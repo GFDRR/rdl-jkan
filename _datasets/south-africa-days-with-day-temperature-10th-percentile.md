@@ -6,8 +6,8 @@ creator:
   email: briley@worldbank.org
   name: GFDRR
   url: https://www.gfdrr.org
-dataset_id: T2M_dayover25.zip
-description: "Annual number of days attaining a maximum temperature > 25\xB0C. The\
+dataset_id: TX10P.zip
+description: "Annual number of days when the day temperature < 10th percentile. The\
   \ baseline is calculated for 2001\u20132020, with projections for 2021\u20132040\
   \ and 2041\u20132060 under two climate scenarios: RCP 4.5 (moderate emissions) and\
   \ RCP 8.5 (high emissions)."
@@ -24,7 +24,7 @@ hazard:
   hazard_type: extreme_temperature
   intensity: WBGT:c
   occurrence_range: ''
-  processes: extreme_heat
+  processes: extreme_cold
 license: CC-BY-4.0
 loss: null
 project: Future Heat Stress Indicators for Johannesburg and Ekurhuleni
@@ -35,34 +35,34 @@ publisher:
 purpose: 'This dataset is part of the scientific paper: Souverijns, N., De Ridder,
   K., Veldeman, N., Lefebre, F., Kusambiza-Kiingi, F., Memela, W., Jones, N.K.W.,
   2022. Urban heat in Johannesburg and Ekurhuleni, South Africa: A meter-scale assessment
-  and vulnerability analysis. Urban Climate, 46, 101331. https://doi.org/10.1016/j.uclim.2022.101337'
+  and vulnerability analysis. Urban Climate, 46, 101331. https://doi.org/10.1016/j.uclim.2022.101349'
 resources:
 - coordinate_system: EPSG:4326
-  description: "Annual number of days when the maximum temperature exceeds 25\xB0\
-    C for 2001-2020."
+  description: Number of days with day temperatures below the 10th percentile for
+    the period 2001-2020.
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '0'
   spatial_resolution: null
-  title: "Days with Maximum Temperature > 25\xB0C - Johannebsurg & Ekurhuleni (2001-2020)"
+  title: Days with Day Temperature < 10th Percentile - Johannebsurg & Ekurhuleni (2001-2020)
 - coordinate_system: EPSG:4326
-  description: "Projected annual number of days when the maximum temperature exceeds\
-    \ 25\xB0C under the RCP 4.5 and 8.5 scenario for 2021-2040."
+  description: Projected number of days with day temperatures below the 10th percentile
+    under the RCP 4.5 and 8.5 scenario for 2021-2040.
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '1'
   spatial_resolution: null
-  title: "Days with Maximum Temperature > 25\xB0C - Johannebsurg & Ekurhuleni (2021-2040,\
-    \ RCP4.5 & RCP8.5)"
+  title: Days with Day Temperature < 10th Percentile - Johannebsurg & Ekurhuleni (2021-2040,
+    RCP4.5 & RCP8.5)
 - coordinate_system: EPSG:4326
-  description: "Projected annual number of days when the maximum temperature exceeds\
-    \ 25\xB0C under the RCP 4.5 and 8.5 scenario for 2041-2060."
+  description: Projected number of days with day temperatures below the 10th percentile
+    under the RCP 4.5 and 8.5 scenario for 2041-2060.
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '2'
   spatial_resolution: null
-  title: "Days with Maximum Temperature > 25\xB0C - Johannebsurg & Ekurhuleni (2041-2060,\
-    \ RCP4.5 & RCP8.5)"
+  title: Days with Day Temperature < 10th Percentile - Johannebsurg & Ekurhuleni (2041-2060,
+    RCP4.5 & RCP8.5)
 risk_data_type:
 - hazard
 schema: rdl-02
@@ -85,7 +85,7 @@ spatial:
     id: ZAF-GP-EKU
     scheme: ISO 3166-2
   scale: sub-national
-title: "Days with Maximum Temperature > 25\xB0C"
+title: South Africa Days with Day Temperature < 10th Percentile
 version: 30 March 2022
 vulnerability: null
 ---

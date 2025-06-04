@@ -6,11 +6,11 @@ creator:
   email: briley@worldbank.org
   name: GFDRR
   url: https://www.gfdrr.org
-dataset_id: T2M_dayover30.zip
-description: "Annual number of days attaining a maximum temperature > 30\xB0C. The\
-  \ baseline is calculated for 2001\u20132020, with projections for 2021\u20132040\
-  \ and 2041\u20132060 under two climate scenarios: RCP 4.5 (moderate emissions) and\
-  \ RCP 8.5 (high emissions)."
+dataset_id: T2M_dayover30_duetourban.zip
+description: "Annual number of days attaining a maximum temperature > 30\xB0C that\
+  \ are caused by urban canopy. The baseline is calculated for 2001\u20132020, with\
+  \ projections for 2021\u20132040 and 2041\u20132060 under two climate scenarios:\
+  \ RCP 4.5 (moderate emissions) and RCP 8.5 (high emissions)."
 details: 'Heat stress indicators for present and future climates for the cities of
   Johannesburg and Ekurhuleni (South Africa) at 30m spatial resolution calculated
   with UrbClim (De Ridder et al., 2015) for the following scenarios: 2001-2020: present
@@ -35,34 +35,35 @@ publisher:
 purpose: 'This dataset is part of the scientific paper: Souverijns, N., De Ridder,
   K., Veldeman, N., Lefebre, F., Kusambiza-Kiingi, F., Memela, W., Jones, N.K.W.,
   2022. Urban heat in Johannesburg and Ekurhuleni, South Africa: A meter-scale assessment
-  and vulnerability analysis. Urban Climate, 46, 101331. https://doi.org/10.1016/j.uclim.2022.101339'
+  and vulnerability analysis. Urban Climate, 46, 101331. https://doi.org/10.1016/j.uclim.2022.101340'
 resources:
 - coordinate_system: EPSG:4326
   description: "Projected number of days with a maximum temperature greater than 30\xB0\
-    C for 2001-2020"
+    C due to urban canopy effects for 2001-2020."
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '0'
   spatial_resolution: null
-  title: "Days with Maximum Temperature > 30\xB0C - Johannebsurg & Ekurhuleni (2001-2020)"
+  title: "Days with Maximum Temperature > 30\xB0C Due to Urban Canopy - Johannebsurg\
+    \ & Ekurhuleni (2001-2020)"
 - coordinate_system: EPSG:4326
   description: "Projected number of days with a maximum temperature greater than 30\xB0\
-    C under the RCP 4.5 and 8.5 scenario for 2021-2040."
+    C due to urban canopy effects under the RCP 4.5 and 8.5 scenario for 2021-2040."
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '1'
   spatial_resolution: null
-  title: "Days with Maximum Temperature > 30\xB0C - Johannebsurg & Ekurhuleni (2021-2040,\
-    \ RCP4.5 & RCP8.5)"
+  title: "Days with Maximum Temperature > 30\xB0C Due to Urban Canopy - Johannebsurg\
+    \ & Ekurhuleni (2021-2040, RCP4.5 & RCP8.5)"
 - coordinate_system: EPSG:4326
   description: "Projected number of days with a maximum temperature greater than 30\xB0\
-    C under the RCP 4.5 and 8.5 scenario for 2041-2060."
+    C due to urban canopy effects under the RCP 4.5 and 8.5 scenario for 2041-2060."
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '2'
   spatial_resolution: null
-  title: "Days with Maximum Temperature > 30\xB0C - Johannebsurg & Ekurhuleni (2041-2060,\
-    \ RCP4.5 & RCP8.5)"
+  title: "Days with Maximum Temperature > 30\xB0C Due to Urban Canopy - Johannebsurg\
+    \ & Ekurhuleni (2041-2060, RCP4.5 & RCP8.5)"
 risk_data_type:
 - hazard
 schema: rdl-02
@@ -85,7 +86,7 @@ spatial:
     id: ZAF-GP-EKU
     scheme: ISO 3166-2
   scale: sub-national
-title: "Days with Maximum Temperature > 30\xB0C"
+title: "South Africa Days with Maximum Temperature > 30\xB0C Due to Urban Canopy "
 version: 30 March 2022
 vulnerability: null
 ---

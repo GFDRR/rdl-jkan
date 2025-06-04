@@ -87,7 +87,7 @@ spatial:
     id: ZAF-GP-EKU
     scheme: ISO 3166-2
   scale: sub-national
-title: Warm Spell Duration Index (WSDI)
+title: South Africa Warm Spell Duration Index (WSDI)
 version: 30 March 2022
 vulnerability: null
 ---
