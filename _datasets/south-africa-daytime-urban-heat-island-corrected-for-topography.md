@@ -85,7 +85,7 @@ spatial:
     id: ZAF-GP-EKU
     scheme: ISO 3166-2
   scale: sub-national
-title: Daytime Urban Heat Island Corrected for Topography
+title: South Africa Daytime Urban Heat Island Corrected for Topography
 version: 30 March 2022
 vulnerability: null
 ---
