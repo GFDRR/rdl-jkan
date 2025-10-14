@@ -1,48 +1,3 @@
-#!/usr/bin/python3
-
-import argparse
-import json
-import os
-import re
-import unicodedata
-import logging
-from pathlib import Path
-
-import yaml
-
-generated_dir = "generated"
-datasets_output_dir = f"{generated_dir}/_datasets"
-logname = f"{generated_dir}/error.log"
-
-logging.basicConfig(filename=logname,
-                    filemode='a',
-                    format='%(asctime)s %(levelname)s %(message)s',
-                    datefmt='%H:%M:%S',
-                    level=logging.DEBUG)
-
-# Copied Django's slugify from https://github.com/django/django/blob/main/django/utils/text.py
-# It's somewhat overkill for our case (which is just generating valid filenames), but it's relatively
-# short, we're familiar with it, and it should be thoroughly battle-tested at this point.
-def slugify(value, allow_unicode=False):
-    """
-    Convert to ASCII if 'allow_unicode' is False. Convert spaces or repeated
-    dashes to single dashes. Remove characters that aren't alphanumerics,
-    underscores, or hyphens. Convert to lowercase. Also strip leading and
-    trailing whitespace, dashes, and underscores.
-    """
-    value = str(value)
-    if allow_unicode:
-        value = unicodedata.normalize("NFKC", value)
-    else:
-        value = (
-            unicodedata.normalize("NFKD", value)
-            .encode("ascii", "ignore")
-            .decode("ascii")
-        )
-    value = re.sub(r"[^\w\s-]", "", value.lower())
-    return re.sub(r"[-\s]+", "-", value).strip("-_")
-
-
 def make_resource(resource):
     """Convert RDL resource metadata into JKAN frontmatter"""
     return {
@@ -56,6 +11,7 @@ def make_resource(resource):
         "download_url": resource.get("download_url", resource.get("access_url")),
         "spatial_resolution": resource.get("spatial_resolution"),
     }
+
 
 def make_exposure(exposure):
     """Convert RDL exposure metadata into JKAN frontmatter"""
@@ -83,6 +39,7 @@ def make_exposure(exposure):
         "quantity_kind": ', '.join(sorted(set(props_to_summarize["quantity_kind"]))),
     }
 
+
 def make_hazard(hazard):
     """Convert RDL hazard metadata into JKAN frontmatter"""
     if hazard is None:
@@ -97,10 +54,10 @@ def make_hazard(hazard):
         "occurrence_range": [], # found on event_set
         "processes": hazard.get("processes",[]), # found on hazard, event.hazard
     }
-    
+
     for event_set in hazard["event_sets"]:
         if "calculation_method" in event_set:
-            props_to_summarize["calculation_method"].append(event_set["calculation_method"])    
+            props_to_summarize["calculation_method"].append(event_set["calculation_method"])
         if "analysis_type" in event_set:
             props_to_summarize["hazard_analysis_type"].append(event_set["analysis_type"])
         if "occurrence_range" in event_set:
@@ -109,7 +66,7 @@ def make_hazard(hazard):
         if "events" in event_set:
             for event in event_set["events"]:
                 if "calculation_method" in event:
-                    props_to_summarize["calculation_method"].append(event["calculation_method"])    
+                    props_to_summarize["calculation_method"].append(event["calculation_method"])
                 if "disaster_identifiers" in event:
                     for di in event["disaster_identifiers"]:
                         props_to_summarize["disaster_identifiers"].append(f"{di.get('id')}; {di.get('scheme')}")
@@ -128,14 +85,15 @@ def make_hazard(hazard):
         "occurrence_range": ', '.join(sorted(set(props_to_summarize["occurrence_range"]))),
         "processes": ', '.join(sorted(set(props_to_summarize["processes"])))
     }
- 
+
+
 def make_vulnerability(vulnerability):
     """Convert RDL vulnerability metadata into JKAN frontmatter"""
     if vulnerability is None:
         return None
 
     impact = vulnerability.get("impact")
-    
+
     # TODO: will there ever actually be more than one function type present on a vulnerability?
     approach = []
     relationship = []
@@ -206,7 +164,7 @@ def make_loss(loss):
     """Convert RDL loss metadata into JKAN frontmatter"""
     if loss is None:
         return None
-    
+
     props_to_summarize = {
         # required; throw if missing
         "dimension": [],
@@ -258,7 +216,7 @@ def make_loss(loss):
             props_to_summarize["type"].append(l["type"])
         if "vulnerability_id" in l:
             props_to_summarize["vulnerability_id"].append(l["vulnerability_id"])
-        
+
     return {
         "dimension": ', '.join(sorted(set(props_to_summarize["dimension"]))),
         "hazard_type": ', '.join(sorted(set(props_to_summarize["hazard_type"]))),
@@ -276,6 +234,7 @@ def make_loss(loss):
         "type": ', '.join(sorted(set(props_to_summarize["type"]))),
         "vulnerability_id": ', '.join(sorted(set(props_to_summarize["vulnerability_id"]))),
     }
+
 
 def make_dataset_frontmatter(dataset):
     """Formats RDL metadata into JKAN frontmatter for a dataset"""
@@ -312,60 +271,3 @@ def make_dataset_frontmatter(dataset):
         else:
             payload["spatial"]["countries"] = ['GLO']
     return payload
-
-def write_frontmatter(metadata, output_path):
-    filename = (
-        slugify(metadata.get("name", metadata["title"]), allow_unicode=True) + ".md"
-    )
-    with open((Path(output_path) / filename), "w") as outfile:
-        outfile.write("---\n")
-        outfile.write(yaml.dump(metadata))
-        outfile.write("---\n")
-
-
-if __name__ == "__main__":
-    # Parse args
-    parser = argparse.ArgumentParser(
-        description="Convert RDL JSON datasets into JKAN frontmatter"
-    )
-    parser.add_argument(
-        "--input_folder",
-        help="Path to the folder containing RDL datasets in JSON format",
-        default=".",
-        action="store",
-    )
-    args = parser.parse_args()
-    # Create output paths if they don't already exist
-    if not Path(generated_dir).is_dir():
-        os.makedirs(generated_dir)
-    if not Path(datasets_output_dir).is_dir():
-        os.makedirs(datasets_output_dir)
-   
-
-    # Iterate over all JSON files in the input folder
-    input_path = Path(args.input_folder)
-    for json_file in input_path.glob("../_datasets/json/*.json"):
-        with open(json_file, encoding='utf-8') as input_file:
-            datasets_json = json.load(input_file)
-            for dataset in datasets_json["datasets"]:
-                try:
-                    # Generate output
-                    dataset_frontmatter = make_dataset_frontmatter(dataset)
-                    # Write output
-                    write_frontmatter(dataset_frontmatter, datasets_output_dir)
-                except Exception as e:
-                    logging.error(
-                        f"While writing {dataset.get('title', 'a dataset with a missing title')} "
-                        f"(dataset_id: {dataset.get('id', 'missing')})",
-                        exc_info=e
-                    )
-
-
-    print("\nAll done! Please enjoy your datasets :)\n",
-            "Datasets have been generated in: `import/generated/_datasets`",
-            "To include them in your JKAN site, run the following from `import`",
-            "\nmv generated/_datasets/* ../_datasets\n",
-            "This may overwrite the existing contents of `_datasets`.\n",
-            f"Issues with your input files have been logged to: `import/{logname}`",
-            "More info is availabile at `import/README.md`\n",
-            sep=os.linesep)
