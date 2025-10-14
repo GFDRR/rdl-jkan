@@ -4,7 +4,6 @@ import argparse
 import json
 import os
 import re
-import shutil
 
 import logging
 import fnmatch
@@ -21,38 +20,34 @@ from git import Repo
 def extract_yaml_frontmatter(filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         content = file.read()
-
-    frontmatter_match = re.match(r'---(.*?|\n)---', content, re.DOTALL)
-    if frontmatter_match:
-        frontmatter = frontmatter_match.group(0)
-        return yaml.safe_load(frontmatter)
-
+    pattern = r'^---\n(.*?)\n---\n'
+    match = re.search(pattern, content, re.DOTALL | re.MULTILINE)
+    if match:
+        payload = match.group(1)  # Return the captured YAML content
+        payload = yaml.safe_load(payload)
+        return payload
     return None
 
 
-def filter_markdown_files(directory, key, value):
-    filtered_files = []
-
-    for filename in os.listdir(directory):
+def clean_up_old_versions(json_dataset):
+    for filename in os.listdir(config.datasets_dir):
         if filename.endswith('.md'):
-            filepath = os.path.join(directory, filename)
+            filepath = os.path.join(config.datasets_dir, filename)
             frontmatter = extract_yaml_frontmatter(filepath)
+            json_dataset_id = json_dataset.get("dataset_id")
+            markdown_dataset_id = frontmatter.get('dataset_id')
+            if frontmatter and markdown_dataset_id == json_dataset_id:
+                print(f"Deleting {filepath} with id of {markdown_dataset_id}")
+                os.remove(filepath)
 
-            if frontmatter and frontmatter.get(key) == value:
-                filtered_files.append(filepath)
-
-    return filtered_files
-
-def write_to_markdown(dataset):
+def write_to_markdown(dataset_from_json):
     try:
         # Generate output
-        dataset_frontmatter = mappers.make_dataset_frontmatter(dataset)
+        dataset_frontmatter = mappers.make_dataset_frontmatter(dataset_from_json)
         # Delete old file if it exists, in case of filename changes
-        filtered_files = filter_markdown_files('../_datasets', 'dataset_id', dataset_frontmatter["id"])
-        for file_to_delete in filtered_files:
-            shutil.rmtree(file_to_delete)
+        clean_up_old_versions(dataset_frontmatter)
         # Write output
-        utils.write_frontmatter(dataset_frontmatter, config.datasets_output_dir)
+        utils.write_frontmatter(dataset_frontmatter, config.datasets_dir)
 
     except Exception as e:
         logging.error(
@@ -75,30 +70,34 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--type",
-        choices=['diff', 'batch'],
-        help="Whether the datasets are being generated from new/modified files or from a batch directory",
+        choices=['ci', 'batch'],
+        help="Whether the datasets are being generated from new/modified files from the last commit or from a batch directory",
         default="batch",
         action="store",
     )
     args = parser.parse_args()
     # Create output paths if they don't already exist
-    if not Path(config.generated_dir).is_dir():
-        os.makedirs(config.generated_dir)
-    if not Path(config.datasets_output_dir).is_dir():
-        os.makedirs(config.datasets_output_dir)
+    if not Path(config.root_dir).is_dir():
+        os.makedirs(config.root_dir)
+    if not Path(config.datasets_dir).is_dir():
+        os.makedirs(config.datasets_dir)
+    if not Path(config.json_dir).is_dir():
+        os.makedirs(config.json_dir)
 
-    repo = Repo('..')
-    files = list(repo.head.commit.stats.files.keys())
-
-    if args.type == "diff":
-        for json_file in fnmatch.filter(files, '_datasets/json/*.json'):
-            with open("../" + json_file, encoding='utf-8') as input_file:
+    if args.type == "ci":
+        repo = Repo(config.root_dir)
+        repo.remotes.origin.fetch()
+        current_commit = repo.head.commit
+        diff = current_commit.diff(f"origin/{config.remote_target_branch}")
+        files = {item.a_path for item in diff}
+        for json_file in fnmatch.filter(files, '_datasets/*.json'):
+            with open(os.path.join(config.root_dir, json_file), encoding='utf-8') as input_file:
                 datasets_json = json.load(input_file)
                 for dataset in datasets_json["datasets"]:
                     write_to_markdown(dataset)
     elif args.type == "batch":
         input_path = Path(args.input_folder)
-        for json_file in input_path.glob("../_datasets/json/*.json"):
+        for json_file in input_path.glob(f"{config.json_dir}/*.json"):
             with open(json_file, encoding='utf-8') as input_file:
                 datasets_json = json.load(input_file)
                 for dataset in datasets_json["datasets"]:
@@ -106,12 +105,6 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Unknown type {args.type}")
 
-
     print("\nAll done! Please enjoy your datasets :)\n",
-          "Datasets have been generated in: `import/generated/_datasets`",
-          "To include them in your JKAN site, run the following from `import`",
-          "\nmv generated/_datasets/* ../_datasets\n",
-          "This may overwrite the existing contents of `_datasets`.\n",
-          f"Issues with your input files have been logged to: `import/{config.log_filename}`",
           "More info is available at `import/README.md`\n",
           sep=os.linesep)

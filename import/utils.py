@@ -10,8 +10,7 @@ import config
 import yaml
 
 
-logging.basicConfig(filename=config.log_filename,
-                    filemode='a',
+logging.basicConfig(
                     format='%(asctime)s %(levelname)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
                     level=logging.DEBUG)
@@ -43,6 +42,7 @@ def write_frontmatter(metadata, output_path):
     filename = (
             slugify(metadata.get("name", metadata["title"]), allow_unicode=True) + ".md"
     )
+
     with open((Path(output_path) / filename), "w") as outfile:
         outfile.write("---\n")
         outfile.write(yaml.dump(metadata))
