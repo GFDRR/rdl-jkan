@@ -1,3 +1,5 @@
+import config
+
 def make_resource(resource):
     """Convert RDL resource metadata into JKAN frontmatter"""
     return {
@@ -250,7 +252,7 @@ def make_dataset_frontmatter(dataset):
         "publisher": dataset["publisher"],
         "resources": [make_resource(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
-        "schema": "rdl-02",
+        "schema": config.schema_version,
         "spatial": dataset["spatial"],
         # optional
         "description": dataset.get("description"),
