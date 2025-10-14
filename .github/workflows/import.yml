@@ -1,5 +1,5 @@
 ---
-name: JSON2MD
+name: Import JSON into /_datasets
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  json2md:
+  import:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -27,13 +27,11 @@ jobs:
       - run: echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
       - run: python3 -m pip install -r requirements.txt
       - name: Import JSON datasets
-        run: python3 main.py
-      - run: mv generated/_datasets/* ../_datasets
+        run: python3 main.py --type=ci
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ..
-          git commit -m "Generate MD files for new JSON files"
+          git diff-index --quiet HEAD || git commit -am "Generate MD files for new JSON files"
           git push
           echo "Complete"
