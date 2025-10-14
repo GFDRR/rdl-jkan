@@ -27,7 +27,7 @@ jobs:
       - run: echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
       - run: python3 -m pip install -r requirements.txt
       - name: Import JSON datasets
-        run: python3 rdl2jkan.py
+        run: python3 main.py
       - run: mv generated/_datasets/* ../_datasets
       - name: Commit results
         run: |
