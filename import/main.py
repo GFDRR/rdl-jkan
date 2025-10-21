@@ -40,10 +40,21 @@ def clean_up_old_versions(json_dataset):
                 print(f"Deleting {filepath} with id of {markdown_dataset_id}")
                 os.remove(filepath)
 
+
 def write_to_markdown(dataset_from_json):
     try:
-        # Generate output
-        dataset_frontmatter = mappers.make_dataset_frontmatter(dataset_from_json)
+        # Generate frontmatter
+        dataset_frontmatter = None
+        match dataset_from_json.get('schema'):
+            case "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json":
+                dataset_frontmatter = mappers.make_dataset_frontmatter_v03(dataset_from_json)
+            case "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json":
+                dataset_frontmatter = mappers.make_dataset_frontmatter_v02(dataset_from_json)
+            case _:
+                logging.error(
+                    f"Unknown schema: {dataset_from_json.get('schema', "None")}. Using v0.2"
+                )
+                dataset_frontmatter = mappers.make_dataset_frontmatter_v02(dataset_from_json)
         # Delete old file if it exists, in case of filename changes
         clean_up_old_versions(dataset_frontmatter)
         # Write output
@@ -52,7 +63,7 @@ def write_to_markdown(dataset_from_json):
     except Exception as e:
         logging.error(
             f"While writing {dataset.get('title', 'a dataset with a missing title')} "
-            f"(dataset_id: {dataset.get('id', 'missing')}, file: {json_file})",
+            f"(dataset_id: {dataset.get('id', 'missing')})",
             exc_info=e
         )
 
