@@ -1,4 +1,4 @@
-## How to convert RDLS json to md file (JKAN site)
+## Importing JSON to JKAN-compatible markdown
 
 See here on how to convert and prepare you metadata in JSON file https://metadata.riskdatalibrary.org/
 
@@ -25,6 +25,14 @@ If PyYAML gives you trouble, try [these steps](https://github.com/yaml/pyyaml/is
 
 ### Generate datasets
 
+- You can configure input and output directories in `config.py`
 - Open a shell here, at `/import`
-- Generate datasets with `python3 rdl2jkan.py`
-- Run `mv generated/_datasets/* ../_datasets` to move generated datasets to where JKAN expects them. This may overwrite the contents of `_datasets`.
+- Generate datasets with `python3 main.py`
+
+### CI mode
+
+The script can be run on files modified since the most recent commit on the
+target branch (`remote_target_branch`), which can be set in `config.py`.
+
+To run in CI mode, simply run `python3 main.py --ci` in `/import`.
+ CI mode was developed to support the import GitHub action.
