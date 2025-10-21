@@ -6,8 +6,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: AFG_hzd-drought
-description: Annual water availability per sub-catchment for baseline and projected
-  conditions (2050) according to seven return period scenarios.
+description: ''
 details: "To better understand natural hazard and disaster risk, the World Bank and\
   \ Global Facility for Disaster Reduction and Recovery (GFDRR) supported the development\
   \ of new \uFB02uvial \uFB02ood, \uFB02ash \uFB02ood, drought, landslide, avalanche\

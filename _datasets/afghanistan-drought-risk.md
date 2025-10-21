@@ -75,7 +75,7 @@ spatial:
   countries:
   - AFG
   scale: national
-title: Afghanistan Drought risk
+title: Afghanistan Drought Risk
 version: '2018'
 vulnerability: null
 ---
