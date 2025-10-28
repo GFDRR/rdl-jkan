@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import re
+import sys
 
 import logging
 import fnmatch
@@ -59,13 +60,14 @@ def write_to_markdown(dataset_from_json):
         clean_up_old_versions(dataset_frontmatter)
         # Write output
         utils.write_frontmatter(dataset_frontmatter, config.datasets_dir)
-
+        return 0
     except Exception as e:
         logging.error(
             f"While writing {dataset.get('title', 'a dataset with a missing title')} "
             f"(dataset_id: {dataset.get('id', 'missing')})",
             exc_info=e
         )
+        return 1
 
 
 if __name__ == "__main__":
@@ -105,14 +107,16 @@ if __name__ == "__main__":
             with open(os.path.join(config.root_dir, json_file), encoding='utf-8') as input_file:
                 datasets_json = json.load(input_file)
                 for dataset in datasets_json["datasets"]:
-                    write_to_markdown(dataset)
+                    exit_code = write_to_markdown(dataset)
+                    sys.exit(exit_code)
     elif args.type == "batch":
         input_path = Path(args.input_folder)
         for json_file in input_path.glob(f"{config.json_dir}/*.json"):
             with open(json_file, encoding='utf-8') as input_file:
                 datasets_json = json.load(input_file)
                 for dataset in datasets_json["datasets"]:
-                    write_to_markdown(dataset)
+                    exit_code = write_to_markdown(dataset)
+                    sys.exit(exit_code)
     else:
         raise ValueError(f"Unknown type {args.type}")
 
