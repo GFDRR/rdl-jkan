@@ -103,7 +103,7 @@ if __name__ == "__main__":
         current_commit = repo.head.commit
         diff = current_commit.diff(f"origin/{config.remote_target_branch}")
         files = {item.a_path for item in diff}
-        for json_file in fnmatch.filter(files, '_datasets/json/*.json'):
+        for json_file in fnmatch.filter(files, f"_datasets/json/*.json"):
             with open(os.path.join(config.root_dir, json_file), encoding='utf-8') as input_file:
                 datasets_json = json.load(input_file)
                 schema = datasets_json["schema"]
