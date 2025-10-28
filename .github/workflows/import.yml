@@ -32,6 +32,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git diff-index --quiet HEAD || git commit -am "Generate MD files for new JSON files"
+          git add ..
+          git diff-index --quiet HEAD || git commit -m "Generate MD files for new JSON files"
           git push
           echo "Complete"
