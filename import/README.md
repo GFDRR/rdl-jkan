@@ -34,5 +34,5 @@ If PyYAML gives you trouble, try [these steps](https://github.com/yaml/pyyaml/is
 The script can be run on files modified since the most recent commit on the
 target branch (`remote_target_branch`), which can be set in `config.py`.
 
-To run in CI mode, simply run `python3 main.py --ci` in `/import`.
+To run in CI mode, simply run `python3 main.py --type ci` in `/import`.
  CI mode was developed to support the import GitHub action.
