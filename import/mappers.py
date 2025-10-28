@@ -310,6 +310,8 @@ def make_period(period):
         "temporal_resolution": period.get("temporal_resolution"),
     }
 
+def make_exposure_v03(exposure_array):
+    return [make_exposure(exposure) for exposure in exposure_array]
 
 def make_resource_v03(resource):
     """Convert RDL v0.3 resource metadata into JKAN frontmatter"""
@@ -352,7 +354,7 @@ def make_dataset_frontmatter_v03(dataset):
         "version": dataset.get("version"),
         # must include one of
         # TODO: how should exposure be summarized for rdl-03?
-        "exposure": next(make_exposure(exposure) for exposure in dataset.get("exposure")),
+        "exposure": make_exposure_v03(dataset.get("exposure")),
         "hazard": make_hazard(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
         "vulnerability": make_vulnerability(dataset.get("vulnerability")),
