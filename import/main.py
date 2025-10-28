@@ -42,11 +42,11 @@ def clean_up_old_versions(json_dataset):
                 os.remove(filepath)
 
 
-def write_to_markdown(dataset_from_json):
+def write_to_markdown(dataset_from_json, schema):
     try:
         # Generate frontmatter
         dataset_frontmatter = None
-        match dataset_from_json.get('schema'):
+        match schema:
             case "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json":
                 dataset_frontmatter = mappers.make_dataset_frontmatter_v03(dataset_from_json)
             case "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json":
