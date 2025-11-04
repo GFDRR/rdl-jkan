@@ -47,9 +47,9 @@ def write_to_markdown(dataset_from_json, schema):
         # Generate frontmatter
         dataset_frontmatter = None
         match schema:
-            case "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json":
+            case config.schema_v3:
                 dataset_frontmatter = mappers.make_dataset_frontmatter_v03(dataset_from_json)
-            case "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json":
+            case config.schema_v2:
                 dataset_frontmatter = mappers.make_dataset_frontmatter_v02(dataset_from_json)
             case _:
                 logging.error(
@@ -118,7 +118,8 @@ if __name__ == "__main__":
         for json_file in input_path.glob(f"{config.json_dir}/*.json"):
             with open(json_file, encoding='utf-8') as input_file:
                 datasets_json = json.load(input_file)
-                schema = datasets_json["schema"]
+                
+                schema = datasets_json.get("schema", config.schema_v2)
                 exit_code = 0
                 for dataset in datasets_json["datasets"]:
                     result = write_to_markdown(dataset, schema)

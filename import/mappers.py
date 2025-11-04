@@ -311,7 +311,7 @@ def make_period(period):
     }
 
 def make_exposure_v03(exposure_array):
-    return [make_exposure(exposure) for exposure in exposure_array]
+    return [make_exposure(exposure) for exposure in exposure_array] if exposure_array is not None else []
 
 def make_resource_v03(resource):
     """Convert RDL v0.3 resource metadata into JKAN frontmatter"""
