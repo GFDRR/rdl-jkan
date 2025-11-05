@@ -2,8 +2,8 @@
   <th>{{ include.field.label }}</th>
   <td>
       {% capture name %}{{ include.value.name }}{% endcapture %}
-      {% if include.value.url %}
-        {% capture href %}{{ include.value.url }}{% endcapture %}
+      {% capture href %}{{ include.value.url }}{% endcapture %}
+      {% if href != null and href != "" %}
         <a href="{{ href }}">{{ name }}</a>
       {% elsif include.value.email %}
         {% capture href %}{{ include.value.email }}{% endcapture %}
