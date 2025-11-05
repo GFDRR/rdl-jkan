@@ -97,6 +97,7 @@ if __name__ == "__main__":
     if not Path(config.json_dir).is_dir():
         os.makedirs(config.json_dir)
 
+    exit_code = 0
     if args.type == "ci":
         repo = Repo(config.root_dir)
         repo.remotes.origin.fetch()
@@ -107,12 +108,10 @@ if __name__ == "__main__":
             with open(os.path.join(config.root_dir, json_file), encoding='utf-8') as input_file:
                 datasets_json = json.load(input_file)
                 schema = datasets_json["schema"]
-                exit_code = 0
                 for dataset in datasets_json["datasets"]:
                     result = write_to_markdown(dataset, schema)
                     if result != 0:
-                        exit_code = result  
-                sys.exit(exit_code)
+                        exit_code = result
     elif args.type == "batch":
         input_path = Path(args.input_folder)
         for json_file in input_path.glob(f"{config.json_dir}/*.json"):
@@ -120,15 +119,17 @@ if __name__ == "__main__":
                 datasets_json = json.load(input_file)
                 
                 schema = datasets_json.get("schema", config.schema_v2)
-                exit_code = 0
                 for dataset in datasets_json["datasets"]:
                     result = write_to_markdown(dataset, schema)
                     if result != 0:
                         exit_code = result  
-                sys.exit(exit_code)
     else:
         raise ValueError(f"Unknown type {args.type}")
 
-    print("\nAll done! Please enjoy your datasets :)\n",
+    if exit_code == 0:
+        print("\nAll done! Please enjoy your datasets :)\n",
           "More info is available at `import/README.md`\n",
           sep=os.linesep)
+    else:
+        print(f"\nUh oh! Exit code: {exit_code}")
+    sys.exit(exit_code)
