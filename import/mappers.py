@@ -25,7 +25,7 @@ def make_exposure(exposure):
     }
 
 
-def make_hazard(hazard):
+def make_hazard_v02(hazard):
     """Convert RDL hazard metadata into JKAN frontmatter"""
     if hazard is None:
         return None
@@ -261,7 +261,7 @@ def make_dataset_frontmatter_v02(dataset):
         "version": dataset.get("version"),
         # must include one of
         "exposure": make_exposure(dataset.get("exposure")),
-        "hazard": make_hazard(dataset.get("hazard")),
+        "hazard": make_hazard_v02(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
         "vulnerability": make_vulnerability(dataset.get("vulnerability")),
     }
@@ -275,21 +275,80 @@ def make_dataset_frontmatter_v02(dataset):
 
 
 # v0.3 specific mappers
-def make_entity(entity):
-    return {
-        "name": entity['name'],
+def make_attribution(attribution_or_attributions, role=None):
+    if role is not None:
+        attributions = attribution_or_attributions
+        attribution = next((a for a in attributions if a['role'] == role))
+    else:
+        attribution = attribution_or_attributions
+    
+    entity = attribution['entity']
+    payload = {
         "email": entity['email'],
+        "id": attribution["id"],
+        "name": entity['name'],
         "url": entity['url'],
     }
 
+    if role is None:
+        # add role to attribution if it's not named on the RDL schema
+        # e.g. contact_point, creator, publisher
+        payload["role"] = attribution["role"]
 
-def make_attribution(attribution):
-    """Convert RDL attribution metadata into JKAN frontmatter"""
+    return payload
+
+def make_extra_attributions(attributions):
+    main_attributions = ["contact_point", "creator", "publisher"]
+    return [make_attribution(a) for a in attributions if a['role'] not in main_attributions]
+
+
+def make_hazard_v03(hazard):
+    """Convert RDL hazard metadata into JKAN frontmatter"""
+    if hazard is None:
+        return None
+
+    props_to_summarize = {
+        "calculation_method": [],  # found on event, event_set
+        "disaster_identifiers": [],  # found on event
+        "hazard_analysis_type": [],  # found on event_set as analysis_type
+        "hazard_type":[],  # found on event_set as type
+        "intensity": [],  # found on hazard, event.hazard as intensity_measure
+        "occurrence_range": [],  # found on event_set
+        "processes": [],  # found on event_set, event_set.hazard
+        "seasonality": [],  # found on event_set
+    }
+
+    for event_set in hazard["event_sets"]:
+        if "analysis_type" in event_set:
+            props_to_summarize["hazard_analysis_type"].append(event_set["analysis_type"])
+        if "calculation_method" in event_set:
+            props_to_summarize["calculation_method"].append(event_set["calculation_method"])
+        if "intensity_measure" in event_set:
+            props_to_summarize["intensity"].append(event_set["intensity_measure"])
+        if "occurrence_range" in event_set:
+            props_to_summarize["occurrence_range"].append(event_set["occurrence_range"])
+        if "processes" in event_set:
+            props_to_summarize["processes"].append(event_set["processes"])
+        if "seasonality" in event_set:
+            props_to_summarize["seasonality"].append(event_set["seasonality"])
+        if "type" in event_set:
+            props_to_summarize["hazard_type"].append(event_set["type"])
+
+        if "events" in event_set:
+            for event in event_set["events"]:
+                if "disaster_identifiers" in event:
+                    for di in event["disaster_identifiers"]:
+                        props_to_summarize["disaster_identifiers"].append(f"{di.get('id')}; {di.get('scheme')}")
+
     return {
-        # required; throw if missing
-        "id": attribution["id"],
-        "role": attribution["role"],
-        "entity": make_entity(attribution["entity"]),
+        "calculation_method": ', '.join(sorted(set(props_to_summarize["calculation_method"]))),
+        "disaster_identifiers": ', '.join(sorted(set(props_to_summarize["disaster_identifiers"]))),
+        "hazard_analysis_type": ', '.join(sorted(set(props_to_summarize["hazard_analysis_type"]))),
+        "hazard_type": ', '.join(sorted(set(props_to_summarize["hazard_type"]))),
+        "intensity": ', '.join(sorted(set(props_to_summarize["intensity"]))),
+        "occurrence_range": ', '.join(sorted(set(props_to_summarize["occurrence_range"]))),
+        "processes": ', '.join(sorted(set(props_to_summarize["processes"]))),
+        "seasonality": ', '.join(sorted(set(props_to_summarize["seasonality"])))
     }
 
 
@@ -311,7 +370,7 @@ def make_period(period):
     }
 
 def make_exposure_v03(exposure_array):
-    return [make_exposure(exposure) for exposure in exposure_array]
+    return [make_exposure(exposure) for exposure in exposure_array] if exposure_array is not None else []
 
 def make_resource_v03(resource):
     """Convert RDL v0.3 resource metadata into JKAN frontmatter"""
@@ -337,25 +396,25 @@ def make_dataset_frontmatter_v03(dataset):
         # try first; required by write_yaml
         "title": dataset["title"],
         # required; throw if missing
-        "contact_point": next((e for e in dataset["attributions"] if e['role'] == 'contact_point'))['entity'],
-        "creator": next((e for e in dataset["attributions"] if e['role'] == 'creator'))['entity'],
-        "publisher": next((e for e in dataset["attributions"] if e['role'] == 'publisher'))['entity'],
         "dataset_id": dataset["id"],
         "license": dataset["license"],
         "resources": [make_resource_v03(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
         "spatial": dataset["spatial"],
+        # must include one of the following three properties
+        "contact_point": make_attribution(dataset["attributions"], 'contact_point'),
+        "creator": make_attribution(dataset["attributions"], 'creator'),
+        "publisher": make_attribution(dataset["attributions"], 'publisher'),
         # optional
         "description": dataset.get("description"),
         "details": dataset.get("details"),
-        # TODO: how should project be summarized for rdl-03?
-        "project": dataset.get("project").get("name"),
+        "extra_attributions": make_extra_attributions(dataset["attributions"]),
+        "project": dataset.get("project"),
         "purpose": dataset.get("purpose"),
         "version": dataset.get("version"),
-        # must include one of
         # TODO: how should exposure be summarized for rdl-03?
         "exposure": make_exposure_v03(dataset.get("exposure")),
-        "hazard": make_hazard(dataset.get("hazard")),
+        "hazard": make_hazard_v03(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
         "vulnerability": make_vulnerability(dataset.get("vulnerability")),
     }
