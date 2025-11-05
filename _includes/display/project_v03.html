@@ -1,0 +1,9 @@
+<tr>
+  <th>{{ include.field.label }}</th>
+  <td>
+      {% capture name %}{{ include.value.name }}{% endcapture %}
+      {% if include.value.url %}
+        {% capture href %}{{ include.value.url }}{% endcapture %}
+        <a href="{{ href }}">{{ name }}</a>
+      {% endif %}
+  </td>
