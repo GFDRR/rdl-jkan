@@ -275,12 +275,31 @@ def make_dataset_frontmatter_v02(dataset):
 
 
 # v0.3 specific mappers
-def make_entity(entity):
-    return {
-        "name": entity['name'],
+def make_attribution(attribution_or_attributions, role=None):
+    if role is not None:
+        attributions = attribution_or_attributions
+        attribution = next((a for a in attributions if a['role'] == role))
+    else:
+        attribution = attribution_or_attributions
+    
+    entity = attribution['entity']
+    payload = {
         "email": entity['email'],
+        "id": attribution["id"],
+        "name": entity['name'],
         "url": entity['url'],
     }
+
+    if role is None:
+        # add role to attribution if it's not named on the RDL schema
+        # e.g. contact_point, creator, publisher
+        payload["role"] = attribution["role"]
+
+    return payload
+
+def make_extra_attributions(attributions):
+    main_attributions = ["contact_point", "creator", "publisher"]
+    return [make_attribution(a) for a in attributions if a['role'] not in main_attributions]
 
 
 def make_hazard_v03(hazard):
@@ -377,22 +396,22 @@ def make_dataset_frontmatter_v03(dataset):
         # try first; required by write_yaml
         "title": dataset["title"],
         # required; throw if missing
-        "contact_point": next((e for e in dataset["attributions"] if e['role'] == 'contact_point'))['entity'],
-        "creator": next((e for e in dataset["attributions"] if e['role'] == 'creator'))['entity'],
-        "publisher": next((e for e in dataset["attributions"] if e['role'] == 'publisher'))['entity'],
         "dataset_id": dataset["id"],
         "license": dataset["license"],
         "resources": [make_resource_v03(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
         "spatial": dataset["spatial"],
+        # must include one of the following three properties
+        "contact_point": make_attribution(dataset["attributions"], 'contact_point'),
+        "creator": make_attribution(dataset["attributions"], 'creator'),
+        "publisher": make_attribution(dataset["attributions"], 'publisher'),
         # optional
         "description": dataset.get("description"),
         "details": dataset.get("details"),
-        # TODO: how should project be summarized for rdl-03?
-        "project": dataset.get("project").get("name"),
+        "extra_attributions": make_extra_attributions(dataset["attributions"]),
+        "project": dataset.get("project"),
         "purpose": dataset.get("purpose"),
         "version": dataset.get("version"),
-        # must include one of
         # TODO: how should exposure be summarized for rdl-03?
         "exposure": make_exposure_v03(dataset.get("exposure")),
         "hazard": make_hazard_v03(dataset.get("hazard")),
