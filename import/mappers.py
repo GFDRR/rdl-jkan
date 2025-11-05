@@ -278,7 +278,9 @@ def make_dataset_frontmatter_v02(dataset):
 def make_attribution(attribution_or_attributions, role=None):
     if role is not None:
         attributions = attribution_or_attributions
-        attribution = next((a for a in attributions if a['role'] == role))
+        attribution = next((a for a in attributions if a['role'] == role), None)
+        if attribution is None:
+            return None
     else:
         attribution = attribution_or_attributions
     
