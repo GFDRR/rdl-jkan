@@ -364,6 +364,8 @@ def make_metric(metric):
 
 
 def make_period(period):
+    if period is None:
+        return None
     return {
         "start": period.get("start"),
         "end": period.get("end"),
