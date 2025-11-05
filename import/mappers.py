@@ -289,7 +289,7 @@ def make_attribution(attribution_or_attributions, role=None):
         "email": entity['email'],
         "id": attribution["id"],
         "name": entity['name'],
-        "url": entity['url'],
+        "url": entity.get('url'),
     }
 
     if role is None:
