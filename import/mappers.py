@@ -25,7 +25,7 @@ def make_exposure(exposure):
     }
 
 
-def make_hazard(hazard):
+def make_hazard_v02(hazard):
     """Convert RDL hazard metadata into JKAN frontmatter"""
     if hazard is None:
         return None
@@ -261,7 +261,7 @@ def make_dataset_frontmatter_v02(dataset):
         "version": dataset.get("version"),
         # must include one of
         "exposure": make_exposure(dataset.get("exposure")),
-        "hazard": make_hazard(dataset.get("hazard")),
+        "hazard": make_hazard_v02(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
         "vulnerability": make_vulnerability(dataset.get("vulnerability")),
     }
@@ -283,13 +283,53 @@ def make_entity(entity):
     }
 
 
-def make_attribution(attribution):
-    """Convert RDL attribution metadata into JKAN frontmatter"""
+def make_hazard_v03(hazard):
+    """Convert RDL hazard metadata into JKAN frontmatter"""
+    if hazard is None:
+        return None
+
+    props_to_summarize = {
+        "calculation_method": [],  # found on event, event_set
+        "disaster_identifiers": [],  # found on event
+        "hazard_analysis_type": [],  # found on event_set as analysis_type
+        "hazard_type":[],  # found on event_set as type
+        "intensity": [],  # found on hazard, event.hazard as intensity_measure
+        "occurrence_range": [],  # found on event_set
+        "processes": [],  # found on event_set, event_set.hazard
+        "seasonality": [],  # found on event_set
+    }
+
+    for event_set in hazard["event_sets"]:
+        if "analysis_type" in event_set:
+            props_to_summarize["hazard_analysis_type"].append(event_set["analysis_type"])
+        if "calculation_method" in event_set:
+            props_to_summarize["calculation_method"].append(event_set["calculation_method"])
+        if "intensity_measure" in event_set:
+            props_to_summarize["intensity"].append(event_set["intensity_measure"])
+        if "occurrence_range" in event_set:
+            props_to_summarize["occurrence_range"].append(event_set["occurrence_range"])
+        if "processes" in event_set:
+            props_to_summarize["processes"].append(event_set["processes"])
+        if "seasonality" in event_set:
+            props_to_summarize["seasonality"].append(event_set["seasonality"])
+        if "type" in event_set:
+            props_to_summarize["hazard_type"].append(event_set["type"])
+
+        if "events" in event_set:
+            for event in event_set["events"]:
+                if "disaster_identifiers" in event:
+                    for di in event["disaster_identifiers"]:
+                        props_to_summarize["disaster_identifiers"].append(f"{di.get('id')}; {di.get('scheme')}")
+
     return {
-        # required; throw if missing
-        "id": attribution["id"],
-        "role": attribution["role"],
-        "entity": make_entity(attribution["entity"]),
+        "calculation_method": ', '.join(sorted(set(props_to_summarize["calculation_method"]))),
+        "disaster_identifiers": ', '.join(sorted(set(props_to_summarize["disaster_identifiers"]))),
+        "hazard_analysis_type": ', '.join(sorted(set(props_to_summarize["hazard_analysis_type"]))),
+        "hazard_type": ', '.join(sorted(set(props_to_summarize["hazard_type"]))),
+        "intensity": ', '.join(sorted(set(props_to_summarize["intensity"]))),
+        "occurrence_range": ', '.join(sorted(set(props_to_summarize["occurrence_range"]))),
+        "processes": ', '.join(sorted(set(props_to_summarize["processes"]))),
+        "seasonality": ', '.join(sorted(set(props_to_summarize["seasonality"])))
     }
 
 
@@ -355,7 +395,7 @@ def make_dataset_frontmatter_v03(dataset):
         # must include one of
         # TODO: how should exposure be summarized for rdl-03?
         "exposure": make_exposure_v03(dataset.get("exposure")),
-        "hazard": make_hazard(dataset.get("hazard")),
+        "hazard": make_hazard_v03(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
         "vulnerability": make_vulnerability(dataset.get("vulnerability")),
     }
