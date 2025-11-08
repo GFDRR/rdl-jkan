@@ -4,9 +4,6 @@ import unicodedata
 import logging
 from pathlib import Path
 
-
-import config
-
 import yaml
 
 
