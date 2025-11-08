@@ -5,7 +5,7 @@ def make_exposure(exposure):
 
     props_to_summarize = {
         "dimension": [],  # found on metric
-        "quantity_kind": []  # found on metric
+        "quantity_kind": [],  # found on metric
     }
 
     if "metrics" in exposure:
@@ -20,8 +20,8 @@ def make_exposure(exposure):
         "category": exposure["category"],
         # optional
         "taxonomy": exposure.get("taxonomy"),
-        "dimension": ', '.join(sorted(set(props_to_summarize["dimension"]))),
-        "quantity_kind": ', '.join(sorted(set(props_to_summarize["quantity_kind"]))),
+        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
+        "quantity_kind": ", ".join(sorted(set(props_to_summarize["quantity_kind"]))),
     }
 
 
@@ -35,40 +35,60 @@ def make_hazard_v02(hazard):
         "disaster_identifiers": [],  # found on event
         "hazard_analysis_type": [],  # found on event_set as analysis_type
         "hazard_type": hazard.get("type", []),  # found on hazard, event.hazard as type
-        "intensity": hazard.get("intensity_measure", []),  # found on hazard, event.hazard as intensity_measure
+        "intensity": hazard.get(
+            "intensity_measure", []
+        ),  # found on hazard, event.hazard as intensity_measure
         "occurrence_range": [],  # found on event_set
         "processes": hazard.get("processes", []),  # found on hazard, event.hazard
     }
 
     for event_set in hazard["event_sets"]:
         if "calculation_method" in event_set:
-            props_to_summarize["calculation_method"].append(event_set["calculation_method"])
+            props_to_summarize["calculation_method"].append(
+                event_set["calculation_method"]
+            )
         if "analysis_type" in event_set:
-            props_to_summarize["hazard_analysis_type"].append(event_set["analysis_type"])
+            props_to_summarize["hazard_analysis_type"].append(
+                event_set["analysis_type"]
+            )
         if "occurrence_range" in event_set:
             props_to_summarize["occurrence_range"].append(event_set["occurrence_range"])
 
         if "events" in event_set:
             for event in event_set["events"]:
                 if "calculation_method" in event:
-                    props_to_summarize["calculation_method"].append(event["calculation_method"])
+                    props_to_summarize["calculation_method"].append(
+                        event["calculation_method"]
+                    )
                 if "disaster_identifiers" in event:
                     for di in event["disaster_identifiers"]:
-                        props_to_summarize["disaster_identifiers"].append(f"{di.get('id')}; {di.get('scheme')}")
+                        props_to_summarize["disaster_identifiers"].append(
+                            f"{di.get('id')}; {di.get('scheme')}"
+                        )
                 if "hazard" in event and "type" in event["hazard"]:
                     props_to_summarize["hazard_type"].append(event["hazard"]["type"])
                 if "hazard" in event and "intensity_measure" in event["hazard"]:
-                    props_to_summarize["intensity"].append(event["hazard"]["intensity_measure"])
+                    props_to_summarize["intensity"].append(
+                        event["hazard"]["intensity_measure"]
+                    )
                 if "hazard" in event and "processes" in event["hazard"]:
                     props_to_summarize["processes"].extend(event["hazard"]["processes"])
     return {
-        "calculation_method": ', '.join(sorted(set(props_to_summarize["calculation_method"]))),
-        "disaster_identifiers": ', '.join(sorted(set(props_to_summarize["disaster_identifiers"]))),
-        "hazard_analysis_type": ', '.join(sorted(set(props_to_summarize["hazard_analysis_type"]))),
-        "hazard_type": ', '.join(sorted(set(props_to_summarize["hazard_type"]))),
-        "intensity": ', '.join(sorted(set(props_to_summarize["intensity"]))),
-        "occurrence_range": ', '.join(sorted(set(props_to_summarize["occurrence_range"]))),
-        "processes": ', '.join(sorted(set(props_to_summarize["processes"])))
+        "calculation_method": ", ".join(
+            sorted(set(props_to_summarize["calculation_method"]))
+        ),
+        "disaster_identifiers": ", ".join(
+            sorted(set(props_to_summarize["disaster_identifiers"]))
+        ),
+        "hazard_analysis_type": ", ".join(
+            sorted(set(props_to_summarize["hazard_analysis_type"]))
+        ),
+        "hazard_type": ", ".join(sorted(set(props_to_summarize["hazard_type"]))),
+        "intensity": ", ".join(sorted(set(props_to_summarize["intensity"]))),
+        "occurrence_range": ", ".join(
+            sorted(set(props_to_summarize["occurrence_range"]))
+        ),
+        "processes": ", ".join(sorted(set(props_to_summarize["processes"]))),
     }
 
 
@@ -109,10 +129,7 @@ def make_vulnerability(vulnerability):
             relationship.append(functions["engineering_demand"].get("relationship"))
         function_type.append("engineering_demand")
 
-    props_to_summarize = {
-        "dimension": [],
-        "unit": []
-    }
+    props_to_summarize = {"dimension": [], "unit": []}
 
     if "cost" in vulnerability:
         for cost in vulnerability["cost"]:
@@ -123,18 +140,18 @@ def make_vulnerability(vulnerability):
 
     return {
         # required; throw if missing
-        "approach": ', '.join(sorted(set(approach))),
+        "approach": ", ".join(sorted(set(approach))),
         "base_data_type": impact.get("base_data_type"),
         "category": vulnerability.get("category"),
-        "dimension": ', '.join(sorted(set(props_to_summarize["dimension"]))),
-        "function_type": ', '.join(sorted(set(function_type))),
+        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
+        "function_type": ", ".join(sorted(set(function_type))),
         "hazard_primary": vulnerability.get("hazard_primary"),
         "intensity": vulnerability.get("intensity"),
         "metric": impact.get("metric"),
-        "relationship": ', '.join(sorted(set(relationship))),
+        "relationship": ", ".join(sorted(set(relationship))),
         "scale": vulnerability.get("spatial").get("scale"),
         "type": impact.get("type"),
-        "unit": ', '.join(sorted(set(props_to_summarize["unit"]))),
+        "unit": ", ".join(sorted(set(props_to_summarize["unit"]))),
         "impact_unit": impact.get("unit"),
         # optional
         "hazard_analysis_type": vulnerability.get("hazard_analysis_type"),
@@ -203,21 +220,25 @@ def make_loss(loss):
             props_to_summarize["vulnerability_id"].append(l["vulnerability_id"])
 
     return {
-        "dimension": ', '.join(sorted(set(props_to_summarize["dimension"]))),
-        "hazard_type": ', '.join(sorted(set(props_to_summarize["hazard_type"]))),
-        "approach": ', '.join(sorted(set(props_to_summarize["approach"]))),
-        "base_data_type": ', '.join(sorted(set(props_to_summarize["base_data_type"]))),
-        "category": ', '.join(sorted(set(props_to_summarize["category"]))),
-        "description": ', '.join(sorted(set(props_to_summarize["description"]))),
-        "exposure_id": ', '.join(sorted(set(props_to_summarize["exposure_id"]))),
-        "hazard_analysis_type": ', '.join(sorted(set(props_to_summarize["hazard_analysis_type"]))),
-        "hazard_id": ', '.join(sorted(set(props_to_summarize["hazard_id"]))),
-        "hazard_process": ', '.join(sorted(set(props_to_summarize["hazard_process"]))),
-        "impact_metric": ', '.join(sorted(set(props_to_summarize["impact_metric"]))),
-        "impact_type": ', '.join(sorted(set(props_to_summarize["impact_type"]))),
-        "impact_unit": ', '.join(sorted(set(props_to_summarize["impact_unit"]))),
-        "type": ', '.join(sorted(set(props_to_summarize["type"]))),
-        "vulnerability_id": ', '.join(sorted(set(props_to_summarize["vulnerability_id"]))),
+        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
+        "hazard_type": ", ".join(sorted(set(props_to_summarize["hazard_type"]))),
+        "approach": ", ".join(sorted(set(props_to_summarize["approach"]))),
+        "base_data_type": ", ".join(sorted(set(props_to_summarize["base_data_type"]))),
+        "category": ", ".join(sorted(set(props_to_summarize["category"]))),
+        "description": ", ".join(sorted(set(props_to_summarize["description"]))),
+        "exposure_id": ", ".join(sorted(set(props_to_summarize["exposure_id"]))),
+        "hazard_analysis_type": ", ".join(
+            sorted(set(props_to_summarize["hazard_analysis_type"]))
+        ),
+        "hazard_id": ", ".join(sorted(set(props_to_summarize["hazard_id"]))),
+        "hazard_process": ", ".join(sorted(set(props_to_summarize["hazard_process"]))),
+        "impact_metric": ", ".join(sorted(set(props_to_summarize["impact_metric"]))),
+        "impact_type": ", ".join(sorted(set(props_to_summarize["impact_type"]))),
+        "impact_unit": ", ".join(sorted(set(props_to_summarize["impact_unit"]))),
+        "type": ", ".join(sorted(set(props_to_summarize["type"]))),
+        "vulnerability_id": ", ".join(
+            sorted(set(props_to_summarize["vulnerability_id"]))
+        ),
     }
 
 
@@ -267,10 +288,13 @@ def make_dataset_frontmatter_v02(dataset):
     }
 
     if payload["spatial"].get("scale") == "global":
-        if "countries" in payload["spatial"] and type(payload["spatial"]["countries"]) == list:
-            payload["spatial"]["countries"].append('GLO')
+        if (
+            "countries" in payload["spatial"]
+            and type(payload["spatial"]["countries"]) == list
+        ):
+            payload["spatial"]["countries"].append("GLO")
         else:
-            payload["spatial"]["countries"] = ['GLO']
+            payload["spatial"]["countries"] = ["GLO"]
     return payload
 
 
@@ -278,18 +302,18 @@ def make_dataset_frontmatter_v02(dataset):
 def make_attribution(attribution_or_attributions, role=None):
     if role is not None:
         attributions = attribution_or_attributions
-        attribution = next((a for a in attributions if a['role'] == role), None)
+        attribution = next((a for a in attributions if a["role"] == role), None)
         if attribution is None:
             return None
     else:
         attribution = attribution_or_attributions
-    
-    entity = attribution['entity']
+
+    entity = attribution["entity"]
     payload = {
-        "email": entity['email'],
+        "email": entity["email"],
         "id": attribution["id"],
-        "name": entity['name'],
-        "url": entity.get('url'),
+        "name": entity["name"],
+        "url": entity.get("url"),
     }
 
     if role is None:
@@ -299,9 +323,12 @@ def make_attribution(attribution_or_attributions, role=None):
 
     return payload
 
+
 def make_extra_attributions(attributions):
     main_attributions = ["contact_point", "creator", "publisher"]
-    return [make_attribution(a) for a in attributions if a['role'] not in main_attributions]
+    return [
+        make_attribution(a) for a in attributions if a["role"] not in main_attributions
+    ]
 
 
 def make_hazard_v03(hazard):
@@ -313,7 +340,7 @@ def make_hazard_v03(hazard):
         "calculation_method": [],  # found on event, event_set
         "disaster_identifiers": [],  # found on event
         "hazard_analysis_type": [],  # found on event_set as analysis_type
-        "hazard_type":[],  # found on event_set as type
+        "hazard_type": [],  # found on event_set as type
         "intensity": [],  # found on hazard, event.hazard as intensity_measure
         "occurrence_range": [],  # found on event_set
         "processes": [],  # found on event_set, event_set.hazard
@@ -322,9 +349,13 @@ def make_hazard_v03(hazard):
 
     for event_set in hazard["event_sets"]:
         if "analysis_type" in event_set:
-            props_to_summarize["hazard_analysis_type"].append(event_set["analysis_type"])
+            props_to_summarize["hazard_analysis_type"].append(
+                event_set["analysis_type"]
+            )
         if "calculation_method" in event_set:
-            props_to_summarize["calculation_method"].append(event_set["calculation_method"])
+            props_to_summarize["calculation_method"].append(
+                event_set["calculation_method"]
+            )
         if "intensity_measure" in event_set:
             props_to_summarize["intensity"].append(event_set["intensity_measure"])
         if "occurrence_range" in event_set:
@@ -340,17 +371,27 @@ def make_hazard_v03(hazard):
             for event in event_set["events"]:
                 if "disaster_identifiers" in event:
                     for di in event["disaster_identifiers"]:
-                        props_to_summarize["disaster_identifiers"].append(f"{di.get('id')}; {di.get('scheme')}")
+                        props_to_summarize["disaster_identifiers"].append(
+                            f"{di.get('id')}; {di.get('scheme')}"
+                        )
 
     return {
-        "calculation_method": ', '.join(sorted(set(props_to_summarize["calculation_method"]))),
-        "disaster_identifiers": ', '.join(sorted(set(props_to_summarize["disaster_identifiers"]))),
-        "hazard_analysis_type": ', '.join(sorted(set(props_to_summarize["hazard_analysis_type"]))),
-        "hazard_type": ', '.join(sorted(set(props_to_summarize["hazard_type"]))),
-        "intensity": ', '.join(sorted(set(props_to_summarize["intensity"]))),
-        "occurrence_range": ', '.join(sorted(set(props_to_summarize["occurrence_range"]))),
-        "processes": ', '.join(sorted(set(props_to_summarize["processes"]))),
-        "seasonality": ', '.join(sorted(set(props_to_summarize["seasonality"])))
+        "calculation_method": ", ".join(
+            sorted(set(props_to_summarize["calculation_method"]))
+        ),
+        "disaster_identifiers": ", ".join(
+            sorted(set(props_to_summarize["disaster_identifiers"]))
+        ),
+        "hazard_analysis_type": ", ".join(
+            sorted(set(props_to_summarize["hazard_analysis_type"]))
+        ),
+        "hazard_type": ", ".join(sorted(set(props_to_summarize["hazard_type"]))),
+        "intensity": ", ".join(sorted(set(props_to_summarize["intensity"]))),
+        "occurrence_range": ", ".join(
+            sorted(set(props_to_summarize["occurrence_range"]))
+        ),
+        "processes": ", ".join(sorted(set(props_to_summarize["processes"]))),
+        "seasonality": ", ".join(sorted(set(props_to_summarize["seasonality"]))),
     }
 
 
@@ -373,8 +414,14 @@ def make_period(period):
         "temporal_resolution": period.get("temporal_resolution"),
     }
 
+
 def make_exposure_v03(exposure_array):
-    return [make_exposure(exposure) for exposure in exposure_array] if exposure_array is not None else []
+    return (
+        [make_exposure(exposure) for exposure in exposure_array]
+        if exposure_array is not None
+        else []
+    )
+
 
 def make_resource_v03(resource):
     """Convert RDL v0.3 resource metadata into JKAN frontmatter"""
@@ -392,6 +439,7 @@ def make_resource_v03(resource):
         "temporal": make_period(resource.get("temporal")),
     }
 
+
 def make_dataset_frontmatter_v03(dataset):
     """Formats RDL v0.3 metadata into JKAN frontmatter for a dataset"""
 
@@ -406,9 +454,9 @@ def make_dataset_frontmatter_v03(dataset):
         "risk_data_type": dataset["risk_data_type"],
         "spatial": dataset["spatial"],
         # must include one of the following three properties
-        "contact_point": make_attribution(dataset["attributions"], 'contact_point'),
-        "creator": make_attribution(dataset["attributions"], 'creator'),
-        "publisher": make_attribution(dataset["attributions"], 'publisher'),
+        "contact_point": make_attribution(dataset["attributions"], "contact_point"),
+        "creator": make_attribution(dataset["attributions"], "creator"),
+        "publisher": make_attribution(dataset["attributions"], "publisher"),
         # optional
         "description": dataset.get("description"),
         "details": dataset.get("details"),
@@ -424,8 +472,11 @@ def make_dataset_frontmatter_v03(dataset):
     }
 
     if payload["spatial"].get("scale") == "global":
-        if "countries" in payload["spatial"] and type(payload["spatial"]["countries"]) == list:
-            payload["spatial"]["countries"].append('GLO')
+        if (
+            "countries" in payload["spatial"]
+            and type(payload["spatial"]["countries"]) == list
+        ):
+            payload["spatial"]["countries"].append("GLO")
         else:
-            payload["spatial"]["countries"] = ['GLO']
+            payload["spatial"]["countries"] = ["GLO"]
     return payload
