@@ -56,11 +56,11 @@ for (let component of components) {
     // If the component depends on datasets.json, fetch it first (once per page) and pass it
     if (component.usesDatasets) {
       getDatasets().then((datasets) => {
-        els.each((index, el) => new component.class({el: $(el), user, params, datasets})) // eslint-disable-line
+        els.each((_index, el) => new component.class({el: $(el), user, params, datasets})) // eslint-disable-line
       })
     // Otherwise simply initialize the component
     } else {
-      els.each((index, el) => new component.class({el: $(el), user, params})) // eslint-disable-line
+      els.each((_index, el) => new component.class({el: $(el), user, params})) // eslint-disable-line
     }
   }
 }
