@@ -1,0 +1,675 @@
+{
+    "datasets": [
+        {
+            "id": "https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/earthquake",
+            "title": "Earthquakes Hazard",
+            "description": "Probabilistic modelling of seismic hazard",
+            "risk_data_type": [
+                "hazard"
+            ],
+            "publisher": {
+                "name": "European Facilities for Earthquake Hazard and Risk (EFEHR)",
+                "email": "efehr.hazard@sed.ethz.ch",
+                "url": "http://www.efehr.org/"
+            },
+            "version": "1",
+            "purpose": "To support earthquake risk assessment, develop earthquake-resistant construction codes, and enable decision-making for seismic risk reduction measures across Europe.",
+            "project": "European Seismic Hazard Model 2020 (ESHM20)",
+            "details": "Probabilistic seismic hazard maps for Europe provide gridded datasets of Peak Ground Acceleration (PGA) levels based on comprehensive geological and seismological data. The maps express the spatial distribution of ground shaking for specific exceedance probabilities (e.g., 10% probability of exceedance in 50 years, corresponding to a return period of approximately 475 years). The probabilistic approach considers all potential earthquakes that may affect a given location, along with various models of seismic wave propagation and ground motion, within a statistical framework. The hazard assessments integrate knowledge of past earthquakes, regional geology, and tectonic settings to model future earthquake occurrence. Cell values indicate PGA levels (typically in m/s² or g). The maps are used by engineers to derive codes for earthquake-resistant construction and by decision-makers to develop appropriate measures to reduce earthquake impacts. The dataset is provided by EFEHR (European Facilities for Earthquake Hazard and Risk). NOTE: Seismic hazard assessments require regular review and updates as new data and scientific knowledge become available.",
+            "spatial": {
+                "scale": "regional",
+                "gazetteer_entries": [
+                    {
+                        "id": "Location_1",
+                        "scheme": "GEONAMES",
+                        "description": "Europe",
+                        "uri": "https://www.geonames.org/6255148/europe.html"
+                    }
+                ]
+            },
+            "license": "CC-BY-SA-4.0",
+            "contact_point": {
+                "name": "EFEHR Office",
+                "email": "efehr.hazard@sed.ethz.ch",
+                "url": "http://www.efehr.org/start/"
+            },
+            "creator": {
+                "name": "European Facilities for Earthquake Hazard and Risk (EFEHR)",
+                "email": "efehr.hazard@sed.ethz.ch",
+                "url": "http://www.efehr.org/start/"
+            },
+            "attributions": [
+                {
+                    "id": "Entity_1",
+                    "entity": {
+                        "name": "European Facilities for Earthquake Hazard and Risk (EFEHR)",
+                        "email": "efehr.hazard@sed.ethz.ch",
+                        "url": "http://www.efehr.org/start/"
+                    },
+                    "role": "resource_provider"
+                }
+            ],
+            "sources": [
+                {
+                    "id": "Source_1",
+                    "name": "European Facilities for Earthquake Hazard and Risk (EFEHR)",
+                    "url": "http://www.efehr.org/start/",
+                    "type": "model",
+                    "component": "hazard"
+                }
+            ],
+            "referenced_by": [
+                {
+                    "id": "Ref_1",
+                    "name": "Probabilistic modelling of seismic hazard",
+                    "author_names": [
+                        "Laurentiu Danciu",
+                        "Shyam Nandan",
+                        "Celso Reyes",
+                        "Roberto Basili",
+                        "Graeme Weatherill",
+                        "Celine Beauval",
+                        "Andrea Rovida",
+                        "Susana Vilanova",
+                        "Karin Sesetyan",
+                        "Pierre-Yves Bard",
+                        "Fabrice Cotton",
+                        "Stefan Wiemer",
+                        "Domenico Giardini"
+                    ],
+                    "date_published": "2021-01-01",
+                    "url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "doi": "https://doi.org/10.12686/a15"
+                }
+            ],
+            "resources": [
+                {
+                    "id": "effects_intensity",
+                    "title": "Effects (EMS-98) – Intensity exceedance probabilities",
+                    "description": "Parent for layers like effects_intensity{I}plus_{N}yr_{local|solid}. Maps show the probability that shaking of EMS-98 intensity ≥{I} occurs at least once within {N} years (PoE in N years). Site class: “local” = local soil amplification; “solid” = rock site, typically VS30≈600 m/s. Examples: intensity thresholds 4/7/8 and spans 1/50/100 years; derived from SUIhaz2015 median.",
+                    "media_type": "image/tiff",
+                    "format": "website",
+                    "spatial_resolution": 1000,
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&LAYERS=hmap481&VERSION=1.1.1"
+                },
+                {
+                    "id": "hazard_sa",
+                    "title": "Hazard – Spectral Acceleration (SA) at frequency",
+                    "description": "Parent for layers like hazard_{f}hz_{ARP}yr. Maps show spectral acceleration (SA) at frequency {f} Hz expected with a specified probability of exceedance over an average return period {ARP} years (e.g., 72, 475, 975, 2475, 4975, 10000 yr). Frequencies include 0.25, 0.33, 0.5, 1, 1.81, 2.5, 3.33, 4, 5, 6.66, 10, 20 Hz. Values correspond to SUIhaz2015 median.",
+                    "media_type": "image/tiff",
+                    "format": "website",
+                    "spatial_resolution": 1000,
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&LAYERS=hmap481&VERSION=1.1.1"
+                },
+                {
+                    "id": "hazard_pga",
+                    "title": "Hazard – Peak Ground Acceleration (PGA)",
+                    "description": "Parent for layers like hazard_pga_{ARP}yr. Maps show horizontal peak ground acceleration expected with a specified probability of exceedance over an average return period {ARP} years (e.g., 72, 475, 975, 2475, 4975, 10000 yr). Values correspond to SUIhaz2015 median.",
+                    "media_type": "image/tiff",
+                    "format": "website",
+                    "spatial_resolution": 1000,
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&LAYERS=hmap481&VERSION=1.1.1"
+                },
+                {
+                    "id": "hmap",
+                    "title": "Hazard – PGA map products (hmap*)",
+                    "description": "Parent for products with IDs hmap####. These are packaged hazard map rasters/tiles whose detailed parameters (e.g., PGA vs SA, ARP) are defined in the product’s own metadata. Use this parent when referencing the collection as a whole; for specifics, consult each hmap item’s metadata. Derived from SUIhaz2015 unless otherwise noted.",
+                    "media_type": "image/tiff",
+                    "format": "website",
+                    "spatial_resolution": 1000,
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&LAYERS=hmap481&VERSION=1.1.1"
+                },
+                {
+                    "id": "magnitude_radius_probability",
+                    "title": "Earthquake probability – Magnitude within radius",
+                    "description": "Parent for layers like magnitude_{M}plus_rad{R}km_{N}yr. Maps show the probability that at least one earthquake of magnitude ≥{M} occurs within radius {R} km over {N} years (PoE in N years). Typical values include M≥2.5/4.5/5/6/7; radii 10/20/30/50 km; spans 1/50/100 years. Based on mean/median of SUIhaz2015 as provided.",
+                    "media_type": "image/tiff",
+                    "format": "website",
+                    "spatial_resolution": 1000,
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&LAYERS=hmap481&VERSION=1.1.1"
+                },
+                {
+                    "id": "hazard_sa_landing",
+                    "title": "Hazard – SA at frequency – Access options",
+                    "description": "Landing page with WMS and API options for spectral acceleration (SA) hazard maps.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/"
+                },
+                {
+                    "id": "hazard_sa_wms",
+                    "title": "Hazard – SA at frequency – WMS GetCapabilities",
+                    "description": "OGC WMS capabilities for SA hazard layers.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities"
+                },
+                {
+                    "id": "hazard_sa_ascii",
+                    "title": "Hazard – SA at frequency – ASCII sub-area API",
+                    "description": "ASCII table for a bbox. Provide IMT (e.g., SA[0.50s]), PoE/span, soil, aggregation; placeholders must be filled.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://appsrvr.share-eu.org:8080/share/map?id={model_id}&lon1={ll_lon}&lat1={ll_lat}&lon2={ur_lon}&lat2={ur_lat}&imt={IMT}&hmapexceedprob={poe}&hmapexceedyears={years}&soiltype={soiltype}&aggregationtype={aggtype}&aggregationlevel={agglevel}"
+                },
+                {
+                    "id": "hazard_sa_discovery",
+                    "title": "Hazard – SA at frequency – Model/Layer discovery",
+                    "description": "Resolve hmapid/hmapwms after specifying IMT & PoE/span, soil, and aggregation.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://appsrvr.share-eu.org:8080/share/model?id={model_id}&imt={IMT}&hmapexceedprob={poe}&hmapexceedyears={years}&soiltype={soiltype}&aggregationtype={aggtype}&aggregationlevel={agglevel}"
+                },
+                {
+                    "id": "hazard_pga_landing",
+                    "title": "Hazard – PGA – Access options",
+                    "description": "Landing page with WMS and API options for PGA hazard maps.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/"
+                },
+                {
+                    "id": "hazard_pga_wms",
+                    "title": "Hazard – PGA – WMS GetCapabilities",
+                    "description": "OGC WMS capabilities for PGA hazard layers.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities"
+                },
+                {
+                    "id": "hazard_pga_ascii",
+                    "title": "Hazard – PGA – ASCII sub-area API",
+                    "description": "ASCII table for a bbox. IMT=PGA plus PoE/span, soil, aggregation; placeholders must be filled.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://appsrvr.share-eu.org:8080/share/map?id={model_id}&lon1={ll_lon}&lat1={ll_lat}&lon2={ur_lon}&lat2={ur_lat}&imt=PGA&hmapexceedprob={poe}&hmapexceedyears={years}&soiltype={soiltype}&aggregationtype={aggtype}&aggregationlevel={agglevel}"
+                },
+                {
+                    "id": "hazard_pga_discovery",
+                    "title": "Hazard – PGA – Model/Layer discovery",
+                    "description": "Resolve hmapid/hmapwms for PGA after specifying PoE/span, soil, and aggregation.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://appsrvr.share-eu.org:8080/share/model?id={model_id}&imt=PGA&hmapexceedprob={poe}&hmapexceedyears={years}&soiltype={soiltype}&aggregationtype={aggtype}&aggregationlevel={agglevel}"
+                },
+                {
+                    "id": "hmap_landing",
+                    "title": "Hazard – hmap* packaged products – Access options",
+                    "description": "Landing page with WMS preview and packaged SHP downloads for hmap#### products.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/"
+                },
+                {
+                    "id": "hmap_wms",
+                    "title": "Hazard – hmap* – WMS GetCapabilities",
+                    "description": "OGC WMS capabilities (use LAYERS=hmap{hmapid} with GetMap).",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities"
+                },
+                {
+                    "id": "hmap_shp",
+                    "title": "Hazard – hmap* – SHP download (ZIP)",
+                    "description": "Direct packaged download as ESRI Shapefile ZIP. Replace {hmapid} (only files named hmap####.zip are available).",
+                    "media_type": "application/zip",
+                    "format": "shp",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrappsrvr.ethz.ch/share/staticdownload/hmap{hmapid}.zip"
+                },
+                {
+                    "id": "effects_intensity_landing",
+                    "title": "Effects (EMS-98) – Access options",
+                    "description": "Landing page for EMS-98 intensity exceedance maps (local vs rock sites).",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/"
+                },
+                {
+                    "id": "effects_intensity_wms",
+                    "title": "Effects (EMS-98) – WMS GetCapabilities",
+                    "description": "OGC WMS capabilities listing EMS-98 layers (preview/visualize).",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities"
+                },
+                {
+                    "id": "magnitude_radius_probability_landing",
+                    "title": "Earthquake probability – Magnitude within radius – Access options",
+                    "description": "Landing page for magnitude-within-radius probability maps.",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/"
+                },
+                {
+                    "id": "magnitude_radius_probability_wms",
+                    "title": "Earthquake probability – Magnitude within radius – WMS GetCapabilities",
+                    "description": "OGC WMS capabilities listing magnitude-in-radius layers (preview/visualize).",
+                    "format": "website",
+                    "coordinate_system": "EPSG:4326",
+                    "access_url": "https://hazard.efehr.org/en/web-services/hazard-map-data/",
+                    "download_url": "http://efehrmaps.ethz.ch/cgi-bin/mapserv?MAP=/var/www/mapfile/sharehazard.01.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities"
+                }
+            ],
+            "hazard": {
+                "event_sets": [
+                    {
+                        "id": "Earthquake_Hazard",
+                        "analysis_type": "probabilistic",
+                        "calculation_method": "simulated",
+                        "occurrence_range": "1/10 to 1/10000 years",
+                        "spatial": {
+                            "scale": "regional"
+                        },
+                        "hazards": [
+                            {
+                                "id": "EFEHR_Earthquake_Hazard",
+                                "type": "earthquake",
+                                "processes": [
+                                    "ground_motion"
+                                ],
+                                "intensity_measure": "PGA:g"
+                            }
+                        ],
+                        "events": [
+                            {
+                                "id": "effects_intensity",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "EMS:-"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_sa",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_pga",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "PGA:g"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hmap",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "PGA:g"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "magnitude_radius_probability",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_sa_landing",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_sa_wms",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_sa_ascii",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_sa_discovery",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_pga_landing",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "PGA:g"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_pga_wms",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "PGA:g"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_pga_ascii",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "PGA:g"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hazard_pga_discovery",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "PGA:g"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hmap_landing",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hmap_wms",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "hmap_shp",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "effects_intensity_landing",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "EMS:-"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "effects_intensity_wms",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ],
+                                    "intensity_measure": "EMS:-"
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "magnitude_radius_probability_landing",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "id": "magnitude_radius_probability_wms",
+                                "calculation_method": "simulated",
+                                "hazard": {
+                                    "id": "EFEHR_Earthquake_Hazard",
+                                    "type": "earthquake",
+                                    "processes": [
+                                        "ground_motion"
+                                    ]
+                                },
+                                "occurrence": {
+                                    "probabilistic": {
+                                        "probability": {
+                                            "span": 50
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": [
+                {
+                    "href": "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json",
+                    "rel": "describedby"
+                }
+            ]
+        }
+    ]
+}
