@@ -58,7 +58,7 @@ export function createDatasetFilters (filters) {
       conditions.push(dataset.project && slugify(dataset.project).indexOf(filters.project) !== -1)
     }
     if (filters.hazard_type) {
-      conditions.push(dataset.category.includes('Exposure') || dataset.hazard_type && slugify(dataset.hazard_type).indexOf(filters.hazard_type) !== -1)
+      conditions.push(dataset.category !== 'exposure' && dataset.hazard_type && slugify(dataset.hazard_type).indexOf(filters.hazard_type) !== -1)
     }
 
     return conditions.every(function (value) { return !! value })
