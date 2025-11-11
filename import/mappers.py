@@ -269,6 +269,7 @@ def make_dataset_frontmatter_v02(dataset):
         "contact_point": dataset["contact_point"],
         "creator": dataset["creator"],
         "dataset_id": dataset["id"],
+        "slug": dataset["id"],
         "license": dataset["license"],
         "publisher": dataset["publisher"],
         "resources": [make_resource_v02(resource) for resource in dataset["resources"]],
@@ -449,6 +450,7 @@ def make_dataset_frontmatter_v03(dataset):
         "title": dataset["title"],
         # required; throw if missing
         "dataset_id": dataset["id"],
+        "slug": dataset["id"],
         "license": dataset["license"],
         "resources": [make_resource_v03(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
