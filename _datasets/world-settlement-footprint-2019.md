@@ -6,6 +6,7 @@ contact_point:
 creator:
   name: Mattia Marconcini
 dataset_id: WSF_19
+slug: WSF_19
 description: "The World Settlement Footprint (WSF\xAE) 2019 is a 10m resolution binary\
   \ mask outlining the extent of human settlements globally derived by means of 2019\
   \ multitemporal Sentinel-1 (S1) and Sentinel-2 (S2) imagery."

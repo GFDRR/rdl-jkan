@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: T2M_nightover25.zip
+slug: T2M_nightover25.zip
 description: "Number of nights attaining a minimum temperature not dropping below\
   \ 25\xB0C. The baseline is calculated for 2001\u20132020, with projections for 2021\u2013\
   2040 and 2041\u20132060 under two climate scenarios: RCP 4.5 (moderate emissions)\

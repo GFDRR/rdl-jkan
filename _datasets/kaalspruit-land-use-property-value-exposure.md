@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: EKU-JHB_LanduseExposure.zip
+slug: EKU-JHB_LanduseExposure.zip
 description: This dataset provides a collection of land use exposure datasets for
   risk assessments within the Kaalspruit Region in Johannesburg and Ekurhuleni. It
   includes land use throughout Ekurhuleni, land use in the Kaalspruit Region of Johannesburg,

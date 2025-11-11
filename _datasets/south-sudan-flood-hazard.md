@@ -6,6 +6,7 @@ creator:
   email: mamadio@worldbank.org
   name: Mattia Amadio
 dataset_id: SSD_hzd-flood
+slug: SSD_hzd-flood
 description: River flood hazard extent (perimeter) in South Sudan derived from FATHOM
   2019 for RP 5, 20, 100, 250 years; observed extent of 2019 flood from remote sensing.
 details: null

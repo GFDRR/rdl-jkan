@@ -6,6 +6,7 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_airport
+slug: CA_SFRARR_exp_airport
 description: Collection of airport location and extent.
 details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accelerating
   Risk Reduction in Central Asia'' Program. (https://www.gfdrr.org/en/program/SFRARR-Central-Asia).

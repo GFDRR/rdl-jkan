@@ -5,6 +5,7 @@ contact_point:
 creator:
   name: Gabriele Coccia
 dataset_id: CA_SFRARR_FL_scenarios
+slug: CA_SFRARR_FL_scenarios
 description: 'Fluvial flood hazard map for the historical scenario of the Hamadoni
   flood on the Panj River (Tajikistan, June-July 2005) and realistic scenarios for
   100 years return period. '

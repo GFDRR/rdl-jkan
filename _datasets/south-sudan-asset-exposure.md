@@ -6,6 +6,7 @@ creator:
   email: mamadio@worldbank.org
   name: Mattia Amadio
 dataset_id: SSD_exp-asset
+slug: SSD_exp-asset
 description: Collection of exposure data from Open Street Map, OCHA and World Bank,
   representing location and type of settlments, land use, buildings, health facilities
   and roads.

@@ -6,6 +6,7 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_res_projected
+slug: CA_SFRARR_exp_res_projected
 description: Regional layer of current residential buildings in Central Asia and projected
   (2080) residential exposure.
 details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accelerating
