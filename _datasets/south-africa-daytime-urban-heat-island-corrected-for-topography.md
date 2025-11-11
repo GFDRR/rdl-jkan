@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: T2M_daily_mean_max_topography.zip
+slug: T2M_daily_mean_max_topography.zip
 description: "Daytime Urban Heat Island corrected for topography. The baseline is\
   \ calculated for 2001\u20132020, with projections for 2021\u20132040 and 2041\u2013\
   2060 under two climate scenarios: RCP 4.5 (moderate emissions) and RCP 8.5 (high\

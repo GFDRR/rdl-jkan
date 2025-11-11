@@ -6,6 +6,7 @@ creator:
   name: VITO
   url: https://vito.be/en
 dataset_id: VITO_WBGT
+slug: VITO_WBGT
 description: "Extreme Heat hazard described by the daily maximum Wet Bulb Globe Temperature\
   \ (WBGT \xB0C) for three return period scenarios."
 details: "The WBGT is derived from global daily maximum air temperature contained\

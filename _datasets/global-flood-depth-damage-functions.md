@@ -5,6 +5,7 @@ contact_point:
 creator:
   name: Huizinga, J.
 dataset_id: https://publications.jrc.ec.europa.eu/repository/handle/JRC105688
+slug: https://publications.jrc.ec.europa.eu/repository/handle/JRC105688
 description: This dataset contains damage curves depicting fractional damage function
   of water depth as well as maximum damage values for a variety of assets and land
   use classes.

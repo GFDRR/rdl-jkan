@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: EKU-JHB_InformalSettlements.zip
+slug: EKU-JHB_InformalSettlements.zip
 description: This dataset provides the location and details of the informal settlements
   exposed to flooding and other hazards within the Kaalspruit Region in Johannesburg
   and Ekurhuleni.

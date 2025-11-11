@@ -10,6 +10,7 @@ creator:
   name: FAO
   url: https://www.fao.org/
 dataset_id: GLOBAL_AGRICULTURAL__35TR
+slug: GLOBAL_AGRICULTURAL__35TR
 description: The Agricultural Stress Index (ASI) produced by FAO depicts the frequency
   of severe drought affecting crop areas by means of remote-sensed Vegetation Health
   Index (VHI). FAO provides decadal, monthly and annual drought frequency over the

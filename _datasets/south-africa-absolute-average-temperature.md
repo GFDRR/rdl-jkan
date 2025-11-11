@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: T2M_mean.zip
+slug: T2M_mean.zip
 description: "Absolute average temperature. The baseline is calculated for 2001\u2013\
   2020, with projections for 2021\u20132040 and 2041\u20132060 under two climate scenarios:\
   \ RCP 4.5 (moderate emissions) and RCP 8.5 (high emissions)."

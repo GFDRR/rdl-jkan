@@ -6,6 +6,7 @@ creator:
   email: sadhana.nirandjan@vu.nl
   name: Sadhana Nirandjan
 dataset_id: GLB-CI
+slug: GLB-CI
 description: The spatially-explicit harmonized global dataset of critical infrastructure
   (CI) contains data on the amount of infrastructure per infrastructure type and the
   Critical Infrastructure Spatial Index (CISI)
