@@ -34,7 +34,7 @@ export function createDatasetFilters (filters) {
   return function (dataset) {
     const conditions = []
     if (filters.category) {
-      conditions.push(dataset.category && slugify(dataset.category).indexOf(filters.category) !== -1)
+      conditions.push(dataset.category && !!dataset.category.find(dc => filters.category.indexOf(slugify(dc)) !== -1))
     }
     if (filters.geo_coverage) {
       // for multi-country data sets, search for country name against joined string
