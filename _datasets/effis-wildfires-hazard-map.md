@@ -105,6 +105,34 @@ risk_data_type:
 schema: rdl-02
 slug: rdls_hzd-jrc_drmkc_wildfires
 spatial:
+  countries:
+  - AUT
+  - BEL
+  - BGR
+  - HRV
+  - CYP
+  - CZE
+  - DNK
+  - EST
+  - FIN
+  - FRA
+  - DEU
+  - GRC
+  - HUN
+  - IRL
+  - ITA
+  - LVA
+  - LTU
+  - LUX
+  - MLT
+  - NLD
+  - POL
+  - PRT
+  - ROU
+  - SVK
+  - SVN
+  - ESP
+  - SWE
   gazetteer_entries:
   - description: Europe
     id: Location_1
