@@ -37,17 +37,16 @@ export default class {
         const filters = createDatasetFilters(pick(params, ['organization']))
         const filteredDatasets = filter(datasetsInCat, filters)
         const categorySlug = slugify(category)
-        const isHazardTypeSelected = !!params.hazard_type
-        const isExposure = categorySlug === 'exposure'
-        const selected = params.category && params.category === categorySlug
-        const itemParams = selected ? omit(params, 'category') : defaults({category: categorySlug}, params)
+        const selectedCategoryFilters = (params.category && params.category.split(',')) || []
+        const selected = params.category && params.category.indexOf(categorySlug) !== -1
+        const categoryParams = selected ? selectedCategoryFilters.filter(cf => cf !== categorySlug) : selectedCategoryFilters.concat(categorySlug)
+        const itemParams =  defaults({category: categoryParams.join(',')}, params)
         return {
           title: category,
           url: '?' + $.param(itemParams),
           count: filteredDatasets.length,
           unfilteredCount: datasetsInCat.length,
           selected: selected,
-          disabled: isHazardTypeSelected && isExposure
         }
       })
       .orderBy('unfilteredCount', 'desc')
