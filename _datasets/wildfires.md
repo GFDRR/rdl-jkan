@@ -105,6 +105,34 @@ risk_data_type:
 schema: rdl-02
 slug: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/wildfire_effis
 spatial:
+  countries:
+  - AUT
+  - BEL
+  - BGR
+  - HRV
+  - CYP
+  - CZE
+  - DNK
+  - EST
+  - FIN
+  - FRA
+  - DEU
+  - GRC
+  - HUN
+  - IRL
+  - ITA
+  - LVA
+  - LTU
+  - LUX
+  - MLT
+  - NLD
+  - POL
+  - PRT
+  - ROU
+  - SVK
+  - SVN
+  - ESP
+  - SWE
   gazetteer_entries:
   - description: Europe
     id: Location_1
