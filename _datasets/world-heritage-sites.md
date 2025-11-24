@@ -7,7 +7,7 @@ creator:
   email: wh-gis@unesco.org
   name: World Heritage Sites
   url: https://whc.unesco.org/
-dataset_id: rdls_exp-jrc_drmkc_worldheritagesites
+dataset_id: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/world_heritage_sites
 description: The World Heritage List includes 1223 properties forming part of the
   cultural and natural heritage which the World Heritage Committee considers as having
   outstanding universal value.
@@ -46,7 +46,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-02
-slug: rdls_exp-jrc_drmkc_worldheritagesites
+slug: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/world_heritage_sites
 spatial:
   countries:
   - GLO
