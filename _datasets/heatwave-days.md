@@ -6,8 +6,8 @@ creator:
   email: briley@worldbank.org
   name: GFDRR
   url: https://www.gfdrr.org
-dataset_id: Heatwave_days.zip
-slug: Heatwave_days.zip
+dataset_id: rdls_hzd-VITO_ZAF
+slug: rdls_hzd-VITO_ZAF
 description: "Number of heatwave days per year calculated following the definition\
   \ of the South African Weather Service, where the maximum temperature at a particular\
   \ town is expected to meet or exceed 5 degrees C above the average maximum temperature\
