@@ -6,8 +6,8 @@ creator:
   email: briley@worldbank.org
   name: GFDRR
   url: https://www.gfdrr.org
-dataset_id: GP_PopulationExposure.zip
-slug: GP_PopulationExposure.zip
+dataset_id: rdls_exp-PopulationExposure_ZAF
+slug: rdls_exp-PopulationExposure_ZAF
 description: This dataset provides the population estimates for Johannesburg, Tshwane,
   and Ekurhuleni for 2020 and 2030.
 details: This datasets form part of the initial analysis to understand the exposure
