@@ -5,7 +5,7 @@ contact_point:
 creator:
   name: CIMA
   url: https://www.cimafoundation.org
-dataset_id: CDRI_FL
+dataset_id: rdls_hzd-CDRI-FL
 description: Datasets containing probabilistic analysis of river flood maximum water
   depth (m) covering historical and future projections.
 details: The hydrological model used is the Continuum model (Silvestro et al. 2013
@@ -29,7 +29,7 @@ hazard:
   processes: fluvial_flood
 license: CC-BY-4.0
 loss: null
-project: Global Infrastructure Risk Model and Resilience Index (GIRI)
+project: GIRI - Global Infrastructure Risk Model and Resilience Index
 publisher:
   name: UNEP
   url: https://giri.unepgrid.ch/map
