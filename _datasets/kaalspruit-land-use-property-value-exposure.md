@@ -7,7 +7,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: rdls_exp-LanduseExposure_ZAF
-slug: rdls_exp-LanduseExposure_ZAF
 description: This dataset provides a collection of land use exposure datasets for
   risk assessments within the Kaalspruit Region in Johannesburg and Ekurhuleni. It
   includes land use throughout Ekurhuleni, land use in the Kaalspruit Region of Johannesburg,
@@ -34,7 +33,7 @@ publisher:
 purpose: To assess land use and property value exposure to flooding and other hazards
   in the Kaalspruit River Catchment.
 resources:
-- coordinate_system: 'EPSG: 4326'
+- coordinate_system: EPSG:4326
   description: 'This dataset provides the classification of land use types throughout
     the Ekurhuleni Metropolitan Area. It categorises land use into agriculture, public
     and social services, industrial, landfill sites, mining, mixed use, open spaces,
@@ -44,7 +43,7 @@ resources:
   id: '0'
   spatial_resolution: null
   title: Ekurhuleni_Landuse
-- coordinate_system: 'EPSG: 4326'
+- coordinate_system: EPSG:4326
   description: "This dataset provides the classification of land use types and corresponding\
     \ property values within the Kaalspruit Region of the Ekurhuleni Metropolitan\
     \ Area. It categorises land use into agriculture, business, community and social\
@@ -56,7 +55,7 @@ resources:
   id: '1'
   spatial_resolution: null
   title: Ekurhuleni_Landuse&PropertyValue_Kaalspruit
-- coordinate_system: 'EPSG: 4326'
+- coordinate_system: EPSG:4326
   description: This dataset provides the classification of land use types within the
     Kaalspruit Region of the Johannesburg Metropolitan Area. It categorises land use
     into agriculture, business, community and educational facilities, industrial,
@@ -69,6 +68,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-02
+slug: rdls_exp-LanduseExposure_ZAF
 spatial:
   bbox:
   - 28.0666347539868
