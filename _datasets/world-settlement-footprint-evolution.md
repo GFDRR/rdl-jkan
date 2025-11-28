@@ -6,6 +6,7 @@ contact_point:
 creator:
   name: Mattia Marconcini
 dataset_id: WSF_evo
+slug: WSF_evo
 description: "The World Settlement Footprint (WSF\xAE) Evolution is a 30m resolution\
   \ dataset outlining the global settlement extent on a yearly basis from 1985 to\
   \ 2015."

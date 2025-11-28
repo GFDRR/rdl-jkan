@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: T2M_dayover25_duetourban.zip
+slug: T2M_dayover25_duetourban.zip
 description: "Annual number of days attaining a maximum temperature > 25\xB0C that\
   \ are caused by urban canopy. The baseline is calculated for 2001\u20132020, with\
   \ projections for 2021\u20132040 and 2041\u20132060 under two climate scenarios:\

@@ -6,6 +6,7 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_infra
+slug: CA_SFRARR_exp_infra
 description: Regional layer of power and communications infrastructure in Central
   Asia. The dataset has been developed based on infrastructure data collected from
   global/regional layers and based on local data.

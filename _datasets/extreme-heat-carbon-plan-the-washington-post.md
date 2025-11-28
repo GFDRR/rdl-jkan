@@ -7,6 +7,7 @@ creator:
   name: Carbon Plan
   url: https://carbonplan.org/
 dataset_id: HS_cp
+slug: HS_cp
 description: The final output dataset includes historical and future estimates of
   WBGT in the shade and in the sun for ~15,300 cities and ~24,000 climatically-similar
   regions around the world. The full analysis includes 26 global climate models (GCMs)

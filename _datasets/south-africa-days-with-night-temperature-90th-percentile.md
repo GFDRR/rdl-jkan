@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: TN90P.zip
+slug: TN90P.zip
 description: "Annual number of days when the night temperature > 90th percentile.\
   \ The baseline is calculated for 2001\u20132020, with projections for 2021\u2013\
   2040 and 2041\u20132060 under two climate scenarios: RCP 4.5 (moderate emissions)\

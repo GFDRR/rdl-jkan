@@ -5,6 +5,7 @@ contact_point:
 creator:
   name: Paolo Bazzuro
 dataset_id: CA_SFRARR_EQ_loss
+slug: CA_SFRARR_EQ_loss
 description: 'Seismic risk estimates, including return period loss estimates, annual
   average loss estimates and event loss tables '
 details: null

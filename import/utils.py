@@ -4,16 +4,15 @@ import unicodedata
 import logging
 from pathlib import Path
 
-
-import config
-
 import yaml
 
 
 logging.basicConfig(
-                    format='%(asctime)s %(levelname)s %(message)s',
-                    datefmt='%Y-%m-%d %H:%M:%S',
-                    level=logging.DEBUG)
+    format="%(asctime)s %(levelname)s %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    level=logging.DEBUG,
+)
+
 
 # Copied Django's slugify from https://github.com/django/django/blob/main/django/utils/text.py
 # It's somewhat overkill for our case (which is just generating valid filenames), but it's relatively
@@ -40,7 +39,7 @@ def slugify(value, allow_unicode=False):
 
 def write_frontmatter(metadata, output_path):
     filename = (
-            slugify(metadata.get("name", metadata["title"]), allow_unicode=True) + ".md"
+        slugify(metadata.get("name", metadata["title"]), allow_unicode=True) + ".md"
     )
 
     with open((Path(output_path) / filename), "w") as outfile:
