@@ -6,6 +6,7 @@ creator:
   name: CIMA
   url: https://www.cimafoundation.org
 dataset_id: CDRI_FL
+slug: CDRI_FL
 description: Datasets containing probabilistic analysis of river flood maximum water
   depth (m) covering historical and future projections.
 details: The hydrological model used is the Continuum model (Silvestro et al. 2013

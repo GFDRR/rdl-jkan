@@ -6,6 +6,7 @@ creator:
   email: mamadio@worldbank.org
   name: Mattia Amadio
 dataset_id: SSD_hzd-drought
+slug: SSD_hzd-drought
 description: Drought hazard for South Sudan measured as Agricultural Stress Index
   (ASI) over a period of 30 years.
 details: null

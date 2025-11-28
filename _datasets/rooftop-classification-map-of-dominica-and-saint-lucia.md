@@ -8,6 +8,7 @@ creator:
   name: Isabelle Tingzon
   url: https://issa-tingzon.github.io/
 dataset_id: ortho_OECS
+slug: ortho_OECS
 description: Building footprint polygons in Dominica and Saint Lucia with corresponding
   roof type and roof material attributes predicted from RGB orthophotos taken in 2018-2019,
   in the aftermath of Hurricane Maria.

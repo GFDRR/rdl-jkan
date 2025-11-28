@@ -5,6 +5,7 @@ contact_point:
 creator:
   name: Paolo Bazzuro
 dataset_id: CA_SFRARR_FL_loss
+slug: CA_SFRARR_FL_loss
 description: Fluvial flood risk estimates, including return period loss estimates,
   annual average loss estimates and event loss tables.
 details: 'Data from the Strengthening Financial Resilience and Accelerating Risk Reduction

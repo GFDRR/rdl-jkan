@@ -6,6 +6,7 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp
+slug: CA_SFRARR_exp
 description: Central Asia exposure dataset - access to building, population, infrastructure,
   agriculture data for risk analytics.
 details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accelerating

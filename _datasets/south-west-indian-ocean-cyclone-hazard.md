@@ -6,6 +6,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: SWIO_hzd-strong_wind
+slug: SWIO_hzd-strong_wind
 description: Strong Wind hazard caused by tropical cyclones measured as the maximum
   one-minute sustained wind speed (kph) at 10 meters above the ground surface.
 details: This data set was produced with financial support from the European Union

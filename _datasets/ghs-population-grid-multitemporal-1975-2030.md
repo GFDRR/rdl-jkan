@@ -7,6 +7,7 @@ creator:
   name: EC Joint Research Centre
   url: https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php
 dataset_id: GHSL_POP
+slug: GHSL_POP
 description: 'The spatial raster dataset depicts the distribution of residential population,
   expressed as the number of people per cell. Residential population estimates between
   1975 and 2020 in 5-year intervals and projections to 2025 and 2030 derived from

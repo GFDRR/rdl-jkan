@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: WSDI.zip
+slug: WSDI.zip
 description: "Annual number of days with at least six consecutive days when daytime\
   \ temperatues > 90th percentile. The baseline is calculated for 2001\u20132020,\
   \ with projections for 2021\u20132040 and 2041\u20132060 under two climate scenarios:\

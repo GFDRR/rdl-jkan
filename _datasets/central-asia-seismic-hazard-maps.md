@@ -5,6 +5,7 @@ contact_point:
 creator:
   name: Ettore Faga
 dataset_id: CA_SFRARR_EQ
+slug: CA_SFRARR_EQ
 description: Seismic hazard maps for 25, 50, 100, 250, 475, 500, 1000 and 10,000 years
   return period.
 details: 'Data from the Strengthening Financial Resilience and Accelerating Risk Reduction
