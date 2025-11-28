@@ -22,7 +22,7 @@ import ResultsHeader from "../templates/results-header";
 import TmplDatasetItem from "../templates/rdl-datasets-item";
 import { queryByHook, setContent, createDatasetFilters } from "../util";
 
-const PATH_TO_VECTORS = "../../../vectors.json";
+const PATH_TO_VECTORS = "../../../search/vectors.json";
 
 export default class {
   constructor(opts) {
