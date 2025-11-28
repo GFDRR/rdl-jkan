@@ -6,7 +6,7 @@ creator:
   email: briley@worldbank.org
   name: GFDRR
   url: https://www.gfdrr.org
-dataset_id: GP_PopulationExposure.zip
+dataset_id: rdls_exp-PopulationExposure_ZAF
 description: This dataset provides the population estimates for Johannesburg, Tshwane,
   and Ekurhuleni for 2020 and 2030.
 details: This datasets form part of the initial analysis to understand the exposure
@@ -31,7 +31,7 @@ publisher:
 purpose: To assess population exposure to flooding and other hazards in the Kaalspruit
   River Catchment.
 resources:
-- coordinate_system: 'EPSG: 4326'
+- coordinate_system: EPSG:4326
   description: This dataset provides population estimates for Johannesburg, Tshwane,
     and Ekurhuleni for 2020.
   download_url: null
@@ -39,7 +39,7 @@ resources:
   id: '0'
   spatial_resolution: null
   title: Population Exposure 2020
-- coordinate_system: 'EPSG: 4326'
+- coordinate_system: EPSG:4326
   description: This dataset provides population estimates for Johannesburg, Tshwane,
     and Ekurhuleni for 2030.
   download_url: null
@@ -50,6 +50,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-02
+slug: rdls_exp-PopulationExposure_ZAF
 spatial:
   bbox:
   - 27.717764811559064

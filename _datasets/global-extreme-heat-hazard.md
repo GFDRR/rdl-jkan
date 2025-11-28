@@ -5,7 +5,7 @@ contact_point:
 creator:
   name: VITO
   url: https://vito.be/en
-dataset_id: VITO_WBGT
+dataset_id: rdls_hzd-VITO_WBGT
 description: "Extreme Heat hazard described by the daily maximum Wet Bulb Globe Temperature\
   \ (WBGT \xB0C) for three return period scenarios."
 details: "The WBGT is derived from global daily maximum air temperature contained\
@@ -49,6 +49,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: rdls_hzd-VITO_WBGT
 spatial:
   countries:
   - GLO

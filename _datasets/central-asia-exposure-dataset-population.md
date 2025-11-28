@@ -6,6 +6,7 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_pop
+slug: CA_SFRARR_exp_pop
 description: Regional layer of population distribution in Central Asia.
 details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accelerating
   Risk Reduction in Central Asia'' Program. (https://www.gfdrr.org/en/program/SFRARR-Central-Asia).

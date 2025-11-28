@@ -7,6 +7,7 @@ creator:
   name: EC Joint Research Centre
   url: https://human-settlement.emergency.copernicus.eu/ghs_buS2023.php
 dataset_id: GHSL_BU-S
+slug: GHSL_BU-S
 description: The spatial raster dataset depicts the distribution of the built-up (BU)
   surfaces estimates between 1975 and 2030 in 5 years intervals and two functional
   use components a) the total BU surface and b) the non-residential (NRES) BU surface.

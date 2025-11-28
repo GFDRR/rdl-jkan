@@ -6,6 +6,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: AFG_hzd-earthquake
+slug: AFG_hzd-earthquake
 description: Earthquake hazard map representing Peak ground acceleration (PGA-g) for
   seven return period scenarios.
 details: "To better understand natural hazard and disaster risk, the World Bank and\

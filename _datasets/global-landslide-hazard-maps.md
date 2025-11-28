@@ -6,6 +6,7 @@ creator:
   name: ARUP
   url: https://www.arup.com
 dataset_id: ARUP-LS
+slug: ARUP-LS
 description: The Global Landslide hazard map is a gridded dataset of landslide hazard
   produced at the global scale. Landslides happen around the world and have devastating
   impacts on people and the built environment. To better understand the spatial and

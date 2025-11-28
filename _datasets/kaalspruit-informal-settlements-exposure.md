@@ -6,7 +6,7 @@ creator:
   email: briley@worldbank.org
   name: GFDRR
   url: https://www.gfdrr.org
-dataset_id: EKU-JHB_InformalSettlements.zip
+dataset_id: rdls_exp-InformalSettlements_ZAF
 description: This dataset provides the location and details of the informal settlements
   exposed to flooding and other hazards within the Kaalspruit Region in Johannesburg
   and Ekurhuleni.
@@ -32,7 +32,7 @@ publisher:
 purpose: To assess informal settlements' exposure to flooding and other hazards in
   the Kaalspruit River Catchment.
 resources:
-- coordinate_system: 'EPSG: 4326'
+- coordinate_system: EPSG:4326
   description: This dataset provides the location and details of the informal settlements
     exposed to impacts within the Kaalspruit Region in the Ekurhuleni Metropolitan
     Area.
@@ -41,7 +41,7 @@ resources:
   id: '0'
   spatial_resolution: null
   title: Ekurhuleni_InformalSettlement_Kaalspruit
-- coordinate_system: 'EPSG: 4326'
+- coordinate_system: EPSG:4326
   description: This dataset provides the location and details of the informal settlements
     exposed to impacts within the Kaalspruit Region in the Johannesburg Metropolitan
     Area.
@@ -53,6 +53,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-02
+slug: rdls_exp-InformalSettlements_ZAF
 spatial:
   bbox:
   - 28.17515681205276

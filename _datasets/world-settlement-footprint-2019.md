@@ -5,7 +5,7 @@ contact_point:
   url: https://geoservice.dlr.de/web/datasets/wsf_2019
 creator:
   name: Mattia Marconcini
-dataset_id: WSF_19
+dataset_id: rdls_exp-WSF_19
 description: "The World Settlement Footprint (WSF\xAE) 2019 is a 10m resolution binary\
   \ mask outlining the extent of human settlements globally derived by means of 2019\
   \ multitemporal Sentinel-1 (S1) and Sentinel-2 (S2) imagery."
@@ -51,6 +51,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-02
+slug: rdls_exp-WSF_19
 spatial:
   countries:
   - GLO

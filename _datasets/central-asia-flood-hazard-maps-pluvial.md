@@ -5,6 +5,7 @@ contact_point:
 creator:
   name: Gabriele Coccia
 dataset_id: CA_SFRARR_PL
+slug: CA_SFRARR_PL
 description: Pluvial flood hazard maps for 5,10,20,50,100,200,500,1,000 years return
   time and 6 hours duration, i.e., a map for each return time where each pixel represents
   the maximum water depth.
