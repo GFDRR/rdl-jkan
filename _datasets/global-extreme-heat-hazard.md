@@ -2,21 +2,26 @@
 contact_point:
   email: mamadio@worldbank.org
   name: Mattia Amadio
-  url: https://www.gfdrr.org/en
 creator:
-  name: Global Facility for Disaster Reduction and Recovery (GFDRR)
-  url: https://www.gfdrr.org/en
-dataset_id: rdls_hzd-jrc_drmkc_extremeheat
-description: Probabilistic modelling of extreme heat hazard
-details: "Extreme Heat hazard is classified based on an existing and widely accepted\
-  \ heat stress indicator, the Wet Bulb Globe Temperature (WBGT, in \xB0C) \u2013\
-  \ more specifically the daily maximum WGBT. The WBGT has an obvious relevance for\
-  \ human health, but it is relevant in all kinds of projects and sectors, including\
-  \ infrastructure related, as heat stress affects personnel and stakeholders, and\
-  \ therefore the design of buildings and infrastructure. Heat stress studies in the\
-  \ scientific literature that make use of the WBGT apply thresholds of 28\xB0C and\
-  \ 32\xB0C to categorise heat stress risk. The damaging intensity thresholds are\
-  \ applied following this definition of slight/low (32\xB0C) heat stress."
+  name: VITO
+  url: https://vito.be/en
+dataset_id: rdls_hzd-VITO_WBGT
+description: "Extreme Heat hazard described by the daily maximum Wet Bulb Globe Temperature\
+  \ (WBGT \xB0C) for three return period scenarios."
+details: "The WBGT is derived from global daily maximum air temperature contained\
+  \ in ERA-Interim re-analysis fields for the period 1981-2010, which is considered\
+  \ of sufficient length to provide robust climate statistics. The 0.75\xB0 lat/lon\
+  \ fields are corrected for local-scale altitude effects by means of a high-resolution\
+  \ global digital elevation model, resulting in global daily maximum WBGT fields\
+  \ at a spatial resolution of approximately 10 km. These fields are temporally smoothed\
+  \ using a 3-day filter, so as to account for the cumulative effects of prolonged\
+  \ heat. These 30-year, 10-km resolution, 3-day smoothed daily maximum WBGT values\
+  \ are then employed to fit a Generalized Extreme Value (GEV) probability distribution\
+  \ function for each grid cell of the global domain. Considering return periods of\
+  \ 5, 20, and 100 years, 10-km hazard intensity maps have been calculated for each\
+  \ of these periods. To these hazard intensity maps, threshold values of 32\xB0C,\
+  \ 28\xB0C and 25\xB0C, stemming from the scientific literature, subsequently are\
+  \ applied, resulting in a global heat risk map."
 exposure: null
 hazard:
   calculation_method: simulated
@@ -24,51 +29,32 @@ hazard:
   hazard_analysis_type: probabilistic
   hazard_type: extreme_temperature
   intensity: WBGT:c
-  occurrence_range: 1/5 to 1/100 years
+  occurrence_range: 5, 20, 100 years
   processes: extreme_heat
 license: CC0-1.0
 loss: null
-project: Development of a hazard screening protocol for Extreme Heat
+project: VITO_WBGT
 publisher:
-  name: Global Facility for Disaster Reduction and Recovery (GFDRR)
-  url: https://www.gfdrr.org/en
-purpose: To assess extreme heat hazard across regions using the Wet Bulb Globe Temperature
-  (WBGT) indicator to support human health protection, infrastructure design, and
-  heat stress risk management.
+  name: GFDRR
+  url: https://www.gfdrr.org
+purpose: null
 resources:
 - coordinate_system: EPSG:4326
-  description: "Probabilistic extreme heat hazard maps (the daily maximum of Wet Bulb\
-    \ Globe Temperature, in \xB0C) for the 5-year return period, for Global "
-  download_url: https://datacatalogfiles.worldbank.org/ddh-published/0040194/DR0050009/GLB_HS_RP5.tif
+  description: Global heat stress maps by return period (5, 20, 100 years)
+  download_url: https://datacatalog.worldbank.org/search/dataset/0040194/Global-extreme-heat-hazard
   format: geotiff
-  id: Extreme_Heat_Hazard_RP5
+  id: '0'
   spatial_resolution: 10000
-  title: Extreme Heat Hazard with 5 year Return Period
-- coordinate_system: EPSG:4326
-  description: "Probabilistic extreme heat hazard maps (the daily maximum of Wet Bulb\
-    \ Globe Temperature, in \xB0C) for the 20-year return period, for Global "
-  download_url: https://datacatalogfiles.worldbank.org/ddh-published/0040194/DR0050005/GLB_HS_RP20.tif
-  format: geotiff
-  id: Extreme_Heat_Hazard_RP20
-  spatial_resolution: 10000
-  title: Extreme Heat Hazard with 20 year Return Period
-- coordinate_system: EPSG:4326
-  description: "Probabilistic extreme heat hazard maps (the daily maximum of Wet Bulb\
-    \ Globe Temperature, in \xB0C) for the 100-year return period, for Global "
-  download_url: https://datacatalogfiles.worldbank.org/ddh-published/0040194/DR0050007/GLB_HS_RP100.tif
-  format: geotiff
-  id: Extreme_Heat_Hazard_RP100
-  spatial_resolution: 10000
-  title: Extreme Heat Hazard with 100 year Return Period
+  title: Heat stress global maps
 risk_data_type:
 - hazard
 schema: rdl-02
-slug: rdls_hzd-jrc_drmkc_extremeheat
+slug: rdls_hzd-VITO_WBGT
 spatial:
   countries:
   - GLO
   scale: global
-title: Global Extreme Heat Hazard
-version: '3'
+title: Global extreme heat hazard
+version: '2016'
 vulnerability: null
 ---

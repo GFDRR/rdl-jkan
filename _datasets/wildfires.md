@@ -7,7 +7,7 @@ creator:
   email: 'jrc-effis@ec.europa.eu '
   name: European Forest Fire Information System (EFFIS)
   url: https://forest-fire.emergency.copernicus.eu
-dataset_id: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/wildfire_effis
+dataset_id: rdls_hzd-EFFIS_WF
 description: Deterministic wildfires hazard
 details: Harmonized wildfire risk assessment for the pan-European region through the
   EFFIS system, integrating fire danger (hazard) and vulnerability components across
@@ -103,7 +103,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
-slug: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/wildfire_effis
+slug: rdls_hzd-EFFIS_WF
 spatial:
   countries:
   - AUT

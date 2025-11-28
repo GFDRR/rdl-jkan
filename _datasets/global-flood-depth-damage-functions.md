@@ -5,7 +5,6 @@ contact_point:
 creator:
   name: Huizinga, J.
 dataset_id: rdls_vln-jrc_fl
-slug: rdls_vln-jrc_fl
 description: This dataset contains damage curves depicting fractional damage function
   of water depth as well as maximum damage values for a variety of assets and land
   use classes.
@@ -54,6 +53,7 @@ resources:
 risk_data_type:
 - vulnerability
 schema: rdl-02
+slug: rdls_vln-jrc_fl
 spatial:
   countries:
   - GLO
