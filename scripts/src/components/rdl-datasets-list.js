@@ -15,11 +15,14 @@
 // need to loop over each dataset entry and only include fields if it exists in the .md file...
 // the contents then get displayed by rdl-datasets-items
 
-import { pick, defaults, filter } from "lodash";
+import { pick, defaults, filter, partition } from "lodash";
 import { pipeline } from "@xenova/transformers";
 
+import ResultsHeader from "../templates/results-header";
 import TmplDatasetItem from "../templates/rdl-datasets-item";
 import { queryByHook, setContent, createDatasetFilters } from "../util";
+
+const PATH_TO_VECTORS = "../../../vectors.json";
 
 export default class {
   constructor(opts) {
@@ -27,9 +30,11 @@ export default class {
     this.model = null; // Store transformer model
 
     const elements = {
+      keywordResultsHeader: queryByHook("keyword-results-header", opts.el),
       datasetsItems: queryByHook("rdl-datasets-items", opts.el),
-      datasetsCount: queryByHook("rdl-datasets-count", opts.el),
       searchQuery: queryByHook("search-query", opts.el),
+      semanticResultsHeader: queryByHook("semantic-results-header", opts.el),
+      semanticDatasetsItems: queryByHook("rdl-semantic-datasets-items", opts.el),
     };
 
     // Load the semantic model and vectors
@@ -60,7 +65,7 @@ export default class {
 
   async loadVectors() {
     try {
-      const response = await fetch("../../../vectors.json");
+      const response = await fetch(PATH_TO_VECTORS);
       const vectorsArray = await response.json();
       this.vectors = vectorsArray.reduce((acc, item) => {
         if (item.metadata && item.metadata.dataset_id) {
@@ -68,7 +73,6 @@ export default class {
         }
         return acc;
       }, {});
-      console.log("Vectors loaded:", Object.keys(this.vectors).length);
     } catch (error) {
       console.error("Failed to load vector:", error);
       throw error;
@@ -95,34 +99,31 @@ export default class {
     const filters = createDatasetFilters(
       defaults(paramFilters, attributeFilters)
     );
-
-    this.filteredDatasets = filter(opts.datasets, filters);
-    this.renderDatasets(this.filteredDatasets, elements);
-
-    const datasetSuffix = this.filteredDatasets.length > 1 ? "s" : "";
-    const datasetsCountMarkup =
-      this.filteredDatasets.length + " dataset" + datasetSuffix;
-    setContent(elements.datasetsCount, datasetsCountMarkup);
+    const filteredDatasets = filter(opts.datasets, filters);
+    const datasetsMarkup = filteredDatasets.map(TmplDatasetItem);
+    setContent(elements.keywordResultsHeader, ResultsHeader({
+      count: filteredDatasets.length
+    }));
+    setContent(elements.datasetsItems, datasetsMarkup);
   }
 
   async handleSearch(query, datasets, elements) {
-    // First check for semantic search using model embedding
-    const semanticResults = await this.semanticSearch(query, datasets);
-    console.log("Semantic Results:", semanticResults);
-    if (semanticResults.length > 0) {
-      this.renderDatasets(semanticResults, elements);
-      const resultsCountMarkup = semanticResults.length + " datasets";
-      setContent(elements.datasetsCount, resultsCountMarkup);
-    } else {
-      // Fallback to keyword search if no semantic results
-      const results = this._createSearchFunction(datasets)(query);
-      this.renderDatasets(results, elements);
-      const resultsCountMarkup = results.length + " datasets";
-      setContent(elements.datasetsCount, resultsCountMarkup);
-    }
+    const datasetsNotInKeywordResults = this.keywordSearch(query, datasets, elements);
+    await this.semanticSearch(query, datasetsNotInKeywordResults, elements);
   }
 
-  async semanticSearch(query, datasets) {
+  keywordSearch(query, datasets, elements) {
+    const { matches, others } = this._createSearchFunction(datasets)(query);
+    const datasetsMarkup = matches.map(TmplDatasetItem);
+    setContent(elements.datasetsItems, datasetsMarkup);
+    setContent(elements.keywordResultsHeader, ResultsHeader({
+      type: "keyword",
+      count: matches.length
+    }));
+    return others;
+  }
+
+  async semanticSearch(query, datasets, elements, n = 10) {
     const queryVector = await this.vectorizeQuery(query);
     const results = [];
 
@@ -139,11 +140,14 @@ export default class {
       results.push({ dataset, similarity });
     }
 
-    // Sort by similarity in descending order
-    results.sort((a, b) => b.similarity - a.similarity);
-    console.log("Semantic Results:", results);
-    // Return just the datasets
-    return results.map((result) => result.dataset);
+    const topNResults = results.sort((a, b) => b.similarity - a.similarity).slice(0, n);
+    const semanticResults = topNResults.map((result) => result.dataset);
+    const datasetsMarkup = semanticResults.map(TmplDatasetItem);
+    setContent(elements.semanticDatasetsItems, datasetsMarkup);
+    setContent(elements.semanticResultsHeader, ResultsHeader({
+      type: "semantic",
+      count: semanticResults.length
+    }));
   }
 
   async vectorizeQuery(query) {
@@ -162,18 +166,13 @@ export default class {
     return dotProduct / (magnitudeA * magnitudeB);
   }
 
-  renderDatasets(datasets, elements) {
-    const datasetsMarkup = datasets.map(TmplDatasetItem);
-    setContent(elements.datasetsItems, datasetsMarkup);
-  }
-
   // Returns a function that can be used to search an array of datasets
   // The function returns the filtered array of datasets
   _createSearchFunction(datasets) {
     const keys = ["title", "notes", "description", "license"];
     return function (query) {
       const lowerCaseQuery = query.toLowerCase();
-      return filter(datasets, function (dataset) {
+      const [matches, others] = partition(datasets, function (dataset) {
         return keys.reduce(function (previousValue, key) {
           return (
             previousValue ||
@@ -182,6 +181,7 @@ export default class {
           );
         }, false);
       });
+      return { matches, others };
     };
   }
 }

@@ -19,19 +19,12 @@ permalink: /datasets/
 
     <h3>
       Hazard Type
-      <button
-        class="button-reset"
-        data-toggle="tooltip"
-        title="Enabling a hazard type will filter out all exposure datasets, which have no hazard type."
-      >
+      <button class="button-reset" data-toggle="tooltip"
+        title="Enabling a hazard type will filter out all exposure datasets, which have no hazard type.">
         <i class="fa fa-info-circle" style="font-size: 0.7em;" aria-hidden="true"></i>
       </button>
     </h3>
-    <div
-      class="list-group"
-      data-component="rdl-hazard-type-filter"
-      data-show="5"
-    ></div>
+    <div class="list-group" data-component="rdl-hazard-type-filter" data-show="5"></div>
 
     <h3>Licenses</h3>
     <div class="list-group" data-component="rdl-license-filter" data-show="5"></div>
@@ -41,8 +34,10 @@ permalink: /datasets/
 
   </div>
   <div class="col-sm-8" data-component="rdl-datasets-list">
-    <h3 class="rdl-datasets-count" data-hook="rdl-datasets-count"></h3>
     <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
+    <div data-hook="keyword-results-header"></div>
     <div data-hook="rdl-datasets-items"></div>
+    <div data-hook="semantic-results-header"></div>
+    <div data-hook="rdl-semantic-datasets-items"></div>
   </div>
 </div>
