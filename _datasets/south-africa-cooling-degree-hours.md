@@ -7,6 +7,7 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: Cooling_degree_hours.zip
+slug: Cooling_degree_hours.zip
 description: "Annual number of hours during which the temperatures rises over 25\xB0\
   C, multiplied by the number of degrees the temperature rises above 25\xB0C. This\
   \ is an international standard to estimate the energy demand for air conditioning\

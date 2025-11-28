@@ -6,6 +6,7 @@ creator:
   name: Nadia Bloemendaal
   url: https://data.4tu.nl/authors/8a084c6a-3315-4ba7-9768-dd1ba1825dbc
 dataset_id: STORM
+slug: STORM
 description: Datasets containing probabilistic analysis of tropical cyclone maximum
   wind speed (in m/s). Return periods are generated using the STORM datasets.
 details: Return periods were empirically calculated using Weibull's plotting formula.

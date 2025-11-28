@@ -6,6 +6,7 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_nonres
+slug: CA_SFRARR_exp_nonres
 description: Central Asia exposure dataset - Non-residential buildings (education,
   healthcare, industrial, commercial)
 details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accelerating

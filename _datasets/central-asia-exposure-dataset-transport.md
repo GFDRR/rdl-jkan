@@ -6,6 +6,7 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_transport
+slug: CA_SFRARR_exp_transport
 description: Regional layer of transportation infrastructure in Central Asia. The
   dataset has been developed based on transportation data collected from Openstreetmap
   and validated based on local data.

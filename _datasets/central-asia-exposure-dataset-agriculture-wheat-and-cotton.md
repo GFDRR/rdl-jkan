@@ -6,6 +6,7 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_agri
+slug: CA_SFRARR_exp_agri
 description: Cotton and wheat cropland in Central Asia. The dataset has been developed
   based on cropland data (cotton, wheat) collected from local data provided at sub-national
   level.

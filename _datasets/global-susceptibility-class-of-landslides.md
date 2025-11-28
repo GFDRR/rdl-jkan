@@ -6,6 +6,7 @@ creator:
   name: CIMA
   url: https://www.cimafoundation.org
 dataset_id: CDRI_LS
+slug: CDRI_LS
 description: The landslides susceptibility map indicates the areas of the world that
   are more prone to landslides, both seismic and precipitation-induced.
 details: The precipitation-induced landslides susceptibility map for the current climate

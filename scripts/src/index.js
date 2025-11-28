@@ -53,7 +53,7 @@ const components = [
 for (let component of components) {
   const els = queryByComponent(component.tag)
   if (els.length) {
-    // If the component depends on datasets.json, fetch it first (once per page) and pass it
+    // If the component depends on rdl-datasets.json, fetch it first (once per page) and pass it
     if (component.usesDatasets) {
       getDatasets().then((datasets) => {
         els.each((_index, el) => new component.class({el: $(el), user, params, datasets})) // eslint-disable-line
@@ -65,7 +65,7 @@ for (let component of components) {
   }
 }
 
-// Helper function to ensure datasets.json is only fetched once per page
+// Helper function to ensure rdl-datasets.json is only fetched once per page
 let datasetsCache
 function getDatasets () {
   datasetsCache = datasetsCache || $.getJSON(`${settings.BASE_URL ?? ''}/rdl-datasets.json`)

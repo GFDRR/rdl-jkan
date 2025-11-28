@@ -6,6 +6,7 @@ creator:
   email: mamadio@worldbank.org
   name: Mattia Amadio
 dataset_id: SSD_hzd-earthquake
+slug: SSD_hzd-earthquake
 description: Earthquake hazard intensity (g) for Sub Saharan Africa from Global Earthquake
   Model (GEM) 2016
 details: null
