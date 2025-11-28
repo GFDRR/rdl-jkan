@@ -2,7 +2,7 @@
 
 import argparse
 import json
-from jsonschema import validate
+from validator import validate_with_custom_logic
 import os
 import re
 import sys
@@ -75,7 +75,8 @@ def validate_json_with_schema(dataset_from_json, schema_url):
         schema = json.load(
             file
         )  # Load the schema from the file object    # raises exception if invalid
-        validate(instance=dataset_from_json, schema=schema)
+
+        validate_with_custom_logic(dataset_from_json, schema)
 
 
 def write_to_markdown(dataset_from_json, schema):
