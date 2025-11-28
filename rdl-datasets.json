@@ -3,6 +3,7 @@
 [{% for dataset in site.datasets %}
   {
     "title": {{ dataset.title | jsonify }},
+    "dataset_id": "{{ dataset.dataset_id }}",
     {% if dataset.description != "" %}"description": {{ dataset.description | jsonify }},{% endif %}
     {% if dataset.details != "" %}"details": {{ dataset.details | jsonify }},{% endif %}
     "category": {% if dataset.risk_data_type[0] %}
