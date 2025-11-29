@@ -1,0 +1,190 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-india_gobs",
+      "title": "India Geospatial Open Building Stack (GOBS)",
+      "description": "A geospatial dataset of building stock and height for building-level analysis in India.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "version": "1",
+      "purpose": "To support sustainable development and climate adaptation analysis, including resilience, carbon, cooling, solar, and retrofit applications.",
+      "project": {
+        "name": "GOBS",
+        "url": "https://gobs.aeee.in/"
+      },
+      "details": "This dataset is derived from the Google Open Buildings dataset (v3 footprints, v1 height) and is not based on official surveys; the building_floor attribute is an estimate calculated by dividing building_height by a 3-meter standard, with raw height also provided for custom analysis. Building land use is a proxy based on OpenStreetMap (OSM) tags, as official digitized function data is broadly unavailable. A supervised machine learning model (Random Forest) was employed to predict and impute land use for buildings lacking an original OSM tag. Key transparency fields, is_predicted and prediction_confidence, are included to allow users to filter the data based on the ML model's output. To ensure data quality, the dataset excludes buildings with a confidence level below 0.75 or heights outside the 2.4m to 100m range.",
+      "spatial": {
+        "scale": "national",
+        "geometry": {
+          "type": ""
+        },
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "centroid": [
+          0,
+          0
+        ],
+        "countries": [
+          "IND"
+        ]
+      },
+      "license": "ODbL-1.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "Alliance for an Energy Efficient Economy (AEEE)",
+            "email": "gobs@aeee.in",
+            "url": "https://gobs.aeee.in/"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "Alliance for an Energy Efficient Economy (AEEE)",
+            "email": "gobs@aeee.in",
+            "url": "https://gobs.aeee.in/"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "Alliance for an Energy Efficient Economy (AEEE)",
+            "email": "gobs@aeee.in",
+            "url": "https://gobs.aeee.in/"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "Google Open Buildings dataset (v3)",
+          "description": "This dataset provides the foundational 2D building footprints derived from high-resolution satellite imagery using AI. It's one of the largest open-access building datasets, crucial for humanitarian work and environmental science.",
+          "lineage": "",
+          "url": "https://sites.research.google/gr/open-buildings/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_1"
+        },
+        {
+          "name": "Google Open Building 2.5D Temporal Dataset (v1)",
+          "description": "This complementary dataset offers insights into when each building was likely constructed. It helps track urban growth and changes in the built environment, adding a vital historical context to the spatial data.",
+          "lineage": "",
+          "url": "https://sites.research.google/gr/open-buildings/temporal/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_2"
+        },
+        {
+          "name": "OpenStreetMap",
+          "description": "A global, collaborative mapping project. It provides the essential crowdsourced data on land use and points of interest, which we use to classify buildings by their function (e.g., residential, commercial)",
+          "lineage": "",
+          "url": "https://www.openstreetmap.org/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "ODbL-1.0",
+          "id": "source_3"
+        }
+      ],
+      "referenced_by": [
+        {
+          "author_names": [
+            "Jindal R",
+            "Johnson J",
+            "Kumar S"
+          ],
+          "name": "GOBS",
+          "date_published": "2025-11-01",
+          "url": "https://gobs.aeee.in/",
+          "doi": "",
+          "id": "reference_1"
+        }
+      ],
+      "resources": [
+        {
+          "title": "India Geospatial Open Building Stack (GOBS)",
+          "description": "A geospatial dataset of building stock and height for building-level analysis in India.",
+          "data_format": "CSV (csv)",
+          "access_modality": "download",
+          "spatial_resolution": "",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://gobs.aeee.in/",
+          "download_url": "https://gobs.aeee.in/downloads",
+          "temporal": {
+            "start": "",
+            "end": "",
+            "duration": "",
+            "temporal_resolution": ""
+          },
+          "id": "resource_1"
+        }
+      ],
+      "exposure": [
+        {
+          "metrics": [
+            {
+              "exp_item": "area_in_meters",
+              "dimension": "content",
+              "quantity_kind": "area",
+              "currency": "",
+              "id": "metric_1"
+            },
+            {
+              "exp_item": "perimeter",
+              "dimension": "content",
+              "quantity_kind": "area",
+              "currency": "",
+              "id": "metric_2"
+            },
+            {
+              "exp_item": "building_height",
+              "dimension": "content",
+              "quantity_kind": "area",
+              "currency": "",
+              "id": "metric_3"
+            },
+            {
+              "exp_item": "building_floor",
+              "dimension": "content",
+              "quantity_kind": "area",
+              "currency": "",
+              "id": "metric_4"
+            },
+            {
+              "exp_item": "landuse",
+              "dimension": "content",
+              "quantity_kind": "area",
+              "currency": "",
+              "id": "metric_5"
+            },
+            {
+              "exp_item": "total_built_up",
+              "dimension": "content",
+              "quantity_kind": "area",
+              "currency": "",
+              "id": "metric_6"
+            }
+          ],
+          "category": "buildings",
+          "taxonomy": "GED4ALL",
+          "id": "exp_metrics_1"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
