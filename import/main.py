@@ -2,14 +2,12 @@
 
 import argparse
 import json
-from validator import validate_with_custom_logic
 import os
 import re
 import sys
 import requests
 import json
 import logging
-import fnmatch
 from pathlib import Path
 
 import yaml
@@ -17,7 +15,7 @@ import yaml
 import config
 import utils
 import mappers
-from git import Repo
+from validator import validate_with_custom_logic
 
 
 def extract_yaml_frontmatter(filepath):
@@ -58,12 +56,12 @@ def fetch_schema(schema_url, schema_path):
 
 
 def validate_json_with_schema(dataset_from_json, schema_url):
-    if schema_url is config.schema_url_v3:
+    if schema_url == config.schema_url_v3:
         schema_path = f"{config.schema_path}/rdl-03.json"
         is_cached = os.path.isfile(schema_path)
         if not is_cached:
             # TODO: delete & replace hardcoded_schema_url with schema_url when v0.3 finalized
-            hardcoded_schema_url = "https://raw.githubusercontent.com/GFDRR/CCDR-tools/refs/heads/main/_static/rdls_schema_url_v3.json"
+            hardcoded_schema_url = "https://raw.githubusercontent.com/GFDRR/CCDR-tools/refs/heads/main/_static/rdls_schema_v3.json"
             fetch_schema(hardcoded_schema_url, schema_path)
     else:
         schema_path = f"{config.schema_path}/rdl-02.json"
@@ -72,19 +70,16 @@ def validate_json_with_schema(dataset_from_json, schema_url):
             fetch_schema(schema_url, schema_path)
 
     with open(schema_path, "r") as file:
-        schema = json.load(
-            file
-        )  # Load the schema from the file object    # raises exception if invalid
-
+        schema = json.load(file)
         validate_with_custom_logic(dataset_from_json, schema)
 
 
-def write_to_markdown(dataset_from_json, schema):
+def write_dataset_to_markdown(dataset_from_json, schema_url):
     try:
         # Generate frontmatter
         dataset_frontmatter = None
-        validate_json_with_schema(dataset_from_json, schema)
-        match schema:
+        validate_json_with_schema(dataset_from_json, schema_url)
+        match schema_url:
             case config.schema_url_v3:
                 dataset_frontmatter = mappers.make_dataset_frontmatter_v03(
                     dataset_from_json
@@ -112,6 +107,22 @@ def write_to_markdown(dataset_from_json, schema):
             exc_info=e,
         )
         return 1
+
+
+def write_datasets_to_markdown(json_filepaths):
+    exit_code = 0
+    for json_file in json_filepaths:
+        json_filepath = os.path.join(config.root_dir, json_file)
+        encoding = utils.detect_encoding(json_filepath)
+        with open(json_filepath, encoding=encoding) as input_file:
+            datasets_json = json.load(input_file)
+            for dataset in datasets_json["datasets"]:
+                first_link, *_ = dataset.get("links")
+                schema_url = first_link.get("href")
+                result = write_dataset_to_markdown(dataset, schema_url)
+                if result != 0:
+                    exit_code = result
+    return exit_code
 
 
 if __name__ == "__main__":
@@ -143,32 +154,16 @@ if __name__ == "__main__":
 
     exit_code = 0
     if args.type == "ci":
-        repo = Repo(config.root_dir)
-        repo.remotes.origin.fetch()
-        current_commit = repo.head.commit
-        diff = current_commit.diff(f"origin/{config.remote_target_branch}")
-        files = {item.a_path for item in diff}
-        for json_file in fnmatch.filter(files, f"_datasets/json/*.json"):
-            with open(
-                os.path.join(config.root_dir, json_file), encoding="utf-8"
-            ) as input_file:
-                datasets_json = json.load(input_file)
-                schema = datasets_json.get("schema", config.schema_url_v2)
-                for dataset in datasets_json["datasets"]:
-                    result = write_to_markdown(dataset, schema)
-                    if result != 0:
-                        exit_code = result
+        result = write_datasets_to_markdown(utils.get_recently_changed_json_files())
+        if result != 0:
+            exit_code = result
     elif args.type == "batch":
         input_path = Path(args.input_folder)
-        for json_file in input_path.glob(f"{config.json_dir}/*.json"):
-            with open(json_file, encoding="utf-8") as input_file:
-                datasets_json = json.load(input_file)
-
-                schema = datasets_json.get("schema", config.schema_url_v2)
-                for dataset in datasets_json["datasets"]:
-                    result = write_to_markdown(dataset, schema)
-                    if result != 0:
-                        exit_code = result
+        result = write_datasets_to_markdown(
+            input_path.glob(f"{config.json_dir}/*.json")
+        )
+        if result != 0:
+            exit_code = result
     else:
         raise ValueError(f"Unknown type {args.type}")
 
