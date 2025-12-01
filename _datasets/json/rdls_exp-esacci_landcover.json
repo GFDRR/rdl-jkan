@@ -13,7 +13,7 @@
         "name": "Climate Change Initiative - European Space Agency",
         "url": "http://www.esa-landcover-cci.org/"
       },
-      "details": "The land cover maps are delivered in NetCDF-4 format following CF-1.6 conventions, with a geographic coordinate system based on WGS84 using Plate Carrée projection. Each annual map includes five bands: lccs_class (land cover classification), processed_flag (processing status), current_pixel_state (pixel state during baseline generation), observation_count (number of valid observations), and change_count (number of detected land cover changes during 1992-2022). The change detection methodology captures transitions between six IPCC land categories (cropland, forest, grassland, wetland, settlement, and other land), with changes requiring confirmation over at least two consecutive years. The dataset achieves an overall accuracy of approximately 70% when validated against independent reference samples. Four land cover classes rely on external datasets: tree cover flooded saline water (mangroves from global atlas), urban areas (Global Human Settlement Layer and Global Urban Footprint), water bodies (CCI global open water bodies map), and permanent snow and ice (Randolph Glaciers Inventory). The spatial resolution corresponds to 0.002778° (approximately 300m at the equator, ~200m in mid-latitudes). File sizes are approximately 2.5 GB per annual map with internal LZW compression.",
+      "details": "The land cover maps are delivered in NetCDF-4 format following CF-1.6 conventions, with a geographic coordinate system based on WGS84 using Plate Carrï¿½e projection. Each annual map includes five bands: lccs_class (land cover classification), processed_flag (processing status), current_pixel_state (pixel state during baseline generation), observation_count (number of valid observations), and change_count (number of detected land cover changes during 1992-2022). The change detection methodology captures transitions between six IPCC land categories (cropland, forest, grassland, wetland, settlement, and other land), with changes requiring confirmation over at least two consecutive years. The dataset achieves an overall accuracy of approximately 70% when validated against independent reference samples. Four land cover classes rely on external datasets: tree cover flooded saline water (mangroves from global atlas), urban areas (Global Human Settlement Layer and Global Urban Footprint), water bodies (CCI global open water bodies map), and permanent snow and ice (Randolph Glaciers Inventory). The spatial resolution corresponds to 0.002778ï¿½ (approximately 300m at the equator, ~200m in mid-latitudes). File sizes are approximately 2.5 GB per annual map with internal LZW compression.",
       "spatial": {
         "scale": "global",
         "geometry": {
@@ -28,8 +28,7 @@
         "centroid": [
           0,
           0
-        ],
-        "countries": []
+        ]
       },
       "license": "CC-BY-4.0",
       "attributions": [
@@ -74,7 +73,6 @@
         {
           "name": "Copernicus Sentinel-3 Ocean and Land Colour Instrument (OLCI)",
           "description": "S3-OLCI (Sentinel-3 Ocean and Land Colour Instrument) is used in combination with S3-SLSTR (Sentinel-3 Sea and Land Surface Temperature Radiometer) to generate the land cover maps for 2020-2022. S3-OLCI global surface reflectance composites are produced at two spatial resolutions: 1 km resolution for detecting land cover changes and 300 m resolution for delineating the identified changes at the land cover map spatial resolution. S3-OLCI replaced PROBA-V as the primary data source starting in 2020, continuing the time series that began with AVHRR (1992-1999), SPOT-VGT (1999-2013), and PROBA-V (2014-2019), ensuring temporal consistency across the entire land cover map series from 1992 to present.",
-          "lineage": "",
           "url": "https://dataspace.copernicus.eu/explore-data/data-collections/sentinel-data/sentinel-3",
           "type": "dataset",
           "component": "exposure",
@@ -82,17 +80,15 @@
           "id": "source_WFhKRWnY"
         }
       ],
-      "referenced_by": [],
       "resources": [
         {
           "title": "Land cover class",
           "description": "Land cover class per pixel, according to a legend of 22 classes, defined using the Land Cover Classification System developed by the United Nations Food and Agriculture Organization. Distinct values are encoded as unsigned byte (0..255). The complete legend is available in the NetCDF files metadata and in the Product User Guide documentation.",
           "data_format": "NetCDF (nc)",
           "access_modality": "download",
-          "spatial_resolution": "300",
+          "spatial_resolution": 300,
           "coordinate_system": "EPSG:32662",
           "access_url": "https://cds.climate.copernicus.eu/datasets/satellite-land-cover?tab=overview",
-          "download_url": "",
           "temporal": {
             "start": "1992-01-01",
             "end": "2022-01-01",
@@ -106,10 +102,9 @@
           "description": "Number of years where land cover class changes have occurred, since 1992. 0 for stable, greater than 0 for changes.",
           "data_format": "NetCDF (nc)",
           "access_modality": "download",
-          "spatial_resolution": "300",
+          "spatial_resolution": 300,
           "coordinate_system": "EPSG:32662",
           "access_url": "https://cds.climate.copernicus.eu/datasets/satellite-land-cover?tab=overview",
-          "download_url": "",
           "temporal": {
             "start": "1992-01-01",
             "end": "2022-01-01",
@@ -123,10 +118,9 @@
           "description": "Pixel identification from satellite surface reflectance observations, mainly distinguishing between land, water, and snow/ice. Six values are used: 1, 2, 3, 4, 5, 6; respectively meaning: clear land, clear water, clear snow ice, cloud, cloud shadow, filled.",
           "data_format": "NetCDF (nc)",
           "access_modality": "download",
-          "spatial_resolution": "300",
+          "spatial_resolution": 300,
           "coordinate_system": "EPSG:32662",
           "access_url": "https://cds.climate.copernicus.eu/datasets/satellite-land-cover?tab=overview",
-          "download_url": "",
           "temporal": {
             "start": "1992-01-01",
             "end": "2022-01-01",
@@ -140,10 +134,9 @@
           "description": "Flag to mark areas that could not be classified. Two values are used: 0, 1; respectively meaning: not_processed, processed.",
           "data_format": "NetCDF (nc)",
           "access_modality": "download",
-          "spatial_resolution": "300",
+          "spatial_resolution": 300,
           "coordinate_system": "EPSG:32662",
           "access_url": "https://cds.climate.copernicus.eu/datasets/satellite-land-cover?tab=overview",
-          "download_url": "",
           "temporal": {
             "start": "1992-01-01",
             "end": "2022-01-01",
@@ -157,10 +150,9 @@
           "description": "Number of valid satellite observations that have contributed to each pixel's classification",
           "data_format": "NetCDF (nc)",
           "access_modality": "download",
-          "spatial_resolution": "300",
+          "spatial_resolution": 300,
           "coordinate_system": "EPSG:32662",
           "access_url": "https://cds.climate.copernicus.eu/datasets/satellite-land-cover?tab=overview",
-          "download_url": "",
           "temporal": {
             "start": "1992-01-01",
             "end": "2022-01-01",
