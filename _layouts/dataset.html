@@ -63,10 +63,9 @@ layout: default
           <span class="label label-default" property="dcat:mediaType">json</span>
         </li>
       </ul>
-      <h2>RDL {{page.risk_data_type | first | capitalize}} Info</h2>
+      {% for rdt in page.risk_data_type %}
+      <h2>RDL {{ rdt | capitalize }} Info</h2>
       <table class="table table-striped dataset-details">
-
-        {% for rdt in page.risk_data_type %}
         {% assign rdl_fields = site.data.schemas[schema][rdt] %}
         {% for field in rdl_fields %}
         {% if field.field_name contains "occurrence_time" %}
@@ -97,8 +96,8 @@ layout: default
         {% endif %}
         {% endif %}
         {% endfor %}
-        {% endfor %}
       </table>
+      {% endfor %}
 
       <h2>Additional Info</h2>
       <table class="table table-striped dataset-details">
