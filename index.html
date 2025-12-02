@@ -1,27 +1,42 @@
 ---
+title: Datasets
 layout: default
 ---
+{% include breadcrumbs.html %}
 
-<div class="jumbotron">
-  <h1>{{ site.greeting }}</h1>
-  <p>
-    {{ site.description }}
-  </p>
-  <p><a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/datasets" role="button">Start browsing</a></p>
-</div>
+<div class="row">
+  <div class="col-sm-4">
 
-<h3>Browse by Category</h3>
+    <h3>Categories</h3>
+    <div class="list-group" data-component="categories-filter" data-show="5"></div>
 
-<div class="homepage-categories">
-{% for category in site.data.categories %}
-  {% if category.featured == true %}
-    {% capture logo_alt %}{{ category.name }}{% if category.logo_credit and category.logo_credit != empty %} logo by {{ category.logo_credit }}{% endif %}{% endcapture %}
-    <a href="{{ site.baseurl }}/datasets/?category={{ category.name | slugify }}" class="thumbnail" title="{{ logo_alt }}">
-      {% if category.logo and category.logo != empty %}
-        <img src="{{ site.baseurl }}{{ category.logo }}" alt="{{ logo_alt }}">
-      {% endif %}
-      {{ category.name }}
-    </a>
-  {% endif %}
-{% endfor %}
+    <h3>Countries</h3>
+    <div class="list-group" data-component="rdl-country-filter" data-show="5"></div>
+
+    <h3>Geographical Scale</h3>
+    <div class="list-group" data-component="rdl-geographical-scale-filter" data-show="5"></div>
+
+    <h3>
+      Hazard Type
+      <button class="button-reset" data-toggle="tooltip"
+        title="Enabling a hazard type will filter out all exposure datasets, which have no hazard type.">
+        <i class="fa fa-info-circle" style="font-size: 0.7em;" aria-hidden="true"></i>
+      </button>
+    </h3>
+    <div class="list-group" data-component="rdl-hazard-type-filter" data-show="5"></div>
+
+    <h3>Licenses</h3>
+    <div class="list-group" data-component="rdl-license-filter" data-show="5"></div>
+
+    <h3>Projects</h3>
+    <div class="list-group" data-component="rdl-project-filter" data-show="5"></div>
+
+  </div>
+  <div class="col-sm-8" data-component="rdl-datasets-list">
+    <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
+    <div data-hook="keyword-results-header"></div>
+    <div data-hook="rdl-datasets-items"></div>
+    <div data-hook="semantic-results-header"></div>
+    <div data-hook="rdl-semantic-datasets-items"></div>
+  </div>
 </div>
