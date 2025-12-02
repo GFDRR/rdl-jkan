@@ -61,8 +61,7 @@ def validate_json_with_schema(dataset_from_json, schema_url):
         is_cached = os.path.isfile(schema_path)
         if not is_cached:
             # TODO: delete & replace hardcoded_schema_url with schema_url when v0.3 finalized
-            hardcoded_schema_url = "https://raw.githubusercontent.com/GFDRR/CCDR-tools/refs/heads/main/_static/rdls_schema_v3.json"
-            fetch_schema(hardcoded_schema_url, schema_path)
+            hardcoded_schema_url = "https://raw.githubusercontent.com/GFDRR/CCDR-tools/refs/heads/main/_static/rdls_schema_v0.3.json"            fetch_schema(hardcoded_schema_url, schema_path)
     else:
         schema_path = f"{config.schema_path}/rdl-02.json"
         is_cached = os.path.isfile(schema_path)
