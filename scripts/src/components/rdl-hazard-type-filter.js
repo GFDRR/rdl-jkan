@@ -1,14 +1,14 @@
 import $ from 'jquery'
-import {chain, omit, defaults} from 'lodash'
+import { chain, omit, defaults } from 'lodash'
 
 import TmplListGroupItem from '../templates/list-group-item'
-import {setContent, slugify, collapseListGroup} from '../util'
+import { setContent, slugify, collapseListGroup } from '../util'
 
 
 function prep_hazard_type(hazard_type, params, datasetsForHazardType) {
   const hazardTypeSlug = slugify(hazard_type)
   const selected = params.hazard_type && params.hazard_type === hazardTypeSlug
-  const itemParams = selected ? omit(params, 'hazard_type') : defaults({hazard_type: hazardTypeSlug}, params)
+  const itemParams = selected ? omit(params, 'hazard_type') : defaults({ hazard_type: hazardTypeSlug }, params)
 
   return {
     title: hazard_type,
@@ -20,10 +20,10 @@ function prep_hazard_type(hazard_type, params, datasetsForHazardType) {
 }
 
 export default class {
-  constructor (opts) {
+  constructor(opts) {
     const hazardTypes = this._hazardTypesWithCount(opts.datasets, opts.params)
 
-    const hazardTypesMarkup = hazardTypes.sort((a,b) => {
+    const hazardTypesMarkup = hazardTypes.sort((a, b) => {
       // ignore upper and lowercase
       const titleA = a.title.toUpperCase();
       const titleB = b.title.toUpperCase();
@@ -35,8 +35,9 @@ export default class {
     collapseListGroup(opts.el)
   }
 
-  _hazardTypesWithCount (datasets, params) {
+  _hazardTypesWithCount(datasets, params) {
     return chain(datasets)
+      .filter(dataset => !dataset.hazard_type.includes('None'))
       .groupBy('hazard_type')
       .flatMap(function (datasetsForHazardType, hazard_type) {
         var hazardTypes = hazard_type.split(",")
