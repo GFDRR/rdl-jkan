@@ -429,7 +429,7 @@ def make_resource_v03(resource):
     return {
         # required; throw if missing
         "description": resource["description"],
-        "format": resource["format"],
+        "format": resource["data_format"],
         "id": resource["id"],
         "title": resource["title"],
         # optional

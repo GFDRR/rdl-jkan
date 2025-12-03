@@ -46,8 +46,11 @@
         {{ "None" | jsonify }}
       {% endif %},
     "url": "{{ site.baseurl }}{{ dataset.url }}",
-    "project": {% if dataset.project %} 
-        {{ dataset.project | jsonify }}
+    "project": {% if dataset.project %}{% if dataset.schema == "rdl-03" %} 
+        {{ dataset.project.name | jsonify }}
+        {% else %}
+          {{ dataset.project | jsonify }}
+        {% endif %}
       {% else %}
         {{ "None" | jsonify }}
       {% endif %},    {% if dataset.version != "" %}"version": {{ dataset.version | jsonify }},{% endif %}
