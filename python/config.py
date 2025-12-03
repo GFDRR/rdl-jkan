@@ -3,8 +3,8 @@ root_dir = ".."
 datasets_dir = f"{root_dir}/_datasets"
 # input directory
 json_dir = f"{datasets_dir}/json"
-schema_path = f"{root_dir}/import"
-
+python_path = f"{root_dir}/python"
+vectors_path = f"{python_path}/vectors.json"
 # for use when run with --ci flag
 remote_target_branch = "rdl-0.3"
 
