@@ -3,7 +3,7 @@ function getText(data) {
     case "keyword":
       return `${data.count} dataset${data.count === 1 ? '' : 's'} matching query`;
     case "semantic":
-      return (data.count === 0) ? '' : `${data.count} additional semantically related dataset${data.count === 1 ? '' : 's'}`;
+      return (data.count === 0) ? '' : "You may also be interested in...";
     default:
       return `${data.count} dataset${data.count === 1 ? '' : 's'}`;
   }
