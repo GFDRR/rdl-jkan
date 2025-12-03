@@ -1,13 +1,14 @@
-import re
-import unicodedata
 import chardet
 import fnmatch
 from git import Repo
-import config
+import json
 import logging
 from pathlib import Path
-
+import re
+import unicodedata
 import yaml
+
+import config
 
 
 logging.basicConfig(
@@ -24,13 +25,41 @@ def detect_encoding(filepath):
         return result["encoding"]
 
 
-def get_recently_changed_json_files():
+def extract_yaml_frontmatter(filepath):
+    with open(filepath, "r", encoding="utf-8") as file:
+        content = file.read()
+    pattern = r"^---\n(.*?)\n---\n"
+    match = re.search(pattern, content, re.DOTALL | re.MULTILINE)
+    if match:
+        payload = match.group(1)  # Return the captured YAML content
+        payload = yaml.safe_load(payload)
+        return payload
+    return None
+
+
+def get_recently_changed_files(pattern):
     repo = Repo(config.root_dir)
     repo.remotes.origin.fetch()
     current_commit = repo.head.commit
+    # get diff between current commit and remote target branch
     diff = current_commit.diff(f"origin/{config.remote_target_branch}")
     files = {item.a_path for item in diff}
-    return fnmatch.filter(files, f"_datasets/json/*.json")
+    # add in unstaged changes
+    for item in repo.index.diff(None):
+        files.add(item.a_path)
+    if pattern:
+        return fnmatch.filter(files, pattern)
+    return files
+
+
+def save_to_json(data, filename) -> int:
+    try:
+        with open(filename, "w") as json_file:
+            json.dump(data, json_file, indent=4)
+            return 0
+    except Exception as e:
+        logging.error(f"Failed to save to JSON: {e}")
+        return 1
 
 
 # Copied Django's slugify from https://github.com/django/django/blob/main/django/utils/text.py
