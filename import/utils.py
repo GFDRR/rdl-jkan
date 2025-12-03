@@ -1,6 +1,9 @@
 import re
 import unicodedata
-
+import chardet
+import fnmatch
+from git import Repo
+import config
 import logging
 from pathlib import Path
 
@@ -12,6 +15,22 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
     level=logging.DEBUG,
 )
+
+
+def detect_encoding(filepath):
+    with open(filepath, "rb") as file:
+        raw_data = file.read()
+        result = chardet.detect(raw_data)
+        return result["encoding"]
+
+
+def get_recently_changed_json_files():
+    repo = Repo(config.root_dir)
+    repo.remotes.origin.fetch()
+    current_commit = repo.head.commit
+    diff = current_commit.diff(f"origin/{config.remote_target_branch}")
+    files = {item.a_path for item in diff}
+    return fnmatch.filter(files, f"_datasets/json/*.json")
 
 
 # Copied Django's slugify from https://github.com/django/django/blob/main/django/utils/text.py
