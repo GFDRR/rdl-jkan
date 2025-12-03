@@ -1,5 +1,5 @@
 ---
-name: Import JSON into /_datasets
+name: Sync markdown and vector embeddings to updated JSON datasets
 
 on:
   pull_request:
@@ -34,5 +34,32 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ..
           git diff-index --quiet HEAD || git commit -m "Generate MD files for new JSON files"
+          git push
+          echo "Complete"
+  search:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./search
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+      - run: python3 -m venv .venv
+      - run: source .venv/bin/activate
+      - run: echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
+      - run: python3 -m pip install -r requirements.txt
+      - name: Generate vector embeddings for semantic search
+        run: python3 main.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Generate vector embeddings for semantic search"
           git push
           echo "Complete"
