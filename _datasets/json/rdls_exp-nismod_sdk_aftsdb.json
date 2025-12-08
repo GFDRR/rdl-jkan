@@ -1,0 +1,522 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-nismod_sdk_aftsdb",
+      "title": "The African Transport Systems Database: an open geospatial database of multi-modal connected networks",
+      "description": "The first comprehensive geolocated multi-modal transport database for the whole continent of Africa (AfTS-Db), including road, rail, aviation, maritime and inland waterway networks. The database contains standardized asset and network data across all transport modes, including inter-modal connections, attributes of road and rail corridors and estimated annual statistics for airports and ports. The database includes: 234 airports with airline routes, 179 maritime ports with inter-port connections, 132 inland ports and docking sites with river and lake connections, 6,057 railway stations connected across 99,373 kilometers of rail lines, and 1,004,512 kilometers of roads (motorways, trunk roads, primary and secondary routes, and connecting local roads). All datasets follow a standardized network specification with nodes and edges for each transport mode.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "version": "2",
+      "purpose": "The AfTS-Db provides key information for transport planning, resilience assessments, asset management, and development of transport models and applications. The database is designed to support data-driven policy formulation, infrastructure development, and enhancement of trade and mobility across the African continent. It facilitates analysis of African value chains, strategic planning and decision-making, and supports applications ranging from economic analysis to environmental and climate risk and resilience impact assessments. The database addresses the critical need for open-access, standardized geospatial data on existing and planned transport networks to adequately assess and mitigate development impacts across Africa.",
+      "project": {
+        "name": "Climate Compatible Growth (CCG)",
+        "url": "https://climatecompatiblegrowth.com/"
+      },
+      "details": "The database is provided in Geopackage (gpkg) format for each transport mode, containing nodes (point features) and edges (line features) with associated attributes. Key data sources include OpenStreetMap for roads and railways, World Bank Global Airports database, PortWatch, Verschuur et al. (2023) for maritime data, and various AfDB reports and development corridor studies. The temporal coverage spans 2019-2025, with railway status classifications including operational, planned, proposed, under construction, and rehabilitation projects. Position accuracy of airports and ports has been validated to 100% using satellite imagery, while the railway network has been validated against CIA Factbook and World Population Review showing total length differences of -6% and 1% respectively, and the road network has been validated against the HeiGIT dataset. The database includes estimated construction, upgrading, and operation/maintenance costs for roads and railways through 2050, and identifies 7 types of inter-modal connections (airport-railway, airport-road, inland waterway-railway, inland waterway-road, maritime port-railway, maritime port-road, and railway-road). All processing code is available on GitHub under MIT license, and the database is designed to be regularly updatable as source datasets such as OSM, PortWatch, and OurAirports are refreshed.",
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "DZA",
+          "AGO",
+          "BEN",
+          "BWA",
+          "BFA",
+          "BDI",
+          "CPV",
+          "CMR",
+          "CAF",
+          "TCD",
+          "COM",
+          "COG",
+          "COD",
+          "CIV",
+          "DJI",
+          "EGY",
+          "GNQ",
+          "ERI",
+          "SWZ",
+          "ETH",
+          "GAB",
+          "GMB",
+          "GHA",
+          "GIN",
+          "GNB",
+          "KEN",
+          "LSO",
+          "LBR",
+          "LBY",
+          "MDG",
+          "MWI",
+          "MLI",
+          "MRT",
+          "MUS",
+          "MAR",
+          "MOZ",
+          "NAM",
+          "NER",
+          "NGA",
+          "RWA",
+          "STP",
+          "SEN",
+          "SYC",
+          "SLE",
+          "SOM",
+          "ZAF",
+          "SSD",
+          "SDN",
+          "TZA",
+          "TGO",
+          "TUN",
+          "UGA",
+          "ZMB",
+          "ZWE"
+        ]
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "Zenodo",
+            "email": "info@zenodo.org",
+            "url": "https://zenodo.org/records/17593244"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "Silvia Colombo",
+            "email": "silvia.colombo@ouce.ox.ac.uk",
+            "url": "https://www.eci.ox.ac.uk/"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "Silvia Colombo",
+            "email": "silvia.colombo@ouce.ox.ac.uk",
+            "url": "https://www.eci.ox.ac.uk/"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "OpenStreetMap",
+          "description": "Open-source geospatial database used to extract road and railway infrastructure data for Africa. OSM data was downloaded and processed to create topological networks for roads (August 2025 extract) and railways (November 2021 extract), forming the base layers for these transport modes.",
+          "url": "https://www.openstreetmap.org/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "ODbL-1.0",
+          "id": "source_osm"
+        },
+        {
+          "name": "World Bank Global Airports Database",
+          "description": "Contains main airport locations mapped from air traffic flow repository, identifying international airports and their flight connections globally. Provides total annual seats offered across all flights for each airport (2019 data) as a proxy for passenger volumes, and estimates total seats between airport pairs for understanding air traffic flow volumes.",
+          "url": "https://datacatalog.worldbank.org/search/dataset/0038117/Global-Airports",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_wb_airports"
+        },
+        {
+          "name": "OurAirports",
+          "description": "Open-source global airports geodatabase with high positional accuracy. Used to cross-check and correct airport coordinates from the World Bank database, ensuring airport point locations correspond to main terminals with 100% positional accuracy validated against satellite imagery.",
+          "url": "https://ourairports.com/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Public Domain",
+          "id": "source_ourairports"
+        },
+        {
+          "name": "Global Maritime Network",
+          "description": "Global maritime infrastructure network dataset providing port locations and maritime routes with high positional accuracy extracted from satellite images. Contributes 82% (149 out of 178) of maritime ports in the AfTS-DB, along with network topology and port-to-port routing information.",
+          "url": "https://doi.org/10.1038/s43247-022-00656-7",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_verschuur"
+        },
+        {
+          "name": "PortWatch",
+          "description": "Provides observed maritime Automatic Identification System (AIS) data on cargo vessel properties and locations (2019-2024). Used to add port usage attributes including annual vessel counts by cargo type, cargo weights, vessel dwell times, and proportion of country exports/imports handled at each port.",
+          "url": "https://portwatch.imf.org/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_portwatch"
+        },
+        {
+          "name": "USGS Africa Infrastructure Database",
+          "description": "Geospatial compilation focusing on mineral industries and related infrastructure in Africa, including detailed layers of ports, roads, and railways. Contributes additional maritime port locations (18% of total ports) and validation data for railway facilities serving mining and industrial locations.",
+          "url": "https://doi.org/10.5066/P97EQWXP",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Public Domain",
+          "id": "source_usgs"
+        },
+        {
+          "name": "African Development Corridors Database",
+          "description": "Comprehensive open-source geodatabase of 184 development corridor projects including railways, ports, pipelines, airports, techno-cities, and industrial parks with 22 attributes. Used to add new and planned transport infrastructure projects not yet in OSM, particularly for railways and ports.",
+          "url": "https://doi.org/10.1038/s41597-022-01771-y",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_thorn"
+        },
+        {
+          "name": "African Development Bank Cross-border Road Corridors Reports (2019, 2023)",
+          "description": "AfDB reports identifying and characterizing important cross-border road corridors in Africa with details on length, costs, and development status. Used to identify, digitize, and add corridor names and attributes to 41 major road corridors across the continent.",
+          "url": "https://www.afdb.org/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Open Access",
+          "id": "source_afdb_corridors"
+        },
+        {
+          "name": "AU-PIDA (African Union Programme for Infrastructure Development in Africa)",
+          "description": "Portal tracking African infrastructure development projects including planned and proposed transport infrastructure. Used to add railway projects and validate existing infrastructure, particularly for planned rail developments not yet in OSM.",
+          "url": "https://www.au-pida.org/pida-projects/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Open Access",
+          "id": "source_aupida"
+        },
+        {
+          "name": "Tripartite Transport and Transit Facilitation Programme (TTTFP)",
+          "description": "Identifies regional transport corridors across Eastern and Southern Africa. Used to supplement AfDB corridor data and validate road corridor routes and connections between countries.",
+          "url": "https://tttfp.org/corridors/all-corridors/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Open Access",
+          "id": "source_tttfp"
+        },
+        {
+          "name": "Nile Basin Initiative (NBI) River Navigation Study",
+          "description": "Study exploring feasibility of enhancing inland waterway transport for goods from Lake Victoria to Mediterranean ports in Egypt. Provides locations of ports and docking points (piers, docks, landing sites, yacht clubs) along the Nile river system.",
+          "url": "https://nilebasin.org/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Open Access",
+          "id": "source_nbi"
+        },
+        {
+          "name": "HydroRIVERS",
+          "description": "Global river network database providing detailed river geometry and connectivity. Used to create navigable routes along the Congo and Nile rivers, connecting ports and docking points along these inland waterway systems.",
+          "url": "https://www.hydrosheds.org/products/hydrorivers",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_hydrorivers"
+        },
+        {
+          "name": "Country-Specific Transport Infrastructure Studies",
+          "description": "Collection of national and regional studies providing detailed information on road, rail, airport, and inland port infrastructure across various African countries. These studies were used to validate and supplement OSM data, identify inland ports along Lake Victoria, Lake Tanganyika, Lake Kivu, and Congo River systems, and geolocate 60 inland ports and 72 docking points with satellite imagery validation. Sources include studies on Tanzania, Kenya, Uganda, Rwanda, Burundi, DRC, Ghana, Nigeria, Ethiopia, and other African countries.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Various",
+          "id": "source_country_studies"
+        },
+        {
+          "name": "CPCS East African Railways Master Plan Study (2009)",
+          "description": "Comprehensive railway master plan for the East African Community providing detailed information on existing and planned railway infrastructure across Kenya, Tanzania, Uganda, Rwanda, Burundi, and neighboring countries. Used to validate and supplement railway network data and identify planned rail projects.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Open Access",
+          "id": "source_cpcs_rail"
+        },
+        {
+          "name": "Africa Rail Network Repository (TRG-Rail)",
+          "description": "Enhanced railway network dataset with country-specific attributes including rail line names, operational status, gauge widths, and facility types. Provides detailed classification of railway stations by facility type (mines, ports, freight terminals, etc.) based on comprehensive review of rail networks across Africa.",
+          "url": "https://github.com/trg-rail/africa_rail_network",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Open Source",
+          "id": "source_trg_rail"
+        },
+        {
+          "name": "AidData Chinese Development Finance",
+          "description": "Global open-source spatial dataset mapping and tracking China's development aid projects linked with OpenStreetMap information. Used to identify and validate transport infrastructure projects funded through China's Belt and Road Initiative in Africa.",
+          "url": "https://doi.org/10.1038/s41597-024-03341-w",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_aiddata"
+        },
+        {
+          "name": "Open-GIRA",
+          "description": "Open-source Python-based workflow for downloading and processing OSM data to create topologically connected transport networks. Used to extract and process road (August 2025) and railway (November 2021) data from OSM, converting raw geometries into routable networks.",
+          "url": "https://github.com/nismod/open-gira",
+          "type": "model",
+          "component": "exposure",
+          "license": "MIT",
+          "id": "source_opengira"
+        },
+        {
+          "name": "snkit",
+          "description": "Spatial network library used to snap points to lines and establish connectivity between locations to create topological networks. Applied to convert OSM extracted geometries into connected network representations with proper node-edge relationships.",
+          "url": "https://github.com/tomalrussell/snkit",
+          "type": "model",
+          "component": "exposure",
+          "license": "MIT",
+          "id": "source_snkit"
+        }
+      ],
+      "referenced_by": [
+        {
+          "author_names": [
+            "Silvia Colombo",
+            "Raghav Pant",
+            "Marcus Young",
+            "Fred Thomas",
+            "Tom Russell",
+            "Jasper Verschuur",
+            "Jim W. Hall"
+          ],
+          "name": "The African Transport Systems Database: an open geospatial database of multi-modal connected networks",
+          "date_published": "2025-09-29",
+          "url": "https://eartharxiv.org/repository/view/10374/",
+          "doi": "https://doi.org/10.31223/X5M16M",
+          "id": "reference_1"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Africa Airport Network",
+          "description": "Geopackage file containing 234 airports across Africa with network topology (nodes and edges). Includes airport locations, airline routes between airports, and annual seat capacity data (2019) as a proxy for passenger volumes. Contains flight connection routes represented as straight-line segments between airport pairs.",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_airport_network.gpkg",
+          "temporal": {
+            "temporal_resolution": "Annual"
+          },
+          "id": "resource_airport_network"
+        },
+        {
+          "title": "Africa Airport OurAirport Reference Data",
+          "description": "Reference geopackage file containing airport location data from OurAirports database used for positional accuracy validation and coordinate correction of the World Bank Global Airports database. Provides high-accuracy airport terminal locations.",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_airport_ourairport.gpkg",
+          "id": "resource_airport_ourairport"
+        },
+        {
+          "title": "Africa Road Corridors Investment Costs",
+          "description": "CSV file containing estimated construction, upgrading, operation and maintenance costs for 41 major road corridors across Africa. Includes minimum, median, and maximum cost estimates per kilometer per lane based on road type and condition (paved/unpaved), with projections through 2050.",
+          "data_format": "CSV (csv)",
+          "access_modality": "download",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_corridors_costs.csv",
+          "id": "resource_corridors_costs"
+        },
+        {
+          "title": "Africa Inland Waterways Network",
+          "description": "Geopackage file containing inland waterway network including 60 inland ports and 132 total docking points (ports, piers, docks, landing sites, yacht clubs) with navigable routes. Covers Lakes Victoria, Tanganyika, Malawi, Kivu and waterways along the Congo and Nile river systems. Includes network topology with nodes (ports/docking points) and edges (navigable routes).",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_iww_network.gpkg",
+          "id": "resource_iww_network"
+        },
+        {
+          "title": "Africa Maritime Network",
+          "description": "Geopackage file containing maritime port network with 179 ports and shipping routes between African ports. Includes port-to-port navigable routes, port usage statistics (2019-2024) from AIS data including annual vessel counts by cargo type (container, dry bulk, tankers, RoRo, general), cargo weights, vessel dwell times, and proportion of country exports/imports handled at each port.",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_maritime_network.gpkg",
+          "id": "resource_maritime_network"
+        },
+        {
+          "title": "Africa Multimodal Network",
+          "description": "Geopackage file containing multimodal connections between different transport modes. Includes 7 types of inter-modal connections: airport-railway, airport-road, inland waterway-railway, inland waterway-road, maritime port-railway, maritime port-road, and railway-road. Each connection represented as directional edges linking nodes across transport networks.",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_multimodal.gpkg",
+          "id": "resource_multimodal"
+        },
+        {
+          "title": "Africa Railways Investment Costs",
+          "description": "CSV file containing estimated construction, upgrading, operation and maintenance costs for railway lines across Africa. Includes minimum, median, and maximum cost estimates per kilometer based on railway status (planned, proposed, rehabilitation), with projections through 2050.",
+          "data_format": "CSV (csv)",
+          "access_modality": "download",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_rails_costs.csv",
+          "id": "resource_rails_costs"
+        },
+        {
+          "title": "Africa Railways Network",
+          "description": "Geopackage file containing comprehensive railway network with 6,057 railway stations connected across 99,373 kilometers of rail lines. Includes 986 named railway corridors with attributes for operational status (abandoned, under construction, disused, open, planned, proposed, razed, under rehabilitation, suspended), gauge widths, line names, and facility types (mines, ports, freight terminals, manufacturing, etc.). Network topology includes nodes (stations/junctions) and edges (rail line segments).",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_railways_network.gpkg",
+          "id": "resource_railways_network"
+        },
+        {
+          "title": "Africa Roads Network",
+          "description": "Geopackage file containing comprehensive road network with 1,004,512 kilometers of roads including motorways, trunk roads, primary and secondary routes, and connecting local roads. Includes 41 named major road corridors across Africa with attributes for highway classification, surface type (paved/unpaved), number of lanes, bridge indicators, and speed limits. Network topology includes nodes (junctions/endpoints) and edges (road segments).",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/africa_roads_network.gpkg",
+          "id": "resource_roads_network"
+        },
+        {
+          "title": "Africa Transport Database Metadata",
+          "description": "Excel spreadsheet containing comprehensive metadata documentation for the African Transport Systems Database. Describes each dataset component, column names, attributes, data sources, processing methods, and quality assessments. Provides detailed explanation of the database structure and content.",
+          "data_format": "Excel (xlsx)",
+          "access_modality": "download",
+          "access_url": "https://zenodo.org/records/17593244",
+          "download_url": "https://zenodo.org/records/17593244/files/METADATA.xlsx",
+          "id": "resource_metadata"
+        }
+      ],
+      "exposure": [
+        {
+          "metrics": [
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_airport_nodes"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_airport_routes"
+            },
+            {
+              "dimension": "Product",
+              "quantity_kind": "count",
+              "id": "metric_airport_total_seats"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_airport_reference_nodes"
+            },
+            {
+              "dimension": "Product",
+              "quantity_kind": "monetary",
+              "currency": "USD",
+              "id": "metric_road_corridor_costs"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_iww_nodes"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_iww_edges"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "length",
+              "id": "metric_iww_length"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_maritime_nodes"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_maritime_edges"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "length",
+              "id": "metric_maritime_length"
+            },
+            {
+              "dimension": "Product",
+              "quantity_kind": "count",
+              "id": "metric_maritime_vessel_count"
+            },
+            {
+              "dimension": "Product",
+              "quantity_kind": "weight",
+              "id": "metric_maritime_capacity_tons"
+            },
+            {
+              "dimension": "Product",
+              "quantity_kind": "time",
+              "id": "metric_maritime_turnaround_time"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_multimodal_connections"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "length",
+              "id": "metric_multimodal_length"
+            },
+            {
+              "dimension": "Product",
+              "quantity_kind": "monetary",
+              "currency": "USD",
+              "id": "metric_railway_costs"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_rail_nodes"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_rail_edges"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "length",
+              "id": "metric_rail_length"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_road_nodes"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "count",
+              "id": "metric_road_edges"
+            },
+            {
+              "dimension": "Structure",
+              "quantity_kind": "length",
+              "id": "metric_road_length"
+            }
+          ],
+          "category": "infrastructure",
+          "taxonomy": "GED4ALL",
+          "id": "exposure_aftsdb"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
