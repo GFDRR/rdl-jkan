@@ -1,0 +1,1145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-nismod_sdk_stormtcwindspeed",
+      "title": "STORM tropical cyclone wind speed return periods",
+      "description": "Gridded and table-based tropical-cyclone wind-hazard datasets for the present climate, providing maximum wind speeds at fixed return periods and return periods at fixed wind speeds; gridded products are ~10 km per basin, and city/island tables summarize conditions within 100 km.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "version": "4",
+      "purpose": "To supply consistent, high-resolution tropical-cyclone wind hazard metrics that support risk assessment, engineering design, and adaptation planning-using a common methodology (Weibull plotting) across basins and for selected cities and islands.",
+      "details": "Synthetic tracks were generated with the statistical STORM algorithm; a 2-D parametric wind model was applied to produce ~10 km fields, and return periods (or wind speeds) were derived empirically with Weibulls plotting formula. Datasets include, for each grid cell (or city/island entry), the mean, standard deviation, and 5-95% confidence intervals across 1,000 realizations; basin IDs (EP, NA, NI, SI, SP, WP) and fixed value sets for return periods (10-10,000 yr) and wind speeds (20-75 m s⁻¹ with additional threshold values) are provided.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC0-1.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "4TU.ResearchData",
+            "email": "researchdata@4tu.nl",
+            "url": "https://data.4tu.nl/"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "Nadia Bloemendaal",
+            "email": "nadia.bloemendaal@vu.nl",
+            "url": "https://vu.nl/en/about-vu/research-institutes/ivm"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "Nadia Bloemendaal",
+            "email": "nadia.bloemendaal@vu.nl",
+            "url": "https://vu.nl/en/about-vu/research-institutes/ivm"
+          }
+        },
+        {
+          "id": "attribution_collaborator_1",
+          "role": "collaborator",
+          "entity": {
+            "name": "Deltares,Delft, The Netherlands",
+            "email": "info@deltares.nl",
+            "url": "https://www.deltares.nl/en"
+          }
+        },
+        {
+          "id": "attribution_collaborator_2",
+          "role": "collaborator",
+          "entity": {
+            "name": "Royal Netherlands Meteorological Institute (KNMI), De Bilt, The Netherlands",
+            "email": "pers@knmi.nl",
+            "url": "https://www.knmi.nl/over-het-knmi/about"
+          }
+        },
+        {
+          "id": "attribution_collaborator_3",
+          "role": "collaborator",
+          "entity": {
+            "name": "University of Southampton, National Oceanography Centre, School of Ocean and Earth Science",
+            "email": "enquiries@bodc.ac.uk",
+            "url": "https://noc.ac.uk/"
+          }
+        },
+        {
+          "id": "attribution_collaborator_4",
+          "role": "collaborator",
+          "entity": {
+            "name": "Vrije Universiteit Amsterdam, Institute for Environmental Studies (IVM)",
+            "email": "info.ivm@vu.nl",
+            "url": "https://vu.nl/en/about-vu/research-institutes/ivm"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "ERA5 - ECMWF Reanalysis v5",
+          "description": "Fifth generation global climate reanalysis from ECMWF/Copernicus Climate Change Service providing hourly atmospheric, land, and oceanic variables at 0.25° × 0.25° resolution. Used to extract monthly mean sea-level pressure (MSLP) and sea-surface temperature (SST) during tropical cyclone seasons.",
+          "lineage": "Monthly mean MSLP and SST values calculated from hourly ERA5 data during TC seasons for each basin, used as environmental input conditions for synthetic tropical cyclone track modeling",
+          "url": "https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5",
+          "type": "dataset",
+          "component": "hazard",
+          "license": "CC-BY-4.0",
+          "id": "source_1"
+        },
+        {
+          "name": "International Best Track Archive for Climate Stewardship (IBTrACS)",
+          "description": "Global unified dataset of tropical cyclone best-track data from multiple warning centers, providing location, intensity (maximum sustained wind speed and minimum central pressure), and related parameters at 3-hourly intervals. Used for extracting tropical cyclone tracks from 1980-2018 with wind speeds >18 m/s.",
+          "lineage": "Extracted TC data from IBTrACS for 1980-2018, unified wind speeds to 10-minute averages, filtered for U10 > 18 m/s (tropical storm threshold), excluded South Atlantic basin, linearly interpolated to 3-hourly values",
+          "url": "https://www.ncei.noaa.gov/products/international-best-track-archive",
+          "type": "dataset",
+          "component": "hazard",
+          "license": "CC0-1.0",
+          "id": "source_2"
+        }
+      ],
+      "referenced_by": [
+        {
+          "author_names": [
+            "Nadia Bloemendaal",
+            "Ivan D. Haigh",
+            "Hans de Moel",
+            "Sanne Muis",
+            "Reindert J. Haarsma",
+            "Jeroen C. J. H. Aerts"
+          ],
+          "name": "Generation of a global synthetic tropical cyclone hazard dataset using STORM",
+          "date_published": "2020-02-06",
+          "url": "https://www.nature.com/articles/s41597-020-0381-2",
+          "doi": "https://doi.org/10.1038/s41597-020-0381-2",
+          "id": "reference_1"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Basins of STORM IBTrACS dataset (KML)",
+          "description": "Basin reference layer listing the six TC basins used across the STORM products: EP (Eastern Pacific), NA (North Atlantic), NI (North Indian), SI (South Indian), SP (South Pacific), WP (Western Pacific)",
+          "data_format": "KML (kml)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff/4",
+          "download_url": "https://data.4tu.nl/file/0ea98bdd-5772-4da8-ae97-99735e891aff/e4d92161-214a-4df7-a2fb-533825b1d46e",
+          "id": "resource_1"
+        },
+        {
+          "title": "STORM Cities: TC wind-speed return periods (present)",
+          "description": "Workbook with two sheets for events within 100 km of 18 predefined coastal cities: (1) wind speed at fixed return periods, and (2) return period at fixed wind speeds (5 m/s steps plus Saffir-Simpson thresholds).",
+          "data_format": "Excel (xlsx)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff/4",
+          "download_url": "https://data.4tu.nl/file/0ea98bdd-5772-4da8-ae97-99735e891aff/d08e9a54-a5bf-442a-ac3c-69ec1f9a0f59",
+          "id": "resource_2"
+        },
+        {
+          "title": "STORM Fixed Return Periods (present, gridded)",
+          "description": "Per-basin ~10 km grids of maximum wind speed (m/s) at fixed return periods (10-10,000 yr), including mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download",
+          "spatial_resolution": 10000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff/4",
+          "download_url": "https://data.4tu.nl/file/0ea98bdd-5772-4da8-ae97-99735e891aff/0b98c6f5-c7af-45bb-bb6e-dac53e1b8d55",
+          "id": "resource_3"
+        },
+        {
+          "title": "STORM Fixed Wind Speeds (present, gridded)",
+          "description": "Per-basin ~10 km grids of return period (years) at fixed wind speeds (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s), including mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download",
+          "spatial_resolution": 10000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff/4",
+          "download_url": "https://data.4tu.nl/file/0ea98bdd-5772-4da8-ae97-99735e891aff/3c839d73-e6c0-4d63-ae03-c0d05e734d57",
+          "id": "resource_4"
+        },
+        {
+          "title": "STORM Islands: TC wind-speed return periods (present)",
+          "description": "Workbook with two sheets for events within 100 km of island capitals (SIDS and others): (1) wind speed at fixed return periods, and (2) return period at fixed wind speeds (5 m/s steps plus Saffir-Simpson thresholds).",
+          "data_format": "Excel (xlsx)",
+          "access_modality": "download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff/4",
+          "download_url": "https://data.4tu.nl/file/0ea98bdd-5772-4da8-ae97-99735e891aff/f537c00b-4019-42da-bd13-e4bcb49c8aa3",
+          "id": "resource_5"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_storm_tropical_cyclone",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "1/10 to 1/10000 years",
+            "hazards": [
+              {
+                "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                "type": "strong_wind",
+                "processes": [
+                  "tropical_cyclone"
+                ]
+              },
+              {
+                "id": "STORM_FIXED_WIND_SPEEDS",
+                "type": "strong_wind",
+                "processes": [
+                  "tropical_cyclone"
+                ]
+              },
+              {
+                "id": "STORM_CITIES_TC_WIND_SPEED_RETURN_PERIODS",
+                "type": "strong_wind",
+                "processes": [
+                  "tropical_cyclone"
+                ]
+              },
+              {
+                "id": "STORM_ISLANDS_TC_WIND_SPEED_RETURN_PERIODS",
+                "type": "strong_wind",
+                "processes": [
+                  "tropical_cyclone"
+                ]
+              }
+            ],
+            "events": [
+              {
+                "id": "RP10",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP10 (10-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10,
+                    "event_rate": 0.1,
+                    "probability": {
+                      "value": 0.1,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP20",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP20 (20-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20,
+                    "event_rate": 0.05,
+                    "probability": {
+                      "value": 0.05,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP30",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP30 (30-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 30,
+                    "event_rate": 0.033333,
+                    "probability": {
+                      "value": 0.033333,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP40",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP40 (40-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 40,
+                    "event_rate": 0.025,
+                    "probability": {
+                      "value": 0.025,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP50",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP50 (50-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50,
+                    "event_rate": 0.02,
+                    "probability": {
+                      "value": 0.02,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP60",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP60 (60-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 60,
+                    "event_rate": 0.016667,
+                    "probability": {
+                      "value": 0.016667,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP70",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP70 (70-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 70,
+                    "event_rate": 0.014286,
+                    "probability": {
+                      "value": 0.014286,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP80",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP80 (80-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 80,
+                    "event_rate": 0.0125,
+                    "probability": {
+                      "value": 0.0125,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP90",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP90 (90-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 90,
+                    "event_rate": 0.011111,
+                    "probability": {
+                      "value": 0.011111,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP100",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP100 (100-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01,
+                    "probability": {
+                      "value": 0.01,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP200",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP200 (200-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 200,
+                    "event_rate": 0.005,
+                    "probability": {
+                      "value": 0.005,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP300",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP300 (300-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 300,
+                    "event_rate": 0.003333,
+                    "probability": {
+                      "value": 0.003333,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP400",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP400 (400-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 400,
+                    "event_rate": 0.0025,
+                    "probability": {
+                      "value": 0.0025,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP500",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP500 (500-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500,
+                    "event_rate": 0.002,
+                    "probability": {
+                      "value": 0.002,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP600",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP600 (600-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 600,
+                    "event_rate": 0.001667,
+                    "probability": {
+                      "value": 0.001667,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP700",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP700 (700-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 700,
+                    "event_rate": 0.001429,
+                    "probability": {
+                      "value": 0.001429,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP800",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP800 (800-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 800,
+                    "event_rate": 0.00125,
+                    "probability": {
+                      "value": 0.00125,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP900",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP900 (900-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 900,
+                    "event_rate": 0.001111,
+                    "probability": {
+                      "value": 0.001111,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP1000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP1000 (1000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000,
+                    "event_rate": 0.001,
+                    "probability": {
+                      "value": 0.001,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP2000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP2000 (2000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2000,
+                    "event_rate": 0.0005,
+                    "probability": {
+                      "value": 0.0005,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP3000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP3000 (3000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 3000,
+                    "event_rate": 0.000333,
+                    "probability": {
+                      "value": 0.000333,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP4000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP4000 (4000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 4000,
+                    "event_rate": 0.00025,
+                    "probability": {
+                      "value": 0.00025,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP5000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP5000 (5000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5000,
+                    "event_rate": 0.0002,
+                    "probability": {
+                      "value": 0.0002,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP6000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP6000 (6000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 6000,
+                    "event_rate": 0.000167,
+                    "probability": {
+                      "value": 0.000167,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP7000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP7000 (7000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 7000,
+                    "event_rate": 0.000143,
+                    "probability": {
+                      "value": 0.000143,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP8000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP8000 (8000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 8000,
+                    "event_rate": 0.000125,
+                    "probability": {
+                      "value": 0.000125,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP9000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP9000 (9000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 9000,
+                    "event_rate": 0.000111,
+                    "probability": {
+                      "value": 0.000111,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "RP10000",
+                "calculation_method": "simulated",
+                "description": "STORM fixed-return-period maximum wind speed (m/s) for RP10000 (10000-year return period). Per-basin about 10 km grids; includes mean, standard deviation, and 5-95% confidence intervals over 1,000 realizations.",
+                "hazard": {
+                  "id": "STORM_FIXED_RETURN_PERIODS_PRESENT",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10000,
+                    "event_rate": 0.0001,
+                    "probability": {
+                      "value": 0.0001,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS18MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS18MS (18 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS20MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS20MS (20 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS25MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS25MS (25 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS30MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS30MS (30 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS33MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS33MS (33 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS35MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS35MS (35 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS40MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS40MS (40 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS42MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS42MS (42 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS45MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS45MS (45 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS50MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS50MS (50 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS55MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS55MS (55 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS58MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS58MS (58 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS60MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS60MS (60 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS65MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS65MS (65 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS70MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS70MS (70 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "WS75MS",
+                "calculation_method": "simulated",
+                "description": "Per-basin ~10 km grids of return period (years) for fixed wind speed WS75MS (75 m/s), from STORM fixed-wind-speed products (20-75 m/s at 5 m/s steps, plus 18, 33, 42, 58 m/s).",
+                "hazard": {
+                  "id": "STORM_FIXED_WIND_SPEEDS",
+                  "type": "strong_wind",
+                  "processes": [
+                    "tropical_cyclone"
+                  ]
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
