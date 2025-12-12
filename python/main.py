@@ -104,8 +104,8 @@ def write_datasets_to_markdown(json_filepaths):
         with open(json_filepath, encoding=encoding) as input_file:
             datasets_json = json.load(input_file)
             for dataset in datasets_json["datasets"]:
-                first_link, *_ = dataset.get("links", [{"href": config.schema_url_v2}])
-                schema_url = first_link.get("href")
+                links = dataset.get("links", [])
+                schema_url = next((link["href"] for link in links if link.get("rel") == "describedby"), config.schema_url_v2)
                 result = write_dataset_to_markdown(dataset, schema_url)
                 if result != 0:
                     exit_code = result

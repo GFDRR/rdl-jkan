@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-GAR_seismic",
+      "title": "GAR Seismic Hazard maps",
+      "description": "For the GAR Atlas, a fully probabilistic seismic hazard analysis at global level was developed by CIMNE and INGENIAR Ltda. This hazard model is a continuation and improvement of the one developed in the framework of GAR13 where a set of tectonic provinces were identified and characterized by means of a set of parameters that describe the future seismic activity on each of them based on historical records together with relationships to obtain hazard intensities as a function of magnitude and distance. The hazard analysis was performed using the program CRISIS2014, a state-of-the-art tool for these kinds of tasks and widely known and acknowledged by experts in the field across the world. The chosen hazard intensity measure for this case was spectral acceleration and to guarantee a good connection between the hazard and the exposure characteristics, results for several ordinates beteween 0.0 and 2.3 seconds were computed.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "version": "1.0",
+      "project": {
+        "name": "GAR Atlas",
+        "url": "https://www.preventionweb.net/english/hyogo/gar/atlas/"
+      },
+      "details": "This dataset was developed in the framework of an analysis with a global scope and should not be used for local applications and/or decision-making purposes (such as land use planning). The main purpose of all GAR Atlas datasets is to broadly identify high risk areas at global level and also identifying areas where more detailed data should be collected and where detailed risk assessments are to be performed. Results for some areas may be underestimated or overestimated. UNISDR and its scientific partners and collaborators should in no case be liable for misuse or misinterpretation of the presented results. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher_1765296204845",
+          "role": "publisher",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "url": "http://www.undrr.org"
+          }
+        },
+        {
+          "id": "attribution_creator_1765296231939",
+          "role": "creator",
+          "entity": {
+            "name": "International Centre for Numerical Methods in Engineering (CIMNE)",
+            "url": "https://cimne.com/"
+          }
+        },
+        {
+          "id": "attribution_contact_point_1765297532214",
+          "role": "contact_point",
+          "entity": {
+            "name": "GAR Risk Data Platform",
+            "url": "https://risk.preventionweb.net/"
+          }
+        }
+      ],
+      "referenced_by": [
+        {
+          "name": "Update on the probabilistic modelling of natural risks at global level: global risk model",
+          "date_published": "2015-02-01",
+          "url": "https://www.preventionweb.net/english/hyogo/gar/2015/en/bgdocs/CIMNE_INGENIAR%20Background%20Paper%20Global%20Risk%20Model%20GAR%2015%20v1.3.pdf",
+          "id": "reference_YxN8cGq3"
+        }
+      ],
+      "resources": [
+        {
+          "data_format": "GRID (grd)",
+          "access_modality": "Download page",
+          "spatial_resolution": 8000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://risk.preventionweb.net/",
+          "id": "resource_UdLfzVrE",
+          "title": "Peak ground acceleration and Spectral acceleration",
+          "description": "The dataset download page includes:\n\n- Peak Ground Acceleration (PGA)\n- Spectral acceleration 0.2/0.5/1 sec\n\nEach are provided for return period scenarios 250, 475, 975, 1500, 2475 years."
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "hazards": [
+              {
+                "type": "earthquake",
+                "hazard_process": "ground_motion",
+                "intensity_measure": "AvgSa:cm/s2",
+                "id": "hazard_YiqnwZuB"
+              },
+              {
+                "type": "earthquake",
+                "hazard_process": "ground_motion",
+                "intensity_measure": "PGA:cm/s2",
+                "id": "hazard_5xnQJjDo"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "frequency_distribution": "poisson",
+            "calculation_method": "simulated",
+            "occurrence_range": "RP 250, 475, 975, 1500, 2475 years",
+            "id": "event_set_xjZnwJUB"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
