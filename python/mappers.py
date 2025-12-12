@@ -311,7 +311,7 @@ def make_attribution(attribution_or_attributions, role=None):
 
     entity = attribution["entity"]
     payload = {
-        "email": entity["email"],
+        "email": entity.get("email"),
         "id": attribution["id"],
         "name": entity["name"],
         "url": entity.get("url"),
