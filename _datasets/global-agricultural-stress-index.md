@@ -3,14 +3,13 @@ contact_point:
   email: mamadio@worldbank.org
   id: attribution_contact_point_1759330864916
   name: Mattia Amadio
-  url: ''
+  url: null
 creator:
   email: giews1@fao.org
   id: attribution_creator_1759330856680
   name: FAO
   url: https://www.fao.org/
 dataset_id: GLOBAL_AGRICULTURAL__35TR
-slug: GLOBAL_AGRICULTURAL__35TR
 description: The Agricultural Stress Index (ASI) produced by FAO depicts the frequency
   of severe drought affecting crop areas by means of remote-sensed Vegetation Health
   Index (VHI). FAO provides decadal, monthly and annual drought frequency over the
@@ -24,7 +23,7 @@ extra_attributions:
   id: attribution_1762252073805
   name: Mattia Amadio
   role: resource_provider
-  url: ''
+  url: null
 hazard:
   calculation_method: inferred
   disaster_identifiers: ''
@@ -32,7 +31,7 @@ hazard:
   hazard_type: drought
   intensity: VCI:-
   occurrence_range: ''
-  processes: agricultural_drought
+  processes: ''
   seasonality: uniform
 license: CC-BY-4.0
 loss: null
@@ -61,10 +60,10 @@ resources:
     \ drought event\n -   50 percent (1/2) of cropland area being affected by the\
     \ drought event"
   download_url: https://datacatalogfiles.worldbank.org/ddh-published/0066907/DR0095589/ASI.zip
-  format: geotiff
+  format: GeoTIFF (tif)
   id: resource_LwLJRHNJ
-  media_type: ''
-  spatial_resolution: '1000'
+  media_type: null
+  spatial_resolution: 1000
   temporal:
     duration: P40Y
     end: '2024'
@@ -74,6 +73,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-03
+slug: GLOBAL_AGRICULTURAL__35TR
 spatial:
   bbox:
   - 0
@@ -82,8 +82,6 @@ spatial:
   - 0
   countries:
   - GLO
-  geometry:
-    type: ''
   scale: global
 title: Global Agricultural Stress Index
 version: '2024'
