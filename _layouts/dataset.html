@@ -9,6 +9,15 @@ layout: default
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign resource_system_fields = "id|title|download_url|format|description" | split: "|" %}
 
+<script type="application/ld+json">
+{
+   "@context":"http://schema.org",
+   "@type":"Dataset",
+
+   "url":"{{ site.baseurl }}{{ page.url }}"
+}
+</script>
+
 <div data-component="view-switcher">
   <div class="row" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset"
     resource="{{ page.url }}">
