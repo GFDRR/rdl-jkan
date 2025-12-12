@@ -43,5 +43,5 @@ def validate_with_custom_logic(dataset, schema):
     CustomValidator = validators.create(
         meta_schema=ValidatorClass.META_SCHEMA, validators=all_validators
     )
-
+    print(f"Validating {dataset.get('id', 'Unknown Dataset')} with custom logic...")
     CustomValidator(schema).validate(dataset)
