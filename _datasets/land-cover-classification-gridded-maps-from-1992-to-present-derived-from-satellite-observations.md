@@ -22,7 +22,7 @@ description: This dataset provides global land cover maps at 300m spatial resolu
   2016-2022 are consistent with the ESA CCI global annual land cover maps from 1992-2015,
   ensuring temporal continuity across the entire time series.
 details: "The land cover maps are delivered in NetCDF-4 format following CF-1.6 conventions,\
-  \ with a geographic coordinate system based on WGS84 using Plate Carr\uFFFDe projection.\
+  \ with a geographic coordinate system based on WGS84 using Plate Carr\xE9e projection.\
   \ Each annual map includes five bands: lccs_class (land cover classification), processed_flag\
   \ (processing status), current_pixel_state (pixel state during baseline generation),\
   \ observation_count (number of valid observations), and change_count (number of\
@@ -34,7 +34,7 @@ details: "The land cover maps are delivered in NetCDF-4 format following CF-1.6 
   \ rely on external datasets: tree cover flooded saline water (mangroves from global\
   \ atlas), urban areas (Global Human Settlement Layer and Global Urban Footprint),\
   \ water bodies (CCI global open water bodies map), and permanent snow and ice (Randolph\
-  \ Glaciers Inventory). The spatial resolution corresponds to 0.002778\uFFFD (approximately\
+  \ Glaciers Inventory). The spatial resolution corresponds to 0.002778\xB0 (approximately\
   \ 300m at the equator, ~200m in mid-latitudes). File sizes are approximately 2.5\
   \ GB per annual map with internal LZW compression."
 exposure:
