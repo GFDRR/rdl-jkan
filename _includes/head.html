@@ -47,6 +47,88 @@
     {% include addons/twittercard.html %}
   {% endif %}
 
+  <script type="application/ld+json">
+    {% if page.slug %}
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "creator": {
+          "@type": "Organization",
+          "name": "{{ page.creator.name | escape }}",
+        },
+        "dateCreated": "UNKNOWN",
+        "description": "{{ page.description | strip_html | strip_newlines | escape }}",
+        "distribution": [
+          {% for distribution in page.resources %}
+            {
+              "@type": "DataDownload",
+              "contentUrl": "{{ distribution.download_url }}",
+              "description": "{{ distribution.description | escape }}",
+              {% if page.schema == "rdl-02" %}
+              "encodingFormat": "{{ distribution.format | escape }}",
+              {% elsif page.schema == "rdl-03" %}
+              "encodingFormat": "{{ distribution.data_format | escape }}",
+              {% endif %}
+            }{% if forloop.last == false %},{% endif %}
+          {% endfor %}
+        ],
+        "identifier": "{{ page.dataset_id }}",
+        "license": "{{ page.license }}",
+        "keywords": "UNKNOWN",
+        "name": "{{ page.title | escape }}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ page.publisher.name | escape }}",
+        },
+        "url": "{{ site.baseurl }}/datasets/{{ page.slug }}"
+      }
+    {% else %}
+      { "@context": "https://schema.org",
+      "@type": "DataCatalog",
+      "name": "{{ site.title }}",
+      "dataset": [
+        {% for dataset in site.datasets %}
+          {
+            "@context": "https://schema.org",
+            "@type": "Dataset",
+            "creator": {
+              "@type": "Organization",
+              "name": "{{ dataset.creator.name | escape }}",
+            },
+            "dateCreated": "UNKNOWN",
+            "description": "{{ dataset.description | strip_html | strip_newlines | escape }}",
+            "distribution": [
+              {% for distribution in dataset.resources %}
+                {
+                  "@type": "DataDownload",
+                  "contentUrl": "{{ distribution.download_url }}",
+                  "description": "{{ distribution.description | escape }}",
+                  {% if dataset.schema == "rdl-02" %}
+                    "encodingFormat": "{{ distribution.format | escape }}",
+                  {% elsif dataset.schema == "rdl-03" %}
+                    "encodingFormat": "{{ distribution.data_format | escape }}",
+                  {% endif %}
+                }{% if forloop.last == false %},{% endif %}
+              {% endfor %}
+            ],
+            "identifier": "{{ dataset.dataset_id }}",
+            "license": "{{ dataset.license }}",
+            "keywords": "",
+            "name": "{{ dataset.title | escape }}",
+            "publisher": {
+              "@type": "Organization",
+              "name": "{{ dataset.publisher.name | escape }}",
+            },
+            "url": "{{ site.baseurl }}/datasets/{{ dataset.slug }}"
+          }{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+      ],
+      "keywords": "open data catalog risk disaster exposure hazard loss vulnerability",
+      "url": "{{ site.baseurl }}"
+      }
+    {% endif %} 
+  </script>
+
   <script>
   var settings = {
     BASE_URL: {{ site.baseurl | jsonify }},
