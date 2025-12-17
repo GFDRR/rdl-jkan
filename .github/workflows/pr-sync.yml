@@ -1,5 +1,5 @@
 ---
-name: Sync markdown and vector embeddings with updated JSON metadata
+name: Generate markdown from new JSON metadata on PR open/synchronize
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  import:
+  markdown:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -26,14 +26,14 @@ jobs:
       - run: source .venv/bin/activate
       - run: echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
       - run: python3 -m pip install -r requirements.txt
-      - name: Import JSON datasets and generate vector embeddings
-        run: python3 main.py --ci -v
+      - name: Generate markdown from new JSON metadata
+        run: python3 main.py --ci --markdown
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ..
-          git diff-index --quiet HEAD || git commit -m "Sync markdown and vector embeddings with updated JSON metadata"
+          git diff-index --quiet HEAD || git commit -m "Generate markdown from new JSON metadata"
           git push
           echo "Complete"
  
