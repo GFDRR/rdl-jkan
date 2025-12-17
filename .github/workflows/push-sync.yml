@@ -1,0 +1,39 @@
+---
+name: Generate vector embeddings on push to deployed branch
+
+on:
+  push:
+    branches:
+      - rdl-0.**
+
+permissions:
+  contents: write
+
+jobs:
+  vectors:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./python
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+      - run: python3 -m venv .venv
+      - run: source .venv/bin/activate
+      - run: echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
+      - run: python3 -m pip install -r requirements.txt
+      - name: Generate vector embeddings
+        run: python3 main.py --ci --vectors
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ..
+          git diff-index --quiet HEAD || git commit -m "Generate vector embeddings"
+          git push
+          echo "Complete"
