@@ -28,6 +28,10 @@ def custom_required(validator, required, instance, schema):
     if schema.get("title") == "Event" and "occurrence" in required:
         required = [r for r in required if r != "occurrence"]
 
+    # If this is an Event schema and occurrence is required, remove it from validation
+    if schema.get("title") == "Hazard" and "hazard_process" in required:
+        required = [r for r in required if r != "hazard_process"]
+
     # Use the default required validator with potentially modified required list
     for property in required:
         if property not in instance:
