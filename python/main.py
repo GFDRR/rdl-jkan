@@ -163,6 +163,12 @@ if __name__ == "__main__":
         action="store_true",
     )
     parser.add_argument(
+        "-m",
+        "--markdown",
+        help="Tells the command to generate markdown from JSON metadata",
+        action="store_true",
+    )
+    parser.add_argument(
         "-v",
         "--vectors",
         help="Tells the command to generate vector embeddings of metadata",
@@ -175,7 +181,11 @@ if __name__ == "__main__":
         if args.ci
         else Path(".").glob(f"{config.json_dir}/*.json")
     )
-    exit_code = write_datasets_to_markdown(files_to_process)
+    exit_code = 0
+    if args.markdown is True and files_to_process:
+        exit_code = write_datasets_to_markdown(files_to_process)
+        if exit_code == 0:
+            print(f"Markdown generated in {config.datasets_dir}.")
     if args.vectors is True and files_to_process:
         model = SentenceTransformer("all-MiniLM-L6-v2")
         datasets_metadata = get_datasets_metadata()
@@ -184,13 +194,9 @@ if __name__ == "__main__":
         exit_code = exit_code | utils.save_to_json(
             vector_embeddings, config.vectors_path
         )
-        print(f"Vectors saved to {config.vectors_path}.")
-    if exit_code == 0:
-        print(
-            "\nAll done! Please enjoy your datasets :)\n",
-            "More info is available at `python/README.md`\n",
-            sep=os.linesep,
-        )
-    else:
-        print(f"\nUh oh! Exit code: {exit_code}")
+        if exit_code == 0:
+            print(f"Vectors saved to {config.vectors_path}.")
+    if args.vectors is False and args.markdown is False:
+        print("No action specified. Use --markdown and/or --vectors.")
+        exit_code = 1
     sys.exit(exit_code)
