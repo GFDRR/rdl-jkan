@@ -1,0 +1,264 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-nismod_sdk_electransdistline",
+      "title": "Data from: Predictive mapping of the global power system using open data",
+      "description": "A first composite map of the global power grid using publicly available open data, generated through the gridfinder tool. This dataset includes high-voltage (HV, >70 kV) transmission networks, predicted medium-voltage (MV, 10-70 kV) distribution networks, and low-voltage (LV, <1 kV) infrastructure estimates. The data shows that 97% of the global population lives within 10km of a MV line, with significant regional variations. The dataset was created using state-of-the-art algorithms in geospatial data analysis, including night-time light imagery filtering and least-cost routing algorithms following roads and known distribution lines.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "version": "1.1.1",
+      "purpose": "To provide a standardized global dataset of electricity transmission and distribution networks for electrification planning, power sector resilience assessment, climate change adaptation, and achieving Sustainable Development Goal 7 (SDG 7). The dataset enables improved efforts in electricity modelling and planning, assessment of social inequalities, estimation of exposure to natural hazards, and quantification of electricity infrastructure roll-out requirements.",
+      "project": {
+        "name": "Predictive mapping of the global power system",
+        "url": "https://gridfinder.org"
+      },
+      "details": "This research presents the first composite map of the global power grid using publicly available open data. The methodology uses multiple filtering algorithms applied to VIIRS night-time light imagery to identify electrification targets, then connects these locations through a many-to-many variant of Dijkstra's algorithm using OpenStreetMap road networks as a cost function. The validation was performed across 16 electricity networks from 14 countries representing all World Bank income groupings, achieving 75% predictive accuracy across an equal-area grid with 15km edge length. The dataset comprises approximately 6.6 million km of high-voltage transmission lines (from OpenStreetMap), 7 million km of predicted medium-voltage distribution lines, and 69 million km of estimated low-voltage infrastructure. Important limitation: this dataset does not attempt to replicate actual network configurations or precise structures needed for electrical modeling such as power flow modeling.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "Zenodo",
+            "email": "info@zenodo.org",
+            "url": "https://zenodo.org/records/3628142"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "Christopher Arderne",
+            "email": "carderne@worldbank.org",
+            "url": "https://www.worldbank.org/ext/en/home"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "Christopher Arderne",
+            "email": "carderne@worldbank.org",
+            "url": "https://www.worldbank.org/ext/en/home"
+          }
+        },
+        {
+          "id": "attribution_collaborator1",
+          "role": "collaborator",
+          "entity": {
+            "name": "Environmental Change Institute, University of Oxford",
+            "email": "enquiries@eci.ox.ac.uk",
+            "url": "https://www.eci.ox.ac.uk"
+          }
+        },
+        {
+          "id": "attribution_collaborator2",
+          "role": "collaborator",
+          "entity": {
+            "name": "Department of Civil and Environmental Engineering, University of Auckland",
+            "email": "cee-enquiries@auckland.ac.nz",
+            "url": "https://www.auckland.ac.nz/en/engineering/about-the-faculty/engineering/civil-and-environmental-engineering.html"
+          }
+        },
+        {
+          "id": "attribution_collaborator3",
+          "role": "collaborator",
+          "entity": {
+            "name": "Institute for Environmental Studies (IVM), Vrije Universiteit Amsterdam",
+            "email": "info.ivm@vu.nl",
+            "url": "https://vu.nl/en/about-vu/research-institutes/ivm"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "source_1",
+          "name": "OpenStreetMap",
+          "url": "https://planet.openstreetmap.org",
+          "description": "Road and electricity network data, particularly transmission lines >70kV",
+          "lineage": "Used as the primary source for high-voltage transmission lines (>70 kV). Road network data was used to create a cost function for the least-cost routing algorithm that predicts medium-voltage distribution lines. Existing OSM electricity lines were assigned a cost of 0.00, motorways 0.10, tertiary roads 0.17, with other roads scaled in between. Predicted MV lines that replicate existing OSM lines were removed from final results to show only additions. Comprises 6.6 million km of global transmission network (92% of well-tagged data fits HV definition).",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "ODbL-1.0"
+        },
+        {
+          "id": "source_2",
+          "name": "VIIRS Day/Night Band Nighttime Lights",
+          "url": "https://ngdc.noaa.gov/eog/viirs/download_dnb_composites.html",
+          "description": "Night-time lights imagery at 450m resolution, monthly temporal resolution, 2017 data used",
+          "lineage": "Twelve months of VIIRS night-time lights imagery were merged using the 70th percentile value for each pixel to filter transient events (fires, gas flaring, snow, lunar reflections). A 2D distance-weighted cubic filter was convolved over the image to highlight locations brighter than their surroundings. A threshold of 0.1 was applied to create binary raster of electrification targets. Additional filters removed locations with no population or on slopes >25°. This produced target coordinates representing locations most likely connected to distribution grid, which were then connected using the routing algorithm.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0"
+        },
+        {
+          "id": "source_3",
+          "name": "GHS Population (GHS-POP)",
+          "url": "https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php",
+          "description": "Population data at 250m resolution, 2015 data used",
+          "lineage": "Used to filter out electrification target locations with no population. Applied in the low-voltage infrastructure estimation algorithm to calculate the length of LV lines in each cell based on population, demand, and household size. Used in access rate estimation algorithm by splitting each country into eight groups combining urban-rural classification with four quantiles of population density to capture variations in brightness per capita.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0"
+        },
+        {
+          "id": "source_4",
+          "name": "GHS Settlement Model (GHS-SMOD)",
+          "url": "https://ghsl.jrc.ec.europa.eu/ghs_smod2019.php",
+          "description": "Urban extents data at 1,000m resolution, 2015 data used",
+          "lineage": "Used to classify areas as urban or rural for the access rate estimation algorithm. The algorithm splits each country into urban and rural categories, then applies different brightness-to-access conversion factors based on urban/rural classification and population density quartiles. Used to calibrate results against national urban and rural accessibility statistics from World Bank data.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0"
+        },
+        {
+          "id": "source_5",
+          "name": "NASA SRTM Digital Elevation Model",
+          "url": "http://srtm.csi.cgiar.org/srtmdata",
+          "description": "Digital elevation model at 1 arc second resolution, 2000 data used",
+          "lineage": "Used to filter out electrification target locations on slopes above 25° and permanent ice caps, where it is very unlikely that distribution lines cross. This filtering was applied after the initial night-time lights processing but before the routing algorithm connected the targets.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Public Domain"
+        },
+        {
+          "id": "source_6",
+          "name": "World Bank Electrification Rates",
+          "url": "https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS",
+          "description": "National electrification access statistics, 2016 data used",
+          "lineage": "Provided national-level total, urban, and rural electrification access rates used to calibrate the access rate estimation algorithm. The iterative algorithm modifies the brightness-to-access conversion factor for each of eight groups (urban/rural × four population density quartiles) until results match national statistics within 2%. For countries with >90% urban access, the algorithm directly applies these rates to urban areas.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0"
+        },
+        {
+          "id": "source_7",
+          "name": "ESA CCI Land Cover",
+          "url": "https://maps.elie.ucl.ac.be/CCI/viewer",
+          "description": "Land cover data at 300m resolution, 2015 data used",
+          "lineage": "Used in conjunction with the digital elevation model to apply additional filters for removing unlikely electrification target locations, such as permanent ice caps and other land cover types where distribution infrastructure is unlikely to be present.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "Custom"
+        },
+        {
+          "id": "source_8",
+          "name": "gridfinder",
+          "url": "https://github.com/carderne/gridfinder",
+          "description": "Open-source algorithmic model for predicting medium-voltage electricity distribution networks based on night-time lights and road networks. Adapted from Facebook's many-to-many Dijkstra algorithm.",
+          "lineage": "The core computational model that generates medium-voltage (10-70 kV) distribution network predictions. Takes electrification targets (derived from filtered VIIRS night-time lights) and connects them using a many-to-many variant of Dijkstra's shortest path algorithm. Uses OSM road network data as a cost function (existing grid lines: cost 0.00, motorways: 0.10, tertiary roads: 0.17, no roads: 1.00). The algorithm greedily adds points starting from a single location and branching outwards, keeping track of cost/distance and adding targets as found. Processes each country individually assuming MV lines don't cross borders. Applies 100km buffer on OSM data to remove predicted lines in remote areas. Produces approximately 7 million km of predicted MV distribution lines globally. Final output excludes lines that replicate existing OSM data.",
+          "type": "model",
+          "component": "exposure",
+          "license": "MIT"
+        },
+        {
+          "id": "source_9",
+          "name": "access-estimator",
+          "url": "https://github.com/carderne/access-estimator",
+          "description": "Algorithmic model for estimating electricity access rates and low-voltage infrastructure density as gridded rasters, using night-time lights, population data, urban classification, and national statistics.",
+          "lineage": "Used to produce two outputs: (1) Gridded electricity access rates by applying an iterative algorithm that matches national urban/rural statistics, splitting each country into 8 groups (urban/rural × 4 population density quartiles) and adjusting brightness-to-access conversion factors until calibrated to World Bank data within 2%. (2) Low-voltage infrastructure density estimates using the formula: length = (demand × area × hh × pop) / capacity, where parameters were varied by region and calibrated against detailed LV network data. Produces approximately 69 million km of estimated LV infrastructure globally. For countries with >90% urban access, directly applies national rates to urban areas.",
+          "type": "model",
+          "component": "exposure",
+          "license": "MIT"
+        }
+      ],
+      "referenced_by": [
+        {
+          "author_names": [
+            "Christopher Arderne",
+            "Claire Nicolas",
+            "Conrad Zorn",
+            "Elco E. Koks"
+          ],
+          "name": "Predictive mapping of the global power system using open data",
+          "date_published": "2020-01-15",
+          "url": "https://www.nature.com/articles/s41597-019-0347-4",
+          "doi": "https://doi.org/10.1038/s41597-019-0347-4",
+          "id": "reference_1"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Global Grid Network (Vector)",
+          "description": "Vectorized predicted distribution and transmission line network. Contains both existing OpenStreetMap lines (tagged in 'source' column) and newly predicted medium-voltage lines. Represents approximately 6.6 million km of high-voltage transmission lines and 7 million km of predicted medium-voltage distribution lines.",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "file_download",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/3628142",
+          "download_url": "https://zenodo.org/records/3628142/files/grid.gpkg",
+          "id": "resource_1"
+        },
+        {
+          "title": "Low-Voltage Infrastructure (Raster)",
+          "description": "Raster of predicted low-voltage infrastructure in kilometres per cell. Estimated using population density, night-time lights, urban extents, and national statistics to calculate the density of LV infrastructure (<1 kV). Comprises approximately 69 million km of estimated low-voltage infrastructure globally.",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "file_download",
+          "spatial_resolution": 250,
+          "coordinate_system": "EPSG:54009",
+          "access_url": "https://zenodo.org/records/3628142",
+          "download_url": "https://zenodo.org/records/3628142/files/lv.tif",
+          "id": "resource_2"
+        },
+        {
+          "title": "Electrification Targets (Raster)",
+          "description": "Binary raster showing locations predicted to be connected to the distribution grid. Created through filtering of VIIRS night-time lights imagery using the 70th percentile value over 12 months, with a threshold value of 0.1 applied after convolving a distance-weighted filter.",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "file_download",
+          "spatial_resolution": 450,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://zenodo.org/records/3628142",
+          "download_url": "https://zenodo.org/records/3628142/files/targets.tif",
+          "id": "resource_3"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_electricity_transmission",
+          "category": "infrastructure",
+          "taxonomy": "GED4ALL",
+          "metrics": [
+            {
+              "id": "metric_transmission_length",
+              "dimension": "structure",
+              "quantity_kind": "length"
+            }
+          ]
+        },
+        {
+          "id": "exposure_electricity_distribution",
+          "category": "infrastructure",
+          "taxonomy": "GED4ALL",
+          "metrics": [
+            {
+              "id": "metric_distribution_length",
+              "dimension": "structure",
+              "quantity_kind": "length"
+            }
+          ]
+        },
+        {
+          "id": "exposure_electricity_low_voltage",
+          "category": "infrastructure",
+          "taxonomy": "GED4ALL",
+          "metrics": [
+            {
+              "id": "metric_low_voltage_length",
+              "dimension": "structure",
+              "quantity_kind": "length"
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
