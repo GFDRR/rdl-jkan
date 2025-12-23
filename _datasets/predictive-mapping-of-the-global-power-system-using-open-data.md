@@ -121,7 +121,7 @@ spatial:
   countries:
   - GLO
   scale: global
-title: 'Predictive mapping of the global power system using open data'
+title: Predictive mapping of the global power system using open data
 version: 1.1.1
 vulnerability: null
 ---
