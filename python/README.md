@@ -6,7 +6,7 @@ See here on how to convert and prepare you metadata in JSON file https://metadat
 
 From `/python`, run:
 
-Linux:
+Linux or Mac:
 
 ```
 python3 -m venv .venv
