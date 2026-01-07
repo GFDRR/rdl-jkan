@@ -87,4 +87,5 @@ spatial:
 title: Absolute Average Temperature
 version: 30 March 2022
 vulnerability: null
+
 ---
