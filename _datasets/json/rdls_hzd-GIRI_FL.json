@@ -1,0 +1,229 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-GIRI_FL",
+      "title": "Global river flood hazard",
+      "description": "Datasets containing probabilistic analysis of river flood maximum water depth (m) covering historical and future projections at the global scale.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "version": "1",
+      "project": {
+        "name": "Global Infrastructure Risk Model and Resilience Index (GIRI)",
+        "url": "https://giri.unepgrid.ch/"
+      },
+      "details": "The hydrological model used is the Continuum model (Silvestro et al. 2013 and 2015). It is a continuous, distributed and physically based hydrological model able to reproduce the spatial-temporal evolution of soil moisture, energy fluxes, surface soil temperature, evapotranspiration and discharge. Climate dataset used for the simulation of basin response are the W5E5 Global Meteorological dataset for present climate, and the ISIMIP3b Global Meteorological reanalysis dataset for the futur climate. In order to generate flood hazard maps, resulting discharge estimates are input to an hydraulic model based on the Manning equation that compute channel uniform flow depth. This simplified approach fits to determine flood maps on large areas.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "1",
+          "role": "publisher",
+          "entity": {
+            "name": "UNEP-GRID",
+            "url": "https://unepgrid.ch/en"
+          }
+        },
+        {
+          "id": "2",
+          "role": "creator",
+          "entity": {
+            "name": "CIMA",
+            "url": "https://www.cimafoundation.org"
+          }
+        },
+        {
+          "id": "3",
+          "role": "contact_point",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          }
+        },
+        {
+          "id": "4",
+          "role": "resource_provider",
+          "entity": {
+            "name": "CDRI",
+            "url": "https://cdri.world/"
+          }
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "1",
+          "name": "The GIRI global flood hazard model ",
+          "author_names": [
+            "L. Alfieri",
+            "L. Campo",
+            "S. Gabellani",
+            "T. Ghizzoni",
+            "C. Herold",
+            "A. Libertino",
+            "E. Trasforini",
+            "R. Rudari"
+          ],
+          "date_published": "2023-01-01",
+          "url": "https://giri.unepgrid.ch/sites/default/files/2023-09/CIMA_GIRI_Flood_BGpaper.pdf"
+        },
+        {
+          "id": "2",
+          "name": "Supplement material to the GIRI global flood hazard model ",
+          "date_published": "2023-01-01",
+          "url": "https://giri.unepgrid.ch/sites/default/files/2023-09/CIMA_GIRI_Flood_BGpaper_Supplement.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "HST",
+          "title": "Flood hazard (historical 1979-2016)",
+          "description": "Collection of historical hazard maps",
+          "spatial_resolution": 90,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "temporal": {
+            "start": "1979",
+            "end": "2016"
+          },
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        },
+        {
+          "id": "PRJ_LB",
+          "title": "Flood hazard (projected SSP1)",
+          "description": "Collection of projected hazard maps (SSP1)",
+          "spatial_resolution": 90,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "temporal": {
+            "start": "2017",
+            "end": "2100"
+          },
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        },
+        {
+          "id": "PRJ_UB",
+          "title": "Flood hazard (projected SSP5)",
+          "description": "Collection of projected hazard maps (SSP5)",
+          "spatial_resolution": 90,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "temporal": {
+            "start": "2017",
+            "end": "2100"
+          },
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "HST",
+            "analysis_type": "probabilistic",
+            "frequency_distribution": "generalized_extreme_value",
+            "calculation_method": "simulated",
+            "occurrence_range": "Return period 2 to 1,000 years",
+            "spatial": {
+              "scale": "global"
+            },
+            "hazards": [
+              {
+                "id": "FLD",
+                "type": "flood",
+                "hazard_process": "fluvial_flood",
+                "intensity_measure": "Wd:M"
+              }
+            ],
+            "events": [
+              {
+                "id": "RP2",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "RP5",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "RP10",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "RP25",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "RP50",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "RP100",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "RP200",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 200
+                  }
+                }
+              },
+              {
+                "id": "RP500",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "RP1000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

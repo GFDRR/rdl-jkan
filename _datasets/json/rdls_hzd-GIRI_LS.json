@@ -1,0 +1,211 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-GIRI_LS",
+      "title": "Global susceptibility class of landslides",
+      "description": "The landslides susceptibility map indicates the areas of the world that are more prone to landslides, both seismic and precipitation-induced.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "version": "1",
+      "project": {
+        "name": "Global Infrastructure Risk Model and Resilience Index (GIRI)",
+        "url": "https://giri.unepgrid.ch/"
+      },
+      "details": "The precipitation-induced landslides susceptibility map for the current climate classifies the terrain into five susceptibility classes by combining slope, vegetation, lithology, and antecedent rainfall information from global datasets. The susceptibility map has global coverage and a resolution of ~90 meters at the equator.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "1",
+          "entity": {
+            "name": "CDRI",
+            "url": "https://cdri.world/"
+          },
+          "role": "resource_provider"
+        },
+        {
+          "id": "attribution_publisher_migrated_1767717804161",
+          "role": "publisher",
+          "entity": {
+            "name": "UNEP-GRID",
+            "url": "https://unepgrid.ch/en"
+          }
+        },
+        {
+          "id": "attribution_creator_migrated_1767717804161",
+          "role": "creator",
+          "entity": {
+            "name": "CIMA",
+            "url": "https://www.cimafoundation.org"
+          }
+        },
+        {
+          "id": "attribution_contact_point_migrated_1767717804161",
+          "role": "contact_point",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          }
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "1",
+          "name": "A new model for global landslide susceptibility assessment and scenario-based hazard assessment",
+          "author_names": [
+            "Rosa M. Palau",
+            "Farrokh Nadim",
+            "Eivind Paulsen",
+            "Erlend Storrøsten"
+          ],
+          "date_published": "2003-01-01",
+          "url": "https://giri.unepgrid.ch/sites/default/files/2023-06/20230615-NGI_manuscript_GIRI_landlside_hazard_model.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "EQ_trigger",
+          "title": "Landslide from earthquake trigger",
+          "description": "The earthquake-induced landslides susceptibility map indicates the areas of the world that are more prone to landslides triggered by earthquakes.",
+          "spatial_resolution": 90,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        },
+        {
+          "id": "RF_trigger-hst",
+          "title": "Landslide from precipitation trigger - Historical",
+          "description": "The precipitation-induced landslides susceptibility map for the existing climate indicates the areas of the world that are more prone to landslides according to current precipitation trends",
+          "spatial_resolution": 90,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        },
+        {
+          "id": "RF_trigger-ssp1",
+          "title": "Landslide from precipitation trigger - SSP1",
+          "description": "The precipitation-induced landslides susceptibility map for the existing climate indicates the areas of the world that are more prone to landslides according to future precipitation trends (lower bound)",
+          "spatial_resolution": 90,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        },
+        {
+          "id": "RF_trigger-ssp5",
+          "title": "Landslide from precipitation trigger - SSP5",
+          "description": "The precipitation-induced landslides susceptibility map for the existing climate indicates the areas of the world that are more prone to landslides according to future precipitation trends (upper bound)",
+          "spatial_resolution": 90,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "LS_EQ",
+            "analysis_type": "deterministic",
+            "seasonality": "uniform",
+            "calculation_method": "inferred",
+            "spatial": {
+              "scale": "global"
+            },
+            "hazards": [
+              {
+                "id": "LS_EQ",
+                "type": "landslide",
+                "intensity_measure": "LSI:-",
+                "trigger": {
+                  "type": "earthquake"
+                }
+              }
+            ],
+            "events": [
+              {
+                "id": "1",
+                "calculation_method": "inferred",
+                "hazard": {
+                  "id": "LS_EQ",
+                  "type": "landslide",
+                  "intensity_measure": "LSI:-"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Max",
+                    "thresholds": [
+                      "1 (very low)",
+                      "2 (low)",
+                      "3 (medium)",
+                      "4 (high)",
+                      "5 (very high)"
+                    ]
+                  }
+                },
+                "description": "Susceptibility classes of earthquake-triggered landslides from 1 (very low) to 5 (very high)."
+              }
+            ]
+          },
+          {
+            "id": "LS_RF",
+            "analysis_type": "deterministic",
+            "seasonality": "uniform",
+            "calculation_method": "inferred",
+            "spatial": {
+              "scale": "global"
+            },
+            "hazards": [
+              {
+                "id": "LS_RF",
+                "type": "landslide",
+                "intensity_measure": "LSI:-",
+                "trigger": {
+                  "type": "convective_storm"
+                }
+              }
+            ],
+            "events": [
+              {
+                "id": "1",
+                "calculation_method": "inferred",
+                "hazard": {
+                  "id": "LS_RF",
+                  "type": "landslide"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Max",
+                    "thresholds": [
+                      "1 (very low)",
+                      "2 (low)",
+                      "3 (medium)",
+                      "4 (high)",
+                      "5 (very high)"
+                    ]
+                  }
+                },
+                "description": "Susceptibility classes of earthquake-triggered landslides from 1 (very low) to 5 (very high)."
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
