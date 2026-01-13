@@ -91,77 +91,6 @@ def make_hazard_v02(hazard):
         "processes": ", ".join(sorted(set(props_to_summarize["processes"]))),
     }
 
-
-def make_vulnerability(vulnerability):
-    """Convert RDL vulnerability metadata into JKAN frontmatter"""
-    if vulnerability is None:
-        return None
-
-    impact = vulnerability.get("impact")
-
-    # TODO: will there ever actually be more than one function type present on a vulnerability?
-    approach = []
-    relationship = []
-    function_type = []
-    functions = vulnerability.get("functions")
-    if "vulnerability" in functions:
-        if "approach" in functions["vulnerability"]:
-            approach.append(functions["vulnerability"]["approach"])
-        if "relationship" in functions["vulnerability"]:
-            relationship.append(functions["vulnerability"]["relationship"])
-        function_type.append("vulnerability")
-    if "fragility" in functions:
-        if "approach" in functions["fragility"]:
-            approach.append(functions["fragility"].get("approach"))
-        if "relationship" in functions["fragility"]:
-            relationship.append(functions["fragility"].get("relationship"))
-        function_type.append("fragility")
-    if "damage_to_loss" in functions:
-        if "approach" in functions["damage_to_loss"]:
-            approach.append(functions["damage_to_loss"].get("approach"))
-        if "relationship" in functions["damage_to_loss"]:
-            relationship.append(functions["damage_to_loss"].get("relationship"))
-        function_type.append("damage_to_loss")
-    if "engineering_demand" in functions:
-        if "approach" in functions["engineering_demand"]:
-            approach.append(functions["engineering_demand"].get("approach"))
-        if "relationship" in functions["engineering_demand"]:
-            relationship.append(functions["engineering_demand"].get("relationship"))
-        function_type.append("engineering_demand")
-
-    props_to_summarize = {"dimension": [], "unit": []}
-
-    if "cost" in vulnerability:
-        for cost in vulnerability["cost"]:
-            if cost["dimension"]:
-                props_to_summarize["dimension"].append(cost["dimension"])
-            if cost["unit"]:
-                props_to_summarize["unit"].append(cost["unit"])
-
-    return {
-        # required; throw if missing
-        "approach": ", ".join(sorted(set(approach))),
-        "base_data_type": impact.get("base_data_type"),
-        "category": vulnerability.get("category"),
-        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
-        "function_type": ", ".join(sorted(set(function_type))),
-        "hazard_primary": vulnerability.get("hazard_primary"),
-        "intensity": vulnerability.get("intensity"),
-        "metric": impact.get("metric"),
-        "relationship": ", ".join(sorted(set(relationship))),
-        "scale": vulnerability.get("spatial").get("scale"),
-        "type": impact.get("type"),
-        "unit": ", ".join(sorted(set(props_to_summarize["unit"]))),
-        "impact_unit": impact.get("unit"),
-        # optional
-        "hazard_analysis_type": vulnerability.get("hazard_analysis_type"),
-        "hazard_process_primary": vulnerability.get("hazard_process_primary"),
-        "hazard_process_secondary": vulnerability.get("hazard_process_secondary"),
-        "hazard_secondary": vulnerability.get("hazard_secondary"),
-        "taxonomy": vulnerability.get("taxonomy"),
-    }
-
-
 def make_loss(loss):
     """Convert RDL loss metadata into JKAN frontmatter"""
     if loss is None:
@@ -257,6 +186,74 @@ def make_resource_v02(resource):
         "spatial_resolution": resource.get("spatial_resolution"),
     }
 
+def make_vulnerability_v02(vulnerability):
+    """Convert RDL vulnerability metadata into JKAN frontmatter"""
+    if vulnerability is None:
+        return None
+
+    impact = vulnerability.get("impact")
+
+    # TODO: will there ever actually be more than one function type present on a vulnerability?
+    approach = []
+    relationship = []
+    function_type = []
+    functions = vulnerability.get("functions")
+    if "vulnerability" in functions:
+        if "approach" in functions["vulnerability"]:
+            approach.append(functions["vulnerability"]["approach"])
+        if "relationship" in functions["vulnerability"]:
+            relationship.append(functions["vulnerability"]["relationship"])
+        function_type.append("vulnerability")
+    if "fragility" in functions:
+        if "approach" in functions["fragility"]:
+            approach.append(functions["fragility"].get("approach"))
+        if "relationship" in functions["fragility"]:
+            relationship.append(functions["fragility"].get("relationship"))
+        function_type.append("fragility")
+    if "damage_to_loss" in functions:
+        if "approach" in functions["damage_to_loss"]:
+            approach.append(functions["damage_to_loss"].get("approach"))
+        if "relationship" in functions["damage_to_loss"]:
+            relationship.append(functions["damage_to_loss"].get("relationship"))
+        function_type.append("damage_to_loss")
+    if "engineering_demand" in functions:
+        if "approach" in functions["engineering_demand"]:
+            approach.append(functions["engineering_demand"].get("approach"))
+        if "relationship" in functions["engineering_demand"]:
+            relationship.append(functions["engineering_demand"].get("relationship"))
+        function_type.append("engineering_demand")
+
+    props_to_summarize = {"dimension": [], "unit": []}
+
+    if "cost" in vulnerability:
+        for cost in vulnerability["cost"]:
+            if cost["dimension"]:
+                props_to_summarize["dimension"].append(cost["dimension"])
+            if cost["unit"]:
+                props_to_summarize["unit"].append(cost["unit"])
+
+    return {
+        # required; throw if missing
+        "approach": ", ".join(sorted(set(approach))),
+        "base_data_type": impact.get("base_data_type"),
+        "category": vulnerability.get("category"),
+        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
+        "function_type": ", ".join(sorted(set(function_type))),
+        "hazard_primary": vulnerability.get("hazard_primary"),
+        "intensity": vulnerability.get("intensity"),
+        "metric": impact.get("metric"),
+        "relationship": ", ".join(sorted(set(relationship))),
+        "scale": vulnerability.get("spatial").get("scale"),
+        "type": impact.get("type"),
+        "unit": ", ".join(sorted(set(props_to_summarize["unit"]))),
+        "impact_unit": impact.get("unit"),
+        # optional
+        "hazard_analysis_type": vulnerability.get("hazard_analysis_type"),
+        "hazard_process_primary": vulnerability.get("hazard_process_primary"),
+        "hazard_process_secondary": vulnerability.get("hazard_process_secondary"),
+        "hazard_secondary": vulnerability.get("hazard_secondary"),
+        "taxonomy": vulnerability.get("taxonomy"),
+    }
 
 def make_dataset_frontmatter_v02(dataset):
     """Formats RDL v0.2 metadata into JKAN frontmatter for a dataset"""
@@ -285,7 +282,7 @@ def make_dataset_frontmatter_v02(dataset):
         "exposure": make_exposure(dataset.get("exposure")),
         "hazard": make_hazard_v02(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
-        "vulnerability": make_vulnerability(dataset.get("vulnerability")),
+        "vulnerability": make_vulnerability_v02(dataset.get("vulnerability")),
     }
 
     if payload["spatial"].get("scale") == "global":
@@ -440,6 +437,89 @@ def make_resource_v03(resource):
         "temporal": make_period(resource.get("temporal")),
     }
 
+def make_vulnerability_v03(vulnerability):
+    """Convert RDL vulnerability metadata into JKAN frontmatter"""
+    if vulnerability is None:
+        return None
+
+    approach = []
+    relationship = []
+    base_data_type = []
+    function_type = []
+    category = []
+    hazard_primary = []
+    intensity = []
+    metric = []
+    unit = []
+    hazard_analysis_type = []
+    hazard_process_primary = []
+    hazard_process_secondary = []
+    hazard_secondary = []
+    taxonomy = []
+    impact_type = []
+    functions = vulnerability.get("functions", {}).get("vulnerability", []) + vulnerability.get("functions", {}).get("fragility", []) + vulnerability.get("functions", {}).get("damage_to_loss", [])+ vulnerability.get("functions", {}).get("engineering_demand", [])
+    for f in functions:
+        if "approach" in f:
+            approach.append(f["approach"])
+        if "relationship" in f:
+            relationship.append(f["relationship"])
+        if "approach" in f:
+            approach.append(f["approach"])
+        if "impact_modelling" in f:
+            base_data_type.append(f["impact_modelling"])
+        if "category" in f:
+            category.append(f["category"])
+        if "hazard_primary" in f:
+            hazard_primary.append(f["hazard_primary"])
+        if "intensity" in f:
+            intensity.append(f["intensity"])
+        if "impact_metric" in f:
+            metric.append(f["impact_metric"])
+        if "impact_type" in f:
+            impact_type.append(f["impact_type"])
+        if "quantity_kind" in f:
+            unit.append(f["quantity_kind"])
+        if "hazard_analysis_type" in f:
+            hazard_analysis_type.append(f["hazard_analysis_type"])
+        if "hazard_process_primary" in f:
+            hazard_process_primary.append(f["hazard_process_primary"])
+        if "hazard_process_secondary" in f:
+            hazard_process_secondary.append(f["hazard_process_secondary"])
+        if "hazard_secondary" in f:
+            hazard_secondary.append(f["hazard_secondary"])
+        if "taxonomy" in f:
+            taxonomy.append(f["taxonomy"])
+
+    props_to_summarize = {"dimension": [], "unit": []}
+
+    if "cost" in vulnerability:
+        for cost in vulnerability["cost"]:
+            if cost["dimension"]:
+                props_to_summarize["dimension"].append(cost["dimension"])
+            if cost["unit"]:
+                props_to_summarize["unit"].append(cost["unit"])
+
+    return {
+        # required; throw if missing
+        "approach": ", ".join(sorted(set(approach))),
+        "base_data_type": ", ".join(sorted(set(base_data_type))),
+        "category":  ", ".join(sorted(set(category))),
+        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
+        "function_type": ", ".join(sorted(set(function_type))),
+        "hazard_primary":  ", ".join(sorted(set(hazard_primary))),
+        "intensity":  ", ".join(sorted(set(intensity))),
+        "metric":  ", ".join(sorted(set(metric))),
+        "relationship": ", ".join(sorted(set(relationship))),
+        # "scale": vulnerability.get("spatial").get("scale"),
+        "unit": ", ".join(sorted(set(props_to_summarize["unit"]))),
+        # optional
+        "hazard_analysis_type": ", ".join(sorted(set(hazard_analysis_type))),
+        "hazard_process_primary": ", ".join(sorted(set(hazard_process_primary))),
+        "hazard_process_secondary": ", ".join(sorted(set(hazard_process_secondary))),
+        "hazard_secondary": ", ".join(sorted(set(hazard_secondary))),
+        "taxonomy": ", ".join(sorted(set(taxonomy))),
+    }
+
 
 def make_dataset_frontmatter_v03(dataset):
     """Formats RDL v0.3 metadata into JKAN frontmatter for a dataset"""
@@ -470,7 +550,7 @@ def make_dataset_frontmatter_v03(dataset):
         "exposure": make_exposure_v03(dataset.get("exposure")),
         "hazard": make_hazard_v03(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
-        "vulnerability": make_vulnerability(dataset.get("vulnerability")),
+        "vulnerability": make_vulnerability_v03(dataset.get("vulnerability")),
     }
 
     if payload["spatial"].get("scale") == "global":
