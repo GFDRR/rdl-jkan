@@ -16,6 +16,10 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
     level=logging.DEBUG,
+    handlers=[
+    logging.FileHandler("python.log"),
+    logging.StreamHandler()
+    ]
 )
 
 
@@ -38,19 +42,44 @@ def extract_yaml_frontmatter(filepath):
     return None
 
 
-def get_recently_changed_files(pattern):
+def get_recently_changed_files():
     repo = Repo(config.root_dir)
     repo.remotes.origin.fetch()
     current_commit = repo.head.commit
     # get diff between current commit and remote target branch
-    diff = current_commit.diff(f"origin/{config.remote_target_branch}")
-    files = {item.a_path for item in diff}
-    # add in unstaged changes
-    for item in repo.index.diff(None):
-        files.add(item.a_path)
-    if pattern:
-        return fnmatch.filter(files, pattern)
-    return [os.path.join(config.root_dir, file) for file in files]
+    current_diff = current_commit.diff(f"origin/{config.remote_target_branch}", paths="_datasets/json/", R=True)
+    # get diff from unstaged changes
+    unstaged_diff = repo.index.diff(None, paths="_datasets/json/", R=True)
+    # combine diffs
+    diff = current_diff + unstaged_diff
+
+    json_to_generate_md_from = []
+    json_to_delete_md_for = []
+    tweak_filepath = lambda path: os.path.join(config.root_dir, path)
+    
+    for item in diff:
+        if item.change_type == "D":
+            json_to_delete_md_for.append(tweak_filepath(item.a_path))
+        elif item.change_type in {"A", "M", "R", "C"}:
+            json_to_generate_md_from.append(tweak_filepath(item.b_path))
+    return json_to_generate_md_from, json_to_delete_md_for
+
+
+def get_deleted_json_id(json_path):
+    print(f"Getting deleted JSON ID from {json_path}")
+    repo = Repo(config.root_dir)
+    repo.remotes.origin.fetch()
+    tree = repo.commit("origin/rdl-0.3").tree
+
+    # Specify the path to the JSON file
+    blob = tree[os.path.relpath(json_path, config.root_dir)]
+    # encoding = detect_encoding(json_path)
+
+    # Read the content of the file
+    content = blob.data_stream.read().decode("utf-8")
+    data = json.loads(content)
+
+    return data.get("dataset_id")
 
 
 def save_to_json(data, filename) -> int:
