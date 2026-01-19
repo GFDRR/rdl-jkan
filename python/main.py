@@ -89,8 +89,8 @@ def write_dataset_to_markdown(dataset_from_json, schema_url):
         return 0
     except Exception as e:
         logging.error(
-            f"While writing {dataset.get('title', 'a dataset with a missing title')} "
-            f"(dataset_id: {dataset.get('id', 'missing')})",
+            f"While writing {dataset_from_json.get('title', 'a dataset with a missing title')} "
+            f"(dataset_id: {dataset_from_json.get('id', 'missing')})",
             exc_info=e,
         )
         return 1
@@ -98,8 +98,8 @@ def write_dataset_to_markdown(dataset_from_json, schema_url):
 
 def write_datasets_to_markdown(json_filepaths):
     exit_code = 0
-    for json_file in json_filepaths:
-        json_filepath = os.path.join(config.root_dir, json_file)
+    for json_filepath in json_filepaths:
+        # TODO: If json_filepath refers to a deleted file, skip it
         encoding = utils.detect_encoding(json_filepath)
         with open(json_filepath, encoding=encoding) as input_file:
             datasets_json = json.load(input_file)
