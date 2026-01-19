@@ -1,3 +1,4 @@
+import os
 import chardet
 import fnmatch
 from git import Repo
@@ -49,7 +50,7 @@ def get_recently_changed_files(pattern):
         files.add(item.a_path)
     if pattern:
         return fnmatch.filter(files, pattern)
-    return files
+    return [os.path.join(config.root_dir, file) for file in files]
 
 
 def save_to_json(data, filename) -> int:
