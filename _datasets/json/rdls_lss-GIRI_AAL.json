@@ -4,7 +4,9 @@
       "id": "rdls_lss-GIRI_AAL",
       "title": "Global multi-hazard average annual loss",
       "description": "Values of average annual loss (AAL) including all hazards. The AAL provides an estimator of losses that are likely to occur every year due to a specific hazard. Values of AAL are calculated per country, sector (buildings, power, telecommunications, roads and railways, water and wastewater, oil and gas, ports and airports) and subsector. Global scale analysis, covering historical and future climate projections (SSP1, SSP5).",
-      "risk_data_type": ["loss"],
+      "risk_data_type": [
+        "loss"
+      ],
       "version": "1",
       "project": {
         "name": "Global Infrastructure Risk Model and Resilience Index (GIRI)",
@@ -93,54 +95,54 @@
       "loss": {
         "losses": [
           {
-            "id": "AAL_HST",
+            "id": "AAL_FL",
             "hazard_type": "flood",
             "hazard_process": "fluvial_flood",
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "loss_type": "",
-              "loss_approach": "",
-              "loss_frequency_type": "",
               "impact_type": "direct",
+              "impact_modelling": "inferred",
               "impact_metric": "economic_loss_value",
-              "quantity_kind": "USD",
-              "temporal_metric": "average_annual_loss",
-              "impact_modelling": "inferred"
+              "quantity_kind": "monetary",
+              "currency": "USD",
+              "loss_type": "gross",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
             }
           },
           {
-            "id": "AAL_SSP1",
+            "id": "AAL_EQ",
             "hazard_type": "earthquake",
             "hazard_process": "ground_motion",
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "loss_type": "",
-              "loss_approach": "",
-              "loss_frequency_type": "",
               "impact_type": "direct",
+              "impact_modelling": "inferred",
               "impact_metric": "economic_loss_value",
-              "quantity_kind": "USD",
-              "temporal_metric": "average_annual_loss",
-              "impact_modelling": "inferred"
+              "quantity_kind": "monetary",
+              "currency": "USD",
+              "loss_type": "gross",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
             }
           },
           {
-            "id": "AAL_SSP5",
+            "id": "AAL_LS",
             "hazard_type": "landslide",
             "hazard_process": "landslide_general",
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "loss_type": "",
-              "loss_approach": "",
-              "loss_frequency_type": "",
               "impact_type": "direct",
+              "impact_modelling": "inferred",
               "impact_metric": "economic_loss_value",
-              "quantity_kind": "USD",
-              "temporal_metric": "average_annual_loss",
-              "impact_modelling": "inferred"
+              "quantity_kind": "monetary",
+              "currency": "USD",
+              "loss_type": "gross",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
             }
           }
         ]
