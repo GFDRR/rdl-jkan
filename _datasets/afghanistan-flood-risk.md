@@ -5,8 +5,7 @@ contact_point:
 creator:
   name: GFDRR
   url: https://www.gfdrr.org
-dataset_id: AFG_lss-flood
-slug: AFG_lss-flood
+dataset_id: rdls_lss-gfdrr_afg_flood
 description: Average Annual Losses (AAL) over population and asset under current conditions
   and SSP scenarios at 2050.
 details: "To better understand natural hazard and disaster risk, the World Bank and\
@@ -69,6 +68,7 @@ resources:
 risk_data_type:
 - loss
 schema: rdl-02
+slug: rdls_lss-gfdrr_afg_flood
 spatial:
   countries:
   - AFG

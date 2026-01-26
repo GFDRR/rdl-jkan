@@ -6,7 +6,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: AFG_hzd-landslide
-slug: AFG_hzd-landslide
 description: Earthquake-induced landslide hazard measured as probability of occurrance
   for seven return period scenarios. National hazard assessment and focus on two areas
   (Kabul and Salang pass).
@@ -60,6 +59,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: AFG_hzd-landslide
 spatial:
   countries:
   - AFG

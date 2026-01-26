@@ -6,7 +6,6 @@ creator:
   email: mamadio@worldbank.org
   name: Mattia Amadio
 dataset_id: SSD_hzd-drought
-slug: SSD_hzd-drought
 description: Drought hazard for South Sudan measured as Agricultural Stress Index
   (ASI) over a period of 30 years.
 details: null
@@ -26,9 +25,9 @@ publisher:
   name: GFDRR
   url: https://www.gfdrr.org
 purpose: "The results of the analysis contribute to the production of knowledge for\
-  \ disaster risk management (DRM) to support the World Bank\u2019s operational teams\
-  \ in their in-country engagements. Specifcally, the key fndings of this study allow\
-  \ to rank South Sudan states in terms of natural disasters risk, and to identify\
+  \ disaster risk management (DRM) to support the World Bank\xE2\u20AC\u2122s operational\
+  \ teams in their in-country engagements. Specifcally, the key fndings of this study\
+  \ allow to rank South Sudan states in terms of natural disasters risk, and to identify\
   \ the most critical components for each area. The output of this assessment includes\
   \ a geodatabase which contains both the key primary data and all the resulting maps\
   \ produced by the analysis, allowing risk analysts and managers to explore them\
@@ -44,6 +43,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: SSD_hzd-drought
 spatial:
   countries:
   - SSD
