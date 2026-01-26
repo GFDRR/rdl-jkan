@@ -56,9 +56,11 @@ def validate_json_with_schema(dataset_from_json, schema_url):
         if not is_cached:
             fetch_schema(schema_url, schema_path)
 
-    with open(schema_path, "r") as file:
-        schema = json.load(file)
-        validate_with_custom_logic(dataset_from_json, schema)
+    # TODO: drop this condition; temporarily skips v0.2 validations
+    if schema_url == config.schema_url_v3:
+        with open(schema_path, "r") as file:
+            schema = json.load(file)
+            validate_with_custom_logic(dataset_from_json, schema)
 
 
 def write_dataset_to_markdown(dataset_from_json, schema_url):

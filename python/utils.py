@@ -1,6 +1,5 @@
 import os
 import chardet
-import fnmatch
 from git import Repo
 import json
 import logging
@@ -21,6 +20,8 @@ logging.basicConfig(
     logging.StreamHandler()
     ]
 )
+logging.getLogger('chardet').setLevel(logging.WARNING)
+logging.getLogger('git').setLevel(logging.WARNING)
 
 
 def detect_encoding(filepath):
@@ -66,7 +67,6 @@ def get_recently_changed_files():
 
 
 def get_deleted_json_id(json_path):
-    print(f"Getting deleted JSON ID from {json_path}")
     repo = Repo(config.root_dir)
     repo.remotes.origin.fetch()
     tree = repo.commit("origin/rdl-0.3").tree
