@@ -1,0 +1,614 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-STORM",
+      "title": "Global tropical cyclone (wind speed) hazard, historical and projections",
+      "description": "Datasets containing probabilistic analysis of tropical cyclone maximum wind speed (in m/s) at fixed return periods and return periods at fixed wind speeds for present climate (1980-2018) and climate change scenarios (1979-2014 baseline and 2015-2050 projections); gridded products are ~10 km per basin, and city/island tables summarize conditions within 100 km. Climate change datasets incorporate signals from four GCMs (CMCC-CM2-VHR4, CNRM-CM6-1-HR, EC-Earth3P-HR, HadGEM3-GC31-HM).",
+      "risk_data_type": ["hazard"],
+      "version": "4",
+      "purpose": "To supply consistent, high-resolution tropical-cyclone wind hazard metrics for present climate and climate change scenarios that support risk assessment, engineering design, and adaptation planning using a common methodology (Weibull plotting) across basins and for selected cities and islands.",
+      "project": {
+        "name": "STORM - Synthetic Tropical cyclOne geneRation Model",
+        "url": "https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff"
+      },
+      "details": "Datasets were generated with the statistical STORM algorithm. Present climate dataset uses IBTrACS historical tracks (1980-2018) with ERA5 monthly-mean environmental conditions. Climate change datasets add signals from four GCMs (CMCC-CM2-VHR4, CNRM-CM6-1-HR, EC-Earth3P-HR, HadGEM3-GC31-HM) to project future conditions. A 2-D parametric wind model was applied to produce ~10 km fields, and return periods (or wind speeds) were derived empirically with Weibull's plotting formula. Datasets include, for each grid cell (or city/island entry), the mean, standard deviation, and 5-95% confidence intervals across 1,000 realizations; basin IDs (EP, NA, NI, SI, SP, WP) and fixed value sets for return periods (10-10,000 yr) and wind speeds (20-75 m s⁻¹ with additional threshold values) are provided.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC0-1.0",
+      "attributions": [
+        {
+          "id": "1",
+          "entity": {
+            "name": "4TU.Centre for Research Data",
+            "url": "https://data.4tu.nl/"
+          },
+          "role": "resource_provider"
+        },
+        {
+          "id": "3",
+          "entity": {
+            "name": "Tom Russell",
+            "url": "https://www.eci.ox.ac.uk/person/tom-russell"
+          },
+          "role": "processor"
+        },
+        {
+          "id": "attribution_publisher_migrated_1767801294813",
+          "role": "publisher",
+          "entity": {
+            "name": "4TU.Centre for Research Data",
+            "url": "https://data.4tu.nl/"
+          }
+        },
+        {
+          "id": "attribution_creator_migrated_1767801294813",
+          "role": "creator",
+          "entity": {
+            "name": "Nadia Bloemendaal",
+            "url": "https://data.4tu.nl/authors/8a084c6a-3315-4ba7-9768-dd1ba1825dbc",
+            "email": "nadia.bloemendaal@vu.nl"
+          }
+        },
+        {
+          "id": "attribution_contact_point_migrated_1767801294813",
+          "role": "contact_point",
+          "entity": {
+            "name": "Nadia Bloemendaal",
+            "email": "nadia.bloemendaal@vu.nl",
+            "url": "https://vu.nl/en/about-vu/research-institutes/ivm"
+          }
+        },
+        {
+          "id": "attribution_1767801783793",
+          "role": "collaborator",
+          "entity": {
+            "name": "Deltares",
+            "email": "info@deltares.nl",
+            "url": "https://www.deltares.nl/en"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "ERA5 - ECMWF Reanalysis v5",
+          "description": "Fifth generation global climate reanalysis from ECMWF/Copernicus Climate Change Service providing hourly atmospheric, land, and oceanic variables at 0.25° × 0.25° resolution. Used to extract monthly mean sea-level pressure (MSLP) and sea-surface temperature (SST) during tropical cyclone seasons.",
+          "lineage": "Monthly mean MSLP and SST values calculated from hourly ERA5 data during TC seasons for each basin, used as environmental input conditions for synthetic tropical cyclone track modeling",
+          "url": "https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5",
+          "type": "dataset",
+          "component": "hazard",
+          "license": "CC-BY-4.0",
+          "id": "source_j5pyQ3dq"
+        },
+        {
+          "name": "International Best Track Archive for Climate Stewardship (IBTrACS)",
+          "description": "Global unified dataset of tropical cyclone best-track data from multiple warning centers, providing location, intensity (maximum sustained wind speed and minimum central pressure), and related parameters at 3-hourly intervals. Used for extracting tropical cyclone tracks from 1980-2018 with wind speeds >18 m/s.",
+          "lineage": "Extracted TC data from IBTrACS for 1980-2018, unified wind speeds to 10-minute averages, filtered for U10 > 18 m/s (tropical storm threshold), excluded South Atlantic basin, linearly interpolated to 3-hourly values",
+          "url": "https://www.ncei.noaa.gov/products/international-best-track-archive",
+          "type": "dataset",
+          "component": "hazard",
+          "license": "CC0-1.0",
+          "id": "source_bYuXx4dE"
+        },
+        {
+          "name": "STORM - Synthetic Tropical cyclOne geneRation Model",
+          "description": "Global synthetic tropical cyclone dataset containing 10,000 years of simulated tropical cyclones under present-climate conditions. Generated using the STORM model with IBTrACS historical data and ERA5 environmental conditions as inputs. Includes TC position, maximum 10-minute sustained wind speeds (U10), mean sea-level pressure (MSLP), and radius to maximum winds (Rmax) at 3-hourly intervals.",
+          "lineage": "Synthetic dataset generated using STORM model with IBTrACS historical TC tracks (1980-2018) and ERA5 monthly-mean SST and MSLP fields as inputs. Model uses autoregressive formulas to simulate consecutive changes in TC position, pressure, wind speed, and eye size. Validated to preserve TC statistics within one standard deviation of IBTrACS observations.",
+          "url": "https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff",
+          "type": "dataset",
+          "component": "hazard",
+          "license": "CC0-1.0",
+          "id": "source_xdMmDQnG"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "1",
+          "name": "Generation of a global synthetic tropical cyclone hazard dataset using STORM",
+          "author_names": [
+            "Nadia Bloemendaal",
+            "Ivan D. Haigh",
+            "Hans de Moel",
+            "Sanne Muis",
+            "Reindert J. Haarsma",
+            "Jeroen C. J. H. Aerts"
+          ],
+          "date_published": "2020-02-06",
+          "url": "https://www.nature.com/articles/s41597-020-0381-2",
+          "doi": "https://doi.org/10.1038/s41597-020-0381-2"
+        },
+        {
+          "author_names": [
+            "Nadia Bloemendaal",
+            "Hans de Moel",
+            "Sanne Muis",
+            "Jeroen C. J. H. Aerts",
+            "Ivan D. Haigh"
+          ],
+          "name": "Estimation of global tropical cyclone wind speed probabilities using the STORM dataset",
+          "date_published": "2020-11-10",
+          "url": "https://www.nature.com/articles/s41597-020-00720-x",
+          "doi": "https://doi.org/10.1038/s41597-020-00720-x",
+          "id": "reference_SoyNkUM8"
+        }
+      ],
+      "resources": [
+        {
+          "id": "HST",
+          "title": "Global tropical cyclone wind speed maps by return period (historical 1979-2014)",
+          "description": "The GeoTIFFs provided in the original STORM datasets have been mosaicked into single files with global extent for each climate model/return period. STORM_FIXED_RETURN_PERIODS_{STORM_MODEL}_{STORM_RP}_YR_RP.tif",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page",
+          "spatial_resolution": 10000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff/4",
+          "temporal": {
+            "start": "1979",
+            "end": "2014"
+          }
+        },
+        {
+          "id": "PRJ_MEDIAN",
+          "title": "Global tropical cyclone wind speed maps by return period (median projections 2015-2050)",
+          "description": "The GeoTIFFs provided in the original STORM datasets have been mosaicked into single files with global extent for each climate model/return period. STORM_FIXED_RETURN_PERIODS_{STORM_MODEL}_{STORM_RP}_YR_RP.tif",
+          "data_format": "GeoTIFF (tif)",
+          "spatial_resolution": 10000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.4tu.nl/datasets/504c838e-2bd8-4d61-85a1-d495bdc560c3/4",
+          "temporal": {
+            "start": "2015",
+            "end": "2050"
+          }
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "HST",
+            "analysis_type": "probabilistic",
+            "frequency_distribution": "user_defined",
+            "seasonality": "uniform",
+            "calculation_method": "simulated",
+            "occurrence_range": "1/10 to 1/10000 years",
+            "hazards": [
+              {
+                "id": "hazard_rht4Fpeu",
+                "type": "strong_wind",
+                "hazard_process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "events": [
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "10",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "20",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "30",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 30
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "40",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 40
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "50",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "60",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 60
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "70",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 70
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "80",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 80
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "90",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 90
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "100",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "200",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 200
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "300",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 300
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "400",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 400
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "500",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "600",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 600
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "700",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 700
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "800",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 800
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "900",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 900
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "1000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "2000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "3000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 3000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "4000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 4000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "5000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "6000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 6000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "7000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 7000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "8000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 8000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "9000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 9000
+                  }
+                }
+              },
+              {
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_rht4Fpeu",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_10m:m/s"
+                },
+                "id": "10000",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10000
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

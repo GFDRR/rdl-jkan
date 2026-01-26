@@ -1,0 +1,186 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-GIRI_TC",
+      "title": "Global tropical cyclone wind hazard",
+      "description": "Datasets containing probabilistic analysis of tropical cyclone wind speed (km/h) covering historical and climate change projections at the global scale.",
+      "risk_data_type": ["hazard"],
+      "version": "1",
+      "project": {
+        "name": "Global Infrastructure Risk Model and Resilience Index (GIRI)",
+        "url": "https://giri.unepgrid.ch/"
+      },
+      "details": "The tropical cyclone wind hazard model uses historical track data and climate projections to generate probabilistic wind speed footprints at global scale. Climate change scenarios incorporate projected changes in cyclone frequency and intensity based on climate models.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "1",
+          "role": "publisher",
+          "entity": {
+            "name": "UNEP-GRID",
+            "url": "https://unepgrid.ch/en"
+          }
+        },
+        {
+          "id": "2",
+          "role": "creator",
+          "entity": {
+            "name": "Ingeniar",
+            "url": "https://ingeniar-risk.com"
+          }
+        },
+        {
+          "id": "3",
+          "role": "contact_point",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          }
+        },
+        {
+          "id": "4",
+          "role": "resource_provider",
+          "entity": {
+            "name": "CDRI",
+            "url": "https://cdri.world/"
+          }
+        }
+      ],
+      "referenced_by": [
+        {
+          "name": "Multi-hazard Disaster Risk Model of Infrastructure and Buildings at the Global Level",
+          "date_published": "2023-11-01",
+          "url": "https://giri.unepgrid.ch/sites/default/files/2023-11/2.4-INGENIAR-CDRI-Background-Report-Risk-model.pdf",
+          "id": "reference_SlPfduen",
+          "author_names": [
+            "O.D. Cardona",
+            "G. A. Bernal",
+            "C. P. Villegas",
+            "J. F. Molina",
+            "S. A. Herrera",
+            "M. C. Marulanda",
+            "D. F. Rincón",
+            "S. Grajales",
+            "P. M. Marulanda",
+            "D. Gonzalez",
+            "A. Maskrey"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "HST",
+          "title": "Tropical cyclone wind hazard (historical)",
+          "description": "Collection of historical tropical cyclone wind hazard maps",
+          "spatial_resolution": 11100,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        },
+        {
+          "id": "CC",
+          "title": "Tropical cyclone wind hazard (climate change)",
+          "description": "Collection of projected tropical cyclone wind hazard maps under climate change scenarios",
+          "spatial_resolution": 11100,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "TC",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "Return period 50 to 1,000 years",
+            "hazards": [
+              {
+                "id": "TC",
+                "type": "strong_wind",
+                "hazard_process": "tropical_cyclone",
+                "intensity_measure": "sws_3s:km/h"
+              }
+            ],
+            "events": [
+              {
+                "id": "50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "TC",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_3s:km/h"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "TC",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_3s:km/h"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "TC",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_3s:km/h"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "TC",
+                  "type": "strong_wind",
+                  "hazard_process": "tropical_cyclone",
+                  "intensity_measure": "sws_3s:km/h"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ],
+            "frequency_distribution": "user_defined"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

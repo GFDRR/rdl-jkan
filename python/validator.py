@@ -47,5 +47,9 @@ def validate_with_custom_logic(dataset, schema):
     CustomValidator = validators.create(
         meta_schema=ValidatorClass.META_SCHEMA, validators=all_validators
     )
-    print(f"Validating {dataset.get('id', 'Unknown Dataset')} with custom logic...")
-    CustomValidator(schema).validate(dataset)
+    try:
+        CustomValidator(schema).validate(dataset)
+    except ValidationError as err:
+        dataset_id = dataset.get("id", "id not found")
+        schema_path = "/".join(str(item) for item in err.relative_path)
+        print(f"Error while validating dataset with id: {dataset_id}\n{err.message}\nSee {schema_path}\n\n")

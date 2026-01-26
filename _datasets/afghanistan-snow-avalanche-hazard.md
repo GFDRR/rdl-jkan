@@ -6,7 +6,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: AFG_hzd-avalanche
-slug: AFG_hzd-avalanche
 description: Detailed avalanche study gathering historic avalanche data and performing
   numerical modeling of the avalanche runout potential and dynamics nationwide.
 details: "To better understand natural hazard and disaster risk, the World Bank and\
@@ -66,6 +65,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: AFG_hzd-avalanche
 spatial:
   countries:
   - AFG

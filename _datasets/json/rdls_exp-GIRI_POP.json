@@ -1,0 +1,128 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-GIRI_POP",
+      "title": "Global population exposure",
+      "description": "Datasets containing population distribution at high resolution for exposure analysis, including HRSL 2018 and GHSL 2020 datasets at the global scale.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "version": "1",
+      "project": {
+        "name": "Global Infrastructure Risk Model and Resilience Index (GIRI)",
+        "url": "https://giri.unepgrid.ch/"
+      },
+      "details": "Population exposure datasets include HRSL (High Resolution Settlement Layer) 2018 from Facebook/Meta and GHSL (Global Human Settlement Layer) 2020 from European Commission JRC. These datasets provide detailed spatial distribution of population for assessing exposure to natural hazards.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "1",
+          "role": "publisher",
+          "entity": {
+            "name": "UNEP-GRID",
+            "url": "https://unepgrid.ch/en"
+          }
+        },
+        {
+          "id": "2",
+          "role": "creator",
+          "entity": {
+            "name": "UNEP-GRID",
+            "url": "https://unepgrid.ch/en"
+          }
+        },
+        {
+          "id": "3",
+          "role": "contact_point",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          }
+        },
+        {
+          "id": "4",
+          "role": "resource_provider",
+          "entity": {
+            "name": "CDRI",
+            "url": "https://cdri.world/"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "High Resolution Settlement Layer (HRSL)",
+          "description": "High Resolution Settlement Layer (HRSL) on Google Earth Engine at 30m resolution from Facebook Connectivity Lab and Center for International Earth Science Information Network - CIESIN - Columbia University. Source imagery for HRSL © 2016 DigitalGlobe. ",
+          "lineage": "The original HRSL was first recalculated at 30arcsec resolution (~1km) through an aggregation process (sum) and, then, integrated into one single layer. Pixel counts were then recalculated for 2018 based on the country population data reported for 2018 by the World Population Prospects 2019.",
+          "url": "https://ai.meta.com/ai-for-good/datasets/high-resolution-population-density-maps/",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_m938Btkq"
+        },
+        {
+          "name": "Global Human Settlement Layer (GHSL)",
+          "description": "The GHS-POP depicts the distribution of human population, expressed as the number of people per cell. Residential population are derived from the raw global census data harmonized by CIESIN for the Gridded Population of the World, version 4.11 (GPWv4.11) at polygon level, and disaggregated from census or administrative units to grid cells, informed by the distribution, classification and density of built-up as mapped in the GHSL global layers.",
+          "url": "https://human-settlement.emergency.copernicus.eu/download.php?ds=pop",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC-BY-4.0",
+          "id": "source_WuyYkwiM"
+        }
+      ],
+      "resources": [
+        {
+          "id": "HRSL_2018",
+          "title": "High Resolution Settlement Layer (HRSL) 2018",
+          "description": "High resolution population distribution from Facebook/Meta for 2018",
+          "spatial_resolution": 1000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "temporal": {
+            "start": "2018",
+            "end": "2018"
+          },
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        },
+        {
+          "id": "GHSL_2020",
+          "title": "Global Human Settlement Layer (GHSL) 2020",
+          "description": "High resolution population distribution from European Commission JRC for 2020",
+          "spatial_resolution": 1000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "temporal": {
+            "start": "2020",
+            "end": "2020"
+          },
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        }
+      ],
+      "exposure": [
+        {
+          "metrics": [
+            {
+              "id": "metric_2q3bBwfM",
+              "dimension": "population",
+              "quantity_kind": "count"
+            }
+          ],
+          "category": "population",
+          "id": "item_SXVra1dT"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

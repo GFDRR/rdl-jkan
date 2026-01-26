@@ -1,0 +1,130 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-GIRI_TS",
+      "title": "Global tsunami run-up hazard",
+      "description": "Dataset containing probabilistic analysis of tsunami run-up height (m) at coastline for return period of 475 years at the global scale.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "version": "1",
+      "project": {
+        "name": "Global Infrastructure Risk Model and Resilience Index (GIRI)",
+        "url": "https://giri.unepgrid.ch/"
+      },
+      "details": "The tsunami hazard model estimates run-up heights at the coastline based on probabilistic seismic sources and tsunami propagation modeling. The model considers submarine earthquakes as the primary tsunami generation mechanism.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "1",
+          "role": "publisher",
+          "entity": {
+            "name": "UNEP-GRID",
+            "url": "https://unepgrid.ch/en"
+          }
+        },
+        {
+          "id": "2",
+          "role": "creator",
+          "entity": {
+            "name": "Ingeniar",
+            "url": "https://ingeniar-risk.com"
+          }
+        },
+        {
+          "id": "3",
+          "role": "contact_point",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          }
+        },
+        {
+          "id": "4",
+          "role": "resource_provider",
+          "entity": {
+            "name": "CDRI",
+            "url": "https://cdri.world/"
+          }
+        }
+      ],
+      "referenced_by": [
+        {
+          "name": "Multi-hazard Disaster Risk Model of Infrastructure and Buildings at the Global Level",
+          "date_published": "2023-11-01",
+          "url": "https://giri.unepgrid.ch/sites/default/files/2023-11/2.4-INGENIAR-CDRI-Background-Report-Risk-model.pdf",
+          "id": "reference_SlPfduen",
+          "author_names": [
+            "O.D. Cardona",
+            "G. A. Bernal",
+            "C. P. Villegas",
+            "J. F. Molina",
+            "S. A. Herrera",
+            "M. C. Marulanda",
+            "D. F. Rincón",
+            "S. Grajales",
+            "P. M. Marulanda",
+            "D. Gonzalez",
+            "A. Maskrey"
+          ]
+        }
+      ],      
+      "resources": [
+        {
+          "id": "RP475",
+          "title": "Tsunami run-up hazard (475-year return period)",
+          "description": "Tsunami run-up height at coastline for 475-year return period",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://hazards-data.unepgrid.ch/Tsunami_hazard_results.gpkg",
+          "data_format": "GeoPackage (gpkg)",
+          "access_modality": "file_download"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "RP475",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "Return period 475 years",
+            "hazards": [
+              {
+                "id": "TS",
+                "type": "tsunami",
+                "hazard_process": "tsunami",
+                "intensity_measure": "Rh_tsi:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "475",
+                "hazard": {
+                  "id": "TS",
+                  "type": "tsunami",
+                  "hazard_process": "tsunami",
+                  "intensity_measure": "Rh_tsi:m"
+                },
+                "calculation_method": "simulated",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 475
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

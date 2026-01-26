@@ -6,7 +6,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: AFG_hzd-flood
-slug: AFG_hzd-flood
 description: Fluvial flood hazard is calculated based on probabilistic hydrological
   analysis models (precipitation into runoff) and hydrodynamic analysis (runoff into
   river flow and inundation, and flow over floodplain areas).
@@ -75,6 +74,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: AFG_hzd-flood
 spatial:
   countries:
   - AFG

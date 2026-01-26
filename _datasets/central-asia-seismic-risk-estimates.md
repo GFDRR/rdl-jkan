@@ -4,11 +4,20 @@ contact_point:
   name: Paola Ceresa
 creator:
   name: Paolo Bazzuro
-dataset_id: CA_SFRARR_EQ_loss
-slug: CA_SFRARR_EQ_loss
+dataset_id: rdls_lss-wb_sfrarr_earthquake
 description: 'Seismic risk estimates, including return period loss estimates, annual
   average loss estimates and event loss tables '
-details: null
+details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accelerating
+  Risk Reduction in Central Asia'' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia).
+
+  Exposure data developed using high-resolution global and regional datasets and local
+  official data, harmonized to produce a regionally-consistent exposure database for
+  Central Asia. The exposure database includes: population, residential buildings,
+  non-residential buildings (schools, healthcare facilities, industrial and commercial
+  buildings), croplands, transportation system (roads, railways and bridges), airports
+  and airstrips, mines, and supply infrastructure. The exposure database developed
+  during this project can be used at regional scale, national scale or sub-national
+  scale (e.g., at Oblast scale).'
 exposure: null
 hazard: null
 license: CC-BY-SA-4.0
@@ -20,7 +29,7 @@ loss:
     seismic risk aggregated to the Oblast, national and regional level, Estimated
     fatalities due to seismic risk, aggregated to the Oblast, national and regional
     level
-  dimension: product, structure
+  dimension: population, product, structure
   exposure_id: CA_SFRARR_exp
   hazard_analysis_type: probabilistic
   hazard_id: CA_SFRARR_EQ
@@ -31,7 +40,8 @@ loss:
   impact_unit: count
   type: ground_up
   vulnerability_id: CA_SFRARR_EQ_vuln
-project: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia
+project: "SFRARR -\xC2\_Strengthening Financial Resilience and Accelerating Risk Reduction\
+  \ in Central Asia"
 publisher:
   name: RED - Risk, Engineering  Development - Pavia (Italy)
   url: https://www.redrisk.com
@@ -125,6 +135,7 @@ resources:
 risk_data_type:
 - loss
 schema: rdl-02
+slug: rdls_lss-wb_sfrarr_earthquake
 spatial:
   bbox:
   - 46
