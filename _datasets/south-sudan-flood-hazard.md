@@ -6,15 +6,14 @@ creator:
   email: mamadio@worldbank.org
   name: Mattia Amadio
 dataset_id: SSD_hzd-flood
-slug: SSD_hzd-flood
 description: River flood hazard extent (perimeter) in South Sudan derived from FATHOM
-  2019 for RP 5, 20, 100, 250 years; observed extent of 2019 flood from remote sensing.
+  2019 for RP 5, 20, 100, 250 years.
 details: null
 exposure: null
 hazard:
-  calculation_method: simulated
+  calculation_method: observed, simulated
   disaster_identifiers: FL-2019-000062-SSD; GLIDE
-  hazard_analysis_type: probabilistic
+  hazard_analysis_type: empirical, probabilistic
   hazard_type: flood
   intensity: fl_wd:m
   occurrence_range: 5, 20, 100, 250 years
@@ -26,9 +25,9 @@ publisher:
   name: GFDRR
   url: https://www.gfdrr.org
 purpose: "The results of the analysis contribute to the production of knowledge for\
-  \ disaster risk management (DRM) to support the World Bank\u2019s operational teams\
-  \ in their in-country engagements. Specifcally, the key fndings of this study allow\
-  \ to rank South Sudan states in terms of natural disasters risk, and to identify\
+  \ disaster risk management (DRM) to support the World Bank\xE2\u20AC\u2122s operational\
+  \ teams in their in-country engagements. Specifcally, the key fndings of this study\
+  \ allow to rank South Sudan states in terms of natural disasters risk, and to identify\
   \ the most critical components for each area. The output of this assessment includes\
   \ a geodatabase which contains both the key primary data and all the resulting maps\
   \ produced by the analysis, allowing risk analysts and managers to explore them\
@@ -53,6 +52,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: SSD_hzd-flood
 spatial:
   countries:
   - SSD

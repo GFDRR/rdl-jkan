@@ -6,7 +6,6 @@ creator:
   name: Fathom
   url: https://www.fathom.global/
 dataset_id: FTH_v3-oac
-slug: FTH_v3-oac
 description: Third release of the probabilistic modelling of fluvial, pluvial and
   coastal flood hazard developed by Fathom. This selection includes 16 countries among
   the most vulnerable to climate change, such as Pakistan, Somalia, and Yemen, which
@@ -64,6 +63,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: FTH_v3-oac
 spatial:
   countries:
   - BFA

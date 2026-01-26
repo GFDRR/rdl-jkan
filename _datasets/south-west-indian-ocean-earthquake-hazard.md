@@ -6,7 +6,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: SWIO_hzd-earthquake
-slug: SWIO_hzd-earthquake
 description: Earthquake hazard map representing Peak ground acceleration (PGA-g) for
   six return period scenarios.
 details: This data set was produced with financial support from the European Union
@@ -87,6 +86,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: SWIO_hzd-earthquake
 spatial:
   countries:
   - COM

@@ -6,7 +6,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: AFG_exp-asset
-slug: AFG_exp-asset
 description: 'Collection of exposure datasets for risk assessment purpose in Afghanistan.
   Includes:
 
@@ -84,6 +83,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-02
+slug: AFG_exp-asset
 spatial:
   countries:
   - AFG

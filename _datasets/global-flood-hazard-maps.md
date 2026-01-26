@@ -6,7 +6,6 @@ creator:
   name: Fathom
   url: https://www.fathom.global/
 dataset_id: FTH_v3
-slug: FTH_v3
 description: Third release of the probabilistic modelling of fluvial, pluvial and
   coastal flood hazard developed by Fathom. Includes baseline (2020) and projections
   (2030, 2050, 2080) under four different IPCC scenarios.
@@ -61,6 +60,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: FTH_v3
 spatial:
   bbox:
   - -180

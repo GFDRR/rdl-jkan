@@ -49,7 +49,7 @@ resources:
     \ Area. It categorises land use into agriculture, business, community and social\
     \ services, industrial, open spaces, recreational, residential, roads and transportation.\
     \ In addition, it includes the market value of the land use types and the property\
-    \ value per m\xB2."
+    \ value per m\xC2\xB2."
   download_url: null
   format: geojson
   id: '1'
