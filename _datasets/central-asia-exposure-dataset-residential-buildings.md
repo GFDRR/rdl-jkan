@@ -6,10 +6,9 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_res
-slug: CA_SFRARR_exp_res
 description: Central Asia exposure dataset - Residential buildings
 details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accelerating
-  Risk Reduction in Central Asia'' Program. (https://www.gfdrr.org/en/program/SFRARR-Central-Asia).
+  Risk Reduction in Central Asia'' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia).
 
   Exposure data developed using high-resolution global and regional datasets and local
   official data, harmonized to produce a regionally-consistent exposure database for
@@ -27,7 +26,8 @@ exposure:
 hazard: null
 license: CC-BY-SA-4.0
 loss: null
-project: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia
+project: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction
+  in Central Asia
 publisher:
   name: RED - Risk, Engineering  Development - Pavia (Italy)
   url: https://www.redrisk.com
@@ -41,8 +41,8 @@ purpose: Regional risk modelling. These data have been derived on a regional sca
   modelling, particularly were applied to dimension mitigation structures or strategies
 resources:
 - coordinate_system: null
-  description: "Central Asia exposure layers \u2013 Residential buildings.\nFiles:\
-    \ RESIDENTIAL_[OBLAST].csv, RESIDENTIAL_[OBLAST].shp"
+  description: "Central Asia exposure layers \xE2\u20AC\u201C Residential buildings.\n\
+    Files: RESIDENTIAL_[OBLAST].csv, RESIDENTIAL_[OBLAST].shp"
   download_url: https://datacatalog.worldbank.org/search/dataset/0064251
   format: csv
   id: CA_SFRARR_exp_res
@@ -51,6 +51,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-02
+slug: CA_SFRARR_exp_res
 spatial:
   bbox:
   - 46

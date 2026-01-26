@@ -6,7 +6,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: AFG_lss-drought
-slug: AFG_lss-drought
 description: Annual average losses in agricultural production (USD) and affected population,
   both for the baseline reference and future projections (2050)
 details: "To better understand natural hazard and disaster risk, the World Bank and\
@@ -72,6 +71,7 @@ resources:
 risk_data_type:
 - loss
 schema: rdl-02
+slug: AFG_lss-drought
 spatial:
   countries:
   - AFG

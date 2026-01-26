@@ -1,14 +1,17 @@
 ---
 contact_point:
   email: mamadio@worldbank.org
+  id: '3'
   name: Mattia Amadio
+  url: null
 creator:
+  email: null
+  id: '2'
   name: CIMA
   url: https://www.cimafoundation.org
-dataset_id: CDRI_FL
-slug: CDRI_FL
+dataset_id: rdls_hzd-GIRI_FL
 description: Datasets containing probabilistic analysis of river flood maximum water
-  depth (m) covering historical and future projections.
+  depth (m) covering historical and future projections at the global scale.
 details: The hydrological model used is the Continuum model (Silvestro et al. 2013
   and 2015). It is a continuous, distributed and physically based hydrological model
   able to reproduce the spatial-temporal evolution of soil moisture, energy fluxes,
@@ -19,47 +22,77 @@ details: The hydrological model used is the Continuum model (Silvestro et al. 20
   are input to an hydraulic model based on the Manning equation that compute channel
   uniform flow depth. This simplified approach fits to determine flood maps on large
   areas.
-exposure: null
+exposure: []
+extra_attributions:
+- email: null
+  id: '4'
+  name: CDRI
+  role: resource_provider
+  url: https://cdri.world/
 hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: flood
-  intensity: fl_wd:m
+  hazard_type: ''
+  intensity: ''
   occurrence_range: Return period 2 to 1,000 years
-  processes: fluvial_flood
+  processes: ''
+  seasonality: ''
 license: CC-BY-4.0
 loss: null
-project: Global Infrastructure Risk Model and Resilience Index (GIRI)
+project:
+  name: Global Infrastructure Risk Model and Resilience Index (GIRI)
+  url: https://giri.unepgrid.ch/
 publisher:
-  name: UNEP
-  url: https://giri.unepgrid.ch/map
+  email: null
+  id: '1'
+  name: UNEP-GRID
+  url: https://unepgrid.ch/en
 purpose: null
 resources:
 - coordinate_system: EPSG:4326
   description: Collection of historical hazard maps
   download_url: https://giri.unepgrid.ch/map
-  format: geotiff
+  format: GeoTIFF (tif)
   id: HST
+  media_type: null
   spatial_resolution: 90
+  temporal:
+    duration: null
+    end: '2016'
+    start: '1979'
+    temporal_resolution: null
   title: Flood hazard (historical 1979-2016)
 - coordinate_system: EPSG:4326
   description: Collection of projected hazard maps (SSP1)
   download_url: https://giri.unepgrid.ch/map
-  format: geotiff
+  format: GeoTIFF (tif)
   id: PRJ_LB
+  media_type: null
   spatial_resolution: 90
+  temporal:
+    duration: null
+    end: '2100'
+    start: '2017'
+    temporal_resolution: null
   title: Flood hazard (projected SSP1)
 - coordinate_system: EPSG:4326
   description: Collection of projected hazard maps (SSP5)
   download_url: https://giri.unepgrid.ch/map
-  format: geotiff
+  format: GeoTIFF (tif)
   id: PRJ_UB
+  media_type: null
   spatial_resolution: 90
+  temporal:
+    duration: null
+    end: '2100'
+    start: '2017'
+    temporal_resolution: null
   title: Flood hazard (projected SSP5)
 risk_data_type:
 - hazard
-schema: rdl-02
+schema: rdl-03
+slug: rdls_hzd-GIRI_FL
 spatial:
   countries:
   - GLO

@@ -6,10 +6,9 @@ creator:
   email: cscaini@inogs.it
   name: Chiara Scaini
 dataset_id: CA_SFRARR_exp_airport
-slug: CA_SFRARR_exp_airport
 description: Collection of airport location and extent.
 details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accelerating
-  Risk Reduction in Central Asia'' Program. (https://www.gfdrr.org/en/program/SFRARR-Central-Asia).
+  Risk Reduction in Central Asia'' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia).
 
   Exposure data developed using high-resolution global and regional datasets and local
   official data, harmonized to produce a regionally-consistent exposure database for
@@ -27,7 +26,8 @@ exposure:
 hazard: null
 license: CC-BY-SA-4.0
 loss: null
-project: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia
+project: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction
+  in Central Asia
 publisher:
   name: RED - Risk, Engineering  Development - Pavia (Italy)
   url: https://www.redrisk.com
@@ -58,6 +58,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-02
+slug: CA_SFRARR_exp_airport
 spatial:
   bbox:
   - 46

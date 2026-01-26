@@ -1,0 +1,191 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-GIRI_EQ",
+      "title": "Global earthquake ground shaking hazard",
+      "description": "Datasets containing probabilistic analysis of earthquake peak ground acceleration (PGA) in units of g (gravity). The map has global coverage and a resolution of 30' (~55.5 kilometers at the equator). ",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "version": "1",
+      "project": {
+        "name": "Global Infrastructure Risk Model and Resilience Index (GIRI)",
+        "url": "https://giri.unepgrid.ch/"
+      },
+      "details": "The earthquake hazard model uses probabilistic seismic hazard analysis (PSHA) to estimate ground shaking intensity expressed as peak ground acceleration. The model incorporates global seismic source zones, historical earthquake catalogs, and ground motion prediction equations.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "1",
+          "role": "publisher",
+          "entity": {
+            "name": "UNEP-GRID",
+            "url": "https://unepgrid.ch/en"
+          }
+        },
+        {
+          "id": "2",
+          "role": "creator",
+          "entity": {
+            "name": "Ingeniar",
+            "url": "https://ingeniar-risk.com"
+          }
+        },
+        {
+          "id": "3",
+          "role": "contact_point",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          }
+        },
+        {
+          "id": "4",
+          "role": "resource_provider",
+          "entity": {
+            "name": "CDRI",
+            "url": "https://cdri.world/"
+          }
+        }
+      ],
+      "referenced_by": [
+        {
+          "name": "Multi-hazard Disaster Risk Model of Infrastructure and Buildings at the Global Level",
+          "date_published": "2023-11-01",
+          "url": "https://giri.unepgrid.ch/sites/default/files/2023-11/2.4-INGENIAR-CDRI-Background-Report-Risk-model.pdf",
+          "id": "reference_SlPfduen",
+          "author_names": [
+            "O.D. Cardona",
+            "G. A. Bernal",
+            "C. P. Villegas",
+            "J. F. Molina",
+            "S. A. Herrera",
+            "M. C. Marulanda",
+            "D. F. Rincón",
+            "S. Grajales",
+            "P. M. Marulanda",
+            "D. Gonzalez",
+            "A. Maskrey"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "EQ",
+          "title": "Earthquake ground shaking hazard",
+          "description": "Collection of earthquake peak ground acceleration maps for multiple return periods",
+          "spatial_resolution": 55500,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://giri.unepgrid.ch/map",
+          "download_url": "https://giri.unepgrid.ch/map",
+          "data_format": "GeoTIFF (tif)",
+          "access_modality": "download_page"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "EQ",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "Return period 100 to 2,475 years",
+            "hazards": [
+              {
+                "id": "EQ",
+                "type": "earthquake",
+                "hazard_process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "events": [
+              {
+                "id": "100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "EQ",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "EQ",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "475",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "EQ",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 475
+                  }
+                }
+              },
+              {
+                "id": "1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "EQ",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              },
+              {
+                "id": "2475",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "EQ",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2475
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

@@ -17,14 +17,14 @@ import utils
 from validator import validate_with_custom_logic
 
 
-def clean_up_old_versions(json_dataset):
+def delete_stale_markdown(json_to_delete_md_for):
+    ids_to_delete = [utils.get_deleted_json_id(path) for path in json_to_delete_md_for]
     for filename in os.listdir(config.datasets_dir):
         if filename.endswith(".md"):
             filepath = os.path.join(config.datasets_dir, filename)
             frontmatter = utils.extract_yaml_frontmatter(filepath)
-            json_dataset_id = json_dataset.get("dataset_id")
             markdown_dataset_id = frontmatter.get("dataset_id")
-            if frontmatter and markdown_dataset_id == json_dataset_id:
+            if frontmatter and markdown_dataset_id in ids_to_delete:
                 print(f"Deleting {filepath} with id of {markdown_dataset_id}")
                 os.remove(filepath)
 
@@ -38,7 +38,7 @@ def fetch_schema(schema_url, schema_path):
             json.dump(response_dict, file)
     else:
         raise Exception(
-            f"Failed to retrieve schema from {hardcoded_schema_url}, status code: {response.status_code}"
+            f"Failed to retrieve schema from {schema_url}, status code: {response.status_code}"
         )
 
 
@@ -56,9 +56,11 @@ def validate_json_with_schema(dataset_from_json, schema_url):
         if not is_cached:
             fetch_schema(schema_url, schema_path)
 
-    with open(schema_path, "r") as file:
-        schema = json.load(file)
-        validate_with_custom_logic(dataset_from_json, schema)
+    # TODO: drop this condition; temporarily skips v0.2 validations
+    if schema_url == config.schema_url_v3:
+        with open(schema_path, "r") as file:
+            schema = json.load(file)
+            validate_with_custom_logic(dataset_from_json, schema)
 
 
 def write_dataset_to_markdown(dataset_from_json, schema_url):
@@ -82,24 +84,22 @@ def write_dataset_to_markdown(dataset_from_json, schema_url):
                 dataset_frontmatter = mappers.make_dataset_frontmatter_v02(
                     dataset_from_json
                 )
-        # Delete old file if it exists, in case of filename changes
-        clean_up_old_versions(dataset_frontmatter)
         # Write output
         utils.write_frontmatter(dataset_frontmatter, config.datasets_dir)
         return 0
     except Exception as e:
         logging.error(
-            f"While writing {dataset.get('title', 'a dataset with a missing title')} "
-            f"(dataset_id: {dataset.get('id', 'missing')})",
+            f"While writing {dataset_from_json.get('title', 'a dataset with a missing title')} "
+            f"(dataset_id: {dataset_from_json.get('id', 'missing')})",
             exc_info=e,
         )
         return 1
 
 
-def write_datasets_to_markdown(json_filepaths):
+def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for):
     exit_code = 0
-    for json_file in json_filepaths:
-        json_filepath = os.path.join(config.root_dir, json_file)
+    delete_stale_markdown(json_to_delete_md_for)
+    for json_filepath in json_to_generate_md_from:
         encoding = utils.detect_encoding(json_filepath)
         with open(json_filepath, encoding=encoding) as input_file:
             datasets_json = json.load(input_file)
@@ -110,15 +110,6 @@ def write_datasets_to_markdown(json_filepaths):
                 if result != 0:
                     exit_code = result
     return exit_code
-
-
-def check_for_required_paths():
-    if not Path(config.root_dir).is_dir():
-        os.makedirs(config.root_dir)
-    if not Path(config.datasets_dir).is_dir():
-        os.makedirs(config.datasets_dir)
-    if not Path(config.json_dir).is_dir():
-        os.makedirs(config.json_dir)
 
 
 def get_datasets_metadata():
@@ -152,8 +143,7 @@ def embed_datasets_metadata(datasets_metadata):
 
     return results
 
-
-if __name__ == "__main__":
+def setup_args():
     parser = argparse.ArgumentParser(
         description="Utility for importing RDL metadata into JKAN"
     )
@@ -175,18 +165,41 @@ if __name__ == "__main__":
         action="store_true",
     )
     args = parser.parse_args()
-    check_for_required_paths()
-    files_to_process = (
-        utils.get_recently_changed_files(f"_datasets/json/*.json")
-        if args.ci
-        else Path(".").glob(f"{config.json_dir}/*.json")
-    )
+    if args.vectors is False and args.markdown is False:
+        print("No action specified. Use --markdown and/or --vectors.")
+        sys.exit(1)
+
+    return args
+
+def setup_paths():
+    if not Path(config.root_dir).is_dir():
+        os.makedirs(config.root_dir)
+    if not Path(config.datasets_dir).is_dir():
+        os.makedirs(config.datasets_dir)
+    if not Path(config.json_dir).is_dir():
+        os.makedirs(config.json_dir)
+
+def setup_plan():
+    if args.markdown:
+        if args.ci:
+            json_to_generate_md_from, json_to_delete_md_for = utils.get_recently_changed_files()
+        else:
+            json_to_generate_md_from = json_to_delete_md_for = Path(".").glob(f"{config.json_dir}/*.json")
+    should_generate_vectors =  args.vectors and (json_to_delete_md_for or json_to_delete_md_for)
+
+    return json_to_generate_md_from, json_to_delete_md_for, should_generate_vectors
+
+if __name__ == "__main__":
     exit_code = 0
-    if args.markdown is True and files_to_process:
-        exit_code = write_datasets_to_markdown(files_to_process)
+    args = setup_args()
+    setup_paths()
+    json_to_generate_md_from, json_to_delete_md_for, should_generate_vectors = setup_plan()
+
+    if json_to_generate_md_from or json_to_delete_md_for:
+        exit_code = write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for)
         if exit_code == 0:
             print(f"Markdown generated in {config.datasets_dir}.")
-    if args.vectors is True and files_to_process:
+    if should_generate_vectors:
         model = SentenceTransformer("all-MiniLM-L6-v2")
         datasets_metadata = get_datasets_metadata()
         vector_embeddings = embed_datasets_metadata(datasets_metadata)
@@ -196,7 +209,5 @@ if __name__ == "__main__":
         )
         if exit_code == 0:
             print(f"Vectors saved to {config.vectors_path}.")
-    if args.vectors is False and args.markdown is False:
-        print("No action specified. Use --markdown and/or --vectors.")
-        exit_code = 1
+
     sys.exit(exit_code)

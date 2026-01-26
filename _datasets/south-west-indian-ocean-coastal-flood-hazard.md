@@ -6,7 +6,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: SWIO_hzd-coastal_flood
-slug: SWIO_hzd-coastal_flood
 description: 'Coastal flood hazard measured as the maximum water depth for six return
   periods. '
 details: This data set was produced with financial support from the European Union
@@ -82,6 +81,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: SWIO_hzd-coastal_flood
 spatial:
   countries:
   - COM

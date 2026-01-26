@@ -7,7 +7,6 @@ creator:
   name: Carbon Plan
   url: https://carbonplan.org/
 dataset_id: HS_cp
-slug: HS_cp
 description: The final output dataset includes historical and future estimates of
   WBGT in the shade and in the sun for ~15,300 cities and ~24,000 climatically-similar
   regions around the world. The full analysis includes 26 global climate models (GCMs)
@@ -20,8 +19,8 @@ hazard:
   calculation_method: inferred, simulated
   disaster_identifiers: ''
   hazard_analysis_type: deterministic, empirical
-  hazard_type: 'extreme_temperature'
-  intensity: 'extreme_heat'
+  hazard_type: ''
+  intensity: ''
   occurrence_range: ''
   processes: ''
 license: CC-BY-4.0
@@ -288,13 +287,192 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: HS_cp
 spatial:
-  bbox:
-  - -180
-  - -90
-  - 180
-  - 90
   countries:
+  - AFG
+  - AGO
+  - ALB
+  - ARE
+  - ARG
+  - ARM
+  - AUS
+  - AUT
+  - AZE
+  - BDI
+  - BEL
+  - BEN
+  - BFA
+  - BGD
+  - BGR
+  - BHR
+  - BHS
+  - BIH
+  - BLR
+  - BLZ
+  - BOL
+  - BRA
+  - BRB
+  - BRN
+  - BTN
+  - BWA
+  - CAF
+  - CAN
+  - CHE
+  - CHL
+  - CHN
+  - CIV
+  - CMR
+  - COD
+  - COG
+  - COL
+  - COM
+  - CPV
+  - CRI
+  - CUB
+  - CUW
+  - CYP
+  - CZE
+  - DEU
+  - DJI
+  - DNK
+  - DOM
+  - DZA
+  - ECU
+  - EGY
+  - ERI
+  - ESH
+  - ESP
+  - EST
+  - ETH
+  - FIN
+  - FJI
+  - FRA
+  - GAB
+  - GBR
+  - GEO
+  - GHA
+  - GIB
+  - GIN
+  - GMB
+  - GNB
+  - GNQ
+  - GRC
+  - GTM
+  - GUY
+  - HND
+  - HRV
+  - HTI
+  - HUN
+  - IDN
+  - IND
+  - IRL
+  - IRN
+  - IRQ
+  - ISL
+  - ISR
+  - ITA
+  - JAM
+  - JEY
+  - JOR
+  - JPN
+  - KAZ
+  - KEN
+  - KGZ
+  - KHM
+  - KOR
+  - KWT
+  - LAO
+  - LBN
+  - LBR
+  - LBY
+  - LKA
+  - LSO
+  - LTU
+  - LUX
+  - LVA
+  - MAR
+  - MCO
+  - MDA
+  - MDG
+  - MDV
+  - MEX
+  - MKD
+  - MLI
+  - MLT
+  - MMR
+  - MNE
+  - MNG
+  - MOZ
+  - MRT
+  - MUS
+  - MWI
+  - MYS
+  - NAM
+  - NCL
+  - NER
+  - NGA
+  - NIC
+  - NLD
+  - NOR
+  - NPL
+  - NZL
+  - OMN
+  - PAK
+  - PAN
+  - PER
+  - PHL
+  - PNG
+  - POL
+  - PRI
+  - PRK
+  - PRT
+  - PRY
+  - PSE
+  - PYF
+  - QAT
+  - ROU
+  - RUS
+  - RWA
+  - SAU
+  - SDN
+  - SEN
+  - SGP
+  - SLB
+  - SLE
+  - SLV
+  - SOM
+  - SRB
+  - SSD
+  - STP
+  - SUR
+  - SVK
+  - SVN
+  - SWE
+  - SWZ
+  - SYR
+  - TCD
+  - TGO
+  - THA
+  - TJK
+  - TKM
+  - TLS
+  - TTO
+  - TUN
+  - TUR
+  - TWN
+  - TZA
+  - UGA
+  - UKR
+  - URY
+  - USA
+  - UZB
+  - VEN
+  - VNM
+  - YEM
+  - ZAF
+  - ZMB
+  - ZWE
   - GLO
   scale: global
 title: Extreme Heat - Carbon Plan & The Washington Post

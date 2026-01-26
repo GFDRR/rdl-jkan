@@ -6,7 +6,6 @@ creator:
   name: GFDRR
   url: https://www.gfdrr.org
 dataset_id: SWIO_hzd-flood
-slug: SWIO_hzd-flood
 description: 'Flood hazard measured as the maximum water depth for six return periods. '
 details: This data set was produced with financial support from the European Union
   in the framework of the ACP-EU Natural Disaster Risk Reduction Program, managed
@@ -121,6 +120,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-02
+slug: SWIO_hzd-flood
 spatial:
   countries:
   - COM
