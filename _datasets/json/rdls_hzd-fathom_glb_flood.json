@@ -663,6 +663,23 @@
           },
           {
             "id": "PFL_U",
+            "analysis_type": "probabilistic",
+            "frequency_distribution": "generalized_extreme_value",
+            "seasonality": "uniform",
+            "calculation_method": "simulated",
+            "occurrence_range": "1/10 to 1/1000 years",
+            "spatial": {
+              "bbox": [-180, -90, 180, 90],
+              "scale": "global"
+            },
+            "hazards": [
+              {
+                "id": "PFL",
+                "type": "flood",
+                "processes": ["pluvial_flood"],
+                "intensity_measure": "wd:cm"
+              }
+            ],
             "events": [
               {
                 "id": "5",
