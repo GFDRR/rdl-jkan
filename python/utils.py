@@ -62,6 +62,7 @@ def get_recently_changed_files():
         if item.change_type == "D":
             json_to_delete_md_for.append(tweak_filepath(item.a_path))
         elif item.change_type in {"A", "M", "R", "C"}:
+            json_to_delete_md_for.append(tweak_filepath(item.a_path))
             json_to_generate_md_from.append(tweak_filepath(item.b_path))
     return json_to_generate_md_from, json_to_delete_md_for
 
@@ -78,8 +79,7 @@ def get_deleted_json_id(json_path):
     # Read the content of the file
     content = blob.data_stream.read().decode("utf-8")
     data = json.loads(content)
-
-    return data.get("dataset_id")
+    return data.get("datasets", [{}])[0].get("id")
 
 
 def save_to_json(data, filename) -> int:

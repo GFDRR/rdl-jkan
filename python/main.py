@@ -180,12 +180,13 @@ def setup_paths():
         os.makedirs(config.json_dir)
 
 def setup_plan():
+    json_to_generate_md_from = json_to_delete_md_for = None
     if args.markdown:
         if args.ci:
             json_to_generate_md_from, json_to_delete_md_for = utils.get_recently_changed_files()
         else:
             json_to_generate_md_from = json_to_delete_md_for = Path(".").glob(f"{config.json_dir}/*.json")
-    should_generate_vectors =  args.vectors and (json_to_delete_md_for or json_to_delete_md_for)
+    should_generate_vectors =  args.vectors and (json_to_generate_md_from or json_to_delete_md_for)
 
     return json_to_generate_md_from, json_to_delete_md_for, should_generate_vectors
 
