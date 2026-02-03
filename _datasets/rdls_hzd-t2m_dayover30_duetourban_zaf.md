@@ -6,13 +6,11 @@ creator:
   email: briley@worldbank.org
   name: GFDRR
   url: https://www.gfdrr.org
-dataset_id: rdls_hzd-Cooling_degree_hours_ZAF
-description: "Annual number of hours during which the temperatures rises over 25\xB0\
-  C, multiplied by the number of degrees the temperature rises above 25\xB0C. This\
-  \ is an international standard to estimate the energy demand for air conditioning\
-  \ use. The baseline is calculated for 2001\u20132020, with projections for 2021\u2013\
-  2040 and 2041\u20132060 under two climate scenarios: RCP 4.5 (moderate emissions)\
-  \ and RCP 8.5 (high emissions)."
+dataset_id: rdls_hzd-T2M_dayover30_duetourban_ZAF
+description: "Annual number of days attaining a maximum temperature > 30\xB0C that\
+  \ are caused by urban canopy. The baseline is calculated for 2001\u20132020, with\
+  \ projections for 2021\u20132040 and 2041\u20132060 under two climate scenarios:\
+  \ RCP 4.5 (moderate emissions) and RCP 8.5 (high emissions)."
 details: 'Heat stress indicators for present and future climates for the cities of
   Johannesburg and Ekurhuleni (South Africa) at 30m spatial resolution calculated
   with UrbClim (De Ridder et al., 2015) for the following scenarios: 2001-2020: present
@@ -37,37 +35,39 @@ publisher:
 purpose: 'This dataset is part of the scientific paper: Souverijns, N., De Ridder,
   K., Veldeman, N., Lefebre, F., Kusambiza-Kiingi, F., Memela, W., Jones, N.K.W.,
   2022. Urban heat in Johannesburg and Ekurhuleni, South Africa: A meter-scale assessment
-  and vulnerability analysis. Urban Climate, 46, 101331. https://doi.org/10.1016/j.uclim.2022.101331 '
+  and vulnerability analysis. Urban Climate, 46, 101331. https://doi.org/10.1016/j.uclim.2022.101340'
 resources:
 - coordinate_system: EPSG:4326
-  description: "Annual number of hours during which the temperature rises above 25\xB0\
-    C, multiplied by the number of degrees above 25\xB0C for 2001-2020. This is used\
-    \ to estimate the energy demand for air conditioning."
+  description: "Projected number of days with a maximum temperature greater than 30\xB0\
+    C due to urban canopy effects for 2001-2020."
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '0'
   spatial_resolution: null
-  title: Cooling Degree Hours - Johannebsurg & Ekurhuleni (2001-2020)
+  title: "Days with Maximum Temperature > 30\xB0C Due to Urban Canopy - Johannebsurg\
+    \ & Ekurhuleni (2001-2020)"
 - coordinate_system: EPSG:4326
-  description: "Projected annual number of hours during which the temperature rises\
-    \ above 25\xB0C under RCP 4.5 and 8.5 scenario for 2021-2040."
+  description: "Projected number of days with a maximum temperature greater than 30\xB0\
+    C due to urban canopy effects under the RCP 4.5 and 8.5 scenario for 2021-2040."
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '1'
   spatial_resolution: null
-  title: Cooling Degree Hours - Johannebsurg & Ekurhuleni (2021-2040, RCP4.5 & RCP8.5)
+  title: "Days with Maximum Temperature > 30\xB0C Due to Urban Canopy - Johannebsurg\
+    \ & Ekurhuleni (2021-2040, RCP4.5 & RCP8.5)"
 - coordinate_system: EPSG:4326
-  description: "Projected annual number of hours during which the temperature rises\
-    \ above 25\xB0C under RCP 4.5 and 8.5 scenario for 2041-2060."
+  description: "Projected number of days with a maximum temperature greater than 30\xB0\
+    C due to urban canopy effects under the RCP 4.5 and 8.5 scenario for 2041-2060."
   download_url: https://zenodo.org/records/6394130
   format: geotiff
   id: '2'
   spatial_resolution: null
-  title: Cooling Degree Hours - Johannebsurg & Ekurhuleni (2041-2060, RCP4.5 & RCP8.5)
+  title: "Days with Maximum Temperature > 30\xB0C Due to Urban Canopy - Johannebsurg\
+    \ & Ekurhuleni (2041-2060, RCP4.5 & RCP8.5)"
 risk_data_type:
 - hazard
 schema: rdl-02
-slug: rdls_hzd-Cooling_degree_hours_ZAF
+slug: rdls_hzd-T2M_dayover30_duetourban_ZAF
 spatial:
   bbox:
   - 27.676831894273278
@@ -87,7 +87,7 @@ spatial:
     id: ZAF-GP-EKU
     scheme: ISO 3166-2
   scale: sub-national
-title: Cooling Degree Hours
+title: "Days with Maximum Temperature > 30\xB0C Due to Urban Canopy "
 version: 30 March 2022
 vulnerability: null
 ---
