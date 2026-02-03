@@ -18,7 +18,9 @@ from validator import validate_with_custom_logic
 
 
 def delete_stale_markdown(json_to_delete_md_for):
-    ids_to_delete = [utils.get_deleted_json_id(path) for path in json_to_delete_md_for]
+    ids_to_delete = []
+    for path in json_to_delete_md_for:
+        ids_to_delete.extend(utils.get_deleted_json_ids(path))
     for filename in os.listdir(config.datasets_dir):
         if filename.endswith(".md"):
             filepath = os.path.join(config.datasets_dir, filename)

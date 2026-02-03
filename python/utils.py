@@ -1,6 +1,7 @@
 import os
 import chardet
 from git import Repo
+from git.exc import GitCommandError
 import json
 import logging
 from pathlib import Path
@@ -67,19 +68,78 @@ def get_recently_changed_files():
     return json_to_generate_md_from, json_to_delete_md_for
 
 
-def get_deleted_json_id(json_path):
+def get_deleted_json_ids(json_path):
     repo = Repo(config.root_dir)
     repo.remotes.origin.fetch()
-    tree = repo.commit("origin/rdl-0.3").tree
+    # Compute repository root relative to current working directory to avoid repo.working_tree_dir surprises
+    repo_root = os.path.abspath(os.path.join(os.getcwd(), config.root_dir))
+    abs_json = os.path.abspath(json_path)
+    rel = os.path.relpath(abs_json, repo_root)
+    rel = os.path.normpath(rel)
+    # Strip any leading '..' components to ensure the path stays inside the repo for git
+    parts = rel.split(os.path.sep)
+    while parts and parts[0] == os.pardir:
+        parts.pop(0)
+    rel = os.path.join(*parts) if parts else ""
 
-    # Specify the path to the JSON file
-    blob = tree[os.path.relpath(json_path, config.root_dir)]
-    # encoding = detect_encoding(json_path)
+    if not rel:
+        logging.warning(f"Computed relative path empty for json_path {json_path}")
+        return []
+
+    basename = os.path.basename(rel)
+    json_dir_rel = os.path.relpath(config.json_dir, config.root_dir)
+    fallback = os.path.normpath(os.path.join(json_dir_rel, basename))
+
+    # First try to find a commit that contains this path in history (this will find the file if it existed before deletion)
+    blob = None
+    try:
+        for commit in repo.iter_commits(paths=rel):
+            try:
+                blob = commit.tree[rel]
+                break
+            except KeyError:
+                try:
+                    blob = commit.tree[fallback]
+                    break
+                except KeyError:
+                    # search commit tree for matching basename
+                    for item in commit.tree.traverse():
+                        if getattr(item, "type", None) == "blob" and os.path.basename(item.path) == basename:
+                            blob = item
+                            break
+                    if blob:
+                        break
+    except Exception as e:
+        logging.debug(f"Error while iterating commits for path {rel}: {e}")
+
+    # If not found in history, try the configured remote branch as a last resort
+    if blob is None:
+        try:
+            tree = repo.commit(f"origin/{config.remote_target_branch}").tree
+            try:
+                blob = tree[rel]
+            except KeyError:
+                try:
+                    blob = tree[fallback]
+                except KeyError:
+                    for item in tree.traverse():
+                        if getattr(item, "type", None) == "blob" and os.path.basename(item.path) == basename:
+                            blob = item
+                            logging.debug(f"Found blob by basename {basename} on origin branch at {item.path}")
+                            break
+        except Exception as e:
+            logging.debug(f"Error while checking origin/{config.remote_target_branch}: {e}")
+
+    if blob is None:
+        logging.warning(
+            f"JSON file not found in history or origin/{config.remote_target_branch}: {json_path} (looked for: {rel} and {fallback})"
+        )
+        return []
 
     # Read the content of the file
     content = blob.data_stream.read().decode("utf-8")
     data = json.loads(content)
-    return data.get("datasets", [{}])[0].get("id")
+    return [d.get("id") for d in data.get("datasets", []) if d.get("id")]
 
 
 def save_to_json(data, filename) -> int:
