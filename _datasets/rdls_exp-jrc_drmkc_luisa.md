@@ -68,7 +68,7 @@ resources:
 - coordinate_system: null
   description: "QGIS (.qml) style file with predefined symbology, classification,\
     \ and labeling for consistent visualization. Load in QGIS via Layer Properties\
-    \ \u2192 Style to apply immediately."
+    \ \xE2\u2020\u2019 Style to apply immediately."
   download_url: https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/LUISA/EUROPE/Basemaps/LandUse/2018/LATEST/QGIS_legend_Base_Map_2018.qml
   format: website
   id: qgis_layerstyle
