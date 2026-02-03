@@ -187,7 +187,10 @@ def setup_plan():
         if args.ci:
             json_to_generate_md_from, json_to_delete_md_for = utils.get_recently_changed_files()
         else:
-            json_to_generate_md_from = json_to_delete_md_for = Path(".").glob(f"{config.json_dir}/*.json")
+            # Convert glob to a list so the iterable isn't exhausted by multiple consumers
+            json_glob = list(Path(".").glob(f"{config.json_dir}/*.json"))
+            json_to_generate_md_from = json_glob
+            json_to_delete_md_for = json_glob
     should_generate_vectors =  args.vectors and (json_to_generate_md_from or json_to_delete_md_for)
 
     return json_to_generate_md_from, json_to_delete_md_for, should_generate_vectors
