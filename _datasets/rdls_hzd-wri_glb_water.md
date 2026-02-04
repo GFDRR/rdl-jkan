@@ -30,10 +30,10 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: deterministic
-  hazard_type: ''
+  hazard_type: drought
   intensity: ''
   occurrence_range: ''
-  processes: ''
+  processes: socioeconomic_drought
   seasonality: ''
 license: CC-BY-4.0
 loss: null

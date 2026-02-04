@@ -30,10 +30,10 @@ hazard:
   calculation_method: inferred
   disaster_identifiers: ''
   hazard_analysis_type: deterministic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: wildfire
+  intensity: FWI:-
   occurrence_range: ''
-  processes: ''
+  processes: wildfire
   seasonality: ''
 license: CC-BY-4.0
 loss: null

@@ -55,8 +55,8 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: deterministic, probabilistic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: coastal_flood, flood, landslide
+  intensity: wd:m
   occurrence_range: 'Erosion hazard lines/zones for baseline reference and future
     horizons (2040, 2070), including permanent (structural/SLR-related) and combined
     permanent+temporary storm erosion representations., Time horizons: 2020, 2040,
@@ -64,7 +64,7 @@ hazard:
     (as in filenames)., Time horizons: current (baseline), 2040, 2070; return periods
     encoded in rasters: T1, T4, T5, T10, T25, T100, T250 (some also provided as corrected
     variants).'
-  processes: ''
+  processes: coastal_flood, landslide_general, pluvial_flood
   seasonality: ''
 license: CC-BY-4.0
 loss:

@@ -45,10 +45,10 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: ''
+  hazard_type: drought, extreme_temperature
   intensity: ''
   occurrence_range: ''
-  processes: ''
+  processes: extreme_heat, meteorological_drought
   seasonality: ''
 license: CC0-1.0
 loss: null
