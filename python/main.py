@@ -18,7 +18,9 @@ from validator import validate_with_custom_logic
 
 
 def delete_stale_markdown(json_to_delete_md_for):
-    ids_to_delete = [utils.get_deleted_json_id(path) for path in json_to_delete_md_for]
+    ids_to_delete = []
+    for path in json_to_delete_md_for:
+        ids_to_delete.extend(utils.get_deleted_json_ids(path))
     for filename in os.listdir(config.datasets_dir):
         if filename.endswith(".md"):
             filepath = os.path.join(config.datasets_dir, filename)
@@ -180,12 +182,16 @@ def setup_paths():
         os.makedirs(config.json_dir)
 
 def setup_plan():
+    json_to_generate_md_from = json_to_delete_md_for = None
     if args.markdown:
         if args.ci:
             json_to_generate_md_from, json_to_delete_md_for = utils.get_recently_changed_files()
         else:
-            json_to_generate_md_from = json_to_delete_md_for = Path(".").glob(f"{config.json_dir}/*.json")
-    should_generate_vectors =  args.vectors and (json_to_delete_md_for or json_to_delete_md_for)
+            # Convert glob to a list so the iterable isn't exhausted by multiple consumers
+            json_glob = list(Path(".").glob(f"{config.json_dir}/*.json"))
+            json_to_generate_md_from = json_glob
+            json_to_delete_md_for = json_glob
+    should_generate_vectors =  args.vectors and (json_to_generate_md_from or json_to_delete_md_for)
 
     return json_to_generate_md_from, json_to_delete_md_for, should_generate_vectors
 

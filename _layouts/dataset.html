@@ -55,9 +55,8 @@ layout: default
           <span class="label label-default" property="dcat:mediaType">markdown</span>
         </li>
         <li>
-          {% assign path_to_json = page.path | split: "/" | last | replace: ".md", ".json" | prepend: "datasets/json/"
-          %}
-          <a href="https://jkan.riskdatalibrary.org/{{ path_to_json }}" property="dcat:accessURL" download>
+          <a href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-0.3/_datasets/json/{{ page.dataset_id }}.json" property="dcat:accessURL"
+            download>
             <span property="dct:title">Metadata</span>
           </a>
           <span class="label label-default" property="dcat:mediaType">json</span>
