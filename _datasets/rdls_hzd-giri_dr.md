@@ -30,10 +30,10 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: drought
+  intensity: SMA:-, SPI:-, SSI:-
   occurrence_range: Return period 5 to 25 years
-  processes: ''
+  processes: hydrological_drought, meteorological_drought
   seasonality: ''
 license: CC-BY-4.0
 loss: null
