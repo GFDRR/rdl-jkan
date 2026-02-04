@@ -1,0 +1,217 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-CSDI_ZAF",
+      "title": "Cold Spell Duration Index (CSDI)",
+      "description": "Annual number of days with at least six consecutive days when the night temperature < 10th percentile. The baseline is calculated for 2001–2020, with projections for 2021–2040 and 2041–2060 under two climate scenarios: RCP 4.5 (moderate emissions) and RCP 8.5 (high emissions).",
+      "risk_data_type": ["hazard"],
+      "publisher": {
+        "name": "GFDRR; VITO",
+        "email": "njones@worldbankgroup.org; niels.souverijns@vito.be",
+        "url": "https://www.gfdrr.org; https://vito.be"
+      },
+      "version": "30 March 2022",
+      "purpose": "This dataset is part of the scientific paper: Souverijns, N., De Ridder, K., Veldeman, N., Lefebre, F., Kusambiza-Kiingi, F., Memela, W., Jones, N.K.W., 2022. Urban heat in Johannesburg and Ekurhuleni, South Africa: A meter-scale assessment and vulnerability analysis. Urban Climate, 46, 101331. https://doi.org/10.1016/j.uclim.2022.101331 ",
+      "project": "Future Heat Stress Indicators for Johannesburg and Ekurhuleni",
+      "details": "Heat stress indicators for present and future climates for the cities of Johannesburg and Ekurhuleni (South Africa) at 30m spatial resolution calculated with UrbClim (De Ridder et al., 2015) for the following scenarios: 2001-2020: present time (ERA5 input data), 2021-2040 RCP4.5 (CMIP5 ensemble), 2021-2040 RCP8.5 (CMIP5 ensemble), 2041-2060 RCP4.5 (CMIP5 ensemble), and  2041-2060 RCP8.5 (CMIP5 ensemble)",
+      "spatial": {
+        "countries": ["ZAF"],
+        "bbox": [
+          27.676831894273278, -26.580113703331147, 28.588018624040238,
+          -25.838677579993774
+        ],
+        "centroid": [28.132425259156758, -26.20939564166246],
+        "scale": "sub-national",
+        "gazetteer_entries": [
+          {
+            "id": "ZAF-GP-JHB",
+            "scheme": "ISO 3166-2",
+            "description": "City of Johannesburg, Gauteng Province"
+          },
+          {
+            "id": "ZAF-GP-EKU",
+            "scheme": "ISO 3166-2",
+            "description": "City of Ekurhuleni, Gauteng Province"
+          }
+        ]
+      },
+      "temporal_resolution": "Daily",
+      "license": "CC-BY-4.0",
+      "contact_point": {
+        "name": "Bradley Riley",
+        "email": "briley@worldbank.org"
+      },
+      "creator": {
+        "name": "GFDRR",
+        "email": "briley@worldbank.org",
+        "url": "https://www.gfdrr.org"
+      },
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "Nick Jones",
+            "email": "njones@worldbankgroup.org"
+          },
+          "role": "world_bank_team_lead"
+        },
+        {
+          "id": "1",
+          "entity": {
+            "name": "Niels Souverijns",
+            "email": "niels.souverijns@vito.be"
+          },
+          "role": "custodian"
+        },
+        {
+          "id": "2",
+          "entity": {
+            "name": "Bradley Riley",
+            "email": "briley@worldbank.org"
+          },
+          "role": "contributor"
+        }
+      ],
+      "sources": [
+        { "id": "0", "name": "ERA5", "type": "dataset", "component": "hazard" },
+        {
+          "id": "1",
+          "name": "CMIP5 ensemble",
+          "type": "model",
+          "component": "hazard"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "0",
+          "name": "Urban heat in Johannesburg and Ekurhuleni, South Africa: A meter-scale assessment and vulnerability analysis",
+          "author_names": [
+            "Niels Souverijns",
+            " Koen De Ridder",
+            " Nele Veldeman",
+            " Filip Lefebre",
+            " Frederick Kusambiza-Kiingi",
+            " Wetu Memela",
+            " Nicholas K.W. Jones"
+          ],
+          "date_published": "2022-11-04",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212095522002498?via%3Dihub"
+        }
+      ],
+      "resources": [
+        {
+          "id": "0",
+          "title": "Cold Spell Duration Index - Johannebsurg & Ekurhuleni (2001-2020)",
+          "description": "Annual number of days with at least six consecutive days when the night temperature is below the 10th percentile for 2001-2020.",
+          "format": "geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://zenodo.org/records/6394130"
+        },
+        {
+          "id": "1",
+          "title": "Cold Spell Duration Index - Johannebsurg & Ekurhuleni (2021-2040, RCP4.5 & RCP8.5)",
+          "description": "Projected annual number of days with at least six consecutive days when the night temperature is below the 10th percentile under RCP 4.5 and 8.5 scenario for 2021-2040.",
+          "format": "geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://zenodo.org/records/6394130"
+        },
+        {
+          "id": "2",
+          "title": "Cold Spell Duration Index - Johannebsurg & Ekurhuleni (2041-2060, RCP4.5 & RCP8.5)",
+          "description": "Projected annual number of days with at least six consecutive days when the night temperature is below the 10th percentile under the RCP 4.5 and 8.5 scenario for 2041-2060.",
+          "format": "geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://zenodo.org/records/6394130"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "Baseline",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "spatial": {
+              "countries": ["ZAF"],
+              "scale": "sub-national",
+              "gazetteer_entries": [
+                {
+                  "id": "ZAF-GP-EKU",
+                  "scheme": "ISO 3166-2",
+                  "description": "City of Ekurhuleni, Gauteng Province"
+                }
+              ]
+            },
+            "temporal": { "start": "2001", "end": "2020", "duration": "P20Y" },
+            "hazards": [
+              {
+                "id": "ET",
+                "type": "extreme_temperature",
+                "processes": ["extreme_cold"],
+                "intensity_measure": "WBGT:c"
+              }
+            ],
+            "events": [
+              {
+                "id": "CSDI_2001-2020",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "ET",
+                  "type": "extreme_temperature",
+                  "processes": ["extreme_cold"],
+                  "intensity_measure": "WBGT:c"
+                }
+              }
+            ]
+          },
+          {
+            "id": "Projection",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "spatial": {
+              "countries": ["ZAF"],
+              "scale": "sub-national",
+              "gazetteer_entries": [
+                {
+                  "id": "ZAF-GP-JHB",
+                  "scheme": "ISO 3166-2",
+                  "description": "City of Johannesburg, Gauteng Province"
+                }
+              ]
+            },
+            "temporal": { "start": "2021", "end": "2040", "duration": "P20Y" },
+            "hazards": [
+              {
+                "id": "ET",
+                "type": "extreme_temperature",
+                "processes": ["extreme_cold"],
+                "intensity_measure": "WBGT:c"
+              }
+            ],
+            "events": [
+              {
+                "id": "CSDI_2021-2040",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "ET",
+                  "type": "extreme_temperature",
+                  "processes": ["extreme_cold"],
+                  "intensity_measure": "WBGT:c"
+                }
+              },
+              {
+                "id": "CSDI_2041-2060",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "ET",
+                  "type": "extreme_temperature",
+                  "processes": ["extreme_cold"],
+                  "intensity_measure": "WBGT:c"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

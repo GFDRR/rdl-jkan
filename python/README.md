@@ -36,3 +36,32 @@ pip install -r requirements.txt
 - Generate datasets with `python3 main.py --markdown`
   - To run on only files modified since the most recent commit on the target branch, run `python3 main.py --ci --markdown`
   - To also generate vector embeddings for semantic search, add the `--vectors` flag, e.g. `python3 main.py --ci --markdown --vectors`
+
+
+### Handling multi-dataset JSON files
+
+Run the following in bash in the `_datasets/json` directory:
+
+```
+for f in *.json; do
+  echo "Processing file: $f"
+  if jq empty "$f" >/dev/null 2>&1; then
+    count=$(jq '.datasets | length' "$f")
+    echo " - Number of datasets: $count"
+    if [ "$count" -gt 1 ]; then
+      echo " - Splitting datasets..."
+      jq -c '.datasets[] | {id, data: .}' "$f" | while IFS= read -r line; do
+        id=$(jq -r '.id' <<<"$line") || { echo " - Error extracting ID"; continue; }
+        jq -c '{datasets: [ .data ] }' <<<"$line" > "$id.json"
+        echo "   - Created file: $id.json"
+      done
+      rm "$f"
+      echo " - Deleted original file: $f"
+    else
+      echo " - Only one dataset; no action taken."
+    fi
+  else
+    echo "Invalid JSON in file: $f"
+  fi
+done
+```

@@ -1,80 +1,78 @@
 {
-    "datasets": [
+  "datasets": [
+    {
+      "id": "rdls_exp-jrc_drmkc_port",
+      "title": "GISCO Global Ports 2013",
+      "description": "Global dataset of ports",
+      "risk_data_type": ["exposure"],
+      "publisher": {
+        "name": "European Commission, Eurostat/GISCO",
+        "url": "https://ec.europa.eu/eurostat/web/gisco"
+      },
+      "version": "2013",
+      "purpose": "To provide a comprehensive global dataset of port locations with standardized UN Locode identifiers for cartographic applications, spatial analysis, and geo-referencing of port statistics.",
+      "details": "The dataset contains a pointfeature class with the location of 2440 pan-European ports, plus one attribute table and 3 domain tables. The ports are identified following the UN Locode list. The dataset is based on the list “Ports Estat 2010” from Eurostat. All ports are represented by a point location in PORT_PT_2013. Point coordinates and Locodes are derived from several input sources, including ports lists from EMSA, Lloyds, Norie’s Seaports of the World, the GISCO Ports 2010 dataset and the UN/LOCODE 2007 list. Attributes in PORT_AT_2013 include the port name, Locode Status Indicator, and reliability flags for the positional and Locode accuracy. Dataset coverage is global. The dataset has been created for cartographic purposes and for appropriate analysis. Port statistics can be geo-referenced to this high quality pan-European dataset, especially when based on UN Locode.",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC-BY-SA-4.0",
+      "contact_point": {
+        "name": "European Commission, Eurostat/GISCO",
+        "email": "estat-gisco@ec.europa.eu",
+        "url": "https://ec.europa.eu/eurostat/web/gisco"
+      },
+      "creator": {
+        "name": "European Commission, Eurostat/GISCO",
+        "email": "estat-gisco@ec.europa.eu",
+        "url": "https://ec.europa.eu/eurostat/web/gisco"
+      },
+      "exposure": {
+        "category": "infrastructure",
+        "metrics": [
+          {
+            "id": "port",
+            "dimension": "structure",
+            "quantity_kind": "count"
+          }
+        ]
+      },
+      "attributions": [
         {
-            "id": "rdls_exp-jrc_drmkc_giscoport",
-            "title": "GISCO Global Ports 2013",
-            "description": "Global dataset of ports",
-            "risk_data_type": [
-                "exposure"
-            ],
-            "publisher": {
-                "name": "European Commission, Eurostat/GISCO",
-                "url": "https://ec.europa.eu/eurostat/web/gisco"
-            },
-            "version": "2013",
-            "purpose": "To provide a comprehensive global dataset of port locations with standardized UN Locode identifiers for cartographic applications, spatial analysis, and geo-referencing of port statistics.",
-            "details": "The dataset contains a pointfeature class with the location of 2440 pan-European ports, plus one attribute table and 3 domain tables. The ports are identified following the UN Locode list. The dataset is based on the list “Ports Estat 2010” from Eurostat. All ports are represented by a point location in PORT_PT_2013. Point coordinates and Locodes are derived from several input sources, including ports lists from EMSA, Lloyds, Norie’s Seaports of the World, the GISCO Ports 2010 dataset and the UN/LOCODE 2007 list. Attributes in PORT_AT_2013 include the port name, Locode Status Indicator, and reliability flags for the positional and Locode accuracy. Dataset coverage is global. The dataset has been created for cartographic purposes and for appropriate analysis. Port statistics can be geo-referenced to this high quality pan-European dataset, especially when based on UN Locode.",
-            "spatial": {
-                "scale": "global"
-            },
-            "license": "CC-BY-SA-4.0",
-            "contact_point": {
-                "name": "European Commission, Eurostat/GISCO",
-                "email": "estat-gisco@ec.europa.eu",
-                "url": "https://ec.europa.eu/eurostat/web/gisco"
-            },
-            "creator": {
-                "name": "European Commission, Eurostat/GISCO",
-                "email": "estat-gisco@ec.europa.eu",
-                "url": "https://ec.europa.eu/eurostat/web/gisco"
-            },
-            "exposure": {
-                "category": "infrastructure",
-                "metrics": [
-                    {
-                        "id": "port",
-                        "dimension": "structure",
-                        "quantity_kind": "count"
-                    }
-                ]
-            },
-            "attributions": [
-                {
-                    "id": "Entity_1",
-                    "entity": {
-                        "name": "European Commision (EC), Joint Research Centre (JRC)",
-                        "email": "jrc-risk-data-hub@ec.europa.eu",
-                        "url": "https://joint-research-centre.ec.europa.eu/"
-                    },
-                    "role": "resource_provider"
-                }
-            ],
-            "sources": [
-                {
-                    "id": "Source_1",
-                    "name": "European Commission, Eurostat/GISCO",
-                    "url": "https://ec.europa.eu/eurostat/web/gisco",
-                    "type": "dataset",
-                    "component": "exposure"
-                }
-            ],
-            "resources": [
-                {
-                    "id": "gisco_port_2013",
-                    "title": "Global dataset of ports",
-                    "description": "The dataset contains a pointfeature class with the location of 2440 pan-European ports, plus one attribute table and 3 domain tables.",
-                    "format": "shp",
-                    "coordinate_system": "EPSG:4258",
-                    "access_url": "https://ec.europa.eu/eurostat/web/gisco/geodata/transport-networks",
-                    "download_url": "https://ec.europa.eu/eurostat/cache/GISCO/geodatafiles/PORT_2013_SH.zip"
-                }
-            ],
-            "links": [
-                {
-                    "href": "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json",
-                    "rel": "describedby"
-                }
-            ]
+          "id": "Entity_1",
+          "entity": {
+            "name": "European Commision (EC), Joint Research Centre (JRC)",
+            "email": "jrc-risk-data-hub@ec.europa.eu",
+            "url": "https://joint-research-centre.ec.europa.eu/"
+          },
+          "role": "resource_provider"
         }
-    ]
+      ],
+      "sources": [
+        {
+          "id": "Source_1",
+          "name": "European Commission, Eurostat/GISCO",
+          "url": "https://ec.europa.eu/eurostat/web/gisco",
+          "type": "dataset",
+          "component": "exposure"
+        }
+      ],
+      "resources": [
+        {
+          "id": "gisco_port_2013",
+          "title": "Global dataset of ports",
+          "description": "The dataset contains a pointfeature class with the location of 2440 pan-European ports, plus one attribute table and 3 domain tables.",
+          "format": "shp",
+          "coordinate_system": "EPSG:4258",
+          "access_url": "https://ec.europa.eu/eurostat/web/gisco/geodata/transport-networks",
+          "download_url": "https://ec.europa.eu/eurostat/cache/GISCO/geodatafiles/PORT_2013_SH.zip"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
 }
