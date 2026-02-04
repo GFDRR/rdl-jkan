@@ -346,6 +346,14 @@ def make_hazard_v03(hazard):
     }
 
     for event_set in hazard["event_sets"]:
+        for es_hazard in event_set.get("hazards", []):
+            if "type" in es_hazard:
+                props_to_summarize["hazard_type"].append(es_hazard["type"])
+            if "hazard_process" in es_hazard:
+                props_to_summarize["processes"].append(es_hazard["hazard_process"])
+            if "intensity_measure" in es_hazard:
+                props_to_summarize["intensity"].append(es_hazard["intensity_measure"])
+
         if "analysis_type" in event_set:
             props_to_summarize["hazard_analysis_type"].append(
                 event_set["analysis_type"]
@@ -358,8 +366,8 @@ def make_hazard_v03(hazard):
             props_to_summarize["intensity"].append(event_set["intensity_measure"])
         if "occurrence_range" in event_set:
             props_to_summarize["occurrence_range"].append(event_set["occurrence_range"])
-        if "processes" in event_set:
-            props_to_summarize["processes"].append(event_set["processes"])
+        if "hazard_process" in event_set:
+            props_to_summarize["processes"].append(event_set["hazard_process"])
         if "seasonality" in event_set:
             props_to_summarize["seasonality"].append(event_set["seasonality"])
         if "type" in event_set:

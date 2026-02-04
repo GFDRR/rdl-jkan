@@ -40,10 +40,10 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: earthquake
+  intensity: AvgSa:cm/s2, PGA:cm/s2
   occurrence_range: RP 250, 475, 975, 1500, 2475 years
-  processes: ''
+  processes: ground_motion
   seasonality: ''
 license: CC-BY-4.0
 loss: null

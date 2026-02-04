@@ -31,7 +31,7 @@ hazard:
   hazard_type: drought
   intensity: VCI:-
   occurrence_range: ''
-  processes: ''
+  processes: agricultural_drought
   seasonality: uniform
 license: CC-BY-4.0
 loss: null

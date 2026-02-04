@@ -26,10 +26,10 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: tsunami
+  intensity: Rh_tsi:m
   occurrence_range: Return period 475 years
-  processes: ''
+  processes: tsunami
   seasonality: ''
 license: CC-BY-4.0
 loss: null
