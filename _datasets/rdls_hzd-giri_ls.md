@@ -27,8 +27,8 @@ hazard:
   calculation_method: inferred
   disaster_identifiers: ''
   hazard_analysis_type: deterministic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: landslide
+  intensity: LSI:-
   occurrence_range: ''
   processes: ''
   seasonality: uniform

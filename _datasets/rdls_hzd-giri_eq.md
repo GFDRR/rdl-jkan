@@ -28,10 +28,10 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: earthquake
+  intensity: PGA:g
   occurrence_range: Return period 100 to 2,475 years
-  processes: ''
+  processes: ground_motion
   seasonality: ''
 license: CC-BY-4.0
 loss: null

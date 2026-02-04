@@ -82,10 +82,11 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: drought, earthquake, extreme_temperature, flood, landslide, volcanic
+  intensity: ash_thickness:cm
   occurrence_range: ''
-  processes: ''
+  processes: ashfall, extreme_heat, ground_motion, landslide_general, meteorological_drought,
+    pluvial_flood
   seasonality: ''
 license: CC-BY-4.0
 loss: null

@@ -23,8 +23,8 @@ hazard:
   calculation_method: inferred
   disaster_identifiers: ''
   hazard_analysis_type: empirical
-  hazard_type: ''
-  intensity: ''
+  hazard_type: volcanic
+  intensity: vei:-
   occurrence_range: ''
   processes: ''
   seasonality: ''

@@ -35,10 +35,10 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: flood
+  intensity: Wd:M
   occurrence_range: Return period 10 to 1,000 years
-  processes: ''
+  processes: coastal_flood
   seasonality: ''
 license: CC-BY-4.0
 loss: null

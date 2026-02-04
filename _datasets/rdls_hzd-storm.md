@@ -47,10 +47,10 @@ hazard:
   calculation_method: simulated
   disaster_identifiers: ''
   hazard_analysis_type: probabilistic
-  hazard_type: ''
-  intensity: ''
+  hazard_type: strong_wind
+  intensity: sws_10m:m/s
   occurrence_range: 1/10 to 1/10000 years
-  processes: ''
+  processes: tropical_cyclone
   seasonality: uniform
 license: CC0-1.0
 loss: null
