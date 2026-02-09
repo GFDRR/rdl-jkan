@@ -333,7 +333,7 @@ def make_catalog(dataset):
         for prefix, label in config.dataset_catalogs.items():
             if url is not None and prefix in url:
                 return label
-    return "Other"
+    return None
 
 def make_extra_attributions(attributions):
     main_attributions = ["contact_point", "creator", "publisher"]
