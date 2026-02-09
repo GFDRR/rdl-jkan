@@ -7,6 +7,7 @@ import {omit} from 'lodash'
 import UserModel from './models/user'
 import Navigation from './components/navigation'
 import RDLDatasetsList from './components/rdl-datasets-list'
+import RDLCatalogFilter from './components/rdl-catalog-filter'
 import CategoriesFilter from './components/categories-filter'
 import RDLCountryFilter from './components/rdl-country-filter'
 import RDLHazardTypeFilter from './components/rdl-hazard-type-filter'
@@ -43,6 +44,7 @@ const components = [
   {tag: 'view-switcher', class: ViewSwitcher},
   {tag: 'theme-gallery', class: ThemeGallery},
   {tag: 'rdl-datasets-list', class: RDLDatasetsList, usesDatasets: true},
+  {tag: 'rdl-catalog-filter', class: RDLCatalogFilter, usesDatasets: true},
   {tag: 'categories-filter', class: CategoriesFilter, usesDatasets: true},
   {tag: 'rdl-country-filter', class: RDLCountryFilter, usesDatasets: true},
   {tag: 'rdl-geographical-scale-filter', class: RDLGeographicalScaleFilter, usesDatasets: true},

@@ -81,6 +81,7 @@ export default class {
 
   initializeDatasets(opts, elements) {
     const paramFilters = pick(opts.params, [
+      "catalog",
       "category",
       "geo_coverage",
       "geo_scale",
@@ -89,6 +90,7 @@ export default class {
       "hazard_type",
     ]);
     const attributeFilters = pick(opts.el.data(), [
+      "catalog",
       "category",
       "geo_coverage",
       "geo_scale",
