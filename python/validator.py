@@ -1,5 +1,5 @@
 from jsonschema import validators, ValidationError
-
+import logging
 
 def custom_properties(validator, properties, instance, schema):
     if not validator.is_type(instance, "object"):
@@ -49,7 +49,12 @@ def validate_with_custom_logic(dataset, schema):
     )
     try:
         CustomValidator(schema).validate(dataset)
+        return 0
     except ValidationError as err:
         dataset_id = dataset.get("id", "id not found")
         schema_path = "/".join(str(item) for item in err.relative_path)
-        print(f"Error while validating dataset with id: {dataset_id}\n{err.message}\nSee {schema_path}\n\n")
+        logging.warning(
+            f"Error while validating dataset with id: {dataset_id}\n{err.message}\nSee {schema_path}\n\n",
+            exc_info=err,
+        )
+        return 1

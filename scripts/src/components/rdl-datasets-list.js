@@ -169,7 +169,7 @@ export default class {
   // Returns a function that can be used to search an array of datasets
   // The function returns the filtered array of datasets
   _createSearchFunction(datasets) {
-    const keys = ["title", "notes", "description", "license"];
+    const keys = ["title", "notes", "description", "license", "catalog"];
     return function (query) {
       const lowerCaseQuery = query.toLowerCase();
       const [matches, others] = partition(datasets, function (dataset) {
