@@ -62,14 +62,17 @@ def validate_json_with_schema(dataset_from_json, schema_url):
     if schema_url == config.schema_url_v3:
         with open(schema_path, "r") as file:
             schema = json.load(file)
-            validate_with_custom_logic(dataset_from_json, schema)
-
+            exit_code = validate_with_custom_logic(dataset_from_json, schema)
+            return exit_code
+    return 0
 
 def write_dataset_to_markdown(dataset_from_json, schema_url):
     try:
         # Generate frontmatter
         dataset_frontmatter = None
-        validate_json_with_schema(dataset_from_json, schema_url)
+        exit_code = validate_json_with_schema(dataset_from_json, schema_url)
+        if exit_code != 0:
+            return exit_code
         match schema_url:
             case config.schema_url_v3:
                 dataset_frontmatter = mappers.make_dataset_frontmatter_v03(
@@ -107,7 +110,14 @@ def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for):
             datasets_json = json.load(input_file)
             for dataset in datasets_json["datasets"]:
                 links = dataset.get("links", [])
-                schema_url = next((link["href"] for link in links if link.get("rel") == "describedby"), config.schema_url_v2)
+                schema_url = next(
+                    (
+                        link["href"]
+                        for link in links
+                        if link.get("rel") == "describedby"
+                    ),
+                    config.schema_url_v2,
+                )
                 result = write_dataset_to_markdown(dataset, schema_url)
                 if result != 0:
                     exit_code = result
