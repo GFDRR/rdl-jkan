@@ -42,8 +42,8 @@ loss:
   impact_unit: count
   type: ground_up
   vulnerability_id: CA_SFRARR_FL_vuln
-project: "SFRARR -\xC2\_Strengthening Financial Resilience and Accelerating Risk Reduction\
-  \ in Central Asia"
+project: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction
+  in Central Asia
 publisher:
   name: RED - Risk, Engineering  Development - Pavia (Italy)
   url: https://www.redrisk.com
