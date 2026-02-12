@@ -1,0 +1,141 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-hdx_united_nations_offic_tsunami_hazard_run_up_rp_500_years_multihazard",
+      "title": "Global model of tsunami hazard (run up) return period of 500 years",
+      "description": "Global model of tsunami hazard (run up) return period of 500 years. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/0ab99df0-17d4-4582-9e16-790308905993]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "details": "Caveats: This dataset was generated using other global datasets; it should not be used for local applications (such as land use planning). The main purpose of GAR 2015 datasets is to broadly identify high risk areas at global level and for identification of areas where more detailed data should be collected. Some areas may be underestimated or overestimated. Given this analysis was conducted using global datasets, the resolution of which is not sufficient for in-situ planning, it should not be used for critical (like life saving) decisions. UNISDR and collaborators should in no case be liable for misuse or misinterpretation of the presented results. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. This analysis was conducted using global datasets, the resolution of which is not relevant for in-situ planning and should not be used for life and death decisions. UNISDR and collaborators should in no case be liable for misuse of the presented results. | Methodology: This dataset was generated using other global datasets. | Temporal coverage: [2015-01-01T00:00:00 TO 2015-01-01T23:59:59] | Update frequency: Never | Last modified: 2015-11-24",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "Other",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "url": "https://data.humdata.org/dataset/0ab99df0-17d4-4582-9e16-790308905993"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "UNISDR",
+            "url": "https://data.humdata.org/dataset/0ab99df0-17d4-4582-9e16-790308905993"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "url": "https://data.humdata.org/dataset/0ab99df0-17d4-4582-9e16-790308905993"
+          }
+        }
+      ],
+      "resources": [
+        {
+          "id": "hdx_dataset_metadata_json",
+          "title": "HDX dataset metadata (JSON)",
+          "description": "Dataset-level metadata exported from HDX.",
+          "data_format": "JSON (json)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/0ab99df0-17d4-4582-9e16-790308905993/download_metadata?format=json"
+        },
+        {
+          "id": "hdx_res_fa1cd272",
+          "title": "Tsunami_RunUp_RP500.zip",
+          "description": "Zipped file of tsunami run up (39,557 kb).",
+          "data_format": "Shapefile (shp)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/0ab99df0-17d4-4582-9e16-790308905993/resource/fa1cd272-e6ea-4160-abfd-10fcbb43a398/download/tsunami-runup-rp500.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_0ab99df0_1",
+            "hazards": [
+              {
+                "id": "hazard_0ab99df0_1",
+                "type": "earthquake",
+                "hazard_process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "event_count": 1,
+            "occurrence_range": "Return periods from 500 to 500 years",
+            "events": [
+              {
+                "id": "event_rp500_0ab99df0_1",
+                "calculation_method": "simulated",
+                "description": "Earthquake hazard, 500-year return period",
+                "hazard": {
+                  "id": "hazard_0ab99df0_1",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500,
+                    "event_rate": 0.002
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "event_set_0ab99df0_2",
+            "hazards": [
+              {
+                "id": "hazard_0ab99df0_2",
+                "type": "tsunami",
+                "hazard_process": "tsunami",
+                "intensity_measure": "Rh_tsi:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "event_count": 1,
+            "occurrence_range": "Return periods from 500 to 500 years",
+            "events": [
+              {
+                "id": "event_rp500_0ab99df0_2",
+                "calculation_method": "simulated",
+                "description": "Tsunami hazard, 500-year return period",
+                "hazard": {
+                  "id": "hazard_0ab99df0_2",
+                  "type": "tsunami",
+                  "hazard_process": "tsunami"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500,
+                    "event_rate": 0.002
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/0ab99df0-17d4-4582-9e16-790308905993",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

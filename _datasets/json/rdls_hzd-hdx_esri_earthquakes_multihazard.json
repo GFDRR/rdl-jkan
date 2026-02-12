@@ -1,0 +1,110 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-hdx_esri_earthquakes_multihazard",
+      "title": "Recent Earthquakes",
+      "description": "This map displays continuously updated data from the USGS Earthquakes and Shakemaps. This map is provided by the Esri Disaster Response Program. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "details": "Methodology: USGS Prompt Assessment of Global Earthquakes for Response (PAGER) program. | Temporal coverage: [2020-04-09T00:00:00 TO 2020-04-09T23:59:59] | Update frequency: Every day | Last modified: 2026-02-03",
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "CC0-1.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "Esri",
+            "url": "https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "Esri",
+            "url": "https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "Esri",
+            "url": "https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff"
+          }
+        }
+      ],
+      "resources": [
+        {
+          "id": "hdx_dataset_metadata_json",
+          "title": "HDX dataset metadata (JSON)",
+          "description": "Dataset-level metadata exported from HDX.",
+          "data_format": "JSON (json)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff/download_metadata?format=json"
+        },
+        {
+          "id": "hdx_res_538415b5",
+          "title": "Earthquake Data",
+          "description": "This service presents recent earthquake information from the USGS Prompt Assessment of Global Earthquakes for Response (PAGER) program.",
+          "data_format": "GeoJSON (geojson)",
+          "access_modality": "REST",
+          "download_url": "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USGS_Seismic_Data_v1/FeatureServer"
+        },
+        {
+          "id": "hdx_res_0f32d1a4",
+          "title": "Living Atlas Earthquakes Service",
+          "description": "This service presents recent earthquake information from the USGS Prompt Assessment of Global Earthquakes for Response (PAGER) program.",
+          "data_format": "GeoJSON (geojson)",
+          "access_modality": "REST",
+          "download_url": "https://www.arcgis.com/home/item.html?id=9e2f2b544c954fda9cd13b7f3e6eebce"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_8b45ca43_1",
+            "hazards": [
+              {
+                "id": "hazard_8b45ca43_1",
+                "type": "earthquake",
+                "hazard_process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred",
+            "event_count": 1,
+            "events": [
+              {
+                "id": "event_1_8b45ca43_1",
+                "calculation_method": "inferred",
+                "hazard": {
+                  "id": "hazard_8b45ca43_1",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion"
+                },
+                "occurrence": {},
+                "description": "earthquake hazard data"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
