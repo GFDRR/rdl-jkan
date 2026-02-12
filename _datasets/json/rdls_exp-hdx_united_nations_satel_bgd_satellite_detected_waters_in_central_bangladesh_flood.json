@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-hdx_united_nations_satel_bgd_satellite_detected_waters_in_central_bangladesh_flood",
+      "title": "Satellite Detected Waters in Central Bangladesh",
+      "description": "This map illustrates satellite-detected surface water extent in the central part of Bangladesh using a Sentinel-1 satellite image acquired on the 12 August 2017 with a total surface of 4,280,650 ha. In this analyzed area; 1,644,983 ha (38%) of lands are likely affected. These lands are are mainly cropland irrigated and rainfed areas and estimated to 1,576,351 ha. The population exposure analysis using WorldPop data shows that ~17,000,000 people are potentially affected by floods in the analysed zone: ~8,400,000 are located in Dhaka Division and ~5,750,000 in Rajshahi Division. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "details": "Caveats: This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification. | Methodology: UNOSAT datasets and maps are produced using a variety of methods. In general, analysts closely review satellite imagery, often comparing two or more images together, and determine notable changes between the images. For damage assessments, refugee or IDP assessments, and similar analyses, these changes are then manually documented in the vector data by the analyst. For flood extractions, landcover mapping and similar analyses, a variety of automated remote sensing techniques are used to extract the relevant information which is then reviewed and revised as necessary by the analyst. In all cases, resulting data is then loaded into a standardized UNOSAT geodatabase and exported asshapefiles for dissemination. | Temporal coverage: [2017-08-15T00:00:00 TO 2017-08-15T23:59:59] | Update frequency: Never | Last modified: 2025-11-21",
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "license": "CC-BY-SA-4.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "UNOSAT",
+            "url": "https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f"
+          }
+        }
+      ],
+      "resources": [
+        {
+          "id": "hdx_dataset_metadata_json",
+          "title": "HDX dataset metadata (JSON)",
+          "description": "Dataset-level metadata exported from HDX.",
+          "data_format": "JSON (json)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f/download_metadata?format=json"
+        },
+        {
+          "id": "hdx_res_ed5b0d50",
+          "title": "FL20170815BGD_gdb.zip",
+          "description": "Zipped geodatabase",
+          "data_format": "File Geodatabase (gdb)",
+          "access_modality": "file_download",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/BD/FL20170815BGD/FL20170815BGD_gdb.zip"
+        },
+        {
+          "id": "hdx_res_ce506301",
+          "title": "FL20170815BGD_shp.zip",
+          "description": "Zipped shapefile",
+          "data_format": "Shapefile (shp)",
+          "access_modality": "file_download",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/BD/FL20170815BGD/FL20170815BGD_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_32e725a8_1",
+            "hazards": [
+              {
+                "id": "hazard_32e725a8_1",
+                "type": "flood",
+                "hazard_process": "pluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred",
+            "event_count": 1,
+            "events": [
+              {
+                "id": "event_1_32e725a8_1",
+                "calculation_method": "inferred",
+                "hazard": {
+                  "id": "hazard_32e725a8_1",
+                  "type": "flood",
+                  "hazard_process": "pluvial_flood"
+                },
+                "occurrence": {},
+                "description": "flood hazard data (pluvial flood) for Bangladesh"
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_32e725a8_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_32e725a8_1_1",
+              "dimension": "population",
+              "quantity_kind": "count"
+            }
+          ]
+        },
+        {
+          "id": "exposure_32e725a8_2",
+          "category": "agriculture",
+          "metrics": [
+            {
+              "id": "metric_32e725a8_2_1",
+              "dimension": "structure",
+              "quantity_kind": "area"
+            }
+          ]
+        },
+        {
+          "id": "exposure_32e725a8_3",
+          "category": "natural_environment",
+          "metrics": [
+            {
+              "id": "metric_32e725a8_3_1",
+              "dimension": "structure",
+              "quantity_kind": "area"
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
