@@ -3,24 +3,28 @@ contact_point:
   email: silvia.colombo@ouce.ox.ac.uk
   id: attribution_contact
   name: Silvia Colombo
-  url: https://www.eci.ox.ac.uk/
+  url: https://www.eci.ox.ac.uk/person/silvia-colombo
 creator:
   email: silvia.colombo@ouce.ox.ac.uk
-  id: attribution_creator
+  id: attribution_creator1
   name: Silvia Colombo
-  url: https://www.eci.ox.ac.uk/
-dataset_id: rdls_exp-nismod_sdk_transport
-description: 'The first comprehensive geolocated multi-modal transport database for
-  the whole continent of Africa (AfTS-Db), including road, rail, aviation, maritime
-  and inland waterway networks. The database contains standardized asset and network
-  data across all transport modes, including inter-modal connections, attributes of
-  road and rail corridors and estimated annual statistics for airports and ports.
-  The database includes: 234 airports with airline routes, 179 maritime ports with
-  inter-port connections, 132 inland ports and docking sites with river and lake connections,
-  6,057 railway stations connected across 99,373 kilometers of rail lines, and 1,004,512
-  kilometers of roads (motorways, trunk roads, primary and secondary routes, and connecting
-  local roads). All datasets follow a standardized network specification with nodes
-  and edges for each transport mode.'
+  url: https://www.eci.ox.ac.uk/person/silvia-colombo
+dataset_id: rdls_exp-nismod_sdk_aftsdb
+description: We present the first comprehensive geolocated multi-modal transport database
+  for the whole continent of Africa, the African Transport Systems Database (AfTS-Db),
+  including road, rail, aviation, maritime and inland waterway networks. To do so,
+  we created and standardized asset and network data across all transport modes, including
+  inter-modal connections, attributes of road and rail corridors and estimated annual
+  statistics for airports and ports. The African Transport Systems Database includes
+  234 airports including their airline routes, 179 maritime ports and their connections
+  with each other, 132 inland ports and docking sites with river and lake connections,  4,412
+  railway stations connected across 99,373 kilometers of rail lines, and 1,004,512
+  kilometers of roads mainly comprised of all motorways, trunk roads, primary and
+  secondary routes across Africa and some local roads that connect to other transport
+  modes. The AfTS-Db provides key information for transport planning, resilience assessments,
+  asset management and development of transport models and applications. Furthermore,
+  we expect the data will also be of relevance for environmental, health, social and
+  economic studies.
 details: The database is provided in Geopackage (gpkg) format for each transport mode,
   containing nodes (point features) and edges (line features) with associated attributes.
   Key data sources include OpenStreetMap for roads and railways, World Bank Global
@@ -43,7 +47,12 @@ exposure:
   dimension: product, structure
   quantity_kind: count, length, monetary, time, weight
   taxonomy: GED4ALL
-extra_attributions: []
+extra_attributions:
+- email: fcdo.correspondence@fcdo.gov.uk
+  id: attribution_funder
+  name: UK Foreign, Commonwealth and Development Office (FCDO)
+  role: funder
+  url: https://www.gov.uk/government/organisations/foreign-commonwealth-development-office
 hazard: null
 license: CC-BY-4.0
 loss: null
@@ -54,7 +63,7 @@ publisher:
   email: info@zenodo.org
   id: attribution_publisher
   name: Zenodo
-  url: https://zenodo.org/records/17593244
+  url: https://zenodo.org
 purpose: The AfTS-Db provides key information for transport planning, resilience assessments,
   asset management, and development of transport models and applications. The database
   is designed to support data-driven policy formulation, infrastructure development,
@@ -71,7 +80,7 @@ resources:
     airports, and annual seat capacity data (2019) as a proxy for passenger volumes.
     Contains flight connection routes represented as straight-line segments between
     airport pairs.
-  download_url: https://zenodo.org/records/17593244/files/africa_airport_network.gpkg
+  download_url: https://zenodo.org/records/17861120/files/africa_airport_network.gpkg
   format: GeoPackage (gpkg)
   id: resource_airport_network
   media_type: null
@@ -87,7 +96,7 @@ resources:
     database used for positional accuracy validation and coordinate correction of
     the World Bank Global Airports database. Provides high-accuracy airport terminal
     locations.
-  download_url: https://zenodo.org/records/17593244/files/africa_airport_ourairport.gpkg
+  download_url: https://zenodo.org/records/17861120/files/africa_airport_ourairport.gpkg
   format: GeoPackage (gpkg)
   id: resource_airport_ourairport
   media_type: null
@@ -99,7 +108,7 @@ resources:
     maintenance costs for 41 major road corridors across Africa. Includes minimum,
     median, and maximum cost estimates per kilometer per lane based on road type and
     condition (paved/unpaved), with projections through 2050.
-  download_url: https://zenodo.org/records/17593244/files/africa_corridors_costs.csv
+  download_url: https://zenodo.org/records/17861120/files/africa_corridors_costs.csv
   format: CSV (csv)
   id: resource_corridors_costs
   media_type: null
@@ -112,7 +121,7 @@ resources:
     clubs) with navigable routes. Covers Lakes Victoria, Tanganyika, Malawi, Kivu
     and waterways along the Congo and Nile river systems. Includes network topology
     with nodes (ports/docking points) and edges (navigable routes).
-  download_url: https://zenodo.org/records/17593244/files/africa_iww_network.gpkg
+  download_url: https://zenodo.org/records/17861120/files/africa_iww_network.gpkg
   format: GeoPackage (gpkg)
   id: resource_iww_network
   media_type: null
@@ -125,7 +134,7 @@ resources:
     port usage statistics (2019-2024) from AIS data including annual vessel counts
     by cargo type (container, dry bulk, tankers, RoRo, general), cargo weights, vessel
     dwell times, and proportion of country exports/imports handled at each port.
-  download_url: https://zenodo.org/records/17593244/files/africa_maritime_network.gpkg
+  download_url: https://zenodo.org/records/17861120/files/africa_maritime_network.gpkg
   format: GeoPackage (gpkg)
   id: resource_maritime_network
   media_type: null
@@ -138,7 +147,7 @@ resources:
     airport-road, inland waterway-railway, inland waterway-road, maritime port-railway,
     maritime port-road, and railway-road. Each connection represented as directional
     edges linking nodes across transport networks.'
-  download_url: https://zenodo.org/records/17593244/files/africa_multimodal.gpkg
+  download_url: https://zenodo.org/records/17861120/files/africa_multimodal.gpkg
   format: GeoPackage (gpkg)
   id: resource_multimodal
   media_type: null
@@ -150,7 +159,7 @@ resources:
     maintenance costs for railway lines across Africa. Includes minimum, median, and
     maximum cost estimates per kilometer based on railway status (planned, proposed,
     rehabilitation), with projections through 2050.
-  download_url: https://zenodo.org/records/17593244/files/africa_rails_costs.csv
+  download_url: https://zenodo.org/records/17861120/files/africa_rails_costs.csv
   format: CSV (csv)
   id: resource_rails_costs
   media_type: null
@@ -165,7 +174,7 @@ resources:
     gauge widths, line names, and facility types (mines, ports, freight terminals,
     manufacturing, etc.). Network topology includes nodes (stations/junctions) and
     edges (rail line segments).
-  download_url: https://zenodo.org/records/17593244/files/africa_railways_network.gpkg
+  download_url: https://zenodo.org/records/17861120/files/africa_railways_network.gpkg
   format: GeoPackage (gpkg)
   id: resource_railways_network
   media_type: null
@@ -179,7 +188,7 @@ resources:
     with attributes for highway classification, surface type (paved/unpaved), number
     of lanes, bridge indicators, and speed limits. Network topology includes nodes
     (junctions/endpoints) and edges (road segments).
-  download_url: https://zenodo.org/records/17593244/files/africa_roads_network.gpkg
+  download_url: https://zenodo.org/records/17861120/files/africa_roads_network.gpkg
   format: GeoPackage (gpkg)
   id: resource_roads_network
   media_type: null
@@ -191,7 +200,7 @@ resources:
     the African Transport Systems Database. Describes each dataset component, column
     names, attributes, data sources, processing methods, and quality assessments.
     Provides detailed explanation of the database structure and content.
-  download_url: https://zenodo.org/records/17593244/files/METADATA.xlsx
+  download_url: https://zenodo.org/records/17861120/files/METADATA.xlsx
   format: Excel (xlsx)
   id: resource_metadata
   media_type: null
@@ -201,7 +210,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-03
-slug: rdls_exp-nismod_sdk_transport
+slug: rdls_exp-nismod_sdk_aftsdb
 spatial:
   countries:
   - DZA
@@ -261,6 +270,6 @@ spatial:
   scale: regional
 title: 'The African Transport Systems Database: an open geospatial database of multi-modal
   connected networks'
-version: '2'
+version: '3'
 vulnerability: null
 ---
