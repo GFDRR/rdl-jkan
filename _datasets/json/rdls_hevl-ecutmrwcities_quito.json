@@ -1,0 +1,543 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hevl-ecutmrwcities_quito",
+      "title": "Tomorrow's Cities Multi-Hazard Risk Assessment Dataset for Quito (Santa Rosa), Ecuador",
+      "description": "Multi-hazard risk data package for Santa Rosa district, Quito, Ecuador, providing earthquake hazard (2 PGA scenarios as XLSX grid data), debris flow hazard (1 depth scenario), flood vulnerability functions (no flood depth data), synthetic future urban exposure datasets (buildings, households, land use) for three community planning scenarios (VS0, VS2, VS3), and multi-hazard impact assessment results. Developed as part of the Tomorrow's Cities GCRF Urban Disaster Risk Hub project for risk-informed decision making in urban planning.",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "vulnerability",
+        "loss"
+      ],
+      "version": "1",
+      "purpose": "To support multi-hazard risk assessment and risk-informed urban planning decision making for Quito (Santa Rosa district) by providing spatial hazard, synthetic future exposure, vulnerability/fragility functions, and impact assessment datasets for participatory community planning scenarios.",
+      "project": {
+        "name": "Tomorrow's Cities - GCRF Urban Disaster Risk Hub",
+        "url": "https://tomorrowscities.org/"
+      },
+      "details": "The dataset includes: (i) earthquake hazard as 2 XLSX PGA scenario grids (EQ-SCEN1-PGA.xlsx, EQ-SCEN2-PGA.xlsx) with 499 points providing X/Y projected coordinates and IM (PGA in g), earthquake fragility for 11 building typologies (5 damage states DS1-DS5 with SA intensity measure and period-dependent parameters), debris flow fragility for 11 typologies; (ii) debris flow depth scenario (DF-SCEN01-DPTH.xlsx, 3.0 MB) with depth values; (iii) flood vulnerability functions for 1,260 building typologies at 9 water depths (0-6m) — note: no flood depth hazard map provided, flood assessed through debris flow depth proxy; (iv) three future exposure dataset variants (VS0: Santa Rosa baseline, VS2: Vision 2, VS3: Vision 3; VS1 absent) each containing building footprints (333 buildings) with structural taxonomy, household data (497 households), and land use plans (6 zones, 2 residential types); and (v) multi-hazard impact results including metrics.txt summary files with damage distribution and impact metrics (metric3-metric8) for both basic (v1) and enhanced (v2) analysis versions.",
+      "spatial": {
+        "scale": "sub-national",
+        "countries": [
+          "ECU"
+        ],
+        "bbox": [
+          -78.58,
+          -0.32,
+          -78.54,
+          -0.28
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Ecuador",
+            "uri": "https://www.geonames.org/3658394/ecuador.html",
+            "id": "gazetteer_1"
+          },
+          {
+            "scheme": "GEONAMES",
+            "description": "Quito",
+            "uri": "https://www.geonames.org/3652462/quito.html",
+            "id": "gazetteer_2"
+          }
+        ]
+      },
+      "license": "CC0-1.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "Tomorrow's Cities",
+            "email": "support@tomorrowscities.org",
+            "url": "https://data.tomorrowscities.org/"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "Tomorrow's Cities",
+            "email": "support@tomorrowscities.org",
+            "url": "https://data.tomorrowscities.org/"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "Menteşe, E.Y. - Anofa Engineering, Planning and Informatics Ltd.",
+            "email": "emin.mentese@anofa.co",
+            "url": "https://orcid.org/0000-0002-7187-4384"
+          }
+        },
+        {
+          "id": "attribution_funder",
+          "role": "funder",
+          "entity": {
+            "name": "Natural Environment Research Council (NERC)",
+            "email": "press@ukri.org",
+            "url": "https://www.ukri.org/councils/nerc/"
+          }
+        },
+        {
+          "id": "attribution_collaborator",
+          "role": "collaborator",
+          "entity": {
+            "name": "University College London",
+            "email": "servicedesk@ucl.ac.uk",
+            "url": "https://www.ucl.ac.uk/"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "Building footprints and exposure data",
+          "description": "Building footprints with structural taxonomy for Santa Rosa district, Quito. Only 333 buildings across 6 land use zones — smallest exposure dataset of all Tomorrow's Cities.",
+          "lineage": "Building data with camelCase field names (zoneID, nHouse, expStr, bldID, repValue, fptarea, residents). Typology includes Adobe (Adb+LC+LR), RC infilled, and Brick masonry structures.",
+          "type": "dataset",
+          "component": "exposure",
+          "license": "CC0-1.0",
+          "id": "source_1"
+        },
+        {
+          "name": "Synthetic population generation algorithm",
+          "description": "Bespoke algorithms developed to generate synthetic future population (households) based on population projections and land use plans through participatory community engagement.",
+          "lineage": "Algorithms coded in MATLAB environment to produce synthetic social data representing future urban scenarios. Methodology described in Menteşe et al. (2023).",
+          "url": "https://doi.org/10.1016/j.ijdrr.2023.103651",
+          "type": "model",
+          "component": "exposure",
+          "license": "Unknown",
+          "id": "source_2"
+        },
+        {
+          "name": "Earthquake hazard scenarios",
+          "description": "Two earthquake PGA scenarios (EQ-SCEN1 and EQ-SCEN2) provided as XLSX grids with 499 points per scenario, with X/Y projected coordinates and IM (PGA in g). All hazard data is tabular — no GeoTIFF or GeoJSON rasters.",
+          "lineage": "Generated for Santa Rosa district, Quito. Source fault, magnitude, and depth parameters not documented.",
+          "type": "model",
+          "component": "hazard",
+          "license": "Unknown",
+          "id": "source_3"
+        },
+        {
+          "name": "Debris flow depth scenario",
+          "description": "Single debris flow depth scenario (DF-SCEN01-DPTH.xlsx, 3.0 MB) providing depth values for the Santa Rosa study area.",
+          "lineage": "Debris flow simulation for Santa Rosa area. Return period, trigger mechanism, and volume not documented.",
+          "type": "model",
+          "component": "hazard",
+          "license": "Unknown",
+          "id": "source_4"
+        },
+        {
+          "name": "Earthquake fragility functions",
+          "description": "Fragility functions for 11 building typologies defining probability of exceeding 5 damage states (DS1-DS5) as a function of spectral acceleration, with period-dependent parameters. Typologies include Adobe (Adb+LC+LR), RC infilled, Brick masonry.",
+          "lineage": "Developed based on consultation with local partners and global vulnerability databases.",
+          "type": "model",
+          "component": "vulnerability",
+          "license": "Unknown",
+          "id": "source_5"
+        },
+        {
+          "name": "Debris flow fragility functions",
+          "description": "Fragility functions for 11 building typologies (same format as flood vulnerability) defining damage ratios at debris/water depths from hw0 to hw6.",
+          "lineage": "Developed based on consultation with local partners.",
+          "type": "model",
+          "component": "vulnerability",
+          "license": "Unknown",
+          "id": "source_6"
+        },
+        {
+          "name": "Flood vulnerability functions",
+          "description": "Depth-damage vulnerability functions defining damage ratio as a function of water depth for 1,260 building typologies at 9 water depth levels (0-6m). Note: No flood depth hazard map provided — flood is assessed through debris flow depth proxy.",
+          "lineage": "Produced based on consultation with local partners and global vulnerability databases.",
+          "url": "https://publications.jrc.ec.europa.eu/repository/handle/JRC105688",
+          "type": "model",
+          "component": "vulnerability",
+          "license": "Unknown",
+          "id": "source_7"
+        }
+      ],
+      "referenced_by": [
+        {
+          "author_names": [
+            "Gemma Cremen",
+            "Carmine Galasso",
+            "John McCloskey",
+            "Alejandro Barcena",
+            "Maggie Creed",
+            "Maria Evangelina Filippi",
+            "Roberto Gentile",
+            "Luke T. Jenkins",
+            "Mehmet Kalaycioglu",
+            "Emin Yahya Mentese",
+            "Manoranjan Muthusamy",
+            "Karim Tarbali",
+            "Robert Šakić Trogrlić"
+          ],
+          "name": "A state-of-the-art decision-support environment for risk-sensitive and pro-poor urban planning and design in Tomorrow's cities",
+          "date_published": "2022-12-29",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420922006197",
+          "doi": "https://doi.org/10.1016/j.ijdrr.2022.103400",
+          "id": "reference_1"
+        },
+        {
+          "author_names": [
+            "Emin Yahya Menteşe",
+            "Gemma Cremen",
+            "Roberto Gentile",
+            "Carmine Galasso",
+            "Maria Evangelina Filippi",
+            "John McCloskey"
+          ],
+          "name": "Future exposure modelling for risk-informed decision making in urban planning",
+          "date_published": "2023-03-27",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420923001310",
+          "doi": "https://doi.org/10.1016/j.ijdrr.2023.103651",
+          "id": "reference_2"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Quito Multi Hazard Dataset",
+          "description": "Multi-hazard dataset containing: (1) 2 earthquake PGA scenario XLSX grids (499 points each); (2) 1 debris flow depth scenario XLSX (3.0 MB); (3) Earthquake fragility for 11 typologies (DS1-DS5); (4) Debris flow fragility for 11 typologies; (5) Flood vulnerability for 1,260 typologies (no flood depth data provided). All hazard data is tabular (XLSX), not raster.",
+          "data_format": "Excel (xlsx)",
+          "access_modality": "file_download",
+          "access_url": "https://data.tomorrowscities.org/dataset/quito-multi-hazard-dataset",
+          "download_url": "https://data.tomorrowscities.org/dataset/quito-multi-hazard-dataset/resource/ac00a37d-ecd5-4a3e-bc04-4cea0484324a",
+          "id": "resource_hazard_multihazard"
+        },
+        {
+          "title": "Quito Future Exposure Dataset - VS0",
+          "description": "Future urban exposure dataset for VS0 (Santa Rosa baseline), including building footprints (333 buildings) with structural taxonomy, household data (497 households), and land use plan (6 zones). Data formats: Shapefile for spatial data, Excel (XLSX) for tabular data. No individual-level data.",
+          "data_format": "Shapefile (shp)",
+          "access_modality": "file_download",
+          "coordinate_system": "EPSG:32717",
+          "access_url": "https://data.tomorrowscities.org/dataset/quito-future-exposure-dataset-vs0",
+          "download_url": "https://data.tomorrowscities.org/dataset/quito-future-exposure-dataset-vs0/resource/c4a322ef-935f-46b6-9421-d256fbd35bee",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_vs0"
+        },
+        {
+          "title": "Quito Future Exposure Dataset - VS2",
+          "description": "Future urban exposure dataset for Vision Scenario 2. Data formats: Shapefile, XLSX.",
+          "data_format": "Shapefile (shp)",
+          "access_modality": "file_download",
+          "coordinate_system": "EPSG:32717",
+          "access_url": "https://data.tomorrowscities.org/dataset/quito-future-exposure-dataset-vs2",
+          "download_url": "https://data.tomorrowscities.org/dataset/quito-future-exposure-dataset-vs2/resource/f1515843-2259-4e69-93e1-8a5f98bd1993",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_vs2"
+        },
+        {
+          "title": "Quito Future Exposure Dataset - VS3",
+          "description": "Future urban exposure dataset for Vision Scenario 3. Data formats: Shapefile, XLSX.",
+          "data_format": "Shapefile (shp)",
+          "access_modality": "file_download",
+          "coordinate_system": "EPSG:32717",
+          "access_url": "https://data.tomorrowscities.org/dataset/quito-future-exposure-dataset-vs3",
+          "download_url": "https://data.tomorrowscities.org/dataset/quito-future-exposure-dataset-vs3/resource/702720b9-35ef-401e-8dee-221088f2f385",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_vs3"
+        },
+        {
+          "title": "Quito Impact Results - VS0",
+          "description": "Multi-hazard impact results for VS0 including earthquake (2 scenarios, basic v1 and enhanced v2), debris flow, and flood damage. Contains metrics.txt summaries with building damage distributions and impact metrics (metric3-metric8). Data formats: CSV, TXT.",
+          "data_format": "CSV (csv)",
+          "access_modality": "file_download",
+          "access_url": "https://data.tomorrowscities.org/dataset/quito-impact-results-vs0",
+          "download_url": "https://data.tomorrowscities.org/dataset/quito-impact-results-vs0/resource/2686985e-842a-4458-9156-6ae2fb90b1cf",
+          "id": "resource_impact_vs0"
+        },
+        {
+          "title": "Quito Impact Results - VS2",
+          "description": "Multi-hazard impact results for Vision Scenario 2. Data formats: CSV, TXT.",
+          "data_format": "CSV (csv)",
+          "access_modality": "file_download",
+          "access_url": "https://data.tomorrowscities.org/dataset/quito-impact-results-vs2",
+          "download_url": "https://data.tomorrowscities.org/dataset/quito-impact-results-vs2/resource/8023e4e8-55fa-49e3-8ae1-86fecf4aaeb4",
+          "id": "resource_impact_vs2"
+        },
+        {
+          "title": "Quito Impact Results - VS3",
+          "description": "Multi-hazard impact results for Vision Scenario 3. Data formats: CSV, TXT.",
+          "data_format": "CSV (csv)",
+          "access_modality": "file_download",
+          "access_url": "https://data.tomorrowscities.org/dataset/quito-impact-results-vs3",
+          "download_url": "https://data.tomorrowscities.org/dataset/quito-impact-results-vs3/resource/7c794f1a-95ab-414d-994b-62ef77936729",
+          "id": "resource_impact_vs3"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_earthquake_quito",
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated",
+            "event_count": 2,
+            "hazards": [
+              {
+                "id": "hazard_earthquake",
+                "type": "earthquake",
+                "hazard_process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_earthquake_quito_scen1",
+                "calculation_method": "simulated",
+                "description": "Earthquake Scenario 1 for Santa Rosa area providing Peak Ground Acceleration (PGA) values at 499 grid points. Tabular XLSX format with X/Y projected coordinates and IM values. File: EQ-SCEN1-PGA.xlsx",
+                "hazard": {
+                  "id": "hazard_earthquake",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis"
+                  }
+                }
+              },
+              {
+                "id": "event_earthquake_quito_scen2",
+                "calculation_method": "simulated",
+                "description": "Earthquake Scenario 2 for Santa Rosa area providing Peak Ground Acceleration (PGA) values at 499 grid points. File: EQ-SCEN2-PGA.xlsx",
+                "hazard": {
+                  "id": "hazard_earthquake",
+                  "type": "earthquake",
+                  "hazard_process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "event_set_debris_flow_quito",
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated",
+            "event_count": 1,
+            "hazards": [
+              {
+                "id": "hazard_debris_flow",
+                "type": "landslide",
+                "hazard_process": "landslide_mudflow",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_debris_flow_quito_scen01",
+                "calculation_method": "simulated",
+                "description": "Debris flow Scenario 01 for Santa Rosa area providing depth values. Tabular XLSX format (3.0 MB). Also serves as proxy for flood hazard assessment. File: DF-SCEN01-DPTH.xlsx",
+                "hazard": {
+                  "id": "hazard_debris_flow",
+                  "type": "landslide",
+                  "hazard_process": "landslide_mudflow",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis — return period and trigger mechanism undocumented"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_buildings",
+          "category": "buildings",
+          "taxonomy": "GED4ALL",
+          "metrics": [
+            {
+              "id": "metric_building_count",
+              "dimension": "structure",
+              "quantity_kind": "count"
+            },
+            {
+              "id": "metric_building_replacement_value",
+              "dimension": "structure",
+              "quantity_kind": "currency"
+            },
+            {
+              "id": "metric_building_footprint_area",
+              "dimension": "structure",
+              "quantity_kind": "area"
+            }
+          ]
+        },
+        {
+          "id": "exposure_population",
+          "category": "population",
+          "taxonomy": "GED4ALL",
+          "metrics": [
+            {
+              "id": "metric_population_residents",
+              "dimension": "population",
+              "quantity_kind": "count"
+            },
+            {
+              "id": "metric_population_households",
+              "dimension": "population",
+              "quantity_kind": "count"
+            }
+          ]
+        },
+        {
+          "id": "exposure_landuse",
+          "category": "economic_indicator",
+          "taxonomy": "GED4ALL",
+          "metrics": [
+            {
+              "id": "metric_landuse_area",
+              "dimension": "structure",
+              "quantity_kind": "area"
+            }
+          ]
+        }
+      ],
+      "vulnerability": {
+        "functions": {
+          "vulnerability": [
+            {
+              "approach": "analytical",
+              "relationship": "discrete",
+              "hazard_primary": "flood",
+              "hazard_process_primary": "fluvial_flood",
+              "hazard_analysis_type": "deterministic",
+              "intensity_measure": "wd:m",
+              "category": "buildings",
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "ratio",
+              "taxonomy": "Custom",
+              "analysis_details": "Depth-damage vulnerability functions defining damage ratio as a function of water depth (0-6m at 9 discrete levels) for 1,260 building typologies. Note: No flood depth hazard map provided — flood is assessed through debris flow depth proxy.",
+              "id": "vulnerability_function_flood_buildings"
+            },
+            {
+              "approach": "analytical",
+              "relationship": "discrete",
+              "hazard_primary": "landslide",
+              "hazard_process_primary": "landslide_mudflow",
+              "hazard_analysis_type": "deterministic",
+              "intensity_measure": "wd:m",
+              "category": "buildings",
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "ratio",
+              "taxonomy": "Custom",
+              "analysis_details": "Debris flow depth-damage vulnerability functions for 11 building typologies defining damage ratios at debris depths from hw0 to hw6 (same format as flood vulnerability).",
+              "id": "vulnerability_function_debris_flow_buildings"
+            }
+          ],
+          "fragility": [
+            {
+              "approach": "analytical",
+              "relationship": "math_parametric",
+              "hazard_primary": "earthquake",
+              "hazard_process_primary": "ground_motion",
+              "hazard_analysis_type": "deterministic",
+              "intensity_measure": "PGA:g",
+              "category": "buildings",
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "ratio",
+              "taxonomy": "Custom",
+              "analysis_details": "Lognormal fragility functions for 11 building typologies defining probability of exceeding 5 damage states (DS1-DS5) as a function of spectral acceleration (g). Period-dependent parameters (periodMin, periodMax). Typologies include Adobe (Adb+LC+LR), RC infilled, Brick masonry with various code levels.",
+              "id": "fragility_function_earthquake_buildings"
+            }
+          ]
+        },
+        "socio_economic": [
+          {
+            "scheme": "Custom",
+            "indicator_name": "Household income level",
+            "indicator_code": "income",
+            "description": "Income level attribute for synthetic households used as socio-economic indicator in the exposure dataset.",
+            "reference_year": 1900,
+            "id": "socioeconomic_income"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Building damage state results from earthquake impact assessment for each vision scenario (VS0, VS2, VS3) and both earthquake scenarios (SCEN1, SCEN2), with basic (v1) and enhanced (v2) analysis versions.",
+            "id": "loss_earthquake_buildings"
+          },
+          {
+            "hazard_type": "landslide",
+            "hazard_process": "landslide_mudflow",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Building damage state results from debris flow impact assessment for each vision scenario.",
+            "id": "loss_debris_flow_buildings"
+          },
+          {
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Affected population metrics from multi-hazard impact assessment including homeless households/individuals (metric5/metric6), hospital access disruption (metric3/metric4), and total reposition value for damaged buildings (metric8).",
+            "id": "loss_earthquake_population"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
