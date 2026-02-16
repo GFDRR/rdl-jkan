@@ -3,13 +3,13 @@ contact_point:
   email: tom.russell@ouce.ox.ac.uk
   id: attribution_contact
   name: Tom Russell
-  url: https://www.eci.ox.ac.uk/
+  url: https://www.eci.ox.ac.uk/person/tom-russell
 creator:
   email: tom.russell@ouce.ox.ac.uk
-  id: attribution_creator
+  id: attribution_creator1
   name: Tom Russell
-  url: https://www.eci.ox.ac.uk/
-dataset_id: rdls_exp-nismod_sdk_econactivity
+  url: https://www.eci.ox.ac.uk/person/tom-russell
+dataset_id: rdls_exp-nismod_sdk_regeconactivity
 description: 'A curated collection of open geospatial datasets processed to support
   downscaling of regional economic activity from national/subnational levels to high-resolution
   grids globally. The collection includes agricultural GDP by subsector (crop, livestock,
@@ -52,8 +52,16 @@ exposure:
   quantity_kind: area
   taxonomy: GED4ALL
 - category: infrastructure
+  dimension: structure
+  quantity_kind: count
+  taxonomy: GED4ALL
+- category: infrastructure
   dimension: product, structure
   quantity_kind: count, power
+  taxonomy: GED4ALL
+- category: infrastructure
+  dimension: structure
+  quantity_kind: count
   taxonomy: GED4ALL
 - category: natural_environment
   dimension: content
@@ -75,7 +83,7 @@ publisher:
   email: info@zenodo.org
   id: attribution_publisher
   name: Zenodo
-  url: https://zenodo.org/records/17593244
+  url: https://zenodo.org
 purpose: Provides standardized, analysis-ready geospatial datasets to support research
   on spatial economic modeling, infrastructure-economy interactions, and climate risk
   assessment. Addresses the critical gap in understanding how economic activity distributes
@@ -86,23 +94,6 @@ purpose: Provides standardized, analysis-ready geospatial datasets to support re
   datasets eliminate barriers to access by providing harmonized formats optimized
   for large-scale spatial analysis and machine learning applications in economic geography.
 resources:
-- coordinate_system: null
-  description: Presentation slides from the validation workshop held at Oxford University
-    on 15 May 2025, documenting the Bayesian Hierarchical Model methodology for downscaling
-    regional economic activity data. Covers the problem statement, data sources, pycnophylactic
-    interpolation methods, H3 hexagonal grid framework, ISIC sector classification
-    mapping, uncertainty quantification approaches (redundancy and spatial entropy
-    measures), validation techniques (category co-location analysis), and example
-    outputs for UK, Thailand, and Ghana. Includes visual demonstrations of Manufacturing
-    and Services sector distributions globally, and category co-location comparisons
-    between Overture Maps and Foursquare POI sources.
-  download_url: https://zenodo.org/records/17250268/files/workshop_DS_Global_Econ_15_05_2025_1.pdf
-  format: PDF (pdf)
-  id: resource_workshop_presentation
-  media_type: null
-  spatial_resolution: null
-  temporal: null
-  title: 'Workshop: Downscaling of global economic activity data'
 - coordinate_system: null
   description: 'JSON file mapping dataset identifiers to their S3 cloud storage paths
     for direct access. Contains 18 entries pointing to processed Parquet datasets
@@ -139,7 +130,7 @@ resources:
 risk_data_type:
 - exposure
 schema: rdl-03
-slug: rdls_exp-nismod_sdk_econactivity
+slug: rdls_exp-nismod_sdk_regeconactivity
 spatial:
   countries:
   - GLO
