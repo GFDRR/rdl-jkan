@@ -1,0 +1,643 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-nerundrr_desinventar_a",
+      "title": "DesInventar Disaster Loss and Damage Dataset for Niger",
+      "description": "National disaster loss inventory for Niger from the DesInventar Sendai Framework Monitor database, compiled by Systeme d'Alerte Precoce (SAP) and published by the United Nations Office for Disaster Risk Reduction (UNDRR). Contains 1,362 event-level loss records covering historical, with observed impacts from drought, flood, wildfire events. Loss data includes human casualties, displacement, building damage, economic losses, agricultural damage, and infrastructure impacts. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "version": "1",
+      "purpose": "To document historical disaster losses in Niger from the DesInventar national disaster loss inventory, supporting disaster risk reduction monitoring under the Sendai Framework.",
+      "project": {
+        "name": "DesInventar Sendai - Disaster Information Management System",
+        "url": "https://www.desinventar.net/"
+      },
+      "details": "Event-level disaster loss records from the DesInventar database for Niger, maintained by Systeme d'Alerte Precoce (SAP). Covers 1,362 observed disaster events from historical. Data collected through direct observational reporting and includes human impacts (deaths, injuries, missing, affected, evacuated, relocated), physical impacts (houses destroyed/damaged, education centres, hospitals, roads), economic losses (local currency and USD), and agricultural impacts (crop damage in hectares, livestock losses). Methodology: Direct Observational Data / Anecdotal Data.",
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NER"
+        ],
+        "bbox": [
+          0.15,
+          11.7,
+          15.97,
+          23.52
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Niger",
+            "uri": "https://www.geonames.org/2440476/niger.html",
+            "id": "gazetteer_1"
+          }
+        ]
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "email": "isdr@un.org",
+            "url": "https://www.undrr.org/"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "email": "isdr@un.org",
+            "url": "https://www.desinventar.net/"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "Systeme d'Alerte Precoce (SAP)",
+            "url": "https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "source_desinventar",
+          "name": "DesInventar Sendai",
+          "description": "National disaster loss database for Niger maintained using the DesInventar methodology.",
+          "url": "https://www.desinventar.net/",
+          "type": "dataset",
+          "component": "loss"
+        },
+        {
+          "id": "source_hdx",
+          "name": "Humanitarian Data Exchange (HDX)",
+          "description": "Dataset published on HDX: Disaster Loss Data for Niger",
+          "url": "https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853",
+          "type": "dataset",
+          "component": "loss"
+        }
+      ],
+      "resources": [
+        {
+          "id": "hdx_dataset_metadata_json",
+          "title": "HDX dataset metadata (JSON)",
+          "description": "Dataset-level metadata exported from HDX.",
+          "data_format": "JSON (json)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853/download_metadata?format=json"
+        },
+        {
+          "id": "resource_001",
+          "title": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event",
+          "description": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event",
+          "data_format": "Excel (xlsx)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853/resource/9b9d4019-129f-4df2-9499-09558b893bf8/download/niger.xlsx",
+          "access_url": "https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853"
+        },
+        {
+          "id": "resource_002",
+          "title": "Niger.zip",
+          "description": "DesInventar disaster loss data for Niger",
+          "data_format": "Shapefile (shp)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853/resource/d6b6609d-3e6d-41f9-b14b-d6f4035d2d56/download/niger.zip",
+          "access_url": "https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_001_drought_affected",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from drought (DROUGHT) events in Niger. DesInventar records: 46 events with data out of 289 total drought events."
+          },
+          {
+            "id": "loss_002_drought_damages_in_crops_ha",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from drought (DROUGHT) events in Niger. DesInventar records: 15 events with data out of 289 total drought events."
+          },
+          {
+            "id": "loss_003_drought_deaths",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from drought (DROUGHT) events in Niger. DesInventar records: 2 events with data out of 289 total drought events."
+          },
+          {
+            "id": "loss_004_drought_losses_local",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "XOF"
+            },
+            "description": "Observed total economic losses in local currency from drought (DROUGHT) events in Niger. DesInventar records: 6 events with data out of 289 total drought events."
+          },
+          {
+            "id": "loss_005_drought_lost_cattle",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed livestock lost from drought (DROUGHT) events in Niger. DesInventar records: 14 events with data out of 289 total drought events."
+          },
+          {
+            "id": "loss_006_drought_relocated",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons permanently relocated from homes from drought (DROUGHT) events in Niger. DesInventar records: 10 events with data out of 289 total drought events."
+          },
+          {
+            "id": "loss_007_drought_victims",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from drought (DROUGHT) events in Niger. DesInventar records: 143 events with data out of 289 total drought events."
+          },
+          {
+            "id": "loss_008_flood_affected",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from flood (FLOOD) events in Niger. DesInventar records: 214 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_009_flood_damages_in_crops_ha",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events in Niger. DesInventar records: 239 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_010_flood_deaths",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from flood (FLOOD) events in Niger. DesInventar records: 49 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_011_flood_education_centers",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from flood (FLOOD) events in Niger. DesInventar records: 5 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_012_flood_hospitals",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from flood (FLOOD) events in Niger. DesInventar records: 1 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_013_flood_houses_damaged",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from flood (FLOOD) events in Niger. DesInventar records: 29 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_014_flood_houses_destroyed",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from flood (FLOOD) events in Niger. DesInventar records: 410 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_015_flood_injured",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from flood (FLOOD) events in Niger. DesInventar records: 34 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_016_flood_losses_local",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "XOF"
+            },
+            "description": "Observed total economic losses in local currency from flood (FLOOD) events in Niger. DesInventar records: 9 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_017_flood_losses_usd",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "USD"
+            },
+            "description": "Observed total economic losses in US Dollars from flood (FLOOD) events in Niger. DesInventar records: 1 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_018_flood_lost_cattle",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed livestock lost from flood (FLOOD) events in Niger. DesInventar records: 122 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_019_flood_relocated",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons permanently relocated from homes from flood (FLOOD) events in Niger. DesInventar records: 2 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_020_flood_victims",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from flood (FLOOD) events in Niger. DesInventar records: 456 events with data out of 763 total flood events."
+          },
+          {
+            "id": "loss_021_wildfire_affected",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 78 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_022_wildfire_damages_in_crops_ha",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 168 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_023_wildfire_deaths",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 23 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_024_wildfire_education_centers",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 2 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_025_wildfire_houses_damaged",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 2 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_026_wildfire_houses_destroyed",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 28 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_027_wildfire_losses_local",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "XOF"
+            },
+            "description": "Observed total economic losses in local currency from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 14 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_028_wildfire_losses_usd",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "USD"
+            },
+            "description": "Observed total economic losses in US Dollars from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 2 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_029_wildfire_lost_cattle",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed livestock lost from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 14 events with data out of 310 total wildfire events."
+          },
+          {
+            "id": "loss_030_wildfire_victims",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 48 events with data out of 310 total wildfire events."
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/d16485d0-2011-4f5d-bb12-9e92feb8f853",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
