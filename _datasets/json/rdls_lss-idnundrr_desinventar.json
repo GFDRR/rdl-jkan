@@ -1,0 +1,914 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-idnundrr_desinventar",
+      "title": "DesInventar Disaster Loss and Damage Dataset for Indonesia",
+      "description": "National disaster loss inventory for Indonesia from the DesInventar Sendai Framework Monitor database, compiled by Badan Nasional Penanggulangan Bencana (BNPB) and published by the United Nations Office for Disaster Risk Reduction (UNDRR). Contains 5,307 event-level loss records covering 1973-2012, with observed impacts from coastal_flood, drought, earthquake, tsunami, wildfire events. Loss data includes human casualties, displacement, building damage, economic losses, agricultural damage, and infrastructure impacts. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "version": "1",
+      "purpose": "To document historical disaster losses in Indonesia from the DesInventar national disaster loss inventory, supporting disaster risk reduction monitoring under the Sendai Framework.",
+      "project": {
+        "name": "DesInventar Sendai - Disaster Information Management System",
+        "url": "https://www.desinventar.net/"
+      },
+      "details": "Event-level disaster loss records from the DesInventar database for Indonesia, maintained by Badan Nasional Penanggulangan Bencana (BNPB). Covers 5,307 observed disaster events from 1973-2012. Data collected through direct observational reporting and includes human impacts (deaths, injuries, missing, affected, evacuated, relocated), physical impacts (houses destroyed/damaged, education centres, hospitals, roads), economic losses (local currency and USD), and agricultural impacts (crop damage in hectares, livestock losses). Methodology: Direct Observational Data / Anecdotal Data.",
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ],
+        "bbox": [
+          95.01,
+          -10.92,
+          140.98,
+          5.91
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Indonesia",
+            "uri": "https://www.geonames.org/1643084/indonesia.html",
+            "id": "gazetteer_1"
+          }
+        ]
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "email": "isdr@un.org",
+            "url": "https://www.undrr.org/"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "email": "isdr@un.org",
+            "url": "https://www.desinventar.net/"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "Badan Nasional Penanggulangan Bencana (BNPB)",
+            "url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "source_desinventar",
+          "name": "DesInventar Sendai",
+          "description": "National disaster loss database for Indonesia maintained using the DesInventar methodology.",
+          "url": "https://www.desinventar.net/",
+          "type": "dataset",
+          "component": "loss"
+        },
+        {
+          "id": "source_hdx",
+          "name": "Humanitarian Data Exchange (HDX)",
+          "description": "Dataset published on HDX: Disaster Loss Data for Indonesia",
+          "url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366",
+          "type": "dataset",
+          "component": "loss"
+        }
+      ],
+      "resources": [
+        {
+          "id": "hdx_dataset_metadata_json",
+          "title": "HDX dataset metadata (JSON)",
+          "description": "Dataset-level metadata exported from HDX.",
+          "data_format": "JSON (json)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366/download_metadata?format=json"
+        },
+        {
+          "id": "resource_001",
+          "title": "IDN.zip",
+          "description": "DesInventar disaster loss data for Indonesia",
+          "data_format": "Shapefile (shp)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366/resource/71c78d9f-b219-4881-8c1d-f79654b8c32b/download/idn.zip",
+          "access_url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366"
+        },
+        {
+          "id": "resource_002",
+          "title": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event",
+          "description": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event",
+          "data_format": "Excel (xlsx)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366/resource/bc3bc1c5-89ff-4777-9299-dbd2d09e2033/download/indonesia.xls",
+          "access_url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_001_coastalflood_affected",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from coastal flood (SURGE) events in Indonesia. DesInventar records: 32 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_002_coastalflood_damages_in_crops_ha",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from coastal flood (SURGE) events in Indonesia. DesInventar records: 5 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_003_coastalflood_deaths",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from coastal flood (SURGE) events in Indonesia. DesInventar records: 17 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_004_coastalflood_education_centers",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from coastal flood (SURGE) events in Indonesia. DesInventar records: 11 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_005_coastalflood_evacuated",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from coastal flood (SURGE) events in Indonesia. DesInventar records: 54 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_006_coastalflood_hospitals",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from coastal flood (SURGE) events in Indonesia. DesInventar records: 6 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_007_coastalflood_houses_damaged",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from coastal flood (SURGE) events in Indonesia. DesInventar records: 55 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_008_coastalflood_houses_destroyed",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from coastal flood (SURGE) events in Indonesia. DesInventar records: 93 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_009_coastalflood_injured",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from coastal flood (SURGE) events in Indonesia. DesInventar records: 18 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_010_coastalflood_losses_local",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "IDR"
+            },
+            "description": "Observed total economic losses in local currency from coastal flood (SURGE) events in Indonesia. DesInventar records: 38 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_011_coastalflood_missing",
+            "hazard_type": "coastal_flood",
+            "hazard_process": "storm_surge",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons missing or unaccounted for after disaster events from coastal flood (SURGE) events in Indonesia. DesInventar records: 7 events with data out of 270 total coastal flood events (2009-2011)."
+          },
+          {
+            "id": "loss_012_drought_affected",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from drought (DROUGHT) events in Indonesia. DesInventar records: 38 events with data out of 1,748 total drought events (2004-2008)."
+          },
+          {
+            "id": "loss_013_drought_damages_in_crops_ha",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from drought (DROUGHT) events in Indonesia. DesInventar records: 1,352 events with data out of 1,748 total drought events (2004-2008)."
+          },
+          {
+            "id": "loss_014_drought_deaths",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from drought (DROUGHT) events in Indonesia. DesInventar records: 1 events with data out of 1,748 total drought events (2004-2008)."
+          },
+          {
+            "id": "loss_015_drought_losses_local",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "IDR"
+            },
+            "description": "Observed total economic losses in local currency from drought (DROUGHT) events in Indonesia. DesInventar records: 8 events with data out of 1,748 total drought events (2004-2008)."
+          },
+          {
+            "id": "loss_016_earthquake_affected",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 29 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_017_earthquake_damages_in_crops_ha",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 5 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_018_earthquake_deaths",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 165 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_019_earthquake_education_centers",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 171 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_020_earthquake_evacuated",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 103 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_021_earthquake_hospitals",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 83 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_022_earthquake_houses_damaged",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 171 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_023_earthquake_houses_destroyed",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 188 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_024_earthquake_injured",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 169 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_025_earthquake_losses_local",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "IDR"
+            },
+            "description": "Observed total economic losses in local currency from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 32 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_026_earthquake_missing",
+            "hazard_type": "earthquake",
+            "hazard_process": "ground_motion",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons missing or unaccounted for after disaster events from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 10 events with data out of 449 total earthquake events (1976-2004)."
+          },
+          {
+            "id": "loss_027_tsunami_damages_in_crops_ha",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 2 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_028_tsunami_deaths",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 11 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_029_tsunami_education_centers",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 2 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_030_tsunami_evacuated",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 2 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_031_tsunami_hospitals",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 1 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_032_tsunami_houses_damaged",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 1 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_033_tsunami_houses_destroyed",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 6 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_034_tsunami_injured",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 3 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_035_tsunami_missing",
+            "hazard_type": "tsunami",
+            "hazard_process": "tsunami",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons missing or unaccounted for after disaster events from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 6 events with data out of 13 total tsunami events (1973-1977)."
+          },
+          {
+            "id": "loss_036_wildfire_affected",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 512 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_037_wildfire_damages_in_crops_ha",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 12 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_038_wildfire_deaths",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 145 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_039_wildfire_education_centers",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 50 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_040_wildfire_evacuated",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 465 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_041_wildfire_hospitals",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 14 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_042_wildfire_houses_damaged",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 92 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_043_wildfire_houses_destroyed",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 1,088 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_044_wildfire_injured",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 166 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_045_wildfire_losses_local",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "IDR"
+            },
+            "description": "Observed total economic losses in local currency from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 1,310 events with data out of 2,827 total wildfire events (2005-2012)."
+          },
+          {
+            "id": "loss_046_wildfire_missing",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons missing or unaccounted for after disaster events from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 5 events with data out of 2,827 total wildfire events (2005-2012)."
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
