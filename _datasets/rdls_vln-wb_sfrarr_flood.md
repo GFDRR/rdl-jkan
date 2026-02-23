@@ -21,8 +21,8 @@ exposure: null
 hazard: null
 license: CC-BY-SA-4.0
 loss: null
-project: "SFRARR -\xC2\_Strengthening Financial Resilience and Accelerating Risk Reduction\
-  \ in Central Asia"
+project: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction
+  in Central Asia
 publisher:
   name: RED - Risk, Engineering  Development - Pavia (Italy)
   url: https://www.redrisk.com
