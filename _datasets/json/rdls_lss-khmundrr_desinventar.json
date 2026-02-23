@@ -1,0 +1,826 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-khmundrr_desinventar",
+      "title": "DesInventar Disaster Loss and Damage Dataset for Cambodia",
+      "description": "National disaster loss inventory for Cambodia from the DesInventar Sendai Framework Monitor database, compiled by National Committee for Disaster Management (NCDM) and published by the United Nations Office for Disaster Risk Reduction (UNDRR). Contains 7,957 event-level loss records covering 2009-2016, with observed impacts from drought, flood, strong_wind, wildfire events. Loss data includes human casualties, displacement, building damage, economic losses, agricultural damage, and infrastructure impacts. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "version": "1",
+      "purpose": "To document historical disaster losses in Cambodia from the DesInventar national disaster loss inventory, supporting disaster risk reduction monitoring under the Sendai Framework.",
+      "project": {
+        "name": "DesInventar Sendai - Disaster Information Management System",
+        "url": "https://www.desinventar.net/"
+      },
+      "details": "Event-level disaster loss records from the DesInventar database for Cambodia, maintained by National Committee for Disaster Management (NCDM). Covers 7,957 observed disaster events from 2009-2016. Data collected through direct observational reporting and includes human impacts (deaths, injuries, missing, affected, evacuated, relocated), physical impacts (houses destroyed/damaged, education centres, hospitals, roads), economic losses (local currency and USD), and agricultural impacts (crop damage in hectares, livestock losses). Methodology: Direct Observational Data / Anecdotal Data.",
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KHM"
+        ],
+        "bbox": [
+          102.31,
+          10.42,
+          107.61,
+          14.7
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Cambodia",
+            "uri": "https://www.geonames.org/1831722/cambodia.html",
+            "id": "gazetteer_1"
+          }
+        ]
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "attribution_publisher",
+          "role": "publisher",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "email": "isdr@un.org",
+            "url": "https://www.undrr.org/"
+          }
+        },
+        {
+          "id": "attribution_creator",
+          "role": "creator",
+          "entity": {
+            "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+            "email": "isdr@un.org",
+            "url": "https://www.desinventar.net/"
+          }
+        },
+        {
+          "id": "attribution_contact",
+          "role": "contact_point",
+          "entity": {
+            "name": "National Committee for Disaster Management (NCDM)",
+            "url": "https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "source_desinventar",
+          "name": "DesInventar Sendai",
+          "description": "National disaster loss database for Cambodia maintained using the DesInventar methodology.",
+          "url": "https://www.desinventar.net/",
+          "type": "dataset",
+          "component": "loss"
+        },
+        {
+          "id": "source_hdx",
+          "name": "Humanitarian Data Exchange (HDX)",
+          "description": "Dataset published on HDX: Disaster loss and damage data for Cambodia",
+          "url": "https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738",
+          "type": "dataset",
+          "component": "loss"
+        }
+      ],
+      "resources": [
+        {
+          "id": "hdx_dataset_metadata_json",
+          "title": "HDX dataset metadata (JSON)",
+          "description": "Dataset-level metadata exported from HDX.",
+          "data_format": "JSON (json)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738/download_metadata?format=json"
+        },
+        {
+          "id": "resource_001",
+          "title": "Disaster data for Cambodia",
+          "description": "Disaster data for Cambodia",
+          "data_format": "Shapefile (shp)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738/resource/bbb63796-5079-45af-b461-6f8b085b91a9/download/camdodia.zip",
+          "access_url": "https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738"
+        },
+        {
+          "id": "resource_002",
+          "title": "Disaster Tabular data for Cambodia",
+          "description": "Disaster Tabular data for Cambodia",
+          "data_format": "Excel (xlsx)",
+          "access_modality": "file_download",
+          "download_url": "https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738/resource/484f981d-278f-4bf0-8581-1fc38d70232a/download/di_report-cambodia.xls",
+          "access_url": "https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_001_drought_affected",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from drought (Drought) events in Cambodia. DesInventar records: 32 events with data out of 1,300 total drought events (2011-2016)."
+          },
+          {
+            "id": "loss_002_drought_damages_in_crops_ha",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from drought (Drought) events in Cambodia. DesInventar records: 552 events with data out of 1,300 total drought events (2011-2016)."
+          },
+          {
+            "id": "loss_003_drought_damages_in_roads_mts",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed metres of transport networks destroyed from drought (Drought) events in Cambodia. DesInventar records: 4 events with data out of 1,300 total drought events (2011-2016)."
+          },
+          {
+            "id": "loss_004_drought_education_centers",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from drought (Drought) events in Cambodia. DesInventar records: 1 events with data out of 1,300 total drought events (2011-2016)."
+          },
+          {
+            "id": "loss_005_drought_lost_cattle",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed livestock lost from drought (Drought) events in Cambodia. DesInventar records: 2 events with data out of 1,300 total drought events (2011-2016)."
+          },
+          {
+            "id": "loss_006_drought_victims",
+            "hazard_type": "drought",
+            "hazard_process": "meteorological_drought",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from drought (Drought) events in Cambodia. DesInventar records: 334 events with data out of 1,300 total drought events (2011-2016)."
+          },
+          {
+            "id": "loss_007_flood_damages_in_crops_ha",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from flood (Flood) events in Cambodia. DesInventar records: 1,780 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_008_flood_damages_in_roads_mts",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed metres of transport networks destroyed from flood (Flood) events in Cambodia. DesInventar records: 983 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_009_flood_deaths",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from flood (Flood) events in Cambodia. DesInventar records: 394 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_010_flood_education_centers",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from flood (Flood) events in Cambodia. DesInventar records: 59 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_011_flood_evacuated",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from flood (Flood) events in Cambodia. DesInventar records: 421 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_012_flood_hospitals",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from flood (Flood) events in Cambodia. DesInventar records: 27 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_013_flood_houses_damaged",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from flood (Flood) events in Cambodia. DesInventar records: 222 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_014_flood_houses_destroyed",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from flood (Flood) events in Cambodia. DesInventar records: 184 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_015_flood_injured",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from flood (Flood) events in Cambodia. DesInventar records: 38 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_016_flood_lost_cattle",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed livestock lost from flood (Flood) events in Cambodia. DesInventar records: 88 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_017_flood_relocated",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons permanently relocated from homes from flood (Flood) events in Cambodia. DesInventar records: 15 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_018_flood_victims",
+            "hazard_type": "flood",
+            "hazard_process": "fluvial_flood",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from flood (Flood) events in Cambodia. DesInventar records: 1,546 events with data out of 3,389 total flood events (2011-2014)."
+          },
+          {
+            "id": "loss_019_strongwind_affected",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from strong wind (Storm) events in Cambodia. DesInventar records: 4 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_020_strongwind_damages_in_crops_ha",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from strong wind (Storm) events in Cambodia. DesInventar records: 13 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_021_strongwind_damages_in_roads_mts",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed metres of transport networks destroyed from strong wind (Storm) events in Cambodia. DesInventar records: 3 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_022_strongwind_deaths",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from strong wind (Storm) events in Cambodia. DesInventar records: 58 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_023_strongwind_education_centers",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from strong wind (Storm) events in Cambodia. DesInventar records: 26 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_024_strongwind_evacuated",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from strong wind (Storm) events in Cambodia. DesInventar records: 2 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_025_strongwind_hospitals",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from strong wind (Storm) events in Cambodia. DesInventar records: 7 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_026_strongwind_houses_damaged",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from strong wind (Storm) events in Cambodia. DesInventar records: 787 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_027_strongwind_houses_destroyed",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from strong wind (Storm) events in Cambodia. DesInventar records: 957 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_028_strongwind_injured",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from strong wind (Storm) events in Cambodia. DesInventar records: 128 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_029_strongwind_lost_cattle",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed livestock lost from strong wind (Storm) events in Cambodia. DesInventar records: 23 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_030_strongwind_missing",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons missing or unaccounted for after disaster events from strong wind (Storm) events in Cambodia. DesInventar records: 1 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_031_strongwind_victims",
+            "hazard_type": "strong_wind",
+            "hazard_process": "extratropical_cyclone",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from strong wind (Storm) events in Cambodia. DesInventar records: 681 events with data out of 1,454 total strong wind events (2009-2016)."
+          },
+          {
+            "id": "loss_032_wildfire_affected",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from wildfire (Fire) events in Cambodia. DesInventar records: 5 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_033_wildfire_damages_in_crops_ha",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "area",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from wildfire (Fire) events in Cambodia. DesInventar records: 1 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_034_wildfire_deaths",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from wildfire (Fire) events in Cambodia. DesInventar records: 53 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_035_wildfire_evacuated",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "displaced_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from wildfire (Fire) events in Cambodia. DesInventar records: 2 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_036_wildfire_houses_damaged",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "damage_ratio",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from wildfire (Fire) events in Cambodia. DesInventar records: 220 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_037_wildfire_houses_destroyed",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from wildfire (Fire) events in Cambodia. DesInventar records: 1,249 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_038_wildfire_injured",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "casualty_count",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from wildfire (Fire) events in Cambodia. DesInventar records: 46 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_039_wildfire_losses_usd",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "economic_loss_value",
+              "quantity_kind": "currency",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "currency": "USD"
+            },
+            "description": "Observed total economic losses in US Dollars from wildfire (Fire) events in Cambodia. DesInventar records: 1 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_040_wildfire_lost_cattle",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "asset_loss",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed livestock lost from wildfire (Fire) events in Cambodia. DesInventar records: 2 events with data out of 1,814 total wildfire events (2013-2016)."
+          },
+          {
+            "id": "loss_041_wildfire_victims",
+            "hazard_type": "wildfire",
+            "hazard_process": "wildfire",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "observed",
+              "impact_metric": "exposure_to_hazard",
+              "quantity_kind": "count",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from wildfire (Fire) events in Cambodia. DesInventar records: 579 events with data out of 1,814 total wildfire events (2013-2016)."
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/0fccd714-7418-4ce5-9632-bbe125681738",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
