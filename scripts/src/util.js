@@ -51,6 +51,9 @@ export function createDatasetFilters (filters) {
     if (filters.geo_scale) {
       conditions.push(dataset.geo_scale && slugify(dataset.geo_scale).indexOf(filters.geo_scale) !== -1)
     }
+    if (filters.catalog) {
+      conditions.push(dataset.catalog && slugify(dataset.catalog).indexOf(filters.catalog) !== -1)
+    }
     if (filters.license_display) {
       conditions.push(dataset.license_display && slugify(dataset.license_display).indexOf(filters.license_display) !== -1)
     }
