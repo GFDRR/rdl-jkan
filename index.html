@@ -27,7 +27,7 @@ layout: default
         
         // Pagination state
         currentPage: 1,
-        itemsPerPage: 5,
+        itemsPerPage: 10,
         
         // Initialize on page load
         init() {
@@ -238,7 +238,58 @@ layout: default
         get totalPages() {
           return Math.ceil(this.filteredDatasets.matches.length / this.itemsPerPage);
         },
-        
+
+        // Generate page numbers with ellipsis (e.g., [1, 2, 3, '...', 8, 9, 10])
+        getPaginationNumbers(currentPage, totalPages) {
+          if (totalPages <= 7) {
+            return Array.from({ length: totalPages }, (_, i) => i + 1);
+          }
+          
+          const pages = [];
+          
+          // Always show first page
+          pages.push(1);
+          
+          // Calculate range around current page
+          let startPage = Math.max(2, currentPage - 1);
+          let endPage = Math.min(totalPages - 1, currentPage + 1);
+          
+          // Adjust range if at the start or end
+          if (currentPage <= 3) {
+            // Near start: show 2, 3, 4, 5
+            startPage = 2;
+            endPage = 5;
+          } else if (currentPage >= totalPages - 2) {
+            // Near end: show last 4 pages before the final one
+            startPage = totalPages - 4;
+            endPage = totalPages - 1;
+          }
+          
+          // Add left ellipsis if needed
+          if (startPage > 2) {
+            pages.push('...');
+          }
+          
+          // Add page numbers
+          for (let i = startPage; i <= endPage; i++) {
+            pages.push(i);
+          }
+          
+          // Add right ellipsis if needed
+          if (endPage < totalPages - 1) {
+            pages.push('...');
+          }
+          
+          // Always show last page
+          pages.push(totalPages);
+          
+          return pages;
+        },
+
+        get paginationNumbers() {
+          return this.getPaginationNumbers(this.currentPage, this.totalPages);
+        },
+
         get paginatedDatasets() {
           const start = (this.currentPage - 1) * this.itemsPerPage;
           const end = start + this.itemsPerPage;
@@ -613,11 +664,12 @@ layout: default
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 10px;
+          gap: 5px;
+          flex-wrap: wrap;
         "
       >
         <button
-          @click="currentPage = Math.max(1, currentPage - 1)"
+          @click="currentPage = Math.max(1, currentPage - 1); window.scrollTo(0, 0)"
           :disabled="currentPage === 1"
           class="btn btn-default"
           :class="{ 'disabled': currentPage === 1 }"
@@ -625,13 +677,26 @@ layout: default
           <i class="fa fa-chevron-left"></i> Previous
         </button>
 
-        <span
-          x-text="`Page ${currentPage} of ${totalPages}`"
-          style="margin: 0 15px"
-        ></span>
+        <!-- Page Numbers -->
+        <template x-for="(page, index) in paginationNumbers" :key="index">
+          <div style="display: contents;">
+            <span
+              x-show="page === '...'"
+              style="padding: 6px 8px;"
+              x-text="page"
+            ></span>
+            <button
+              x-show="page !== '...'"
+              @click="currentPage = page; window.scrollTo(0, 0)"
+              class="btn"
+              :class="page === currentPage ? 'btn-primary' : 'btn-default'"
+              x-text="page"
+            ></button>
+          </div>
+        </template>
 
         <button
-          @click="currentPage = Math.min(totalPages, currentPage + 1)"
+          @click="currentPage = Math.min(totalPages, currentPage + 1); window.scrollTo(0, 0)"
           :disabled="currentPage === totalPages"
           class="btn btn-default"
           :class="{ 'disabled': currentPage === totalPages }"
