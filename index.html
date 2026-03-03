@@ -2,44 +2,444 @@
 title: Datasets
 layout: default
 ---
+
 {% include breadcrumbs.html %}
 
 <div class="row">
-  <div class="col-sm-4">
+  <div
+    x-data="{
+        query: '',
+        showCategories: 5,
+        showCountries: 5,
+        showScales: 5,
+        showHazards: 5,
+        showLicenses: 5,
+        showProjects: 5,
+        
+        // Partition function (from lodash)
+        partition(array, predicate) {
+          return array.reduce((acc, item) => {
+            acc[predicate(item) ? 0 : 1].push(item);
+            return acc;
+          }, [[], []]);
+        },
+        
+        // Keyword search function
+        keywordSearch(datasets) {
+          const keys = ['title', 'notes', 'description', 'license'];
+          const lowerCaseQuery = this.query.toLowerCase();
+          return this.partition(datasets, function (dataset) {
+            return keys.reduce(function (previousValue, key) {
+              return (
+                previousValue ||
+                (dataset[key] &&
+                  dataset[key].toLowerCase().indexOf(lowerCaseQuery) !== -1)
+              );
+            }, false);
+          });
+        },
+        
+        // Get filtered datasets (keyword search + filters)
+        get filteredDatasets() {
+          if (!$store.datasets.unfiltered.length) return { matches: [], others: [] };
+          
+          // First apply keyword search if query exists
+          let datasetsToFilter = $store.datasets.unfiltered;
+          if (this.query.trim()) {
+            const [matches, others] = this.keywordSearch(datasetsToFilter);
+            datasetsToFilter = matches;
+          }
+          
+          // Then apply filters
+          const filtered = $store.datasets.applyFilters(datasetsToFilter);
+          
+          // Return in same format as before
+          if (this.query.trim()) {
+            return { matches: filtered, others: [] };
+          }
+          return { matches: filtered, others: [] };
+        },
+        
+        // Get datasets for filter options (faceted search)
+        // Applies keyword search + all filters EXCEPT the specified filter type
+        getDatasetsForFilterOptions(excludeFilterType) {
+          if (!$store.datasets.unfiltered.length) return [];
+          
+          // Start with all datasets
+          let datasets = $store.datasets.unfiltered;
+          
+          // Apply keyword search if query exists
+          if (this.query.trim()) {
+            const [matches] = this.keywordSearch(datasets);
+            datasets = matches;
+          }
+          
+          // Apply all filters except the excluded one
+          return $store.datasets.applyFiltersExcluding(datasets, excludeFilterType);
+        },
+        
+        // Check if any filters are active
+        get hasActiveFilters() {
+          return $store.datasets.activeFilterCount > 0;
+        }
+    }"
+  >
+    <div class="col-sm-4">
+      <!-- Active Filters Summary -->
+      <div x-show="hasActiveFilters" style="margin: 10px 0">
+        <span
+          x-text="$store.datasets.activeFilterCount + ' filter(s) active'"
+        ></span>
+        <button
+          @click="$store.datasets.clearFilters()"
+          class="btn btn-xs btn-default"
+        >
+          Clear all
+        </button>
+      </div>
 
-    <h3>Categories</h3>
-    <div class="list-group" data-component="categories-filter" data-show="5"></div>
+      <!-- Categories Filter -->
+      <div style="margin: 15px 0">
+        <h4>Categories</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('category', getDatasetsForFilterOptions('category')).slice(0, showCategories)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('category', item.slug)"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  flex: 1;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('category', getDatasetsForFilterOptions('category')).length > showCategories"
+            @click.prevent="showCategories = showCategories + 10"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
 
-    <h3>Countries</h3>
-    <div class="list-group" data-component="rdl-country-filter" data-show="5"></div>
+      <!-- Countries Filter -->
+      <div style="margin: 15px 0">
+        <h4>Countries</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).slice(0, showCountries)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('geo_coverage', item.slug)"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  flex: 1;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).length > showCountries"
+            @click.prevent="showCountries = showCountries + 10"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
 
-    <h3>Geographical Scale</h3>
-    <div class="list-group" data-component="rdl-geographical-scale-filter" data-show="5"></div>
+      <!-- Geographical Scale Filter -->
+      <div style="margin: 15px 0">
+        <h4>Geographical Scale</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('geo_scale', getDatasetsForFilterOptions('geo_scale')).slice(0, showScales)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('geo_scale', item.slug)"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  flex: 1;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+        </div>
+      </div>
 
-    <h3>
-      Hazard Type
-      <button class="button-reset" data-toggle="tooltip"
-        title="Enabling a hazard type will filter out all exposure datasets, which have no hazard type.">
-        <i class="fa fa-info-circle" style="font-size: 0.7em;" aria-hidden="true"></i>
-      </button>
-    </h3>
-    <div class="list-group" data-component="rdl-hazard-type-filter" data-show="5"></div>
+      <!-- Hazard Type Filter -->
+      <div style="margin: 15px 0">
+        <h4>
+          Hazard Type
+          <button
+            class="button-reset"
+            data-toggle="tooltip"
+            title="Enabling a hazard type will filter out all exposure datasets, which have no hazard type."
+          >
+            <i
+              class="fa fa-info-circle"
+              style="font-size: 0.7em"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).slice(0, showHazards)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('hazard_type', item.slug)"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  flex: 1;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).length > showHazards"
+            @click.prevent="showHazards = showHazards + 10"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
 
-    <h3>Catalogs</h3>
-    <div class="list-group" data-component="rdl-catalog-filter" data-show="5"></div>
+      <!-- Licenses Filter -->
+      <div style="margin: 15px 0">
+        <h4>Licenses</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).slice(0, showLicenses)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('license_display', item.slug)"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  flex: 1;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).length > showLicenses"
+            @click.prevent="showLicenses = showLicenses + 10"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
 
-    <h3>Licenses</h3>
-    <div class="list-group" data-component="rdl-license-filter" data-show="5"></div>
+      <!-- Projects Filter -->
+      <div style="margin: 15px 0">
+        <h4>Projects</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('project', getDatasetsForFilterOptions('project')).slice(0, showProjects)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('project', item.slug)"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  flex: 1;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('project', getDatasetsForFilterOptions('project')).length > showProjects"
+            @click.prevent="showProjects = showProjects + 10"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <!-- Search Input -->
+      <input
+        x-model="query"
+        type="text"
+        placeholder="Search..."
+        class="form-control"
+      />
+      <!-- Results Section -->
+      <h3
+        x-text="`${filteredDatasets.matches.length} dataset${filteredDatasets.matches.length === 1 ? '' : 's'} matching query`"
+      ></h3>
 
-    <h3>Projects</h3>
-    <div class="list-group" data-component="rdl-project-filter" data-show="5"></div>
-
-  </div>
-  <div class="col-sm-8" data-component="rdl-datasets-list">
-    <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
-    <div data-hook="keyword-results-header"></div>
-    <div data-hook="rdl-datasets-items"></div>
-    <div data-hook="semantic-results-header"></div>
-    <div data-hook="rdl-semantic-datasets-items"></div>
+      <ul>
+        <template
+          x-for="data in filteredDatasets.matches"
+          :key="data.dataset_id"
+        >
+          <rdl-dataset>
+            <h3><a x-bind:href="data.url" x-text="data.title"></a></h3>
+            <span x-text="data.description || ''"></span>
+            <br /><br />
+            <strong>Developed by (version):</strong
+            ><span
+              x-text="` ${data.creator?.name || 'Unknown'}  (${data.version || 'Version not supplied'})`"
+            ></span>
+            <br />
+            <strong>Geo Coverage:</strong
+            ><span
+              x-text="` ${Array.isArray(data.geo_coverage) ? data.geo_coverage.join(', ') : data.geo_coverage || 'Not supplied'}`"
+            ></span>
+            <br />
+            <strong>License:</strong>
+            <span x-show="data.license_display == null">
+              Unknown or not provided</span
+            >
+            <span x-show="data.license != null && data.license != 'Not found'">
+              <a
+                property="dct:license"
+                x-bind:resource="data.license_display"
+                x-bind:href="data.license"
+                x-text="data.license_display"
+              ></a>
+            </span>
+            <span
+              x-show="data.license_display != null && (data.license == null || data.license == 'Not found')"
+              x-text="data.license_display"
+            ></span>
+            <hr />
+          </rdl-dataset>
+        </template>
+      </ul>
+      <h3
+        style="
+          border-top: 2px solid #333;
+          border-bottom: 2px solid #333;
+          padding: 0.3em 0;
+        "
+      >
+        You may also be interested in...
+      </h3>
+    </div>
   </div>
 </div>
