@@ -1,3 +1,5 @@
+import config
+
 def make_exposure(exposure):
     """Convert RDL exposure metadata into JKAN frontmatter"""
     if exposure is None:
@@ -263,6 +265,7 @@ def make_dataset_frontmatter_v02(dataset):
         # try first; required by write_yaml
         "title": dataset["title"],
         # required; throw if missing
+        "catalog": make_catalog(dataset),
         "contact_point": dataset["contact_point"],
         "creator": dataset["creator"],
         "dataset_id": dataset["id"],
@@ -321,6 +324,16 @@ def make_attribution(attribution_or_attributions, role=None):
 
     return payload
 
+
+def make_catalog(dataset):
+    link_hrefs = [link.get("href") for link in dataset.get("links", [])]     
+    access_urls = [resource.get("access_url") for resource in dataset.get("resources", [])]
+
+    for url in link_hrefs + access_urls:
+        for prefix, label in config.dataset_catalogs.items():
+            if url is not None and prefix in url:
+                return label
+    return None
 
 def make_extra_attributions(attributions):
     main_attributions = ["contact_point", "creator", "publisher"]
@@ -543,6 +556,7 @@ def make_dataset_frontmatter_v03(dataset):
         "resources": [make_resource_v03(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
         "spatial": dataset["spatial"],
+        "catalog": make_catalog(dataset),
         # must include one of the following three properties
         "contact_point": make_attribution(dataset["attributions"], "contact_point"),
         "creator": make_attribution(dataset["attributions"], "creator"),
