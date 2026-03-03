@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: baird.langenbrunner@globalenergymonitor.org
   name: Baird Langenbrunner

@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: efehr.hazard@sed.ethz.ch
   name: EFEHR Office
