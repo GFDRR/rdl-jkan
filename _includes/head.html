@@ -292,7 +292,9 @@
               let values = [];
               switch (filterType) {
                 case 'catalog':
-                  values = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
+                  // Handle comma-separated catalog values like 'GFDRR, World Bank'
+                  const catalogVal = dataset.catalog || 'Other';
+                  values = catalogVal.toString().split(',').map(c => c.trim()).filter(c => c);
                   break;
                 case 'category':
                   values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
@@ -327,7 +329,9 @@
               let values = [];
               switch (filterType) {
                 case 'catalog':
-                  values = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
+                  // Handle comma-separated catalog values like 'GFDRR, World Bank'
+                  const catalogVal = dataset.catalog || 'Other';
+                  values = catalogVal.toString().split(',').map(c => c.trim()).filter(c => c);
                   break;
                 case 'category':
                   values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
@@ -366,10 +370,16 @@
             }));
 
             // Sort: selected first, then by count (desc), then alphabetically
+            // For catalog, "Other" always goes last
             return options.sort((a, b) => {
               // Selected items come first
               if (a.selected && !b.selected) return -1;
               if (!a.selected && b.selected) return 1;
+              // For catalog filter, "Other" always goes last
+              if (filterType === 'catalog') {
+                if (a.title === 'Other') return 1;
+                if (b.title === 'Other') return -1;
+              }
               // Then sort by count (descending)
               if (b.count !== a.count) return b.count - a.count;
               // Finally sort alphabetically

@@ -15,6 +15,7 @@ layout: default
         showHazards: 5,
         showLicenses: 5,
         showProjects: 5,
+        showCatalogs: 5,
         
         // Semantic search state
         model: null,
@@ -472,6 +473,47 @@ layout: default
           </a>
         </div>
       </div>
+      <!-- Catalog Filter -->
+      <div style="margin: 15px 0">
+        <h4>Catalog</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).slice(0, showCatalogs)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('catalog', item.slug)"
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).filter(i => i.count > 0).length > showCatalogs"
+            @click.prevent="showCatalogs = showCatalogs + 10"
+            style="text-align: center;"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
+      
       <!-- Licenses Filter -->
       <div style="margin: 15px 0">
         <h4>Licenses</h4>
