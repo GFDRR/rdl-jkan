@@ -1,4 +1,5 @@
 ---
+catalog: Copernicus Climate Data Store
 contact_point:
   email: Pierre.Defourny@uclouvain.be
   id: attribution_contact

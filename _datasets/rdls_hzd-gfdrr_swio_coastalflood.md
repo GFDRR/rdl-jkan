@@ -1,4 +1,5 @@
 ---
+catalog: World Bank Data Catalog
 contact_point:
   email: pchrzanowski@worldbank.org
   name: Pierre Chrzanowski

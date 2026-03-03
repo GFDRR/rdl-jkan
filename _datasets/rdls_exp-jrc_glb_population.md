@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: jrc-ghsl-data@ec.europa.eu
   name: JRC GHSL

@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: estat-gisco@ec.europa.eu
   name: European Commission, Eurostat/GISCO

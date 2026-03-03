@@ -1,4 +1,5 @@
 ---
+catalog: World Bank Data Catalog
 contact_point:
   email: paola.ceresa@redrisk.com
   name: Paola Ceresa

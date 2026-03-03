@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: bernhard.lehner@mcgill.ca
   name: Bernhard Lehner

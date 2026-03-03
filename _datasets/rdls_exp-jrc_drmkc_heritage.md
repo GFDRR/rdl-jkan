@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: wh-gis@unesco.org
   name: United Nations Educational, Scientific and Cultural Organization (UNESCO)

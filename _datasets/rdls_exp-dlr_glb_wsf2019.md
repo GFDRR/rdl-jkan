@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: wsf@dlr.de
   name: WSF team

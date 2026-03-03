@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: roberto.basili@ingv.it
   name: Roberto Basili
