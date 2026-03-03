@@ -34,12 +34,23 @@
     defer
     src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.15.8/dist/cdn.min.js"
   ></script>
+  <!-- jQuery (required for Bootstrap) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"
+  ></script>
   <script
     defer
     src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.8/dist/cdn.min.js"
   ></script>
-  <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2/dist/tra
-     nsformers.min.js"></script>
+  <!-- TODO: uncomment to bring back semantic search -->
+  <!-- <script type="module">
+    import { pipeline } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0-next.5";
+    window.pipeline = pipeline;
+  </script> -->
   <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
@@ -80,12 +91,12 @@
   <script>
       var settings = {
         BASE_URL: {{ site.baseurl | jsonify }},
-      PAGE_URL: { { page.url | jsonify } },
-      REPO_BRANCH: {% if site.github.is_user_page %} "master"{% else %} "gh-pages"{% endif %},
-      REPO_OWNER: { { site.github.owner_name | jsonify } },
-      REPO_NAME: { { site.github.project_title | jsonify } },
-      GITHUB_CLIENT_ID: { { site.github_client_id | jsonify } },
-      GATEKEEPER_HOST: { { site.gatekeeper_host | jsonify } }
+        PAGE_URL: {{ page.url | jsonify }},
+        REPO_BRANCH: {% if site.github.is_user_page %} "master"{% else %} "gh-pages"{% endif %},
+        REPO_OWNER: {{ site.github.owner_name | jsonify }},
+        REPO_NAME: {{ site.github.project_title | jsonify }},
+        GITHUB_CLIENT_ID: {{ site.github.client_id | jsonify }},
+        GATEKEEPER_HOST: {{ site.gatekeeper_host | jsonify }}
     }
 
       // Slugify function (matches Jekyll's slugify)
@@ -100,6 +111,7 @@
         Alpine.store('datasets', {
           unfiltered: [],
           filters: {
+            catalog: [],
             category: [],
             geo_coverage: [],
             geo_scale: [],
@@ -139,12 +151,54 @@
 
           // Clear all filters
           clearFilters() {
+            this.filters.catalog = [];
             this.filters.category = [];
             this.filters.geo_coverage = [];
             this.filters.geo_scale = [];
             this.filters.hazard_type = [];
             this.filters.license_display = [];
             this.filters.project = [];
+            this.updateUrlParams();
+          },
+
+          // Load filters and search from URL params
+          loadFromUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Load search query
+            const searchQuery = urlParams.get('q') || '';
+
+            // Load filter values for each filter type
+            const filterTypes = ['catalog', 'category', 'geo_coverage', 'geo_scale', 'hazard_type', 'license_display', 'project'];
+            filterTypes.forEach(filterType => {
+              const values = urlParams.getAll(filterType + '[]');
+              if (values.length > 0) {
+                this.filters[filterType] = values;
+              }
+            });
+
+            return searchQuery;
+          },
+
+          // Update URL params based on current filters and search
+          updateUrlParams(query = '') {
+            const urlParams = new URLSearchParams();
+
+            // Add search query if present
+            if (query && query.trim()) {
+              urlParams.set('q', query.trim());
+            }
+
+            // Add filter values
+            Object.entries(this.filters).forEach(([filterType, values]) => {
+              values.forEach(value => {
+                urlParams.append(filterType + '[]', value);
+              });
+            });
+
+            // Update URL without reloading page
+            const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+            window.history.replaceState({}, '', newUrl);
           },
 
           // Get active filter count
@@ -161,6 +215,15 @@
           // This is used for faceted search - counts for a filter should reflect other applied filters
           applyFiltersExcluding(datasets, excludeFilterType) {
             return datasets.filter(dataset => {
+              // Catalog filter
+              if (excludeFilterType !== 'catalog' && this.filters.catalog.length > 0) {
+                const datasetCatalogs = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
+                const hasMatchingCatalog = datasetCatalogs.some(cat =>
+                  this.filters.catalog.includes(slugify(cat))
+                );
+                if (!hasMatchingCatalog) return false;
+              }
+
               // Category filter
               if (excludeFilterType !== 'category' && this.filters.category.length > 0) {
                 const datasetCategories = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
@@ -223,12 +286,14 @@
 
           // Get filter options with counts (for displaying filter UI)
           getFilterOptions(filterType, datasets) {
-            const counts = {};
-
-            datasets.forEach(dataset => {
+            // First, collect ALL possible values from unfiltered datasets
+            const allValues = new Set();
+            this.unfiltered.forEach(dataset => {
               let values = [];
-
               switch (filterType) {
+                case 'catalog':
+                  values = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
+                  break;
                 case 'category':
                   values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
                   break;
@@ -249,7 +314,41 @@
                   values = dataset.project ? [dataset.project] : [];
                   break;
               }
+              values.forEach(val => {
+                if (val && val !== 'None') {
+                  allValues.add(val.trim());
+                }
+              });
+            });
 
+            // Count occurrences in the filtered datasets
+            const counts = {};
+            datasets.forEach(dataset => {
+              let values = [];
+              switch (filterType) {
+                case 'catalog':
+                  values = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
+                  break;
+                case 'category':
+                  values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
+                  break;
+                case 'geo_coverage':
+                  values = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
+                  break;
+                case 'geo_scale':
+                  values = dataset.geo_scale ? dataset.geo_scale.split(',') : [];
+                  break;
+                case 'hazard_type':
+                  if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return;
+                  values = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
+                  break;
+                case 'license_display':
+                  values = dataset.license_display ? dataset.license_display.split(',') : [];
+                  break;
+                case 'project':
+                  values = dataset.project ? [dataset.project] : [];
+                  break;
+              }
               values.forEach(val => {
                 if (val && val !== 'None') {
                   const trimmed = val.trim();
@@ -258,14 +357,24 @@
               });
             });
 
-            return Object.entries(counts)
-              .map(([title, count]) => ({
-                title,
-                slug: slugify(title),
-                count,
-                selected: this.isFilterActive(filterType, slugify(title))
-              }))
-              .sort((a, b) => b.count - a.count || a.title.localeCompare(b.title));
+            // Build options array with all values (including 0 counts)
+            const options = Array.from(allValues).map(title => ({
+              title,
+              slug: slugify(title),
+              count: counts[title] || 0,
+              selected: this.isFilterActive(filterType, slugify(title))
+            }));
+
+            // Sort: selected first, then by count (desc), then alphabetically
+            return options.sort((a, b) => {
+              // Selected items come first
+              if (a.selected && !b.selected) return -1;
+              if (!a.selected && b.selected) return 1;
+              // Then sort by count (descending)
+              if (b.count !== a.count) return b.count - a.count;
+              // Finally sort alphabetically
+              return a.title.localeCompare(b.title);
+            });
           }
         })
         await Alpine.store('datasets').fetchUnfiltered()
