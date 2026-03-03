@@ -615,9 +615,12 @@ layout: default
         class="form-control"
       />
       <!-- Results Section -->
-      <h3
+      <h3 x-show="filteredDatasets.matches.length > 0"
         x-text="`Showing ${paginationStart}-${paginationEnd} of ${filteredDatasets.matches.length} dataset${filteredDatasets.matches.length === 1 ? '' : 's'}`"
       ></h3>
+      <h3 x-show="filteredDatasets.matches.length === 0">
+        No datasets found with these filters and/or query
+      </h3>
 
       <ul>
         <template x-for="data in paginatedDatasets" :key="data.dataset_id">
