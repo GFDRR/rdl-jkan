@@ -12,12 +12,14 @@ creator:
   url: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff
 dataset_id: rdls_hzd-hdx_esri_earthquakes_multihazard
 description: 'This map displays continuously updated data from the USGS Earthquakes
-  and Shakemaps. This map is provided by the Esri Disaster Response Program. [Source:
-  This metadata record was automatically extracted from the Humanitarian Data Exchange
-  (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff]'
+  and Shakemaps. This map is provided by the Esri Disaster Response Program. In addition
+  to displaying earthquakes by magnitude, this service also provide earthquake impact
+  details. Impact is measured by population as well as models for economic and fatality
+  loss. [Source: This metadata record was automatically extracted from the Humanitarian
+  Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff]'
 details: 'Methodology: USGS Prompt Assessment of Global Earthquakes for Response (PAGER)
-  program. | Temporal coverage: [2020-04-09T00:00:00 TO 2020-04-09T23:59:59] | Update
-  frequency: Every day | Last modified: 2026-02-03'
+  program. | Temporal coverage: 90 days ago (major events) or 7 days ago (other events)
+  to today | Update frequency: Every day'
 exposure: []
 extra_attributions: []
 hazard:
