@@ -11,9 +11,9 @@ creator:
   name: WFP ADAM
   url: https://data.humdata.org/dataset/c8d4ab35-e0b6-405b-9cc4-fe3e709a7132
 dataset_id: rdls_exp-hdx_wfp_advanced_disaste_phl_philippines_cyclone_1001032_windstorm
-description: 'ADAM ID: 1001032_4 Cyclone (tropical depression) during the period Nov
-  12 2023-Nov 13 2023 in . It impacted 0 people. [Source: This metadata record was
-  automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org]
+description: 'Cyclone (tropical depression) during the period Nov 12 2023-Nov 13 2023
+  in the Philippines. It impacted 0 people. [Source: This metadata record was automatically
+  extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org]
   [Original dataset: https://data.humdata.org/dataset/c8d4ab35-e0b6-405b-9cc4-fe3e709a7132]'
 details: 'Methodology: ADAM is an operational system for collecting, analysing and
   mapping geospatial and socio-economic information following sudden onset humanitarian
