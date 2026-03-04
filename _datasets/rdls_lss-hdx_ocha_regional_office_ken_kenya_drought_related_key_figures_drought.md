@@ -14,9 +14,7 @@ dataset_id: rdls_lss-hdx_ocha_regional_office_ken_kenya_drought_related_key_figu
 description: 'Drought Related Key Figures for Kenya. [Source: This metadata record
   was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org]
   [Original dataset: https://data.humdata.org/dataset/c7e5d29e-f5e8-4d8b-a437-f784fcfd6103]'
-details: 'Methodology: https://reliefweb.int/report/kenya/kenya-drought-flash-appeal-october-2021-october-2022-revised-may-2022
-  | Temporal coverage: [2023-05-31T00:00:00 TO 2023-05-31T23:59:59] | Update frequency:
-  Never | Last modified: 2025-08-26'
+details: 'Methodology: https://reliefweb.int/report/kenya/kenya-drought-flash-appeal-october-2021-october-2022-revised-may-2022'
 exposure:
 - category: population
   dimension: population
