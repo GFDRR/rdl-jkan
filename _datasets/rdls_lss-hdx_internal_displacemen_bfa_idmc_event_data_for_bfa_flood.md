@@ -71,9 +71,8 @@ details: 'Caveats: Please note that most of the figures are estimates. The defin
   Unlike refugees, internally displaced people remain under the protection of their
   own government, even if their reason for fleeing was similar to that of refugees.
   Refugees are people who have crossed an international border to find sanctuary and
-  have been granted refugee or refugee-like status or temporary protection. | Temporal
-  coverage: [2025-08-06T00:00:00 TO 2026-02-02T23:59:59] | Update frequency: Every
-  day | Last modified: 2026-02-02'
+  have been granted refugee or refugee-like status or temporary protection. | Update
+  frequency: Every day'
 exposure:
 - category: population
   dimension: population
