@@ -1,0 +1,66 @@
+---
+name: Generate vector embeddings on push
+
+on:
+  push:
+    branches:
+      - rdl-0.**
+
+permissions:
+  contents: write
+
+jobs:
+  generate-vectors:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./python
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2  # Need history to check for changes
+      
+      - name: Check if datasets changed
+        id: check_changes
+        run: |
+          # Check if any files in _datasets/ changed in the last commit
+          if git diff --name-only HEAD~1 HEAD | grep -q "^_datasets/"; then
+            echo "datasets_changed=true" >> $GITHUB_OUTPUT
+            echo "Dataset changes detected - will regenerate vectors"
+          else
+            echo "datasets_changed=false" >> $GITHUB_OUTPUT
+            echo "No dataset changes - skipping vector generation"
+          fi
+      
+      - name: Set up Python
+        if: steps.check_changes.outputs.datasets_changed == 'true'
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        if: steps.check_changes.outputs.datasets_changed == 'true'
+        run: |
+          python3 -m venv .venv
+          source .venv/bin/activate
+          echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
+          python3 -m pip install -r requirements.txt
+      
+      - name: Generate vector embeddings
+        if: steps.check_changes.outputs.datasets_changed == 'true'
+        run: python3 main.py --vectors
+      
+      - name: Commit vector embeddings
+        if: steps.check_changes.outputs.datasets_changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ./vectors.json
+          if git diff-index --quiet HEAD; then
+            echo "No vector changes to commit"
+          else
+            git commit -m "Generate vector embeddings"
+            git push
+          fi
+          echo "Complete"
