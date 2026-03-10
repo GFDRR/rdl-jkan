@@ -20,8 +20,8 @@ description: 'This map illustrates satellite-detected surface water extent in th
   in the analysed zone: ~8,400,000 are located in Dhaka Division and ~5,750,000 in
   Rajshahi Division. This is a preliminary analysis and has not yet been validated
   in the field. Please send ground feedback to UNITAR-UNOSAT. [Source: This metadata
-  record was automatically extracted from the Humanitarian Data Exchange (HDX) at
-  https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f]'
+  record was automatically extracted from the Humanitarian Data Exchange (HDX); Original
+  dataset: https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f]'
 details: 'Caveats: This is a preliminary assessment and has not yet been validated
   in the field. It is important to consider the characteristics of the source imagery
   used in the analyses when interpreting results. For damage assessments it should
@@ -39,8 +39,7 @@ details: 'Caveats: This is a preliminary assessment and has not yet been validat
   variety of automated remote sensing techniques are used to extract the relevant
   information which is then reviewed and revised as necessary by the analyst. In all
   cases, resulting data is then loaded into a standardized UNOSAT geodatabase and
-  exported asshapefiles for dissemination. | Temporal coverage: [2017-08-15T00:00:00
-  TO 2017-08-15T23:59:59] | Update frequency: Never | Last modified: 2025-11-21'
+  exported asshapefiles for dissemination.'
 exposure:
 - category: population
   dimension: population
@@ -74,15 +73,6 @@ publisher:
   url: https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f
 purpose: null
 resources:
-- coordinate_system: null
-  description: Dataset-level metadata exported from HDX.
-  download_url: https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f/download_metadata?format=json
-  format: JSON (json)
-  id: hdx_dataset_metadata_json
-  media_type: null
-  spatial_resolution: null
-  temporal: null
-  title: HDX dataset metadata (JSON)
 - coordinate_system: null
   description: Zipped geodatabase
   download_url: https://unosat-maps.web.cern.ch/unosat-maps/BD/FL20170815BGD/FL20170815BGD_gdb.zip
