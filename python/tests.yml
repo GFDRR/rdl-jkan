@@ -1,0 +1,18 @@
+# Search Test Configuration
+# This file defines test cases for semantic search functionality.
+# Each test case specifies a query and expected results.
+#
+# Fields:
+#   - query: The search query string
+#   - description: Optional description of what this test validates
+#   - includes: List of dataset IDs that MUST appear in search results
+#   - excludes: List of dataset IDs that MUST NOT appear in search results
+#
+# Note: Tests run against the top 20 results by default.
+
+search_tests:
+  - query: "vulnerability flood"
+    description: "Test adapted from https://github.com/GFDRR/rdl-jkan/issues/31#issuecomment-3889901224"
+    includes:
+      - rdls_vln-jrc_glb_flood
+      - rdls_lss-gmb_floodcoastres
