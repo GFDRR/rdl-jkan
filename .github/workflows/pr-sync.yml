@@ -46,7 +46,7 @@ jobs:
       - name: Commit markdown files
         run: |
           git add ../_datasets
-          if git diff-index --quiet HEAD; then
+          if git diff --cached --quiet -- ../_datasets; then
             echo "No changes to commit"
           else
             git commit -m "Generate markdown from new JSON metadata"
