@@ -72,6 +72,9 @@ def validate_json_with_schema(dataset_from_json, schema_url, validation_errors):
     return 0
 
 def write_dataset_to_markdown(dataset_from_json, schema_url, validation_errors):
+    dataset_id = dataset_from_json.get('id', 'unknown')
+    dataset_title = dataset_from_json.get('title', 'a dataset with a missing title')
+    
     try:
         # Generate frontmatter
         dataset_frontmatter = None
@@ -98,11 +101,18 @@ def write_dataset_to_markdown(dataset_from_json, schema_url, validation_errors):
         utils.write_frontmatter(dataset_frontmatter, config.datasets_dir)
         return 0
     except Exception as e:
+        error_message = str(e)
         logging.error(
-            f"While writing {dataset_from_json.get('title', 'a dataset with a missing title')} "
-            f"(dataset_id: {dataset_from_json.get('id', 'missing')})",
+            f"While writing {dataset_title} "
+            f"(dataset_id: {dataset_id})",
             exc_info=e,
         )
+        # Add the error to validation_errors so it shows up in validation_results.json
+        validation_errors.append({
+            'dataset_id': dataset_id,
+            'message': error_message,
+            'schema_path': 'mapping/validation'
+        })
         return 1
 
 
@@ -113,25 +123,22 @@ def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for, 
     modified_datasets = []
     deleted_datasets = []
     
-    # Handle deletions
-    for path in json_to_delete_md_for:
-        deleted_ids = utils.get_deleted_json_ids(path)
-        deleted_datasets.extend(deleted_ids)
+    # First, collect all dataset IDs from json_to_generate_md_from to determine additions vs modifications
+    # This must happen BEFORE we delete any markdown files
+    datasets_to_process = []  # List of (dataset, schema_url, is_modification) tuples
     
-    delete_stale_markdown(json_to_delete_md_for)
-    
-    # Handle additions/modifications
     for json_filepath in json_to_generate_md_from:
         encoding = utils.detect_encoding(json_filepath)
         with open(json_filepath, encoding=encoding) as input_file:
             datasets_json = json.load(input_file)
             for dataset in datasets_json.get("datasets", []):
                 dataset_id = dataset.get("id", "unknown")
-                # Determine if this is an addition or modification
+                # Determine if this is an addition or modification (check BEFORE deleting)
                 md_filename = f"{dataset_id.replace('/', '_')}.md"
                 md_filepath = Path(config.datasets_dir) / md_filename
                 
-                if md_filepath.exists():
+                is_modification = md_filepath.exists()
+                if is_modification:
                     modified_datasets.append(dataset_id)
                 else:
                     added_datasets.append(dataset_id)
@@ -145,9 +152,24 @@ def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for, 
                     ),
                     config.schema_url_v2,
                 )
-                result = write_dataset_to_markdown(dataset, schema_url, validation_errors)
-                if result != 0:
-                    exit_code = result
+                datasets_to_process.append((dataset, schema_url, is_modification))
+    
+    # Handle deletions - only for files that are truly being deleted (not in json_to_generate_md_from)
+    # A file is only truly deleted if it's in json_to_delete_md_for but NOT in json_to_generate_md_from
+    json_to_generate_paths = set(str(p) for p in json_to_generate_md_from)
+    truly_deleted_json_files = [p for p in json_to_delete_md_for if str(p) not in json_to_generate_paths]
+    
+    for path in truly_deleted_json_files:
+        deleted_ids = utils.get_deleted_json_ids(path)
+        deleted_datasets.extend(deleted_ids)
+    
+    delete_stale_markdown(truly_deleted_json_files)
+    
+    # Handle additions/modifications - generate markdown
+    for dataset, schema_url, is_modification in datasets_to_process:
+        result = write_dataset_to_markdown(dataset, schema_url, validation_errors)
+        if result != 0:
+            exit_code = result
     
     return exit_code, added_datasets, modified_datasets, deleted_datasets
 
@@ -224,9 +246,25 @@ def setup_paths():
     if not Path(config.json_dir).is_dir():
         os.makedirs(config.json_dir)
 
+def vectors_are_stale(vectors_path: str, datasets_dir: str) -> bool:
+    """Return True if the vectors file is missing or older than any dataset markdown."""
+    if not os.path.isfile(vectors_path):
+        return True
+    vectors_mtime = os.path.getmtime(vectors_path)
+    for root, _, files in os.walk(datasets_dir):
+        for fname in files:
+            if not fname.endswith(".md"):
+                continue
+            if os.path.getmtime(os.path.join(root, fname)) > vectors_mtime:
+                return True
+    return False
+
+
 def setup_plan():
     json_to_generate_md_from = json_to_delete_md_for = []
     model = None
+    should_generate_vectors = False
+
     if args.markdown:
         if args.ci:
             json_to_generate_md_from, json_to_delete_md_for = utils.get_recently_changed_files()
@@ -234,17 +272,21 @@ def setup_plan():
             json_files = list(Path(".").glob(f"{config.json_dir}/*.json"))
             json_to_generate_md_from = json_files
             json_to_delete_md_for = json_files
-        
-    if args.vectors:
-        model = SentenceTransformer("all-MiniLM-L6-v2")
 
-    return json_to_generate_md_from, json_to_delete_md_for, model
+    if args.vectors:
+        markdown_changes = bool(json_to_generate_md_from or json_to_delete_md_for)
+        stale = vectors_are_stale(config.vectors_path, config.datasets_dir)
+        should_generate_vectors = markdown_changes or stale
+        if should_generate_vectors:
+            model = SentenceTransformer("all-MiniLM-L6-v2")
+
+    return json_to_generate_md_from, json_to_delete_md_for, model, should_generate_vectors
 
 if __name__ == "__main__":
     exit_code = 0
     args = setup_args()
     setup_paths()
-    json_to_generate_md_from, json_to_delete_md_for, model = setup_plan()
+    json_to_generate_md_from, json_to_delete_md_for, model, should_generate_vectors = setup_plan()
     
     # Track operation results for PR comment
     markdown_files = {"added": [], "modified": [], "deleted": []}
@@ -279,22 +321,24 @@ if __name__ == "__main__":
         save_validation_results(validation_results)
     
     # Process vector generation
-    if args.vectors:
+    if should_generate_vectors:
         datasets_metadata = get_datasets_metadata()
         vector_embeddings = embed_datasets_metadata(datasets_metadata, model)
         
         result = utils.save_to_json(vector_embeddings, config.vectors_path)
         exit_code = exit_code | result
-        if exit_code == 0:
+        # Only check the result of vector save operation, not cumulative exit_code
+        if result == 0:
             vectors_generated = True
             vector_count = len(vector_embeddings)
             print(f"Vectors saved to {config.vectors_path}.")
     
     # Run tests
     if args.test == "search":
-        # TODO: should only run in ci if vectors were updated
-        test_exit_code = run_search_tests(model)
-        exit_code = exit_code | test_exit_code
+        if args.ci and not vectors_generated:
+            print("Skipping search tests in CI because vectors were not updated.")
+        else:
+            exit_code = exit_code | run_search_tests(model)
     
     # Generate PR comment if in CI mode
     if args.ci:
