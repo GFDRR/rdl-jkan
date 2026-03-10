@@ -14,7 +14,9 @@ import logging
 import config
 import mappers
 import utils
-from validator import validate_with_custom_logic
+import pr_comment
+from validator import validate_with_custom_logic, save_validation_results
+from test import run_search_tests
 
 
 def delete_stale_markdown(json_to_delete_md_for):
@@ -44,7 +46,8 @@ def fetch_schema(schema_url, schema_path):
         )
 
 
-def validate_json_with_schema(dataset_from_json, schema_url):
+def validate_json_with_schema(dataset_from_json, schema_url, validation_errors):
+    """Validate dataset and collect errors for PR comment."""
     if schema_url == config.schema_url_v3:
         schema_path = f"{config.python_path}/rdl-03.json"
         is_cached = os.path.isfile(schema_path)
@@ -62,15 +65,17 @@ def validate_json_with_schema(dataset_from_json, schema_url):
     if schema_url == config.schema_url_v3:
         with open(schema_path, "r") as file:
             schema = json.load(file)
-            exit_code = validate_with_custom_logic(dataset_from_json, schema)
+            exit_code, error_details = validate_with_custom_logic(dataset_from_json, schema)
+            if error_details:
+                validation_errors.append(error_details)
             return exit_code
     return 0
 
-def write_dataset_to_markdown(dataset_from_json, schema_url):
+def write_dataset_to_markdown(dataset_from_json, schema_url, validation_errors):
     try:
         # Generate frontmatter
         dataset_frontmatter = None
-        exit_code = validate_json_with_schema(dataset_from_json, schema_url)
+        exit_code = validate_json_with_schema(dataset_from_json, schema_url, validation_errors)
         if exit_code != 0:
             return exit_code
         match schema_url:
@@ -101,14 +106,36 @@ def write_dataset_to_markdown(dataset_from_json, schema_url):
         return 1
 
 
-def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for):
+def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for, validation_errors):
+    """Write datasets to markdown and track added/modified/deleted dataset IDs."""
     exit_code = 0
+    added_datasets = []
+    modified_datasets = []
+    deleted_datasets = []
+    
+    # Handle deletions
+    for path in json_to_delete_md_for:
+        deleted_ids = utils.get_deleted_json_ids(path)
+        deleted_datasets.extend(deleted_ids)
+    
     delete_stale_markdown(json_to_delete_md_for)
+    
+    # Handle additions/modifications
     for json_filepath in json_to_generate_md_from:
         encoding = utils.detect_encoding(json_filepath)
         with open(json_filepath, encoding=encoding) as input_file:
             datasets_json = json.load(input_file)
-            for dataset in datasets_json["datasets"]:
+            for dataset in datasets_json.get("datasets", []):
+                dataset_id = dataset.get("id", "unknown")
+                # Determine if this is an addition or modification
+                md_filename = f"{dataset_id.replace('/', '_')}.md"
+                md_filepath = Path(config.datasets_dir) / md_filename
+                
+                if md_filepath.exists():
+                    modified_datasets.append(dataset_id)
+                else:
+                    added_datasets.append(dataset_id)
+                
                 links = dataset.get("links", [])
                 schema_url = next(
                     (
@@ -118,10 +145,11 @@ def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for):
                     ),
                     config.schema_url_v2,
                 )
-                result = write_dataset_to_markdown(dataset, schema_url)
+                result = write_dataset_to_markdown(dataset, schema_url, validation_errors)
                 if result != 0:
                     exit_code = result
-    return exit_code
+    
+    return exit_code, added_datasets, modified_datasets, deleted_datasets
 
 
 def get_datasets_metadata():
@@ -141,7 +169,7 @@ def get_datasets_metadata():
     return metadata_entries
 
 
-def embed_datasets_metadata(datasets_metadata):
+def embed_datasets_metadata(datasets_metadata, model):
     results = []
     for dataset_metadata in datasets_metadata:
         tensor = model.encode(
@@ -176,9 +204,14 @@ def setup_args():
         help="Tells the command to generate vector embeddings of metadata",
         action="store_true",
     )
+    parser.add_argument(
+        "--test",
+        help="Run tests after other operations. Use 'search' to run semantic search tests",
+        choices=["search"],
+    )
     args = parser.parse_args()
-    if args.vectors is False and args.markdown is False:
-        print("No action specified. Use --markdown and/or --vectors.")
+    if args.vectors is False and args.markdown is False and args.test is None:
+        print("No action specified. Use --markdown, --vectors, and/or --test.")
         sys.exit(1)
 
     return args
@@ -193,6 +226,7 @@ def setup_paths():
 
 def setup_plan():
     json_to_generate_md_from = json_to_delete_md_for = []
+    model = None
     if args.markdown:
         if args.ci:
             json_to_generate_md_from, json_to_delete_md_for = utils.get_recently_changed_files()
@@ -200,29 +234,74 @@ def setup_plan():
             json_files = list(Path(".").glob(f"{config.json_dir}/*.json"))
             json_to_generate_md_from = json_files
             json_to_delete_md_for = json_files
-    should_generate_vectors = args.vectors
+        
+    if args.vectors:
+        model = SentenceTransformer("all-MiniLM-L6-v2")
 
-    return json_to_generate_md_from, json_to_delete_md_for, should_generate_vectors
+    return json_to_generate_md_from, json_to_delete_md_for, model
 
 if __name__ == "__main__":
     exit_code = 0
     args = setup_args()
     setup_paths()
-    json_to_generate_md_from, json_to_delete_md_for, should_generate_vectors = setup_plan()
+    json_to_generate_md_from, json_to_delete_md_for, model = setup_plan()
+    
+    # Track operation results for PR comment
+    markdown_files = {"added": [], "modified": [], "deleted": []}
+    vectors_generated = False
+    vector_count = 0
+    validation_errors = []
 
+    # Process markdown generation
     if json_to_generate_md_from or json_to_delete_md_for:
-        exit_code = write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for)
+        result, added, modified, deleted = write_datasets_to_markdown(
+            json_to_generate_md_from, json_to_delete_md_for, validation_errors
+        )
+        exit_code = exit_code | result
+        markdown_files["added"] = added
+        markdown_files["modified"] = modified
+        markdown_files["deleted"] = deleted
         if exit_code == 0:
             print(f"Markdown generated in {config.datasets_dir}.")
-    if should_generate_vectors:
-        model = SentenceTransformer("all-MiniLM-L6-v2")
+    
+    # Save validation results
+    if validation_errors or json_to_generate_md_from or json_to_delete_md_for:
+        # Count validated datasets
+        validated_count = len(markdown_files["added"]) + len(markdown_files["modified"])
+        validation_results = {
+            "summary": {
+                "passed": validated_count - len(validation_errors),
+                "failed": len(validation_errors),
+                "total": validated_count
+            },
+            "errors": validation_errors
+        }
+        save_validation_results(validation_results)
+    
+    # Process vector generation
+    if args.vectors:
         datasets_metadata = get_datasets_metadata()
-        vector_embeddings = embed_datasets_metadata(datasets_metadata)
-
-        exit_code = exit_code | utils.save_to_json(
-            vector_embeddings, config.vectors_path
-        )
+        vector_embeddings = embed_datasets_metadata(datasets_metadata, model)
+        
+        result = utils.save_to_json(vector_embeddings, config.vectors_path)
+        exit_code = exit_code | result
         if exit_code == 0:
+            vectors_generated = True
+            vector_count = len(vector_embeddings)
             print(f"Vectors saved to {config.vectors_path}.")
+    
+    # Run tests
+    if args.test == "search":
+        # TODO: should only run in ci if vectors were updated
+        test_exit_code = run_search_tests(model)
+        exit_code = exit_code | test_exit_code
+    
+    # Generate PR comment if in CI mode
+    if args.ci:
+        pr_comment.generate(
+            markdown_files=markdown_files,
+            vectors_generated=vectors_generated,
+            vector_count=vector_count
+        )
 
     sys.exit(exit_code)
