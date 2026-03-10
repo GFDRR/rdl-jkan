@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: nadia.bloemendaal@vu.nl
   id: attribution_contact_point_migrated_1767801294813

@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: logan.byers@wri.org
   id: attribution_contact

@@ -2,44 +2,773 @@
 title: Datasets
 layout: default
 ---
+
 {% include breadcrumbs.html %}
 
 <div class="row">
-  <div class="col-sm-4">
+  <div
+    x-data="{
+        query: '',
+        showCategories: 5,
+        showCountries: 5,
+        showScales: 5,
+        showHazards: 5,
+        showLicenses: 5,
+        showProjects: 5,
+        showCatalogs: 5,
+        
+        // Semantic search state
+        model: null,
+        vectors: {},
+        semanticResults: [],
+        isModelLoading: false,
+        isVectorsLoading: false,
+        semanticQuery: '',
+        
+        // Pagination state
+        currentPage: 1,
+        itemsPerPage: 10,
+        
+        // Initialize on page load
+        init() {
+          // Load filters and search from URL params
+          this.query = $store.datasets.loadFromUrlParams();
+          
+          this.loadModel();
+          this.loadVectors();
+          
+          // Watch for query changes to trigger semantic search and update URL
+          this.$watch('query', (value) => {
+            $store.datasets.updateUrlParams(value);
+            if (value.trim() && this.model && Object.keys(this.vectors).length > 0) {
+              this.performSemanticSearch(value);
+            } else {
+              this.semanticResults = [];
+            }
+          });
+          
+          // Watch for filter changes to update URL
+          this.$watch('$store.datasets.filters', () => {
+            $store.datasets.updateUrlParams(this.query);
+          }, { deep: true });
+          
+          // Reset pagination when query or filters change
+          this.$watch('query', () => {
+            this.currentPage = 1;
+          });
+          
+          this.$watch('$store.datasets.filters', () => {
+            this.currentPage = 1;
+          }, { deep: true });
+          
+          // Watch for model and vectors to be ready, then trigger semantic search if query exists
+          this.$watch('isModelLoading', (value) => {
+            if (!value && !this.isVectorsLoading && this.query.trim() && this.model && Object.keys(this.vectors).length > 0) {
+              this.performSemanticSearch(this.query);
+            }
+          });
+          
+          this.$watch('isVectorsLoading', (value) => {
+            if (!value && !this.isModelLoading && this.query.trim() && this.model && Object.keys(this.vectors).length > 0) {
+              this.performSemanticSearch(this.query);
+            }
+          });
+        },
+        
+        // Load the transformer model
+        async loadModel() {
+          this.isModelLoading = true;
+          try {
+            // Wait for pipeline to be available from the module script
+            let retries = 0;
+            while (typeof window.pipeline === 'undefined' && retries < 50) {
+              await new Promise(resolve => setTimeout(resolve, 100));
+              retries++;
+            }
+            if (typeof window.pipeline === 'undefined') {
+              throw new Error('Pipeline not available after waiting');
+            }
+            this.model = await window.pipeline(
+              'feature-extraction',
+              'Xenova/all-MiniLM-L6-v2'
+            );
+          } catch (error) {
+            console.error('Failed to load model:', error);
+          } finally {
+            this.isModelLoading = false;
+          }
+        },
+        
+        // Load pre-generated vectors
+        async loadVectors() {
+          this.isVectorsLoading = true;
+          try {
+            const response = await fetch(`${settings.BASE_URL ?? ''}/python/vectors.json`);
+            const vectorsArray = await response.json();
+            this.vectors = vectorsArray.reduce((acc, item) => {
+              if (item.metadata && item.metadata.dataset_id) {
+                acc[item.metadata.dataset_id] = item.vector;
+              }
+              return acc;
+            }, {});
+          } catch (error) {
+            console.error('Failed to load vectors:', error);
+          } finally {
+            this.isVectorsLoading = false;
+          }
+        },
+        
+        // Vectorize a query using the model
+        async vectorizeQuery(query) {
+          if (!this.model) return null;
+          const result = await this.model([query.trim()], {
+            pooling: 'mean',
+            normalize: true,
+          });
+          return Array.from(result.data);
+        },
+        
+        // Calculate cosine similarity between two vectors
+        cosineSimilarity(vecA, vecB) {
+          const dotProduct = vecA.reduce((sum, val, i) => sum + val * vecB[i], 0);
+          const magnitudeA = Math.sqrt(vecA.reduce((sum, val) => sum + val * val, 0));
+          const magnitudeB = Math.sqrt(vecB.reduce((sum, val) => sum + val * val, 0));
+          return dotProduct / (magnitudeA * magnitudeB);
+        },
+        
+        // Perform semantic search on datasets not matched by keyword
+        async performSemanticSearch(query, n = 10) {
+          if (!query.trim() || !this.model || Object.keys(this.vectors).length === 0) {
+            this.semanticResults = [];
+            return;
+          }
+          
+          this.semanticQuery = query;
+          const queryVector = await this.vectorizeQuery(query);
+          if (!queryVector) return;
+          
+          // Get datasets not matched by keyword search
+          const [matches, others] = this.keywordSearch($store.datasets.unfiltered);
+          
+          // Apply filters to others
+          const filteredOthers = $store.datasets.applyFilters(others);
+          
+          const results = [];
+          for (const dataset of filteredOthers) {
+            const datasetVector = this.vectors[dataset.dataset_id];
+            if (!datasetVector) continue;
+            
+            const similarity = this.cosineSimilarity(queryVector, datasetVector);
+            results.push({ dataset, similarity });
+          }
+          
+          // Sort by similarity and take top N
+          this.semanticResults = results
+            .sort((a, b) => b.similarity - a.similarity)
+            .slice(0, n)
+            .map(r => r.dataset);
+        },
+        
+        // Partition function (from lodash)
+        partition(array, predicate) {
+          return array.reduce((acc, item) => {
+            acc[predicate(item) ? 0 : 1].push(item);
+            return acc;
+          }, [[], []]);
+        },
+        
+        // Keyword search function
+        keywordSearch(datasets) {
+          const keys = ['title', 'notes', 'description', 'license'];
+          const lowerCaseQuery = this.query.toLowerCase();
+          return this.partition(datasets, function (dataset) {
+            return keys.reduce(function (previousValue, key) {
+              return (
+                previousValue ||
+                (dataset[key] &&
+                  dataset[key].toLowerCase().indexOf(lowerCaseQuery) !== -1)
+              );
+            }, false);
+          });
+        },
+        
+        // Get filtered datasets (keyword search + filters)
+        get filteredDatasets() {
+          if (!$store.datasets.unfiltered.length) return { matches: [], others: [] };
+          
+          // First apply keyword search if query exists
+          let datasetsToFilter = $store.datasets.unfiltered;
+          let others = [];
+          if (this.query.trim()) {
+            const [matches, nonMatches] = this.keywordSearch(datasetsToFilter);
+            datasetsToFilter = matches;
+            others = nonMatches;
+          }
+          
+          // Then apply filters
+          const filtered = $store.datasets.applyFilters(datasetsToFilter);
+          
+          return { matches: filtered, others: others };
+        },
+        
+        // Get datasets for filter options (faceted search)
+        // Applies keyword search + all filters EXCEPT the specified filter type
+        getDatasetsForFilterOptions(excludeFilterType) {
+          if (!$store.datasets.unfiltered.length) return [];
+          
+          // Start with all datasets
+          let datasets = $store.datasets.unfiltered;
+          
+          // Apply keyword search if query exists
+          if (this.query.trim()) {
+            const [matches] = this.keywordSearch(datasets);
+            datasets = matches;
+          }
+          
+          // Apply all filters except the excluded one
+          return $store.datasets.applyFiltersExcluding(datasets, excludeFilterType);
+        },
+        
+        // Check if any filters are active
+        get hasActiveFilters() {
+          return $store.datasets.activeFilterCount > 0;
+        },
+        
+        // Pagination computed properties
+        get totalPages() {
+          return Math.ceil(this.filteredDatasets.matches.length / this.itemsPerPage);
+        },
 
-    <h3>Categories</h3>
-    <div class="list-group" data-component="categories-filter" data-show="5"></div>
+        // Generate page numbers with ellipsis (e.g., [1, 2, 3, '...', 8, 9, 10])
+        getPaginationNumbers(currentPage, totalPages) {
+          if (totalPages <= 7) {
+            return Array.from({ length: totalPages }, (_, i) => i + 1);
+          }
+          
+          const pages = [];
+          
+          // Always show first page
+          pages.push(1);
+          
+          // Calculate range around current page
+          let startPage = Math.max(2, currentPage - 1);
+          let endPage = Math.min(totalPages - 1, currentPage + 1);
+          
+          // Adjust range if at the start or end
+          if (currentPage <= 3) {
+            // Near start: show 2, 3, 4, 5
+            startPage = 2;
+            endPage = 5;
+          } else if (currentPage >= totalPages - 2) {
+            // Near end: show last 4 pages before the final one
+            startPage = totalPages - 4;
+            endPage = totalPages - 1;
+          }
+          
+          // Add left ellipsis if needed
+          if (startPage > 2) {
+            pages.push('...');
+          }
+          
+          // Add page numbers
+          for (let i = startPage; i <= endPage; i++) {
+            pages.push(i);
+          }
+          
+          // Add right ellipsis if needed
+          if (endPage < totalPages - 1) {
+            pages.push('...');
+          }
+          
+          // Always show last page
+          pages.push(totalPages);
+          
+          return pages;
+        },
 
-    <h3>Countries</h3>
-    <div class="list-group" data-component="rdl-country-filter" data-show="5"></div>
+        get paginationNumbers() {
+          return this.getPaginationNumbers(this.currentPage, this.totalPages);
+        },
 
-    <h3>Geographical Scale</h3>
-    <div class="list-group" data-component="rdl-geographical-scale-filter" data-show="5"></div>
+        get paginatedDatasets() {
+          const start = (this.currentPage - 1) * this.itemsPerPage;
+          const end = start + this.itemsPerPage;
+          return this.filteredDatasets.matches.slice(start, end);
+        },
+        
+        get paginationStart() {
+          return (this.currentPage - 1) * this.itemsPerPage + 1;
+        },
+        
+        get paginationEnd() {
+          return Math.min(this.currentPage * this.itemsPerPage, this.filteredDatasets.matches.length);
+        }
+    }"
+  >
+    <div class="col-sm-4">
+      <!-- Active Filters Summary -->
+      <div x-show="hasActiveFilters" style="margin: 10px 0">
+        <span
+          x-text="$store.datasets.activeFilterCount + ' filter(s) active'"
+        ></span>
+        <button
+          @click="$store.datasets.clearFilters()"
+          class="btn btn-xs btn-default"
+        >
+          Clear all
+        </button>
+      </div>
 
-    <h3>
-      Hazard Type
-      <button class="button-reset" data-toggle="tooltip"
-        title="Enabling a hazard type will filter out all exposure datasets, which have no hazard type.">
-        <i class="fa fa-info-circle" style="font-size: 0.7em;" aria-hidden="true"></i>
-      </button>
-    </h3>
-    <div class="list-group" data-component="rdl-hazard-type-filter" data-show="5"></div>
+      <!-- Risk Component Filter -->
+      <div style="margin: 15px 0">
+        <h4>Risk Component</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('category', getDatasetsForFilterOptions('category')).slice(0, showCategories)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('category', item.slug)"
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('category', getDatasetsForFilterOptions('category')).filter(i => i.count > 0).length > showCategories"
+            @click.prevent="showCategories = showCategories + 10"
+            style="text-align: center"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
+      <!-- Hazard Type Filter -->
+      <div style="margin: 15px 0">
+        <h4>
+          Hazard Type
+          <button
+            class="button-reset"
+            data-toggle="tooltip"
+            title="Enabling a hazard type will filter out all exposure datasets, which have no hazard type."
+          >
+            <i
+              class="fa fa-info-circle"
+              style="font-size: 0.7em"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).slice(0, showHazards)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('hazard_type', item.slug)"
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).filter(i => i.count > 0).length > showHazards"
+            @click.prevent="showHazards = showHazards + 10"
+            style="text-align: center"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
+      <!-- Geographical Scale Filter -->
+      <div style="margin: 15px 0">
+        <h4>Geographical Scale</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('geo_scale', getDatasetsForFilterOptions('geo_scale')).slice(0, showScales)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('geo_scale', item.slug)"
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+        </div>
+      </div>
+      <!-- Countries Filter -->
+      <div style="margin: 15px 0">
+        <h4>Countries</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).slice(0, showCountries)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('geo_coverage', item.slug)"
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).filter(i => i.count > 0).length > showCountries"
+            @click.prevent="showCountries = showCountries + 10"
+            style="text-align: center"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
 
-    <h3>Catalogs</h3>
-    <div class="list-group" data-component="rdl-catalog-filter" data-show="5"></div>
+      <!-- Projects Filter -->
+      <div style="margin: 15px 0">
+        <h4>Projects</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('project', getDatasetsForFilterOptions('project')).slice(0, showProjects)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('project', item.slug)"
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('project', getDatasetsForFilterOptions('project')).filter(i => i.count > 0).length > showProjects"
+            @click.prevent="showProjects = showProjects + 10"
+            style="text-align: center"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
+      <!-- Catalog Filter -->
+      <div style="margin: 15px 0">
+        <h4>Catalog</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).slice(0, showCatalogs)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('catalog', item.slug)"
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).filter(i => i.count > 0).length > showCatalogs"
+            @click.prevent="showCatalogs = showCatalogs + 10"
+            style="text-align: center;"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
+      
+      <!-- Licenses Filter -->
+      <div style="margin: 15px 0">
+        <h4>Licenses</h4>
+        <div class="list-group">
+          <template
+            x-for="item in $store.datasets.getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).slice(0, showLicenses)"
+            :key="item.slug"
+          >
+            <a
+              href="#"
+              class="list-group-item"
+              :class="{ 'active': item.selected }"
+              @click.prevent="$store.datasets.toggleFilter('license_display', item.slug)"
+            >
+              <span
+                class="list-group-item-truncate"
+                x-text="item.title"
+                style="
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              ></span>
+              <span class="badge" x-text="item.count"></span>
+              <span x-show="item.selected" class="badge"
+                ><i class="fa fa-times"></i
+              ></span>
+            </a>
+          </template>
+          <a
+            href="#"
+            class="list-group-item"
+            x-show="$store.datasets.getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).filter(i => i.count > 0).length > showLicenses"
+            @click.prevent="showLicenses = showLicenses + 10"
+          >
+            Show more...
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <h3>Licenses</h3>
-    <div class="list-group" data-component="rdl-license-filter" data-show="5"></div>
+    <div class="col-sm-8">
+      <!-- Search Input -->
+      <input
+        x-model="query"
+        type="text"
+        placeholder="Search..."
+        class="form-control"
+      />
+      <!-- Results Section -->
+      <h3 x-show="filteredDatasets.matches.length > 0"
+        x-text="`Showing ${paginationStart}-${paginationEnd} of ${filteredDatasets.matches.length} dataset${filteredDatasets.matches.length === 1 ? '' : 's'}`"
+      ></h3>
+      <h3 x-show="filteredDatasets.matches.length === 0">
+        No datasets found with these filters and/or query
+      </h3>
 
-    <h3>Projects</h3>
-    <div class="list-group" data-component="rdl-project-filter" data-show="5"></div>
+      <ul>
+        <template x-for="data in paginatedDatasets" :key="data.dataset_id">
+          <rdl-dataset>
+            <h3><a x-bind:href="data.url" x-text="data.title"></a></h3>
+            <span x-text="data.description || ''"></span>
+            <br /><br />
+            <strong>Developed by (version):</strong>
+            <span
+              x-text="` ${data.creator?.name || 'Unknown'}  (${data.version || 'Version not supplied'})`"
+            ></span>
+            <br />
+            <strong>Geo Coverage:</strong>
+            <span
+              x-text="` ${Array.isArray(data.geo_coverage) ? data.geo_coverage.join(', ') : data.geo_coverage || 'Not supplied'}`"
+            ></span>
+            <br />
+            <strong>License:</strong>
+            <span x-show="data.license_display == null">
+              Unknown or not provided</span
+            >
+            <span x-show="data.license != null && data.license != 'Not found'">
+              <a
+                property="dct:license"
+                x-bind:resource="data.license_display"
+                x-bind:href="data.license"
+                x-text="data.license_display"
+              ></a>
+            </span>
+            <span
+              x-show="data.license_display != null && (data.license == null || data.license == 'Not found')"
+              x-text="data.license_display"
+            ></span>
+            <hr />
+          </rdl-dataset>
+        </template>
+      </ul>
 
-  </div>
-  <div class="col-sm-8" data-component="rdl-datasets-list">
-    <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
-    <div data-hook="keyword-results-header"></div>
-    <div data-hook="rdl-datasets-items"></div>
-    <div data-hook="semantic-results-header"></div>
-    <div data-hook="rdl-semantic-datasets-items"></div>
+      <!-- Pagination Controls -->
+      <div
+        x-show="totalPages > 1"
+        style="
+          margin: 20px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          flex-wrap: wrap;
+        "
+      >
+        <button
+          @click="currentPage = Math.max(1, currentPage - 1); window.scrollTo(0, 0)"
+          :disabled="currentPage === 1"
+          class="btn btn-default"
+          :class="{ 'disabled': currentPage === 1 }"
+        >
+          <i class="fa fa-chevron-left"></i> Previous
+        </button>
+
+        <!-- Page Numbers -->
+        <template x-for="(page, index) in paginationNumbers" :key="index">
+          <div style="display: contents;">
+            <span
+              x-show="page === '...'"
+              style="padding: 6px 8px;"
+              x-text="page"
+            ></span>
+            <button
+              x-show="page !== '...'"
+              @click="currentPage = page; window.scrollTo(0, 0)"
+              class="btn"
+              :class="page === currentPage ? 'btn-primary' : 'btn-default'"
+              x-text="page"
+            ></button>
+          </div>
+        </template>
+
+        <button
+          @click="currentPage = Math.min(totalPages, currentPage + 1); window.scrollTo(0, 0)"
+          :disabled="currentPage === totalPages"
+          class="btn btn-default"
+          :class="{ 'disabled': currentPage === totalPages }"
+        >
+          Next <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Semantic Search Results -->
+      <!-- TODO: x-if false to hide semantic search until UX is figured out -->
+      <template x-if="false">
+        <div x-show="query.trim() && (isModelLoading || isVectorsLoading)">
+          <p>
+            <i class="fa fa-spinner fa-spin"></i> Loading semantic search...
+          </p>
+        </div>
+        <div
+          x-show="query.trim() && semanticResults.length > 0 && !isModelLoading && !isVectorsLoading"
+        >
+          <h3
+            style="
+              border-top: 2px solid #333;
+              border-bottom: 2px solid #333;
+              padding: 0.3em 0;
+            "
+          >
+            You may also be interested in...
+          </h3>
+          <ul>
+            <template x-for="data in semanticResults" :key="data.dataset_id">
+              <rdl-dataset>
+                <h3><a x-bind:href="data.url" x-text="data.title"></a></h3>
+                <span x-text="data.description || ''"></span>
+                <br /><br />
+                <strong>Developed by (version):</strong>
+                ><span
+                  x-text="` ${data.creator?.name || 'Unknown'}  (${data.version || 'Version not supplied'})`"
+                ></span>
+                <br />
+                <strong>Geo Coverage:</strong>
+                ><span
+                  x-text="` ${Array.isArray(data.geo_coverage) ? data.geo_coverage.join(', ') : data.geo_coverage || 'Not supplied'}`"
+                ></span>
+                <br />
+                <strong>License:</strong>
+                <span x-show="data.license_display == null">
+                  Unknown or not provided</span
+                >
+                >
+                <span
+                  x-show="data.license != null && data.license != 'Not found'"
+                >
+                  <a
+                    property="dct:license"
+                    x-bind:resource="data.license_display"
+                    x-bind:href="data.license"
+                    x-text="data.license_display"
+                  ></a>
+                </span>
+                <span
+                  x-show="data.license_display != null && (data.license == null || data.license == 'Not found')"
+                  x-text="data.license_display"
+                ></span>
+                <hr />
+              </rdl-dataset>
+            </template>
+          </ul>
+        </div>
+      </template>
+    </div>
   </div>
 </div>

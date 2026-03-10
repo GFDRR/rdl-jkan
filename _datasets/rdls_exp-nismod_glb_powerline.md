@@ -1,4 +1,5 @@
 ---
+catalog: Zenodo
 contact_point:
   email: carderne@worldbank.org
   id: attribution_contact

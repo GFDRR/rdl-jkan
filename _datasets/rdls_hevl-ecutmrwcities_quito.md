@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: emin.mentese@anofa.co
   id: attribution_contact

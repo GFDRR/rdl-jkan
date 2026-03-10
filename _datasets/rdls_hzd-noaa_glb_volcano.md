@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: haz.info@noaa.gov
   id: attribution_contact_point_1765372426726

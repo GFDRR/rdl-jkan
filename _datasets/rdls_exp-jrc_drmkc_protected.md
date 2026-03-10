@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: sdi@eea.europa.eu
   name: European Environment Agency

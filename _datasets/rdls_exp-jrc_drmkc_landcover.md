@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: copernicus@eea.europa.eu
   name: Copernicus Land Monitoring Service helpdesk

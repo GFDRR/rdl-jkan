@@ -1,4 +1,5 @@
 ---
+catalog: World Bank Data Catalog
 contact_point:
   email: mamadio@worldbank.org
   name: Mattia Amadio

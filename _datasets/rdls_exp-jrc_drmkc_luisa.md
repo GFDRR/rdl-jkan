@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: filipe.batista@ec.europa.eu
   name: Filipe Batista

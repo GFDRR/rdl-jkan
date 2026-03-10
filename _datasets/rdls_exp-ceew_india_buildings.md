@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: gobs@aeee.in
   id: attribution_contact

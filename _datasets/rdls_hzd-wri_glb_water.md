@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: samantha.kuzma@wri.org
   id: attribution_contact_point_1765293751573

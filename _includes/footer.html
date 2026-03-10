@@ -1,43 +1,55 @@
 <!-- general behavior -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="{{ site.baseurl }}/scripts/dist/bundle.js"></script>
-
 <script type="text/javascript">
-$(document).ready(function() {
-    $("a[rdlmail]").on("mouseover click hover", function() {
-        this.href = this.href.replace('tt%7C%7C@rdl.org/', '').replace('@@','.')
+  $(document).ready(function () {
+    // Initialize Bootstrap tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $("a[rdlmail]").on("mouseover click hover", function () {
+      this.href = this.href.replace("tt%7C%7C@rdl.org/", "").replace("@@", ".");
     });
-})
+  });
 </script>
 
-<footer class="text-center navbar-default" style="bottom: 0px;">
-    <div class="container">
-        <div class="row">
-            <!--Grid columns-->
-            <div class="col-lg-3 col-md-3" style="vertical-align: middle">
-                <br />
-                <img src="{{base_url}}/img/logos/gfdrr-logo-footer.png" width="192" height="auto" alt="GFDRR Logo">
-            </div>
-            <div class="col-lg-6 col-md-3" style="color: white; vertical-align: middle">
-                <br />
-                © 2021 Global Facility for Disaster Reduction and Recovery
-            </div>
-            <div class="col-lg-3 col-md-3" style="text-align: left; color: white"><br />
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#!" style="color: white">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="/legal/" style="color: white">Disclaimer</a>
-                    </li>
-                    <li>
-                        <a rdlmail href="mailto:tt||@rdl.org/contact@riskdatalibrary@@org?subject=RDL JKAN enquiry"
-                        style="color: white">
-                        Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<footer class="text-center navbar-default" style="bottom: 0px">
+  <div class="container">
+    <div class="row">
+      <!--Grid columns-->
+      <div class="col-lg-3 col-md-3" style="vertical-align: middle">
+        <br />
+        <img
+          src="{{base_url}}/img/logos/gfdrr-logo-footer.png"
+          width="192"
+          height="auto"
+          alt="GFDRR Logo"
+        />
+      </div>
+      <div
+        class="col-lg-6 col-md-3"
+        style="color: white; vertical-align: middle"
+      >
+        <br />
+        © 2021 Global Facility for Disaster Reduction and Recovery
+      </div>
+      <div class="col-lg-3 col-md-3" style="text-align: left; color: white">
+        <br />
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color: white">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="/legal/" style="color: white">Disclaimer</a>
+          </li>
+          <li>
+            <a
+              rdlmail
+              href="mailto:tt||@rdl.org/contact@riskdatalibrary@@org?subject=RDL JKAN enquiry"
+              style="color: white"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </footer>
