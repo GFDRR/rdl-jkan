@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: 'jrc-effis@ec.europa.eu '
   name: JRC EFFIS Team

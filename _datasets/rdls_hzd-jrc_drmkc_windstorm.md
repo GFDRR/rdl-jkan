@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: thomas.roeoesli@usys.ethz.ch
   name: "Thomas R\xF6\xF6sli"

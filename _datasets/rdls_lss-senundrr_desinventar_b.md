@@ -1,4 +1,5 @@
 ---
+catalog: Humanitarian Data Exchange
 contact_point:
   email: null
   id: attribution_contact

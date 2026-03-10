@@ -1,4 +1,5 @@
 ---
+catalog: Zenodo
 contact_point:
   email: silvia.colombo@ouce.ox.ac.uk
   id: attribution_contact

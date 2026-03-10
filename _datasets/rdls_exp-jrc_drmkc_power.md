@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: james.norman@globalenergymonitor.org
   name: James Norman

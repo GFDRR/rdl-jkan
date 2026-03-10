@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: paola.ceresa@redrisk.com
   name: Paola Ceresa

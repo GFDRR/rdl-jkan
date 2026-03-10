@@ -1,4 +1,5 @@
 ---
+catalog: Zenodo
 contact_point:
   email: sadhana.nirandjan@vu.nl
   name: Sadhana Nirandjan

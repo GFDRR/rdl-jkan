@@ -1,4 +1,5 @@
 ---
+catalog: null
 contact_point:
   email: peter.salamon@ec.europa.eu
   name: Peter Salamon
