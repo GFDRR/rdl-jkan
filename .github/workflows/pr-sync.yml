@@ -12,7 +12,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  markdown:
+  python:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -34,7 +34,7 @@ jobs:
       - run: echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
       - run: python3 -m pip install -r requirements.txt
       
-      - name: Generate markdown from new JSON metadata
+      - name: Generate markdown, vector embeddings, and test artefacts
         run: python3 main.py --ci --markdown --vectors --test search
         continue-on-error: true  # Don't block PR on test failures
       
@@ -46,13 +46,10 @@ jobs:
       - name: Commit markdown files
         run: |
           git add ../_datasets
-          git diff-index --quiet HEAD || git commit -m "Generate markdown from new JSON metadata"
-          git push
-          echo "Complete"
-      
-      - name: Commit vector embeddings
-        run: |
-          git add ./vectors.json
-          git diff-index --quiet HEAD || git commit -m "Generate vector embeddings"
-          git push
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            git commit -m "Generate markdown from new JSON metadata"
+            git push
+          fi
           echo "Complete"
