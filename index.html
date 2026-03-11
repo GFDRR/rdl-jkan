@@ -3,9 +3,19 @@ title: Datasets
 layout: default
 ---
 
-{% include breadcrumbs.html %}
+<!-- Modern Hero Section -->
+<div class="modern-hero">
+  <div class="hero-background-image"></div>
+  <div class="hero-content">
+    <h1>Discover Risk Datasets</h1>
+    <p>Browse standardized disaster risk data including hazard, exposure, vulnerability, and loss datasets from around the world</p>
+  </div>
+</div>
 
-<div class="row">
+<!-- Content Wrapper -->
+<div class="content-wrapper">
+  <div class="modern-content">
+    <div class="row">
   <div
     x-data="{
         // Constants
@@ -356,15 +366,20 @@ layout: default
   >
     <div class="col-sm-4">
       <!-- Active Filters Summary -->
-      <div x-show="hasActiveFilters" style="margin: 10px 0">
-        <span x-text="activeFilterCount + ' filter(s) active'"></span>
-        <button @click="clearFilters()" class="btn btn-xs btn-default">
+      <div x-show="hasActiveFilters" class="active-filters-summary">
+        <span
+          x-text="datasets.activeFilterCount + ' filter(s) active'"
+        ></span>
+        <button
+          @click="datasets.clearFilters()"
+          class="btn btn-xs btn-default"
+        >
           Clear all
         </button>
       </div>
 
       <!-- Risk Component Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Risk Component</h4>
         <div class="list-group">
           <template
@@ -402,9 +417,8 @@ layout: default
           >
         </div>
       </div>
-
       <!-- Hazard Type Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>
           Hazard Type
           <button
@@ -455,9 +469,8 @@ layout: default
           >
         </div>
       </div>
-
       <!-- Geographical Scale Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Geographical Scale</h4>
         <div class="list-group">
           <template
@@ -487,9 +500,8 @@ layout: default
           </template>
         </div>
       </div>
-
       <!-- Countries Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Countries</h4>
         <div class="list-group">
           <template
@@ -527,9 +539,10 @@ layout: default
           >
         </div>
       </div>
+      </div>
 
       <!-- Projects Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Projects</h4>
         <div class="list-group">
           <template
@@ -567,9 +580,8 @@ layout: default
           >
         </div>
       </div>
-
       <!-- Catalog Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Catalog</h4>
         <div class="list-group">
           <template
@@ -609,7 +621,7 @@ layout: default
       </div>
 
       <!-- Licenses Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Licenses</h4>
         <div class="list-group">
           <template
@@ -645,6 +657,7 @@ layout: default
             >Show more...</a
           >
         </div>
+      </div>
       </div>
     </div>
 
@@ -727,14 +740,7 @@ layout: default
       <!-- Pagination Controls -->
       <div
         x-show="totalPages > 1"
-        style="
-          margin: 20px 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          flex-wrap: wrap;
-        "
+        class="pagination-wrapper"
       >
         <button
           @click="currentPage = Math.max(1, currentPage - 1); window.scrollTo(0, 0)"
@@ -770,5 +776,7 @@ layout: default
         </button>
       </div>
     </div>
+  </div>
+</div>
   </div>
 </div>
