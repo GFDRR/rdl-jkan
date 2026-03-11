@@ -218,9 +218,10 @@
               // Catalog filter
               if (excludeFilterType !== 'catalog' && this.filters.catalog.length > 0) {
                 const datasetCatalogs = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
-                const hasMatchingCatalog = datasetCatalogs.some(cat =>
-                  this.filters.catalog.includes(slugify(cat))
-                );
+                const hasMatchingCatalog = datasetCatalogs.some(cat => {
+                  if (cat === null || cat === undefined) return false;
+                  return this.filters.catalog.includes(slugify(cat))
+                });
                 if (!hasMatchingCatalog) return false;
               }
 
