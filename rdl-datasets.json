@@ -26,15 +26,14 @@
       {% else %}
         {{ "None" | jsonify }}
       {% endif %},
+    "license_code": {{ dataset.license | jsonify }},
     {% if site.data.rdl-license-name[dataset.license] %}
       "license_display": {{ site.data.rdl-license-name[dataset.license] | jsonify }},
     {% else %}
       "license_display": {{ dataset.license | jsonify }},
     {% endif %}
     {% if site.data.rdl-license-url[dataset.license] %}
-      "license": {{ site.data.rdl-license-url[dataset.license] | jsonify }},
-    {% else %}
-      "license": "Not found",
+      "license_url": {{ site.data.rdl-license-url[dataset.license] | jsonify }},
     {% endif %}
     {% if dataset.creator != "" %}"creator": {{ dataset.creator | jsonify }},{% endif %}
     "geo_coverage": {% if dataset.spatial.countries[0] %} 

@@ -88,7 +88,7 @@ hazard:
   occurrence_range: ''
   processes: fluvial_flood
   seasonality: ''
-license: Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)
+license: CC-BY-IGO-3.0
 loss:
   approach: ''
   base_data_type: ''
