@@ -75,6 +75,22 @@ body {
   line-height: 1.6;
 }
 
+/* Override view-switcher hiding - we want to show dataset content */
+[data-component~=view-switcher] [data-hook~=view]:not(.dataset-detail-layout) {
+  display: block !important;
+}
+
+/* Ensure dataset detail grid layout always applies */
+[data-component~=view-switcher] .dataset-detail-layout[data-hook~=view] {
+  display: grid !important;
+}
+
+/* Override Bootstrap container padding for tighter layout */
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 /* ====================================
    3. Header Styles
    ==================================== */
@@ -170,9 +186,11 @@ body {
 .modern-hero {
   position: relative;
   background: #667eea;
-  padding: 70px 40px;
+  padding: 80px 40px;
   color: white;
   overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .modern-hero::before {
@@ -305,9 +323,9 @@ body {
 }
 
 .modern-content {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 10px;
 }
 
 /* ====================================
@@ -341,6 +359,9 @@ body {
   border-radius: var(--radius-md);
   transition: all 0.2s;
   background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .filter-card .list-group-item:hover {
@@ -358,11 +379,20 @@ body {
   color: var(--color-hazard);
 }
 
+.filter-card .list-group-item-truncate {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .filter-card .list-group-item .badge {
   background: var(--color-bg-light);
   color: var(--color-text-secondary);
   border-radius: 12px;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .filter-card .list-group-item:hover .badge {
@@ -372,10 +402,11 @@ body {
 /* Filter icons for risk components */
 .filter-icon {
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .filter-icon.hazard {
@@ -392,6 +423,18 @@ body {
 
 .filter-icon.loss {
   background: var(--color-loss);
+}
+
+/* Country flag styling */
+.country-flag {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 6px;
+  line-height: 1;
+}
+
+.filter-card .country-flag {
+  font-size: 14px;
 }
 
 /* Active filters summary */
@@ -553,9 +596,10 @@ body {
    9. Dataset Detail Page Layout
    ==================================== */
 .dataset-detail-layout {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 40px;
+  display: grid !important;
+  grid-template-columns: 1fr 380px !important;
+  gap: 32px;
+  align-items: start;
 }
 
 .main-content {
@@ -563,6 +607,7 @@ body {
   border-radius: var(--radius-lg);
   padding: var(--spacing-2xl);
   box-shadow: var(--shadow-sm);
+  min-width: 0; /* Allow grid item to shrink below content size */
 }
 
 .dataset-header {
@@ -638,6 +683,55 @@ body {
   margin: 0 0 20px 0;
   padding-bottom: 12px;
   border-bottom: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Risk Component Sections with Color Coding */
+.risk-component-section {
+  border-left: 4px solid var(--color-border);
+  padding-left: 20px;
+}
+
+.risk-component-section.hazard {
+  border-left-color: var(--color-hazard);
+}
+
+.risk-component-section.exposure {
+  border-left-color: var(--color-exposure);
+}
+
+.risk-component-section.vulnerability {
+  border-left-color: var(--color-vulnerability);
+}
+
+.risk-component-section.loss {
+  border-left-color: var(--color-loss);
+}
+
+.component-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.component-icon.hazard {
+  background: var(--color-hazard);
+}
+
+.component-icon.exposure {
+  background: var(--color-exposure);
+}
+
+.component-icon.vulnerability {
+  background: var(--color-vulnerability);
+}
+
+.component-icon.loss {
+  background: var(--color-loss);
 }
 
 /* Resources List */
@@ -758,14 +852,19 @@ body {
   position: sticky;
   top: 20px;
   height: fit-content;
+  min-width: 0; /* Allow grid item to shrink if needed */
 }
 
 .sidebar-card {
   background: var(--color-bg-card);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card:first-child {
+  margin-top: 0;
 }
 
 .sidebar-card h4 {
@@ -877,54 +976,47 @@ body {
 .modern-footer {
   background: var(--color-bg-dark);
   color: var(--color-text-light);
-  padding: 40px 0;
+  padding: 32px 0 24px;
   margin-top: 60px;
 }
 
 .footer-content {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 10px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
 }
 
 .footer-branding {
-  max-width: 300px;
+  max-width: 280px;
 }
 
 .footer-branding h5 {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
-  margin: 0 0 12px 0;
+  margin: 0 0 6px 0;
 }
 
 .footer-branding p {
-  font-size: 13px;
-  line-height: 1.6;
-  margin: 0 0 20px 0;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
   color: var(--color-text-light);
 }
 
-.footer-logo {
-  margin-bottom: 16px;
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .footer-logo img {
-  height: 70px;
+  height: 40px;
   width: auto;
-}
-
-.footer-sponsor {
-  margin-top: 20px;
-}
-
-.footer-sponsor p {
-  font-size: 12px;
-  margin-bottom: 12px;
-  color: var(--color-text-secondary);
 }
 
 .footer-sponsor-logos {
@@ -934,27 +1026,27 @@ body {
 }
 
 .footer-sponsor-logos img:first-child {
-  height: 48px;
+  height: 32px;
   width: auto;
 }
 
 .footer-sponsor-logos img:last-child {
-  height: 24px;
+  height: 18px;
   width: auto;
   filter: brightness(0) invert(1);
 }
 
 .footer-section h5 {
   color: white;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  margin: 0 0 16px 0;
+  margin: 0 0 12px 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .footer-section p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   margin: 0;
 }
@@ -966,27 +1058,18 @@ body {
 }
 
 .footer-section ul li {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .footer-section ul li a {
   color: var(--color-text-light);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   transition: color 0.2s;
 }
 
 .footer-section ul li a:hover {
   color: white;
-}
-
-.footer-bottom {
-  max-width: 1400px;
-  margin: 32px auto 0;
-  padding: 24px 40px 0;
-  border-top: 1px solid #374151;
-  text-align: center;
-  font-size: 13px;
 }
 
 /* ====================================
@@ -1051,13 +1134,18 @@ body {
    ==================================== */
 @media (max-width: 1200px) {
   .modern-content {
-    padding: 0 30px;
+    padding: 0 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .dataset-detail-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .sidebar {
@@ -1079,7 +1167,12 @@ body {
   }
 
   .modern-content {
-    padding: 0 20px;
+    padding: 0 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .main-content {

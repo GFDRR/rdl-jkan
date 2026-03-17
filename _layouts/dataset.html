@@ -8,6 +8,8 @@ layout: default
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign resource_system_fields = "id|title|download_url|format|description" | split: "|" %}
 
+</div><!-- Close default container -->
+
 <!-- Content Wrapper -->
 <div class="content-wrapper">
   <div class="modern-content">
@@ -115,8 +117,11 @@ layout: default
           </div>
           <!-- RDL Component Info -->
           {% for rdt in page.risk_data_type %}
-          <div class="content-section">
-            <h2 class="section-title">{{ rdt | capitalize }} Component</h2>
+          <div class="content-section risk-component-section {{ rdt | downcase }}">
+            <h2 class="section-title">
+              <span class="component-icon {{ rdt | downcase }}"></span>
+              {{ rdt | capitalize }} Component
+            </h2>
             <table class="data-table">
               {% assign rdl_fields = site.data.schemas[schema][rdt] %}
               {% for field in rdl_fields %}
@@ -221,6 +226,24 @@ layout: default
             </div>
           </div>
 
+          <!-- Spatial Extent -->
+          <div class="sidebar-card">
+            <h4>Spatial Extent</h4>
+            <div class="minimap-container">
+              <div class="minimap-world"></div>
+              <div class="minimap-bbox" style="left: 10%; top: 15%; width: 80%; height: 70%;"></div>
+              {% if page.geo_coverage %}
+              <div class="minimap-label">
+                {% if page.geo_coverage.size > 1 %}
+                  {{ page.geo_coverage | join: ", " }}
+                {% else %}
+                  {{ page.geo_coverage | first }}
+                {% endif %}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+
           <!-- Dataset Info Summary -->
           <div class="sidebar-card">
             <h4>Dataset Info</h4>
@@ -258,8 +281,28 @@ layout: default
             </div>
             {% endif %}
           </div>
+
+          <!-- Related Datasets -->
+          <div class="sidebar-card">
+            <h4>Related Datasets</h4>
+            {% assign current_category = page.category | first | downcase %}
+            {% assign other_categories = "hazard,exposure,vulnerability,loss" | split: "," | where_exp: "cat", "cat != current_category" %}
+
+            {% for cat in other_categories limit:3 %}
+              <div class="sidebar-item">
+                <div class="sidebar-content">
+                  <div class="sidebar-value">
+                    <a href="{{ site.baseurl }}/#category={{ cat }}">Explore {{ cat | capitalize }} datasets</a>
+                  </div>
+                  <div class="sidebar-label">{{ cat | capitalize }}</div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
         </aside>
       </div>
     </div>
   </div>
 </div>
+
+<div class="container"><!-- Reopen default container for next content -->
