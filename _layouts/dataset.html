@@ -227,22 +227,78 @@ layout: default
           </div>
 
           <!-- Spatial Extent -->
+          {% if page.spatial.countries %}
           <div class="sidebar-card">
             <h4>Spatial Extent</h4>
-            <div class="minimap-container">
-              <div class="minimap-world"></div>
-              <div class="minimap-bbox" style="left: 10%; top: 15%; width: 80%; height: 70%;"></div>
-              {% if page.geo_coverage %}
-              <div class="minimap-label">
-                {% if page.geo_coverage.size > 1 %}
-                  {{ page.geo_coverage | join: ", " }}
-                {% else %}
-                  {{ page.geo_coverage | first }}
-                {% endif %}
-              </div>
+            <div id="spatial-extent-map" style="height: 160px; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; background: #e5e7eb;"></div>
+            <div style="margin-top: 8px; font-size: 11px; color: #6b7280;">
+              {% if page.spatial.countries.size > 1 %}
+                {{ page.spatial.countries | join: ", " }}
+              {% else %}
+                {{ page.spatial.countries | first }}
               {% endif %}
             </div>
+            <script>
+              (function() {
+                // Get country codes and calculate bounding box
+                var countryCodes = {{ page.spatial.countries | jsonify }};
+                var countryBboxData = {
+                  {% for country in site.data.country-bbox %}
+                    '{{ country[0] }}': {{ country[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+                  {% endfor %}
+                };
+
+                // Calculate union of all country bounding boxes
+                var minLat = Infinity, minLon = Infinity, maxLat = -Infinity, maxLon = -Infinity;
+                countryCodes.forEach(function(code) {
+                  var bbox = countryBboxData[code];
+                  if (bbox) {
+                    minLon = Math.min(minLon, bbox[0]);
+                    minLat = Math.min(minLat, bbox[1]);
+                    maxLon = Math.max(maxLon, bbox[2]);
+                    maxLat = Math.max(maxLat, bbox[3]);
+                  }
+                });
+
+                // Only create map if valid bbox found
+                if (minLat !== Infinity) {
+                  var map = L.map('spatial-extent-map', {
+                    zoomControl: false,
+                    dragging: false,
+                    scrollWheelZoom: false,
+                    doubleClickZoom: false,
+                    boxZoom: false,
+                    keyboard: false,
+                    tap: false,
+                    touchZoom: false,
+                    attributionControl: true
+                  });
+
+                  // Add tile layer
+                  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap',
+                    maxZoom: 19
+                  }).addTo(map);
+
+                  // Add bounding box
+                  var bounds = [[minLat, minLon], [maxLat, maxLon]];
+                  var color = countryCodes.length > 1 ? '#d97706' : '#007fc3';
+                  L.rectangle(bounds, {
+                    color: color,
+                    weight: 3,
+                    fillOpacity: 0.15
+                  }).addTo(map);
+
+                  // Fit map to bounds
+                  map.fitBounds(bounds, {
+                    padding: [20, 20],
+                    maxZoom: 10
+                  });
+                }
+              })();
+            </script>
           </div>
+          {% endif %}
 
           <!-- Dataset Info Summary -->
           <div class="sidebar-card">
