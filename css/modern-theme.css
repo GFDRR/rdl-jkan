@@ -931,43 +931,20 @@ body {
   text-decoration: underline;
 }
 
-/* Minimap */
-.minimap-container {
-  width: 100%;
-  height: 200px;
+/* Spatial Extent Map (Leaflet) */
+#spatial-extent-map .leaflet-container {
   background: #e5e7eb;
-  border-radius: var(--radius-md);
-  position: relative;
-  overflow: hidden;
-  margin-top: 12px;
+  font-family: inherit;
 }
 
-.minimap-world {
-  width: 100%;
-  height: 100%;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4d/BlankMap-World.svg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
+#spatial-extent-map .leaflet-control-attribution {
+  font-size: 9px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  padding: 2px 4px !important;
 }
 
-.minimap-bbox {
-  position: absolute;
-  border: 3px solid var(--color-primary);
-  background: rgba(0, 127, 195, 0.15);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.5);
-}
-
-.minimap-label {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  font-size: 11px;
-  color: var(--color-text-secondary);
-  font-weight: 600;
+#spatial-extent-map .leaflet-control-attribution a {
+  color: #6b7280 !important;
 }
 
 /* ====================================
