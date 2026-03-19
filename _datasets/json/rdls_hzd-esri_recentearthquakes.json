@@ -1,13 +1,13 @@
 {
   "datasets": [
     {
-      "id": "rdls_hzd-hdx_esri_earthquakes_multihazard",
+      "id": "rdls_hzd-esri_recentearthquakes",
       "title": "Recent Earthquakes",
-      "description": "This map displays continuously updated data from the USGS Earthquakes and Shakemaps. This map is provided by the Esri Disaster Response Program. In addition to displaying earthquakes by magnitude, this service also provide earthquake impact details. Impact is measured by population as well as models for economic and fatality loss. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff]",
+      "description": "This map displays continuously updated data from the USGS Earthquakes and Shakemaps. This map is provided by the Esri Disaster Response Program. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff]",
       "risk_data_type": [
         "hazard"
       ],
-      "details": "Methodology: USGS Prompt Assessment of Global Earthquakes for Response (PAGER) program. | Temporal coverage: 90 days ago (major events) or 7 days ago (other events) to today | Update frequency: Every day",
+      "details": "Methodology: USGS Prompt Assessment of Global Earthquakes for Response (PAGER) program.",
       "spatial": {
         "scale": "global"
       },
@@ -40,12 +40,12 @@
       ],
       "resources": [
         {
-          "id": "hdx_dataset_metadata_json",
-          "title": "HDX dataset metadata (JSON)",
-          "description": "Dataset-level metadata exported from HDX.",
-          "data_format": "JSON (json)",
-          "access_modality": "file_download",
-          "download_url": "https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff/download_metadata?format=json"
+          "id": "hdx_res_d15bd1fa",
+          "title": "Earthquake App",
+          "description": "This web applications displays continuously updated data from the USGS Earthquakes and Shakemaps. This map is provided by the Esri Disaster Response Program.",
+          "data_format": "CSV (csv)",
+          "access_modality": "download_page",
+          "download_url": "https://disasterresponse.maps.arcgis.com/apps/webappviewer/index.html?id=e588a7f3ba0d41388b5052b6444457a8"
         },
         {
           "id": "hdx_res_538415b5",
@@ -88,13 +88,7 @@
                   "type": "earthquake",
                   "hazard_process": "ground_motion"
                 },
-                "occurrence": {
-                  "empirical": {
-                    "temporal": {
-                      "duration": "P90D"
-                    }
-                  }
-                },
+                "occurrence": {},
                 "description": "earthquake hazard data"
               }
             ]
