@@ -36,77 +36,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from convective
-    storm (HAILSTORM, THUNDERSTORM) events in Mali. DesInventar records: 5 events
-    with data out of 9 total convective storm events (2005-2005)., Observed deaths
-    directly caused by disaster events from flood (FLOOD) events in Mali. DesInventar
-    records: 119 events with data out of 833 total flood events., Observed educational
-    facilities destroyed or affected from flood (FLOOD) events in Mali. DesInventar
-    records: 14 events with data out of 833 total flood events., Observed hectares
-    of crops/woods destroyed or affected from flood (FLOOD) events in Mali. DesInventar
-    records: 115 events with data out of 833 total flood events., Observed hectares
-    of crops/woods destroyed or affected from wildfire (FIRE, FOREST FIRE) events
-    in Mali. DesInventar records: 41 events with data out of 58 total wildfire events
-    (2008-2011)., Observed homes destroyed beyond habitability from convective storm
-    (HAILSTORM, THUNDERSTORM) events in Mali. DesInventar records: 1 events with data
-    out of 9 total convective storm events (2005-2005)., Observed homes destroyed
-    beyond habitability from flood (FLOOD) events in Mali. DesInventar records: 438
-    events with data out of 833 total flood events., Observed homes destroyed beyond
-    habitability from strong wind (WINDSTORM) events in Mali. DesInventar records:
-    1 events with data out of 2 total strong wind events., Observed homes destroyed
-    beyond habitability from wildfire (FIRE, FOREST FIRE) events in Mali. DesInventar
-    records: 2 events with data out of 58 total wildfire events (2008-2011)., Observed
-    homes with non-structural damage, still habitable from flood (FLOOD) events in
-    Mali. DesInventar records: 143 events with data out of 833 total flood events.,
-    Observed homes with non-structural damage, still habitable from wildfire (FIRE,
-    FOREST FIRE) events in Mali. DesInventar records: 2 events with data out of 58
-    total wildfire events (2008-2011)., Observed livestock lost from convective storm
-    (HAILSTORM, THUNDERSTORM) events in Mali. DesInventar records: 2 events with data
-    out of 9 total convective storm events (2005-2005)., Observed livestock lost from
-    drought (DROUGHT) events in Mali. DesInventar records: 2 events with data out
-    of 816 total drought events., Observed livestock lost from flood (FLOOD) events
-    in Mali. DesInventar records: 128 events with data out of 833 total flood events.,
-    Observed livestock lost from wildfire (FIRE, FOREST FIRE) events in Mali. DesInventar
-    records: 5 events with data out of 58 total wildfire events (2008-2011)., Observed
-    metres of transport networks destroyed from flood (FLOOD) events in Mali. DesInventar
-    records: 6 events with data out of 833 total flood events., Observed persons indirectly
-    affected (disruption to services, commerce, work) from convective storm (HAILSTORM,
-    THUNDERSTORM) events in Mali. DesInventar records: 2 events with data out of 9
-    total convective storm events (2005-2005)., Observed persons indirectly affected
-    (disruption to services, commerce, work) from drought (DROUGHT) events in Mali.
-    DesInventar records: 812 events with data out of 816 total drought events., Observed
-    persons indirectly affected (disruption to services, commerce, work) from flood
-    (FLOOD) events in Mali. DesInventar records: 38 events with data out of 833 total
-    flood events., Observed persons indirectly affected (disruption to services, commerce,
-    work) from wildfire (FIRE, FOREST FIRE) events in Mali. DesInventar records: 2
-    events with data out of 58 total wildfire events (2008-2011)., Observed persons
-    injured or made sick directly by disaster events from convective storm (HAILSTORM,
-    THUNDERSTORM) events in Mali. DesInventar records: 1 events with data out of 9
-    total convective storm events (2005-2005)., Observed persons injured or made sick
-    directly by disaster events from flood (FLOOD) events in Mali. DesInventar records:
-    99 events with data out of 833 total flood events., Observed persons injured or
-    made sick directly by disaster events from strong wind (WINDSTORM) events in Mali.
-    DesInventar records: 1 events with data out of 2 total strong wind events., Observed
-    persons injured or made sick directly by disaster events from wildfire (FIRE,
-    FOREST FIRE) events in Mali. DesInventar records: 3 events with data out of 58
-    total wildfire events (2008-2011)., Observed persons missing or unaccounted for
-    after disaster events from flood (FLOOD) events in Mali. DesInventar records:
-    8 events with data out of 833 total flood events., Observed persons permanently
-    relocated from homes from flood (FLOOD) events in Mali. DesInventar records: 23
-    events with data out of 833 total flood events., Observed persons temporarily
-    evacuated from homes or workplaces from flood (FLOOD) events in Mali. DesInventar
-    records: 1 events with data out of 833 total flood events., Observed persons whose
-    goods/services suffered serious damage from drought (DROUGHT) events in Mali.
-    DesInventar records: 1 events with data out of 816 total drought events., Observed
-    persons whose goods/services suffered serious damage from flood (FLOOD) events
-    in Mali. DesInventar records: 544 events with data out of 833 total flood events.,
-    Observed persons whose goods/services suffered serious damage from strong wind
-    (WINDSTORM) events in Mali. DesInventar records: 1 events with data out of 2 total
-    strong wind events., Observed persons whose goods/services suffered serious damage
-    from wildfire (FIRE, FOREST FIRE) events in Mali. DesInventar records: 1 events
-    with data out of 58 total wildfire events (2008-2011)., Observed total economic
-    losses in local currency from flood (FLOOD) events in Mali. DesInventar records:
-    84 events with data out of 833 total flood events.'
+  description: 32 loss records across 5 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -117,6 +47,109 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 32
+  loss_groups:
+  - count: 5
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from convective storm (HAILSTORM, THUNDERSTORM) events in Mali. DesInventar
+      records: 2 events with data out of 9 total convective storm events (2005-2005).'
+    - 'Observed deaths directly caused by disaster events from convective storm (HAILSTORM,
+      THUNDERSTORM) events in Mali. DesInventar records: 5 events with data out of
+      9 total convective storm events (2005-2005).'
+    - 'Observed homes destroyed beyond habitability from convective storm (HAILSTORM,
+      THUNDERSTORM) events in Mali. DesInventar records: 1 events with data out of
+      9 total convective storm events (2005-2005).'
+    - 'Observed persons injured or made sick directly by disaster events from convective
+      storm (HAILSTORM, THUNDERSTORM) events in Mali. DesInventar records: 1 events
+      with data out of 9 total convective storm events (2005-2005).'
+    - 'Observed livestock lost from convective storm (HAILSTORM, THUNDERSTORM) events
+      in Mali. DesInventar records: 2 events with data out of 9 total convective storm
+      events (2005-2005).'
+    hazard_type: convective_storm
+  - count: 3
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from drought (DROUGHT) events in Mali. DesInventar records: 812 events with
+      data out of 816 total drought events.'
+    - 'Observed livestock lost from drought (DROUGHT) events in Mali. DesInventar
+      records: 2 events with data out of 816 total drought events.'
+    - 'Observed persons whose goods/services suffered serious damage from drought
+      (DROUGHT) events in Mali. DesInventar records: 1 events with data out of 816
+      total drought events.'
+    hazard_type: drought
+  - count: 14
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from flood (FLOOD) events in Mali. DesInventar records: 38 events with data
+      out of 833 total flood events.'
+    - 'Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events
+      in Mali. DesInventar records: 115 events with data out of 833 total flood events.'
+    - 'Observed metres of transport networks destroyed from flood (FLOOD) events in
+      Mali. DesInventar records: 6 events with data out of 833 total flood events.'
+    - 'Observed deaths directly caused by disaster events from flood (FLOOD) events
+      in Mali. DesInventar records: 119 events with data out of 833 total flood events.'
+    - 'Observed educational facilities destroyed or affected from flood (FLOOD) events
+      in Mali. DesInventar records: 14 events with data out of 833 total flood events.'
+    - 'Observed persons temporarily evacuated from homes or workplaces from flood
+      (FLOOD) events in Mali. DesInventar records: 1 events with data out of 833 total
+      flood events.'
+    - 'Observed homes with non-structural damage, still habitable from flood (FLOOD)
+      events in Mali. DesInventar records: 143 events with data out of 833 total flood
+      events.'
+    - 'Observed homes destroyed beyond habitability from flood (FLOOD) events in Mali.
+      DesInventar records: 438 events with data out of 833 total flood events.'
+    - 'Observed persons injured or made sick directly by disaster events from flood
+      (FLOOD) events in Mali. DesInventar records: 99 events with data out of 833
+      total flood events.'
+    - 'Observed total economic losses in local currency from flood (FLOOD) events
+      in Mali. DesInventar records: 84 events with data out of 833 total flood events.'
+    - 'Observed livestock lost from flood (FLOOD) events in Mali. DesInventar records:
+      128 events with data out of 833 total flood events.'
+    - 'Observed persons missing or unaccounted for after disaster events from flood
+      (FLOOD) events in Mali. DesInventar records: 8 events with data out of 833 total
+      flood events.'
+    - 'Observed persons permanently relocated from homes from flood (FLOOD) events
+      in Mali. DesInventar records: 23 events with data out of 833 total flood events.'
+    - 'Observed persons whose goods/services suffered serious damage from flood (FLOOD)
+      events in Mali. DesInventar records: 544 events with data out of 833 total flood
+      events.'
+    hazard_type: flood
+  - count: 3
+    descriptions:
+    - 'Observed homes destroyed beyond habitability from strong wind (WINDSTORM) events
+      in Mali. DesInventar records: 1 events with data out of 2 total strong wind
+      events.'
+    - 'Observed persons injured or made sick directly by disaster events from strong
+      wind (WINDSTORM) events in Mali. DesInventar records: 1 events with data out
+      of 2 total strong wind events.'
+    - 'Observed persons whose goods/services suffered serious damage from strong wind
+      (WINDSTORM) events in Mali. DesInventar records: 1 events with data out of 2
+      total strong wind events.'
+    hazard_type: strong_wind
+  - count: 7
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (FIRE, FOREST FIRE) events in Mali. DesInventar records: 2 events
+      with data out of 58 total wildfire events (2008-2011).'
+    - 'Observed hectares of crops/woods destroyed or affected from wildfire (FIRE,
+      FOREST FIRE) events in Mali. DesInventar records: 41 events with data out of
+      58 total wildfire events (2008-2011).'
+    - 'Observed homes with non-structural damage, still habitable from wildfire (FIRE,
+      FOREST FIRE) events in Mali. DesInventar records: 2 events with data out of
+      58 total wildfire events (2008-2011).'
+    - 'Observed homes destroyed beyond habitability from wildfire (FIRE, FOREST FIRE)
+      events in Mali. DesInventar records: 2 events with data out of 58 total wildfire
+      events (2008-2011).'
+    - 'Observed persons injured or made sick directly by disaster events from wildfire
+      (FIRE, FOREST FIRE) events in Mali. DesInventar records: 3 events with data
+      out of 58 total wildfire events (2008-2011).'
+    - 'Observed livestock lost from wildfire (FIRE, FOREST FIRE) events in Mali. DesInventar
+      records: 5 events with data out of 58 total wildfire events (2008-2011).'
+    - 'Observed persons whose goods/services suffered serious damage from wildfire
+      (FIRE, FOREST FIRE) events in Mali. DesInventar records: 1 events with data
+      out of 58 total wildfire events (2008-2011).'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:

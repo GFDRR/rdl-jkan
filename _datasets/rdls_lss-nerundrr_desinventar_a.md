@@ -34,68 +34,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from drought (DROUGHT)
-    events in Niger. DesInventar records: 2 events with data out of 289 total drought
-    events., Observed deaths directly caused by disaster events from flood (FLOOD)
-    events in Niger. DesInventar records: 49 events with data out of 763 total flood
-    events., Observed deaths directly caused by disaster events from wildfire (FIRE,
-    FOREST FIRE) events in Niger. DesInventar records: 23 events with data out of
-    310 total wildfire events., Observed educational facilities destroyed or affected
-    from flood (FLOOD) events in Niger. DesInventar records: 5 events with data out
-    of 763 total flood events., Observed educational facilities destroyed or affected
-    from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 2 events
-    with data out of 310 total wildfire events., Observed health facilities destroyed
-    or affected from flood (FLOOD) events in Niger. DesInventar records: 1 events
-    with data out of 763 total flood events., Observed hectares of crops/woods destroyed
-    or affected from drought (DROUGHT) events in Niger. DesInventar records: 15 events
-    with data out of 289 total drought events., Observed hectares of crops/woods destroyed
-    or affected from flood (FLOOD) events in Niger. DesInventar records: 239 events
-    with data out of 763 total flood events., Observed hectares of crops/woods destroyed
-    or affected from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records:
-    168 events with data out of 310 total wildfire events., Observed homes destroyed
-    beyond habitability from flood (FLOOD) events in Niger. DesInventar records: 410
-    events with data out of 763 total flood events., Observed homes destroyed beyond
-    habitability from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records:
-    28 events with data out of 310 total wildfire events., Observed homes with non-structural
-    damage, still habitable from flood (FLOOD) events in Niger. DesInventar records:
-    29 events with data out of 763 total flood events., Observed homes with non-structural
-    damage, still habitable from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar
-    records: 2 events with data out of 310 total wildfire events., Observed livestock
-    lost from drought (DROUGHT) events in Niger. DesInventar records: 14 events with
-    data out of 289 total drought events., Observed livestock lost from flood (FLOOD)
-    events in Niger. DesInventar records: 122 events with data out of 763 total flood
-    events., Observed livestock lost from wildfire (FIRE, FOREST FIRE) events in Niger.
-    DesInventar records: 14 events with data out of 310 total wildfire events., Observed
-    persons indirectly affected (disruption to services, commerce, work) from drought
-    (DROUGHT) events in Niger. DesInventar records: 46 events with data out of 289
-    total drought events., Observed persons indirectly affected (disruption to services,
-    commerce, work) from flood (FLOOD) events in Niger. DesInventar records: 214 events
-    with data out of 763 total flood events., Observed persons indirectly affected
-    (disruption to services, commerce, work) from wildfire (FIRE, FOREST FIRE) events
-    in Niger. DesInventar records: 78 events with data out of 310 total wildfire events.,
-    Observed persons injured or made sick directly by disaster events from flood (FLOOD)
-    events in Niger. DesInventar records: 34 events with data out of 763 total flood
-    events., Observed persons permanently relocated from homes from drought (DROUGHT)
-    events in Niger. DesInventar records: 10 events with data out of 289 total drought
-    events., Observed persons permanently relocated from homes from flood (FLOOD)
-    events in Niger. DesInventar records: 2 events with data out of 763 total flood
-    events., Observed persons whose goods/services suffered serious damage from drought
-    (DROUGHT) events in Niger. DesInventar records: 143 events with data out of 289
-    total drought events., Observed persons whose goods/services suffered serious
-    damage from flood (FLOOD) events in Niger. DesInventar records: 456 events with
-    data out of 763 total flood events., Observed persons whose goods/services suffered
-    serious damage from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar
-    records: 48 events with data out of 310 total wildfire events., Observed total
-    economic losses in US Dollars from flood (FLOOD) events in Niger. DesInventar
-    records: 1 events with data out of 763 total flood events., Observed total economic
-    losses in US Dollars from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar
-    records: 2 events with data out of 310 total wildfire events., Observed total
-    economic losses in local currency from drought (DROUGHT) events in Niger. DesInventar
-    records: 6 events with data out of 289 total drought events., Observed total economic
-    losses in local currency from flood (FLOOD) events in Niger. DesInventar records:
-    9 events with data out of 763 total flood events., Observed total economic losses
-    in local currency from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar
-    records: 14 events with data out of 310 total wildfire events.'
+  description: 30 loss records across 3 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -105,6 +44,94 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 30
+  loss_groups:
+  - count: 7
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from drought (DROUGHT) events in Niger. DesInventar records: 46 events with
+      data out of 289 total drought events.'
+    - 'Observed hectares of crops/woods destroyed or affected from drought (DROUGHT)
+      events in Niger. DesInventar records: 15 events with data out of 289 total drought
+      events.'
+    - 'Observed deaths directly caused by disaster events from drought (DROUGHT) events
+      in Niger. DesInventar records: 2 events with data out of 289 total drought events.'
+    - 'Observed total economic losses in local currency from drought (DROUGHT) events
+      in Niger. DesInventar records: 6 events with data out of 289 total drought events.'
+    - 'Observed livestock lost from drought (DROUGHT) events in Niger. DesInventar
+      records: 14 events with data out of 289 total drought events.'
+    - 'Observed persons permanently relocated from homes from drought (DROUGHT) events
+      in Niger. DesInventar records: 10 events with data out of 289 total drought
+      events.'
+    - 'Observed persons whose goods/services suffered serious damage from drought
+      (DROUGHT) events in Niger. DesInventar records: 143 events with data out of
+      289 total drought events.'
+    hazard_type: drought
+  - count: 13
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from flood (FLOOD) events in Niger. DesInventar records: 214 events with data
+      out of 763 total flood events.'
+    - 'Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events
+      in Niger. DesInventar records: 239 events with data out of 763 total flood events.'
+    - 'Observed deaths directly caused by disaster events from flood (FLOOD) events
+      in Niger. DesInventar records: 49 events with data out of 763 total flood events.'
+    - 'Observed educational facilities destroyed or affected from flood (FLOOD) events
+      in Niger. DesInventar records: 5 events with data out of 763 total flood events.'
+    - 'Observed health facilities destroyed or affected from flood (FLOOD) events
+      in Niger. DesInventar records: 1 events with data out of 763 total flood events.'
+    - 'Observed homes with non-structural damage, still habitable from flood (FLOOD)
+      events in Niger. DesInventar records: 29 events with data out of 763 total flood
+      events.'
+    - 'Observed homes destroyed beyond habitability from flood (FLOOD) events in Niger.
+      DesInventar records: 410 events with data out of 763 total flood events.'
+    - 'Observed persons injured or made sick directly by disaster events from flood
+      (FLOOD) events in Niger. DesInventar records: 34 events with data out of 763
+      total flood events.'
+    - 'Observed total economic losses in local currency from flood (FLOOD) events
+      in Niger. DesInventar records: 9 events with data out of 763 total flood events.'
+    - 'Observed total economic losses in US Dollars from flood (FLOOD) events in Niger.
+      DesInventar records: 1 events with data out of 763 total flood events.'
+    - 'Observed livestock lost from flood (FLOOD) events in Niger. DesInventar records:
+      122 events with data out of 763 total flood events.'
+    - 'Observed persons permanently relocated from homes from flood (FLOOD) events
+      in Niger. DesInventar records: 2 events with data out of 763 total flood events.'
+    - 'Observed persons whose goods/services suffered serious damage from flood (FLOOD)
+      events in Niger. DesInventar records: 456 events with data out of 763 total
+      flood events.'
+    hazard_type: flood
+  - count: 10
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (FIRE, FOREST FIRE) events in Niger. DesInventar records: 78 events
+      with data out of 310 total wildfire events.'
+    - 'Observed hectares of crops/woods destroyed or affected from wildfire (FIRE,
+      FOREST FIRE) events in Niger. DesInventar records: 168 events with data out
+      of 310 total wildfire events.'
+    - 'Observed deaths directly caused by disaster events from wildfire (FIRE, FOREST
+      FIRE) events in Niger. DesInventar records: 23 events with data out of 310 total
+      wildfire events.'
+    - 'Observed educational facilities destroyed or affected from wildfire (FIRE,
+      FOREST FIRE) events in Niger. DesInventar records: 2 events with data out of
+      310 total wildfire events.'
+    - 'Observed homes with non-structural damage, still habitable from wildfire (FIRE,
+      FOREST FIRE) events in Niger. DesInventar records: 2 events with data out of
+      310 total wildfire events.'
+    - 'Observed homes destroyed beyond habitability from wildfire (FIRE, FOREST FIRE)
+      events in Niger. DesInventar records: 28 events with data out of 310 total wildfire
+      events.'
+    - 'Observed total economic losses in local currency from wildfire (FIRE, FOREST
+      FIRE) events in Niger. DesInventar records: 14 events with data out of 310 total
+      wildfire events.'
+    - 'Observed total economic losses in US Dollars from wildfire (FIRE, FOREST FIRE)
+      events in Niger. DesInventar records: 2 events with data out of 310 total wildfire
+      events.'
+    - 'Observed livestock lost from wildfire (FIRE, FOREST FIRE) events in Niger.
+      DesInventar records: 14 events with data out of 310 total wildfire events.'
+    - 'Observed persons whose goods/services suffered serious damage from wildfire
+      (FIRE, FOREST FIRE) events in Niger. DesInventar records: 48 events with data
+      out of 310 total wildfire events.'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:

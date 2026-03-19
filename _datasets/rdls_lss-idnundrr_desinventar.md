@@ -36,118 +36,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from coastal flood
-    (SURGE) events in Indonesia. DesInventar records: 17 events with data out of 270
-    total coastal flood events (2009-2011)., Observed deaths directly caused by disaster
-    events from drought (DROUGHT) events in Indonesia. DesInventar records: 1 events
-    with data out of 1,748 total drought events (2004-2008)., Observed deaths directly
-    caused by disaster events from earthquake (EARTHQUAKE) events in Indonesia. DesInventar
-    records: 165 events with data out of 449 total earthquake events (1976-2004).,
-    Observed deaths directly caused by disaster events from tsunami (TSUNAMI) events
-    in Indonesia. DesInventar records: 11 events with data out of 13 total tsunami
-    events (1973-1977)., Observed deaths directly caused by disaster events from wildfire
-    (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 145 events with
-    data out of 2,827 total wildfire events (2005-2012)., Observed educational facilities
-    destroyed or affected from coastal flood (SURGE) events in Indonesia. DesInventar
-    records: 11 events with data out of 270 total coastal flood events (2009-2011).,
-    Observed educational facilities destroyed or affected from earthquake (EARTHQUAKE)
-    events in Indonesia. DesInventar records: 171 events with data out of 449 total
-    earthquake events (1976-2004)., Observed educational facilities destroyed or affected
-    from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 2 events with
-    data out of 13 total tsunami events (1973-1977)., Observed educational facilities
-    destroyed or affected from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar
-    records: 50 events with data out of 2,827 total wildfire events (2005-2012).,
-    Observed health facilities destroyed or affected from coastal flood (SURGE) events
-    in Indonesia. DesInventar records: 6 events with data out of 270 total coastal
-    flood events (2009-2011)., Observed health facilities destroyed or affected from
-    earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 83 events with
-    data out of 449 total earthquake events (1976-2004)., Observed health facilities
-    destroyed or affected from tsunami (TSUNAMI) events in Indonesia. DesInventar
-    records: 1 events with data out of 13 total tsunami events (1973-1977)., Observed
-    health facilities destroyed or affected from wildfire (FIRE, FOREST FIRE) events
-    in Indonesia. DesInventar records: 14 events with data out of 2,827 total wildfire
-    events (2005-2012)., Observed hectares of crops/woods destroyed or affected from
-    coastal flood (SURGE) events in Indonesia. DesInventar records: 5 events with
-    data out of 270 total coastal flood events (2009-2011)., Observed hectares of
-    crops/woods destroyed or affected from drought (DROUGHT) events in Indonesia.
-    DesInventar records: 1,352 events with data out of 1,748 total drought events
-    (2004-2008)., Observed hectares of crops/woods destroyed or affected from earthquake
-    (EARTHQUAKE) events in Indonesia. DesInventar records: 5 events with data out
-    of 449 total earthquake events (1976-2004)., Observed hectares of crops/woods
-    destroyed or affected from tsunami (TSUNAMI) events in Indonesia. DesInventar
-    records: 2 events with data out of 13 total tsunami events (1973-1977)., Observed
-    hectares of crops/woods destroyed or affected from wildfire (FIRE, FOREST FIRE)
-    events in Indonesia. DesInventar records: 12 events with data out of 2,827 total
-    wildfire events (2005-2012)., Observed homes destroyed beyond habitability from
-    coastal flood (SURGE) events in Indonesia. DesInventar records: 93 events with
-    data out of 270 total coastal flood events (2009-2011)., Observed homes destroyed
-    beyond habitability from earthquake (EARTHQUAKE) events in Indonesia. DesInventar
-    records: 188 events with data out of 449 total earthquake events (1976-2004).,
-    Observed homes destroyed beyond habitability from tsunami (TSUNAMI) events in
-    Indonesia. DesInventar records: 6 events with data out of 13 total tsunami events
-    (1973-1977)., Observed homes destroyed beyond habitability from wildfire (FIRE,
-    FOREST FIRE) events in Indonesia. DesInventar records: 1,088 events with data
-    out of 2,827 total wildfire events (2005-2012)., Observed homes with non-structural
-    damage, still habitable from coastal flood (SURGE) events in Indonesia. DesInventar
-    records: 55 events with data out of 270 total coastal flood events (2009-2011).,
-    Observed homes with non-structural damage, still habitable from earthquake (EARTHQUAKE)
-    events in Indonesia. DesInventar records: 171 events with data out of 449 total
-    earthquake events (1976-2004)., Observed homes with non-structural damage, still
-    habitable from tsunami (TSUNAMI) events in Indonesia. DesInventar records: 1 events
-    with data out of 13 total tsunami events (1973-1977)., Observed homes with non-structural
-    damage, still habitable from wildfire (FIRE, FOREST FIRE) events in Indonesia.
-    DesInventar records: 92 events with data out of 2,827 total wildfire events (2005-2012).,
-    Observed persons indirectly affected (disruption to services, commerce, work)
-    from coastal flood (SURGE) events in Indonesia. DesInventar records: 32 events
-    with data out of 270 total coastal flood events (2009-2011)., Observed persons
-    indirectly affected (disruption to services, commerce, work) from drought (DROUGHT)
-    events in Indonesia. DesInventar records: 38 events with data out of 1,748 total
-    drought events (2004-2008)., Observed persons indirectly affected (disruption
-    to services, commerce, work) from earthquake (EARTHQUAKE) events in Indonesia.
-    DesInventar records: 29 events with data out of 449 total earthquake events (1976-2004).,
-    Observed persons indirectly affected (disruption to services, commerce, work)
-    from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 512
-    events with data out of 2,827 total wildfire events (2005-2012)., Observed persons
-    injured or made sick directly by disaster events from coastal flood (SURGE) events
-    in Indonesia. DesInventar records: 18 events with data out of 270 total coastal
-    flood events (2009-2011)., Observed persons injured or made sick directly by disaster
-    events from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records:
-    169 events with data out of 449 total earthquake events (1976-2004)., Observed
-    persons injured or made sick directly by disaster events from tsunami (TSUNAMI)
-    events in Indonesia. DesInventar records: 3 events with data out of 13 total tsunami
-    events (1973-1977)., Observed persons injured or made sick directly by disaster
-    events from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records:
-    166 events with data out of 2,827 total wildfire events (2005-2012)., Observed
-    persons missing or unaccounted for after disaster events from coastal flood (SURGE)
-    events in Indonesia. DesInventar records: 7 events with data out of 270 total
-    coastal flood events (2009-2011)., Observed persons missing or unaccounted for
-    after disaster events from earthquake (EARTHQUAKE) events in Indonesia. DesInventar
-    records: 10 events with data out of 449 total earthquake events (1976-2004).,
-    Observed persons missing or unaccounted for after disaster events from tsunami
-    (TSUNAMI) events in Indonesia. DesInventar records: 6 events with data out of
-    13 total tsunami events (1973-1977)., Observed persons missing or unaccounted
-    for after disaster events from wildfire (FIRE, FOREST FIRE) events in Indonesia.
-    DesInventar records: 5 events with data out of 2,827 total wildfire events (2005-2012).,
-    Observed persons temporarily evacuated from homes or workplaces from coastal flood
-    (SURGE) events in Indonesia. DesInventar records: 54 events with data out of 270
-    total coastal flood events (2009-2011)., Observed persons temporarily evacuated
-    from homes or workplaces from earthquake (EARTHQUAKE) events in Indonesia. DesInventar
-    records: 103 events with data out of 449 total earthquake events (1976-2004).,
-    Observed persons temporarily evacuated from homes or workplaces from tsunami (TSUNAMI)
-    events in Indonesia. DesInventar records: 2 events with data out of 13 total tsunami
-    events (1973-1977)., Observed persons temporarily evacuated from homes or workplaces
-    from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 465
-    events with data out of 2,827 total wildfire events (2005-2012)., Observed total
-    economic losses in local currency from coastal flood (SURGE) events in Indonesia.
-    DesInventar records: 38 events with data out of 270 total coastal flood events
-    (2009-2011)., Observed total economic losses in local currency from drought (DROUGHT)
-    events in Indonesia. DesInventar records: 8 events with data out of 1,748 total
-    drought events (2004-2008)., Observed total economic losses in local currency
-    from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 32 events
-    with data out of 449 total earthquake events (1976-2004)., Observed total economic
-    losses in local currency from wildfire (FIRE, FOREST FIRE) events in Indonesia.
-    DesInventar records: 1,310 events with data out of 2,827 total wildfire events
-    (2005-2012).'
+  description: 46 loss records across 5 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -157,6 +46,161 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 46
+  loss_groups:
+  - count: 11
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from coastal flood (SURGE) events in Indonesia. DesInventar records: 32 events
+      with data out of 270 total coastal flood events (2009-2011).'
+    - 'Observed hectares of crops/woods destroyed or affected from coastal flood (SURGE)
+      events in Indonesia. DesInventar records: 5 events with data out of 270 total
+      coastal flood events (2009-2011).'
+    - 'Observed deaths directly caused by disaster events from coastal flood (SURGE)
+      events in Indonesia. DesInventar records: 17 events with data out of 270 total
+      coastal flood events (2009-2011).'
+    - 'Observed educational facilities destroyed or affected from coastal flood (SURGE)
+      events in Indonesia. DesInventar records: 11 events with data out of 270 total
+      coastal flood events (2009-2011).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from coastal
+      flood (SURGE) events in Indonesia. DesInventar records: 54 events with data
+      out of 270 total coastal flood events (2009-2011).'
+    - 'Observed health facilities destroyed or affected from coastal flood (SURGE)
+      events in Indonesia. DesInventar records: 6 events with data out of 270 total
+      coastal flood events (2009-2011).'
+    - 'Observed homes with non-structural damage, still habitable from coastal flood
+      (SURGE) events in Indonesia. DesInventar records: 55 events with data out of
+      270 total coastal flood events (2009-2011).'
+    - 'Observed homes destroyed beyond habitability from coastal flood (SURGE) events
+      in Indonesia. DesInventar records: 93 events with data out of 270 total coastal
+      flood events (2009-2011).'
+    - 'Observed persons injured or made sick directly by disaster events from coastal
+      flood (SURGE) events in Indonesia. DesInventar records: 18 events with data
+      out of 270 total coastal flood events (2009-2011).'
+    - 'Observed total economic losses in local currency from coastal flood (SURGE)
+      events in Indonesia. DesInventar records: 38 events with data out of 270 total
+      coastal flood events (2009-2011).'
+    - 'Observed persons missing or unaccounted for after disaster events from coastal
+      flood (SURGE) events in Indonesia. DesInventar records: 7 events with data out
+      of 270 total coastal flood events (2009-2011).'
+    hazard_type: coastal_flood
+  - count: 4
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from drought (DROUGHT) events in Indonesia. DesInventar records: 38 events with
+      data out of 1,748 total drought events (2004-2008).'
+    - 'Observed hectares of crops/woods destroyed or affected from drought (DROUGHT)
+      events in Indonesia. DesInventar records: 1,352 events with data out of 1,748
+      total drought events (2004-2008).'
+    - 'Observed deaths directly caused by disaster events from drought (DROUGHT) events
+      in Indonesia. DesInventar records: 1 events with data out of 1,748 total drought
+      events (2004-2008).'
+    - 'Observed total economic losses in local currency from drought (DROUGHT) events
+      in Indonesia. DesInventar records: 8 events with data out of 1,748 total drought
+      events (2004-2008).'
+    hazard_type: drought
+  - count: 11
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from earthquake (EARTHQUAKE) events in Indonesia. DesInventar records: 29 events
+      with data out of 449 total earthquake events (1976-2004).'
+    - 'Observed hectares of crops/woods destroyed or affected from earthquake (EARTHQUAKE)
+      events in Indonesia. DesInventar records: 5 events with data out of 449 total
+      earthquake events (1976-2004).'
+    - 'Observed deaths directly caused by disaster events from earthquake (EARTHQUAKE)
+      events in Indonesia. DesInventar records: 165 events with data out of 449 total
+      earthquake events (1976-2004).'
+    - 'Observed educational facilities destroyed or affected from earthquake (EARTHQUAKE)
+      events in Indonesia. DesInventar records: 171 events with data out of 449 total
+      earthquake events (1976-2004).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from earthquake
+      (EARTHQUAKE) events in Indonesia. DesInventar records: 103 events with data
+      out of 449 total earthquake events (1976-2004).'
+    - 'Observed health facilities destroyed or affected from earthquake (EARTHQUAKE)
+      events in Indonesia. DesInventar records: 83 events with data out of 449 total
+      earthquake events (1976-2004).'
+    - 'Observed homes with non-structural damage, still habitable from earthquake
+      (EARTHQUAKE) events in Indonesia. DesInventar records: 171 events with data
+      out of 449 total earthquake events (1976-2004).'
+    - 'Observed homes destroyed beyond habitability from earthquake (EARTHQUAKE) events
+      in Indonesia. DesInventar records: 188 events with data out of 449 total earthquake
+      events (1976-2004).'
+    - 'Observed persons injured or made sick directly by disaster events from earthquake
+      (EARTHQUAKE) events in Indonesia. DesInventar records: 169 events with data
+      out of 449 total earthquake events (1976-2004).'
+    - 'Observed total economic losses in local currency from earthquake (EARTHQUAKE)
+      events in Indonesia. DesInventar records: 32 events with data out of 449 total
+      earthquake events (1976-2004).'
+    - 'Observed persons missing or unaccounted for after disaster events from earthquake
+      (EARTHQUAKE) events in Indonesia. DesInventar records: 10 events with data out
+      of 449 total earthquake events (1976-2004).'
+    hazard_type: earthquake
+  - count: 9
+    descriptions:
+    - 'Observed hectares of crops/woods destroyed or affected from tsunami (TSUNAMI)
+      events in Indonesia. DesInventar records: 2 events with data out of 13 total
+      tsunami events (1973-1977).'
+    - 'Observed deaths directly caused by disaster events from tsunami (TSUNAMI) events
+      in Indonesia. DesInventar records: 11 events with data out of 13 total tsunami
+      events (1973-1977).'
+    - 'Observed educational facilities destroyed or affected from tsunami (TSUNAMI)
+      events in Indonesia. DesInventar records: 2 events with data out of 13 total
+      tsunami events (1973-1977).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from tsunami
+      (TSUNAMI) events in Indonesia. DesInventar records: 2 events with data out of
+      13 total tsunami events (1973-1977).'
+    - 'Observed health facilities destroyed or affected from tsunami (TSUNAMI) events
+      in Indonesia. DesInventar records: 1 events with data out of 13 total tsunami
+      events (1973-1977).'
+    - 'Observed homes with non-structural damage, still habitable from tsunami (TSUNAMI)
+      events in Indonesia. DesInventar records: 1 events with data out of 13 total
+      tsunami events (1973-1977).'
+    - 'Observed homes destroyed beyond habitability from tsunami (TSUNAMI) events
+      in Indonesia. DesInventar records: 6 events with data out of 13 total tsunami
+      events (1973-1977).'
+    - 'Observed persons injured or made sick directly by disaster events from tsunami
+      (TSUNAMI) events in Indonesia. DesInventar records: 3 events with data out of
+      13 total tsunami events (1973-1977).'
+    - 'Observed persons missing or unaccounted for after disaster events from tsunami
+      (TSUNAMI) events in Indonesia. DesInventar records: 6 events with data out of
+      13 total tsunami events (1973-1977).'
+    hazard_type: tsunami
+  - count: 11
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (FIRE, FOREST FIRE) events in Indonesia. DesInventar records:
+      512 events with data out of 2,827 total wildfire events (2005-2012).'
+    - 'Observed hectares of crops/woods destroyed or affected from wildfire (FIRE,
+      FOREST FIRE) events in Indonesia. DesInventar records: 12 events with data out
+      of 2,827 total wildfire events (2005-2012).'
+    - 'Observed deaths directly caused by disaster events from wildfire (FIRE, FOREST
+      FIRE) events in Indonesia. DesInventar records: 145 events with data out of
+      2,827 total wildfire events (2005-2012).'
+    - 'Observed educational facilities destroyed or affected from wildfire (FIRE,
+      FOREST FIRE) events in Indonesia. DesInventar records: 50 events with data out
+      of 2,827 total wildfire events (2005-2012).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from wildfire
+      (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 465 events with
+      data out of 2,827 total wildfire events (2005-2012).'
+    - 'Observed health facilities destroyed or affected from wildfire (FIRE, FOREST
+      FIRE) events in Indonesia. DesInventar records: 14 events with data out of 2,827
+      total wildfire events (2005-2012).'
+    - 'Observed homes with non-structural damage, still habitable from wildfire (FIRE,
+      FOREST FIRE) events in Indonesia. DesInventar records: 92 events with data out
+      of 2,827 total wildfire events (2005-2012).'
+    - 'Observed homes destroyed beyond habitability from wildfire (FIRE, FOREST FIRE)
+      events in Indonesia. DesInventar records: 1,088 events with data out of 2,827
+      total wildfire events (2005-2012).'
+    - 'Observed persons injured or made sick directly by disaster events from wildfire
+      (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 166 events with
+      data out of 2,827 total wildfire events (2005-2012).'
+    - 'Observed total economic losses in local currency from wildfire (FIRE, FOREST
+      FIRE) events in Indonesia. DesInventar records: 1,310 events with data out of
+      2,827 total wildfire events (2005-2012).'
+    - 'Observed persons missing or unaccounted for after disaster events from wildfire
+      (FIRE, FOREST FIRE) events in Indonesia. DesInventar records: 5 events with
+      data out of 2,827 total wildfire events (2005-2012).'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:

@@ -35,100 +35,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from flood (Flood)
-    events in Cambodia. DesInventar records: 394 events with data out of 3,389 total
-    flood events (2011-2014)., Observed deaths directly caused by disaster events
-    from strong wind (Storm) events in Cambodia. DesInventar records: 58 events with
-    data out of 1,454 total strong wind events (2009-2016)., Observed deaths directly
-    caused by disaster events from wildfire (Fire) events in Cambodia. DesInventar
-    records: 53 events with data out of 1,814 total wildfire events (2013-2016).,
-    Observed educational facilities destroyed or affected from drought (Drought) events
-    in Cambodia. DesInventar records: 1 events with data out of 1,300 total drought
-    events (2011-2016)., Observed educational facilities destroyed or affected from
-    flood (Flood) events in Cambodia. DesInventar records: 59 events with data out
-    of 3,389 total flood events (2011-2014)., Observed educational facilities destroyed
-    or affected from strong wind (Storm) events in Cambodia. DesInventar records:
-    26 events with data out of 1,454 total strong wind events (2009-2016)., Observed
-    health facilities destroyed or affected from flood (Flood) events in Cambodia.
-    DesInventar records: 27 events with data out of 3,389 total flood events (2011-2014).,
-    Observed health facilities destroyed or affected from strong wind (Storm) events
-    in Cambodia. DesInventar records: 7 events with data out of 1,454 total strong
-    wind events (2009-2016)., Observed hectares of crops/woods destroyed or affected
-    from drought (Drought) events in Cambodia. DesInventar records: 552 events with
-    data out of 1,300 total drought events (2011-2016)., Observed hectares of crops/woods
-    destroyed or affected from flood (Flood) events in Cambodia. DesInventar records:
-    1,780 events with data out of 3,389 total flood events (2011-2014)., Observed
-    hectares of crops/woods destroyed or affected from strong wind (Storm) events
-    in Cambodia. DesInventar records: 13 events with data out of 1,454 total strong
-    wind events (2009-2016)., Observed hectares of crops/woods destroyed or affected
-    from wildfire (Fire) events in Cambodia. DesInventar records: 1 events with data
-    out of 1,814 total wildfire events (2013-2016)., Observed homes destroyed beyond
-    habitability from flood (Flood) events in Cambodia. DesInventar records: 184 events
-    with data out of 3,389 total flood events (2011-2014)., Observed homes destroyed
-    beyond habitability from strong wind (Storm) events in Cambodia. DesInventar records:
-    957 events with data out of 1,454 total strong wind events (2009-2016)., Observed
-    homes destroyed beyond habitability from wildfire (Fire) events in Cambodia. DesInventar
-    records: 1,249 events with data out of 1,814 total wildfire events (2013-2016).,
-    Observed homes with non-structural damage, still habitable from flood (Flood)
-    events in Cambodia. DesInventar records: 222 events with data out of 3,389 total
-    flood events (2011-2014)., Observed homes with non-structural damage, still habitable
-    from strong wind (Storm) events in Cambodia. DesInventar records: 787 events with
-    data out of 1,454 total strong wind events (2009-2016)., Observed homes with non-structural
-    damage, still habitable from wildfire (Fire) events in Cambodia. DesInventar records:
-    220 events with data out of 1,814 total wildfire events (2013-2016)., Observed
-    livestock lost from drought (Drought) events in Cambodia. DesInventar records:
-    2 events with data out of 1,300 total drought events (2011-2016)., Observed livestock
-    lost from flood (Flood) events in Cambodia. DesInventar records: 88 events with
-    data out of 3,389 total flood events (2011-2014)., Observed livestock lost from
-    strong wind (Storm) events in Cambodia. DesInventar records: 23 events with data
-    out of 1,454 total strong wind events (2009-2016)., Observed livestock lost from
-    wildfire (Fire) events in Cambodia. DesInventar records: 2 events with data out
-    of 1,814 total wildfire events (2013-2016)., Observed metres of transport networks
-    destroyed from drought (Drought) events in Cambodia. DesInventar records: 4 events
-    with data out of 1,300 total drought events (2011-2016)., Observed metres of transport
-    networks destroyed from flood (Flood) events in Cambodia. DesInventar records:
-    983 events with data out of 3,389 total flood events (2011-2014)., Observed metres
-    of transport networks destroyed from strong wind (Storm) events in Cambodia. DesInventar
-    records: 3 events with data out of 1,454 total strong wind events (2009-2016).,
-    Observed persons indirectly affected (disruption to services, commerce, work)
-    from drought (Drought) events in Cambodia. DesInventar records: 32 events with
-    data out of 1,300 total drought events (2011-2016)., Observed persons indirectly
-    affected (disruption to services, commerce, work) from strong wind (Storm) events
-    in Cambodia. DesInventar records: 4 events with data out of 1,454 total strong
-    wind events (2009-2016)., Observed persons indirectly affected (disruption to
-    services, commerce, work) from wildfire (Fire) events in Cambodia. DesInventar
-    records: 5 events with data out of 1,814 total wildfire events (2013-2016)., Observed
-    persons injured or made sick directly by disaster events from flood (Flood) events
-    in Cambodia. DesInventar records: 38 events with data out of 3,389 total flood
-    events (2011-2014)., Observed persons injured or made sick directly by disaster
-    events from strong wind (Storm) events in Cambodia. DesInventar records: 128 events
-    with data out of 1,454 total strong wind events (2009-2016)., Observed persons
-    injured or made sick directly by disaster events from wildfire (Fire) events in
-    Cambodia. DesInventar records: 46 events with data out of 1,814 total wildfire
-    events (2013-2016)., Observed persons missing or unaccounted for after disaster
-    events from strong wind (Storm) events in Cambodia. DesInventar records: 1 events
-    with data out of 1,454 total strong wind events (2009-2016)., Observed persons
-    permanently relocated from homes from flood (Flood) events in Cambodia. DesInventar
-    records: 15 events with data out of 3,389 total flood events (2011-2014)., Observed
-    persons temporarily evacuated from homes or workplaces from flood (Flood) events
-    in Cambodia. DesInventar records: 421 events with data out of 3,389 total flood
-    events (2011-2014)., Observed persons temporarily evacuated from homes or workplaces
-    from strong wind (Storm) events in Cambodia. DesInventar records: 2 events with
-    data out of 1,454 total strong wind events (2009-2016)., Observed persons temporarily
-    evacuated from homes or workplaces from wildfire (Fire) events in Cambodia. DesInventar
-    records: 2 events with data out of 1,814 total wildfire events (2013-2016)., Observed
-    persons whose goods/services suffered serious damage from drought (Drought) events
-    in Cambodia. DesInventar records: 334 events with data out of 1,300 total drought
-    events (2011-2016)., Observed persons whose goods/services suffered serious damage
-    from flood (Flood) events in Cambodia. DesInventar records: 1,546 events with
-    data out of 3,389 total flood events (2011-2014)., Observed persons whose goods/services
-    suffered serious damage from strong wind (Storm) events in Cambodia. DesInventar
-    records: 681 events with data out of 1,454 total strong wind events (2009-2016).,
-    Observed persons whose goods/services suffered serious damage from wildfire (Fire)
-    events in Cambodia. DesInventar records: 579 events with data out of 1,814 total
-    wildfire events (2013-2016)., Observed total economic losses in US Dollars from
-    wildfire (Fire) events in Cambodia. DesInventar records: 1 events with data out
-    of 1,814 total wildfire events (2013-2016).'
+  description: 41 loss records across 4 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -138,6 +45,138 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 41
+  loss_groups:
+  - count: 6
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from drought (Drought) events in Cambodia. DesInventar records: 32 events with
+      data out of 1,300 total drought events (2011-2016).'
+    - 'Observed hectares of crops/woods destroyed or affected from drought (Drought)
+      events in Cambodia. DesInventar records: 552 events with data out of 1,300 total
+      drought events (2011-2016).'
+    - 'Observed metres of transport networks destroyed from drought (Drought) events
+      in Cambodia. DesInventar records: 4 events with data out of 1,300 total drought
+      events (2011-2016).'
+    - 'Observed educational facilities destroyed or affected from drought (Drought)
+      events in Cambodia. DesInventar records: 1 events with data out of 1,300 total
+      drought events (2011-2016).'
+    - 'Observed livestock lost from drought (Drought) events in Cambodia. DesInventar
+      records: 2 events with data out of 1,300 total drought events (2011-2016).'
+    - 'Observed persons whose goods/services suffered serious damage from drought
+      (Drought) events in Cambodia. DesInventar records: 334 events with data out
+      of 1,300 total drought events (2011-2016).'
+    hazard_type: drought
+  - count: 12
+    descriptions:
+    - 'Observed hectares of crops/woods destroyed or affected from flood (Flood) events
+      in Cambodia. DesInventar records: 1,780 events with data out of 3,389 total
+      flood events (2011-2014).'
+    - 'Observed metres of transport networks destroyed from flood (Flood) events in
+      Cambodia. DesInventar records: 983 events with data out of 3,389 total flood
+      events (2011-2014).'
+    - 'Observed deaths directly caused by disaster events from flood (Flood) events
+      in Cambodia. DesInventar records: 394 events with data out of 3,389 total flood
+      events (2011-2014).'
+    - 'Observed educational facilities destroyed or affected from flood (Flood) events
+      in Cambodia. DesInventar records: 59 events with data out of 3,389 total flood
+      events (2011-2014).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from flood
+      (Flood) events in Cambodia. DesInventar records: 421 events with data out of
+      3,389 total flood events (2011-2014).'
+    - 'Observed health facilities destroyed or affected from flood (Flood) events
+      in Cambodia. DesInventar records: 27 events with data out of 3,389 total flood
+      events (2011-2014).'
+    - 'Observed homes with non-structural damage, still habitable from flood (Flood)
+      events in Cambodia. DesInventar records: 222 events with data out of 3,389 total
+      flood events (2011-2014).'
+    - 'Observed homes destroyed beyond habitability from flood (Flood) events in Cambodia.
+      DesInventar records: 184 events with data out of 3,389 total flood events (2011-2014).'
+    - 'Observed persons injured or made sick directly by disaster events from flood
+      (Flood) events in Cambodia. DesInventar records: 38 events with data out of
+      3,389 total flood events (2011-2014).'
+    - 'Observed livestock lost from flood (Flood) events in Cambodia. DesInventar
+      records: 88 events with data out of 3,389 total flood events (2011-2014).'
+    - 'Observed persons permanently relocated from homes from flood (Flood) events
+      in Cambodia. DesInventar records: 15 events with data out of 3,389 total flood
+      events (2011-2014).'
+    - 'Observed persons whose goods/services suffered serious damage from flood (Flood)
+      events in Cambodia. DesInventar records: 1,546 events with data out of 3,389
+      total flood events (2011-2014).'
+    hazard_type: flood
+  - count: 13
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from strong wind (Storm) events in Cambodia. DesInventar records: 4 events with
+      data out of 1,454 total strong wind events (2009-2016).'
+    - 'Observed hectares of crops/woods destroyed or affected from strong wind (Storm)
+      events in Cambodia. DesInventar records: 13 events with data out of 1,454 total
+      strong wind events (2009-2016).'
+    - 'Observed metres of transport networks destroyed from strong wind (Storm) events
+      in Cambodia. DesInventar records: 3 events with data out of 1,454 total strong
+      wind events (2009-2016).'
+    - 'Observed deaths directly caused by disaster events from strong wind (Storm)
+      events in Cambodia. DesInventar records: 58 events with data out of 1,454 total
+      strong wind events (2009-2016).'
+    - 'Observed educational facilities destroyed or affected from strong wind (Storm)
+      events in Cambodia. DesInventar records: 26 events with data out of 1,454 total
+      strong wind events (2009-2016).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from strong
+      wind (Storm) events in Cambodia. DesInventar records: 2 events with data out
+      of 1,454 total strong wind events (2009-2016).'
+    - 'Observed health facilities destroyed or affected from strong wind (Storm) events
+      in Cambodia. DesInventar records: 7 events with data out of 1,454 total strong
+      wind events (2009-2016).'
+    - 'Observed homes with non-structural damage, still habitable from strong wind
+      (Storm) events in Cambodia. DesInventar records: 787 events with data out of
+      1,454 total strong wind events (2009-2016).'
+    - 'Observed homes destroyed beyond habitability from strong wind (Storm) events
+      in Cambodia. DesInventar records: 957 events with data out of 1,454 total strong
+      wind events (2009-2016).'
+    - 'Observed persons injured or made sick directly by disaster events from strong
+      wind (Storm) events in Cambodia. DesInventar records: 128 events with data out
+      of 1,454 total strong wind events (2009-2016).'
+    - 'Observed livestock lost from strong wind (Storm) events in Cambodia. DesInventar
+      records: 23 events with data out of 1,454 total strong wind events (2009-2016).'
+    - 'Observed persons missing or unaccounted for after disaster events from strong
+      wind (Storm) events in Cambodia. DesInventar records: 1 events with data out
+      of 1,454 total strong wind events (2009-2016).'
+    - 'Observed persons whose goods/services suffered serious damage from strong wind
+      (Storm) events in Cambodia. DesInventar records: 681 events with data out of
+      1,454 total strong wind events (2009-2016).'
+    hazard_type: strong_wind
+  - count: 10
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (Fire) events in Cambodia. DesInventar records: 5 events with
+      data out of 1,814 total wildfire events (2013-2016).'
+    - 'Observed hectares of crops/woods destroyed or affected from wildfire (Fire)
+      events in Cambodia. DesInventar records: 1 events with data out of 1,814 total
+      wildfire events (2013-2016).'
+    - 'Observed deaths directly caused by disaster events from wildfire (Fire) events
+      in Cambodia. DesInventar records: 53 events with data out of 1,814 total wildfire
+      events (2013-2016).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from wildfire
+      (Fire) events in Cambodia. DesInventar records: 2 events with data out of 1,814
+      total wildfire events (2013-2016).'
+    - 'Observed homes with non-structural damage, still habitable from wildfire (Fire)
+      events in Cambodia. DesInventar records: 220 events with data out of 1,814 total
+      wildfire events (2013-2016).'
+    - 'Observed homes destroyed beyond habitability from wildfire (Fire) events in
+      Cambodia. DesInventar records: 1,249 events with data out of 1,814 total wildfire
+      events (2013-2016).'
+    - 'Observed persons injured or made sick directly by disaster events from wildfire
+      (Fire) events in Cambodia. DesInventar records: 46 events with data out of 1,814
+      total wildfire events (2013-2016).'
+    - 'Observed total economic losses in US Dollars from wildfire (Fire) events in
+      Cambodia. DesInventar records: 1 events with data out of 1,814 total wildfire
+      events (2013-2016).'
+    - 'Observed livestock lost from wildfire (Fire) events in Cambodia. DesInventar
+      records: 2 events with data out of 1,814 total wildfire events (2013-2016).'
+    - 'Observed persons whose goods/services suffered serious damage from wildfire
+      (Fire) events in Cambodia. DesInventar records: 579 events with data out of
+      1,814 total wildfire events (2013-2016).'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:

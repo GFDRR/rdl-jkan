@@ -118,11 +118,16 @@ def make_loss(loss):
         "vulnerability_id": [],
     }
 
+    # Group descriptions by hazard type for collapsible display
+    groups = {}
+
     for l in loss.get("losses", []):
+        ht = l.get("hazard_type", "")
+
         if "dimension" in l.get("cost", {}):
             props_to_summarize["dimension"].append(l["cost"]["dimension"])
-        if "hazard_type" in l:
-            props_to_summarize["hazard_type"].append(l["hazard_type"])
+        if ht:
+            props_to_summarize["hazard_type"].append(ht)
         if "approach" in l:
             props_to_summarize["approach"].append(l["approach"])
         if "base_data_type" in l.get("impact", {}):
@@ -130,7 +135,10 @@ def make_loss(loss):
         if "category" in l:
             props_to_summarize["category"].append(l["category"])
         if "description" in l:
-            props_to_summarize["description"].append(l["description"])
+            desc = l["description"]
+            props_to_summarize["description"].append(desc)
+            if ht and desc:
+                groups.setdefault(ht, []).append(desc)
         if "exposure_id" in l:
             props_to_summarize["exposure_id"].append(l["exposure_id"])
         if "hazard_analysis_type" in l:
@@ -150,13 +158,34 @@ def make_loss(loss):
         if "vulnerability_id" in l:
             props_to_summarize["vulnerability_id"].append(l["vulnerability_id"])
 
-    return {
+    # Build loss_groups: array of {hazard_type, count, descriptions}
+    loss_groups = [
+        {"hazard_type": ht, "count": len(descs), "descriptions": descs}
+        for ht, descs in sorted(groups.items())
+    ]
+
+    total_losses = len(loss.get("losses", []))
+    unique_hazards = len(set(props_to_summarize["hazard_type"]))
+
+    # For large datasets, replace concatenated descriptions with a summary
+    if total_losses > 5 and props_to_summarize["description"]:
+        description_str = (
+            f"{total_losses} loss records across "
+            f"{unique_hazards} hazard type"
+            f"{'s' if unique_hazards != 1 else ''}"
+        )
+    else:
+        description_str = ", ".join(
+            sorted(set(props_to_summarize["description"]))
+        )
+
+    result = {
         "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
         "hazard_type": ", ".join(sorted(set(props_to_summarize["hazard_type"]))),
         "approach": ", ".join(sorted(set(props_to_summarize["approach"]))),
         "base_data_type": ", ".join(sorted(set(props_to_summarize["base_data_type"]))),
         "category": ", ".join(sorted(set(props_to_summarize["category"]))),
-        "description": ", ".join(sorted(set(props_to_summarize["description"]))),
+        "description": description_str,
         "exposure_id": ", ".join(sorted(set(props_to_summarize["exposure_id"]))),
         "hazard_analysis_type": ", ".join(
             sorted(set(props_to_summarize["hazard_analysis_type"]))
@@ -171,6 +200,14 @@ def make_loss(loss):
             sorted(set(props_to_summarize["vulnerability_id"]))
         ),
     }
+
+    # Add structured fields when there are grouped descriptions
+    if loss_groups:
+        result["loss_groups"] = loss_groups
+    if total_losses > 0:
+        result["loss_count"] = total_losses
+
+    return result
 
 
 # v0.2 specific mappers

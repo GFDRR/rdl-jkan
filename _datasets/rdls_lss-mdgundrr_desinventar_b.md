@@ -36,45 +36,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from drought (DROUGHT)
-    events in Madagascar. DesInventar records: 3 events with data out of 3 total drought
-    events (2015-2015)., Observed deaths directly caused by disaster events from flood
-    (FLOOD) events in Madagascar. DesInventar records: 8 events with data out of 20
-    total flood events (2008-2015)., Observed deaths directly caused by disaster events
-    from landslide (LANDSLIDE) events in Madagascar. DesInventar records: 2 events
-    with data out of 2 total landslide events (2015-2015)., Observed deaths directly
-    caused by disaster events from wildfire (FIRE) events in Madagascar. DesInventar
-    records: 14 events with data out of 219 total wildfire events (2009-2015)., Observed
-    educational facilities destroyed or affected from wildfire (FIRE) events in Madagascar.
-    DesInventar records: 9 events with data out of 219 total wildfire events (2009-2015).,
-    Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events
-    in Madagascar. DesInventar records: 9 events with data out of 20 total flood events
-    (2008-2015)., Observed homes destroyed beyond habitability from flood (FLOOD)
-    events in Madagascar. DesInventar records: 10 events with data out of 20 total
-    flood events (2008-2015)., Observed homes destroyed beyond habitability from landslide
-    (LANDSLIDE) events in Madagascar. DesInventar records: 2 events with data out
-    of 2 total landslide events (2015-2015)., Observed homes destroyed beyond habitability
-    from wildfire (FIRE) events in Madagascar. DesInventar records: 199 events with
-    data out of 219 total wildfire events (2009-2015)., Observed homes with non-structural
-    damage, still habitable from wildfire (FIRE) events in Madagascar. DesInventar
-    records: 1 events with data out of 219 total wildfire events (2009-2015)., Observed
-    persons indirectly affected (disruption to services, commerce, work) from flood
-    (FLOOD) events in Madagascar. DesInventar records: 19 events with data out of
-    20 total flood events (2008-2015)., Observed persons indirectly affected (disruption
-    to services, commerce, work) from wildfire (FIRE) events in Madagascar. DesInventar
-    records: 159 events with data out of 219 total wildfire events (2009-2015)., Observed
-    persons injured or made sick directly by disaster events from wildfire (FIRE)
-    events in Madagascar. DesInventar records: 24 events with data out of 219 total
-    wildfire events (2009-2015)., Observed persons permanently relocated from homes
-    from flood (FLOOD) events in Madagascar. DesInventar records: 7 events with data
-    out of 20 total flood events (2008-2015)., Observed persons whose goods/services
-    suffered serious damage from flood (FLOOD) events in Madagascar. DesInventar records:
-    19 events with data out of 20 total flood events (2008-2015)., Observed persons
-    whose goods/services suffered serious damage from landslide (LANDSLIDE) events
-    in Madagascar. DesInventar records: 1 events with data out of 2 total landslide
-    events (2015-2015)., Observed persons whose goods/services suffered serious damage
-    from wildfire (FIRE) events in Madagascar. DesInventar records: 137 events with
-    data out of 219 total wildfire events (2009-2015).'
+  description: 17 loss records across 4 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -84,6 +46,70 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 17
+  loss_groups:
+  - count: 1
+    descriptions:
+    - 'Observed deaths directly caused by disaster events from drought (DROUGHT) events
+      in Madagascar. DesInventar records: 3 events with data out of 3 total drought
+      events (2015-2015).'
+    hazard_type: drought
+  - count: 6
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from flood (FLOOD) events in Madagascar. DesInventar records: 19 events with
+      data out of 20 total flood events (2008-2015).'
+    - 'Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events
+      in Madagascar. DesInventar records: 9 events with data out of 20 total flood
+      events (2008-2015).'
+    - 'Observed deaths directly caused by disaster events from flood (FLOOD) events
+      in Madagascar. DesInventar records: 8 events with data out of 20 total flood
+      events (2008-2015).'
+    - 'Observed homes destroyed beyond habitability from flood (FLOOD) events in Madagascar.
+      DesInventar records: 10 events with data out of 20 total flood events (2008-2015).'
+    - 'Observed persons permanently relocated from homes from flood (FLOOD) events
+      in Madagascar. DesInventar records: 7 events with data out of 20 total flood
+      events (2008-2015).'
+    - 'Observed persons whose goods/services suffered serious damage from flood (FLOOD)
+      events in Madagascar. DesInventar records: 19 events with data out of 20 total
+      flood events (2008-2015).'
+    hazard_type: flood
+  - count: 3
+    descriptions:
+    - 'Observed deaths directly caused by disaster events from landslide (LANDSLIDE)
+      events in Madagascar. DesInventar records: 2 events with data out of 2 total
+      landslide events (2015-2015).'
+    - 'Observed homes destroyed beyond habitability from landslide (LANDSLIDE) events
+      in Madagascar. DesInventar records: 2 events with data out of 2 total landslide
+      events (2015-2015).'
+    - 'Observed persons whose goods/services suffered serious damage from landslide
+      (LANDSLIDE) events in Madagascar. DesInventar records: 1 events with data out
+      of 2 total landslide events (2015-2015).'
+    hazard_type: landslide
+  - count: 7
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (FIRE) events in Madagascar. DesInventar records: 159 events with
+      data out of 219 total wildfire events (2009-2015).'
+    - 'Observed deaths directly caused by disaster events from wildfire (FIRE) events
+      in Madagascar. DesInventar records: 14 events with data out of 219 total wildfire
+      events (2009-2015).'
+    - 'Observed educational facilities destroyed or affected from wildfire (FIRE)
+      events in Madagascar. DesInventar records: 9 events with data out of 219 total
+      wildfire events (2009-2015).'
+    - 'Observed homes with non-structural damage, still habitable from wildfire (FIRE)
+      events in Madagascar. DesInventar records: 1 events with data out of 219 total
+      wildfire events (2009-2015).'
+    - 'Observed homes destroyed beyond habitability from wildfire (FIRE) events in
+      Madagascar. DesInventar records: 199 events with data out of 219 total wildfire
+      events (2009-2015).'
+    - 'Observed persons injured or made sick directly by disaster events from wildfire
+      (FIRE) events in Madagascar. DesInventar records: 24 events with data out of
+      219 total wildfire events (2009-2015).'
+    - 'Observed persons whose goods/services suffered serious damage from wildfire
+      (FIRE) events in Madagascar. DesInventar records: 137 events with data out of
+      219 total wildfire events (2009-2015).'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:

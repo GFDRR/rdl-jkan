@@ -35,67 +35,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from flood (FLOOD)
-    events in Senegal. DesInventar records: 22 events with data out of 149 total flood
-    events., Observed deaths directly caused by disaster events from strong wind (STORM)
-    events in Senegal. DesInventar records: 2 events with data out of 13 total strong
-    wind events., Observed deaths directly caused by disaster events from wildfire
-    (FIRE) events in Senegal. DesInventar records: 50 events with data out of 580
-    total wildfire events., Observed educational facilities destroyed or affected
-    from flood (FLOOD) events in Senegal. DesInventar records: 2 events with data
-    out of 149 total flood events., Observed educational facilities destroyed or affected
-    from wildfire (FIRE) events in Senegal. DesInventar records: 17 events with data
-    out of 580 total wildfire events., Observed health facilities destroyed or affected
-    from flood (FLOOD) events in Senegal. DesInventar records: 2 events with data
-    out of 149 total flood events., Observed health facilities destroyed or affected
-    from wildfire (FIRE) events in Senegal. DesInventar records: 3 events with data
-    out of 580 total wildfire events., Observed hectares of crops/woods destroyed
-    or affected from flood (FLOOD) events in Senegal. DesInventar records: 14 events
-    with data out of 149 total flood events., Observed hectares of crops/woods destroyed
-    or affected from wildfire (FIRE) events in Senegal. DesInventar records: 1 events
-    with data out of 580 total wildfire events., Observed homes destroyed beyond habitability
-    from flood (FLOOD) events in Senegal. DesInventar records: 8 events with data
-    out of 149 total flood events., Observed homes destroyed beyond habitability from
-    wildfire (FIRE) events in Senegal. DesInventar records: 16 events with data out
-    of 580 total wildfire events., Observed homes with non-structural damage, still
-    habitable from flood (FLOOD) events in Senegal. DesInventar records: 45 events
-    with data out of 149 total flood events., Observed homes with non-structural damage,
-    still habitable from wildfire (FIRE) events in Senegal. DesInventar records: 204
-    events with data out of 580 total wildfire events., Observed livestock lost from
-    wildfire (FIRE) events in Senegal. DesInventar records: 5 events with data out
-    of 580 total wildfire events., Observed persons indirectly affected (disruption
-    to services, commerce, work) from flood (FLOOD) events in Senegal. DesInventar
-    records: 18 events with data out of 149 total flood events., Observed persons
-    indirectly affected (disruption to services, commerce, work) from wildfire (FIRE)
-    events in Senegal. DesInventar records: 4 events with data out of 580 total wildfire
-    events., Observed persons injured or made sick directly by disaster events from
-    flood (FLOOD) events in Senegal. DesInventar records: 12 events with data out
-    of 149 total flood events., Observed persons injured or made sick directly by
-    disaster events from wildfire (FIRE) events in Senegal. DesInventar records: 29
-    events with data out of 580 total wildfire events., Observed persons missing or
-    unaccounted for after disaster events from flood (FLOOD) events in Senegal. DesInventar
-    records: 4 events with data out of 149 total flood events., Observed persons missing
-    or unaccounted for after disaster events from strong wind (STORM) events in Senegal.
-    DesInventar records: 11 events with data out of 13 total strong wind events.,
-    Observed persons permanently relocated from homes from flood (FLOOD) events in
-    Senegal. DesInventar records: 3 events with data out of 149 total flood events.,
-    Observed persons temporarily evacuated from homes or workplaces from flood (FLOOD)
-    events in Senegal. DesInventar records: 2 events with data out of 149 total flood
-    events., Observed persons temporarily evacuated from homes or workplaces from
-    strong wind (STORM) events in Senegal. DesInventar records: 7 events with data
-    out of 13 total strong wind events., Observed persons whose goods/services suffered
-    serious damage from flood (FLOOD) events in Senegal. DesInventar records: 16 events
-    with data out of 149 total flood events., Observed persons whose goods/services
-    suffered serious damage from wildfire (FIRE) events in Senegal. DesInventar records:
-    25 events with data out of 580 total wildfire events., Observed total economic
-    losses in US Dollars from flood (FLOOD) events in Senegal. DesInventar records:
-    2 events with data out of 149 total flood events., Observed total economic losses
-    in US Dollars from wildfire (FIRE) events in Senegal. DesInventar records: 59
-    events with data out of 580 total wildfire events., Observed total economic losses
-    in local currency from flood (FLOOD) events in Senegal. DesInventar records: 3
-    events with data out of 149 total flood events., Observed total economic losses
-    in local currency from wildfire (FIRE) events in Senegal. DesInventar records:
-    2 events with data out of 580 total wildfire events.'
+  description: 29 loss records across 3 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -105,6 +45,97 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 29
+  loss_groups:
+  - count: 14
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from flood (FLOOD) events in Senegal. DesInventar records: 18 events with data
+      out of 149 total flood events.'
+    - 'Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events
+      in Senegal. DesInventar records: 14 events with data out of 149 total flood
+      events.'
+    - 'Observed deaths directly caused by disaster events from flood (FLOOD) events
+      in Senegal. DesInventar records: 22 events with data out of 149 total flood
+      events.'
+    - 'Observed educational facilities destroyed or affected from flood (FLOOD) events
+      in Senegal. DesInventar records: 2 events with data out of 149 total flood events.'
+    - 'Observed persons temporarily evacuated from homes or workplaces from flood
+      (FLOOD) events in Senegal. DesInventar records: 2 events with data out of 149
+      total flood events.'
+    - 'Observed health facilities destroyed or affected from flood (FLOOD) events
+      in Senegal. DesInventar records: 2 events with data out of 149 total flood events.'
+    - 'Observed homes with non-structural damage, still habitable from flood (FLOOD)
+      events in Senegal. DesInventar records: 45 events with data out of 149 total
+      flood events.'
+    - 'Observed homes destroyed beyond habitability from flood (FLOOD) events in Senegal.
+      DesInventar records: 8 events with data out of 149 total flood events.'
+    - 'Observed persons injured or made sick directly by disaster events from flood
+      (FLOOD) events in Senegal. DesInventar records: 12 events with data out of 149
+      total flood events.'
+    - 'Observed total economic losses in local currency from flood (FLOOD) events
+      in Senegal. DesInventar records: 3 events with data out of 149 total flood events.'
+    - 'Observed total economic losses in US Dollars from flood (FLOOD) events in Senegal.
+      DesInventar records: 2 events with data out of 149 total flood events.'
+    - 'Observed persons missing or unaccounted for after disaster events from flood
+      (FLOOD) events in Senegal. DesInventar records: 4 events with data out of 149
+      total flood events.'
+    - 'Observed persons permanently relocated from homes from flood (FLOOD) events
+      in Senegal. DesInventar records: 3 events with data out of 149 total flood events.'
+    - 'Observed persons whose goods/services suffered serious damage from flood (FLOOD)
+      events in Senegal. DesInventar records: 16 events with data out of 149 total
+      flood events.'
+    hazard_type: flood
+  - count: 3
+    descriptions:
+    - 'Observed deaths directly caused by disaster events from strong wind (STORM)
+      events in Senegal. DesInventar records: 2 events with data out of 13 total strong
+      wind events.'
+    - 'Observed persons temporarily evacuated from homes or workplaces from strong
+      wind (STORM) events in Senegal. DesInventar records: 7 events with data out
+      of 13 total strong wind events.'
+    - 'Observed persons missing or unaccounted for after disaster events from strong
+      wind (STORM) events in Senegal. DesInventar records: 11 events with data out
+      of 13 total strong wind events.'
+    hazard_type: strong_wind
+  - count: 12
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (FIRE) events in Senegal. DesInventar records: 4 events with data
+      out of 580 total wildfire events.'
+    - 'Observed hectares of crops/woods destroyed or affected from wildfire (FIRE)
+      events in Senegal. DesInventar records: 1 events with data out of 580 total
+      wildfire events.'
+    - 'Observed deaths directly caused by disaster events from wildfire (FIRE) events
+      in Senegal. DesInventar records: 50 events with data out of 580 total wildfire
+      events.'
+    - 'Observed educational facilities destroyed or affected from wildfire (FIRE)
+      events in Senegal. DesInventar records: 17 events with data out of 580 total
+      wildfire events.'
+    - 'Observed health facilities destroyed or affected from wildfire (FIRE) events
+      in Senegal. DesInventar records: 3 events with data out of 580 total wildfire
+      events.'
+    - 'Observed homes with non-structural damage, still habitable from wildfire (FIRE)
+      events in Senegal. DesInventar records: 204 events with data out of 580 total
+      wildfire events.'
+    - 'Observed homes destroyed beyond habitability from wildfire (FIRE) events in
+      Senegal. DesInventar records: 16 events with data out of 580 total wildfire
+      events.'
+    - 'Observed persons injured or made sick directly by disaster events from wildfire
+      (FIRE) events in Senegal. DesInventar records: 29 events with data out of 580
+      total wildfire events.'
+    - 'Observed total economic losses in local currency from wildfire (FIRE) events
+      in Senegal. DesInventar records: 2 events with data out of 580 total wildfire
+      events.'
+    - 'Observed total economic losses in US Dollars from wildfire (FIRE) events in
+      Senegal. DesInventar records: 59 events with data out of 580 total wildfire
+      events.'
+    - 'Observed livestock lost from wildfire (FIRE) events in Senegal. DesInventar
+      records: 5 events with data out of 580 total wildfire events.'
+    - 'Observed persons whose goods/services suffered serious damage from wildfire
+      (FIRE) events in Senegal. DesInventar records: 25 events with data out of 580
+      total wildfire events.'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:

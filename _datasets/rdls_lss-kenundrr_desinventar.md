@@ -36,132 +36,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from convective
-    storm (THUNDERSTORM) events in Kenya. DesInventar records: 14 events with data
-    out of 19 total convective storm events (2011-2013)., Observed deaths directly
-    caused by disaster events from flood (FLOOD) events in Kenya. DesInventar records:
-    236 events with data out of 737 total flood events (2011-2014)., Observed deaths
-    directly caused by disaster events from flood (RAINS) events in Kenya. DesInventar
-    records: 6 events with data out of 48 total flood events (2015-2016)., Observed
-    deaths directly caused by disaster events from landslide (LANDSLIDE) events in
-    Kenya. DesInventar records: 26 events with data out of 44 total landslide events
-    (2013-2016)., Observed deaths directly caused by disaster events from landslide
-    (MUDSLIDE) events in Kenya. DesInventar records: 4 events with data out of 6 total
-    landslide events (2009-2015)., Observed deaths directly caused by disaster events
-    from strong wind (STORM, WINDSTORM) events in Kenya. DesInventar records: 6 events
-    with data out of 19 total strong wind events (2010-2015)., Observed deaths directly
-    caused by disaster events from wildfire (FIRE, FOREST FIRE) events in Kenya. DesInventar
-    records: 114 events with data out of 415 total wildfire events (1997-2016)., Observed
-    educational facilities destroyed or affected from convective storm (THUNDERSTORM)
-    events in Kenya. DesInventar records: 1 events with data out of 19 total convective
-    storm events (2011-2013)., Observed educational facilities destroyed or affected
-    from flood (FLOOD) events in Kenya. DesInventar records: 1 events with data out
-    of 737 total flood events (2011-2014)., Observed educational facilities destroyed
-    or affected from strong wind (STORM, WINDSTORM) events in Kenya. DesInventar records:
-    1 events with data out of 19 total strong wind events (2010-2015)., Observed hectares
-    of crops/woods destroyed or affected from flood (FLOOD) events in Kenya. DesInventar
-    records: 34 events with data out of 737 total flood events (2011-2014)., Observed
-    hectares of crops/woods destroyed or affected from landslide (LANDSLIDE) events
-    in Kenya. DesInventar records: 1 events with data out of 44 total landslide events
-    (2013-2016)., Observed hectares of crops/woods destroyed or affected from wildfire
-    (FIRE, FOREST FIRE) events in Kenya. DesInventar records: 23 events with data
-    out of 415 total wildfire events (1997-2016)., Observed homes destroyed beyond
-    habitability from convective storm (THUNDERSTORM) events in Kenya. DesInventar
-    records: 1 events with data out of 19 total convective storm events (2011-2013).,
-    Observed homes destroyed beyond habitability from flood (FLOOD) events in Kenya.
-    DesInventar records: 136 events with data out of 737 total flood events (2011-2014).,
-    Observed homes destroyed beyond habitability from landslide (LANDSLIDE) events
-    in Kenya. DesInventar records: 13 events with data out of 44 total landslide events
-    (2013-2016)., Observed homes destroyed beyond habitability from wildfire (FIRE,
-    FOREST FIRE) events in Kenya. DesInventar records: 69 events with data out of
-    415 total wildfire events (1997-2016)., Observed homes with non-structural damage,
-    still habitable from convective storm (THUNDERSTORM) events in Kenya. DesInventar
-    records: 1 events with data out of 19 total convective storm events (2011-2013).,
-    Observed homes with non-structural damage, still habitable from flood (FLOOD)
-    events in Kenya. DesInventar records: 32 events with data out of 737 total flood
-    events (2011-2014)., Observed homes with non-structural damage, still habitable
-    from flood (RAINS) events in Kenya. DesInventar records: 1 events with data out
-    of 48 total flood events (2015-2016)., Observed homes with non-structural damage,
-    still habitable from landslide (LANDSLIDE) events in Kenya. DesInventar records:
-    2 events with data out of 44 total landslide events (2013-2016)., Observed homes
-    with non-structural damage, still habitable from strong wind (STORM, WINDSTORM)
-    events in Kenya. DesInventar records: 4 events with data out of 19 total strong
-    wind events (2010-2015)., Observed homes with non-structural damage, still habitable
-    from wildfire (FIRE, FOREST FIRE) events in Kenya. DesInventar records: 15 events
-    with data out of 415 total wildfire events (1997-2016)., Observed livestock lost
-    from convective storm (THUNDERSTORM) events in Kenya. DesInventar records: 2 events
-    with data out of 19 total convective storm events (2011-2013)., Observed livestock
-    lost from drought (DROUGHT) events in Kenya. DesInventar records: 1 events with
-    data out of 569 total drought events (2009-2011)., Observed livestock lost from
-    flood (FLOOD) events in Kenya. DesInventar records: 20 events with data out of
-    737 total flood events (2011-2014)., Observed persons indirectly affected (disruption
-    to services, commerce, work) from convective storm (THUNDERSTORM) events in Kenya.
-    DesInventar records: 1 events with data out of 19 total convective storm events
-    (2011-2013)., Observed persons indirectly affected (disruption to services, commerce,
-    work) from drought (DROUGHT) events in Kenya. DesInventar records: 165 events
-    with data out of 569 total drought events (2009-2011)., Observed persons indirectly
-    affected (disruption to services, commerce, work) from flood (FLOOD) events in
-    Kenya. DesInventar records: 207 events with data out of 737 total flood events
-    (2011-2014)., Observed persons indirectly affected (disruption to services, commerce,
-    work) from landslide (LANDSLIDE) events in Kenya. DesInventar records: 11 events
-    with data out of 44 total landslide events (2013-2016)., Observed persons indirectly
-    affected (disruption to services, commerce, work) from strong wind (STORM, WINDSTORM)
-    events in Kenya. DesInventar records: 5 events with data out of 19 total strong
-    wind events (2010-2015)., Observed persons indirectly affected (disruption to
-    services, commerce, work) from wildfire (FIRE, FOREST FIRE) events in Kenya. DesInventar
-    records: 3 events with data out of 415 total wildfire events (1997-2016)., Observed
-    persons injured or made sick directly by disaster events from convective storm
-    (THUNDERSTORM) events in Kenya. DesInventar records: 7 events with data out of
-    19 total convective storm events (2011-2013)., Observed persons injured or made
-    sick directly by disaster events from flood (FLOOD) events in Kenya. DesInventar
-    records: 23 events with data out of 737 total flood events (2011-2014)., Observed
-    persons injured or made sick directly by disaster events from flood (RAINS) events
-    in Kenya. DesInventar records: 1 events with data out of 48 total flood events
-    (2015-2016)., Observed persons injured or made sick directly by disaster events
-    from landslide (LANDSLIDE) events in Kenya. DesInventar records: 5 events with
-    data out of 44 total landslide events (2013-2016)., Observed persons injured or
-    made sick directly by disaster events from landslide (MUDSLIDE) events in Kenya.
-    DesInventar records: 1 events with data out of 6 total landslide events (2009-2015).,
-    Observed persons injured or made sick directly by disaster events from strong
-    wind (STORM, WINDSTORM) events in Kenya. DesInventar records: 1 events with data
-    out of 19 total strong wind events (2010-2015)., Observed persons injured or made
-    sick directly by disaster events from wildfire (FIRE, FOREST FIRE) events in Kenya.
-    DesInventar records: 79 events with data out of 415 total wildfire events (1997-2016).,
-    Observed persons missing or unaccounted for after disaster events from convective
-    storm (THUNDERSTORM) events in Kenya. DesInventar records: 1 events with data
-    out of 19 total convective storm events (2011-2013)., Observed persons missing
-    or unaccounted for after disaster events from flood (FLOOD) events in Kenya. DesInventar
-    records: 9 events with data out of 737 total flood events (2011-2014)., Observed
-    persons missing or unaccounted for after disaster events from landslide (LANDSLIDE)
-    events in Kenya. DesInventar records: 1 events with data out of 44 total landslide
-    events (2013-2016)., Observed persons missing or unaccounted for after disaster
-    events from strong wind (STORM, WINDSTORM) events in Kenya. DesInventar records:
-    1 events with data out of 19 total strong wind events (2010-2015)., Observed persons
-    permanently relocated from homes from flood (FLOOD) events in Kenya. DesInventar
-    records: 14 events with data out of 737 total flood events (2011-2014)., Observed
-    persons permanently relocated from homes from landslide (LANDSLIDE) events in
-    Kenya. DesInventar records: 2 events with data out of 44 total landslide events
-    (2013-2016)., Observed persons permanently relocated from homes from wildfire
-    (FIRE, FOREST FIRE) events in Kenya. DesInventar records: 1 events with data out
-    of 415 total wildfire events (1997-2016)., Observed persons temporarily evacuated
-    from homes or workplaces from flood (FLOOD) events in Kenya. DesInventar records:
-    9 events with data out of 737 total flood events (2011-2014)., Observed persons
-    whose goods/services suffered serious damage from drought (DROUGHT) events in
-    Kenya. DesInventar records: 2 events with data out of 569 total drought events
-    (2009-2011)., Observed persons whose goods/services suffered serious damage from
-    flood (FLOOD) events in Kenya. DesInventar records: 2 events with data out of
-    737 total flood events (2011-2014)., Observed persons whose goods/services suffered
-    serious damage from flood (RAINS) events in Kenya. DesInventar records: 38 events
-    with data out of 48 total flood events (2015-2016)., Observed total economic losses
-    in local currency from convective storm (THUNDERSTORM) events in Kenya. DesInventar
-    records: 1 events with data out of 19 total convective storm events (2011-2013).,
-    Observed total economic losses in local currency from flood (FLOOD) events in
-    Kenya. DesInventar records: 2 events with data out of 737 total flood events (2011-2014).,
-    Observed total economic losses in local currency from strong wind (STORM, WINDSTORM)
-    events in Kenya. DesInventar records: 1 events with data out of 19 total strong
-    wind events (2010-2015)., Observed total economic losses in local currency from
-    wildfire (FIRE, FOREST FIRE) events in Kenya. DesInventar records: 16 events with
-    data out of 415 total wildfire events (1997-2016).'
+  description: 54 loss records across 6 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -172,6 +47,185 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 54
+  loss_groups:
+  - count: 9
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from convective storm (THUNDERSTORM) events in Kenya. DesInventar records: 1
+      events with data out of 19 total convective storm events (2011-2013).'
+    - 'Observed deaths directly caused by disaster events from convective storm (THUNDERSTORM)
+      events in Kenya. DesInventar records: 14 events with data out of 19 total convective
+      storm events (2011-2013).'
+    - 'Observed educational facilities destroyed or affected from convective storm
+      (THUNDERSTORM) events in Kenya. DesInventar records: 1 events with data out
+      of 19 total convective storm events (2011-2013).'
+    - 'Observed homes with non-structural damage, still habitable from convective
+      storm (THUNDERSTORM) events in Kenya. DesInventar records: 1 events with data
+      out of 19 total convective storm events (2011-2013).'
+    - 'Observed homes destroyed beyond habitability from convective storm (THUNDERSTORM)
+      events in Kenya. DesInventar records: 1 events with data out of 19 total convective
+      storm events (2011-2013).'
+    - 'Observed persons injured or made sick directly by disaster events from convective
+      storm (THUNDERSTORM) events in Kenya. DesInventar records: 7 events with data
+      out of 19 total convective storm events (2011-2013).'
+    - 'Observed total economic losses in local currency from convective storm (THUNDERSTORM)
+      events in Kenya. DesInventar records: 1 events with data out of 19 total convective
+      storm events (2011-2013).'
+    - 'Observed livestock lost from convective storm (THUNDERSTORM) events in Kenya.
+      DesInventar records: 2 events with data out of 19 total convective storm events
+      (2011-2013).'
+    - 'Observed persons missing or unaccounted for after disaster events from convective
+      storm (THUNDERSTORM) events in Kenya. DesInventar records: 1 events with data
+      out of 19 total convective storm events (2011-2013).'
+    hazard_type: convective_storm
+  - count: 3
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from drought (DROUGHT) events in Kenya. DesInventar records: 165 events with
+      data out of 569 total drought events (2009-2011).'
+    - 'Observed livestock lost from drought (DROUGHT) events in Kenya. DesInventar
+      records: 1 events with data out of 569 total drought events (2009-2011).'
+    - 'Observed persons whose goods/services suffered serious damage from drought
+      (DROUGHT) events in Kenya. DesInventar records: 2 events with data out of 569
+      total drought events (2009-2011).'
+    hazard_type: drought
+  - count: 17
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from flood (FLOOD) events in Kenya. DesInventar records: 207 events with data
+      out of 737 total flood events (2011-2014).'
+    - 'Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events
+      in Kenya. DesInventar records: 34 events with data out of 737 total flood events
+      (2011-2014).'
+    - 'Observed deaths directly caused by disaster events from flood (FLOOD) events
+      in Kenya. DesInventar records: 236 events with data out of 737 total flood events
+      (2011-2014).'
+    - 'Observed educational facilities destroyed or affected from flood (FLOOD) events
+      in Kenya. DesInventar records: 1 events with data out of 737 total flood events
+      (2011-2014).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from flood
+      (FLOOD) events in Kenya. DesInventar records: 9 events with data out of 737
+      total flood events (2011-2014).'
+    - 'Observed homes with non-structural damage, still habitable from flood (FLOOD)
+      events in Kenya. DesInventar records: 32 events with data out of 737 total flood
+      events (2011-2014).'
+    - 'Observed homes destroyed beyond habitability from flood (FLOOD) events in Kenya.
+      DesInventar records: 136 events with data out of 737 total flood events (2011-2014).'
+    - 'Observed persons injured or made sick directly by disaster events from flood
+      (FLOOD) events in Kenya. DesInventar records: 23 events with data out of 737
+      total flood events (2011-2014).'
+    - 'Observed total economic losses in local currency from flood (FLOOD) events
+      in Kenya. DesInventar records: 2 events with data out of 737 total flood events
+      (2011-2014).'
+    - 'Observed livestock lost from flood (FLOOD) events in Kenya. DesInventar records:
+      20 events with data out of 737 total flood events (2011-2014).'
+    - 'Observed persons missing or unaccounted for after disaster events from flood
+      (FLOOD) events in Kenya. DesInventar records: 9 events with data out of 737
+      total flood events (2011-2014).'
+    - 'Observed persons permanently relocated from homes from flood (FLOOD) events
+      in Kenya. DesInventar records: 14 events with data out of 737 total flood events
+      (2011-2014).'
+    - 'Observed persons whose goods/services suffered serious damage from flood (FLOOD)
+      events in Kenya. DesInventar records: 2 events with data out of 737 total flood
+      events (2011-2014).'
+    - 'Observed deaths directly caused by disaster events from flood (RAINS) events
+      in Kenya. DesInventar records: 6 events with data out of 48 total flood events
+      (2015-2016).'
+    - 'Observed homes with non-structural damage, still habitable from flood (RAINS)
+      events in Kenya. DesInventar records: 1 events with data out of 48 total flood
+      events (2015-2016).'
+    - 'Observed persons injured or made sick directly by disaster events from flood
+      (RAINS) events in Kenya. DesInventar records: 1 events with data out of 48 total
+      flood events (2015-2016).'
+    - 'Observed persons whose goods/services suffered serious damage from flood (RAINS)
+      events in Kenya. DesInventar records: 38 events with data out of 48 total flood
+      events (2015-2016).'
+    hazard_type: flood
+  - count: 10
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from landslide (LANDSLIDE) events in Kenya. DesInventar records: 11 events with
+      data out of 44 total landslide events (2013-2016).'
+    - 'Observed hectares of crops/woods destroyed or affected from landslide (LANDSLIDE)
+      events in Kenya. DesInventar records: 1 events with data out of 44 total landslide
+      events (2013-2016).'
+    - 'Observed deaths directly caused by disaster events from landslide (LANDSLIDE)
+      events in Kenya. DesInventar records: 26 events with data out of 44 total landslide
+      events (2013-2016).'
+    - 'Observed homes with non-structural damage, still habitable from landslide (LANDSLIDE)
+      events in Kenya. DesInventar records: 2 events with data out of 44 total landslide
+      events (2013-2016).'
+    - 'Observed homes destroyed beyond habitability from landslide (LANDSLIDE) events
+      in Kenya. DesInventar records: 13 events with data out of 44 total landslide
+      events (2013-2016).'
+    - 'Observed persons injured or made sick directly by disaster events from landslide
+      (LANDSLIDE) events in Kenya. DesInventar records: 5 events with data out of
+      44 total landslide events (2013-2016).'
+    - 'Observed persons missing or unaccounted for after disaster events from landslide
+      (LANDSLIDE) events in Kenya. DesInventar records: 1 events with data out of
+      44 total landslide events (2013-2016).'
+    - 'Observed persons permanently relocated from homes from landslide (LANDSLIDE)
+      events in Kenya. DesInventar records: 2 events with data out of 44 total landslide
+      events (2013-2016).'
+    - 'Observed deaths directly caused by disaster events from landslide (MUDSLIDE)
+      events in Kenya. DesInventar records: 4 events with data out of 6 total landslide
+      events (2009-2015).'
+    - 'Observed persons injured or made sick directly by disaster events from landslide
+      (MUDSLIDE) events in Kenya. DesInventar records: 1 events with data out of 6
+      total landslide events (2009-2015).'
+    hazard_type: landslide
+  - count: 7
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from strong wind (STORM, WINDSTORM) events in Kenya. DesInventar records: 5
+      events with data out of 19 total strong wind events (2010-2015).'
+    - 'Observed deaths directly caused by disaster events from strong wind (STORM,
+      WINDSTORM) events in Kenya. DesInventar records: 6 events with data out of 19
+      total strong wind events (2010-2015).'
+    - 'Observed educational facilities destroyed or affected from strong wind (STORM,
+      WINDSTORM) events in Kenya. DesInventar records: 1 events with data out of 19
+      total strong wind events (2010-2015).'
+    - 'Observed homes with non-structural damage, still habitable from strong wind
+      (STORM, WINDSTORM) events in Kenya. DesInventar records: 4 events with data
+      out of 19 total strong wind events (2010-2015).'
+    - 'Observed persons injured or made sick directly by disaster events from strong
+      wind (STORM, WINDSTORM) events in Kenya. DesInventar records: 1 events with
+      data out of 19 total strong wind events (2010-2015).'
+    - 'Observed total economic losses in local currency from strong wind (STORM, WINDSTORM)
+      events in Kenya. DesInventar records: 1 events with data out of 19 total strong
+      wind events (2010-2015).'
+    - 'Observed persons missing or unaccounted for after disaster events from strong
+      wind (STORM, WINDSTORM) events in Kenya. DesInventar records: 1 events with
+      data out of 19 total strong wind events (2010-2015).'
+    hazard_type: strong_wind
+  - count: 8
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (FIRE, FOREST FIRE) events in Kenya. DesInventar records: 3 events
+      with data out of 415 total wildfire events (1997-2016).'
+    - 'Observed hectares of crops/woods destroyed or affected from wildfire (FIRE,
+      FOREST FIRE) events in Kenya. DesInventar records: 23 events with data out of
+      415 total wildfire events (1997-2016).'
+    - 'Observed deaths directly caused by disaster events from wildfire (FIRE, FOREST
+      FIRE) events in Kenya. DesInventar records: 114 events with data out of 415
+      total wildfire events (1997-2016).'
+    - 'Observed homes with non-structural damage, still habitable from wildfire (FIRE,
+      FOREST FIRE) events in Kenya. DesInventar records: 15 events with data out of
+      415 total wildfire events (1997-2016).'
+    - 'Observed homes destroyed beyond habitability from wildfire (FIRE, FOREST FIRE)
+      events in Kenya. DesInventar records: 69 events with data out of 415 total wildfire
+      events (1997-2016).'
+    - 'Observed persons injured or made sick directly by disaster events from wildfire
+      (FIRE, FOREST FIRE) events in Kenya. DesInventar records: 79 events with data
+      out of 415 total wildfire events (1997-2016).'
+    - 'Observed total economic losses in local currency from wildfire (FIRE, FOREST
+      FIRE) events in Kenya. DesInventar records: 16 events with data out of 415 total
+      wildfire events (1997-2016).'
+    - 'Observed persons permanently relocated from homes from wildfire (FIRE, FOREST
+      FIRE) events in Kenya. DesInventar records: 1 events with data out of 415 total
+      wildfire events (1997-2016).'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:

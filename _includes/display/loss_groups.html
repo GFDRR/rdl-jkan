@@ -1,0 +1,20 @@
+<tr>
+  <th>{{ include.field.label }}</th>
+  <td>
+    {% for group in include.value %}
+      {% capture ht_code %}{{ group.hazard_type }}{% endcapture %}
+      {% assign ht_label = site.data.rdl-hazard_type[ht_code] | default: ht_code %}
+      <details class="loss-group">
+        <summary class="loss-group-summary">
+          {{ ht_label }}
+          <span class="badge">{{ group.count }}</span>
+        </summary>
+        <ul class="loss-group-descriptions">
+          {% for desc in group.descriptions %}
+            <li>{{ desc }}</li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% endfor %}
+  </td>
+</tr>

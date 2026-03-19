@@ -36,116 +36,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from convective
-    storm (HAILSTORM, THUNDERSTORM) events in Ethiopia. DesInventar records: 17 events
-    with data out of 242 total convective storm events (1996-2012)., Observed deaths
-    directly caused by disaster events from drought (DROUGHT) events in Ethiopia.
-    DesInventar records: 2 events with data out of 5,802 total drought events (1992-2013).,
-    Observed deaths directly caused by disaster events from flood (FLOOD) events in
-    Ethiopia. DesInventar records: 179 events with data out of 1,475 total flood events
-    (2006-2013)., Observed deaths directly caused by disaster events from landslide
-    (LANDSLIDE) events in Ethiopia. DesInventar records: 30 events with data out of
-    141 total landslide events (2001-2013)., Observed deaths directly caused by disaster
-    events from strong wind (SNOWSTORM, STORM, WINDSTORM) events in Ethiopia. DesInventar
-    records: 2 events with data out of 27 total strong wind events (1996-2009)., Observed
-    deaths directly caused by disaster events from wildfire (FIRE, FOREST FIRE) events
-    in Ethiopia. DesInventar records: 76 events with data out of 1,410 total wildfire
-    events (2000-2013)., Observed educational facilities destroyed or affected from
-    flood (FLOOD) events in Ethiopia. DesInventar records: 4 events with data out
-    of 1,475 total flood events (2006-2013)., Observed health facilities destroyed
-    or affected from flood (FLOOD) events in Ethiopia. DesInventar records: 1 events
-    with data out of 1,475 total flood events (2006-2013)., Observed hectares of crops/woods
-    destroyed or affected from convective storm (HAILSTORM, THUNDERSTORM) events in
-    Ethiopia. DesInventar records: 141 events with data out of 242 total convective
-    storm events (1996-2012)., Observed hectares of crops/woods destroyed or affected
-    from drought (DROUGHT) events in Ethiopia. DesInventar records: 75 events with
-    data out of 5,802 total drought events (1992-2013)., Observed hectares of crops/woods
-    destroyed or affected from extreme temperature (FROST) events in Ethiopia. DesInventar
-    records: 6 events with data out of 7 total extreme temperature events (1999-2005).,
-    Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events
-    in Ethiopia. DesInventar records: 392 events with data out of 1,475 total flood
-    events (2006-2013)., Observed hectares of crops/woods destroyed or affected from
-    landslide (LANDSLIDE) events in Ethiopia. DesInventar records: 55 events with
-    data out of 141 total landslide events (2001-2013)., Observed hectares of crops/woods
-    destroyed or affected from strong wind (SNOWSTORM, STORM, WINDSTORM) events in
-    Ethiopia. DesInventar records: 5 events with data out of 27 total strong wind
-    events (1996-2009)., Observed hectares of crops/woods destroyed or affected from
-    wildfire (FIRE, FOREST FIRE) events in Ethiopia. DesInventar records: 60 events
-    with data out of 1,410 total wildfire events (2000-2013)., Observed homes destroyed
-    beyond habitability from convective storm (HAILSTORM, THUNDERSTORM) events in
-    Ethiopia. DesInventar records: 27 events with data out of 242 total convective
-    storm events (1996-2012)., Observed homes destroyed beyond habitability from earthquake
-    (EARTHQUAKE) events in Ethiopia. DesInventar records: 1 events with data out of
-    3 total earthquake events (1993-2005)., Observed homes destroyed beyond habitability
-    from flood (FLOOD) events in Ethiopia. DesInventar records: 141 events with data
-    out of 1,475 total flood events (2006-2013)., Observed homes destroyed beyond
-    habitability from landslide (LANDSLIDE) events in Ethiopia. DesInventar records:
-    26 events with data out of 141 total landslide events (2001-2013)., Observed homes
-    destroyed beyond habitability from strong wind (SNOWSTORM, STORM, WINDSTORM) events
-    in Ethiopia. DesInventar records: 5 events with data out of 27 total strong wind
-    events (1996-2009)., Observed homes destroyed beyond habitability from wildfire
-    (FIRE, FOREST FIRE) events in Ethiopia. DesInventar records: 89 events with data
-    out of 1,410 total wildfire events (2000-2013)., Observed homes with non-structural
-    damage, still habitable from convective storm (HAILSTORM, THUNDERSTORM) events
-    in Ethiopia. DesInventar records: 1 events with data out of 242 total convective
-    storm events (1996-2012)., Observed homes with non-structural damage, still habitable
-    from flood (FLOOD) events in Ethiopia. DesInventar records: 31 events with data
-    out of 1,475 total flood events (2006-2013)., Observed homes with non-structural
-    damage, still habitable from landslide (LANDSLIDE) events in Ethiopia. DesInventar
-    records: 2 events with data out of 141 total landslide events (2001-2013)., Observed
-    persons indirectly affected (disruption to services, commerce, work) from convective
-    storm (HAILSTORM, THUNDERSTORM) events in Ethiopia. DesInventar records: 30 events
-    with data out of 242 total convective storm events (1996-2012)., Observed persons
-    indirectly affected (disruption to services, commerce, work) from drought (DROUGHT)
-    events in Ethiopia. DesInventar records: 5,569 events with data out of 5,802 total
-    drought events (1992-2013)., Observed persons indirectly affected (disruption
-    to services, commerce, work) from earthquake (EARTHQUAKE) events in Ethiopia.
-    DesInventar records: 1 events with data out of 3 total earthquake events (1993-2005).,
-    Observed persons indirectly affected (disruption to services, commerce, work)
-    from extreme temperature (FROST) events in Ethiopia. DesInventar records: 2 events
-    with data out of 7 total extreme temperature events (1999-2005)., Observed persons
-    indirectly affected (disruption to services, commerce, work) from extreme temperature
-    (HEAT WAVE) events in Ethiopia. DesInventar records: 1 events with data out of
-    2 total extreme temperature events (1996-1996)., Observed persons indirectly affected
-    (disruption to services, commerce, work) from flood (FLOOD) events in Ethiopia.
-    DesInventar records: 926 events with data out of 1,475 total flood events (2006-2013).,
-    Observed persons indirectly affected (disruption to services, commerce, work)
-    from landslide (LANDSLIDE) events in Ethiopia. DesInventar records: 54 events
-    with data out of 141 total landslide events (2001-2013)., Observed persons indirectly
-    affected (disruption to services, commerce, work) from strong wind (SNOWSTORM,
-    STORM, WINDSTORM) events in Ethiopia. DesInventar records: 12 events with data
-    out of 27 total strong wind events (1996-2009)., Observed persons indirectly affected
-    (disruption to services, commerce, work) from wildfire (FIRE, FOREST FIRE) events
-    in Ethiopia. DesInventar records: 239 events with data out of 1,410 total wildfire
-    events (2000-2013)., Observed persons injured or made sick directly by disaster
-    events from convective storm (HAILSTORM, THUNDERSTORM) events in Ethiopia. DesInventar
-    records: 5 events with data out of 242 total convective storm events (1996-2012).,
-    Observed persons injured or made sick directly by disaster events from earthquake
-    (EARTHQUAKE) events in Ethiopia. DesInventar records: 1 events with data out of
-    3 total earthquake events (1993-2005)., Observed persons injured or made sick
-    directly by disaster events from flood (FLOOD) events in Ethiopia. DesInventar
-    records: 27 events with data out of 1,475 total flood events (2006-2013)., Observed
-    persons injured or made sick directly by disaster events from landslide (LANDSLIDE)
-    events in Ethiopia. DesInventar records: 9 events with data out of 141 total landslide
-    events (2001-2013)., Observed persons injured or made sick directly by disaster
-    events from wildfire (FIRE, FOREST FIRE) events in Ethiopia. DesInventar records:
-    59 events with data out of 1,410 total wildfire events (2000-2013)., Observed
-    persons permanently relocated from homes from convective storm (HAILSTORM, THUNDERSTORM)
-    events in Ethiopia. DesInventar records: 13 events with data out of 242 total
-    convective storm events (1996-2012)., Observed persons permanently relocated from
-    homes from drought (DROUGHT) events in Ethiopia. DesInventar records: 7 events
-    with data out of 5,802 total drought events (1992-2013)., Observed persons permanently
-    relocated from homes from flood (FLOOD) events in Ethiopia. DesInventar records:
-    274 events with data out of 1,475 total flood events (2006-2013)., Observed persons
-    permanently relocated from homes from landslide (LANDSLIDE) events in Ethiopia.
-    DesInventar records: 33 events with data out of 141 total landslide events (2001-2013).,
-    Observed persons permanently relocated from homes from wildfire (FIRE, FOREST
-    FIRE) events in Ethiopia. DesInventar records: 34 events with data out of 1,410
-    total wildfire events (2000-2013)., Observed total economic losses in local currency
-    from flood (FLOOD) events in Ethiopia. DesInventar records: 3 events with data
-    out of 1,475 total flood events (2006-2013)., Observed total economic losses in
-    local currency from wildfire (FIRE, FOREST FIRE) events in Ethiopia. DesInventar
-    records: 570 events with data out of 1,410 total wildfire events (2000-2013).'
+  description: 45 loss records across 8 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -157,6 +48,166 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 45
+  loss_groups:
+  - count: 7
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from convective storm (HAILSTORM, THUNDERSTORM) events in Ethiopia. DesInventar
+      records: 30 events with data out of 242 total convective storm events (1996-2012).'
+    - 'Observed hectares of crops/woods destroyed or affected from convective storm
+      (HAILSTORM, THUNDERSTORM) events in Ethiopia. DesInventar records: 141 events
+      with data out of 242 total convective storm events (1996-2012).'
+    - 'Observed deaths directly caused by disaster events from convective storm (HAILSTORM,
+      THUNDERSTORM) events in Ethiopia. DesInventar records: 17 events with data out
+      of 242 total convective storm events (1996-2012).'
+    - 'Observed homes with non-structural damage, still habitable from convective
+      storm (HAILSTORM, THUNDERSTORM) events in Ethiopia. DesInventar records: 1 events
+      with data out of 242 total convective storm events (1996-2012).'
+    - 'Observed homes destroyed beyond habitability from convective storm (HAILSTORM,
+      THUNDERSTORM) events in Ethiopia. DesInventar records: 27 events with data out
+      of 242 total convective storm events (1996-2012).'
+    - 'Observed persons injured or made sick directly by disaster events from convective
+      storm (HAILSTORM, THUNDERSTORM) events in Ethiopia. DesInventar records: 5 events
+      with data out of 242 total convective storm events (1996-2012).'
+    - 'Observed persons permanently relocated from homes from convective storm (HAILSTORM,
+      THUNDERSTORM) events in Ethiopia. DesInventar records: 13 events with data out
+      of 242 total convective storm events (1996-2012).'
+    hazard_type: convective_storm
+  - count: 4
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from drought (DROUGHT) events in Ethiopia. DesInventar records: 5,569 events
+      with data out of 5,802 total drought events (1992-2013).'
+    - 'Observed hectares of crops/woods destroyed or affected from drought (DROUGHT)
+      events in Ethiopia. DesInventar records: 75 events with data out of 5,802 total
+      drought events (1992-2013).'
+    - 'Observed deaths directly caused by disaster events from drought (DROUGHT) events
+      in Ethiopia. DesInventar records: 2 events with data out of 5,802 total drought
+      events (1992-2013).'
+    - 'Observed persons permanently relocated from homes from drought (DROUGHT) events
+      in Ethiopia. DesInventar records: 7 events with data out of 5,802 total drought
+      events (1992-2013).'
+    hazard_type: drought
+  - count: 3
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from earthquake (EARTHQUAKE) events in Ethiopia. DesInventar records: 1 events
+      with data out of 3 total earthquake events (1993-2005).'
+    - 'Observed homes destroyed beyond habitability from earthquake (EARTHQUAKE) events
+      in Ethiopia. DesInventar records: 1 events with data out of 3 total earthquake
+      events (1993-2005).'
+    - 'Observed persons injured or made sick directly by disaster events from earthquake
+      (EARTHQUAKE) events in Ethiopia. DesInventar records: 1 events with data out
+      of 3 total earthquake events (1993-2005).'
+    hazard_type: earthquake
+  - count: 3
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from extreme temperature (FROST) events in Ethiopia. DesInventar records: 2
+      events with data out of 7 total extreme temperature events (1999-2005).'
+    - 'Observed hectares of crops/woods destroyed or affected from extreme temperature
+      (FROST) events in Ethiopia. DesInventar records: 6 events with data out of 7
+      total extreme temperature events (1999-2005).'
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from extreme temperature (HEAT WAVE) events in Ethiopia. DesInventar records:
+      1 events with data out of 2 total extreme temperature events (1996-1996).'
+    hazard_type: extreme_temperature
+  - count: 10
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from flood (FLOOD) events in Ethiopia. DesInventar records: 926 events with
+      data out of 1,475 total flood events (2006-2013).'
+    - 'Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events
+      in Ethiopia. DesInventar records: 392 events with data out of 1,475 total flood
+      events (2006-2013).'
+    - 'Observed deaths directly caused by disaster events from flood (FLOOD) events
+      in Ethiopia. DesInventar records: 179 events with data out of 1,475 total flood
+      events (2006-2013).'
+    - 'Observed educational facilities destroyed or affected from flood (FLOOD) events
+      in Ethiopia. DesInventar records: 4 events with data out of 1,475 total flood
+      events (2006-2013).'
+    - 'Observed health facilities destroyed or affected from flood (FLOOD) events
+      in Ethiopia. DesInventar records: 1 events with data out of 1,475 total flood
+      events (2006-2013).'
+    - 'Observed homes with non-structural damage, still habitable from flood (FLOOD)
+      events in Ethiopia. DesInventar records: 31 events with data out of 1,475 total
+      flood events (2006-2013).'
+    - 'Observed homes destroyed beyond habitability from flood (FLOOD) events in Ethiopia.
+      DesInventar records: 141 events with data out of 1,475 total flood events (2006-2013).'
+    - 'Observed persons injured or made sick directly by disaster events from flood
+      (FLOOD) events in Ethiopia. DesInventar records: 27 events with data out of
+      1,475 total flood events (2006-2013).'
+    - 'Observed total economic losses in local currency from flood (FLOOD) events
+      in Ethiopia. DesInventar records: 3 events with data out of 1,475 total flood
+      events (2006-2013).'
+    - 'Observed persons permanently relocated from homes from flood (FLOOD) events
+      in Ethiopia. DesInventar records: 274 events with data out of 1,475 total flood
+      events (2006-2013).'
+    hazard_type: flood
+  - count: 7
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from landslide (LANDSLIDE) events in Ethiopia. DesInventar records: 54 events
+      with data out of 141 total landslide events (2001-2013).'
+    - 'Observed hectares of crops/woods destroyed or affected from landslide (LANDSLIDE)
+      events in Ethiopia. DesInventar records: 55 events with data out of 141 total
+      landslide events (2001-2013).'
+    - 'Observed deaths directly caused by disaster events from landslide (LANDSLIDE)
+      events in Ethiopia. DesInventar records: 30 events with data out of 141 total
+      landslide events (2001-2013).'
+    - 'Observed homes with non-structural damage, still habitable from landslide (LANDSLIDE)
+      events in Ethiopia. DesInventar records: 2 events with data out of 141 total
+      landslide events (2001-2013).'
+    - 'Observed homes destroyed beyond habitability from landslide (LANDSLIDE) events
+      in Ethiopia. DesInventar records: 26 events with data out of 141 total landslide
+      events (2001-2013).'
+    - 'Observed persons injured or made sick directly by disaster events from landslide
+      (LANDSLIDE) events in Ethiopia. DesInventar records: 9 events with data out
+      of 141 total landslide events (2001-2013).'
+    - 'Observed persons permanently relocated from homes from landslide (LANDSLIDE)
+      events in Ethiopia. DesInventar records: 33 events with data out of 141 total
+      landslide events (2001-2013).'
+    hazard_type: landslide
+  - count: 4
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from strong wind (SNOWSTORM, STORM, WINDSTORM) events in Ethiopia. DesInventar
+      records: 12 events with data out of 27 total strong wind events (1996-2009).'
+    - 'Observed hectares of crops/woods destroyed or affected from strong wind (SNOWSTORM,
+      STORM, WINDSTORM) events in Ethiopia. DesInventar records: 5 events with data
+      out of 27 total strong wind events (1996-2009).'
+    - 'Observed deaths directly caused by disaster events from strong wind (SNOWSTORM,
+      STORM, WINDSTORM) events in Ethiopia. DesInventar records: 2 events with data
+      out of 27 total strong wind events (1996-2009).'
+    - 'Observed homes destroyed beyond habitability from strong wind (SNOWSTORM, STORM,
+      WINDSTORM) events in Ethiopia. DesInventar records: 5 events with data out of
+      27 total strong wind events (1996-2009).'
+    hazard_type: strong_wind
+  - count: 7
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (FIRE, FOREST FIRE) events in Ethiopia. DesInventar records: 239
+      events with data out of 1,410 total wildfire events (2000-2013).'
+    - 'Observed hectares of crops/woods destroyed or affected from wildfire (FIRE,
+      FOREST FIRE) events in Ethiopia. DesInventar records: 60 events with data out
+      of 1,410 total wildfire events (2000-2013).'
+    - 'Observed deaths directly caused by disaster events from wildfire (FIRE, FOREST
+      FIRE) events in Ethiopia. DesInventar records: 76 events with data out of 1,410
+      total wildfire events (2000-2013).'
+    - 'Observed homes destroyed beyond habitability from wildfire (FIRE, FOREST FIRE)
+      events in Ethiopia. DesInventar records: 89 events with data out of 1,410 total
+      wildfire events (2000-2013).'
+    - 'Observed persons injured or made sick directly by disaster events from wildfire
+      (FIRE, FOREST FIRE) events in Ethiopia. DesInventar records: 59 events with
+      data out of 1,410 total wildfire events (2000-2013).'
+    - 'Observed total economic losses in local currency from wildfire (FIRE, FOREST
+      FIRE) events in Ethiopia. DesInventar records: 570 events with data out of 1,410
+      total wildfire events (2000-2013).'
+    - 'Observed persons permanently relocated from homes from wildfire (FIRE, FOREST
+      FIRE) events in Ethiopia. DesInventar records: 34 events with data out of 1,410
+      total wildfire events (2000-2013).'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:

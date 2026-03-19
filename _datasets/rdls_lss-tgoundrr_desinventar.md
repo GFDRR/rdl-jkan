@@ -34,122 +34,7 @@ loss:
   approach: ''
   base_data_type: ''
   category: ''
-  description: 'Observed deaths directly caused by disaster events from convective
-    storm (Thunderstorm) events in Togo. DesInventar records: 1 events with data out
-    of 9 total convective storm events (2011-2011)., Observed deaths directly caused
-    by disaster events from flood (Flood) events in Togo. DesInventar records: 32
-    events with data out of 135 total flood events., Observed deaths directly caused
-    by disaster events from landslide (Landslide) events in Togo. DesInventar records:
-    1 events with data out of 6 total landslide events., Observed deaths directly
-    caused by disaster events from strong wind (Hurricane) events in Togo. DesInventar
-    records: 1 events with data out of 40 total strong wind events (1960-2013)., Observed
-    deaths directly caused by disaster events from wildfire (Fire, Forest fire) events
-    in Togo. DesInventar records: 13 events with data out of 197 total wildfire events
-    (2009-2009)., Observed educational facilities destroyed or affected from convective
-    storm (Thunderstorm) events in Togo. DesInventar records: 6 events with data out
-    of 9 total convective storm events (2011-2011)., Observed educational facilities
-    destroyed or affected from flood (Flood) events in Togo. DesInventar records:
-    15 events with data out of 135 total flood events., Observed educational facilities
-    destroyed or affected from strong wind (Hurricane) events in Togo. DesInventar
-    records: 14 events with data out of 40 total strong wind events (1960-2013).,
-    Observed educational facilities destroyed or affected from strong wind (Storm)
-    events in Togo. DesInventar records: 1 events with data out of 4 total strong
-    wind events., Observed educational facilities destroyed or affected from wildfire
-    (Fire, Forest fire) events in Togo. DesInventar records: 9 events with data out
-    of 197 total wildfire events (2009-2009)., Observed health facilities destroyed
-    or affected from flood (Flood) events in Togo. DesInventar records: 2 events with
-    data out of 135 total flood events., Observed health facilities destroyed or affected
-    from strong wind (Hurricane) events in Togo. DesInventar records: 1 events with
-    data out of 40 total strong wind events (1960-2013)., Observed hectares of crops/woods
-    destroyed or affected from flood (Flood) events in Togo. DesInventar records:
-    21 events with data out of 135 total flood events., Observed hectares of crops/woods
-    destroyed or affected from wildfire (Fire, Forest fire) events in Togo. DesInventar
-    records: 14 events with data out of 197 total wildfire events (2009-2009)., Observed
-    homes destroyed beyond habitability from convective storm (Thunderstorm) events
-    in Togo. DesInventar records: 2 events with data out of 9 total convective storm
-    events (2011-2011)., Observed homes destroyed beyond habitability from flood (Flood)
-    events in Togo. DesInventar records: 59 events with data out of 135 total flood
-    events., Observed homes destroyed beyond habitability from landslide (Landslide)
-    events in Togo. DesInventar records: 5 events with data out of 6 total landslide
-    events., Observed homes destroyed beyond habitability from strong wind (Hurricane)
-    events in Togo. DesInventar records: 5 events with data out of 40 total strong
-    wind events (1960-2013)., Observed homes destroyed beyond habitability from wildfire
-    (Fire, Forest fire) events in Togo. DesInventar records: 64 events with data out
-    of 197 total wildfire events (2009-2009)., Observed homes with non-structural
-    damage, still habitable from convective storm (Thunderstorm) events in Togo. DesInventar
-    records: 4 events with data out of 9 total convective storm events (2011-2011).,
-    Observed homes with non-structural damage, still habitable from flood (Flood)
-    events in Togo. DesInventar records: 54 events with data out of 135 total flood
-    events., Observed homes with non-structural damage, still habitable from landslide
-    (Landslide) events in Togo. DesInventar records: 5 events with data out of 6 total
-    landslide events., Observed homes with non-structural damage, still habitable
-    from strong wind (Hurricane) events in Togo. DesInventar records: 14 events with
-    data out of 40 total strong wind events (1960-2013)., Observed homes with non-structural
-    damage, still habitable from strong wind (Storm) events in Togo. DesInventar records:
-    1 events with data out of 4 total strong wind events., Observed homes with non-structural
-    damage, still habitable from wildfire (Fire, Forest fire) events in Togo. DesInventar
-    records: 50 events with data out of 197 total wildfire events (2009-2009)., Observed
-    livestock lost from flood (Flood) events in Togo. DesInventar records: 1 events
-    with data out of 135 total flood events., Observed livestock lost from strong
-    wind (Hurricane) events in Togo. DesInventar records: 1 events with data out of
-    40 total strong wind events (1960-2013)., Observed metres of transport networks
-    destroyed from flood (Flood) events in Togo. DesInventar records: 4 events with
-    data out of 135 total flood events., Observed persons indirectly affected (disruption
-    to services, commerce, work) from convective storm (Thunderstorm) events in Togo.
-    DesInventar records: 2 events with data out of 9 total convective storm events
-    (2011-2011)., Observed persons indirectly affected (disruption to services, commerce,
-    work) from flood (Flood) events in Togo. DesInventar records: 109 events with
-    data out of 135 total flood events., Observed persons indirectly affected (disruption
-    to services, commerce, work) from landslide (Landslide) events in Togo. DesInventar
-    records: 5 events with data out of 6 total landslide events., Observed persons
-    indirectly affected (disruption to services, commerce, work) from strong wind
-    (Hurricane) events in Togo. DesInventar records: 20 events with data out of 40
-    total strong wind events (1960-2013)., Observed persons indirectly affected (disruption
-    to services, commerce, work) from strong wind (Storm) events in Togo. DesInventar
-    records: 4 events with data out of 4 total strong wind events., Observed persons
-    indirectly affected (disruption to services, commerce, work) from wildfire (Fire,
-    Forest fire) events in Togo. DesInventar records: 162 events with data out of
-    197 total wildfire events (2009-2009)., Observed persons injured or made sick
-    directly by disaster events from flood (Flood) events in Togo. DesInventar records:
-    22 events with data out of 135 total flood events., Observed persons injured or
-    made sick directly by disaster events from strong wind (Hurricane) events in Togo.
-    DesInventar records: 3 events with data out of 40 total strong wind events (1960-2013).,
-    Observed persons injured or made sick directly by disaster events from wildfire
-    (Fire, Forest fire) events in Togo. DesInventar records: 7 events with data out
-    of 197 total wildfire events (2009-2009)., Observed persons missing or unaccounted
-    for after disaster events from flood (Flood) events in Togo. DesInventar records:
-    2 events with data out of 135 total flood events., Observed persons permanently
-    relocated from homes from flood (Flood) events in Togo. DesInventar records: 32
-    events with data out of 135 total flood events., Observed persons permanently
-    relocated from homes from wildfire (Fire, Forest fire) events in Togo. DesInventar
-    records: 12 events with data out of 197 total wildfire events (2009-2009)., Observed
-    persons temporarily evacuated from homes or workplaces from flood (Flood) events
-    in Togo. DesInventar records: 11 events with data out of 135 total flood events.,
-    Observed persons temporarily evacuated from homes or workplaces from landslide
-    (Landslide) events in Togo. DesInventar records: 1 events with data out of 6 total
-    landslide events., Observed persons temporarily evacuated from homes or workplaces
-    from strong wind (Hurricane) events in Togo. DesInventar records: 1 events with
-    data out of 40 total strong wind events (1960-2013)., Observed persons temporarily
-    evacuated from homes or workplaces from wildfire (Fire, Forest fire) events in
-    Togo. DesInventar records: 4 events with data out of 197 total wildfire events
-    (2009-2009)., Observed persons whose goods/services suffered serious damage from
-    flood (Flood) events in Togo. DesInventar records: 16 events with data out of
-    135 total flood events., Observed persons whose goods/services suffered serious
-    damage from landslide (Landslide) events in Togo. DesInventar records: 5 events
-    with data out of 6 total landslide events., Observed persons whose goods/services
-    suffered serious damage from wildfire (Fire, Forest fire) events in Togo. DesInventar
-    records: 10 events with data out of 197 total wildfire events (2009-2009)., Observed
-    total economic losses in US Dollars from convective storm (Thunderstorm) events
-    in Togo. DesInventar records: 1 events with data out of 9 total convective storm
-    events (2011-2011)., Observed total economic losses in US Dollars from flood (Flood)
-    events in Togo. DesInventar records: 30 events with data out of 135 total flood
-    events., Observed total economic losses in US Dollars from strong wind (Hurricane)
-    events in Togo. DesInventar records: 7 events with data out of 40 total strong
-    wind events (1960-2013)., Observed total economic losses in US Dollars from strong
-    wind (Storm) events in Togo. DesInventar records: 2 events with data out of 4
-    total strong wind events., Observed total economic losses in US Dollars from wildfire
-    (Fire, Forest fire) events in Togo. DesInventar records: 74 events with data out
-    of 197 total wildfire events (2009-2009).'
+  description: 52 loss records across 5 hazard types
   dimension: ''
   exposure_id: ''
   hazard_analysis_type: ''
@@ -160,6 +45,168 @@ loss:
   impact_metric: ''
   impact_type: ''
   impact_unit: ''
+  loss_count: 52
+  loss_groups:
+  - count: 6
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from convective storm (Thunderstorm) events in Togo. DesInventar records: 2
+      events with data out of 9 total convective storm events (2011-2011).'
+    - 'Observed deaths directly caused by disaster events from convective storm (Thunderstorm)
+      events in Togo. DesInventar records: 1 events with data out of 9 total convective
+      storm events (2011-2011).'
+    - 'Observed educational facilities destroyed or affected from convective storm
+      (Thunderstorm) events in Togo. DesInventar records: 6 events with data out of
+      9 total convective storm events (2011-2011).'
+    - 'Observed homes with non-structural damage, still habitable from convective
+      storm (Thunderstorm) events in Togo. DesInventar records: 4 events with data
+      out of 9 total convective storm events (2011-2011).'
+    - 'Observed homes destroyed beyond habitability from convective storm (Thunderstorm)
+      events in Togo. DesInventar records: 2 events with data out of 9 total convective
+      storm events (2011-2011).'
+    - 'Observed total economic losses in US Dollars from convective storm (Thunderstorm)
+      events in Togo. DesInventar records: 1 events with data out of 9 total convective
+      storm events (2011-2011).'
+    hazard_type: convective_storm
+  - count: 15
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from flood (Flood) events in Togo. DesInventar records: 109 events with data
+      out of 135 total flood events.'
+    - 'Observed hectares of crops/woods destroyed or affected from flood (Flood) events
+      in Togo. DesInventar records: 21 events with data out of 135 total flood events.'
+    - 'Observed metres of transport networks destroyed from flood (Flood) events in
+      Togo. DesInventar records: 4 events with data out of 135 total flood events.'
+    - 'Observed deaths directly caused by disaster events from flood (Flood) events
+      in Togo. DesInventar records: 32 events with data out of 135 total flood events.'
+    - 'Observed educational facilities destroyed or affected from flood (Flood) events
+      in Togo. DesInventar records: 15 events with data out of 135 total flood events.'
+    - 'Observed persons temporarily evacuated from homes or workplaces from flood
+      (Flood) events in Togo. DesInventar records: 11 events with data out of 135
+      total flood events.'
+    - 'Observed health facilities destroyed or affected from flood (Flood) events
+      in Togo. DesInventar records: 2 events with data out of 135 total flood events.'
+    - 'Observed homes with non-structural damage, still habitable from flood (Flood)
+      events in Togo. DesInventar records: 54 events with data out of 135 total flood
+      events.'
+    - 'Observed homes destroyed beyond habitability from flood (Flood) events in Togo.
+      DesInventar records: 59 events with data out of 135 total flood events.'
+    - 'Observed persons injured or made sick directly by disaster events from flood
+      (Flood) events in Togo. DesInventar records: 22 events with data out of 135
+      total flood events.'
+    - 'Observed total economic losses in US Dollars from flood (Flood) events in Togo.
+      DesInventar records: 30 events with data out of 135 total flood events.'
+    - 'Observed livestock lost from flood (Flood) events in Togo. DesInventar records:
+      1 events with data out of 135 total flood events.'
+    - 'Observed persons missing or unaccounted for after disaster events from flood
+      (Flood) events in Togo. DesInventar records: 2 events with data out of 135 total
+      flood events.'
+    - 'Observed persons permanently relocated from homes from flood (Flood) events
+      in Togo. DesInventar records: 32 events with data out of 135 total flood events.'
+    - 'Observed persons whose goods/services suffered serious damage from flood (Flood)
+      events in Togo. DesInventar records: 16 events with data out of 135 total flood
+      events.'
+    hazard_type: flood
+  - count: 6
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from landslide (Landslide) events in Togo. DesInventar records: 5 events with
+      data out of 6 total landslide events.'
+    - 'Observed deaths directly caused by disaster events from landslide (Landslide)
+      events in Togo. DesInventar records: 1 events with data out of 6 total landslide
+      events.'
+    - 'Observed persons temporarily evacuated from homes or workplaces from landslide
+      (Landslide) events in Togo. DesInventar records: 1 events with data out of 6
+      total landslide events.'
+    - 'Observed homes with non-structural damage, still habitable from landslide (Landslide)
+      events in Togo. DesInventar records: 5 events with data out of 6 total landslide
+      events.'
+    - 'Observed homes destroyed beyond habitability from landslide (Landslide) events
+      in Togo. DesInventar records: 5 events with data out of 6 total landslide events.'
+    - 'Observed persons whose goods/services suffered serious damage from landslide
+      (Landslide) events in Togo. DesInventar records: 5 events with data out of 6
+      total landslide events.'
+    hazard_type: landslide
+  - count: 14
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from strong wind (Storm) events in Togo. DesInventar records: 4 events with
+      data out of 4 total strong wind events.'
+    - 'Observed educational facilities destroyed or affected from strong wind (Storm)
+      events in Togo. DesInventar records: 1 events with data out of 4 total strong
+      wind events.'
+    - 'Observed homes with non-structural damage, still habitable from strong wind
+      (Storm) events in Togo. DesInventar records: 1 events with data out of 4 total
+      strong wind events.'
+    - 'Observed total economic losses in US Dollars from strong wind (Storm) events
+      in Togo. DesInventar records: 2 events with data out of 4 total strong wind
+      events.'
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from strong wind (Hurricane) events in Togo. DesInventar records: 20 events
+      with data out of 40 total strong wind events (1960-2013).'
+    - 'Observed deaths directly caused by disaster events from strong wind (Hurricane)
+      events in Togo. DesInventar records: 1 events with data out of 40 total strong
+      wind events (1960-2013).'
+    - 'Observed educational facilities destroyed or affected from strong wind (Hurricane)
+      events in Togo. DesInventar records: 14 events with data out of 40 total strong
+      wind events (1960-2013).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from strong
+      wind (Hurricane) events in Togo. DesInventar records: 1 events with data out
+      of 40 total strong wind events (1960-2013).'
+    - 'Observed health facilities destroyed or affected from strong wind (Hurricane)
+      events in Togo. DesInventar records: 1 events with data out of 40 total strong
+      wind events (1960-2013).'
+    - 'Observed homes with non-structural damage, still habitable from strong wind
+      (Hurricane) events in Togo. DesInventar records: 14 events with data out of
+      40 total strong wind events (1960-2013).'
+    - 'Observed homes destroyed beyond habitability from strong wind (Hurricane) events
+      in Togo. DesInventar records: 5 events with data out of 40 total strong wind
+      events (1960-2013).'
+    - 'Observed persons injured or made sick directly by disaster events from strong
+      wind (Hurricane) events in Togo. DesInventar records: 3 events with data out
+      of 40 total strong wind events (1960-2013).'
+    - 'Observed total economic losses in US Dollars from strong wind (Hurricane) events
+      in Togo. DesInventar records: 7 events with data out of 40 total strong wind
+      events (1960-2013).'
+    - 'Observed livestock lost from strong wind (Hurricane) events in Togo. DesInventar
+      records: 1 events with data out of 40 total strong wind events (1960-2013).'
+    hazard_type: strong_wind
+  - count: 11
+    descriptions:
+    - 'Observed persons indirectly affected (disruption to services, commerce, work)
+      from wildfire (Fire, Forest fire) events in Togo. DesInventar records: 162 events
+      with data out of 197 total wildfire events (2009-2009).'
+    - 'Observed hectares of crops/woods destroyed or affected from wildfire (Fire,
+      Forest fire) events in Togo. DesInventar records: 14 events with data out of
+      197 total wildfire events (2009-2009).'
+    - 'Observed deaths directly caused by disaster events from wildfire (Fire, Forest
+      fire) events in Togo. DesInventar records: 13 events with data out of 197 total
+      wildfire events (2009-2009).'
+    - 'Observed educational facilities destroyed or affected from wildfire (Fire,
+      Forest fire) events in Togo. DesInventar records: 9 events with data out of
+      197 total wildfire events (2009-2009).'
+    - 'Observed persons temporarily evacuated from homes or workplaces from wildfire
+      (Fire, Forest fire) events in Togo. DesInventar records: 4 events with data
+      out of 197 total wildfire events (2009-2009).'
+    - 'Observed homes with non-structural damage, still habitable from wildfire (Fire,
+      Forest fire) events in Togo. DesInventar records: 50 events with data out of
+      197 total wildfire events (2009-2009).'
+    - 'Observed homes destroyed beyond habitability from wildfire (Fire, Forest fire)
+      events in Togo. DesInventar records: 64 events with data out of 197 total wildfire
+      events (2009-2009).'
+    - 'Observed persons injured or made sick directly by disaster events from wildfire
+      (Fire, Forest fire) events in Togo. DesInventar records: 7 events with data
+      out of 197 total wildfire events (2009-2009).'
+    - 'Observed total economic losses in US Dollars from wildfire (Fire, Forest fire)
+      events in Togo. DesInventar records: 74 events with data out of 197 total wildfire
+      events (2009-2009).'
+    - 'Observed persons permanently relocated from homes from wildfire (Fire, Forest
+      fire) events in Togo. DesInventar records: 12 events with data out of 197 total
+      wildfire events (2009-2009).'
+    - 'Observed persons whose goods/services suffered serious damage from wildfire
+      (Fire, Forest fire) events in Togo. DesInventar records: 10 events with data
+      out of 197 total wildfire events (2009-2009).'
+    hazard_type: wildfire
   type: ''
   vulnerability_id: ''
 project:
