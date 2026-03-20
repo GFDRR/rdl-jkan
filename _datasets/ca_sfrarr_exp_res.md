@@ -29,6 +29,10 @@ license: CC-BY-SA-4.0
 loss: null
 project: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction
   in Central Asia
+related_datasets:
+- CA_SFRARR_exp_nonres
+- CA_SFRARR_exp_infra
+- CA_SFRARR_exp_pop
 publisher:
   name: RED - Risk, Engineering  Development - Pavia (Italy)
   url: https://www.redrisk.com

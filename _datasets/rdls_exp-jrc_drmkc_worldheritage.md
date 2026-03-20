@@ -25,7 +25,7 @@ exposure:
   quantity_kind: count
   taxonomy: null
 hazard: null
-license: CC BY-NC-ND 4.0
+license: CC-BY-NC-ND 4.0
 loss: null
 project: World Heritage Sites
 publisher:
