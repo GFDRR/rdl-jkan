@@ -6,7 +6,7 @@
   <link
     rel="icon"
     type="image/png"
-    href="https://riskdatalibrary.org/assets/images/favicon/favicon.png"
+    href="{{ site.baseurl }}/favicon.png"
   />
 
   <title>
@@ -51,11 +51,11 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin="anonymous"></script>
+
   <script
     defer
     src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.8/dist/cdn.min.js"
   ></script>
-  <!-- Semantic search support -->
   <script type="module">
     try {
       const { pipeline } =
@@ -77,7 +77,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css"
   />
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
   <link rel="stylesheet" href="{{ site.baseurl }}/css/modern-theme.css" />
   <link
     rel="canonical"
@@ -115,6 +114,11 @@
       }
       window.slugify = slugify;
       document.addEventListener('alpine:init', async () => {
+        // Shared search query store
+        Alpine.store('search', {
+          query: ''
+        });
+
         Alpine.store('datasets', {
           BASE_URL,
           unfiltered: [],

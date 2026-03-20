@@ -3,31 +3,7 @@ title: Datasets
 layout: default
 ---
 
-<!-- Modern Hero Section -->
-<div class="modern-hero" x-data="{ heroQuery: '' }">
-  <div class="hero-background-image"></div>
-  <div class="hero-content">
-    <h1>Discover Risk Datasets</h1>
-    <p>Browse standardized disaster risk data including hazard, exposure, vulnerability, and loss datasets from around the world</p>
-    <!-- Search Bar in Hero -->
-    <div class="modern-search">
-      <input
-        x-model="heroQuery"
-        type="text"
-        placeholder="Search datasets by keyword, location, or hazard type..."
-        class="form-control"
-        @keyup="$nextTick(() => { const mainSearch = document.querySelector('.content-wrapper [x-data]'); if (mainSearch && mainSearch.__x) { mainSearch.__x.$data.query = heroQuery; } })"
-      />
-    </div>
-  </div>
-</div>
-
-<!-- Content Wrapper -->
-<div class="content-wrapper">
-  <div class="modern-content">
-    <div class="row">
-  <div
-    x-data="{
+<div x-data="{
         // Constants
         KEYWORD_SCORE_MIN: 0.75,
         KEYWORD_SCORE_MAX: 1.0,
@@ -374,6 +350,28 @@ layout: default
         },
     }"
   >
+  <!-- Modern Hero Section -->
+<div class="modern-hero">
+  <div class="hero-background-image"></div>
+  <div class="hero-content">
+    <h1>Discover Risk Datasets</h1>
+    <p>Browse standardized disaster risk data including hazard, exposure, vulnerability, and loss datasets from around the world</p>
+    <!-- Search Bar in Hero -->
+    <div class="modern-search">
+      <input
+        x-model="query"
+        type="text"
+        placeholder="Search datasets by keyword, location, or hazard type..."
+        class="form-control"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Content Wrapper -->
+<div class="content-wrapper">
+  <div class="modern-content">
+<div class="row">
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
       <!-- Active Filters Summary -->
       <div x-show="hasActiveFilters" class="active-filters-summary">
@@ -525,7 +523,7 @@ layout: default
               :class="{ 'active': item.selected }"
               @click.prevent="toggleFilter('geo_coverage', item.slug)"
             >
-              <span x-show="window.getCountryFlag(item.title)" class="country-flag" x-text="window.getCountryFlag(item.title)"></span>
+              <span x-show="window.getCountryFlag(item.code || item.title)" class="country-flag" x-text="window.getCountryFlag(item.code || item.title)"></span>
               <span
                 class="list-group-item-truncate"
                 x-text="item.title"
@@ -686,10 +684,24 @@ layout: default
           :key="dataset.metadata.dataset_id"
         >
           <article class="dataset-card">
-            <!-- Category Badge -->
-            <div x-show="dataset.category" class="category-badge" :class="dataset.metadata.category && Array.isArray(dataset.metadata.category) ? dataset.metadata.category[0].toLowerCase() : (dataset.metadata.category ? dataset.metadata.category.toLowerCase() : '')">
-              <span class="badge-icon"></span>
-              <span x-text="Array.isArray(dataset.metadata.category) ? dataset.metadata.category[0] : dataset.metadata.category"></span>
+            <!-- Category Badges - show all categories -->
+            <div x-show="data.metadata.category" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <template x-if="Array.isArray(data.metadata.category)">
+                <div style="display: contents;">
+                  <template x-for="cat in data.metadata.category" :key="cat">
+                    <div class="category-badge" :class="cat.toLowerCase()">
+                      <span class="badge-icon"></span>
+                      <span x-text="cat"></span>
+                    </div>
+                  </template>
+                </div>
+              </template>
+              <template x-if="!Array.isArray(data.category)">
+                <div class="category-badge" :class="data.category.toLowerCase()">
+                  <span class="badge-icon"></span>
+                  <span x-text="data.category"></span>
+                </div>
+              </template>
             </div>
 
             <h3>
