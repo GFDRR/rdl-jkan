@@ -338,7 +338,10 @@ layout: default
             {% endif %}
           </div>
 
-          <!-- Related Datasets -->
+          <!-- Related Datasets
+               NOTE: This is a client-side feature using Alpine.js, not part of the dataset schema.
+               It uses a three-tier fallback: explicit related_datasets field (optional) → same project → semantic search.
+               The related_datasets field is intentionally NOT in the schema to keep it optional and flexible. -->
           <div class="sidebar-card"
                data-dataset-id="{{ page.dataset_id }}"
                data-project="{{ page.project | escape }}"

@@ -36,9 +36,14 @@
       "license_url": {{ site.data.rdl-license-url[dataset.license] | jsonify }},
     {% endif %}
     {% if dataset.creator != "" %}"creator": {{ dataset.creator | jsonify }},{% endif %}
-    "geo_coverage": {% if dataset.spatial.countries[0] %} 
+    "geo_coverage": {% if dataset.spatial.countries[0] %}
         [{% for geo in dataset.spatial.countries %}
           {{ site.data.ISO3[geo] | jsonify }}{% unless forloop.last %}, {% endunless %}
+        {% endfor %}]
+      {% endif %},
+    "geo_coverage_codes": {% if dataset.spatial.countries[0] %}
+        [{% for geo in dataset.spatial.countries %}
+          {{ geo | jsonify }}{% unless forloop.last %}, {% endunless %}
         {% endfor %}]
       {% endif %},
     "geo_scale": {% if dataset.spatial.scale %} 
