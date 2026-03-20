@@ -1,7 +1,18 @@
-# Country bounding boxes in geographic coordinates
+# Country bounding boxes in geographic coordinates (WGS84/EPSG:4326)
 # Format: [minLon, minLat, maxLon, maxLat]
-# Used for Leaflet spatial extent maps on dataset detail pages
-# Source: Natural Earth Data 1:110m country boundaries
+#
+# Purpose: Used for Leaflet spatial extent maps on dataset detail pages
+#          to display approximate geographic coverage of datasets
+#
+# Source: Natural Earth Data 1:110m Admin 0 Countries (Public Domain)
+#         https://www.naturalearthdata.com/downloads/110m-cultural-vectors/
+#
+# Generation: This file can be regenerated from the official Natural Earth shapefile
+#             using the script: python scripts/generate_country_bbox.py
+#             See scripts/README.md for details
+#
+# Note: These are simplified bounding boxes suitable for visualization purposes.
+#       For precise geospatial analysis, use the original shapefiles from Natural Earth.
 
 AFG: [60.53, 29.32, 75.16, 38.49]  # Afghanistan
 AGO: [11.68, -18.04, 24.08, -4.38]  # Angola
