@@ -11,7 +11,7 @@ layout: default
         // Constants
         KEYWORD_SCORE_MIN: 0.75,
         KEYWORD_SCORE_MAX: 1.0,
-        SCORED_FIELDS: ['title', 'notes', 'description', 'license', 'catalog'],
+        SCORED_FIELDS: ['catalog', 'category', 'creator.name', 'dataset_id', 'description', 'details','geo_coverage',   'license','notes', 'project', 'resources', 'title'],
         SEMANTIC_MAX_RESULTS: 10,
         SEMANTIC_MIN_SCORE: 0.3,
 
@@ -365,10 +365,11 @@ layout: default
           
           for (const dataset of $store.datasets.unfiltered) {
             let matchCount = 0;
-            
             for (const key of this.SCORED_FIELDS) {
-              if (dataset[key] && dataset[key].toLowerCase().indexOf(lowerCaseQuery) !== -1) {
-                matchCount++;
+              if (dataset[key]) {
+                if (JSON.stringify(dataset[key]).toLowerCase().indexOf(lowerCaseQuery) !== -1) {
+                  matchCount++;
+                }
               }
             }
             
