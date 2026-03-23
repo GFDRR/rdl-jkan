@@ -804,13 +804,13 @@ layout: default
             class="list-group-item"
             x-show="getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).filter(i => i.count > 0).length > showCatalogs"
             @click.prevent="showCatalogs = showCatalogs + 10"
-            style="text-align: center;"
+            style="text-align: center"
           >
             Show more...
           </a>
         </div>
       </div>
-      
+
       <!-- Licenses Filter -->
       <div style="margin: 15px 0">
         <h4>Licenses</h4>
@@ -861,7 +861,8 @@ layout: default
         class="form-control"
       />
       <!-- Results Section -->
-      <h3 x-show="results.length > 0"
+      <h3
+        x-show="results.length > 0"
         x-text="`Showing ${paginationStart}-${paginationEnd} of ${results.length} dataset${results.length === 1 ? '' : 's'}`"
       ></h3>
       <h3 x-show="results.length === 0">
@@ -869,16 +870,22 @@ layout: default
       </h3>
 
       <ul>
-        <template x-for="dataset in paginatedDatasets" :key="dataset.metadata.dataset_id">
+        <template
+          x-for="dataset in paginatedDatasets"
+          :key="dataset.metadata.dataset_id"
+        >
           <rdl-dataset>
             <h3>
-              <a x-bind:href="dataset.metadata.url" x-text="dataset.metadata.title"></a>
+              <a
+                x-bind:href="dataset.metadata.url"
+                x-text="dataset.metadata.title"
+              ></a>
               <!-- Semantic match indicator with tooltip -->
-              <span 
-                x-show="dataset.isSemanticMatch" 
+              <span
+                x-show="dataset.isSemanticMatch"
                 x-init="$nextTick(() => { if (typeof $ !== 'undefined' && $.fn.tooltip) { $( $el ).tooltip(); } })"
-                class="label label-info" 
-                style="margin-left: 8px; cursor: help;"
+                class="label label-info"
+                style="margin-left: 8px; cursor: help"
                 data-toggle="tooltip"
                 data-placement="right"
                 :title="`Semantic match (similarity: ${dataset.score?.toFixed(3) || 'N/A'})`"
@@ -902,7 +909,9 @@ layout: default
             <span x-show="dataset.metadata.license_display == null">
               Unknown or not provided</span
             >
-            <span x-show="dataset.metadata.license != null && dataset.metadata.license != 'Not found'">
+            <span
+              x-show="dataset.metadata.license != null && dataset.metadata.license != 'Not found'"
+            >
               <a
                 property="dct:license"
                 x-bind:resource="dataset.metadata.license_display"
@@ -942,10 +951,10 @@ layout: default
 
         <!-- Page Numbers -->
         <template x-for="(page, index) in paginationNumbers" :key="index">
-          <div style="display: contents;">
+          <div style="display: contents">
             <span
               x-show="page === '...'"
-              style="padding: 6px 8px;"
+              style="padding: 6px 8px"
               x-text="page"
             ></span>
             <button
