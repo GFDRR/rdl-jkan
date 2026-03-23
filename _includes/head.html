@@ -49,10 +49,11 @@
   <!-- Semantic search support -->
   <script type="module">
     try {
-      const { pipeline } = await import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0-next.5");
+      const { pipeline } =
+        await import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0-next.5");
       window.pipeline = pipeline;
     } catch (error) {
-      console.warn('Failed to load transformers pipeline:', error);
+      console.warn("Failed to load transformers pipeline:", error);
     }
   </script>
   <link
@@ -93,7 +94,7 @@
   {% include addons/twittercard.html %} {% endif %}
 
   <script>
-    const BASE_URL = {{ site.baseurl | jsonify }};
+      const BASE_URL = {{ site.baseurl | jsonify }};
 
       // Slugify function (matches Jekyll's slugify)
       function slugify(text) {
@@ -102,7 +103,7 @@
           .replace(/\-\-+/g, '-')
           .replace(/^\-|\-$/i, '');
       }
-
+      window.slugify = slugify;
       document.addEventListener('alpine:init', async () => {
         Alpine.store('datasets', {
           BASE_URL,
