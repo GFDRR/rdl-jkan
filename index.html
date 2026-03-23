@@ -29,41 +29,22 @@ layout: default
           }
           
           const pages = [];
-          
-          // Always show first page
           pages.push(1);
           
-          // Calculate range around current page
           let startPage = Math.max(2, currentPage - 1);
           let endPage = Math.min(totalPages - 1, currentPage + 1);
           
-          // Adjust range if at the start or end
           if (currentPage <= 3) {
-            // Near start: show 2, 3, 4, 5
             startPage = 2;
             endPage = 5;
           } else if (currentPage >= totalPages - 2) {
-            // Near end: show last 4 pages before the final one
             startPage = totalPages - 4;
             endPage = totalPages - 1;
           }
           
-          // Add left ellipsis if needed
-          if (startPage > 2) {
-            pages.push('...');
-          }
-          
-          // Add page numbers
-          for (let i = startPage; i <= endPage; i++) {
-            pages.push(i);
-          }
-          
-          // Add right ellipsis if needed
-          if (endPage < totalPages - 1) {
-            pages.push('...');
-          }
-          
-          // Always show last page
+          if (startPage > 2) pages.push('...');
+          for (let i = startPage; i <= endPage; i++) pages.push(i);
+          if (endPage < totalPages - 1) pages.push('...');
           pages.push(totalPages);
           
           return pages;
@@ -75,8 +56,7 @@ layout: default
 
         get paginatedDatasets() {
           const start = (this.currentPage - 1) * this.itemsPerPage;
-          const end = start + this.itemsPerPage;
-          return this.results.slice(start, end);
+          return this.results.slice(start, start + this.itemsPerPage);
         },
         
         get paginationStart() {
@@ -88,7 +68,6 @@ layout: default
         },
 
         // Filtering
-        filteredResultsBeforeSearch: [],
         showCatalogs: 5,
         showCategories: 5,
         showCountries: 5,
@@ -106,13 +85,30 @@ layout: default
           project: []
         },
 
-        toggleFilter(filterType, value) {
-          const index = this.filters[filterType].indexOf(value);
-          if (index === -1) {
-            this.filters[filterType].push(value);
-          } else {
-            this.filters[filterType].splice(index, 1);
+        getDatasetValues(dataset, filterType) {
+          switch (filterType) {
+            case 'catalog':
+              return (dataset.catalog || 'Other').toString().split(',').map(c => c.trim()).filter(c => c);
+            case 'category':
+              return Array.isArray(dataset.category) ? dataset.category : [dataset.category];
+            case 'geo_coverage':
+              return Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
+            case 'geo_scale':
+              return dataset.geo_scale ? dataset.geo_scale.split(',') : [];
+            case 'hazard_type':
+              if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return [];
+              return Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
+            case 'license_display':
+              return dataset.license_display ? dataset.license_display.split(',') : [];
+            case 'project':
+              return dataset.project ? [dataset.project] : [];
           }
+          return [];
+        },
+
+        toggleFilter(filterType, value) {
+          const idx = this.filters[filterType].indexOf(value);
+          idx === -1 ? this.filters[filterType].push(value) : this.filters[filterType].splice(idx, 1);
         },
 
         isFilterActive(filterType, value) {
@@ -120,14 +116,8 @@ layout: default
         },
 
         clearFilters() {
-          this.filters.catalog = [];
-          this.filters.category = [];
-          this.filters.geo_coverage = [];
-          this.filters.geo_scale = [];
-          this.filters.hazard_type = [];
-          this.filters.license_display = [];
-          this.filters.project = [];
-          this.updateUrlParams();
+          Object.keys(this.filters).forEach(k => this.filters[k] = []);
+          $store.datasets.updateUrlParams();
         },
 
         get activeFilterCount() {
@@ -138,212 +128,62 @@ layout: default
           return this.activeFilterCount > 0;
         },
 
-        getFilteredResultsBeforeSearch() {
-          this.filteredResultsBeforeSearch = this.applyFilters();
+        get filteredResultsBeforeSearch() {
+          return this.applyFilters();
         },
 
         getDatasetsForFilterOptions(excludeFilterType) {
-          let baseDatasets = $store.datasets.unfiltered;
-          if (this.query.trim()) {
-            const lowerCaseQuery = this.query.toLowerCase();
-            
-            baseDatasets = baseDatasets.filter(dataset => {
-              for (const key of this.SCORED_FIELDS) {
-                if (dataset[key]) {
-                  if (JSON.stringify(dataset[key]).toLowerCase().indexOf(lowerCaseQuery) !== -1) {
-                    return true;
-                  }
-                }
-              }
-              return false;
-            });
-          }
+          const baseDatasets = this.query.trim() 
+            ? this.filteredKeywordResults.map(r => r.metadata)
+            : $store.datasets.unfiltered;
           return this.applyFiltersExcluding(excludeFilterType, baseDatasets);
         },
 
-        // Apply filters to datasets
-        applyFilters() {
-          return this.applyFiltersExcluding();
+        applyFilters(datasets = null) {
+          return this.applyFiltersExcluding(null, datasets);
         },
 
         applyFiltersExcluding(excludeFilterType = null, datasets = null) {
-          const datasetsToFilter = datasets || $store.datasets.unfiltered;
-          const slugify = (text) => {
-            return text.toString().toLowerCase().trim()
-              .replace(/[^a-zA-Z0-9]/g, '-')
-              .replace(/\-\-+/g, '-')
-              .replace(/^\-|\-$/i, '');
-          };
-          return datasetsToFilter.filter((dataset) => {
-            // Catalog filter
-            if (excludeFilterType !== 'catalog' && this.filters.catalog.length > 0) {
-              const datasetCatalogs = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
-              const hasMatchingCatalog = datasetCatalogs.some(cat => {
-                if (cat === null || cat === undefined) return false;
-                return this.filters.catalog.includes(slugify(cat))
-              });
-              if (!hasMatchingCatalog) return false;
-            }
-
-            // Category filter
-            if (excludeFilterType !== 'category' && this.filters.category.length > 0) {
-              const datasetCategories = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
-              const hasMatchingCategory = datasetCategories.some(cat =>
-                this.filters.category.includes(slugify(cat))
-              );
-              if (!hasMatchingCategory) return false;
-            }
-
-            // Geo coverage filter
-            if (excludeFilterType !== 'geo_coverage' && this.filters.geo_coverage.length > 0) {
-              const coverage = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage.join(',') : dataset.geo_coverage;
-              const coverageSlug = slugify(coverage || '');
-              const hasMatchingCoverage = this.filters.geo_coverage.some(filter =>
-                coverageSlug.includes(filter)
-              );
-              if (!hasMatchingCoverage) return false;
-            }
-
-            // Geo scale filter
-            if (excludeFilterType !== 'geo_scale' && this.filters.geo_scale.length > 0) {
-              const scaleSlug = slugify(dataset.geo_scale || '');
-              const hasMatchingScale = this.filters.geo_scale.some(filter =>
-                scaleSlug.includes(filter)
-              );
-              if (!hasMatchingScale) return false;
-            }
-
-            // Hazard type filter (skip exposure datasets)
-            if (excludeFilterType !== 'hazard_type' && this.filters.hazard_type.length > 0) {
-              if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return false;
-              const hazardTypes = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
-              const hasMatchingHazard = hazardTypes.some(ht =>
-                this.filters.hazard_type.includes(slugify(ht))
-              );
-              if (!hasMatchingHazard) return false;
-            }
-
-            // License filter
-            if (excludeFilterType !== 'license_display' && this.filters.license_display.length > 0) {
-              const licenseSlug = slugify(dataset.license_display || '');
-              const hasMatchingLicense = this.filters.license_display.some(filter =>
-                licenseSlug.includes(filter)
-              );
-              if (!hasMatchingLicense) return false;
-            }
-
-            // Project filter
-            if (excludeFilterType !== 'project' && this.filters.project.length > 0) {
-              const projectSlug = slugify(dataset.project || '');
-              const hasMatchingProject = this.filters.project.some(filter =>
-                projectSlug.includes(filter)
-              );
-              if (!hasMatchingProject) return false;
-            }
-
-            return true;
-          });
+          const toFilter = datasets || $store.datasets.unfiltered;
+          const filterTypes = ['catalog', 'category', 'geo_coverage', 'geo_scale', 'hazard_type', 'license_display', 'project'];
+          return toFilter.filter(dataset => 
+            filterTypes.every(type => 
+              type === excludeFilterType || this.datasetMatchesFilter(dataset, type)
+            )
+          );
         },
 
-        // Get filter options with counts
+        datasetMatchesFilter(dataset, filterType) {
+          const values = this.filters[filterType];
+          if (!values.length) return true;
+          const datasetValues = this.getDatasetValues(dataset, filterType);
+          if (['geo_coverage', 'geo_scale', 'license_display', 'project'].includes(filterType)) {
+            const combinedSlug = window.slugify(datasetValues.join(','));
+            return values.some(v => combinedSlug.includes(v));
+          }
+          return datasetValues.some(v => v && values.includes(window.slugify(v)));
+        },
+
         getFilterOptions(filterType, datasets) {
-          const slugify = (text) => {
-            return text.toString().toLowerCase().trim()
-              .replace(/[^a-zA-Z0-9]/g, '-')
-              .replace(/\-\-+/g, '-')
-              .replace(/^\-|\-$/i, '');
-          };
-          // First, collect ALL possible values from unfiltered datasets
           const allValues = new Set();
-          $store.datasets.unfiltered.forEach(dataset => {
-            let values = [];
-            switch (filterType) {
-              case 'catalog':
-                const catalogVal = dataset.catalog || 'Other';
-                values = catalogVal.toString().split(',').map(c => c.trim()).filter(c => c);
-                break;
-              case 'category':
-                values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
-                break;
-              case 'geo_coverage':
-                values = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
-                break;
-              case 'geo_scale':
-                values = dataset.geo_scale ? dataset.geo_scale.split(',') : [];
-                break;
-              case 'hazard_type':
-                if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return;
-                values = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
-                break;
-              case 'license_display':
-                values = dataset.license_display ? dataset.license_display.split(',') : [];
-                break;
-              case 'project':
-                values = dataset.project ? [dataset.project] : [];
-                break;
-            }
-            values.forEach(val => {
-              if (val && val !== 'None') {
-                allValues.add(val.trim());
-              }
-            });
+          $store.datasets.unfiltered.forEach(d => {
+            this.getDatasetValues(d, filterType).forEach(v => v && v !== 'None' && allValues.add(v.trim()));
           });
-
-          // Count occurrences in the filtered datasets
           const counts = {};
-          datasets.forEach(dataset => {
-            let values = [];
-            switch (filterType) {
-              case 'catalog':
-                const catalogVal = dataset.catalog || 'Other';
-                values = catalogVal.toString().split(',').map(c => c.trim()).filter(c => c);
-                break;
-              case 'category':
-                values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
-                break;
-              case 'geo_coverage':
-                values = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
-                break;
-              case 'geo_scale':
-                values = dataset.geo_scale ? dataset.geo_scale.split(',') : [];
-                break;
-              case 'hazard_type':
-                if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return;
-                values = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
-                break;
-              case 'license_display':
-                values = dataset.license_display ? dataset.license_display.split(',') : [];
-                break;
-              case 'project':
-                values = dataset.project ? [dataset.project] : [];
-                break;
-            }
-            values.forEach(val => {
-              if (val && val !== 'None') {
-                const trimmed = val.trim();
-                counts[trimmed] = (counts[trimmed] || 0) + 1;
-              }
+          datasets.forEach(d => {
+            this.getDatasetValues(d, filterType).forEach(v => {
+              if (v && v !== 'None') counts[v.trim()] = (counts[v.trim()] || 0) + 1;
             });
           });
-
-          // Build options array with all values (including 0 counts)
-          const options = Array.from(allValues).map(title => ({
+          return Array.from(allValues).map(title => ({
             title,
-            slug: slugify(title),
+            slug: window.slugify(title),
             count: counts[title] || 0,
-            selected: this.isFilterActive(filterType, slugify(title))
-          }));
-
-          // Sort: selected first, then by count (desc), then alphabetically
-          return options.sort((a, b) => {
-            if (a.selected && !b.selected) return -1;
-            if (!a.selected && b.selected) return 1;
-            if (filterType === 'catalog') {
-              if (a.title === 'Other') return 1;
-              if (b.title === 'Other') return -1;
-            }
-            if (b.count !== a.count) return b.count - a.count;
-            return a.title.localeCompare(b.title);
+            selected: this.isFilterActive(filterType, window.slugify(title))
+          })).sort((a, b) => {
+            if (a.selected !== b.selected) return a.selected ? -1 : 1;
+            if (filterType === 'catalog' && (a.title === 'Other') !== (b.title === 'Other')) return a.title === 'Other' ? 1 : -1;
+            return b.count - a.count || a.title.localeCompare(b.title);
           });
         },
 
@@ -357,7 +197,6 @@ layout: default
         isTransformerModelLoading: false,
         isEmbeddedMetadataLoading: false,
 
-        // Keyword search logic
         keywordSearch() {
           const lowerCaseQuery = this.query.toLowerCase();
           const keywordMatches = [];
@@ -366,21 +205,15 @@ layout: default
           for (const dataset of $store.datasets.unfiltered) {
             let matchCount = 0;
             for (const key of this.SCORED_FIELDS) {
-              if (dataset[key]) {
-                if (JSON.stringify(dataset[key]).toLowerCase().indexOf(lowerCaseQuery) !== -1) {
-                  matchCount++;
-                }
+              if (dataset[key] && JSON.stringify(dataset[key]).toLowerCase().includes(lowerCaseQuery)) {
+                matchCount++;
               }
             }
             
             if (matchCount > 0) {
-              const score = this.KEYWORD_SCORE_MIN + 
-                (this.KEYWORD_SCORE_MAX - this.KEYWORD_SCORE_MIN) * 
-                (matchCount / this.SCORED_FIELDS.length);
-              
               keywordMatches.push({
                 metadata: dataset,
-                score,
+                score: this.KEYWORD_SCORE_MIN + (this.KEYWORD_SCORE_MAX - this.KEYWORD_SCORE_MIN) * (matchCount / this.SCORED_FIELDS.length),
                 isKeywordMatch: true,
                 isSemanticMatch: false
               });
@@ -392,7 +225,6 @@ layout: default
           this.filteredNonKeywordResults = nonMatches;
         },
 
-        // Semantic search logic
         async loadTransformerModel() {
           this.isTransformerModelLoading = true;
           try {
@@ -401,17 +233,9 @@ layout: default
               await new Promise(resolve => setTimeout(resolve, 100));
               retries++;
             }
-            if (typeof window.pipeline === 'undefined') {
-              throw new Error('Pipeline not available after waiting');
-            }
-            // Use quantized model (q8) to reduce memory usage and prevent WASM OOM errors
-            this.model = await window.pipeline(
-              'feature-extraction',
-              'Xenova/all-MiniLM-L6-v2',
-              { dtype: 'q8' }
-            );
+            if (typeof window.pipeline === 'undefined') throw new Error('Pipeline not available');
+            this.model = await window.pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', { dtype: 'q8' });
           } catch (error) {
-            // Silently fail - semantic search will be unavailable, keyword search still works
             console.warn('Semantic search unavailable:', error.message);
           } finally {
             this.isTransformerModelLoading = false;
@@ -424,9 +248,7 @@ layout: default
             const response = await fetch(`${$store.datasets.BASE_URL ?? ''}/python/vectors.json`);
             const vectorsArray = await response.json();
             this.vectors = vectorsArray.reduce((acc, item) => {
-              if (item.metadata && item.metadata.dataset_id) {
-                acc[item.metadata.dataset_id] = item.vector;
-              }
+              if (item.metadata?.dataset_id) acc[item.metadata.dataset_id] = item.vector;
               return acc;
             }, {});
           } catch (error) {
@@ -438,10 +260,7 @@ layout: default
         
         async embedQueryAsVector(query) {
           if (!this.model) return null;
-          const result = await this.model([query.trim()], {
-            pooling: 'mean',
-            normalize: true,
-          });
+          const result = await this.model([query.trim()], { pooling: 'mean', normalize: true });
           return Array.from(result.data);
         },
         
@@ -453,90 +272,73 @@ layout: default
         },
 
         async semanticSearch(query) {
-          if (!query.trim() || !this.model || Object.keys(this.vectors).length === 0) {
+          if (!query.trim() || !this.model || !Object.keys(this.vectors).length) {
             this.filteredSemanticResults = [];
             return;
           }
           
           const embeddedQuery = await this.embedQueryAsVector(query);
-          if (!embeddedQuery)  {
+          if (!embeddedQuery) {
             this.filteredSemanticResults = [];
             return;
           }
           
-          const results = [];
-          for (const result of this.filteredNonKeywordResults) {
-            const datasetVector = this.vectors[result.dataset_id];
-            if (!datasetVector) continue;
-            
-            const similarity = this.calculateCosineSimilarity(embeddedQuery, datasetVector);
-            if (similarity >= this.SEMANTIC_MIN_SCORE) {
-              results.push({
+          this.filteredSemanticResults = this.filteredNonKeywordResults
+            .map(result => {
+              const datasetVector = this.vectors[result.dataset_id];
+              if (!datasetVector) return null;
+              const similarity = this.calculateCosineSimilarity(embeddedQuery, datasetVector);
+              return similarity >= this.SEMANTIC_MIN_SCORE ? {
                 metadata: result,
                 score: similarity,
                 isKeywordMatch: false,
                 isSemanticMatch: true
-              });
-            }
-          }
-          
-          this.filteredSemanticResults = results
+              } : null;
+            })
+            .filter(Boolean)
             .sort((a, b) => b.score - a.score)
-            .slice(0, this.SEMANTIC_MAX_RESULTS ?? results.length);
+            .slice(0, this.SEMANTIC_MAX_RESULTS);
         },
         
-        // Unified search logic
         get results() {
           if (!this.query.trim()) {
-            const filtered = this.applyFilters();
-            return filtered.map(dataset => ({
+            return this.applyFilters().map(dataset => ({
               metadata: dataset,
               score: 0.5,
               isKeywordMatch: false,
               isSemanticMatch: false
             }));
           }
-          return [
-            ...this.filteredKeywordResults,
-            ...this.filteredSemanticResults,
-          ].sort((a, b) => b.score - a.score);
+          const filteredIds = new Set(this.applyFilters().map(d => d.dataset_id));
+          return [...this.filteredKeywordResults, ...this.filteredSemanticResults]
+            .filter(r => filteredIds.has(r.metadata.dataset_id))
+            .sort((a, b) => b.score - a.score);
         },
 
-        // Lifecycle functions
         init() {
           this.loadTransformerModel();
           this.loadEmbeddedMetadata();
           
-          // Wait for datasets to load before loading URL params and searching
           this.$watch('$store.datasets.isLoading', (value) => {
             if (!value && $store.datasets.unfiltered.length > 0) {
               const { searchQuery, filters } = $store.datasets.loadFromUrlParams();
               this.query = searchQuery;
-              if (Object.keys(filters).length > 0) {
-                Object.assign(this.filters, filters);
-              }
-              this.getFilteredResultsBeforeSearch();
-              if (this.query.trim()) {
-                this.keywordSearch();
-              }
+              if (Object.keys(filters).length > 0) Object.assign(this.filters, filters);
+              if (this.query.trim()) this.keywordSearch();
             }
           });
           
-          // Watch state changes to keep UI up to date
           this.$watch('query', (value) => {
-            $store.datasets.updateUrlParams(value);
+            $store.datasets.updateUrlParams(value, this.filters);
             if ($store.datasets.unfiltered.length === 0) return;
             this.keywordSearch();
             if (value.trim() && this.model && Object.keys(this.vectors).length > 0) {
               this.semanticSearch(value);
             }
           });
-          this.$watch('query', () => {
-            this.currentPage = 1;
-          });
+          this.$watch('query', () => this.currentPage = 1);
           this.$watch('filters', () => {
             $store.datasets.updateUrlParams(this.query, this.filters);
-            this.getFilteredResultsBeforeSearch();
             this.currentPage = 1;
           }, { deep: true });
           this.$watch('isTransformerModelLoading', (value) => {
@@ -555,13 +357,8 @@ layout: default
     <div class="col-sm-4">
       <!-- Active Filters Summary -->
       <div x-show="hasActiveFilters" style="margin: 10px 0">
-        <span
-          x-text="activeFilterCount + ' filter(s) active'"
-        ></span>
-        <button
-          @click="clearFilters()"
-          class="btn btn-xs btn-default"
-        >
+        <span x-text="activeFilterCount + ' filter(s) active'"></span>
+        <button @click="clearFilters()" class="btn btn-xs btn-default">
           Clear all
         </button>
       </div>
@@ -601,11 +398,11 @@ layout: default
             x-show="getFilterOptions('category', getDatasetsForFilterOptions('category')).filter(i => i.count > 0).length > showCategories"
             @click.prevent="showCategories = showCategories + 10"
             style="text-align: center"
+            >Show more...</a
           >
-            Show more...
-          </a>
         </div>
       </div>
+
       <!-- Hazard Type Filter -->
       <div style="margin: 15px 0">
         <h4>
@@ -654,11 +451,11 @@ layout: default
             x-show="getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).filter(i => i.count > 0).length > showHazards"
             @click.prevent="showHazards = showHazards + 10"
             style="text-align: center"
+            >Show more...</a
           >
-            Show more...
-          </a>
         </div>
       </div>
+
       <!-- Geographical Scale Filter -->
       <div style="margin: 15px 0">
         <h4>Geographical Scale</h4>
@@ -690,6 +487,7 @@ layout: default
           </template>
         </div>
       </div>
+
       <!-- Countries Filter -->
       <div style="margin: 15px 0">
         <h4>Countries</h4>
@@ -725,9 +523,8 @@ layout: default
             x-show="getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).filter(i => i.count > 0).length > showCountries"
             @click.prevent="showCountries = showCountries + 10"
             style="text-align: center"
+            >Show more...</a
           >
-            Show more...
-          </a>
         </div>
       </div>
 
@@ -766,11 +563,11 @@ layout: default
             x-show="getFilterOptions('project', getDatasetsForFilterOptions('project')).filter(i => i.count > 0).length > showProjects"
             @click.prevent="showProjects = showProjects + 10"
             style="text-align: center"
+            >Show more...</a
           >
-            Show more...
-          </a>
         </div>
       </div>
+
       <!-- Catalog Filter -->
       <div style="margin: 15px 0">
         <h4>Catalog</h4>
@@ -806,9 +603,8 @@ layout: default
             x-show="getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).filter(i => i.count > 0).length > showCatalogs"
             @click.prevent="showCatalogs = showCatalogs + 10"
             style="text-align: center"
+            >Show more...</a
           >
-            Show more...
-          </a>
         </div>
       </div>
 
@@ -846,9 +642,8 @@ layout: default
             class="list-group-item"
             x-show="getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).filter(i => i.count > 0).length > showLicenses"
             @click.prevent="showLicenses = showLicenses + 10"
+            >Show more...</a
           >
-            Show more...
-          </a>
         </div>
       </div>
     </div>
@@ -861,6 +656,7 @@ layout: default
         placeholder="Search..."
         class="form-control"
       />
+
       <!-- Results Section -->
       <h3
         x-show="results.length > 0"
@@ -881,10 +677,9 @@ layout: default
                 x-bind:href="dataset.metadata.url"
                 x-text="dataset.metadata.title"
               ></a>
-              <!-- Semantic match indicator with tooltip -->
               <span
                 x-show="dataset.isSemanticMatch"
-                x-init="$nextTick(() => { if (typeof $ !== 'undefined' && $.fn.tooltip) { $( $el ).tooltip(); } })"
+                x-init="$nextTick(() => { if (typeof $ !== 'undefined' && $.fn.tooltip) { $($el).tooltip(); } })"
                 class="label label-info"
                 style="margin-left: 8px; cursor: help"
                 data-toggle="tooltip"
@@ -894,21 +689,21 @@ layout: default
                 <i class="fa fa-magic" aria-hidden="true"></i> Semantic
               </span>
             </h3>
-            <span x-text="dataset.metadata.description || ''"></span>
-            <br /><br />
+            <span x-text="dataset.metadata.description || ''"></span
+            ><br /><br />
             <strong>Developed by (version):</strong>
             <span
               x-text="` ${dataset.metadata.creator?.name || 'Unknown'}  (${dataset.metadata.version || 'Version not supplied'})`"
-            ></span>
-            <br />
+            ></span
+            ><br />
             <strong>Geo Coverage:</strong>
             <span
               x-text="` ${Array.isArray(dataset.metadata.geo_coverage) ? dataset.metadata.geo_coverage.join(', ') : dataset.metadata.geo_coverage || 'Not supplied'}`"
-            ></span>
-            <br />
+            ></span
+            ><br />
             <strong>License:</strong>
-            <span x-show="dataset.metadata.license_display == null">
-              Unknown or not provided</span
+            <span x-show="dataset.metadata.license_display == null"
+              >Unknown or not provided</span
             >
             <span
               x-show="dataset.metadata.license != null && dataset.metadata.license != 'Not found'"
@@ -949,8 +744,6 @@ layout: default
         >
           <i class="fa fa-chevron-left"></i> Previous
         </button>
-
-        <!-- Page Numbers -->
         <template x-for="(page, index) in paginationNumbers" :key="index">
           <div style="display: contents">
             <span
@@ -967,7 +760,6 @@ layout: default
             ></button>
           </div>
         </template>
-
         <button
           @click="currentPage = Math.min(totalPages, currentPage + 1); window.scrollTo(0, 0)"
           :disabled="currentPage === totalPages"
