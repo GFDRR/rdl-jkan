@@ -60,7 +60,6 @@
       {% else %}
         {{ "None" | jsonify }}
       {% endif %},
-    {% if dataset.related_datasets %}"related_datasets": {{ dataset.related_datasets | jsonify }},{% endif %}
     {% if dataset.version != "" %}"version": {{ dataset.version | jsonify }},{% endif %}
     "resources": {{ dataset.resources | jsonify }}
   }{% unless forloop.last %},{% endunless %}{% endfor %}

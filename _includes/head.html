@@ -114,11 +114,6 @@
       }
       window.slugify = slugify;
       document.addEventListener('alpine:init', async () => {
-        // Shared search query store
-        Alpine.store('search', {
-          query: ''
-        });
-
         Alpine.store('datasets', {
           BASE_URL,
           unfiltered: [],
