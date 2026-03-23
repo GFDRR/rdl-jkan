@@ -8,238 +8,21 @@ layout: default
 <div class="row">
   <div
     x-data="{
-        query: '',
-        showCategories: 5,
-        showCountries: 5,
-        showScales: 5,
-        showHazards: 5,
-        showLicenses: 5,
-        showProjects: 5,
-        showCatalogs: 5,
-        
-        // Semantic search state
-        model: null,
-        vectors: {},
-        semanticResults: [],
-        isModelLoading: false,
-        isVectorsLoading: false,
-        semanticQuery: '',
-        
-        // Pagination state
+        // Constants
+        KEYWORD_SCORE_MIN: 0.75,
+        KEYWORD_SCORE_MAX: 1.0,
+        SCORED_FIELDS: ['title', 'notes', 'description', 'license', 'catalog'],
+        SEMANTIC_MAX_RESULTS: 10,
+        SEMANTIC_MIN_SCORE: 0.3,
+
+        // Pagination
         currentPage: 1,
         itemsPerPage: 10,
-        
-        // Initialize on page load
-        init() {
-          // Load filters and search from URL params
-          this.query = $store.datasets.loadFromUrlParams();
-          
-          this.loadModel();
-          this.loadVectors();
-          
-          // Watch for query changes to trigger semantic search and update URL
-          this.$watch('query', (value) => {
-            $store.datasets.updateUrlParams(value);
-            if (value.trim() && this.model && Object.keys(this.vectors).length > 0) {
-              this.performSemanticSearch(value);
-            } else {
-              this.semanticResults = [];
-            }
-          });
-          
-          // Watch for filter changes to update URL
-          this.$watch('$store.datasets.filters', () => {
-            $store.datasets.updateUrlParams(this.query);
-          }, { deep: true });
-          
-          // Reset pagination when query or filters change
-          this.$watch('query', () => {
-            this.currentPage = 1;
-          });
-          
-          this.$watch('$store.datasets.filters', () => {
-            this.currentPage = 1;
-          }, { deep: true });
-          
-          // Watch for model and vectors to be ready, then trigger semantic search if query exists
-          this.$watch('isModelLoading', (value) => {
-            if (!value && !this.isVectorsLoading && this.query.trim() && this.model && Object.keys(this.vectors).length > 0) {
-              this.performSemanticSearch(this.query);
-            }
-          });
-          
-          this.$watch('isVectorsLoading', (value) => {
-            if (!value && !this.isModelLoading && this.query.trim() && this.model && Object.keys(this.vectors).length > 0) {
-              this.performSemanticSearch(this.query);
-            }
-          });
-        },
-        
-        // Load the transformer model
-        async loadModel() {
-          this.isModelLoading = true;
-          try {
-            // Wait for pipeline to be available from the module script
-            let retries = 0;
-            while (typeof window.pipeline === 'undefined' && retries < 50) {
-              await new Promise(resolve => setTimeout(resolve, 100));
-              retries++;
-            }
-            if (typeof window.pipeline === 'undefined') {
-              throw new Error('Pipeline not available after waiting');
-            }
-            this.model = await window.pipeline(
-              'feature-extraction',
-              'Xenova/all-MiniLM-L6-v2'
-            );
-          } catch (error) {
-            console.error('Failed to load model:', error);
-          } finally {
-            this.isModelLoading = false;
-          }
-        },
-        
-        // Load pre-generated vectors
-        async loadVectors() {
-          this.isVectorsLoading = true;
-          try {
-            const response = await fetch(`${settings.BASE_URL ?? ''}/python/vectors.json`);
-            const vectorsArray = await response.json();
-            this.vectors = vectorsArray.reduce((acc, item) => {
-              if (item.metadata && item.metadata.dataset_id) {
-                acc[item.metadata.dataset_id] = item.vector;
-              }
-              return acc;
-            }, {});
-          } catch (error) {
-            console.error('Failed to load vectors:', error);
-          } finally {
-            this.isVectorsLoading = false;
-          }
-        },
-        
-        // Vectorize a query using the model
-        async vectorizeQuery(query) {
-          if (!this.model) return null;
-          const result = await this.model([query.trim()], {
-            pooling: 'mean',
-            normalize: true,
-          });
-          return Array.from(result.data);
-        },
-        
-        // Calculate cosine similarity between two vectors
-        cosineSimilarity(vecA, vecB) {
-          const dotProduct = vecA.reduce((sum, val, i) => sum + val * vecB[i], 0);
-          const magnitudeA = Math.sqrt(vecA.reduce((sum, val) => sum + val * val, 0));
-          const magnitudeB = Math.sqrt(vecB.reduce((sum, val) => sum + val * val, 0));
-          return dotProduct / (magnitudeA * magnitudeB);
-        },
-        
-        // Perform semantic search on datasets not matched by keyword
-        async performSemanticSearch(query, n = 10) {
-          if (!query.trim() || !this.model || Object.keys(this.vectors).length === 0) {
-            this.semanticResults = [];
-            return;
-          }
-          
-          this.semanticQuery = query;
-          const queryVector = await this.vectorizeQuery(query);
-          if (!queryVector) return;
-          
-          // Get datasets not matched by keyword search
-          const [matches, others] = this.keywordSearch($store.datasets.unfiltered);
-          
-          // Apply filters to others
-          const filteredOthers = $store.datasets.applyFilters(others);
-          
-          const results = [];
-          for (const dataset of filteredOthers) {
-            const datasetVector = this.vectors[dataset.dataset_id];
-            if (!datasetVector) continue;
-            
-            const similarity = this.cosineSimilarity(queryVector, datasetVector);
-            results.push({ dataset, similarity });
-          }
-          
-          // Sort by similarity and take top N
-          this.semanticResults = results
-            .sort((a, b) => b.similarity - a.similarity)
-            .slice(0, n)
-            .map(r => r.dataset);
-        },
-        
-        // Partition function (from lodash)
-        partition(array, predicate) {
-          return array.reduce((acc, item) => {
-            acc[predicate(item) ? 0 : 1].push(item);
-            return acc;
-          }, [[], []]);
-        },
-        
-        // Keyword search function
-        keywordSearch(datasets) {
-          const keys = ['title', 'notes', 'description', 'license'];
-          const lowerCaseQuery = this.query.toLowerCase();
-          return this.partition(datasets, function (dataset) {
-            return keys.reduce(function (previousValue, key) {
-              return (
-                previousValue ||
-                (dataset[key] &&
-                  dataset[key].toLowerCase().indexOf(lowerCaseQuery) !== -1)
-              );
-            }, false);
-          });
-        },
-        
-        // Get filtered datasets (keyword search + filters)
-        get filteredDatasets() {
-          if (!$store.datasets.unfiltered.length) return { matches: [], others: [] };
-          
-          // First apply keyword search if query exists
-          let datasetsToFilter = $store.datasets.unfiltered;
-          let others = [];
-          if (this.query.trim()) {
-            const [matches, nonMatches] = this.keywordSearch(datasetsToFilter);
-            datasetsToFilter = matches;
-            others = nonMatches;
-          }
-          
-          // Then apply filters
-          const filtered = $store.datasets.applyFilters(datasetsToFilter);
-          
-          return { matches: filtered, others: others };
-        },
-        
-        // Get datasets for filter options (faceted search)
-        // Applies keyword search + all filters EXCEPT the specified filter type
-        getDatasetsForFilterOptions(excludeFilterType) {
-          if (!$store.datasets.unfiltered.length) return [];
-          
-          // Start with all datasets
-          let datasets = $store.datasets.unfiltered;
-          
-          // Apply keyword search if query exists
-          if (this.query.trim()) {
-            const [matches] = this.keywordSearch(datasets);
-            datasets = matches;
-          }
-          
-          // Apply all filters except the excluded one
-          return $store.datasets.applyFiltersExcluding(datasets, excludeFilterType);
-        },
-        
-        // Check if any filters are active
-        get hasActiveFilters() {
-          return $store.datasets.activeFilterCount > 0;
-        },
-        
-        // Pagination computed properties
+
         get totalPages() {
-          return Math.ceil(this.filteredDatasets.matches.length / this.itemsPerPage);
+          return Math.ceil(this.results.length / this.itemsPerPage);
         },
 
-        // Generate page numbers with ellipsis (e.g., [1, 2, 3, '...', 8, 9, 10])
         getPaginationNumbers(currentPage, totalPages) {
           if (totalPages <= 7) {
             return Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -293,7 +76,7 @@ layout: default
         get paginatedDatasets() {
           const start = (this.currentPage - 1) * this.itemsPerPage;
           const end = start + this.itemsPerPage;
-          return this.filteredDatasets.matches.slice(start, end);
+          return this.results.slice(start, end);
         },
         
         get paginationStart() {
@@ -301,18 +84,481 @@ layout: default
         },
         
         get paginationEnd() {
-          return Math.min(this.currentPage * this.itemsPerPage, this.filteredDatasets.matches.length);
-        }
+          return Math.min(this.currentPage * this.itemsPerPage, this.results.length);
+        },
+
+        // Filtering
+        filteredResultsBeforeSearch: [],
+        showCatalogs: 5,
+        showCategories: 5,
+        showCountries: 5,
+        showHazards: 5,
+        showLicenses: 5,
+        showProjects: 5,
+        showScales: 5,
+        filters: {
+          catalog: [],
+          category: [],
+          geo_coverage: [],
+          geo_scale: [],
+          hazard_type: [],
+          license_display: [],
+          project: []
+        },
+
+        toggleFilter(filterType, value) {
+          const index = this.filters[filterType].indexOf(value);
+          if (index === -1) {
+            this.filters[filterType].push(value);
+          } else {
+            this.filters[filterType].splice(index, 1);
+          }
+        },
+
+        isFilterActive(filterType, value) {
+          return this.filters[filterType].includes(value);
+        },
+
+        clearFilters() {
+          this.filters.catalog = [];
+          this.filters.category = [];
+          this.filters.geo_coverage = [];
+          this.filters.geo_scale = [];
+          this.filters.hazard_type = [];
+          this.filters.license_display = [];
+          this.filters.project = [];
+          this.updateUrlParams();
+        },
+
+        get activeFilterCount() {
+          return Object.values(this.filters).reduce((sum, arr) => sum + arr.length, 0);
+        },
+
+        get hasActiveFilters() {
+          return this.activeFilterCount > 0;
+        },
+
+        getFilteredResultsBeforeSearch() {
+          this.filteredResultsBeforeSearch = this.applyFilters();
+        },
+
+        getDatasetsForFilterOptions(excludeFilterType) {
+          let baseDatasets = $store.datasets.unfiltered;
+          if (this.query.trim()) {
+            const lowerCaseQuery = this.query.toLowerCase();
+            
+            baseDatasets = baseDatasets.filter(dataset => {
+              for (const key of this.SCORED_FIELDS) {
+                if (dataset[key]) {
+                  if (JSON.stringify(dataset[key]).toLowerCase().indexOf(lowerCaseQuery) !== -1) {
+                    return true;
+                  }
+                }
+              }
+              return false;
+            });
+          }
+          return this.applyFiltersExcluding(excludeFilterType, baseDatasets);
+        },
+
+        // Apply filters to datasets
+        applyFilters() {
+          return this.applyFiltersExcluding();
+        },
+
+        applyFiltersExcluding(excludeFilterType = null, datasets = null) {
+          const datasetsToFilter = datasets || $store.datasets.unfiltered;
+          const slugify = (text) => {
+            return text.toString().toLowerCase().trim()
+              .replace(/[^a-zA-Z0-9]/g, '-')
+              .replace(/\-\-+/g, '-')
+              .replace(/^\-|\-$/i, '');
+          };
+          return datasetsToFilter.filter((dataset) => {
+            // Catalog filter
+            if (excludeFilterType !== 'catalog' && this.filters.catalog.length > 0) {
+              const datasetCatalogs = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
+              const hasMatchingCatalog = datasetCatalogs.some(cat => {
+                if (cat === null || cat === undefined) return false;
+                return this.filters.catalog.includes(slugify(cat))
+              });
+              if (!hasMatchingCatalog) return false;
+            }
+
+            // Category filter
+            if (excludeFilterType !== 'category' && this.filters.category.length > 0) {
+              const datasetCategories = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
+              const hasMatchingCategory = datasetCategories.some(cat =>
+                this.filters.category.includes(slugify(cat))
+              );
+              if (!hasMatchingCategory) return false;
+            }
+
+            // Geo coverage filter
+            if (excludeFilterType !== 'geo_coverage' && this.filters.geo_coverage.length > 0) {
+              const coverage = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage.join(',') : dataset.geo_coverage;
+              const coverageSlug = slugify(coverage || '');
+              const hasMatchingCoverage = this.filters.geo_coverage.some(filter =>
+                coverageSlug.includes(filter)
+              );
+              if (!hasMatchingCoverage) return false;
+            }
+
+            // Geo scale filter
+            if (excludeFilterType !== 'geo_scale' && this.filters.geo_scale.length > 0) {
+              const scaleSlug = slugify(dataset.geo_scale || '');
+              const hasMatchingScale = this.filters.geo_scale.some(filter =>
+                scaleSlug.includes(filter)
+              );
+              if (!hasMatchingScale) return false;
+            }
+
+            // Hazard type filter (skip exposure datasets)
+            if (excludeFilterType !== 'hazard_type' && this.filters.hazard_type.length > 0) {
+              if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return false;
+              const hazardTypes = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
+              const hasMatchingHazard = hazardTypes.some(ht =>
+                this.filters.hazard_type.includes(slugify(ht))
+              );
+              if (!hasMatchingHazard) return false;
+            }
+
+            // License filter
+            if (excludeFilterType !== 'license_display' && this.filters.license_display.length > 0) {
+              const licenseSlug = slugify(dataset.license_display || '');
+              const hasMatchingLicense = this.filters.license_display.some(filter =>
+                licenseSlug.includes(filter)
+              );
+              if (!hasMatchingLicense) return false;
+            }
+
+            // Project filter
+            if (excludeFilterType !== 'project' && this.filters.project.length > 0) {
+              const projectSlug = slugify(dataset.project || '');
+              const hasMatchingProject = this.filters.project.some(filter =>
+                projectSlug.includes(filter)
+              );
+              if (!hasMatchingProject) return false;
+            }
+
+            return true;
+          });
+        },
+
+        // Get filter options with counts
+        getFilterOptions(filterType, datasets) {
+          const slugify = (text) => {
+            return text.toString().toLowerCase().trim()
+              .replace(/[^a-zA-Z0-9]/g, '-')
+              .replace(/\-\-+/g, '-')
+              .replace(/^\-|\-$/i, '');
+          };
+          // First, collect ALL possible values from unfiltered datasets
+          const allValues = new Set();
+          $store.datasets.unfiltered.forEach(dataset => {
+            let values = [];
+            switch (filterType) {
+              case 'catalog':
+                const catalogVal = dataset.catalog || 'Other';
+                values = catalogVal.toString().split(',').map(c => c.trim()).filter(c => c);
+                break;
+              case 'category':
+                values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
+                break;
+              case 'geo_coverage':
+                values = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
+                break;
+              case 'geo_scale':
+                values = dataset.geo_scale ? dataset.geo_scale.split(',') : [];
+                break;
+              case 'hazard_type':
+                if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return;
+                values = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
+                break;
+              case 'license_display':
+                values = dataset.license_display ? dataset.license_display.split(',') : [];
+                break;
+              case 'project':
+                values = dataset.project ? [dataset.project] : [];
+                break;
+            }
+            values.forEach(val => {
+              if (val && val !== 'None') {
+                allValues.add(val.trim());
+              }
+            });
+          });
+
+          // Count occurrences in the filtered datasets
+          const counts = {};
+          datasets.forEach(dataset => {
+            let values = [];
+            switch (filterType) {
+              case 'catalog':
+                const catalogVal = dataset.catalog || 'Other';
+                values = catalogVal.toString().split(',').map(c => c.trim()).filter(c => c);
+                break;
+              case 'category':
+                values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
+                break;
+              case 'geo_coverage':
+                values = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
+                break;
+              case 'geo_scale':
+                values = dataset.geo_scale ? dataset.geo_scale.split(',') : [];
+                break;
+              case 'hazard_type':
+                if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return;
+                values = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
+                break;
+              case 'license_display':
+                values = dataset.license_display ? dataset.license_display.split(',') : [];
+                break;
+              case 'project':
+                values = dataset.project ? [dataset.project] : [];
+                break;
+            }
+            values.forEach(val => {
+              if (val && val !== 'None') {
+                const trimmed = val.trim();
+                counts[trimmed] = (counts[trimmed] || 0) + 1;
+              }
+            });
+          });
+
+          // Build options array with all values (including 0 counts)
+          const options = Array.from(allValues).map(title => ({
+            title,
+            slug: slugify(title),
+            count: counts[title] || 0,
+            selected: this.isFilterActive(filterType, slugify(title))
+          }));
+
+          // Sort: selected first, then by count (desc), then alphabetically
+          return options.sort((a, b) => {
+            if (a.selected && !b.selected) return -1;
+            if (!a.selected && b.selected) return 1;
+            if (filterType === 'catalog') {
+              if (a.title === 'Other') return 1;
+              if (b.title === 'Other') return -1;
+            }
+            if (b.count !== a.count) return b.count - a.count;
+            return a.title.localeCompare(b.title);
+          });
+        },
+
+        // Search
+        query: '',
+        model: null,
+        vectors: {},
+        filteredKeywordResults: [],
+        filteredNonKeywordResults: [],
+        filteredSemanticResults: [],
+        isTransformerModelLoading: false,
+        isEmbeddedMetadataLoading: false,
+
+        // Keyword search logic
+        keywordSearch() {
+          const lowerCaseQuery = this.query.toLowerCase();
+          const keywordMatches = [];
+          const nonMatches = [];
+          
+          for (const dataset of $store.datasets.unfiltered) {
+            let matchCount = 0;
+            
+            for (const key of this.SCORED_FIELDS) {
+              if (dataset[key] && dataset[key].toLowerCase().indexOf(lowerCaseQuery) !== -1) {
+                matchCount++;
+              }
+            }
+            
+            if (matchCount > 0) {
+              const score = this.KEYWORD_SCORE_MIN + 
+                (this.KEYWORD_SCORE_MAX - this.KEYWORD_SCORE_MIN) * 
+                (matchCount / this.SCORED_FIELDS.length);
+              
+              keywordMatches.push({
+                metadata: dataset,
+                score,
+                isKeywordMatch: true,
+                isSemanticMatch: false
+              });
+            } else {
+              nonMatches.push(dataset);
+            }
+          }
+          this.filteredKeywordResults = keywordMatches;
+          this.filteredNonKeywordResults = nonMatches;
+        },
+
+        // Semantic search logic
+        async loadTransformerModel() {
+          this.isTransformerModelLoading = true;
+          try {
+            let retries = 0;
+            while (typeof window.pipeline === 'undefined' && retries < 50) {
+              await new Promise(resolve => setTimeout(resolve, 100));
+              retries++;
+            }
+            if (typeof window.pipeline === 'undefined') {
+              throw new Error('Pipeline not available after waiting');
+            }
+            // Use quantized model (q8) to reduce memory usage and prevent WASM OOM errors
+            this.model = await window.pipeline(
+              'feature-extraction',
+              'Xenova/all-MiniLM-L6-v2',
+              { dtype: 'q8' }
+            );
+          } catch (error) {
+            // Silently fail - semantic search will be unavailable, keyword search still works
+            console.warn('Semantic search unavailable:', error.message);
+          } finally {
+            this.isTransformerModelLoading = false;
+          }
+        },
+        
+        async loadEmbeddedMetadata() {
+          this.isEmbeddedMetadataLoading = true;
+          try {
+            const response = await fetch(`${$store.datasets.BASE_URL ?? ''}/python/vectors.json`);
+            const vectorsArray = await response.json();
+            this.vectors = vectorsArray.reduce((acc, item) => {
+              if (item.metadata && item.metadata.dataset_id) {
+                acc[item.metadata.dataset_id] = item.vector;
+              }
+              return acc;
+            }, {});
+          } catch (error) {
+            console.error('Failed to load vectors:', error);
+          } finally {
+            this.isEmbeddedMetadataLoading = false;
+          }
+        },
+        
+        async embedQueryAsVector(query) {
+          if (!this.model) return null;
+          const result = await this.model([query.trim()], {
+            pooling: 'mean',
+            normalize: true,
+          });
+          return Array.from(result.data);
+        },
+        
+        calculateCosineSimilarity(vecA, vecB) {
+          const dotProduct = vecA.reduce((sum, val, i) => sum + val * vecB[i], 0);
+          const magnitudeA = Math.sqrt(vecA.reduce((sum, val) => sum + val * val, 0));
+          const magnitudeB = Math.sqrt(vecB.reduce((sum, val) => sum + val * val, 0));
+          return dotProduct / (magnitudeA * magnitudeB);
+        },
+
+        async semanticSearch(query) {
+          if (!query.trim() || !this.model || Object.keys(this.vectors).length === 0) {
+            this.filteredSemanticResults = [];
+            return;
+          }
+          
+          const embeddedQuery = await this.embedQueryAsVector(query);
+          if (!embeddedQuery)  {
+            this.filteredSemanticResults = [];
+            return;
+          }
+          
+          const results = [];
+          for (const result of this.filteredNonKeywordResults) {
+            const datasetVector = this.vectors[result.dataset_id];
+            if (!datasetVector) continue;
+            
+            const similarity = this.calculateCosineSimilarity(embeddedQuery, datasetVector);
+            if (similarity >= this.SEMANTIC_MIN_SCORE) {
+              results.push({
+                metadata: result,
+                score: similarity,
+                isKeywordMatch: false,
+                isSemanticMatch: true
+              });
+            }
+          }
+          
+          this.filteredSemanticResults = results
+            .sort((a, b) => b.score - a.score)
+            .slice(0, this.SEMANTIC_MAX_RESULTS ?? results.length);
+        },
+        
+        // Unified search logic
+        get results() {
+          if (!this.query.trim()) {
+            const filtered = this.applyFilters();
+            return filtered.map(dataset => ({
+              metadata: dataset,
+              score: 0.5,
+              isKeywordMatch: false,
+              isSemanticMatch: false
+            }));
+          }
+          return [
+            ...this.filteredKeywordResults,
+            ...this.filteredSemanticResults,
+          ].sort((a, b) => b.score - a.score);
+        },
+
+        // Lifecycle functions
+        init() {
+          this.loadTransformerModel();
+          this.loadEmbeddedMetadata();
+          
+          // Wait for datasets to load before loading URL params and searching
+          this.$watch('$store.datasets.isLoading', (value) => {
+            if (!value && $store.datasets.unfiltered.length > 0) {
+              const { searchQuery, filters } = $store.datasets.loadFromUrlParams();
+              this.query = searchQuery;
+              if (Object.keys(filters).length > 0) {
+                Object.assign(this.filters, filters);
+              }
+              this.getFilteredResultsBeforeSearch();
+              if (this.query.trim()) {
+                this.keywordSearch();
+              }
+            }
+          });
+          
+          // Watch state changes to keep UI up to date
+          this.$watch('query', (value) => {
+            $store.datasets.updateUrlParams(value);
+            if ($store.datasets.unfiltered.length === 0) return;
+            this.keywordSearch();
+            if (value.trim() && this.model && Object.keys(this.vectors).length > 0) {
+              this.semanticSearch(value);
+            }
+          });
+          this.$watch('query', () => {
+            this.currentPage = 1;
+          });
+          this.$watch('filters', () => {
+            $store.datasets.updateUrlParams(this.query, this.filters);
+            this.getFilteredResultsBeforeSearch();
+            this.currentPage = 1;
+          }, { deep: true });
+          this.$watch('isTransformerModelLoading', (value) => {
+            if (!value && !this.isEmbeddedMetadataLoading && this.query.trim() && this.model && Object.keys(this.vectors).length > 0) {
+              this.semanticSearch(this.query);
+            }
+          });
+          this.$watch('isEmbeddedMetadataLoading', (value) => {
+            if (!value && !this.isTransformerModelLoading && this.query.trim() && this.model && Object.keys(this.vectors).length > 0) {
+              this.semanticSearch(this.query);
+            }
+          });
+        },
     }"
   >
     <div class="col-sm-4">
       <!-- Active Filters Summary -->
       <div x-show="hasActiveFilters" style="margin: 10px 0">
         <span
-          x-text="$store.datasets.activeFilterCount + ' filter(s) active'"
+          x-text="activeFilterCount + ' filter(s) active'"
         ></span>
         <button
-          @click="$store.datasets.clearFilters()"
+          @click="clearFilters()"
           class="btn btn-xs btn-default"
         >
           Clear all
@@ -324,14 +570,14 @@ layout: default
         <h4>Risk Component</h4>
         <div class="list-group">
           <template
-            x-for="item in $store.datasets.getFilterOptions('category', getDatasetsForFilterOptions('category')).slice(0, showCategories)"
+            x-for="item in getFilterOptions('category', getDatasetsForFilterOptions('category')).slice(0, showCategories)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="$store.datasets.toggleFilter('category', item.slug)"
+              @click.prevent="toggleFilter('category', item.slug)"
             >
               <span
                 class="list-group-item-truncate"
@@ -351,7 +597,7 @@ layout: default
           <a
             href="#"
             class="list-group-item"
-            x-show="$store.datasets.getFilterOptions('category', getDatasetsForFilterOptions('category')).filter(i => i.count > 0).length > showCategories"
+            x-show="getFilterOptions('category', getDatasetsForFilterOptions('category')).filter(i => i.count > 0).length > showCategories"
             @click.prevent="showCategories = showCategories + 10"
             style="text-align: center"
           >
@@ -377,14 +623,14 @@ layout: default
         </h4>
         <div class="list-group">
           <template
-            x-for="item in $store.datasets.getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).slice(0, showHazards)"
+            x-for="item in getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).slice(0, showHazards)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="$store.datasets.toggleFilter('hazard_type', item.slug)"
+              @click.prevent="toggleFilter('hazard_type', item.slug)"
             >
               <span
                 class="list-group-item-truncate"
@@ -404,7 +650,7 @@ layout: default
           <a
             href="#"
             class="list-group-item"
-            x-show="$store.datasets.getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).filter(i => i.count > 0).length > showHazards"
+            x-show="getFilterOptions('hazard_type', getDatasetsForFilterOptions('hazard_type')).filter(i => i.count > 0).length > showHazards"
             @click.prevent="showHazards = showHazards + 10"
             style="text-align: center"
           >
@@ -417,14 +663,14 @@ layout: default
         <h4>Geographical Scale</h4>
         <div class="list-group">
           <template
-            x-for="item in $store.datasets.getFilterOptions('geo_scale', getDatasetsForFilterOptions('geo_scale')).slice(0, showScales)"
+            x-for="item in getFilterOptions('geo_scale', getDatasetsForFilterOptions('geo_scale')).slice(0, showScales)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="$store.datasets.toggleFilter('geo_scale', item.slug)"
+              @click.prevent="toggleFilter('geo_scale', item.slug)"
             >
               <span
                 class="list-group-item-truncate"
@@ -448,14 +694,14 @@ layout: default
         <h4>Countries</h4>
         <div class="list-group">
           <template
-            x-for="item in $store.datasets.getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).slice(0, showCountries)"
+            x-for="item in getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).slice(0, showCountries)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="$store.datasets.toggleFilter('geo_coverage', item.slug)"
+              @click.prevent="toggleFilter('geo_coverage', item.slug)"
             >
               <span
                 class="list-group-item-truncate"
@@ -475,7 +721,7 @@ layout: default
           <a
             href="#"
             class="list-group-item"
-            x-show="$store.datasets.getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).filter(i => i.count > 0).length > showCountries"
+            x-show="getFilterOptions('geo_coverage', getDatasetsForFilterOptions('geo_coverage')).filter(i => i.count > 0).length > showCountries"
             @click.prevent="showCountries = showCountries + 10"
             style="text-align: center"
           >
@@ -489,14 +735,14 @@ layout: default
         <h4>Projects</h4>
         <div class="list-group">
           <template
-            x-for="item in $store.datasets.getFilterOptions('project', getDatasetsForFilterOptions('project')).slice(0, showProjects)"
+            x-for="item in getFilterOptions('project', getDatasetsForFilterOptions('project')).slice(0, showProjects)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="$store.datasets.toggleFilter('project', item.slug)"
+              @click.prevent="toggleFilter('project', item.slug)"
             >
               <span
                 class="list-group-item-truncate"
@@ -516,7 +762,7 @@ layout: default
           <a
             href="#"
             class="list-group-item"
-            x-show="$store.datasets.getFilterOptions('project', getDatasetsForFilterOptions('project')).filter(i => i.count > 0).length > showProjects"
+            x-show="getFilterOptions('project', getDatasetsForFilterOptions('project')).filter(i => i.count > 0).length > showProjects"
             @click.prevent="showProjects = showProjects + 10"
             style="text-align: center"
           >
@@ -529,14 +775,14 @@ layout: default
         <h4>Catalog</h4>
         <div class="list-group">
           <template
-            x-for="item in $store.datasets.getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).slice(0, showCatalogs)"
+            x-for="item in getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).slice(0, showCatalogs)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="$store.datasets.toggleFilter('catalog', item.slug)"
+              @click.prevent="toggleFilter('catalog', item.slug)"
             >
               <span
                 class="list-group-item-truncate"
@@ -556,7 +802,7 @@ layout: default
           <a
             href="#"
             class="list-group-item"
-            x-show="$store.datasets.getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).filter(i => i.count > 0).length > showCatalogs"
+            x-show="getFilterOptions('catalog', getDatasetsForFilterOptions('catalog')).filter(i => i.count > 0).length > showCatalogs"
             @click.prevent="showCatalogs = showCatalogs + 10"
             style="text-align: center;"
           >
@@ -570,14 +816,14 @@ layout: default
         <h4>Licenses</h4>
         <div class="list-group">
           <template
-            x-for="item in $store.datasets.getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).slice(0, showLicenses)"
+            x-for="item in getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).slice(0, showLicenses)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="$store.datasets.toggleFilter('license_display', item.slug)"
+              @click.prevent="toggleFilter('license_display', item.slug)"
             >
               <span
                 class="list-group-item-truncate"
@@ -597,7 +843,7 @@ layout: default
           <a
             href="#"
             class="list-group-item"
-            x-show="$store.datasets.getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).filter(i => i.count > 0).length > showLicenses"
+            x-show="getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).filter(i => i.count > 0).length > showLicenses"
             @click.prevent="showLicenses = showLicenses + 10"
           >
             Show more...
@@ -615,44 +861,58 @@ layout: default
         class="form-control"
       />
       <!-- Results Section -->
-      <h3 x-show="filteredDatasets.matches.length > 0"
-        x-text="`Showing ${paginationStart}-${paginationEnd} of ${filteredDatasets.matches.length} dataset${filteredDatasets.matches.length === 1 ? '' : 's'}`"
+      <h3 x-show="results.length > 0"
+        x-text="`Showing ${paginationStart}-${paginationEnd} of ${results.length} dataset${results.length === 1 ? '' : 's'}`"
       ></h3>
-      <h3 x-show="filteredDatasets.matches.length === 0">
+      <h3 x-show="results.length === 0">
         No datasets found with these filters and/or query
       </h3>
 
       <ul>
-        <template x-for="data in paginatedDatasets" :key="data.dataset_id">
+        <template x-for="dataset in paginatedDatasets" :key="dataset.metadata.dataset_id">
           <rdl-dataset>
-            <h3><a x-bind:href="data.url" x-text="data.title"></a></h3>
-            <span x-text="data.description || ''"></span>
+            <h3>
+              <a x-bind:href="dataset.metadata.url" x-text="dataset.metadata.title"></a>
+              <!-- Semantic match indicator with tooltip -->
+              <span 
+                x-show="dataset.isSemanticMatch" 
+                x-init="$nextTick(() => { if (typeof $ !== 'undefined' && $.fn.tooltip) { $( $el ).tooltip(); } })"
+                class="label label-info" 
+                style="margin-left: 8px; cursor: help;"
+                data-toggle="tooltip"
+                data-placement="right"
+                :title="`Semantic match (similarity: ${dataset.score?.toFixed(3) || 'N/A'})`"
+              >
+                <i class="fa fa-magic" aria-hidden="true"></i> Semantic
+              </span>
+            </h3>
+            <span x-text="dataset.metadata.description || ''"></span>
             <br /><br />
             <strong>Developed by (version):</strong>
             <span
-              x-text="` ${data.creator?.name || 'Unknown'}  (${data.version || 'Version not supplied'})`"
+              x-text="` ${dataset.metadata.creator?.name || 'Unknown'}  (${dataset.metadata.version || 'Version not supplied'})`"
             ></span>
             <br />
             <strong>Geo Coverage:</strong>
             <span
-              x-text="` ${Array.isArray(data.geo_coverage) ? data.geo_coverage.join(', ') : data.geo_coverage || 'Not supplied'}`"
+              x-text="` ${Array.isArray(dataset.metadata.geo_coverage) ? dataset.metadata.geo_coverage.join(', ') : dataset.metadata.geo_coverage || 'Not supplied'}`"
             ></span>
             <br />
             <strong>License:</strong>
-            <span x-show="data.license_display == null">
+            <span x-show="dataset.metadata.license_display == null">
               Unknown or not provided</span
             >
-            <span x-show="data.license != null && data.license != 'Not found'">
+            <span x-show="dataset.metadata.license != null && dataset.metadata.license != 'Not found'">
               <a
                 property="dct:license"
-                x-bind:resource="data.license_display"
-                x-bind:href="data.license"
-                x-text="data.license_display"
+                x-bind:resource="dataset.metadata.license_display"
+                x-bind:href="dataset.metadata.license"
+                x-text="dataset.metadata.license_display"
               ></a>
             </span>
             <span
-              x-show="data.license_display != null && (data.license == null || data.license == 'Not found')"
-              x-text="data.license_display"
+              x-show="dataset.metadata.license_display != null && (dataset.metadata.license == null || dataset.metadata.license == 'Not found')"
+              x-text="dataset.metadata.license_display"
             ></span>
             <hr />
           </rdl-dataset>
@@ -707,68 +967,6 @@ layout: default
           Next <i class="fa fa-chevron-right"></i>
         </button>
       </div>
-
-      <!-- Semantic Search Results -->
-      <!-- TODO: x-if false to hide semantic search until UX is figured out -->
-      <template x-if="false">
-        <div x-show="query.trim() && (isModelLoading || isVectorsLoading)">
-          <p>
-            <i class="fa fa-spinner fa-spin"></i> Loading semantic search...
-          </p>
-        </div>
-        <div
-          x-show="query.trim() && semanticResults.length > 0 && !isModelLoading && !isVectorsLoading"
-        >
-          <h3
-            style="
-              border-top: 2px solid #333;
-              border-bottom: 2px solid #333;
-              padding: 0.3em 0;
-            "
-          >
-            You may also be interested in...
-          </h3>
-          <ul>
-            <template x-for="data in semanticResults" :key="data.dataset_id">
-              <rdl-dataset>
-                <h3><a x-bind:href="data.url" x-text="data.title"></a></h3>
-                <span x-text="data.description || ''"></span>
-                <br /><br />
-                <strong>Developed by (version):</strong>
-                ><span
-                  x-text="` ${data.creator?.name || 'Unknown'}  (${data.version || 'Version not supplied'})`"
-                ></span>
-                <br />
-                <strong>Geo Coverage:</strong>
-                ><span
-                  x-text="` ${Array.isArray(data.geo_coverage) ? data.geo_coverage.join(', ') : data.geo_coverage || 'Not supplied'}`"
-                ></span>
-                <br />
-                <strong>License:</strong>
-                <span x-show="data.license_display == null">
-                  Unknown or not provided</span
-                >
-                >
-                <span
-                  x-show="data.license != null && data.license != 'Not found'"
-                >
-                  <a
-                    property="dct:license"
-                    x-bind:resource="data.license_display"
-                    x-bind:href="data.license"
-                    x-text="data.license_display"
-                  ></a>
-                </span>
-                <span
-                  x-show="data.license_display != null && (data.license == null || data.license == 'Not found')"
-                  x-text="data.license_display"
-                ></span>
-                <hr />
-              </rdl-dataset>
-            </template>
-          </ul>
-        </div>
-      </template>
     </div>
   </div>
 </div>
