@@ -160,7 +160,7 @@ def generate_test_results_section(test_results: Optional[Dict[str, Any]]) -> str
                 found = inc.get('found', False)
                 rank = inc.get('rank', '-')
                 score = inc.get('score', '-')
-                if score != '-':
+                if score != '-' and score is not None:
                     score = f"{score:.4f}"
                 lines.append(f"| `{ds_id}` | ✅ | {'✅' if found else '❌'} | {rank} | {score} |")
             lines.append("")
