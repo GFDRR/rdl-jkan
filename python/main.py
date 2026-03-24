@@ -335,10 +335,7 @@ if __name__ == "__main__":
     
     # Run tests
     if args.test == "search":
-        if args.ci and not vectors_generated:
-            print("Skipping search tests in CI because vectors were not updated.")
-        else:
-            exit_code = exit_code | run_search_tests(model)
+        exit_code = exit_code | run_search_tests(model)
     
     # Generate PR comment if in CI mode
     if args.ci:
