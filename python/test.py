@@ -12,18 +12,19 @@ from pathlib import Path
 from typing import List, Dict, Any, Tuple
 from sentence_transformers import SentenceTransformer
 import logging
+import config
 
 # Configuration
 SEARCH_TESTS_FILE = Path(__file__).parent / "tests.yml"
 VECTORS_PATH = Path(__file__).parent / "vectors.json"
 RESULTS_PATH = Path(__file__).parent / "test_results.json"
 
-# Constants to match front-end hybrid search logic
-KEYWORD_SCORE_MIN = 0.75
-KEYWORD_SCORE_MAX = 1.0
-SCORED_FIELDS = ['catalog', 'category', 'creator.name', 'dataset_id', 'description', 'details', 'geo_coverage', 'license', 'notes', 'project', 'resources', 'title']
-SEMANTIC_MAX_RESULTS = 20
-SEMANTIC_MIN_SCORE = 0.3
+# Import constants from config (matching front-end hybrid search logic)
+KEYWORD_SCORE_MIN = config.KEYWORD_SCORE_MIN
+KEYWORD_SCORE_MAX = config.KEYWORD_SCORE_MAX
+SCORED_FIELDS = config.SCORED_FIELDS
+SEMANTIC_MAX_RESULTS = config.SEMANTIC_MAX_RESULTS
+SEMANTIC_MIN_SCORE = config.SEMANTIC_MIN_SCORE
 
 
 def load_search_tests() -> List[Dict[str, Any]]:
@@ -149,17 +150,62 @@ def perform_semantic_search(
     return results[:n]
 
 
+def get_all_semantic_scores(
+    query: str,
+    model: SentenceTransformer,
+    vectors: List[Dict[str, Any]]
+) -> List[Dict[str, Any]]:
+    """
+    Get semantic scores for ALL datasets (even below threshold).
+    Used for ranking purposes in test results.
+    
+    Returns list of dicts with dataset_id, score, match_type, metadata.
+    """
+    if not vectors:
+        return []
+    
+    # Encode the query
+    query_embedding = model.encode(query, convert_to_tensor=False, normalize_embeddings=True)
+    
+    # Calculate similarity with all datasets
+    results = []
+    for item in vectors:
+        dataset_id = item.get('metadata', {}).get('dataset_id')
+        vector = item.get('vector', [])
+        metadata = item.get('metadata', {})
+        if dataset_id and vector:
+            similarity = cosine_similarity(query_embedding.tolist(), vector)
+            results.append({
+                'dataset_id': dataset_id,
+                'score': float(similarity),
+                'match_type': 'semantic',
+                'metadata': metadata
+            })
+    
+    # Sort by similarity (descending)
+    results.sort(key=lambda x: x['score'], reverse=True)
+    return results
+
+
 def hybrid_search(
     query: str,
     model: SentenceTransformer,
     vectors: List[Dict[str, Any]],
-    top_n: int = 20
+    top_n: int = 20,
+    return_all: bool = False
 ) -> List[Dict[str, Any]]:
     """
     Perform hybrid search matching front-end logic:
     1. First do keyword search on all datasets
     2. Then do semantic search only on non-matching datasets
     3. Combine and sort by score
+    
+    Args:
+        query: Search query string
+        model: SentenceTransformer model
+        vectors: List of dataset vectors
+        top_n: Number of top results to return
+        return_all: If True, return all results instead of just top_n
     
     Returns list of result dicts with dataset_id, score, match_type, metadata.
     """
@@ -175,6 +221,8 @@ def hybrid_search(
     # Sort by score descending
     all_results.sort(key=lambda x: x['score'], reverse=True)
     
+    if return_all:
+        return all_results
     return all_results[:top_n]
 
 
@@ -231,9 +279,18 @@ def run_search_tests(model: SentenceTransformer = None) -> int:
         top_n = 20
         results = hybrid_search(query, model, vectors, top_n=top_n)
         result_ids = [r['dataset_id'] for r in results]
-        result_ranks = {r['dataset_id']: idx + 1 for idx, r in enumerate(results)}
         result_scores = {r['dataset_id']: r['score'] for r in results}
         result_match_types = {r['dataset_id']: r['match_type'] for r in results}
+        
+        # Get all results to determine ranks for datasets outside top N
+        # Use get_all_semantic_scores to include datasets below threshold
+        keyword_results, non_matching = keyword_search(query, vectors)
+        all_semantic_results = get_all_semantic_scores(query, model, non_matching)
+        
+        # Combine keyword and all semantic results for full ranking
+        all_results = keyword_results + all_semantic_results
+        all_results.sort(key=lambda x: x['score'], reverse=True)
+        all_result_ranks = {r['dataset_id']: idx + 1 for idx, r in enumerate(all_results)}
 
         # Show result breakdown
         keyword_count = sum(1 for r in results if r['match_type'] == 'keyword')
@@ -241,7 +298,7 @@ def run_search_tests(model: SentenceTransformer = None) -> int:
         print(f"  Results: {len(results)} total ({keyword_count} keyword, {semantic_count} semantic)")
         
         print(f"  Top results (highest score first):")
-        for idx, result in enumerate(results[:10], start=1):
+        for idx, result in enumerate(results[:SEMANTIC_MAX_RESULTS], start=1):
             dataset_id = result['dataset_id']
             score = result['score']
             match_type = result['match_type']
@@ -254,8 +311,10 @@ def run_search_tests(model: SentenceTransformer = None) -> int:
         print("  Expected includes:")
         expected_includes = []
         for ds_id in includes:
-            if ds_id in result_ranks:
-                rank = result_ranks[ds_id]
+            # Get rank from all results (even if outside top N)
+            rank = all_result_ranks.get(ds_id)
+            
+            if ds_id in result_ids:
                 score = result_scores.get(ds_id, 0.0)
                 match_type = result_match_types.get(ds_id, 'unknown')
                 print(f"    ✓ {ds_id} found at rank {rank} (score {score:.4f}, {match_type})")
@@ -267,15 +326,20 @@ def run_search_tests(model: SentenceTransformer = None) -> int:
                     "match_type": match_type
                 })
             else:
-                # Provide diagnostic info for missing includes
-                print(f"    ✗ {ds_id} not found in top {SEMANTIC_MAX_RESULTS}")
+                # Provide diagnostic info for missing includes and capture score
+                print(f"    ✗ {ds_id} not found in top {top_n}")
+                missing_score = None
+                missing_match_type = None
+                
                 # Check if it would have matched keywords
                 keyword_results, _ = keyword_search(query, vectors)
                 keyword_ids = [r['dataset_id'] for r in keyword_results]
                 if ds_id in keyword_ids:
                     for r in keyword_results:
                         if r['dataset_id'] == ds_id:
-                            print(f"      ↳ Keyword match (score {r['score']:.4f}) but outside top {top_n}")
+                            missing_score = r['score']
+                            missing_match_type = 'keyword'
+                            print(f"      ↳ Keyword match (score {missing_score:.4f}) but outside top {top_n}")
                             break
                 else:
                     # Check if it would have matched semantically
@@ -283,10 +347,13 @@ def run_search_tests(model: SentenceTransformer = None) -> int:
                         if item.get('metadata', {}).get('dataset_id') == ds_id:
                             query_embedding = model.encode(query, convert_to_tensor=False, normalize_embeddings=True)
                             similarity = cosine_similarity(query_embedding.tolist(), item.get('vector', []))
-                            if similarity < SEMANTIC_MIN_SCORE:
-                                print(f"      ↳ Semantic score {similarity:.4f} below threshold ({SEMANTIC_MIN_SCORE})")
+                            missing_score = float(similarity)
+                            if similarity >= SEMANTIC_MIN_SCORE:
+                                missing_match_type = 'semantic'
+                                print(f"      ↳ Semantic score {similarity:.4f} but outside top {top_n}")
                             else:
-                                print(f"      ↳ Semantic score {similarity:.4f} but outside top {SEMANTIC_MAX_RESULTS}")
+                                missing_match_type = 'semantic (below threshold)'
+                                print(f"      ↳ Semantic score {similarity:.4f} below threshold ({SEMANTIC_MIN_SCORE})")
                             break
                     else:
                         print(f"      ↳ Dataset not found in vectors.json")
@@ -294,9 +361,9 @@ def run_search_tests(model: SentenceTransformer = None) -> int:
                 expected_includes.append({
                     "dataset_id": ds_id,
                     "found": False,
-                    "rank": None,
-                    "score": None,
-                    "match_type": None
+                    "rank": rank,
+                    "score": round(missing_score, 4) if missing_score is not None else None,
+                    "match_type": missing_match_type
                 })
 
         # Build test result entry

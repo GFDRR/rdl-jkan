@@ -8,6 +8,13 @@ vectors_path = f"{python_path}/vectors.json"
 # for use when run with --ci flag
 remote_target_branch = "rdl-0.3"
 
+# Search configuration constants (matching front-end hybrid search logic)
+KEYWORD_SCORE_MIN = 0.75
+KEYWORD_SCORE_MAX = 1.0
+SCORED_FIELDS = ['catalog', 'category', 'creator.name', 'dataset_id', 'description', 'details', 'geo_coverage', 'license', 'notes', 'project', 'resources', 'title']
+SEMANTIC_MAX_RESULTS = 20
+SEMANTIC_MIN_SCORE = 0.3
+
 schema_url_v2 = "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json"
 schema_url_v3 = "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json"
 
