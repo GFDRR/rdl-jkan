@@ -3,7 +3,7 @@
     {
       "id": "rdls_hzd-mdg_grma_landslidehazard",
       "title": "Rainfall-induced landslide hazard",
-      "description": "Rainfall-induced landslide hazard index simulated by AXA Climate, for all SSPs (2–4.5 and 5–8.5) and all time horizons (baseline scenario, 2050, 2085).",
+      "description": "Rainfall-induced landslide hazard index simulated by AXA Climate, for SSP2-4.5 and SSP5-8.5 scenarios across three time horizons (baseline, 2050, 2085).",
       "risk_data_type": [
         "hazard"
       ],
@@ -13,7 +13,7 @@
         "name": "GRMA Madagascar - Phase 1",
         "url": "https://www.resiliencemada.gov.mg"
       },
-      "details": "The hazard index was build with BRGM landslide susceptibility map and daily precipitation dataset.",
+      "details": "The hazard index was built with BRGM landslide susceptibility map and daily precipitation dataset.",
       "spatial": {
         "scale": "national",
         "countries": [
@@ -61,10 +61,11 @@
         {
           "id": "resource_downscaled_precip",
           "title": "Downscaled precipitation on ERA5 dataset",
-          "description": "GCM precipitation downscaled using AXA Climate algorithm to 0.25 degree resolution for future scenarios",
+          "description": "GCM precipitation downscaled using AXA Climate proprietary algorithm to 0.25 degree resolution for future scenarios (SSP2-4.5 and SSP5-8.5).",
           "data_format": "HDF5 (hdf5)",
           "access_modality": "API",
-          "coordinate_system": "EPSG:4326"
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://climate.axa"
         }
       ],
       "hazard": {
@@ -80,7 +81,7 @@
                 },
                 "type": "landslide",
                 "hazard_process": "landslide_general",
-                "intensity_measure": "riskidx:-"
+                "intensity_measure": "LSI:-"
               }
             ],
             "analysis_type": "empirical",
