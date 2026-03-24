@@ -1,20 +1,26 @@
 ---
-name: Generate markdown from new JSON metadata on PR open/synchronize
+name: Generate markdown, vector embeddings, and test artefacts on PR open/synchronize
 
 on:
   pull_request:
     types: [opened, synchronize]
     branches:
       - rdl-0.**
+
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
-  markdown:
+  python:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./python
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PR_NUMBER: ${{ github.event.number }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -27,13 +33,23 @@ jobs:
       - run: source .venv/bin/activate
       - run: echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
       - run: python3 -m pip install -r requirements.txt
-      - name: Generate markdown from new JSON metadata
-        run: python3 main.py --ci --markdown
-      - name: Commit results
+      
+      - name: Generate markdown, vector embeddings, and test artefacts
+        run: python3 main.py --ci --markdown --vectors --test search
+        continue-on-error: true  # Don't block PR on test failures
+      
+      - name: Set up git config
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ..
-          git diff-index --quiet HEAD || git commit -m "Generate markdown from new JSON metadata"
-          git push
+      
+      - name: Commit markdown files
+        run: |
+          git add ../_datasets
+          if git diff --cached --quiet -- ../_datasets; then
+            echo "No changes to commit"
+          else
+            git commit -m "Generate markdown from new JSON metadata"
+            git push
+          fi
           echo "Complete"

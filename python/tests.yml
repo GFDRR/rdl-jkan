@@ -1,0 +1,29 @@
+# Search Test Configuration
+# This file defines test cases for semantic search functionality.
+# Each test case specifies a query and expected results.
+#
+# Fields:
+#   - query: The search query string
+#   - description: Optional description of what this test validates
+#   - includes: List of dataset IDs that MUST appear in search results
+#   - excludes: List of dataset IDs that MUST NOT appear in search results
+#
+# Note: Tests run against the top 20 results by default.
+
+search_tests:
+  - query: "vulnerability flood"
+    description: "Test adapted from comments on Issue #31"
+    includes:
+      - rdls_vln-jrc_glb_flood
+      - rdls_lss-gmb_floodcoastres
+      - rdls_vln-undrr_glb_floodinfrastructure
+      - rdls_vln-wb_sfrarr_flood
+      - rdls_hevl-kentmrwcities_nairobi
+      - rdls_hevl-kentmrwcities_nakuru
+      - rdls_lss-tmrwcities_daressalaam
+      - rdls_hevl-bgdtmrwcities_chattogram
+      - rdls_hevl-ecutmrwcities_quito
+      - rdls_hevl-npltmrwcities_rapti
+      - rdls_hevl-psetmrwcities_nablus
+      - rdls_lss-tmrwcities_coxsbazar
+      - rdls_lss-tmrwcities_daressalaam

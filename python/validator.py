@@ -1,5 +1,11 @@
 from jsonschema import validators, ValidationError
+import json
 import logging
+from pathlib import Path
+
+# Configuration
+RESULTS_PATH = Path(__file__).parent / "validation_results.json"
+
 
 def custom_properties(validator, properties, instance, schema):
     if not validator.is_type(instance, "object"):
@@ -39,6 +45,13 @@ def custom_required(validator, required, instance, schema):
 
 
 def validate_with_custom_logic(dataset, schema):
+    """
+    Validate a dataset against the schema with custom logic.
+    
+    Returns:
+        tuple: (exit_code, error_details) where exit_code is 0 for success, 1 for failure
+               and error_details is a dict with error information or None
+    """
     ValidatorClass = validators.validator_for(schema)
     all_validators = dict(ValidatorClass.VALIDATORS)
     all_validators["properties"] = custom_properties
@@ -49,7 +62,7 @@ def validate_with_custom_logic(dataset, schema):
     )
     try:
         CustomValidator(schema).validate(dataset)
-        return 0
+        return 0, None
     except ValidationError as err:
         dataset_id = dataset.get("id", "id not found")
         schema_path = "/".join(str(item) for item in err.relative_path)
@@ -57,4 +70,16 @@ def validate_with_custom_logic(dataset, schema):
             f"Error while validating dataset with id: {dataset_id}\n{err.message}\nSee {schema_path}\n\n",
             exc_info=err,
         )
-        return 1
+        error_details = {
+            "dataset_id": dataset_id,
+            "message": err.message,
+            "schema_path": schema_path
+        }
+        return 1, error_details
+
+
+def save_validation_results(results):
+    """Save validation results to JSON file."""
+    with open(RESULTS_PATH, 'w') as f:
+        json.dump(results, f, indent=2)
+    logging.info(f"Validation results written to {RESULTS_PATH}")
