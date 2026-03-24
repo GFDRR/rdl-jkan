@@ -60,7 +60,8 @@
           "temporal": {
             "temporal_resolution": "P1M"
           },
-          "access_modality": "download_page"
+          "access_modality": "download_page",
+          "access_url": "https://www.resiliencemada.gov.mg"
         },
         {
           "id": "resource_fire_intensity",
@@ -72,7 +73,8 @@
           "temporal": {
             "temporal_resolution": "P1M"
           },
-          "access_modality": "download_page"
+          "access_modality": "download_page",
+          "access_url": "https://www.resiliencemada.gov.mg"
         },
         {
           "id": "resource_fwi",
@@ -84,7 +86,8 @@
           "temporal": {
             "temporal_resolution": "P1M"
           },
-          "access_modality": "download_page"
+          "access_modality": "download_page",
+          "access_url": "https://www.resiliencemada.gov.mg"
         },
         {
           "id": "resource_esa_landcover",
@@ -93,7 +96,8 @@
           "data_format": "GeoTIFF (tif)",
           "spatial_resolution": 10,
           "coordinate_system": "EPSG:4326",
-          "access_modality": "download_page"
+          "access_modality": "download_page",
+          "access_url": "https://esa-worldcover.org/en"
         },
         {
           "id": "resource_litpop_gdp",
@@ -102,7 +106,8 @@
           "data_format": "GeoTIFF (tif)",
           "spatial_resolution": 1000,
           "coordinate_system": "EPSG:4326",
-          "access_modality": "download_page"
+          "access_modality": "download_page",
+          "access_url": "https://climada-petals.readthedocs.io/en/stable/tutorial/climada_exposures_LitPop.html"
         },
         {
           "id": "resource_worldpop",
@@ -128,7 +133,8 @@
           "temporal": {
             "temporal_resolution": "P1M"
           },
-          "access_modality": "download_page"
+          "access_modality": "download_page",
+          "access_url": "https://www.resiliencemada.gov.mg"
         }
       ],
       "hazard": {
@@ -159,7 +165,7 @@
               "quantity_kind": "area"
             }
           ],
-          "category": "forest"
+          "category": "natural_environment"
         },
         {
           "id": "exposure_population_001",
@@ -181,7 +187,7 @@
               "quantity_kind": "monetary"
             }
           ],
-          "category": "economic"
+          "category": "economic_indicator"
         }
       ],
       "vulnerability": {
@@ -189,12 +195,12 @@
           "vulnerability": [
             {
               "id": "vuln_burned_area",
-              "approach": "modelling",
+              "approach": "empirical",
               "relationship": "math_parametric",
               "hazard_primary": "wildfire",
               "hazard_analysis_type": "empirical",
               "intensity_measure": "MHI:-",
-              "category": "economic",
+              "category": "natural_environment",
               "impact_type": "direct",
               "impact_modelling": "inferred",
               "impact_metric": "loss_ratio",
@@ -203,12 +209,12 @@
             },
             {
               "id": "vuln_economic_loss",
-              "approach": "modelling",
+              "approach": "empirical",
               "relationship": "math_parametric",
               "hazard_primary": "wildfire",
               "hazard_analysis_type": "empirical",
               "intensity_measure": "MHI:-",
-              "category": "economic",
+              "category": "economic_indicator",
               "impact_type": "direct",
               "impact_modelling": "inferred",
               "impact_metric": "loss_ratio",
@@ -217,7 +223,7 @@
             },
             {
               "id": "vuln_population_impact",
-              "approach": "modelling",
+              "approach": "empirical",
               "relationship": "math_parametric",
               "hazard_primary": "wildfire",
               "hazard_analysis_type": "empirical",
@@ -225,7 +231,7 @@
               "category": "population",
               "impact_type": "direct",
               "impact_modelling": "inferred",
-              "impact_metric": "impact_ratio",
+              "impact_metric": "exposure_to_hazard",
               "quantity_kind": "percent",
               "analysis_details": "Binary vulnerability curve of impacted population as a function of fire frequency"
             }
