@@ -10,7 +10,7 @@ creator:
   id: attribution_creator
   name: UNOSAT
   url: https://data.humdata.org/dataset/32e725a8-9f29-4ab3-8903-ba7f10ae581f
-dataset_id: rdls_exp-hdx_united_nations_satel_bgd_satellite_detected_waters_in_central_bangladesh_flood
+dataset_id: rdls_he-bgd_unosat_detectedwaterscentral
 description: 'This map illustrates satellite-detected surface water extent in the
   central part of Bangladesh using a Sentinel-1 satellite image acquired on the 12
   August 2017 with a total surface of 4,280,650 ha. In this analyzed area; 1,644,983
@@ -30,7 +30,7 @@ details: 'Caveats: This is a preliminary assessment and has not yet been validat
   not be visible at all. For flood extractions using radar data it is important to
   note that urban areas and highly vegetated areas may mask the flood signature and
   result in underestimation of flood waters. Users with specific questions or concerns
-  should contact unosat@unitar.org to seek clarification. | Methodology: UNOSAT datasets
+  should contact unosat@unitar.org to seek clarification.. Methodology: UNOSAT datasets
   and maps are produced using a variety of methods. In general, analysts closely review
   satellite imagery, often comparing two or more images together, and determine notable
   changes between the images. For damage assessments, refugee or IDP assessments,
@@ -80,7 +80,11 @@ resources:
   id: hdx_res_ed5b0d50
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: null
+    end: '2017-08-15'
+    start: '2017-08-15'
+    temporal_resolution: null
   title: FL20170815BGD_gdb.zip
 - coordinate_system: null
   description: Zipped shapefile
@@ -89,13 +93,17 @@ resources:
   id: hdx_res_ce506301
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: null
+    end: '2017-08-15'
+    start: '2017-08-15'
+    temporal_resolution: null
   title: FL20170815BGD_shp.zip
 risk_data_type:
 - hazard
 - exposure
 schema: rdl-03
-slug: rdls_exp-hdx_united_nations_satel_bgd_satellite_detected_waters_in_central_bangladesh_flood
+slug: rdls_he-bgd_unosat_detectedwaterscentral
 spatial:
   countries:
   - BGD

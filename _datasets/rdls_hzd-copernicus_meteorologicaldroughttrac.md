@@ -10,7 +10,7 @@ creator:
   id: attribution_creator
   name: European Commission, Joint Research Centre (JRC)
   url: https://data.humdata.org/dataset/4efff3a9-6449-4892-8fa4-d76f7374fa51
-dataset_id: rdls_hzd-hdx_copernicus_global_meteorological_drought_tracking_drought
+dataset_id: rdls_hzd-copernicus_meteorologicaldroughttrac
 description: 'The Indicator for Meteorological Drought Tracking provides a clear spatio-temporal
   identification of persistent low-precipitation conditions at the global scale and
   at near real-time. It provides the outline and the duration and total spatial extent
@@ -19,14 +19,12 @@ description: 'The Indicator for Meteorological Drought Tracking provides a clear
   from the ERA5 fifth generation reanalysis for the global climate and weather of
   the ECMWF, with baseline 1991-2020. Drought events are identified by means of a
   three dimensional density-based clustering algorithm (DBSCAN). [Source: This metadata
-  record was automatically extracted from the Humanitarian Data Exchange (HDX) at
-  https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/4efff3a9-6449-4892-8fa4-d76f7374fa51]'
+  record was automatically extracted from the Humanitarian Data Exchange (HDX); Original
+  dataset: https://data.humdata.org/dataset/4efff3a9-6449-4892-8fa4-d76f7374fa51]'
 details: 'Caveats: A range of different degrees of clustering can be obtained using
   different model settings and parameterization, meaning that a same parameterization
   at the global scale can likely result in overestimation/underestimation of drought
-  events in certain areas. | Methodology: See [factsheet](https://drought.emergency.copernicus.eu/data/factsheets/factsheet_met_drought_tracking.pdf)
-  | Temporal coverage: [1991-02-11T00:00:00 TO 2025-12-31T23:59:59] | Update frequency:
-  Every month | Last modified: 2026-01-12'
+  events in certain areas.. Methodology: See [factsheet]((see referenced_by)).'
 exposure: []
 extra_attributions: []
 hazard:
@@ -49,22 +47,17 @@ publisher:
 purpose: null
 resources:
 - coordinate_system: null
-  description: Dataset-level metadata exported from HDX.
-  download_url: https://data.humdata.org/dataset/4efff3a9-6449-4892-8fa4-d76f7374fa51/download_metadata?format=json
-  format: JSON (json)
-  id: hdx_dataset_metadata_json
-  media_type: null
-  spatial_resolution: null
-  temporal: null
-  title: HDX dataset metadata (JSON)
-- coordinate_system: null
   description: Data from 2025-01-01 to 2025-12-31
   download_url: https://data.humdata.org/dataset/4efff3a9-6449-4892-8fa4-d76f7374fa51/resource/a4426b7f-dc16-48b8-9d1e-5c90ec3e4217/download/jspa3_m_gdo_20250101_20251221_t.zip
   format: GeoJSON (geojson)
   id: hdx_res_a4426b7f
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20250101_20251221_t.zip
 - coordinate_system: null
   description: Data from 2024-01-01 to 2024-12-31
@@ -73,7 +66,11 @@ resources:
   id: hdx_res_b96ae75f
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20240101_20241221_t.zip
 - coordinate_system: null
   description: Data from 2023-01-01 to 2023-12-31
@@ -82,7 +79,11 @@ resources:
   id: hdx_res_21c677e4
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20230101_20231221_t.zip
 - coordinate_system: null
   description: Data from 2022-01-01 to 2022-12-31
@@ -91,7 +92,11 @@ resources:
   id: hdx_res_c32848ca
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20220101_20221221_t.zip
 - coordinate_system: null
   description: Data from 2021-01-01 to 2021-12-31
@@ -100,7 +105,11 @@ resources:
   id: hdx_res_ce8f6bb1
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20210101_20211221_t.zip
 - coordinate_system: null
   description: Data from 2020-01-01 to 2020-12-31
@@ -109,7 +118,11 @@ resources:
   id: hdx_res_8f79cab6
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20200101_20201221_t.zip
 - coordinate_system: null
   description: Data from 2019-01-01 to 2019-12-31
@@ -118,7 +131,11 @@ resources:
   id: hdx_res_34374b41
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20190101_20191221_t.zip
 - coordinate_system: null
   description: Data from 2018-01-01 to 2018-12-31
@@ -127,7 +144,11 @@ resources:
   id: hdx_res_5d3bff8e
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20180101_20181221_t.zip
 - coordinate_system: null
   description: Data from 2017-01-01 to 2017-12-31
@@ -136,7 +157,11 @@ resources:
   id: hdx_res_4aa61717
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20170101_20171221_t.zip
 - coordinate_system: null
   description: Data from 2016-01-01 to 2016-12-31
@@ -145,7 +170,11 @@ resources:
   id: hdx_res_acc6a29b
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20160101_20161221_t.zip
 - coordinate_system: null
   description: Data from 2015-01-01 to 2015-12-31
@@ -154,7 +183,11 @@ resources:
   id: hdx_res_9d1f5153
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20150101_20151221_t.zip
 - coordinate_system: null
   description: Data from 2014-01-01 to 2014-12-31
@@ -163,7 +196,11 @@ resources:
   id: hdx_res_242e1b61
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20140101_20141221_t.zip
 - coordinate_system: null
   description: Data from 2013-01-01 to 2013-12-31
@@ -172,7 +209,11 @@ resources:
   id: hdx_res_6ebdfa05
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20130101_20131221_t.zip
 - coordinate_system: null
   description: Data from 2012-01-01 to 2012-12-31
@@ -181,7 +222,11 @@ resources:
   id: hdx_res_7b30bc4e
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20120101_20121221_t.zip
 - coordinate_system: null
   description: Data from 2011-01-01 to 2011-12-31
@@ -190,7 +235,11 @@ resources:
   id: hdx_res_bf3764c7
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20110101_20111221_t.zip
 - coordinate_system: null
   description: Data from 2010-01-01 to 2010-12-31
@@ -199,7 +248,11 @@ resources:
   id: hdx_res_971331bc
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20100101_20101221_t.zip
 - coordinate_system: null
   description: Data from 2009-01-01 to 2009-12-31
@@ -208,7 +261,11 @@ resources:
   id: hdx_res_e7d5ab78
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20090101_20091221_t.zip
 - coordinate_system: null
   description: Data from 2008-01-01 to 2008-12-31
@@ -217,7 +274,11 @@ resources:
   id: hdx_res_3dd66337
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20080101_20081221_t.zip
 - coordinate_system: null
   description: Data from 2007-01-01 to 2007-12-31
@@ -226,7 +287,11 @@ resources:
   id: hdx_res_429a98db
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20070101_20071221_t.zip
 - coordinate_system: null
   description: Data from 2006-01-01 to 2006-12-31
@@ -235,7 +300,11 @@ resources:
   id: hdx_res_1a615791
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20060101_20061221_t.zip
 - coordinate_system: null
   description: Data from 2005-01-01 to 2005-12-31
@@ -244,7 +313,11 @@ resources:
   id: hdx_res_f2212a15
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20050101_20051221_t.zip
 - coordinate_system: null
   description: Data from 2004-01-01 to 2004-12-31
@@ -253,7 +326,11 @@ resources:
   id: hdx_res_6dfb3c8b
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20040101_20041221_t.zip
 - coordinate_system: null
   description: Data from 2003-01-01 to 2003-12-31
@@ -262,7 +339,11 @@ resources:
   id: hdx_res_57028eb9
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20030101_20031221_t.zip
 - coordinate_system: null
   description: Data from 2002-01-01 to 2002-12-31
@@ -271,7 +352,11 @@ resources:
   id: hdx_res_5083739e
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20020101_20021221_t.zip
 - coordinate_system: null
   description: Data from 2001-01-01 to 2001-12-31
@@ -280,7 +365,11 @@ resources:
   id: hdx_res_8c1d4ba2
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20010101_20011221_t.zip
 - coordinate_system: null
   description: Data from 2000-01-01 to 2000-12-31
@@ -289,7 +378,11 @@ resources:
   id: hdx_res_8177862d
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_20000101_20001221_t.zip
 - coordinate_system: null
   description: Data from 1999-01-01 to 1999-12-31
@@ -298,7 +391,11 @@ resources:
   id: hdx_res_146e0de8
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19990101_19991221_t.zip
 - coordinate_system: null
   description: Data from 1998-01-01 to 1998-12-31
@@ -307,7 +404,11 @@ resources:
   id: hdx_res_65d6e5c2
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19980101_19981221_t.zip
 - coordinate_system: null
   description: Data from 1997-01-01 to 1997-12-31
@@ -316,7 +417,11 @@ resources:
   id: hdx_res_0ac466b3
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19970101_19971221_t.zip
 - coordinate_system: null
   description: Data from 1996-01-01 to 1996-12-31
@@ -325,7 +430,11 @@ resources:
   id: hdx_res_cf9acdd9
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19960101_19961221_t.zip
 - coordinate_system: null
   description: Data from 1995-01-01 to 1995-12-31
@@ -334,7 +443,11 @@ resources:
   id: hdx_res_6cee2beb
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19950101_19951221_t.zip
 - coordinate_system: null
   description: Data from 1994-01-01 to 1994-12-31
@@ -343,7 +456,11 @@ resources:
   id: hdx_res_b3f48823
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19940101_19941221_t.zip
 - coordinate_system: null
   description: Data from 1993-01-01 to 1993-12-31
@@ -352,7 +469,11 @@ resources:
   id: hdx_res_df58485a
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19930101_19931221_t.zip
 - coordinate_system: null
   description: Data from 1992-01-01 to 1992-12-31
@@ -361,7 +482,11 @@ resources:
   id: hdx_res_9a01b1b4
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19920101_19921221_t.zip
 - coordinate_system: null
   description: Data from 1991-02-11 to 1991-12-31
@@ -370,12 +495,16 @@ resources:
   id: hdx_res_a6744071
   media_type: null
   spatial_resolution: null
-  temporal: null
+  temporal:
+    duration: P34Y
+    end: '2025-12-31'
+    start: '1991-02-11'
+    temporal_resolution: null
   title: jspa3_m_gdo_19910211_19911221_t.zip
 risk_data_type:
 - hazard
 schema: rdl-03
-slug: rdls_hzd-hdx_copernicus_global_meteorological_drought_tracking_drought
+slug: rdls_hzd-copernicus_meteorologicaldroughttrac
 spatial:
   countries:
   - GLO

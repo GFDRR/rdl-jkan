@@ -10,16 +10,13 @@ creator:
   id: attribution_creator
   name: Esri
   url: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff
-dataset_id: rdls_hzd-hdx_esri_earthquakes_multihazard
+dataset_id: rdls_hzd-esri_recentearthquakes
 description: 'This map displays continuously updated data from the USGS Earthquakes
-  and Shakemaps. This map is provided by the Esri Disaster Response Program. In addition
-  to displaying earthquakes by magnitude, this service also provide earthquake impact
-  details. Impact is measured by population as well as models for economic and fatality
-  loss. [Source: This metadata record was automatically extracted from the Humanitarian
-  Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff]'
+  and Shakemaps. This map is provided by the Esri Disaster Response Program. [Source:
+  This metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff]'
 details: 'Methodology: USGS Prompt Assessment of Global Earthquakes for Response (PAGER)
-  program. | Temporal coverage: 90 days ago (major events) or 7 days ago (other events)
-  to today | Update frequency: Every day'
+  program.'
 exposure: []
 extra_attributions: []
 hazard:
@@ -42,14 +39,16 @@ publisher:
 purpose: null
 resources:
 - coordinate_system: null
-  description: Dataset-level metadata exported from HDX.
-  download_url: https://data.humdata.org/dataset/8b45ca43-0fcb-4559-b6a4-05b01fd8c3ff/download_metadata?format=json
-  format: JSON (json)
-  id: hdx_dataset_metadata_json
+  description: This web applications displays continuously updated data from the USGS
+    Earthquakes and Shakemaps. This map is provided by the Esri Disaster Response
+    Program.
+  download_url: https://disasterresponse.maps.arcgis.com/apps/webappviewer/index.html?id=e588a7f3ba0d41388b5052b6444457a8
+  format: CSV (csv)
+  id: hdx_res_d15bd1fa
   media_type: null
   spatial_resolution: null
   temporal: null
-  title: HDX dataset metadata (JSON)
+  title: Earthquake App
 - coordinate_system: null
   description: This service presents recent earthquake information from the USGS Prompt
     Assessment of Global Earthquakes for Response (PAGER) program.
@@ -73,7 +72,7 @@ resources:
 risk_data_type:
 - hazard
 schema: rdl-03
-slug: rdls_hzd-hdx_esri_earthquakes_multihazard
+slug: rdls_hzd-esri_recentearthquakes
 spatial:
   countries:
   - GLO
