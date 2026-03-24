@@ -335,63 +335,8 @@ layout: default
             </div>
             {% endif %}
           </div>
-
-          <!-- Related Datasets
-               NOTE: This is a client-side feature using Alpine.js, not part of the dataset schema.
-               It uses a three-tier fallback: explicit related_datasets field (optional) → same project → semantic search.
-               The related_datasets field is intentionally NOT in the schema to keep it optional and flexible. -->
-          <div class="sidebar-card"
-               data-dataset-id="{{ page.dataset_id }}"
-               data-project="{{ page.project | escape }}"
-               data-related-datasets="{{ page.related_datasets | jsonify | escape }}"
-               data-title="{{ page.title | escape }}"
-               x-data="relatedDatasetsFromData($el)"
-               x-init="await loadRelated()">
-            <h4>Related Datasets</h4>
-            <template x-if="loading">
-              <div style="text-align: center; padding: 20px; color: #9ca3af;">
-                <i class="fa fa-spinner fa-spin"></i> Loading...
-              </div>
-            </template>
-            <template x-if="!loading && relatedDatasets.length > 0">
-              <div>
-                <template x-for="(dataset, index) in relatedDatasets.slice(0, 4)" :key="dataset.dataset_id">
-                  <div class="sidebar-item" style="border-bottom: 1px solid #e5e7eb; padding-bottom: 8px; margin-bottom: 8px;">
-                    <div class="sidebar-content">
-                      <div class="sidebar-value">
-                        <a :href="dataset.url" x-text="dataset.title" style="font-weight: 500; color: #1f2937;"></a>
-                      </div>
-                      <div class="sidebar-label" style="margin-top: 4px; display: flex; align-items: center; gap: 6px;">
-                        <template x-for="cat in dataset.category" :key="cat">
-                          <span :class="'category-badge ' + cat.toLowerCase()" style="font-size: 10px; padding: 2px 6px;" x-text="cat"></span>
-                        </template>
-                      </div>
-                    </div>
-                  </div>
-                </template>
-                <div x-show="fallbackLevel" style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #e5e7eb; font-size: 11px; color: #6b7280;">
-                  <span x-show="fallbackLevel === 'explicit'">
-                    <i class="fa fa-link"></i> Explicitly related datasets
-                  </span>
-                  <span x-show="fallbackLevel === 'project'">
-                    <i class="fa fa-folder-o"></i> From same project
-                  </span>
-                  <span x-show="fallbackLevel === 'search'">
-                    <i class="fa fa-search"></i> Suggested by semantic search
-                  </span>
-                </div>
-              </div>
-            </template>
-            <template x-if="!loading && relatedDatasets.length === 0">
-              <div style="padding: 12px; text-align: center; color: #9ca3af; font-size: 13px;">
-                No related datasets found
-              </div>
-            </template>
-          </div>
         </aside>
       </div>
     </div>
   </div>
 </div>
-
-<div class="container"><!-- Reopen default container for next content -->
