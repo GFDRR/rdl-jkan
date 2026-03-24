@@ -191,7 +191,7 @@ def hybrid_search(
     query: str,
     model: SentenceTransformer,
     vectors: List[Dict[str, Any]],
-    top_n: int = 20,
+    top_n: int = SEMANTIC_MAX_RESULTS,
     return_all: bool = False
 ) -> List[Dict[str, Any]]:
     """
@@ -276,7 +276,7 @@ def run_search_tests(model: SentenceTransformer = None) -> int:
             print(f"  Description: {description}")
         
         # Perform hybrid search (matching front-end logic)
-        top_n = 20
+        top_n = SEMANTIC_MAX_RESULTS
         results = hybrid_search(query, model, vectors, top_n=top_n)
         result_ids = [r['dataset_id'] for r in results]
         result_scores = {r['dataset_id']: r['score'] for r in results}
