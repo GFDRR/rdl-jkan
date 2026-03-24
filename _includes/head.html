@@ -46,11 +46,16 @@
     defer
     src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.8/dist/cdn.min.js"
   ></script>
-  <!-- TODO: uncomment to bring back semantic search -->
-  <!-- <script type="module">
-    import { pipeline } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0-next.5";
-    window.pipeline = pipeline;
-  </script> -->
+  <!-- Semantic search support -->
+  <script type="module">
+    try {
+      const { pipeline } =
+        await import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0-next.5");
+      window.pipeline = pipeline;
+    } catch (error) {
+      console.warn("Failed to load transformers pipeline:", error);
+    }
+  </script>
   <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
@@ -89,15 +94,7 @@
   {% include addons/twittercard.html %} {% endif %}
 
   <script>
-      var settings = {
-        BASE_URL: {{ site.baseurl | jsonify }},
-        PAGE_URL: {{ page.url | jsonify }},
-        REPO_BRANCH: {% if site.github.is_user_page %} "master"{% else %} "gh-pages"{% endif %},
-        REPO_OWNER: {{ site.github.owner_name | jsonify }},
-        REPO_NAME: {{ site.github.project_title | jsonify }},
-        GITHUB_CLIENT_ID: {{ site.github.client_id | jsonify }},
-        GATEKEEPER_HOST: {{ site.gatekeeper_host | jsonify }}
-    }
+      const BASE_URL = {{ site.baseurl | jsonify }};
 
       // Slugify function (matches Jekyll's slugify)
       function slugify(text) {
@@ -106,59 +103,33 @@
           .replace(/\-\-+/g, '-')
           .replace(/^\-|\-$/i, '');
       }
-
+      window.slugify = slugify;
       document.addEventListener('alpine:init', async () => {
         Alpine.store('datasets', {
+          BASE_URL,
           unfiltered: [],
-          filters: {
-            catalog: [],
-            category: [],
-            geo_coverage: [],
-            geo_scale: [],
-            hazard_type: [],
-            license_display: [],
-            project: []
-          },
+          isLoading: true,
 
           async fetchUnfiltered() {
-            fetch(`${settings.BASE_URL ?? ''}/rdl-datasets.json`)
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.json();
-              })
-              .then((initialDatasets) => {
-                this.unfiltered = initialDatasets;
-              })
-              .catch(error => console.error('Failed to fetch data:', error));
-          },
-
-          // Toggle a filter value on/off
-          toggleFilter(filterType, value) {
-            const index = this.filters[filterType].indexOf(value);
-            if (index === -1) {
-              this.filters[filterType].push(value);
-            } else {
-              this.filters[filterType].splice(index, 1);
+            this.isLoading = true;
+            try {
+              const response = await fetch(`${BASE_URL ?? ''}/rdl-datasets.json`);
+              if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+              }
+              const initialDatasets = await response.json();
+              this.unfiltered = initialDatasets.sort((a, b) => {
+                const titleA = a.title ? a.title.toLowerCase() : '';
+                const titleB = b.title ? b.title.toLowerCase() : '';
+                if (titleA < titleB) return -1;
+                if (titleA > titleB) return 1;
+                return 0;
+              });
+            } catch (error) {
+              console.error('Failed to fetch data:', error);
+            } finally {
+              this.isLoading = false;
             }
-          },
-
-          // Check if a filter value is active
-          isFilterActive(filterType, value) {
-            return this.filters[filterType].includes(value);
-          },
-
-          // Clear all filters
-          clearFilters() {
-            this.filters.catalog = [];
-            this.filters.category = [];
-            this.filters.geo_coverage = [];
-            this.filters.geo_scale = [];
-            this.filters.hazard_type = [];
-            this.filters.license_display = [];
-            this.filters.project = [];
-            this.updateUrlParams();
           },
 
           // Load filters and search from URL params
@@ -169,19 +140,20 @@
             const searchQuery = urlParams.get('q') || '';
 
             // Load filter values for each filter type
+            const filters = {};
             const filterTypes = ['catalog', 'category', 'geo_coverage', 'geo_scale', 'hazard_type', 'license_display', 'project'];
             filterTypes.forEach(filterType => {
               const values = urlParams.getAll(filterType + '[]');
               if (values.length > 0) {
-                this.filters[filterType] = values;
+                filters[filterType] = values;
               }
             });
 
-            return searchQuery;
+            return { searchQuery, filters };
           },
 
           // Update URL params based on current filters and search
-          updateUrlParams(query = '') {
+          updateUrlParams(query = '', filters = {}) {
             const urlParams = new URLSearchParams();
 
             // Add search query if present
@@ -190,7 +162,7 @@
             }
 
             // Add filter values
-            Object.entries(this.filters).forEach(([filterType, values]) => {
+            Object.entries(filters).forEach(([filterType, values]) => {
               values.forEach(value => {
                 urlParams.append(filterType + '[]', value);
               });
@@ -200,193 +172,6 @@
             const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
             window.history.replaceState({}, '', newUrl);
           },
-
-          // Get active filter count
-          get activeFilterCount() {
-            return Object.values(this.filters).reduce((sum, arr) => sum + arr.length, 0);
-          },
-
-          // Apply filters to a dataset array
-          applyFilters(datasets) {
-            return this.applyFiltersExcluding(datasets, null);
-          },
-
-          // Apply filters to a dataset array, optionally excluding one filter type
-          // This is used for faceted search - counts for a filter should reflect other applied filters
-          applyFiltersExcluding(datasets, excludeFilterType) {
-            return datasets.filter(dataset => {
-              // Catalog filter
-              if (excludeFilterType !== 'catalog' && this.filters.catalog.length > 0) {
-                const datasetCatalogs = Array.isArray(dataset.catalog) ? dataset.catalog : [dataset.catalog];
-                const hasMatchingCatalog = datasetCatalogs.some(cat => {
-                  if (cat === null || cat === undefined) return false;
-                  return this.filters.catalog.includes(slugify(cat))
-                });
-                if (!hasMatchingCatalog) return false;
-              }
-
-              // Category filter
-              if (excludeFilterType !== 'category' && this.filters.category.length > 0) {
-                const datasetCategories = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
-                const hasMatchingCategory = datasetCategories.some(cat =>
-                  this.filters.category.includes(slugify(cat))
-                );
-                if (!hasMatchingCategory) return false;
-              }
-
-              // Geo coverage filter
-              if (excludeFilterType !== 'geo_coverage' && this.filters.geo_coverage.length > 0) {
-                const coverage = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage.join(',') : dataset.geo_coverage;
-                const coverageSlug = slugify(coverage || '');
-                const hasMatchingCoverage = this.filters.geo_coverage.some(filter =>
-                  coverageSlug.includes(filter)
-                );
-                if (!hasMatchingCoverage) return false;
-              }
-
-              // Geo scale filter
-              if (excludeFilterType !== 'geo_scale' && this.filters.geo_scale.length > 0) {
-                const scaleSlug = slugify(dataset.geo_scale || '');
-                const hasMatchingScale = this.filters.geo_scale.some(filter =>
-                  scaleSlug.includes(filter)
-                );
-                if (!hasMatchingScale) return false;
-              }
-
-              // Hazard type filter (skip exposure datasets)
-              if (excludeFilterType !== 'hazard_type' && this.filters.hazard_type.length > 0) {
-                if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return false;
-                const hazardTypes = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
-                const hasMatchingHazard = hazardTypes.some(ht =>
-                  this.filters.hazard_type.includes(slugify(ht))
-                );
-                if (!hasMatchingHazard) return false;
-              }
-
-              // License filter
-              if (excludeFilterType !== 'license_display' && this.filters.license_display.length > 0) {
-                const licenseSlug = slugify(dataset.license_display || '');
-                const hasMatchingLicense = this.filters.license_display.some(filter =>
-                  licenseSlug.includes(filter)
-                );
-                if (!hasMatchingLicense) return false;
-              }
-
-              // Project filter
-              if (excludeFilterType !== 'project' && this.filters.project.length > 0) {
-                const projectSlug = slugify(dataset.project || '');
-                const hasMatchingProject = this.filters.project.some(filter =>
-                  projectSlug.includes(filter)
-                );
-                if (!hasMatchingProject) return false;
-              }
-
-              return true;
-            });
-          },
-
-          // Get filter options with counts (for displaying filter UI)
-          getFilterOptions(filterType, datasets) {
-            // First, collect ALL possible values from unfiltered datasets
-            const allValues = new Set();
-            this.unfiltered.forEach(dataset => {
-              let values = [];
-              switch (filterType) {
-                case 'catalog':
-                  // Handle comma-separated catalog values like 'GFDRR, World Bank'
-                  const catalogVal = dataset.catalog || 'Other';
-                  values = catalogVal.toString().split(',').map(c => c.trim()).filter(c => c);
-                  break;
-                case 'category':
-                  values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
-                  break;
-                case 'geo_coverage':
-                  values = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
-                  break;
-                case 'geo_scale':
-                  values = dataset.geo_scale ? dataset.geo_scale.split(',') : [];
-                  break;
-                case 'hazard_type':
-                  if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return;
-                  values = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
-                  break;
-                case 'license_display':
-                  values = dataset.license_display ? dataset.license_display.split(',') : [];
-                  break;
-                case 'project':
-                  values = dataset.project ? [dataset.project] : [];
-                  break;
-              }
-              values.forEach(val => {
-                if (val && val !== 'None') {
-                  allValues.add(val.trim());
-                }
-              });
-            });
-
-            // Count occurrences in the filtered datasets
-            const counts = {};
-            datasets.forEach(dataset => {
-              let values = [];
-              switch (filterType) {
-                case 'catalog':
-                  // Handle comma-separated catalog values like 'GFDRR, World Bank'
-                  const catalogVal = dataset.catalog || 'Other';
-                  values = catalogVal.toString().split(',').map(c => c.trim()).filter(c => c);
-                  break;
-                case 'category':
-                  values = Array.isArray(dataset.category) ? dataset.category : [dataset.category];
-                  break;
-                case 'geo_coverage':
-                  values = Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
-                  break;
-                case 'geo_scale':
-                  values = dataset.geo_scale ? dataset.geo_scale.split(',') : [];
-                  break;
-                case 'hazard_type':
-                  if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return;
-                  values = Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
-                  break;
-                case 'license_display':
-                  values = dataset.license_display ? dataset.license_display.split(',') : [];
-                  break;
-                case 'project':
-                  values = dataset.project ? [dataset.project] : [];
-                  break;
-              }
-              values.forEach(val => {
-                if (val && val !== 'None') {
-                  const trimmed = val.trim();
-                  counts[trimmed] = (counts[trimmed] || 0) + 1;
-                }
-              });
-            });
-
-            // Build options array with all values (including 0 counts)
-            const options = Array.from(allValues).map(title => ({
-              title,
-              slug: slugify(title),
-              count: counts[title] || 0,
-              selected: this.isFilterActive(filterType, slugify(title))
-            }));
-
-            // Sort: selected first, then by count (desc), then alphabetically
-            // For catalog, "Other" always goes last
-            return options.sort((a, b) => {
-              // Selected items come first
-              if (a.selected && !b.selected) return -1;
-              if (!a.selected && b.selected) return 1;
-              // For catalog filter, "Other" always goes last
-              if (filterType === 'catalog') {
-                if (a.title === 'Other') return 1;
-                if (b.title === 'Other') return -1;
-              }
-              // Then sort by count (descending)
-              if (b.count !== a.count) return b.count - a.count;
-              // Finally sort alphabetically
-              return a.title.localeCompare(b.title);
-            });
-          }
         })
         await Alpine.store('datasets').fetchUnfiltered()
       })
