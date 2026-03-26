@@ -1,0 +1,1335 @@
+/* ====================================
+   RDL Catalog Modern Theme
+   Design System & Component Styles
+   ==================================== */
+
+/* ====================================
+   0. Legacy Styles (from main.css)
+   ==================================== */
+.organization-thumbnail img {
+  width: 64px;
+}
+
+dataset {
+  display: block;
+  border-bottom: 1px #d6d6d6 solid;
+  padding-bottom: 20px;
+}
+
+.button-reset {
+  background:none;
+  border: none;
+}
+
+.list-group-item-truncate {
+  display: inline-block;
+  line-height: 1;
+  width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.resource-description {
+  font-size: 90%;
+}
+
+.select2 {
+  margin-bottom: 10px;
+}
+
+.datasets-count {
+  display: inline-block;
+}
+
+.add-dataset-btn {
+  margin-top: 15px;
+}
+
+/* Hidden from guests */
+.user-issue {
+  display: none;
+}
+
+.resource-details,
+.show-resource-details {
+  display: none;
+}
+
+.show-resource-details {
+  font-size: 80%;
+}
+
+.user-issue {
+  color: red;
+}
+
+[data-component~=view-switcher] [data-hook~=view] {
+  display: none;
+}
+
+.homepage-categories,
+.theme-gallery {
+  text-align: justify;
+}
+
+/* allows last line of categories to be justify aligned */
+.homepage-categories:after,
+.theme-gallery:after {
+  display: inline-block;
+  width: 100%;
+  content: '';
+}
+
+.homepage-categories .thumbnail {
+  display: inline-block;
+  min-width: 120px;
+  text-align: center;
+  border: none;
+  padding: 10px;
+}
+
+.homepage-categories .thumbnail img {
+  height: 160px;
+}
+
+.homepage-categories a {
+  color: #000;
+}
+
+.theme-gallery .panel {
+  display: inline-block;
+  max-width: 250px;
+  text-align: center;
+}
+
+.theme-gallery .panel img {
+  width: 100%;
+}
+
+.theme-gallery .panel-primary {
+  border-width: 5px;
+}
+
+/* Dataset details table styling for consistent alignment */
+.dataset-details th {
+  width: 30%;
+  white-space: normal;
+  vertical-align: top;
+}
+
+.dataset-details td {
+  width: 70%;
+  word-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+}
+
+/* ====================================
+   1. CSS Variables & Design Tokens
+   ==================================== */
+:root {
+  /* Colors - Background */
+  --color-bg-page: #f5f7fa;
+  --color-bg-card: #ffffff;
+  --color-bg-dark: #1a1f36;
+  --color-bg-hover: #f8f9fb;
+  --color-bg-light: #f3f4f6;
+
+  /* Colors - Text */
+  --color-text-primary: #1a1f36;
+  --color-text-secondary: #6b7280;
+  --color-text-light: #9ca3af;
+  --color-text-inverse: #ffffff;
+
+  /* Colors - Brand */
+  --color-primary: #007fc3;
+  --color-primary-dark: #0066a1;
+
+  /* Colors - Risk Components (Fixed Schema) */
+  --color-hazard: #007fc3;
+  --color-hazard-bg: #e0f2fe;
+  --color-exposure: #00cbab;
+  --color-exposure-bg: #d1f8f0;
+  --color-vulnerability: #ffc757;
+  --color-vulnerability-bg: #fff4e0;
+  --color-loss: #f3436a;
+  --color-loss-bg: #ffe5ea;
+
+  /* Colors - UI Elements */
+  --color-border: #e5e8ed;
+  --color-border-light: #d1d5db;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+
+  /* Typography */
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ====================================
+   2. Global Resets & Base Styles
+   ==================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-bg-page);
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* Override view-switcher hiding - we want to show dataset content */
+[data-component~=view-switcher] [data-hook~=view]:not(.dataset-detail-layout) {
+  display: block !important;
+}
+
+/* Ensure dataset detail grid layout always applies */
+[data-component~=view-switcher] .dataset-detail-layout[data-hook~=view] {
+  display: grid !important;
+}
+
+/* Override Bootstrap container padding for tighter layout */
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* ====================================
+   3. Header Styles
+   ==================================== */
+.modern-header {
+  background: var(--color-bg-dark);
+  border-bottom: 1px solid #2d3548;
+  padding: 0;
+}
+
+.modern-header .navbar {
+  background: transparent;
+  border: none;
+  margin-bottom: 0;
+  min-height: auto;
+}
+
+.modern-header .container {
+  max-width: 1400px;
+  padding: 20px 40px;
+}
+
+.modern-header .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  height: auto;
+  color: var(--color-text-inverse);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modern-header .navbar-brand:hover,
+.modern-header .navbar-brand:focus {
+  text-decoration: none;
+  color: var(--color-text-inverse);
+}
+
+.modern-header .navbar-brand img {
+  height: 36px;
+  width: auto;
+}
+
+.modern-header .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.modern-header .catalog-text {
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 0.32em;
+}
+
+.modern-header .navbar-nav > li > a {
+  color: var(--color-text-light);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 10px 16px;
+}
+
+.modern-header .navbar-nav > li > a:hover,
+.modern-header .navbar-nav > li > a:focus {
+  color: var(--color-text-inverse);
+  background: transparent;
+}
+
+.modern-header .navbar-nav > li.active > a {
+  color: var(--color-text-inverse);
+  background: transparent;
+}
+
+.modern-header .navbar-toggle {
+  border-color: #2d3548;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.modern-header .navbar-toggle:hover,
+.modern-header .navbar-toggle:focus {
+  background-color: #2d3548;
+}
+
+.modern-header .navbar-toggle .icon-bar {
+  background-color: var(--color-text-inverse);
+}
+
+/* ====================================
+   4. Hero Section (Index Page)
+   ==================================== */
+.modern-hero {
+  position: relative;
+  background: #667eea;
+  padding: 80px 40px;
+  color: white;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.modern-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(40, 52, 105, 0.85) 0%, rgba(79, 24, 46, 0.85) 100%);
+  z-index: 1;
+}
+
+.hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://riskdatalibrary.org/assets/images/gen/home/home-1.webp');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modern-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+  color: white;
+}
+
+.modern-hero p {
+  font-size: 18px;
+  margin: 0 0 36px 0;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Search Bar in Hero */
+.modern-search {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  position: relative;
+}
+
+.modern-search input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 0 140px 0 24px;
+  font-size: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.modern-search input:focus {
+  outline: none;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+}
+
+.search-button {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-button:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Stats Cards */
+.stats-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 16px 32px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.stat-card .number {
+  font-size: 32px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-card .label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ====================================
+   5. Content Layout
+   ==================================== */
+.content-wrapper {
+  background: var(--color-bg-page);
+  padding: var(--spacing-2xl) 0;
+  min-height: calc(100vh - 400px);
+}
+
+.modern-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* ====================================
+   6. Filter Sidebar
+   ==================================== */
+.filter-card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-card h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px 0;
+}
+
+.filter-card .list-group {
+  margin-bottom: 0;
+}
+
+.filter-card .list-group-item {
+  border: none;
+  padding: 10px 12px;
+  margin: 0;
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-card .list-group-item:hover {
+  background: var(--color-bg-hover);
+}
+
+.filter-card .list-group-item.active {
+  background: var(--color-hazard-bg);
+  color: var(--color-hazard);
+  border: none;
+}
+
+.filter-card .list-group-item.active .badge {
+  background: #bae6fd;
+  color: var(--color-hazard);
+}
+
+.filter-card .list-group-item-truncate {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.filter-card .list-group-item .badge {
+  background: var(--color-bg-light);
+  color: var(--color-text-secondary);
+  border-radius: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.filter-card .list-group-item:hover .badge {
+  background: #e5e7eb;
+}
+
+/* Filter icons for risk components */
+.filter-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.filter-icon.hazard {
+  background: var(--color-hazard);
+}
+
+.filter-icon.exposure {
+  background: var(--color-exposure);
+}
+
+.filter-icon.vulnerability {
+  background: var(--color-vulnerability);
+}
+
+.filter-icon.loss {
+  background: var(--color-loss);
+}
+
+/* Country flag styling */
+.country-flag {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 6px;
+  line-height: 1;
+}
+
+.filter-card .country-flag {
+  font-size: 14px;
+}
+
+/* Active filters summary */
+.active-filters-summary {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin: 10px 0;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ====================================
+   7. Dataset Cards (Index)
+   ==================================== */
+.dataset-card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.dataset-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border);
+  transform: translateY(-2px);
+}
+
+.dataset-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.dataset-card h3 a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dataset-card h3 a:hover {
+  color: var(--color-primary);
+}
+
+.dataset-card .card-description {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.dataset-card .card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-bg-light);
+}
+
+.dataset-card .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.dataset-card .meta-item i {
+  color: var(--color-text-light);
+  font-size: 14px;
+}
+
+.dataset-card .meta-item strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.dataset-card .meta-item a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.dataset-card .meta-item a:hover {
+  text-decoration: underline;
+}
+
+/* ====================================
+   8. Category Badges
+   ==================================== */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-xl);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.category-badge .badge-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Hazard - Blue */
+.category-badge.hazard {
+  background: var(--color-hazard-bg);
+  color: var(--color-hazard);
+}
+
+.category-badge.hazard .badge-icon {
+  background: var(--color-hazard);
+}
+
+/* Exposure - Teal */
+.category-badge.exposure {
+  background: var(--color-exposure-bg);
+  color: #00a896;
+}
+
+.category-badge.exposure .badge-icon {
+  background: var(--color-exposure);
+}
+
+/* Vulnerability - Yellow */
+.category-badge.vulnerability {
+  background: var(--color-vulnerability-bg);
+  color: #d9a024;
+}
+
+.category-badge.vulnerability .badge-icon {
+  background: var(--color-vulnerability);
+}
+
+/* Loss - Red */
+.category-badge.loss {
+  background: var(--color-loss-bg);
+  color: var(--color-loss);
+}
+
+.category-badge.loss .badge-icon {
+  background: var(--color-loss);
+}
+
+/* ====================================
+   9. Dataset Detail Page Layout
+   ==================================== */
+.dataset-detail-layout {
+  display: grid !important;
+  grid-template-columns: 1fr 380px !important;
+  gap: 32px;
+  align-items: start;
+}
+
+.main-content {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+  min-width: 0; /* Allow grid item to shrink below content size */
+}
+
+.dataset-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.dataset-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.dataset-description {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Quick Info Cards */
+.quick-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.info-card {
+  background: var(--color-bg-hover);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.info-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.info-value {
+  font-size: 15px;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.info-value a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.info-value a:hover {
+  text-decoration: underline;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 20px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Risk Component Sections with Color Coding */
+.risk-component-section {
+  border-left: 4px solid var(--color-border);
+  padding-left: 20px;
+}
+
+.risk-component-section.hazard {
+  border-left-color: var(--color-hazard);
+}
+
+.risk-component-section.exposure {
+  border-left-color: var(--color-exposure);
+}
+
+.risk-component-section.vulnerability {
+  border-left-color: var(--color-vulnerability);
+}
+
+.risk-component-section.loss {
+  border-left-color: var(--color-loss);
+}
+
+.component-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.component-icon.hazard {
+  background: var(--color-hazard);
+}
+
+.component-icon.exposure {
+  background: var(--color-exposure);
+}
+
+.component-icon.vulnerability {
+  background: var(--color-vulnerability);
+}
+
+.component-icon.loss {
+  background: var(--color-loss);
+}
+
+/* Resources List */
+.resources-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resource-item {
+  background: var(--color-bg-hover);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.resource-item:hover {
+  background: #f0f2f5;
+}
+
+.resource-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.resource-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.resource-title a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.resource-title a:hover {
+  color: var(--color-primary);
+}
+
+.resource-title i {
+  margin-right: 8px;
+  color: var(--color-text-secondary);
+}
+
+/* Format Badge */
+.format-badge {
+  background: white;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.resource-description {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+}
+
+/* Data Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 12px;
+  background: var(--color-bg-hover);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 35%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.data-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.data-table tr:last-child td,
+.data-table tr:last-child th {
+  border-bottom: none;
+}
+
+/* Text Badges (for analysis types, processes, etc.) */
+.text-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  background: var(--color-bg-light);
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+/* ====================================
+   10. Sidebar (Dataset Detail)
+   ==================================== */
+.sidebar {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  min-width: 0; /* Allow grid item to shrink if needed */
+}
+
+.sidebar-card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card:first-child {
+  margin-top: 0;
+}
+
+.sidebar-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-bg-light);
+}
+
+.sidebar-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sidebar-item:first-child {
+  padding-top: 0;
+}
+
+.sidebar-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--color-bg-hover);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.sidebar-content {
+  flex: 1;
+}
+
+.sidebar-label {
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+
+.sidebar-value {
+  font-size: 14px;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.sidebar-value a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.sidebar-value a:hover {
+  text-decoration: underline;
+}
+
+/* Spatial Extent Map (Leaflet) */
+#spatial-extent-map .leaflet-container {
+  background: #e5e7eb;
+  font-family: inherit;
+}
+
+#spatial-extent-map .leaflet-control-attribution {
+  font-size: 9px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  padding: 2px 4px !important;
+}
+
+#spatial-extent-map .leaflet-control-attribution a {
+  color: #6b7280 !important;
+}
+
+/* ====================================
+   11. Footer Styles
+   ==================================== */
+.modern-footer {
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 32px 0 24px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 0.8fr 0.8fr 0.8fr;
+  gap: 32px;
+}
+
+.footer-branding {
+  max-width: 240px;
+}
+
+.footer-branding h5 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.footer-branding p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+  color: var(--color-text-light);
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.footer-sponsors {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-sponsor-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.footer-sponsor-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-sponsor-logos img:first-child {
+  height: 32px;
+  width: auto;
+}
+
+.footer-sponsor-logos img:last-child {
+  height: 18px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.footer-section h5 {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-section p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px;
+}
+
+.footer-section ul li a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+
+.footer-section ul li a:hover {
+  color: white;
+}
+
+/* ====================================
+   12. Buttons & Actions
+   ==================================== */
+.action-button {
+  display: block;
+  width: 100%;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-bottom: 12px;
+}
+
+.action-button:hover {
+  background: var(--color-primary-dark);
+  color: white;
+  text-decoration: none;
+}
+
+.action-button.secondary {
+  background: white;
+  color: #374151;
+  border: 1px solid var(--color-border-light);
+}
+
+.action-button.secondary:hover {
+  background: #f9fafb;
+  color: #374151;
+}
+
+.action-button i {
+  margin-right: 8px;
+}
+
+/* ====================================
+   13. Pagination
+   ==================================== */
+.pagination-wrapper {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.pagination-wrapper .btn {
+  min-width: 40px;
+}
+
+/* ====================================
+   14. Responsive Design
+   ==================================== */
+@media (max-width: 1200px) {
+  .modern-content {
+    padding: 0 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dataset-detail-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .modern-hero h1 {
+    font-size: 36px;
+  }
+
+  .modern-header .container {
+    padding: 15px 20px;
+  }
+
+  .modern-content {
+    padding: 0 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .main-content {
+    padding: 24px;
+  }
+
+  .quick-info {
+    grid-template-columns: 1fr;
+  }
+
+  .modern-search input {
+    padding: 0 110px 0 20px;
+  }
+
+  .search-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .dataset-detail-layout {
+    gap: 20px;
+  }
+}
+
+/* ====================================
+   15. Utility Classes
+   ==================================== */
+.text-center {
+  text-align: center;
+}
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--spacing-sm); }
+.mt-2 { margin-top: var(--spacing-md); }
+.mt-3 { margin-top: var(--spacing-lg); }
+.mt-4 { margin-top: var(--spacing-xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--spacing-sm); }
+.mb-2 { margin-bottom: var(--spacing-md); }
+.mb-3 { margin-bottom: var(--spacing-lg); }
+.mb-4 { margin-bottom: var(--spacing-xl); }

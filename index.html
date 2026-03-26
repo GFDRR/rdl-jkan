@@ -2,18 +2,22 @@
 title: Datasets
 layout: default
 ---
+<script>
+  const emojiMap = {{ site.data["country-emoji"] | jsonify }};
+  window.emojiMap = emojiMap;
+</script>
 
-{% include breadcrumbs.html %}
-
-<div class="row">
-  <div
-    x-data="{
+<div x-data="{
         // Constants
         KEYWORD_SCORE_MIN: 0.75,
         KEYWORD_SCORE_MAX: 1.0,
-        SCORED_FIELDS: ['catalog', 'category', 'creator.name', 'dataset_id', 'description', 'details','geo_coverage',   'license','notes', 'project', 'resources', 'title'],
+        SCORED_FIELDS: ['catalog', 'category', 'creator.name', 'dataset_id', 'description', 'details', 'geo_coverage', 'license', 'notes', 'project', 'resources', 'title'],
         SEMANTIC_MAX_RESULTS: 50,
         SEMANTIC_MIN_SCORE: 0.25,
+
+        getCountryEmoji(code) {
+          return window.emojiMap[code];
+        },
 
         // Pagination
         currentPage: 1,
@@ -81,7 +85,7 @@ layout: default
           geo_coverage: [],
           geo_scale: [],
           hazard_type: [],
-          license_display: [],
+          license_code: [],
           project: []
         },
 
@@ -98,8 +102,8 @@ layout: default
             case 'hazard_type':
               if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return [];
               return Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
-            case 'license_display':
-              return dataset.license_display ? dataset.license_display.split(',') : [];
+            case 'license_code':
+              return dataset.license_code ? dataset.license_code.split(',') : [];
             case 'project':
               return dataset.project ? [dataset.project] : [];
           }
@@ -145,7 +149,7 @@ layout: default
 
         applyFiltersExcluding(excludeFilterType = null, datasets = null) {
           const toFilter = datasets || $store.datasets.unfiltered;
-          const filterTypes = ['catalog', 'category', 'geo_coverage', 'geo_scale', 'hazard_type', 'license_display', 'project'];
+          const filterTypes = ['catalog', 'category', 'geo_coverage', 'geo_scale', 'hazard_type', 'license_code', 'project'];
           return toFilter.filter(dataset => 
             filterTypes.every(type => 
               type === excludeFilterType || this.datasetMatchesFilter(dataset, type)
@@ -157,7 +161,7 @@ layout: default
           const values = this.filters[filterType];
           if (!values.length) return true;
           const datasetValues = this.getDatasetValues(dataset, filterType);
-          if (['geo_coverage', 'geo_scale', 'license_display', 'project'].includes(filterType)) {
+          if (['geo_coverage', 'geo_scale', 'license_code', 'project'].includes(filterType)) {
             const combinedSlug = window.slugify(datasetValues.join(','));
             return values.some(v => combinedSlug.includes(v));
           }
@@ -354,17 +358,44 @@ layout: default
         },
     }"
   >
-    <div class="col-sm-4">
+  <!-- Modern Hero Section -->
+<div class="modern-hero">
+  <div class="hero-background-image"></div>
+  <div class="hero-content">
+    <h1>Discover Risk Datasets</h1>
+    <p>Browse standardized disaster risk data including hazard, exposure, vulnerability, and loss datasets from around the world</p>
+    <!-- Search Bar in Hero -->
+    <div class="modern-search">
+      <input
+        x-model="query"
+        type="text"
+        placeholder="Search datasets by keyword, location, or hazard type..."
+        class="form-control"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Content Wrapper -->
+<div class="content-wrapper">
+  <div class="modern-content">
+<div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
       <!-- Active Filters Summary -->
-      <div x-show="hasActiveFilters" style="margin: 10px 0">
-        <span x-text="activeFilterCount + ' filter(s) active'"></span>
-        <button @click="clearFilters()" class="btn btn-xs btn-default">
+      <div x-show="hasActiveFilters" class="active-filters-summary">
+        <span
+          x-text="activeFilterCount + ' filter(s) active'"
+        ></span>
+        <button
+          @click="clearFilters()"
+          class="btn btn-xs btn-default"
+        >
           Clear all
         </button>
       </div>
 
       <!-- Risk Component Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Risk Component</h4>
         <div class="list-group">
           <template
@@ -377,6 +408,7 @@ layout: default
               :class="{ 'active': item.selected }"
               @click.prevent="toggleFilter('category', item.slug)"
             >
+              <span class="filter-icon" :class="item.slug"></span>
               <span
                 class="list-group-item-truncate"
                 x-text="item.title"
@@ -402,9 +434,8 @@ layout: default
           >
         </div>
       </div>
-
       <!-- Hazard Type Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>
           Hazard Type
           <button
@@ -455,9 +486,8 @@ layout: default
           >
         </div>
       </div>
-
       <!-- Geographical Scale Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Geographical Scale</h4>
         <div class="list-group">
           <template
@@ -487,9 +517,8 @@ layout: default
           </template>
         </div>
       </div>
-
       <!-- Countries Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Countries</h4>
         <div class="list-group">
           <template
@@ -502,6 +531,7 @@ layout: default
               :class="{ 'active': item.selected }"
               @click.prevent="toggleFilter('geo_coverage', item.slug)"
             >
+              <span x-show="getCountryEmoji(item.title)" class="country-flag" x-text="getCountryEmoji(item.title)"></span>
               <span
                 class="list-group-item-truncate"
                 x-text="item.title"
@@ -529,7 +559,7 @@ layout: default
       </div>
 
       <!-- Projects Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Projects</h4>
         <div class="list-group">
           <template
@@ -567,9 +597,8 @@ layout: default
           >
         </div>
       </div>
-
       <!-- Catalog Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Catalog</h4>
         <div class="list-group">
           <template
@@ -609,18 +638,18 @@ layout: default
       </div>
 
       <!-- Licenses Filter -->
-      <div style="margin: 15px 0">
+      <div class="filter-card">
         <h4>Licenses</h4>
         <div class="list-group">
           <template
-            x-for="item in getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).slice(0, showLicenses)"
+            x-for="item in getFilterOptions('license_code', getDatasetsForFilterOptions('license_code')).slice(0, showLicenses)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="toggleFilter('license_display', item.slug)"
+              @click.prevent="toggleFilter('license_code', item.slug)"
             >
               <span
                 class="list-group-item-truncate"
@@ -640,7 +669,7 @@ layout: default
           <a
             href="#"
             class="list-group-item"
-            x-show="getFilterOptions('license_display', getDatasetsForFilterOptions('license_display')).filter(i => i.count > 0).length > showLicenses"
+            x-show="getFilterOptions('license_code', getDatasetsForFilterOptions('license_code')).filter(i => i.count > 0).length > showLicenses"
             @click.prevent="showLicenses = showLicenses + 10"
             >Show more...</a
           >
@@ -648,36 +677,44 @@ layout: default
       </div>
     </div>
 
-    <div class="col-sm-8">
-      <!-- Search Input -->
-      <input
-        x-model="query"
-        type="text"
-        placeholder="Search..."
-        class="form-control"
-      />
-
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
       <!-- Results Section -->
-      <h3
-        x-show="results.length > 0"
+      <h3 x-show="results.length > 0" style="margin-top: 0; margin-bottom: 24px;"
         x-text="`Showing ${paginationStart}-${paginationEnd} of ${results.length} dataset${results.length === 1 ? '' : 's'}`"
       ></h3>
-      <h3 x-show="results.length === 0">
+      <h3 x-show="results.length === 0" style="margin-top: 0;">
         No datasets found with these filters and/or query
       </h3>
 
-      <ul>
+      <div>
         <template
           x-for="dataset in paginatedDatasets"
           :key="dataset.metadata.dataset_id"
         >
-          <rdl-dataset>
+          <article class="dataset-card">
+            <!-- Category Badges - show all categories -->
+            <div x-show="data.metadata.category" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <template x-if="Array.isArray(data.metadata.category)">
+                <div style="display: contents;">
+                  <template x-for="cat in data.metadata.category" :key="cat">
+                    <div class="category-badge" :class="cat.toLowerCase()">
+                      <span class="badge-icon"></span>
+                      <span x-text="cat"></span>
+                    </div>
+                  </template>
+                </div>
+              </template>
+              <template x-if="!Array.isArray(data.category)">
+                <div class="category-badge" :class="data.category.toLowerCase()">
+                  <span class="badge-icon"></span>
+                  <span x-text="data.category"></span>
+                </div>
+              </template>
+            </div>
+
             <h3>
-              <a
-                x-bind:href="dataset.metadata.url"
-                x-text="dataset.metadata.title"
-              ></a>
-              <span
+              <a x-bind:href="dataset.metadata.url" x-text="dataset.metadata.title"></a>
+                            <span
                 x-show="dataset.isSemanticMatch"
                 x-init="$nextTick(() => { if (typeof $ !== 'undefined' && $.fn.tooltip) { $($el).tooltip(); } })"
                 class="label label-info"
@@ -689,52 +726,39 @@ layout: default
                 <i class="fa fa-magic" aria-hidden="true"></i> Semantic
               </span>
             </h3>
-            <span x-text="dataset.metadata.description || ''"></span
-            ><br /><br />
-            <strong>Developed by (version):</strong>
-            <span
-              x-text="` ${dataset.metadata.creator?.name || 'Unknown'}  (${dataset.metadata.version || 'Version not supplied'})`"
-            ></span
-            ><br />
-            <strong>Geo Coverage:</strong>
-            <span
-              x-text="` ${Array.isArray(dataset.metadata.geo_coverage) ? dataset.metadata.geo_coverage.join(', ') : dataset.metadata.geo_coverage || 'Not supplied'}`"
-            ></span
-            ><br />
-            <strong>License:</strong>
-            <span x-show="dataset.metadata.license_display == null"
-              >Unknown or not provided</span
-            >
-            <span
-              x-show="dataset.metadata.license != null && dataset.metadata.license != 'Not found'"
-            >
-              <a
-                property="dct:license"
-                x-bind:resource="dataset.metadata.license_display"
-                x-bind:href="dataset.metadata.license"
-                x-text="dataset.metadata.license_display"
-              ></a>
-            </span>
-            <span
-              x-show="dataset.metadata.license_display != null && (dataset.metadata.license == null || dataset.metadata.license == 'Not found')"
-              x-text="dataset.metadata.license_display"
-            ></span>
-            <hr />
-          </rdl-dataset>
+            <p class="card-description" x-text="dataset.metadata.description || ''"></p>
+
+            <div class="card-footer">
+              <div class="meta-item" x-show="dataset.metadata.creator && dataset.metadata.creator.name">
+                <i class="fa fa-user"></i>
+                <strong x-text="dataset.metadata.creator?.name || 'Unknown'"></strong>
+              </div>
+              <div class="meta-item" x-show="dataset.metadata.version">
+                <i class="fa fa-code-fork"></i>
+                <span x-text="`Version ${dataset.metadata.version}`"></span>
+              </div>
+              <div class="meta-item" x-show="dataset.metadata.geo_coverage">
+                <i class="fa fa-map-marker"></i>
+                <span x-text="Array.isArray(dataset.metadata.geo_coverage) ? dataset.metadata.geo_coverage.join(', ') : dataset.metadata.geo_coverage"></span>
+              </div>
+              <div class="meta-item" x-show="dataset.metadata.license_code">
+                <i class="fa fa-legal"></i>
+                <a x-show="dataset.metadata.license_url" x-bind:href="dataset.metadata.license_url" x-text="dataset.metadata.license_code"></a>
+                <span x-show="!dataset.metadata.license_url" x-text="dataset.metadata.license_code"></span>
+              </div>
+              <div class="meta-item" x-show="dataset.metadata.modified">
+                <i class="fa fa-calendar"></i>
+                <span x-text="'Updated ' + dataset.metadata.modified"></span>
+              </div>
+            </div>
+          </article>
         </template>
-      </ul>
+      </div>
 
       <!-- Pagination Controls -->
       <div
         x-show="totalPages > 1"
-        style="
-          margin: 20px 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          flex-wrap: wrap;
-        "
+        class="pagination-wrapper"
       >
         <button
           @click="currentPage = Math.max(1, currentPage - 1); window.scrollTo(0, 0)"
