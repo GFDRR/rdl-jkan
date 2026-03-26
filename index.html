@@ -679,10 +679,10 @@ layout: default
 
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
       <!-- Results Section -->
-      <h3 x-show="filteredDatasets.matches.length > 0" style="margin-top: 0; margin-bottom: 24px;"
-        x-text="`Showing ${paginationStart}-${paginationEnd} of ${filteredDatasets.matches.length} dataset${filteredDatasets.matches.length === 1 ? '' : 's'}`"
+      <h3 x-show="results.length > 0" style="margin-top: 0; margin-bottom: 24px;"
+        x-text="`Showing ${paginationStart}-${paginationEnd} of ${results.length} dataset${results.length === 1 ? '' : 's'}`"
       ></h3>
-      <h3 x-show="filteredDatasets.matches.length === 0" style="margin-top: 0;">
+      <h3 x-show="results.length === 0" style="margin-top: 0;">
         No datasets found with these filters and/or query
       </h3>
 
