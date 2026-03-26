@@ -49,7 +49,10 @@ jobs:
       
       - name: Generate vector embeddings
         if: steps.check_changes.outputs.datasets_changed == 'true'
-        run: python3 main.py --vectors
+        
+        run: |
+          source .venv/bin/activate
+          python3 main.py --vectors
       
       - name: Commit vector embeddings
         if: steps.check_changes.outputs.datasets_changed == 'true'
@@ -64,3 +67,4 @@ jobs:
             git push
           fi
           echo "Complete"
+
