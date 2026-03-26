@@ -384,10 +384,10 @@ layout: default
       <!-- Active Filters Summary -->
       <div x-show="hasActiveFilters" class="active-filters-summary">
         <span
-          x-text="datasets.activeFilterCount + ' filter(s) active'"
+          x-text="activeFilterCount + ' filter(s) active'"
         ></span>
         <button
-          @click="datasets.clearFilters()"
+          @click="clearFilters()"
           class="btn btn-xs btn-default"
         >
           Clear all
