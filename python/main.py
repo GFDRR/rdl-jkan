@@ -115,14 +115,30 @@ def write_dataset_to_markdown(dataset_from_json, schema_url, validation_errors):
         })
         return 1
 
+def fetch_geojson_for_countries(countries):
+    """Fetch simplified GeoJSON for a list of country codes from the GeoBoundaries API."""
+    for country_code in countries:
+        try:
+            geoboundaries_response = requests.get(f"https://www.geoboundaries.org/api/current/gbOpen/{country_code}/ADM0/")
+            if geoboundaries_response.status_code == 200:
+                geoboundaries_data = geoboundaries_response.json()
+                geojson_response = requests.get(geoboundaries_data.get("simplifiedGeometryGeoJSON"))  # Fetch the GeoJSON to cache it for later use
+                geojson_data = geojson_response.json()
 
-def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for, validation_errors):
+                with open(f"{config.country_geojson_dir}/{country_code}.geojson", 'w') as f:
+                    json.dump(geojson_data, f)
+            else:
+                logging.warning(f"Failed to fetch GeoJSON for {country_code}: {geoboundaries_response.status_code}")
+        except Exception as e:
+            logging.error(f"Error fetching GeoJSON for {country_code}: {str(e)}")
+
+def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for, validation_errors, include_geojson):
     """Write datasets to markdown and track added/modified/deleted dataset IDs."""
     exit_code = 0
     added_datasets = []
     modified_datasets = []
     deleted_datasets = []
-    
+    countries = set()
     # First, collect all dataset IDs from json_to_generate_md_from to determine additions vs modifications
     # This must happen BEFORE we delete any markdown files
     datasets_to_process = []  # List of (dataset, schema_url, is_modification) tuples
@@ -152,8 +168,10 @@ def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for, 
                     ),
                     config.schema_url_v2,
                 )
+                if include_geojson:
+                    countries.update(dataset.get("spatial", {}).get("countries", []))
                 datasets_to_process.append((dataset, schema_url, is_modification))
-    
+    fetch_geojson_for_countries(countries)
     # Handle deletions - only for files that are truly being deleted (not in json_to_generate_md_from)
     # A file is only truly deleted if it's in json_to_delete_md_for but NOT in json_to_generate_md_from
     json_to_generate_paths = set(str(p) for p in json_to_generate_md_from)
@@ -212,6 +230,11 @@ def setup_args():
     parser.add_argument(
         "--ci",
         help="Tells the command to only run on commits since the remote target branch defined in config.py",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--geojson",
+        help="Tells the command to fetch simplified country boundary GeoJSON from GeoBoundaries API",
         action="store_true",
     )
     parser.add_argument(
@@ -297,7 +320,7 @@ if __name__ == "__main__":
     # Process markdown generation
     if json_to_generate_md_from or json_to_delete_md_for:
         result, added, modified, deleted = write_datasets_to_markdown(
-            json_to_generate_md_from, json_to_delete_md_for, validation_errors
+            json_to_generate_md_from, json_to_delete_md_for, validation_errors, args.geojson
         )
         exit_code = exit_code | result
         markdown_files["added"] = added

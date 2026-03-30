@@ -2,6 +2,7 @@ root_dir = ".."
 # output directory
 datasets_dir = f"{root_dir}/_datasets"
 # input directory
+country_geojson_dir = f"{root_dir}/country_geojson"
 json_dir = f"{datasets_dir}/json"
 python_path = f"{root_dir}/python"
 vectors_path = f"{python_path}/vectors.json"

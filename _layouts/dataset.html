@@ -228,7 +228,7 @@ layout: default
           {% if page.spatial.countries %}
           <div class="sidebar-card">
             <h4>Spatial Extent</h4>
-            <div style="margin-top: 8px; font-size: 11px; color: #6b7280;">
+            <div id="spatial-extent-map" style="height: 160px; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; background: #e5e7eb;"></div>            <div style="margin-top: 8px; font-size: 11px; color: #6b7280;">
               {% if page.spatial.countries.size > 1 %}
                 {{ page.spatial.countries | join: ", " }}
               {% else %}
@@ -280,3 +280,42 @@ layout: default
     </div>
   </div>
 </div>
+<script> 
+  const map = L.map('spatial-extent-map', {
+    zoomControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    boxZoom: false,
+    keyboard: false,
+    tap: false,
+    touchZoom: false,
+    attributionControl: true
+  });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+  const countryCodes = {{ page.spatial.countries | jsonify }};
+  const isGlobal = (countryCodes.length === 1 && countryCodes[0].toLowerCase() === "glo");
+
+  if (isGlobal) {
+    map.setView([20, 0], 1);
+  } else {
+    const featureGroup = L.featureGroup().addTo(map);
+  
+    Promise.all(countryCodes.map(countryCode =>
+      fetch(`/country_geojson/${countryCode}.geojson`)
+        .then(response => response.json())
+        .then(data => {
+          L.geoJSON(data).addTo(featureGroup);
+        })
+        .catch(error => console.error('Error loading GeoJSON:', error))
+    )).then(() => {
+      // Fit bounds after ALL GeoJSON files are loaded
+      if (featureGroup.getLayers().length > 0) {
+        map.fitBounds(featureGroup.getBounds());
+      }
+    });
+  }
+</script>
