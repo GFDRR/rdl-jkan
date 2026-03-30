@@ -433,13 +433,37 @@ def make_period(period):
         "temporal_resolution": period.get("temporal_resolution"),
     }
 
-
 def make_exposure_v03(exposure_array):
-    return (
-        [make_exposure(exposure) for exposure in exposure_array]
-        if exposure_array is not None
-        else []
-    )
+    """Convert RDL exposure metadata into JKAN frontmatter"""
+    if exposure_array is None:
+        return None
+
+    props_to_summarize = {
+        "category": [],  # found on exposure
+        "taxonomy": [],  # found on exposure
+        "dimension": [],  # found on metric
+        "quantity_kind": [],  # found on metric
+    }
+    for exposure in exposure_array:
+        # required; throw if missing
+        props_to_summarize["category"].append(exposure["category"])
+        if "taxonomy" in exposure:
+            props_to_summarize["taxonomy"].append(exposure["taxonomy"])
+        if "metrics" in exposure:
+            for metric in exposure["metrics"]:
+                if metric["dimension"]:
+                    props_to_summarize["dimension"].append(metric["dimension"])
+                if metric["quantity_kind"]:
+                    props_to_summarize["quantity_kind"].append(metric["quantity_kind"])
+
+    return {
+        # required; throw if missing
+        "category": ", ".join(sorted(set(props_to_summarize["category"]))),
+        # optional
+        "taxonomy": ", ".join(sorted(set(props_to_summarize["taxonomy"]))) if len(props_to_summarize["taxonomy"]) > 0 else None,
+        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"])))  if len(props_to_summarize["dimension"]) > 0 else None,
+        "quantity_kind": ", ".join(sorted(set(props_to_summarize["quantity_kind"])))  if len(props_to_summarize["quantity_kind"]) > 0 else None,
+    }
 
 
 def make_resource_v03(resource):
@@ -568,7 +592,6 @@ def make_dataset_frontmatter_v03(dataset):
         "project": dataset.get("project"),
         "purpose": dataset.get("purpose"),
         "version": dataset.get("version"),
-        # TODO: how should exposure be summarized for rdl-03?
         "exposure": make_exposure_v03(dataset.get("exposure")),
         "hazard": make_hazard_v03(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
