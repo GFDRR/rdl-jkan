@@ -23,30 +23,37 @@
     touchZoom: false,
     attributionControl: true
   });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap',
-    maxZoom: 19
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-  const countryCodes = {{ page.spatial.countries | jsonify }};
-  const isGlobal = (countryCodes.length === 1 && countryCodes[0].toLowerCase() === "glo");
-
+  const spatial = {{ page.spatial | jsonify }};
+  const countryCodes = spatial.countries || [];
+  const bbox = spatial.bbox || null;
+  const isGlobal = (spatial.scale || "").toLowerCase() === "global";
   if (isGlobal) {
     map.setView([20, 0], 1);
   } else {
     const featureGroup = L.featureGroup().addTo(map);
-  
-    Promise.all(countryCodes.map(countryCode =>
-      fetch(`/country_geojson/${countryCode}.geojson`)
-        .then(response => response.json())
-        .then(data => {
-          L.geoJSON(data).addTo(featureGroup);
-        })
-        .catch(error => console.error('Error loading GeoJSON:', error))
-    )).then(() => {
-      // Fit bounds after ALL GeoJSON files are loaded
-      if (featureGroup.getLayers().length > 0) {
-        map.fitBounds(featureGroup.getBounds());
-      }
-    });
+    if (bbox) {
+      const [ minLat, minLon, maxLat, maxLon] = bbox;
+      const bounds = L.latLngBounds([[minLat, minLon], [maxLat, maxLon]]);
+      featureGroup.addLayer(L.rectangle(bounds));
+      map.fitBounds(featureGroup.getBounds());
+    }
+    else if (countryCodes.length > 0) {
+      Promise.all(countryCodes.map(countryCode =>
+        fetch(`/country_geojson/${countryCode}.geojson`)
+          .then(response => response.json())
+          .then(data => {
+            L.geoJSON(data).addTo(featureGroup);
+          })
+          .catch(error => console.error('Error loading GeoJSON:', error))
+      )).then(() => {
+        if (featureGroup.getLayers().length > 0) {
+          map.fitBounds(featureGroup.getBounds());
+        }
+      });
+    }
   }
 </script>
