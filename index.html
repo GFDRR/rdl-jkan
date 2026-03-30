@@ -697,10 +697,10 @@ layout: default
         >
           <article class="dataset-card">
             <!-- Category Badges - show all categories -->
-            <div x-show="data.metadata.category" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
-              <template x-if="Array.isArray(data.metadata.category)">
+            <div x-show="dataset.metadata.category" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <template x-if="Array.isArray(dataset.metadata.category)">
                 <div style="display: contents;">
-                  <template x-for="cat in data.metadata.category" :key="cat">
+                  <template x-for="cat in dataset.metadata.category" :key="cat">
                     <div class="category-badge" :class="cat.toLowerCase()">
                       <span class="badge-icon"></span>
                       <span x-text="cat"></span>
@@ -708,10 +708,10 @@ layout: default
                   </template>
                 </div>
               </template>
-              <template x-if="!Array.isArray(data.category)">
-                <div class="category-badge" :class="data.category.toLowerCase()">
+              <template x-if="!Array.isArray(dataset.metadata.category)">
+                <div class="category-badge" :class="dataset.metadata.category.toLowerCase()">
                   <span class="badge-icon"></span>
-                  <span x-text="data.category"></span>
+                  <span x-text="dataset.metadata.category"></span>
                 </div>
               </template>
             </div>
