@@ -25,7 +25,7 @@
   });
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> and <a href="https://www.geoboundaries.org/">GeoBoundaries</a>'
   }).addTo(map);
   const spatial = {{ page.spatial | jsonify }};
   const countryCodes = spatial.countries || [];
