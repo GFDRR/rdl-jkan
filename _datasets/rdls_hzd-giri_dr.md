@@ -20,7 +20,7 @@ details: 'The drought hazard model uses three complementary indices: Standardize
   (SSI) for hydrological drought, and Soil Moisture Anomaly (SMA) for agricultural
   drought. Each index is analyzed for return periods, number of events, and average
   event duration under historical and projected climate scenarios (SSP1 and SSP5).'
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: '4'

@@ -16,7 +16,7 @@ description: 'Drought Related Key Figures for Kenya. [Source: This metadata reco
   [Original dataset: https://data.humdata.org/dataset/c7e5d29e-f5e8-4d8b-a437-f784fcfd6103]'
 details: 'Methodology: https://reliefweb.int/report/kenya/kenya-drought-flash-appeal-october-2021-october-2022-revised-may-2022'
 exposure:
-- category: population
+  category: population
   dimension: population
   quantity_kind: count
   taxonomy: null

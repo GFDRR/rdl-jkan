@@ -17,7 +17,7 @@ details: The tropical cyclone wind hazard model uses historical track data and c
   projections to generate probabilistic wind speed footprints at global scale. Climate
   change scenarios incorporate projected changes in cyclone frequency and intensity
   based on climate models.
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: '4'

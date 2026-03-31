@@ -39,7 +39,7 @@ details: "The land cover maps are delivered in NetCDF-4 format following CF-1.6 
   \ 300m at the equator, ~200m in mid-latitudes). File sizes are approximately 2.5\
   \ GB per annual map with internal LZW compression."
 exposure:
-- category: natural_environment
+  category: natural_environment
   dimension: content
   quantity_kind: area
   taxonomy: GED4ALL

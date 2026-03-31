@@ -27,7 +27,7 @@ details: 'Event-level disaster loss records from the DesInventar database for Co
   impacts (houses destroyed/damaged, education centres, hospitals, roads), economic
   losses (local currency and USD), and agricultural impacts (crop damage in hectares,
   livestock losses). Methodology: Direct Observational Data / Anecdotal Data.'
-exposure: []
+exposure: null
 extra_attributions: []
 hazard: null
 license: CC-BY-4.0

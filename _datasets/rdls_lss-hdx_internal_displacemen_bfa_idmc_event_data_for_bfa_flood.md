@@ -74,7 +74,7 @@ details: 'Caveats: Please note that most of the figures are estimates. The defin
   have been granted refugee or refugee-like status or temporary protection. | Update
   frequency: Every day'
 exposure:
-- category: population
+  category: population
   dimension: population
   quantity_kind: count
   taxonomy: null

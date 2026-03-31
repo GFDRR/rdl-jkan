@@ -36,7 +36,7 @@ details: 'Caveats: This dataset was generated using other global datasets; it sh
   of the presented results. | Methodology: This dataset was generated using other
   global datasets. | Temporal coverage: [2015-01-01T00:00:00 TO 2015-01-01T23:59:59]
   | Update frequency: Never | Last modified: 2015-11-24'
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: simulated

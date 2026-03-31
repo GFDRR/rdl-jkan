@@ -30,13 +30,9 @@ details: 'Caveats: The data must be requested via the resource download link | M
   [f2f] | Temporal coverage: [2019-01-01T00:00:00 TO 2019-12-31T23:59:59] | Update
   frequency: Never | Last modified: 2021-04-09'
 exposure:
-- category: infrastructure
+  category: agriculture, infrastructure
   dimension: structure
-  quantity_kind: length
-  taxonomy: null
-- category: agriculture
-  dimension: structure
-  quantity_kind: area
+  quantity_kind: area, length
   taxonomy: null
 extra_attributions: []
 hazard: null

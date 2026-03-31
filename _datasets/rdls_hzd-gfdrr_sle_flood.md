@@ -17,7 +17,7 @@ details: 'This flood hazard dataset comprises two complementary hazard types: (1
   River flood maps modeling fluvial flooding from river overflow and channel exceedance,
   and (2) Surface water flood maps modeling pluvial flooding from direct rainfall
   and inadequate drainage.'
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: simulated

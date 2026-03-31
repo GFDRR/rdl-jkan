@@ -20,7 +20,7 @@ description: 'This map displays continuously updated data from the USGS Earthqua
 details: 'Methodology: USGS Prompt Assessment of Global Earthquakes for Response (PAGER)
   program. | Temporal coverage: 90 days ago (major events) or 7 days ago (other events)
   to today | Update frequency: Every day'
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: inferred

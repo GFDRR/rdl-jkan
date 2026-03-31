@@ -22,7 +22,7 @@ details: 'Methodology: ADAM is an operational system for collecting, analysing a
   near-real time risk and impact information. | Temporal coverage: [2023-11-12T00:00:00
   TO 2023-11-13T23:59:59] | Update frequency: Never | Last modified: 2023-11-24'
 exposure:
-- category: population
+  category: population
   dimension: population
   quantity_kind: count
   taxonomy: null

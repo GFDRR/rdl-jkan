@@ -22,7 +22,7 @@ details: The multi-hazard average annual loss dataset integrates risk from multi
   estimate expected annual economic losses to buildings and infrastructure. Estimates
   are provided for historical climate conditions and future climate scenarios (SSP1
   and SSP5) to assess climate change impacts on risk.
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: attribution_resource_provider_1

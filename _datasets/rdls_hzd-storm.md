@@ -27,7 +27,7 @@ details: "Datasets were generated with the statistical STORM algorithm. Present 
   \ and 5-95% confidence intervals across 1,000 realizations; basin IDs (EP, NA, NI,\
   \ SI, SP, WP) and fixed value sets for return periods (10-10,000 yr) and wind speeds\
   \ (20-75 m s\u207B\xB9 with additional threshold values) are provided."
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: '1'

@@ -23,7 +23,7 @@ details: The hydrological model used is the Continuum model (Silvestro et al. 20
   are input to an hydraulic model based on the Manning equation that compute channel
   uniform flow depth. This simplified approach fits to determine flood maps on large
   areas.
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: '4'

@@ -17,7 +17,7 @@ details: The precipitation-induced landslides susceptibility map for the current
   classifies the terrain into five susceptibility classes by combining slope, vegetation,
   lithology, and antecedent rainfall information from global datasets. The susceptibility
   map has global coverage and a resolution of ~90 meters at the equator.
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: '4'

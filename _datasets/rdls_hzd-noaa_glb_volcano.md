@@ -18,7 +18,7 @@ description: 'Global listing of over 800 significant eruptions which includes in
   more), with a Volcanic Explosivity Index (VEI) of 6 or larger, caused a tsunami,
   or was associated with a major earthquake.'
 details: null
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: inferred
