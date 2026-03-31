@@ -39,25 +39,9 @@ details: "The dataset includes: (i) earthquake hazard GeoTIFFs for three scenari
   \ combinations (3 EQ cases + 2 flood RPs + 2 landslide temporal) per scenario, with\
   \ zone-aggregated XLSX summaries."
 exposure:
-- category: buildings
-  dimension: structure
-  quantity_kind: area, count, currency
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: infrastructure
-  dimension: structure
-  quantity_kind: count, length
-  taxonomy: GED4ALL
-- category: infrastructure
-  dimension: structure
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: economic_indicator
-  dimension: structure
-  quantity_kind: area
+  category: buildings, economic_indicator, infrastructure, population
+  dimension: population, structure
+  quantity_kind: area, count, currency, length
   taxonomy: GED4ALL
 extra_attributions:
 - email: press@ukri.org

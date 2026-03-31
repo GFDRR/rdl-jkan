@@ -41,17 +41,9 @@ details: 'Caveats: This is a preliminary assessment and has not yet been validat
   cases, resulting data is then loaded into a standardized UNOSAT geodatabase and
   exported asshapefiles for dissemination.'
 exposure:
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: null
-- category: agriculture
-  dimension: structure
-  quantity_kind: area
-  taxonomy: null
-- category: natural_environment
-  dimension: structure
-  quantity_kind: area
+  category: agriculture, natural_environment, population
+  dimension: population, structure
+  quantity_kind: area, count
   taxonomy: null
 extra_attributions: []
 hazard:

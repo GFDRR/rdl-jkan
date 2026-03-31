@@ -30,17 +30,9 @@ details: "The dataset includes: (i) 30 simulated ground motion field CSVs (GMs_s
   \ use plans (294 zones, 18 categories); and (iv) impact results for each scenario\
   \ including building damage states, impact metrics, and hospital accessibility."
 exposure:
-- category: buildings
-  dimension: structure
+  category: buildings, economic_indicator, population
+  dimension: population, structure
   quantity_kind: area, count, currency
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: economic_indicator
-  dimension: structure
-  quantity_kind: area
   taxonomy: GED4ALL
 extra_attributions:
 - email: press@ukri.org

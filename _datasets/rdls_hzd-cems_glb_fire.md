@@ -25,7 +25,7 @@ details: The selected data records in this data set are regularly extended with 
   as ERA5 forcing data become available. This dataset is produced by ECMWF in its
   role of the computational centre for fire danger forecast of the CEMS, on behalf
   of the Joint Research Centre which is the managing entity of the service.
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: inferred

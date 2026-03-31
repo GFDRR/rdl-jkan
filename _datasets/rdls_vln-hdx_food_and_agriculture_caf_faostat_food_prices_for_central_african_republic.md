@@ -23,21 +23,13 @@ details: 'Caveats: Reliability and accuracy depend on the sampling design and si
   | Methodology: Registry | Temporal coverage: [1991-01-01T00:00:00 TO 2025-12-31T23:59:59]
   | Update frequency: Every year | Last modified: 2026-01-12'
 exposure:
-- category: agriculture
-  dimension: structure
-  quantity_kind: area
-  taxonomy: null
-- category: economic_indicator
-  dimension: product
-  quantity_kind: monetary
-  taxonomy: null
-- category: population
-  dimension: population
-  quantity_kind: count
+  category: agriculture, economic_indicator, population
+  dimension: population, product, structure
+  quantity_kind: area, count, monetary
   taxonomy: null
 extra_attributions: []
 hazard: null
-license: CC-BY-IGO-3.0
+license: Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)
 loss: null
 project: null
 publisher:

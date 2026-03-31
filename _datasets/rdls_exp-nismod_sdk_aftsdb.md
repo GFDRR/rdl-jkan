@@ -44,7 +44,7 @@ details: The database is provided in Geopackage (gpkg) format for each transport
   designed to be regularly updatable as source datasets such as OSM, PortWatch, and
   OurAirports are refreshed.
 exposure:
-- category: infrastructure
+  category: infrastructure
   dimension: product, structure
   quantity_kind: count, length, monetary, time, weight
   taxonomy: GED4ALL

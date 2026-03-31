@@ -25,7 +25,7 @@ details: "Storm surge hazard is modeled only along the coastline. The process in
   \ level but given that although tropical cyclones are formed along the North Atlantic\
   \ Ocean but do not occur in Europe, neither strong wings nor storm surge were modeled\
   \ for European countries. "
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: '4'

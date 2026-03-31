@@ -24,7 +24,7 @@ details: 'Caveats: Time period is set to publication date rather than the date t
   data covers | Methodology: Inquire via disaster-risk-management@igad.int | Temporal
   coverage: [2025-03-28T00:00:00 TO 2025-03-28T23:59:59] | Update frequency: As needed
   | Last modified: 2025-03-28'
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: simulated

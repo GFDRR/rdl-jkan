@@ -25,7 +25,7 @@ details: "Aqueduct\u2019s tools use open-source, peer reviewed data to map water
   \ one-on-one with companies, governments and research partners through the Aqueduct\
   \ Alliance to help advance best practices in water resource management and enable\
   \ sustainable growth in a water-constrained world."
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: simulated

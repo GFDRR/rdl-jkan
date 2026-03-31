@@ -75,7 +75,7 @@ details: "Methodology: WFP's Hunger Monitoring Unit in the Research, Assessment 
   \ coverage: [2024-03-11T00:00:00 TO 2024-10-02T23:59:59] | Update frequency: As\
   \ needed | Last modified: 2025-03-11"
 exposure:
-- category: agriculture
+  category: agriculture
   dimension: structure
   quantity_kind: area
   taxonomy: null

@@ -101,7 +101,7 @@ details: 'Methodology: Estimated total number of people per grid-cell. The datas
   The mapping approach is Random Forest. | Temporal coverage: [2000-01-01T00:00:00
   TO 2020-12-31T23:59:59] | Update frequency: Never | Last modified: 2020-09-20'
 exposure:
-- category: population
+  category: population
   dimension: population
   quantity_kind: count
   taxonomy: null

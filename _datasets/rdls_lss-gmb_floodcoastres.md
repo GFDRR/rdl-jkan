@@ -29,16 +29,8 @@ details: "Inventory review indicates the package includes: (i) flood hazard GeoT
   \ unit/meaning should be confirmed to distinguish hazard-depth intermediates from\
   \ monetary damage surfaces)."
 exposure:
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: structure
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: infrastructure
-  dimension: structure
+  category: buildings, infrastructure, population
+  dimension: population, structure
   quantity_kind: count
   taxonomy: GED4ALL
 extra_attributions:

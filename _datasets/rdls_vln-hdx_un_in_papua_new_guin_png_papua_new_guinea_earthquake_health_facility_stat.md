@@ -17,7 +17,7 @@ description: 'Papua New Guinea Earthquake Health Facility Status as of 3 April 2
 details: 'Methodology: Registry | Temporal coverage: [2018-04-03T00:00:00 TO 2018-04-03T23:59:59]
   | Update frequency: Never | Last modified: 2018-04-12'
 exposure:
-- category: infrastructure
+  category: infrastructure
   dimension: structure
   quantity_kind: length
   taxonomy: null
