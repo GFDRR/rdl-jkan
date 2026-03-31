@@ -35,7 +35,7 @@ details: 'Caveats: Some early (pre-1950) storms were not correctly matched, so t
   at [this link](https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-07/IBTrACS_version4r01_Technical_Details.pdf)
   | Temporal coverage: [1919-05-14T00:00:00 TO 2025-03-01T23:59:59] | Update frequency:
   As needed | Last modified: 2025-08-26'
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: observed

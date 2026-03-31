@@ -19,13 +19,9 @@ details: 'Methodology: Data collected from UNICEF CO Sitrep, FEWSNET Food securi
   Classification, UNOCHA and IOM | Temporal coverage: [2017-07-31T00:00:00 TO 2017-07-31T23:59:59]
   | Update frequency: Never | Last modified: 2017-08-25'
 exposure:
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: null
-- category: agriculture
-  dimension: structure
-  quantity_kind: area
+  category: agriculture, population
+  dimension: population, structure
+  quantity_kind: area, count
   taxonomy: null
 extra_attributions: []
 hazard: null

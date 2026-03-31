@@ -18,7 +18,7 @@ details: Population exposure datasets include HRSL (High Resolution Settlement L
   Commission JRC. These datasets provide detailed spatial distribution of population
   for assessing exposure to natural hazards.
 exposure:
-- category: population
+  category: population
   dimension: population
   quantity_kind: count
   taxonomy: null

@@ -35,18 +35,10 @@ details: 'The dataset includes: (i) earthquake hazard multiband GeoTIFF (multi-b
   damage states, casualties, hospital accessibility, power availability, and road
   network disruption.'
 exposure:
-- category: buildings
-  dimension: structure
+  category: buildings, economic_indicator, population
+  dimension: population, structure
   quantity_kind: area, count, currency
-  taxonomy: Custom
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: economic_indicator
-  dimension: structure
-  quantity_kind: area
-  taxonomy: GED4ALL
+  taxonomy: Custom, GED4ALL
 extra_attributions:
 - email: press@ukri.org
   id: attribution_funder

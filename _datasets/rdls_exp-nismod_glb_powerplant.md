@@ -26,7 +26,7 @@ details: The Global Power Plant Database leverages existing data sources and met
   through satellite imagery. The database is continuously updated as data becomes
   available.
 exposure:
-- category: infrastructure
+  category: infrastructure
   dimension: structure
   quantity_kind: count, energy, power
   taxonomy: GED4ALL

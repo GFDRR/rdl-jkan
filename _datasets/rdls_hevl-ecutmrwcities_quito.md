@@ -33,17 +33,9 @@ details: "The dataset includes: (i) earthquake hazard as 2 XLSX PGA scenario gri
   \ distribution and impact metrics (metric3-metric8) for both basic (v1) and enhanced\
   \ (v2) analysis versions."
 exposure:
-- category: buildings
-  dimension: structure
+  category: buildings, economic_indicator, population
+  dimension: population, structure
   quantity_kind: area, count, currency
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: economic_indicator
-  dimension: structure
-  quantity_kind: area
   taxonomy: GED4ALL
 extra_attributions:
 - email: press@ukri.org
