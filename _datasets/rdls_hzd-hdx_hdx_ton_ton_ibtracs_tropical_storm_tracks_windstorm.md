@@ -46,7 +46,7 @@ hazard:
   occurrence_range: ''
   processes: tornado
   seasonality: ''
-license: Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)
+license: CC-BY-IGO-3.0
 loss: null
 project: null
 publisher:
