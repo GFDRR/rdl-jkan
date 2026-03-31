@@ -36,7 +36,6 @@ layout: default
               <p x-ref="description" class="desc-text">{{ page.description }}</p>
               <button x-show="$refs.description.scrollHeight > $refs.description.clientHeight" class="desc-toggle" @click="open = ! open" x-text="open ? 'Show less' : 'Show more'"></button>
             </div>
-
             <!-- Quick Info Cards -->
             <div class="quick-info">
               {% if page.creator.name %}
@@ -166,6 +165,18 @@ layout: default
               {% endif %}
               {% endif %}
               {% endfor %}
+<<<<<<< HEAD
+=======
+              {% if rdt == "loss" and page.loss.loss_groups %}
+              {% include display/loss_groups.html value=page.loss.loss_groups %}
+              {% endif %}
+              {% if rdt == "loss" and page.loss.loss_count %}
+              <tr>
+                <th>Total Loss Records</th>
+                <td>{{ page.loss.loss_count }}</td>
+              </tr>
+              {% endif %}
+>>>>>>> f2109d8 (Remove schema changes, render loss_groups directly from layout)
             </table>
           </div>
           {% endfor %}
@@ -231,7 +242,23 @@ layout: default
             </div>
           </div>
 
+<<<<<<< HEAD
           {% include display/spatial_extent_map.html %}
+=======
+          <!-- Spatial Extent -->
+          {% if page.spatial.countries %}
+          <div class="sidebar-card">
+            <h4>Spatial Extent</h4>
+            <div style="margin-top: 8px; font-size: 11px; color: #6b7280;">
+              {% if page.spatial.countries.size > 1 %}
+                {{ page.spatial.countries | join: ", " }}
+              {% else %}
+                {{ page.spatial.countries | first }}
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+>>>>>>> f2109d8 (Remove schema changes, render loss_groups directly from layout)
 
           <!-- Dataset Info Summary -->
           <div class="sidebar-card">
@@ -275,4 +302,7 @@ layout: default
     </div>
   </div>
 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f2109d8 (Remove schema changes, render loss_groups directly from layout)
