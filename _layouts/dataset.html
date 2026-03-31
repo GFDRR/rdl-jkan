@@ -224,19 +224,7 @@ layout: default
             </div>
           </div>
 
-          <!-- Spatial Extent -->
-          {% if page.spatial.countries %}
-          <div class="sidebar-card">
-            <h4>Spatial Extent</h4>
-            <div style="margin-top: 8px; font-size: 11px; color: #6b7280;">
-              {% if page.spatial.countries.size > 1 %}
-                {{ page.spatial.countries | join: ", " }}
-              {% else %}
-                {{ page.spatial.countries | first }}
-              {% endif %}
-            </div>
-          </div>
-          {% endif %}
+          {% include display/spatial_extent_map.html %}
 
           <!-- Dataset Info Summary -->
           <div class="sidebar-card">
@@ -280,3 +268,4 @@ layout: default
     </div>
   </div>
 </div>
+
