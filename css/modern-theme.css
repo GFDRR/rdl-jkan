@@ -1376,3 +1376,80 @@ body {
 .desc-toggle:hover {
   text-decoration: underline;
 }
+
+/* ====================================
+   18. Loss Record Groups - Collapsible
+   ==================================== */
+.loss-group {
+  margin-bottom: 6px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.loss-group[open] {
+  border-color: #adb5bd;
+}
+
+.loss-group-summary {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: #f8f9fa;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.15s;
+}
+
+.loss-group-summary::-webkit-details-marker {
+  display: none;
+}
+
+.loss-group-summary::before {
+  content: "\25B6";
+  font-size: 9px;
+  color: #6c757d;
+  transition: transform 0.15s;
+}
+
+.loss-group[open] > .loss-group-summary::before {
+  transform: rotate(90deg);
+}
+
+.loss-group-summary:hover {
+  background-color: #e9ecef;
+}
+
+.loss-group-summary .badge {
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 11px;
+  background-color: #495057;
+  color: #fff;
+  padding: 2px 7px;
+  border-radius: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.loss-group-descriptions {
+  margin: 0;
+  padding: 8px 14px 10px 32px;
+  font-size: 13px;
+  background-color: #fff;
+  border-top: 1px solid #dee2e6;
+  list-style: disc;
+}
+
+.loss-group-descriptions li {
+  margin-bottom: 4px;
+  line-height: 1.5;
+  color: #343a40;
+}
+
+.loss-group-descriptions li:last-child {
+  margin-bottom: 0;
+}
