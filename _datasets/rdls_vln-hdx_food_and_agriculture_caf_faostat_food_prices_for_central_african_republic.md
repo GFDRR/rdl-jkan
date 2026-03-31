@@ -29,7 +29,7 @@ exposure:
   taxonomy: null
 extra_attributions: []
 hazard: null
-license: Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)
+license: CC-BY-IGO-3.0
 loss: null
 project: null
 publisher:
