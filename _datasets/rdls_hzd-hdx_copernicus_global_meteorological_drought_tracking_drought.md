@@ -27,7 +27,7 @@ details: 'Caveats: A range of different degrees of clustering can be obtained us
   events in certain areas. | Methodology: See [factsheet](https://drought.emergency.copernicus.eu/data/factsheets/factsheet_met_drought_tracking.pdf)
   | Temporal coverage: [1991-02-11T00:00:00 TO 2025-12-31T23:59:59] | Update frequency:
   Every month | Last modified: 2026-01-12'
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: inferred

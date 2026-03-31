@@ -18,7 +18,7 @@ description: The Agricultural Stress Index (ASI) produced by FAO depicts the fre
 details: "For each season there are two indicators, according to two exposure intensity\
   \ thresholds:\n- 30 percent (1/3) of cropland area being affected by the drought\
   \ event\n - 50 percent (1/2) of cropland area being affected by the drought event"
-exposure: []
+exposure: null
 extra_attributions:
 - email: mamadio@worldbank.org
   id: attribution_1762252073805

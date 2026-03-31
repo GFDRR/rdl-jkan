@@ -74,7 +74,7 @@ details: 'Caveats: Please note that most of the figures are estimates. The defin
   have been granted refugee or refugee-like status or temporary protection. | Update
   frequency: Every day'
 exposure:
-- category: population
+  category: population
   dimension: population
   quantity_kind: count
   taxonomy: null
@@ -88,7 +88,7 @@ hazard:
   occurrence_range: ''
   processes: fluvial_flood
   seasonality: ''
-license: CC-BY-IGO-3.0
+license: Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)
 loss:
   approach: ''
   base_data_type: ''

@@ -32,15 +32,7 @@ details: 'This research presents the first composite map of the global power gri
   limitation: this dataset does not attempt to replicate actual network configurations
   or precise structures needed for electrical modeling such as power flow modeling.'
 exposure:
-- category: infrastructure
-  dimension: structure
-  quantity_kind: length
-  taxonomy: GED4ALL
-- category: infrastructure
-  dimension: structure
-  quantity_kind: length
-  taxonomy: GED4ALL
-- category: infrastructure
+  category: infrastructure
   dimension: structure
   quantity_kind: length
   taxonomy: GED4ALL

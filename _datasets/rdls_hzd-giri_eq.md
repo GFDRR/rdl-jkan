@@ -18,7 +18,7 @@ details: The earthquake hazard model uses probabilistic seismic hazard analysis 
   to estimate ground shaking intensity expressed as peak ground acceleration. The
   model incorporates global seismic source zones, historical earthquake catalogs,
   and ground motion prediction equations.
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: '4'

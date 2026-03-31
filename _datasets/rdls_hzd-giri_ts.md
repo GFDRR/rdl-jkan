@@ -16,7 +16,7 @@ description: Dataset containing probabilistic analysis of tsunami run-up height 
 details: The tsunami hazard model estimates run-up heights at the coastline based
   on probabilistic seismic sources and tsunami propagation modeling. The model considers
   submarine earthquakes as the primary tsunami generation mechanism.
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: '4'

@@ -31,21 +31,9 @@ details: "The dataset includes: (i) flood hazard PNG map visualisation (13.5 MB)
   \ power availability, and road edge damage. Note: WOM impact results appear to be\
   \ missing from the dataset."
 exposure:
-- category: buildings
-  dimension: structure
-  quantity_kind: area, count, currency
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: infrastructure
-  dimension: structure
-  quantity_kind: count, length
-  taxonomy: GED4ALL
-- category: economic_indicator
-  dimension: structure
-  quantity_kind: area
+  category: buildings, economic_indicator, infrastructure, population
+  dimension: population, structure
+  quantity_kind: area, count, currency, length
   taxonomy: GED4ALL
 extra_attributions:
 - email: press@ukri.org

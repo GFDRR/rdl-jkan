@@ -35,7 +35,7 @@ details: This dataset was developed in the framework of an analysis with a globa
   UNISDR or the Secretariat of the United Nations concerning the legal status of any
   country, territory, city or area or of its authorities, or concerning the delimitation
   of its frontiers or boundaries.
-exposure: []
+exposure: null
 extra_attributions: []
 hazard:
   calculation_method: simulated

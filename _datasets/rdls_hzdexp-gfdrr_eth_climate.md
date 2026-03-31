@@ -25,53 +25,9 @@ details: 'This dataset was developed as part of the ACP-EU Disaster Risk Managem
   for evidence-based decision-making on disaster risk reduction and climate adaptation
   investments.'
 exposure:
-- category: buildings
-  dimension: structure
-  quantity_kind: area
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: population, structure
-  quantity_kind: area, count
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: population, structure
-  quantity_kind: area, count
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: population, structure
-  quantity_kind: area, count
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: population, structure
-  quantity_kind: area, count
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: structure
-  quantity_kind: area
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: structure
-  quantity_kind: ratio
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: ratio
-  taxonomy: GED4ALL
-- category: buildings
+  category: buildings, population
   dimension: index, population, structure
-  quantity_kind: area, count, dimensionless
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: index
-  quantity_kind: dimensionless
+  quantity_kind: area, count, dimensionless, ratio
   taxonomy: GED4ALL
 extra_attributions:
 - email: admin@geosas.net

@@ -19,7 +19,7 @@ details: Building exposure datasets provide spatial distribution of building foo
   are essential for assessing the built environment exposure to natural hazards and
   estimating potential losses.
 exposure:
-- category: buildings
+  category: buildings
   dimension: structure
   quantity_kind: area
   taxonomy: null

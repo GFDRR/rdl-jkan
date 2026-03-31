@@ -25,7 +25,7 @@ details: This dataset is derived from the Google Open Buildings dataset (v3 foot
   buildings with a confidence level below 0.75 or heights outside the 2.4m to 100m
   range.
 exposure:
-- category: buildings
+  category: buildings
   dimension: content
   quantity_kind: area
   taxonomy: GED4ALL

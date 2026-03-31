@@ -25,7 +25,7 @@ details: The dataset uses hydrological data from 1960-1999 for current flood sce
   with significant backwater effects, or assessing the impact of hydraulic structures.
   Flood hazard maps represent situations with no flood protection measures and may
   overestimate flood extent where protection infrastructure exists.
-exposure: []
+exposure: null
 extra_attributions:
 - email: dccinfo@rws.nl
   id: attribution_funder

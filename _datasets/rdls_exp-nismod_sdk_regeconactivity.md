@@ -40,33 +40,9 @@ details: 'This is version 0.1.0 of a curated data package developed for the vali
   and will be released separately; this package contains input and validation datasets
   used in model development.'
 exposure:
-- category: economic_indicator
-  dimension: product
-  quantity_kind: monetary
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: buildings
-  dimension: structure
-  quantity_kind: area
-  taxonomy: GED4ALL
-- category: infrastructure
-  dimension: structure
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: infrastructure
-  dimension: product, structure
-  quantity_kind: count, power
-  taxonomy: GED4ALL
-- category: infrastructure
-  dimension: structure
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: natural_environment
-  dimension: content
-  quantity_kind: area
+  category: buildings, economic_indicator, infrastructure, natural_environment, population
+  dimension: content, population, product, structure
+  quantity_kind: area, count, monetary, power
   taxonomy: GED4ALL
 extra_attributions:
 - email: fcdo.correspondence@fcdo.gov.uk

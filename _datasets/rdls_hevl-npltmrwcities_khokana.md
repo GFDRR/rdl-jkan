@@ -33,17 +33,9 @@ details: 'The dataset includes: (i) earthquake hazard from OpenQuake scenario si
   multi-sheet XLSX impact results disaggregated by hazard type (earthquake, flood)
   and functional impact (uninhabitable residential, non-functional workplace/school/hospital).'
 exposure:
-- category: buildings
-  dimension: structure
+  category: buildings, economic_indicator, population
+  dimension: population, structure
   quantity_kind: area, count, currency
-  taxonomy: GED4ALL
-- category: population
-  dimension: population
-  quantity_kind: count
-  taxonomy: GED4ALL
-- category: economic_indicator
-  dimension: structure
-  quantity_kind: area
   taxonomy: GED4ALL
 extra_attributions:
 - email: press@ukri.org
