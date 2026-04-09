@@ -1,33 +1,49 @@
-# JKAN [![Build Status](https://travis-ci.org/timwis/jkan.svg?branch=gh-pages)](https://travis-ci.org/timwis/jkan) [![Join the chat at https://gitter.im/timwis/jkan](https://badges.gitter.im/timwis/jkan.svg)](https://gitter.im/timwis/jkan?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-A lightweight, backend-free open data portal, powered by Jekyll
+# Risk Data Library Catalog
 
-## How to run locally using docker
+Browse standardized disaster risk data including hazard, exposure, vulnerability, and loss datasets from around the world.
 
-```
-docker compose up --build
-```
+## Overview
 
-## How to run locally on host
+The Risk Data Library Catalog is a centralized platform for discovering and accessing critical disaster risk datasets. Using the [Risk Data Library Standard](https://docs.riskdatalibrary.org/en/latest/), an open meta data standard, it aggregates risk data from multiple authoritative sources, enabling researchers, policymakers, practitioners, and analysts to find, evaluate, and utilize high-quality risk information for disaster risk reduction and climate adaptation initiatives.
 
-```
-bundle exec jekyll serve
-```
+## Key Features
 
-Open-source data portals can be really hard to install and maintain. But their
-basic purpose of providing links to download data really isn't that complicated. JKAN is a proof-of-concept
-that allows a small, resource-strapped government agency to stand-up an open data portal by simply
-[clicking the fork button](https://help.github.com/articles/fork-a-repo/).
+- **Unified Search**: Search and find risk datasets from multiple authoritative catalogs in a single interface, including:
+  - World Bank Data Catalog
+  - Humanitarian Data Exchange
+  - Copernicus Climate Data Store
+  - FAO Data
+  - GAR PreventionWeb
 
-Please note this is still a work in progress! Check out the [issues](https://github.com/timwis/jkan/issues) to help
-out or give feedback.
+- **Standardized Data**: Access hazard, exposure, vulnerability, and loss datasets organized using consistent metadata standard for easy comparison and integration.
 
-[Demo site](https://demo.jkan.io)
+- **Multi-Source Integration**: Browse datasets from leading organizations and data platforms without managing multiple separate catalogs.
 
-## Installation
-See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io) for an installation wizard,
-or follow the [manual installation](https://github.com/timwis/jkan/wiki/Manual-Installation) instructions yourself.
+- **Advanced Discovery**: Filter and refine your search to find datasets most relevant to your geographic region, hazard type, or analytical needs.
 
-For configuration details, see the [wiki](https://github.com/timwis/jkan/wiki)
+## Getting Started
 
-## Development
-Please see the [Architecture](https://github.com/timwis/jkan/wiki/Architecture) page in the wiki.
+### Browsing the Catalog
+
+Visit the Risk Data Library Catalog to explore available datasets. Use the search functionality to find datasets by keyword, hazard type, geographic region, or data source.
+
+### Accessing Data
+
+Most datasets include direct links to download or access the data through their original source platforms. Dataset records provide:
+- Detailed metadata and descriptions
+- Data download links or API access information
+- Data format and structure details
+- Attribution and licensing information
+- Point of contact for additional questions
+
+## About Jkan
+
+This catalog is built on [Jkan](https://github.com/plural/jkan), a lightweight open-source data catalog software designed for organizations that want to publish data without complex infrastructure.
+
+## Support and Feedback
+
+For questions, feedback, or to report issues with the catalog, please contact the Risk Data Library team.
+
+## License
+
+Please see the LICENSE file for details on the licensing of this catalog software and associated data.
