@@ -28,7 +28,19 @@ layout: default
             <h1 class="dataset-title">
               <span property="dct:title">{{ page.title }}</span>
             </h1>
-            <p class="dataset-description" property="dct:description">{{ page.description }}</p>
+            <div class="dataset-description desc-truncate" property="dct:description">
+              <p class="desc-text">{{ page.description }}</p>
+              <button class="desc-toggle" style="display:none;" onclick="this.parentElement.classList.toggle('expanded'); this.textContent = this.parentElement.classList.contains('expanded') ? 'Show less' : 'Show more';">Show more</button>
+            </div>
+            <script>
+              (function() {
+                var el = document.querySelector('.dataset-description .desc-text');
+                var btn = document.querySelector('.dataset-description .desc-toggle');
+                if (el && btn && el.scrollHeight > el.clientHeight) {
+                  btn.style.display = '';
+                }
+              })();
+            </script>
 
             <!-- Quick Info Cards -->
             <div class="quick-info">
