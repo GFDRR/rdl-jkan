@@ -36,7 +36,7 @@
   } else {
     const featureGroup = L.featureGroup().addTo(map);
     if (bbox) {
-      const [ minLat, minLon, maxLat, maxLon] = bbox;
+      const [ minLon, minLat, maxLon, maxLat] = bbox;
       const bounds = L.latLngBounds([[minLat, minLon], [maxLat, maxLon]]);
       featureGroup.addLayer(L.rectangle(bounds));
       map.fitBounds(featureGroup.getBounds());
