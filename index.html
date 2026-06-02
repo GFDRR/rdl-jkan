@@ -730,16 +730,14 @@ layout: default
                 <i class="fa fa-magic" aria-hidden="true"></i> Semantic
               </span>
             </h3>
-            <div class="desc-truncate" :class="{ 'expanded': expanded }"
-                 x-data="{ expanded: false, overflows: false }"
-                 x-init="$nextTick(() => { overflows = $refs.descText.scrollHeight > $refs.descText.clientHeight })">
+            <div
+              x-data="{ open: false }"
+              x-bind:class="'desc-truncate' + (open ? ' expanded' : '')"
+            >
               <p class="card-description desc-text"
-                 x-ref="descText"
+                 x-ref="description"
                  x-text="dataset.metadata.description || ''"></p>
-              <button class="desc-toggle"
-                      x-show="overflows"
-                      x-on:click.stop="expanded = !expanded"
-                      x-text="expanded ? 'Show less' : 'Show more'"></button>
+              <button x-show="$refs.description.scrollHeight > $refs.description.clientHeight" class="desc-toggle" @click="open = ! open" x-text="open ? 'Show less' : 'Show more'"></button>
             </div>
 
             <div class="card-footer">
