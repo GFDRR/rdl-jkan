@@ -616,6 +616,10 @@ body {
   font-size: 15px;
   color: var(--color-text-secondary);
   line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.dataset-card .desc-truncate {
   margin-bottom: 20px;
 }
 
@@ -1336,3 +1340,39 @@ body {
 .mb-2 { margin-bottom: var(--spacing-md); }
 .mb-3 { margin-bottom: var(--spacing-lg); }
 .mb-4 { margin-bottom: var(--spacing-xl); }
+
+/* ====================================
+   17. Description Truncation
+   ==================================== */
+.desc-truncate {
+  position: relative;
+}
+
+.desc-truncate .desc-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  transition: all 0.2s ease;
+}
+
+.desc-truncate.expanded .desc-text {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+.desc-toggle {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--color-primary, #2563eb);
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font-weight: 500;
+}
+
+.desc-toggle:hover {
+  text-decoration: underline;
+}

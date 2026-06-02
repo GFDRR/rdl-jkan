@@ -28,7 +28,14 @@ layout: default
             <h1 class="dataset-title">
               <span property="dct:title">{{ page.title }}</span>
             </h1>
-            <p class="dataset-description" property="dct:description">{{ page.description }}</p>
+            <div
+              x-data="{ open: false }"
+              x-bind:class="'dataset-description desc-truncate' + (open ? ' expanded' : '')"
+              property="dct:description"
+            >
+              <p x-ref="description" class="desc-text">{{ page.description }}</p>
+              <button x-show="$refs.description.scrollHeight > $refs.description.clientHeight" class="desc-toggle" @click="open = ! open" x-text="open ? 'Show less' : 'Show more'"></button>
+            </div>
 
             <!-- Quick Info Cards -->
             <div class="quick-info">
