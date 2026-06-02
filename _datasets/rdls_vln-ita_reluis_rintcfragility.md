@@ -38,7 +38,7 @@ details: 'Fragility functions were derived from nonlinear dynamic analyses of th
   specify beam-column connection and cladding type; Steel entries include plan dimensions
   and bracing configuration; Bridge entries specify structural typology, pier characteristics,
   and height.'
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: attribution_funder

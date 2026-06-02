@@ -42,7 +42,7 @@ details: 'Fragility functions were derived using analytical methods (nonlinear d
   analysis of structural, architectural, and non-structural components. The prototype
   software OOFIMS implements the systemic analysis using Object-Oriented Matlab, integrated
   into the EQvis platform.'
-exposure: []
+exposure: null
 extra_attributions:
 - email: null
   id: attribution_funder
