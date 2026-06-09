@@ -19,6 +19,7 @@ def make_dataset_frontmatter(dataset):
         "dataset_id": dataset["id"],
         "description": dataset["description"],
         "license": dataset["license"],
+        "links": dataset["links"],
         "publisher": make_entity(dataset["publisher"]),
         "resources": [make_resource(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
@@ -37,8 +38,6 @@ def make_dataset_frontmatter(dataset):
         ],
         "hazard": make_hazard_top_level(dataset.get("hazard")),
         "lineage": make_lineage(dataset["lineage"]) if "lineage" in dataset else None,
-        # TODO: this is actually required? because it needs one for schema
-        "links": dataset.get("links"),
         "loss": make_loss(dataset.get("loss")),
         "project": make_project(dataset["project"]) if "project" in dataset else None,
         "purpose": dataset.get("purpose"),
@@ -90,7 +89,6 @@ def make_attribution(attribution):
     }
 
 
-# TODO: make sure this is still correct
 def make_catalog(dataset):
     link_hrefs = [link.get("href") for link in dataset.get("links", [])]
     access_urls = [
@@ -192,7 +190,7 @@ def make_exposure(exposure):
         "category": exposure["category"],
         "metrics": [make_metric(metric) for metric in exposure.get("metrics", [])],
         # optional
-        "asset_type": make_asset_type(exposure.get("asset_type"))
+        "asset_type": make_asset_type(exposure.get("asset_type")),
     }
 
 
@@ -230,6 +228,29 @@ def make_hazard(hazard):
     }
 
 
+def make_impact(impact):
+    if impact is None:
+        return None
+    return {
+        # optional
+        "measurement": make_measurement(impact.get("measurement")),
+        "metric": impact.get("metric"),
+        "modelling": impact.get("modelling"),
+        "type": impact.get("type"),
+    }
+
+
+def make_impact_and_losses(impact_and_losses):
+    return {
+        # required; throw if missing
+        "loss_type": impact_and_losses["loss_type"],
+        "loss_approach": impact_and_losses["loss_approach"],
+        "loss_frequency_type": impact_and_losses["loss_frequency_type"],
+        # optional
+        "impact": make_impact(impact_and_losses.get("impact")),
+    }
+
+
 def make_lineage(lineage):
     return {
         # optional
@@ -242,79 +263,18 @@ def make_loss(loss):
     """Convert RDL loss metadata into JKAN frontmatter"""
     if loss is None:
         return None
-
-    props_to_summarize = {
-        # required; throw if missing
-        "dimension": [],
-        "hazard_type": [],
-        # optional
-        "approach": [],
-        "base_data_type": [],
-        "category": [],
-        "description": [],
-        "exposure_id": [],
-        "hazard_analysis_type": [],
-        "hazard_id": [],
-        "hazard_process": [],
-        "impact_metric": [],
-        "impact_type": [],
-        "impact_unit": [],
-        "type": [],
-        "vulnerability_id": [],
-    }
-
-    for l in loss.get("losses", []):
-        if "dimension" in l.get("cost", {}):
-            props_to_summarize["dimension"].append(l["cost"]["dimension"])
-        if "hazard_type" in l:
-            props_to_summarize["hazard_type"].append(l["hazard_type"])
-        if "approach" in l:
-            props_to_summarize["approach"].append(l["approach"])
-        if "base_data_type" in l.get("impact", {}):
-            props_to_summarize["base_data_type"].append(l["impact"]["base_data_type"])
-        if "category" in l:
-            props_to_summarize["category"].append(l["category"])
-        if "description" in l:
-            props_to_summarize["description"].append(l["description"])
-        if "exposure_id" in l:
-            props_to_summarize["exposure_id"].append(l["exposure_id"])
-        if "hazard_analysis_type" in l:
-            props_to_summarize["hazard_analysis_type"].append(l["hazard_analysis_type"])
-        if "hazard_id" in l:
-            props_to_summarize["hazard_id"].append(l["hazard_id"])
-        if "hazard_process" in l:
-            props_to_summarize["hazard_process"].append(l["hazard_process"])
-        if "metric" in l.get("impact", {}):
-            props_to_summarize["impact_metric"].append(l["impact"]["metric"])
-        if "type" in l.get("impact", {}):
-            props_to_summarize["impact_type"].append(l["impact"]["type"])
-        if "unit" in l.get("impact", {}):
-            props_to_summarize["impact_unit"].append(l["impact"]["unit"])
-        if "type" in l:
-            props_to_summarize["type"].append(l["type"])
-        if "vulnerability_id" in l:
-            props_to_summarize["vulnerability_id"].append(l["vulnerability_id"])
-
     return {
-        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
-        "hazard_type": ", ".join(sorted(set(props_to_summarize["hazard_type"]))),
-        "approach": ", ".join(sorted(set(props_to_summarize["approach"]))),
-        "base_data_type": ", ".join(sorted(set(props_to_summarize["base_data_type"]))),
-        "category": ", ".join(sorted(set(props_to_summarize["category"]))),
-        "description": ", ".join(sorted(set(props_to_summarize["description"]))),
-        "exposure_id": ", ".join(sorted(set(props_to_summarize["exposure_id"]))),
-        "hazard_analysis_type": ", ".join(
-            sorted(set(props_to_summarize["hazard_analysis_type"]))
-        ),
-        "hazard_id": ", ".join(sorted(set(props_to_summarize["hazard_id"]))),
-        "hazard_process": ", ".join(sorted(set(props_to_summarize["hazard_process"]))),
-        "impact_metric": ", ".join(sorted(set(props_to_summarize["impact_metric"]))),
-        "impact_type": ", ".join(sorted(set(props_to_summarize["impact_type"]))),
-        "impact_unit": ", ".join(sorted(set(props_to_summarize["impact_unit"]))),
-        "type": ", ".join(sorted(set(props_to_summarize["type"]))),
-        "vulnerability_id": ", ".join(
-            sorted(set(props_to_summarize["vulnerability_id"]))
-        ),
+        # requred; throw if missing
+        "id": loss["id"],
+        "asset_category": loss["asset_category"],
+        "asset_dimension": loss["asset_dimension"],
+        "hazard": make_hazard(loss["hazard"]),
+        "impact_and_losses": make_impact_and_losses(loss["impact_and_losses"]),
+        # optional
+        "description": loss.get("description"),
+        "disaster_identifiers": [
+            make_disaster_identifier(di) for di in loss.get("disaster_identifiers", [])
+        ],
     }
 
 
@@ -502,88 +462,137 @@ def make_trigger(trigger):
 
 def make_vulnerability(vulnerability):
     """Convert RDL vulnerability metadata into JKAN frontmatter"""
-    if vulnerability is None:
+    if vulnerability is None or vulnerability.get("functions") is None:
         return None
+    return {
+        # optional
+        "functions": {
+            "damage_to_loss": [
+                make_vulnerability_function_damage_to_loss(vf)
+                for vf in vulnerability["functions"].get("damage_to_loss", [])
+            ],
+            "engineering_demand": [
+                make_vulnerability_function_engineering_demand(vf)
+                for vf in vulnerability["functions"].get("engineering_demand", [])
+            ],
+            "fragility": [
+                make_vulnerability_function_fragility(vf)
+                for vf in vulnerability["functions"].get("fragility", [])
+            ],
+            "socio_economic": [
+                make_vulnerability_function_socio_economic(vf)
+                for vf in vulnerability["functions"].get("socio_economic", [])
+            ],
+            "vulnerability": [
+                make_vulnerability_function_vulnerability(vf)
+                for vf in vulnerability["functions"].get("vulnerability", [])
+            ],
+        }
+    }
 
-    approach = []
-    relationship = []
-    base_data_type = []
-    function_type = []
-    category = []
-    hazard_primary = []
-    intensity = []
-    metric = []
-    unit = []
-    hazard_analysis_type = []
-    hazard_process_primary = []
-    hazard_process_secondary = []
-    hazard_secondary = []
-    taxonomy = []
-    impact_type = []
-    functions = (
-        vulnerability.get("functions", {}).get("vulnerability", [])
-        + vulnerability.get("functions", {}).get("fragility", [])
-        + vulnerability.get("functions", {}).get("damage_to_loss", [])
-        + vulnerability.get("functions", {}).get("engineering_demand", [])
-    )
-    for f in functions:
-        if "approach" in f:
-            approach.append(f["approach"])
-        if "relationship" in f:
-            relationship.append(f["relationship"])
-        if "approach" in f:
-            approach.append(f["approach"])
-        if "impact_modelling" in f:
-            base_data_type.append(f["impact_modelling"])
-        if "category" in f:
-            category.append(f["category"])
-        if "hazard_primary" in f:
-            hazard_primary.append(f["hazard_primary"])
-        if "intensity" in f:
-            intensity.append(f["intensity"])
-        if "impact_metric" in f:
-            metric.append(f["impact_metric"])
-        if "impact_type" in f:
-            impact_type.append(f["impact_type"])
-        if "quantity_kind" in f:
-            unit.append(f["quantity_kind"])
-        if "hazard_analysis_type" in f:
-            hazard_analysis_type.append(f["hazard_analysis_type"])
-        if "hazard_process_primary" in f:
-            hazard_process_primary.append(f["hazard_process_primary"])
-        if "hazard_process_secondary" in f:
-            hazard_process_secondary.append(f["hazard_process_secondary"])
-        if "hazard_secondary" in f:
-            hazard_secondary.append(f["hazard_secondary"])
-        if "taxonomy" in f:
-            taxonomy.append(f["taxonomy"])
 
-    props_to_summarize = {"dimension": [], "unit": []}
-
-    if "cost" in vulnerability:
-        for cost in vulnerability["cost"]:
-            if cost["dimension"]:
-                props_to_summarize["dimension"].append(cost["dimension"])
-            if cost["unit"]:
-                props_to_summarize["unit"].append(cost["unit"])
-
+def make_vulnerability_function_vulnerability(vf):
     return {
         # required; throw if missing
-        "approach": ", ".join(sorted(set(approach))),
-        "base_data_type": ", ".join(sorted(set(base_data_type))),
-        "category": ", ".join(sorted(set(category))),
-        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
-        "function_type": ", ".join(sorted(set(function_type))),
-        "hazard_primary": ", ".join(sorted(set(hazard_primary))),
-        "intensity": ", ".join(sorted(set(intensity))),
-        "metric": ", ".join(sorted(set(metric))),
-        "relationship": ", ".join(sorted(set(relationship))),
-        # "scale": vulnerability.get("spatial").get("scale"),
-        "unit": ", ".join(sorted(set(props_to_summarize["unit"]))),
+        "id": vf["id"],
+        "approach": vf["approach"],
+        "relationship": vf["relationship"],
         # optional
-        "hazard_analysis_type": ", ".join(sorted(set(hazard_analysis_type))),
-        "hazard_process_primary": ", ".join(sorted(set(hazard_process_primary))),
-        "hazard_process_secondary": ", ".join(sorted(set(hazard_process_secondary))),
-        "hazard_secondary": ", ".join(sorted(set(hazard_secondary))),
-        "taxonomy": ", ".join(sorted(set(taxonomy))),
+        "analysis_details": vf.get("analysis_details"),
+        "category": vf.get("category"),
+        "hazard_analysis_type": vf.get("hazard_analysis_type"),
+        "hazard_primary": (
+            make_hazard(vf["hazard_primary"]) if "hazard_primary" in vf else None
+        ),
+        "hazard_secondary": (
+            make_hazard(vf["hazard_secondary"]) if "hazard_secondary" in vf else None
+        ),
+        "impact": make_impact(vf.get("impact")),
+        "taxonomy": vf.get("taxonomy"),
+    }
+
+
+def make_vulnerability_function_fragility(vf):
+    return {
+        # required; throw if missing
+        "id": vf["id"],
+        "approach": vf["approach"],
+        "relationship": vf["relationship"],
+        # optional
+        "analysis_details": vf.get("analysis_details"),
+        "category": vf.get("category"),
+        "hazard_analysis_type": vf.get("hazard_analysis_type"),
+        "hazard_primary": (
+            make_hazard(vf["hazard_primary"]) if "hazard_primary" in vf else None
+        ),
+        "hazard_secondary": (
+            make_hazard(vf["hazard_secondary"]) if "hazard_secondary" in vf else None
+        ),
+        "impact": make_impact(vf.get("impact")),
+        "damage_scale_name": vf.get("damage_scale_name"),
+        "damage_states_names": vf.get("damage_states_names"),
+        "taxonomy": vf.get("taxonomy"),
+    }
+
+
+def make_vulnerability_function_damage_to_loss(vf):
+    return {
+        # required; throw if missing
+        "id": vf["id"],
+        "approach": vf["approach"],
+        "relationship": vf["relationship"],
+        # optional
+        "analysis_details": vf.get("analysis_details"),
+        "category": vf.get("category"),
+        "hazard_analysis_type": vf.get("hazard_analysis_type"),
+        "hazard_primary": (
+            make_hazard(vf["hazard_primary"]) if "hazard_primary" in vf else None
+        ),
+        "hazard_secondary": (
+            make_hazard(vf["hazard_secondary"]) if "hazard_secondary" in vf else None
+        ),
+        "impact": make_impact(vf.get("impact")),
+        "loss_scale_name": vf.get("loss_scale_name"),
+        "loss_states_names": vf.get("loss_states_names"),
+        "taxonomy": vf.get("taxonomy"),
+    }
+
+
+def make_vulnerability_function_engineering_demand(vf):
+    return {
+        # required; throw if missing
+        "id": vf["id"],
+        "approach": vf["approach"],
+        "relationship": vf["relationship"],
+        # optional
+        "analysis_details": vf.get("analysis_details"),
+        "category": vf.get("category"),
+        "hazard_analysis_type": vf.get("hazard_analysis_type"),
+        "hazard_primary": (
+            make_hazard(vf["hazard_primary"]) if "hazard_primary" in vf else None
+        ),
+        "hazard_secondary": (
+            make_hazard(vf["hazard_secondary"]) if "hazard_secondary" in vf else None
+        ),
+        "impact": make_impact(vf.get("impact")),
+        "demand_scale_name": vf.get("demand_scale_name"),
+        "demand_states_names": vf.get("demand_states_names"),
+        "taxonomy": vf.get("taxonomy"),
+        "parameter": vf.get("parameter"),
+    }
+
+
+def make_vulnerability_function_socio_economic(vf):
+    return {
+        # required; throw if missing
+        "id": vf["id"],
+        "indicator_name": vf["indicator_name"],
+        "indicator_code": vf["indicator_code"],
+        "description": vf["description"],
+        "reference_year": vf["reference_year"],
+        # optional
+        "scheme": vf.get("scheme"),
+        "threshold": vf.get("threshold"),
+        "uri": vf.get("uri"),
+        "analysis_details": vf.get("analysis_details"),
     }
