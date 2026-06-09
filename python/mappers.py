@@ -27,72 +27,6 @@ def make_exposure(exposure):
     }
 
 
-def make_hazard_v02(hazard):
-    """Convert RDL hazard metadata into JKAN frontmatter"""
-    if hazard is None:
-        return None
-
-    props_to_summarize = {
-        "calculation_method": [],  # found on event, event_set
-        "disaster_identifiers": [],  # found on event
-        "hazard_analysis_type": [],  # found on event_set as analysis_type
-        "hazard_type": hazard.get("type", []),  # found on hazard, event.hazard as type
-        "intensity": hazard.get(
-            "intensity_measure", []
-        ),  # found on hazard, event.hazard as intensity_measure
-        "occurrence_range": [],  # found on event_set
-        "processes": hazard.get("processes", []),  # found on hazard, event.hazard
-    }
-
-    for event_set in hazard["event_sets"]:
-        if "calculation_method" in event_set:
-            props_to_summarize["calculation_method"].append(
-                event_set["calculation_method"]
-            )
-        if "analysis_type" in event_set:
-            props_to_summarize["hazard_analysis_type"].append(
-                event_set["analysis_type"]
-            )
-        if "occurrence_range" in event_set:
-            props_to_summarize["occurrence_range"].append(event_set["occurrence_range"])
-
-        if "events" in event_set:
-            for event in event_set["events"]:
-                if "calculation_method" in event:
-                    props_to_summarize["calculation_method"].append(
-                        event["calculation_method"]
-                    )
-                if "disaster_identifiers" in event:
-                    for di in event["disaster_identifiers"]:
-                        props_to_summarize["disaster_identifiers"].append(
-                            f"{di.get('id')}; {di.get('scheme')}"
-                        )
-                if "hazard" in event and "type" in event["hazard"]:
-                    props_to_summarize["hazard_type"].append(event["hazard"]["type"])
-                if "hazard" in event and "intensity_measure" in event["hazard"]:
-                    props_to_summarize["intensity"].append(
-                        event["hazard"]["intensity_measure"]
-                    )
-                if "hazard" in event and "processes" in event["hazard"]:
-                    props_to_summarize["processes"].extend(event["hazard"]["processes"])
-    return {
-        "calculation_method": ", ".join(
-            sorted(set(props_to_summarize["calculation_method"]))
-        ),
-        "disaster_identifiers": ", ".join(
-            sorted(set(props_to_summarize["disaster_identifiers"]))
-        ),
-        "hazard_analysis_type": ", ".join(
-            sorted(set(props_to_summarize["hazard_analysis_type"]))
-        ),
-        "hazard_type": ", ".join(sorted(set(props_to_summarize["hazard_type"]))),
-        "intensity": ", ".join(sorted(set(props_to_summarize["intensity"]))),
-        "occurrence_range": ", ".join(
-            sorted(set(props_to_summarize["occurrence_range"]))
-        ),
-        "processes": ", ".join(sorted(set(props_to_summarize["processes"]))),
-    }
-
 def make_loss(loss):
     """Convert RDL loss metadata into JKAN frontmatter"""
     if loss is None:
@@ -172,134 +106,6 @@ def make_loss(loss):
         ),
     }
 
-
-# v0.2 specific mappers
-def make_resource_v02(resource):
-    """Convert RDL v0.2 resource metadata into JKAN frontmatter"""
-    return {
-        # required; throw if missing
-        "description": resource["description"],
-        "format": resource["format"],
-        "id": resource["id"],
-        "title": resource["title"],
-        # optional
-        "coordinate_system": resource.get("coordinate_system"),
-        "download_url": resource.get("download_url", resource.get("access_url")),
-        "spatial_resolution": resource.get("spatial_resolution"),
-    }
-
-def make_vulnerability_v02(vulnerability):
-    """Convert RDL vulnerability metadata into JKAN frontmatter"""
-    if vulnerability is None:
-        return None
-
-    impact = vulnerability.get("impact")
-
-    # TODO: will there ever actually be more than one function type present on a vulnerability?
-    approach = []
-    relationship = []
-    function_type = []
-    functions = vulnerability.get("functions")
-    if "vulnerability" in functions:
-        if "approach" in functions["vulnerability"]:
-            approach.append(functions["vulnerability"]["approach"])
-        if "relationship" in functions["vulnerability"]:
-            relationship.append(functions["vulnerability"]["relationship"])
-        function_type.append("vulnerability")
-    if "fragility" in functions:
-        if "approach" in functions["fragility"]:
-            approach.append(functions["fragility"].get("approach"))
-        if "relationship" in functions["fragility"]:
-            relationship.append(functions["fragility"].get("relationship"))
-        function_type.append("fragility")
-    if "damage_to_loss" in functions:
-        if "approach" in functions["damage_to_loss"]:
-            approach.append(functions["damage_to_loss"].get("approach"))
-        if "relationship" in functions["damage_to_loss"]:
-            relationship.append(functions["damage_to_loss"].get("relationship"))
-        function_type.append("damage_to_loss")
-    if "engineering_demand" in functions:
-        if "approach" in functions["engineering_demand"]:
-            approach.append(functions["engineering_demand"].get("approach"))
-        if "relationship" in functions["engineering_demand"]:
-            relationship.append(functions["engineering_demand"].get("relationship"))
-        function_type.append("engineering_demand")
-
-    props_to_summarize = {"dimension": [], "unit": []}
-
-    if "cost" in vulnerability:
-        for cost in vulnerability["cost"]:
-            if cost["dimension"]:
-                props_to_summarize["dimension"].append(cost["dimension"])
-            if cost["unit"]:
-                props_to_summarize["unit"].append(cost["unit"])
-
-    return {
-        # required; throw if missing
-        "approach": ", ".join(sorted(set(approach))),
-        "base_data_type": impact.get("base_data_type"),
-        "category": vulnerability.get("category"),
-        "dimension": ", ".join(sorted(set(props_to_summarize["dimension"]))),
-        "function_type": ", ".join(sorted(set(function_type))),
-        "hazard_primary": vulnerability.get("hazard_primary"),
-        "intensity": vulnerability.get("intensity"),
-        "metric": impact.get("metric"),
-        "relationship": ", ".join(sorted(set(relationship))),
-        "scale": vulnerability.get("spatial").get("scale"),
-        "type": impact.get("type"),
-        "unit": ", ".join(sorted(set(props_to_summarize["unit"]))),
-        "impact_unit": impact.get("unit"),
-        # optional
-        "hazard_analysis_type": vulnerability.get("hazard_analysis_type"),
-        "hazard_process_primary": vulnerability.get("hazard_process_primary"),
-        "hazard_process_secondary": vulnerability.get("hazard_process_secondary"),
-        "hazard_secondary": vulnerability.get("hazard_secondary"),
-        "taxonomy": vulnerability.get("taxonomy"),
-    }
-
-def make_dataset_frontmatter_v02(dataset):
-    """Formats RDL v0.2 metadata into JKAN frontmatter for a dataset"""
-
-    payload = {
-        "schema": "rdl-02",
-        # try first; required by write_yaml
-        "title": dataset["title"],
-        # required; throw if missing
-        "catalog": make_catalog(dataset),
-        "contact_point": dataset["contact_point"],
-        "creator": dataset["creator"],
-        "dataset_id": dataset["id"],
-        "slug": dataset["id"],
-        "license": dataset["license"],
-        "publisher": dataset["publisher"],
-        "resources": [make_resource_v02(resource) for resource in dataset["resources"]],
-        "risk_data_type": dataset["risk_data_type"],
-        "spatial": dataset["spatial"],
-        # optional
-        "description": dataset.get("description"),
-        "details": dataset.get("details"),
-        "project": dataset.get("project"),
-        "purpose": dataset.get("purpose"),
-        "version": dataset.get("version"),
-        # must include one of
-        "exposure": make_exposure(dataset.get("exposure")),
-        "hazard": make_hazard_v02(dataset.get("hazard")),
-        "loss": make_loss(dataset.get("loss")),
-        "vulnerability": make_vulnerability_v02(dataset.get("vulnerability")),
-    }
-
-    if payload["spatial"].get("scale") == "global":
-        if (
-            "countries" in payload["spatial"]
-            and type(payload["spatial"]["countries"]) == list
-        ):
-            payload["spatial"]["countries"].append("GLO")
-        else:
-            payload["spatial"]["countries"] = ["GLO"]
-    return payload
-
-
-# v0.3 specific mappers
 def make_attribution(attribution_or_attributions, role=None):
     if role is not None:
         attributions = attribution_or_attributions
@@ -342,7 +148,7 @@ def make_extra_attributions(attributions):
     ]
 
 
-def make_hazard_v03(hazard):
+def make_hazard(hazard):
     """Convert RDL hazard metadata into JKAN frontmatter"""
     if hazard is None:
         return None
@@ -433,7 +239,7 @@ def make_period(period):
         "temporal_resolution": period.get("temporal_resolution"),
     }
 
-def make_exposure_v03(exposure_array):
+def make_exposure(exposure_array):
     """Convert RDL exposure metadata into JKAN frontmatter"""
     if exposure_array is None:
         return None
@@ -466,7 +272,7 @@ def make_exposure_v03(exposure_array):
     }
 
 
-def make_resource_v03(resource):
+def make_resource(resource):
     """Convert RDL v0.3 resource metadata into JKAN frontmatter"""
     return {
         # required; throw if missing
@@ -482,7 +288,7 @@ def make_resource_v03(resource):
         "temporal": make_period(resource.get("temporal")),
     }
 
-def make_vulnerability_v03(vulnerability):
+def make_vulnerability(vulnerability):
     """Convert RDL vulnerability metadata into JKAN frontmatter"""
     if vulnerability is None:
         return None
@@ -566,18 +372,18 @@ def make_vulnerability_v03(vulnerability):
     }
 
 
-def make_dataset_frontmatter_v03(dataset):
-    """Formats RDL v0.3 metadata into JKAN frontmatter for a dataset"""
+def make_dataset_frontmatter(dataset):
+    """Formats RDL v1.0 metadata into JKAN frontmatter for a dataset"""
 
     payload = {
-        "schema": "rdl-03",
+        "schema": "rdl-1.0",
         # try first; required by write_yaml
         "title": dataset["title"],
         # required; throw if missing
         "dataset_id": dataset["id"],
         "slug": dataset["id"],
         "license": dataset["license"],
-        "resources": [make_resource_v03(resource) for resource in dataset["resources"]],
+        "resources": [make_resource(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
         "spatial": dataset["spatial"],
         "catalog": make_catalog(dataset),
@@ -592,10 +398,10 @@ def make_dataset_frontmatter_v03(dataset):
         "project": dataset.get("project"),
         "purpose": dataset.get("purpose"),
         "version": dataset.get("version"),
-        "exposure": make_exposure_v03(dataset.get("exposure")),
-        "hazard": make_hazard_v03(dataset.get("hazard")),
+        "exposure": make_exposure(dataset.get("exposure")),
+        "hazard": make_hazard(dataset.get("hazard")),
         "loss": make_loss(dataset.get("loss")),
-        "vulnerability": make_vulnerability_v03(dataset.get("vulnerability")),
+        "vulnerability": make_vulnerability(dataset.get("vulnerability")),
     }
 
     if payload["spatial"].get("scale") == "global":
