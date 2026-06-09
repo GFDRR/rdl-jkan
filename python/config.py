@@ -16,8 +16,7 @@ SCORED_FIELDS = ['catalog', 'category', 'creator.name', 'dataset_id', 'descripti
 SEMANTIC_MAX_RESULTS = 50
 SEMANTIC_MIN_SCORE = 0.25
 
-schema_url_v2 = "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json"
-schema_url_v3 = "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json"
+schema_url = "https://raw.githubusercontent.com/GFDRR/rdl-standard/refs/heads/1.0-dev/schema/rdls_schema.json"
 
 dataset_catalogs = {
     "oasishub.co": "OASIS HUB",
