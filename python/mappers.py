@@ -57,11 +57,27 @@ def make_dataset_frontmatter(dataset):
 
 
 def make_affiliation(affiliation):
+    if affiliation is None:
+        return None
     return {
         # required; throw if missing
         "name": affiliation["name"],
         # optional
         "url": affiliation.get("url"),
+    }
+
+
+def make_asset_type(asset_type):
+    if asset_type is None:
+        return None
+    return {
+        # required; throw if missing
+        "id": asset_type["id"],
+        # optional
+        "scheme": asset_type.get("scheme"),
+        "title": asset_type.get("title"),
+        "description": asset_type.get("description"),
+        "uri": asset_type.get("uri"),
     }
 
 
@@ -89,6 +105,8 @@ def make_catalog(dataset):
 
 
 def make_classification(classification):
+    if classification is None:
+        return None
     return {
         # required; throw if missing
         "id": classification["id"],
@@ -128,11 +146,7 @@ def make_entity(attribution):
         # optional
         "email": attribution.get("email"),
         "url": attribution.get("url"),
-        "affiliation": (
-            make_affiliation(attribution["affiliation"])
-            if "affiliation" in attribution
-            else None
-        ),
+        "affiliation": make_affiliation(attribution.get("affiliation")),
     }
 
 
@@ -167,48 +181,18 @@ def make_event_set(event_set):
     }
 
 
-def make_exposure(exposure_array):
+def make_exposure(exposure):
     """Convert RDL exposure metadata into JKAN frontmatter"""
-    if exposure_array is None:
+    if exposure is None:
         return None
-
-    props_to_summarize = {
-        "category": [],  # found on exposure
-        "taxonomy": [],  # found on exposure
-        "dimension": [],  # found on metric
-        "quantity_kind": [],  # found on metric
-    }
-    for exposure in exposure_array:
-        # required; throw if missing
-        props_to_summarize["category"].append(exposure["category"])
-        if "taxonomy" in exposure:
-            props_to_summarize["taxonomy"].append(exposure["taxonomy"])
-        if "metrics" in exposure:
-            for metric in exposure["metrics"]:
-                if metric["dimension"]:
-                    props_to_summarize["dimension"].append(metric["dimension"])
-                if metric["quantity_kind"]:
-                    props_to_summarize["quantity_kind"].append(metric["quantity_kind"])
 
     return {
         # required; throw if missing
-        "category": ", ".join(sorted(set(props_to_summarize["category"]))),
+        "id": exposure["id"],
+        "category": exposure["category"],
+        "metrics": [make_metric(metric) for metric in exposure.get("metrics", [])],
         # optional
-        "taxonomy": (
-            ", ".join(sorted(set(props_to_summarize["taxonomy"])))
-            if len(props_to_summarize["taxonomy"]) > 0
-            else None
-        ),
-        "dimension": (
-            ", ".join(sorted(set(props_to_summarize["dimension"])))
-            if len(props_to_summarize["dimension"]) > 0
-            else None
-        ),
-        "quantity_kind": (
-            ", ".join(sorted(set(props_to_summarize["quantity_kind"])))
-            if len(props_to_summarize["quantity_kind"]) > 0
-            else None
-        ),
+        "asset_type": make_asset_type(exposure.get("asset_type"))
     }
 
 
@@ -241,11 +225,7 @@ def make_hazard(hazard):
         "process": hazard["process"],
         "intensity_measure": hazard["intensity_measure"],
         # optional
-        "classification": (
-            make_classification(hazard["classification"])
-            if "classification" in hazard
-            else None
-        ),
+        "classification": make_classification(hazard.get("classification")),
         "trigger": make_trigger(hazard["trigger"]) if "trigger" in hazard else None,
     }
 
@@ -338,12 +318,20 @@ def make_loss(loss):
     }
 
 
+def make_measurement(measurement):
+    return {
+        # optional
+        "quantity_kind": measurement.get("quantity_kind"),
+        "unit": measurement.get("unit"),
+    }
+
+
 def make_metric(metric):
     return {
         # required; throw if missing
         "id": metric["id"],
         "dimension": metric["dimension"],
-        "quantity_kind": metric["quantity_kind"],
+        "measurement": make_measurement(metric["measurement"]),
     }
 
 
