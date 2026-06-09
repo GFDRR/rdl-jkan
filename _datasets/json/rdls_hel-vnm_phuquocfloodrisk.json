@@ -1,0 +1,755 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-vnm_phuquocfloodrisk",
+      "title": "Comprehensive Flood Risk Assessment for Phu Quoc Island, Viet Nam",
+      "description": "Multi-hazard flood risk assessment for Phu Quoc Island covering fluvial/pluvial, coastal, and compound flooding across current climate and climate change 2050 scenarios. Includes probabilistic hazard maps (5 return periods: 5-100 years), land use and population exposure data, depth-damage vulnerability assessment, and spatial loss outputs (damage rasters, annual expected losses, affected population). Commissioned by World Bank/GFDRR to support the Phu Quoc Sustainable Water Management Project (SWMP).",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Global Facility for Disaster Reduction and Recovery (GFDRR)",
+        "email": "data@gfdrr.org",
+        "url": "https://www.gfdrr.org/en"
+      },
+      "version": "1.0",
+      "purpose": "To support the Government of Viet Nam and Phu Quoc authorities in understanding comprehensive flood risk under current and future climate conditions, enabling evidence-based investment decisions for flood risk management interventions including protective (grey infrastructure) and adaptive (nature-based) strategies.",
+      "project": {
+        "name": "Flood Risk Management Services for Phu Quoc Island (BJ7114-HAS-XX-VN-RP-WM-0001)",
+        "url": "https://www.worldbank.org"
+      },
+      "details": "This flood risk assessment combines: (1) HEC-RAS 2D hydraulic modeling of fluvial/pluvial (G1), coastal (G2), and compound (G3) flood hazards at 5m resolution across 5 return periods (5, 10, 20, 50, 100 years); (2) Current and projected (2050 climate change) scenarios with four intervention strategies: Do Nothing (S0), Planned Reservoirs (Future Baseline), Protective grey infrastructure (S1), and Adaptive nature-based solutions (S2); (3) Land use exposure data with economic values (USD/m2) for residential, commercial, industrial, and critical infrastructure; (4) Population exposure distinguishing residential and tourist populations; (5) Depth-damage vulnerability curves applied via the Global Flood Risk Tool (GFRT); (6) Spatial loss outputs including probabilistic damage rasters, annual expected losses, and affected population counts. Key findings: Current climate Expected Annual Damage is USD 37M (total), projected to increase ~5x to USD 175M by 2050 under climate change. The Adaptive strategy (S2) achieves ~59% reduction in expected annual damage.",
+      "contact_point": {
+        "name": "Pierre Chrzanowski",
+        "email": "pchrzanowski@worldbank.org",
+        "url": "https://www.gfdrr.org/en"
+      },
+      "creator": {
+        "name": "Royal HaskoningDHV",
+        "url": "https://www.royalhaskoningdhv.com/"
+      },
+      "spatial": {
+        "scale": "sub-national",
+        "countries": [
+          "VNM"
+        ],
+        "bbox": [
+          103.8,
+          9.8,
+          104.1,
+          10.45
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Viet Nam",
+            "uri": "https://www.geonames.org/1562822/socialist-republic-of-vietnam.html",
+            "id": "gazetteer_vietnam"
+          },
+          {
+            "scheme": "GEONAMES",
+            "description": "Phu Quoc Island",
+            "uri": "https://www.geonames.org/1571067/phu-quoc.html",
+            "id": "gazetteer_phuquoc"
+          }
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_creator_egis",
+          "role": "creator",
+          "entity": {
+            "name": "EGIS",
+            "url": "https://www.egis-group.com/"
+          }
+        },
+        {
+          "id": "attribution_ttl",
+          "role": "world_bank_team_lead",
+          "entity": {
+            "name": "Halla Maher Qaddumi",
+            "email": "hqaddumi@worldbank.org",
+            "url": "https://www.worldbank.org"
+          }
+        },
+        {
+          "id": "attribution_funder",
+          "role": "funder",
+          "entity": {
+            "name": "Global Facility for Disaster Reduction and Recovery (GFDRR)",
+            "email": "data@gfdrr.org",
+            "url": "https://www.gfdrr.org/en"
+          }
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_hecras",
+            "name": "HEC-RAS 2D hydraulic model",
+            "type": "model",
+            "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "used_in": "hazard",
+            "description": "US Army Corps of Engineers HEC-RAS 2D hydraulic modeling software used for flood inundation simulation across Phu Quoc Island. Configured with Manning's n roughness coefficients by land use type and percent impervious values for rainfall-runoff calculations."
+          },
+          {
+            "id": "source_intermap_dtm",
+            "name": "Intermap DTM (1m pixel, 3m vertical accuracy)",
+            "url": "https://www.intermap.com/",
+            "type": "dataset",
+            "used_in": "hazard",
+            "description": "High-resolution Digital Terrain Model from Intermap Technologies used as the foundational topographic input for HEC-RAS 2D flood modeling. 1-meter pixel resolution with 3-meter vertical accuracy. A 5m resampled version (DEM_PhuQuoc_5m.tif) is included in the dataset."
+          },
+          {
+            "id": "source_gfrt",
+            "name": "Global Flood Risk Tool (GFRT)",
+            "type": "model",
+            "used_in": "vulnerability",
+            "description": "Proprietary flood risk calculation tool used for computing direct damage from flood inundation depth, land use exposure, and depth-damage vulnerability curves. Combines hazard, exposure, and vulnerability layers to produce spatial damage rasters and aggregate loss statistics."
+          },
+          {
+            "id": "source_landuse_population",
+            "name": "Phu Quoc land use and population data",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Land use classification data (current and planned) and population density data (residential and tourist) for Phu Quoc Island from Government of Viet Nam sources and the Phu Quoc Development Plan."
+          },
+          {
+            "id": "source_climate_projections",
+            "name": "Climate change projections (2050)",
+            "type": "dataset",
+            "used_in": "hazard",
+            "description": "Climate change projections for 2050 used to adjust rainfall intensities and sea level rise for future flood hazard scenarios. Projections inform the CC2050 variants of all hazard groups (G1, G2, G3)."
+          }
+        ],
+        "description": "Flood risk assessment for Phu Quoc Island, Kien Giang Province, Viet Nam, produced by Royal HaskoningDHV and EGIS under the GFDRR-financed Phu Quoc Sustainable Water Management Project. A HEC-RAS 2D hydrodynamic model was calibrated against historical flood events (including the August 2019 event) using a 5 m Intermap DTM as topographic input. Fluvial/pluvial, coastal, and compound flood scenarios were simulated for current climate and 2050 climate change conditions across four management strategies (do-nothing, planned reservoirs, protective, adaptive). Flood damage was computed using the Global Flood Risk Tool (GFRT) by applying depth-damage vulnerability curves and land-use-based maximum damage values (USD/m2) to inundation depths. Population exposure distinguished residential and tourist populations from current and projected density datasets."
+      },
+      "resources": [
+        {
+          "title": "Digital Elevation Model - Phu Quoc Island",
+          "description": "Zip archive containing a 5-meter resolution DEM for Phu Quoc Island (DEM_PhuQuoc_5m.tif, 135.6 MB). Resampled from Intermap DTM (1m pixel, 3m vertical accuracy). Serves as the foundational topographic input for all HEC-RAS 2D flood inundation modeling across the island.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0067048/multihazard_flood_risk_assessment_for_phu_quoc_island_viet_nam",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0067048/DR0095913/1_DEM_PhuQuoc.zip",
+          "id": "resource_dem",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Current Climate Baseline - Do Nothing Scenario (S0)",
+          "description": "Zip archive containing flood modeling outputs for the current climate baseline under the Do Nothing (S0) scenario. Includes: (1) Inundation rasters - 15 GeoTIFF files for three hazard groups (G1 fluvial/pluvial, G2 coastal, G3 combined) across 5 return periods (5, 10, 20, 50, 100 years), showing water depth in meters at 5m resolution; (2) Flood damage rasters - probabilistic damage GeoTIFFs for each hazard group and return period, annual expected loss rasters (G3_S0_BL_annual.tif), and empirical 2019 flood event damage (Depth_Max_2019_damage.tif based on August 2019 flooding affecting 3,874 houses with USD 4.3M estimated damage); (3) Affected population rasters - residential and tourist population affected per hazard group and return period, plus annual expected affected population. File naming convention: G[group]_S0_[return_period].tif for hazard, G[group]_S0_[return_period]_damage.tif for loss.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0067048/multihazard_flood_risk_assessment_for_phu_quoc_island_viet_nam",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0067048/DR0095914/2_CurrentClimate_Baseline_DoNothing.zip",
+          "id": "resource_current_climate_s0",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Climate Change 2050 Baseline - Do Nothing Scenario (S0 CC2050)",
+          "description": "Zip archive containing flood modeling outputs for the climate change 2050 projection under the Do Nothing (S0) scenario, with adjusted rainfall intensities and sea level rise but no flood interventions. Includes: (1) Inundation rasters - 15 GeoTIFF files for three hazard groups (G1 fluvial/pluvial, G2 coastal, G3 combined) across 5 return periods (5, 10, 20, 50, 100 years); (2) Flood damage rasters - probabilistic damage for each hazard group and return period, plus annual expected loss rasters; (3) Affected population rasters - residential and tourist population affected per scenario. CC2050 Do Nothing projects total expected annual damage of USD 174.88M (direct USD 129.54M) and annual affected population of ~36,000. File naming: G[group]_S0_CC50_[return_period].tif.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0067048/multihazard_flood_risk_assessment_for_phu_quoc_island_viet_nam",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0067048/DR0095915/3_ClimateChange2050_Baseline_DoNothing.zip",
+          "id": "resource_cc2050_s0",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Climate Change 2050 - Planned Structures / Future Baseline",
+          "description": "Zip archive containing flood modeling outputs for the climate change 2050 projection with planned reservoir structures (Future Baseline scenario). Development Plan implemented with planned reservoirs for water supply and flood reduction. Includes: (1) Inundation rasters - GeoTIFF files for three hazard groups (G1 fluvial/pluvial, G2 coastal, G3 combined) across 5 return periods; (2) Flood damage rasters - probabilistic damage and annual expected loss rasters; (3) Affected population rasters. Total expected annual damage under this scenario: USD 164.19M. File naming: G[group]_FutureBaseline_CC50_[return_period].tif.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0067048/multihazard_flood_risk_assessment_for_phu_quoc_island_viet_nam",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0067048/DR0095912/4_ClimateChange2050_Planned_Structures.zip",
+          "id": "resource_cc2050_futurebaseline",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Climate Change 2050 - Protective Strategy (S1) with Interventions",
+          "description": "Zip archive containing flood modeling outputs for the climate change 2050 projection with the Protective strategy (S1) of grey structural measures including dikes, embankments, pumping stations, and land grading. Includes: (1) Inundation rasters - GeoTIFF files for three hazard groups (G1 fluvial/pluvial, G2 coastal, G3 combined) across 5 return periods; (2) Flood damage rasters - probabilistic damage and annual expected loss rasters; (3) Affected population rasters. The Protective strategy achieves ~33% reduction in expected annual damage compared to the Future Baseline, with total EAD of USD 110.08M. File naming: G[group]_S1_CC50_[return_period].tif.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0067048/multihazard_flood_risk_assessment_for_phu_quoc_island_viet_nam",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0067048/DR0095916/5_ClimateChange2050_Planned_Structures_Intervention.zip",
+          "id": "resource_cc2050_s1_protective",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Climate Change 2050 - Adaptive Strategy (S2) Living with Water",
+          "description": "Zip archive containing flood modeling outputs for the climate change 2050 projection with the Adaptive strategy (S2) of nature-based solutions and non-structural measures (Living with Water approach). Includes: (1) Inundation rasters - GeoTIFF files for three hazard groups (G1 fluvial/pluvial, G2 coastal, G3 combined) across 5 return periods; (2) Flood damage rasters - probabilistic damage and annual expected loss rasters; (3) Affected population rasters. The Adaptive strategy achieves ~59% reduction in expected annual damage compared to the Future Baseline, with total EAD of USD 68.05M — the most effective risk reduction strategy assessed. File naming: G[group]_S2_CC50_[return_period].tif.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0067048/multihazard_flood_risk_assessment_for_phu_quoc_island_viet_nam",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0067048/DR0095917/6_ClimateChange2050_Planned_Structures_LivingwithWater.zip",
+          "id": "resource_cc2050_s2_adaptive",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Duong Dong Dam Break Scenario",
+          "description": "Zip archive containing flood modeling outputs for the Duong Dong dam break scenario. Simulates the consequences of a dam failure event at the Duong Dong reservoir on Phu Quoc Island, including downstream inundation mapping, flood damage assessment, and affected population estimates. This scenario provides critical information for emergency preparedness and dam safety planning.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0067048/multihazard_flood_risk_assessment_for_phu_quoc_island_viet_nam",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0067048/DR0095918/7_DuongDong_DamBreak.zip",
+          "id": "resource_dambreak",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Exposure Vector Data - Land Use, Population, Infrastructure",
+          "description": "Zip archive containing exposure datasets in Shapefile format for Phu Quoc Island. Includes: (1) Land use classification - PhuQuoc_Landuse_Current.shp (current conditions), PhuQuoc_Landuse_Planning.shp (future planned 2050), PhuQuoc_Landuse_Planning_LivingWithWater.shp (Adaptive S2 scenario); (2) Population density - PhuQuoc_Current_Population_Density.shp (current residential and tourist) and PhuQuoc_Planning_Population_Density.shp (projected scenarios); (3) Infrastructure - PhuQuoc_Road.shp (road network) and PhuQuoc_PlanningOpenWater.shp (planned water infrastructure); (4) Catchment boundaries - PhuQuoc_MainCatchments_withOthers.shp and PhuQuoc_SubOtherCatchments.shp. Land use types include residential, commercial, industrial, critical infrastructure, agriculture, forest, and open water, each with associated economic values (USD/m2) used in damage calculations.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0067048/multihazard_flood_risk_assessment_for_phu_quoc_island_viet_nam",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0067048/DR0095919/Vector_data.zip",
+          "id": "resource_exposure_vector",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_fluvial_pluvial",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "Return periods of 5, 10, 20, 50, and 100 years",
+            "event_count": 5,
+            "hazards": [
+              {
+                "id": "hazard_fluvial_pluvial",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_G1_S0_RP5",
+                "calculation_method": "simulated",
+                "description": "Fluvial/pluvial flood hazard map showing water depth for a 1-in-5 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G1_S0_05.tif.",
+                "hazard": {
+                  "id": "hazard_fluvial_pluvial",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5,
+                    "event_rate": 0.2
+                  }
+                }
+              },
+              {
+                "id": "event_G1_S0_RP10",
+                "calculation_method": "simulated",
+                "description": "Fluvial/pluvial flood hazard map showing water depth for a 1-in-10 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G1_S0_10.tif.",
+                "hazard": {
+                  "id": "hazard_fluvial_pluvial",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10,
+                    "event_rate": 0.1
+                  }
+                }
+              },
+              {
+                "id": "event_G1_S0_RP20",
+                "calculation_method": "simulated",
+                "description": "Fluvial/pluvial flood hazard map showing water depth for a 1-in-20 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G1_S0_20.tif.",
+                "hazard": {
+                  "id": "hazard_fluvial_pluvial",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20,
+                    "event_rate": 0.05
+                  }
+                }
+              },
+              {
+                "id": "event_G1_S0_RP50",
+                "calculation_method": "simulated",
+                "description": "Fluvial/pluvial flood hazard map showing water depth for a 1-in-50 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G1_S0_50.tif.",
+                "hazard": {
+                  "id": "hazard_fluvial_pluvial",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50,
+                    "event_rate": 0.02
+                  }
+                }
+              },
+              {
+                "id": "event_G1_S0_RP100",
+                "calculation_method": "simulated",
+                "description": "Fluvial/pluvial flood hazard map showing water depth for a 1-in-100 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G1_S0_100.tif.",
+                "hazard": {
+                  "id": "hazard_fluvial_pluvial",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "event_set_coastal",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "Return periods of 5, 10, 20, 50, and 100 years",
+            "event_count": 5,
+            "hazards": [
+              {
+                "id": "hazard_coastal",
+                "type": "coastal_flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_G2_S0_RP5",
+                "calculation_method": "simulated",
+                "description": "Coastal flood hazard map showing water depth for a 1-in-5 year return period event on Phu Quoc Island. Storm surge and tidal flooding. Current climate baseline, Do Nothing (S0) scenario. File: G2_S0_05.tif.",
+                "hazard": {
+                  "id": "hazard_coastal",
+                  "type": "coastal_flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5,
+                    "event_rate": 0.2
+                  }
+                }
+              },
+              {
+                "id": "event_G2_S0_RP10",
+                "calculation_method": "simulated",
+                "description": "Coastal flood hazard map showing water depth for a 1-in-10 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G2_S0_10.tif.",
+                "hazard": {
+                  "id": "hazard_coastal",
+                  "type": "coastal_flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10,
+                    "event_rate": 0.1
+                  }
+                }
+              },
+              {
+                "id": "event_G2_S0_RP20",
+                "calculation_method": "simulated",
+                "description": "Coastal flood hazard map showing water depth for a 1-in-20 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G2_S0_20.tif.",
+                "hazard": {
+                  "id": "hazard_coastal",
+                  "type": "coastal_flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20,
+                    "event_rate": 0.05
+                  }
+                }
+              },
+              {
+                "id": "event_G2_S0_RP50",
+                "calculation_method": "simulated",
+                "description": "Coastal flood hazard map showing water depth for a 1-in-50 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G2_S0_50.tif.",
+                "hazard": {
+                  "id": "hazard_coastal",
+                  "type": "coastal_flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50,
+                    "event_rate": 0.02
+                  }
+                }
+              },
+              {
+                "id": "event_G2_S0_RP100",
+                "calculation_method": "simulated",
+                "description": "Coastal flood hazard map showing water depth for a 1-in-100 year return period event on Phu Quoc Island. Current climate baseline, Do Nothing (S0) scenario. File: G2_S0_100.tif.",
+                "hazard": {
+                  "id": "hazard_coastal",
+                  "type": "coastal_flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "event_set_combined",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "Return periods of 5, 10, 20, 50, and 100 years",
+            "event_count": 5,
+            "hazards": [
+              {
+                "id": "hazard_combined",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_G3_S0_RP5",
+                "calculation_method": "simulated",
+                "description": "Combined (compound) flood hazard map showing water depth for a 1-in-5 year return period event on Phu Quoc Island. Combines fluvial, pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0) scenario. File: G3_S0_05.tif.",
+                "hazard": {
+                  "id": "hazard_combined",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5,
+                    "event_rate": 0.2
+                  }
+                }
+              },
+              {
+                "id": "event_G3_S0_RP10",
+                "calculation_method": "simulated",
+                "description": "Combined (compound) flood hazard map showing water depth for a 1-in-10 year return period event on Phu Quoc Island. Combines fluvial, pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0) scenario. File: G3_S0_10.tif.",
+                "hazard": {
+                  "id": "hazard_combined",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10,
+                    "event_rate": 0.1
+                  }
+                }
+              },
+              {
+                "id": "event_G3_S0_RP20",
+                "calculation_method": "simulated",
+                "description": "Combined (compound) flood hazard map showing water depth for a 1-in-20 year return period event on Phu Quoc Island. Combines fluvial, pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0) scenario. File: G3_S0_20.tif.",
+                "hazard": {
+                  "id": "hazard_combined",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20,
+                    "event_rate": 0.05
+                  }
+                }
+              },
+              {
+                "id": "event_G3_S0_RP50",
+                "calculation_method": "simulated",
+                "description": "Combined (compound) flood hazard map showing water depth for a 1-in-50 year return period event on Phu Quoc Island. Combines fluvial, pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0) scenario. File: G3_S0_50.tif.",
+                "hazard": {
+                  "id": "hazard_combined",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50,
+                    "event_rate": 0.02
+                  }
+                }
+              },
+              {
+                "id": "event_G3_S0_RP100",
+                "calculation_method": "simulated",
+                "description": "Combined (compound) flood hazard map showing water depth for a 1-in-100 year return period event on Phu Quoc Island. Combines fluvial, pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0) scenario. File: G3_S0_100.tif.",
+                "hazard": {
+                  "id": "hazard_combined",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_buildings_landuse",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_building_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_building_economic_value",
+              "dimension": "content",
+              "measurement": {
+                "quantity_kind": "currency",
+                "unit": "USD"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "title": "Building taxonomy",
+            "description": "Building and land use classes in Phu Quoc using the Global Flood Risk Tool (GFRT) taxonomy."
+          }
+        },
+        {
+          "id": "exposure_population",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_population_residential",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_population_tourist",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "population",
+            "title": "Population taxonomy",
+            "description": "Residential and tourist population in Phu Quoc derived from project surveys and official statistics."
+          }
+        },
+        {
+          "id": "exposure_infrastructure",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_road_network",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "road_network",
+            "title": "Infrastructure taxonomy",
+            "description": "Road network in Phu Quoc derived from project GIS vector data."
+          }
+        },
+        {
+          "id": "exposure_agriculture",
+          "category": "agriculture",
+          "metrics": [
+            {
+              "id": "metric_agriculture_area",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "agricultural_land",
+            "title": "Agriculture taxonomy",
+            "description": "Agricultural land area in Phu Quoc derived from project land use classification."
+          }
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_aal_combined_current",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "loss_annual_average_value",
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic",
+              "measurement": {
+                "quantity_kind": "monetary",
+                "unit": "USD"
+              }
+            },
+            "description": "Expected Annual Damage (EAD) for combined flooding (G3) on Phu Quoc Island under current climate conditions. Direct damage EAD: USD 27M; Total (direct + indirect): USD 37M. Calculated using Global Flood Risk Tool (GFRT) combining flood inundation depth, land use exposure with economic values (USD/m2), and depth-damage vulnerability curves. Integrates losses across all 5 return periods (5, 10, 20, 50, 100 years). Raster file: G3_S0_BL_annual.tif.",
+            "hazard": {
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_aal_combined_cc2050",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "loss_annual_average_value",
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic",
+              "measurement": {
+                "quantity_kind": "monetary",
+                "unit": "USD"
+              }
+            },
+            "description": "Expected Annual Damage (EAD) for combined flooding (G3) on Phu Quoc Island under 2050 climate change conditions. Do Nothing (S0): direct USD 129.54M, total USD 174.88M. Future Baseline: total USD 164.19M. Protective strategy (S1): total USD 110.08M (~33% reduction). Adaptive strategy (S2): total USD 68.05M (~59% reduction). Represents ~5x increase from current climate baseline.",
+            "hazard": {
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_probabilistic_damage",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "economic_loss_value",
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic",
+              "measurement": {
+                "quantity_kind": "monetary",
+                "unit": "USD"
+              }
+            },
+            "description": "Probabilistic flood damage rasters for each hazard group (G1 fluvial/pluvial, G2 coastal, G3 combined) and return period (5, 10, 20, 50, 100 years) across all scenarios. Current climate: 10-year flood direct damage USD 125M, 100-year flood USD 212M. CC2050: 10-year flood USD 602M, 100-year flood USD 948M. File naming: G[group]_S[scenario]_[CC50]_[return_period]_damage.tif.",
+            "hazard": {
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_empirical_2019",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "economic_loss_value",
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical",
+              "measurement": {
+                "quantity_kind": "monetary",
+                "unit": "USD"
+              }
+            },
+            "description": "Flood damage from the August 2019 event on Phu Quoc Island, modeled using observed flood extent and depth. 3,874 houses affected, inundation depths exceeding 1.5m in some areas, estimated total damage USD 4.3 million. File: Depth_Max_2019_damage.tif.",
+            "hazard": {
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_affected_population_residential",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "displaced_count",
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic",
+              "measurement": {
+                "quantity_kind": "count"
+              }
+            },
+            "description": "Residential population affected by flooding for each hazard group and return period. Current climate annual affected population: ~9,500; projected 2050: ~36,000 (~4x increase). Files: Residential_G[group]_S[scenario]_[return_period]_affected_population.tif and annual aggregates.",
+            "hazard": {
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_affected_population_tourist",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "displaced_count",
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic",
+              "measurement": {
+                "quantity_kind": "count"
+              }
+            },
+            "description": "Tourist population affected by flooding for each hazard group and return period. Phu Quoc is a major tourism destination; tourist population exposure is assessed separately from residential. Files: Tourist_G[group]_S[scenario]_[return_period]_affected_population.tif and annual aggregates.",
+            "hazard": {
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
