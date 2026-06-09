@@ -1,7 +1,8 @@
-'''
+"""
 Differences between RDLS and output frontmatter:
-    - links are replaced by catalog, derived from links and resources 
-'''
+    - catalog added; derived from links and resources
+"""
+
 import config
 
 
@@ -21,6 +22,7 @@ def make_dataset_frontmatter(dataset):
         "publisher": make_entity(dataset["publisher"]),
         "resources": [make_resource(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
+        "schema": make_schema(dataset["links"]),
         "slug": dataset["id"],
         "spatial": make_spatial(dataset["spatial"]),
         # optional
@@ -33,8 +35,10 @@ def make_dataset_frontmatter(dataset):
         "exposure": [
             make_exposure(exposure) for exposure in dataset.get("exposure", [])
         ],
-        "hazard": make_hazard(dataset.get("hazard")),
+        "hazard": make_hazard_top_level(dataset.get("hazard")),
         "lineage": make_lineage(dataset["lineage"]) if "lineage" in dataset else None,
+        # TODO: this is actually required? because it needs one for schema
+        "links": dataset.get("links"),
         "loss": make_loss(dataset.get("loss")),
         "project": make_project(dataset["project"]) if "project" in dataset else None,
         "purpose": dataset.get("purpose"),
@@ -43,7 +47,9 @@ def make_dataset_frontmatter(dataset):
             for related_resource in dataset.get("referenced_by", [])
         ],
         "spatial_resolution": dataset.get("spatial_resolution"),
-        "temporal": make_temporal(dataset["temporal"]) if "temporal" in dataset else None,
+        "temporal": (
+            make_temporal(dataset["temporal"]) if "temporal" in dataset else None
+        ),
         "temporal_resolution": dataset.get("temporal_resolution"),
         "version": dataset.get("version"),
         "vulnerability": make_vulnerability(dataset.get("vulnerability")),
@@ -59,7 +65,6 @@ def make_affiliation(affiliation):
     }
 
 
-
 def make_attribution(attribution):
     return {
         # required; throw if missing
@@ -69,6 +74,7 @@ def make_attribution(attribution):
     }
 
 
+# TODO: make sure this is still correct
 def make_catalog(dataset):
     link_hrefs = [link.get("href") for link in dataset.get("links", [])]
     access_urls = [
@@ -81,6 +87,19 @@ def make_catalog(dataset):
                 return label
     return None
 
+
+def make_classification(classification):
+    return {
+        # required; throw if missing
+        "id": classification["id"],
+        # optional
+        "description": classification.get("description"),
+        "scheme": classification.get("scheme"),
+        "title": classification.get("title"),
+        "uri": classification.get("uri"),
+    }
+
+
 def make_climate(climate):
     return {
         # optional
@@ -89,6 +108,19 @@ def make_climate(climate):
         "percentile": climate.get("percentile"),
     }
 
+
+def make_disaster_identifier(disaster_identifier):
+    return {
+        # required; throw if missing
+        "id": disaster_identifier["id"],
+        # optional
+        "description": disaster_identifier.get("description"),
+        "scheme": disaster_identifier.get("scheme"),
+        "title": disaster_identifier.get("title"),
+        "uri": disaster_identifier.get("uri"),
+    }
+
+
 def make_entity(attribution):
     return {
         # required; throw if missing
@@ -96,7 +128,42 @@ def make_entity(attribution):
         # optional
         "email": attribution.get("email"),
         "url": attribution.get("url"),
-        "affiliation": make_affiliation(attribution["affiliation"]) if "affiliation" in attribution else None,
+        "affiliation": (
+            make_affiliation(attribution["affiliation"])
+            if "affiliation" in attribution
+            else None
+        ),
+    }
+
+
+def make_event(event):
+    return {
+        # required; throw if missing
+        "id": event["id"],
+        "calculation_method": event["calculation_method"],
+        "hazard": make_hazard(event["hazard"]),
+        "occurrence": make_occurrence(event["occurrence"]),
+        # optional
+        "disaster_identifiers": [
+            make_disaster_identifier(di) for di in event.get("disaster_identifiers", [])
+        ],
+        "description": event.get("description"),
+    }
+
+
+def make_event_set(event_set):
+    return {
+        # required; throw if missing
+        "id": event_set["id"],
+        "hazards": [make_hazard(hazard) for hazard in event_set["hazards"]],
+        "analysis_type": event_set["analysis_type"],
+        # optional
+        "frequency_distribution": event_set.get("frequency_distribution"),
+        "seasonality": event_set.get("seasonality"),
+        "calculation_method": event_set.get("calculation_method"),
+        "event_count": event_set.get("event_count"),
+        "occurrence_range": event_set.get("occurrence_range"),
+        "events": [make_event(event) for event in event_set.get("events", [])],
     }
 
 
@@ -143,6 +210,8 @@ def make_exposure(exposure_array):
             else None
         ),
     }
+
+
 def make_gazetteer_entry(gazetteer_entry):
     return {
         # required; throw if missing
@@ -153,75 +222,31 @@ def make_gazetteer_entry(gazetteer_entry):
         "uri": gazetteer_entry.get("uri"),
     }
 
-def make_hazard(hazard):
+
+def make_hazard_top_level(hazard):
     """Convert RDL hazard metadata into JKAN frontmatter"""
     if hazard is None:
         return None
 
-    props_to_summarize = {
-        "calculation_method": [],  # found on event, event_set
-        "disaster_identifiers": [],  # found on event
-        "hazard_analysis_type": [],  # found on event_set as analysis_type
-        "hazard_type": [],  # found on event_set as type
-        "intensity": [],  # found on hazard, event.hazard as intensity_measure
-        "occurrence_range": [],  # found on event_set
-        "processes": [],  # found on event_set, event_set.hazard
-        "seasonality": [],  # found on event_set
+    return {
+        "event_sets": [make_event_set(event_set) for event_set in hazard["event_sets"]],
     }
 
-    for event_set in hazard["event_sets"]:
-        for es_hazard in event_set.get("hazards", []):
-            if "type" in es_hazard:
-                props_to_summarize["hazard_type"].append(es_hazard["type"])
-            if "hazard_process" in es_hazard:
-                props_to_summarize["processes"].append(es_hazard["hazard_process"])
-            if "intensity_measure" in es_hazard:
-                props_to_summarize["intensity"].append(es_hazard["intensity_measure"])
 
-        if "analysis_type" in event_set:
-            props_to_summarize["hazard_analysis_type"].append(
-                event_set["analysis_type"]
-            )
-        if "calculation_method" in event_set:
-            props_to_summarize["calculation_method"].append(
-                event_set["calculation_method"]
-            )
-        if "intensity_measure" in event_set:
-            props_to_summarize["intensity"].append(event_set["intensity_measure"])
-        if "occurrence_range" in event_set:
-            props_to_summarize["occurrence_range"].append(event_set["occurrence_range"])
-        if "hazard_process" in event_set:
-            props_to_summarize["processes"].append(event_set["hazard_process"])
-        if "seasonality" in event_set:
-            props_to_summarize["seasonality"].append(event_set["seasonality"])
-        if "type" in event_set:
-            props_to_summarize["hazard_type"].append(event_set["type"])
-
-        if "events" in event_set:
-            for event in event_set["events"]:
-                if "disaster_identifiers" in event:
-                    for di in event["disaster_identifiers"]:
-                        props_to_summarize["disaster_identifiers"].append(
-                            f"{di.get('id')}; {di.get('scheme')}"
-                        )
-
+def make_hazard(hazard):
     return {
-        "calculation_method": ", ".join(
-            sorted(set(props_to_summarize["calculation_method"]))
+        # required; throw if missing
+        "id": hazard["id"],
+        "type": hazard["type"],
+        "process": hazard["process"],
+        "intensity_measure": hazard["intensity_measure"],
+        # optional
+        "classification": (
+            make_classification(hazard["classification"])
+            if "classification" in hazard
+            else None
         ),
-        "disaster_identifiers": ", ".join(
-            sorted(set(props_to_summarize["disaster_identifiers"]))
-        ),
-        "hazard_analysis_type": ", ".join(
-            sorted(set(props_to_summarize["hazard_analysis_type"]))
-        ),
-        "hazard_type": ", ".join(sorted(set(props_to_summarize["hazard_type"]))),
-        "intensity": ", ".join(sorted(set(props_to_summarize["intensity"]))),
-        "occurrence_range": ", ".join(
-            sorted(set(props_to_summarize["occurrence_range"]))
-        ),
-        "processes": ", ".join(sorted(set(props_to_summarize["processes"]))),
-        "seasonality": ", ".join(sorted(set(props_to_summarize["seasonality"]))),
+        "trigger": make_trigger(hazard["trigger"]) if "trigger" in hazard else None,
     }
 
 
@@ -322,6 +347,62 @@ def make_metric(metric):
     }
 
 
+def make_occurrence(occurrence):
+    return {
+        # required; throw if missing
+        # optional
+        "deterministic": make_occurrence_deterministic(occurrence.get("deterministic")),
+        "empirical": make_occurrence_empirical(occurrence.get("empirical")),
+        "probabilistic": make_occurrence_probabilistic(occurrence.get("probabilistic")),
+    }
+
+
+def make_occurrence_deterministic(deterministic):
+    if deterministic is None:
+        return None
+    return {
+        # optional
+        "index_criteria": deterministic.get("index_criteria"),
+        "thresholds": deterministic.get("thresholds"),
+        "description": deterministic.get("description"),
+    }
+
+
+def make_occurrence_empirical(empirical):
+    if empirical is None:
+        return None
+    return {
+        # optional
+        "temporal": (
+            make_temporal(empirical["temporal"]) if "temporal" in empirical else None
+        ),
+        "return_period": empirical.get("return_period"),
+    }
+
+
+def make_occurrence_probabilistic(probabilistic):
+    if probabilistic is None:
+        return None
+    return {
+        # optional
+        "return_period": probabilistic.get("return_period"),
+        "event_rate": probabilistic.get("event_rate"),
+        "probability": make_occurrence_probablilistic_probability(
+            probabilistic.get("probability")
+        ),
+    }
+
+
+def make_occurrence_probablilistic_probability(probability):
+    if probability is None:
+        return None
+    return {
+        # required; throw if missing
+        "span": probability["span"],
+        # optional
+        "value": probability.get("value"),
+    }
+
 
 def make_project(project):
     return {
@@ -360,11 +441,24 @@ def make_resource(resource):
         "spatial_aggregation": resource.get("spatial_aggregation"),
         "spatial_resolution": resource.get("spatial_resolution"),
         "coordinate_system": resource.get("coordinate_system"),
-        "temporal": make_temporal(resource["temporal"]) if "temporal" in resource else None,
+        "temporal": (
+            make_temporal(resource["temporal"]) if "temporal" in resource else None
+        ),
         "temporal_resolution": resource.get("temporal_resolution"),
-        "baseline_period": make_temporal(resource["baseline_period"]) if "baseline_period" in resource else None,
-        "climate": make_climate(resource["climate"]) if "climate" in resource else None,    
+        "baseline_period": (
+            make_temporal(resource["baseline_period"])
+            if "baseline_period" in resource
+            else None
+        ),
+        "climate": make_climate(resource["climate"]) if "climate" in resource else None,
     }
+
+
+def make_schema(links):
+    for link in links:
+        if link.get("rel") == "describedby":
+            return link.get("href")
+    return None
 
 
 def make_source(source):
@@ -385,10 +479,7 @@ def make_spatial(spatial):
     # TODO: spatial is required but has no required properties??
     # unless there must be one gazetteer entry?
     if spatial.get("scale") == "global":
-        if (
-            "countries" in spatial
-            and type(spatial["countries"]) == list
-        ):
+        if "countries" in spatial and type(spatial["countries"]) == list:
             spatial["countries"].append("GLO")
         else:
             spatial["countries"] = ["GLO"]
@@ -396,10 +487,12 @@ def make_spatial(spatial):
         "bbox": spatial.get("bbox"),
         "centroid": spatial.get("centroid"),
         "countries": spatial.get("countries"),
-        "gazetteer_entries": [make_gazetteer_entry(g) for g in spatial.get("gazetteer_entries", [])],
+        "gazetteer_entries": [
+            make_gazetteer_entry(g) for g in spatial.get("gazetteer_entries", [])
+        ],
         "scale": spatial.get("scale"),
     }
-    
+
 
 def make_temporal(temporal):
     return {
@@ -407,6 +500,15 @@ def make_temporal(temporal):
         "end": temporal.get("end"),
         "duration": temporal.get("duration"),
         "central_year": temporal.get("central_year"),
+    }
+
+
+def make_trigger(trigger):
+    return {
+        # required; throw if missing
+        "type": trigger["type"],
+        # optional
+        "process": trigger.get("process"),
     }
 
 
