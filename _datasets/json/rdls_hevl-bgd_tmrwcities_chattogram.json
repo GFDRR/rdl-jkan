@@ -64,7 +64,7 @@
           }
         ]
       },
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license": "CC0-1.0",
       "attributions": [
         {
           "id": "attribution_funder",
@@ -92,7 +92,7 @@
             "name": "OpenStreetMap building footprints",
             "url": "https://www.openstreetmap.org/",
             "type": "dataset",
-            "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+            "license": "ODbL-1.0",
             "used_in": "exposure",
             "description": "Building footprints derived from OpenStreetMap database, modified and attributed to represent future urban context with structural taxonomy for multi-hazard risk assessment. Lineage: OSM data scraped and modified with building attributes including lateral resistance system, code level, storeys, and occupancy type to support vulnerability assessment."
           },
@@ -124,7 +124,7 @@
             "name": "NASADEM Digital Elevation Model",
             "url": "https://www.earthdata.nasa.gov/esds/competitive-programs/measures/nasadem",
             "type": "dataset",
-            "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "license": "CC0-1.0",
             "used_in": "hazard",
             "description": "NASA Digital Elevation Model used as terrain input for flood hazard modelling. Lineage: Used as base terrain for flood simulation workflow."
           },
@@ -149,7 +149,7 @@
             "name": "HAZUS infrastructure fragility functions",
             "url": "https://www.fema.gov/flood-maps/tools-resources/flood-map-products/hazus",
             "type": "model",
-            "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "license": "CC0-1.0",
             "used_in": "vulnerability",
             "description": "Fragility functions for road (HWB classes) and power network (ESS classes) infrastructure under earthquake loading. Lineage: Adapted from HAZUS-MH technical manual for infrastructure vulnerability assessment."
           }
@@ -551,6 +551,7 @@
               "analysis_details": "Depth-damage vulnerability functions defining damage ratio as a function of water depth (0-6m at 9 discrete levels: 0, 0.5, 1, 1.5, 2, 3, 4, 5, 6m) for 495 building typologies classified by lateral resistance system (BrCfl, BrCri, Rci), code level (LC, MC, HC), storeys, and occupancy type (Res, Com, Edu, etc.). Functions based on consultation with local partners and JRC global flood depth-damage database.",
               "id": "vulnerability_function_flood_buildings",
               "hazard_primary": {
+                "id": "TODO",
                 "type": "flood",
                 "process": "fluvial_flood",
                 "intensity_measure": "wd:m"
@@ -575,6 +576,7 @@
               "analysis_details": "Lognormal fragility functions for 45 building typologies defining probability of exceeding 4 damage states (DS1-DS4) as a function of PGA or spectral acceleration (g). Parameters include median (mu) and dispersion (sigma) for each damage state, with period range (minperiod, maxperiod) for each typology. Building taxonomy follows {LRS}+{CodeLevel}+{Height} pattern where LRS includes RCi (reinforced concrete infill), BrCri (brick with concrete), BrCfl (brick with flexible); CodeLevel includes LC (low code), MC (moderate code), HC (high code); Height includes LR (low-rise), MR (mid-rise), HR (high-rise).",
               "id": "fragility_function_earthquake_buildings",
               "hazard_primary": {
+                "id": "TODO",
                 "type": "earthquake",
                 "process": "ground_motion",
                 "intensity_measure": "PGA:g"
@@ -597,6 +599,7 @@
               "analysis_details": "HAZUS-based fragility functions for road infrastructure (HWB3, HWB5, HWB7 highway bridge classes) defining median PGA and dispersion for 4 damage states (slight, moderate, extensive, complete).",
               "id": "fragility_function_earthquake_roads",
               "hazard_primary": {
+                "id": "TODO",
                 "type": "earthquake",
                 "process": "ground_motion",
                 "intensity_measure": "PGA:g"
@@ -619,6 +622,7 @@
               "analysis_details": "HAZUS-based fragility functions for power network infrastructure (ESS1-ESS18 substation classes at 115/230/500 kV, anchored and unanchored configurations) defining median PGA and dispersion (beta) for 4 damage states (slight, moderate, extensive, complete).",
               "id": "fragility_function_earthquake_power",
               "hazard_primary": {
+                "id": "TODO",
                 "type": "earthquake",
                 "process": "ground_motion",
                 "intensity_measure": "PGA:g"
@@ -672,6 +676,7 @@
             "description": "Building damage state results from earthquake impact assessment for each community planning scenario (Civil Society, Farmers/Fishermen, Informal Working, Landless). Damage states derived by convolving spectral acceleration hazard with building fragility functions.",
             "id": "loss_earthquake_buildings",
             "hazard": {
+              "id": "TODO",
               "type": "earthquake",
               "process": "ground_motion",
               "intensity_measure": "PGA:g"
@@ -694,6 +699,7 @@
             "description": "Building damage ratio results from flood impact assessment for each community planning scenario (Civil Society, Farmers/Fishermen, Informal Working, Landless). Damage ratios derived by applying depth-damage vulnerability functions to flood water depth hazard.",
             "id": "loss_flood_buildings",
             "hazard": {
+              "id": "TODO",
               "type": "flood",
               "process": "fluvial_flood",
               "intensity_measure": "wd:m"
@@ -716,6 +722,7 @@
             "description": "Affected population results from earthquake impact assessment for each community planning scenario, derived from building damage states and residential occupancy.",
             "id": "loss_earthquake_population",
             "hazard": {
+              "id": "TODO",
               "type": "earthquake",
               "process": "ground_motion",
               "intensity_measure": "PGA:g"
@@ -738,6 +745,7 @@
             "description": "Affected population results from flood impact assessment for each community planning scenario, derived from building inundation and residential occupancy.",
             "id": "loss_flood_population",
             "hazard": {
+              "id": "TODO",
               "type": "flood",
               "process": "fluvial_flood",
               "intensity_measure": "wd:m"
