@@ -7,7 +7,7 @@ json_dir = f"{datasets_dir}/json"
 python_path = f"{root_dir}/python"
 vectors_path = f"{python_path}/vectors.json"
 # for use when run with --ci flag
-remote_target_branch = "rdl-0.3"
+remote_target_branch = "rdl-1.0"
 
 # Search configuration constants (matching front-end hybrid search logic)
 KEYWORD_SCORE_MIN = 0.75
