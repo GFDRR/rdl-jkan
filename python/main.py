@@ -51,7 +51,8 @@ def validate_json_with_schema(dataset_from_json, schema_url, validation_errors):
     schema_path = f"{config.python_path}/rdls_schema.json"
     is_cached = os.path.isfile(schema_path)
     if not is_cached:
-        fetch_schema(schema_url, schema_path)
+        # TODO: this can use the schema_url param when it's up
+        fetch_schema(config.schema_url, schema_path)
 
     with open(schema_path, "r") as file:
         schema = json.load(file)
