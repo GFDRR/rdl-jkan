@@ -31,7 +31,6 @@ def make_dataset_frontmatter(dataset):
             make_attribution(attribution)
             for attribution in dataset.get("attributions", [])
         ],
-        "catalog": make_catalog(dataset),
         "details": dataset.get("details"),
         "exposure": [
             make_exposure(exposure) for exposure in dataset.get("exposure", [])
@@ -39,7 +38,7 @@ def make_dataset_frontmatter(dataset):
         "hazard": make_hazard_top_level(dataset.get("hazard")),
         "lineage": make_lineage(dataset["lineage"]) if "lineage" in dataset else None,
         "loss": {
-            "losses": [make_loss(l) for l in dataset.get("loss", {}).get("losses",[])]
+            "losses": [make_loss(l) for l in dataset.get("loss", {}).get("losses", [])]
         },
         "project": make_project(dataset["project"]) if "project" in dataset else None,
         "purpose": dataset.get("purpose"),
@@ -54,6 +53,25 @@ def make_dataset_frontmatter(dataset):
         "temporal_resolution": dataset.get("temporal_resolution"),
         "version": dataset.get("version"),
         "vulnerability": make_vulnerability(dataset.get("vulnerability")),
+        "decorations": make_decorations(dataset),
+    }
+
+
+def make_decorations(dataset):
+    hazard_original = make_hazard_top_level(dataset.get("hazard")) or {}
+    hazard = {
+        "type": ", ".join(list(
+        set(
+            event["hazard"]["type"]
+            for event_set in hazard_original.get("event_sets", [])
+            for event in event_set.get("events", [])
+        )
+    )),
+    }
+
+    return {
+        "catalog": make_catalog(dataset),
+        "hazard": hazard
     }
 
 
