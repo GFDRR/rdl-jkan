@@ -31,7 +31,7 @@ details: 'Event-level disaster loss records from the DesInventar database for Al
   Data.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Event-level disaster loss records collected through the DesInventar
     Sendai system, a standardised methodology for building national disaster loss
@@ -77,7 +77,7 @@ loss:
       classification: null
       id: TODO
       intensity_measure: wd:m
-      process: storm_surge
+      process: pluvial_flood
       trigger: null
       type: flood
     id: loss_001_coastalflood_houses_damaged
@@ -2220,7 +2220,7 @@ resources:
   title: Disaster Tabular data for Albania
 risk_data_type:
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_lss-alb_undrr_desinventar
 spatial:
   bbox:

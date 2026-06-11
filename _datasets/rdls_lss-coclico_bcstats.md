@@ -18,7 +18,7 @@ description: 'Projections of the cost of buildings exposed to coastal flooding, 
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Projections of the cost of buildings exposed to coastal flooding, integrating
     future flood risk models and current buildings.
@@ -127,7 +127,7 @@ resources:
   title: GeoParquet STAC items
 risk_data_type:
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_lss-coclico_bcstats
 spatial:
   bbox:

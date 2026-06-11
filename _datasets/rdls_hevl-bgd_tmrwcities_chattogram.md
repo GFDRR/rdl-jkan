@@ -135,6 +135,8 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
+  analysis_types: deterministic
+  calculation_methods: simulated
   event_sets:
   - analysis_type: deterministic
     calculation_method: simulated
@@ -247,7 +249,11 @@ hazard:
     id: event_set_flood_bairag
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+  intensity_measures: PGA:g, wd:m
+  occurrence_ranges: ''
+  processes: fluvial_flood, pluvial_flood, ground_motion
+  types: earthquake, flood
+license: CC0-1.0
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities
     GCRF Urban Disaster Risk Hub. OpenStreetMap building footprints were classified
@@ -262,7 +268,7 @@ lineage:
     from the JRC European flood damage database.
   sources:
   - id: source_1
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0
     name: OpenStreetMap building footprints
     risk_data_type: null
     type: dataset
@@ -290,7 +296,7 @@ lineage:
     url: null
     used_in: hazard
   - id: source_5
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: NASADEM Digital Elevation Model
     risk_data_type: null
     type: dataset
@@ -311,7 +317,7 @@ lineage:
     url: https://publications.jrc.ec.europa.eu/repository/handle/JRC105688
     used_in: vulnerability
   - id: source_8
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: HAZUS infrastructure fragility functions
     risk_data_type: null
     type: model
@@ -658,7 +664,7 @@ risk_data_type:
 - exposure
 - vulnerability
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_hevl-bgd_tmrwcities_chattogram
 spatial:
   bbox:

@@ -124,6 +124,8 @@ exposure:
       quantity_kind: area
       unit: null
 hazard:
+  analysis_types: probabilistic
+  calculation_methods: simulated
   event_sets:
   - analysis_type: probabilistic
     calculation_method: simulated
@@ -475,7 +477,11 @@ hazard:
     id: event_set_combined
     occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+  intensity_measures: wd:m
+  occurrence_ranges: Return periods of 5, 10, 20, 50, and 100 years
+  processes: fluvial_flood, coastal_flood
+  types: flood
+license: CC-BY-4.0
 lineage:
   description: Flood risk assessment for Phu Quoc Island, Kien Giang Province, Viet
     Nam, produced by Royal HaskoningDHV and EGIS under the GFDRR-financed Phu Quoc
@@ -490,7 +496,7 @@ lineage:
     tourist populations from current and projected density datasets.
   sources:
   - id: source_hecras
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: HEC-RAS 2D hydraulic model
     risk_data_type: null
     type: model
@@ -858,7 +864,7 @@ risk_data_type:
 - hazard
 - exposure
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_hel-vnm_phuquocfloodrisk
 spatial:
   bbox:

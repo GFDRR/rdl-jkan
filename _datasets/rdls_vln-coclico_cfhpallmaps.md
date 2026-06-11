@@ -37,7 +37,7 @@ description: 'Inundation Distribution During Flood Events user story provides fl
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Inundation Distribution During Flood Events user story provides flood
     extent projections under various scenarios, including different coastal protection
@@ -135,7 +135,7 @@ resources:
   title: GeoParquet STAC items
 risk_data_type:
 - vulnerability
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_vln-coclico_cfhpallmaps
 spatial:
   bbox:

@@ -56,6 +56,8 @@ details: 'Methodology: news articles where flooding is the primary subject are p
   Also available as Google Earth Engine FeatureCollection at projects/sat-io/open-datasets/groundsource_2026.'
 exposure: []
 hazard:
+  analysis_types: empirical
+  calculation_methods: observed
   event_sets:
   - analysis_type: empirical
     calculation_method: observed
@@ -81,7 +83,11 @@ hazard:
     id: es_flood_empirical
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+  intensity_measures: wd:m
+  occurrence_ranges: ''
+  processes: fluvial_flood
+  types: flood
+license: CC-BY-4.0
 lineage:
   description: Flood event records extracted from global news media (2000-2026) using
     a four-stage LLM pipeline. News articles are retrieved from global sources across
@@ -204,7 +210,7 @@ resources:
   title: Groundsource on Google Earth Engine
 risk_data_type:
 - hazard
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_hzd-google_groundsource
 spatial:
   bbox:

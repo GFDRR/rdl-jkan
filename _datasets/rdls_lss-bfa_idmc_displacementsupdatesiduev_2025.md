@@ -60,7 +60,7 @@ details: 'Please note that most of the figures are estimates. The definition hig
   displacement.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC collects event data on internal displacements triggered by natural
     hazards and conflict-related violence through systematic monitoring and reporting.
@@ -109,7 +109,7 @@ loss:
       classification: null
       id: TODO
       intensity_measure: sws_10m:m/s
-      process: fluvial_flood
+      process: lightning
       trigger: null
       type: convective_storm
     id: loss_2
@@ -145,7 +145,7 @@ resources:
   title: idmc event data for BFA
 risk_data_type:
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_lss-bfa_idmc_displacementsupdatesiduev_2025
 spatial:
   bbox: null

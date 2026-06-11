@@ -28,7 +28,7 @@ exposure:
       quantity_kind: currency
       unit: USD
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: null
   sources:
@@ -90,7 +90,7 @@ resources:
   title: 'OGC WCS: geonode Service'
 risk_data_type:
 - exposure
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_exp-bdi_icpac_croplandsquaremeters2019
 spatial:
   bbox:

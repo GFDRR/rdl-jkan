@@ -70,6 +70,8 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
+  analysis_types: empirical
+  calculation_methods: observed
   event_sets:
   - analysis_type: empirical
     calculation_method: observed
@@ -86,7 +88,11 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+  intensity_measures: AA:km2
+  occurrence_ranges: ''
+  processes: fluvial_flood
+  types: flood
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed Planet and Pleiades satellite imagery acquired\
     \ 23-25 February 2025 over Gaborone, South East District, and Kgatleng Districts,\
@@ -191,7 +197,7 @@ risk_data_type:
 - hazard
 - exposure
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
 spatial:
   bbox: null

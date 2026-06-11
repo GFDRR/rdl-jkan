@@ -123,7 +123,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: This dataset aggregates multiple risk assessment indicators from diverse
     sources (demographic, environmental, infrastructure, accessibility, and hazard
@@ -286,7 +286,7 @@ resources:
 risk_data_type:
 - exposure
 - vulnerability
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_ev-phl_heigit_riskassessmentindicators_2025
 spatial:
   bbox: null

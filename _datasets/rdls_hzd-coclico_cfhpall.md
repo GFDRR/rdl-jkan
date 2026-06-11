@@ -35,6 +35,8 @@ description: 'Flood Maps represent the flood simulations across Europe (at 25 m 
 details: null
 exposure: []
 hazard:
+  analysis_types: probabilistic
+  calculation_methods: simulated
   event_sets:
   - analysis_type: probabilistic
     calculation_method: simulated
@@ -105,7 +107,11 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+  intensity_measures: wd:m
+  occurrence_ranges: ''
+  processes: coastal_flood
+  types: flood
+license: CC-BY-4.0
 lineage:
   description: 'Flood Maps represent the flood simulations across Europe (at 25 m
     resolution), indicating the maximum flood extent and depth, for different emission
@@ -196,7 +202,7 @@ resources:
   title: Geoserver Parquet link
 risk_data_type:
 - hazard
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_hzd-coclico_cfhpall
 spatial:
   bbox:

@@ -114,7 +114,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Pastoral sentinel data collected through questionnaires administered
     to a network of field data collectors across West and Central Africa as part of
@@ -191,7 +191,7 @@ resources:
 risk_data_type:
 - exposure
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_el-acfrowca_pastoralsentinels
 spatial:
   bbox: null
