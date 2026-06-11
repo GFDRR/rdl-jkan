@@ -730,7 +730,15 @@ layout: default
                 <i class="fa fa-magic" aria-hidden="true"></i> Semantic
               </span>
             </h3>
-            <p class="card-description" x-text="dataset.metadata.description || ''"></p>
+            <div
+              x-data="{ open: false }"
+              x-bind:class="'desc-truncate' + (open ? ' expanded' : '')"
+            >
+              <p class="card-description desc-text"
+                 x-ref="description"
+                 x-text="dataset.metadata.description || ''"></p>
+              <button x-show="$refs.description.scrollHeight > $refs.description.clientHeight" class="desc-toggle" @click="open = ! open" x-text="open ? 'Show less' : 'Show more'"></button>
+            </div>
 
             <div class="card-footer">
               <div class="meta-item" x-show="dataset.metadata.creator && dataset.metadata.creator.name">
