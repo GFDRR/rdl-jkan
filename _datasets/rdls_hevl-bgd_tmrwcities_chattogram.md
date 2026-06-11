@@ -249,7 +249,7 @@ hazard:
     id: event_set_flood_bairag
     occurrence_range: null
     seasonality: null
-  intensity_measures: PGA:g, wd:m
+  intensity_measures: wd:m, PGA:g
   occurrence_ranges: ''
   processes: fluvial_flood, pluvial_flood, ground_motion
   types: earthquake, flood
