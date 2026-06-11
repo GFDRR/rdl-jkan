@@ -38,7 +38,7 @@ def make_dataset_frontmatter(dataset):
         ],
         "hazard": make_hazard_top_level(dataset.get("hazard")),
         "lineage": make_lineage(dataset["lineage"]) if "lineage" in dataset else None,
-        "loss": make_loss(dataset.get("loss")),
+        "loss": [make_loss(l) for l in dataset.get("loss", {}).get("losses",[])],
         "project": make_project(dataset["project"]) if "project" in dataset else None,
         "purpose": dataset.get("purpose"),
         "referenced_by": [
