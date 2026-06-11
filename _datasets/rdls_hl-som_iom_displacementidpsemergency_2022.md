@@ -35,6 +35,8 @@ description: 'Emergency Trends Tracking (ETT) is a crisis-based tool that tracks
 details: null
 exposure: []
 hazard:
+  analysis_types: empirical
+  calculation_methods: observed
   event_sets:
   - analysis_type: empirical
     calculation_method: observed
@@ -51,7 +53,11 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+  intensity_measures: SPI:-
+  occurrence_ranges: ''
+  processes: meteorological_drought
+  types: drought
+license: CC-BY-4.0
 lineage:
   description: Emergency Trends Tracking (ETT) is a crisis-based monitoring tool that
     collects empirical displacement data through IOM DTM standard methodology. Data
@@ -401,7 +407,7 @@ resources:
 risk_data_type:
 - hazard
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_hl-som_iom_displacementidpsemergency_2022
 spatial:
   bbox: null

@@ -17,7 +17,7 @@ description: 'GDP from 2005 [Source: This metadata record was automatically extr
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Global gridded GDP datasets consistent with the shared socioeconomic
     pathways (Wang & Sun 2022)
@@ -101,7 +101,7 @@ resources:
   title: Reference
 risk_data_type:
 - vulnerability
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_vln-crstac_globalgriddedgdp_historicalgdp
 spatial:
   bbox:

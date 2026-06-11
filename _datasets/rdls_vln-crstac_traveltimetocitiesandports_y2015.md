@@ -21,7 +21,7 @@ description: 'The dataset is a suite of global travel-time accessibility indicat
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The dataset is a suite of global travel-time accessibility indicators
     for the year 2015, at approximately one-kilometre spatial resolution for the entire
@@ -138,7 +138,7 @@ resources:
   title: Code link
 risk_data_type:
 - vulnerability
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_vln-crstac_traveltimetocitiesandports_y2015
 spatial:
   bbox:

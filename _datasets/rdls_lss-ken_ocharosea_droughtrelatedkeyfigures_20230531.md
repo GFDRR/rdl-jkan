@@ -25,7 +25,7 @@ description: 'Drought Related Key Figures for Kenya. [Source: This metadata reco
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Drought-related key figures aggregated from humanitarian partners'
     field assessments and situation reports during the 2021-2022 Kenya drought emergency.
@@ -132,7 +132,7 @@ resources:
   title: kenya-drought-key-figures
 risk_data_type:
 - loss
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_lss-ken_ocharosea_droughtrelatedkeyfigures_20230531
 spatial:
   bbox: null

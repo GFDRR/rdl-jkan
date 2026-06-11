@@ -185,6 +185,8 @@ exposure:
       quantity_kind: energy
       unit: gigawatt_hour
 hazard:
+  analysis_types: probabilistic
+  calculation_methods: simulated
   event_sets:
   - analysis_type: probabilistic
     calculation_method: simulated
@@ -626,7 +628,14 @@ hazard:
     occurrence_range: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500,
       600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 10000 year return periods
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+  intensity_measures: SPI:-, sws_10m:m/s, wd:m, AirTemp:C
+  occurrence_ranges: 2, 5, 10, 25, 50, 100, 250, 500, 1000 year return periods, Annual
+    probability of occurrence, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300,
+    400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 10000 year return
+    periods
+  processes: coastal_flood, fluvial_flood, extreme_heat, meteorological_drought, tropical_cyclone
+  types: drought, strong_wind, flood, extreme_temperature
+license: CC-BY-SA-4.0
 lineage:
   description: Global multi-hazard infrastructure risk and resilience analysis produced
     using the open-gira pipeline (University of Oxford / NISMOD). Country extents
@@ -640,91 +649,91 @@ lineage:
     GHS-POP and GHS-BUILT-S grids were spatially aggregated using snkit.
   sources:
   - id: source_aqueduct_floods
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Aqueduct Floods
     risk_data_type: null
     type: dataset
     url: https://www.wri.org/publication/aqueduct-floods-methodology
     used_in: hazard
   - id: source_extreme_heat_drought
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Annual probability of extreme heat and drought events
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.5281/zenodo.8147088
     used_in: hazard
   - id: source_storm_cyclone
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: STORM tropical cyclone wind speed return periods
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.4121/12705164.v3
     used_in: hazard
   - id: source_storm_cyclone_cc
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: STORM climate change tropical cyclone wind speed return periods
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.4121/14510817.v3
     used_in: hazard
   - id: source_ghs_pop
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GHS-POP - Global Human Settlement Population Grid
     risk_data_type: null
     type: dataset
     url: https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php
     used_in: exposure
   - id: source_ghs_built
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GHS-BUILT-S - Global Human Settlement Built-up Surface Grid
     risk_data_type: null
     type: dataset
     url: https://human-settlement.emergency.copernicus.eu/ghs_buS2023.php
     used_in: exposure
   - id: source_osm_networks
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0
     name: OpenStreetMap road and rail networks
     risk_data_type: null
     type: dataset
     url: https://global.infrastructureresilience.org
     used_in: exposure
   - id: source_power_plants
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global Power Plant Database
     risk_data_type: null
     type: dataset
     url: https://resourcewatch.org/data/explore/Global-Power-Plant-Database
     used_in: exposure
   - id: source_power_transmission
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Predictive mapping of the global power system
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.5281/zenodo.3628142
     used_in: exposure
   - id: source_natural_earth
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: Natural Earth Admin 0 Map Units
     risk_data_type: null
     type: dataset
     url: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details
     used_in: exposure
   - id: source_model_snkit
-    license: https://opensource.org/licenses/MIT
+    license: MIT
     name: snkit - Spatial Networks Toolkit
     risk_data_type: null
     type: model
     url: https://github.com/nismod/snkit
     used_in: exposure
   - id: source_model_snail
-    license: https://opensource.org/licenses/MIT
+    license: MIT
     name: nismod-snail - Spatial Networks Impact Assessment Library
     risk_data_type: null
     type: model
     url: https://github.com/nismod/snail
     used_in: vulnerability
   - id: source_model_open_gira
-    license: https://opensource.org/licenses/MIT
+    license: MIT
     name: open-gira - Global Infrastructure Risk and Resilience Analysis
     risk_data_type: null
     type: model
@@ -783,7 +792,7 @@ resources:
 risk_data_type:
 - hazard
 - exposure
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_he-abw_nismod_sdkicra
 spatial:
   bbox:

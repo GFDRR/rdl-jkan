@@ -221,7 +221,7 @@ exposure:
       quantity_kind: length
       unit: kilometre
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Africa Transport System Database (AFTSDB) compiled by integrating transport
     network data from multiple continental and national sources. OpenStreetMap road
@@ -233,49 +233,49 @@ lineage:
     standardised and processed using the open-gira and snkit toolkits.
   sources:
   - id: source_osm
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0
     name: OpenStreetMap
     risk_data_type: null
     type: dataset
     url: https://www.openstreetmap.org/
     used_in: exposure
   - id: source_wb_airports
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: World Bank Global Airports Database
     risk_data_type: null
     type: dataset
     url: https://datacatalog.worldbank.org/search/dataset/0038117/Global-Airports
     used_in: exposure
   - id: source_ourairports
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: OurAirports
     risk_data_type: null
     type: dataset
     url: https://ourairports.com/
     used_in: exposure
   - id: source_verschuur
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global Maritime Network
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.1038/s43247-022-00656-7
     used_in: exposure
   - id: source_portwatch
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: PortWatch
     risk_data_type: null
     type: dataset
     url: https://portwatch.imf.org/
     used_in: exposure
   - id: source_usgs
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: USGS Africa Infrastructure Database
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.5066/P97EQWXP
     used_in: exposure
   - id: source_thorn
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: African Development Corridors Database
     risk_data_type: null
     type: dataset
@@ -310,7 +310,7 @@ lineage:
     url: https://nilebasin.org/
     used_in: exposure
   - id: source_hydrorivers
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: HydroRIVERS
     risk_data_type: null
     type: dataset
@@ -338,21 +338,21 @@ lineage:
     url: https://github.com/trg-rail/africa_rail_network
     used_in: exposure
   - id: source_aiddata
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: AidData Chinese Development Finance
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.1038/s41597-024-03341-w
     used_in: exposure
   - id: source_opengira
-    license: https://opensource.org/licenses/MIT
+    license: MIT
     name: Open-GIRA
     risk_data_type: null
     type: model
     url: https://github.com/nismod/open-gira
     used_in: exposure
   - id: source_snkit
-    license: https://opensource.org/licenses/MIT
+    license: MIT
     name: snkit
     risk_data_type: null
     type: model
@@ -597,7 +597,7 @@ resources:
   title: Africa Transport Database Metadata
 risk_data_type:
 - exposure
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_exp-nismod_aftsdb
 spatial:
   bbox: null

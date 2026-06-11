@@ -172,7 +172,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Multi-layer regional economic activity dataset assembled from global
     gridded and vector sources. Agricultural GDP from AgGDP and MAPSPAM crop production
@@ -184,70 +184,70 @@ lineage:
     performed using scalenav.
   sources:
   - id: source_aggdp
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: AgGDP - Global Gridded Agricultural GDP
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.5194/essd-15-1357-2023
     used_in: exposure
   - id: source_mapspam
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: MAPSPAM - Global Spatially-Disaggregated Crop Production Statistics
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.7910/DVN/SWPENT
     used_in: exposure
   - id: source_mining
-    license: https://creativecommons.org/licenses/by-sa/4.0/
+    license: CC-BY-SA-4.0
     name: Global-scale Mining Areas Dataset
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.1038/s41597-020-00624-w
     used_in: exposure
   - id: source_gem
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GEM Global Integrated Power Tracker
     risk_data_type: null
     type: dataset
     url: https://globalenergymonitor.org/projects/global-integrated-power-tracker/
     used_in: exposure
   - id: source_kummu_gdp
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Kummu Gridded Global GDP Dataset
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.1038/s41597-025-04487-x
     used_in: exposure
   - id: source_copernicus
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Copernicus Global Dynamic Land Cover
     risk_data_type: null
     type: dataset
     url: https://land.copernicus.eu/en/products/global-dynamic-land-cover
     used_in: exposure
   - id: source_ghsl
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GHSL - Global Human Settlement Layer
     risk_data_type: null
     type: dataset
     url: https://ghsl.jrc.ec.europa.eu/
     used_in: exposure
   - id: source_overture
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0
     name: Overture Maps Places
     risk_data_type: null
     type: dataset
     url: https://overturemaps.org/
     used_in: exposure
   - id: source_dose_wdi
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: DOSE-WDI
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.5281/zenodo.17235586
     used_in: exposure
   - id: source_scalenav
-    license: https://opensource.org/licenses/MIT
+    license: MIT
     name: scalenav
     risk_data_type: null
     type: model
@@ -326,7 +326,7 @@ resources:
   title: Dataset Metadata
 risk_data_type:
 - exposure
-schema: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+schema: rdls-10
 slug: rdls_exp-nismod_regeconactivity
 spatial:
   bbox: null
