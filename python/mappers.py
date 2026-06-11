@@ -23,7 +23,6 @@ def make_dataset_frontmatter(dataset):
         "publisher": make_entity(dataset["publisher"]),
         "resources": [make_resource(resource) for resource in dataset["resources"]],
         "risk_data_type": dataset["risk_data_type"],
-        "schema": make_schema(dataset["links"]),
         "slug": dataset["id"],
         "spatial": make_spatial(dataset["spatial"]),
         # optional
@@ -420,13 +419,6 @@ def make_resource(resource):
         ),
         "climate": make_climate(resource["climate"]) if "climate" in resource else None,
     }
-
-
-def make_schema(links):
-    for link in links:
-        if link.get("rel") == "describedby":
-            return link.get("href")
-    return None
 
 
 def make_source(source):
