@@ -10,7 +10,7 @@ def make_dataset_frontmatter(dataset):
     """Formats RDL v1.0 metadata into JKAN frontmatter for a dataset"""
 
     return {
-        "schema": "rdls-1.0",
+        "schema": "rdls-10",
         # try first; required by write_yaml
         "title": dataset["title"],
         # required; throw if missing

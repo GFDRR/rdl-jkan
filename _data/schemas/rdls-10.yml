@@ -77,14 +77,12 @@ resource_fields:
     label: URL to resource
     datajson: downloadURL
 
-# HazardModel
 hazard:
-  ## EventSet
   - field_name: id
     label: Hazard ID
     required: true
-  - field_name: hazard_type
-    label: Hazard type
+  - field_name: types
+    label: Hazard types
     required: true
     display_template: display/hazard_type.html
     values:
@@ -135,25 +133,25 @@ hazard:
       - wildfire
       - extratropical_cyclone
       - tropical_cyclone
-  - field_name: intensity
+  - field_name: intensity_measures
     display_template: display/IMT.html
-    label: Intensity
-  - field_name: hazard_analysis_type
-    label: Hazard Analysis Type
+    label: Intensity Measures
+  - field_name: analysis_types
+    label: Analysis Types
     display_template: display/analysis_type.html
     values:
       - probabilistic
       - deterministic
       - empirical
-  - field_name: calculation_method
+  - field_name: calculation_methods
     display_template: display/calculation_method.html
-    label: Calculation Method
+    label: Calculation Methods
     values:
       - inferred
       - simulated
       - observed
-  - field_name: occurrence_range
-    label: Occurrence Range
+  - field_name: occurrence_ranges
+    label: Occurrence Ranges
   - field_name: disaster_identifiers
     display_template: display/disaster_identifiers.html
     label: Disaster Identifiers
