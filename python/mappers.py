@@ -30,6 +30,7 @@ def make_dataset_frontmatter(dataset):
             make_attribution(attribution)
             for attribution in dataset.get("attributions", [])
         ],
+        "catalog": make_catalog(dataset),
         "details": dataset.get("details"),
         "exposure": [
             make_exposure(exposure) for exposure in dataset.get("exposure", [])
@@ -52,25 +53,6 @@ def make_dataset_frontmatter(dataset):
         "temporal_resolution": dataset.get("temporal_resolution"),
         "version": dataset.get("version"),
         "vulnerability": make_vulnerability(dataset.get("vulnerability")),
-        "decorations": make_decorations(dataset),
-    }
-
-
-def make_decorations(dataset):
-    hazard_original = make_hazard_top_level(dataset.get("hazard")) or {}
-    hazard = {
-        "type": ", ".join(list(
-        set(
-            event["hazard"]["type"]
-            for event_set in hazard_original.get("event_sets", [])
-            for event in event_set.get("events", [])
-        )
-    )),
-    }
-
-    return {
-        "catalog": make_catalog(dataset),
-        "hazard": hazard
     }
 
 
@@ -228,9 +210,36 @@ def make_hazard_top_level(hazard):
     """Convert RDL hazard metadata into JKAN frontmatter"""
     if hazard is None:
         return None
+    event_sets = [make_event_set(event_set) for event_set in hazard["event_sets"]]
 
+    analysis_types = []
+    calculation_methods = []
+    hazard_types = []
+    intensity_measures = []
+    occurrence_ranges = []
+    processes = []
+    for event_set in event_sets:
+        analysis_types.append(event_set["analysis_type"])
+        calculation_methods.append(event_set["calculation_method"])
+        if event_set["occurrence_range"] is not None:
+            occurrence_ranges.append(event_set["occurrence_range"])
+        for hazard in event_set.get("hazards",[]):
+            hazard_types.append(hazard["type"])
+            processes.append(hazard["process"])
+            intensity_measures.append(hazard["intensity_measure"])
+        for event in event_set.get("events",[]):
+            hazard_types.append(event["hazard"]["type"])
+            processes.append(event["hazard"]["process"])
+            intensity_measures.append(event["hazard"]["intensity_measure"])
+   
     return {
-        "event_sets": [make_event_set(event_set) for event_set in hazard["event_sets"]],
+        "event_sets": event_sets,
+        "analysis_types":", ".join(list(set(analysis_types))),
+        "calculation_methods":", ".join(list(set(calculation_methods))),
+        "occurrence_ranges":", ".join(list(set(occurrence_ranges))),
+        "intensity_measures":", ".join(list(set(intensity_measures))),
+        "processes":", ".join(list(set(processes))),
+        "types":", ".join(list(set(hazard_types)))
     }
 
 

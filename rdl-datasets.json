@@ -6,13 +6,13 @@
     "dataset_id": "{{ dataset.dataset_id }}",
     {% if dataset.description != "" %}"description": {{ dataset.description | jsonify }},{% endif %}
     {% if dataset.details != "" %}"details": {{ dataset.details | jsonify }},{% endif %}
-    {% if dataset.decorations.catalog %}"catalog": {{ dataset.decorations.catalog | jsonify }},{% endif %}
+    {% if dataset.catalog %}"catalog": {{ dataset.catalog | jsonify }},{% endif %}
     {% if dataset.risk_data_type[0] %}"category":
       [{% for cat in dataset.risk_data_type %}
           {{ cat | capitalize | jsonify }}{% unless forloop.last %}, {% endunless %}
         {% endfor %}],
     {% endif %}
-    {% assign split_hazard_type = dataset.decorations.hazard.type | split: ", " %}
+    {% assign split_hazard_type = dataset.hazard.type | split: ", " %}
     {% if split_hazard_type.size > 0 %}
       "hazard_type": [{% for code in split_hazard_type %}
           {% if site.data.rdl-hazard_type[code] %}
