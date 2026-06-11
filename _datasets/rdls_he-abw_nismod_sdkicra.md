@@ -628,13 +628,14 @@ hazard:
     occurrence_range: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500,
       600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 10000 year return periods
     seasonality: null
-  intensity_measures: SPI:-, sws_10m:m/s, wd:m, AirTemp:C
+  intensity_measures: wd:m, sws_10m:m/s, AirTemp:C, SPI:-
   occurrence_ranges: 2, 5, 10, 25, 50, 100, 250, 500, 1000 year return periods, Annual
     probability of occurrence, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300,
     400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 10000 year return
     periods
-  processes: coastal_flood, fluvial_flood, extreme_heat, meteorological_drought, tropical_cyclone
-  types: drought, strong_wind, flood, extreme_temperature
+  processes: coastal_flood, tropical_cyclone, meteorological_drought, extreme_heat,
+    fluvial_flood
+  types: drought, extreme_temperature, flood, strong_wind
 license: CC-BY-SA-4.0
 lineage:
   description: Global multi-hazard infrastructure risk and resilience analysis produced
