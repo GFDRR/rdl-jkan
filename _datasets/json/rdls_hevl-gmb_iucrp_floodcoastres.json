@@ -1,0 +1,575 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hevl-gmb_iucrp_floodcoastres",
+      "title": "Flood and Coastal Risk Assessment and Priority Investment Planning for Greater Banjul Area, The Gambia",
+      "description": "Risk data package for the Greater Banjul Area (GBA), The Gambia, providing flood hazard (urban/pluvial maximum water depth and coastal flat water-level scenarios), coastal erosion hazard zones, exposure layers (land use, critical facilities, essential access routes, study boundaries), and derived risk/loss rasters for baseline and future horizons (2020, 2040, 2070).",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "vulnerability",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Global Facility for Disaster Reduction and Recovery (GFDRR)",
+        "email": "data@gfdrr.org",
+        "url": "https://www.gfdrr.org/en"
+      },
+      "version": "1",
+      "purpose": "To support flood and coastal risk assessment and the prioritization of investment options for resilience in the Greater Banjul Area by providing spatial hazard, exposure, and risk/loss datasets for current conditions and future horizons.",
+      "project": {
+        "name": "The Gambia Integrated Urban and Coastal Resilience Program",
+        "url": "https://www.gfdrr.org/en/gambia-integrated-urban-and-coastal-resilience-technical-assistance-program"
+      },
+      "details": "Inventory review indicates the package includes: (i) flood hazard GeoTIFFs under `02 Flood hazard` for Urban (21 rasters; return period labels T04, T1, T5, T10, T25, T100, T250 across horizons current/2040/2070) and Coastal (15 rasters; flat scenario water level in meters across 2020/2040/2070 with labels 0.4/1/10/30/100); (ii) coastal erosion vectors in `Erosion hazard.gdb` (2040/2070 erosion zones plus Jan 2020 reference coastline); (iii) exposure vectors in `Landuse.gdb` (land use polygons, critical facilities points/polygons, essential roads) and `Areas.gdb` (areas and project boundary); and (iv) downstream outputs in `04 Risk` (9 risk rasters for Coastal/Urban/Combined x 2020/2040/2070) and `05 Damage` (33 GeoTIFF rasters, with naming patterns indicating max water depth and flat scenario layers; unit/meaning should be confirmed to distinguish hazard-depth intermediates from monetary damage surfaces).",
+      "contact_point": {
+        "name": "Pierre Chrzanowski",
+        "email": "pchrzanowski@worldbank.org",
+        "url": "https://www.gfdrr.org/en"
+      },
+      "creator": {
+        "name": "Royal HaskoningDHV",
+        "email": "info@haskoning.com",
+        "url": "https://www.haskoning.com/"
+      },
+      "spatial": {
+        "scale": "sub-national",
+        "countries": [
+          "GMB"
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Banjul",
+            "uri": "https://www.geonames.org/2413876/banjul.html",
+            "id": "gazetteer_1"
+          },
+          {
+            "scheme": "GEONAMES",
+            "description": "Kanifing",
+            "uri": "https://www.geonames.org/2413106/kanifing.html",
+            "id": "gazetteer_2"
+          }
+        ]
+      },
+      "temporal": {
+        "start": "2020",
+        "end": "2070"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_ttl",
+          "role": "world_bank_team_lead",
+          "entity": {
+            "name": "Cecile Lorillou",
+            "email": "clorillou@worldbank.org",
+            "url": "https://www.worldbank.org"
+          }
+        },
+        {
+          "id": "attribution_funder",
+          "role": "funder",
+          "entity": {
+            "name": "ACP-EU Natural Disaster Risk Reduction Program",
+            "url": "https://capacity4dev.europa.eu/groups/drr-acp/info/acp-eu-natural-disaster-risk-reduction-program_en"
+          }
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Flood hazard assessment (fluvial, pluvial, coastal) - project hazard modelling workflow",
+            "url": "https://www.fathom.global/",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Project flood hazard modelling used as an input to risk assessment, covering river/fluvial floods, pluvial floods, and coastal floods for Greater Banjul Area. Lineage: Used to generate flood hazard layers that feed the flood risk assessment."
+          },
+          {
+            "id": "source_2",
+            "name": "Coastal erosion hazard assessment - shoreline change and storm erosion workflow",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Project coastal erosion hazard assessment distinguishing structural erosion and temporary storm erosion. Lineage: Used to generate erosion hazard layers that feed the risk assessment and hotspot prioritization."
+          },
+          {
+            "id": "source_3",
+            "name": "IPCC-based sea level rise and rainfall change projections (used for climate change assumptions)",
+            "type": "dataset",
+            "used_in": "hazard",
+            "description": "IPCC projections of sea level rise and rainfall change for ~50 years were used in the analysis to represent climate change influence on hazard. Lineage: Applied as climate change assumptions/inputs when deriving hazard scenarios."
+          },
+          {
+            "id": "source_4",
+            "name": "NDMA field observations and prior workshop flood observations (validation reference)",
+            "type": "dataset",
+            "used_in": "hazard",
+            "description": "Field observations (observed by NDMA) and locations identified during prior workshops used to validate flood hazard model results. Lineage: Used for validation/ground-truthing of hazard model outputs."
+          },
+          {
+            "id": "source_5",
+            "name": "Historical satellite data for shoreline change analysis",
+            "type": "dataset",
+            "used_in": "hazard",
+            "description": "Historical satellite data used to compute Linear Regression Rate (LRR) for erosion/sedimentation trends. Lineage: Input dataset for deriving structural erosion rates and erosion hazard mapping."
+          },
+          {
+            "id": "source_6",
+            "name": "Land use map and critical infrastructure layers (Greater Banjul Area)",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Exposure inputs consisting of land use mapping and critical infrastructure inventories. Lineage: Used as exposure layers in the flood risk assessment together with population and vulnerability parameters."
+          },
+          {
+            "id": "source_7",
+            "name": "Population density maps (current/2040/2070) - derived from census and growth projections",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Population density used to quantify social exposure / population affected in the risk assessment. Lineage: Maps are based on census data and population growth predictions (2040, 2070) and are used in social risk / population affected outputs."
+          },
+          {
+            "id": "source_8",
+            "name": "Poverty rate at national poverty line maps (2040/2070) - derived from census and growth projections",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Poverty rate layer used to characterize social vulnerability in hotspot reporting and risk interpretation. Lineage: Maps are based on census data and population growth predictions (2040, 2070) and are used as social vulnerability context for flood risk."
+          },
+          {
+            "id": "source_9",
+            "name": "Depth-damage functions (damage functions / vulnerability curves)",
+            "type": "model",
+            "used_in": "exposure",
+            "description": "Damage functions used to translate hazard intensity (e.g., inundation depth) and exposure into economic damage estimates. Lineage: Used as the vulnerability component in the risk model alongside economic values to compute direct/indirect economic damage outputs."
+          },
+          {
+            "id": "source_10",
+            "name": "Economic values (asset/land-use economic valuation inputs)",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Economic value parameters used together with damage functions to estimate direct and indirect economic damages. Lineage: Used as vulnerability parameters within the risk model to compute economic damage outputs."
+          }
+        ],
+        "description": "Flood and coastal risk assessment for the Greater Banjul Area (GBA), The Gambia, produced by Royal HaskoningDHV under the ACP-EU Natural Disaster Risk Reduction programme (GFDRR). Fluvial, pluvial, and coastal flood hazard modelled using 2D hydrodynamic simulation for 2020, 2040, and 2070 time horizons, incorporating IPCC-based sea level rise and rainfall change projections. Coastal erosion zones derived from satellite-based shoreline change analysis supplemented by NDMA field observations and historical storm records. Land use and critical facility inventory compiled from the GBA land use map. Exposure and loss estimates used population and poverty density maps projected to 2040 and 2070 using census growth rates. Damage computed by applying depth-damage vulnerability functions to spatially intersected hazard and exposure layers."
+      },
+      "resources": [
+        {
+          "title": "Interactive Story Map - Flood and Coastal Risk Assessment for Greater Banjul",
+          "description": "ArcGIS Map Journal web application providing an interactive narrative overview of the flood and coastal risk assessment for the Greater Banjul Area. Presents key findings, hazard maps, risk outputs, and investment planning recommendations through an interactive dashboard interface.",
+          "access_url": "https://geowb.maps.arcgis.com/apps/MapJournal/index.html?appid=a7884f06912c4e73a73c49a9feebda68#",
+          "id": "resource_storymap",
+          "format": "Web application"
+        },
+        {
+          "title": "Land Use and Exposure Layers",
+          "description": "Zip archive containing vector exposure data for the Greater Banjul Area. Includes the File Geodatabase Landuse.gdb with four key layers: (1) LU_GBA_5_0 - land use polygons with attribute Category (e.g., Residential, Shrubs, Forest, essential access routes); (2) Road_essential - lines with attribute eclass (e.g., Essential access routes paved/unpaved); (3) Critical_facilities - polygons with building_name and Category (e.g., Hospital, School, Fire Station); (4) Critical_facilities_point - points with Category_2 and name_building. Also includes LU_GBA_5_0.zip packaging the land use polygon layer as a Shapefile set for GIS interoperability.",
+          "coordinate_system": "EPSG:32628",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0066938/flood_and_coastal_risk_assessment_and_priority_investment_planning_for_greater_banjul_the_gambia",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0066938/DR0095906/01_Landuse.zip",
+          "id": "resource_landuse",
+          "media_type": "application/x-filegdb"
+        },
+        {
+          "title": "Flood Hazard Rasters - Coastal and Urban",
+          "description": "Zip archive containing 36 flood hazard GeoTIFF rasters for the Greater Banjul Area, organized into Coastal and Urban subfolders for time horizons 2020, 2040, and 2070. Urban flood hazard (21 files): maximum water depth rasters following naming convention T{RP}_max_wd_{YEAR}.tif, where RP indicates return period category (T04, T1, T5, T10, T25, T100, T250) for each horizon (current/2020, 2040, 2070). Coastal flood hazard (15 files): flat scenario inundation rasters following naming convention flat scenario_{water_level}m_{YEAR}_{RP}.tif, where water_level is the total water level in meters and RP is the return period class (0.4, 1, 10, 30, 100 years) for each horizon. Intensity measure: maximum water depth in meters. Coordinate system: WGS84 / UTM zone 28N (EPSG:32628).",
+          "coordinate_system": "EPSG:32628",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0066938/flood_and_coastal_risk_assessment_and_priority_investment_planning_for_greater_banjul_the_gambia",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0066938/DR0095907/02_Flood_Hazard.zip",
+          "id": "resource_flood_hazard",
+          "media_type": "application/zip"
+        },
+        {
+          "title": "Coastal Erosion Hazard Vectors",
+          "description": "Zip archive containing an Esri File Geodatabase (Erosion hazard.gdb) with coastal erosion hazard vector layers for the Greater Banjul Area. Contains 5 line feature layers: (1) Erosion_zone_2040_years_Permanent_erosion - permanent erosion zone projected to 2040; (2) Erosion_zone_2040_years_Permanent_erosion_Temporary_storm_erosion - combined permanent and temporary storm erosion zone for 2040; (3) Erosion_zone_2070_permanent - permanent erosion zone projected to 2070; (4) Erosion_zone_2070_years_Permanent_erosion_Temporary_storm_erosion - combined permanent and temporary storm erosion zone for 2070; (5) Reference_coastline_position_January_2020 - baseline reference coastline.",
+          "coordinate_system": "EPSG:32628",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0066938/flood_and_coastal_risk_assessment_and_priority_investment_planning_for_greater_banjul_the_gambia",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0066938/DR0095908/03_Erosion_Hazard.zip",
+          "id": "resource_erosion_hazard",
+          "media_type": "application/x-filegdb"
+        },
+        {
+          "title": "Risk Output Rasters - Coastal, Urban, and Combined",
+          "description": "Zip archive containing 9 risk output GeoTIFF rasters for the Greater Banjul Area, providing three risk surfaces (Coastal, Urban, Combined) for each time horizon 2020, 2040, and 2070. Files follow the naming convention {TYPE}_{YEAR}_risk_corrected.tif where TYPE is Coastal, Urban, or Combined. These are downstream products derived from the hazard-exposure-vulnerability workflow, integrating flood hazard depth with land use exposure and damage functions to produce spatially distributed risk estimates.",
+          "coordinate_system": "EPSG:32628",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0066938/flood_and_coastal_risk_assessment_and_priority_investment_planning_for_greater_banjul_the_gambia",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0066938/DR0095909/04_Risk.zip",
+          "id": "resource_risk",
+          "media_type": "application/zip"
+        },
+        {
+          "title": "Damage Rasters - Coastal and Urban Flood Depth Outputs",
+          "description": "Zip archive containing 33 GeoTIFF rasters for the Greater Banjul Area, organized by Coastal and Urban subfolders for time horizons 2020, 2040, and 2070. Urban rasters (stored under Urban {YEAR} folders) follow naming convention T{RP}_max_wd_{YEAR}_corrected.tif, representing corrected maximum water depth surfaces per return period. Coastal rasters (stored under Coastal {YEAR} uncorrected folders) follow naming convention flat scenario_{water_level}m_{YEAR}_{RP}.tif, representing coastal inundation depth surfaces. These rasters serve as intermediate depth outputs used in conjunction with exposure and vulnerability data to compute the risk_corrected rasters in the Risk package.",
+          "coordinate_system": "EPSG:32628",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0066938/flood_and_coastal_risk_assessment_and_priority_investment_planning_for_greater_banjul_the_gambia",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0066938/DR0095910/05_Damage.zip",
+          "id": "resource_damage",
+          "media_type": "application/zip"
+        },
+        {
+          "title": "Project Boundary and Study Areas",
+          "description": "Zip archive containing an Esri File Geodatabase (Areas.gdb) with supporting polygon boundaries for the Greater Banjul Area study. Contains two polygon layers: (1) Areas - study/aggregation units used for hotspot reporting and summarization of risk results across the Greater Banjul Area (Banjul, Kanifing Municipality, Kombo North/Central/South); (2) Project_boundary - overall project boundary/extent delineating the geographic scope of the flood and coastal risk assessment.",
+          "coordinate_system": "EPSG:32628",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0066938/flood_and_coastal_risk_assessment_and_priority_investment_planning_for_greater_banjul_the_gambia",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0066938/DR0095911/06_Areas.zip",
+          "id": "resource_areas",
+          "media_type": "application/x-filegdb"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_flood_urban_pluvial_occurrence",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "event_count": 7,
+            "occurrence_range": "Time horizons: current (baseline), 2040, 2070; 7 return-period rasters per horizon: T1, T4, T5, T10, T25, T100, T250 (some also provided as corrected variants). Per-horizon raster naming: 'T{RP}_max_wd_{horizon}.tif' (raw) and 'T{RP}_max_wd_{horizon}_corrected.tif' (corrected).",
+            "hazards": [
+              {
+                "id": "hazard_flood_urban_pluvial",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ]
+          },
+          {
+            "id": "event_set_flood_coastal_flat_scenario_occurrence",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "event_count": 5,
+            "occurrence_range": "Time horizons: 2020, 2040, 2070; 5 probability/return-period classes encoded in rasters per horizon: 0.4, 1, 10, 30, 100. Per-horizon water-level values (m above datum) observed in raster filenames - 2020: {0.4: 2.38, 1: 2.42, 10: 2.52, 30: 2.57, 100: 2.62}; 2040: {0.4: 2.48, 1: 2.52, 10: 2.62/2.72, 30: 2.67, 100: 2.72}; 2070: {0.4: 2.70, 1: 2.74, 10: 2.84, 30: 2.89, 100: 2.94}. File naming pattern: 'flat scenario_{water_level}m_{year}_{class}.tif'. Some filenames contain minor formatting inconsistencies (spaces / double .tif) - treat as semantic rather than literal string matching.",
+            "hazards": [
+              {
+                "id": "hazard_flood_coastal",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ]
+          },
+          {
+            "id": "event_set_coastal_erosion_hazard_zones",
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated",
+            "occurrence_range": "Erosion hazard lines/zones for baseline reference and future horizons (2040, 2070), including permanent (structural/SLR-related) and combined permanent+temporary storm erosion representations.",
+            "hazards": [
+              {
+                "id": "hazard_coastal_erosion",
+                "type": "erosion",
+                "process": "coastal_erosion",
+                "intensity_measure": "Er:m/yr"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_coastal_erosion_reference_coastline_2020",
+                "calculation_method": "simulated",
+                "description": "Reference coastline linework (baseline). Delivered in the coastal erosion geodatabase as 'Reference_coastline_2020'. Used as the baseline shoreline for defining erosion hazard offsets/zones.",
+                "hazard": {
+                  "id": "hazard_coastal_erosion",
+                  "type": "erosion",
+                  "process": "coastal_erosion",
+                  "intensity_measure": "Er:m/yr"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis"
+                  }
+                }
+              },
+              {
+                "id": "event_coastal_erosion_permanent_2040",
+                "calculation_method": "simulated",
+                "description": "Permanent/structural erosion zone for 2040 horizon, delivered as 'Erosion_zone_2040_permanent'. Represents irreversible shoreline retreat component (e.g., SLR-driven and/or structural erosion trend).",
+                "hazard": {
+                  "id": "hazard_coastal_erosion",
+                  "type": "erosion",
+                  "process": "coastal_erosion",
+                  "intensity_measure": "Er:m/yr"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis"
+                  }
+                }
+              },
+              {
+                "id": "event_coastal_erosion_permanent_plus_temporary_storm_2040",
+                "calculation_method": "simulated",
+                "description": "Combined erosion zone for 2040 horizon delivered as 'Erosion_zone_2040_permanent_and_temporary_storm_erosion'. This layer represents permanent (structural) erosion plus an additional temporary storm erosion buffer.",
+                "hazard": {
+                  "id": "hazard_coastal_erosion",
+                  "type": "erosion",
+                  "process": "coastal_erosion",
+                  "intensity_measure": "Er:m/yr"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis"
+                  }
+                }
+              },
+              {
+                "id": "event_coastal_erosion_permanent_2070",
+                "calculation_method": "simulated",
+                "description": "Permanent/structural erosion zone for 2070 horizon, delivered as 'Erosion_zone_2070_permanent'.",
+                "hazard": {
+                  "id": "hazard_coastal_erosion",
+                  "type": "erosion",
+                  "process": "coastal_erosion",
+                  "intensity_measure": "Er:m/yr"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis"
+                  }
+                }
+              },
+              {
+                "id": "event_coastal_erosion_permanent_plus_temporary_storm_2070",
+                "calculation_method": "simulated",
+                "description": "Combined erosion zone for 2070 horizon delivered as 'Erosion_zone_2070_permanent_and_temporary_storm_erosion'.",
+                "hazard": {
+                  "id": "hazard_coastal_erosion",
+                  "type": "erosion",
+                  "process": "coastal_erosion",
+                  "intensity_measure": "Er:m/yr"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_gba_population",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_gba_population_individuals",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_gba_population_households",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_gba_population_poor_individuals",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "population",
+            "scheme": "GED4ALL",
+            "title": "Population taxonomy",
+            "description": "Population exposure in the Greater Banjul Area classified using the GEM GED4ALL schema, sourced from the IUCRP project surveys.",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL"
+          }
+        },
+        {
+          "id": "exposure_gba_buildings",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_gba_building_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "scheme": "GED4ALL",
+            "title": "Building taxonomy",
+            "description": "Building stock in the Greater Banjul Area classified using the GEM GED4ALL schema.",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL"
+          }
+        },
+        {
+          "id": "exposure_gba_critical_facilities_infrastructure",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_gba_critical_facility_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "critical_facilities",
+            "title": "Infrastructure taxonomy",
+            "description": "Critical facilities and infrastructure in the Greater Banjul Area derived from land use mapping (IUCRP project)."
+          }
+        }
+      ],
+      "vulnerability": {
+        "functions": {
+          "vulnerability": [
+            {
+              "approach": "hybrid",
+              "relationship": "discrete",
+              "hazard_analysis_type": "probabilistic",
+              "category": "buildings",
+              "taxonomy": "Custom",
+              "analysis_details": "Depth-damage vulnerability functions used to convert flood inundation water depth (wd:m) into a damage ratio by asset / land-use class (e.g., residential, commercial/industrial, critical facilities) for the Greater Banjul Area urban flood risk assessment. Applied together with exposure layers (land use, critical facilities) and per-unit economic values (where available in project materials) to estimate direct economic flood damages and derived risk outputs.",
+              "id": "vulnerability_function_1",
+              "hazard_primary": {
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "wd:m"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage_ratio",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            },
+            {
+              "approach": "hybrid",
+              "relationship": "discrete",
+              "hazard_analysis_type": "probabilistic",
+              "category": "buildings",
+              "taxonomy": "Custom",
+              "analysis_details": "Depth-damage vulnerability functions used to convert coastal inundation water depth (wd:m) into a damage ratio by asset / land-use class for the Greater Banjul Area coastal flood risk assessment (including sea level rise 'flat' scenarios and related coastal inundation outputs). Applied together with exposure layers (land use, critical facilities) and per-unit economic values (where available in project materials) to estimate direct economic coastal flood damages and derived risk outputs.",
+              "id": "vulnerability_function_2",
+              "hazard_primary": {
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage_ratio",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            }
+          ]
+        },
+        "socio_economic": [
+          {
+            "scheme": "Custom",
+            "indicator_name": "Population density",
+            "indicator_code": "population_density",
+            "description": "Population density used as a socio-economic component of the project's social vulnerability / social flood vulnerability mapping for the Greater Banjul Area.",
+            "reference_year": 2020,
+            "id": "socioeconomic_1"
+          },
+          {
+            "scheme": "Custom",
+            "indicator_name": "Poverty rate at national poverty line",
+            "indicator_code": "poverty_rate_national_poverty_line",
+            "description": "Poverty rate at the national poverty line used as a socio-economic component of the project's social vulnerability / social flood vulnerability mapping for the Greater Banjul Area.",
+            "reference_year": 2020,
+            "id": "socioeconomic_2"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "economic_loss_value",
+              "loss_type": "ground_up",
+              "loss_approach": "hybrid",
+              "loss_frequency_type": "probabilistic",
+              "measurement": {
+                "quantity_kind": "currency",
+                "unit": "USD"
+              }
+            },
+            "description": "Urban flood loss outputs for Greater Banjul Area derived from probabilistic pluvial flood hazard modelling and depth-damage functions applied to building / land-use exposure. Inventory indicates urban return-period rasters with naming pattern: T{RP}_max_wd_{year}_corrected.tif (e.g., T1/T5/T10/T25/T100/T250 for current/2040/2070). Confirm whether values represent monetary losses (USD) or intermediate depth grids; treat as economic loss layers per project methodology described in the PDFs.",
+            "id": "loss_urban_pluvial_buildings_monetary",
+            "hazard": {
+              "type": "flood",
+              "process": "pluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "economic_loss_value",
+              "loss_type": "ground_up",
+              "loss_approach": "hybrid",
+              "loss_frequency_type": "probabilistic",
+              "measurement": {
+                "quantity_kind": "currency",
+                "unit": "USD"
+              }
+            },
+            "description": "Coastal flood loss outputs for Greater Banjul Area derived from coastal inundation 'flat' sea-level scenarios combined with exposure and depth-damage functions. Inventory indicates coastal scenario rasters under 2020/2040/2070 with naming pattern: flat scenario_{waterlevel}m_{year}_{class}.tif (e.g., 0.4/1/10/30/100 classes; water levels vary by horizon). Confirm whether stored rasters are monetary loss values (USD) or intermediate inundation depths; treat as economic loss layers per project methodology described in the PDFs.",
+            "id": "loss_coastal_flat_buildings_monetary",
+            "hazard": {
+              "type": "flood",
+              "process": "coastal_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "asset_category": "development_index",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact_type": "direct",
+              "impact_modelling": "simulated",
+              "impact_metric": "damage_index",
+              "loss_type": "gross",
+              "loss_approach": "hybrid",
+              "loss_frequency_type": "probabilistic",
+              "measurement": {
+                "quantity_kind": "dimensionless_ratio"
+              }
+            },
+            "description": "Risk / prioritization index rasters provided as corrected risk surfaces for Coastal, Urban, and Combined cases for 2020/2040/2070 (e.g., Coastal_2020_risk_corrected.tif, Urban_2040_risk_corrected.tif, Combined_2070_risk_corrected.tif). Interpreted as a normalized damage/risk index (non-monetary). If these rasters actually represent expected annual loss (EAL/AAL) or other monetary risk metrics, re-map impact_metric to loss_annual_average_value and set quantity_kind=monetary with currency=USD.",
+            "id": "loss_risk_index_corrected",
+            "hazard": {
+              "type": "flood",
+              "process": "pluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
