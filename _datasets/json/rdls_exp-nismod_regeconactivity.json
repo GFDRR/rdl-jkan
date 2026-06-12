@@ -1,0 +1,334 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-nismod_regeconactivity",
+      "title": "Data to Support Downscaling of Global Regional Economic Activity",
+      "description": "A curated collection of open geospatial datasets processed to support downscaling of regional economic activity from national/subnational levels to high-resolution grids globally. The collection includes agricultural GDP by subsector (crop, livestock, forestry, fisheries), gridded GDP data, built environment indicators, points of interest from Overture Maps and Foursquare, population and settlement layers, land cover classifications, power generation facilities, and mining locations. All datasets are harmonized to cloud-optimized Parquet format and H3 hexagonal grid system to enable analysis of economic activity distribution across three dimensions: Location (high spatial resolution), Category (economic sectors following ISIC classification), and Output (GDP/GVA quantification). This package provides standardized inputs for developing Bayesian Hierarchical Models that infer 20-sector gridded regional Gross Value Added (rGVA) globally by incorporating multi-scale, multi-sector priors.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Zenodo",
+        "email": "info@zenodo.org",
+        "url": "https://zenodo.org"
+      },
+      "version": "0.1.0",
+      "purpose": "Provides standardized, analysis-ready geospatial datasets to support research on spatial economic modeling, infrastructure-economy interactions, and climate risk assessment. Addresses the critical gap in understanding how economic activity distributes spatially by enabling researchers to downscale coarse national/regional economic statistics to high-resolution grids while maintaining sectoral detail. Facilitates data-driven analysis of economic exposure in infrastructure climate risk assessments, regional economic planning, and sustainable development research. The processed datasets eliminate barriers to access by providing harmonized formats optimized for large-scale spatial analysis and machine learning applications in economic geography.",
+      "project": {
+        "name": "Climate Compatible Growth (CCG)",
+        "url": "https://climatecompatiblegrowth.com/"
+      },
+      "details": "This is version 0.1.0 of a curated data package developed for the validation workshop - Downscaling of global economic activity data - held at Oxford University on 15 May 2025. All datasets have been transformed from their original sources into cloud-optimized Parquet format and spatially harmonized using H3 hexagonal grid (resolutions 7-10, approximately 5km-100m cell sizes) via the scalenav framework built on DuckDB and Ibis for large-scale spatial analysis. The processing methodology implements pycnophylactic spatial downscaling (mass-preserving interpolation) and maps Points of Interest to ISIC codes for sector-specific economic disaggregation. Datasets are accessible via cloud object storage (S3: s3://gri-datapkg/spatial-economics/v0.1.0/) without download requirements. All data sources are attributed to original creators and carry their respective licenses; processing code is available under MIT license on GitHub. Spatial coverage is global with example applications in UK, Thailand, and Ghana; temporal coverage spans primarily 2010-2024 with some historical data to 1990. The final model outputs (20-sector gridded rGVA globally) are work-in-progress and will be released separately; this package contains input and validation datasets used in model development.",
+      "contact_point": {
+        "name": "Tom Russell",
+        "url": "https://orcid.org/0000-0002-0081-400X"
+      },
+      "creator": {
+        "name": "Tom Russell",
+        "url": "https://orcid.org/0000-0002-0081-400X"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_creator2",
+          "role": "creator",
+          "entity": {
+            "name": "Ivann Schlosser",
+            "url": "https://orcid.org/0009-0004-4099-3198"
+          }
+        },
+        {
+          "id": "attribution_funder",
+          "role": "funder",
+          "entity": {
+            "name": "UK Foreign, Commonwealth and Development Office (FCDO)",
+            "email": "fcdo.correspondence@fcdo.gov.uk",
+            "url": "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office"
+          }
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_aggdp",
+            "name": "AgGDP - Global Gridded Agricultural GDP",
+            "url": "https://doi.org/10.5194/essd-15-1357-2023",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "High-resolution global dataset estimating agricultural gross domestic product across subsectors (crop, livestock, forestry, fisheries). Provides spatially explicit agricultural economic activity data at approximately 10km resolution, used as sector-specific priors for agriculture downscaling."
+          },
+          {
+            "id": "source_mapspam",
+            "name": "MAPSPAM - Global Spatially-Disaggregated Crop Production Statistics",
+            "url": "https://doi.org/10.7910/DVN/SWPENT",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Global dataset of spatially disaggregated crop production statistics for 2020, providing crop-specific yield and production data at 10km resolution. Used to validate and inform agricultural sector economic activity distribution."
+          },
+          {
+            "id": "source_mining",
+            "name": "Global-scale Mining Areas Dataset",
+            "url": "https://doi.org/10.1038/s41597-020-00624-w",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "used_in": "exposure",
+            "description": "Global dataset of mining areas with location, type, and size information. Provides point locations of mining facilities used to identify extractive industry economic activity and inform mining sector (ISIC Section B) spatial distribution."
+          },
+          {
+            "id": "source_gem",
+            "name": "GEM Global Integrated Power Tracker",
+            "url": "https://globalenergymonitor.org/projects/global-integrated-power-tracker/",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Database of power generation facilities worldwide including location, capacity, fuel type, and operational status. Used to identify electricity generation infrastructure and inform utilities sector (ISIC Section D) spatial patterns."
+          },
+          {
+            "id": "source_kummu_gdp",
+            "name": "Kummu Gridded Global GDP Dataset",
+            "url": "https://doi.org/10.1038/s41597-025-04487-x",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Downscaled gridded global dataset for gross domestic product per capita PPP over 1990-2022 at approximately 1km resolution. Provides high spatial resolution total GDP estimates without sectoral detail, used as baseline for spatial distribution patterns."
+          },
+          {
+            "id": "source_copernicus",
+            "name": "Copernicus Global Dynamic Land Cover",
+            "url": "https://land.copernicus.eu/en/products/global-dynamic-land-cover",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "European Union's global land cover classification at 100m resolution, providing land use categories including agricultural, forest, urban, and other classifications. Used to identify agricultural land areas and constrain sector-specific economic activity distribution."
+          },
+          {
+            "id": "source_ghsl",
+            "name": "GHSL - Global Human Settlement Layer",
+            "url": "https://ghsl.jrc.ec.europa.eu/",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "JRC dataset package including population (POP), built-up area (S_2018), non-residential built-up area (S_NRES), and building height (H_AGBH) layers at 100m resolution. Provides general spatial proxies for economic activity distribution across all sectors."
+          },
+          {
+            "id": "source_overture",
+            "name": "Overture Maps Places",
+            "url": "https://overturemaps.org/",
+            "type": "dataset",
+            "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+            "used_in": "exposure",
+            "description": "Open-source points of interest database with approximately 65 million global locations categorized by activity type. POI categories are mapped to ISIC codes to provide sector-specific spatial indicators for services and manufacturing economic activity."
+          },
+          {
+            "id": "source_dose_wdi",
+            "name": "DOSE-WDI",
+            "url": "https://doi.org/10.5281/zenodo.17235586",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Combined dataset of subnational economic output (DOSE) merged with World Development Indicators (WDI) national statistics. Provides 3-sector (Agriculture, Manufacturing, Services) economic output at subnational administrative levels globally, serving as top-down constraints for downscaling."
+          },
+          {
+            "id": "source_scalenav",
+            "name": "scalenav",
+            "url": "https://github.com/nismod/scale-nav",
+            "type": "model",
+            "license": "https://opensource.org/licenses/MIT",
+            "used_in": "exposure",
+            "description": "Python framework for large-scale spatial analysis and downscaling, built on H3 hexagonal grid system, DuckDB analytical database, and Ibis dataframe library. Performs spatial aggregation, pycnophylactic interpolation, and mass-preserving downscaling operations on cloud-optimized Parquet datasets."
+          }
+        ],
+        "description": "Multi-layer regional economic activity dataset assembled from global gridded and vector sources. Agricultural GDP from AgGDP and MAPSPAM crop production statistics; mining site boundaries from the Global-scale Mining Areas Dataset; power infrastructure from the GEM Global Integrated Power Tracker; gridded GDP from the Kummu et al. dataset; land cover from Copernicus Global Dynamic Land Cover; population and settlement from GHSL; points of interest from Overture Maps; economic development indicators from DOSE-WDI. Spatial aggregation and normalisation performed using scalenav."
+      },
+      "resources": [
+        {
+          "title": "Dataset Catalogue",
+          "description": "JSON file mapping dataset identifiers to their S3 cloud storage paths for direct access. Contains 18 entries pointing to processed Parquet datasets including: agricultural GDP subsectors (crop, fish, forest, livestock, total), Copernicus built-up area, DOSE-WDI economic output, GEM power tracker, JRC population and settlement layers (aggregated, building height, population, settlement area for 2018 and non-residential), Kummu GDP PPP, MAPSPAM crop yields, mining locations, and Overture places with land use (both filled and original versions). All datasets stored in cloud-optimized Parquet format at s3://gri-datapkg/spatial-economics/v0.1.0/ with subdirectories by source and processing status.",
+          "access_url": "https://doi.org/10.5281/zenodo.17235586",
+          "download_url": "https://zenodo.org/records/17235586/files/catalogue.json",
+          "id": "resource_catalogue_json",
+          "media_type": "application/json"
+        },
+        {
+          "title": "Dataset Metadata",
+          "description": "CSV file providing structured metadata for all datasets in the collection including dataset names, descriptions, source attributions, licenses, temporal coverage, spatial coverage, and access methods. Lists 18 processed datasets with details on agricultural GDP (AgGDP subsectors), demographic data (GHSL population and built-up layers), land cover (Copernicus), economic indicators (DOSE-WDI, Kummu GDP), infrastructure (GEM power facilities, mining areas), points of interest (Overture Maps places and land use), and crop production statistics (MAPSPAM yields). Serves as human-readable documentation of the data collection contents and provenance.",
+          "access_url": "https://doi.org/10.5281/zenodo.17235586",
+          "download_url": "https://zenodo.org/records/17235586/files/global-spatial-economics-datasets-public.csv",
+          "id": "resource_metadata_csv",
+          "media_type": "text/csv"
+        }
+      ],
+      "exposure": [
+        {
+          "metrics": [
+            {
+              "dimension": "product",
+              "id": "metric_agricultural_gdp",
+              "measurement": {
+                "quantity_kind": "currency",
+                "unit": "USD"
+              }
+            },
+            {
+              "dimension": "product",
+              "id": "metric_gridded_gdp",
+              "measurement": {
+                "quantity_kind": "currency",
+                "unit": "USD"
+              }
+            }
+          ],
+          "category": "economic_indicator",
+          "id": "exposure_gridded_gdp",
+          "asset_type": {
+            "id": "gridded_gdp",
+            "title": "Economic indicator taxonomy",
+            "description": "Gridded GDP data classified using the GEM GED4ALL schema, derived from aggregate GDP statistics (DOSE-WDI) and agricultural production data (MapSPAM) disaggregated to a spatial grid.",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "dimension": "population",
+              "id": "metric_population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "category": "population",
+          "id": "exposure_demographic",
+          "asset_type": {
+            "id": "population",
+            "title": "Population taxonomy",
+            "description": "Population exposure data classified using the GEM GED4ALL schema, sourced from GHS-POP (Global Human Settlement Population Grid).",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "dimension": "structure",
+              "id": "metric_built_area",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ],
+          "category": "buildings",
+          "id": "exposure_builtup",
+          "asset_type": {
+            "id": "built_up_surface_area",
+            "title": "Building taxonomy",
+            "description": "Built-up surface area classified using the GEM GED4ALL schema, sourced from GHS-BUILT-S (Global Human Settlement Built-up Surface Grid).",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "dimension": "structure",
+              "id": "metric_poi_count",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "category": "infrastructure",
+          "id": "exposure_poi",
+          "asset_type": {
+            "id": "points_of_interest",
+            "title": "Infrastructure taxonomy",
+            "description": "Points of interest classified using the GEM GED4ALL schema, sourced from Overture Maps Foundation open data.",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "dimension": "structure",
+              "id": "metric_power_facilities",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "dimension": "product",
+              "id": "metric_generation_capacity",
+              "measurement": {
+                "quantity_kind": "power"
+              }
+            }
+          ],
+          "category": "infrastructure",
+          "id": "exposure_power_generation",
+          "asset_type": {
+            "id": "power_generation_facilities",
+            "title": "Infrastructure taxonomy",
+            "description": "Power generation facilities classified using the GEM GED4ALL schema, sourced from the GEM Global Power Plant Database.",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "dimension": "structure",
+              "id": "metric_mining_sites",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "category": "infrastructure",
+          "id": "exposure_mining",
+          "asset_type": {
+            "id": "mining_sites",
+            "title": "Infrastructure taxonomy",
+            "description": "Mining sites classified using the GEM GED4ALL schema, sourced from open global mining datasets.",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "dimension": "content",
+              "id": "metric_land_cover",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ],
+          "category": "natural_environment",
+          "id": "exposure_land_cover",
+          "asset_type": {
+            "id": "land_cover",
+            "title": "Land cover taxonomy",
+            "description": "Land cover data classified using the GEM GED4ALL schema, sourced from Copernicus Global Land Service land cover products.",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
