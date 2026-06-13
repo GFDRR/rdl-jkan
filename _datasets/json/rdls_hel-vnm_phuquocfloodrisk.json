@@ -611,16 +611,18 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "loss_annual_average_value",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "probabilistic",
-              "measurement": {
-                "quantity_kind": "currency",
-                "unit": "USD"
-              }
+              "loss_frequency_type": "probabilistic"
             },
             "description": "Expected Annual Damage (EAD) for combined flooding (G3) on Phu Quoc Island under current climate conditions. Direct damage EAD: USD 27M; Total (direct + indirect): USD 37M. Calculated using Global Flood Risk Tool (GFRT) combining flood inundation depth, land use exposure with economic values (USD/m2), and depth-damage vulnerability curves. Integrates losses across all 5 return periods (5, 10, 20, 50, 100 years). Raster file: G3_S0_BL_annual.tif.",
             "hazard": {
@@ -634,16 +636,18 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "loss_annual_average_value",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "probabilistic",
-              "measurement": {
-                "quantity_kind": "currency",
-                "unit": "USD"
-              }
+              "loss_frequency_type": "probabilistic"
             },
             "description": "Expected Annual Damage (EAD) for combined flooding (G3) on Phu Quoc Island under 2050 climate change conditions. Do Nothing (S0): direct USD 129.54M, total USD 174.88M. Future Baseline: total USD 164.19M. Protective strategy (S1): total USD 110.08M (~33% reduction). Adaptive strategy (S2): total USD 68.05M (~59% reduction). Represents ~5x increase from current climate baseline.",
             "hazard": {
@@ -657,16 +661,18 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "economic_loss_value",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "probabilistic",
-              "measurement": {
-                "quantity_kind": "currency",
-                "unit": "USD"
-              }
+              "loss_frequency_type": "probabilistic"
             },
             "description": "Probabilistic flood damage rasters for each hazard group (G1 fluvial/pluvial, G2 coastal, G3 combined) and return period (5, 10, 20, 50, 100 years) across all scenarios. Current climate: 10-year flood direct damage USD 125M, 100-year flood USD 212M. CC2050: 10-year flood USD 602M, 100-year flood USD 948M. File naming: G[group]_S[scenario]_[CC50]_[return_period]_damage.tif.",
             "hazard": {
@@ -680,16 +686,18 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "economic_loss_value",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "empirical",
-              "loss_frequency_type": "empirical",
-              "measurement": {
-                "quantity_kind": "currency",
-                "unit": "USD"
-              }
+              "loss_frequency_type": "empirical"
             },
             "description": "Flood damage from the August 2019 event on Phu Quoc Island, modeled using observed flood extent and depth. 3,874 houses affected, inundation depths exceeding 1.5m in some areas, estimated total damage USD 4.3 million. File: Depth_Max_2019_damage.tif.",
             "hazard": {
@@ -703,15 +711,17 @@
             "asset_category": "population",
             "asset_dimension": "population",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "displaced_count",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "probabilistic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "probabilistic"
             },
             "description": "Residential population affected by flooding for each hazard group and return period. Current climate annual affected population: ~9,500; projected 2050: ~36,000 (~4x increase). Files: Residential_G[group]_S[scenario]_[return_period]_affected_population.tif and annual aggregates.",
             "hazard": {
@@ -725,15 +735,17 @@
             "asset_category": "population",
             "asset_dimension": "population",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "displaced_count",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "probabilistic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "probabilistic"
             },
             "description": "Tourist population affected by flooding for each hazard group and return period. Phu Quoc is a major tourism destination; tourist population exposure is assessed separately from residential. Files: Tourist_G[group]_S[scenario]_[return_period]_affected_population.tif and annual aggregates.",
             "hazard": {
