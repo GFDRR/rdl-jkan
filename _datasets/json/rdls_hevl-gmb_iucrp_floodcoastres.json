@@ -376,7 +376,7 @@
             }
           ],
           "asset_type": {
-            "id": "population",
+            "id": "sei-pop",
             "scheme": "GED4ALL",
             "title": "Population taxonomy",
             "description": "Population exposure in the Greater Banjul Area classified using the GEM GED4ALL schema, sourced from the IUCRP project surveys.",
@@ -397,7 +397,7 @@
             }
           ],
           "asset_type": {
-            "id": "buildings",
+            "id": "bui",
             "scheme": "GED4ALL",
             "title": "Building taxonomy",
             "description": "Building stock in the Greater Banjul Area classified using the GEM GED4ALL schema.",
@@ -443,7 +443,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -465,7 +465,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -498,16 +498,18 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "economic_loss_value",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "hybrid",
-              "loss_frequency_type": "probabilistic",
-              "measurement": {
-                "quantity_kind": "currency",
-                "unit": "USD"
-              }
+              "loss_frequency_type": "probabilistic"
             },
             "description": "Urban flood loss outputs for Greater Banjul Area derived from probabilistic pluvial flood hazard modelling and depth-damage functions applied to building / land-use exposure. Inventory indicates urban return-period rasters with naming pattern: T{RP}_max_wd_{year}_corrected.tif (e.g., T1/T5/T10/T25/T100/T250 for current/2040/2070). Confirm whether values represent monetary losses (USD) or intermediate depth grids; treat as economic loss layers per project methodology described in the PDFs.",
             "id": "loss_urban_pluvial_buildings_monetary",
@@ -521,16 +523,18 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "economic_loss_value",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "hybrid",
-              "loss_frequency_type": "probabilistic",
-              "measurement": {
-                "quantity_kind": "currency",
-                "unit": "USD"
-              }
+              "loss_frequency_type": "probabilistic"
             },
             "description": "Coastal flood loss outputs for Greater Banjul Area derived from coastal inundation 'flat' sea-level scenarios combined with exposure and depth-damage functions. Inventory indicates coastal scenario rasters under 2020/2040/2070 with naming pattern: flat scenario_{waterlevel}m_{year}_{class}.tif (e.g., 0.4/1/10/30/100 classes; water levels vary by horizon). Confirm whether stored rasters are monetary loss values (USD) or intermediate inundation depths; treat as economic loss layers per project methodology described in the PDFs.",
             "id": "loss_coastal_flat_buildings_monetary",
@@ -544,15 +548,17 @@
             "asset_category": "development_index",
             "asset_dimension": "index",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "damage_index",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage_index",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              },
               "loss_type": "gross",
               "loss_approach": "hybrid",
-              "loss_frequency_type": "probabilistic",
-              "measurement": {
-                "quantity_kind": "dimensionless_ratio"
-              }
+              "loss_frequency_type": "probabilistic"
             },
             "description": "Risk / prioritization index rasters provided as corrected risk surfaces for Coastal, Urban, and Combined cases for 2020/2040/2070 (e.g., Coastal_2020_risk_corrected.tif, Urban_2040_risk_corrected.tif, Combined_2070_risk_corrected.tif). Interpreted as a normalized damage/risk index (non-monetary). If these rasters actually represent expected annual loss (EAL/AAL) or other monetary risk metrics, re-map impact_metric to loss_annual_average_value and set quantity_kind=monetary with currency=USD.",
             "id": "loss_risk_index_corrected",

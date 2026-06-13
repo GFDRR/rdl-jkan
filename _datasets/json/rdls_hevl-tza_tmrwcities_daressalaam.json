@@ -381,7 +381,7 @@
             }
           ],
           "asset_type": {
-            "id": "buildings",
+            "id": "bui",
             "title": "Building taxonomy",
             "description": "Building exposure classified using the GEM Global Exposure Database for All (GED4ALL) taxonomy, sourced from OpenStreetMap building footprints",
             "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
@@ -418,7 +418,7 @@
             }
           ],
           "asset_type": {
-            "id": "population",
+            "id": "sei-pop",
             "title": "Population exposure model",
             "description": "Synthetic population derived from census household data using the Tomorrow's Cities DST population generation algorithm",
             "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
@@ -447,7 +447,7 @@
             }
           ],
           "asset_type": {
-            "id": "road_network",
+            "id": "trs-rod",
             "title": "Infrastructure exposure - road network",
             "description": "Road network infrastructure derived from OpenStreetMap, classified per GED4ALL infrastructure exposure framework",
             "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
@@ -476,7 +476,7 @@
             }
           ],
           "asset_type": {
-            "id": "power_infrastructure",
+            "id": "pwr-lin",
             "title": "Infrastructure exposure - power grid",
             "description": "Electricity network nodes and edges derived from OpenStreetMap, classified per GED4ALL infrastructure exposure framework",
             "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
@@ -523,7 +523,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -547,7 +547,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -569,7 +569,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -610,15 +610,17 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "damage_ratio",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "deterministic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "deterministic"
             },
             "description": "Building damage state results from flood impact assessment for each community planning scenario (Elderly, Leaders, Residents, Youth) and both flood scenarios. Damage states (DS0=undamaged, DS1=damaged) derived by applying depth-damage vulnerability functions to flood water depth hazard.",
             "id": "loss_flood_buildings",
@@ -632,15 +634,17 @@
             "asset_category": "population",
             "asset_dimension": "population",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "casualty_count",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "deterministic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "deterministic"
             },
             "description": "Casualty results from flood impact assessment for each community planning scenario, derived from building inundation and residential occupancy.",
             "id": "loss_flood_casualties",
@@ -654,15 +658,17 @@
             "asset_category": "infrastructure",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "damage_ratio",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "deterministic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "deterministic"
             },
             "description": "Road network damage state results from flood impact assessment, with road edges flagged as damaged/undamaged based on flood inundation.",
             "id": "loss_flood_infrastructure",
@@ -676,15 +682,17 @@
             "asset_category": "population",
             "asset_dimension": "disruption",
             "impact_and_losses": {
-              "impact_type": "indirect",
-              "impact_modelling": "simulated",
-              "impact_metric": "downtime_loss",
+              "impact": {
+                "type": "indirect",
+                "modelling": "simulated",
+                "metric": "downtime",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "deterministic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "deterministic"
             },
             "description": "Hospital accessibility and power availability impacts from flood, derived from road network connectivity analysis (road edges damaged by flooding) and power network assessment. Each building has hospital_access and has_power boolean attributes.",
             "id": "loss_flood_indirect",

@@ -445,7 +445,7 @@
             }
           ],
           "asset_type": {
-            "id": "buildings",
+            "id": "bui",
             "title": "Building taxonomy",
             "description": "Building exposure classified using the GEM Global Exposure Database for All (GED4ALL) taxonomy, sourced from OpenStreetMap building footprints",
             "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
@@ -482,7 +482,7 @@
             }
           ],
           "asset_type": {
-            "id": "population",
+            "id": "sei-pop",
             "title": "Population exposure model",
             "description": "Synthetic population derived from census household data using the Tomorrow's Cities DST population generation algorithm",
             "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
@@ -511,7 +511,7 @@
             }
           ],
           "asset_type": {
-            "id": "road_network",
+            "id": "trs-rod",
             "title": "Infrastructure exposure - road network",
             "description": "Road network infrastructure derived from OpenStreetMap, classified per GED4ALL infrastructure exposure framework",
             "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
@@ -558,7 +558,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -582,7 +582,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -604,7 +604,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -626,7 +626,7 @@
               "impact": {
                 "type": "direct",
                 "modelling": "simulated",
-                "metric": "damage_ratio",
+                "metric": "damage",
                 "measurement": {
                   "quantity_kind": "dimensionless_ratio"
                 }
@@ -659,15 +659,17 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "damage_ratio",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "deterministic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "deterministic"
             },
             "description": "Building damage state results from earthquake impact assessment for each community planning scenario (Civil Society, Farmers/Fishermen, Informal Working, Landless). Damage states derived by convolving spectral acceleration hazard with building fragility functions.",
             "id": "loss_earthquake_buildings",
@@ -681,15 +683,17 @@
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "damage_ratio",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "deterministic",
-              "measurement": {
-                "quantity_kind": "dimensionless_ratio"
-              }
+              "loss_frequency_type": "deterministic"
             },
             "description": "Building damage ratio results from flood impact assessment for each community planning scenario (Civil Society, Farmers/Fishermen, Informal Working, Landless). Damage ratios derived by applying depth-damage vulnerability functions to flood water depth hazard.",
             "id": "loss_flood_buildings",
@@ -703,15 +707,17 @@
             "asset_category": "population",
             "asset_dimension": "population",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "displaced_count",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "deterministic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "deterministic"
             },
             "description": "Affected population results from earthquake impact assessment for each community planning scenario, derived from building damage states and residential occupancy.",
             "id": "loss_earthquake_population",
@@ -725,15 +731,17 @@
             "asset_category": "population",
             "asset_dimension": "population",
             "impact_and_losses": {
-              "impact_type": "direct",
-              "impact_modelling": "simulated",
-              "impact_metric": "displaced_count",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
               "loss_type": "ground_up",
               "loss_approach": "analytical",
-              "loss_frequency_type": "deterministic",
-              "measurement": {
-                "quantity_kind": "count"
-              }
+              "loss_frequency_type": "deterministic"
             },
             "description": "Affected population results from flood impact assessment for each community planning scenario, derived from building inundation and residential occupancy.",
             "id": "loss_flood_population",
