@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-col_ochacol_elementosexpuestospredicc_2025",
+      "title": "Colombia - Elementos Expuestos-Predicción Impactos por Fenómenos Hidrometeorológicos",
+      "description": "Datos sobre los elementos expuestos en zonas susceptibles a inundaciones, sequías meteorológicas y deslizamientos durante el primer trimestre de 2025. El archivo de Excel incluye 12 hojas con información detallada sobre: Personas, hogares y viviendas. Zonas de cultivos. Instituciones educativas Centros de salud. En zonas susceptibles de inundación, sequía meteorológica y deslizamientos para el primer trimestre del año, así mismo se adiciono para cada resultado el nivel de riesgo para cada municipio a partir del Índice Municipal de Riesgo Ajustado por Capacidades desarrollado por el DNP. Las fuentes de información utilizadas son el IDEAM, el DANE, DNP - Clúster de Salud y UNICEF Emergencias.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/elementos-_expuestos_efm_2025]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The sources of information used are IDEAM, DANE, DNP - Health Cluster and UNICEF Emergencies.",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/elementos-_expuestos_efm_2025"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/elementos-_expuestos_efm_2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-01",
+        "end": "2025-03-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Multiple geospatial datasets representing exposed elements (population, agriculture, education facilities, health centers) were integrated into a unified framework and subjected to spatial join analysis (point-in-polygon) to determine exposure to hydrometeorological hazard zones (flooding, drought, landslides) at the municipal level for Q1 2025. Municipal risk indices (IMGRAC) were calculated and appended to characterize relative risk capacity.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Multiple sources(see comments for full list)",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_13d63255",
+          "title": "Elementos _Expuestos_EFM_2025 1.xlsx",
+          "description": "Datos sobre los elementos expuestos en zonas susceptibles a inundaciones, sequías meteorológicas y deslizamientos durante el primer trimestre de 2025. El número de personas y hogares expuestos se calculan a partir de la superposición de las capas de afectación con el Marco Geostadistico Nacional del Censo 2018 DANE. El archivo de Excel incluye 12 hojas con información detallada sobre: Personas, hogares y viviendas. Zonas de cultivos. Instituciones educativas Centros de salud. En zonas susceptibles de inundación, sequía meteorológica y deslizamientos para el primer trimestre del año, así mismo se adiciono para cada resultado el nivel de riesgo para cada municipio a partir del Índice Municipal de Riesgo Ajustado por Capacidades desarrollado por el DNP. Las fuentes de información utilizadas son el IDEAM, el DANE, DNP - Clúster de Salud y UNICEF Emergencias.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/23d428d2-1572-44e0-bee6-edf3df2ff481/resource/13d63255-c07f-494f-8fb8-7bb35f9cc500/download/elementos-_expuestos_efm_2025-1.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Urban and rural population exposed to hydrometeorological hazards by municipality"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural land use by crop type exposed to hydrometeorological hazards"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Educational institutions exposed to hydrometeorological hazards"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/elementos-_expuestos_efm_2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-eth_icpac_populationdensity_20250409",
+      "title": "Ethiopia population Density",
+      "description": "This dataset represents the estimated population density of Ethiopia in the year 2020 , expressed as the number of people per square kilometer. It is intended to support spatial analysis and decision-making in areas such as disaster risk reduction, resource allocation, development planning, and vulnerability assessment Source - WORLDPOP Relationship to Exposure- (Positive)- The higher the population, the higher the exposure. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-ethiopia-population-density]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Time period is set to publication date rather than the date the data covers",
+      "contact_point": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-ethiopia-population-density"
+      },
+      "creator": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-ethiopia-population-density"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2025-04-09"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/icpac-geonode-ethiopia-population-density"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Population density estimates for Ethiopia in 2020 were sourced from WorldPop, a global gridded population dataset. The data was processed into a GeoTIFF raster format to support spatial analysis for disaster risk reduction, resource allocation, and vulnerability assessment applications.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Global gridded population density dataset providing spatially distributed population estimates derived from census and survey data."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_811f629a",
+          "title": "Ethiopia population Density - GeoTIFF",
+          "description": "GeoTIFF file. This dataset represents the estimated population density of Ethiopia in the year 2020 , expressed as the number of people per square kilometer. It is intended to support spatial analysis and decision-making in areas such as disaster risk reduction, resource allocation, development planning, and vulnerability assessment Source - WORLDPOP Relationship to Exposure- (Positive)- The higher the population, the higher the exposure",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__Normalized_Population_Density&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population density of Ethiopia in 2020, expressed as people per square kilometer"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/icpac-geonode-ethiopia-population-density",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
