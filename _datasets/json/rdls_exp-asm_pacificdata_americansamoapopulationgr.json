@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-asm_pacificdata_americansamoapopulationgr",
+      "title": "American Samoa Population Grid 2020",
+      "description": "Data Input: Settlement footprint from Facebook's High-Resolution Population Density Maps. Population allocated proportionally using 2011 census population counts at enumeration area level. Year Population Growth Rate of 0.23% has been applied to update population up to 2020 [Source: This metadata record was automatically extracted from the GeoNode portal pacificdata]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org"
+      },
+      "contact_point": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/1027"
+      },
+      "creator": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/1027"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ASM"
+        ],
+        "bbox": [
+          -171.24496278419812,
+          -14.61649374528302,
+          -167.94196278419813,
+          -11.009493745283018
+        ]
+      },
+      "temporal": {
+        "central_year": 2024
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Earth and Oceans Observations Team Pacific Community",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "GeoTIFF",
+          "description": "American Samoa Population Grid 2020",
+          "media_type": "image/tiff;application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__asm_pop_grid_2020&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WMS: geonode Service",
+          "description": "American Samoa Population Grid 2020 (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:asm_pop_grid_2020",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:asm_pop_grid_2020&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_2",
+          "title": "OGC WCS: geonode Service",
+          "description": "American Samoa Population Grid 2020 (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:asm_pop_grid_2020",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__asm_pop_grid_2020",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geonode.pacificdata.org/catalogue/#/dataset/1027",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

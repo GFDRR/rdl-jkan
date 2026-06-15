@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-pyf_pacificdata_frenchpolynesiapopulation",
+      "title": "French Polynesia Population Grid 2020",
+      "description": "Data Input: Settlement footprint from Facebook's High-Resolution Population Density Maps. Population allocated proportionally using 2017 census population counts at commune level. Population data source. Commune boundaries layers source Year Population Growth Rate of 0.37 % has been applied to update population up to 2020 The human settlement footprint with census population allocated has been converted into a 100 m resolution raster. [Source: This metadata record was automatically extracted from the GeoNode portal pacificdata]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org"
+      },
+      "contact_point": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/1035"
+      },
+      "creator": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/1035"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PYF"
+        ],
+        "bbox": [
+          -155.440161437616,
+          -28.3462749810569,
+          -133.266161437616,
+          -7.46827498105688
+        ]
+      },
+      "temporal": {
+        "central_year": 2024
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Earth and Oceans Observations Team Pacific Community",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "GeoTIFF",
+          "description": "French Polynesia Population Grid 2020",
+          "media_type": "image/tiff;application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__pyf_pop_grid_2020&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WMS: geonode Service",
+          "description": "French Polynesia Population Grid 2020 (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:pyf_pop_grid_2020",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:pyf_pop_grid_2020&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_2",
+          "title": "OGC WCS: geonode Service",
+          "description": "French Polynesia Population Grid 2020 (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:pyf_pop_grid_2020",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__pyf_pop_grid_2020",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geonode.pacificdata.org/catalogue/#/dataset/1035",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

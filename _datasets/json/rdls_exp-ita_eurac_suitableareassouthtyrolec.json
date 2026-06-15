@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ita_eurac_suitableareassouthtyrolec",
+      "title": "Suitable areas in South Tyrol for e-car chargers",
+      "description": "Layer to represent the most suitable locations for installing charging infrastructure for e-cars in South Tyrol. [Source: This metadata record was automatically extracted from the GeoNode portal eurac]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Samuele Zilio",
+        "url": "https://maps.eurac.edu"
+      },
+      "version": "updated to March 2021",
+      "details": "For more information see the Interreg IT-CH project Mobster (https://www.progettomobster.eu/en/home-page-en/)",
+      "contact_point": {
+        "name": "Samuele Zilio",
+        "email": "samuele.zilio@eurac.edu",
+        "url": "https://maps.eurac.edu/api/v2/users/1052"
+      },
+      "creator": {
+        "name": "Valentina D'Alonzo",
+        "email": "valentina.dalonzo@eurac.edu",
+        "url": "https://maps.eurac.edu/api/v2/users/1021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ITA"
+        ],
+        "bbox": [
+          611409.1307672436,
+          5125868.635287163,
+          747939.1307672436,
+          5217258.635287163
+        ]
+      },
+      "temporal": {
+        "central_year": 2021
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "The raster layer is the output of a weighted sum analysis considering several Points of Interests (POIs) related to the possible locations for charging points for e-cars in South Tyrol.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Valentina D'Alonzo",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Suitable areas in South Tyrol for e-car chargers (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:25832",
+          "access_url": "https://maps.eurac.edu/datasets/geonode:geonode:weighted_sum_car0",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:weighted_sum_car0&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "Suitable areas in South Tyrol for e-car chargers (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:25832",
+          "access_url": "https://maps.eurac.edu/datasets/geonode:geonode:weighted_sum_car0",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:weighted_sum_car0",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "id": "resource_2",
+          "title": "GZIP",
+          "description": "Suitable areas in South Tyrol for e-car chargers (X-Gzip)",
+          "format": "X-Gzip",
+          "coordinate_system": "EPSG:25832",
+          "download_url": "https://maps.eurac.edu/geoserver/wcs?service=WCS&request=GetCoverage&coverageid=geonode__weighted_sum_car0&format=application%2Fx-gzip&version=2.0.1&srs=EPSG%3A25832&bbox=611409.130767243600000%2C5125868.635287163000000%2C747939.130767243600000%2C5217258.635287163000000"
+        },
+        {
+          "id": "resource_3",
+          "title": "GeoTIFF",
+          "description": "Suitable areas in South Tyrol for e-car chargers",
+          "media_type": "image/tiff;application=geotiff",
+          "coordinate_system": "EPSG:25832",
+          "download_url": "https://maps.eurac.edu/geoserver/wcs?service=WCS&request=GetCoverage&coverageid=geonode__weighted_sum_car0&format=image%2Ftiff&version=2.0.1&srs=EPSG%3A25832&bbox=611409.130767243600000%2C5125868.635287163000000%2C747939.130767243600000%2C5217258.635287163000000"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://maps.eurac.edu/catalogue/#/dataset/307",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

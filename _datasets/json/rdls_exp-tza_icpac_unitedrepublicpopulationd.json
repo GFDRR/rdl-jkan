@@ -1,0 +1,101 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-tza_icpac_unitedrepublicpopulationd",
+      "title": "United Republic of Tanzania population distribution for 2050",
+      "description": "Population distribution for United Republic of Tanzania at 90 meters resolution (2050). This layer contains the number of people per pixel and it is based on the population distribution data from WorldPop top-down modelling methods (https://www.worldpop.org/methods/populations) adjusted to match United Nations national population projection for 2050. [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net"
+      },
+      "contact_point": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "creator": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TZA"
+        ],
+        "bbox": [
+          29.09167,
+          -12.01083,
+          40.69583,
+          -0.73417
+        ]
+      },
+      "temporal": {
+        "central_year": 2021
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ICPAC",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "United Republic of Tanzania population distribution for 2050 (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:tz_pop_2050_unadj_constrained_def",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:tz_pop_2050_unadj_constrained_def&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "United Republic of Tanzania population distribution for 2050 (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:tz_pop_2050_unadj_constrained_def",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:tz_pop_2050_unadj_constrained_def",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/tz_pop_2050_unadj_constrained_def:geonode:tz_pop_2050_unadj_constrained_def",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

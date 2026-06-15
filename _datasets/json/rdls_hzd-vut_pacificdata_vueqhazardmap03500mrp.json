@@ -1,0 +1,129 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-vut_pacificdata_vueqhazardmap03500mrp",
+      "title": "Vanuatu Earthquake Hazard Map, 0.3s Spectral Acceleration, 500-year Return Period",
+      "description": "An earthquake hazard map provides, at any location, the value of a ground motion intensity measure (for example, horizontal peak ground acceleration, PGA) that is expected to be exceeded at least once in 500 year mean return period. The earthquake hazard maps are developed by determining the simulated ground motion intensities at every gridded location for 10,000 realizations of next-year activity of earthquake events. At each grid location, the intensities are ranked and the ground motion intensity of the mean return period of interest is recorded. Spectral = 0.3 second spectral acceleration. The size of the finest grid is 9 arc seconds and was resampled to coarser resolutions (up to approximately 7 arc minutes) for some locations. Compiled by AIR Worldwide. [Source: This metadata record was automatically extracted from the GeoNode portal pacificdata]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org"
+      },
+      "details": "Hazard Earthquake Probabilistic",
+      "contact_point": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/140"
+      },
+      "creator": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/140"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ],
+        "bbox": [
+          166.541485,
+          -20.24942,
+          170.237485,
+          -13.07342
+        ]
+      },
+      "temporal": {
+        "central_year": 2020
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Earth and Oceans Observations Team Pacific Community",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Vanuatu Earthquake Hazard Map, 0.3s Spectral Acceleration, 500-year Return Period (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:van_03_500t",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:van_03_500t&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "Vanuatu Earthquake Hazard Map, 0.3s Spectral Acceleration, 500-year Return Period (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:van_03_500t",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__van_03_500t",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "id": "resource_2",
+          "title": "GeoTIFF",
+          "description": "Vanuatu Earthquake Hazard Map, 0.3s Spectral Acceleration, 500-year Return Period",
+          "media_type": "image/tiff;application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__van_03_500t&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_500yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_earthquake",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500,
+                    "event_rate": 0.002
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geonode.pacificdata.org/catalogue/#/dataset/140",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

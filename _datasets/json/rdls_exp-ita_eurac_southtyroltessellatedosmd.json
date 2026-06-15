@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ita_eurac_southtyroltessellatedosmd",
+      "title": "SOUTH TYROL: tessellated OSM drivable roads (~250m)",
+      "description": "Drivable roads from OpenStreetMap over South Tyrol (IT) onto an hexagonal tessellation of ~250m. [Source: This metadata record was automatically extracted from the GeoNode portal eurac]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Piero Campalani",
+        "url": "https://maps.eurac.edu"
+      },
+      "purpose": "Simplify the OSM roads network onto a regular tessellation for more flexible use in risk analysis and reduction.",
+      "details": "An edge in the roads network exist when at least 1 road in the original OSM network intersects with the underlying hexagonal tessellation. The 'count' field registers the number of such roads per each edge. The type and number of roads intersecting with the cells borders both participate in the definition of the 'weight'. The more important the road, the higher the weight. Python packages used: NetworkX, Shapely, GeoPandas.",
+      "contact_point": {
+        "name": "Piero Campalani",
+        "email": "piero.campalani@eurac.edu",
+        "url": "https://maps.eurac.edu/api/v2/users/1060"
+      },
+      "creator": {
+        "name": "Piero Campalani",
+        "email": "piero.campalani@eurac.edu",
+        "url": "https://maps.eurac.edu/api/v2/users/1060"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ITA"
+        ],
+        "bbox": [
+          609134.1875,
+          5122152.5,
+          759892.25,
+          5216581.0
+        ]
+      },
+      "temporal": {
+        "central_year": 2022
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Data derived from original OSM data.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Piero Campalani",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: EO_CDR Service",
+          "description": "SOUTH TYROL: tessellated OSM drivable roads (~250m) (OGC WMS: EO_CDR Service)",
+          "coordinate_system": "EPSG:25832",
+          "access_url": "https://maps.eurac.edu/datasets/geonode:EO_CDR:st_tran_rds_ln_s4_osm_pp_drive_250tess",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:EO_CDR:st_tran_rds_ln_s4_osm_pp_drive_250tess&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "GML 2.0",
+          "description": "SOUTH TYROL: tessellated OSM drivable roads (~250m) (GML 2.0)",
+          "media_type": "application/gml+xml",
+          "coordinate_system": "EPSG:25832",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=EO_CDR%3Ast_tran_rds_ln_s4_osm_pp_drive_250tess&outputFormat=gml2&srs=EPSG%3A25832"
+        },
+        {
+          "id": "resource_2",
+          "title": "GML 3.1.1",
+          "description": "SOUTH TYROL: tessellated OSM drivable roads (~250m) (GML 3.1.1)",
+          "media_type": "application/gml+xml",
+          "coordinate_system": "EPSG:25832",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=EO_CDR%3Ast_tran_rds_ln_s4_osm_pp_drive_250tess&outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&srs=EPSG%3A25832"
+        },
+        {
+          "id": "resource_3",
+          "title": "CSV",
+          "description": "SOUTH TYROL: tessellated OSM drivable roads (~250m) (CSV)",
+          "media_type": "text/csv",
+          "coordinate_system": "EPSG:25832",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=EO_CDR%3Ast_tran_rds_ln_s4_osm_pp_drive_250tess&outputFormat=csv&srs=EPSG%3A25832"
+        },
+        {
+          "id": "resource_4",
+          "title": "Excel",
+          "description": "SOUTH TYROL: tessellated OSM drivable roads (~250m) (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "coordinate_system": "EPSG:25832",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=EO_CDR%3Ast_tran_rds_ln_s4_osm_pp_drive_250tess&outputFormat=excel&srs=EPSG%3A25832"
+        },
+        {
+          "id": "resource_5",
+          "title": "GeoJSON",
+          "description": "SOUTH TYROL: tessellated OSM drivable roads (~250m) (JSON)",
+          "media_type": "application/json",
+          "coordinate_system": "EPSG:25832",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=EO_CDR%3Ast_tran_rds_ln_s4_osm_pp_drive_250tess&outputFormat=json&srs=EPSG%3A25832&srsName=EPSG%3A25832"
+        },
+        {
+          "id": "resource_6",
+          "title": "Zipped Shapefile",
+          "description": "SOUTH TYROL: tessellated OSM drivable roads (~250m) (Zipped Shapefile)",
+          "media_type": "application/vnd.shp",
+          "coordinate_system": "EPSG:25832",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=EO_CDR%3Ast_tran_rds_ln_s4_osm_pp_drive_250tess&outputFormat=SHAPE-ZIP&srs=EPSG%3A25832&format_options=charset%3AUTF-8"
+        },
+        {
+          "id": "resource_7",
+          "title": "OGC WFS: EO_CDR Service",
+          "description": "SOUTH TYROL: tessellated OSM drivable roads (~250m) (OGC WFS: EO_CDR Service)",
+          "coordinate_system": "EPSG:25832",
+          "access_url": "https://maps.eurac.edu/datasets/geonode:EO_CDR:st_tran_rds_ln_s4_osm_pp_drive_250tess",
+          "download_url": "https://maps.eurac.edu/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geonode:EO_CDR:st_tran_rds_ln_s4_osm_pp_drive_250tess&outputFormat=application%2Fjson",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://maps.eurac.edu/catalogue/#/dataset/1019",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
