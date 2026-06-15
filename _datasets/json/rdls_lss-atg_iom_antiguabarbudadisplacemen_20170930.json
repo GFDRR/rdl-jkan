@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-atg_iom_antiguabarbudadisplacemen_20170930",
+      "title": "Antigua and Barbuda IOM Displacement Tracking Matrix (DTM) from API",
+      "description": "This dataset comes from the International Organization for Migration (IOM)'s displacement tracking matrix (DTM) publicly accessible API . This API allows the humanitarian community, academia, media, government, and non-governmental organizations to utilize the data collected by DTM. The DTM API only provides non-sensitive IDP figures, aggregated at the country, Admin 1 (states, provinces, or equivalent), and Admin 2 (smaller subnational administrative areas) levels. For more detailed information, please see the country-specific DTM datasets on HDX .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/atg-iom-dtm-from-api]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset comes from the [DTM API](https://dtm.iom.int/data-and-analysis/dtm-api), which provides only non-sensitive IDP figures, aggregated at the country, Admin 1, and Admin 2 levels. For more detailed information, please see the [country-specific DTM datasets on HDX](https://data.humdata.org/dataset/?dataseries_name=IOM%20-%20DTM%20Baseline%20Assessment&dataseries_name=IOM%20-%20DTM%20Event%20and%20Flow%20Tracking&dataseries_name=IOM%20-%20DTM%20Site%20and%20Location%20Assessment&organization=international-organization-for-migration&q=&sort=last_modified%20desc&ext_page_size=25). IOM is continually adding new data as well as updating data that's already been added.",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/atg-iom-dtm-from-api"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/atg-iom-dtm-from-api"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ATG"
+        ]
+      },
+      "temporal": {
+        "start": "2017-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "url": "https://data.humdata.org/dataset/atg-iom-dtm-from-api"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM collects displacement data through field assessments and tracking mechanisms at multiple administrative levels in Antigua and Barbuda. Data is aggregated by displacement reason, demographics (gender), origin location, and assessment type (baseline, emergency tracking, or site assessment), then published via the DTM API for humanitarian access.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IOM DTM API provides non-sensitive IDP figures aggregated at country and subnational administrative levels, tracking displacement populations by reason, demographics, and origin location."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://dtm.iom.int/about/methodological-framework"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_6e88adf2",
+          "title": "Antigua and Barbuda IOM DTM data for admin levels 0-1",
+          "description": "Antigua and Barbuda IOM displacement tracking matrix data at admin levels 0-1, sourced from the DTM API",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/3ae37fb0-39bf-41bf-bd46-4eed308b9083/resource/6e88adf2-2309-48aa-b33b-e601ea88a59e/download/atg-iom-dtm-from-api-admin-0-to-1.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons (IDPs) from conflict-related displacement tracked at admin levels 0-1"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/atg-iom-dtm-from-api",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

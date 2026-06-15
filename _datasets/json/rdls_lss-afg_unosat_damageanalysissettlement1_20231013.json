@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-afg_unosat_damageanalysissettlement1_20231013",
+      "title": "Afghanistan - Damage analysis by settlement of the 11th October 2023 Hirat earthquake",
+      "description": "UNOSAT code EQ20231008AFG, GDACS Id: 1394952 This map illustrates the level of damage induced by the 11 October earthquake (M6.3) in settlements North and North-West Herat as observed from very high-resolution images WorldView-3 and WorldView-1 acquired on 11 October 2023. UNOSAT has analysed an area of a total of 3,150km² and detected 123 affected settlements, amongst which 92 are moderately affected, 10 severely affected and 21 are almost destroyed. In addition, 25 settlements have no visible damages. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-analysis-by-settlement-of-the-11th-october-2023-hirat-earthquake]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-analysis-by-settlement-of-the-11th-october-2023-hirat-earthquake"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-analysis-by-settlement-of-the-11th-october-2023-hirat-earthquake"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-13"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared very high-resolution satellite imagery acquired on 11 October 2023 with pre-event baseline imagery to detect and classify building damage across 3,150 km² in Herat Province. Settlements were categorized into damage classes (no visible damage, moderately affected, severely affected, almost destroyed) through visual interpretation of structural changes observed in the imagery.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from very high-resolution satellite imagery (WorldView-3 and WorldView-1) acquired on 11 October 2023, classifying 123 affected settlements by damage severity level."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_23b2518f",
+          "title": "EQ20231008AFG_gdb.zip",
+          "description": "Afghanistan - Damage analysis by settlement of the 11th October 2023 Hirat earthquake (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3688/EQ20231008AFG_gdb.zip"
+        },
+        {
+          "id": "resource_11eac265",
+          "title": "EQ20231008AFG_SHP.zip",
+          "description": "Afghanistan - Damage analysis by settlement of the 11th October 2023 Hirat earthquake (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3688/EQ20231008AFG_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from M6.3 earthquake assessed by satellite imagery in Herat settlements"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-analysis-by-settlement-of-the-11th-october-2023-hirat-earthquake",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

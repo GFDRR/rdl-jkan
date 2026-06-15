@@ -1,0 +1,97 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-usa_wfp_hawaiimay42018magnitude69_20180504",
+      "title": "United States - Hawaii May 4, 2018 magnitude 6.9 earthquake Interferogram using Sentinel 1A C-band SAR",
+      "description": "This is an interferogram of the Hawaii magnitude 6.9 earthquake followed by multiple volcanic eruptions of Kilauea volcano. Data source is Sentinel 1A C-band Synthetic Aperture Radar Interferometric Wide Swath provided by the European Space Agency. Best viewed in Google Earth Pro.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hawaii-mag6-9-earthquake-4may2018]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "This data should be interpreted with caution. Data shows vertical displacements with respect to radar Line of Sight (LOS) and does not equate to actual metric units. Data unit is in phase (radar wavelength per cycle). In case you need information on actual vertical displacement in meters, data needs a separate processing called phase unwrapping.",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/hawaii-mag6-9-earthquake-4may2018"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/hawaii-mag6-9-earthquake-4may2018"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "USA"
+        ]
+      },
+      "temporal": {
+        "start": "2018-05-04"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "European Space Agency Sentinel-1A C-band Synthetic Aperture Radar",
+            "url": "https://data.humdata.org/dataset/hawaii-mag6-9-earthquake-4may2018"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1A C-band SAR data acquired on May 2 and May 14, 2018 were processed using interferometric techniques to generate phase interferograms representing ground displacement from the May 4, 2018 magnitude 6.9 earthquake. The resulting interferogram is provided as a KML file for visualization in geospatial software.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "European Space Agency Sentinel-1A C-band Synthetic Aperture Radar",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Sentinel-1A Interferometric Wide Swath SAR data used to generate interferometric phase measurements of ground displacement from the earthquake"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ccb1bd67",
+          "title": "Phase_ifg_VV_02May2018_14May2018.kmz",
+          "description": "This is a Radar Interferogram of the 4 May 2018 Hawaii earthquake which is followed by volcanic activity in Kilauea volcano. Processed using Sentinel 1A C-band SAR datasets.",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://data.humdata.org/dataset/2583dd1d-1603-4583-ac2e-3c42587e3cdc/resource/ccb1bd67-0560-47b7-8aa7-49649903f3d0/download/phase_ifg_vv_02may2018_14may2018.kmz"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hawaii-mag6-9-earthquake-4may2018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

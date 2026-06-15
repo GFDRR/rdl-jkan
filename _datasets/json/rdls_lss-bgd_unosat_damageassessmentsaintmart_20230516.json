@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-bgd_unosat_damageassessmentsaintmart_20230516",
+      "title": "Bangladesh - Damage assessment in Saint Martin's Island Cox'Bazar District, Chittagong Division as of 15 May 2023",
+      "description": "UNOSAT code TC20230510BGD, GDACS Id: 1000970 This map illustrates satellite-based damage assessment in Saint Martin's Island Cox'Bazar District, Chattogram Division detected by using a Pleiades very high-resolution satellite image acquired on 15 May 2023. Within the analyzed area, UNOSAT identified 211 affected and potentially affected structures. Taking into account the pre-building footprints provided by Humanitarian OpenStreetMap, this represents about 17% of the total number of structures affected in Saint Martin's Island. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-saint-martins-island-coxbazar-district-chittagong-division-as-of-15-m]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-saint-martins-island-coxbazar-district-chittagong-division-as-of-15-m"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-saint-martins-island-coxbazar-district-chittagong-division-as-of-15-m"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2023-05-16"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-saint-martins-island-coxbazar-district-chittagong-division-as-of-15-m"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-saint-martins-island-coxbazar-district-chittagong-division-as-of-15-m"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event satellite imagery (Pleiades, 15 May 2023) was compared against pre-event imagery and Humanitarian OpenStreetMap building footprints to detect structural damage caused by Cyclone Mocha (GDACS Id: 1000970) on Saint Martin's Island, Cox's Bazar District. UNOSAT analysts visually interpreted change detection results to classify structures as affected or potentially affected, producing a preliminary damage assessment geodataset.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "UNOSAT performed satellite-based damage assessment using a Pleiades very high-resolution satellite image acquired on 15 May 2023, comparing pre- and post-event imagery to identify affected structures."
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Pre-event building footprints from Humanitarian OpenStreetMap were used as the baseline inventory to calculate the proportion of structures affected on Saint Martin's Island."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0be88b18",
+          "title": "TC20230510BGD_gdb.zip",
+          "description": "Bangladesh - Damage assessment in Saint Martin's Island Cox'Bazar District, Chittagong Division as of 15 May 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3593/TC20230510BGD_gdb.zip"
+        },
+        {
+          "id": "resource_09e6f39c",
+          "title": "TC20230510BGD_shp.zip",
+          "description": "Bangladesh - Damage assessment in Saint Martin's Island Cox'Bazar District, Chittagong Division as of 15 May 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3593/TC20230510BGD_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Satellite-based damage assessment identifying 211 affected and potentially affected structures on Saint Martin's Island following Cyclone Mocha (TC20230510BGD), representing ~17% of total structures"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-saint-martins-island-coxbazar-district-chittagong-division-as-of-15-m",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

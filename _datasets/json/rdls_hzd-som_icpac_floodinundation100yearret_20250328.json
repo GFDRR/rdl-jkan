@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-som_icpac_floodinundation100yearret_20250328",
+      "title": "Somalia Flood Inundation (100 year return period)",
+      "description": "This dataset is the output from the Global Flood Model intercomparison project undertaken on behalf of the Global Flood Partnership. The methodology is described in Trigg et al., 2016, 'The credibility challenge for global fluvial flood risk analysis,' published in the Environmental Research Letters Journal. Each file is a geospatial, WGS84, 1/1200 decimal degrees resolution (~90m) GeoTIFF raster with a classified integer value representing how many out of the 6 models agree that a cell is wet (note 0 - dry/no data). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-somalia-flood-inundation-100-year-return-period]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Time period is set to publication date rather than the date the data covers",
+      "contact_point": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-somalia-flood-inundation-100-year-return-period"
+      },
+      "creator": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-somalia-flood-inundation-100-year-return-period"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2025-03-28"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Global Flood Model intercomparison project",
+            "url": "https://data.humdata.org/dataset/icpac-geonode-somalia-flood-inundation-100-year-return-period"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Fluvial flood inundation depths were simulated using 6 independent global flood models as part of the Global Flood Partnership intercomparison project. Model outputs were harmonized to WGS84 at ~90m resolution and consensus was derived by counting agreement across models (0-6 scale). The dataset represents the 100-year return period probabilistic hazard for Somalia.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Global Flood Model intercomparison project",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multi-model ensemble flood hazard simulation combining 6 independent global flood models to generate probabilistic inundation extent and depth estimates at specified return periods."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2a9062bd",
+          "title": "Somalia Flood Inundation (100 year return period) GeoTIFF",
+          "description": "GeoTIFF file. This dataset is the output from the Global Flood Model intercomparison project undertaken on behalf of the Global Flood Partnership. The methodology is described in Trigg et al., 2016, 'The credibility challenge for global fluvial flood risk analysis,' published in the Environmental Research Letters Journal. Each file is a geospatial, WGS84, 1/1200 decimal degrees resolution (~90m) GeoTIFF raster with a classified integer value representing how many out of the 6 models agree that a cell is wet (note 0 - dry/no data)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__Somalia_flood_inundation&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_100yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01
+                  }
+                },
+                "description": "Probabilistic fluvial flood inundation depth model at 100-year return period from multi-model ensemble consensus"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/icpac-geonode-somalia-flood-inundation-100-year-return-period",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

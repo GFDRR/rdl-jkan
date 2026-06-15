@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ben_iom_displacementidpsmobilityt_2024",
+      "title": "Benin Displacement - [IDPs] - Mobility Tracking [IOM DTM]",
+      "description": "Due to Sahel Crisis, IOM DTM conducted mobility tracking in Alibori and Atacora departments in Benin. The datasets show the total number of IDP individuals identified and the origin of the majority of IDPs.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/benin-displacement-idps-mobility-tracking-iom-dtm]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/benin-displacement-idps-mobility-tracking-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/benin-displacement-idps-mobility-tracking-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BEN"
+        ]
+      },
+      "temporal": {
+        "start": "2024-02-05",
+        "end": "2025-07-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "url": "https://data.humdata.org/dataset/benin-displacement-idps-mobility-tracking-iom-dtm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM conducted field-based mobility tracking surveys in Alibori and Atacora departments of Benin following the Sahel crisis. Enumerators interviewed community leaders and key informants at locality level to identify total IDP counts, household numbers, displacement reasons (climate-related and conflict-related), origin locations, and temporal dynamics. Data were collected across multiple survey rounds (Round 2 and Round 3) and disaggregated by gender and age.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IOM DTM conducts standardized mobility tracking surveys to identify and quantify internally displaced persons, their origins, displacement reasons, and arrival dates using field-based enumeration methodology."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://displacement.iom.int/sites/default/files/public/Methodological%20Framework%20used%20in%20DTM%20Operations%20for%20Quantifying%20Displacement%20and%20Mobility.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_53fc119d",
+          "title": "Benin - Mobility Tracking - Round 3",
+          "description": "This dataset contains the results of displacement tracking activities conducted in the north of the country. The assessment was carried out in 254 localities hosting internally displaced persons (IDPs). Data collection took place from 16 to 22 July 2025 in the 11 communes of the Alibori and Atakora departments.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b32b1739-ba36-4cc6-9c62-93b0d4a89846/resource/53fc119d-0c2b-4a39-afc0-8ad1329ee4e0/download/iom_dtm_benin_mt_baseline_assessment_round_3_hdx.xlsx"
+        },
+        {
+          "id": "resource_37eefd7d",
+          "title": "Benin - Mobility Tracking - Round 2",
+          "description": "In round 2, 12,501 IDP individuals were identified. Among them, 4,564 were children under 18 years old.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b32b1739-ba36-4cc6-9c62-93b0d4a89846/resource/37eefd7d-794f-42e0-8a06-a0c9fa126388/download/ben_mt_clean_final_publish_hdx.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons identified through mobility tracking in response to Sahel crisis (conflict and climate-related hazards)"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons identified through mobility tracking in response to drought and climate-related hazards"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/benin-displacement-idps-mobility-tracking-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-sle_hdx_ibtracsstormtracks_1852",
+      "title": "Sierra Leone: IBTrACS Storm Tracks",
+      "description": "The International Best Track Archive for Climate Stewardship (IBTrACS) project is the most complete global collection of tropical cyclones available. It merges recent and historical tropical cyclone data from multiple agencies to create a unified, publicly available, best-track dataset that improves inter-agency comparisons. Fields available: SID: A unique storm identifier (SID) assigned by IBTrACS algorithm. ISO_TIME: Time of the observation in ISO format (YYYY-MM-DD hh:mm:ss) BASIN: Basin of the current storm position SUBBASIN: Sub-basin of the current storm position NATURE: Type of storm (a combination of the various types from the available sources) NUMBER: Number of the storm for the year (restarts at 1 for each year LAT: Mean position - latitude (a combination of the available positions) LON: Mean position - longitude (a combination of the available positions) WMO_WIND: Maximum sustained wind speed assigned by the responsible WMO agency WMO_PRES: Minimum central pressure assigned by the responsible WMO agency.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sle-ibtracs-tropical-storm-tracks]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Some early (pre-1950) storms were not correctly matched, so the number of storms in the record is artificially high. For example, SIO storms in 1901 are not matched, so the same storm is tracked by the following identifiers: ds824, td9636, and reunion. This storm is broken into different tracks because of temporal differences in the storm data.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/sle-ibtracs-tropical-storm-tracks"
+      },
+      "creator": {
+        "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+        "url": "https://data.humdata.org/dataset/sle-ibtracs-tropical-storm-tracks"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SLE"
+        ]
+      },
+      "temporal": {
+        "start": "1852-09-26",
+        "end": "2025-10-15"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+            "url": "https://data.humdata.org/dataset/sle-ibtracs-tropical-storm-tracks"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IBTrACS (International Best Track Archive for Climate Stewardship) v04r01 aggregates tropical cyclone track data from multiple national and international meteorological agencies into a single harmonized archive. The dataset was spatially filtered to retain only storm tracks relevant to Sierra Leone, providing CSV and GeoJSON representations of storm positions with associated wind speed and pressure observations. This dataset supports historical hazard characterization and tropical cyclone frequency analysis for Sierra Leone.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "IBTrACS v04r01 is a globally unified best-track tropical cyclone dataset that merges historical and recent storm track records from multiple meteorological agencies. It provides standardized storm position, intensity (wind speed, pressure), basin, and storm nature attributes at sub-daily intervals."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-07/IBTrACS_version4r01_Technical_Details.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_dd8b24ee",
+          "title": "ibtracs_ALL_list_v04r01_SLE.csv",
+          "description": "IBTrACS storm tracks from 1852 to date that pass within 2000 kilometers of Sierra Leone.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/03388710-1471-4cfb-8eb1-91b2f12d4218/resource/dd8b24ee-062a-4801-9f51-4d9710ea91c5/download/ibtracs_all_list_v04r01_sle.csv"
+        },
+        {
+          "id": "resource_ddf1ded0",
+          "title": "ibtracs_ALL_list_v04r01_lines_SLE.geojson",
+          "description": "IBTrACS storm tracks from 1852 to date that pass within 2000 kilometers of Sierra Leone.",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/03388710-1471-4cfb-8eb1-91b2f12d4218/resource/ddf1ded0-b76b-4e78-8b1f-fee4da515c6f/download/ibtracs_all_list_v04r01_lines_sle.geojson"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sle-ibtracs-tropical-storm-tracks",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
