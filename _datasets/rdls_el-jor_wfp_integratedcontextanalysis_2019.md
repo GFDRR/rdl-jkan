@@ -1,0 +1,470 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: World Food Programme
+    url: https://data.humdata.org/dataset/wfp_ica_jor_2019
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: WFP - World Food Programme
+  url: https://data.humdata.org/dataset/wfp_ica_jor_2019
+creator:
+  affiliation: null
+  email: null
+  name: WFP - World Food Programme
+  url: https://data.humdata.org/dataset/wfp_ica_jor_2019
+dataset_id: rdls_el-jor_wfp_integratedcontextanalysis_2019
+description: 'The ICA is a process of consultations supported by mapped-out data that
+  produces a strategic plan describing where different combinations of programme themes
+  are appropriate to achieve goals of reducing food insecurity and climate related
+  shock risk. The ICA combines multi-year food security trends with natural shock
+  risk data to highlight sub-national areas where different programme strategies make
+  sense. Food security trend maps shows areas where safety nets can address regular
+  food insecurity, and others where shocks make recovery more important. Climate-related
+  natural shock risk maps show where DRR, preparedness and early warning efforts can
+  complement food-security objectives. Atop this core foundation, mapped data on subjects
+  including nutrition, gender, livelihoods and resilience can enrich theme-level strategic
+  planning in which all pieces work together. The full group of ICA partners discuss
+  these analytical results to arrive at strategic programmatic directions.. [Source:
+  This metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/wfp_ica_jor_2019]'
+details: null
+exposure:
+- asset_type:
+    description: Population density distribution across ICA analysis areas in 2015
+    id: population
+    scheme: null
+    title: null
+    uri: null
+  category: population
+  id: exposure_1
+  metrics:
+  - dimension: population
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+- asset_type:
+    description: Land degradation extent and severity across the study area
+    id: natural_environment
+    scheme: null
+    title: null
+    uri: null
+  category: natural_environment
+  id: exposure_2
+  metrics:
+  - dimension: product
+    id: metric_1
+    measurement:
+      quantity_kind: area
+      unit: null
+hazard: null
+license: https://opendatacommons.org/licenses/odbl/1-0/
+lineage:
+  description: The ICA combines multi-year food security trend data (2010-2014) with
+    natural shock hazard layers (drought 1980-2016, floods 2019, land degradation
+    2001-2016) and population density (2015) to produce strategic sub-national risk
+    analysis. Hazard data were mapped from observed events and satellite-derived land
+    degradation indices, then overlaid with food insecurity recurrence patterns to
+    identify areas where different programme interventions are appropriate for reducing
+    food insecurity and climate shock vulnerability.
+  sources:
+  - id: source_1
+    license: null
+    name: World Food Programme
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/wfp_ica_jor_2019
+  rel: source
+loss:
+  losses:
+  - asset_category: agriculture
+    asset_dimension: product
+    description: Food insecurity recurrence linked to drought hazard exposure from
+      2010-2014
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: null
+      trigger: null
+      type: drought
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: area
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: agriculture
+    asset_dimension: product
+    description: Food insecurity recurrence linked to flood hazard exposure from 2010-2014
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_2
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: area
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the drought hazard estimated
+    and used for the Integrated Context Analysis (ICA) run in Jordan in 2019. Data
+    source: ''CDI Validation summary report and drought vulnerability maps'', UNDP
+    2018. The key indicators used were natural factors related to exposure and a combination
+    of natural and human-driven factors for the sensitivity. Adaptive capacity, on
+    the other hand, has been based on the availability of resources, socio-economic
+    indicators, legislation and capacity of relevant institutions and society.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/8cea8b9f724e4fc7939d68ae8c788e78/data
+  format: null
+  id: resource_c9f951e1
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Drought hazard, 1980-2016
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Jordan: Integrated Context Analysis (ICA), 2019 (No abstract provided)'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/6113b05dfb84492597c6596248b32da0/data
+  format: PNG
+  id: resource_6fbe85a7
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Recurrence of food insecurity, 2010-2014
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the recurrence of food insecurity
+    conditions observed and used for the Integrated Context Analysis (ICA) run in
+    Jordan in 2019. Data source: Department of Statistics (DoS), 2010-2014. The key
+    indicator used for the analysis was the Food Consumption Score (FCS), which aggregates
+    household-level data on the diversity and frequency of food groups consumed over
+    the previous seven days, then weighted according to the relative nutritional value
+    of the consumed food groups. Given the values of food insecurity across the country
+    (with a national, multi-year average of 4.6%), a threshold equal to 5% has been
+    chosen to allow a better separation of severely affected areas from better-off
+    geographical areas.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/95be72b5c3674dc28c7c751cb5a107cb/data
+  format: null
+  id: resource_eefb7669
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Recurrence of food insecurity, 2010-2014
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the land degradation phenomenon
+    - by second-level administrative area - observed for the purposes of the Integrated
+    Context Analysis (ICA) run in Jordan in 2019. Data sources: HQ OSE GIS Analysis
+    of NASA MODIS 2001-2016, WorldClim 1970-2000, FAO and NASA SRTM Digital Elevation
+    Model data. The main indicators used for the analysis were the average ecological
+    changes observed between 2001-2006 and 2011-2016 and the percentage of erosion-prone
+    surface.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/c9e4682a4e2849048d8a1203c0470a7a/data
+  format: null
+  id: resource_0cae110c
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Land Degradation, 2001-2016
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the severity of the combined
+    natural hazards (droughts and floods) used for the Integrated Context Analysis
+    (ICA) run in Jordan in 2019. Data source: WFP JOCO analysis of national rainfall
+    intensity data from MWI (Ministry of Water and Irrigation) and 30m Digital Elevation
+    Model (DEM) through the Watershed Modeling System (WMS), ''CDI Validation summary
+    report and drought vulnerability maps'', UNDP 2018.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/e7d97ffc16614c00918f115c2e994aa1/data
+  format: null
+  id: resource_ba2518ed
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Natural shocks hazard
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Jordan: Integrated Context Analysis (ICA), 2019 (No abstract provided)'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/c9c34068117a4595bbd2a154fca0b7c3/data
+  format: PNG
+  id: resource_bb5f088f
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - ICA Areas & Population Density, 2015
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Jordan: Integrated Context Analysis (ICA), 2019 (No abstract provided)'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/46f8aa891e884755b9aa549537d68267/data
+  format: PNG
+  id: resource_a6a3e5be
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - ICA Categories
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This document contains the results of the Integrated Context Analysis
+    (ICA) conducted in the Jordan in 2019. The analysis brings together the exposure
+    of natural shocks (floods and droughts) and the recurrence of food insecurity
+    with other key contextual information to provide broad programmatic strategies
+    by second-level administrative area.
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/91cceeb210c043c9ab3385f42fbd62f0/data
+  format: null
+  id: resource_0224bc1f
+  media_type: application/pdf
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Technical Paper
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Jordan: Integrated Context Analysis (ICA), 2019 (No abstract provided)'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/4894ca133970448dbaeea761f4f88c49/data
+  format: PNG
+  id: resource_ba06b781
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Drought hazard, 1980-2016
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Jordan: Integrated Context Analysis (ICA), 2019 (No abstract provided)'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/e03cce8f5b81458197d9d810ab9411e1/data
+  format: PNG
+  id: resource_062422bd
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - ICA Areas
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Jordan: Integrated Context Analysis (ICA), 2019 (No abstract provided)'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/381fdd7ebb394106a198883204d30aa8/data
+  format: PNG
+  id: resource_e72301f1
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Severity of natural hazards (floods and drought)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Jordan: Integrated Context Analysis (ICA), 2019 (No abstract provided)'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/e70c671562db499ea433fe2df6b3e20b/data
+  format: null
+  id: resource_30880a8c
+  media_type: application/pdf
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - ICA Areas & Land Degradation, 2001-2016
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Jordan: Integrated Context Analysis (ICA), 2019 (No abstract provided)'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/5dc9d7ad6ae148acaf78107e44feb44f/data
+  format: PNG
+  id: resource_4a157293
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Flood hazard, 2019
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This layer contains information about the final classification deriving
+    from the Integrated Context Analysis (ICA) run in Jordan in 2019, showing the
+    areas of convergence between recurrence of food insecurity and propensity to natural
+    shocks (floods and droughts).
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/dffa7b520140402094e810a8c4b44bbe/data
+  format: null
+  id: resource_f8f8072a
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - ICA Categories & Areas
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the flood hazard estimated and
+    used for the Integrated Context Analysis (ICA) run in Jordan in 2019. Data source:
+    WFP JOCO analysis of national rainfall intensity data from MWI (Ministry of Water
+    and Irrigation) and 30m Digital Elevation Model (DEM) through the Watershed Modeling
+    System (WMS). The main indicator used for the analysis was the normalized flood
+    intensity, expressed as the ratio between the peak flow and the drainage area.
+    For more information about the flood hazard analysis, please find the flood hazard
+    map report at the following link: https://www.wfp.org/publications/2019-flood-hazard-map-jordan'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/31fd21c031b4400c815acf93745bad66/data
+  format: null
+  id: resource_b7f176dd
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Flood hazard, 2019
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This Excel file contains the food insecurity analysis performed for
+    the purposes of the Integrated Context Analysis (ICA) run in Jordan in 2019. The
+    analysis, using Department of Statistics (DoS) data from 2010 and 2014, determines
+    the recurrence of food insecurity conditions - by second-level administrative
+    area - applying a threshold equal to 5%.
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/3fa6f2a6b67048c58a80708ffd2d8118/data
+  format: null
+  id: resource_179d4c36
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Jordan, 2019 - Food Insecurity Recurrence Analysis
+risk_data_type:
+- exposure
+- loss
+schema: rdls-10
+slug: rdls_el-jor_wfp_integratedcontextanalysis_2019
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - JOR
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2019-12-31'
+  start: '2019-01-01'
+temporal_resolution: null
+title: 'Jordan: Integrated Context Analysis (ICA), 2019'
+version: null
+vulnerability: null
+---
