@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mex_unosat_damageassessmenttlayacapa_20171018",
+      "title": "Damage Assessment in Tlayacapan town, Municipality of Tlayacapan, State of Morelos, Mexico",
+      "description": "This map illustrates UAV images-detected and field work survey damaged structures in the town of Tlayacapan located in Tlayacapan Municipality, Morelos State, Mexico. The analyzed area is located at 68 km north-west of the epicentral zone of the 19 September 2017 M7.1 earthquake. The Institute of Geography of the National Autonomous University of Mexico (IGG-UNAM) identified 189 damaged structures. The analysis was performed using a post-event UAV images acquired on 7 October 2017 and field work. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-tlayacapan-town-municipality-of-tlayacapan-state-of-morelos-mexico-2707]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-tlayacapan-town-municipality-of-tlayacapan-state-of-morelos-mexico-2707"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-tlayacapan-town-municipality-of-tlayacapan-state-of-morelos-mexico-2707"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MEX"
+        ]
+      },
+      "temporal": {
+        "start": "2017-10-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Institute of Geography of the National Autonomous University of Mexico (IGG-UNAM)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-tlayacapan-town-municipality-of-tlayacapan-state-of-morelos-mexico-2707"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event damage assessment derived from UAV imagery acquired on 7 October 2017 (18 days after the 19 September 2017 M7.1 earthquake) combined with field validation surveys. The Institute of Geography (IGG-UNAM) identified and classified 189 damaged structures in Tlayacapan town, located 68 km from the epicenter. UNOSAT compiled and standardized the results into geospatial vector datasets (geodatabase and shapefile formats) with damage classification attributes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Institute of Geography of the National Autonomous University of Mexico (IGG-UNAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment identifying 189 damaged structures in Tlayacapan town using UAV imagery acquired on 7 October 2017 and field validation surveys"
+          },
+          {
+            "id": "source_2",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and damage assessment compilation comparing pre- and post-event imagery to identify structural damage"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_682487b1",
+          "title": "EQ20170919MEX_gdb.zip",
+          "description": "Damage Assessment in Tlayacapan town, Municipality of Tlayacapan, State of Morelos, Mexico (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170919MEX/EQ20170919MEX_gdb.zip"
+        },
+        {
+          "id": "resource_4131e2e0",
+          "title": "EQ20170919MEX_shp.zip",
+          "description": "Damage Assessment in Tlayacapan town, Municipality of Tlayacapan, State of Morelos, Mexico (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170919MEX/EQ20170919MEX_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from the 19 September 2017 M7.1 earthquake detected via UAV imagery and field survey"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-tlayacapan-town-municipality-of-tlayacapan-state-of-morelos-mexico-2707",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

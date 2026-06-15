@@ -1,0 +1,108 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mrtsen_achgis4tech_sahelpredictiondeathanima_2018",
+      "title": "Sahel Prediction Death Animals",
+      "description": "The model trains with the actual data of the variables to be predicted and uses their correlation with agroclimatic indicators, biomass, and violence to predict said variable where there is no actual data, at the level of Commune/Municipality for all of Senegal and Mauritania. This information belongs to the Food and Nutrition Security Monitoring and Prediction System in the Sahel (PREDISAN) Project, funded by the Agencia Andaluza de Cooperación Internacional para el Desarrollo (AACID) and the University of Granada (UGR). The PREDISAN AI-SAHEL Project focuses on the Monitoring and Prediction System for Humanitarian Vulnerability of Pastoral and Agro-pastoral Populations in the Western Sahel, based on GIS Analysis and Artificial Intelligence. For more information, contact GIS4Tech at info@gis4tech.com or visit the PREDISAN platform at https://predisan.gis4tech.com/sahel.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sahel-prediction-dead-animals-by-ach-gis4tech]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/sahel-prediction-dead-animals-by-ach-gis4tech"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/sahel-prediction-dead-animals-by-ach-gis4tech"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "SEN",
+          "MRT"
+        ]
+      },
+      "temporal": {
+        "start": "2018-01-01",
+        "end": "2026-02-28"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "PREDISAN (Food and Nutrition Security Monitoring and Prediction System in the Sahel)",
+            "url": "https://data.humdata.org/dataset/sahel-prediction-dead-animals-by-ach-gis4tech"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The model integrates historical livestock mortality data with agroclimatic indicators, biomass measurements, and violence records to train a predictive algorithm that estimates dead animals at commune/municipality spatial resolution. Predictions are generated for areas lacking direct observational data, producing probabilistic outputs (prob_dead_animals_0, prob_dead_animals_1) alongside point estimates.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "PREDISAN (Food and Nutrition Security Monitoring and Prediction System in the Sahel)",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "AI-based predictive model trained on agroclimatic indicators, biomass, and violence data to forecast livestock mortality at commune/municipality level across Senegal and Mauritania."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_74dd04cf",
+          "title": "Sahel-prediction-death-animals-by-ACH-GIS4Tech.csv",
+          "description": "Sahel prediction Death Animals",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/2ee5806a-848b-4a87-9fb8-e5b68d8a9a45/resource/74dd04cf-cb51-4aa1-b63e-7745e91cbe45/download/sahel-prediction-death-animals-by-ach-gis4tech.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Predicted livestock mortality (dead animals) from drought conditions in Sahel region"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sahel-prediction-dead-animals-by-ach-gis4tech",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

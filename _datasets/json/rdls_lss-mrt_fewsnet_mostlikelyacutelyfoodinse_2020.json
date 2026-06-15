@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mrt_fewsnet_mostlikelyacutelyfoodinse_2020",
+      "title": "Mauritania Most Likely FEWS NET Acutely Food Insecure Population Estimates Data",
+      "description": "Mauritania Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2020. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mauritania_most_likely_fewsnet_fipe]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Acutely Food Insecure Population Estimates in different scenarios collected by FEWS NET enumerators on a regular schedule (typically monthly).",
+      "contact_point": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/mauritania_most_likely_fewsnet_fipe"
+      },
+      "creator": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/mauritania_most_likely_fewsnet_fipe"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MRT"
+        ]
+      },
+      "temporal": {
+        "start": "2020-07-01",
+        "end": "2025-05-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "FEWS NET enumerators conducted regular (typically monthly) surveys across Mauritania to estimate acutely food insecure populations under different scenarios. Population estimates were aggregated and classified to produce most likely food insecurity impact figures for 2020, reflecting drought-driven humanitarian needs.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "FEWS NET",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Famine Early Warning Systems Network (FEWS NET) acutely food insecure population estimates collected through regular enumerator surveys across Mauritania, providing scenario-based impact assessments of food security crises."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_901911dd",
+          "title": "Mauritania Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2020",
+          "description": "Mauritania Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2020",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://fdw.fews.net/api/ipcpopulationsize/?preference=best&country=MR&scenario=ML&format=xlsx"
+        },
+        {
+          "id": "resource_9905d649",
+          "title": "Mauritania Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2020",
+          "description": "Mauritania Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2020",
+          "media_type": "text/csv",
+          "download_url": "https://fdw.fews.net/api/ipcpopulationsize/?preference=best&country=MR&scenario=ML&format=csv"
+        },
+        {
+          "id": "resource_c86213a0",
+          "title": "Mauritania Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2020",
+          "description": "Mauritania Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2020",
+          "media_type": "application/json",
+          "download_url": "https://fdw.fews.net/api/ipcpopulationsize/?preference=best&country=MR&scenario=ML&format=json"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acutely food insecure population estimates from drought-driven food security crisis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mauritania_most_likely_fewsnet_fipe",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

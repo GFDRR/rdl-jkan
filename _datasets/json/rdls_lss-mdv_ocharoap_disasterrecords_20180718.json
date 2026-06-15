@@ -1,0 +1,179 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mdv_ocharoap_disasterrecords_20180718",
+      "title": "Maldives - Disaster Records",
+      "description": "This datasets include Maldives Disaster Record recorded in Desinventar database by UNDP. The data were cleaned by the Faculty of Engineering, Science and Technology within the Maldives National University.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/maldives-disaster-records]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/maldives-disaster-records"
+      },
+      "creator": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/maldives-disaster-records"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDV"
+        ]
+      },
+      "temporal": {
+        "start": "2018-07-18"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Desinventar database",
+            "url": "https://data.humdata.org/dataset/maldives-disaster-records"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historical disaster records from the Desinventar database were extracted for Maldives and cleaned by the Faculty of Engineering, Science and Technology at Maldives National University. The dataset contains post-event impact records of natural disasters affecting the country, compiled from official disaster documentation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Desinventar database",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Global disaster inventory system maintained by UNDP that records post-event disaster impacts and losses from historical events."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8521e7dc",
+          "title": "Disaster_record_from_Desinventar.xlsx",
+          "description": "This datasets include Maldives Disaster Record recorded in Desinventar database by UNDP. The data were cleaned by the Faculty of Engineering, Science and Technology within the Maldives National University.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/509cd879-f937-4428-8868-5459938744d3/resource/8521e7dc-e511-45bb-989b-b9538580daea/download/disaster_record_from_desinventar.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flooding events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flooding events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from strong wind events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by strong wind events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/maldives-disaster-records",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

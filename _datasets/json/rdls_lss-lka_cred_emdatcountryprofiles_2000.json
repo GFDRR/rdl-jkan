@@ -1,0 +1,300 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-lka_cred_emdatcountryprofiles_2000",
+      "title": "EM-DAT - Country Profiles, Sri Lanka",
+      "description": "Aggregated figures for natural hazard related events in EM-DAT: Sri Lanka Documentation on the Country Profiles available here How to cite the EM-DAT Project here Main dataset on HDX: EM-DAT - Country Profiles More on the EM-DAT database : website / data portal Each line corresponds to a given combination of year, country, disaster subtype and reports figures for : number of disasters total number of people affected total number of deaths economic losses (original value and adjusted). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/emdat-country-profiles-lka]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/emdat-country-profiles-lka"
+      },
+      "creator": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/emdat-country-profiles-lka"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LKA"
+        ]
+      },
+      "temporal": {
+        "start": "2000-01-01",
+        "end": "2025-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "EM-DAT (Emergency Events Database)",
+            "url": "https://data.humdata.org/dataset/emdat-country-profiles-lka"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "EM-DAT aggregates disaster event records from multiple sources including government agencies, UN bodies, and media reports. This country profile dataset compiles historical natural hazard impact data for Sri Lanka, organizing events by disaster type, subtype, and year with standardized metrics for affected populations, deaths, and economic damage in both original and inflation-adjusted USD values.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "EM-DAT (Emergency Events Database)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Comprehensive registry of natural disaster events with aggregated impact figures including affected populations, fatalities, and economic losses by disaster type and year for Sri Lanka."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7e2c0d98",
+          "title": "EMDAT-country-profiles_LKA_2026_01_30.xlsx",
+          "description": "EM-DAT - Country Profiles, Sri Lanka (Version: 2026-01-30)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a996efaa-d8f0-44d7-9c27-417720ae2328/resource/7e2c0d98-ba7d-465c-abac-89e05b16291c/download/emdat-country-profiles_lka_2026_01_30.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by flood events in Sri Lanka"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from flood events in Sri Lanka"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic damage from flood events in Sri Lanka"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by earthquake events in Sri Lanka"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from earthquake events in Sri Lanka"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic damage from earthquake events in Sri Lanka"
+          },
+          {
+            "id": "loss_7",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by strong wind events in Sri Lanka"
+          },
+          {
+            "id": "loss_8",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from strong wind events in Sri Lanka"
+          },
+          {
+            "id": "loss_9",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic damage from strong wind events in Sri Lanka"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/emdat-country-profiles-lka",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

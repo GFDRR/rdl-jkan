@@ -1,0 +1,138 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-lby_unosat_10september2023mediterran_20231011",
+      "title": "10 September 2023 Mediterranean Sea Storm Daniel in Libya, Preliminary Satellite-Based Comprehensive Damage Assessment Report",
+      "description": "UNOSAT code FL20230912LBY, GDACS Id: 1102204 On the night of the 10th of September 2023, after its journey through the Mediterranean Sea, the storm Daniel brought heavy rains that triggered floods in Benghazi, Almarj, Al Jabal Al Akhdar and Derna Governorates, in northeastern Libya. The increase of water levels in the region caused the collapse of two dams located upstream Derna River and the consequences was tremendous. The dam breach released a massive amount of water and a huge flood wave wiped out entire neighbourhoods in the city of Derna. Hundreds of people were reported missing by the Libyan Red Crescent Society. According to the Libyan National Meteorological Centre, the storm reached its peak with winds going up to 70-80 km/h. This led to the falling of electricity towers and tress causing communications interruption. Between 150 - 240 mm were reported and caused flash floods in several cities. Al-Bayda have recorded the highest daily rainfall rate: 414.1 mm in the night of the 10 to 11 September 2023.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/10-september-2023-mediterranean-sea-storm-daniel-in-libya-preliminary-satellite-based-comp]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/10-september-2023-mediterranean-sea-storm-daniel-in-libya-preliminary-satellite-based-comp"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/10-september-2023-mediterranean-sea-storm-daniel-in-libya-preliminary-satellite-based-comp"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LBY"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/10-september-2023-mediterranean-sea-storm-daniel-in-libya-preliminary-satellite-based-comp"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts conducted post-event satellite imagery analysis comparing pre- and post-Storm Daniel images to identify and map building damage and flood extent in northeastern Libya. Damage was classified and validated through visual interpretation of satellite data, with results delivered as vector geodatabase and shapefile formats containing damage site locations, confidence levels, and damage classifications.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and damage assessment conducted through visual comparison of pre- and post-event satellite images to identify building damage and flood impacts in Derna and surrounding governorates."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e988ddaa",
+          "title": "FL20230912LBY_gdb.zip",
+          "description": "10 September 2023 Mediterranean Sea Storm Daniel in Libya, Preliminary Satellite-Based Comprehensive Damage Assessment Report (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3687/FL20230912LBY_gdb.zip"
+        },
+        {
+          "id": "resource_0106e482",
+          "title": "FL20230912LBY_SHP.zip",
+          "description": "10 September 2023 Mediterranean Sea Storm Daniel in Libya, Preliminary Satellite-Based Comprehensive Damage Assessment Report (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3687/FL20230912LBY_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from fluvial flooding caused by Storm Daniel and dam collapse in Derna"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from fluvial flooding in northeastern Libya"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/10-september-2023-mediterranean-sea-storm-daniel-in-libya-preliminary-satellite-based-comp",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

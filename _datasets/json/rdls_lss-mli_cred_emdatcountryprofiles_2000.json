@@ -1,0 +1,300 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mli_cred_emdatcountryprofiles_2000",
+      "title": "EM-DAT - Country Profiles, Mali",
+      "description": "Aggregated figures for natural hazard related events in EM-DAT: Mali Documentation on the Country Profiles available here How to cite the EM-DAT Project here Main dataset on HDX: EM-DAT - Country Profiles More on the EM-DAT database : website / data portal Each line corresponds to a given combination of year, country, disaster subtype and reports figures for : number of disasters total number of people affected total number of deaths economic losses (original value and adjusted). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/emdat-country-profiles-mli]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/emdat-country-profiles-mli"
+      },
+      "creator": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/emdat-country-profiles-mli"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MLI"
+        ]
+      },
+      "temporal": {
+        "start": "2000-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "EM-DAT (Emergency Events Database)",
+            "url": "https://data.humdata.org/dataset/emdat-country-profiles-mli"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "EM-DAT aggregates disaster event records from multiple sources including government agencies, UN bodies, NGOs, and media reports. Country profile data for Mali summarizes historical natural hazard impacts by disaster type, subtype, and year, presenting total affected populations, deaths, and economic damages in both original and inflation-adjusted USD values.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "EM-DAT (Emergency Events Database)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Comprehensive registry of natural disaster events with aggregated impact figures including affected populations, fatalities, and economic losses compiled by the Centre for Research on the Epidemiology of Disasters."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b385d28b",
+          "title": "EMDAT-country-profiles_MLI_2026_01_30.xlsx",
+          "description": "EM-DAT - Country Profiles, Mali (Version: 2026-01-30)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/23219f38-e296-4aa8-9cc6-a3f0381efa2e/resource/b385d28b-20d2-41b1-a002-b435603537a2/download/emdat-country-profiles_mli_2026_01_30.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by flood events in Mali"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from flood events in Mali"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic damage from flood events in Mali"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by drought events in Mali"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from drought events in Mali"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic damage from drought events in Mali"
+          },
+          {
+            "id": "loss_7",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by strong wind events in Mali"
+          },
+          {
+            "id": "loss_8",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from strong wind events in Mali"
+          },
+          {
+            "id": "loss_9",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic damage from strong wind events in Mali"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/emdat-country-profiles-mli",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

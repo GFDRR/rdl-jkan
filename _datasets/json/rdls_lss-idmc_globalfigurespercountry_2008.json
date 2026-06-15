@@ -1,0 +1,173 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-idmc_globalfigurespercountry_2008",
+      "title": "Global Internal Displacement Figures Per Country",
+      "description": "Internal displacement figures per country. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/world-internal-displacement-figures-per-country]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Internal Displacement Monitoring Centre (IDMC)",
+        "url": "https://data.humdata.org/dataset/world-internal-displacement-figures-per-country"
+      },
+      "creator": {
+        "name": "Internal Displacement Monitoring Centre (IDMC)",
+        "url": "https://data.humdata.org/dataset/world-internal-displacement-figures-per-country"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2008-01-01",
+        "end": "2018-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IDMC collects and aggregates internal displacement data from multiple sources including government reports, humanitarian assessments, and field monitoring across countries. Data is compiled into a global database tracking displacement figures by country and triggering hazard type, providing post-event impact records for disaster risk analysis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Internal Displacement Monitoring Centre (IDMC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Global database of internal displacement figures aggregated by country and hazard type, compiled from government sources, humanitarian organizations, and field monitoring."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.internal-displacement.org/database/methodology"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_cbbb2b0e",
+          "title": "idmc_displacement_all_dataset2.xlsx",
+          "description": "Global Internal Displacement Figures Per Country (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/23c87a9e-22e0-4b7d-9ca0-43a532913ba3/resource/cbbb2b0e-c6b2-4d12-826c-213cc0d0fdb4/download/idmc_displacement_all_dataset2.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement figures resulting from various hazards including floods"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement figures resulting from earthquakes"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement figures resulting from wildfires"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement figures resulting from storms and cyclones"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/world-internal-displacement-figures-per-country",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

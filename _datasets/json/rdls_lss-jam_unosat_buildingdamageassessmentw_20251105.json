@@ -1,0 +1,138 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-jam_unosat_buildingdamageassessmentw_20251105",
+      "title": "Jamaica - Building Damage Assessment in White House Village, Whitehouse District, Westmoreland Parishe as of 31 October 2025",
+      "description": "UNOSAT code: TC20251028JAM, GDACS ID: 1001230 This map illustrates the structures and buildings damaged by the passage of Hurricane MELISSA-25. The analysis focuses on White House Village in Westmoreland Parish, as of 31 October 2025. Damage and destruction were identified using very highresolution aerial imagery acquired by NOAA on 31 October 2025. In this area, UNOSAT identified a total of 1,875 affected buildings, of which 715 were completely destroyed and 1,160 were damaged. This is a preliminary analysis and has not yet been validated in the field. Ground verification is encouraged, and feedback can be sent to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/building-damage-assessment-in-white-house-village-whitehouse-district-westmoreland-parishe]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assessment-in-white-house-village-whitehouse-district-westmoreland-parishe"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assessment-in-white-house-village-whitehouse-district-westmoreland-parishe"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "JAM"
+        ]
+      },
+      "temporal": {
+        "start": "2025-11-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/building-damage-assessment-in-white-house-village-whitehouse-district-westmoreland-parishe"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed very high-resolution NOAA aerial imagery acquired on 31 October 2025 and compared multi-temporal satellite images to identify structural damage caused by Hurricane MELISSA-25. Building-level damage classification (completely destroyed vs. damaged) was performed through visual interpretation of satellite imagery in White House Village, Westmoreland Parish, Jamaica, resulting in a preliminary damage inventory of 1,875 affected structures.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from very high-resolution NOAA aerial imagery acquired 31 October 2025, identifying building destruction and damage in White House Village through satellite image analysis and comparison."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6ab82c47",
+          "title": "TC20251028JAM_gdb.zip",
+          "description": "Jamaica - Building Damage Assessment in White House Village, Whitehouse District, Westmoreland Parishe as of 31 October 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4215/TC20251028JAM_gdb.zip"
+        },
+        {
+          "id": "resource_6c2a081e",
+          "title": "TC20251028JAM_SHP.zip",
+          "description": "Jamaica - Building Damage Assessment in White House Village, Whitehouse District, Westmoreland Parishe as of 31 October 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4215/TC20251028JAM_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Hurricane MELISSA-25 assessed via post-event satellite imagery"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total affected buildings (damaged and destroyed) from Hurricane MELISSA-25"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/building-damage-assessment-in-white-house-village-whitehouse-district-westmoreland-parishe",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
