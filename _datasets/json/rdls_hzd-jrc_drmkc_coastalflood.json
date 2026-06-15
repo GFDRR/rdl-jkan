@@ -1,0 +1,275 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-jrc_drmkc_coastalflood",
+      "title": "Coclico Coastal Hazards and Flood Risk",
+      "description": "Probabilistic modelling of coastal flood hazard",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Coastal Climate Core Services (CoCliCo) project",
+        "url": "https://coclicoservices.eu/"
+      },
+      "version": "1",
+      "purpose": "To assess coastal flood extent and depth under various extreme event scenarios and sea level rise projections from 2030 to 2150 to support coastal risk management and adaptation planning.",
+      "project": {
+        "name": "Coastal Climate Core Services (CoCliCo)",
+        "url": "https://coclicoservices.eu/"
+      },
+      "details": "Flood maps showing the maximum flood extent and depth for different extreme scenarios (1-year, 100-year, and 1000-year return period TWL events), various relative SLR projections (decadal time steps from 2030 to 2150 relative to the reference period 1995–2014 for three SSP scenarios and one high-end scenario), and the combination of each extreme scenario with every sea level rise scenario.",
+      "contact_point": {
+        "name": "Gonéri Le Cozannet",
+        "email": "g.lecozannet@brgm.fr",
+        "url": "https://brgm.fr/fr"
+      },
+      "creator": {
+        "name": "Coastal Climate Core Services (CoCliCo) project",
+        "url": "https://coclicoservices.eu/"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "AUT",
+          "BEL",
+          "BGR",
+          "HRV",
+          "CYP",
+          "CZE",
+          "DNK",
+          "EST",
+          "FIN",
+          "FRA",
+          "DEU",
+          "GRC",
+          "HUN",
+          "IRL",
+          "ITA",
+          "LVA",
+          "LTU",
+          "LUX",
+          "MLT",
+          "NLD",
+          "POL",
+          "PRT",
+          "ROU",
+          "SVK",
+          "SVN",
+          "ESP",
+          "SWE"
+        ],
+        "gazetteer_entries": [
+          {
+            "id": "Location_1",
+            "scheme": "GEONAMES",
+            "description": "Europe",
+            "uri": "https://www.geonames.org/6255148/europe.html"
+          }
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "Entity_1",
+          "entity": {
+            "name": "Coastal Climate Core Services (CoCliCo) project",
+            "url": "https://coclicoservices.eu/"
+          },
+          "role": "resource_provider"
+        },
+        {
+          "id": "Entity_2",
+          "entity": {
+            "name": "Deltares",
+            "url": "https://deltares.nl/"
+          },
+          "role": "processor"
+        },
+        {
+          "id": "Entity_3",
+          "entity": {
+            "name": "Universidad de Cantabria, Instituto de Hidráulica Ambiental de la Universidad de Cantabria 'IHCantabria'",
+            "url": "https://www.ihcantabria.com"
+          },
+          "role": "author"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "Source_1",
+            "name": "Coastal Climate Core Services (CoCliCo) project",
+            "url": "https://coclicoservices.eu/",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Coastal flood hazard maps produced by the CoCliCo project (IH-Cantabria / Deltares) using the RFSM-EDA 2D hydraulic model, which solves Saint-Venant equations across 22 flood units covering European coastal areas at 25 m resolution. Hydrographic forcing combines sea-level rise projections with mean spring high tides for permanent flooding scenarios; episodic event hydrographs are reconstructed from TPXO astronomical tides, ROMS storm surge model, and wave setup using the Peak Over Threshold method. Flood maps are post-processed to apply coastal defense levels at NUTS2 provincial scale (High Defended, Low Defended, Undefended). Funded by the European Union Horizon 2020 research and innovation programme under grant agreement No 101003598."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "Ref_1",
+          "name": "EUROPEAN ASSESSMENT OF COASTAL FLOOD HAZARDS",
+          "author_names": [
+            "Camila Cotrim",
+            "Alexandra Toimil",
+            "Iñigo Losada",
+            "Melisa Menendez",
+            "Hector Lobeto",
+            "Iria Suárez",
+            "Sara Novo"
+          ],
+          "date_published": "2025-05-29",
+          "url": "https://icce-ojs-tamu.tdl.org/icce/article/view/14640",
+          "doi": "https://doi.org/10.9753/icce.v38.management.202"
+        }
+      ],
+      "resources": [
+        {
+          "id": "cfhp_stac_collection",
+          "title": "Coastal Flood Hazard and Projections (CFHP) - STAC Collection (Cloud Optimized GeoTIFF)",
+          "description": "Collection of 240 Cloud Optimized GeoTIFF flood maps at 25 m resolution covering European coastal areas, modelled with the RFSM-EDA hydraulic model. Maps span four dimensions: (1) coastal protection level - High Defended (NUTS2 policy-based maximum), Low Defended, Undefended (no policy protection beyond DEM); (2) return period - static water level (no RP), 1 year, 100 years, 1000 years; (3) climate scenario - no scenario (2010 baseline), SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End (P83 of SSP5-8.5 including low-confidence processes); (4) time horizon - 2010 (hindcast), 2030 (near-term), 2050 (mid-century), 2100 (end-of-century), 2150 (High-End scenario only). Each raster cell contains maximum flood depth in metres. Access individual COG layers through the STAC catalogue or STAC Browser link.",
+          "media_type": "application/json",
+          "spatial_resolution": 25,
+          "coordinate_system": "EPSG:3035",
+          "access_url": "https://radiantearth.github.io/stac-browser/#/external/storage.googleapis.com/coclico-data-public/coclico/coclico-stac/cfhp_all/collection.json?.language=en",
+          "download_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/cfhp_all/collection.json"
+        },
+        {
+          "id": "cfhp_wmts",
+          "title": "Coastal Flood Hazard and Projections (CFHP) - WMTS Visualization",
+          "description": "OGC WMTS endpoint via the CoCliCo GeoServer for map visualization of the CFHP flood maps. Provides tile-based access to aggregated flood statistics at LAU/NUTS administrative unit level across Europe.",
+          "media_type": "application/xml",
+          "coordinate_system": "EPSG:3035",
+          "access_url": "https://coclico.avi.deltares.nl/geoserver/gwc/service/wmts"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "Coastal_Flood_Hazard",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "1/1 to 1/1000 years",
+            "spatial": {
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "CoCliCo_Coastal_Flood_Hazard",
+                "type": "flood",
+                "processes": [
+                  "coastal_flood"
+                ],
+                "intensity_measure": "fl_wd:m",
+                "process": "coastal_flood"
+              }
+            ],
+            "events": [
+              {
+                "id": "cfhp_static",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CoCliCo_Coastal_Flood_Hazard",
+                  "type": "flood",
+                  "processes": [
+                    "coastal_flood"
+                  ],
+                  "intensity_measure": "fl_wd:m",
+                  "process": "coastal_flood"
+                },
+                "description": "Static water level: maximum flood extent and depth at a given sea level (no return period applied). Available across all defense levels, climate scenarios (SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons (2010, 2030, 2050, 2100, 2150 for High-End) via the STAC collection.",
+                "occurrence": {
+                  "probabilistic": {
+                    "probability": {
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "cfhp_1yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CoCliCo_Coastal_Flood_Hazard",
+                  "type": "flood",
+                  "processes": [
+                    "coastal_flood"
+                  ],
+                  "intensity_measure": "fl_wd:m",
+                  "process": "coastal_flood"
+                },
+                "description": "1-year return period (63% probability of exceedance in 1 year): maximum flood extent and depth. Available across all defense levels, climate scenarios (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons (2010, 2030, 2050, 2100) via the STAC collection.",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1,
+                    "event_rate": 1.0,
+                    "probability": {
+                      "value": 0.63212,
+                      "span": 1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "cfhp_100yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CoCliCo_Coastal_Flood_Hazard",
+                  "type": "flood",
+                  "processes": [
+                    "coastal_flood"
+                  ],
+                  "intensity_measure": "fl_wd:m",
+                  "process": "coastal_flood"
+                },
+                "description": "100-year return period (1% annual exceedance probability): maximum flood extent and depth. Available across all defense levels, climate scenarios (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons (2010, 2030, 2050, 2100) via the STAC collection.",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01,
+                    "probability": {
+                      "value": 0.63212,
+                      "span": 100
+                    }
+                  }
+                }
+              },
+              {
+                "id": "cfhp_1000yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CoCliCo_Coastal_Flood_Hazard",
+                  "type": "flood",
+                  "processes": [
+                    "coastal_flood"
+                  ],
+                  "intensity_measure": "fl_wd:m",
+                  "process": "coastal_flood"
+                },
+                "description": "1000-year return period (0.1% annual exceedance probability): maximum flood extent and depth. Available across all defense levels, climate scenarios (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons (2010, 2030, 2050, 2100) via the STAC collection.",
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000,
+                    "event_rate": 0.001,
+                    "probability": {
+                      "value": 0.63212,
+                      "span": 1000
+                    }
+                  }
+                }
+              }
+            ],
+            "description": "Probabilistic coastal flood hazard modelled with the RFSM-EDA hydraulic model at 25 m resolution across European coastal areas. The full dataset spans three coastal protection levels (High Defended, Low Defended, Undefended), four return periods (static/no-RP, 1yr, 100yr, 1000yr), five climate scenarios (baseline 2010, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and four to five time horizons (2010 hindcast, 2030, 2050, 2100, and 2150 for High-End only). Each map shows maximum flood depth in metres. The 240 individual COG layers are accessible through the STAC collection."
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
