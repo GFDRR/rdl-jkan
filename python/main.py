@@ -48,27 +48,19 @@ def fetch_schema(schema_url, schema_path):
 
 def validate_json_with_schema(dataset_from_json, schema_url, validation_errors):
     """Validate dataset and collect errors for PR comment."""
-    if schema_url == config.schema_url_v3:
-        schema_path = f"{config.python_path}/rdl-03.json"
-        is_cached = os.path.isfile(schema_path)
-        if not is_cached:
-            # TODO: delete & replace hardcoded_schema_url with schema_url when v0.3 finalized
-            hardcoded_schema_url = "https://raw.githubusercontent.com/GFDRR/CCDR-tools/refs/heads/main/_static/rdls_schema_v0.3.json"
-            fetch_schema(hardcoded_schema_url, schema_path)
-    else:
-        schema_path = f"{config.python_path}/rdl-02.json"
-        is_cached = os.path.isfile(schema_path)
-        if not is_cached:
-            fetch_schema(schema_url, schema_path)
+    schema_path = f"{config.python_path}/rdls_schema.json"
+    is_cached = os.path.isfile(schema_path)
+    if not is_cached:
+        # TODO: this can use the schema_url param when it's up
+        fetch_schema(config.schema_url, schema_path)
 
-    # TODO: drop this condition; temporarily skips v0.2 validations
-    if schema_url == config.schema_url_v3:
-        with open(schema_path, "r") as file:
-            schema = json.load(file)
-            exit_code, error_details = validate_with_custom_logic(dataset_from_json, schema)
-            if error_details:
-                validation_errors.append(error_details)
-            return exit_code
+    with open(schema_path, "r") as file:
+        schema = json.load(file)
+        exit_code, error_details = validate_with_custom_logic(dataset_from_json, schema)
+        if error_details:
+            validation_errors.append(error_details)
+        return exit_code
+
     return 0
 
 def write_dataset_to_markdown(dataset_from_json, schema_url, validation_errors):
@@ -76,29 +68,14 @@ def write_dataset_to_markdown(dataset_from_json, schema_url, validation_errors):
     dataset_title = dataset_from_json.get('title', 'a dataset with a missing title')
     
     try:
-        # Generate frontmatter
         dataset_frontmatter = None
         exit_code = validate_json_with_schema(dataset_from_json, schema_url, validation_errors)
         if exit_code != 0:
             return exit_code
-        match schema_url:
-            case config.schema_url_v3:
-                dataset_frontmatter = mappers.make_dataset_frontmatter_v03(
-                    dataset_from_json
-                )
-            case config.schema_url_v2:
-                dataset_frontmatter = mappers.make_dataset_frontmatter_v02(
-                    dataset_from_json
-                )
-            case _:
-                logging.error(
-                    f"Unknown schema: {dataset_from_json.get('schema', "None")}. Using v0.2"
-                )
-                dataset_frontmatter = mappers.make_dataset_frontmatter_v02(
-                    dataset_from_json
-                )
-        # Write output
+        
+        dataset_frontmatter = mappers.make_dataset_frontmatter(dataset_from_json)    
         utils.write_frontmatter(dataset_frontmatter, config.datasets_dir)
+
         return 0
     except Exception as e:
         error_message = str(e)
@@ -107,7 +84,6 @@ def write_dataset_to_markdown(dataset_from_json, schema_url, validation_errors):
             f"(dataset_id: {dataset_id})",
             exc_info=e,
         )
-        # Add the error to validation_errors so it shows up in validation_results.json
         validation_errors.append({
             'dataset_id': dataset_id,
             'message': error_message,
@@ -166,7 +142,7 @@ def write_datasets_to_markdown(json_to_generate_md_from, json_to_delete_md_for, 
                         for link in links
                         if link.get("rel") == "describedby"
                     ),
-                    config.schema_url_v2,
+                    config.schema_url,
                 )
                 if include_geojson:
                     countries.update(dataset.get("spatial", {}).get("countries", []))

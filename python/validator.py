@@ -3,7 +3,6 @@ import json
 import logging
 from pathlib import Path
 
-# Configuration
 RESULTS_PATH = Path(__file__).parent / "validation_results.json"
 
 
