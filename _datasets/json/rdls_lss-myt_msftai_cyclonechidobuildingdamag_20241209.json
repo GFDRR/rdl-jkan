@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-myt_msftai_cyclonechidobuildingdamag_20241209",
+      "title": "Cyclone Chido: Building Damage Assessment in Passamanty, Mayotte",
+      "description": "We ran our damage assessment AI models on images provided by Planet and have mapped out the affected buildings. The images cover Passamainty in Mayotte. We assessed 3,875 buildings in the area, with damage levels as follows: 1,426 buildings are between 0% and 20% damaged 136 buildings are between 20% and 40% damaged 92 buildings are between 40% and 60% damaged 62 buildings are between 60% and 80% damaged 2,159 buildings are between 80% and 100% damaged. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/building-damage-assessment-in-passamanty-mayotte-after-cyclone-chido]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "While the data provides a valuable first look, it should serve as a preliminary guide and will require on-the-ground verification for a complete understanding. Any building classified as >0% damaged likely has nearby debris and should be further inspected.",
+      "contact_point": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/building-damage-assessment-in-passamanty-mayotte-after-cyclone-chido"
+      },
+      "creator": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/building-damage-assessment-in-passamanty-mayotte-after-cyclone-chido"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MYT"
+        ]
+      },
+      "temporal": {
+        "start": "2024-12-09"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Planet Labs satellite imagery",
+            "url": "https://data.humdata.org/dataset/building-damage-assessment-in-passamanty-mayotte-after-cyclone-chido"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Microsoft AI for Good Lab damage assessment models",
+            "url": "https://data.humdata.org/dataset/building-damage-assessment-in-passamanty-mayotte-after-cyclone-chido"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Microsoft AI for Good Lab applied trained damage assessment machine learning models to Planet satellite imagery of Passamanty, Mayotte following Cyclone Chido to classify 3,875 buildings into six damage categories (0-20%, 20-40%, 40-60%, 60-80%, 80-100% damage). The resulting damage counts and spatial building footprints were mapped in geopackage format for post-event impact assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Planet Labs satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "High-resolution satellite imagery used as input for AI damage assessment models to identify and classify building damage"
+          },
+          {
+            "id": "source_2",
+            "name": "Microsoft AI for Good Lab damage assessment models",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Machine learning models trained to classify building damage levels from satellite imagery, applied to assess 3,875 buildings in Passamanty"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1a2d0251",
+          "title": "mayotte_0_extent.gpkg",
+          "description": "Cyclone Chido: Building Damage Assessment in Passamanty, Mayotte (The extent of available imagery in the AOI.)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/4b96001b-845a-4739-89a2-51225b762d2e/resource/1a2d0251-bb73-4191-bdfc-c1bc9145ef45/download/mayotte_0_extent.gpkg"
+        },
+        {
+          "id": "resource_8950a27f",
+          "title": "mayotte_0_outputs.gpkg",
+          "description": "Cyclone Chido: Building Damage Assessment in Passamanty, Mayotte (Results that outline the building damage assessment footprints in the AOI.)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/4b96001b-845a-4739-89a2-51225b762d2e/resource/8950a27f-5f1a-4415-a9b5-861feb7e9cdb/download/mayotte_0_outputs.gpkg"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from tropical cyclone (Cyclone Chido) assessed via AI damage classification models"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/building-damage-assessment-in-passamanty-mayotte-after-cyclone-chido",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

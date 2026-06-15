@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-khm_ocharoap_casualtyincident_20130101",
+      "title": "Cambodia - Casualty Incident",
+      "description": "Casualty Incident by ERW/Mine. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cambodia-protection-0]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "**Languages:** EN",
+      "contact_point": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/cambodia-protection-0"
+      },
+      "creator": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/cambodia-protection-0"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KHM"
+        ]
+      },
+      "temporal": {
+        "start": "2013-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "The Cambodian Mine Action and Victim Assistance Authority (CMAA)",
+            "url": "https://data.humdata.org/dataset/cambodia-protection-0"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "The Cambodia Mine/ERW Victim Information System (CMVIS)",
+            "url": "https://data.humdata.org/dataset/cambodia-protection-0"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Casualty incident data compiled from the Cambodia Mine/ERW Victim Information System (CMVIS) maintained by the Cambodian Mine Action and Victim Assistance Authority (CMAA), covering recorded deaths and injuries from mine and ERW incidents during 2005-2013, georeferenced as point locations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "The Cambodian Mine Action and Victim Assistance Authority (CMAA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official government authority responsible for mine action and victim assistance in Cambodia."
+          },
+          {
+            "id": "source_2",
+            "name": "The Cambodia Mine/ERW Victim Information System (CMVIS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Systematic registry of casualties and incidents caused by mines and explosive remnants of war in Cambodia."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e8171489",
+          "title": "khm_casualtyincidentp_gov_cmaa_cmvis_2005_2013.zip",
+          "description": "Cambodia - Casualty Incident (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/42bb25d2-66b4-49c8-bbcf-542e2910ca8c/resource/e8171489-3787-4af2-ae11-80ab8281061d/download/khm_casualtyincidentp_gov_cmaa_cmvis_2005_2013.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_pest_infestation",
+              "type": "pest_infestation",
+              "intensity_measure": "Pest:count/area"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Casualty fatalities from explosive remnants of war (ERW) and mine incidents"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_pest_infestation",
+              "type": "pest_infestation",
+              "intensity_measure": "Pest:count/area"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Casualty injuries from explosive remnants of war (ERW) and mine incidents"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cambodia-protection-0",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

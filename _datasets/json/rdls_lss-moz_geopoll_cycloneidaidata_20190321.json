@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-moz_geopoll_cycloneidaidata_20190321",
+      "title": "Mozambique Cyclone Idai Data",
+      "description": "This dataset includes 700 completed interviews from Mozambique following Cyclone Idai, including respondents from Sofala province and Beira. All respondents were affected by the cyclone, and data includes information on home and community damages, food security, and access to resources including clean water and electricity. Data was collected via remote SMS survey March 21st, 2019 - March 22nd 2019 and is not nationally or regionally representative but is intended to show a snapshot of the cyclone's impact on the ground. Statistical disclosure control methods have been applied to the data in order to protect individual respondents information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-cyclone-idai-data]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "This data was collected via remote SMS survey following Cyclone Idai and is not intended to be fully representative of the situation or population, but provides a snapshot view based on those who were able to be reached via SMS.",
+      "contact_point": {
+        "name": "Mobile Accord, Inc. (GeoPoll)",
+        "url": "https://data.humdata.org/dataset/mozambique-cyclone-idai-data"
+      },
+      "creator": {
+        "name": "Mobile Accord, Inc. (GeoPoll)",
+        "url": "https://data.humdata.org/dataset/mozambique-cyclone-idai-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-03-21"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Post-event impact data collected via remote SMS survey from 700 affected respondents in Mozambique within 2 days of Cyclone Idai landfall. Survey captured self-reported damages to homes and communities, food security status, and access disruptions to water and electricity. Statistical disclosure control methods were applied to anonymize individual responses for this snapshot assessment of cyclone impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Mobile Accord, Inc. (GeoPoll)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Remote SMS survey of 700 affected households in Sofala province and Beira conducted March 21-22, 2019, capturing post-cyclone impacts on housing, food security, and essential services."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8ab6219b",
+          "title": "anonymized_geopoll_mozambique_cyclone_data_round1_final_dataset.xlsx",
+          "description": "This dataset includes 700 completed interviews from Mozambique following Cyclone Idai, including respondents from Sofala province and Beira. Data was collected via SMS and is not regionally or nationally representative. Non-perturbative statistical disclosure control methods have been applied to the data in order to protect individual respondents information. Hence, the detail in the data has been reduced without distorting the structure.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/44e9264a-5efb-4c96-873a-2735a65c0363/resource/8ab6219b-52c5-4c22-966a-b376d808598f/download/anonymized_geopoll_mozambique_cyclone_data_round1_final_dataset.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct home and community damage from Cyclone Idai"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Loss of access to clean water and electricity infrastructure"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food security impacts and resource access disruption"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-cyclone-idai-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

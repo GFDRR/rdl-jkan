@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mmr_unosat_updatedestroyedbuildingsm_20171005",
+      "title": "Update: Destroyed buildings in Maungdaw and Buthindaung townships, Maungdaw District, Myanmar",
+      "description": "This map illustrates satellite-detected destroyed or otherwise damaged structures in Maungdaw and Buthindaung townships, Maungdaw District, Myanmar. The analysis found a total area of more than 160 thousand square meters of destroyed structures occurring between 25 September and 1 October 2017. This represents an increase of approximately 1% since last UNOSAT analysis with imagery collected on 25 September, when more than 20.5 square kilometers of destroyed structures were identified. Additionally, 6 fires were detected within the area between 25 September and 1 October 2017 by the MODIS and VIIRS sensors, with recent fire detections indicating destruction is likely ongoing. Most of the detected fires are located in the proximity of the affected areas as observed in the imagery collected 1 October. Finally, heavy cloud cover and haze during the period in question, indicates that destruction and fire detections are likely underestimated in this analysis. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/destroyed-buildings-in-maungdaw-and-buthindaung-townships-maungdaw-district-myanmar-2697]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/destroyed-buildings-in-maungdaw-and-buthindaung-townships-maungdaw-district-myanmar-2697"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/destroyed-buildings-in-maungdaw-and-buthindaung-townships-maungdaw-district-myanmar-2697"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2017-10-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal satellite imagery from 25 September and 1 October 2017 to detect structural damage in Maungdaw and Buthindaung townships. Damaged structures were digitized as polygons with area measurements in square meters and hectares, supplemented by MODIS fire detection data. The dataset represents post-event damage assessment from a complex emergency context.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis detecting destroyed and damaged structures through multi-temporal comparison of high-resolution satellite imagery collected between 25 September and 1 October 2017."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1de96cc2",
+          "title": "Damage_Analysis_Maungdaw_gdb.zip",
+          "description": "Update: Destroyed buildings in Maungdaw and Buthindaung townships, Maungdaw District, Myanmar (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MM/CE20130326MMR/Damage_Analysis_Maungdaw_gdb.zip"
+        },
+        {
+          "id": "resource_8a5571de",
+          "title": "Damage_Analysis_Maungdaw_shpb.zip",
+          "description": "Update: Destroyed buildings in Maungdaw and Buthindaung townships, Maungdaw District, Myanmar (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MM/CE20130326MMR/Damage_Analysis_Maungdaw_shpb.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from conflict-related destruction detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/destroyed-buildings-in-maungdaw-and-buthindaung-townships-maungdaw-district-myanmar-2697",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

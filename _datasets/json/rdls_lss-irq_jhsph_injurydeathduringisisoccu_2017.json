@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-irq_jhsph_injurydeathduringisisoccu_2017",
+      "title": "Iraq - Injury and death during the ISIS occupation of Mosul and its liberation",
+      "description": "This is the minimal underlying dataset for a forthcoming manuscript presenting results from a cross-sectional survey aimed at measuring deaths, injuries, and kidnapping in Mosul households during the 29 months of ISIS control and the 8 months of Iraqi military action during the liberation.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/injury-and-death-during-the-isis-occupation-of-mosul-and-its-liberation]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "Please disregard the 'expected update frequency.' This was a cross sectional survey and will not be conducted again.",
+      "contact_point": {
+        "name": "Johns Hopkins School of Public Health",
+        "url": "https://data.humdata.org/dataset/injury-and-death-during-the-isis-occupation-of-mosul-and-its-liberation"
+      },
+      "creator": {
+        "name": "Johns Hopkins School of Public Health",
+        "url": "https://data.humdata.org/dataset/injury-and-death-during-the-isis-occupation-of-mosul-and-its-liberation"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IRQ"
+        ]
+      },
+      "temporal": {
+        "start": "2017-03-01",
+        "end": "2017-07-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Cross-sectional household survey conducted in Mosul to measure mortality, morbidity, and kidnapping outcomes during the ISIS occupation (29 months) and subsequent Iraqi military liberation operations (8 months). Survey data were compiled into a minimal dataset for epidemiological analysis of conflict-related health impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Johns Hopkins School of Public Health",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Cross-sectional household survey measuring deaths, injuries, and kidnapping in Mosul during the 29-month ISIS occupation and 8-month liberation period."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b2c9a14a",
+          "title": "Mosul_Deaths_Injuries_Min_Dataset",
+          "description": "Minimal underlying dataset for assessment of mortality in and injuries in Mosul from mid-2014 through mid-2017",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/7a0ba837-2798-4bae-a0cf-525a297c0033/resource/b2c9a14a-91c3-47e0-afa5-44ba9e033f77/download/mosul_deaths_injuries_min_dataset_21jan2018.xls"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths among Mosul households during ISIS occupation and military liberation operations"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injuries among Mosul households during ISIS occupation and military liberation operations"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/injury-and-death-during-the-isis-occupation-of-mosul-and-its-liberation",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

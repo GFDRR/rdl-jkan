@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-irq_ochairq_foodsecuritymalnutrition_2021",
+      "title": "Iraq - Food Security and malnutrition",
+      "description": "Food Security Indicators for Iraq. The data is extracted from HungerMap LIVE Website.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/food-security-malnutrition]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Iraq (inactive)",
+        "url": "https://data.humdata.org/dataset/food-security-malnutrition"
+      },
+      "creator": {
+        "name": "OCHA Iraq (inactive)",
+        "url": "https://data.humdata.org/dataset/food-security-malnutrition"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IRQ"
+        ]
+      },
+      "temporal": {
+        "start": "2021-07-07",
+        "end": "2023-02-23"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP HungerMap LIVE",
+            "url": "https://data.humdata.org/dataset/food-security-malnutrition"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Food security and malnutrition indicators are extracted manually from the WFP HungerMap LIVE platform and updated bi-weekly. The data represents population-level impact assessments of food insecurity and malnutrition conditions, primarily driven by drought and conflict-related disruptions to food systems.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP HungerMap LIVE",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Real-time food security and malnutrition monitoring platform providing population-level food insecurity classifications and nutritional status indicators across Iraq."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://hungermap.wfp.org/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_36f4e534",
+          "title": "Food Security",
+          "description": "Iraq - Food Security and malnutrition (Food Security)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTYdtK7ggHdEGYmqh2ZnclChC-d6fN_KZVG2A2x0Cgs5DpGRTm35McZOG1h4L0OWs7dp6WboJX4pOw/pub?gid=1192665978&single=true&output=csv"
+        },
+        {
+          "id": "resource_ce568bdb",
+          "title": "Food Security & Malnutrition",
+          "description": "Iraq - Food Security and malnutrition (Food Security & Malnutrition)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTYdtK7ggHdEGYmqh2ZnclChC-d6fN_KZVG2A2x0Cgs5DpGRTm35McZOG1h4L0OWs7dp6WboJX4pOw/pub?gid=1871189161&single=true&output=csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity and malnutrition prevalence in population affected by drought conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/food-security-malnutrition",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

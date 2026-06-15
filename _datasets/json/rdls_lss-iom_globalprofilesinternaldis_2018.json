@@ -1,0 +1,204 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-iom_globalprofilesinternaldis_2018",
+      "title": "IOM - Global Profiles for Internal Displacement (GPID)",
+      "description": "While the total numbers of internal displacements - by cause, location, and time - are well documented, global estimates of the demographic and socio-economic profiles of impacted communities have been largely missing. This lack of disaggregated data on variables such as age, sex, income, education, health, and land use, has limited understanding of the diverse vulnerabilities and needs of displacement-affected populations - complicating the work of decision makers tasked with allocating resources effectively. The Global Profiles for Internal Displacement (GPID) dataset aims to bridge this gap. By combining geolocated displacement data from the Internal Displacement Monitoring Centre (IDMC) with high-resolution global maps of demographic and socio-economic indicators, the dataset provides consistent estimates of key characteristics of populations in locations impacted by internal displacement - annually since 2018 at global, regional, and national level. Find out more on the GPID website .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/iom-global-profiles-for-internal-displacement-gpid]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/iom-global-profiles-for-internal-displacement-gpid"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/iom-global-profiles-for-internal-displacement-gpid"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2018-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Internal Displacement Monitoring Centre (IDMC)",
+            "url": "https://data.humdata.org/dataset/iom-global-profiles-for-internal-displacement-gpid"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "GPID aggregates internal displacement data from IDMC across multiple hazard causes (flood, drought, earthquake, cyclones, conflict) and enriches it with disaggregated demographic variables (age, sex, income, education, health, land use) to create population profiles at global, regional, and country levels. The dataset bridges the gap between total displacement counts and detailed vulnerability characterization of displacement-affected communities.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Internal Displacement Monitoring Centre (IDMC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Primary source of internal displacement data by cause, location, and time. GPID integrates IDMC displacement figures and enriches them with demographic and socio-economic profiling of affected populations."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://dtm.iom.int/global-profiles-for-internal-displacement/gpid/index.html"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_34546f8f",
+          "title": "GPID v1.0 - Readme",
+          "description": "IOM - Global Profiles for Internal Displacement (GPID) (GPID v1.0 - Readme)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/71a5658e-d896-4d64-a8ff-a0b2b9441dcb/resource/34546f8f-8006-430a-a871-39faa1e97157/download/gpid-v1.0-readme.txt"
+        },
+        {
+          "id": "resource_0c5a6e77",
+          "title": "GPID v1.0 - Global level",
+          "description": "This file provides demographic, socio-economic, and land use profiles of populations in areas that experienced internal displacement due to conflict and different disaster types during 2018-2024, at global level.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/71a5658e-d896-4d64-a8ff-a0b2b9441dcb/resource/0c5a6e77-dbeb-4c0d-a51f-22f8aca3eece/download/gpid-v1.0-global-level.csv"
+        },
+        {
+          "id": "resource_d3d344ff",
+          "title": "GPID v1.0 - Regional level",
+          "description": "This file provides demographic, socio-economic, and land use profiles of populations in areas that experienced internal displacement due to conflict and different disaster types during 2018-2024, at regional level.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/71a5658e-d896-4d64-a8ff-a0b2b9441dcb/resource/d3d344ff-fc43-439d-accf-50afc391137a/download/gpid-v1.0-regional-level.csv"
+        },
+        {
+          "id": "resource_a435a32e",
+          "title": "GPID v1.0 - Country level",
+          "description": "This file provides demographic, socio-economic, and land use profiles of populations in areas that experienced internal displacement due to conflict and different disaster types during 2018-2024, at country level.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/71a5658e-d896-4d64-a8ff-a0b2b9441dcb/resource/a435a32e-9827-4016-b568-7c3425cff8c1/download/gpid-v1.0-country-level.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced populations from flooding with demographic and socio-economic profiles"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced populations from drought with demographic and socio-economic profiles"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced populations from earthquakes with demographic and socio-economic profiles"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced populations from cyclones/hurricanes with demographic and socio-economic profiles"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/iom-global-profiles-for-internal-displacement-gpid",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

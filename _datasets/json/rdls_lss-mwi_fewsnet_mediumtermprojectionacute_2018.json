@@ -1,0 +1,133 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mwi_fewsnet_mediumtermprojectionacute_2018",
+      "title": "Malawi Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2018",
+      "description": "The FEWS NET Data Warehouse is currently unavailable . Datasets on HDX that refer to the Data Warehouse have been archived. Malawi Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic data for 2018. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/malawi_medium_term_projection__fewsnet_ipc_shapefile_for_2018]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "IPC Classification spatial data in different IPC scenarios collected by FEWS NET enumerators on a regular schedule (typically monthly).",
+      "contact_point": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/malawi_medium_term_projection__fewsnet_ipc_shapefile_for_2018"
+      },
+      "creator": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/malawi_medium_term_projection__fewsnet_ipc_shapefile_for_2018"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2018-01-01",
+        "end": "2018-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "FEWS NET enumerators collected IPC classification data on a monthly schedule across Malawi in 2018. Geographic boundaries were classified into IPC phases (1-5) representing acute food insecurity severity levels, with multiple scenarios projected for medium-term periods. Data was compiled into spatial datasets (GeoJSON/KML) for February, June, and December 2018.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "FEWS NET",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Integrated Food Security Phase Classification (IPC) spatial data collected through regular enumerator surveys to classify acute food insecurity levels across geographic areas."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_68d104a3",
+          "title": "February - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Malawi Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2018 (February - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/geo+json",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=MW&scenario=ML2&collection_date=2018-02-01&format=geojson"
+        },
+        {
+          "id": "resource_8726f154",
+          "title": "February - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Malawi Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2018 (February - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=MW&scenario=ML2&collection_date=2018-02-01&format=kml"
+        },
+        {
+          "id": "resource_4df28797",
+          "title": "June - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Malawi Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2018 (June - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/geo+json",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=MW&scenario=ML2&collection_date=2018-06-01&format=geojson"
+        },
+        {
+          "id": "resource_1155d68a",
+          "title": "June - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Malawi Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2018 (June - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=MW&scenario=ML2&collection_date=2018-06-01&format=kml"
+        },
+        {
+          "id": "resource_65dde77f",
+          "title": "December - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Malawi Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2018 (December - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/geo+json",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=MW&scenario=ML2&collection_date=2018-12-01&format=geojson"
+        },
+        {
+          "id": "resource_dc628178",
+          "title": "December - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Malawi Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2018 (December - 2018 Malawi Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=MW&scenario=ML2&collection_date=2018-12-01&format=kml"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute food insecurity classification for population affected by drought conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/malawi_medium_term_projection__fewsnet_ipc_shapefile_for_2018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

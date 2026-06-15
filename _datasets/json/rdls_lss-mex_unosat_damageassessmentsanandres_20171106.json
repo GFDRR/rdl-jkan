@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mex_unosat_damageassessmentsanandres_20171106",
+      "title": "Damage Assessment in San Andrés Cholula and San Pedro Cholula, State of Puebla, Mexico",
+      "description": "This map illustrates damaged structures detected with different media support (newspapers, government reports, web news) and Digital Globe images captured on September 20 (from the web site https://www.digitalglobe.com/opendata/mexico-city-earthquake/post-event) in San Andrés Cholula and San Pedro Cholula located in Puebla State, Mexico. The analyzed area is located at 60 km of the epicentral zone of the 19 September 2017 M7.1 earthquake. IGG-UNAM identified 39 damaged structures. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-san-andres-cholula-and-san-pedro-cholula-state-of-puebla-mexico-2717]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-san-andres-cholula-and-san-pedro-cholula-state-of-puebla-mexico-2717"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-san-andres-cholula-and-san-pedro-cholula-state-of-puebla-mexico-2717"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MEX"
+        ]
+      },
+      "temporal": {
+        "start": "2017-11-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Digital Globe",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-san-andres-cholula-and-san-pedro-cholula-state-of-puebla-mexico-2717"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "IGG-UNAM",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-san-andres-cholula-and-san-pedro-cholula-state-of-puebla-mexico-2717"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event damage assessment conducted by UNOSAT analysts through multi-temporal satellite imagery comparison (pre- and post-earthquake) from Digital Globe, corroborated with media reports and government sources. IGG-UNAM provided ground validation identifying 39 damaged structures in the study municipalities located 60 km from the earthquake epicenter.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from satellite imagery comparison and corroborated with newspaper reports, government reports, and web news sources. Identified 39 damaged structures in San Andrés Cholula and San Pedro Cholula."
+          },
+          {
+            "id": "source_2",
+            "name": "Digital Globe",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery captured on 20 September 2017 used for visual damage detection and structure identification."
+          },
+          {
+            "id": "source_3",
+            "name": "IGG-UNAM",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Ground validation and damage structure identification contributing to the final damage count."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c7d64372",
+          "title": "EQ20170919MEX_gdb.zip",
+          "description": "Damage Assessment in San Andrés Cholula and San Pedro Cholula, State of Puebla, Mexico (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170919MEX/EQ20170919MEX_gdb.zip"
+        },
+        {
+          "id": "resource_4d2de7f0",
+          "title": "EQ20170919MEX_shp.zip",
+          "description": "Damage Assessment in San Andrés Cholula and San Pedro Cholula, State of Puebla, Mexico (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170919MEX/EQ20170919MEX_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from the 19 September 2017 M7.1 earthquake in Puebla State"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-san-andres-cholula-and-san-pedro-cholula-state-of-puebla-mexico-2717",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

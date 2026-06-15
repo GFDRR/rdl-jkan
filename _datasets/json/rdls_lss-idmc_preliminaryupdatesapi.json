@@ -1,0 +1,214 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-idmc_preliminaryupdatesapi",
+      "title": "Preliminary Internal Displacement Updates API",
+      "description": "The IDMC's Internal Displacement Updates (IDU) are preliminary estimates of new displacements reported in the last 180 days. The IDU API presents provisional data that is updated on daily basis, according to the availability of data. Curated and validated estimates are published in the Global Internal Displacement Database (GIDD) -See https://www.internaldisplacement.org/database/displacement-data. For a detailed description of methodology please refer to the IDMC GRID methodological annex (https://www.internal-displacement.org/global-report/grid2020/downloads/2020-IDMC-GRID-methodology.pdf) and IDMC's monitoring guidelines (https://monitoringguidance.wixsite.com/idmc). The IDU dataset contains preliminary estimates of aggregated from diverse publishers or sources. New displacement estimates are provided for three different causes of internal displacement: disasters, conflict and violence, and development projects. The documentation of the API is available at bit.ly/IDU_API_DOC.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-internal-displacement-updates]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Internal Displacement Monitoring Centre (IDMC)",
+        "url": "https://data.humdata.org/dataset/preliminary-internal-displacement-updates"
+      },
+      "creator": {
+        "name": "Internal Displacement Monitoring Centre (IDMC)",
+        "url": "https://data.humdata.org/dataset/preliminary-internal-displacement-updates"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IDMC collects and validates reports of new internal displacements from multiple hazard types over rolling 180-day windows. Preliminary estimates are aggregated by event, location, and hazard type, then published via API with daily updates. Data undergoes quality assurance before inclusion in the authoritative Global Internal Displacement Database.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Internal Displacement Monitoring Centre (IDMC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Curated and validated estimates of new internal displacements from disaster events, updated daily with preliminary data that feeds into the Global Internal Displacement Database (GIDD)."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.internal-displacement.org/database/methodology"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_1ace9c2a",
+          "title": "idus_view_flat.csv",
+          "description": "Preliminary Internal Displacement Updates API (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSjAww1Xd-kHg5NKVZknWXJElWIrOSHnWitOaryYgaAjTGCrCr2Ev8ygl2Z4ROlKz8zMR_DsllDzyD0/pub?gid=0&single=true&output=csv"
+        },
+        {
+          "id": "resource_f5fd5b73",
+          "title": "idus_view_flat.json",
+          "description": "Preliminary Internal Displacement Updates API (JSON)",
+          "media_type": "application/json",
+          "download_url": "https://backend.idmcdb.org/data/idus_view_flat"
+        },
+        {
+          "id": "resource_2338437e",
+          "title": "idus-view-flat-geojson.geojson",
+          "description": "Preliminary Internal Displacement Updates API (GeoJSON)",
+          "media_type": "application/geo+json",
+          "download_url": "https://backend.idmcdb.org/api/idus-view-flat-geojson"
+        },
+        {
+          "id": "resource_a93bccf7",
+          "title": "HDX_IDU_Codebook_19052020_V1.pdf",
+          "description": "Preliminary Internal Displacement Updates API (PDF)",
+          "media_type": "application/pdf",
+          "download_url": "https://www.internal-displacement.org/sites/default/files/IDMC_IDU_API_Codebook_14102020.pdf"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement counts from flood events reported in the last 180 days"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement counts from earthquake events reported in the last 180 days"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement counts from strong wind/cyclone events reported in the last 180 days"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement counts from wildfire events reported in the last 180 days"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement counts from drought events reported in the last 180 days"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-internal-displacement-updates",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

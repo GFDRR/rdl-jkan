@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mrt_wfp_hungermapdata_202403",
+      "title": "Mauritania - HungerMap data",
+      "description": "HungerMapLIVE is the World Food Programme (WFP)'s global hunger monitoring system. It combines key metrics from various data sources - such as food security information, weather, population size, conflict, hazards, nutrition information and macro-economic data - to help assess, monitor and predict the magnitude and severity of hunger in near real-time. The resulting analysis is displayed on an interactive map that helps WFP staff, key decision makers and the broader humanitarian community to make more informed and timely decisions relating to food security. The platform covers 94 countries, including countries where WFP has operations as well as most lower and lower-middle income countries (as classified by the World Bank).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/wfp-hungermap-data-for-mrt]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-mrt"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-mrt"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MRT"
+        ]
+      },
+      "temporal": {
+        "start": "2024-03-11",
+        "end": "2024-03-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP HungerMap",
+            "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-mrt"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP's Hunger Monitoring Unit conducts real-time food security monitoring using observed data from multiple sources (food security surveys, weather, conflict, nutrition) and machine learning-based predictive models to estimate food security status and prevalence indicators (FCS, RCSI, health access, market access) at administrative levels in Mauritania.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP HungerMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "WFP's global hunger monitoring system combining food security indicators, weather data, conflict information, and macro-economic data to assess food insecurity severity and magnitude in near real-time."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_40b1bdc7",
+          "title": "wfp-hungermap-data-for-mrt.csv",
+          "description": "Mauritania - HungerMap data",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/6fe5ad08-aa68-4fed-89fd-733d6d7a1748/resource/40b1bdc7-f756-4d29-ba20-5080e8bed33a/download/wfp-hungermap-data-for-mrt.csv"
+        },
+        {
+          "id": "resource_9c617d00",
+          "title": "wfp-hungermap-data-for-mrt-long.csv",
+          "description": "Mauritania - HungerMap data long format",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/6fe5ad08-aa68-4fed-89fd-733d6d7a1748/resource/9c617d00-7ba7-4920-be4c-a576cc310a1a/download/wfp-hungermap-data-for-mrt-long.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity prevalence and affected population from drought and food security crises"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/wfp-hungermap-data-for-mrt",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

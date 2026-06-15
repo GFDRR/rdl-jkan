@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_us_army_civil_a_earthquakesurveys_20100112",
+      "title": "Haiti earthquake surveys",
+      "description": "The US Army Civil Affairs collected surveys after the 2010 Haiti earthquake.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-earthquake-surveys]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "US Army Civil Affairs (inactive)",
+        "url": "https://data.humdata.org/dataset/haiti-earthquake-surveys"
+      },
+      "creator": {
+        "name": "US Army Civil Affairs (inactive)",
+        "url": "https://data.humdata.org/dataset/haiti-earthquake-surveys"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2010-01-12"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "US Army Civil Affairs",
+            "url": "https://data.humdata.org/dataset/haiti-earthquake-surveys"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The US Army Civil Affairs conducted field surveys following the January 2010 Haiti earthquake to assess damage to buildings and civil infrastructure. Survey data were collected through sample survey methodology and compiled into a spatial geodataset with multiple damage assessment attributes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "US Army Civil Affairs",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-earthquake field surveys documenting building damage and civil infrastructure impacts from the 2010 Haiti earthquake"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6d6b0e3c",
+          "title": "CIM_Project_II.shp.zip",
+          "description": "Haiti earthquake surveys (The US Army Civil Affairs collected surveys after the 2010 Haiti earthquake.)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/edfcf185-f936-4622-b23c-e10355a4d545/resource/6d6b0e3c-207f-4c47-908c-c5c1f26f3667/download/cim_project_ii.shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Post-event building damage assessment from the 2010 Haiti earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-earthquake-surveys",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
