@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-moz_grid3_censusdisaggregatedgridde",
+      "title": "Census disaggregated gridded population estimates for Mozambique (2017), version 1.1",
+      "description": "These data were produced by the WorldPop Research Group at the University of Southampton. This work is part of the GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development) project funded by the Bill and Melinda Gates Foundation (BMGF) and the United Kingdom Foreign, Commonwealth & Development Office (OPP1182425). Project partners include WorldPop at the University of Southampton, the United Nations Population Fund ( UNFPA ), Center for International Earth Science Information Network ( CIESIN ) in the Earth Institute at Columbia University, and the Flowminder Foundation. This work provides an estimate of the geographic distribution of the population of Mozambique in 2017. The outputs are intended as an interim population product to support ongoing development and operations work until such time as the official 2017 Population and Housing Census results are available in a spatial gridded format. At that time, this interim gridded population layer will be superseded and users will be advised to use the official gridded population release from INE . For further details, please, read MOZ_population_v1_1_README.pdf Recommended citation Bondarenko M, Jones P, Leasure D, Lazar AN, Tatem AJ. 2020. Census disaggregated gridded population estimates for Mozambique (2017), version 1.1. WorldPop, University of Southampton. doi:10.5258/SOTON/WP00672. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/gridded-population-estimates-for-mozambique-2017-census-v1-1]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "Census disaggregated gridded population estimates for Mozambique (2017), version 1.1. Contact release@worldpop.org for more information. __Recommended citation__ _Bondarenko M, Jones P, Leasure D, Lazar AN, Tatem AJ. 2020. Census disaggregated gridded population estimates for Mozambique (2017), version 1.1. WorldPop, University of Southampton. doi:10.5258/SOTON/WP00672_",
+      "contact_point": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/gridded-population-estimates-for-mozambique-2017-census-v1-1"
+      },
+      "creator": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/gridded-population-estimates-for-mozambique-2017-census-v1-1"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop Research Group",
+            "url": "https://data.humdata.org/dataset/gridded-population-estimates-for-mozambique-2017-census-v1-1"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Mozambique Census 2017",
+            "url": "https://data.humdata.org/dataset/gridded-population-estimates-for-mozambique-2017-census-v1-1"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Census population counts from Mozambique's 2017 national census were spatially disaggregated using WorldPop's gridding methodology to produce high-resolution (approximately 100m) gridded population estimates stratified by age and sex groups. The resulting dataset provides baseline population exposure data suitable for disaster risk assessment applications.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop Research Group",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial disaggregation methodology and gridding algorithms applied to census population data to produce high-resolution population estimates"
+          },
+          {
+            "id": "source_2",
+            "name": "Mozambique Census 2017",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "National census enumeration data providing population counts by administrative unit, disaggregated by age and sex"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_05aa308d",
+          "title": "MOZ_population_v1_1_gridded.tif",
+          "description": "Top-down gridded population estimates (~100m) for Mozambique. A geotiff raster with estimates of total population size for each approximately 100 m grid cell across the study area.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/237"
+        },
+        {
+          "id": "resource_60e5de16",
+          "title": "MOZ_population_v1_1_agesex.zip",
+          "description": "Top-down gridded population estimates (~100m) for specific age-sex groups. This zip file contains geotiff rasters with estimates of population sizes for individual age-sex groups for each approximately 100 m grid cell across the study area.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/241"
+        },
+        {
+          "id": "resource_c1a3d5ef",
+          "title": "MOZ_population_v1_1_mastergrid.tif",
+          "description": "Mastergrid for gridded population estimates. This geotiff raster contains the mastergrid used to define where population estimates were made. It contains a value of 1 where population estimates were made and a value of 0 or NA everywhere else. Cell IDs from the mastergrid can be used to lookup values in the SQL database.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/245"
+        },
+        {
+          "id": "resource_423179ce",
+          "title": "MOZ_population_v1_1_README.pdf",
+          "description": "README: MOZ Population v1.0 (English + Portuguese). This README file (English + Protuguese) provides information about the data included in the data release, how it was produced, source data that were used, and known assumptions and limitations of the results.",
+          "media_type": "application/pdf",
+          "download_url": "https://wopr.worldpop.org/download/242"
+        },
+        {
+          "id": "resource_3e837293",
+          "title": "MOZ_population_v1_1_sql.sql",
+          "description": "SQL database with population predictions for each 100 m grid cell. This SQLite database contains estimates of population size in each grid cell. The database can be used to develop applications that query the population estimates. It is used for WorldPop's woprVision web application.",
+          "format": "SQL",
+          "download_url": "https://wopr.worldpop.org/download/243"
+        },
+        {
+          "id": "resource_2b3f64a2",
+          "title": "MOZ_population_v1_1_tiles.zip",
+          "description": "Image tiles for gridded population estimates. These image tiles (XYZ format) allow for rapid display of the 100 m gridded population estimates across the study area in web applications.",
+          "format": "PNG",
+          "download_url": "https://wopr.worldpop.org/download/244"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population estimates disaggregated by age and sex derived from 2017 census data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/gridded-population-estimates-for-mozambique-2017-census-v1-1",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-npl_osgeonpl_buildings_20250319",
+      "title": "Nepal - Buildings",
+      "description": "This dataset includes building footprints from the Overture Buildings theme. Sources include OSM, Microsoft Global ML Buildings, Google Open Buildings, and Esri Community Maps. Read more at https://docs.overturemaps.org/guides/buildings/. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/osgeonepal_npl_buildings]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Includes building data from OSM (ODbL), Microsoft (ODbL), Google (CC BY), and Esri (CC BY). Final dataset is ODbL-licensed. Attribution and share-alike required. Data might contain errors and was processed and published using the Overture public release via the overture2hdx package.",
+      "contact_point": {
+        "name": "OSGeo Nepal",
+        "url": "https://data.humdata.org/dataset/osgeonepal_npl_buildings"
+      },
+      "creator": {
+        "name": "OSGeo Nepal",
+        "url": "https://data.humdata.org/dataset/osgeonepal_npl_buildings"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2025-03-19"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/osgeonepal_npl_buildings"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Microsoft Global ML Buildings",
+            "url": "https://data.humdata.org/dataset/osgeonepal_npl_buildings"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Google Open Buildings",
+            "url": "https://data.humdata.org/dataset/osgeonepal_npl_buildings"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "Esri Community Maps",
+            "url": "https://data.humdata.org/dataset/osgeonepal_npl_buildings"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building footprints were aggregated from four independent sources (OSM, Microsoft ML, Google Open Buildings, Esri Community Maps) through the Overture Maps standardization framework. The dataset provides unified building structure geometry across Nepal in vector format (GeoPackage and Shapefile), enabling exposure assessment for disaster risk applications.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Crowdsourced building footprint data integrated into Overture Buildings theme"
+          },
+          {
+            "id": "source_2",
+            "name": "Microsoft Global ML Buildings",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Machine learning-derived building footprints from satellite imagery"
+          },
+          {
+            "id": "source_3",
+            "name": "Google Open Buildings",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "ML-generated building footprints from high-resolution satellite data"
+          },
+          {
+            "id": "source_4",
+            "name": "Esri Community Maps",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Community-contributed geospatial building data"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f5278cec",
+          "title": "osgeonepal_npl_buildings_gpkg.zip",
+          "description": "Nepal - Buildings (Buildings data in GPKG format)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/f47f74f6-8624-42ac-bceb-1c46ef4599a1/resource/f5278cec-c8a0-4e68-96a7-895c4f474f75/download/osgeonepal_npl_buildings_gpkg.zip"
+        },
+        {
+          "id": "resource_6203007e",
+          "title": "osgeonepal_npl_buildings_shp.zip",
+          "description": "Nepal - Buildings (Buildings data in SHP format)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/f47f74f6-8624-42ac-bceb-1c46ef4599a1/resource/6203007e-0961-47b5-adb1-460e3935c22c/download/osgeonepal_npl_buildings_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints and structure inventory across Nepal derived from multiple open geospatial sources"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/osgeonepal_npl_buildings",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
