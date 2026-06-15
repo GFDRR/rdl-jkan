@@ -1,0 +1,100 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-isrjorlbnpsesyr_unosat_geodatasnowcoverextentove_20150112",
+      "title": "Geodata of Snow cover extent over West Bank, Israel, Jordan, Lebanon and Syria",
+      "description": "This map illustrates the extent of the snow cover caused by the storm 'Huda' that moved through the Middle East region striking Lebanon, Jordan, and the West Bank from about 7-12 January. This analysis was based on satellite imagery collected by the MODIS sensor on the NASA Terra satellite on 12 January 2015. As seen in the imagery the snow has covered a very extensive part of the Lebanon and Syria. Due to cloud cover present on the imagery an extensive portion of the area of interest could not be analysed. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-snow-cover-extent-over-west-bank-israel-jordan-lebanon-and-syria-january-12-2015]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-snow-cover-extent-over-west-bank-israel-jordan-lebanon-and-syria-january-12-2015"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-snow-cover-extent-over-west-bank-israel-jordan-lebanon-and-syria-january-12-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE",
+          "LBN",
+          "SYR",
+          "JOR",
+          "ISR"
+        ]
+      },
+      "temporal": {
+        "start": "2015-01-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "NASA Terra MODIS",
+            "url": "https://data.humdata.org/dataset/geodata-of-snow-cover-extent-over-west-bank-israel-jordan-lebanon-and-syria-january-12-2015"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts interpreted MODIS satellite imagery collected on 12 January 2015 from the NASA Terra satellite to delineate snow cover extent across the Middle East region affected by extratropical cyclone 'Huda'. The analysis involved visual comparison of satellite imagery to identify notable changes and map the spatial distribution of snow cover, with limitations due to cloud cover obscuring portions of the study area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "NASA Terra MODIS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery from the MODIS sensor on NASA Terra satellite used to detect and map snow cover extent as a proxy indicator of the spatial footprint of extratropical cyclone Huda"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_726d8a19",
+          "title": "modis_terra_20150112_snowcover_Final.zip",
+          "description": "Geodata of Snow cover extent over West Bank, Israel, Jordan, Lebanon and Syria (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/ST20150107PSE/modis_terra_20150112_snowcover_Final.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "extratropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-snow-cover-extent-over-west-bank-israel-jordan-lebanon-and-syria-january-12-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-ken_unosat_geodataelevationmapkalobe_20150701",
+      "title": "Geodata of Elevation Map of Kalobeyei, Turkana County, Kenya",
+      "description": "This map illustrates topographic features in the planned Kalobeyei site, Turkana County, Kenya using a Digital Elevation Model derived from imagery with 1m resolution. UNITAR-UNOSAT built water levels scenarios that represents the potentially affected areas along the modelled stream network assuming a static raising of waters of 1 meter, 2 meters and 3 meters. Streamlines and static water levels has been extracted from a Hydrologically Conditioned version of the DEM derived from WorldView-2 Imagery with 5 m resolution. The model shows spatial distribution of potential water levels in the basin based on the elevation extracted from the DEM but does not represent a current flood scenario. This is a preliminary analysis & has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-elevation-map-of-kalobeyei-turkana-county-kenya-july-01-2015]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-elevation-map-of-kalobeyei-turkana-county-kenya-july-01-2015"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-elevation-map-of-kalobeyei-turkana-county-kenya-july-01-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2015-07-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "A hydrologically conditioned DEM was derived from WorldView-2 satellite imagery (5m resolution) of the Kalobeyei site in Turkana County, Kenya. Streamlines and static water level surfaces were extracted from this DEM and modeled under three deterministic scenarios representing uniform water surface elevation increases of 1m, 2m, and 3m above baseline, producing spatial inundation extent maps for flood hazard assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Hydrologically conditioned Digital Elevation Model derived from WorldView-2 satellite imagery at 5m resolution, used to extract streamlines and model static water level scenarios"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_85293729",
+          "title": "Static_Water_Levels_Kalobeyei_Kenya_shp.zip",
+          "description": "Geodata of Elevation Map of Kalobeyei, Turkana County, Kenya (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/SS/CE20131218SSD/Static_Water_Levels_Kalobeyei_Kenya_shp.zip"
+        },
+        {
+          "id": "resource_0c4133a8",
+          "title": "Static_Water_Levels_Kalobeyei_Kenya_gdb.zip",
+          "description": "Geodata of Elevation Map of Kalobeyei, Turkana County, Kenya (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/SS/CE20131218SSD/Static_Water_Levels_Kalobeyei_Kenya_gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-elevation-map-of-kalobeyei-turkana-county-kenya-july-01-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

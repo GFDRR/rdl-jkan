@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-phl_wfp_typhoontrackscategory4520_2012",
+      "title": "Philippines - Philippine Typhoon Tracks (Category 4 and 5) from 2012 - 2016",
+      "description": "A collection of the strongest typhoon (tracks and windspeed) data for the Philippines with category levels 4 and 5. Data were scrapped from http://weather.unisys.com/.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippine-typhoon-tracks-category-4-and-5-from-2012-2016]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Please refer to http://weather.unisys.com/ for a detailed tracking information.",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/philippine-typhoon-tracks-category-4-and-5-from-2012-2016"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/philippine-typhoon-tracks-category-4-and-5-from-2012-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2012-01-01",
+        "end": "2016-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Unisys Weather",
+            "url": "https://data.humdata.org/dataset/philippine-typhoon-tracks-category-4-and-5-from-2012-2016"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Typhoon track and wind speed data were extracted from Unisys Weather satellite tracking records via web scraping. The dataset contains observed positions, wind speeds, and temporal information for Category 4-5 typhoons affecting the Philippines during 2012-2016, provided as point geometries (windspeed file) and polyline geometries (track path file).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Unisys Weather",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite tracking data providing typhoon track positions, wind speed measurements, and intensity classifications for tropical cyclones in the Western Pacific region"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ecc68be3",
+          "title": "PH_Typhoon_Tracks_windspeed_cat4_5_2012_2016.zip",
+          "description": "Philippines - Philippine Typhoon Tracks (Category 4 and 5) from 2012 - 2016 (PH Typhoon tracks (windspeed) from 2012 to 2016 with category level 4 and 5)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/3960d233-25f8-468b-8d0a-74499104a8b0/resource/ecc68be3-b7d3-44ee-aae8-3e5848bcbf36/download/ph_typhoon_tracks_windspeed_cat4_5_2012_2016.zip"
+        },
+        {
+          "id": "resource_59a314e8",
+          "title": "PH_Typhoon_Tracks_path_cat4_5_2012_2016.zip",
+          "description": "Philippines - Philippine Typhoon Tracks (Category 4 and 5) from 2012 - 2016 (PH Typhoon tracks (path) from 2012 to 2016 with category level 4 and 5)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/3960d233-25f8-468b-8d0a-74499104a8b0/resource/59a314e8-98ac-4594-b2f4-f9230806393f/download/ph_typhoon_tracks_path_cat4_5_2012_2016.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippine-typhoon-tracks-category-4-and-5-from-2012-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

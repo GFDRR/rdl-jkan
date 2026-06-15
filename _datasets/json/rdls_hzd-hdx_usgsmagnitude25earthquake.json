@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-hdx_usgsmagnitude25earthquake",
+      "title": "USGS Magnitude 2.5+ Earthquakes",
+      "description": "This data lists events with magnitude 2.5+ which have been located by the USGS and contributing agencies within the last day and last week. To see these events in an interactive map, see the USGS map . For more information, see the USGS site .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/usgs-magnitude-2-5-earthquakes]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "These events should not be considered to be complete lists of all events in the U.S. and adjacent areas and especially should not be considered to be complete lists of all events M4.5+ in the world.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/usgs-magnitude-2-5-earthquakes"
+      },
+      "creator": {
+        "name": "USGS",
+        "url": "https://data.humdata.org/dataset/usgs-magnitude-2-5-earthquakes"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "USGS",
+            "url": "https://data.humdata.org/dataset/usgs-magnitude-2-5-earthquakes"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "USGS and contributing agencies detect and locate earthquake events in real-time using seismic networks. Events with magnitude 2.5 and above are compiled into near-real-time catalogs updated daily, with derived intensity metrics (Community Decimal Intensity, Modified Mercalli Intensity) calculated from felt reports and instrumental data.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "USGS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Direct observational earthquake event data including magnitude, location, time, and derived intensity metrics (CDI, MMI) from the United States Geological Survey Earthquake Hazards Program"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d32557f8",
+          "title": "USGS Magnitude 2.5+ Earthquakes, Past Day (geojson)",
+          "description": "USGS Magnitude 2.5+ Earthquakes, Past Day (geojson)",
+          "media_type": "application/geo+json",
+          "download_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
+        },
+        {
+          "id": "resource_80dd31c5",
+          "title": "USGS Magnitude 2.5+ Earthquakes, Past Day (csv)",
+          "description": "USGS Magnitude 2.5+ Earthquakes, Past Day (csv)",
+          "media_type": "text/csv",
+          "download_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.csv"
+        },
+        {
+          "id": "resource_e9ec6d6a",
+          "title": "USGS Magnitude 2.5+ Earthquakes, Past Week (geojson)",
+          "description": "USGS Magnitude 2.5+ Earthquakes, Past Week (geojson)",
+          "media_type": "application/geo+json",
+          "download_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson"
+        },
+        {
+          "id": "resource_169aafca",
+          "title": "USGS Magnitude 2.5+ Earthquakes, Past Week (csv)",
+          "description": "USGS Magnitude 2.5+ Earthquakes, Past Week (csv)",
+          "media_type": "text/csv",
+          "download_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "mag:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/usgs-magnitude-2-5-earthquakes",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

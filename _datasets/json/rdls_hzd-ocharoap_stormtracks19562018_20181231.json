@@ -1,0 +1,130 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-ocharoap_stormtracks19562018_20181231",
+      "title": "Asia Pacific: Storm tracks 1956 to 2018",
+      "description": "This shape file consists of consolidated history of tropical storm paths over the past 50 years in the West Pacific, South Pacific, South Indian and North Indian basin. Attributes provides details such as storm Name, Date, Time, wind speed and GPS points for each advisory point. Wind speeds are in knots for more details on speeds conversion and storm categories please visit the original source of data: UNISYS (http://weather.unisys.com/hurricane/index.php), NOAA (http://rammb.cira.colostate.edu/products/tc_realtime/index.asp). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/asia-pacific-storm-tracks-1956-to-2018]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "Updated as of 31 December 2018.",
+      "contact_point": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/asia-pacific-storm-tracks-1956-to-2018"
+      },
+      "creator": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/asia-pacific-storm-tracks-1956-to-2018"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "KOR",
+          "VNM",
+          "AUS",
+          "FJI",
+          "IDN",
+          "IND",
+          "JPN",
+          "KHM",
+          "LAO",
+          "LKA",
+          "MMR",
+          "MYS",
+          "PHL",
+          "SGP",
+          "THA",
+          "TLS"
+        ]
+      },
+      "temporal": {
+        "start": "2018-12-31"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNISYS",
+            "url": "https://data.humdata.org/dataset/asia-pacific-storm-tracks-1956-to-2018"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "NOAA",
+            "url": "https://data.humdata.org/dataset/asia-pacific-storm-tracks-1956-to-2018"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historical tropical cyclone tracks were consolidated from UNISYS and NOAA sources covering 1956-2018 across West Pacific, South Pacific, South Indian, and North Indian basins. Each track point includes observed wind speed (in knots), pressure, date, time, and geographic coordinates. Data is provided as a shapefile with advisory-level spatial resolution.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNISYS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Historical tropical cyclone track database providing storm paths, wind speeds, and pressure measurements across Pacific and Indian Ocean basins"
+          },
+          {
+            "id": "source_2",
+            "name": "NOAA",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Real-time and historical tropical cyclone tracking data used to validate and supplement UNISYS track records"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_85fe1efc",
+          "title": "UNISYS_tracks_1956_2018Dec31.zip",
+          "description": "This shape file consists of consolidated history of tropical storm paths over the past 50 years in the West Pacific, South Pacific, South Indian and North Indian basin. Attributes provides details such as storm Name, Date, Time, wind speed and GPS points for each advisory point. Wind speeds are in knots for more details on speeds conversion and storm categories please visit the original source of data: UNISYS, NOAA (http://rammb.cira.colostate.edu/products/tc_realtime/index.asp)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/b1068a22-ec52-459d-9541-0fb63906bb39/resource/85fe1efc-e737-4b9a-ae87-b0365a1cced3/download/unisys_tracks_1956_2018dec31.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/asia-pacific-storm-tracks-1956-to-2018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

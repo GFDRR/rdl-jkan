@@ -1,0 +1,158 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-moz_wfp_satellitedetectedwaterscy_20190321",
+      "title": "Mozambique satellite detected waters, Cyclone Idai",
+      "description": "This dataset is a compilation of various sources such as Copernicus, Sentinel-1 and Atmospheric and Environmental Research, A Verisk Business, & African Risk Capacity using several days to calculate the maximum flood extent for the whole event.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-flood-detected-waters-cyclone-idai]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "Disclaimer for Flood depictions: AFED v05r00 The ARC Flood Extent Depiction (AFED) data have been developed by Atmospheric Environmental Research, Inc. (AER), a Verisk Business, for the African Risk Capacity (ARC) Group. AFED data are downscaled from coarse resolution (22 km) microwave satellite data and, although depicted at ~90m resolution, will only detect large scale river flooding. Flooding in elevated areas and small tributaries usually is not detected. The data are provided to the public for information purposes only, and neither AER nor the ARC Group make any representation or warranty regarding the fitness of the data and information for any particular purpose. In no event shall AER nor the ARC Group be held liable with respect to any subject matter presented here.",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/mozambique-flood-detected-waters-cyclone-idai"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/mozambique-flood-detected-waters-cyclone-idai"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-03-21"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1",
+            "url": "https://data.humdata.org/dataset/mozambique-flood-detected-waters-cyclone-idai"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Copernicus",
+            "url": "https://data.humdata.org/dataset/mozambique-flood-detected-waters-cyclone-idai"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Atmospheric and Environmental Research (A Verisk Business)",
+            "url": "https://data.humdata.org/dataset/mozambique-flood-detected-waters-cyclone-idai"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "African Risk Capacity",
+            "url": "https://data.humdata.org/dataset/mozambique-flood-detected-waters-cyclone-idai"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Multi-temporal satellite observations from Sentinel-1 SAR and Copernicus data collected over several days during Cyclone Idai were processed using the AFED v05r00 flood detection algorithm to delineate maximum inundation extent. The resulting flood extent polygons represent observed water surfaces derived from direct satellite observation rather than hydrological modeling.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar satellite imagery used to detect water surfaces and map flood extent"
+          },
+          {
+            "id": "source_2",
+            "name": "Copernicus",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "European Earth observation programme providing satellite data for flood mapping"
+          },
+          {
+            "id": "source_3",
+            "name": "Atmospheric and Environmental Research (A Verisk Business)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "AFED v05r00 flood detection algorithm applied to satellite imagery for water extent delineation"
+          },
+          {
+            "id": "source_4",
+            "name": "African Risk Capacity",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Contributing organization to flood extent compilation and analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3f2b3a74",
+          "title": "MOZ_floods_20190312.zip",
+          "description": "Flood extent as of 12 March. Compiled from Copernicus and Sentinel 1",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/4b3930dc-21a4-43b3-9257-e1f552a969a6/resource/3f2b3a74-e5dc-44d3-a339-007a1396bf0a/download/moz_floods_20190312.zip"
+        },
+        {
+          "id": "resource_9a3f23c6",
+          "title": "MOZ_TotalFloodExtent.zip",
+          "description": "Maximum flood extent as of 21 March. Compiled from Copernicus, Sentinel 1 using data from 12 to 21 March 2019 and AFED-detected non-persistent water (7-16 March and 20 March 2019)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/4b3930dc-21a4-43b3-9257-e1f552a969a6/resource/9a3f23c6-0cc3-4e99-bb72-0b4e099847df/download/moz_totalfloodextent.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-flood-detected-waters-cyclone-idai",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

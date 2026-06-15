@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-hti_nlrc510_hurricanematthewcomposite_20161013",
+      "title": "Haiti - Hurricane Matthew - composite index hurricane impact (wind, rain)",
+      "description": "Includes the windspeed per adm3-area, and a combined 1-10 score for windspeed and accumulated rainfall. Datasets used: https://data.humdata.org/dataset/accumulated-gpm-imerg-data-for-haiti-hurricane-matthew-october-3-6th-2016 https://data.humdata.org/dataset/hurricane-matthew-gust-footprint-tropical-storm-risk-university-college-london. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-hurricane-matthew-composite-index-hurricane-impact-wind-rain]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "- converted windspeed vector input layer to raster in QGIS - used 'Zonal statistics' in QGIS to compute average windspeed per adm3-area - computed 1-10 scores for both rain and windspeed by transforming the min-max range linearly to a 1-10 range (simply computed manually in Attribute Table) and averaged them (with equal weights) to a composite score.",
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/haiti-hurricane-matthew-composite-index-hurricane-impact-wind-rain"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/haiti-hurricane-matthew-composite-index-hurricane-impact-wind-rain"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-13"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Accumulated GPM IMERG data for Haiti Hurricane Matthew October 3-6th 2016",
+            "url": "https://data.humdata.org/dataset/haiti-hurricane-matthew-composite-index-hurricane-impact-wind-rain"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Hurricane Matthew Gust Footprint - Tropical Storm Risk, University College London",
+            "url": "https://data.humdata.org/dataset/haiti-hurricane-matthew-composite-index-hurricane-impact-wind-rain"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Wind speed and accumulated rainfall data from two independent sources (TSR gust footprint model and GPM IMERG satellite observations) were integrated and aggregated to administrative level 3 boundaries. A composite 1-10 impact index was calculated combining normalized windspeed and rainfall metrics to characterize Hurricane Matthew's hazard intensity across Haiti.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Accumulated GPM IMERG data for Haiti Hurricane Matthew October 3-6th 2016",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-derived accumulated rainfall measurements during Hurricane Matthew event period"
+          },
+          {
+            "id": "source_2",
+            "name": "Hurricane Matthew Gust Footprint - Tropical Storm Risk, University College London",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Modeled tropical cyclone wind gust field for Hurricane Matthew derived from meteorological analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_44cbb8a5",
+          "title": "rain_wind_matthew_adm3.zip",
+          "description": "Haiti - Hurricane Matthew - composite index hurricane impact (wind, rain) (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/37455eee-27bc-4aef-b766-eae0583187b3/resource/44cbb8a5-4dee-4c67-b972-945453e329e8/download/rain_wind_matthew_adm3.zip"
+        },
+        {
+          "id": "resource_69c81dab",
+          "title": "rain_wind_matthew_adm3.xlsx",
+          "description": "Haiti - Hurricane Matthew - composite index hurricane impact (wind, rain) (PCODED, HXL)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/37455eee-27bc-4aef-b766-eae0583187b3/resource/69c81dab-f62b-4dfa-b0ca-22f6f833dd93/download/rainfall_windspeed_output.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-hurricane-matthew-composite-index-hurricane-impact-wind-rain",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

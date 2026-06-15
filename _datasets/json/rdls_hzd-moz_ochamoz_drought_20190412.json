@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-moz_ochamoz_drought_20190412",
+      "title": "Mozambique Drought",
+      "description": "Data produced under the ADRF Sub Saharan Africa Risk Profiles project. The project provides also risk data produced, exposure and hazard data used in the analyses.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-drought]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Mozambique",
+        "url": "https://data.humdata.org/dataset/mozambique-drought"
+      },
+      "creator": {
+        "name": "OCHA Mozambique",
+        "url": "https://data.humdata.org/dataset/mozambique-drought"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-04-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Mozambique National Disasters Management Institute",
+            "url": "https://data.humdata.org/dataset/mozambique-drought"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "ADRF Sub Saharan Africa Risk Profiles project",
+            "url": "https://data.humdata.org/dataset/mozambique-drought"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Drought hazard data generated using a soil water balance approach applied to global geospatial raster datasets (precipitation, evapotranspiration, rooted soil depth, water holding capacity) analyzed on a seasonal basis to quantify accumulated transpiration and derive Standardized Precipitation Index values across Mozambique at 30-arcsecond resolution.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Mozambique National Disasters Management Institute",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Primary data source providing institutional oversight and validation of drought hazard analysis for Mozambique"
+          },
+          {
+            "id": "source_2",
+            "name": "ADRF Sub Saharan Africa Risk Profiles project",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Analytical framework and soil water balance methodology applied to generate SPI-based drought hazard assessment using global geospatial raster inputs"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3d5df070",
+          "title": "euwatch_spi_mozambique_r25_30s_clipped.zip",
+          "description": "Mozambique Drought (Drought indicators in raster format for Mozambique)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "http://geonode.ingc.gov.mz/qgis-server/geotiff/euwatch_spi_mozambique_r25_30s_clipped?access_token=bb3efa145d1311e9932e02967b3ca6c8"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-drought",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

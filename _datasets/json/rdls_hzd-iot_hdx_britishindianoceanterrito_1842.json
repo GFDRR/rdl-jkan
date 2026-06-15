@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-iot_hdx_britishindianoceanterrito_1842",
+      "title": "British Indian Ocean Territory: IBTrACS Storm Tracks",
+      "description": "The International Best Track Archive for Climate Stewardship (IBTrACS) project is the most complete global collection of tropical cyclones available. It merges recent and historical tropical cyclone data from multiple agencies to create a unified, publicly available, best-track dataset that improves inter-agency comparisons. Fields available: SID: A unique storm identifier (SID) assigned by IBTrACS algorithm. ISO_TIME: Time of the observation in ISO format (YYYY-MM-DD hh:mm:ss) BASIN: Basin of the current storm position SUBBASIN: Sub-basin of the current storm position NATURE: Type of storm (a combination of the various types from the available sources) NUMBER: Number of the storm for the year (restarts at 1 for each year LAT: Mean position - latitude (a combination of the available positions) LON: Mean position - longitude (a combination of the available positions) WMO_WIND: Maximum sustained wind speed assigned by the responsible WMO agency WMO_PRES: Minimum central pressure assigned by the responsible WMO agency.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/iot-ibtracs-tropical-storm-tracks]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Some early (pre-1950) storms were not correctly matched, so the number of storms in the record is artificially high. For example, SIO storms in 1901 are not matched, so the same storm is tracked by the following identifiers: ds824, td9636, and reunion. This storm is broken into different tracks because of temporal differences in the storm data.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/iot-ibtracs-tropical-storm-tracks"
+      },
+      "creator": {
+        "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+        "url": "https://data.humdata.org/dataset/iot-ibtracs-tropical-storm-tracks"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IOT"
+        ]
+      },
+      "temporal": {
+        "start": "1842-10-25",
+        "end": "2026-01-21"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+            "url": "https://data.humdata.org/dataset/iot-ibtracs-tropical-storm-tracks"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IBTrACS merges historical and recent tropical cyclone observations from multiple national meteorological agencies into a unified best-track dataset. Track positions, wind speeds (wmo_wind), and central pressures (wmo_pres) are standardized and quality-controlled. The dataset provides observed hazard characteristics for tropical cyclones affecting the British Indian Ocean Territory region.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "International Best Track Archive for Climate Stewardship (IBTrACS) project providing merged tropical cyclone track data from multiple agencies with standardized best-track positions, wind speeds, and central pressures."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-07/IBTrACS_version4r01_Technical_Details.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_a111242f",
+          "title": "ibtracs_ALL_list_v04r01_IOT.csv",
+          "description": "IBTrACS storm tracks from 1842 to date that pass within 2000 kilometers of British Indian Ocean Territory.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/544ba5f5-1e68-4ead-8391-c2b39fcb10c4/resource/a111242f-8d82-472b-96cc-a400854dc592/download/ibtracs_all_list_v04r01_iot.csv"
+        },
+        {
+          "id": "resource_a2fc7e6e",
+          "title": "ibtracs_ALL_list_v04r01_lines_IOT.geojson",
+          "description": "IBTrACS storm tracks from 1842 to date that pass within 2000 kilometers of British Indian Ocean Territory.",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/544ba5f5-1e68-4ead-8391-c2b39fcb10c4/resource/a2fc7e6e-805f-4bed-8291-1996b9f3d070/download/ibtracs_all_list_v04r01_lines_iot.geojson"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/iot-ibtracs-tropical-storm-tracks",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

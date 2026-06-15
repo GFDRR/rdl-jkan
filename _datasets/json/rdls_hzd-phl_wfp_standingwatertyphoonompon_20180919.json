@@ -1,0 +1,95 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-phl_wfp_standingwatertyphoonompon_20180919",
+      "title": "Standing Water Typhoon Ompong Cagayan, Philippines",
+      "description": "Generated in Google Earth Engine using Sentinel 1 A data.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/standing-water-typhoon-ompong-cagayan-philippines]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/standing-water-typhoon-ompong-cagayan-philippines"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/standing-water-typhoon-ompong-cagayan-philippines"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2018-09-19"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1A",
+            "url": "https://data.humdata.org/dataset/standing-water-typhoon-ompong-cagayan-philippines"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1A SAR data was processed in Google Earth Engine to detect standing water surfaces in Cagayan province following Typhoon Ompong. The analysis leverages radar backscatter characteristics to identify inundated areas, producing an observed post-event flood extent map.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1A",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar satellite imagery used to detect standing water and inundation extent following Typhoon Ompong"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_31cc3532",
+          "title": "Cagayan_ompong.tif",
+          "description": "Standing Water Typhoon Ompong Cagayan, Philippines (Standing surface water due to Typhonn Ompong in Cagayan Province, Philippines.)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/f468b878-9b9b-4a85-8b38-19d025f960af/resource/31cc3532-e7e3-4c49-82d5-8ff23e679732/download/cagayan_ompong.tif"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/standing-water-typhoon-ompong-cagayan-philippines",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

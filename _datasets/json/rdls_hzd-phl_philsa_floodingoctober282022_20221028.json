@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-phl_philsa_floodingoctober282022_20221028",
+      "title": "Flooding in the Philippines on October 28, 2022",
+      "description": "This dataset shows the actual extent of flooding in the Philippines caused by typhoons or tropical cyclones as of October 28, 2022, as observed through available satellite imagery. The dataset can be used to track the progression of floods over time, identify areas at risk, and assess the impact of these natural disasters on infrastructure, agriculture, and local populations.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-20221028]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset has not been validated using ground-truth data.",
+      "contact_point": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20221028"
+      },
+      "creator": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20221028"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2022-10-28"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine Space Agency",
+            "url": "https://data.humdata.org/dataset/philippines-flood-20221028"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite synthetic aperture radar (SAR) imagery from Sentinel-1 was processed to detect and map flood extent during typhoon-induced flooding on October 28, 2022. The Philippine Space Agency applied image classification algorithms to delineate inundated areas, producing vector (shapefile) and raster (PNG) outputs representing the observed spatial distribution of flooding across affected regions.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine Space Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite image processing and analysis to delineate actual flood extent from Sentinel-1 SAR imagery during the October 28, 2022 typhoon event in the Philippines."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_db9835df",
+          "title": "20221028_0600_fld_s1_maps.zip",
+          "description": "Flooding extents on October 28, 2022 at 06:00 AM using Sentinel-1 satellite image",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/52e6c7dd-6f12-4a38-9e02-e97dbc7bcb9b/resource/db9835df-721c-42d0-866e-e9f9a10b13db/download/20221028_0600_fld_s1_maps.zip"
+        },
+        {
+          "id": "resource_4cb5d1b3",
+          "title": "20221028_0600_fld_s1_shp.zip",
+          "description": "Flooding extents on October 28, 2022 at 06:00 AM using Sentinel-1 satellite image",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/52e6c7dd-6f12-4a38-9e02-e97dbc7bcb9b/resource/4cb5d1b3-d84e-455c-b329-32d3c01fdd3a/download/20221028_0600_fld_s1_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-20221028",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
