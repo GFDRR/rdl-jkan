@@ -1,0 +1,321 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: National IPC Technical Working Group
+    url: https://data.humdata.org/dataset/angola-acute-food-insecurity-country-data
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Integrated Food Security Phase Classification (IPC)
+  url: https://data.humdata.org/dataset/angola-acute-food-insecurity-country-data
+creator:
+  affiliation: null
+  email: null
+  name: Integrated Food Security Phase Classification (IPC)
+  url: https://data.humdata.org/dataset/angola-acute-food-insecurity-country-data
+dataset_id: rdls_lss-ago_ipc_acuteinsecuritycountrydat_2019
+description: 'The IPC Acute Food Insecurity (IPC AFI) classification provides strategically
+  relevant information to decision makers that focuses on short-term objectives to
+  prevent, mitigate or decrease severe food insecurity that threatens lives or livelihoods.
+  This data has been produced by the National IPC Technical Working Groups for IPC
+  population estimates since 2017. All national population figures are based on official
+  country population estimates. IPC estimates are those published in country IPC reports.
+  There is also a global dataset .. [Source: This metadata record was automatically
+  extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/angola-acute-food-insecurity-country-data]'
+details: null
+exposure: []
+hazard: null
+license: https://creativecommons.org/publicdomain/zero/1.0/
+lineage:
+  description: The IPC Acute Food Insecurity classification system aggregates food
+    security assessments conducted by the National IPC Technical Working Group to
+    classify populations into five phases (1-5) representing increasing severity of
+    food insecurity. Population figures are derived from official country estimates
+    and IPC reports, providing post-assessment impact data on food insecurity severity
+    at national, provincial, and area levels.
+  sources:
+  - id: source_1
+    license: null
+    name: National IPC Technical Working Group
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/angola-acute-food-insecurity-country-data
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Population classified by IPC Acute Food Insecurity phase, indicating
+      food insecurity severity linked to drought and other shocks
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: null
+      trigger: null
+      type: drought
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: total
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://www.ipcinfo.org/ipc/technical/manual_en
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (IPC GeoJSON for latest
+    analysis)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/7ccb4a1d-3cfd-437c-85a6-fb32db295a4f/download/ipc_ago.geojson
+  format: null
+  id: resource_7ccb4a1d
+  media_type: application/geo+json
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago.geojson
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (Latest IPC national data
+    in long form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/d4ad79bc-b74c-4442-b6fc-009994987995/download/ipc_ago_national_long_latest.csv
+  format: null
+  id: resource_d4ad79bc
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_national_long_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (Latest IPC level 1 data
+    in long form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/50cf4106-81a7-42e5-be7f-e75ca7177f01/download/ipc_ago_level1_long_latest.csv
+  format: null
+  id: resource_50cf4106
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_level1_long_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (Latest IPC level 1 data
+    in wide form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/3ce4c3fb-6004-4343-86e6-a59d760aadcc/download/ipc_ago_level1_wide_latest.csv
+  format: null
+  id: resource_3ce4c3fb
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_level1_wide_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (Latest IPC area data in
+    long form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/8cdca536-fcc5-410e-805a-1ad24008b5f1/download/ipc_ago_area_long_latest.csv
+  format: null
+  id: resource_8cdca536
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_area_long_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (Latest IPC area data in
+    wide form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/ff4cac87-9782-4e23-97a5-192d7045d42c/download/ipc_ago_area_wide_latest.csv
+  format: null
+  id: resource_ff4cac87
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_area_wide_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (All IPC national data
+    in long form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/0b392ef6-db95-4e7e-8871-b2e99721eaa5/download/ipc_ago_national_long.csv
+  format: null
+  id: resource_0b392ef6
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_national_long.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (All IPC national data
+    in wide form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/ce24be36-df57-427f-a248-58ed3b3debf5/download/ipc_ago_national_wide.csv
+  format: null
+  id: resource_ce24be36
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_national_wide.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (All IPC level 1 data in
+    long form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/8d8fa344-3643-48aa-a123-7d82d254bba3/download/ipc_ago_level1_long.csv
+  format: null
+  id: resource_8d8fa344
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_level1_long.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (All IPC level 1 data in
+    wide form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/c9128163-6e31-49d7-aac7-cbbd248efdae/download/ipc_ago_level1_wide.csv
+  format: null
+  id: resource_c9128163
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_level1_wide.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (All IPC area data in long
+    form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/10c5b38d-1ac1-48e5-bdf4-3ee1853d437b/download/ipc_ago_area_long.csv
+  format: null
+  id: resource_10c5b38d
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_area_long.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Angola: Acute Food Insecurity Country Data (All IPC area data in wide
+    form)'
+  download_url: https://data.humdata.org/dataset/b57c8667-6403-4af4-9465-5a9f013ae8fc/resource/7d5b1800-f7fc-462f-9aea-fd426e243bb4/download/ipc_ago_area_wide.csv
+  format: null
+  id: resource_7d5b1800
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_ago_area_wide.csv
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-ago_ipc_acuteinsecuritycountrydat_2019
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - AGO
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2022-03-31'
+  start: '2019-07-01'
+temporal_resolution: null
+title: 'Angola: Acute Food Insecurity Country Data'
+version: null
+vulnerability: null
+---
