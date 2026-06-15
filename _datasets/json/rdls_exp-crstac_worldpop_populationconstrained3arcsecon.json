@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_worldpop_populationconstrained3arcsecon",
+      "title": "WorldPop - Population (constrained) 3 arc seconds",
+      "description": "Estimated total number of people per grid-cell. The dataset is available to download in Geotiff format. The projection is Geographic Coordinate System, WGS84. The units are number of people per pixel. The mapping approach is Random Forest-based dasymetric redistribution, restricted to settlements estbalished with the help of satellite imagery [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "WorldPop",
+        "url": "https://hub.worldpop.org/"
+      },
+      "purpose": "The WorldPop constrained data spatial disaggregate the population across those raster cells where buildings are located. The data need to be downloaded per country.",
+      "contact_point": {
+        "name": "WorldPop",
+        "url": "https://hub.worldpop.org/"
+      },
+      "creator": {
+        "name": "WorldPop",
+        "url": "https://hub.worldpop.org/"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 93,
+      "temporal": {
+        "start": "2020",
+        "end": "2020"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Open access spatial demographic datasets built using transparent approaches.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "WorldPop unconstrained and Ecopia.AI and Maxar Technologies building footprints",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/wpgp/popRF",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.5258/SOTON/WP00684",
+          "url": "https://doi.org/10.5258/SOTON/WP00684"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: WorldPop - Population (constrained) 3 arc seconds",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/population/worldpop/population-constrained-3-arc-seconds/population-constrained-3-arc-seconds.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "WorldPop - Population (constrained) 3 arc seconds - data file",
+          "description": "WorldPop - Population (constrained) 3 arc seconds - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://hub.worldpop.org/geodata/listing?id=78"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "WorldPop - Population (constrained) 3 arc seconds (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.5258/SOTON/WP00684"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "WorldPop - Population (constrained) 3 arc seconds (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/wpgp/popRF"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "population",
+            "description": "population number"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

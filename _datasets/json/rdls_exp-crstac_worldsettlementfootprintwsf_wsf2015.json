@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_worldsettlementfootprintwsf_wsf2015",
+      "title": "World Settlement Footprint (WSF) - WSF 2015",
+      "description": "The World Settlement Footprint - WSF 2015 is a a 10m resolution binary mask outlining the 2015 global settlement extent. It has been derived by jointly exploiting multitemporal Sentinel-1 radar and Landsat-8 optical satellite imagery and its quality has been validated against 900,000 samples labelled by crowdsourcing photointerpretation of very high resolution Google Earth imagery [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "German Aerospace Center (DLR)",
+        "url": "https://geoservice.dlr.de/web/maps"
+      },
+      "contact_point": {
+        "name": "German Aerospace Center (DLR)",
+        "url": "https://geoservice.dlr.de/web/maps"
+      },
+      "creator": {
+        "name": "German Aerospace Center (DLR)",
+        "url": "https://geoservice.dlr.de/web/maps"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 10,
+      "temporal": {
+        "start": "2015",
+        "end": "2015"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "The World Settlement Footprint (WSF) is a 10m resolution binary mask outlining the extent of human settlements globally derived by means of multitemporal satellite imagery.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "Sentinel + Landsat",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/s41597-020-00580-5",
+          "url": "https://doi.org/10.1038/s41597-020-00580-5"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: World Settlement Footprint (WSF) - WSF 2015",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/land-use/world-settlement-footprint-wsf/wsf-2015/wsf-2015.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "World Settlement Footprint (WSF) - WSF 2015 - data file",
+          "description": "World Settlement Footprint (WSF) - WSF 2015 - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://springernature.figshare.com/ndownloader/files/18108833"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "World Settlement Footprint (WSF) - WSF 2015 (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/s41597-020-00580-5"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "urban/built-up footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

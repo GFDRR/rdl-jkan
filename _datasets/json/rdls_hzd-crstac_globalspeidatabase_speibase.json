@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_globalspeidatabase_speibase",
+      "title": "Global SPEI database - SPEIbase",
+      "description": "The SPEIbase is based on the FAO-56 Penman-Monteith estimation of potential evapotranspiration. This is a major difference with respect to the SPEI Global Drought Monitor, that uses the Thornthwaite PET estimation [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Spanish National Research Council (CSIC)",
+        "url": "https://spei.csic.es/spei_database"
+      },
+      "contact_point": {
+        "name": "Spanish National Research Council (CSIC)",
+        "url": "https://spei.csic.es/spei_database"
+      },
+      "creator": {
+        "name": "Spanish National Research Council (CSIC)",
+        "url": "https://spei.csic.es/spei_database"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 55500,
+      "temporal": {
+        "start": "1901",
+        "end": "2022"
+      },
+      "temporal_resolution": "P1M",
+      "license": "https://spdx.org/licenses/ODbL-1.0.html",
+      "lineage": {
+        "description": "The Global SPEI database, SPEIbase, offers long-time, robust information about drought conditions at the global scale, with a 0.5 degrees spatial resolution and a monthly time resolution. It has a multi-scale character, providing SPEI time-scales between 1 and 48 months. It is based on monthly precipitation and potential evapotranspiration data from the Climatic Research Unit of the University of East Anglia, starting in January 1901, and it is updated as soon as new data becomes available.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "NOAA",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://doi.org/10.5281/zenodo.834461",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1002/joc.3887",
+          "url": "https://doi.org/10.1002/joc.3887"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Global SPEI database - SPEIbase",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/precipitation-related/global-spei-database/speibase/speibase.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Global SPEI database - SPEIbase - data file",
+          "description": "Global SPEI database - SPEIbase - data file",
+          "media_type": "application/x-netcdf",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://digital.csic.es/bitstream/10261/332007/3/spei01.nc"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Global SPEI database - SPEIbase (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1002/joc.3887"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Global SPEI database - SPEIbase (Code link)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.5281/zenodo.834461"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "spi:dimensionless"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

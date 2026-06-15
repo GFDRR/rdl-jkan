@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-coclico_slp",
+      "title": "CoCliCo - Sea Level Rise",
+      "description": "Sea level rise projections provide regional insights into future sea level changes, helping assess coastal flood risks and inform adaptation planning. Spatial coverage: Global Ocean and European seas Sources: IPCC AR6 report, Caron et al. Glacial Isostatic Adjustment (GIA), CMIP6 Common usage: Coastal impact assessment, adaptation planning, sensitivity analysis More info about the dataset can be found in the User Handbook. Variants in the source dataset - scenarios: high_end (High End), ssp126 (SSP1-2.6), ssp245 (SSP2-4.5), ssp585 (SSP5-8.5) - Climate scenarios based on IPCC's Shared Socioeconomic Pathways (SSPs). High-end (if applicable) refers to P83 of SSP5-8.5, taking into account low-confidence processes. Other scenarios use the P50; ensemble: msl_h (83.3 Percentile), msl_m (50.0 Percentile), msl_l (16.7 Percentile) - Uncertainty range of projections. 16.7, 50 and 83.3 indicate the lower bound, median and upper bound respectively; time: 2031 (2030), 2041 (2040), 2051 (2050), 2061 (2060), 2071 (2070), 2081 (2080), 2091 (2090), 2101 (2100), ... (5 more) - Time slice applied to the data. Either present-day (2010) or future state representing medium (2030 till 2050) and long term (2050 till 2100) outlook. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Sea level rise projections provide regional insights into future sea level changes, helping assess coastal flood risks and inform adaptation planning. Spatial coverage: Global Ocean and European seas Sources: IPCC AR6 report, Caron et al. Glacial Isostatic Adjustment (GIA), CMIP6 Common usage: Coastal impact assessment, adaptation planning, sensitivity analysis More info about the dataset can be found in the User Handbook",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_2",
+            "name": "BRGM, French Geological Survey",
+            "type": "dataset",
+            "url": "www.brgm.fr",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Sea Level Rise [slp]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/slp/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Sea Level Rise",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/slp.png"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "sea_level_rise",
+                "process": "sea_level_rise",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

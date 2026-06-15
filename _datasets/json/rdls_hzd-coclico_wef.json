@@ -1,0 +1,226 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-coclico_wef",
+      "title": "CoCliCo - Wave energy flux",
+      "description": "Dataset with extreme Wave Energy Flux (WEF) at the Global scale. WEF is estimated for a scenario with high emission of greenhouse gases (RCP8.5) for eight different return periods (5, 10, 20, 50, 100, 200, 500 and 1000) and for eleven decades (1995, 2010-2100). This dataset is part of the LISCOAST (https://data.jrc.ec.europa.eu/collection/LISCOAST) project. See this article (https://doi.org/10.1002/2016GL072488) for more dataset-specific information. Variants in the source dataset - rp: 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 500.0, 1000.0; time: 1995.0, 2010.0, 2020.0, 2030.0, 2040.0, 2050.0, 2060.0, 2070.0, ... (3 more); lon: -180.003, 181.622 - longitude; lat: -60.337, 77.942 - latitude. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "Dataset with extreme Wave Energy Flux (WEF) at the Global scale. WEF is estimated for a scenario with high emission of greenhouse gases (RCP8.5) for eight different return periods (5, 10, 20, 50, 100, 200, 500 and 1000) and for eleven decades (1995, 2010-2100). This dataset is part of the LISCOAST (https://data.jrc.ec.europa.eu/collection/LISCOAST) project. See this article (https://doi.org/10.1002/2016GL072488) for more dataset-specific information.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://www.deltares.nl",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Wave energy flux [wef]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/wef/collection.json"
+        },
+        {
+          "id": "resource_data",
+          "title": "Global Wave Energy Flux zarr root",
+          "description": "The root of the Global Wave Energy Flux zarr dataset on public Google Cloud Storage.",
+          "download_url": "https://storage.googleapis.com/coclico-data-public/coclico/global_wave_energy_flux.zarr",
+          "media_type": "application/vnd.zarr"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Wave energy flux",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/wef.png"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_rp_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5.0
+                  }
+                },
+                "description": "Return period 5 year(s) (source: Collection.summaries.rp)."
+              },
+              {
+                "id": "event_rp_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10.0
+                  }
+                },
+                "description": "Return period 10 year(s) (source: Collection.summaries.rp)."
+              },
+              {
+                "id": "event_rp_20",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20.0
+                  }
+                },
+                "description": "Return period 20 year(s) (source: Collection.summaries.rp)."
+              },
+              {
+                "id": "event_rp_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50.0
+                  }
+                },
+                "description": "Return period 50 year(s) (source: Collection.summaries.rp)."
+              },
+              {
+                "id": "event_rp_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100.0
+                  }
+                },
+                "description": "Return period 100 year(s) (source: Collection.summaries.rp)."
+              },
+              {
+                "id": "event_rp_200",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 200.0
+                  }
+                },
+                "description": "Return period 200 year(s) (source: Collection.summaries.rp)."
+              },
+              {
+                "id": "event_rp_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500.0
+                  }
+                },
+                "description": "Return period 500 year(s) (source: Collection.summaries.rp)."
+              },
+              {
+                "id": "event_rp_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000.0
+                  }
+                },
+                "description": "Return period 1000 year(s) (source: Collection.summaries.rp)."
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

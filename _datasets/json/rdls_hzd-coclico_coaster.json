@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-coclico_coaster",
+      "title": "CoCliCo - Coastal Change Segments",
+      "description": "Coastal Change Segments uses the historical shoreline change regime from the 'Coastal Typologies and Erosion for Risk' (CoasTER) database which integrates existing information on erosion and other relevant coastal characteristics for Europe's coastal floodplains. Spatial coverage: European coastlines. Sources: Remote sensing, historical shoreline data (1984-2024). Common usage: Coastal erosion monitoring, sediment transport studies, policy and spatial planning. More Info about the dataset: User Handbook. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "University of East Anglia (UEA)",
+        "url": "https://research-portal.uea.ac.uk/en/"
+      },
+      "contact_point": {
+        "name": "University of East Anglia (UEA)",
+        "url": "https://research-portal.uea.ac.uk/en/"
+      },
+      "creator": {
+        "name": "University of East Anglia (UEA)",
+        "url": "https://research-portal.uea.ac.uk/en/"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -31.386545494931003,
+          32.457482285641014,
+          60.24216959014434,
+          67.12036364463012
+        ]
+      },
+      "temporal": {
+        "start": "2025",
+        "end": "2025"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Coastal Change Segments uses the historical shoreline change regime from the 'Coastal Typologies and Erosion for Risk' (CoasTER) database which integrates existing information on erosion and other relevant coastal characteristics for Europe's coastal floodplains. Spatial coverage: European coastlines. Sources: Remote sensing, historical shoreline data (1984-2024). Common usage: Coastal erosion monitoring, sediment transport studies, policy and spatial planning. More Info about the dataset: User Handbook",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "University of East Anglia (UEA)",
+            "type": "dataset",
+            "url": "https://research-portal.uea.ac.uk/en/",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_2",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_citation",
+          "name": "Hanson, S.E., Nicholls, R.J, Calkoen, F. R. Le Cozannet, G. and Luijendijk, A. P (2025, in review) 'A geospatial database of coastal characteristics for erosion assessment of Europe's coastal floodplains'",
+          "url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/coaster/collection.json"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Coastal Change Segments [coaster]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/coaster/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Coastal Change Segments",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/download/storage/v1/b/coclico-data-public/o/coclico%2Fassets%2Fthumbnails%2Fcoaster.png?alt=media"
+        },
+        {
+          "id": "resource_geoparquetstacitems",
+          "title": "GeoParquet STAC items",
+          "description": "CoCliCo - Coastal Change Segments (Snapshot of the collection's STAC items exported to GeoParquet format.)",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "gs://coclico-data-public/coclico/items/coaster.parquet"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "erosion",
+                "process": "coastal_erosion",
+                "intensity_measure": "Er:m/yr"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

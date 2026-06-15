@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-coclico_ceed",
+      "title": "CoCliCo - Coastal European Exposure Database",
+      "description": "EU-wide high-resolution object-based maps of economic assets and infrastructure systems in coastal flood-prone areas that combined the automated extraction of asset using supervised DL algorithms applied to satellite imagery and opensource database. Dataset is divided over NUTS2 polygons. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Institute for Environmental Studies, Vrije Universiteit Amsterdam",
+        "url": "www.ivm.nl"
+      },
+      "contact_point": {
+        "name": "Institute for Environmental Studies, Vrije Universiteit Amsterdam",
+        "url": "www.ivm.nl"
+      },
+      "creator": {
+        "name": "Institute for Environmental Studies, Vrije Universiteit Amsterdam",
+        "url": "www.ivm.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -11.045382150506173,
+          34.269110172112164,
+          34.53596939451993,
+          71.03953129412078
+        ]
+      },
+      "temporal": {
+        "start": "2021",
+        "end": "2021"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "EU-wide high-resolution object-based maps of economic assets and infrastructure systems in coastal flood-prone areas that combined the automated extraction of asset using supervised DL algorithms applied to satellite imagery and opensource database. Dataset is divided over NUTS2 polygons.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Institute for Environmental Studies, Vrije Universiteit Amsterdam",
+            "type": "dataset",
+            "url": "www.ivm.nl",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_2",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Coastal European Exposure Database [ceed]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/ceed/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Coastal European Exposure Database",
+          "media_type": "image/jpeg",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/ceed.jpeg"
+        },
+        {
+          "id": "resource_geoparquetstacitems",
+          "title": "GeoParquet STAC items",
+          "description": "CoCliCo - Coastal European Exposure Database (Snapshot of the collection's STAC items exported to GeoParquet format.)",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "gs://coclico-data-public/coclico/items/ceed.parquet"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "building footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_deltarescoastalfloodmaps_differentreturnperiodsin2050",
+      "title": "Deltares Coastal Flood Maps - Different return periods in 2050",
+      "description": "Inundation (m) of coastal floods at 3 arc seconds resolution for 2050 (return periods 0, 2, 5, 10, 25, 50, 100, 250). Climate scenarios (as published): \"RCPs\" [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://planetarycomputer.microsoft.com/dataset/deltares-floods"
+      },
+      "purpose": "download via API (example provided), data available for RCP8.5",
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://planetarycomputer.microsoft.com/dataset/deltares-floods"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://planetarycomputer.microsoft.com/dataset/deltares-floods"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 93,
+      "temporal": {
+        "start": "2050",
+        "end": "2050"
+      },
+      "license": "https://spdx.org/licenses/CDLA-Permissive-1.0.html",
+      "lineage": {
+        "description": "Global flood maps are simulated based on coastal extreme water levels with given return periods. These coastal water levels are taken from the Deltares dataset of extreme sea levels modelled using GTSMv3.0 with ERA5 reanalysis dataset (1979-2018) used a atmospheric forcing. Global coastal flood maps are simulated based on two DEMs (i.e. MERIT, NASADEM) and are available at high resolution of 3 arc-seconds (90m at the equator). A bathtub inundation model that includes flood attenuation and roughness is used as the flood modeling tool. Spatial fields of sea level rise were imposed on extreme water levels, which were derived for the present-day situation (2018, end of the ERA5 climate reanalysis) and for the future situation (2050, based on the IPCC AR5 assessment for the RCP 8.5 scenario).",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "GTSM",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "MERIT-DEM",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_3",
+            "name": "NASADEM",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_4",
+            "name": "ERA5",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://planetarycomputer.microsoft.com/dataset/deltares-floods#Example-Notebook",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_pub_publicationlink",
+          "name": "Publication link",
+          "url": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/aod_docs/11206409-003-ZWS-0003_v0.1-Planetary-Computer-Deltares-global-flood-docs.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Deltares Coastal Flood Maps - Different return periods in 2050",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/flood/deltares-coastal-flood-maps/different-return-periods-in-2050/different-return-periods-in-2050.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Deltares Coastal Flood Maps - Different return periods in 2050 - data file",
+          "description": "Deltares Coastal Flood Maps - Different return periods in 2050 - data file",
+          "media_type": "application/x-netcdf",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://planetarycomputer.microsoft.com/dataset/deltares-floods"
+        },
+        {
+          "id": "resource_link_publicationlink",
+          "title": "Publication link",
+          "description": "Deltares Coastal Flood Maps - Different return periods in 2050 (Publication link)",
+          "format": "Web reference",
+          "access_url": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/aod_docs/11206409-003-ZWS-0003_v0.1-Planetary-Computer-Deltares-global-flood-docs.pdf"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Deltares Coastal Flood Maps - Different return periods in 2050 (Code link)",
+          "format": "Web reference",
+          "access_url": "https://planetarycomputer.microsoft.com/dataset/deltares-floods#Example-Notebook"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

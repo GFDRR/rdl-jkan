@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_seasonalforecastoffiredangerindices_canadianfwi",
+      "title": "Seasonal forecast of fire danger indices - Canadian FWI",
+      "description": "Canadian Forest Service Fire Weather Index (FWI) Rating System at 1 dec deg spatial resolution. Components: Build up index, Duff moisture code, Fire daily severity rating, Initial fire spread index, Drought code, Fine fuel moisture code, Fire weather index [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "ECMWF",
+        "url": "https://doi.org/10.24381/cds.b9c753f1"
+      },
+      "purpose": "data download via interface or API",
+      "contact_point": {
+        "name": "ECMWF",
+        "url": "https://doi.org/10.24381/cds.b9c753f1"
+      },
+      "creator": {
+        "name": "ECMWF",
+        "url": "https://doi.org/10.24381/cds.b9c753f1"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -179.95,
+          -89.95,
+          179.95,
+          89.95
+        ]
+      },
+      "spatial_resolution": 111000,
+      "temporal": {
+        "start": "1981",
+        "end": "2026"
+      },
+      "temporal_resolution": "P1D",
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "Modelled daily fire danger time series, driven by seasonal weather forecasts (ECMWF SEAS5) and using fire danger indices from the U.S. Forest Service National Fire-Danger Rating System (NFDRS), the Canadian Forest Service Fire Weather Index Rating System (FWI), and the Australian McArthur (Mark 5) rating systems.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "ECMWF SEAS5",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/fdg10371/Jupyter_notebooks",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/s41597-024-02948-3",
+          "url": "https://doi.org/10.1038/s41597-024-02948-3"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Seasonal forecast of fire danger indices - Canadian FWI",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/environmental/seasonal-forecast-of-fire-danger-indices/canadian-fwi/canadian-fwi.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Seasonal forecast of fire danger indices - Canadian FWI - data file",
+          "description": "Seasonal forecast of fire danger indices - Canadian FWI - data file",
+          "media_type": "application/grib",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://doi.org/10.24381/cds.b9c753f1"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Seasonal forecast of fire danger indices - Canadian FWI (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/s41597-024-02948-3"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Seasonal forecast of fire danger indices - Canadian FWI (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/fdg10371/Jupyter_notebooks"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "burnedarea:ha"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
