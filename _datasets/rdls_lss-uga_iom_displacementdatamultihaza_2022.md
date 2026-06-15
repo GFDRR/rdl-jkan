@@ -1,0 +1,598 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: International Organization for Migration (IOM) Displacement Tracking Matrix
+      (DTM)
+    url: https://data.humdata.org/dataset/uganda-displacement-data-multi-hazard-response-drr-platform-iom-dtm
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/uganda-displacement-data-multi-hazard-response-drr-platform-iom-dtm
+creator:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/uganda-displacement-data-multi-hazard-response-drr-platform-iom-dtm
+dataset_id: rdls_lss-uga_iom_displacementdatamultihaza_2022
+description: 'In response to the need for timely and accurate information on the multi-hazard
+  in Uganda, the International Organization for Migration (IOM) in Uganda implements
+  the Displacement Tracking Matrix (DTM). This dataset includes the number of affected
+  individuals and households, the number of displaced individuals and households,
+  and the most pressing needs.. [Source: This metadata record was automatically extracted
+  from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/uganda-displacement-data-multi-hazard-response-drr-platform-iom-dtm]'
+details: null
+exposure: []
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: IOM DTM collects displacement and impact data through standardized
+    field assessments and administrative reporting across Uganda's regions and districts.
+    Data is aggregated monthly to track affected populations, displaced households,
+    and humanitarian needs across multiple hazard types (flood, drought, climate events).
+    The dataset serves as a multi-hazard response and disaster risk reduction platform
+    for Uganda.
+  sources:
+  - id: source_1
+    license: null
+    name: International Organization for Migration (IOM) Displacement Tracking Matrix
+      (DTM)
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/uganda-displacement-data-multi-hazard-response-drr-platform-iom-dtm
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Affected population from multi-hazard events including flooding
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: Internally displaced persons from multi-hazard events including flooding
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_2
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: Affected population from drought and climate hazards
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: null
+      trigger: null
+      type: drought
+    id: loss_3
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: Internally displaced persons from drought and climate hazards
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: null
+      trigger: null
+      type: drought
+    id: loss_4
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://displacement.iom.int/sites/default/files/public/Methodological%20Framework%20used%20in%20DTM%20Operations%20for%20Quantifying%20Displacement%20and%20Mobility.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Hazards during the reporting period affected over 120,936 individuals
+    (15,572 households) with 13,763 people from 1,983 households being internally
+    displaced.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/e53049ab-5574-4d44-8a75-9abb0bd4c767/download/eet-dataset_aug_sept_oct_2025_public.xlsx
+  format: null
+  id: resource_e53049ab
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (August - October 2025)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: During the June and July 2025, several extreme weather events, including
+    floods, severe storms, and lightning, were documented. In total, these hazards
+    affected 19,869 individuals (3,801 households), with 14,853 people from 2,981
+    households experiencing internal displacement. Adults aged 18-64 comprised the
+    majority of those impacted at 46%, followed by children under 18 at 41%, and seniors
+    over 65 at 13%. Notably, females represented 64% of the affected population.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/4d4aaa6f-5842-469c-8b22-929cb3f34444/download/dtm_ug_eet_june_july_2025_dataset_publish.xlsx
+  format: null
+  id: resource_4d4aaa6f
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (June - July 2025)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: During this period, hazards impacted 13,421 individuals (2,776 households),
+    with 1,611 people from 374 households being displaced internally. Adults (18-64)
+    were the most affected, comprising 46%, followed by children below the age of
+    18 at 41%, and seniors over 65 at 13%. Additionally, females constituted more
+    than half of those affected, at 57%.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/cec100a9-f2d0-409c-89c1-319327f8598f/download/dataset_april_may_2025_iom_dtm_eet_uganda_publish.xlsx
+  format: null
+  id: resource_cec100a9
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (April - May 2025)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: During this period, hazards impacted over 1,034 individuals (210 households),
+    with 560 people from 156 households being displaced internally.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/10d1ff76-22dd-4b89-98c0-d1c4092447e9/download/february-2025_uganda-dtm_eet_dataset_publish_hdx.xlsx
+  format: null
+  id: resource_10d1ff76
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (Feb 2025)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Hazards during the reporting period affected over 1,907 individuals
+    (719 households) with 1,336 people from 501 households being internally displaced.
+    The most affected age group were adults between 18 and 64 years (75%), followed
+    by children below the age of 18 (21%) and elderly above 64 (4%).
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/b83baf8a-3eb6-4b73-bc2e-e4e050eaae89/download/january-2025-dtm-eet-disaster-uganda-13022025_publish.xlsx
+  format: null
+  id: resource_b83baf8a
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (Jan 2025)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: As of November 10, 2024, the Ministry of Health reported 443 Mpox cases
+    across 37 districts. Males accounted for 56% of cases, with females making up
+    the remaining 44%. Additionally, September and October saw widespread extreme
+    weather events, including floods, landslides, heavy storms, and fires. The hazards
+    in there reporting period affected over 50,262 individuals (9,348 households),
+    with 21,498 people from 3,965 households internally displaced. The most affected
+    age group were adults between 18 and 64 years (64%) followed by children below
+    the age of 18 (26%) and elderly above 64 (10%). Notably, more than half of affected
+    people were female (58%). Urgent needs have emerged, with health, food assistance
+    and NFI as critical priorities in the aftermath of the reported hazards. Infrastructure
+    damage was significant, with 4,990 houses partially destroyed, 926 houses completely
+    damaged, and 902 water facilities, 29 schools and 6 health facilities affected.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/2f2b082c-3582-4fec-8934-cc0bacefc6f7/download/uganda_multi_hazard_dataset-sep_oct_2024-public.xlsx
+  format: null
+  id: resource_2f2b082c
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (Sep - Oct 2024)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Scattered rains experienced during the months of June and July triggered
+    flash floods and heavy storms. Lightning was reported in the Karamoja region in
+    Amudat district, land conflicts in Wakiso and Amuru while public riots in Kamwenge.
+    The hazards affected 12,446 individuals (2,777 households), with 1,989 people
+    from 540 households internally displaced. Adults between 18 and 64 years were
+    the most affected age group (48%), followed by children below the age of 18 (39%)
+    and elderly above 64 (13%). Notably, more than half of affected people were female
+    (55%). Urgent needs have emerged, with health, food assistance and NFI as critical
+    priorities in the aftermath of the hazards. Infrastructure damage was significant,
+    with 231 houses completely destroyed, 150 houses partially damaged, and 69 water
+    facilities, 9 schools and 8 health facilities affected.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/5f136a11-577a-47fd-a616-c6bedbabebdf/download/june_july-24-hazard-dataset.xlsx
+  format: null
+  id: resource_5f136a11
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (June & July 2024)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The May rains triggered floods and landslides/mudslides in the most
+    affected districts in Uganda. Most floods in districts bordering the big water
+    bodies are because of the rising water levels. The hazards affected 46,457 individuals
+    (10,191 households), with 12,681 people from 2,697 households internally displaced
+    due to the adverse weather conditions.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/4f869210-7eb0-4215-af39-a9497559c40c/download/may-24-dataset_public.xlsx
+  format: null
+  id: resource_4f869210
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (May 2024)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In April 2024, the hazards affected 37,866 individuals (11,015 households),
+    with 12,731 people from 3,717 households internally displaced due to the adverse
+    weather conditions.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/63c36035-8abd-49fc-8df6-9a053a9af317/download/april-24-disaster-dataset_15052024_public_hdx.xlsx
+  format: null
+  id: resource_63c36035
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (April 2024)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In March, the impacts of the hazards affected 10,390 individuals (2,387
+    households), with 426 people from 91 households were internally displaced. Children
+    below the age of 18 were the most affected age group (67%), followed by adults
+    (18-64) at 30% and elderly above 64 (3%). Notably, more than half of affected
+    people were female (62%).
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/80b5629a-e8da-41a4-b49b-87e6ffba6744/download/march-2024-disaster-dataset_publish_hdx.xlsx
+  format: null
+  id: resource_80b5629a
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (March 2024)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In February 2024, the impacts of the hazards affected 3,935 individuals
+    (993 households), with 1,525 people from 271 households were internally displaced.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/9d4288e6-12b4-492b-a94d-83a4760caa26/download/feb-24-disaster-database_public_hdx.xlsx
+  format: null
+  id: resource_9d4288e6
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (February 2024)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In January, the impacts of the hazards affected 1,654 individuals (288
+    households), with 685 people from 125 households were internally displaced.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/e602e652-2bb3-423b-b670-754edb348979/download/jan-24-disaster-database_public_hdx.xlsx
+  format: null
+  id: resource_e602e652
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (January 2024)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: As the September to December (SOND) rainfall season winds down, extreme
+    weather events, specifically floods, landslides, hailstorms, and heavy winds have
+    led to significant devastation in the affected districts. The disasters have adversely
+    impacted 7,052 individuals, comprising 1,618 households, with 1,859 individuals
+    from 412 households being internally displaced. Demographically, adults (19-64
+    years) constitute the majority of the affected population at 61%, followed by
+    children under 19 years at 30%, and the elderly above 64 years at 9%. The primary
+    needs identified in the aftermath of these disasters include shelter, child protection
+    and general protection. The damage assessment revealed that 233 houses have been
+    partially damaged, while 46 houses have been completely destroyed. Additionally,
+    71 water facilities and 9 schools have suffered adverse effects.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/49cb8fb5-bd40-4cc8-be58-330bc6c2585f/download/dec-2023-uganda-multihazard-dataset_public-hdx.xlsx
+  format: null
+  id: resource_49cb8fb5
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (December 2023)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The ongoing heavy rains in the nation triggered extreme weather events
+    which include floods and heavy storms in the month of November. The disasters
+    affected a total of 38,547 individuals, representing 7,854 households while 15,962
+    individuals from 2,839 households were internally displaced. Adults (19-64 years)
+    were the most affected population group (50%), followed by children under 18 years
+    (42%) and the elderly who were above 64 years (8%). The most pressing needs are
+    food assistance, NFI, Hygiene promotion among others. Houses partially damaged
+    totaled 4,019 while 1,594 houses were completely destroyed. 208 water facilities,
+    42 health facilities and 32 schools were also affected. Disasters have so far
+    affected 215,299 individuals and displaced over 47,467 people as reported from
+    January to November 2023.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/c48f3e87-1852-4630-bd49-5e59da54753d/download/november_2023_disaster_update_uganda_dataset-002_public_hdx.xlsx
+  format: null
+  id: resource_c48f3e87
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (November 2023)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: "In September 2023, the Prime Minister Office's, in conjunction with\
+    \ Ministry of Water & Environment and Uganda National Meteorological Authority\
+    \ published an alert on the potential impacts of floods related to el ni\xF1o\
+    \ during the September - December rainy season. To monitor those, DTM Uganda,\
+    \ in collaboration with District Disaster Management Committees and Ministries\
+    \ Departs & Agencie activated its Emergency Event Tracking. In fact, between 1\
+    \ October and 14 November 2023, over 79,000 individuals have been affected by\
+    \ el ni\xF1o-related floods and other associated events related to heavy rains,\
+    \ such as landslides, mudslides, and traffic road accidents. Widespread heavy\
+    \ rains have caused significant damage to roads, bridges and properties across\
+    \ various regions, disrupting socio-economic activities and access to education,\
+    \ markets and health facilities; while above 2,600 acres of cultivable land have\
+    \ been destroyed exposing affected communities to food insecurity, especially\
+    \ to the almost 23,600 IDPs."
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/99ce9c42-65a6-49fc-b852-9a5b001ea175/download/oct_2023_eet_elnino_dataset_uganda_final_public_hdx.xlsx
+  format: null
+  id: resource_99ce9c42
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: "Uganda - EL Ni\xF1o Impact/DRR Platform (November 2023)"
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In September, 2557 individuals and 662 households were affected. 246
+    individuals and 57 households were internally displaced.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/98f452b7-5faa-45ba-bd73-e8d9e17bf73c/download/september_2023_dataset_public.xlsx
+  format: null
+  id: resource_98f452b7
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (September 2023)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In August 2023, 2904 individuals and 864 households were affected.
+    1041 individuals and 24 households were internally displaced.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/c90c93db-345f-4e6c-baca-391c24e855fb/download/multi-hazard_dataset_august_2023_rev_public.xlsx
+  format: null
+  id: resource_c90c93db
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (August 2023)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In the month of July 2023, floods were reported in Kapelebyong & Gulu,
+    human epidemics outbreaks (Cholera) in Kayunga, Namayingo & Nakaseke (rift valley
+    fever) and road accidents in Kagadi and Kampala. The disasters affected a total
+    of 2,040 individuals, representing 300 households and displaced internally 156
+    individuals from 30 households. The hazards affected mostly Adults (19-64 years)
+    population group (63%), followed by children under 18 years (33%) and the elderly
+    who are above 64 years (4%). The most pressing needs are in the affected sub-counties
+    are Health, water supply, sanitation, hygiene promotion among others.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/b1521bbc-b33d-436a-a56b-7a07c7ab844f/download/july_23_ug_hazard_data_hdx.xlsx
+  format: null
+  id: resource_b1521bbc
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (July 2023)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: From January to July 2023, 90,226 people were affected, and 2,401 people
+    were displaced by multi-hazards in Uganda.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/f8e58e54-14d6-4ff2-9821-dad0a50a0f68/download/2023_ug_multihazard_database_public.xlsx
+  format: null
+  id: resource_f8e58e54
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (January - July 2023)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset shows the number of individuals and households affected
+    and the impacts of disasters on a monthly basis at a district (Admin 2) level
+    in Uganda. A total of 171,148 individuals were affected in 2022.
+  download_url: https://data.humdata.org/dataset/acc482ab-7ef8-4135-aa20-e75e110ebf9e/resource/24b91ab8-7f65-4f08-918d-1fe112fe29f1/download/uganda_multihazard_2022_database_12012022-final-website.xlsx
+  format: null
+  id: resource_24b91ab8
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Uganda - Multi-Hazard Response/DRR Platform (2022)
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-uga_iom_displacementdatamultihaza_2022
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - UGA
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2025-10-31'
+  start: '2022-01-01'
+temporal_resolution: null
+title: Uganda Displacement Data - Multi-Hazard Response/DRR Platform [IOM DTM]
+version: null
+vulnerability: null
+---
