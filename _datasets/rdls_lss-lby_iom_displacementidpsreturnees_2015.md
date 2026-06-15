@@ -1,0 +1,956 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: International Organization for Migration (IOM) Displacement Tracking Matrix
+      (DTM)
+    url: https://data.humdata.org/dataset/libya-baseline-assessment-data-iom-dtm
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/libya-baseline-assessment-data-iom-dtm
+creator:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/libya-baseline-assessment-data-iom-dtm
+dataset_id: rdls_lss-lby_iom_displacementidpsreturnees_2015
+description: 'This datasets has IDPs, Household & Returnees data at Admin3 level gathered
+  through DTM Mobility Tracking Assessment. In the context of the political instability
+  that has prevailed since the uprising in Libya (October 2011) and culminated in
+  the collapse of a fragile central authority accompanied by fragmentation and infighting
+  among myriads of militias, with continued fighting since the mid-2014 escalations,
+  estimates indicate that the number of Internally Displaced Per-sons (IDPs) in Libya
+  has exceeded 400,000 individuals, some eight percent of the total population (HNO,
+  September 2015). While the country struggles to achieve and maintain stability,
+  thousands of migrants are also taking journeys to and through Libya in a desperate
+  bid to seek a better life in Europe. These migrants are exposed to risks of being
+  trafficked and exploited while traveling through dangerous routes in deserts and
+  territories controlled by different armed groups, as well as dying during attempts
+  to cross the Mediterranean Sea. However, there has been no standardized mechanism
+  in place to verify and regularly update IDP and migrant numbers. Given that most
+  humanitarian and international organizations operate remotely from Tunis since mid-July
+  2014 due to the deteriorating security situation, maintaining access to reliable
+  and updated data on the humanitarian situation in Libya has been challenging.. [Source:
+  This metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/libya-baseline-assessment-data-iom-dtm]'
+details: null
+exposure: []
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: IOM DTM conducted repeated baseline assessments (45 rounds) across
+    Libya at Admin3 administrative level to track internally displaced persons and
+    returnees resulting from political instability and armed conflict since 2011.
+    Data collection followed standardized DTM methodology for mobility tracking, with
+    household and individual-level counts aggregated by region and supplemented with
+    access-to-services and needs indicators.
+  sources:
+  - id: source_1
+    license: null
+    name: International Organization for Migration (IOM) Displacement Tracking Matrix
+      (DTM)
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/libya-baseline-assessment-data-iom-dtm
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Internal displacement of population due to political instability
+      and armed conflict in Libya
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: Returnee populations tracked through DTM mobility assessments
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_2
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://displacement.iom.int/sites/default/files/public/Methodological%20Framework%20used%20in%20DTM%20Operations%20for%20Quantifying%20Displacement%20and%20Mobility.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: During the assessment period, 125,802 individuals were identified as
+    IDPs (displaced in the locations of displacement) while 705,426 individuals were
+    identified as returnees (previously displaced persons returned to their locations
+    of origin). This shows that the overall displacement stock in Libya (covering
+    IDPs in locations of displacement as well as returnees at locations of origin/solution)
+    includes 831,228 displaced individuals.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/5fa55cb0-326a-4629-a056-eaf37aeff9d9/download/dtm-libya-r45-public-idps-returnees-dataset_hdx.xlsx
+  format: null
+  id: resource_5fa55cb0
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 45
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: During this round, a total of 695,516 individuals previously displaced
+    were identified to have returned to their places of origin, while 134,787 IDPs
+    were also identified as still displaced by end of August 2022. This accounts for
+    a 57 per cent reduction in the number of people internally displaced in Libya
+    since the October 2020 ceasefire (when 316,415 IDPs were reported).
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/2700fa9e-528b-4eae-a237-47928edae449/download/hdx_dtm-libya-r43-public-idps-returnees-dataset.xlsx
+  format: null
+  id: resource_2700fa9e
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 43
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This IOM Displacement Tracking Matrix (DTM) report presents the data
+    and findings on internally displaced persons (IDPs) and returnees between May
+    - June 2022, representing round 42 of the DTM Mobility Tracking in Libya. The
+    number of people internally displaced (IDPs) in Libya continued to decrease during
+    the reporting period as 143,419 individuals (29,194 families) were identified
+    to be displaced by June 2022 compared to 159,996 IDPs identified in the previous
+    round. By June 2022, a total of 688,121 individuals previously displaced were
+    reported to have returned to their places of origin in 56 municipalities that
+    had been previously affected by armed conflict or insecurity.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/16045b96-3c36-4b0c-b33e-74e4beb921ba/download/hdx_dtm-libya-r42-public-idps-returnees-dataset.xlsx
+  format: null
+  id: resource_16045b96
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 42
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This IOM Displacement Tracking Matrix (DTM) dataset presents the data
+    on internally displaced persons (IDPs) and returnees between February 2021 - April
+    2022, representing round 41 of the DTM Mobility Tracking in Libya. The trend of
+    return of IDPs to their places of origin and the resulting decrease in the number
+    of people displaced observed since the October 2020 ceasefire continued, with
+    680,772 individuals previously displaced returned to their places of origin, while
+    159,996 IDPs still identified as displaced by end of April 2022. This accounts
+    for a 49 per cent reduction in the number of people internally displaced in Libya
+    since the October 2020 ceasefire (when 316,415 IDPs were reported)
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/ac01da30-749c-48ba-869f-0a39f8cd6ef7/download/dtm-libya-r41-public-idps-returnees-dataset.xlsx
+  format: null
+  id: resource_ac01da30
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 41
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This IOM Displacement Tracking Matrix (DTM) report presents the data
+    and findings on internally displaced persons (IDPs) and returnees between December
+    2021 - January 2022, representing round 40 of the DTM Mobility Tracking in Libya.
+    Consistent with the trend observed throughout 2021, in this round of reporting,
+    the numbers of IDPs within the country continued decreasing, with a parallel increase
+    in the number of returnees. As compared to 661,892 returnees identified in round
+    39, the number of those identified during round 40 increased to 673,554 individuals.
+    This indicates a slight increase in the percentage of those returning (2%), accounting
+    for a total increase of 19 per cent since October 2020 ceasefire in Libya.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/ca6eccab-f1e7-483a-ae72-bff5e4bcbf94/download/hdx_dtm-libya-r40-public-idps-and-returnees-dataset.xlsx
+  format: null
+  id: resource_ca6eccab
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 40
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Libya Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]
+    (DTM Libya Baseline Assessment Round 39)
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/d4d1ef14-8e39-4828-a7ea-bc323e4ca013/download/hdx_dtm-libya-r39-public-idps-returnees-dataset.xlsx
+  format: null
+  id: resource_d4d1ef14
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 39
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: During July - September 2021, a further 6% reduction in the number
+    of people displaced (around 12,644 individuals) was observed as IDP families continued
+    to return to their places of origin. A total of 199,949 IDPs were identified to
+    be still displaced, as the number of returnees increased to 648,317 individuals
+    during this round of data collection.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/3448ab73-2831-42e1-9556-0243dee1df5e/download/hdx_dtm-round-38-data-summaries-for-publication.xlsx
+  format: null
+  id: resource_3448ab73
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 38
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: A total of 212,593 IDPs were identified during this round, marking
+    a reduction of 5% in the IDP figures from the previous round. Whereas, the number
+    of returnees increased to 643,123 individuals during this round.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/68bffa87-3a70-413a-a423-b2e915f7a89f/download/hdx_dtm-round-37-data-summaries.xlsx
+  format: null
+  id: resource_68bffa87
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 37
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: A total of 223,949 IDPs were identified during this round, a 9% reduction
+    in the IDP figures from the previous round. While the number of returnees increased
+    to 642,408 individuals during this round,
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/ebd4c803-dc5b-42db-8c33-0cb2817c8dd0/download/hdx_dtm-round-36-data-summaries-for-publication.xlsx
+  format: null
+  id: resource_ebd4c803
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 36
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Libya Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]
+    (DTM Libya Baseline Assessment Round 35)
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/e5561bc8-bb2d-4d57-b17b-9c47a1e00148/download/dtm-libya-baseline-assessment-round-35.xlsx
+  format: null
+  id: resource_e5561bc8
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 35
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Libya Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]
+    (DTM Libya Baseline Assessment Round 34)
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/9ade9ff6-e56c-45a8-a47d-da01490c7ffa/download/dtm-libya-baseline-assessment-round-34.xlsx
+  format: null
+  id: resource_9ade9ff6
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 34
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Libya Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]
+    (DTM Libya Baseline Assessment Round 33)
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/c5ffe61b-b2f6-4a09-9a99-28496fdbf26b/download/dtm-libya-baseline-assessment-round-33.xlsx
+  format: null
+  id: resource_c5ffe61b
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 33
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Libya Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]
+    (392,241 IDPs and 493,716 Returnees)
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/9fade75a-dd8f-4bc8-a1d8-84454a84816c/download/dtm-libya-baseline-assessment-round-32.xlsx
+  format: null
+  id: resource_9fade75a
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 32
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Libya Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]
+    (DTM Libya Baseline Assessment Round 31)
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/9c3fc957-8e67-4bb7-8810-693d6462c5ca/download/dtm-libya-baseline-assessment-round-31.xlsx
+  format: null
+  id: resource_9c3fc957
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 31
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In Round 30, the number of IDPs identified in Libya increased from
+    373,709 IDPs to 401,836 IDPs. New displacements during the reporting period were
+    primarily due to an increase in the instances of armed conflict in western Libya.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/a604182f-222a-478e-a2bc-b29cf9631a4e/download/dtm-libya-baseline-assessment-round-30.xlsx
+  format: null
+  id: resource_a604182f
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 30
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: In Round 29, the number of IDPs identified in Libya increased from
+    355,762 to 373,709.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/e4e3f129-8e51-4af5-b378-5239bf855202/download/dtm-libya-baseline-assessment-round-29.xlsx
+  format: null
+  id: resource_e4e3f129
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 29
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This report presents the findings of Round 28 of the mobility tracking
+    component of the Displacement Tracking Matrix (DTM) programme in Libya, covering
+    the reporting period from November to December 2019. In Round 28, the number of
+    internally displaced persons (IDPs) identified in Libya increased from 343,180
+    IDPs to 355,762 IDPs. New displacements during the reporting period were primarily
+    due to continued armed conflict in western Libya (Tripoli mantika and surrounding
+    regions).
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/253ae354-954f-4490-96a7-7ec88ff773f4/download/dtm-libya-baseline-assessment-round-28.xlsx
+  format: null
+  id: resource_253ae354
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 28
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Covering the reporting period from Aug to Oct 2019. In Round 27, the
+    number of IDPs) identified in Libya increased from 301,407 IDPs to 343,180 IDPs.
+    New displacements during the reporting period were primarily due to continued
+    conflict in Tripoli and to the outbreak of clashes in Murzuq, Southern Libya,
+    since August 2019.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/ac52e379-172c-4389-b991-8cc859938afe/download/dtm-libya-baseline-assessment-round-27.xlsx
+  format: null
+  id: resource_ac52e379
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 27
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The dataset contains number of IDPs and returnees at admin level 3.
+    Number of identified returnees in Libya increased sligthly to 447,025 and total
+    number of IDPs identified were 301,407. August 2019
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/bbfca9e4-4c56-4be6-9843-66db5b8973cd/download/dtm-libya-baseline-assessment-round-26.xlsx
+  format: null
+  id: resource_bbfca9e4
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 26
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The dataset contains number of IDPs and returnees at admin level 3.
+    Number of identified returnees in Libya decreased sligthly to 444,760 and total
+    number of IDPs identified were 268,629. May 2019
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/6107f8dc-3cc7-4754-9f75-50c800ca5fed/download/dtm-libya-baseline-assessment-round-25.xlsx
+  format: null
+  id: resource_6107f8dc
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 25
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The dataset contains number of IDPs and returnees at admin level 3.
+    Number of identified returnees in Libya decreased sligthly to 445,476 and total
+    number of IDPs identified were 172,541. Feb 2019
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/f74d5124-c21d-40e5-8751-df8d0b21a657/download/dtm-libya-baseline-assessment-round-24.xlsx
+  format: null
+  id: resource_f74d5124
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 24
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The dataset contains number of IDPs and returnees at admin level 3.
+    Number of identified returnees in Libya increased to 445,845 and total number
+    of IDPs identified were 170,040. Dec 2018
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/f5ecd232-ef0d-40cf-8919-b0dd80123b7b/download/dtm-libya-baseline-assessment-round-23.xlsx
+  format: null
+  id: resource_f5ecd232
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 23
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The dataset contains number of IDPs and returnees at admin level 3.
+    Number of identified returnees in Libya increased to 403,978 (+21,756) and total
+    number of IDPs identified were 187,423. Oct 2018
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/255f7055-9fe9-4f4c-8148-8e4529bca4f7/download/dtm-libya-baseline-assessment-round-22.xlsx
+  format: null
+  id: resource_255f7055
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 22
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The dataset contains number of IDPs, returnees at admin level 3. Returnees
+    trend continued in Round 21 as the number of returnees identified by DTM increased
+    to 382,222 returnees across Libya. At the same time, during the reporting period
+    new displacements were reported in several locations, including 370 Tawerghan
+    families (1,850 individuals) from Trig Al Matar and more than 2,400 from Derna.
+    August 2018
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/82850e86-593d-43e6-9a34-ba97164e1f76/download/dtm-libya-baseline-assessment-round-21.xlsx
+  format: null
+  id: resource_82850e86
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 21
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Returnees 372,741 individuals & 74,554 HH, 92% of them live in theri
+    previous home. IDPs 192,513 ind and 38,510 HH 65% of IDPs live in self-pad rented
+    accomodations.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/a5a4b545-0d9a-48f2-a013-c62632f888e1/download/dtm-libya-baseline-assessment-round-20.xlsx
+  format: null
+  id: resource_a5a4b545
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 20
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Returnees 372,022 individuals & 74,416 HH. IDPs 179,400 ind and 35,911
+    HH. 62,618 Ind and 12,501 HH Displaced between 2011-2014 . Displaced in 2015 69,212
+    ind and 13,841 HH. Displaced from 2016 to present 47,570 ind and 9,569 HH. Migrants
+    677,013 ind.
+  download_url: https://data.humdata.org/dataset/89d609ef-b8c0-47b5-91a6-fe29af7d147c/resource/982913dd-7ead-4bd5-b5f2-9fb7a4ed3aef/download/dtm-libya-baseline-assessment-round-19.xlsx
+  format: null
+  id: resource_982913dd
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 19
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is from Mar 2018. The dataset has IDPs , Households and
+    Returnees. 184,612 total IDPs and 368,583 total returnees. Place of displacement
+    and origin and year of displacement.
+  download_url: https://displacement.iom.int/system/tdf/datasets/R18%20Data%20Summaries%20for%20Publication_re.xlsx?file=1&type=node&id=3435
+  format: null
+  id: resource_ff652d06
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 18
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Jan-Feb 2018. The dataset has IDPs, Households,
+    Returnees at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/R17%20Data%20Summaries%20for%20Publication.xlsx?file=1&type=node&id=3182
+  format: null
+  id: resource_3a368abc
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 17
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Dec 2017. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/IDP-Returnee%20Dataset%20-%20DTM%20Libya%20Round%2016.xlsx?file=1&type=node&id=3116
+  format: null
+  id: resource_81779faa
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 16
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Nov 2017. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/IOM%20DTM%20Libya%20Baladiya%20Data%20Generator%20%28R15%29.xlsm?file=1&type=node&id=3311
+  format: null
+  id: resource_97b270a9
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 15
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Oct 2017. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/DTM%20Round%2014%20IDP%20and%20Returnee%20Data%20Summaries.xlsx?file=1&type=node&id=3310
+  format: null
+  id: resource_90594ecd
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 14
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Aug 2017. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/DTM%20Libya%20Round%2013%20IDP-Returnee%20Dataset%20%28for%20publication%29.xlsx?file=1&type=node&id=3309
+  format: null
+  id: resource_f5739eb9
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 13
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Jul 2017. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/DTM%20Libya%20Round%2012%20IDP-Returnee%20Dataset%20%28for%20publication%29.xlsx?file=1&type=node&id=3308
+  format: null
+  id: resource_c22503c6
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 12
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Jul 2017. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/DTM%20Libya%20Round%2011%20IDP-Returnee%20Dataset%20%28for%20publication%29.xlsx?file=1&type=node&id=1524
+  format: null
+  id: resource_0c274c01
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 11
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form May 2017. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/IOM%20DTM%20Libya%20Round%2010%20IDP-Returnee%20Datastet%20for%20Publication.xlsx?file=1&type=node&id=1481
+  format: null
+  id: resource_10e60e5b
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 10
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form March 2017. The dataset has IDPs, Households,
+    Returnees at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/05_IOM%20DTM%20IDP-Returnee%20Dataset_Libya_Round%209_201703%20%28Public%29.xlsx?file=1&type=node&id=1478
+  format: null
+  id: resource_4c1a4c22
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 9
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Jan -Feb 2017. The dataset has IDPs, Households,
+    Returnees at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/05_IOM%20DTM_%20Dataset%20Mobility%20Tracking_Libya_Round%208_201701-201702.xlsx?file=1&type=node&id=1476
+  format: null
+  id: resource_d3522337
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 8
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Dec 2016. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/05_IOM%20DTM%20Dataset%20%28Public%29_Libya_Round%207.xlsx?file=1&type=node&id=1472
+  format: null
+  id: resource_1ae8141d
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 7
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Sep 2016. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/Libya_baselinbe_round_6.xlsx?file=1&type=node&id=271
+  format: null
+  id: resource_ebbdc439
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 6
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Jul-Aug 2016. The dataset has IDPs, Households,
+    Returnees at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/DTM%20R5%20Dataset%20.xlsx?file=1&type=node&id=270
+  format: null
+  id: resource_deacd619
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 5
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Jun 2016. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/Libya_baseline_round_4.xlsx?file=1&type=node&id=268
+  format: null
+  id: resource_b49ea6a5
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 4
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form May 2016. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/Libya_baseline_round_3.xlsx?file=1&type=node&id=267
+  format: null
+  id: resource_3276386c
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 3
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form March 2016. The dataset has IDPs, Households,
+    Returnees at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/Libya_baseline_round_2.xlsx?file=1&type=node&id=266
+  format: null
+  id: resource_a4c62130
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 2
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This dataset is form Dec 2015. The dataset has IDPs, Households, Returnees
+    at Admin3 level.
+  download_url: https://displacement.iom.int/system/tdf/datasets/DTM%20R1%20Dataset.xlsx?file=1&type=node&id=265
+  format: null
+  id: resource_3d6903ef
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Libya Baseline Assessment Round 1
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-lby_iom_displacementidpsreturnees_2015
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - LBY
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2022-12-31'
+  start: '2015-12-01'
+temporal_resolution: null
+title: Libya Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]
+version: null
+vulnerability: null
+---

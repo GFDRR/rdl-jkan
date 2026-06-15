@@ -4,7 +4,7 @@ attributions:
     affiliation: null
     email: null
     name: Humanitarian partners
-    url: https://data.humdata.org/dataset/kenya-drought-related-key-figures
+    url: https://data.humdata.org/dataset/kenya-pin-targeted-reached-by-location-and-cluster
   id: attribution_1
   role: collaborator
 catalog: Humanitarian Data Exchange
@@ -12,26 +12,25 @@ contact_point:
   affiliation: null
   email: null
   name: OCHA Regional Office for Southern and Eastern Africa (ROSEA)
-  url: https://data.humdata.org/dataset/kenya-drought-related-key-figures
+  url: https://data.humdata.org/dataset/kenya-pin-targeted-reached-by-location-and-cluster
 creator:
   affiliation: null
   email: null
   name: OCHA Regional Office for Southern and Eastern Africa (ROSEA)
-  url: https://data.humdata.org/dataset/kenya-drought-related-key-figures
-dataset_id: rdls_lss-ken_ocharosea_droughtrelatedkeyfigures_20230531
-description: 'Drought Related Key Figures for Kenya. [Source: This metadata record
-  was automatically extracted from the Humanitarian Data Exchange (HDX); Original
-  dataset: https://data.humdata.org/dataset/kenya-drought-related-key-figures]'
+  url: https://data.humdata.org/dataset/kenya-pin-targeted-reached-by-location-and-cluster
+dataset_id: rdls_lss-ken_ocharosea_droughtrelatedpeopleaffec_20230630
+description: 'Drought affected areas and population in Kenya. [Source: This metadata
+  record was automatically extracted from the Humanitarian Data Exchange (HDX); Original
+  dataset: https://data.humdata.org/dataset/kenya-pin-targeted-reached-by-location-and-cluster]'
 details: null
 exposure: []
 hazard: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
-  description: Drought-related key figures aggregated from humanitarian partners'
-    field assessments and situation reports during the 2021-2022 Kenya drought emergency.
-    Data compiled by OCHA ROSEA to track population-level impacts including affected
-    counts, internally displaced persons, and malnutrition prevalence for humanitarian
-    response planning and funding appeals.
+  description: Drought-affected population data compiled from humanitarian partners
+    operating in Kenya, aggregated by geographic location to track affected populations,
+    humanitarian assistance targets, and actual reach of interventions during drought
+    events.
   sources:
   - id: source_1
     license: null
@@ -44,13 +43,13 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-- href: https://data.humdata.org/dataset/kenya-drought-related-key-figures
+- href: https://data.humdata.org/dataset/kenya-pin-targeted-reached-by-location-and-cluster
   rel: source
 loss:
   losses:
   - asset_category: population
     asset_dimension: population
-    description: Population affected by drought in Kenya
+    description: Population affected by drought in Kenya by location
     disaster_identifiers: []
     hazard:
       classification: null
@@ -73,7 +72,7 @@ loss:
       loss_type: ground_up
   - asset_category: population
     asset_dimension: population
-    description: Internally displaced persons due to drought
+    description: Population targeted for humanitarian assistance due to drought
     disaster_identifiers: []
     hazard:
       classification: null
@@ -88,7 +87,7 @@ loss:
         measurement:
           quantity_kind: count
           unit: null
-        metric: displaced
+        metric: exposure
         modelling: observed
         type: total
       loss_approach: empirical
@@ -96,7 +95,8 @@ loss:
       loss_type: ground_up
   - asset_category: population
     asset_dimension: population
-    description: Malnutrition cases related to drought
+    description: Population reached by humanitarian assistance in drought-affected
+      areas
     disaster_identifiers: []
     hazard:
       classification: null
@@ -130,28 +130,29 @@ referenced_by:
   doi: null
   id: reference_1
   name: Methodology documentation
-  url: https://reliefweb.int/report/kenya/kenya-drought-flash-appeal-october-2021-october-2022-revised-may-2022
+  url: https://reliefweb.int/updates?advanced-search=(PC131
 resources:
 - access_url: null
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Kenya Drought Related - Key Figures (CSV)
-  download_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRppQx8JTKkKRCKmzfnCMmTFEcvCpkbP9PdHs1sQTUyacmbsx8tlAXpgBLFce-lcehukreGGuXjA_4S/pub?gid=1275038715&single=true&output=csv
+  description: Kenya Drought Related - People Affected, Targeted & Reached by Location
+    (CSV)
+  download_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRppQx8JTKkKRCKmzfnCMmTFEcvCpkbP9PdHs1sQTUyacmbsx8tlAXpgBLFce-lcehukreGGuXjA_4S/pub?gid=1774496556&single=true&output=csv
   format: null
-  id: resource_a2ced1e0
+  id: resource_8a741b70
   media_type: text/csv
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: kenya-drought-key-figures
+  title: kenya-drought-affected-targeted-reached-by-location
 risk_data_type:
 - loss
 schema: rdls-10
-slug: rdls_lss-ken_ocharosea_droughtrelatedkeyfigures_20230531
+slug: rdls_lss-ken_ocharosea_droughtrelatedpeopleaffec_20230630
 spatial:
   bbox: null
   centroid: null
@@ -164,9 +165,9 @@ temporal:
   central_year: null
   duration: null
   end: null
-  start: '2023-05-31'
+  start: '2023-06-30'
 temporal_resolution: null
-title: Kenya Drought Related - Key Figures
+title: Kenya Drought Related - People Affected, Targeted & Reached by Location
 version: null
 vulnerability: null
 ---
