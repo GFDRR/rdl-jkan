@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_subsidiariedaddelaunidadp_20161231",
+      "title": "Subsidiariedad de la Unidad para las Víctimas en Colombia, 2013 - 2015",
+      "description": "Corresponde a los municipios focalizados por la Unidad para la Atención a Víctimas (UARIV) entre 2013 al 2015; y para el 2016, representa los municipios focalizados, los montos asignados y pagados (ejecutados) y la cantidad de hogares apoyados en la etapa de inmediatez, lo cual corresponde a la etapa en la cual las víctimas se encuentran entre la declaración de los hechos y se emita el concepto de valoración.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/subsidiariedad-uariv15]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/subsidiariedad-uariv15"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/subsidiariedad-uariv15"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2016-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Unidad para la Atención y Reparación Integral a las Víctimas (UARIV)",
+            "url": "https://data.humdata.org/dataset/subsidiariedad-uariv15"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "This dataset compiles administrative records from the Colombian Victims Unit (UARIV) documenting municipalities prioritized for victim assistance between 2013-2015, and for 2016 includes allocated and executed monetary amounts alongside household counts supported during the immediate assistance phase following armed conflict events.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Unidad para la Atención y Reparación Integral a las Víctimas (UARIV)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Administrative registry of victims assisted and financial resources allocated for reparation and immediate assistance by the Colombian Victims Unit across focused municipalities."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d3f6ccdd",
+          "title": "Subsidiariedad-UARIV-2013-2015.xlsx",
+          "description": "Subsidiariedad de la Unidad para las Víctimas en Colombia, 2013 - 2015 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/9f833509-a29a-4798-a3a1-1d2f1fd54ba1/resource/d3f6ccdd-284b-459c-abe9-42666d6f8a03/download/reporte-ejecucion-mun-2013-2016.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Count of households supported by the Victims Unit during immediate assistance phase following armed conflict events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Monetary amounts assigned and executed by the Victims Unit for victim assistance and reparation"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/subsidiariedad-uariv15",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

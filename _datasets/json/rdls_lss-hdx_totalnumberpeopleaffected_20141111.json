@@ -1,0 +1,237 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hdx_totalnumberpeopleaffected_20141111",
+      "title": "Total number of people affected by natural disasters",
+      "description": "Number of people affected by natural disasters disaggregated by country and year. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/total-number-of-people-affected-by-natural-disasters]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/total-number-of-people-affected-by-natural-disasters"
+      },
+      "creator": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/total-number-of-people-affected-by-natural-disasters"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2014-11-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Centre for Research on the Epidemiology of Disasters (CRED)",
+            "url": "https://data.humdata.org/dataset/total-number-of-people-affected-by-natural-disasters"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Data compiled from the EM-DAT (Emergency Events Database) maintained by CRED, aggregating reported disaster impact records from multiple sources. The dataset presents total affected population counts disaggregated by country and year across multiple natural hazard types, representing post-event impact assessments.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Centre for Research on the Epidemiology of Disasters (CRED)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "EM-DAT database providing global records of natural disaster impacts including affected populations disaggregated by country, year, and disaster type."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.emdat.be/explanatory-notes"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_fc53c2b6",
+          "title": "total-affected-natural-disasters.xlsx",
+          "description": "Total number of people affected by natural disasters (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/97e007af-4733-4b60-a472-a733f10dedd5/resource/fc53c2b6-8143-45b1-a796-55644f8d9d55/download/total-affected-natural-disasters.xlsx"
+        },
+        {
+          "id": "resource_cb274aca",
+          "title": "total-affected-natural-disasters.csv",
+          "description": "Total number of people affected by natural disasters (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/97e007af-4733-4b60-a472-a733f10dedd5/resource/cb274aca-d979-4fac-a2b5-a0de5910c6e2/download/total-affected-natural-disasters.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total number of people affected by flood events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total number of people affected by earthquake events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total number of people affected by strong wind events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total number of people affected by drought events"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total number of people affected by landslide events"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total number of people affected by wildfire events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/total-number-of-people-affected-by-natural-disasters",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_flowminder_hurricanematthewestimated_20161122",
+      "title": "Hurricane Matthew Haiti estimated population movement as of 22 November 2016",
+      "description": "Estimated population movement in Haiti as of 22 November 2016. The estimated distribution of people for whom their home Commune/Section Communale in the pre-hurricane period was in either Grande Anse, Sud or Nippes départment, and as of 22 November had moved to another Commune/Section Communale. Estimates are based on movements of de-identified Digicel SIM cards which made or received at least one call pre-hurricane and in the week up to 22 November 2016. The SIM card movements are combined with available population data derived from estimates for the year 2015.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-22-november-2016]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "Flowminder (inactive)",
+        "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-22-november-2016"
+      },
+      "creator": {
+        "name": "Flowminder (inactive)",
+        "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-22-november-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-11-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Flowminder",
+            "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-22-november-2016"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Digicel Haiti",
+            "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-22-november-2016"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Population estimates 2015",
+            "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-22-november-2016"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "De-identified Digicel SIM card call records from pre-hurricane and post-hurricane periods (up to 22 November 2016) were tracked to identify population movements from Grande Anse, Sud, and Nippes départments. SIM card movement patterns were combined with 2015 population estimates to derive estimated total population displacement across communes and sections communales affected by Hurricane Matthew.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Flowminder",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "De-identified Digicel SIM card movement data tracking population displacement from affected communes pre- and post-hurricane"
+          },
+          {
+            "id": "source_2",
+            "name": "Digicel Haiti",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Mobile phone network operator providing call detail records for population movement tracking"
+          },
+          {
+            "id": "source_3",
+            "name": "Population estimates 2015",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Baseline population data used to scale SIM card movements to estimated total population displacement"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_377f805e",
+          "title": "FINAL_HTI_Flowminder-WFP-Population-Movements-20161122.pdf",
+          "description": "Estimated population movement in Haiti as of 22 November 2016. The estimated distribution of people for whom their home Commune/Section Communale in the pre-hurricane period was in either Grande Anse, Sud or Nippes départment, and as of 22 November had moved to another Commune/Section Communale. Estimates are based on movements of de-identified Digicel SIM cards which made or received at least one call pre-hurricane and in the week up to 22 November 2016. The SIM card movements are combined with available population data derived from estimates for the year 2015.",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/53ab6298-b783-4ef5-ae43-7532420ce8ad/resource/377f805e-e064-4060-9dde-b0da4e3ae421/download/final_hti_flowminder-wfp-population-movements-20161122.pdf"
+        },
+        {
+          "id": "resource_4ce91195",
+          "title": "Flowminder-Digicel-WFP_Haiti-population-movement_2016-11-22.zip",
+          "description": "Compressed folder containing p-coded csv files. Contains: inflow and outflow of people as a percentage of population at Haiti Administrative unit level 2 and 3 (p-codes) absolute inflow and outflow of people at Haiti Administrative unit level 2 and 3 (p-codes) population inflow and outflow above normal at Haiti Administrative unit level 2 and 3 (p-codes) Summary statistics on estimated population flows README file containing supporting information",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/53ab6298-b783-4ef5-ae43-7532420ce8ad/resource/4ce91195-aa61-463f-a702-c7f93d8533c9/download/flowminder-digicel-wfp_haiti-population-movement_2016-11-22.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement from Hurricane Matthew estimated via mobile phone movement data"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-22-november-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

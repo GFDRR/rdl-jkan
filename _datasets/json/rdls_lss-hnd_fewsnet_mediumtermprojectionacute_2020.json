@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hnd_fewsnet_mediumtermprojectionacute_2020",
+      "title": "Honduras Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2020",
+      "description": "Honduras Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic data for 2020. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/honduras_medium_term_projection__fewsnet_ipc_shapefile_for_2020]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "IPC Classification spatial data in different IPC scenarios collected by FEWS NET enumerators on a regular schedule (typically monthly).",
+      "contact_point": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/honduras_medium_term_projection__fewsnet_ipc_shapefile_for_2020"
+      },
+      "creator": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/honduras_medium_term_projection__fewsnet_ipc_shapefile_for_2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-01",
+        "end": "2020-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "FEWS NET enumerators conducted regular (typically monthly) field surveys to classify acute food insecurity conditions using the IPC methodology. Survey results were spatially mapped and compiled into geographic datasets for October, November, and December 2020 medium-term projections, representing modeled food insecurity impact classifications.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "FEWS NET",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Integrated Food Security Phase Classification (IPC) spatial data collected through regular enumerator surveys to classify acute food insecurity phases across geographic areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4fda4bab",
+          "title": "October - 2020 Honduras Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Honduras Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2020 (October - 2020 Honduras Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/geo+json",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=HN&scenario=ML2&collection_date=2020-10-01&format=geojson"
+        },
+        {
+          "id": "resource_ec5e2782",
+          "title": "November - 2020 Honduras Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Honduras Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2020 (November - 2020 Honduras Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/geo+json",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=HN&scenario=ML2&collection_date=2020-11-01&format=geojson"
+        },
+        {
+          "id": "resource_7bce96f9",
+          "title": "December - 2020 Honduras Medium Term Projection FEWS NET IPC Geographic Data",
+          "description": "Honduras Medium Term Projection FEWS NET Acute Food Insecurity Classifications Geographic Data for 2020 (December - 2020 Honduras Medium Term Projection FEWS NET IPC Geographic Data)",
+          "media_type": "application/geo+json",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=HN&scenario=ML2&collection_date=2020-12-01&format=geojson"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute food insecurity classifications derived from drought and other livelihood shocks affecting population food security status"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/honduras_medium_term_projection__fewsnet_ipc_shapefile_for_2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

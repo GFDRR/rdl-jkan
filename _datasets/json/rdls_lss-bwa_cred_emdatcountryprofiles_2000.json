@@ -1,0 +1,252 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-bwa_cred_emdatcountryprofiles_2000",
+      "title": "EM-DAT - Country Profiles, Botswana",
+      "description": "Aggregated figures for natural hazard related events in EM-DAT: Botswana Documentation on the Country Profiles available here How to cite the EM-DAT Project here Main dataset on HDX: EM-DAT - Country Profiles More on the EM-DAT database : website / data portal Each line corresponds to a given combination of year, country, disaster subtype and reports figures for : number of disasters total number of people affected total number of deaths economic losses (original value and adjusted). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/emdat-country-profiles-bwa]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/emdat-country-profiles-bwa"
+      },
+      "creator": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/emdat-country-profiles-bwa"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BWA"
+        ]
+      },
+      "temporal": {
+        "start": "2000-01-01",
+        "end": "2025-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "EM-DAT (Emergency Events Database)",
+            "url": "https://data.humdata.org/dataset/emdat-country-profiles-bwa"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "EM-DAT Country Profiles aggregate historical disaster event records from the Emergency Events Database, compiled from diverse sources including government reports, UN agencies, and media monitoring. Data are organized by disaster type and subtype with cumulative impact metrics (affected count, deaths, economic damage) for Botswana across all recorded events.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "EM-DAT (Emergency Events Database)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Comprehensive registry of natural disaster events with aggregated impact figures including affected populations, fatalities, and economic damages. EM-DAT compiles data from multiple sources including UN agencies, governments, and media reports."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9685adca",
+          "title": "EMDAT-country-profiles_BWA_2026_01_30.xlsx",
+          "description": "EM-DAT - Country Profiles, Botswana (Version: 2026-01-30)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/21123599-a529-4a72-a14e-7b26f339c151/resource/9685adca-a480-4beb-a8b7-b76fcb022a52/download/emdat-country-profiles_bwa_2026_01_30.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by flood events in Botswana"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from flood events in Botswana"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by drought events in Botswana"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from drought events in Botswana"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_extreme_temperature",
+              "type": "extreme_temperature",
+              "intensity_measure": "AirTemp:C"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by extreme temperature events in Botswana"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_extreme_temperature",
+              "type": "extreme_temperature",
+              "intensity_measure": "AirTemp:C"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from extreme temperature events in Botswana"
+          },
+          {
+            "id": "loss_7",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic losses from wildfire events in Botswana"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/emdat-country-profiles-bwa",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

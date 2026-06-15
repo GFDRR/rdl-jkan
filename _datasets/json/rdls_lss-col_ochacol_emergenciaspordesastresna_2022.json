@@ -1,0 +1,273 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_emergenciaspordesastresna_2022",
+      "title": "Colombia: Emergencias por Desastres Naturales",
+      "description": "Emergencias por desastres naturales según reporte de la UNGRD. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/colombia-emergencias-por-desastres-naturales]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/colombia-emergencias-por-desastres-naturales"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/colombia-emergencias-por-desastres-naturales"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-01",
+        "end": "2024-07-02"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+            "url": "https://data.humdata.org/dataset/colombia-emergencias-por-desastres-naturales"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event disaster impact registry compiled by UNGRD from emergency reports across Colombian departments and municipalities. Data includes standardized impact metrics (deaths, injuries, affected persons, damaged buildings, affected roads, destroyed dwellings, affected hectares) aggregated by event date, location, and hazard type for the period 2016-2024.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official Colombian national disaster risk management authority registry of natural disaster emergencies with impact metrics including casualties, affected populations, damaged infrastructure, and affected agricultural areas from 2016-2024."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_239f7524",
+          "title": "ungrd_2016_2024_total.xlsx",
+          "description": "Colombia: Emergencias por Desastres Naturales (Colombia desastres naturales Enero 2016- 2 Julio 2024 fuente UNGRD)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8b4abbc2-a705-4eb7-8909-bdc7d9ed20ce/resource/239f7524-f5e1-49ca-ab2b-82cb15afa94b/download/ungrd_2016_2024_total.xlsx"
+        },
+        {
+          "id": "resource_6f4c8b32",
+          "title": "Colombia emergencias por desastres naturales, UNGRD. 1 enero a 11 de abril 2023",
+          "description": "Colombia emergencias por desastres naturales, UNGRD. 1 enero a 11 de abril 2023",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8b4abbc2-a705-4eb7-8909-bdc7d9ed20ce/resource/6f4c8b32-1dfa-46d6-b16a-5cad8b25f0b0/download/emergencias-2023-martes-11-de-abril-7am.xlsx"
+        },
+        {
+          "id": "resource_fb9cb227",
+          "title": "Colombia emergencias por desastres naturales, UNGRD. 1 enero a 7 de marzo 2023",
+          "description": "Emergencias por desastres naturales reportadas UNGRD 1 de enero a 7 de marzo 2023",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8b4abbc2-a705-4eb7-8909-bdc7d9ed20ce/resource/fb9cb227-035a-49a5-a311-a32295645afa/download/emergencias-2023-martes-07-de-marzo-7am.xlsx"
+        },
+        {
+          "id": "resource_a3585673",
+          "title": "Colombia emergencias por desastres naturales UNGRD 2022",
+          "description": "Emergencias por desastres naturales 2022 según reporte de la Unidad Nacional de Gestión de Riesgos y Desastres",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8b4abbc2-a705-4eb7-8909-bdc7d9ed20ce/resource/a3585673-c67e-4b29-82f5-bdcb6ead5711/download/emergencias-2022.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People affected by flood events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Destroyed dwellings from flood events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Agricultural land affected (hectares) by flood events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People affected by landslide events"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Destroyed dwellings from landslide events"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People affected by strong wind/storm events"
+          },
+          {
+            "id": "loss_7",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Destroyed dwellings from strong wind/storm events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/colombia-emergencias-por-desastres-naturales",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

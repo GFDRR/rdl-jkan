@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-gtm_ocharolac_desnutricionagudaenmenore_20160502",
+      "title": "Guatemala Desnutrición Aguda en menores de 5 años por desastres naturales 2015",
+      "description": "Peso para talla en menores de 5 años (desnutrición aguda) se utiliza para evaluar Incidencia de los desastres naturales recientes Mitch 1998, Stan 2005, Agatha y volcán de Pacaya 2010 y E12 2012. Este es un indicador que evalúa la desnutrición aguda por hambre.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/guatemala-incidencia-en-peso-para-talla-en-menores-de-5-anos-por-desastres-naturales-2015]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "* [INFORM Guatemala.](http://www.inform-index.org/Subnational/Guatemala) * Componente: Población Desprotegida * Sub Componente: Población Infantil afectada por desastres naturales * Categoría: Otros grupos vulnerables * Dimensión: Vulnerabilidad",
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/guatemala-incidencia-en-peso-para-talla-en-menores-de-5-anos-por-desastres-naturales-2015"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/guatemala-incidencia-en-peso-para-talla-en-menores-de-5-anos-por-desastres-naturales-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GTM"
+        ]
+      },
+      "temporal": {
+        "start": "2016-05-02"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Ministerio de Salud Pública y Asistencia Social de Guatemala - SIGSA",
+            "url": "https://data.humdata.org/dataset/guatemala-incidencia-en-peso-para-talla-en-menores-de-5-anos-por-desastres-naturales-2015"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Health surveillance data from Guatemala's national health registry (SIGSA) documenting acute malnutrition indicators in children under 5 years, analyzed to evaluate the indirect health impacts of specific natural disaster events (Hurricane Mitch 1998, Stan 2005, Agatha and Pacaya volcano 2010, E12 2012) on nutritional status.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Ministerio de Salud Pública y Asistencia Social de Guatemala - SIGSA",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Health registry system providing surveillance data on acute malnutrition (weight-for-height) in children under 5 years, used to assess incidence related to natural disaster events."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e65c1b1e",
+          "title": "2.2.2.2.A Incidencia en peso para talla en menores de 5 años por desastres naturales.xlsx",
+          "description": "Impacto eventos naturales en la desnutrición aguda (Peso para Talla) en menores de 5 años, año 2015.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/1b2491ff-5dfc-4795-b814-b216e4fbf4da/resource/e65c1b1e-5b5a-4542-a140-d7850899c3ed/download/2.2.2.2.a-incidencia-en-peso-para-talla-en-menores-de-5-anos-por-desastres-naturales.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute malnutrition (weight-for-height) in children under 5 years as indirect impact from natural disasters"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute malnutrition (weight-for-height) in children under 5 years as indirect impact from volcanic activity"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/guatemala-incidencia-en-peso-para-talla-en-menores-de-5-anos-por-desastres-naturales-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

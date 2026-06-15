@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_victimasdeminas_1990",
+      "title": "Colombia - Víctimas de minas",
+      "description": "Según el Glosario Nacional de Términos para la Acción Integral contra Minas Antipersonal, por 'mina antipersonal' se entiende toda mina concebida para que explosione por la presencia, la proximidad o el contacto de una persona, y que en caso de explosionar tenga la potencialidad de incapacitar, herir y/o matar a una o más personas. Las minas diseñadas para detonar por la presencia, la proximidad o el contacto de un vehículo, y no de una persona que estén provistas de un dispositivo antimanipulación, no son consideradas minas antipersonal por estar así equipadas.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/victimas-de-minas]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/victimas-de-minas"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/victimas-de-minas"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "1990-01-01",
+        "end": "2015-02-16"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Dirección para la Acción Integral contra Minas Antipersonal (DAICMA)",
+            "url": "https://data.humdata.org/dataset/victimas-de-minas"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Annual registry of landmine victims compiled by DAICMA from incident reports across Colombia. Data captures direct human casualties (deaths and injuries) from antipersonnel mine explosions, serving as a post-event impact record for disaster risk monitoring.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Dirección para la Acción Integral contra Minas Antipersonal (DAICMA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official registry of antipersonnel landmine victims in Colombia, documenting casualties and injuries from mine incidents."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0f07246d",
+          "title": "Landmine-Victims-Annual.csv",
+          "description": "Colombia - Víctimas de minas (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/94b63a7c-088b-4e11-87bc-db5a562ff3c2/resource/0f07246d-7d19-4465-9005-13cbd925f1a4/download/landmine-victims-annual.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_pest_infestation",
+              "type": "pest_infestation",
+              "intensity_measure": "Pest:count/area"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from antipersonnel landmine incidents"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_pest_infestation",
+              "type": "pest_infestation",
+              "intensity_measure": "Pest:count/area"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injuries from antipersonnel landmine incidents"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/victimas-de-minas",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

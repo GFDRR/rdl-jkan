@@ -1,0 +1,180 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_unosat_damageassessmentoverviewd_20161018",
+      "title": "Haiti - Damage Assessment Overview of Dame Marie and Anse d'Hainault Areas, Grande Anse & Sud Departments",
+      "description": "This map illustrates potentially damaged satellite-detected areas, related damage density and the identified road obstacles in the southwestern part of Haiti in Grande Anse and Sud departments, Haiti. The UNITAR-UNOSAT analysis used a Pleiades satellite image acquired on the 12 October 2016. The UNITAR-UNOSAT analysis combined with Copernicus analysis, identified 9,173 potentially damaged structures within this map extent. Additionally, 123 road obstacles and 255 population gathering sites within this area were identified in the analysis. Please note that some areas were cloud covered and could not be analysed. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-overview-of-dame-marie-and-anse-d-hainault-areas-grande-anse-sud-departments]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-overview-of-dame-marie-and-anse-d-hainault-areas-grande-anse-sud-departments"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-overview-of-dame-marie-and-anse-d-hainault-areas-grande-anse-sud-departments"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNITAR-UNOSAT",
+            "url": "https://data.humdata.org/dataset/damage-assessment-overview-of-dame-marie-and-anse-d-hainault-areas-grande-anse-sud-departments"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Copernicus Emergency Management Service",
+            "url": "https://data.humdata.org/dataset/damage-assessment-overview-of-dame-marie-and-anse-d-hainault-areas-grande-anse-sud-departments"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event satellite imagery from Pleiades (acquired 12 October 2016) was analyzed by UNOSAT using change detection methods, comparing pre- and post-event imagery to identify potentially damaged structures, road obstacles, and population gathering sites in Grande Anse and Sud departments of Haiti following Hurricane Matthew (October 2016). The UNOSAT analysis was combined with Copernicus Emergency Management Service outputs to produce a unified geodatabase of impact features. The resulting dataset supports humanitarian response and damage assessment operations in the affected area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNITAR-UNOSAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "UNOSAT performed satellite imagery analysis using Pleiades imagery acquired on 12 October 2016 to detect damaged structures, road obstacles, and population gathering sites in southwestern Haiti."
+          },
+          {
+            "id": "source_2",
+            "name": "Copernicus Emergency Management Service",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Copernicus analysis was combined with UNOSAT analysis to produce the final damage assessment, contributing to the identification of 9,173 potentially damaged structures."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_78b4304d",
+          "title": "TC20161003THI_combined_gdb.zip",
+          "description": "Haiti - Damage Assessment Overview of Dame Marie and Anse d'Hainault Areas, Grande Anse & Sud Departments (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/TC20161003THI_combined_gdb.zip"
+        },
+        {
+          "id": "resource_3a7bd133",
+          "title": "TC20161003THI_combined_shp.zip",
+          "description": "Haiti - Damage Assessment Overview of Dame Marie and Anse d'Hainault Areas, Grande Anse & Sud Departments (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/TC20161003THI_combined_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Satellite-detected potentially damaged structures (9,173) in Grande Anse and Sud departments following Hurricane Matthew, derived from Pleiades imagery analysis by UNOSAT and Copernicus"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Road obstacles (123) identified in the affected area following Hurricane Matthew, detected via satellite imagery change detection"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population gathering sites (255) identified in the affected area, indicating displaced or congregating populations following Hurricane Matthew"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-overview-of-dame-marie-and-anse-d-hainault-areas-grande-anse-sud-departments",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
