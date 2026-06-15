@@ -1,0 +1,120 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-mnp_spc_northernmarianaislandscoa_20190930",
+      "title": "Northern Mariana Islands - Coastal Proximity of Populations",
+      "description": "Spatial datasets utilized to conduct the spatial analysis and additional information from the research article: Coastal proximity of populations in 22 Pacific Island Countries and Territories. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223249 https://sdd.spc.int/mapping-coastal Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-northern]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-northern"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-northern"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MNP"
+        ]
+      },
+      "temporal": {
+        "start": "2019-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "SPC Statistics for Development Division (SDD)",
+            "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-northern"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Census population data for the Northern Mariana Islands were spatially integrated with a 1km coastal buffer zone and a gridded population raster (PopGrid) to assess the proportion of the population living in close proximity to the coast. The analysis follows the methodology described in the peer-reviewed study on coastal proximity of populations across 22 Pacific Island Countries and Territories (Plos ONE, 2019). Village boundaries and household counts from the 2010 census serve as the primary input for the spatial analysis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "SPC Statistics for Development Division (SDD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Provides census-derived population data and village boundaries for the Northern Mariana Islands, used to quantify population distribution relative to coastal proximity."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_eb36f62b",
+          "title": "MNP Village boundaries",
+          "description": "Northern Mariana Islands - Coastal Proximity of Populations (MNP Village boundaries)",
+          "media_type": "application/geo+json",
+          "download_url": "https://pacificdata.org/data/dataset/f2bbd77a-22f8-45e5-b162-72622a19f162/resource/a0b90e82-1a9c-4e78-bc9b-d2430a5db1b2/download/mnp_vi_4326.geojson"
+        },
+        {
+          "id": "resource_796f8877",
+          "title": "CNMI 1km Coastal Buffer",
+          "description": "Northern Mariana Islands - Coastal Proximity of Populations (CNMI 1km Coastal Buffer)",
+          "media_type": "application/geo+json",
+          "download_url": "https://pacificdata.org/data/dataset/f2bbd77a-22f8-45e5-b162-72622a19f162/resource/dafe5d0c-a6bc-41c4-a31e-a330dea21938/download/mnp_1kmbuff_4326.geojson"
+        },
+        {
+          "id": "resource_bc6156e1",
+          "title": "CNMI PopGrid",
+          "description": "This spatial 1km resolution grid contains population data generated from 2010 PHC. For more information about this dataset please check on https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223249 https://sdd.spc.int/mapping-coastal",
+          "format": "zipped tif",
+          "download_url": "https://pacificdata.org/data/dataset/f2bbd77a-22f8-45e5-b162-72622a19f162/resource/7848b622-33da-4ca9-bc8d-550edae54f39/download/rmgpssgrd.zip"
+        },
+        {
+          "id": "resource_76bd5cd6",
+          "title": "MNP README",
+          "description": "Northern Mariana Islands - Coastal Proximity of Populations (MNP README)",
+          "media_type": "text/plain",
+          "download_url": "https://pacificdata.org/data/dataset/f2bbd77a-22f8-45e5-b162-72622a19f162/resource/98c7fc8f-df86-4778-8ba4-488760288591/download/readme.txt"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded and village-level population counts for Northern Mariana Islands, with coastal proximity analysis derived from census data and a 1km coastal buffer"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-northern",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
