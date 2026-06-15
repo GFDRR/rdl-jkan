@@ -1,0 +1,120 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-vut_spc_vanuatupopulationgrid2020_20200403",
+      "title": "Vanuatu_Population_Grid_2020",
+      "description": "Population Raster Vanuatu 2020 Data Input: Household locations from 2016 Population and Housing Census conducted using Survey Solutions CAPI (Computer Assisted Personal Interview). Year Population Growth Rate of 2.3% has been applied to update population up to 2020 Household locations vector layer has been transformed into a 100m resolution raster. Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-vanuatu_population_grid_2020]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-vanuatu_population_grid_2020"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-vanuatu_population_grid_2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2020-04-03"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "SPC Statistics for Development Division (SDD)",
+            "url": "https://data.humdata.org/dataset/pdh-vanuatu_population_grid_2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Household locations from the 2016 Vanuatu Population and Housing Census (collected via CAPI survey) were transformed into a 100m resolution raster grid. Population counts were projected to 2020 by applying a 2.3% annual growth rate to account for demographic change between census and target year.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "SPC Statistics for Development Division (SDD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "2016 Population and Housing Census conducted using Survey Solutions CAPI, providing household location data that was gridded and projected forward to 2020"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3c089412",
+          "title": "VUT_Pop_Grid_2020",
+          "description": "Population Raster Vanuatu 2020 HH locations vector layer transformed into a 100m resolution raster. This is a demo version, SDD is still evaluating the methodology but given the COVID outbreak the dataset has been early released.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://pacificdata.org/data/dataset/1cb668eb-e915-4970-8b87-89aead626d39/resource/08748669-bfb9-404a-9ca4-bd1b49f337ef/download/rastpop2020rps_100m.tif"
+        },
+        {
+          "id": "resource_049e84bb",
+          "title": "VUT_PopGrid_2020_README",
+          "description": "Vanuatu_Population_Grid_2020 (Text)",
+          "media_type": "text/plain",
+          "download_url": "https://pacificdata.org/data/dataset/1cb668eb-e915-4970-8b87-89aead626d39/resource/4dc1ace6-b011-44f9-8262-6e4b7a0cd698/download/vut_popgrid_2020_readme.txt"
+        },
+        {
+          "id": "resource_a30ba26a",
+          "title": "VUT_PopGrid_2020_Atlas",
+          "description": "Vanuatu_Population_Grid_2020 (Static maps of the Vanuatu Population Grid 2020)",
+          "format": "zip",
+          "download_url": "https://pacificdata.org/data/dataset/1cb668eb-e915-4970-8b87-89aead626d39/resource/c0737a05-4e52-41f7-bfbb-be8077468542/download/vut_popgrid_atlas.zip"
+        },
+        {
+          "id": "resource_1e7c1ab6",
+          "title": "VUT_PopGrid_2020_Web Mapping Service",
+          "description": "Vanuatu_Population_Grid_2020 (VUT_PopGrid_2020_Web Mapping Service)",
+          "access_url": "https://tiles.arcgis.com/tiles/OAxZXfmfGWlgx9kD/arcgis/rest/services/Van_PPG_MS/MapServer",
+          "media_type": "text/html"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution at 100m resolution derived from 2016 census household locations and projected to 2020 using 2.3% annual growth rate"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-vanuatu_population_grid_2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

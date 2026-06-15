@@ -1,0 +1,106 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-zmb_ethzprs_pomelohighresolutionpopul_2020",
+      "title": "POMELO - Zambia High Resolution Population Density",
+      "description": "This dataset presents a fine-grained population map of Zambiawith a resolution of 100 meters for 2020, generated using the POMELO super-resolution technique that is based on deep learning. Please refer to our Nature Scientific Reports publication for more details. Background: Traditionally, many countries, including those in sub-Saharan Africa, rely on aggregated census data over expansive spatial units, which are not always timely or accurate. The need for detailed population maps is paramount in several sectors, including urban development, environmental supervision, public health, and humanitarian initiatives. Addressing this gap, the POMELO methodology leverages coarse census data in conjunction with open geodata to produce high precision population maps. Key Features: Resolution: The map offers a granular view with a 100m ground sampling distance, providing intricate details about population distributions in Zambia. Data Sources: Utilizing a combination of projected admisistrative census data (UN), and supplementing it with open geodata. Reliability: In comparative experiments conducted in sub-Saharan Africa, POMELO's ability to disaggregate coarse census counts achieved R2 values of 85-89%. Furthermore, its potential to predict population numbers without any census data reached accuracy levels of 48-69%.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pomelo-zambia-high-resolution-population]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "ETH Zürich, Photogrammetry and Remote Sensing",
+        "url": "https://data.humdata.org/dataset/pomelo-zambia-high-resolution-population"
+      },
+      "creator": {
+        "name": "ETH Zürich, Photogrammetry and Remote Sensing",
+        "url": "https://data.humdata.org/dataset/pomelo-zambia-high-resolution-population"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ZMB"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-01",
+        "end": "2020-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "ETH Zürich Photogrammetry and Remote Sensing",
+            "url": "https://data.humdata.org/dataset/pomelo-zambia-high-resolution-population"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "High-resolution population density map generated using the POMELO super-resolution deep learning technique applied to Zambian census data and remote sensing imagery, producing a 100-meter resolution gridded population dataset for 2020 to address the lack of timely and spatially detailed population data in sub-Saharan Africa.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ETH Zürich Photogrammetry and Remote Sensing",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "POMELO super-resolution deep learning technique applied to generate fine-grained population density estimates from coarse census data and remote sensing inputs."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.nature.com/articles/s41598-022-24495-w"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_c315dd19",
+          "title": "zmb_pomelo.tiff",
+          "description": "POMELO - Zambia High Resolution Population Density (Georeferenced Tiff raster)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/e65907b1-36c3-45eb-9d11-12cb03da8817/resource/c315dd19-1be0-42d2-94cd-3c7489a85e36/download/zmb_pomelo.tiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "High-resolution gridded population density map at 100m resolution for Zambia in 2020"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pomelo-zambia-high-resolution-population",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

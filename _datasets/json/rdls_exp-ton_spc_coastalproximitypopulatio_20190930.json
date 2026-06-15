@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ton_spc_coastalproximitypopulatio_20190930",
+      "title": "Coastal proximity of populations in 22 Pacific Island Countries and Territories - Dataset - Tonga",
+      "description": "Spatial datasets utilized to conduct the spatial analysis and additional information from the research article: Coastal proximity of populations in 22 Pacific Island Countries and Territories. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223249 https://sdd.spc.int/mapping-coastal Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-tonga]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-tonga"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-tonga"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TON"
+        ]
+      },
+      "temporal": {
+        "start": "2019-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Pacific Community Statistics for Development Division (SDD)",
+            "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-tonga"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Census population data from Tonga's 2016 census was spatially gridded at 1km resolution and intersected with coastal buffer zones (1km inland from shoreline) to quantify populations in coastal proximity. Administrative block boundaries and household counts were used to distribute population across spatial units for coastal vulnerability assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Pacific Community Statistics for Development Division (SDD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Census-based population data and administrative boundary definitions for Tonga used to generate gridded population estimates and coastal proximity analysis."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_91a794e5",
+          "title": "TON Block Boundaries",
+          "description": "Coastal proximity of populations in 22 Pacific Island Countries and Territories - Dataset - Tonga (TON Block Boundaries)",
+          "media_type": "application/geo+json",
+          "download_url": "https://pacificdata.org/data/dataset/b6eee133-8dbe-4bdd-b237-282c64845212/resource/287ed261-1f01-487b-83d4-9f52cc961a2d/download/blk_ton_4326.geojson"
+        },
+        {
+          "id": "resource_6f6e1fb3",
+          "title": "TON 1km Coastal Buffer",
+          "description": "Coastal proximity of populations in 22 Pacific Island Countries and Territories - Dataset - Tonga (TON 1km Coastal Buffer)",
+          "media_type": "application/geo+json",
+          "download_url": "https://pacificdata.org/data/dataset/b6eee133-8dbe-4bdd-b237-282c64845212/resource/201d8dcf-21b7-462c-b827-7fcc6d6f235f/download/ton1kmbuff_4326.geojson"
+        },
+        {
+          "id": "resource_d5c1a9b9",
+          "title": "TON 2016 PopGrid",
+          "description": "This spatial 1km resolution grid contains population data generated from 2016 Tonga PHC. For more information about this dataset please check on https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223249 https://sdd.spc.int/mapping-coastal",
+          "format": "zipped tif",
+          "download_url": "https://pacificdata.org/data/dataset/b6eee133-8dbe-4bdd-b237-282c64845212/resource/591b8596-345b-4071-b2b7-21f4d5376ddc/download/gpspop2016.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution at 1km resolution derived from 2016 census data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-tonga",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
