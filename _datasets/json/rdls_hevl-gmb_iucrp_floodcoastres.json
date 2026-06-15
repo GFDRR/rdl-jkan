@@ -436,6 +436,7 @@
               "analysis_details": "Depth-damage vulnerability functions used to convert flood inundation water depth (wd:m) into a damage ratio by asset / land-use class (e.g., residential, commercial/industrial, critical facilities) for the Greater Banjul Area urban flood risk assessment. Applied together with exposure layers (land use, critical facilities) and per-unit economic values (where available in project materials) to estimate direct economic flood damages and derived risk outputs.",
               "id": "vulnerability_function_1",
               "hazard_primary": {
+                "id": "hazard_flood",
                 "type": "flood",
                 "process": "pluvial_flood",
                 "intensity_measure": "wd:m"
@@ -458,6 +459,7 @@
               "analysis_details": "Depth-damage vulnerability functions used to convert coastal inundation water depth (wd:m) into a damage ratio by asset / land-use class for the Greater Banjul Area coastal flood risk assessment (including sea level rise 'flat' scenarios and related coastal inundation outputs). Applied together with exposure layers (land use, critical facilities) and per-unit economic values (where available in project materials) to estimate direct economic coastal flood damages and derived risk outputs.",
               "id": "vulnerability_function_2",
               "hazard_primary": {
+                "id": "hazard_flood",
                 "type": "flood",
                 "process": "coastal_flood",
                 "intensity_measure": "wd:m"
@@ -514,6 +516,7 @@
             "description": "Urban flood loss outputs for Greater Banjul Area derived from probabilistic pluvial flood hazard modelling and depth-damage functions applied to building / land-use exposure. Inventory indicates urban return-period rasters with naming pattern: T{RP}_max_wd_{year}_corrected.tif (e.g., T1/T5/T10/T25/T100/T250 for current/2040/2070). Confirm whether values represent monetary losses (USD) or intermediate depth grids; treat as economic loss layers per project methodology described in the PDFs.",
             "id": "loss_urban_pluvial_buildings_monetary",
             "hazard": {
+              "id": "hazard_flood",
               "type": "flood",
               "process": "pluvial_flood",
               "intensity_measure": "wd:m"
@@ -539,6 +542,7 @@
             "description": "Coastal flood loss outputs for Greater Banjul Area derived from coastal inundation 'flat' sea-level scenarios combined with exposure and depth-damage functions. Inventory indicates coastal scenario rasters under 2020/2040/2070 with naming pattern: flat scenario_{waterlevel}m_{year}_{class}.tif (e.g., 0.4/1/10/30/100 classes; water levels vary by horizon). Confirm whether stored rasters are monetary loss values (USD) or intermediate inundation depths; treat as economic loss layers per project methodology described in the PDFs.",
             "id": "loss_coastal_flat_buildings_monetary",
             "hazard": {
+              "id": "hazard_flood",
               "type": "flood",
               "process": "coastal_flood",
               "intensity_measure": "wd:m"
@@ -563,6 +567,7 @@
             "description": "Risk / prioritization index rasters provided as corrected risk surfaces for Coastal, Urban, and Combined cases for 2020/2040/2070 (e.g., Coastal_2020_risk_corrected.tif, Urban_2040_risk_corrected.tif, Combined_2070_risk_corrected.tif). Interpreted as a normalized damage/risk index (non-monetary). If these rasters actually represent expected annual loss (EAL/AAL) or other monetary risk metrics, re-map impact_metric to loss_annual_average_value and set quantity_kind=monetary with currency=USD.",
             "id": "loss_risk_index_corrected",
             "hazard": {
+              "id": "hazard_flood",
               "type": "flood",
               "process": "pluvial_flood",
               "intensity_measure": "wd:m"

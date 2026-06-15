@@ -1,0 +1,806 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hevl-pse_tmrwcities_nablus",
+      "title": "Tomorrow's Cities Multi-Hazard Risk Assessment Dataset for Nablus, Palestine",
+      "description": "Multi-hazard risk data package for Nablus, West Bank, Palestine, providing earthquake hazard (single rupture scenario rup4 with multiband ground motion raster), flood hazard (future high-emission climate scenario depth map), earthquake-triggered landslide hazard, synthetic future urban exposure datasets (buildings, households, individuals, land use) for five community planning scenarios (Apartment Buildings, Civil Societies, Community Service, Women, Youth), vulnerability/fragility functions for buildings, roads, and power infrastructure (OpenQuake NRML format), and multi-hazard impact assessment results. Developed as part of the Tomorrow's Cities GCRF Urban Disaster Risk Hub project for risk-informed decision making in urban planning.",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "vulnerability",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Tomorrow's Cities",
+        "email": "support@tomorrowscities.org",
+        "url": "https://data.tomorrowscities.org/"
+      },
+      "version": "1",
+      "purpose": "To support multi-hazard risk assessment and risk-informed urban planning decision making for Nablus by providing spatial hazard, synthetic future exposure, vulnerability functions, and impact assessment datasets for participatory community planning scenarios.",
+      "project": {
+        "name": "Tomorrow's Cities - GCRF Urban Disaster Risk Hub",
+        "url": "https://tomorrowscities.org/"
+      },
+      "details": "The dataset includes: (i) earthquake hazard multiband GeoTIFF (multi-band-rup4.tif) with ground motion intensity measures for rupture scenario 4, structural fragility in OpenQuake NRML 0.5 discrete format with PGA intensity measure and 4 damage states (slight, moderate, extensive, complete) using GEM Building Taxonomy v2.0, power fragility for 18 infrastructure types, and road fragility for 29 types; (ii) flood depth GeoTIFF (future high-emission climate scenario YVS) with depth-damage vulnerability functions for 91 building typologies at 9 water depths; (iii) earthquake-triggered landslide raster (eq-landslide-rup4.tif); (iv) five future exposure dataset variants representing different community planning scenarios, each containing building footprints (3,631 buildings, 80 typologies in GEM Taxonomy v2.0 format), household data, individual demographics, and land use plans (35 zones, 15 categories); and (v) multi-hazard impact results for earthquake, flood, and landslide per scenario including building damage states, casualties, hospital accessibility, power availability, and road network disruption.",
+      "contact_point": {
+        "name": "Menteşe, E.Y. - Anofa Engineering, Planning and Informatics Ltd.",
+        "email": "emin.mentese@anofa.co",
+        "url": "https://orcid.org/0000-0002-7187-4384"
+      },
+      "creator": {
+        "name": "Tomorrow's Cities",
+        "email": "support@tomorrowscities.org",
+        "url": "https://data.tomorrowscities.org/"
+      },
+      "spatial": {
+        "scale": "sub-national",
+        "countries": [
+          "PSE"
+        ],
+        "bbox": [
+          35.22,
+          32.19,
+          35.3,
+          32.25
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Palestine",
+            "uri": "https://www.geonames.org/6254930/palestinian-territory.html",
+            "id": "gazetteer_1"
+          },
+          {
+            "scheme": "GEONAMES",
+            "description": "Nablus",
+            "uri": "https://www.geonames.org/282615/nablus.html",
+            "id": "gazetteer_2"
+          }
+        ]
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_funder",
+          "role": "funder",
+          "entity": {
+            "name": "Natural Environment Research Council (NERC)",
+            "email": "press@ukri.org",
+            "url": "https://www.ukri.org/councils/nerc/"
+          }
+        },
+        {
+          "id": "attribution_collaborator",
+          "role": "collaborator",
+          "entity": {
+            "name": "University College London",
+            "email": "servicedesk@ucl.ac.uk",
+            "url": "https://www.ucl.ac.uk/"
+          }
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OpenStreetMap building footprints",
+            "url": "https://www.openstreetmap.org/",
+            "type": "dataset",
+            "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+            "used_in": "exposure",
+            "description": "Building footprints derived from OpenStreetMap database, modified and attributed to represent future urban context with structural taxonomy for multi-hazard risk assessment. Lineage: OSM data scraped and modified with building attributes using GEM Building Taxonomy v2.0 format (CR+CIP/LFINF+DUL+LC+1s+Ind) including material, lateral system, ductility, code level, storeys, and occupancy."
+          },
+          {
+            "id": "source_2",
+            "name": "Synthetic population generation algorithm",
+            "url": "https://doi.org/10.1016/j.ijdrr.2023.103651",
+            "type": "model",
+            "used_in": "exposure",
+            "description": "Bespoke algorithms developed to generate synthetic future population (households and individuals) based on population projections and land use plans through participatory community engagement. Lineage: Algorithms coded in MATLAB environment to produce synthetic social data representing future urban scenarios. Methodology described in Menteşe et al. (2023)."
+          },
+          {
+            "id": "source_3",
+            "name": "Earthquake hazard simulation",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Earthquake ground motion simulation providing multiband GeoTIFF raster for rupture scenario 4 (rup4) with multiple intensity measures. Lineage: Generated using physics-based simulation methodology for Nablus study area."
+          },
+          {
+            "id": "source_4",
+            "name": "Flood hazard modelling",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Future high-emission climate flood depth simulation (YVS scenario) providing water depth GeoTIFF raster for the Nablus study area. Lineage: Flood simulation using future high-emission climate pathway with precipitation projections."
+          },
+          {
+            "id": "source_5",
+            "name": "Earthquake-triggered landslide modelling",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Earthquake-triggered landslide susceptibility raster derived from seismic ground motion and terrain analysis. Lineage: Generated by coupling earthquake ground motion (rup4) with slope stability analysis."
+          },
+          {
+            "id": "source_6",
+            "name": "OpenQuake structural fragility functions",
+            "url": "https://doi.org/10.1016/j.ijdrr.2022.103365",
+            "type": "model",
+            "used_in": "vulnerability",
+            "description": "Discrete fragility functions in OpenQuake NRML 0.5 format defining probability of exceeding 4 damage states (slight, moderate, extensive, complete) as a function of PGA for buildings classified using GEM Building Taxonomy v2.0. No-damage limit: 0.05g, PGA range: 0.05-2.0g at 30 discrete levels. Lineage: Developed based on consultation with local partners and global vulnerability databases. Methodology described in Gentile et al. (2022)."
+          },
+          {
+            "id": "source_7",
+            "name": "Depth-damage vulnerability functions for flood",
+            "url": "https://publications.jrc.ec.europa.eu/repository/handle/JRC105688",
+            "type": "model",
+            "used_in": "vulnerability",
+            "description": "Vulnerability functions defining damage ratio as a function of water depth for 91 building typologies at 9 water depth levels (0-6m). Lineage: Produced based on consultation with local partners and global vulnerability databases such as JRC Global flood depth-damage functions."
+          },
+          {
+            "id": "source_8",
+            "name": "Power and road infrastructure fragility",
+            "type": "model",
+            "used_in": "vulnerability",
+            "description": "Fragility functions for 18 power infrastructure types and 29 road types under earthquake loading, providing lognormal parameters for 4 damage states. Lineage: Adapted from HAZUS-MH methodology and local engineering assessment."
+          }
+        ],
+        "description": "Integrated multi-hazard risk dataset produced by the Tomorrow's Cities GCRF Urban Disaster Risk Hub. OpenStreetMap building footprints were classified by construction type, occupancy, and number of storeys and enriched with replacement value estimates. A synthetic population was generated from census data using the agent-based algorithm of Calderon and Silva (2023, doi:10.1016/j.ijdrr.2023.103651), disaggregating individuals to buildings via household composition models. Earthquake hazard scenarios were simulated using OpenQuake-based GMPE ensembles (Weatherill et al. 2022). Flood hazard maps were derived from NASADEM-based hydrodynamic modelling. Earthquake building fragility functions and road/infrastructure fragility functions were adapted from HAZUS guidelines; flood depth-damage vulnerability functions from the JRC European flood damage database."
+      },
+      "referenced_by": [
+        {
+          "author_names": [
+            "Gemma Cremen",
+            "Carmine Galasso",
+            "John McCloskey",
+            "Alejandro Barcena",
+            "Maggie Creed",
+            "Maria Evangelina Filippi",
+            "Roberto Gentile",
+            "Luke T. Jenkins",
+            "Mehmet Kalaycioglu",
+            "Emin Yahya Mentese",
+            "Manoranjan Muthusamy",
+            "Karim Tarbali",
+            "Robert Šakić Trogrlić"
+          ],
+          "name": "A state-of-the-art decision-support environment for risk-sensitive and pro-poor urban planning and design in Tomorrow's cities",
+          "date_published": "2022-12-29",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420922006197",
+          "doi": "https://doi.org/10.1016/j.ijdrr.2022.103400",
+          "id": "reference_1"
+        },
+        {
+          "author_names": [
+            "Emin Yahya Menteşe",
+            "Gemma Cremen",
+            "Roberto Gentile",
+            "Carmine Galasso",
+            "Maria Evangelina Filippi",
+            "John McCloskey"
+          ],
+          "name": "Future exposure modelling for risk-informed decision making in urban planning",
+          "date_published": "2023-03-27",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420923001310",
+          "doi": "https://doi.org/10.1016/j.ijdrr.2023.103651",
+          "id": "reference_2"
+        },
+        {
+          "author_names": [
+            "Roberto Gentile",
+            "Gemma Cremen",
+            "Carmine Galasso",
+            "Luke T. Jenkins",
+            "Vibek Manandhar",
+            "Emin Yahya Menteşe",
+            "Ramesh Guragain",
+            "John McCloskey"
+          ],
+          "name": "Scoring, selecting, and developing physical impact models for multi-hazard risk assessment",
+          "date_published": "2022-10-14",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420922005842",
+          "doi": "https://doi.org/10.1016/j.ijdrr.2022.103365",
+          "id": "reference_3"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Nablus Multi Hazard Dataset",
+          "description": "Multi-hazard dataset containing: (1) Earthquake multiband GeoTIFF for rup4 scenario with ground motion IMs; (2) OpenQuake NRML structural fragility XML (discrete, PGA, 4 DS), power fragility (18 types), road fragility (29 types); (3) Future high-emission flood depth GeoTIFF (YVS scenario) with vulnerability functions for 91 typologies; Data formats: GeoTIFF, XML, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-multi-hazard-dataset",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-multi-hazard-dataset/resource/a4aac9d1-7ccb-4dcf-af98-234641fbdc75",
+          "id": "resource_hazard_multihazard",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Nablus Future Exposure Dataset - Apartment Buildings",
+          "description": "Future urban exposure dataset for Apartment Buildings community planning scenario, including building footprints (3,631 buildings, 80 typologies in GEM Taxonomy v2.0) with structural attributes, household data (9,704 households), individual demographics (59,580 individuals), and land use plan (35 zones). Data formats: GeoJSON for spatial data, JSON and XLSX for tabular data.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-apartment-buildings",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-apartment-buildings/resource/b9a2a521-4b99-48b2-ba16-fc50ba9dc279",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_apartment_buildings",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Future Exposure Dataset - Civil Societies",
+          "description": "Future urban exposure dataset for Civil Societies community planning scenario, including building footprints with structural taxonomy, household data, individual demographics, and land use plan. Data formats: GeoJSON, JSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-civil-societies",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-civil-societies/resource/76a0adc4-947a-4037-8cc2-a20f78540d45",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_civil_societies",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Future Exposure Dataset - Community Service",
+          "description": "Future urban exposure dataset for Community Service planning scenario, including building footprints with structural taxonomy, household data, individual demographics, and land use plan. Data formats: GeoJSON, JSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-community-service",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-community-service/resource/7663f6dd-b8f5-4e20-8450-1705fab1f992",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_community_service",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Future Exposure Dataset - Women",
+          "description": "Future urban exposure dataset for Women community planning scenario, including building footprints with structural taxonomy, household data, individual demographics, and land use plan. Data formats: GeoJSON, JSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-women",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-women/resource/b4558674-4acf-43b3-b7ef-02b6ff6a63f0",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_women",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Future Exposure Dataset - Youth",
+          "description": "Future urban exposure dataset for Youth community planning scenario, including building footprints with structural taxonomy, household data, individual demographics, and land use plan. Data formats: GeoJSON, JSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-youth",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-future-exposure-dataset-youth/resource/38366625-3e58-4137-bea7-0b67ddce4888",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_youth",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Impact Results - Apartment Buildings",
+          "description": "Multi-hazard impact assessment results for Apartment Buildings scenario, including earthquake, flood, and landslide building damage states, casualties, hospital accessibility, power availability, and road network disruption. Data formats: GeoJSON, GeoTIFF.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-apartment-buildings",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-apartment-buildings/resource/223813ce-e9ae-4a15-875b-b48cbfef4a2c",
+          "id": "resource_impact_apartment_buildings",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Impact Results - Civil Societies",
+          "description": "Multi-hazard impact assessment results for Civil Societies scenario. Data formats: GeoJSON, GeoTIFF.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-civil-societies",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-civil-societies/resource/c468a110-1e7f-48b8-83b3-61ea0a2ddfcd",
+          "id": "resource_impact_civil_societies",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Impact Results - Community Service",
+          "description": "Multi-hazard impact assessment results for Community Service scenario. Data formats: GeoJSON, GeoTIFF.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-community-service",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-community-service/resource/3831127e-f092-4492-ac8b-b680d2868d48",
+          "id": "resource_impact_community_service",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Impact Results - Women",
+          "description": "Multi-hazard impact assessment results for Women scenario. Data formats: GeoJSON, GeoTIFF.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-women",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-women/resource/6b321b7a-a33e-4513-83ed-95caf84ef89a",
+          "id": "resource_impact_women",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Nablus Impact Results - Youth",
+          "description": "Multi-hazard impact assessment results for Youth scenario. Data formats: GeoJSON, GeoTIFF.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-youth",
+          "download_url": "https://data.tomorrowscities.org/dataset/nablus-impact-results-youth/resource/b46d7d8d-9e2f-4c4f-a171-cd9e4c708889",
+          "id": "resource_impact_youth",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_earthquake_nablus",
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated",
+            "event_count": 1,
+            "hazards": [
+              {
+                "id": "hazard_earthquake",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_earthquake_nablus_rup4",
+                "calculation_method": "simulated",
+                "description": "Earthquake ground motion for rupture scenario 4 (rup4) provided as multiband GeoTIFF raster with multiple intensity measures. Structural fragility defined in OpenQuake NRML 0.5 discrete format with PGA range 0.05-2.0g at 30 discrete levels.",
+                "hazard": {
+                  "id": "hazard_earthquake",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Scenario-based deterministic analysis for rupture scenario 4"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "event_set_flood_nablus",
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated",
+            "event_count": 1,
+            "hazards": [
+              {
+                "id": "hazard_flood",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_flood_nablus_future_high",
+                "calculation_method": "simulated",
+                "description": "Future high-emission climate flood depth scenario (YVS) for Nablus providing flood water depth as GeoTIFF raster. File: Nablus_flood_depth_future_high_YVS.tif",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Future high-emission climate scenario"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "event_set_landslide_nablus",
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated",
+            "event_count": 1,
+            "hazards": [
+              {
+                "id": "hazard_landslide",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_landslide_nablus_eq_triggered",
+                "calculation_method": "simulated",
+                "description": "Earthquake-triggered landslide susceptibility raster derived from coupling rup4 ground motion with slope stability analysis. File: eq-landslide-rup4.tif. Note: All 3,631 buildings show DS=0 (no landslide damage) in impact results.",
+                "hazard": {
+                  "id": "hazard_landslide",
+                  "type": "landslide",
+                  "process": "landslide_general",
+                  "intensity_measure": "LSI:-"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Earthquake-triggered landslide scenario"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_buildings",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_building_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_building_replacement_value",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "currency"
+              }
+            },
+            {
+              "id": "metric_building_footprint_area",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "Custom",
+            "scheme": "Custom",
+            "title": "Building taxonomy",
+            "description": "Building exposure derived from OpenStreetMap footprints, classified using a city-specific structural taxonomy for the risk assessment"
+          }
+        },
+        {
+          "id": "exposure_population",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_population_residents",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_population_households",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_population_individuals",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "sei-pop",
+            "title": "Population exposure model",
+            "description": "Synthetic population derived from census household data using the Tomorrow's Cities DST population generation algorithm",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "id": "exposure_landuse",
+          "category": "economic_indicator",
+          "metrics": [
+            {
+              "id": "metric_landuse_area",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "hectare"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "land_use_zones",
+            "title": "Land use exposure",
+            "description": "Urban land use classification areas classified per GED4ALL exposure framework",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL"
+          }
+        }
+      ],
+      "vulnerability": {
+        "functions": {
+          "vulnerability": [
+            {
+              "approach": "analytical",
+              "relationship": "discrete",
+              "hazard_analysis_type": "deterministic",
+              "category": "buildings",
+              "taxonomy": "Custom",
+              "analysis_details": "Depth-damage vulnerability functions defining damage ratio as a function of water depth (0-6m at 9 discrete levels: 0, 0.5, 1, 1.5, 2, 3, 4, 5, 6m) for 91 building typologies. Functions based on consultation with local partners and JRC global flood depth-damage database.",
+              "id": "vulnerability_function_flood_buildings",
+              "hazard_primary": {
+                "id": "hazard_flood",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            }
+          ],
+          "fragility": [
+            {
+              "approach": "analytical",
+              "relationship": "discrete",
+              "hazard_analysis_type": "deterministic",
+              "category": "buildings",
+              "taxonomy": "Custom",
+              "analysis_details": "OpenQuake NRML 0.5 discrete fragility functions for building typologies using GEM Building Taxonomy v2.0 (e.g., CR+CIP/LDUAL+DUM+HC+2s+Edu). PGA intensity measure with 30 discrete levels from 0.05g to 2.0g. Four damage states: slight, moderate, extensive, complete. No-damage limit: 0.05g.",
+              "id": "fragility_function_earthquake_buildings",
+              "hazard_primary": {
+                "id": "hazard_earthquake",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            },
+            {
+              "approach": "empirical",
+              "relationship": "math_parametric",
+              "hazard_analysis_type": "deterministic",
+              "category": "infrastructure",
+              "taxonomy": "Custom",
+              "analysis_details": "Fragility functions for 18 power infrastructure types providing lognormal parameters (median PGA and beta) for 4 damage states (slight, moderate, extensive, complete). Also includes 29 road type fragility functions with median and dispersion parameters.",
+              "id": "fragility_function_earthquake_infrastructure",
+              "hazard_primary": {
+                "id": "hazard_earthquake",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            }
+          ]
+        },
+        "socio_economic": [
+          {
+            "scheme": "Custom",
+            "indicator_name": "Household income level",
+            "indicator_code": "income",
+            "description": "Income level attribute for synthetic households used as socio-economic indicator in the exposure dataset.",
+            "reference_year": 1900,
+            "id": "socioeconomic_income"
+          },
+          {
+            "scheme": "Custom",
+            "indicator_name": "Education attainment status",
+            "indicator_code": "eduattstat",
+            "description": "Education attainment status for synthetic individuals used as socio-economic indicator in the exposure dataset.",
+            "reference_year": 1900,
+            "id": "socioeconomic_education"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Building damage state results from earthquake impact assessment for each community planning scenario (Apartment Buildings, Civil Societies, Community Service, Women, Youth).",
+            "id": "loss_earthquake_buildings",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            }
+          },
+          {
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Building damage state results from flood impact assessment for each community planning scenario.",
+            "id": "loss_flood_buildings",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Building damage state results from earthquake-triggered landslide assessment. Note: All buildings currently show DS=0 (no landslide damage) in available results.",
+            "id": "loss_landslide_buildings",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "process": "landslide_general",
+              "intensity_measure": "LSI:-"
+            }
+          },
+          {
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Casualty results from earthquake impact assessment for each community planning scenario.",
+            "id": "loss_earthquake_casualties",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            }
+          },
+          {
+            "asset_category": "population",
+            "asset_dimension": "disruption",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "simulated",
+                "metric": "downtime",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Hospital accessibility and power availability impacts from earthquake and flood, derived from road network connectivity analysis and power network damage assessment. Each building has hospital_access and has_power boolean attributes.",
+            "id": "loss_earthquake_indirect",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            }
+          },
+          {
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Road network and power infrastructure damage from earthquake impact assessment, including road edge and node damage states.",
+            "id": "loss_earthquake_infrastructure",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            }
+          },
+          {
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Road network damage from flood impact assessment, with road edges flagged as damaged/undamaged based on flood inundation.",
+            "id": "loss_flood_infrastructure",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
