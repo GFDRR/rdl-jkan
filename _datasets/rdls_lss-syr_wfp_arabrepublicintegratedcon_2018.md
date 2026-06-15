@@ -1,0 +1,328 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: World Food Programme
+    url: https://data.humdata.org/dataset/wfp_ica_syr_2018
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: WFP - World Food Programme
+  url: https://data.humdata.org/dataset/wfp_ica_syr_2018
+creator:
+  affiliation: null
+  email: null
+  name: WFP - World Food Programme
+  url: https://data.humdata.org/dataset/wfp_ica_syr_2018
+dataset_id: rdls_lss-syr_wfp_arabrepublicintegratedcon_2018
+description: 'The ICA is a process of consultations supported by mapped-out data that
+  produces a strategic plan describing where different combinations of programme themes
+  are appropriate to achieve goals of reducing food insecurity and climate related
+  shock risk. The ICA combines multi-year food security trends with natural shock
+  risk data to highlight sub-national areas where different programme strategies make
+  sense. Food security trend maps shows areas where safety nets can address regular
+  food insecurity, and others where shocks make recovery more important. Climate-related
+  natural shock risk maps show where DRR, preparedness and early warning efforts can
+  complement food-security objectives. Atop this core foundation, mapped data on subjects
+  including nutrition, gender, livelihoods and resilience can enrich theme-level strategic
+  planning in which all pieces work together. The full group of ICA partners discuss
+  these analytical results to arrive at strategic programmatic directions.. [Source:
+  This metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/wfp_ica_syr_2018]'
+details: null
+exposure: []
+hazard: null
+license: https://opendatacommons.org/licenses/odbl/1-0/
+lineage:
+  description: The ICA combines multi-year food security trend data (2015-2018) with
+    natural shock hazard layers (flood 2013, drought 1982-2016) and ancillary exposure
+    data (land cover, land degradation) to produce sub-national risk stratification.
+    Hazard and food insecurity layers were spatially integrated to identify areas
+    where different programme strategies are appropriate for reducing food insecurity
+    and climate shock vulnerability.
+  sources:
+  - id: source_1
+    license: null
+    name: World Food Programme
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/wfp_ica_syr_2018
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Food insecurity recurrence linked to flood hazard exposure 2015-2018
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: Food insecurity recurrence linked to drought hazard exposure 2015-2018
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: null
+      trigger: null
+      type: drought
+    id: loss_2
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: This layer contains information about the final categorization resulting
+    from the Integrated Context Analysis (ICA) performed in the Syrian Arab Republic
+    between 2018 and 2019, showing the areas of convergence of high levels of food
+    insecurity recurrence and major propensity to natural shocks (floods and droughts).
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/5e0a0855a19f45939c4a1823c4c1446a/data
+  format: null
+  id: resource_9fdac445
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - ICA Categories & Areas
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the flood hazard - by second-level
+    administrative area - estimated during the Integrated Context Analysis (ICA) run
+    in the Syrian Arab Republic between 2018 and 2019. Data sources: UNEP/UNISDR GAR
+    2013. The main indicators used for the analysis were the percentage of department
+    surface at flood risk and the maximum expected frequency of flood events with
+    a 100-year return period.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/548cefcab49f48e6a55006c4cb0a3da1/data
+  format: null
+  id: resource_07ef2485
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - Flood Hazard, 2013
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the drought hazard - by second-level
+    administrative area - estimated during the Integrated Context Analysis (ICA) run
+    in the Syrian Arab Republic between 2018 and 2019. Data source: HQ VAM Analysis
+    of Chirps Rainfall Estimates (RFE), 1982-2016. The main indicator used for the
+    analysis was the number of poor growing seasons observed between 2012 and 2016
+    (using as benchmark the 35-years average) and the percentage of interannual rainfall
+    variability observed between 1982-2016.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/e1e0ac151c8b49ad9d8f1a261962e7e7/data
+  format: null
+  id: resource_7e3963b2
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - Drought Hazard, 1982-2016
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the food security trend analysis
+    - by second-level administrative unit - used for the purposes of the Integrated
+    Context Analysis (ICA) run in the Syrian Arab Republic between 2018 and 2019.
+    Data source: FSA, FSLA-FSA and CFSAM-FSA, 2015-2018. The main indicator used for
+    the analysis was the CARI (Consolidated Approach to Reporting Indicators of Food
+    Security) indicator, with a threshold - referring to moderately and severely food
+    insecure households - set to 30%.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/49243d1155ad4c7ebb2695a3a979e703/data
+  format: null
+  id: resource_4cad30d3
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - Recurrence of Food Insecurity, 2015-2018
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the two most dominant land cover
+    classes - by second-level administrative area - observed during the Integrated
+    Context Analysis (ICA) run in the Syrian Arab Republic between 2018 and 2019.
+    Data source: NASA MODIS, 2016.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/c9f196c1a0dc4d5b9714c59dce713475/data
+  format: null
+  id: resource_ccd01340
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - Two Most Dominant Land Cover Classes, 2016
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the natural shock hazard (floods
+    and droughts) - by second-level administrative unit - estimated during the Integrated
+    Context Analysis (ICA) performed in the Syrian Arab Republic between 2018 and
+    2019. Data sources: UNEP/UNISDR GAR 2013, HQ VAM Analysis of CHIRPS Rainfall Estimates
+    (RFE) 1982-2016.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/10a3339b5687453082493167564cd944/data
+  format: null
+  id: resource_8dec5578
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - Natural Shock Hazard
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the numbers of food insecure
+    people - by second-level administrative unit - estimated for the purposes of the
+    Integrated Context Analysis (ICA) run in the Syrian Arab Republic between 2018
+    and 2019. Data source: FSA, FSLA-FSA and CFSAM-FSA, 2015-2018. The main indicators
+    used for the analysis were the percentage of food insecure population for long-term
+    planning and the population at risk of food insecurity.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/cf8a62451d9a4604b1b3d105750b7444/data
+  format: null
+  id: resource_7221c298
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - Estimated Numbers of Food Insecure People,
+    2015-2018
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the land degradation phenomenon
+    - by second-level administrative area - observed for the purposes of the Integrated
+    Context Analysis (ICA) run in the Syrian Arab Republic between 2018 and 2019.
+    Data sources: HQ OSEP GIS Analysis of NASA MODIS 2001-2016, WorldClim 1970-2000,
+    FAO and NASA SRTM Digital Elevation Model data. The main indicators used for the
+    analysis were the average ecological changes observed between 2001-2006 and 2011-2016
+    and the percentage of erosion-prone surface.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/3db7bbb4364747ac9652df34712f6e0d/data
+  format: null
+  id: resource_48c9c157
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - Land Degradation, 2001-2016
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the malnutrition levels - by
+    first-level administrative unit - used for the purposes of the Integrated Context
+    Analysis (ICA) run in the Syrian Arab Republic between 2018 and 2019. Data source:
+    Standardized Monitoring and Assessment of Relief and Transitions (SMART), 2016.
+    The main indicators used for the analysis were the prevalence of Global Acute
+    Malnutrition (GAM) and stunting, with thresholds set according to the guidelines
+    suggested by the World Health Organization (WHO).'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/faf9938d523c4ef9ab20f3223308e479/data
+  format: null
+  id: resource_337de0c3
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Syrian Arab Republic, 2018 - Prevalence of Malnutrition, 2016
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-syr_wfp_arabrepublicintegratedcon_2018
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - SYR
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2018-12-31'
+  start: '2018-01-01'
+temporal_resolution: null
+title: 'Syrian Arab Republic: Integrated Context Analysis (ICA), 2018'
+version: null
+vulnerability: null
+---
