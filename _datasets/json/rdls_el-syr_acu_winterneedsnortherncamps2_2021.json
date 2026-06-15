@@ -1,0 +1,129 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-syr_acu_winterneedsnortherncamps2_2021",
+      "title": "Winter needs in Northern Syria Camps 2021",
+      "description": "The IMU of the ACU, issues its fourth edition of the 'Winter Needs in the Northern Syrian Camps' report, addressing 680 camps in the governorates of Aleppo and Idleb. The report brings to light the most important items that IDPs are in need for in terms of type and quantities, according to international standards for humanitarian response. It furthermore, brings emphasis to bear on the course of action that IDPs, as well as the camp management teams, should follow to drive down the effects of natural disasters that may put their lives at risk. Noting that the number of families that ACU enumerators were able to assess their needs reached 156,873 families, making up an overall individual number of 872,082 IDPs. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/winter-needs-in-northern-syria-camps-2021]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "Assistance Coordination Unit",
+        "url": "https://data.humdata.org/dataset/winter-needs-in-northern-syria-camps-2021"
+      },
+      "creator": {
+        "name": "Assistance Coordination Unit",
+        "url": "https://data.humdata.org/dataset/winter-needs-in-northern-syria-camps-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2021-10-01",
+        "end": "2021-11-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Assistance Coordination Unit (ACU)",
+            "url": "https://data.humdata.org/dataset/winter-needs-in-northern-syria-camps-2021"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sample survey conducted by ACU's Information Management Unit across 680 IDP camps in Aleppo and Idleb governorates to enumerate winter needs and disaster risk awareness. Data collected according to international humanitarian response standards to identify required non-food items and shelter needs for vulnerable populations exposed to winter conditions and natural hazards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Assistance Coordination Unit (ACU)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Sample survey of 680 camps in northern Syria documenting IDP winter needs and vulnerability to natural disasters, conducted by ACU's Information Management Unit"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bb124eb5",
+          "title": "ACU_Syria_Winter_Needs_In_Northers_Syria_Camps_October_2021.xlsx",
+          "description": "Winter needs in Northern Syria Camps 2021 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/be71e3e9-e07a-49e4-9ed0-d16d22722fd4/resource/bb124eb5-6c42-4f86-bcf8-0accad464999/download/acu_syria_winter_needs_in_northers_syria_camps_october_2021.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons (IDPs) living in 680 camps across Aleppo and Idleb governorates"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_extreme_temperature",
+              "type": "extreme_temperature",
+              "intensity_measure": "AirTemp:C"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Winter needs assessment for IDP populations vulnerable to extreme cold conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/winter-needs-in-northern-syria-camps-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

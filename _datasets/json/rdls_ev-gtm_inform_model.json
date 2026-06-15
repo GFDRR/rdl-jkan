@@ -1,0 +1,201 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_ev-gtm_inform_model",
+      "title": "INFORM Guatemala Model",
+      "description": "INFORM Guatemala is a municipal risk index that identifies risks, threats, vulnerabilities and response capacities in the 340 municipalities of Guatemala. The municipal risk index simplifies information about crisis risk and is comprised of 29 indicators representing the three dimensions of risk: hazard and exposure, vulnerability, and lack of coping capacity. The results of the Guatemala INFORM index will be used by the National Coordination System for Disaster Risk Reduction (CONRED) for its analysis of risk of humanitarian crisis and disasters, municipal response capacities and potential humanitarian needs. Government institutions, civil society and international cooperation organizations can also use the results to focus the design and implementation of development programs and projects. The Guatemala INFORM initiative is supported by UNICEF, OCHA and WFP.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/inform-guatemala-model]",
+      "risk_data_type": [
+        "exposure",
+        "vulnerability"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "INFORM",
+        "url": "https://data.humdata.org/dataset/inform-guatemala-model"
+      },
+      "creator": {
+        "name": "INFORM",
+        "url": "https://data.humdata.org/dataset/inform-guatemala-model"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GTM"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Inter-Agency Standing Committee (IASC)",
+            "url": "https://data.humdata.org/dataset/inform-guatemala-model"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "European Commission",
+            "url": "https://data.humdata.org/dataset/inform-guatemala-model"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "National Coordination System for Disaster Risk Reduction (CONRED)",
+            "url": "https://data.humdata.org/dataset/inform-guatemala-model"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The INFORM Guatemala model integrates 29 indicators from multiple national and international sources across three risk dimensions (hazard & exposure, vulnerability, coping capacity) normalized and aggregated to produce a composite municipal risk index. Data sources include observed disaster events 2008-2021, socioeconomic indicators from national census and development agencies, and institutional capacity assessments, all processed through the INFORM v3.2021 methodology to generate normalized sub-indices and an overall risk score for each of Guatemala's 340 municipalities.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Inter-Agency Standing Committee (IASC)",
+            "type": "model",
+            "risk_data_type": [
+              "vulnerability"
+            ],
+            "used_in": "vulnerability",
+            "description": "INFORM risk methodology framework defining the three-dimensional risk model structure and indicator selection criteria"
+          },
+          {
+            "id": "source_2",
+            "name": "European Commission",
+            "type": "model",
+            "risk_data_type": [
+              "vulnerability"
+            ],
+            "used_in": "vulnerability",
+            "description": "Co-developer of INFORM methodology and risk assessment framework"
+          },
+          {
+            "id": "source_3",
+            "name": "National Coordination System for Disaster Risk Reduction (CONRED)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Institutional capacity data and disaster event records for Guatemala"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://bit.ly/2MB0ZIj"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_fa5bbe16",
+          "title": "INFORM v3.2021.xlsx",
+          "description": "INFORM Guatemala is a municipal risk index that identifies risks, threats, vulnerabilities and response capacities in the 340 municipalities of Guatemala. The municipal risk index simplifies information about crisis risk and is comprised of 29 indicators representing the three dimensions of risk: hazard and exposure, vulnerability, and lack of coping capacity.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d9e378fd-164e-43c4-893d-148cb18f23f3/resource/fa5bbe16-8c43-40b5-973e-d91692f7c2e6/download/inform-v3.2021.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Total municipal population estimates"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "natural_environment",
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "Forest cover and annual rate of change by municipality"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road network density and electrification coverage at municipal level"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_4",
+          "category": "economic_indicator",
+          "asset_type": {
+            "id": "economic_indicator",
+            "description": "Economic indicators including GDP per capita, poverty rates, and remittances as percentage of GDP"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "index",
+              "measurement": {
+                "quantity_kind": "index"
+              }
+            }
+          ]
+        }
+      ],
+      "vulnerability": {
+        "socio_economic": [
+          {
+            "id": "se_1",
+            "indicator_name": "INFORM Guatemala Model",
+            "indicator_code": "inform-guatemala-model",
+            "description": "INFORM Guatemala is a municipal risk index that identifies risks, threats, vulnerabilities and response capacities in the 340 municipalities of Guatemala. The municipal risk index simplifies information about crisis risk and is comprised of 29 indicators representing the three dimensions of risk: hazard and exposure, vulnerability, and lack of coping capacity. The results of the Guatemala INFORM index will be used by the National Coordination System for Disaster Risk Reduction (CONRED) for its a",
+            "reference_year": 2021
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/inform-guatemala-model",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

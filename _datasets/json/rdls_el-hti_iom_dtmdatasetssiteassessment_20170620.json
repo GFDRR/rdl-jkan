@@ -1,0 +1,170 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-hti_iom_dtmdatasetssiteassessment_20170620",
+      "title": "HAITI - IOM DTM DATASETS - SITE ASSESSMENT DATA",
+      "description": "HAITI - IOM DTM DATASET Round 25. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-iom-dtm-datasets-site-assessment-data]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/haiti-iom-dtm-datasets-site-assessment-data"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/haiti-iom-dtm-datasets-site-assessment-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2017-06-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Haiti",
+            "url": "https://data.humdata.org/dataset/haiti-iom-dtm-datasets-site-assessment-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM Round 25 collected direct observational data through site assessments of displacement locations across Haiti, documenting affected populations and shelter conditions resulting from gang violence and insecurity-driven displacement events.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Haiti",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational site assessment data from displacement tracking matrix monitoring of internally displaced populations and affected sites across Haiti."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3a4df419",
+          "title": "DTM_Master_List_Round25.xlsx",
+          "description": "HAITI - IOM DTM DATASETS - SITE ASSESSMENT DATA (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6064c16a-8bf4-4e94-bbab-3aafda4a4ef2/resource/3a4df419-b521-4b38-a129-e2e6cd85892d/download/dtm_master_list_round25.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Displaced and affected populations assessed at displacement sites"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Shelter facilities and site infrastructure at displacement locations"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Displaced population from gang violence and insecurity events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Affected shelter sites and displacement locations"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-iom-dtm-datasets-site-assessment-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

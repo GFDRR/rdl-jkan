@@ -1,0 +1,158 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-hti_acaps_earthquakedamageassessmen_20210827",
+      "title": "Haiti Earthquake - Damage assessment",
+      "description": "Haiti Earthquake (M7.2) Preliminary Satellite-Based Comprehensive - Damage assessment (Grande'Anse, South, and Nippes departments of Haiti, 27 August 2021). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-earthquake-damage-assessment]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "ACAPS",
+        "url": "https://data.humdata.org/dataset/haiti-earthquake-damage-assessment"
+      },
+      "creator": {
+        "name": "ACAPS",
+        "url": "https://data.humdata.org/dataset/haiti-earthquake-damage-assessment"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2021-08-27"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNOSAT",
+            "url": "https://data.humdata.org/dataset/haiti-earthquake-damage-assessment"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery from the M7.2 Haiti earthquake (14 August 2021) was analyzed by UNOSAT to produce a comprehensive damage assessment. Building damage and affected population counts were derived through visual interpretation and automated analysis of pre- and post-event satellite imagery for three departments (Grande'Anse, South, Nippes), generating direct impact metrics for earthquake-affected assets.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNOSAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment providing post-event building damage and affected population counts from optical imagery analysis following the 14 August 2021 Haiti earthquake"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://reliefweb.int/sites/reliefweb.int/files/resources/Preliminary_SatelliteBased_ComprehensiveDamageAssessment_EQ20210814HTI_20210827_Haiti.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_909ae9fe",
+          "title": "20210827 UNOSAT Satellite-Based Comprehensive Damage Assessment.xlsx",
+          "description": "Haiti Earthquake - Damage assessment (Damage Assessment)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a4b01dc1-f860-4894-a25a-0113186c0cb0/resource/909ae9fe-75a9-4678-8ec1-b137367e6bd6/download/20210827-unosat-satellite-based-comprehensive-damage-assessment.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Grande'Anse, South, and Nippes departments assessed for earthquake damage"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from M7.2 earthquake assessed via satellite imagery"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Affected population in earthquake-impacted departments"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-earthquake-damage-assessment",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

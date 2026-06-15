@@ -1,0 +1,152 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-bfamlimrtnertcd_ocharowca_informsubnationalsahel_20180912",
+      "title": "INFORM Subnational Sahel",
+      "description": "The Index for Risk Management INFORM is a composite indicator developed by JRC as a tool for understanding the risk of humanitarian crisis and disasters.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/2016-sahel-inform]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA West and Central Africa (ROWCA)",
+        "url": "https://data.humdata.org/dataset/2016-sahel-inform"
+      },
+      "creator": {
+        "name": "OCHA West and Central Africa (ROWCA)",
+        "url": "https://data.humdata.org/dataset/2016-sahel-inform"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "MLI",
+          "BFA",
+          "NER",
+          "TCD",
+          "MRT"
+        ]
+      },
+      "temporal": {
+        "start": "2018-09-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Joint Research Centre (JRC)",
+            "url": "https://data.humdata.org/dataset/2016-sahel-inform"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "INFORM aggregates approximately 50 indicators from multiple sources into a composite risk index across three dimensions (hazards, exposure, vulnerability) to measure humanitarian crisis and disaster risk at subnational level in the Sahel region. The index synthesizes data from various organizations to produce annual risk assessments for 2016-2018.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Joint Research Centre (JRC)",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Developed the INFORM composite indicator methodology combining ~50 indicators across hazard, exposure, and vulnerability dimensions to assess humanitarian crisis risk"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.inform-index.org/InDepth"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_f3458c96",
+          "title": "INFORM_SAHEL 2016_v330_Final (as300916).xlsx",
+          "description": "INFORM Subnational Sahel (Data as of 30 September 2016)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/fe348e48-9c1f-4138-a368-b45a10e5fde7/resource/f3458c96-0c72-4401-9fa0-18b6c3f21143/download/inform_sahel-2016_v330_final-as300916.xlsx"
+        },
+        {
+          "id": "resource_646e8391",
+          "title": "INFORM_SAHEL 2017_v102.xlsx",
+          "description": "INFORM Subnational Sahel (Data as of 01 June 2017)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/fe348e48-9c1f-4138-a368-b45a10e5fde7/resource/646e8391-97d2-4f61-a17f-35478b0ffdea/download/inform_sahel-2017_v102.xlsx"
+        },
+        {
+          "id": "resource_4781670c",
+          "title": "INFORM_SAHEL 2018_v100.xlsx",
+          "description": "INFORM Subnational Sahel (INFORM_SAHEL 2018_v100.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/fe348e48-9c1f-4138-a368-b45a10e5fde7/resource/4781670c-444b-4ca7-b70d-07692d125750/download/inform_sahel-2018_v100.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to humanitarian crisis and disaster risk in Sahel subnational areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Humanitarian crisis risk combining hazard exposure and vulnerability in Sahel region"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/2016-sahel-inform",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

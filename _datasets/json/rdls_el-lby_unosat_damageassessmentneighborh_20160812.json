@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-lby_unosat_damageassessmentneighborh_20160812",
+      "title": "Damage Assessment: Neighborhoods in Eastern Benghazi City, Libya",
+      "description": "This map illustrates satellite-detected areas of damage in the Bu Attniy North and Bu Attniy South neighborhoods of Benghazi City, Libya. Using satellite imagery acquired 04 and 19 April 2016 as well as 01 August 2015, UNITAR-UNOSAT identified a total of 1,701 potentially damaged structures in these neighborhoods. Approximately 573 of these were destroyed, 329 severely damaged, 496 moderately damaged, and 303 possibly damaged. A slightly higher margin of error is possible in this analysis due to utilization of multiple images and the uncontrolled nature of construction in Benghazi during the analysis timeframe. This is a preliminary analysis & has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-neighborhoods-in-eastern-benghazi-city-libya]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-neighborhoods-in-eastern-benghazi-city-libya"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-neighborhoods-in-eastern-benghazi-city-libya"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LBY"
+        ]
+      },
+      "temporal": {
+        "start": "2016-08-12"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery acquired on 01 August 2015, 04 April 2016, and 19 April 2016 over Benghazi City to detect structural damage through visual change detection. Damaged structures were classified into four categories (destroyed, severely damaged, moderately damaged, possibly damaged) based on observable changes in building footprints and roofing patterns, resulting in a spatial inventory of 1,701 potentially damaged structures.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-event conditions to identify and classify damaged structures through visual interpretation of multi-temporal satellite imagery"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_35966e32",
+          "title": "Benghazi_20160419_Update.gdb.zip",
+          "description": "Damage Assessment: Neighborhoods in Eastern Benghazi City, Libya (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/LY/CE20150814LBY/Benghazi_20160419_Update.gdb.zip"
+        },
+        {
+          "id": "resource_4be78f4b",
+          "title": "Benghazi_20160419_Update_shp.zip",
+          "description": "Damage Assessment: Neighborhoods in Eastern Benghazi City, Libya (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/LY/CE20150814LBY/Benghazi_20160419_Update_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Bu Attniy North and Bu Attniy South neighborhoods classified by damage state"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from conflict-related destruction in Benghazi"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-neighborhoods-in-eastern-benghazi-city-libya",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

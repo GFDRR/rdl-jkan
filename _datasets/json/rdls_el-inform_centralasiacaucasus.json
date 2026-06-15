@@ -1,0 +1,245 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-inform_centralasiacaucasus",
+      "title": "INFORM Central Asia and Caucasus",
+      "description": "The sub national INFORM model for Caucasus and Central Asia was initiated by the Regional Inter-Agency Standing Committee (IASC) Task Force for Caucasus and Central Asia and is managed by OCHA. The INFORM model is being used to support coordinated preparedness actions. Partners hope to use the model to improve cooperation between humanitarian and development actors in managing risk and building resilience across the region.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/informcaucus]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "INFORM",
+        "url": "https://data.humdata.org/dataset/informcaucus"
+      },
+      "creator": {
+        "name": "INFORM",
+        "url": "https://data.humdata.org/dataset/informcaucus"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "AZE",
+          "ARM",
+          "GEO",
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Inter-Agency Standing Committee (IASC)",
+            "url": "https://data.humdata.org/dataset/informcaucus"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "European Commission",
+            "url": "https://data.humdata.org/dataset/informcaucus"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The INFORM model integrates multi-source hazard exposure data (earthquake MMI, landslide intensity, flood extent, drought probability), vulnerability indicators (human development, poverty, conflict), and coping capacity metrics (aid, governance, health) at subnational administrative levels. Data from IASC and European Commission are processed through the INFORM risk framework to generate composite risk indices for preparedness and resilience planning across Caucasus and Central Asia.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Inter-Agency Standing Committee (IASC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Provides hazard exposure data including earthquake, landslide, flood, and drought indicators for the Caucasus and Central Asia region"
+          },
+          {
+            "id": "source_2",
+            "name": "European Commission",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Contributes humanitarian aid and development data used in the INFORM risk assessment framework"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://bit.ly/2MB0ZIj"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_63ac42e8",
+          "title": "INFORM_CCA_2021_30092021.xlsx",
+          "description": "INFORM Central Asia and Caucasus (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b5761f1f-a72e-4631-ad40-92d89e8b1922/resource/63ac42e8-302a-46c9-97a3-8fe58652e035/download/inform_cca_2021_30092021.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to natural hazards including earthquakes, landslides, floods, and droughts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural areas exposed to drought hazards"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquakes at MMI V and higher intensity"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by medium and high intensity landslides"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by floods"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People affected by droughts in agricultural regions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/informcaucus",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

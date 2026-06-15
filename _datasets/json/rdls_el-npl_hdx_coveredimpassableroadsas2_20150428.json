@@ -1,0 +1,133 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-npl_hdx_coveredimpassableroadsas2_20150428",
+      "title": "Nepal: Covered and impassable roads as of 28 Apr 2015",
+      "description": "Geodata of Nepal earthquake covered and impassable road shared publicly by NGA's Open Data Application. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/nepal-covered-and-impassable-road-as-of-28-apr-2015]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/nepal-covered-and-impassable-road-as-of-28-apr-2015"
+      },
+      "creator": {
+        "name": "Nepal National Geospatial Agency IWG-R3",
+        "url": "https://data.humdata.org/dataset/nepal-covered-and-impassable-road-as-of-28-apr-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-04-28"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Nepal National Geospatial Agency IWG-R3",
+            "url": "https://data.humdata.org/dataset/nepal-covered-and-impassable-road-as-of-28-apr-2015"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Road network data was assessed and classified by the Nepal National Geospatial Agency in the immediate aftermath of the April 2015 earthquake, with segments categorized as either covered (blocked by debris/landslides) or impassable (damaged/destroyed). The resulting geodata represents direct earthquake impacts on transportation infrastructure.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Nepal National Geospatial Agency IWG-R3",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event field assessment and mapping of road damage and accessibility status following the April 2015 earthquake in Nepal"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0072d723",
+          "title": "Covered_Roads_Nepal_April_27th_2015.zip",
+          "description": "Nepal: Covered and impassable roads as of 28 Apr 2015 (Polyline of covered roads in Nepal as of 27 Apr 2015 in zipped shapefiles (5 kb))",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/52cbd5f7-ffc2-456a-8323-19f841e0f243/resource/0072d723-a545-4643-9bbc-d2c994586d39/download/covered-roads-nepal-april-27th-2015-2.zip"
+        },
+        {
+          "id": "resource_1953e6e8",
+          "title": "Impassable_Roads_Nepal_April_28th_2015.zip",
+          "description": "Polyline of impassable roads in Nepal as of 28 Apr 2015, in zipped shapefiles (3 kb)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/52cbd5f7-ffc2-456a-8323-19f841e0f243/resource/1953e6e8-9d52-4d65-899d-d7c31ce20357/download/impassable-roads-nepal-april-28th-2015.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road network geometry classified by passability status post-earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to road infrastructure from the 2015 Nepal earthquake, recorded as covered or impassable road segments"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/nepal-covered-and-impassable-road-as-of-28-apr-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

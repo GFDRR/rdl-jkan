@@ -1,0 +1,239 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-yem_hdx_disasterinventory_1979",
+      "title": "Yemen - Disaster Inventory",
+      "description": "https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode=yem. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/yemen-disaster-inventory]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/yemen-disaster-inventory"
+      },
+      "creator": {
+        "name": "UNDRR",
+        "url": "https://data.humdata.org/dataset/yemen-disaster-inventory"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "YEM"
+        ]
+      },
+      "temporal": {
+        "start": "1979-01-01",
+        "end": "2010-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNDRR DesInventar",
+            "url": "https://data.humdata.org/dataset/yemen-disaster-inventory"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "DesInventar is a standardized disaster inventory system that compiles post-event disaster records from multiple sources including government agencies, humanitarian organizations, and media reports. The Yemen inventory contains observed disaster events with spatial, temporal, and impact data organized by hazard type and geographic distribution, serving as an empirical loss database for disaster risk assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNDRR DesInventar",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Disaster inventory system documenting post-event impacts from multiple hazard types across Yemen, including spatial distribution, temporal patterns, and damage assessments"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.desinventar.net/methodology.html"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_7032dafc",
+          "title": "DI_Stat1129_GeoDist_HXL.xls",
+          "description": "Yemen - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ffc25c2f-b3a8-4c5f-85c9-4e47907692ac/resource/7032dafc-713d-4969-b2f7-44b561836346/download/di_stat1129_geodist_hxl.xls"
+        },
+        {
+          "id": "resource_fcf52b94",
+          "title": "DI_Stat1129_Hazard.xls",
+          "description": "Yemen - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ffc25c2f-b3a8-4c5f-85c9-4e47907692ac/resource/fcf52b94-72c9-4098-8500-c705eb6dabea/download/di_stat1129_hazard.xls"
+        },
+        {
+          "id": "resource_8b701889",
+          "title": "DI_Stat1129_Temporal.xls",
+          "description": "Yemen - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ffc25c2f-b3a8-4c5f-85c9-4e47907692ac/resource/8b701889-9c3f-42cc-8cb4-d943a3521dc0/download/di_stat1129_temporal.xls"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock affected by disasters in Yemen"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to and affected by disasters in Yemen"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flood events recorded in disaster inventory"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from strong wind/cyclone events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by strong wind/cyclone events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/yemen-disaster-inventory",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

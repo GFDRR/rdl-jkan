@@ -1,0 +1,136 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-bgd_unhcr_shelterneedassessmentcoxs_2019",
+      "title": "Bangladesh - Shelter Need Assessment Cox's Bazar 2019",
+      "description": "Ensuring adequate and safe shelter for the refugees has been the core part of UNHCR's response in the Rohingya Refugee Crisis Operation from the beginning of influx. Moving forward from emergency shelter kits (ESK) distribution to upgrade shelter kits (USK) distribution, in 2019 UNHCR has initiated a need based targeted shelter repair and replacement assistance to maintain adequate shelter conditions. In line with this approach, condition of the shelters have been assessed in order to identify the individual shelter needs and specific needs of vulnerable families by the technical staff of shelter partners according to criteria and information have been collected through GIS tool. A total of 59,920 shelters were assessed. Based on the outcome of the assessment, most vulnerable shelters have been provided shelter support for Repair and Replacement and less vulnerable shelters are also receiving support for repair and replacement.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unhcr-bgd-shelter-2019-v2-1]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The data must be requested via the resource download link",
+      "contact_point": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/unhcr-bgd-shelter-2019-v2-1"
+      },
+      "creator": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/unhcr-bgd-shelter-2019-v2-1"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2019-07-05",
+        "end": "2019-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNHCR",
+            "url": "https://data.humdata.org/dataset/unhcr-bgd-shelter-2019-v2-1"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNHCR technical staff conducted a complete enumeration shelter condition assessment in Cox's Bazar refugee camps in 2019 to identify shelter damage and repair/replacement needs. The assessment targeted individual shelters to classify vulnerability and prioritize assistance for shelter upgrade and repair interventions.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNHCR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Complete enumeration shelter condition assessment conducted by UNHCR technical staff to identify individual shelter needs and vulnerable family requirements in Rohingya refugee camps."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b13f8251",
+          "title": "Bangladesh - Shelter Need Assessment Cox's Bazar 2019",
+          "description": "Clicking 'Download' leads outside HDX where you can request access to the data in csv, xlsx & dta formats",
+          "access_url": "https://microdata.unhcr.org/index.php/auth/login/?destination=catalog/209/get-microdata",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_36c39c2f",
+          "title": "Codebook",
+          "description": "Bangladesh - Shelter Need Assessment Cox's Bazar 2019 (Contains information about the dataset's metadata and data)",
+          "media_type": "application/pdf",
+          "download_url": "https://microdata.unhcr.org/index.php/catalog/209/pdf-documentation"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Shelter structures in Cox's Bazar refugee camps assessed for condition and repair needs"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Shelter damage and need for repair/replacement assessed in Cox's Bazar camps"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unhcr-bgd-shelter-2019-v2-1",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

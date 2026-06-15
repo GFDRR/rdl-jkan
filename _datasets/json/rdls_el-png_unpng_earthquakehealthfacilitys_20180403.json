@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-png_unpng_earthquakehealthfacilitys_20180403",
+      "title": "Papua New Guinea Earthquake Health Facility Status",
+      "description": "Papua New Guinea Earthquake Health Facility Status as of 3 April 2018. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/papua-new-guinea-earthquake-health-facility-status]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "UN in Papua New Guinea",
+        "url": "https://data.humdata.org/dataset/papua-new-guinea-earthquake-health-facility-status"
+      },
+      "creator": {
+        "name": "UN in Papua New Guinea",
+        "url": "https://data.humdata.org/dataset/papua-new-guinea-earthquake-health-facility-status"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PNG"
+        ]
+      },
+      "temporal": {
+        "start": "2018-04-03"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WHO",
+            "url": "https://data.humdata.org/dataset/papua-new-guinea-earthquake-health-facility-status"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "NDOH",
+            "url": "https://data.humdata.org/dataset/papua-new-guinea-earthquake-health-facility-status"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Health facility status data collected by WHO and Papua New Guinea's National Department of Health following the April 2018 earthquake, documenting facility-level damage and operational impacts through post-event assessment and registry updates.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WHO",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Health facility status assessment and damage documentation following the earthquake event"
+          },
+          {
+            "id": "source_2",
+            "name": "NDOH",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National Department of Health facility registry and operational status reporting"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_06305035",
+          "title": "Papua New Guinea Earthquake Health Facility Status_030418.xlsx",
+          "description": "Papua New Guinea Earthquake Health Facility Status_030418.xlsx",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3f3b4b2f-60c8-4d03-ac74-aa7fd606b0d7/resource/06305035-6d3b-4ea0-8947-9e394ff0d644/download/png-earthquake-health-facility-status_030418.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Health facility infrastructure and operational status"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to health facilities from earthquake ground motion"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/papua-new-guinea-earthquake-health-facility-status",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

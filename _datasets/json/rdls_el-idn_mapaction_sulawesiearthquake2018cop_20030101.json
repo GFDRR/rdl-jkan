@@ -1,0 +1,134 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-idn_mapaction_sulawesiearthquake2018cop_20030101",
+      "title": "Indonesia - Sulawesi Earthquake 2018, Copernicus Building Damage Classification",
+      "description": "This point dataset aggregrates Copernicus building damage data derived from post-event satellite imagery into a single dataset. Within the areas analysed, individual buildings are classified as damage/destroyed/none/possibly damaged. Separate datasets show the footprint of the areas analysed, and a hex grid analysis of building counts.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ma-sulawesi-earthquake-2018-copernicus-building-damage-classfcn]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "MapAction",
+        "url": "https://data.humdata.org/dataset/ma-sulawesi-earthquake-2018-copernicus-building-damage-classfcn"
+      },
+      "creator": {
+        "name": "MapAction",
+        "url": "https://data.humdata.org/dataset/ma-sulawesi-earthquake-2018-copernicus-building-damage-classfcn"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2003-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Copernicus",
+            "url": "https://data.humdata.org/dataset/ma-sulawesi-earthquake-2018-copernicus-building-damage-classfcn"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Copernicus derived building damage classifications from post-event satellite imagery of the 2018 Sulawesi earthquake. Individual buildings were classified into damage states and aggregated into point and hex grid summary formats to quantify direct structural impacts across the affected region.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Copernicus",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event satellite imagery analysis providing building-level damage classification (damaged/destroyed/none/possibly damaged) for the 2018 Sulawesi earthquake impact zone"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d8b87b54",
+          "title": "Sulawesi earthquake 2018 Copernicus building damage classification",
+          "description": "Indonesia - Sulawesi Earthquake 2018, Copernicus Building Damage Classification (Sulawesi earthquake 2018 Copernicus building damage classification)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://maps.mapaction.org/dataset/0de28aa8-cd7f-41f9-87bb-0db0aad7c20d/resource/67a7fa66-a398-49f3-8f41-14d52815af03/download/sulaffdbldgpts1copernicusdamagedbuilding.zip"
+        },
+        {
+          "id": "resource_d4b90253",
+          "title": "Sulawesi earthquake 2018, hex grid summary of Copernicus damaged/destroyed buildings",
+          "description": "Sulawesi earthquake 2018, hex grid summary of Copernicus damaged/destroyed buildings",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://maps.mapaction.org/dataset/0de28aa8-cd7f-41f9-87bb-0db0aad7c20d/resource/c90f48a2-4632-4faa-bb0f-0baacda9f3b2/download/sulaffdbldgpys1copernicusdamageddestroyedhexgrid.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Individual building footprints classified by damage state from post-event satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from 2018 Sulawesi earthquake derived from Copernicus satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ma-sulawesi-earthquake-2018-copernicus-building-damage-classfcn",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

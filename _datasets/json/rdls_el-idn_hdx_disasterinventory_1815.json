@@ -1,0 +1,305 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-idn_hdx_disasterinventory_1815",
+      "title": "Indonesia - Disaster Inventory",
+      "description": "https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode=idn. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/indonesia-disaster-inventory]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/indonesia-disaster-inventory"
+      },
+      "creator": {
+        "name": "UNDRR",
+        "url": "https://data.humdata.org/dataset/indonesia-disaster-inventory"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "1815-01-01",
+        "end": "2018-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNDRR DesInventar",
+            "url": "https://data.humdata.org/dataset/indonesia-disaster-inventory"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The Indonesia Disaster Inventory is compiled from DesInventar, UNDRR's standardized disaster impact database system. Post-event damage and loss data are collected from multiple sources and systematically recorded with geographic, temporal, and hazard-type classifications. The dataset aggregates observed impacts across multiple hazard types (flood, earthquake, landslide, strong wind, etc.) with spatial distribution and temporal trends.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNDRR DesInventar",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Disaster inventory system maintained by UNDRR that compiles post-event damage assessments and impact records from multiple hazard types across Indonesia through systematic data collection and standardization."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.desinventar.net/methodology.html"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_c2d8ad7a",
+          "title": "DI_Stat1114_GeoDist_HXL.xls",
+          "description": "Indonesia - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a63ce98d-7f6a-4249-9162-043be89090ce/resource/c2d8ad7a-6a5c-4a3e-be83-fb72fa9d0dda/download/di_stat1114_geodist_hxl.xls"
+        },
+        {
+          "id": "resource_0ea35cb3",
+          "title": "DI_Stat1114_Hazard.xls",
+          "description": "Indonesia - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a63ce98d-7f6a-4249-9162-043be89090ce/resource/0ea35cb3-9cbb-4fd8-a4b4-1debf18967fc/download/di_stat1114_hazard.xls"
+        },
+        {
+          "id": "resource_30982afb",
+          "title": "DI_Stat1114_Temporal.xls",
+          "description": "Indonesia - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a63ce98d-7f6a-4249-9162-043be89090ce/resource/30982afb-b8d1-4fd0-89e9-d79f0cadd0e1/download/di_stat1114_temporal.xls"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock affected by disaster events"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to and affected by disaster events"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Infrastructure assets impacted by disasters"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage from flood events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage from earthquake events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake events"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage from strong wind events"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage from landslide events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/indonesia-disaster-inventory",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-fji_iom_evacuationtrackingmonitor_2016",
+      "title": "Fiji Evacuation Tracking & Monitoring Cycle 2 - Site Assessment data",
+      "description": "Information Package for Fiji Evacuation Tracking & Monitoring Cycle 2. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/fiji-evacuation-tracking-monitoring-cycle-2]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/fiji-evacuation-tracking-monitoring-cycle-2"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/fiji-evacuation-tracking-monitoring-cycle-2"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "FJI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-05-31",
+        "end": "2016-06-21"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Census-based site assessment data collected by IOM during Fiji evacuation tracking and monitoring cycle 2, documenting displaced populations at evacuation sites and their humanitarian needs in response to cyclone impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Site assessment census data tracking evacuated populations and their needs during cyclone response in Fiji"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f83b2f21",
+          "title": "etm-cycle-2-complete-dataset-sanitized",
+          "description": "Fiji Evacuation Tracking & Monitoring Cycle 2 - Site Assessment data (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c39e836e-8dc3-4b89-996a-c7a3d31cf50c/resource/f83b2f21-027d-4752-af7f-45f11f7293ef/download/etm-cycle-2-complete-dataset-sanitized.xlsx"
+        },
+        {
+          "id": "resource_6bd2dcde",
+          "title": "Fiji ETM Cycle2 Interactive Map.kmz",
+          "description": "Fiji Evacuation Tracking & Monitoring Cycle 2 - Site Assessment data (Fiji ETM Cycle2 Interactive Map.kmz)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://data.humdata.org/dataset/c39e836e-8dc3-4b89-996a-c7a3d31cf50c/resource/6bd2dcde-668c-48ad-aab0-c36faee87d38/download/fiji-etm-cycle2-interactive-map.kmz"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Evacuated population tracked across monitoring sites in Fiji"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement from cyclone evacuation"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/fiji-evacuation-tracking-monitoring-cycle-2",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

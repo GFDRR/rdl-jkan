@@ -1,0 +1,213 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-som_ochasom_rapidneedsassessmentelnin_202311",
+      "title": "Somalia - Rapid Needs Assessment for El Nino Flooding in Baardheere District",
+      "description": "Baardheere district in Jubaland State also experienced extreme flash flooding in March 2023, which caused 14 deaths, displaced thousands, and destroyed property. The Inter-Cluster Coordination Group (ICCG) emergency response and preparedness plan anticipated that this cycle of flooding will affect nearly 400,000 - 500,000 people in Jowhar and Belet Weyne, and approximately 42,305 people in Baardheere. REACH's rapid needs assessment of key informants (KIs) in Belet Weyne and Baardheere districts focuses on locations with high influx of displaced people evacuating their flooded communities, aiming to cover all evacuation sites with affected populations, dependent on accessibility.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/reach_som_clean-dataset-baardheere_rna-flooding_november-2023-xlsx]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/reach_som_clean-dataset-baardheere_rna-flooding_november-2023-xlsx"
+      },
+      "creator": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/reach_som_clean-dataset-baardheere_rna-flooding_november-2023-xlsx"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-01",
+        "end": "2023-11-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "REACH",
+            "url": "https://data.humdata.org/dataset/reach_som_clean-dataset-baardheere_rna-flooding_november-2023-xlsx"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Inter-Cluster Coordination Group (ICCG)",
+            "url": "https://data.humdata.org/dataset/reach_som_clean-dataset-baardheere_rna-flooding_november-2023-xlsx"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event rapid needs assessment data collected via key informant interviews in November 2023 in Baardheere and Belet Weyne districts following March 2023 El Niño-induced flooding. Survey methodology captured displacement status, population demographics, shelter conditions, and humanitarian needs across host communities and IDP settlements. Data was compiled and cleaned by REACH in coordination with OCHA Somalia and humanitarian partners to inform response strategy and resource allocation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "REACH",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Rapid needs assessment survey data collected from key informants in Baardheere and Belet Weyne districts documenting displacement, shelter conditions, and humanitarian needs following March 2023 El Niño flooding."
+          },
+          {
+            "id": "source_2",
+            "name": "Inter-Cluster Coordination Group (ICCG)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Emergency response and preparedness planning data providing population impact projections and affected area estimates for the El Niño flooding cycle."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b44d3aba",
+          "title": "02. REACH_SOM_Clean-dataset-Baardheere_RNA-Flooding_November-2023.xlsx",
+          "description": "Somalia - Rapid Needs Assessment for El Nino Flooding in Baardheere District (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/e855c8d8-93c8-4a86-a2c6-3bd9dc10b8b1/resource/b44d3aba-c2c1-4a06-a841-9e69b78df55c/download/02.-reach_som_clean-dataset-baardheere_rna-flooding_november-2023.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Displaced and host populations in Baardheere and Belet Weyne districts affected by El Niño flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Shelter types occupied by flood-affected households including solid buildings, makeshift shelters, and open-air arrangements"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct fatalities from El Niño flooding in Baardheere district (14 deaths recorded)"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement from flood-affected communities in Baardheere and Belet Weyne districts"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Property destruction from El Niño flooding in assessed locations"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/reach_som_clean-dataset-baardheere_rna-flooding_november-2023-xlsx",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

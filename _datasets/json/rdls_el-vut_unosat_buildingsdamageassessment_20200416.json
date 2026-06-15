@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-vut_unosat_buildingsdamageassessment_20200416",
+      "title": "Buildings Damage Assessment & Related Density in South of Sanma Province, Vanuatu",
+      "description": "UNOSAT code: TC20200403VUT This map illustrates potentially damaged structures and buildings in south of Sanma Province, Vanuatu as detected by satellite image acquired after landfall of the Tropical Cyclone Harold-20 on 6 April 2020. UNITAR-UNOSAT analysis identified about 5,200 potentially damaged structures in the analysis extent across the south of Sanma province within the cloud free areas. Taking into account the pre-building footprints provided by Humanitarian OpenStreetMap, this represents about 33% of the total number of structures/buildings within the analyzed cloud free areas. Please note that some areas could not be analyzed due to the cloud cover. Total and final estimates by municipality are summarized in the table below. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/buildings-damage-assessment-related-density-in-south-of-sanma-province-vanuatu]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/buildings-damage-assessment-related-density-in-south-of-sanma-province-vanuatu"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/buildings-damage-assessment-related-density-in-south-of-sanma-province-vanuatu"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2020-04-16"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/buildings-damage-assessment-related-density-in-south-of-sanma-province-vanuatu"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/buildings-damage-assessment-related-density-in-south-of-sanma-province-vanuatu"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre-event building footprints from Humanitarian OpenStreetMap with post-Tropical Cyclone Harold satellite imagery acquired on 6 April 2020 to detect structural damage through visual change detection. Approximately 5,200 damaged structures were identified in cloud-free areas of south Sanma Province, representing 33% of the total building inventory.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Pre-event building footprints used as reference inventory to calculate damage ratio and total building count in the analysis area"
+          },
+          {
+            "id": "source_2",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event satellite imagery analysis identifying approximately 5,200 potentially damaged structures through change detection methodology"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_77f5d373",
+          "title": "TC20200403VUT_gdb.zip",
+          "description": "Buildings Damage Assessment & Related Density in South of Sanma Province, Vanuatu (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/VU/TC20200403VUT/TC20200403VUT_gdb.zip"
+        },
+        {
+          "id": "resource_fe99c9c8",
+          "title": "TC20200403VUT_SHP.zip",
+          "description": "Buildings Damage Assessment & Related Density in South of Sanma Province, Vanuatu (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/VU/TC20200403VUT/TC20200403VUT_SHP.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints and structures in south Sanma Province identified from satellite imagery and OpenStreetMap"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Tropical Cyclone Harold assessed via post-event satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/buildings-damage-assessment-related-density-in-south-of-sanma-province-vanuatu",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-idn_emergency_capac_jointneedassessmentpaluea_201810",
+      "title": "Indonesia - Joint Need Assessment Palu Earthquake & Tsunami",
+      "description": "excel data. link to the power BI dashboard Data live online: https://bit.ly/2RnUd7x. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/raw-data-of-joint-need-assessment-palu-earthquake-tsunami-28-september-2018]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "data collect from the period of October 3-8, 2018",
+      "contact_point": {
+        "name": "Emergency Capacity Building (ECB) Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/raw-data-of-joint-need-assessment-palu-earthquake-tsunami-28-september-2018"
+      },
+      "creator": {
+        "name": "Emergency Capacity Building (ECB) Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/raw-data-of-joint-need-assessment-palu-earthquake-tsunami-28-september-2018"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-10-03",
+        "end": "2018-10-08"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Emergency Capacity Building (ECB) Indonesia",
+            "url": "https://data.humdata.org/dataset/raw-data-of-joint-need-assessment-palu-earthquake-tsunami-28-september-2018"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Joint needs assessment data collected via sample survey methodology in Palu, Indonesia following the September 2018 earthquake and tsunami. The dataset captures post-event impact information on buildings and population affected, compiled into an Excel database with live Power BI dashboard visualization for humanitarian response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Emergency Capacity Building (ECB) Indonesia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event needs assessment survey data collected from Palu following the September 2018 earthquake and tsunami event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d07fa84d",
+          "title": "raw-data_9oct.xlsx",
+          "description": "Indonesia - Joint Need Assessment Palu Earthquake & Tsunami (Joint Need Assessment for Palu earthquake and tsunami.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d7339e25-c9d4-4df6-b2cc-14c5d4b68280/resource/d07fa84d-83c1-4d9e-9113-2ace48fc6575/download/raw-data_9oct.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock assessed in Palu affected by earthquake and tsunami"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population in Palu assessed for needs following earthquake and tsunami"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from earthquake in Palu"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_tsunami",
+              "type": "tsunami",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from tsunami in Palu"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake in Palu"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_tsunami",
+              "type": "tsunami",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by tsunami in Palu"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/raw-data-of-joint-need-assessment-palu-earthquake-tsunami-28-september-2018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

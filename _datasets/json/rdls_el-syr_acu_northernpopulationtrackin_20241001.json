@@ -1,0 +1,164 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-syr_acu_northernpopulationtrackin_20241001",
+      "title": "Northern Syria Population Tracking",
+      "description": "This dashboard monitors the population movements in Northern Syria in non-governmental areas. The data is collected from the communities and IDP camps in the targeted area by the ACU field enumerators and triangulated with various sources like the local councils and humanitarian organizations to ensure the maximum level of accuracy. The baseline was set by cross-checking the population numbers from ACU Population Monitoring and HNAP statistics. RESIDENT POPULATION: Resident populations are individuals or households living in a location and are neither displaced nor newly returned (in the current calendar year). INTERNALLY DISPLACED PERSONS (IDPs): individuals who have been forced to flee their location of origin to another location within Syria for at least one month. RETURNEES: are individuals who returned to their community of origin within the calendar year and have stayed for at least one month after having previously fled for at least one month. Newly INTERNALLY DISPLACED PERSONS (N-IDPs): individuals who have been forced to flee their location of origin to another location within Syria, and at the time of the data collection, their stay in the displacement sites did not exceed one month. Departures: individuals who were not in their original locations during the data collection period and had left their locations for about a month.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/population-displacement-and-return-movements-in-northern-syria]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "Assistance Coordination Unit",
+        "url": "https://data.humdata.org/dataset/population-displacement-and-return-movements-in-northern-syria"
+      },
+      "creator": {
+        "name": "Assistance Coordination Unit",
+        "url": "https://data.humdata.org/dataset/population-displacement-and-return-movements-in-northern-syria"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2024-10-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "ACU Population Monitoring",
+            "url": "https://data.humdata.org/dataset/population-displacement-and-return-movements-in-northern-syria"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "HNAP statistics",
+            "url": "https://data.humdata.org/dataset/population-displacement-and-return-movements-in-northern-syria"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Local councils",
+            "url": "https://data.humdata.org/dataset/population-displacement-and-return-movements-in-northern-syria"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Population tracking data collected through direct field enumeration by ACU enumerators in Northern Syria communities and IDP camps, triangulated with local councils and humanitarian organization sources (HNAP), and cross-validated against baseline statistics to establish resident, displaced, and returnee population counts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ACU Population Monitoring",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational population data collected by ACU field enumerators from communities and IDP camps in Northern Syria"
+          },
+          {
+            "id": "source_2",
+            "name": "HNAP statistics",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian needs assessment data used for baseline cross-validation and triangulation of population figures"
+          },
+          {
+            "id": "source_3",
+            "name": "Local councils",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Local administrative sources providing population verification and triangulation for accuracy assurance"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_083183d9",
+          "title": "Northern Syria Population Tracking - October 2024.xlsx",
+          "description": "Northern Syria Population Tracking - October 2024.xlsx",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/7bfbbfb3-fd01-462f-9682-6279cebc3cc3/resource/083183d9-1443-4b90-bfbc-1f5afdfe3969/download/northern-syria-population-tracking-october-2024.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Resident population, internally displaced persons, and returnees tracked across Northern Syria communities and IDP camps"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced population counts resulting from conflict-driven displacement in Northern Syria"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/population-displacement-and-return-movements-in-northern-syria",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

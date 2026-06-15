@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-moz_ochamoz_cyclonedikeledimultisecto_202501",
+      "title": "Mozambique: Cyclone Dikeledi Multi-Sectoral Initial Rapid Assessment",
+      "description": "Cyclone Dikeledi Multi-Sectoral Initial Rapid Assessment (MIRA) analysis dataset of Nampula, Mozambique.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-cyclone-dikeledi-multi-sectoral-initial-rapid-assessment]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Mozambique",
+        "url": "https://data.humdata.org/dataset/mozambique-cyclone-dikeledi-multi-sectoral-initial-rapid-assessment"
+      },
+      "creator": {
+        "name": "OCHA Mozambique",
+        "url": "https://data.humdata.org/dataset/mozambique-cyclone-dikeledi-multi-sectoral-initial-rapid-assessment"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-23",
+        "end": "2025-01-25"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Multi-Sectoral Initial Rapid Assessment (MIRA) survey data collected through sample surveys by humanitarian partners in Nampula Province, Mozambique following Cyclone Dikeledi in 2025. The dataset captures village-level post-event population counts, household displacement status, shelter conditions, and vulnerable population groups through structured questionnaires administered by trained enumerators.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Mozambique",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-sectoral rapid assessment survey conducted by humanitarian partners in Nampula Province following Cyclone Dikeledi, capturing post-event population displacement, shelter conditions, and affected household data."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b19e7dfc",
+          "title": "MIRA_-_Ciclone_DIKELEDI_2025_-_all_versions.xlsx",
+          "description": "Mozambique: Cyclone Dikeledi Multi-Sectoral Initial Rapid Assessment (Cyclone Dikeledi Multi-Sectoral Initial Rapid Assessment)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3238d15d-f1af-4ff1-a0ee-a4cef3e23978/resource/b19e7dfc-33e1-443e-aafb-8fd530fae65b/download/mira_-_ciclone_dikeledi_2025_-_all_versions.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population before and after Cyclone Dikeledi, including displaced persons, returnees, and vulnerable groups"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement and shelter conditions resulting from Cyclone Dikeledi"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total affected population and household counts from Cyclone Dikeledi"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-cyclone-dikeledi-multi-sectoral-initial-rapid-assessment",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
