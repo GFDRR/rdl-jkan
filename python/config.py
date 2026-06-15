@@ -7,7 +7,7 @@ json_dir = f"{datasets_dir}/json"
 python_path = f"{root_dir}/python"
 vectors_path = f"{python_path}/vectors.json"
 # for use when run with --ci flag
-remote_target_branch = "rdl-0.3"
+remote_target_branch = "rdl-1.0"
 
 # Search configuration constants (matching front-end hybrid search logic)
 KEYWORD_SCORE_MIN = 0.75
@@ -16,8 +16,7 @@ SCORED_FIELDS = ['catalog', 'category', 'creator.name', 'dataset_id', 'descripti
 SEMANTIC_MAX_RESULTS = 50
 SEMANTIC_MIN_SCORE = 0.25
 
-schema_url_v2 = "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json"
-schema_url_v3 = "https://docs.riskdatalibrary.org/en/0__3__0/rdls_schema.json"
+schema_url = "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json"
 
 dataset_catalogs = {
     "oasishub.co": "OASIS HUB",

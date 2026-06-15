@@ -7,25 +7,19 @@
     {% if dataset.description != "" %}"description": {{ dataset.description | jsonify }},{% endif %}
     {% if dataset.details != "" %}"details": {{ dataset.details | jsonify }},{% endif %}
     {% if dataset.catalog %}"catalog": {{ dataset.catalog | jsonify }},{% endif %}
-    "category": {% if dataset.risk_data_type[0] %}
+    {% if dataset.risk_data_type[0] %}"category":
       [{% for cat in dataset.risk_data_type %}
           {{ cat | capitalize | jsonify }}{% unless forloop.last %}, {% endunless %}
-        {% endfor %}]
-      {% else %} {{ "None" | jsonify }}
-    {% endif %},
-    "hazard_type":
-      {% if dataset.risk_data_type[0] %}
-          [{% for cat in dataset.risk_data_type %}
-          {% assign hazard_type_code = dataset[cat]["hazard_type"] %}
-            {% if hazard_type_code and site.data.rdl-hazard_type[hazard_type_code] %}
-              {{ site.data.rdl-hazard_type[hazard_type_code] | jsonify }}{% unless forloop.last %}, {% endunless %}
-            {% else %}
-              {{ "None" | jsonify }}{% unless forloop.last %}, {% endunless %}
-            {% endif %}
-          {% endfor %}]
-      {% else %}
-        {{ "None" | jsonify }}
-      {% endif %},
+        {% endfor %}],
+    {% endif %}
+    {% assign split_hazard_type = dataset.hazard.type | split: ", " %}
+    {% if split_hazard_type.size > 0 %}
+      "hazard_type": [{% for code in split_hazard_type %}
+          {% if site.data.rdl-hazard_type[code] %}
+            {{ site.data.rdl-hazard_type[code] | jsonify }}
+          {% endif %}{% unless forloop.last %}, {% endunless %}
+        {% endfor %}],
+    {% endif %}
     "license_code": {{ dataset.license | jsonify }},
     {% if site.data.rdl-license-name[dataset.license] %}
       "license_display": {{ site.data.rdl-license-name[dataset.license] | jsonify }},
@@ -47,11 +41,8 @@
         {{ "None" | jsonify }}
       {% endif %},
     "url": "{{ site.baseurl }}{{ dataset.url }}",
-    "project": {% if dataset.project %}{% if dataset.schema == "rdl-03" %}
+    "project": {% if dataset.project %}
         {{ dataset.project.name | jsonify }}
-        {% else %}
-          {{ dataset.project | jsonify }}
-        {% endif %}
       {% else %}
         {{ "None" | jsonify }}
       {% endif %},

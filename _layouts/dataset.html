@@ -93,6 +93,8 @@ layout: default
                   </h3>
                   {% if resource.format %}
                   <span class="format-badge" property='dcat:mediaType'>{{ resource.format }}</span>
+                  {% elsif resource.media_type %}
+                  <span class="format-badge" property='dcat:mediaType'>{{ resource.media_type }}</span>
                   {% endif %}
                 </div>
                 {% if resource.description %}
