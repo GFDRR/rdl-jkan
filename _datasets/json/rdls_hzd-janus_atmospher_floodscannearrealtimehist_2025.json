@@ -1,0 +1,101 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-janus_atmospher_floodscannearrealtimehist_2025",
+      "title": "FloodScan: Near Real-Time and Historical Flood Mapping",
+      "description": "FloodScan uses satellite data to map and monitor floods daily, helping compare current flood conditions with historical averages. This dataset contains two resources: The first (hdx_floodscan_zonal_stats.xlsx) is a daily tabular dataset providing average FloodScan Standard Flood Extent Depiction (SFED) flood fraction (0-100%) per admin 1 and 2 level. Historical baseline values (SFED_BASELINE) are calculated per day-of-year from the last 10 years of historical data (non-inclusive of current year) after applying an 11 day smoothing mean window. Return Period (RP) is calculated empirically based on all historical data up to the current year (non-inclusive). The second resource (aer_floodscan_300s_SFED_90d.zip) is a zipped file containing AER FloodScan estimated daily flood fraction (0-100%) gridded data at approximately 10 km resolution (300 arcseconds equivalent to approximately 0.083 degrees) for the last 90 days. Each file represents the estimates for a single day and includes 2 bands: SFED and SFED_BASELINE. The baseline band provides users an easy way to compare current values with historical averages. The baseline is calculated per day-of-year from the last 10 years of historical data (non-inclusive of current year) after applying an 11 day temporal smoothing mean window.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/floodscan]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Modified and Simplified by UN OCHA",
+      "contact_point": {
+        "name": "JANUS Atmospheric and Environmental Research",
+        "url": "https://data.humdata.org/dataset/floodscan"
+      },
+      "creator": {
+        "name": "JANUS Atmospheric and Environmental Research",
+        "url": "https://data.humdata.org/dataset/floodscan"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2025-10-11",
+        "end": "2026-01-09"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Atmospheric and Environmental Research (AER) FloodScan",
+            "url": "https://data.humdata.org/dataset/floodscan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Daily SFED flood fraction rasters from AER satellite observations are smoothed with an 11-day centered rolling mean and aggregated to create day-of-year baseline climatology from 10 years of historical data (2013-2023). Return periods are calculated empirically by comparing current flood extent to this historical baseline. Data is provided as both gridded GeoTIFF rasters (300m resolution) and zonal statistics aggregated to administrative boundaries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Atmospheric and Environmental Research (AER) FloodScan",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Daily satellite-derived Standard Flood Extent Depiction (SFED) raster data providing observed flood fraction (0-100%) at 300m resolution, processed with 11-day smoothing and baseline calculation from 10 years of historical data (2013-2023)."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b2108171",
+          "title": "hdx_floodscan_zonal_stats.xlsx",
+          "description": "Daily Excel file containing date, admin metadata, raw SFED mean values (per admin 1 and 2), the approximate calculated return period and the baseline value calculated from the past 10 years of data.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b704f489-6705-499a-b5f0-22eeb1184b0b/resource/b2108171-0a17-428f-9a28-7f3f7160d8f5/download/floodscan_readme.xlsx"
+        },
+        {
+          "id": "resource_7e76a4ae",
+          "title": "aer_floodscan_300s_SFED_90d.zip",
+          "description": "Daily zip file containing previous 90 days of raster data with both SFED and SFED baseline bands.",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/b704f489-6705-499a-b5f0-22eeb1184b0b/resource/7e76a4ae-57bd-40e0-acf9-a67def1e7f9b/download/baseline_zipped_file.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/floodscan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

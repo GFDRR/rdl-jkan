@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-jamvir_unosat_detectedwaterextentkingst_20240705",
+      "title": "Satellite detected water extent in Kingston, Saint Catherine and Saint Andrew Parishes, Jamaica as of 04 July 2024",
+      "description": "UNOSAT code: TC20240702JAM, GDACS ID: 1001067 This map illustrates satellite-detected water extent in Kingston, Saint Catherine and Saint Andrew Parishes as observed from a TerraSAR-X image acquired at 06:03 local time. Within the analysed area of about 1,450 km², a limited extent of 5 km² of lands appear to be affected with flood waters. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT). Important note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-in-kingston-saint-catherine-and-saint-andrew-parishes-jamaica-as-of-04-july-2]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-kingston-saint-catherine-and-saint-andrew-parishes-jamaica-as-of-04-july-2"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-kingston-saint-catherine-and-saint-andrew-parishes-jamaica-as-of-04-july-2"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VIR",
+          "JAM"
+        ]
+      },
+      "temporal": {
+        "start": "2024-07-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extent-in-kingston-saint-catherine-and-saint-andrew-parishes-jamaica-as-of-04-july-2"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "A TerraSAR-X synthetic aperture radar (SAR) image acquired at 06:03 local time on 04 July 2024 was processed by UNOSAT analysts using radar backscatter change detection to delineate flood water extent across approximately 1,450 km² in Kingston, Saint Catherine and Saint Andrew Parishes, Jamaica (GDACS event 1001067, Tropical Cyclone Beryl). The analysis identified approximately 5 km² of flooded land area, classified by water status and confidence level, and delivered as vector polygon geodata for rapid emergency response support.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "UNOSAT produced the flood extent map by analysing a TerraSAR-X SAR image acquired on 04 July 2024, delineating water-covered areas through change detection and radar backscatter analysis. The resulting dataset provides polygon geometries of satellite-detected flood water extent with confidence and water classification attributes."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_46a2df0d",
+          "title": "TC20240702JAM_gdb.zip",
+          "description": "Satellite detected water extent in Kingston, Saint Catherine and Saint Andrew Parishes, Jamaica as of 04 July 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3893/TC20240702JAM_gdb.zip"
+        },
+        {
+          "id": "resource_e5edba93",
+          "title": "TC20240702JAM_SHP.zip",
+          "description": "Satellite detected water extent in Kingston, Saint Catherine and Saint Andrew Parishes, Jamaica as of 04 July 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3893/TC20240702JAM_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-in-kingston-saint-catherine-and-saint-andrew-parishes-jamaica-as-of-04-july-2",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

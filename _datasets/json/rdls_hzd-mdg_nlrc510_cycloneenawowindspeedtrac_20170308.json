@@ -1,0 +1,129 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-mdg_nlrc510_cycloneenawowindspeedtrac_20170308",
+      "title": "Cyclone Enawo - Madagascar - windspeed, track and rainfall",
+      "description": "Please note that the windspeed and track dataset only covers the part where the this was still a tropical cyclone. For explanation see below caveats. Due to this we will not release a priority index, since windspeed data is missing for most of the country. Dataset of windspeed and track was kindly provided by University College London. The rainfall data is calculated based on GPM. It is the accumulated rainfall from March 6th midnight to March 10th 10:00am Madagascar time.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cyclone-enawo-madagascar-windspeed-track-and-rainfall]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "Last update on tropical cyclone Enawo was at 18:00 UT 7th March 2017. The data is issued by the Joint Typhoon Warning Center (JTWC) in Hawaii. JTWC stops issuing data on landfalling tropical cyclones when they loose their tropical cyclone status (due to loss of storm structure and organisation). This happened at 18:00 UT 7th March 2017 for Enawo. (Such loss of structure after landfall does not occur for tropical cyclones which strike the Philippines nor for any small island country worldwide).",
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/cyclone-enawo-madagascar-windspeed-track-and-rainfall"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/cyclone-enawo-madagascar-windspeed-track-and-rainfall"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2017-03-08"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "University College London",
+            "url": "https://data.humdata.org/dataset/cyclone-enawo-madagascar-windspeed-track-and-rainfall"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "GPM (Global Precipitation Measurement)",
+            "url": "https://data.humdata.org/dataset/cyclone-enawo-madagascar-windspeed-track-and-rainfall"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Windspeed and track data were directly observed/measured by University College London during Cyclone Enawo's passage. Rainfall accumulation was derived from GPM satellite precipitation measurements for the period March 6-10, 2017. The dataset captures the hazard footprint of a tropical cyclone event in Madagascar.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "University College London",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Provided observed tropical cyclone track and windspeed data for Cyclone Enawo during its passage over Madagascar."
+          },
+          {
+            "id": "source_2",
+            "name": "GPM (Global Precipitation Measurement)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite precipitation data used to calculate accumulated rainfall from the cyclone event (March 6-10, 2017)."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3ac3332b",
+          "title": "Cyclone Enawo - track.zip",
+          "description": "Cyclone Enawo - Madagascar - windspeed, track and rainfall (Cyclone Enawo - track.zip)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/1ffa6ae8-438d-43c7-921b-40356647981f/resource/3ac3332b-8a31-4e5a-8cff-2d545ddb61be/download/cyclone-enawo-track.zip"
+        },
+        {
+          "id": "resource_d16093a7",
+          "title": "Cyclone Enawo - windspeeds.zip",
+          "description": "Cyclone Enawo - Madagascar - windspeed, track and rainfall (Cyclone Enawo - windspeeds.zip)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/1ffa6ae8-438d-43c7-921b-40356647981f/resource/d16093a7-3f2d-48f3-b7b3-46d497b879c4/download/cyclone-enawo-windspeeds.zip"
+        },
+        {
+          "id": "resource_e4b58dfd",
+          "title": "Enawo_rainfall.csv",
+          "description": "Cyclone Enawo - Madagascar - windspeed, track and rainfall (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/1ffa6ae8-438d-43c7-921b-40356647981f/resource/e4b58dfd-0a05-4b62-90a8-0a75328a7150/download/enawo_rainfall.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cyclone-enawo-madagascar-windspeed-track-and-rainfall",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

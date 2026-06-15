@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-phl_wfp_tarlacpampangapangasinans_20180720",
+      "title": "Philippines - Tarlac, Pampanga, Pangasinan standing water due to habagat (July 2018)",
+      "description": "This is a standing water (possible inundated/flooded areas) in tarlac, pampanga and parts of pangasinan Philippines due to several typhoons and habagat (July 2018). Data were processed using Sentinel 1A GRD data (July 20, 2018) to map out areas with standing water . Thanks to ESA Copernicus program for the Sentinel 1 data and Google for their cloud computing reource. This was processed in Google Earth Engine. For more detailed information, please contact michael.manalili@wfp.org or michaelandrew.manalili@gmail.com. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/tarlac-pampanga-pangasinan-standing-water-due-to-habagat-july-2018]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Please contact the contributor for more detailed information",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/tarlac-pampanga-pangasinan-standing-water-due-to-habagat-july-2018"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/tarlac-pampanga-pangasinan-standing-water-due-to-habagat-july-2018"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2018-07-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "ESA Copernicus Sentinel-1A",
+            "url": "https://data.humdata.org/dataset/tarlac-pampanga-pangasinan-standing-water-due-to-habagat-july-2018"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Google Earth Engine",
+            "url": "https://data.humdata.org/dataset/tarlac-pampanga-pangasinan-standing-water-due-to-habagat-july-2018"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1A GRD SAR data acquired on 20 July 2018 was processed in Google Earth Engine using image processing and cloud computing to detect standing water surfaces through backscatter analysis. The resulting raster map identifies inundated and flooded areas across Tarlac, Pampanga, and Pangasinan provinces following typhoon and habagat rainfall events.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ESA Copernicus Sentinel-1A",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Ground Range Detected (GRD) synthetic aperture radar imagery acquired on 20 July 2018, processed to detect standing water surfaces through backscatter analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "Google Earth Engine",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Cloud computing platform used for SAR image processing, water detection algorithm, and spatial analysis of inundated areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2507184b",
+          "title": "standing_water_Sentinel1_Habagat_Philippines_July202018.tif",
+          "description": "This is a standing water (possible inundated/flooded areas) in tarlac, pampanga and parts of pangasinan Philippines due to several typhoons and habagat (July 2018)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/106693d0-98d9-4451-b506-83a6e03cb5e8/resource/2507184b-153c-4c4a-bacb-805a8a4179c2/download/standing_water_sentinel1_habagat_philippines_july202018.tif"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/tarlac-pampanga-pangasinan-standing-water-due-to-habagat-july-2018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
