@@ -1,0 +1,230 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: International Organization for Migration (IOM) Displacement Tracking Matrix
+      (DTM)
+    url: https://data.humdata.org/dataset/yemendisplacement-daily-tracking-idps-returnees-iom-dtm_2026
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/yemendisplacement-daily-tracking-idps-returnees-iom-dtm_2026
+creator:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/yemendisplacement-daily-tracking-idps-returnees-iom-dtm_2026
+dataset_id: rdls_lss-yem_iom_displacementdailytracking_202601
+description: 'In Yemen, implement Rapid Displacement Tracking (RDT) to collect data
+  on the number of Yemeni households (HHs) forced to flee on a daily basis due to
+  conflict, natural hazards or other reasons in accessible areas. This allows DTM
+  to produce regular reporting of occurrences of displacement in terms of numbers,
+  locations and priority needs. Please note that findings are limited to Yemen''s
+  south area administered by the Internationally Recognized Government. RDT methodology
+  captured the estimated number (flow) of newly internally displaced persons (IDPs)
+  and returnees through key informant interviews. The RDT output supply a timely and
+  actionable data on new population movements only and does not capture total numbers
+  (stock) of IDPs or returnees. RDT also does not capture whether displacement is
+  new or repeated (households displaced from another displacement location).. [Source:
+  This metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/yemendisplacement-daily-tracking-idps-returnees-iom-dtm_2026]'
+details: null
+exposure: []
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: Daily displacement tracking data collected through key informant interviews
+    in accessible areas of Yemen's south (Internationally Recognized Government-administered
+    territory). Data aggregated by governorate and district with household-level displacement
+    and return flows, triggering reasons (conflict, natural hazards, other), and associated
+    humanitarian needs assessed at the time of tracking.
+  sources:
+  - id: source_1
+    license: null
+    name: International Organization for Migration (IOM) Displacement Tracking Matrix
+      (DTM)
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/yemendisplacement-daily-tracking-idps-returnees-iom-dtm_2026
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Internally displaced persons (households) due to conflict and other
+      displacement triggers
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: Returnee households returning from displacement
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_2
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://dtm.iom.int/sites/g/files/tmzbdl1461/files/Methodological%20Framework%20used%20in%20DTM%20Operations%20for%20Quantifying%20Displacement%20and%20Mobility.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'From 1 January to 24 January 2026, IOM Yemen DTM tracked 402 households
+    (HH) (2,412 Individuals) who experienced displacement at least once. Between 18
+    and 24 January 2026, IOM Yemen DTM tracked 58 households (348 individuals) displaced
+    at least once. The majority of people moved into/within the following governorates
+    and districts: Ma''rib (40 HHs) - Marib City (19 HHs), Marib (19 HHs), Harib (2
+    HHs) districts. Most displacements in the governorate originated from Hadramawt
+    and Al Hodeidah. Hadramawt (15 HHs) - Sayun (6 HHs), Wadi Al Ayn (5 HHs), Al Qatn
+    (4 HHs) districts. Most displacements in the governorate originated from Marib.
+    Ta''iz (2 HHs) - Salah (2 HHs) district. All displacements in the governorate
+    were internal. The majority of people moved from the following governorates and
+    districts: Hadramawt (17 HHs) - Sayun (16 HHs), Al Mukalla (1 HHs) districts.
+    Marib (14 HHs) - Marib City (14 HHs) district. Al Hodeidah (6 HHs) - Az Zaydiah
+    (2 HHs), At Tuhayta (2 HHs), Al Hali (1 HHs) districts.'
+  download_url: https://data.humdata.org/dataset/3f80bd47-b3d4-465d-b744-bbbae8a50154/resource/8eab221d-6052-4887-9fd3-5dc09a2e4400/download/iom-yemen-dtm-_-rapid-displacement-tracking-rdt-dataset_-18-to-24-jan-2026-_-district-level_hdx.xlsx
+  format: null
+  id: resource_8eab221d
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Yemen Displacement Tracking 18 - 24 January 2026
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'From 1 January to 17 January 2026, IOM Yemen DTM tracked 302 households
+    (HH) (1,812 Individuals) who experienced displacement at least once. Between 11
+    and 17 January 2026, IOM Yemen DTM tracked 60 households (360 individuals) displaced
+    at least once. The majority of people moved into/within the following governorates
+    and districts: Ma''rib (32 HHs) - Ma''rib City (28 HHs), Ma''rib (3 HHs), Harib
+    (1 HHs) districts. Most displacements in the governorate originated from Hadramawt
+    and Raymah. Hadramawt (19 HHs) - Sayun (10 HHs), Wadi Al Ayn (5 HHs), Al Abr (4
+    HHs) districts. Most displacements in the governorate originated from Ma''rib
+    and Hadramawt. Ta''iz (6 HHs) - Jabal Habashi (6 HHs) district. All displacements
+    in the governorate were internal. The majority of people moved from the following
+    governorates and districts: Hadramawt (18 HHs) - Ma''rib City (15 HHs), Al Abdiyah
+    (3 HHs) districts. Hadramawt (13 HHs) - Wadi Al Ayn (5 HHs), Sayun (5 HHs), Tarim
+    (3 HHs) districts. Ta''iz (6 HHs) - Maqbanah (6 HHs) district.'
+  download_url: https://data.humdata.org/dataset/3f80bd47-b3d4-465d-b744-bbbae8a50154/resource/bf07b591-48cd-45de-8509-7ae923c47cc8/download/iom-yemen-dtm-_-rapid-displacement-tracking-rdt-dataset_-11-to-17-jan-2026-_-district-level_hdx.xlsx
+  format: null
+  id: resource_bf07b591
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Yemen Displacement Tracking 11 - 17 January 2026
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'From 1 January to 10 January 2026, IOM Yemen DTM tracked 144 households
+    (HH) (864 Individuals) who experienced displacement at least once. Between 4 and
+    10 January 2026, IOM Yemen DTM tracked 90 households (540 individuals) displaced
+    at least once. The majority of people moved into/within the following governorates
+    and districts: Ma''rib (43 HHs) - Ma''rib City (33 HHs), Ma''rib (10 HHs) districts.
+    Most displacements in the governorate originated from Hadramawt and Ad Dali. Hadramawt
+    (25 HHs) - Sayun (15 HHs), Al Abr (10 HHs) districts. Most displacements in the
+    governorate originated from Ma''rib and Hadramawt. Al Jawf (18 HHs) - Khab wa
+    Ash Shaf (18 HHs) district. All displacements in the governorate originated from
+    Hadramawt. The majority of people moved from the following governorates and districts:
+    Hadramawt (57 HHs) - Sayun (35 HHs), Wadi Al Ayn (18 HHs), Amd (2 HHs) districts.
+    Ma''rib (16 HHs) - Ma''rib City (15 HHs), Harib (1 HH) districts. Al Hodeidah
+    (5 HHs) - Hays (3 HHs), Al Khukhah (1 HH), Al Jarrahi (1 HH) districts.'
+  download_url: https://data.humdata.org/dataset/3f80bd47-b3d4-465d-b744-bbbae8a50154/resource/768d687a-3d95-4c9d-9820-2795dafe0fa6/download/iom-yemen-dtm-_-rapid-displacement-tracking-rdt-dataset_-04-to-10-jan-2026-_-district-level_hdx.xlsx
+  format: null
+  id: resource_768d687a
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Yemen Displacement Tracking 04 - 10 January 2026
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-yem_iom_displacementdailytracking_202601
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - YEM
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2026-01-24'
+  start: '2026-01-01'
+temporal_resolution: null
+title: Yemen Displacement - Daily Tracking - [IDPs, Returnees] - [IOM DTM]
+version: null
+vulnerability: null
+---

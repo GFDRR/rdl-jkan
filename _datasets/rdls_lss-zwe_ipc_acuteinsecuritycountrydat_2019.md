@@ -1,0 +1,321 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: National IPC Technical Working Group
+    url: https://data.humdata.org/dataset/zimbabwe-acute-food-insecurity-country-data
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Integrated Food Security Phase Classification (IPC)
+  url: https://data.humdata.org/dataset/zimbabwe-acute-food-insecurity-country-data
+creator:
+  affiliation: null
+  email: null
+  name: Integrated Food Security Phase Classification (IPC)
+  url: https://data.humdata.org/dataset/zimbabwe-acute-food-insecurity-country-data
+dataset_id: rdls_lss-zwe_ipc_acuteinsecuritycountrydat_2019
+description: 'The IPC Acute Food Insecurity (IPC AFI) classification provides strategically
+  relevant information to decision makers that focuses on short-term objectives to
+  prevent, mitigate or decrease severe food insecurity that threatens lives or livelihoods.
+  This data has been produced by the National IPC Technical Working Groups for IPC
+  population estimates since 2017. All national population figures are based on official
+  country population estimates. IPC estimates are those published in country IPC reports.
+  There is also a global dataset .. [Source: This metadata record was automatically
+  extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/zimbabwe-acute-food-insecurity-country-data]'
+details: null
+exposure: []
+hazard: null
+license: https://creativecommons.org/publicdomain/zero/1.0/
+lineage:
+  description: IPC Acute Food Insecurity classifications are produced by the National
+    IPC Technical Working Group using standardized methodology to assess food insecurity
+    phases across Zimbabwe's population. Population estimates are stratified by administrative
+    level and validity period, with phase classifications (1-5) indicating severity
+    of food insecurity from minimal to catastrophic. Data includes current assessments
+    and projections.
+  sources:
+  - id: source_1
+    license: null
+    name: National IPC Technical Working Group
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/zimbabwe-acute-food-insecurity-country-data
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Population classified by IPC acute food insecurity phase due to drought
+      and livelihood stress
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: null
+      trigger: null
+      type: drought
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: total
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://www.ipcinfo.org/ipc/technical/manual_en
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (IPC GeoJSON for latest
+    analysis)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/d650d444-a1b8-44ae-aae9-7ce16f2eaafc/download/ipc_zwe.geojson
+  format: null
+  id: resource_d650d444
+  media_type: application/geo+json
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe.geojson
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (Latest IPC national
+    data in long form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/1cde52a1-c8c6-4536-9af2-ce025f721aa8/download/ipc_zwe_national_long_latest.csv
+  format: null
+  id: resource_1cde52a1
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_national_long_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (Latest IPC level 1 data
+    in long form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/e33b48c3-95c3-452b-9f1e-a7baf215671f/download/ipc_zwe_level1_long_latest.csv
+  format: null
+  id: resource_e33b48c3
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_level1_long_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (Latest IPC level 1 data
+    in wide form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/eaaefa29-4160-43ea-934b-a50ec3580b7a/download/ipc_zwe_level1_wide_latest.csv
+  format: null
+  id: resource_eaaefa29
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_level1_wide_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (Latest IPC area data
+    in long form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/9683200b-b21f-49ac-920f-da6565563508/download/ipc_zwe_area_long_latest.csv
+  format: null
+  id: resource_9683200b
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_area_long_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (Latest IPC area data
+    in wide form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/cd7ff41e-1ef4-4ca6-abb8-8727635ac418/download/ipc_zwe_area_wide_latest.csv
+  format: null
+  id: resource_cd7ff41e
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_area_wide_latest.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (All IPC national data
+    in long form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/1518bea0-498e-406f-a113-8c5097d71999/download/ipc_zwe_national_long.csv
+  format: null
+  id: resource_1518bea0
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_national_long.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (All IPC national data
+    in wide form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/a5f5777e-02df-4684-8d7f-a9d601d839bf/download/ipc_zwe_national_wide.csv
+  format: null
+  id: resource_a5f5777e
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_national_wide.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (All IPC level 1 data
+    in long form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/38495889-01bd-47a3-bd57-ef63e3e2f100/download/ipc_zwe_level1_long.csv
+  format: null
+  id: resource_38495889
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_level1_long.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (All IPC level 1 data
+    in wide form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/88e69cc0-7bed-409b-a9e3-0e0aa13b8954/download/ipc_zwe_level1_wide.csv
+  format: null
+  id: resource_88e69cc0
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_level1_wide.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (All IPC area data in
+    long form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/ab4a722b-25b5-4783-ab2e-7be27e88409a/download/ipc_zwe_area_long.csv
+  format: null
+  id: resource_ab4a722b
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_area_long.csv
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Zimbabwe: Acute Food Insecurity Country Data (All IPC area data in
+    wide form)'
+  download_url: https://data.humdata.org/dataset/87ddf300-4686-4fb1-ae02-efb9c2a92ad5/resource/e56c6f40-a1bf-4cc2-b97c-5ec71477f5bb/download/ipc_zwe_area_wide.csv
+  format: null
+  id: resource_e56c6f40
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ipc_zwe_area_wide.csv
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-zwe_ipc_acuteinsecuritycountrydat_2019
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - ZWE
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2021-03-31'
+  start: '2019-02-01'
+temporal_resolution: null
+title: 'Zimbabwe: Acute Food Insecurity Country Data'
+version: null
+vulnerability: null
+---
