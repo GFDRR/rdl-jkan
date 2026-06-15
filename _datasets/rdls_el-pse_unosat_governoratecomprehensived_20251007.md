@@ -1,0 +1,165 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: UN Operational Satellite Applications Programme (UNOSAT)
+    url: https://data.humdata.org/dataset/unosat-gaza-governorate-comprehensive-damage-assessment-23-september-2025
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: United Nations Satellite Centre (UNOSAT)
+  url: https://data.humdata.org/dataset/unosat-gaza-governorate-comprehensive-damage-assessment-23-september-2025
+creator:
+  affiliation: null
+  email: null
+  name: United Nations Satellite Centre (UNOSAT)
+  url: https://data.humdata.org/dataset/unosat-gaza-governorate-comprehensive-damage-assessment-23-september-2025
+dataset_id: rdls_el-pse_unosat_governoratecomprehensived_20251007
+description: 'UNOSAT code: CE20231007PSE This map illustrates a satellite imagery
+  based comprehensive assessment of damage and destruction to structures within the
+  area of interest in the Gaza City, Gaza Governorate, Gaza Strip, Occupied Palestinian
+  Territory. The analysis is based on satellite imagery collected on 22-23 September
+  2025, compared with imagery from 8 July 2025. Additional satellite images used for
+  reference and temporal comparison are listed in the copyright section. According
+  to satellite imagery analysis conducted with satellite images collected on 22-23
+  September, approximately 83% of all structures in Gaza City are damaged. Between
+  the period of 8 July - 23 Sep 23, 2025, UNOSAT identified 17,734 destroyed structures,
+  4,345 severely damaged structures, 11,201 moderately damaged structures, and 7,941
+  possibly damaged structures for a total of 41,221 affected structures. Compared
+  to the 8 July 2025 assessment, this corresponds to a 7% increase in total affected
+  structures, and a 36% increase in destroyed structures, indicating worsening damage.
+  An estimated 81,159 housing units are damaged, 16% more than on 8 July 2025, which
+  corresponds to approximately 467,523 displaced persons, according to SMC Partners''
+  assessment (4 October 2025). The neighbourhoods of Az Zaitoun and At Turukman -
+  Ijdeedeh experienced the largest increases in damage compared to July 2025, with
+  approximately 2,568 newly affected structures in Az Zaitoun and 1,440 in At Turukman
+  - Ijdeedeh. This is a preliminary analysis and has not yet been validated in the
+  field.. [Source: This metadata record was automatically extracted from the Humanitarian
+  Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-gaza-governorate-comprehensive-damage-assessment-23-september-2025]'
+details: This is a preliminary assessment and has not yet been validated in the field.
+  It is important to consider the characteristics of the source imagery used in the
+  analyses when interpreting results. For damage assessments it should be noted that
+  only significant damage to the structural integrity of the buildings analyzed can
+  be seen in imagery, while minor damage such as cracks or holes may not be visible
+  at all. For flood extractions using radar data it is important to note that urban
+  areas and highly vegetated areas may mask the flood signature and result in underestimation
+  of flood waters. Users with specific questions or concerns should contact unosat@unitar.org
+  to seek clarification.
+exposure:
+- asset_type:
+    description: Building stock in Gaza City classified by damage state from satellite
+      imagery analysis
+    id: buildings
+    scheme: null
+    title: null
+    uri: null
+  category: buildings
+  id: exposure_1
+  metrics:
+  - dimension: structure
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+hazard: null
+license: https://creativecommons.org/licenses/by-sa/4.0/
+lineage:
+  description: UNOSAT analysts conducted multi-temporal satellite imagery analysis
+    comparing images from 8 July 2025 (baseline) with imagery from 22-23 September
+    2025 to identify and classify building damage and destruction. Damage assessments
+    were derived through visual interpretation of satellite imagery changes, with
+    results compiled into a geodatabase for spatial analysis.
+  sources:
+  - id: source_1
+    license: null
+    name: UN Operational Satellite Applications Programme (UNOSAT)
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/unosat-gaza-governorate-comprehensive-damage-assessment-23-september-2025
+  rel: source
+loss:
+  losses:
+  - asset_category: buildings
+    asset_dimension: structure
+    description: Direct building damage assessment from conflict-related destruction
+      in Gaza Governorate
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_convective_storm
+      intensity_measure: sws_10m:m/s
+      process: null
+      trigger: null
+      type: convective_storm
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Palestine - UNOSAT Gaza Governorate Comprehensive Damage Assessment
+    - 23 September 2025 (Zipped geodatabase)
+  download_url: https://unosat.org/static/unosat_filesystem/4205/OCHA-OPT-030_UNOSAT_A3_Gaza_Governorate_CDA_22-23September2025_GDB_zip.zip
+  format: Geodatabase
+  id: resource_3833144b
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: OCHA-OPT-030_UNOSAT_A3_Gaza_Governorate_CDA_22-23September2025_GDB_zip.zip
+risk_data_type:
+- exposure
+- loss
+schema: rdls-10
+slug: rdls_el-pse_unosat_governoratecomprehensived_20251007
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - PSE
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: null
+  start: '2025-10-07'
+temporal_resolution: null
+title: Palestine - UNOSAT Gaza Governorate Comprehensive Damage Assessment - 23 September
+  2025
+version: null
+vulnerability: null
+---
