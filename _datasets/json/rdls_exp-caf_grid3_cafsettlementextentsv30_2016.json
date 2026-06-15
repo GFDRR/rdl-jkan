@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-caf_grid3_cafsettlementextentsv30_2016",
+      "title": "Central African Republic - GRID3 CAF - Settlement Extents v3.0",
+      "description": "The GRID3 CAF - Settlement Extents v3.0 consists of a geographic representation of settlements in Central African Republic, in two forms: (1) settlement polygons, and (2) spatial points depicting the centroids of settled grid cells at 3-arc seconds (or ~100 meters) contained within settlement polygons. Both layers include attributes as described in the codebooks. The current version supersedes GRID3 Central African Republic Settlement Extents, Version 02; the following changes were made: (1) Development of a new methodology to derive building counts and settlement polygons with open data. (2) Estimation of a probability value for settlement polygons (3) Addition of a building-area measure (4) Replacement of degree of urbanization with classification based on built-up areas, small settlement areas, and hamlets (5) Elimination of building-count ranges (6) Elimination of variable comparing to previous versions Recommended Citation: Center for International Earth Science Information Network (CIESIN), Columbia University. 2024. GRID3 CAF - Settlement Extents v3.0. New York: GRID3. [URL]. Accessed [DAY MONTH YEAR].. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/grid3-caf-settlement-extents-v3-0]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Terms of use: Users are free to download, store, access, use, copy, adapt, transform, alter, arrange, build upon, distribute and transmit this work and any derivative works. Attribution of the source must be provided, and further distribution of this work or derived work must maintain the same terms of data use and license as set forth in this Terms of Use. Copyright 2024. The Trustees of Columbia University in the City of New York. Data license: The data and accompanying document are licensed under a Creative Commons Attribution-ShareAlike 4.0 International, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) and specified in legal code (https://creativecommons.org/licenses/by-sa/4.0/legalcode). Contacts and data queries: The authors of this dataset appreciate feedback regarding the data, including suggestions, discovery of errors, difficulties in using the data, and format preferences. For dataset-related questions, please send an email to: info@ciesin.columbia.edu",
+      "contact_point": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/grid3-caf-settlement-extents-v3-0"
+      },
+      "creator": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/grid3-caf-settlement-extents-v3-0"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CAF"
+        ]
+      },
+      "temporal": {
+        "start": "2016-01-01",
+        "end": "2023-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Center for International Earth Science Information Network (CIESIN), Columbia University",
+            "url": "https://data.humdata.org/dataset/grid3-caf-settlement-extents-v3-0"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Settlement extents were derived from open data using a new methodology to generate building counts and settlement polygons. The dataset includes both settlement polygon boundaries and gridded settlement centroids at 3-arc second (~100 meter) resolution, representing the spatial inventory of human settlements and built structures across Central African Republic.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Center for International Earth Science Information Network (CIESIN), Columbia University",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Provides settlement polygon boundaries and building count derivations from open data sources to map spatial distribution of human settlements and structures in Central African Republic."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_72b881dd",
+          "title": "GRID3 CAF - Settlement Extents v3.0 - Data Release Notes .pdf",
+          "description": "Central African Republic - GRID3 CAF - Settlement Extents v3.0 (Contains information on data inputs, methodology, and codebooks)",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/6048856c-4e75-491d-bfc4-90bae8f875da/resource/72b881dd-eb45-4814-bdef-6dbff3563cef/download/grid3-caf-settlement-extents-v3.0-data-release-notes-.pdf"
+        },
+        {
+          "id": "resource_1cb95f06",
+          "title": "GRID3_CAF_settlement_extents_v3_0.zip",
+          "description": "Central African Republic - GRID3 CAF - Settlement Extents v3.0 (A spatial layer representing settlement polygons)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/6048856c-4e75-491d-bfc4-90bae8f875da/resource/1cb95f06-0b72-44da-8a43-49889ede9524/download/grid3_caf_settlement_extents_v3_0.zip"
+        },
+        {
+          "id": "resource_b34fc129",
+          "title": "GRID3_CAF_settlement_grid_v3_0.zip",
+          "description": "Central African Republic - GRID3 CAF - Settlement Extents v3.0 (A spatial layer representing the centroids of settled grid cells)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/6048856c-4e75-491d-bfc4-90bae8f875da/resource/b34fc129-16ac-4c05-986e-df215758ca72/download/grid3_caf_settlement_grid_v3_0.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints and counts derived from open data within settlement polygons across Central African Republic"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Settled population inferred from settlement extents and grid cell centroids at ~100 meter resolution"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/grid3-caf-settlement-extents-v3-0",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

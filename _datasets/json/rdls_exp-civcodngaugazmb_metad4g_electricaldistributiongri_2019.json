@@ -1,0 +1,198 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-civcodngaugazmb_metad4g_electricaldistributiongri_2019",
+      "title": "Electrical Distribution Grid Maps",
+      "description": "Facebook has produced a model to help map global medium voltage (MV) grid infrastructure, i.e. the distribution lines which connect high-voltage transmission infrastructure to consumer-serving low-voltage distribution. The data found here are model outputs for six select African countries: Malawi, Nigeria, Uganda, DRC, Cote D'Ivoire, and Zambia. The grid maps are produced using a new methodology that employs various publicly-available datasets (night time satellite imagery, roads, political boundaries, etc) to predict the location of existing MV grid infrastructure. The model documentation and code are also available , so data scientists and planners globally can replicate the model to expand model coverage to other countries where this data is not already available. You can find the model code and documentation here: https://github.com/facebookresearch/many-to-many-dijkstra Note: current model accuracy is approximately 70% when compared to existing ground-truthed data. Accuracy can be further improved by integrating other locally-relevant information into the model and running it again. Resolution: geotiff is provided at Bing Tile Level 20. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/electricaldistributiongridmaps]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This project is no longer active and has been carried forward by others, mostly at the World Bank. See global estimates of grid infrastructure from this group here: https://gridfinder.org/",
+      "contact_point": {
+        "name": "AI and Data for Good at Meta",
+        "url": "https://data.humdata.org/dataset/electricaldistributiongridmaps"
+      },
+      "creator": {
+        "name": "AI and Data for Good at Meta",
+        "url": "https://data.humdata.org/dataset/electricaldistributiongridmaps"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD",
+          "NGA",
+          "UGA",
+          "CIV",
+          "ZMB"
+        ]
+      },
+      "temporal": {
+        "start": "2019-01-24",
+        "end": "2019-03-19"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "VIIRS satellite imagery",
+            "url": "https://data.humdata.org/dataset/electricaldistributiongridmaps"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "OpenStreetMap roads and political boundaries",
+            "url": "https://data.humdata.org/dataset/electricaldistributiongridmaps"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Monthly VIIRS satellite composites were processed with custom image filtering to identify consistent night-time lighting locations. These lighting signatures were combined with road networks and administrative boundaries as inputs to a machine learning model trained to predict medium voltage electrical distribution grid locations across six African countries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "VIIRS satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Monthly nighttime satellite imagery used as primary input for identifying locations of electrical grid infrastructure through night-time lighting patterns"
+          },
+          {
+            "id": "source_2",
+            "name": "OpenStreetMap roads and political boundaries",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Publicly-available geospatial reference data used to support grid infrastructure prediction and spatial validation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f1143ea6",
+          "title": "electrical_grid_cote_divoire_15.csv",
+          "description": "Electrical Distribution Grid Maps (Medium-Voltage Distribution Infrastructure for Cote D'Ivoire)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/f1143ea6-0349-423d-9aeb-7eb905f5ffc8/download/electrical_grid_cote_divoire_15.csv"
+        },
+        {
+          "id": "resource_b1d4c926",
+          "title": "electrical_grid_cote_divoire_15_electrical_distribution_grid (1).tif.zip",
+          "description": "Medium-Voltage Distribution Infrastructure for Cote D'Ivoire Resolution: geotiff is provided at Bing Tile Level 20, or approximately 38m/pixel",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/b1d4c926-42eb-4227-b024-809302ee035f/download/electrical_grid_cote_divoire_15_electrical_distribution_grid-1.tif.zip"
+        },
+        {
+          "id": "resource_90d917c8",
+          "title": "electrical_grid_democratic_republic_of_congo_15 (1).csv",
+          "description": "Medium-Voltage Distribution Infrastructure for Democratic Republic of Congo Format: Lat/Long",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/90d917c8-e7c3-4192-bec4-184203bf0d0c/download/electrical_grid_democratic_republic_of_congo_15-1.csv"
+        },
+        {
+          "id": "resource_a2b3a0bb",
+          "title": "electrical_grid_democratic_republic_of_congo_15_electrical_distribution_grid.tif.zip",
+          "description": "Medium-Voltage Distribution Infrastructure for Democratic Republic of Congo Resolution: geotiff is provided at Bing Tile Level 20, or approximately 38m/pixel",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/a2b3a0bb-8c97-4b86-86ae-45b3f2640946/download/electrical_grid_democratic_republic_of_congo_15_electrical_distribution_grid.tif.zip"
+        },
+        {
+          "id": "resource_b2b84057",
+          "title": "electrical_grid_malawi_15.csv",
+          "description": "Electrical Distribution Grid Maps (Medium-Voltage Distribution Infrastructure for Malawi Format: Lat/Long)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/b2b84057-9673-460f-b852-e9b3e38c5532/download/electrical_grid_malawi_15.csv"
+        },
+        {
+          "id": "resource_823d2b07",
+          "title": "electrical_grid_malawi_15_electrical_distribution_grid.tif.zip",
+          "description": "Medium-Voltage Distribution Infrastructure for Malawi Resolution: geotiff is provided at Bing Tile Level 20, or approximately 38m/pixel",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/823d2b07-8d56-4ee2-a54a-1d5b05e9c83f/download/electrical_grid_malawi_15_electrical_distribution_grid.tif.zip"
+        },
+        {
+          "id": "resource_bda367ce",
+          "title": "electrical_grid_nigeria_15.csv",
+          "description": "Electrical Distribution Grid Maps (Medium-Voltage Distribution Infrastructure for Nigeria Format: Lat/Long)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/bda367ce-1888-4c84-babf-1b851ecf5592/download/electrical_grid_nigeria_15.csv"
+        },
+        {
+          "id": "resource_55e0416e",
+          "title": "electrical_grid_nigeria_15_electrical_distribution_grid.tif.zip",
+          "description": "Medium-Voltage Infrastructure for Nigeria Resolution: geotiff is provided at Bing Tile Level 20, or approximately 38m/pixel",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/55e0416e-5c24-44c7-bb59-b90d225e801a/download/electrical_grid_nigeria_15_electrical_distribution_grid.tif.zip"
+        },
+        {
+          "id": "resource_faea552a",
+          "title": "electrical_grid_uganda_15 (2).csv",
+          "description": "Electrical Distribution Grid Maps (Medium-Voltage Distribution Infrastructure for Uganda Format: Lat/Long)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/faea552a-bb9e-4c1c-8bf3-ba5b0136be49/download/electrical_grid_uganda_15-2.csv"
+        },
+        {
+          "id": "resource_f0ee4799",
+          "title": "electrical_grid_uganda_15_electrical_distribution_grid.tif.zip",
+          "description": "Medium-Voltage Distribution Infrastructure for Uganda Resolution: geotiff is provided at Bing Tile Level 20, or approximately 38m/pixel",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/f0ee4799-a345-447f-88e4-25e4d8eb6bf3/download/electrical_grid_uganda_15_electrical_distribution_grid.tif.zip"
+        },
+        {
+          "id": "resource_28bdc2e3",
+          "title": "electrical_grid_zambia_15.csv",
+          "description": "Electrical Distribution Grid Maps (Medium-Voltage Distribution Infrastructure for Zambia Format: Lat/Long)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/28bdc2e3-69b7-4ac6-8732-6a853f5de6af/download/electrical_grid_zambia_15.csv"
+        },
+        {
+          "id": "resource_c5fa2453",
+          "title": "electrical_grid_zambia_15_electrical_distribution_grid.tif.zip",
+          "description": "Medium-Voltage Distribution Infrastructure for Zambia Resolution: geotiff is provided at Bing Tile Level 20, or approximately 38m/pixel",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/5040df47-96a2-4b3c-9a7f-2b7fb2b41316/resource/c5fa2453-1f52-4ad4-9696-d519e4bb4319/download/electrical_grid_zambia_15_electrical_distribution_grid.tif.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Medium voltage electrical distribution grid infrastructure mapped using satellite imagery and machine learning"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/electricaldistributiongridmaps",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

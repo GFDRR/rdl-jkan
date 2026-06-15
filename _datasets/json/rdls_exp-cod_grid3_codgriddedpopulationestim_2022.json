@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-cod_grid3_codgriddedpopulationestim_2022",
+      "title": "DR Congo - GRID3 COD - Gridded Population Estimates v4.4",
+      "description": "Democratic Republic of the Congo gridded population estimates. This data release provides gridded population estimates (spatial resolution of 3 arc-seconds, approximately 100-metre grid cells) for the Democratic Republic of the Congo (DRC), along with uncertainty estimates. The data is a mosaic of gridded population estimates produced for all 26 provinces namely Bas-Uele, Equateur, Haut-Katanga, Haut-Lomami, Haut-Uele, Ituri, Kasai, Kasai-Central, Kasai-Oriental, Kinshasa, Kongo-Central, Kwango, Kwilu, Lomami, Lualaba, Mai-Ndombe, Maniema, Mongala, Nord-Kivu, Nord-Ubangi, Sankuru, Sud-Kivu, Sud-Ubangi, Tanganyika, Tshopo and Tshuapa. The project team used the Pre-Distribution Registration Survey (PDRS) data from the National Malaria Control Programme (PNLP) collected as part of anti-malarial campaigns in the DRC, settlement extent and geospatial covariates to model and estimate population numbers at grid cell level using a Bayesian statistical hierarchical modelling framework. Please note that PNLP data were collected across the DRC, except in Kasai, Kasai Central, Kasai Oriental, Kwango, Nord Ubangi and Lualaba, where the modelling utilised observations from neighbouring provinces The projection for all GIS files is the geographic coordinate system WGS84 (World Geodetic System 1984). Grid cells with values of NA represent areas that were mapped as unsettled according to building footprints data or being outside the national boundary. Suggested Dataset Citation: Yankey O., Nnanatu C., Boo G., Chaudhuri S., Krishnaveni K S, Megheib M, Bonnie A., Chamberlain H., Lazar A. N., Tatem A. J. 2025. Bottom-up gridded population estimates for the Democratic Republic of Congo, version 4.4. WorldPop. URL. Accessed DAY-MONTH-YEAR.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/grid3-cod-gridded-population-estimates-v4-4]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The authors followed rigorous procedures designed to ensure that the used data, the applied method and thus the results are appropriate and of reasonable quality. If users encounter apparent errors or misstatements, they should contact WorldPop at release@worldpop.org. WorldPop, University of Southampton, and their sponsors offer these data on a 'where is, as is' basis; do not offer an express or implied warranty of any kind; do not guarantee the quality, applicability, accuracy, reliability or completeness of any data provided; and shall not be liable for incidental, consequential, or special damages arising out of the use of any data that they offer. These data are operational population estimates and are not official government statistics.",
+      "contact_point": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/grid3-cod-gridded-population-estimates-v4-4"
+      },
+      "creator": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/grid3-cod-gridded-population-estimates-v4-4"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Gridded population estimates were produced by spatially disaggregating census and survey data to 3 arc-second (approximately 100-metre) grid cells across all 26 provinces of the Democratic Republic of the Congo. The dataset includes uncertainty estimates and represents a mosaic of provincial-level population models integrated into a single national grid.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "GRID3",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population estimates produced through spatial disaggregation of census and survey data at 3 arc-second resolution for all 26 provinces of the Democratic Republic of the Congo"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c5b8883b",
+          "title": "COD_population_v4_4_mastergrid.tif",
+          "description": "This geotiff raster contains the mastergrid used to define where population estimates were made.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/614"
+        },
+        {
+          "id": "resource_db9da5da",
+          "title": "Province",
+          "description": "DR Congo - GRID3 COD - Gridded Population Estimates v4.4 (Individual province dataset can be downloaded using this link.)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.worldpop.org/repo/wopr/COD/population/v4.4/Province/"
+        },
+        {
+          "id": "resource_85c53324",
+          "title": "COD_population_v4_4_gridded.tif",
+          "description": "Gridded population estimates (spatial resolution of 3 arc-seconds, approximately 100-metre grid cells)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/613"
+        },
+        {
+          "id": "resource_12d85073",
+          "title": "COD_population_v4_4_README.pdf",
+          "description": "This README file provides information about the data included in the data release, how it was produced, source data that were used, and known assumptions and limitations of the results.",
+          "media_type": "application/pdf",
+          "download_url": "https://wopr.worldpop.org/download/615"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population estimates at 100-metre resolution with uncertainty quantification for all provinces in Democratic Republic of the Congo"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/grid3-cod-gridded-population-estimates-v4-4",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
