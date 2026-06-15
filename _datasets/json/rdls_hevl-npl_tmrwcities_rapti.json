@@ -1,0 +1,992 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hevl-npl_tmrwcities_rapti",
+      "title": "Tomorrow's Cities Multi-Hazard Risk Assessment Dataset for Rapti Municipality, Nepal",
+      "description": "Multi-hazard risk data package for Rapti Municipality, Lumbini Province, Nepal, providing earthquake hazard (3 scenario GeoTIFFs: Nepal-Bihar, 2015 Gorkha Mw 7.8, 1505 AD), flood hazard (20-year and 70-year return period future climate GeoTIFFs), landslide susceptibility (current and future with extended variants covering power nodes), synthetic future urban exposure datasets (buildings, households, individuals, land use, road networks, power networks) for six ethnicity-based community planning scenarios (Ethnic, Madhesi, Pahadi, Planners, Squatter, Tharu), vulnerability/fragility functions for earthquake, flood, and landslide, and comprehensive multi-hazard impact assessment results. Developed as part of the Tomorrow's Cities GCRF Urban Disaster Risk Hub project for risk-informed decision making in urban planning.",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "vulnerability",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Tomorrow's Cities",
+        "email": "support@tomorrowscities.org",
+        "url": "https://data.tomorrowscities.org/"
+      },
+      "version": "1",
+      "purpose": "To support multi-hazard risk assessment and risk-informed urban planning decision making for Rapti Municipality by providing spatial hazard, synthetic future exposure, vulnerability functions, and impact assessment datasets for participatory community planning scenarios representing diverse ethnic/caste communities.",
+      "project": {
+        "name": "Tomorrow's Cities - GCRF Urban Disaster Risk Hub",
+        "url": "https://tomorrowscities.org/"
+      },
+      "details": "The dataset includes: (i) earthquake hazard GeoTIFFs for three scenarios - Nepal-Bihar earthquake, 2015 Gorkha Mw 7.8 replay, and historical 1505 AD earthquake - plus a composite multiband intensity raster; (ii) flood hazard GeoTIFFs for 20-year and 70-year return periods under future climate conditions (precipitation increases of +173mm and +212mm respectively); (iii) landslide susceptibility rasters for current and future conditions, each with base and extended variants (extended covers 3 power nodes); (iv) vulnerability/fragility functions: earthquake fragility for 54 building typologies (period-dependent, 4 damage states), 18 power types (HAZUS), road fragility; flood depth-damage vulnerability; and landslide fragility for 51 entries (typology × susceptibility with minor/moderate/severe damage); (v) six future exposure dataset variants representing ethnic/caste-based planning scenarios, each containing building footprints (10,945 buildings, 352 typologies), household data (32,944 households), individual demographics, land use plans (905 zones, 48 categories), road network (3,659 edges), and power network (2 transmission lines, 3 substations); and (vi) impact results for all 7 hazard combinations (3 EQ cases + 2 flood RPs + 2 landslide temporal) per scenario, with zone-aggregated XLSX summaries.",
+      "contact_point": {
+        "name": "Menteşe, E.Y. - Anofa Engineering, Planning and Informatics Ltd.",
+        "email": "emin.mentese@anofa.co",
+        "url": "https://orcid.org/0000-0002-7187-4384"
+      },
+      "creator": {
+        "name": "Tomorrow's Cities",
+        "email": "support@tomorrowscities.org",
+        "url": "https://data.tomorrowscities.org/"
+      },
+      "spatial": {
+        "scale": "sub-national",
+        "countries": [
+          "NPL"
+        ],
+        "bbox": [
+          82.6,
+          27.8,
+          82.75,
+          27.95
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Nepal",
+            "uri": "https://www.geonames.org/1282988/nepal.html",
+            "id": "gazetteer_1"
+          },
+          {
+            "scheme": "GEONAMES",
+            "description": "Lumbini Province",
+            "uri": "https://www.geonames.org/12587039/lumbini-province.html",
+            "id": "gazetteer_2"
+          },
+          {
+            "scheme": "GEONAMES",
+            "description": "Rapti",
+            "uri": "https://www.geonames.org/1282898/rapti.html",
+            "id": "gazetteer_3"
+          }
+        ]
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_funder",
+          "role": "funder",
+          "entity": {
+            "name": "Natural Environment Research Council (NERC)",
+            "email": "press@ukri.org",
+            "url": "https://www.ukri.org/councils/nerc/"
+          }
+        },
+        {
+          "id": "attribution_collaborator",
+          "role": "collaborator",
+          "entity": {
+            "name": "University College London",
+            "email": "servicedesk@ucl.ac.uk",
+            "url": "https://www.ucl.ac.uk/"
+          }
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OpenStreetMap building footprints",
+            "url": "https://www.openstreetmap.org/",
+            "type": "dataset",
+            "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+            "used_in": "exposure",
+            "description": "Building footprints derived from OpenStreetMap database, modified and attributed to represent future urban context with structural taxonomy for multi-hazard risk assessment. Lineage: OSM data scraped and modified with building attributes including lateral resistance system (Adb, BrCfl, BrCri, BrM, Rci), code level, storeys, occupancy, and unit price. Rich attribute set includes OccBld, lrstype, CodeLevel, nstoreys fields."
+          },
+          {
+            "id": "source_2",
+            "name": "Synthetic population generation algorithm",
+            "url": "https://doi.org/10.1016/j.ijdrr.2023.103651",
+            "type": "model",
+            "used_in": "exposure",
+            "description": "Bespoke algorithms developed to generate synthetic future population (households and individuals) based on population projections and land use plans through participatory community engagement with six ethnic/caste community groups. Lineage: Algorithms coded in MATLAB environment to produce synthetic social data representing future urban scenarios. Methodology described in Menteşe et al. (2023)."
+          },
+          {
+            "id": "source_3",
+            "name": "Earthquake hazard scenarios",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Three deterministic earthquake scenario GeoTIFFs: (1) Nepal-Bihar earthquake, (2) 2015 Gorkha Mw 7.8 replay, (3) 1505 AD historical earthquake. Plus composite multiband intensity raster combining all scenarios. Lineage: Generated using earthquake simulation methodology. Gorkha scenario based on well-documented 2015 Mw 7.8 event parameters."
+          },
+          {
+            "id": "source_4",
+            "name": "Climate-informed flood hazard modelling",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Probabilistic flood simulation for 20-year and 70-year return periods under future climate conditions with precipitation increases of +173mm and +212mm respectively. Lineage: Flood simulations generated using climate-informed hydrological modelling. File naming convention: Rapti_max_depth_{RP}yr_future_{precip_increase}mm_{ensemble_member}.tif"
+          },
+          {
+            "id": "source_5",
+            "name": "Landslide susceptibility modelling",
+            "type": "model",
+            "used_in": "hazard",
+            "description": "Landslide susceptibility GeoTIFFs for current and future temporal conditions, each with base and extended spatial variants. Extended versions enlarge coverage area to include three electrical power nodes. Lineage: Developed based on terrain analysis, geological assessment, and climate projections for current and future conditions."
+          },
+          {
+            "id": "source_6",
+            "name": "Building fragility functions for earthquake",
+            "url": "https://doi.org/10.1016/j.ijdrr.2022.103365",
+            "type": "model",
+            "used_in": "vulnerability",
+            "description": "Fragility functions defining probability of exceeding damage states (DS1-DS4) as a function of spectral acceleration for 54 building typologies with period-dependent lognormal parameters. Lineage: Developed based on consultation with local partners and global vulnerability databases. Methodology described in Gentile et al. (2022)."
+          },
+          {
+            "id": "source_7",
+            "name": "Depth-damage vulnerability functions for flood",
+            "url": "https://publications.jrc.ec.europa.eu/repository/handle/JRC105688",
+            "type": "model",
+            "used_in": "vulnerability",
+            "description": "Vulnerability functions defining damage ratio as a function of water depth for building typologies at 9 water depth levels (0-6m). Lineage: Produced based on consultation with local partners and global vulnerability databases."
+          },
+          {
+            "id": "source_8",
+            "name": "Landslide fragility functions",
+            "type": "model",
+            "used_in": "vulnerability",
+            "description": "Fragility functions for 51 entries defining probability of minor, moderate, and severe damage for building and infrastructure typologies across landslide susceptibility levels. Lineage: Developed based on consultation with local partners. Includes building typologies (Adb, BrCfl, BrCri, BrM, Rci) and infrastructure (roads, substations)."
+          },
+          {
+            "id": "source_9",
+            "name": "HAZUS infrastructure fragility functions",
+            "url": "https://www.fema.gov/flood-maps/tools-resources/flood-map-products/hazus",
+            "type": "model",
+            "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "used_in": "vulnerability",
+            "description": "Fragility functions for 18 power infrastructure classes and road infrastructure under earthquake loading. Lineage: Adapted from HAZUS-MH technical manual for infrastructure vulnerability assessment."
+          }
+        ],
+        "description": "Integrated multi-hazard risk dataset produced by the Tomorrow's Cities GCRF Urban Disaster Risk Hub. OpenStreetMap building footprints were classified by construction type, occupancy, and number of storeys and enriched with replacement value estimates. A synthetic population was generated from census data using the agent-based algorithm of Calderon and Silva (2023, doi:10.1016/j.ijdrr.2023.103651), disaggregating individuals to buildings via household composition models. Earthquake hazard scenarios were simulated using OpenQuake-based GMPE ensembles (Weatherill et al. 2022). Flood hazard maps were derived from NASADEM-based hydrodynamic modelling. Earthquake building fragility functions and road/infrastructure fragility functions were adapted from HAZUS guidelines; flood depth-damage vulnerability functions from the JRC European flood damage database."
+      },
+      "referenced_by": [
+        {
+          "author_names": [
+            "Gemma Cremen",
+            "Carmine Galasso",
+            "John McCloskey",
+            "Alejandro Barcena",
+            "Maggie Creed",
+            "Maria Evangelina Filippi",
+            "Roberto Gentile",
+            "Luke T. Jenkins",
+            "Mehmet Kalaycioglu",
+            "Emin Yahya Mentese",
+            "Manoranjan Muthusamy",
+            "Karim Tarbali",
+            "Robert Šakić Trogrlić"
+          ],
+          "name": "A state-of-the-art decision-support environment for risk-sensitive and pro-poor urban planning and design in Tomorrow's cities",
+          "date_published": "2022-12-29",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420922006197",
+          "doi": "https://doi.org/10.1016/j.ijdrr.2022.103400",
+          "id": "reference_1"
+        },
+        {
+          "author_names": [
+            "Emin Yahya Menteşe",
+            "Gemma Cremen",
+            "Roberto Gentile",
+            "Carmine Galasso",
+            "Maria Evangelina Filippi",
+            "John McCloskey"
+          ],
+          "name": "Future exposure modelling for risk-informed decision making in urban planning",
+          "date_published": "2023-03-27",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420923001310",
+          "doi": "https://doi.org/10.1016/j.ijdrr.2023.103651",
+          "id": "reference_2"
+        },
+        {
+          "author_names": [
+            "Roberto Gentile",
+            "Gemma Cremen",
+            "Carmine Galasso",
+            "Luke T. Jenkins",
+            "Vibek Manandhar",
+            "Emin Yahya Menteşe",
+            "Ramesh Guragain",
+            "John McCloskey"
+          ],
+          "name": "Scoring, selecting, and developing physical impact models for multi-hazard risk assessment",
+          "date_published": "2022-10-14",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420922005842",
+          "doi": "https://doi.org/10.1016/j.ijdrr.2022.103365",
+          "id": "reference_3"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Rapti Multi Hazard Dataset",
+          "description": "Multi-hazard dataset containing: (1) 3 earthquake scenario GeoTIFFs (Nepal-Bihar, Gorkha, 1505 AD) plus composite multiband raster; (2) 2 flood GeoTIFFs for 20yr and 70yr return periods under future climate; (3) 4 landslide susceptibility GeoTIFFs (current/future × base/extended); (4) Vulnerability/fragility functions for earthquake (54 building + 18 power + road typologies), flood, and landslide (51 entries). Data formats: GeoTIFF, XLSX, TXT.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-multi-hazard-dataset",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-multi-hazard-dataset/resource/0c4b41ab-8e04-4073-83ad-a0bdcc313c34",
+          "id": "resource_hazard_multihazard",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "title": "Rapti Future Exposure Dataset - Ethnic",
+          "description": "Future urban exposure dataset for Ethnic minority community planning scenario, including building footprints (10,945 buildings, 352 typologies) with rich attributes (OccBld, lrstype, CodeLevel, nstoreys, unit_price), household data (32,944 households), individual demographics, land use plan (905 zones, 48 categories), road network (3,659 edges), and power network (2 edges, 3 nodes). Data formats: GeoJSON for spatial data, JSON for tabular data.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-ethnic",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-ethnic/resource/d0204033-f8ad-4afd-a944-a5b242db152a",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_ethnic",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Future Exposure Dataset - Madhesi",
+          "description": "Future urban exposure dataset for Madhesi community planning scenario. Data formats: GeoJSON, JSON.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-madhesi",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-madhesi/resource/e7d1489e-2776-4783-8bcc-4eaef7e8dc2a",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_madhesi",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Future Exposure Dataset - Pahadi",
+          "description": "Future urban exposure dataset for Pahadi community planning scenario. Data formats: GeoJSON, JSON.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-pahadi",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-pahadi/resource/628371c4-7b70-4be7-9b8d-d0e4338b60f2",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_pahadi",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Future Exposure Dataset - Planners",
+          "description": "Future urban exposure dataset for urban Planners optimal scenario. Data formats: GeoJSON, JSON.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-planners",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-planners/resource/e8c5de85-f084-4fba-a2b9-e619207da873",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_planners",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Future Exposure Dataset - Squatter",
+          "description": "Future urban exposure dataset for Squatter/informal settlement community planning scenario. Data formats: GeoJSON, JSON.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-squatter",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-squatter/resource/757d3097-c837-48ee-ae49-53b0f0280f38",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_squatter",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Future Exposure Dataset - Tharu",
+          "description": "Future urban exposure dataset for Tharu indigenous community planning scenario. Data formats: GeoJSON, JSON.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-tharu",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-future-exposure-dataset-tharu/resource/ad747579-6c20-444f-858d-7ac78ed78ef3",
+          "temporal": {
+            "duration": "P50Y"
+          },
+          "id": "resource_exposure_tharu",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Impact Results - Ethnic",
+          "description": "Multi-hazard impact results for Ethnic scenario including 7 hazard GeoJSONs (3 EQ cases + 2 flood RPs + 2 landslide temporal) and zone-aggregated XLSX summaries. Data formats: GeoJSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-ethnic",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-ethnic/resource/c4469a4c-cc5d-4baf-a9d4-c03f40605d47",
+          "id": "resource_impact_ethnic",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Impact Results - Madhesi",
+          "description": "Multi-hazard impact results for Madhesi scenario. Data formats: GeoJSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-madhesi",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-madhesi/resource/920c35e4-12c5-4c6f-bdf6-9a98f4aeb73d",
+          "id": "resource_impact_madhesi",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Impact Results - Pahadi",
+          "description": "Multi-hazard impact results for Pahadi scenario. Data formats: GeoJSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-pahadi",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-pahadi/resource/63333717-81ba-4c8d-a01d-9361b114f31f",
+          "id": "resource_impact_pahadi",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Impact Results - Planners",
+          "description": "Multi-hazard impact results for Planners scenario. Data formats: GeoJSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-planners",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-planners/resource/43b92857-26d8-45f2-891c-6cad599ef208",
+          "id": "resource_impact_planners",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Impact Results - Squatter",
+          "description": "Multi-hazard impact results for Squatter scenario. Data formats: GeoJSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-squatter",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-squatter/resource/a1c0920e-2b90-41ab-8cf9-501d793e5911",
+          "id": "resource_impact_squatter",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        },
+        {
+          "title": "Rapti Impact Results - Tharu",
+          "description": "Multi-hazard impact results for Tharu scenario. Data formats: GeoJSON, XLSX.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-tharu",
+          "download_url": "https://data.tomorrowscities.org/dataset/rapti-impact-results-tharu/resource/240eec13-11e5-4e4d-85d8-ca3f3d3aa9d5",
+          "id": "resource_impact_tharu",
+          "media_type": "application/geo+json",
+          "spatial_aggregation": "Individual building footprint level"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_earthquake_rapti",
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated",
+            "event_count": 3,
+            "hazards": [
+              {
+                "id": "hazard_earthquake",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_earthquake_rapti_nepalbihar",
+                "calculation_method": "simulated",
+                "description": "Nepal-Bihar earthquake scenario for Rapti Municipality. GeoTIFF raster: earthquake_scenario1_nepalbihar.tif",
+                "hazard": {
+                  "id": "hazard_earthquake",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Historical/scenario-based Nepal-Bihar earthquake"
+                  }
+                }
+              },
+              {
+                "id": "event_earthquake_rapti_gorkha",
+                "calculation_method": "simulated",
+                "description": "2015 Gorkha earthquake (Mw 7.8) replay scenario for Rapti Municipality. GeoTIFF raster: earthquake_scenario2_gorkha.tif",
+                "hazard": {
+                  "id": "hazard_earthquake",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Historical replay of 2015 Mw 7.8 Gorkha earthquake"
+                  }
+                }
+              },
+              {
+                "id": "event_earthquake_rapti_1505",
+                "calculation_method": "simulated",
+                "description": "Historical 1505 AD earthquake scenario for Rapti Municipality. GeoTIFF raster: earthquake_scenario3_the1501.tif",
+                "hazard": {
+                  "id": "hazard_earthquake",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Palaeo-seismic reconstruction of 1505 AD earthquake"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "event_set_flood_rapti",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "event_count": 2,
+            "hazards": [
+              {
+                "id": "hazard_flood",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_flood_rapti_20yr",
+                "calculation_method": "simulated",
+                "description": "20-year return period flood under future climate conditions with +173mm precipitation increase. GeoTIFF: Rapti_max_depth_20yr_future_173mm_05.tif",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20,
+                    "event_rate": 0.05
+                  }
+                }
+              },
+              {
+                "id": "event_flood_rapti_70yr",
+                "calculation_method": "simulated",
+                "description": "70-year return period flood under future climate conditions with +212mm precipitation increase. GeoTIFF: Rapti_max_depth_70yr_future_212mm_05.tif",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 70,
+                    "event_rate": 0.0143
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "event_set_landslide_rapti",
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred",
+            "event_count": 2,
+            "hazards": [
+              {
+                "id": "hazard_landslide",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_landslide_rapti_current",
+                "calculation_method": "inferred",
+                "description": "Current landslide susceptibility for Rapti Municipality. Base extent (landslide_current.tif) plus extended version covering 3 power nodes (landslide_current_extended.tif).",
+                "hazard": {
+                  "id": "hazard_landslide",
+                  "type": "landslide",
+                  "process": "landslide_general",
+                  "intensity_measure": "LSI:-"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Current baseline susceptibility"
+                  }
+                }
+              },
+              {
+                "id": "event_landslide_rapti_future",
+                "calculation_method": "inferred",
+                "description": "Future landslide susceptibility for Rapti Municipality under climate change conditions. Base extent (landslide_future.tif) plus extended version covering 3 power nodes (landslide_future_extended.tif).",
+                "hazard": {
+                  "id": "hazard_landslide",
+                  "type": "landslide",
+                  "process": "landslide_general",
+                  "intensity_measure": "LSI:-"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Future climate-informed susceptibility"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_buildings",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_building_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_building_replacement_value",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "currency"
+              }
+            },
+            {
+              "id": "metric_building_footprint_area",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "bui",
+            "title": "Building taxonomy",
+            "description": "Building exposure classified using the GEM Global Exposure Database for All (GED4ALL) taxonomy, sourced from OpenStreetMap building footprints",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "id": "exposure_population",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_population_residents",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_population_households",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_population_individuals",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "sei-pop",
+            "title": "Population exposure model",
+            "description": "Synthetic population derived from census household data using the Tomorrow's Cities DST population generation algorithm",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "id": "exposure_infrastructure_roads",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_road_length",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length",
+                "unit": "metre"
+              }
+            },
+            {
+              "id": "metric_road_edge_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "trs-rod",
+            "title": "Infrastructure exposure - road network",
+            "description": "Road network infrastructure derived from OpenStreetMap, classified per GED4ALL infrastructure exposure framework",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "id": "exposure_infrastructure_power",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_power_node_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_power_edge_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "pwr-lin",
+            "title": "Infrastructure exposure - power grid",
+            "description": "Electricity network nodes and edges derived from OpenStreetMap, classified per GED4ALL infrastructure exposure framework",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        },
+        {
+          "id": "exposure_landuse",
+          "category": "economic_indicator",
+          "metrics": [
+            {
+              "id": "metric_landuse_area",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "hectare"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "land_use_zones",
+            "title": "Land use exposure",
+            "description": "Urban land use classification areas classified per GED4ALL exposure framework",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL"
+          }
+        }
+      ],
+      "vulnerability": {
+        "functions": {
+          "vulnerability": [
+            {
+              "approach": "analytical",
+              "relationship": "discrete",
+              "hazard_analysis_type": "probabilistic",
+              "category": "buildings",
+              "taxonomy": "Custom",
+              "analysis_details": "Depth-damage vulnerability functions defining damage ratio as a function of water depth (0-6m at 9 discrete levels) for building typologies classified by lateral resistance system (Adb, BrCfl, BrCri, BrM, Rci), code level, storeys, and occupancy type.",
+              "id": "vulnerability_function_flood_buildings",
+              "hazard_primary": {
+                "id": "hazard_flood",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            }
+          ],
+          "fragility": [
+            {
+              "approach": "analytical",
+              "relationship": "math_parametric",
+              "hazard_analysis_type": "deterministic",
+              "category": "buildings",
+              "taxonomy": "Custom",
+              "analysis_details": "Lognormal fragility functions for 54 building typologies defining probability of exceeding 4 damage states (DS1-DS4) as a function of spectral acceleration (g). Period-dependent parameters (minperiod, maxperiod) for each typology. Building taxonomy follows {Material}+{CodeLevel}+{Storeys}s+{Occupancy} pattern.",
+              "id": "fragility_function_earthquake_buildings",
+              "hazard_primary": {
+                "id": "hazard_earthquake",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            },
+            {
+              "approach": "empirical",
+              "relationship": "math_parametric",
+              "hazard_analysis_type": "deterministic",
+              "category": "infrastructure",
+              "taxonomy": "HAZUS",
+              "analysis_details": "HAZUS-based fragility functions for 18 power infrastructure classes and road infrastructure under earthquake loading.",
+              "id": "fragility_function_earthquake_infrastructure",
+              "hazard_primary": {
+                "id": "hazard_earthquake",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            },
+            {
+              "approach": "analytical",
+              "relationship": "discrete",
+              "hazard_analysis_type": "deterministic",
+              "category": "buildings",
+              "taxonomy": "Custom",
+              "analysis_details": "Landslide fragility functions for 51 entries providing probability of minor, moderate, and severe damage for building typologies (Adb, BrCfl, BrCri, BrM, Rci with code levels) and infrastructure (roads, substations) across landslide susceptibility levels.",
+              "id": "fragility_function_landslide_buildings",
+              "hazard_primary": {
+                "id": "hazard_landslide",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio"
+                }
+              }
+            }
+          ]
+        },
+        "socio_economic": [
+          {
+            "scheme": "Custom",
+            "indicator_name": "Household income level",
+            "indicator_code": "income",
+            "description": "Income level attribute for synthetic households used as socio-economic indicator in the exposure dataset.",
+            "reference_year": 1900,
+            "id": "socioeconomic_income"
+          },
+          {
+            "scheme": "Custom",
+            "indicator_name": "Education attainment status",
+            "indicator_code": "eduattstat",
+            "description": "Education attainment status for synthetic individuals used as socio-economic indicator in the exposure dataset.",
+            "reference_year": 1900,
+            "id": "socioeconomic_education"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Building damage state results from earthquake impact assessment for 3 scenarios (Nepal-Bihar, Gorkha, 1505 AD) and each community planning scenario (Ethnic, Madhesi, Pahadi, Planners, Squatter, Tharu).",
+            "id": "loss_earthquake_buildings",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            }
+          },
+          {
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Building damage state results from flood impact assessment for 20-year and 70-year return periods under future climate conditions.",
+            "id": "loss_flood_buildings",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Building damage state results from landslide assessment for current and future susceptibility conditions.",
+            "id": "loss_landslide_buildings",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "process": "landslide_general",
+              "intensity_measure": "LSI:-"
+            }
+          },
+          {
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Casualty results from earthquake impact assessment for each scenario combination.",
+            "id": "loss_earthquake_casualties",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            }
+          },
+          {
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Road and power network damage from earthquake assessment.",
+            "id": "loss_earthquake_infrastructure",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            }
+          },
+          {
+            "asset_category": "population",
+            "asset_dimension": "disruption",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "simulated",
+                "metric": "downtime",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Hospital accessibility and power availability impacts from earthquake, flood, and landslide hazards. Each building has hospital_access and has_power boolean attributes.",
+            "id": "loss_earthquake_indirect",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            }
+          },
+          {
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Road network damage from flood impact assessment.",
+            "id": "loss_flood_infrastructure",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
