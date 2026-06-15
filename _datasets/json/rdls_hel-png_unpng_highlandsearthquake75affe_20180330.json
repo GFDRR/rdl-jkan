@@ -1,0 +1,183 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-png_unpng_highlandsearthquake75affe_20180330",
+      "title": "Papua New Guinea Highlands Earthquake 7.5 Affected Villages",
+      "description": "Affected Villages based on 2011 Population. Intensity - USGS Villages - NSO Affected Village - NDC. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/png-earthquake-7-5-affected-villages]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "Intensity - USGS Villages - NSO Affected Village - NDC",
+      "contact_point": {
+        "name": "UN in Papua New Guinea",
+        "url": "https://data.humdata.org/dataset/png-earthquake-7-5-affected-villages"
+      },
+      "creator": {
+        "name": "UN in Papua New Guinea",
+        "url": "https://data.humdata.org/dataset/png-earthquake-7-5-affected-villages"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PNG"
+        ]
+      },
+      "temporal": {
+        "start": "2018-03-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "USGS",
+            "url": "https://data.humdata.org/dataset/png-earthquake-7-5-affected-villages"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "NSO (National Statistics Office)",
+            "url": "https://data.humdata.org/dataset/png-earthquake-7-5-affected-villages"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "NDC (National Disaster Centre)",
+            "url": "https://data.humdata.org/dataset/png-earthquake-7-5-affected-villages"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Village-level affected population data derived by integrating USGS earthquake intensity measurements with 2011 census population counts and NDC disaster impact assessments for the 2011 Papua New Guinea Highlands 7.5 magnitude earthquake.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "USGS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Earthquake intensity data from the United States Geological Survey"
+          },
+          {
+            "id": "source_2",
+            "name": "NSO (National Statistics Office)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "2011 population census data for villages in Papua New Guinea"
+          },
+          {
+            "id": "source_3",
+            "name": "NDC (National Disaster Centre)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Affected village assessments and disaster impact records"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_25f74986",
+          "title": "Affected Villages geocoded_SADD.xlsx",
+          "description": "Papua New Guinea Highlands Earthquake 7.5 Affected Villages (Affected Villages geocoded_SADD.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/e2aa4dba-1e72-4100-a4fa-da91994130ef/resource/25f74986-6d15-4452-882a-d67f31919b75/download/affected-villages-geocoded_sadd.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population in villages based on 2011 census data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake ground shaking in villages"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/png-earthquake-7-5-affected-villages",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

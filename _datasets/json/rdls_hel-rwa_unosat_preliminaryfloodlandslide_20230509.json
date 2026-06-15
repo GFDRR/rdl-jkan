@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-rwa_unosat_preliminaryfloodlandslide_20230509",
+      "title": "Preliminary satellite flood and landslide assessment report, Along Sebaya River, Rubavu District, Karongi Districtn Western Province, Rwanda",
+      "description": "UNOSAT code FL20230504RWA, GDACS Id: 1101977 Status: Washed away structures and damaged transportation network observed along the Sebaya River Further action(s): Continue monitoring Landslides /mudslides observed in Rubavu District, Western Province as of 6 May 2023; Washed away structures observed along the Sebaya River in Rubavu District, Western Province as of 6 May 2023; Damaged roads and damaged bridge by landslide/mudslide observed along the Sebaya River in Rubavu District, Western Province as of 6 May 2023;. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-flood-and-landslide-assessment-report-along-sebaya-river-rubavu-dist]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-flood-and-landslide-assessment-report-along-sebaya-river-rubavu-dist"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-flood-and-landslide-assessment-report-along-sebaya-river-rubavu-dist"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "RWA"
+        ]
+      },
+      "temporal": {
+        "start": "2023-05-09"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/preliminary-satellite-flood-and-landslide-assessment-report-along-sebaya-river-rubavu-dist"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery acquired on or after 4 May 2023 to identify notable changes in the Sebaya River corridor and Rubavu District. Damage features (washed away structures, damaged roads/bridges, landslide scars) were manually delineated and attributed with event codes, sensor information, and impact notes to produce a post-event damage assessment geodatabase.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-event images to identify structural damage, washed away buildings, and infrastructure impacts from flooding and landslides"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_41140ff5",
+          "title": "FL20230504RWA_gdb.zip",
+          "description": "Preliminary satellite flood and landslide assessment report, Along Sebaya River, Rubavu District, Karongi Districtn Western Province, Rwanda (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3579/FL20230504RWA_gdb.zip"
+        },
+        {
+          "id": "resource_2bfb894d",
+          "title": "FL20230504RWA_SHP.zip",
+          "description": "Preliminary satellite flood and landslide assessment report, Along Sebaya River, Rubavu District, Karongi Districtn Western Province, Rwanda (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3579/FL20230504RWA_SHP.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Structures affected by flooding along Sebaya River"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Transportation network including roads and bridges in the study area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Washed away structures observed along Sebaya River from fluvial flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Damaged roads and bridge from landslide/mudslide impacts"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-flood-and-landslide-assessment-report-along-sebaya-river-rubavu-dist",
+          "rel": "source"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "es_flood",
+            "hazards": [
+              {
+                "id": "es_flood_hzd",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_landslide",
+            "hazards": [
+              {
+                "id": "es_landslide_hzd",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "pgd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-lao_unicef_lao_pdr_equityanalysis_2020",
+      "title": "Lao PDR - Equity Analysis",
+      "description": "UNICEF Lao PDR Equity Analysis (Base Layer) is a child rights-focused statistical tool developed by UNICEF's Division of Data, Analysis, Planning and Monitoring (DAPM). Launched in 2025, it aims to identify and assess disparities affecting children by analyzing both deprivation and hazard dimensions using selected national and global datasets, with data collected from 2011 to 2024. 1) Deprivation Analysis examines critical areas impacting children's well-being, including: Health, Nutrition, Education, Protection, Water, Sanitation and Hygiene (WASH), and Social Policy. 2) Hazard Analysis evaluates the prevalence and impact of climatic hazards such as floods, droughts, landslides, storms, heat wave, and air pollution. By highlighting inequities across population group and sub-national levels, Equity Analysis provides critical insights that support not only program planning, monitoring, and effectiveness for child-focused initiatives, but also inform decision-making for a wide range of stakeholders.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unicef-lao-pdr-equity-analysis-base-layer]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Limitations and Special Considerations in Equity Analysis: 1) Limited data availability: The analysis relies on secondary data, which may not be available for all indicators, regions, or population groups. 2) Lack of disaggregated data: Many datasets lack disaggregation by key equity dimensions such as age, sex, disability, ethnicity, or socioeconomic status, limiting deeper equity insights. 3) Outdated or infrequent data: Some sources are not regularly updated, which may affect the accuracy of current deprivation estimates. 4) Data consistency and comparability: Differences in indicator definitions, data collection methods, and reference years across sources may limit comparability. 5) Use of population projections: In the absence of up-to-date census data, population projections are used to estimate intensity (number affected), which introduces assumptions and potential uncertainty in the results. 6) Use of proxy indicators: When direct data is not available, proxy indicators are applied, which may not fully capture the intended deprivation. 7) Simplification through index scoring: The deprivation index (0 = least deprived, 10 = most deprived) is a simplified composite score used for prioritization, which may not capture the full complexity of each issue or context.",
+      "contact_point": {
+        "name": "UNICEF Lao PDR",
+        "url": "https://data.humdata.org/dataset/unicef-lao-pdr-equity-analysis-base-layer"
+      },
+      "creator": {
+        "name": "UNICEF Lao PDR",
+        "url": "https://data.humdata.org/dataset/unicef-lao-pdr-equity-analysis-base-layer"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LAO"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-01",
+        "end": "2024-04-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNICEF Division of Data, Analysis, Planning and Monitoring (DAPM)",
+            "url": "https://data.humdata.org/dataset/unicef-lao-pdr-equity-analysis-base-layer"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Secondary data from national and global datasets (2011-2024) were collected and synthesized to compute deprivation indices across health, nutrition, education, WASH, protection, and social policy domains, combined with hazard exposure metrics to generate composite equity indices at admin1 and admin2 levels.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNICEF Division of Data, Analysis, Planning and Monitoring (DAPM)",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Equity analysis methodology synthesizing secondary data to compute deprivation and hazard indices for child rights assessment"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_28df5ba6",
+          "title": "Equity Analysis_Base Layer.xlsx",
+          "description": "Lao PDR - Equity Analysis (Equity Analysis_Base Layer.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c20e57ca-dae8-4c65-896b-bd4ba25ca0a6/resource/28df5ba6-40a6-4df0-886d-ee4c0817ba6b/download/equity-analysis_base-layer.xlsx"
+        },
+        {
+          "id": "resource_d39b5a7e",
+          "title": "Equity Analysis_Hazard Layer.xlsx",
+          "description": "Lao PDR - Equity Analysis (Equity Analysis_Hazard Layer.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c20e57ca-dae8-4c65-896b-bd4ba25ca0a6/resource/d39b5a7e-8754-438e-825e-78b66ef46fa4/download/equity-analysis_hazard-layer.xlsx"
+        },
+        {
+          "id": "resource_a1c600e7",
+          "title": "Equity Analysis_Deprivation Layer.xlsx",
+          "description": "Lao PDR - Equity Analysis (Equity Analysis_Deprivation Layer.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c20e57ca-dae8-4c65-896b-bd4ba25ca0a6/resource/a1c600e7-49ca-4097-8a79-fd03e69c1a0f/download/equity-analysis_deprivation-layer.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Child population disaggregated by age groups, gender, and ethnicity at provincial and district levels"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Child deprivation indicators across health, nutrition, education, WASH, and protection domains"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Child deprivation indicators linked to drought hazard exposure"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unicef-lao-pdr-equity-analysis-base-layer",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

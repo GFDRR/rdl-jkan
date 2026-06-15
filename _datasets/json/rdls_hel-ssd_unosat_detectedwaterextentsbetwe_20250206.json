@@ -1,0 +1,178 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ssd_unosat_detectedwaterextentsbetwe_20250206",
+      "title": "Satellite detected water extents between 01 and 05 February 2025 over South Sudan",
+      "description": "UNOSAT code: FL20250110SSD This map illustrates cumulative satellite-detected water using VIIRS in South Sudan between 01 to 05 February 2025 compared with the period from 18 to 22 January 2025 . Within the cloud free analysed areas of about 630,000 km², a total of about 38,000 km² of lands appear to be affected with flood waters. Water extent appears to have decreased of about 4,000 km² since the period between 18 to 22 January 2025 within the cloud free analysed areas. Based on Worldpop population data and the maximal flood water extent ~605,000 people are potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extents-between-01-and-05-february-2025-over-south-sudan]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-01-and-05-february-2025-over-south-sudan"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-01-and-05-february-2025-over-south-sudan"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2025-02-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "VIIRS satellite imagery",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-01-and-05-february-2025-over-south-sudan"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-01-and-05-february-2025-over-south-sudan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed VIIRS satellite imagery from 01-05 February 2025 and compared it with baseline imagery from 18-22 January 2025 to detect cumulative water extents across South Sudan. The resulting water extent polygons (38,000 km² affected area within 630,000 km² cloud-free analysis area) were intersected with WorldPop population data to estimate approximately 605,000 potentially exposed people. Change analysis showed a 4,000 km² decrease in water extent compared to the baseline period.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "VIIRS satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-based remote sensing data used to detect and map cumulative water extents across cloud-free areas of South Sudan"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate the number of people potentially exposed to detected flood waters"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_225f8b3b",
+          "title": "FL20220424SSD_gdb.zip",
+          "description": "Satellite detected water extents between 01 and 05 February 2025 over South Sudan (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4074/FL20220424SSD_gdb.zip"
+        },
+        {
+          "id": "resource_fc4ad4c7",
+          "title": "FL20220424SSD_SHP.zip",
+          "description": "Satellite detected water extents between 01 and 05 February 2025 over South Sudan (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4074/FL20220424SSD_SHP.zip"
+        },
+        {
+          "id": "resource_b3251cde",
+          "title": "UNOSAT_Population_Exposure_FL20250110SSD_01Feb_05Feb2025_SouthSudan_Week34.xlsx",
+          "description": "Satellite detected water extents between 01 and 05 February 2025 over South Sudan (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4074/UNOSAT_Population_Exposure_FL20250110SSD_01Feb_05Feb2025_SouthSudan_Week34.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed to flood waters based on WorldPop data and maximal flood extent"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by satellite-detected flood water extent in South Sudan"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-01-and-05-february-2025-over-south-sudan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

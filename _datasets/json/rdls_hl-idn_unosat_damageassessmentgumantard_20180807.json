@@ -1,0 +1,115 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-idn_unosat_damageassessmentgumantard_20180807",
+      "title": "Damage assessment of Gumantar and Dangiang Desa, Kagayan District, Lombok Island, Indonesia",
+      "description": "This map illustrates satellite-detected building damage assessment as of 7 August 2018, over Gumantar and Dangiang Desa, Kagayan District, Lombok Island, after the 6.9 earthquake, 3km SSE of Loloan, Indonesia. The analysis was conducted using a post-event Pleiades satellite image acquired as of 7 August 2018, two days after the earthquake hit the island. UNITAR-UNOSAT analysis identified 1,274 potentially damaged structures within the area. Overall, the satellite detected damage level was severe, in this part of the island, especially in Boyotan Asli and Dangian Timur villages. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-of-gumantar-and-dangiang-desa-kagayan-district-lombok-island-indonesia-2836]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-gumantar-and-dangiang-desa-kagayan-district-lombok-island-indonesia-2836"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-gumantar-and-dangiang-desa-kagayan-district-lombok-island-indonesia-2836"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-08-07"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared post-event Pleiades satellite imagery (7 August 2018, two days after the 6.9 magnitude earthquake) with reference imagery to identify notable structural changes. Building damage was classified by severity level and confidence, resulting in a vector dataset of 1,274 potentially damaged structures with damage classification attributes across two villages in Kagayan District.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event Pleiades satellite imagery acquired 7 August 2018 analyzed to detect and classify building damage from the earthquake through visual comparison of pre- and post-event imagery"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b30c5f24",
+          "title": "EQ20180805IDN_shp.zip",
+          "description": "Damage assessment of Gumantar and Dangiang Desa, Kagayan District, Lombok Island, Indonesia (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/ID/EQ20180805IDN/EQ20180805IDN_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from earthquake ground motion, with 1,274 potentially damaged structures identified in Gumantar and Dangiang Desa"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-of-gumantar-and-dangiang-desa-kagayan-district-lombok-island-indonesia-2836",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

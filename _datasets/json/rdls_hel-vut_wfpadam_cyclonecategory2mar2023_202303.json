@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-vut_wfpadam_cyclonecategory2mar2023_202303",
+      "title": "Vanuatu: Cyclone - Category 2 - Mar 2023",
+      "description": "ADAM ID: 1000966_3 Cyclone (category 2) during the period Mar 01 2023-Mar 05 2023 in Vanuatu. It impacted 142418 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/vanuatu-cyclone-1000966]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1000966"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1000966"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2023-03-01",
+        "end": "2023-03-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1000966"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected observed tropical cyclone track geometry, classification (Category 2), wind speed measurements, and population exposure data for the March 2023 cyclone event in Vanuatu. Geospatial data was processed into shapefile format with population impact metrics aggregated by affected administrative areas.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system collecting and mapping geospatial information on tropical cyclone tracks, classification, wind speed, and affected populations following sudden-onset emergencies."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_fbd900c8",
+          "title": "1000966-14-adam-ts-1000966-14-shp.zip",
+          "description": "Vanuatu: Cyclone - Category 2 - Mar 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/8653835f-4b3e-4bb4-afa9-28e4a928d5b9/resource/fbd900c8-f606-4dbd-af54-92a31ec6ef32/download/1000966-14-adam-ts-1000966-14-shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone hazard in affected areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by Category 2 tropical cyclone in Vanuatu"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/vanuatu-cyclone-1000966",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

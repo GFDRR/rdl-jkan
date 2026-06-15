@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-mar_wfpadam_earthquake68msep2023_20230908",
+      "title": "Morocco: Earthquake - 6.8M - Sep 2023",
+      "description": "ADAM ID: eq_us7000kufc Magnitude 6.8 earthquake at 18.535 depth occurred on Sep 08 2023 in 26km SW of Amizmiz. It impacted 380662 people. The epicentre was at latitude 31.1095 longitude -8.4404.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/morocco-earthquake-eq-us7000kufc]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/morocco-earthquake-eq-us7000kufc"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/morocco-earthquake-eq-us7000kufc"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MAR"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/morocco-earthquake-eq-us7000kufc"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system processed the USGS earthquake event (us7000kufc) and derived population exposure to ground shaking by intersecting MMI intensity zones with gridded population data, stratifying affected counts by administrative boundaries and Modified Mercalli Intensity levels (3-7).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting and mapping geospatial and socio-economic information following sudden-onset emergencies; provides post-event impact dashboards aggregating affected population estimates by administrative division and hazard intensity."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_022c1662",
+          "title": "sm-us7000kufc-sm-us7000kufc-pop-estimation.csv",
+          "description": "Morocco: Earthquake - 6.8M - Sep 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/62467e35-c0ee-4ec0-82ce-35eed21a4e6c/resource/022c1662-f8be-43a9-b921-82f89dc4ec62/download/sm-us7000kufc-sm-us7000kufc-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake ground shaking across MMI intensity levels 3-7"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/morocco-earthquake-eq-us7000kufc",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

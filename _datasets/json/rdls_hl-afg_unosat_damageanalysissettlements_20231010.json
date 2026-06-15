@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-afg_unosat_damageanalysissettlements_20231010",
+      "title": "Afghanistan - Damage analysis by settlement and surface displacement of the 7th October 2023 Hirat earthquake",
+      "description": "UNOSAT code EQ20231008AFG, GDACS Id: 1394952 This map illustrates the level of damage induced by the 07 October earthquake (M6.3) in settlements North and North-West Herat as observed from very high-resolution images Pléiades acquired on 09 October 2023. UNOSAT has analysed 4 areas for a total of 750km² and detected 56 affected settlements, amongst which 38 are moderately affected, 3 severely affected and 15 are almost destroyed. The map illustrates also the coseismic surface displacement interferogram related with the 7 October 2023 earthquake as deduced using a pair of SAR images acquired on 07 Oct. 2023 and 25 Sep. 2023. Narrow fringes translate a higher surface displacement. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-analysis-by-settlement-and-surface-displacement-of-the-7th-october-2023-hirat-earth]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-analysis-by-settlement-and-surface-displacement-of-the-7th-october-2023-hirat-earth"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-analysis-by-settlement-and-surface-displacement-of-the-7th-october-2023-hirat-earth"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-analysis-by-settlement-and-surface-displacement-of-the-7th-october-2023-hirat-earth"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared very high-resolution Pléiades satellite imagery acquired before and after the 7 October 2023 earthquake to detect and classify building damage across settlements in Herat province. Coseismic surface displacement was derived using SAR interferometry from a pair of images. The dataset integrates damage classification (moderately affected, severely affected, almost destroyed) with surface displacement measurements to characterize earthquake impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from very high-resolution Pléiades satellite imagery acquired on 9 October 2023, analyzing 750 km² across 4 areas in northern and north-western Herat province"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c700c85a",
+          "title": "EQ20231008AFG_gdb.zip",
+          "description": "Afghanistan - Damage analysis by settlement and surface displacement of the 7th October 2023 Hirat earthquake (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3686/EQ20231008AFG_gdb.zip"
+        },
+        {
+          "id": "resource_224c0f4c",
+          "title": "EQ20231008AFG_SHP.zip",
+          "description": "Afghanistan - Damage analysis by settlement and surface displacement of the 7th October 2023 Hirat earthquake (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3686/EQ20231008AFG_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Building damage assessment across 56 affected settlements in Herat, classified by damage severity (moderately affected, severely affected, almost destroyed)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-analysis-by-settlement-and-surface-displacement-of-the-7th-october-2023-hirat-earth",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

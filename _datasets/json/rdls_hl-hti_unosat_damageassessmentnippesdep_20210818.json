@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-hti_unosat_damageassessmentnippesdep_20210818",
+      "title": "Damage Assessment in Nippes department, Haiti as of 16 August 2021",
+      "description": "UNOSAT code: EQ20210814HTI This map illustrates potentially damaged structures/buildings in Nippes department of Haiti as detected by using a satellite image acquired after the earthquake. UNOSAT analysis used a Worldview-2 image acquired on 14 & 16 August 2021, a Worldview-1 image acquired on 15 August 2021, a Worldview-3 image acquired on 16 August 2021, and Pleiades images acquired on 15 & 16 August 2021, as a post-event images. Within the analyzed area, UNOSAT identified 73 damaged structures and 125 potentially damaged structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-nippes-department-haiti-as-of-16-august-2021]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-nippes-department-haiti-as-of-16-august-2021"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-nippes-department-haiti-as-of-16-august-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2021-08-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal high-resolution satellite imagery (Worldview and Pleiades sensors) acquired immediately after the 14 August 2021 earthquake to detect structural changes and classify buildings as damaged or potentially damaged. Building footprints and damage classifications were manually interpreted and vectorized into geodatabase and shapefile formats for the Nippes department study area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event satellite imagery analysis (Worldview-2, Worldview-1, Worldview-3, Pleiades) acquired 14-16 August 2021 to detect and classify earthquake-induced building damage through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f2ac20ea",
+          "title": "EQ20210814HTI_gdb.zip",
+          "description": "Damage Assessment in Nippes department, Haiti as of 16 August 2021 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/HT/EQ20210814HTI/EQ20210814HTI_gdb.zip"
+        },
+        {
+          "id": "resource_b207c091",
+          "title": "EQ20210814HTI_shp.zip",
+          "description": "Damage Assessment in Nippes department, Haiti as of 16 August 2021 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/HT/EQ20210814HTI/EQ20210814HTI_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage assessment identifying 73 confirmed damaged and 125 potentially damaged structures from earthquake ground motion"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-nippes-department-haiti-as-of-16-august-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

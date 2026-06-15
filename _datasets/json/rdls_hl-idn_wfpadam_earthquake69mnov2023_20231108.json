@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-idn_wfpadam_earthquake69mnov2023_20231108",
+      "title": "Indonesia: Earthquake - 6.9M - Nov 2023",
+      "description": "ADAM ID: eq_us7000l9h2 Magnitude 6.9 earthquake at 10.0 depth occurred on Nov 08 2023 in Banda Sea. It impacted 736 people. The epicentre was at latitude -6.3878 longitude 129.7638.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000l9h2]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000l9h2"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000l9h2"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000l9h2"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event earthquake impact assessment derived from USGS ShakeMaps (ADAM ID: eq_us7000l9h2) intersected with gridded population data to estimate affected population by Modified Mercalli Intensity (MMI) zones across administrative divisions in Indonesia.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting and mapping geospatial and socio-economic information following sudden-onset emergencies; provides earthquake impact alerts and population exposure analysis by intensity zone."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7101edb1",
+          "title": "sm-us7000l9h2-sm-us7000l9h2-pop-estimation.csv",
+          "description": "Indonesia: Earthquake - 6.9M - Nov 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/e88abf6d-a797-470d-8d3e-ce3fd888f9bd/resource/7101edb1-22f7-4999-85b0-328b482eea09/download/sm-us7000l9h2-sm-us7000l9h2-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake ground shaking across MMI intensity zones"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000l9h2",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

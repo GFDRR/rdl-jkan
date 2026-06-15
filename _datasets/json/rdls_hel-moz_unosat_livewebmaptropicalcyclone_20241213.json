@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-moz_unosat_livewebmaptropicalcyclone_20241213",
+      "title": "UNOSAT Live Web Map Tropical Cyclone for CHIDO-25 in Mozambique",
+      "description": "UNOSAT code: TC20241212MOZ, GDACS ID: 1001131 This application provides flood impact assessments for related to the Tropical Cyclone for CHIDO-25 in Mozambique. Important note: The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations. The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-for-chido-25-in-mozambique]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-for-chido-25-in-mozambique"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-for-chido-25-in-mozambique"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2024-12-13"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-for-chido-25-in-mozambique"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed satellite imagery before and after Tropical Cyclone CHIDO-25 to identify flood impacts and assess population exposure in Mozambique. Population exposure analysis was conducted by overlaying flood-affected areas with gridded population data to quantify affected populations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and damage assessment methodology for tropical cyclone impacts, comparing pre- and post-event satellite images to determine population exposure and flood-related impacts"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_95a61e70",
+          "title": "UNOSAT_PopulationExposureAnalysis_CHIDO25_Mozambique_13122024.xlsx",
+          "description": "UNOSAT Live Web Map Tropical Cyclone for CHIDO-25 in Mozambique (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4049/UNOSAT_PopulationExposureAnalysis_CHIDO25_Mozambique_13122024.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone impacts in affected areas of Mozambique"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by tropical cyclone CHIDO-25 flood impacts"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-for-chido-25-in-mozambique",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-inform_climatechange",
+      "title": "INFORM Climate Change",
+      "description": "INFORM Climate Change analyses how the risk of humanitarian crises will change as a result of climate change under different emission and population scenarios.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/inform-climate-change]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "INFORM",
+        "url": "https://data.humdata.org/dataset/inform-climate-change"
+      },
+      "creator": {
+        "name": "INFORM",
+        "url": "https://data.humdata.org/dataset/inform-climate-change"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "INFORM Climate Change integrates climate projections, population scenarios, and socioeconomic vulnerability indicators to model future humanitarian crisis risk under different emission pathways. The composite indicator combines hazard exposure and vulnerability dimensions to produce forward-looking risk assessments at global scale.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "INFORM",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "INFORM composite indicator methodology that integrates hazard, exposure, and vulnerability data to assess humanitarian crisis risk under climate change scenarios"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1ffdeab7",
+          "title": "INFORM CC Brochure data.xlsx",
+          "description": "INFORM Climate Change (INFORM CC Brochure data.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/10900f21-fd42-489a-a1e2-be1d066bce44/resource/1ffdeab7-4901-477e-a821-a198b53e4c15/download/inform-cc-brochure-data.xlsx"
+        },
+        {
+          "id": "resource_7b54062c",
+          "title": "INFORM Climate Change Brochure.pdf",
+          "description": "INFORM Climate Change Brochure.pdf",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/10900f21-fd42-489a-a1e2-be1d066bce44/resource/7b54062c-05ea-425d-8e07-929efb82195e/download/inform-climate-change-brochure-4.pdf"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to changing climate hazards under future scenarios"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural land and livelihoods vulnerable to climate change impacts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Humanitarian crisis risk to population from climate-driven drought and resource scarcity"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/inform-climate-change",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

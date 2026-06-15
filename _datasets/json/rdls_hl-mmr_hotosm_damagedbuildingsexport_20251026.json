@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-mmr_hotosm_damagedbuildingsexport_20251026",
+      "title": "Myanmar Damaged Buildings (OpenStreetMap Export)",
+      "description": "Humanitarian OpenStreetMap Team (HOT) conducted a pilot of Crowdsourced Damage Assessment (CDA) with local mappers from the Myanmar OpenStreetMap Community (myOSM) to identify and map damaged buildings in priority affected townships from the March 2025 Myanmar earthquake. Through the CDA, mappers will review damaged buildings by comparing pre- and post-disaster satellite imageries (from Maxar and Planet) to identify signs of damages. These were reviewed, mapped, and validated with open-source tools MapSwipe, HOT Tasking Manager, and MapRoulette. Damage assessments were conducted in 20 townships, including: Bago, Magway, Aungmyaythazan, Chanayethazan, Mahaaungmyay, Chanmyathazi, Pyigyitagon, Amarapura, Sintgaing, Kyaukse, Meiktila, Thazi, Patheingyi, Za Bu Thi Ri, Det Khi Na Thi Ri, Pyinmana, Poke Ba Thi Ri, Oke Ta Ra Thi Ri, Lewe, and Sagaing. This dataset includes all OpenStreetMap features (nodes, ways, and relations) within Myanmar that contain any tag key related to 'damage'. ) Features may have these attributes: name building damage damage:event source:damage source:damage:date addr:street addr:city source This dataset is one of many OpenStreetMap exports on HDX . See the Humanitarian OpenStreetMap Team website for more information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hotosm_mmr_damaged_buildings]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "OpenStreetMap data is crowd sourced and cannot be considered to be exhaustive",
+      "contact_point": {
+        "name": "Humanitarian OpenStreetMap Team (HOT)",
+        "url": "https://data.humdata.org/dataset/hotosm_mmr_damaged_buildings"
+      },
+      "creator": {
+        "name": "Humanitarian OpenStreetMap Team (HOT)",
+        "url": "https://data.humdata.org/dataset/hotosm_mmr_damaged_buildings"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2025-10-26"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Maxar and Planet satellite imagery",
+            "url": "https://data.humdata.org/dataset/hotosm_mmr_damaged_buildings"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Local OpenStreetMap mappers conducted crowdsourced damage assessment by comparing pre- and post-disaster satellite imagery (Maxar and Planet) to identify damaged buildings in 20 priority townships affected by the March 2025 Myanmar earthquake. Damage observations were validated using open-source mapping tools (MapSwipe, HOT Tasking Manager, MapRoulette) and compiled into geospatial datasets documenting direct building damage from the earthquake event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian OpenStreetMap Team (HOT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Crowdsourced damage assessment conducted by HOT and Myanmar OpenStreetMap Community mappers using MapSwipe, HOT Tasking Manager, and MapRoulette tools to validate building damage observations."
+          },
+          {
+            "id": "source_2",
+            "name": "Maxar and Planet satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Pre- and post-disaster satellite imagery used as the primary source for visual damage assessment and comparison by mappers."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_52f23b1e",
+          "title": "hotosm_mmr_damaged_buildings.geojson",
+          "description": "Myanmar Damaged Buildings (OpenStreetMap Export) (GeoJSON)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/dfca769f-f305-4106-afcc-c4f78d399d6c/resource/52f23b1e-1835-4df7-94e3-f085a9d8bf28/download/hotosm_mmr_damaged_buildings.geojson"
+        },
+        {
+          "id": "resource_17d4d4da",
+          "title": "hotosm_mmr_damaged_buildings.kml",
+          "description": "Myanmar Damaged Buildings (OpenStreetMap Export) (KML)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://data.humdata.org/dataset/dfca769f-f305-4106-afcc-c4f78d399d6c/resource/17d4d4da-6163-471b-a35f-f296d6383b39/download/hotosm_mmr_damaged_buildings.kml"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from March 2025 Myanmar earthquake assessed through pre- and post-event satellite imagery comparison"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hotosm_mmr_damaged_buildings",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

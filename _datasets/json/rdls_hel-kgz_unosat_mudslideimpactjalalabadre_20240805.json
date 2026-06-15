@@ -1,0 +1,195 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-kgz_unosat_mudslideimpactjalalabadre_20240805",
+      "title": "Mudslide impact in Jalal-Abad Regions, Kyrgyzstan as of 30 July 2024",
+      "description": "UNOSAT code: FL20240725KGZ This map illustrates satellite-detected mudslides in Bazar-Korgon District, Jalal-Abad Region, Kyrgyzstan, as observed from a WorldView-3 satellite image acquired on July 27, 2024, and Global satellites acquired on July 27, 28, and 30, 2024. Within the analyzed area of approximately 280 km², about 1 km² of mudslide extent was observed. Additionally, within this area, 23 buildings (less than 1% of the total structures) were identified as affected by the mudslide. Approximately 5 bridges were observed destroyed as of May 20, 2024. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mudslide-impact-in-jalal-abad-regions-kyrgyzstan-as-of-30-july-2024]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mudslide-impact-in-jalal-abad-regions-kyrgyzstan-as-of-30-july-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mudslide-impact-in-jalal-abad-regions-kyrgyzstan-as-of-30-july-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KGZ"
+        ]
+      },
+      "temporal": {
+        "start": "2024-08-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/mudslide-impact-in-jalal-abad-regions-kyrgyzstan-as-of-30-july-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed multi-temporal satellite imagery (WorldView-3 and Global satellites from July 27-30, 2024) through visual comparison to detect mudslide occurrence and extent in Bazar-Korgon District. Affected buildings and destroyed bridges were identified through direct visual interpretation of satellite imagery within the 280 km² study area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis from WorldView-3 and Global satellites acquired July 27-30, 2024, used to detect and map mudslide extent and affected structures through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3a27d34b",
+          "title": "FL20240725KGZ_GDB.zip",
+          "description": "Mudslide impact in Jalal-Abad Regions, Kyrgyzstan as of 30 July 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3907/FL20240725KGZ_GDB.zip"
+        },
+        {
+          "id": "resource_edc4437b",
+          "title": "FL20240725KGZ_SHP.zip",
+          "description": "Mudslide impact in Jalal-Abad Regions, Kyrgyzstan as of 30 July 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3907/FL20240725KGZ_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in the analyzed area, with 23 structures identified as affected by mudslide"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Bridge infrastructure in the study area, with 5 bridges observed destroyed"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from mudslide impact, 23 structures affected"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct infrastructure loss from mudslide, 5 bridges destroyed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mudslide-impact-in-jalal-abad-regions-kyrgyzstan-as-of-30-july-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

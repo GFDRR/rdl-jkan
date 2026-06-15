@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-cod_unosat_impactdesglissementsdeter_20230508",
+      "title": "Impact des glissements de terrain le 7 mai 2023 en Territoire de Kalehe, Province du Sud-Kivu, République Démocratique du Congo",
+      "description": "UNOSAT code FL20230508COD, GDACS Id: 1101981 Cette carte illustre l'étendue des glissements de terrain le 07 mai 2023 en Territoire de Kalehe, Province du Sud-Kivu, République Démocratique du Congo. Dans la zone analysée de 9,000 ha, environ 90 ha d'escarpements de glissements de terrain sont visibles. Ceci est une analyse préliminaire et n'a pas été validée sur le terrain. Merci d'envoyer vos commentaires au Centre Satellitaire des Nations Unies (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/impact-des-glissements-de-terrain-le-7-mai-2023-en-territoire-de-kalehe-province-du-sud-ki]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/impact-des-glissements-de-terrain-le-7-mai-2023-en-territoire-de-kalehe-province-du-sud-ki"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/impact-des-glissements-de-terrain-le-7-mai-2023-en-territoire-de-kalehe-province-du-sud-ki"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2023-05-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/impact-des-glissements-de-terrain-le-7-mai-2023-en-territoire-de-kalehe-province-du-sud-ki"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery from before and after the 7 May 2023 landslide event in Kalehe Territory, identifying notable changes in terrain to delineate landslide scarp boundaries. The analysis mapped approximately 90 hectares of visible landslide escarpments within a 9,000 hectare study area, producing vector geometries with area measurements. This is a preliminary post-event impact assessment not yet validated on the ground.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and change detection methodology to map landslide scarps and extent following the 7 May 2023 event in Kalehe Territory, South Kivu Province."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_192dee73",
+          "title": "FL20230508COD_gdb.zip",
+          "description": "Impact des glissements de terrain le 7 mai 2023 en Territoire de Kalehe, Province du Sud-Kivu, République Démocratique du Congo (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3577/FL20230508COD_gdb.zip"
+        },
+        {
+          "id": "resource_f5951141",
+          "title": "FL20230508COD_SHP.zip",
+          "description": "Impact des glissements de terrain le 7 mai 2023 en Territoire de Kalehe, Province du Sud-Kivu, République Démocratique du Congo (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3577/FL20230508COD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct landslide scarp extent and area affected in the study zone"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/impact-des-glissements-de-terrain-le-7-mai-2023-en-territoire-de-kalehe-province-du-sud-ki",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

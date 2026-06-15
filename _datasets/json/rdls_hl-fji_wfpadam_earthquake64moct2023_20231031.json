@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-fji_wfpadam_earthquake64moct2023_20231031",
+      "title": "Fiji: Earthquake - 6.4M - Oct 2023",
+      "description": "ADAM ID: eq_us7000l7qy Magnitude 6.4 earthquake at 547.578 depth occurred on Oct 31 2023 in 19km SE of Mago Island. It impacted 1953 people. The epicentre was at latitude -17.538 longitude -179.0119.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/fiji-earthquake-eq-us7000l7qy]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/fiji-earthquake-eq-us7000l7qy"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/fiji-earthquake-eq-us7000l7qy"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "FJI"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-31"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/fiji-earthquake-eq-us7000l7qy"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system processed observed earthquake parameters (magnitude 6.4, epicentre location, depth) and derived MMI ground motion intensity values at administrative levels, then intersected with gridded population data to estimate affected population counts by administrative division.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analysing and mapping geospatial and socio-economic information following sudden onset humanitarian emergencies, providing earthquake impact assessments and population exposure estimates"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_76400a9b",
+          "title": "sm-us7000l7qy-sm-us7000l7qy-pop-estimation.csv",
+          "description": "Fiji: Earthquake - 6.4M - Oct 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/cd2aed89-f350-40cd-bc5d-78fffcb69010/resource/76400a9b-9526-45bd-89f2-6a7853fd0e6d/download/sm-us7000l7qy-sm-us7000l7qy-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by the 6.4 magnitude earthquake, estimated at 1953 people"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/fiji-earthquake-eq-us7000l7qy",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-lby_unosat_floodimpactassessmentdern_20230914",
+      "title": "Flood impact assessment in Derna City centre, East Province, Libya",
+      "description": "UNOSAT code FL20230912LBY, GDACS Id: 1102204 This map illustrates satellite-detected flood extent in the centre of Derna (Libya) as observed from a Pléiades imagery acquired on 13 September 2023 at 13:39 local time after the passage of the Mediterranean tropical-like cyclone Daniel. Extensive damage and destructions are observed in the city centre and the port area. 2217 buildings were affected by the rushing floodwaters in Derna and 886 in this sector of the city. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/flood-impact-assessment-in-derna-city-centre-east-province-libya]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flood-impact-assessment-in-derna-city-centre-east-province-libya"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flood-impact-assessment-in-derna-city-centre-east-province-libya"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LBY"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-14"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/flood-impact-assessment-in-derna-city-centre-east-province-libya"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Pléiades satellite imagery acquired on 13 September 2023 and compared multi-temporal images to detect flood extent changes in Derna city centre following tropical-like cyclone Daniel. Building damage counts were derived from visual interpretation of satellite-detected inundation patterns in the city centre and port area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using Pléiades imagery to detect flood extent and map inundated areas in Derna following cyclone Daniel"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9c976758",
+          "title": "FL20230912LBY_gdb.zip",
+          "description": "Flood impact assessment in Derna City centre, East Province, Libya (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3672/FL20230912LBY_gdb.zip"
+        },
+        {
+          "id": "resource_0cf36dc3",
+          "title": "FL20230912LBY_SHP.zip",
+          "description": "Flood impact assessment in Derna City centre, East Province, Libya (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3672/FL20230912LBY_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Derna city centre affected by flood inundation"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from coastal flooding in Derna city centre and port area"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/flood-impact-assessment-in-derna-city-centre-east-province-libya",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

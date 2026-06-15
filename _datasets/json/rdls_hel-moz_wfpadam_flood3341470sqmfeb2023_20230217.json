@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-moz_wfpadam_flood3341470sqmfeb2023_20230217",
+      "title": "Mozambique: Flood - 334147.0 sq m - Feb 2023",
+      "description": "ADAM ID: FL-20230217-MOZ-00 Flood covering 334147.0 sq m on Feb 17 2023 in Mozambique. It impacted 204989 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-flood-fl-20230217-moz-00]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/mozambique-flood-fl-20230217-moz-00"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/mozambique-flood-fl-20230217-moz-00"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2023-02-17"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/mozambique-flood-fl-20230217-moz-00"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and analyzed geospatial data and socio-economic information following the February 17, 2023 flood event in Mozambique. Flood extent was mapped and overlaid with population and cropland datasets to quantify directly affected populations and flooded agricultural areas. The resulting dataset aggregates observed hazard extent with exposure and impact metrics.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analyzing and mapping geospatial and socio-economic information following sudden-onset humanitarian emergencies. Provides post-event flood extent, affected population counts, and cropland impact assessments."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b0ea3878",
+          "title": "FL-20230217-MOZ-00.geojson",
+          "description": "Mozambique: Flood - 334147.0 sq m - Feb 2023 (GeoJSON File)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/fbea8d02-40ce-45e6-96fd-2af5b78127e5/resource/b0ea3878-e5e7-45ea-9e1c-52c84a7cd91e/download/fl-20230217-moz-00.geojson"
+        },
+        {
+          "id": "resource_b03244c1",
+          "title": "FL-20230217-MOZ-00.tiff",
+          "description": "Mozambique: Flood - 334147.0 sq m - Feb 2023 (GeoTIFF File)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/fbea8d02-40ce-45e6-96fd-2af5b78127e5/resource/b03244c1-8e1a-47cf-8f7f-6fd527c39669/download/fl-20230217-moz-00.tiff"
+        },
+        {
+          "id": "resource_945af654",
+          "title": "FL-20230217-MOZ-00.gpkg",
+          "description": "Mozambique: Flood - 334147.0 sq m - Feb 2023 (Geopackage File)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/fbea8d02-40ce-45e6-96fd-2af5b78127e5/resource/945af654-410a-4585-a35d-57603bcd0fa7/download/fl-20230217-moz-00.gpkg"
+        },
+        {
+          "id": "resource_3d00b119",
+          "title": "metadata.txt",
+          "description": "Mozambique: Flood - 334147.0 sq m - Feb 2023 (Metadata File)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/fbea8d02-40ce-45e6-96fd-2af5b78127e5/resource/3d00b119-1d3a-4f37-98ea-bbed1c50dd70/download/metadata.txt"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland area affected by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population directly affected by the flood event"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population impact from February 2023 flood event in Mozambique"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct cropland area loss from flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-flood-fl-20230217-moz-00",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

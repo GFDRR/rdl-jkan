@@ -1,0 +1,138 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hev-ocharosea_informsubnational_20150101",
+      "title": "INFORM SUB NATIONAL for Eastern Africa",
+      "description": "INFORM SUB NATIONAL data for Eastern Africa Region. It contains the Hazards/Exposures, Vulnerbilities and Lack of Coping Capacity of the Greater Horn of Africa Region and the Overal Rick Index. The scale is from 0 - 10. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/inform-sub-national-for-eastern-africa]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "vulnerability"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Regional Office for Southern and Eastern Africa (ROSEA)",
+        "url": "https://data.humdata.org/dataset/inform-sub-national-for-eastern-africa"
+      },
+      "creator": {
+        "name": "OCHA Regional Office for Southern and Eastern Africa (ROSEA)",
+        "url": "https://data.humdata.org/dataset/inform-sub-national-for-eastern-africa"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "BDI",
+          "DJI",
+          "ERI",
+          "ETH",
+          "KEN",
+          "RWA",
+          "SOM",
+          "SSD",
+          "SDN",
+          "TZA",
+          "UGA"
+        ]
+      },
+      "temporal": {
+        "start": "2015-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "INFORM",
+            "url": "https://data.humdata.org/dataset/inform-sub-national-for-eastern-africa"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sub-national INFORM risk index calculated by aggregating multiple hazard exposure indicators, vulnerability measures, and coping capacity assessments for administrative units across the Greater Horn of Africa region, normalized to a 0-10 scale.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "INFORM",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "INFORM Index for Risk Management methodology providing composite risk indices combining hazard exposure, vulnerability, and lack of coping capacity indicators"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_91313d2e",
+          "title": "INFORM_GHoA 2015_v13_16Feb.xlsx",
+          "description": "INFORM SUB NATIONAL for Eastern Africa (INFORM_GHoA 2015_v13_16Feb.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d2ebf607-4d8d-47b5-a1f5-ea7671fe19c9/resource/91313d2e-5f62-4873-9edf-172db9aeeebf/download/inform-ghoa-2015-v13-16feb.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposure component of INFORM risk index"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "vulnerability": {
+        "socio_economic": [
+          {
+            "id": "se_1",
+            "indicator_name": "INFORM SUB NATIONAL for Eastern Africa",
+            "indicator_code": "inform-sub-national-for-eastern-africa",
+            "description": "INFORM SUB NATIONAL data for Eastern Africa Region. It contains the Hazards/Exposures, Vulnerbilities and Lack of Coping Capacity of the Greater Horn of Africa Region and the Overal Rick Index. The scale is from 0 - 10.",
+            "reference_year": 2015
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/inform-sub-national-for-eastern-africa",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

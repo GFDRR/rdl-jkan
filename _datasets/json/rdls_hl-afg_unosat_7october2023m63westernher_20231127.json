@@ -1,0 +1,156 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-afg_unosat_7october2023m63westernher_20231127",
+      "title": "7 October 2023 M6.3 Western Afghanistan Herat, Preliminary Satellite-Based Comprehensive Damage Assessment Report",
+      "description": "UNOSAT code: EQ20231008AFG, GDACS ID: 1394952 On the 7th of October 2023, a 6.3 magnitude earthquake struck the Herat province in the western part of Afghanistan. The epicentre was located 40 km north-west of Herat City and caused damage and destruction that triggered humanitarian needs for the local populations. The situation worsened when a second and a third strong earthquakes struck the region few days later, respectively on the 11th and 15th of October. The local government reported that the number of deaths was above 2000 people. After the earthquake, UNOSAT quickly estimated that more than a million people were living with the intensity zones above V. It was also estimated that between 150,000 and 230,000 buildings were located within the affected zones. The United Nation Office for the Coordination of Humanitarian Affairs (UNOCHA) reported that the worst affected districts correspond to Herat, Injil and Zindajan district with more than 21,500 destroyed homes. Furthermore in the Herat Province more than 230,000 homes have been impacted by the earthquake and 37,139 families have been left without home living in temporary shelter or open spaces (UNOCHA). At least 40 health facilities were affected during the earthquake, hampering the access to healthcare for an estimated of 580,000 people. One month after the earthquake people displaced from their home still suffer as the winter is approaching and temperatures are dropping (UNHCR).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/7-october-2023-m6-3-western-afghanistan-herat-preliminary-satellite-based-comprehensive-da]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/7-october-2023-m6-3-western-afghanistan-herat-preliminary-satellite-based-comprehensive-da"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/7-october-2023-m6-3-western-afghanistan-herat-preliminary-satellite-based-comprehensive-da"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/7-october-2023-m6-3-western-afghanistan-herat-preliminary-satellite-based-comprehensive-da"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts conducted post-event satellite imagery analysis by comparing pre- and post-earthquake satellite images to identify and map building damage across Herat province. Damage polygons were digitized and compiled into geodatabase and shapefile formats with site-level attributes including area measurements. The assessment captured direct physical damage from the 7 October 2023 M6.3 earthquake and subsequent seismic events on 11 and 15 October.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and damage assessment mapping derived from multi-temporal satellite image comparison to identify building damage and destruction from the earthquake event."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2beea0e9",
+          "title": "EQ20231008AFG_gdb.zip",
+          "description": "7 October 2023 M6.3 Western Afghanistan Herat, Preliminary Satellite-Based Comprehensive Damage Assessment Report (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3756/EQ20231008AFG_gdb.zip"
+        },
+        {
+          "id": "resource_3d733689",
+          "title": "EQ20231008AFG_SHP.zip",
+          "description": "7 October 2023 M6.3 Western Afghanistan Herat, Preliminary Satellite-Based Comprehensive Damage Assessment Report (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3756/EQ20231008AFG_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage assessment from satellite-based damage mapping of the October 2023 Herat earthquake"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Earthquake-related fatalities reported by local government (>2000 deaths)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/7-october-2023-m6-3-western-afghanistan-herat-preliminary-satellite-based-comprehensive-da",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

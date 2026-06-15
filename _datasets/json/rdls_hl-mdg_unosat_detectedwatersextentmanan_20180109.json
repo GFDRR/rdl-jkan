@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-mdg_unosat_detectedwatersextentmanan_20180109",
+      "title": "Satellite Detected Waters Extent in Mananjary District, Vatovavy-Fitovinany Region, Madagascar",
+      "description": "This map illustrates satellite-detected water extent as of 07 January 2018 over Mananjary district, Vatovavy-Fitovinany region, in Madagascar as detected by Sentinel-1. ~ 1000 ha of land over the communes of Tsiatosika and ~1300 ha in Ankatafana seem to be inundated. These zones are mainly agricultural and/or swamps. These waters are the results of recent heavy rains following the cyclone AVA-18 which made landfall the 05 January 2018. It is likely that flood waters have been systematically underestimated along highly vegetated areas along main river banks and within built-up urban areas, due to the special characteristics of the satellite data used. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-waters-extent-in-mananjary-district-vatovavy-fitovinany-region-madagascar-2757]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-mananjary-district-vatovavy-fitovinany-region-madagascar-2757"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-mananjary-district-vatovavy-fitovinany-region-madagascar-2757"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2018-01-09"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts processed Sentinel-1 synthetic aperture radar imagery acquired on 7 January 2018, comparing pre- and post-cyclone AVA-18 images to detect water extent changes. Water bodies were classified and mapped as vector polygons with area calculations in hectares, identifying ~2300 ha of inundation across agricultural and wetland zones in Mananjary district.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Sentinel-1 satellite imagery analysis detecting water extent changes and mapping inundated areas post-cyclone through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c42dc91e",
+          "title": "TC20180103MDG_gdb.zip",
+          "description": "Satellite Detected Waters Extent in Mananjary District, Vatovavy-Fitovinany Region, Madagascar (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MD/TC20180103MDG/TC20180103MDG_gdb.zip"
+        },
+        {
+          "id": "resource_a8930850",
+          "title": "TC20180103MDG_shp.zip",
+          "description": "Satellite Detected Waters Extent in Mananjary District, Vatovavy-Fitovinany Region, Madagascar (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MD/TC20180103MDG/TC20180103MDG_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct inundation of agricultural land and swamps totaling ~2300 hectares across Tsiatosika and Ankatafana communes"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-mananjary-district-vatovavy-fitovinany-region-madagascar-2757",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-lao_unosat_evolutiondetectedwaterext_20180726",
+      "title": "Evolution satellite detected water extent over Sanamxay District, Attapeu Province, Lao People Democratic Republic",
+      "description": "This map illustrates the evolution of satellite-detected surface waters in Sanamxay district, Attapeu province, as observed from the Radarsat-2 radar image acquired on 24 July 2018 and compared with a Radsarsat-2 image acquired on 10 July 2018. As of 10 July 2018, flooded areas and saturated soils were already visible, due to the heavy rains that happened previously to the collapse of the dam. As well, the reservoir controlled by the dam was full of water. As of 24 July 2018, an additional surface of 5,826 ha of inundated areas were detected, representing an increase of the surface waters of 66%, due to the collapse of the dam. At this date, the reservoir that was controlled by the dam has decreased in its size. Several villages and surrounding agricultural fields seems to be inundated. The villages of Ban Hinlat, Ban Thaseangchan, Ban Mai and Ban Samong-tai seems to be the most affected ones. It is likely that flood waters have been systematically underestimated along highly vegetated areas, along the main riverbanks and within built-up urban areas because of the special characteristics of the used satellite data. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/evolution-satellite-detected-water-extent-over-sanamxay-district-attapeu-province-lao-people-]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/evolution-satellite-detected-water-extent-over-sanamxay-district-attapeu-province-lao-people-"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/evolution-satellite-detected-water-extent-over-sanamxay-district-attapeu-province-lao-people-"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LAO"
+        ]
+      },
+      "temporal": {
+        "start": "2018-07-26"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared Radarsat-2 radar imagery acquired on 10 July 2018 and 24 July 2018 to detect changes in surface water extent following the dam collapse in Attapeu Province. The analysis identified an additional 5,826 hectares of inundated areas through visual interpretation and change detection between the two satellite images, with confidence levels and field validation recorded for each mapped water polygon.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite radar imagery analysis (Radarsat-2) comparing water extent before and after the dam collapse event, detecting changes in inundated surface area through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7b1f67d5",
+          "title": "FL20180723LAO_shp.zip",
+          "description": "Evolution satellite detected water extent over Sanamxay District, Attapeu Province, Lao People Democratic Republic (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/LA/FL20180723LAO/FL20180723LAO_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct inundation of 5,826 hectares of land surface detected by satellite radar imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/evolution-satellite-detected-water-extent-over-sanamxay-district-attapeu-province-lao-people-",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

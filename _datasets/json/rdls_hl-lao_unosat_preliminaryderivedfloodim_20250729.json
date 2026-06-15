@@ -1,0 +1,156 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-lao_unosat_preliminaryderivedfloodim_20250729",
+      "title": "Preliminary Satellite-derived Flood Impact Assessment, Muang Sam Tai, Xamtay District, Houaphan Province, LAO PDR, 29 July 2025",
+      "description": "UNOSAT code: TC20250722LAO, GDACS ID: 1001181 Status: Landslide and Increased water of Nam Xam River and areas of washaway along the riverbank Further action(s): continue monitoring Summary of findings: Increased water in the Nam Xam River and areas of washaway along the riverbank were observed in Muang Sam Tai, Xamtay District, Houaphan Province as of 28 July 2025. Structures/buildings damaged by landslides were observed in Muang Sam Tai, Xamtay District, Houaphan Province, as of 28 July 2025.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-muang-sam-tai-xamtay-district-houaph]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-muang-sam-tai-xamtay-district-houaph"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-muang-sam-tai-xamtay-district-houaph"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LAO"
+        ]
+      },
+      "temporal": {
+        "start": "2025-07-29"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-muang-sam-tai-xamtay-district-houaph"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery acquired on 28-29 July 2025 to detect changes in water extent along Nam Xam River and identify structures damaged by landslides. Visual interpretation of satellite data was used to map flood impacts and damage locations without quantitative intensity measurements.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-event scenes to identify flood extent, riverbank washaway, and landslide-damaged structures in the affected area"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a07c9940",
+          "title": "TC20250722LAO_gdb.zip",
+          "description": "Preliminary Satellite-derived Flood Impact Assessment, Muang Sam Tai, Xamtay District, Houaphan Province, LAO PDR, 29 July 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4159/TC20250722LAO_gdb.zip"
+        },
+        {
+          "id": "resource_0518010a",
+          "title": "TC20250722LAO_SHP.zip",
+          "description": "Preliminary Satellite-derived Flood Impact Assessment, Muang Sam Tai, Xamtay District, Houaphan Province, LAO PDR, 29 July 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4159/TC20250722LAO_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from fluvial flooding and associated riverbank washaway"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from landslides triggered during the event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-muang-sam-tai-xamtay-district-houaph",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

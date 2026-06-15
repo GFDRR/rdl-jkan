@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ssd_unosat_detectedcumulativewaterex_20191113",
+      "title": "South Sudan - Satellite-detected cumulative water extents, as of 06 November 2019 over Luakpiny/Nasir, Pibor",
+      "description": "UNOSAT code: FL20191023SSD This map illustrates the 5-day cumulative, day-time surface water extent detected over Luakpiny/Nasir, Pibor and neighbouring counties in South Sudan. The extent was derived from VIIRS-NOAA satellite imagery between 2 and 6 November 2019 and includes all pixels with 0-100% open water. In the two counties of interest, about 9% of the population in Luakpiny/Nasir and 7% in Pibor may be affected by taking into account WorldPop population estimates. This is a preliminary analysis that has not yet been validated in the field. Please send any fieldbased comments to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cumulative-water-extents-as-of-06-november-2019-over-luakpiny-nasir-pibor]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/cumulative-water-extents-as-of-06-november-2019-over-luakpiny-nasir-pibor"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/cumulative-water-extents-as-of-06-november-2019-over-luakpiny-nasir-pibor"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2019-11-13"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "VIIRS-NOAA satellite imagery",
+            "url": "https://data.humdata.org/dataset/cumulative-water-extents-as-of-06-november-2019-over-luakpiny-nasir-pibor"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population estimates",
+            "url": "https://data.humdata.org/dataset/cumulative-water-extents-as-of-06-november-2019-over-luakpiny-nasir-pibor"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed VIIRS-NOAA satellite imagery acquired between 2-6 November 2019 over Luakpiny/Nasir and Pibor counties, detecting cumulative day-time surface water extent by identifying pixels with 0-100% open water. Population exposure was estimated by intersecting the water extent with WorldPop gridded population data to quantify potentially affected residents in each county.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "VIIRS-NOAA satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Day-time surface water detection from VIIRS sensor aboard NOAA satellites for the period 2-6 November 2019"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population estimates",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population density data used to estimate affected population in the study counties"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_336a54da",
+          "title": "FL20191023SSD_gdb.zip",
+          "description": "South Sudan - Satellite-detected cumulative water extents, as of 06 November 2019 over Luakpiny/Nasir, Pibor (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SS/FL20191023SSD/FL20191023SSD_gdb.zip"
+        },
+        {
+          "id": "resource_9a097559",
+          "title": "FL20191023SSD_SHP.zip",
+          "description": "South Sudan - Satellite-detected cumulative water extents, as of 06 November 2019 over Luakpiny/Nasir, Pibor (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SS/FL20191023SSD/FL20191023SSD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "WorldPop population estimates in Luakpiny/Nasir and Pibor counties"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by satellite-detected water extent (9% in Luakpiny/Nasir, 7% in Pibor)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cumulative-water-extents-as-of-06-november-2019-over-luakpiny-nasir-pibor",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

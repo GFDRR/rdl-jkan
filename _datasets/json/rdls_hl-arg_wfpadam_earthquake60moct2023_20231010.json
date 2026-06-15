@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-arg_wfpadam_earthquake60moct2023_20231010",
+      "title": "Argentina: Earthquake - 6.0M - Oct 2023",
+      "description": "ADAM ID: eq_us6000legn Magnitude 6.0 earthquake at 247.255 depth occurred on Oct 10 2023 in 57 km WSW of Abra Pampa, Argentina. It impacted 3132 people. The epicentre was at latitude -22.8844 longitude -66.2242.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/argentina-earthquake-eq-us6000legn]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/argentina-earthquake-eq-us6000legn"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/argentina-earthquake-eq-us6000legn"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ARG"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/argentina-earthquake-eq-us6000legn"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "ADAM system processed the October 10, 2023 magnitude 6.0 earthquake event (USGS ID: us6000legn) by calculating Modified Mercalli Intensity (MMI) distribution across administrative divisions in Argentina and estimating affected population counts at different intensity thresholds (MMI 2-3) to support emergency response operations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting and mapping geospatial and socio-economic information following sudden-onset emergencies; provides earthquake impact dashboards aggregating affected population estimates by administrative division and intensity level"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_48c81673",
+          "title": "sm-us6000legn-sm-us6000legn-pop-estimation.csv",
+          "description": "Argentina: Earthquake - 6.0M - Oct 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/285ed3ff-278e-4a8a-8f47-cb9641d82b38/resource/48c81673-825c-4867-85f3-70dc99e19dfc/download/sm-us6000legn-sm-us6000legn-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake ground shaking at different MMI intensity levels"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/argentina-earthquake-eq-us6000legn",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

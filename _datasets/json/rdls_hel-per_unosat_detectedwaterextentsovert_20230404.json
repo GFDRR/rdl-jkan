@@ -1,0 +1,178 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-per_unosat_detectedwaterextentsovert_20230404",
+      "title": "Satellite detected water extents over Tumbes and Zarumilla Districts, Tumbes Province, Peru as of 30 March 2023",
+      "description": "UNOSAT code FL20230321PER, GDACS Id: 1365556 This map illustrates satellite-detected water using Sentinel-2 acquired on 30 March 2023, 10:52 local time over Tumbes and Zarumilla Districts, Tumbes Province, Peru. Within the cloud free analyzed areas of about 900 km², a total of about 11 km² of lands appear to be affected with flood waters. Based on Worldpop population data and the flood water extent, ~2,400 people are potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-over-tumbes-and-zarumilla-districts-tumbes-province-peru-as-of-30-march-2023]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-over-tumbes-and-zarumilla-districts-tumbes-province-peru-as-of-30-march-2023"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-over-tumbes-and-zarumilla-districts-tumbes-province-peru-as-of-30-march-2023"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PER"
+        ]
+      },
+      "temporal": {
+        "start": "2023-04-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2",
+            "url": "https://data.humdata.org/dataset/water-extents-over-tumbes-and-zarumilla-districts-tumbes-province-peru-as-of-30-march-2023"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/water-extents-over-tumbes-and-zarumilla-districts-tumbes-province-peru-as-of-30-march-2023"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-2 satellite imagery from 30 March 2023 was analyzed by UNOSAT to detect water extents through visual interpretation and multi-temporal comparison. Detected flood water polygons (~11 km²) were intersected with WorldPop population grids to estimate ~2,400 people potentially exposed to flooded areas in Tumbes and Zarumilla Districts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery acquired 30 March 2023 used to detect water extents through visual analysis and change detection"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population data used to estimate population potentially exposed to detected flood waters"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2dd817e7",
+          "title": "FL20230321PER_gdb.zip",
+          "description": "Satellite detected water extents over Tumbes and Zarumilla Districts, Tumbes Province, Peru as of 30 March 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3557/FL20230321PER_gdb.zip"
+        },
+        {
+          "id": "resource_f88afb1d",
+          "title": "FL0230321PER_SHP.zip",
+          "description": "Satellite detected water extents over Tumbes and Zarumilla Districts, Tumbes Province, Peru as of 30 March 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3557/FL0230321PER_SHP.zip"
+        },
+        {
+          "id": "resource_7724ba35",
+          "title": "Satellite detected water extents over Tumbes Provinces, Peru as of 30 March 2023.csv",
+          "description": "Satellite detected water extents over Tumbes and Zarumilla Districts, Tumbes Province, Peru as of 30 March 2023 (Excel file)",
+          "media_type": "text/csv",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3557/Satellite%20detected%20water%20extents%20over%20Tumbes%20Provinces%2C%20Peru%20%20as%20of%2030%20March%202023.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood water extent detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-over-tumbes-and-zarumilla-districts-tumbes-province-peru-as-of-30-march-2023",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

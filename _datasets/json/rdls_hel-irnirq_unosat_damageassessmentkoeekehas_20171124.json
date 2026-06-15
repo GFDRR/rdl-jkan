@@ -1,0 +1,144 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-irnirq_unosat_damageassessmentkoeekehas_20171124",
+      "title": "Damage Assessment of Koeeke Hasan Town and Surroundings, Kermanshah, Iran",
+      "description": "This map illustrates satellite-detected damaged and potentially damaged buildings in the town of Koeeke Hasan, Iran following the M 7.3 earthquake that struck the area on the 12 November 2017. The analysis was carried out comparing a post-event Pleiades image acquired on the 16 November 2017 with a pre-event WorldView3 image of 24 July 2017. The results indicate intense damage across the whole town, particularly in Koeeke Hasan, Koeeke Aziz and Koeeke Mahmod. A total of 1174 structures have been identified as damaged or collapesed across the area extent represented here. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-of-koeeke-hasan-town-and-surroundings-kermanshah-iran-2736]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-koeeke-hasan-town-and-surroundings-kermanshah-iran-2736"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-koeeke-hasan-town-and-surroundings-kermanshah-iran-2736"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IRQ",
+          "IRN"
+        ]
+      },
+      "temporal": {
+        "start": "2017-11-24"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared pre-event and post-event satellite imagery to detect structural changes and identify damaged or collapsed buildings in Koeeke Hasan town following the M 7.3 earthquake. Building damage was mapped and counted across the study area, producing a spatial inventory of direct earthquake impacts on the built environment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre-event WorldView3 (24 July 2017) and post-event Pleiades (16 November 2017) imagery to detect and map building damage from the earthquake"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0ea2c686",
+          "title": "EQ20171112IRQ_gdb.zip",
+          "description": "Damage Assessment of Koeeke Hasan Town and Surroundings, Kermanshah, Iran (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/IQ/EQ20171112IRQ/EQ20171112IRQ_gdb.zip"
+        },
+        {
+          "id": "resource_0bc063c0",
+          "title": "EQ20171112IRQ_shp.zip",
+          "description": "Damage Assessment of Koeeke Hasan Town and Surroundings, Kermanshah, Iran (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/IQ/EQ20171112IRQ/EQ20171112IRQ_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Koeeke Hasan town and surroundings identified through satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from earthquake ground motion: 1174 structures identified as damaged or collapsed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-of-koeeke-hasan-town-and-surroundings-kermanshah-iran-2736",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

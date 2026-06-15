@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-mdg_unosat_detectedwatersextentsoane_20180110",
+      "title": "Satellite Detected Waters Extent in Soaneriana Ivongo District, Analanjirofo Region, Madagascar",
+      "description": "This map illustrates satellite-detected water extent as of 09 January 2018 over Soaneriana Ivongo district, Analanjirofo region, in Madagascar as detected by Radarsat-2. Limited standing waters can be observed in the area. These zones are mainly agricultural and/or swamps. These waters are the results of recent heavy rains following the cyclone AVA-18 which made landfall the 05 January 2018. It is likely that flood waters have been systematically underestimated along highly vegetated areas along main river banks and within built-up urban areas, due to the special characteristics of the satellite data used. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-waters-extent-in-soaneriana-ivongo-district-analanjirofo-region-madagascar-2759]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-soaneriana-ivongo-district-analanjirofo-region-madagascar-2759"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-soaneriana-ivongo-district-analanjirofo-region-madagascar-2759"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2018-01-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "Radarsat-2 satellite imagery acquired on 09 January 2018 was analyzed by UNOSAT to detect water extent in Soaneriana Ivongo district following cyclone AVA-18 landfall on 05 January 2018. Multi-temporal image comparison identified standing water bodies in agricultural and swamp areas, with systematic underestimation acknowledged in vegetated riparian zones and urban areas due to radar signal penetration limitations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Radarsat-2 satellite imagery analysis detecting water extent and inundation patterns post-event. UNOSAT analysts compared multi-temporal satellite images to identify standing water bodies resulting from cyclone-induced heavy rainfall."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0e168c27",
+          "title": "TC20180103MDG_gdb.zip",
+          "description": "Satellite Detected Waters Extent in Soaneriana Ivongo District, Analanjirofo Region, Madagascar (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MD/TC20180103MDG/TC20180103MDG_gdb.zip"
+        },
+        {
+          "id": "resource_5a12b607",
+          "title": "TC20180103MDG_shp.zip",
+          "description": "Satellite Detected Waters Extent in Soaneriana Ivongo District, Analanjirofo Region, Madagascar (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MD/TC20180103MDG/TC20180103MDG_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Post-event satellite-detected water extent and inundation area in agricultural and swamp zones following cyclone-induced flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-soaneriana-ivongo-district-analanjirofo-region-madagascar-2759",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

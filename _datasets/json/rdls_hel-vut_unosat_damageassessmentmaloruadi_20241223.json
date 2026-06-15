@@ -1,0 +1,194 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-vut_unosat_damageassessmentmaloruadi_20241223",
+      "title": "Damage Assessment in Malorua District, Shefa Province, Vanuatu as of 20 December 2024",
+      "description": "UNOSAT code: EQ20241217VUT, GDACS ID: 1458084 This map illustrates the potentially damaged structures/buildings and landslide extents resulting from the earthquake on December 17, 2024, in Vanuatu, as detected from a WorldView-2 very high-resolution satellite image acquired on December 20, 2024, at 09:46 local time. Within the analyzed area of approximately 3,000 hectares, UNOSAT identified 6 potentially damaged structures and 20 hectares of land affected by landslides. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-malorua-district-shefa-province-vanuatu-as-of-20-december-2024]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-malorua-district-shefa-province-vanuatu-as-of-20-december-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-malorua-district-shefa-province-vanuatu-as-of-20-december-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2024-12-23"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-malorua-district-shefa-province-vanuatu-as-of-20-december-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre- and post-event WorldView-2 satellite imagery to detect structural damage and landslide extents in a 3,000-hectare study area in Malorua District. Potentially damaged structures (n=6) and landslide-affected land (20 hectares) were manually identified and digitized from the December 20, 2024 image. This preliminary assessment has not been validated through field surveys.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Very high-resolution WorldView-2 satellite imagery acquired December 20, 2024, analyzed for damage detection and landslide extent mapping following the December 17, 2024 earthquake."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3454ec85",
+          "title": "EQ20241217VUT_gdb.zip",
+          "description": "Damage Assessment in Malorua District, Shefa Province, Vanuatu as of 20 December 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4062/EQ20241217VUT_gdb.zip"
+        },
+        {
+          "id": "resource_73c0e2ca",
+          "title": "EQ20241217VUT_SHP.zip",
+          "description": "Damage Assessment in Malorua District, Shefa Province, Vanuatu as of 20 December 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4062/EQ20241217VUT_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures in Malorua District identified from satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "natural_environment",
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "Land area affected by earthquake-triggered landslides"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from earthquake ground motion detected via satellite analysis"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Land area affected by earthquake-triggered landslides"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-malorua-district-shefa-province-vanuatu-as-of-20-december-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

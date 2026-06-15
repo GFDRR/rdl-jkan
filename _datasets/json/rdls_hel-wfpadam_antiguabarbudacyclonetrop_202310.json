@@ -1,0 +1,159 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-wfpadam_antiguabarbudacyclonetrop_202310",
+      "title": "Antigua and Barbuda: Cyclone - Tropical storm - Oct 2023",
+      "description": "ADAM ID: 1001025_12 Cyclone (tropical storm) during the period Oct 18 2023-Oct 29 2023 in Virgin Islands British, Antigua and Barbuda, Montserrat, Guadeloupe, Bermuda, Barbados, Dominica. It impacted 35248 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/antigua-and-barbuda-cyclone-1001025]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/antigua-and-barbuda-cyclone-1001025"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/antigua-and-barbuda-cyclone-1001025"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "ATG",
+          "BRB",
+          "BMU",
+          "DMA",
+          "GLP",
+          "MSR",
+          "VGB"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-18",
+        "end": "2023-10-29"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/antigua-and-barbuda-cyclone-1001025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected observed tropical cyclone wind speed data and spatial boundaries for the October 2023 tropical storm event. Population exposure was estimated by intersecting wind speed zones with gridded population data at administrative levels, generating population counts at three wind speed thresholds (60, 90, 120 kph). Post-event impact figures aggregated affected population across seven affected countries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational geospatial system collecting and mapping tropical storm wind speed fields and population exposure following sudden-onset emergencies"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bcd0f951",
+          "title": "1001025-40-adam-ts-1001025-40-shp.zip",
+          "description": "Antigua and Barbuda: Cyclone - Tropical storm - Oct 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/8c4021ec-4661-4ed1-bf42-d8c730b801b8/resource/bcd0f951-ef26-44ee-b74d-1bb32be692b0/download/1001025-40-adam-ts-1001025-40-shp.zip"
+        },
+        {
+          "id": "resource_21a79af2",
+          "title": "1001025-40-adam-ts-1001025-40-pop-estimation.csv",
+          "description": "Antigua and Barbuda: Cyclone - Tropical storm - Oct 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/8c4021ec-4661-4ed1-bf42-d8c730b801b8/resource/21a79af2-066e-4455-9af7-c1368331d58c/download/1001025-40-adam-ts-1001025-40-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at multiple thresholds (60, 90, 120 kph)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Total population affected by tropical storm event (35,248 people)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/antigua-and-barbuda-cyclone-1001025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-afg_unosat_damageassessmentsperadist_20220701",
+      "title": "Afghanistan - Damage Assessment in Spera district, Khost province as of 24 June 2022",
+      "description": "UNOSAT code: EQ20220622AFG This map illustrates potentially damaged buildings and damaged buildings in Spera district, Khost province of Afghanistan as detected by a NewSat image acquired on 24 June 2022. Within the analyzed area, UNOSAT has identified 81 potentially damaged buildings, 12 damaged buildings and 170 shelters. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-spera-district-khost-province-as-of-24-june-2022]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-spera-district-khost-province-as-of-24-june-2022"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-spera-district-khost-province-as-of-24-june-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2022-07-01"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-spera-district-khost-province-as-of-24-june-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed NewSat satellite imagery acquired on 24 June 2022 and compared it with pre-event imagery to detect notable changes in building structures. Damaged buildings were classified into two categories (confirmed damaged and potentially damaged) through visual interpretation of structural changes, with results validated against ground observations where available.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using NewSat imagery comparison to identify and classify damaged and potentially damaged buildings in the post-earthquake period"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cbb664be",
+          "title": "EQ20220622AFG_gdb.zip",
+          "description": "Afghanistan - Damage Assessment in Spera district, Khost province as of 24 June 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/AF/EQ20220622AFG/EQ20220622AFG_gdb.zip"
+        },
+        {
+          "id": "resource_a92b3636",
+          "title": "EQ20220622AFG_SHP.zip",
+          "description": "Afghanistan - Damage Assessment in Spera district, Khost province as of 24 June 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/AF/EQ20220622AFG/EQ20220622AFG_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from 22 June 2022 earthquake: 81 potentially damaged buildings and 12 confirmed damaged buildings detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-spera-district-khost-province-as-of-24-june-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

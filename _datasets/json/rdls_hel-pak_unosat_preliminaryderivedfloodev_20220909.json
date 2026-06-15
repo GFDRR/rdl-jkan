@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-pak_unosat_preliminaryderivedfloodev_20220909",
+      "title": "Preliminary Satellite Derived Flood Evolution Assessment, Islamic Republic of Pakistan-9 Sep. 2022",
+      "description": "UNOSAT code FL20220808PAK, GDACS Id: 1101522 Status: Increasing and receding flood waters observed Further action(s): continue monitoring Summary of findings; Evolution of Cumulative Flood Impact Assessment (25 - 31 August Vs 01-07 September 2022): From 01 to 07 September 2022 approximately 22 million people remain potentially exposed or living close to flooded areas Based on satellite data from 25 - 31 August and 01-07 September, flood waters appear to be receding in many parts of the country, however, many districts in the southern province of Sindh still appear to be heavily affected by flooding and increasing flood waters. Floods assessment in Sindh Province Large floods were observed all along the Indus river; Guddu Barrage seem to be intact as of 1 Sep. 2022 Inundated villages and inundated agricultural areas were observed along Indus river as of 5 Sep. 2022; The increasing floodwater along Indus river in Khairpur, Jamshoro, Shaheed Benazir Abad, Thatta and Sujawal districts observed as of 5 Sep. 2022;. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-9-se]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-9-se"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-9-se"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2022-09-09"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-9-se"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed multi-temporal satellite imagery from 25-31 August and 01-07 September 2022, comparing successive images to detect flood water extent and evolution. Population exposure was derived by overlaying observed flood extents with gridded population data to quantify people potentially exposed to or living near flooded areas. The assessment tracked cumulative flood impacts and water recession patterns across Pakistan during the 2022 monsoon flooding event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis and multi-temporal comparison to derive flood extent and evolution mapping. UNOSAT analysts reviewed and compared satellite images to identify flood water extent changes between 25-31 August and 01-07 September 2022."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b365e696",
+          "title": "UNOSAT_Population_Exposure_FL20220808PAK_20220825_20220831_20220901_20220907_Updated14Sep2022.xlsx",
+          "description": "Preliminary Satellite Derived Flood Evolution Assessment, Islamic Republic of Pakistan-9 Sep. 2022 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3350/UNOSAT_Population_Exposure_FL20220808PAK_20220825_20220831_20220901_20220907_Updated14Sep2022.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood waters during August-September 2022 Pakistan flooding event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-9-se",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
