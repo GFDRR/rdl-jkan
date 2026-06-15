@@ -1,0 +1,128 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-idn_unfpaidn_buildingdamagedwestsulawe_20210122",
+      "title": "Indonesia - Building Damaged West Sulawesi Earthquake",
+      "description": "Building Damaged West Sulawesi Earthquake. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/building-damaged-west-sulawesi-earthquake]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "UNFPA Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/building-damaged-west-sulawesi-earthquake"
+      },
+      "creator": {
+        "name": "UNFPA Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/building-damaged-west-sulawesi-earthquake"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-22"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNFPA Indonesia",
+            "url": "https://data.humdata.org/dataset/building-damaged-west-sulawesi-earthquake"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building damage data collected through direct field observation and anecdotal reports by UNFPA Indonesia following the West Sulawesi earthquake event, compiled into a spatial geodataset (shapefile) documenting damaged infrastructure locations and damage status.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNFPA Indonesia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational post-event damage assessment data documenting building damage from the West Sulawesi earthquake"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e7e6c993",
+          "title": "infras.zip",
+          "description": "Indonesia - Building Damaged West Sulawesi Earthquake (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://drive.google.com/file/d/1I5ZVeth3bBSQo41TrgIHtOSz0Lvg_BPd/view?usp=drive_web"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock inventory with damage classification from the West Sulawesi earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from the West Sulawesi earthquake event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/building-damaged-west-sulawesi-earthquake",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

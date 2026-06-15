@@ -1,0 +1,195 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-col_immap_identificaciondeafectacio_20230816",
+      "title": "Identificación de afectación múltiple en los municipios de Colombia, Clúster Educación en Emergencias.",
+      "description": "Para identificar situaciones de afectación múltiple, se hizo la búsqueda de indicadores o información estadística agregada en los diferentes sistemas de información de las entidades oficiales del país, en los registros de interés público. Se seleccionaron los siguientes indicadores: la tasa de deserción, la cobertura neta, la proporción de estudiantes en extraedad, matriculados provenientes de Venezuela, población afectada por emergencias de origen natural reportados por la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD), el número de sedes afectadas, y matriculados afectados por ola invernal según el Ministerio de Educación (MEN); adicionalmente, se utilizó el Índice de Riesgo de Victimización (IRV), presencia de cultivos de coca y el indicador personas en necesidad PiN del Clúster de Educación en Emergencias para el año 2023.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/identificacion-de-afectacion-multiple-en-los-municipios-de-colombia]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/identificacion-de-afectacion-multiple-en-los-municipios-de-colombia"
+      },
+      "creator": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/identificacion-de-afectacion-multiple-en-los-municipios-de-colombia"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-08-16"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+            "url": "https://data.humdata.org/dataset/identificacion-de-afectacion-multiple-en-los-municipios-de-colombia"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Departamento Administrativo Nacional de Estadística (DANE)",
+            "url": "https://data.humdata.org/dataset/identificacion-de-afectacion-multiple-en-los-municipios-de-colombia"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Municipal-level data aggregated from official Colombian government information systems (UNGRD disaster records, DANE census and education statistics) to identify multiple vulnerability indicators in education sector. Data compiled by iMMAP through systematic search of public registries to characterize affected populations and infrastructure in municipalities experiencing natural hazard impacts and education disruption.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official Colombian disaster risk management agency providing reported population affected by natural hazard emergencies and affected educational facilities"
+          },
+          {
+            "id": "source_2",
+            "name": "Departamento Administrativo Nacional de Estadística (DANE)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Colombian national statistics agency providing population census data and educational establishment registries"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7d06d511",
+          "title": "Documento_metodológico_EeE_AfectaciónMúltiple.pdf",
+          "description": "Documento metodológico que evidencia como salieron los resultados para el análisis de la Afectación Múltiple en el clúster de Educación en Emergencias.",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/584a6313-9edc-4360-9841-989d51735270/resource/7d06d511-12cf-4ab0-9766-f29080f5918b/download/documento_metodologico_eee_afectacionmultiple.pdf"
+        },
+        {
+          "id": "resource_a38f3183",
+          "title": "Datos identificación múltiple afectación en municipios de Colombia.xlsx",
+          "description": "Esta base contiene información relevante que se utilizó en la identificación de afectación múltiple en los municipios de Colombia.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/584a6313-9edc-4360-9841-989d51735270/resource/a38f3183-9595-4f86-af6d-9491299c9251/download/datos-identificacion-multiple-afectacion-en-municipios-de-colombia.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "School-age population (students) by municipality, including Venezuelan migrants and vulnerable subgroups"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Educational facilities (school seats/establishments) by municipality"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by natural hazard emergencies reported by UNGRD"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Educational facilities affected by natural hazard emergencies"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/identificacion-de-afectacion-multiple-en-los-municipios-de-colombia",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

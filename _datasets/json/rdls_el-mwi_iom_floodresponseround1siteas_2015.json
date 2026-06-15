@@ -1,0 +1,130 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-mwi_iom_floodresponseround1siteas_2015",
+      "title": "Malawi Flood Response Round 1 - Site assessment",
+      "description": "Site Assessment conducted as the response to internal displacement due to Floods in 2015. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/malawi-flood-response-site-assessment-round-1]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "Census of sites based on interviews of key informants in sites.",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/malawi-flood-response-site-assessment-round-1"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/malawi-flood-response-site-assessment-round-1"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2015-01-12",
+        "end": "2015-03-15"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Lilongwe",
+            "url": "https://data.humdata.org/dataset/malawi-flood-response-site-assessment-round-1"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Census-based site assessment conducted by IOM Lilongwe to enumerate internally displaced persons and characterize affected settlements following the 2015 floods in Malawi. The dataset captures post-event displacement impacts across populated places.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Lilongwe",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Site assessment census data documenting internally displaced persons and affected settlements from the 2015 flood response in Malawi."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_474b5e77",
+          "title": "Malawi_SA_Round1_Final_Dataset.xls",
+          "description": "Malawi Flood Response Round 1 - Site assessment (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f1128065-2a36-40df-8313-1f11b2834d43/resource/474b5e77-ec04-449e-ba98-8fe56c1342b8/download/malawi_sa_round1_final_dataset.xls"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons from flood-affected settlements in Malawi"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement due to 2015 flooding in Malawi"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/malawi-flood-response-site-assessment-round-1",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

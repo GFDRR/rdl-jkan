@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-dma_unosat_tropicalcyclonemariadamag_20171003",
+      "title": "Tropical Cyclone Maria. Damage Density in the North-western Part of Dominica",
+      "description": "This map illustrates potentially damaged structures and buildings in the north-western part of Dominica (St. John, St. Andrew, St. Peter & St. Joseph Parishes) as detected by satellite images acquired after landfall of the Tropical Cyclone Maria-17 on 19 September 2017. UNITAR-UNOSAT analysis used a Pleiades images acquired on 20 and 23 September 2017 as post imagery. Within the extent of this map UNITAR-UNOSAT identified in the cloud free zones about 3723 potentially damaged structures. Taking into account the pre-building footprints provided by Humanitarian OpenStreetMap, this represents about 70 % of the total number of structures within the analysed cloud free areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/tropical-cyclone-maria-damage-density-in-the-north-western-part-of-dominica]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/tropical-cyclone-maria-damage-density-in-the-north-western-part-of-dominica"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/tropical-cyclone-maria-damage-density-in-the-north-western-part-of-dominica"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DMA"
+        ]
+      },
+      "temporal": {
+        "start": "2017-10-03"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/tropical-cyclone-maria-damage-density-in-the-north-western-part-of-dominica"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Pleiades satellite imagery",
+            "url": "https://data.humdata.org/dataset/tropical-cyclone-maria-damage-density-in-the-north-western-part-of-dominica"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre-event building footprints from Humanitarian OpenStreetMap with post-event Pleiades satellite imagery (20-23 September 2017) acquired after Tropical Cyclone Maria landfall on 19 September 2017. Change detection analysis identified 3,723 potentially damaged structures in cloud-free zones of north-western Dominica parishes, with results delivered as vector geodatabase and shapefile formats.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Pre-event building footprints used as reference inventory to calculate damage density in the study area"
+          },
+          {
+            "id": "source_2",
+            "name": "Pleiades satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event satellite images acquired 20-23 September 2017 used for change detection and damage assessment"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cee5e382",
+          "title": "TC20170918DMA_gdb.zip",
+          "description": "Tropical Cyclone Maria. Damage Density in the North-western Part of Dominica (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/DM/TC20170918DMA/TC20170918DMA_gdb.zip"
+        },
+        {
+          "id": "resource_f9db043f",
+          "title": "TC20170918DMA_shp.zip",
+          "description": "Tropical Cyclone Maria. Damage Density in the North-western Part of Dominica (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/DM/TC20170918DMA/TC20170918DMA_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints in north-western Dominica identified from pre-event OpenStreetMap data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Tropical Cyclone Maria detected via post-event satellite imagery analysis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/tropical-cyclone-maria-damage-density-in-the-north-western-part-of-dominica",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

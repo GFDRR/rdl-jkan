@@ -1,0 +1,167 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-pse_unosat_geodatadamageassessmentat_20140804",
+      "title": "Palestine - Geodata of Damage Assessment in Atatra, Gaza Strip - Occupied Palestinian Territory",
+      "description": "This map illustrates satellite-detected damage and destruction in the Atatra area, Gaza Strip, resulting from ongoing violence in the area. Using a satellite image collected 25 July 2014 by the Pleiades satellite, and compared with a pre-crisis Pleiades image collected 6 July 2014, UNOSAT analysis has identified 192 destroyed structures, 60 severely damaged structures, and 89 moderately damaged structures. In addition, 108 craters on roads and in agricultural and non-urbanized areas are also visible as of 25 July 2014. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR/UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-assessment-in-atatra-gaza-strip-occupied-palestinian-territ-august-04-2014]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-atatra-gaza-strip-occupied-palestinian-territ-august-04-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-atatra-gaza-strip-occupied-palestinian-territ-august-04-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2014-08-04"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal Pleiades satellite imagery (6 July 2014 pre-crisis and 25 July 2014 post-crisis) of the Atatra area to detect and classify structural damage and infrastructure impacts from conflict-related violence. Damage was categorized into three severity levels (destroyed, severely damaged, moderately damaged) and road craters were inventoried, producing a preliminary field-unvalidated geodatabase of impact locations and attributes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using Pleiades imagery comparison between pre-crisis (6 July 2014) and post-crisis (25 July 2014) to identify destroyed, severely damaged, and moderately damaged structures and infrastructure damage."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c3560182",
+          "title": "CE20140715PSE.SHP.zip",
+          "description": "Palestine - Geodata of Damage Assessment in Atatra, Gaza Strip - Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.SHP.zip"
+        },
+        {
+          "id": "resource_4f2f9806",
+          "title": "CE20140715PSE.gdb.zip",
+          "description": "Palestine - Geodata of Damage Assessment in Atatra, Gaza Strip - Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock classified by damage severity (destroyed, severely damaged, moderately damaged)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road infrastructure with crater damage counts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from conflict-related violence assessed via satellite imagery"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct infrastructure damage (road craters) from conflict-related violence"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-atatra-gaza-strip-occupied-palestinian-territ-august-04-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

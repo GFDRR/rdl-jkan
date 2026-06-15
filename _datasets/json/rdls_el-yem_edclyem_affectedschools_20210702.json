@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-yem_edclyem_affectedschools_20210702",
+      "title": "Yemen: Affected Schools",
+      "description": "Affected Schools July 2021 updated. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/affected-schools-september-2017-included-july-2021-updated]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "Education Cluster Yemen",
+        "url": "https://data.humdata.org/dataset/affected-schools-september-2017-included-july-2021-updated"
+      },
+      "creator": {
+        "name": "Education Cluster Yemen",
+        "url": "https://data.humdata.org/dataset/affected-schools-september-2017-included-july-2021-updated"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "YEM"
+        ]
+      },
+      "temporal": {
+        "start": "2021-07-02"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "School-level impact data collected through sample survey methodology by the Education Cluster Yemen, documenting affected educational facilities and their status during the humanitarian crisis in July 2021.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Education Cluster Yemen",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Survey-based assessment of school facilities affected by conflict and disasters in Yemen, documenting damage and operational status as of July 2021"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_afb24d5e",
+          "title": "Affected Schools included July_ 2021_updated.xlsx",
+          "description": "Yemen: Affected Schools (Affected Schools included July_ 2021_updated.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b8f67170-cfa6-4acc-9fe0-988a0766182d/resource/afb24d5e-b855-4feb-8066-2100ddf0ba54/download/affected-schools-updated-september-2017-included-july_-2021_updated.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "School buildings and educational infrastructure across Yemen"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Schools affected by conflict and hazards in Yemen as of July 2021"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/affected-schools-september-2017-included-july-2021-updated",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

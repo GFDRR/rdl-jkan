@@ -1,0 +1,138 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-tha_msftai_floodsbuildingdamageasses_20251130",
+      "title": "Thailand Floods: Building Damage Assessment in Hat Yai",
+      "description": "Microsoft AI for Good Lab ran their damage assessment AI models on images provided by Planet and have mapped out the affected buildings in Hat Yai, Thailand.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/thailand-floods-building-damage-assessment-in-hat-yai]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "While the data provides a valuable first look, it should serve as a preliminary guide and will require on-the-ground verification for a complete understanding.",
+      "contact_point": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/thailand-floods-building-damage-assessment-in-hat-yai"
+      },
+      "creator": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/thailand-floods-building-damage-assessment-in-hat-yai"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "THA"
+        ]
+      },
+      "temporal": {
+        "start": "2025-11-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Planet",
+            "url": "https://data.humdata.org/dataset/thailand-floods-building-damage-assessment-in-hat-yai"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Microsoft AI for Good Lab applied their damage assessment AI models to Planet satellite imagery of Hat Yai, Thailand to automatically detect and map building damage from flooding. The resulting building predictions were clipped to the affected area and exported as a geopackage for spatial analysis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Planet",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery provider supplying high-resolution images for damage assessment analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "Microsoft AI for Good Lab",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Damage assessment AI model applied to satellite imagery to identify and classify affected buildings"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_35fb5e62",
+          "title": "20251130_004309_ssc12_building_predictions_clipped.gpkg",
+          "description": "The images cover Hat Yai, Thailand. Analysis was done on Planet SkySat imagery captured 11/30/2025. Total buildings from Overture Maps: 70,516 Intersected by flood predictions: 1,671 Water within 20 meters: 3,219 Separately we labeled a random selection of 139 building footprints with area greater than 50 sq meters as flooded vs. not-flooded based on visible flood waters around the building and estimate that a total of 2005 buildings are affected (N=46439 buildings that are larger than 50 sq m) with a 95% CI of [432, 3577]. Overall, low damage in the city, but heavy flooding in the fields and along the river north of the city.",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/a01fa127-a633-49d6-bd2a-f4520cd83987/resource/35fb5e62-18c0-4723-8c1c-58c741232cc3/download/20251130_004309_ssc12_building_predictions_clipped.gpkg"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints and structures mapped in Hat Yai affected by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from flooding in Hat Yai derived from AI analysis of satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/thailand-floods-building-damage-assessment-in-hat-yai",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

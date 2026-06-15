@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-asm_spc_americansamoapopulationgr_20201123",
+      "title": "American Samoa - American_Samoa_Population_Grid_2020",
+      "description": "Population Raster American Samoa 2020 Data Input: Settlement footprint from Facebook's High-Resolution Population Density Maps (https://data.humdata.org/dataset/american-samoa-high-resolution-population-density-maps-demographic-estimates) Population allocated proportionally using 2011 census population counts at enumeration area level. Year Population Growth Rate of 0.23% has been applied to update population up to 2020 Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-american_samoa_population_grid_2020]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-american_samoa_population_grid_2020"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-american_samoa_population_grid_2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ASM"
+        ]
+      },
+      "temporal": {
+        "start": "2020-11-23"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Facebook High-Resolution Population Density Maps",
+            "url": "https://data.humdata.org/dataset/pdh-american_samoa_population_grid_2020"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "2011 Census Population Counts (American Samoa)",
+            "url": "https://data.humdata.org/dataset/pdh-american_samoa_population_grid_2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Settlement footprints from Facebook's high-resolution population density maps were intersected with 2011 census population counts at enumeration area level and allocated proportionally across grid cells. A 0.23% annual population growth rate was applied to project the 2011 baseline to 2020, producing a gridded population raster for disaster risk assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Facebook High-Resolution Population Density Maps",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Settlement footprint data providing spatial distribution framework for population allocation"
+          },
+          {
+            "id": "source_2",
+            "name": "2011 Census Population Counts (American Samoa)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Enumeration area-level population baseline used for proportional allocation to settlement footprints"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_91eba695",
+          "title": "ASM_Pop_Grid_2020",
+          "description": "Population Raster American Samoa 2020 Data Input: Settlement footprint from Facebook's High-Resolution Population Density Maps (https://data.humdata.org/dataset/american-samoa-high-resolution-population-density-maps-demographic-estimates) Population allocated proportionally using 2011 census population counts at enumeration area level. Year Population Growth Rate of 0.23% has been applied to update population up to 2020 The human settlement footprint with census population allocated has been converted into a 100 m resolution raster. This is a demo version, SDD is still evaluating the methodology but given the COVID outbreak the dataset has been early released.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://pacificdata.org/data/dataset/88eb6392-c134-4736-b204-6de34a775166/resource/f03ee67f-8d8a-4cb6-a05b-f0f09b898577/download/asm_pop_grid_2020.tif"
+        },
+        {
+          "id": "resource_d1c72acf",
+          "title": "ASM_Pop_Grid_2020_README",
+          "description": "American Samoa - American_Samoa_Population_Grid_2020",
+          "media_type": "text/plain",
+          "download_url": "https://pacificdata.org/data/dataset/88eb6392-c134-4736-b204-6de34a775166/resource/63081e26-bc81-44d4-b8a6-6c3c1df9a41f/download/asm_pop_grid_2020_readme.txt"
+        },
+        {
+          "id": "resource_dfa5bca9",
+          "title": "ASM_Pop_Grid_ATLAS",
+          "description": "American Samoa - American_Samoa_Population_Grid_2020 (Static maps of the American Samoa Population Grid 2020)",
+          "format": "zipped jpeg",
+          "download_url": "https://pacificdata.org/data/dataset/88eb6392-c134-4736-b204-6de34a775166/resource/d231b639-8259-427f-8ae4-d7705dafba9c/download/asm_popgrid_2020_atlas.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution for American Samoa in 2020, derived from settlement footprints and census data with growth rate adjustment"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-american_samoa_population_grid_2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

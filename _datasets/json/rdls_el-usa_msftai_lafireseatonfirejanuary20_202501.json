@@ -1,0 +1,164 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-usa_msftai_lafireseatonfirejanuary20_202501",
+      "title": "United States - LA Fires - Eaton fire January 2025: Building Damage Assessment",
+      "description": "We ran our damage assessment AI models on images provided by Maxar and Planet and have mapped out the affected buildings. The images cover Eaton fire. Analysis was done on: 1) Maxar imagery captured 01/10 2) Planet imagery captured 1/11 Latest results show the following. 156,102 buildings in study area 8,682 estimated damaged. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/eaton-fire-altadena-damage-assessment-from-1-10]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "While the data provides a valuable first look, it should serve as a preliminary guide and will require on-the-ground verification for a complete understanding.",
+      "contact_point": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/eaton-fire-altadena-damage-assessment-from-1-10"
+      },
+      "creator": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/eaton-fire-altadena-damage-assessment-from-1-10"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "USA"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-10",
+        "end": "2025-01-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Maxar",
+            "url": "https://data.humdata.org/dataset/eaton-fire-altadena-damage-assessment-from-1-10"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Planet",
+            "url": "https://data.humdata.org/dataset/eaton-fire-altadena-damage-assessment-from-1-10"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "High-resolution satellite imagery from Maxar (01/10/2025) and Planet (01/11/2025) was processed through Microsoft AI for Good Lab's damage assessment AI models to automatically detect and classify building damage in the Eaton fire study area, resulting in damage predictions for 8,682 of 156,102 mapped buildings.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Maxar",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "High-resolution satellite imagery captured 01/10/2025 used as input for damage assessment AI models"
+          },
+          {
+            "id": "source_2",
+            "name": "Planet",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery captured 01/11/2025 used as input for damage assessment AI models"
+          },
+          {
+            "id": "source_3",
+            "name": "Microsoft AI for Good Lab",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Damage assessment AI models applied to satellite imagery to detect and classify building damage from the Eaton fire"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8b69f288",
+          "title": "eaton_planet_1_11_25_damage_predictions.gpkg",
+          "description": "Results from 01/11 using Planet imagery. 156,102 buildings in study area 8,682 estimated damaged The result file contains the following fields for each building footprint: damage_pct_0m - the fraction of the building footprint's area that is classified as damaged by our model damage_pct_10m - total damaged area within a 10m buffer of the building footprint (including the footprint itself) / building footprint's area (this can be >1.0 but we clip to 1.0) damage_pct_20m - same as above but with a 20m buffer damaged - 1 if damage_pct_0m > 0 else 0 unknown_pct - fraction of the pixels within the building footprint that we think are obstructed (clouds, smoke, haze, too dark to evaluate)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/0fd186e9-5e47-4c74-8510-4518506db51e/resource/8b69f288-8554-4e79-ba01-076f8dd1189b/download/eaton_planet_1_11_25_damage_predictions.gpkg"
+        },
+        {
+          "id": "resource_fca461b7",
+          "title": "eaton_jan_10_rgb_damage_predictions.gpkg",
+          "description": "Results from 01/10 using Maxar imagery. 31,356 buildings in this AOI: 27,202 in the 0-20 bucket 4,154 in the >20 bucket (4602 with damage>0) The result file contains the following fields for each building footprint: damage_pct_0m - the fraction of the building footprint's area that is classified as damaged by our model damage_pct_10m - total damaged area within a 10m buffer of the building footprint (including the footprint itself) / building footprint's area (this can be >1.0 but we clip to 1.0) damage_pct_20m - same as above but with a 20m buffer damaged - 1 if damage_pct_0m > 0 else 0 unknown_pct - fraction of the pixels within the building footprint that we think are obstructed (clouds, smoke, haze, too dark to evaluate)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/0fd186e9-5e47-4c74-8510-4518506db51e/resource/fca461b7-4dbf-4fc3-867a-88b25910abe6/download/eaton_jan_10_rgb_damage_predictions.gpkg"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock inventory in the Eaton fire study area with 156,102 buildings mapped"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from wildfire assessed via AI analysis of satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/eaton-fire-altadena-damage-assessment-from-1-10",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

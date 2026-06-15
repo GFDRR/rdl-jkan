@@ -1,0 +1,211 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-usa_msftai_lafirespalisadesfirejanua_202501",
+      "title": "United States - LA Fires - Palisades fire January 2025: Building Damage Assessment",
+      "description": "We ran our damage assessment AI models on images provided by Planet and Maxar and have mapped out the affected buildings. The images cover Palisades fires. Analysis was done on: 1) Planet's 20250108_222134_ssc10 SkySat scene captured 01/08 2) Planet's 20250109_221527_ssc10 SkySat scene captured 01/09 3) Maxar imagery 1050010040277500 captured 1/10 Latest results show the following. Total of 18,538 structures: 11,735 not damaged 6,803 damaged. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/palisades-fire-building-damage-assessment]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "While the data provides a valuable first look, it should serve as a preliminary guide and will require on-the-ground verification for a complete understanding.",
+      "contact_point": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/palisades-fire-building-damage-assessment"
+      },
+      "creator": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/palisades-fire-building-damage-assessment"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "USA"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-08",
+        "end": "2025-01-10"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Planet Labs SkySat imagery",
+            "url": "https://data.humdata.org/dataset/palisades-fire-building-damage-assessment"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Maxar satellite imagery",
+            "url": "https://data.humdata.org/dataset/palisades-fire-building-damage-assessment"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Overture Maps",
+            "url": "https://data.humdata.org/dataset/palisades-fire-building-damage-assessment"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "Microsoft AI for Good Lab damage assessment model",
+            "url": "https://data.humdata.org/dataset/palisades-fire-building-damage-assessment"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building footprints from Overture Maps were intersected with high-resolution satellite imagery from Planet Labs (SkySat) and Maxar captured during and immediately after the Palisades fire (01/08-01/10/2025). Microsoft's AI damage assessment model was applied to classify each structure as damaged or not damaged, resulting in a post-event damage inventory of 18,538 structures with 6,803 confirmed damaged.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Planet Labs SkySat imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "High-resolution satellite imagery captured 01/08 and 01/09/2025 used as input for damage assessment AI models"
+          },
+          {
+            "id": "source_2",
+            "name": "Maxar satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "High-resolution satellite imagery (1050010040277500) captured 01/10/2025 used as input for damage assessment AI models"
+          },
+          {
+            "id": "source_3",
+            "name": "Overture Maps",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Building footprint dataset providing the spatial inventory of structures assessed for damage"
+          },
+          {
+            "id": "source_4",
+            "name": "Microsoft AI for Good Lab damage assessment model",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "AI-based damage classification model applied to satellite imagery to identify and categorize building damage from wildfire"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://overturemaps.org/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_9650c5fe",
+          "title": "maxar_palisades_1050010040277500_damage_predictions.gpkg",
+          "description": "Results from 1/10 using Maxar imagery. Total of 18,538 structures in this AOI: 11,735 not damaged 6,803 damaged The result file contains the following fields for each building footprint: damage_pct_0m - the fraction of the building footprint's area that is classified as damaged by our model damage_pct_10m - total damaged area within a 10m buffer of the building footprint (including the footprint itself) / building footprint's area (this can be >1.0 but we clip to 1.0) damage_pct_20m - same as above but with a 20m buffer damaged - 1 if damage_pct_0m > 0 else 0 unknown_pct - fraction of the pixels within the building footprint that we think are obstructed (clouds, smoke, haze, too dark to evaluate)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/30768ff0-289b-4fda-96d9-7209243c984d/resource/9650c5fe-c29b-429e-81e3-537688a74f60/download/maxar_palisades_1050010040277500_damage_predictions.gpkg"
+        },
+        {
+          "id": "resource_4f04b37a",
+          "title": "20250109_221527_ssc7_u0001_data_mask.geojson",
+          "description": "United States - LA Fires - Palisades fire January 2025: Building Damage Assessment (Mask from 01/09 using Planet imagery.)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/30768ff0-289b-4fda-96d9-7209243c984d/resource/4f04b37a-8aa0-46bd-abe5-463d2dc5c453/download/20250109_221527_ssc7_u0001_data_mask.geojson"
+        },
+        {
+          "id": "resource_2fa2005b",
+          "title": "20250109_221527_ssc7_u0001_damage_predictions.gpkg",
+          "description": "Results from 01/09 using Planet imagery. 20,095 total structures in this AOI: 4,380 unknown 12,063 in 0-20 bucket 3,652 in damaged/destroyed bucket The result file contains the following fields for each building footprint: damage_pct_0m - the fraction of the building footprint's area that is classified as damaged by our model damage_pct_10m - total damaged area within a 10m buffer of the building footprint (including the footprint itself) / building footprint's area (this can be >1.0 but we clip to 1.0) damage_pct_20m - same as above but with a 20m buffer damaged - 1 if damage_pct_0m > 0 else 0 unknown_pct - fraction of the pixels within the building footprint that we think are obstructed (clouds, smoke, haze, too dark to evaluate)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/30768ff0-289b-4fda-96d9-7209243c984d/resource/2fa2005b-a988-4701-9424-4355a3f146b7/download/20250109_221527_ssc7_u0001_damage_predictions.gpkg"
+        },
+        {
+          "id": "resource_0bf4f7a6",
+          "title": "20250108_222134_ssc10_u0001_damage_predictions.gpkg",
+          "description": "Results from 01/08 using Planet imagery. There are 17,835 footprints in the imagery area. Of those: 6251 are covered by clouds, shadow, and/or smoke 9229 are in the lowest 0-20% bucket 2355 are in the >20% bucket The result file contains the following fields for each building footprint: damage_pct_0m - the fraction of the building footprint's area that is classified as damaged by our model damage_pct_10m - total damaged area within a 10m buffer of the building footprint (including the footprint itself) / building footprint's area (this can be >1.0 but we clip to 1.0) damage_pct_20m - same as above but with a 20m buffer damaged - 1 if damage_pct_0m > 0 else 0 unknown_pct - fraction of the pixels within the building footprint that we think are obstructed (clouds, smoke, haze, too dark to evaluate)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/30768ff0-289b-4fda-96d9-7209243c984d/resource/0bf4f7a6-6c95-4580-957e-7b73f4963614/download/20250108_222134_ssc10_u0001_damage_predictions.gpkg"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints from Overture Maps classified by damage status from AI assessment"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from Palisades wildfire using AI models on satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/palisades-fire-building-damage-assessment",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

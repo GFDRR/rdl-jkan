@@ -1,0 +1,301 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-portwatch_disruptions_2018",
+      "title": "Disruptions",
+      "description": "The PortWatch Disruptions dataset collects data from the Global Disaster Alert and Coordination System ( GDACS ), which provides alerts on natural hazards such as earthquakes, tsunamis, tropical cyclones, floods, volcanic eruptions, and droughts, as well as other types of disruptions such as those arising from geopolitical tensions. PortWatch intersects this data with their ports and chokepoints databases to identify locations that may be at risk of being disrupted.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/disruptions]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The API is queried every Tuesday. If new data is available, the dataset is automatically updated.",
+      "contact_point": {
+        "name": "PortWatch",
+        "url": "https://data.humdata.org/dataset/disruptions"
+      },
+      "creator": {
+        "name": "PortWatch",
+        "url": "https://data.humdata.org/dataset/disruptions"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2018-10-21",
+        "end": "2025-11-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Global Disaster Alert and Coordination System (GDACS)",
+            "url": "https://data.humdata.org/dataset/disruptions"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "PortWatch ports and chokepoints database",
+            "url": "https://data.humdata.org/dataset/disruptions"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset integrates real-time hazard alerts from GDACS with PortWatch's spatial database of global ports and maritime chokepoints to identify port disruption events. GDACS alerts are intersected with port locations to determine affected facilities and associated populations, creating a disruption event record with severity classification and temporal coverage.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Global Disaster Alert and Coordination System (GDACS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Provides real-time alerts on natural hazards including earthquakes, tsunamis, tropical cyclones, floods, volcanic eruptions, and droughts globally."
+          },
+          {
+            "id": "source_2",
+            "name": "PortWatch ports and chokepoints database",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial inventory of global port facilities and maritime trade chokepoints used to identify infrastructure at risk."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.imf.org/en/publications/wp/issues/2021/08/20/tracking-trade-from-space-an-application-to-pacific-island-countries-464345"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://www.imf.org/en/publications/wp/issues/2025/05/16/nowcasting-global-trade-from-space-566957"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_84642cfa",
+          "title": "disruptions.csv",
+          "description": "Dataset identifying ports and chokepoints at risk by intersecting GDACS data. See variable descriptions here",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/c23fcd1f-117b-4ce0-8304-d14896e8ffad/resource/84642cfa-6fb6-4648-8b37-1d9db5aa184b/download/disruptions.csv"
+        },
+        {
+          "id": "resource_af35f4e2",
+          "title": "disruptions.geojson",
+          "description": "Dataset in GeoJSON format identifying ports and chokepoints at risk by intersecting GDACS data. See variable descriptions here",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/c23fcd1f-117b-4ce0-8304-d14896e8ffad/resource/af35f4e2-0778-48e7-8af7-1743e1f65e13/download/disruptions.geojson"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Port facilities and maritime chokepoints at risk of disruption"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Affected population in areas with disrupted ports"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "disruption",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Port disruption from earthquake events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_tsunami",
+              "type": "tsunami",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "disruption",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Port disruption from tsunami events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "disruption",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Port disruption from tropical cyclone events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "disruption",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Port disruption from flood events"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "disruption",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Port disruption from volcanic eruption events"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "disruption",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Port disruption from drought events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/disruptions",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

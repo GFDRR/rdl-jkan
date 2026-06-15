@@ -1,0 +1,178 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-syr_ochatur_northwestintersectorrapid_20190131",
+      "title": "North-West Syria: Inter-Sector Rapid Needs Assessment - Flood Impact January 2019",
+      "description": "On 26 December 2018, exceptionally heavy rainfall caused severe flash flooding in Idleb and Aleppo governorates in north-west Syria. This area has a high proportion of displaced people and concentration of camps and sites, making it a region with a notably large vulnerable population. Hundreds of tents were reportedly swept away and concrete houses in camps collapsed. As a result of the flooding, thousands of people have been impacted. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/north-west-syria-inter-sector-rapid-needs-assessment-flood-impact-january-2019]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "KEY FINDINGS The results of this assessment showed a critical need for repair and rehabilitation of infrastructure and social services impacted by the flood. 74% of KIs reported partial damage to roads/streets as a result of the flood, and a majority of KIs (78%) reported a high priority need for repair/rehabilitation of roads/streets. The flooding impact has exacerbated pre-existing conditions and needs. Access to education for school-aged children among the population in assessed locations was found to be challenging. KIs in 34% of assessed IDP camps/sites and communities reported that less than 50% of school-aged children were attending school, with the top barrier to education reportedly being children working/children having to work. This assessment also showed a critical need for winterisation support. Winterisation kits were reported to be a priority by KIs (68%) when asked of top educational needs. Similarly, winter clothing kits were reported by KIs (97%) to be a top need when asked about shelter and NFI needs.",
+      "contact_point": {
+        "name": "OCHA Türkiye (inactive)",
+        "url": "https://data.humdata.org/dataset/north-west-syria-inter-sector-rapid-needs-assessment-flood-impact-january-2019"
+      },
+      "creator": {
+        "name": "OCHA Türkiye (inactive)",
+        "url": "https://data.humdata.org/dataset/north-west-syria-inter-sector-rapid-needs-assessment-flood-impact-january-2019"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2019-01-31"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OCHA Turkey",
+            "url": "https://data.humdata.org/dataset/north-west-syria-inter-sector-rapid-needs-assessment-flood-impact-january-2019"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event rapid needs assessment conducted by OCHA following severe flash flooding on 26 December 2018 in north-west Syria. Data compiled from field assessments and reports documenting direct impacts on displaced populations, camps, and settlements in Idleb and Aleppo governorates, with focus on affected populations and damaged structures.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Turkey",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Inter-Sector Rapid Needs Assessment (RNA) documenting flood impacts on displaced populations and infrastructure in Idleb and Aleppo governorates following the December 2018 flash flooding event."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_819fd2df",
+          "title": "NWS_Flood_RNA_Dataset_January2019_HDX.xlsx",
+          "description": "North-West Syria: Inter-Sector Rapid Needs Assessment - Flood Impact January 2019 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ce0a540f-3f87-4fb7-9be3-2320f5ca00a1/resource/819fd2df-0525-44a2-afd3-07bb733599bc/download/nws_flood_rna_dataset_january2019_hdx.xlsx"
+        },
+        {
+          "id": "resource_1f68b7bb",
+          "title": "NWS_Flood_Factsheet_RNA_January2019_updated.pdf",
+          "description": "North-West Syria: Inter-Sector Rapid Needs Assessment - Flood Impact January 2019 (PDF)",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/ce0a540f-3f87-4fb7-9be3-2320f5ca00a1/resource/1f68b7bb-91a4-4255-9755-c55b47f1d765/download/nws_flood_factsheet_rna_january2019_updated.pdf"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Tent and concrete structures in camps and settlements affected by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Displaced population and residents in camps and settlements in Idleb and Aleppo governorates"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to tents and concrete structures in camps from flash flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flash flooding in north-west Syria"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/north-west-syria-inter-sector-rapid-needs-assessment-flood-impact-january-2019",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

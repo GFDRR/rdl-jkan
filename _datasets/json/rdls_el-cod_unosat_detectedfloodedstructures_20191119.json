@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-cod_unosat_detectedfloodedstructures_20191119",
+      "title": "Satellite-detected flooded structures, as of 15 November 2019, over Libenge, Democratic Republic of the Congo",
+      "description": "UNOSAT code: FL20191118COD This map illustrates satellite-detected flooded structures along the Ubangui River over Libenge, Libenge Territory, Sud-Ubangui Territory in Democratic Republic of the Congo as observed from Pleiades imagery acquired on 15 November 2019. UNITAR-UNOSAT identified 22 potentially flooded structures west of Libenge, within the extent of this map. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/flooded-structures-as-of-15-november-2019-over-libenge-democratic-republic-of-the-congo]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flooded-structures-as-of-15-november-2019-over-libenge-democratic-republic-of-the-congo"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flooded-structures-as-of-15-november-2019-over-libenge-democratic-republic-of-the-congo"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2019-11-19"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/flooded-structures-as-of-15-november-2019-over-libenge-democratic-republic-of-the-congo"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Pleiades satellite imagery acquired on 15 November 2019 over Libenge, Democratic Republic of the Congo, comparing it with reference imagery to identify structural changes indicative of flooding. Visual interpretation identified 22 potentially flooded structures along the Ubangui River, with results delivered as vector geodatabase and shapefile formats containing structure locations and areas.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis using Pleiades imagery to detect flooded structures through visual comparison of pre- and post-event scenes"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bdf966f3",
+          "title": "FL20191118COD_gdb.zip",
+          "description": "Satellite-detected flooded structures, as of 15 November 2019, over Libenge, Democratic Republic of the Congo (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/CD/FL20191118COD/FL20191118COD_gdb.zip"
+        },
+        {
+          "id": "resource_874b032b",
+          "title": "FL20191118COD_SHP.zip",
+          "description": "Satellite-detected flooded structures, as of 15 November 2019, over Libenge, Democratic Republic of the Congo (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/CD/FL20191118COD/FL20191118COD_SHP.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Satellite-detected structures in the flooded area along the Ubangui River"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Satellite-detected flooded structures from post-event imagery analysis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/flooded-structures-as-of-15-november-2019-over-libenge-democratic-republic-of-the-congo",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

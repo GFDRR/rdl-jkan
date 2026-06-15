@@ -1,0 +1,201 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-moz_hdx_disasterinventory_1979",
+      "title": "Mozambique - Disaster Inventory",
+      "description": "https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode=moz. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-disaster-inventory]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/mozambique-disaster-inventory"
+      },
+      "creator": {
+        "name": "UNDRR",
+        "url": "https://data.humdata.org/dataset/mozambique-disaster-inventory"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "1979-01-01",
+        "end": "2012-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNDRR DesInventar",
+            "url": "https://data.humdata.org/dataset/mozambique-disaster-inventory"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historical disaster event records compiled by UNDRR DesInventar platform for Mozambique, documenting observed impacts from multiple hazard types including floods and storms. Data aggregated from government reports, news sources, and field assessments into standardized impact metrics organized by geographic distribution, hazard type, and temporal occurrence.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNDRR DesInventar",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Disaster inventory database documenting historical disaster events with recorded impacts on buildings, population, and economic assets across Mozambique"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.desinventar.net/methodology.html"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_4a61b0d2",
+          "title": "DI_Stat1117_GeoDist_HXL.xls",
+          "description": "Mozambique - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d03b4d48-2923-474d-9fb3-5189ddac1501/resource/4a61b0d2-1cc4-4c4b-b102-937f8ffed7ee/download/di_stat1117_geodist_hxl.xls"
+        },
+        {
+          "id": "resource_26f09afa",
+          "title": "DI_Stat1117_Hazard.xls",
+          "description": "Mozambique - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d03b4d48-2923-474d-9fb3-5189ddac1501/resource/26f09afa-1af7-43e5-83c5-84f7345832fa/download/di_stat1117_hazard.xls"
+        },
+        {
+          "id": "resource_7d5c9270",
+          "title": "DI_Stat1117_Temporal.xls",
+          "description": "Mozambique - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d03b4d48-2923-474d-9fb3-5189ddac1501/resource/7d5c9270-f7a5-47aa-91ce-7ee6b8e2ad16/download/di_stat1117_temporal.xls"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flood events recorded in disaster inventory"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood events recorded in disaster inventory"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from strong wind events recorded in disaster inventory"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by strong wind events recorded in disaster inventory"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-disaster-inventory",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

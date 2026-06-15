@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-lka_msftai_floodsbuildingdamageasses_2025",
+      "title": "Sri Lanka Floods: Building Damage Assessment in Colombo",
+      "description": "Microsoft AI for Good Lab ran their damage assessment AI models on images provided by Planet and have mapped out the affected buildings in Colombo, Sri Lanka.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sri-lanka-floods-building-damage-assessment-in-colombo]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "While the data provides a valuable first look, it should serve as a preliminary guide and will require on-the-ground verification for a complete understanding.",
+      "contact_point": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/sri-lanka-floods-building-damage-assessment-in-colombo"
+      },
+      "creator": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/sri-lanka-floods-building-damage-assessment-in-colombo"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LKA"
+        ]
+      },
+      "temporal": {
+        "start": "2025-11-30",
+        "end": "2025-12-09"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Planet",
+            "url": "https://data.humdata.org/dataset/sri-lanka-floods-building-damage-assessment-in-colombo"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Planet satellite imagery of Colombo, Sri Lanka was acquired around the flood event and processed through Microsoft AI for Good Lab's damage assessment AI models to classify buildings as damaged or undamaged. The resulting geopackage contains building-level damage predictions derived from change detection between pre- and post-event imagery, supporting rapid post-disaster impact assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Planet",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Planet provided pre- and post-event satellite imagery used as input for the AI-based damage assessment model."
+          },
+          {
+            "id": "source_2",
+            "name": "Microsoft AI for Good Lab",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Microsoft AI for Good Lab applied their damage assessment AI models to Planet imagery to classify building damage status in Colombo."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_eccceb3c",
+          "title": "planetscope_srilanka_11_30_buildings_clipped_predictions.gpkg",
+          "description": "We ran a flood model on PlanetScope imagery captured on November 30th over part of Colombo, Sri Lanka. There were a total of 656,656 building footprints in the area we analyzed. Of these: 7,071 were covered by clouds, leaving 649,584 for analysis Our model estimates 34,144 (5.3%) have flood predictions within 20m. We independently labeled 139 building footprints (of size > 50 sq m) based on whether we saw visible flooding around the building, and estimate 24,181 buildings affected (5.0% of the set of >50 sq m) with a 95% CI of [6664, 41697] buildings. Our model has a recall of 0.86 and precision of 0.75 compared to this set of labels.",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/04c95b2c-7472-4516-80f7-b6ed950a5255/resource/eccceb3c-e98d-40d7-9526-2574e564268b/download/planetscope_srilanka_11_30_buildings_clipped_predictions.gpkg"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints in Colombo, Sri Lanka mapped and classified by damage status using AI-based analysis of satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from Sri Lanka floods in Colombo, derived from AI model predictions on Planet satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sri-lanka-floods-building-damage-assessment-in-colombo",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
