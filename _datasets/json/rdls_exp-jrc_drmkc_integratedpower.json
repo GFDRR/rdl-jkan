@@ -1,0 +1,90 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-jrc_drmkc_integratedpower",
+      "title": "Global Integrated Power",
+      "description": "Global dataset of power stations and facilities",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "version": "2025",
+      "purpose": "To provide comprehensive unit-level data on global power stations and facilities across thermal and renewable energy sectors for energy analysis, planning, and policy development worldwide.",
+      "project": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "details": "The Global Integrated Power Tracker (GIPT) is a multi-sector dataset of power stations and facilities worldwide. The tracker provides unit-level information on thermal power (coal, oil, gas, nuclear, geothermal, bioenergy) and renewables (solar, wind, hydro).",
+      "contact_point": {
+        "name": "James Norman",
+        "email": "james.norman@globalenergymonitor.org",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "creator": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "Entity_1",
+          "entity": {
+            "name": "Global Energy Monitor",
+            "url": "https://globalenergymonitor.org/"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "Source_1",
+            "name": "Global Energy Monitor",
+            "url": "https://globalenergymonitor.org/",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Global Integrated Power (GIP) database maintained by Global Energy Monitor (GEM). Tracks power plants and electricity grid infrastructure worldwide including capacity, fuel type, technology, ownership, and development status. Data compiled through open-source research using public records, regulatory filings, and satellite imagery. Updated continuously; global spatial coverage."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "power_facilities",
+          "title": "Global Integrated Power",
+          "description": "Global Integrated Power (Access limited via request form)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://globalenergymonitor.org/projects/global-integrated-power-tracker/download-data/",
+          "media_type": "application/json"
+        }
+      ],
+      "exposure": [
+        {
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "power_facilities",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "id": "exp_1"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

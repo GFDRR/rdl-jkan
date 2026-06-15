@@ -1,0 +1,838 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sen_undrr_desinventar_b",
+      "title": "DesInventar Disaster Loss and Damage Dataset for Senegal",
+      "description": "National disaster loss inventory for Senegal from the DesInventar Sendai Framework Monitor database, compiled by Direction de la Protection Civile (DPC) and published by the United Nations Office for Disaster Risk Reduction (UNDRR). Contains 778 event-level loss records covering 1984-2014, with observed impacts from drought, flood, strong_wind, wildfire events. Loss data includes human casualties, displacement, building damage, economic losses, agricultural damage, and infrastructure impacts. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original dataset: https://data.humdata.org/dataset/34f077f2-7270-45db-8f95-da5e4bfd5c9a]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "email": "isdr@un.org",
+        "url": "https://www.undrr.org/"
+      },
+      "version": "1",
+      "purpose": "To document historical disaster losses in Senegal from the DesInventar national disaster loss inventory, supporting disaster risk reduction monitoring under the Sendai Framework.",
+      "project": {
+        "name": "DesInventar Sendai - Disaster Information Management System",
+        "url": "https://www.desinventar.net/"
+      },
+      "details": "Event-level disaster loss records from the DesInventar database for Senegal, maintained by Direction de la Protection Civile (DPC). Covers 778 observed disaster events from 1984-2014. Data collected through direct observational reporting and includes human impacts (deaths, injuries, missing, affected, evacuated, relocated), physical impacts (houses destroyed/damaged, education centres, hospitals, roads), economic losses (local currency and USD), and agricultural impacts (crop damage in hectares, livestock losses). Methodology: Direct Observational Data / Anecdotal Data.",
+      "contact_point": {
+        "name": "Direction de la Protection Civile (DPC)",
+        "url": "https://data.humdata.org/dataset/34f077f2-7270-45db-8f95-da5e4bfd5c9a"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "email": "isdr@un.org",
+        "url": "https://www.desinventar.net/"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SEN"
+        ],
+        "bbox": [
+          -17.54,
+          12.31,
+          -11.38,
+          16.69
+        ],
+        "gazetteer_entries": [
+          {
+            "scheme": "GEONAMES",
+            "description": "Senegal",
+            "uri": "https://www.geonames.org/2245662/senegal.html",
+            "id": "gazetteer_1"
+          }
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_desinventar",
+            "name": "DesInventar Sendai",
+            "url": "https://www.desinventar.net/",
+            "type": "dataset",
+            "used_in": "loss",
+            "description": "National disaster loss database for Senegal maintained using the DesInventar methodology."
+          },
+          {
+            "id": "source_hdx",
+            "name": "Humanitarian Data Exchange (HDX)",
+            "url": "https://data.humdata.org/dataset/34f077f2-7270-45db-8f95-da5e4bfd5c9a",
+            "type": "dataset",
+            "used_in": "loss",
+            "description": "Dataset published on HDX: Disaster loss and damage dataset for Senegal"
+          }
+        ],
+        "description": "Event-level disaster loss records collected through the DesInventar Sendai system, a standardised methodology for building national disaster loss databases developed by LA RED / UNDRR. National disaster events are documented through systematic review of local and national newspapers, official reports from civil protection agencies, national statistics offices, and other primary administrative sources. Each record represents a discrete observed disaster event with associated human impacts (deaths, injuries, missing persons, affected and evacuated populations), physical impacts (houses destroyed and damaged), agricultural losses (crop area damaged in hectares), and economic losses (local currency and USD where reported). Data collection and quality assurance was performed by national counterpart institutions under UNDRR coordination as part of the Sendai Framework Monitoring initiative. Datasets were published on the Humanitarian Data Exchange (HDX) platform by UNDRR."
+      },
+      "resources": [
+        {
+          "id": "resource_001",
+          "title": "Disaster data for Senegal",
+          "description": "DesInventar Disaster Loss and Damage Dataset for Senegal (Disaster data for Senegal)",
+          "download_url": "https://data.humdata.org/dataset/34f077f2-7270-45db-8f95-da5e4bfd5c9a/resource/33a8ca9d-9c6a-429b-9e13-daf4588e4689/download/senegal.zip",
+          "access_url": "https://data.humdata.org/dataset/34f077f2-7270-45db-8f95-da5e4bfd5c9a",
+          "media_type": "application/vnd.shp"
+        },
+        {
+          "id": "resource_002",
+          "title": "Disaster tabular data for Senegal",
+          "description": "DesInventar Disaster Loss and Damage Dataset for Senegal (Disaster tabular data for Senegal)",
+          "download_url": "https://data.humdata.org/dataset/34f077f2-7270-45db-8f95-da5e4bfd5c9a/resource/7afd0d14-1561-4bd8-9d62-729fc2e6f6bf/download/di_report-senegal.xls",
+          "access_url": "https://data.humdata.org/dataset/34f077f2-7270-45db-8f95-da5e4bfd5c9a",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_001_flood_affected",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from flood (FLOOD) events in Senegal. DesInventar records: 18 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_002_flood_damages_in_crops_ha",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area",
+                  "unit": "hectare"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from flood (FLOOD) events in Senegal. DesInventar records: 14 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_003_flood_deaths",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from flood (FLOOD) events in Senegal. DesInventar records: 22 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_004_flood_education_centers",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from flood (FLOOD) events in Senegal. DesInventar records: 2 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_005_flood_evacuated",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from flood (FLOOD) events in Senegal. DesInventar records: 2 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_006_flood_hospitals",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from flood (FLOOD) events in Senegal. DesInventar records: 2 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_007_flood_houses_damaged",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from flood (FLOOD) events in Senegal. DesInventar records: 45 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_008_flood_houses_destroyed",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from flood (FLOOD) events in Senegal. DesInventar records: 8 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_009_flood_injured",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from flood (FLOOD) events in Senegal. DesInventar records: 12 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_010_flood_losses_local",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "XOF"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed total economic losses in local currency from flood (FLOOD) events in Senegal. DesInventar records: 3 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_011_flood_losses_usd",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed total economic losses in US Dollars from flood (FLOOD) events in Senegal. DesInventar records: 2 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_012_flood_missing",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons missing or unaccounted for after disaster events from flood (FLOOD) events in Senegal. DesInventar records: 4 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_013_flood_relocated",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons permanently relocated from homes from flood (FLOOD) events in Senegal. DesInventar records: 3 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_014_flood_victims",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from flood (FLOOD) events in Senegal. DesInventar records: 16 events with data out of 149 total flood events (2008-2010).",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_015_strongwind_deaths",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from strong wind (STORM) events in Senegal. DesInventar records: 2 events with data out of 13 total strong wind events (2013-2014).",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "process": "extratropical_cyclone",
+              "intensity_measure": "sws_10m:m/s"
+            }
+          },
+          {
+            "id": "loss_016_strongwind_evacuated",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons temporarily evacuated from homes or workplaces from strong wind (STORM) events in Senegal. DesInventar records: 7 events with data out of 13 total strong wind events (2013-2014).",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "process": "extratropical_cyclone",
+              "intensity_measure": "sws_10m:m/s"
+            }
+          },
+          {
+            "id": "loss_017_strongwind_missing",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons missing or unaccounted for after disaster events from strong wind (STORM) events in Senegal. DesInventar records: 11 events with data out of 13 total strong wind events (2013-2014).",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "process": "extratropical_cyclone",
+              "intensity_measure": "sws_10m:m/s"
+            }
+          },
+          {
+            "id": "loss_018_wildfire_affected",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons indirectly affected (disruption to services, commerce, work) from wildfire (FIRE) events in Senegal. DesInventar records: 4 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_019_wildfire_damages_in_crops_ha",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area",
+                  "unit": "hectare"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed hectares of crops/woods destroyed or affected from wildfire (FIRE) events in Senegal. DesInventar records: 1 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_020_wildfire_deaths",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed deaths directly caused by disaster events from wildfire (FIRE) events in Senegal. DesInventar records: 50 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_021_wildfire_education_centers",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed educational facilities destroyed or affected from wildfire (FIRE) events in Senegal. DesInventar records: 17 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_022_wildfire_hospitals",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed health facilities destroyed or affected from wildfire (FIRE) events in Senegal. DesInventar records: 3 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_023_wildfire_houses_damaged",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes with non-structural damage, still habitable from wildfire (FIRE) events in Senegal. DesInventar records: 204 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_024_wildfire_houses_destroyed",
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed homes destroyed beyond habitability from wildfire (FIRE) events in Senegal. DesInventar records: 16 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_025_wildfire_injured",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons injured or made sick directly by disaster events from wildfire (FIRE) events in Senegal. DesInventar records: 29 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_026_wildfire_losses_local",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "XOF"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed total economic losses in local currency from wildfire (FIRE) events in Senegal. DesInventar records: 2 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_027_wildfire_losses_usd",
+            "asset_category": "buildings",
+            "asset_dimension": "content",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed total economic losses in US Dollars from wildfire (FIRE) events in Senegal. DesInventar records: 59 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_028_wildfire_lost_cattle",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed livestock lost from wildfire (FIRE) events in Senegal. DesInventar records: 5 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          },
+          {
+            "id": "loss_029_wildfire_victims",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed persons whose goods/services suffered serious damage from wildfire (FIRE) events in Senegal. DesInventar records: 25 events with data out of 580 total wildfire events (2010-2014).",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            }
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/34f077f2-7270-45db-8f95-da5e4bfd5c9a",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
