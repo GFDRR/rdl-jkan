@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-syr_atlasai_builtupsurface_2021",
+      "title": "Syria: Built-up Surface",
+      "description": "Built-up presence (binary) in a 10m x 10m grid. From the Atlas of Human Settlements 2021 @ Syria.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/syria-built-up-surface]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This limited public release covers the countries of Turkey and Syria for the year 2021, showing the extent of human settlements. This geospatial data is a machine-learning inference-based product that meets stringent model quality tests but has not been physically ground-truthed in the field. Glide: EQ-2023-000015-TUR",
+      "contact_point": {
+        "name": "Atlas AI",
+        "url": "https://data.humdata.org/dataset/syria-built-up-surface"
+      },
+      "creator": {
+        "name": "Atlas AI",
+        "url": "https://data.humdata.org/dataset/syria-built-up-surface"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-01",
+        "end": "2021-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Atlas of Human Settlements 2021",
+            "url": "https://data.humdata.org/dataset/syria-built-up-surface"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Built-up surface presence was derived from satellite imagery analysis using advanced deep learning (encoder-decoder CNNs) and computer vision techniques to classify 10m x 10m grid cells as built-up or non-built-up across Syria. The resulting binary raster represents spatial distribution of building infrastructure without hazard or impact context.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Atlas of Human Settlements 2021",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite-derived built-up surface classification using encoder-decoder convolutional neural networks and computer vision techniques to identify building presence at 10m spatial resolution"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5435ef3c",
+          "title": "AtlasAI_AHS_Turkey_2021_Built_Up_Surface.tif",
+          "description": "Syria: Built-up Surface (built-up surface of Syria in 2021)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/3428bc49-dcff-41e9-848c-ef0d1b374cc0/resource/5435ef3c-9517-45e7-ac4f-bc0e69584a60/download/atlasai_ahs_turkey_2021_built_up_surface.tif"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Built-up surface presence mapped at 10m resolution using satellite imagery and deep learning"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/syria-built-up-surface",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
