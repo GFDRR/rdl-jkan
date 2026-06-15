@@ -1,0 +1,369 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: Copernicus / European Commission Joint Research Centre (JRC)
+    url: https://data.humdata.org/dataset/aus-anomalies-fapar-viirs
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/aus-anomalies-fapar-viirs
+creator:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/aus-anomalies-fapar-viirs
+dataset_id: rdls_hzd-aus_copernicus_vegetationindexanomalyfap_2012
+description: 'Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) is
+  a biophysical dimensionless quantity (its values range from 0/no absorption to 1/total
+  absorption) used to assess the greenness and health of vegetation. FAPAR anomalies
+  can be used as an indicator to detect and monitor the impacts of agricultural drought
+  on the growth and productivity of vegetation. The data is presented in 10-day time
+  composite of the Visible Infrared Imaging Radiometer Suite (VIIRS).. [Source: This
+  metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/aus-anomalies-fapar-viirs]'
+details: Variations in the vegetation health and/or cover could be related to stress
+  factors not related to droughts (e.g., plant diseases, pests, hail, flooding). To
+  determine if changes in FAPAR are linked with a drought event or not, FAPAR data
+  should be interpreted jointly with other indicators (as in the EDO Combined Drought
+  Indicator).
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    drought:
+    - analysis_type: empirical
+      calculation_method: inferred
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: FAPAR:-
+        process: agricultural_drought
+        trigger: null
+        type: drought
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: FAPAR values from VIIRS satellite radiometer observations are composited
+    at 10-day intervals. Anomalies are calculated at each grid cell as the deviation
+    from a long-term mean baseline (2012 to last available full year), producing raster
+    datasets that serve as an empirical indicator of agricultural drought stress on
+    vegetation across Australia.
+  sources:
+  - id: source_1
+    license: null
+    name: Copernicus / European Commission Joint Research Centre (JRC)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/aus-anomalies-fapar-viirs
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://drought.emergency.copernicus.eu/data/factsheets/factsheet_fapar_viirs.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2026-01-01 to 2026-01-10)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/57b86d61-8827-4ff7-bd8e-b1e0cbf25f5a/download/aus_fpanv_m_gdo_20260101_20260101_t.zip
+  format: null
+  id: resource_57b86d61
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20260101_20260101_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2025-01-01 to 2025-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/e814ae46-c8b6-46cb-8945-5816b5111c35/download/aus_fpanv_m_gdo_20250101_20251221_t.zip
+  format: null
+  id: resource_e814ae46
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20250101_20251221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2024-01-01 to 2024-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/82c113eb-302c-41e2-8d39-335d13dc4485/download/aus_fpanv_m_gdo_20240101_20241221_t.zip
+  format: null
+  id: resource_82c113eb
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20240101_20241221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2023-01-01 to 2023-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/e58858e4-2edb-45f1-9963-64f472042e5a/download/aus_fpanv_m_gdo_20230101_20231221_t.zip
+  format: null
+  id: resource_e58858e4
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20230101_20231221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2022-01-01 to 2022-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/85bc60b3-392e-4a57-86e9-1397a7b09fc1/download/aus_fpanv_m_gdo_20220101_20221221_t.zip
+  format: null
+  id: resource_85bc60b3
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20220101_20221221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2021-01-01 to 2021-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/275e5184-214c-4e1c-978b-225246939549/download/aus_fpanv_m_gdo_20210101_20211221_t.zip
+  format: null
+  id: resource_275e5184
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20210101_20211221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2020-01-01 to 2020-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/29d408cd-869b-4014-b343-46d2ee6a397a/download/aus_fpanv_m_gdo_20200101_20201221_t.zip
+  format: null
+  id: resource_29d408cd
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20200101_20201221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2019-01-01 to 2019-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/27999e4b-66df-4363-8d44-bcac3e90b4f7/download/aus_fpanv_m_gdo_20190101_20191221_t.zip
+  format: null
+  id: resource_27999e4b
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20190101_20191221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2018-01-01 to 2018-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/f74e1d71-015d-4570-a721-c48f9928adc3/download/aus_fpanv_m_gdo_20180101_20181221_t.zip
+  format: null
+  id: resource_f74e1d71
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20180101_20181221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2017-01-01 to 2017-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/2d76f46f-b783-4e46-836a-8d0197036cae/download/aus_fpanv_m_gdo_20170101_20171221_t.zip
+  format: null
+  id: resource_2d76f46f
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20170101_20171221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2016-01-01 to 2016-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/c8c82adf-1d1c-4563-ad99-886abde1a19d/download/aus_fpanv_m_gdo_20160101_20161221_t.zip
+  format: null
+  id: resource_c8c82adf
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20160101_20161221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2015-01-01 to 2015-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/a335f406-ada3-4294-acb2-6d58569c5a8a/download/aus_fpanv_m_gdo_20150101_20151221_t.zip
+  format: null
+  id: resource_a335f406
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20150101_20151221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2014-01-01 to 2014-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/d6740bb1-025f-4081-a6d4-8b9979ec4aa8/download/aus_fpanv_m_gdo_20140101_20141221_t.zip
+  format: null
+  id: resource_d6740bb1
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20140101_20141221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2013-01-01 to 2013-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/4f4b7bf0-b6e3-45bb-8187-450635523ada/download/aus_fpanv_m_gdo_20130101_20131221_t.zip
+  format: null
+  id: resource_4f4b7bf0
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20130101_20131221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2012-01-21 to 2012-12-31)'
+  download_url: https://data.humdata.org/dataset/4f9af759-a5b3-4fda-bf24-0fc85d8e3c84/resource/2cda5b5f-508b-4657-9046-737799c1319a/download/aus_fpanv_m_gdo_20120121_20121221_t.zip
+  format: null
+  id: resource_2cda5b5f
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: aus_fpanv_m_gdo_20120121_20121221_t.zip
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-aus_copernicus_vegetationindexanomalyfap_2012
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - AUS
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2026-01-10'
+  start: '2012-01-21'
+temporal_resolution: null
+title: 'Australia: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)'
+version: null
+vulnerability: null
+---
