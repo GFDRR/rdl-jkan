@@ -1,0 +1,703 @@
+---
+attributions: []
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/iom-bangladesh-needs-and-population-monitoring-npm-drone-imagery-and-gis-package-by-camp-august-2018
+creator:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/iom-bangladesh-needs-and-population-monitoring-npm-drone-imagery-and-gis-package-by-camp-august-2018
+dataset_id: rdls_exp-bgd_iom_needspopulationmonitoring_2018
+description: 'NPM Bangladesh has produced a number of tools based on its regular data
+  collection activities and drone flights. The package of August 2018 is based on
+  NPM Site Assessment 12 (as of 4 September) and NPM most updated drone imagery (as
+  of 11 September). Here below, the complete package by camp: SW Map package KMZ file
+  Drone image The full image and shapefiles are available at this link .. [Source:
+  This metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/iom-bangladesh-needs-and-population-monitoring-npm-drone-imagery-and-gis-package-by-camp-august-2018]'
+details: null
+exposure:
+- asset_type:
+    description: Refugee population distribution across refugee camps mapped via drone
+      imagery and site assessment
+    id: population
+    scheme: null
+    title: null
+    uri: null
+  category: population
+  id: exposure_1
+  metrics:
+  - dimension: population
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+- asset_type:
+    description: Camp infrastructure and settlement structures identified through
+      drone imagery and GIS mapping
+    id: infrastructure
+    scheme: null
+    title: null
+    uri: null
+  category: infrastructure
+  id: exposure_2
+  metrics:
+  - dimension: structure
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: IOM conducted regular drone flights and site assessments (NPM Round
+    12) across refugee camps in Cox's Bazar, Bangladesh. Drone imagery and field observations
+    were processed into GIS-compatible shapefiles and KML files organized by individual
+    camp, providing spatial inventories of population distribution and camp infrastructure.
+  sources:
+  - id: source_1
+    license: null
+    name: International Organization for Migration (IOM)
+    risk_data_type:
+    - exposure
+    type: dataset
+    url: null
+    used_in: exposure
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/iom-bangladesh-needs-and-population-monitoring-npm-drone-imagery-and-gis-package-by-camp-august-2018
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: Direct Observational Data/Anecdotal Data
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (NPM Google Earth Manual - May 2018.pdf)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/1bc5ba54-0005-4163-9127-544026be624b/download/npm-google-earth-manual-may-2018.pdf
+  format: null
+  id: resource_1bc5ba54
+  media_type: application/pdf
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: NPM Google Earth Manual - May 2018.pdf
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (NPM SW Map Manual - February 2018.pdf)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/429961dc-4820-4b0d-84a5-f43cc8ab2a56/download/npm-sw-map-manual_2018-04-02.pdf
+  format: null
+  id: resource_429961dc
+  media_type: application/pdf
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: NPM SW Map Manual - February 2018.pdf
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/c3c3ab2e-6daf-452a-ab02-8856f64d5745/download/camp_01e.zip
+  format: null
+  id: resource_c3c3ab2e
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_01E.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/4cc76d24-b496-4366-a875-5a17cb3e1194/download/camp_01w.zip
+  format: null
+  id: resource_4cc76d24
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_01W.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/77601ad1-3047-4e6c-a7d4-d5e2feb70350/download/camp_02e.zip
+  format: null
+  id: resource_77601ad1
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_02E.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/911bfe08-fc89-4c28-95c9-e20ef999a716/download/camp_02w.zip
+  format: null
+  id: resource_911bfe08
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_02W.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/6b38e764-8a25-4d5a-99fc-4207d3b7df82/download/camp_03.zip
+  format: null
+  id: resource_6b38e764
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_03.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/53051793-2347-43db-9d29-6a04be6de027/download/camp_04.zip
+  format: null
+  id: resource_53051793
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_04.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/b18656f8-5917-4de6-9039-c1eb8a5b4536/download/camp_04ext.zip
+  format: null
+  id: resource_b18656f8
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_04EXT.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/cd5af8f6-64cc-4f8f-bb0f-dbec5b6f39bb/download/camp_05.zip
+  format: null
+  id: resource_cd5af8f6
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_05.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/15ac94e9-bc66-4dca-89ce-903cb7e574cf/download/camp_06.zip
+  format: null
+  id: resource_15ac94e9
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_06.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/40d8512d-cebc-432b-8aa7-d5de5d844abd/download/camp_07.zip
+  format: null
+  id: resource_40d8512d
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_07.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/d7631526-c9ca-4379-9437-40396f9bea52/download/camp_08e.zip
+  format: null
+  id: resource_d7631526
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_08E.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/aec8a111-0ae5-4352-b91a-56bc669c110d/download/camp_08w.zip
+  format: null
+  id: resource_aec8a111
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_08W.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/a1a4dcd1-2055-4817-8d44-26579ad964f3/download/camp_09.zip
+  format: null
+  id: resource_a1a4dcd1
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_09.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/3ac6d5d9-a1be-4c43-b49e-7fb5ef6d9ce5/download/camp_10.zip
+  format: null
+  id: resource_3ac6d5d9
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_10.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/5f8f0b74-818b-45ff-91a9-73c0d28bf530/download/camp_11.zip
+  format: null
+  id: resource_5f8f0b74
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_11.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/9987c768-965e-428e-8f96-b62c0359869c/download/camp_12.zip
+  format: null
+  id: resource_9987c768
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_12.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/441d7e37-9177-44d8-a458-ef25829ca020/download/camp_13.zip
+  format: null
+  id: resource_441d7e37
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_13.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/7bc6543b-392f-41b7-b4fd-394d3d0540f8/download/camp_14.zip
+  format: null
+  id: resource_7bc6543b
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_14.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/5af15998-c881-41e0-86f1-32768e1bbe3a/download/camp_15.zip
+  format: null
+  id: resource_5af15998
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_15.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/ef907b26-6bfa-4ca1-9f72-ba12ef1916d2/download/camp_16.zip
+  format: null
+  id: resource_ef907b26
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_16.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/dc5add20-f35e-4632-a8bc-38662e27b118/download/camp_17.zip
+  format: null
+  id: resource_dc5add20
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_17.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/0b96e76a-fdc1-4059-ac16-67a5f3d1aed9/download/camp_18.zip
+  format: null
+  id: resource_0b96e76a
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_18.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/e9dd815d-74f9-4dae-ba10-128a4692a290/download/camp_19.zip
+  format: null
+  id: resource_e9dd815d
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_19.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/6b0e87b2-e643-4bc7-a26a-9a846a2e5aa1/download/camp_20.zip
+  format: null
+  id: resource_6b0e87b2
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_20.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/7cd087ab-1834-4d70-979b-c31077acc695/download/camp_20ext.zip
+  format: null
+  id: resource_7cd087ab
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_20EXT.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/d5df9d85-4e86-4489-a47b-18af91328df3/download/camp_kutupalong_rc.zip
+  format: null
+  id: resource_d5df9d85
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_Kutupalong_RC.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/196e7bb7-a4fe-4169-a13f-ad407b623978/download/camp_21chakmarkul.zip
+  format: null
+  id: resource_196e7bb7
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_21(Chakmarkul).zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/57e181d6-4809-4537-a65b-19c1417294b7/download/camp_22unchiprang.zip
+  format: null
+  id: resource_57e181d6
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_22(Unchiprang).zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/1081f0f1-5928-4a6b-a965-e406043c90a1/download/camp_23shamlapur.zip
+  format: null
+  id: resource_1081f0f1
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_23(Shamlapur).zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/c2c33988-1164-49ad-bcc8-a70b54822d5b/download/camp_24leda.zip
+  format: null
+  id: resource_c2c33988
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_24(Leda).zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/917a7e31-0cac-44aa-bf6c-191481484b77/download/camp_25ali-khali.zip
+  format: null
+  id: resource_917a7e31
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_25(Ali Khali).zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/8f09a455-0103-410e-b15b-b15618880cff/download/camp_26_nayapara_nayapara-rc.zip
+  format: null
+  id: resource_8f09a455
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_26_(Nayapara_Nayapara RC).zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery
+    and GIS package by camp (August 2018) (GIS Packages)
+  download_url: https://data.humdata.org/dataset/eb6c4c7c-817e-481a-b06b-02a1ecdbc32b/resource/3b1ce822-1d4d-4f4c-af3f-9b92cdbecf69/download/camp_27jadimura.zip
+  format: null
+  id: resource_3b1ce822
+  media_type: application/vnd.google-earth.kml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Camp_27(Jadimura).zip
+risk_data_type:
+- exposure
+schema: rdls-10
+slug: rdls_exp-bgd_iom_needspopulationmonitoring_2018
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - BGD
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2018-09-04'
+  start: '2018-08-09'
+temporal_resolution: null
+title: IOM Bangladesh - Needs and Population Monitoring (NPM) Drone imagery and GIS
+  package by camp (August 2018)
+version: null
+vulnerability: null
+---
