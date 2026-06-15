@@ -3,6 +3,7 @@
 {
   "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
   "dataset": [{% for dataset in site.datasets %}{% capture temp %}
+  // TODO: render all datasets in RDLS v1.0
     {% assign schema = dataset.schema | default: site.schema %}
     {% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
     {% assign resource_fields = site.data.schemas[schema].resource_fields %}
