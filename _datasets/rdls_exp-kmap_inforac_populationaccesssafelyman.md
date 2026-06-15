@@ -1,0 +1,179 @@
+---
+attributions: []
+catalog: null
+contact_point:
+  affiliation: null
+  email: alafitte@planbleu.org
+  name: Plan Bleu
+  url: https://kmap.info-rac.org/api/v2/users/1023
+creator:
+  affiliation: null
+  email: info@info-rac.org
+  name: INFORAC Editor
+  url: https://kmap.info-rac.org/api/v2/users/1005
+dataset_id: rdls_exp-kmap_inforac_populationaccesssafelyman
+description: 'Wide disparities still exist in 2017. 6 countries have at least 90%
+  of their population using safely managed sanitation services whereas 6 others have
+  less than 50%. Estimates are available for 20 countries in the Mediterranean region,
+  the population without safely managed sanitation services increased from 139 million
+  in 2000 to 156 million in 2017 (the proportion decreased from 33% to 31%). Similar
+  to SDG Indicator 6.2.1 [Source: This metadata record was automatically extracted
+  from the GeoNode portal kmap_inforac]'
+details: null
+exposure:
+- asset_type: null
+  category: infrastructure
+  id: exposure_1
+  metrics:
+  - dimension: structure
+    id: metric_1
+    measurement:
+      quantity_kind: length
+      unit: null
+- asset_type: null
+  category: population
+  id: exposure_2
+  metrics:
+  - dimension: population
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: null
+  sources:
+  - id: source_1
+    license: null
+    name: INFORAC Editor
+    risk_data_type:
+    - exposure
+    type: dataset
+    url: null
+    used_in: exposure
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://kmap.info-rac.org/catalogue/#/dataset/1238
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Plan Bleu
+  url: https://kmap.info-rac.org
+purpose: null
+referenced_by: []
+resources:
+- access_url: https://kmap.info-rac.org/datasets/geonode:MX-R2F-467-2PL-J9H-CCR:MX-HDOBG-2DVXK-F6J47
+  baseline_period: null
+  climate: null
+  conforms_to: http://www.opengis.net/def/serviceType/ogc/wms
+  coordinate_system: EPSG:4326
+  description: 'Population with access to safely managed sanitation service in % -
+    Period 2000 - 2017 (MSSD indicator 15b) (OGC WMS: remoteWorkspace Service)'
+  download_url: https://geoserver.mapx.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:MX-R2F-467-2PL-J9H-CCR:MX-HDOBG-2DVXK-F6J47&format=image%2Fpng
+  format: null
+  id: resource_0
+  media_type: image/png
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: 'OGC WMS: remoteWorkspace Service'
+risk_data_type:
+- exposure
+schema: rdls-10
+slug: rdls_exp-kmap_inforac_populationaccesssafelyman
+spatial:
+  bbox:
+  - -18.16963768005371
+  - 18.965221405029297
+  - 44.81813049316406
+  - 51.0902214050293
+  centroid: null
+  countries:
+  - ALB
+  - AND
+  - ARE
+  - AUT
+  - BEL
+  - BGR
+  - BHR
+  - BIH
+  - BLR
+  - CHE
+  - CYP
+  - CZE
+  - DEU
+  - DNK
+  - DZA
+  - EGY
+  - ESP
+  - EST
+  - FIN
+  - FRA
+  - GBR
+  - GRC
+  - HRV
+  - HUN
+  - IRL
+  - IRN
+  - IRQ
+  - ISL
+  - ISR
+  - ITA
+  - JOR
+  - KWT
+  - LBN
+  - LBY
+  - LIE
+  - LTU
+  - LUX
+  - LVA
+  - MAR
+  - MCO
+  - MDA
+  - MKD
+  - MLT
+  - MNE
+  - NLD
+  - NOR
+  - OMN
+  - POL
+  - PRT
+  - PSE
+  - QAT
+  - ROU
+  - RUS
+  - SAU
+  - SDN
+  - SMR
+  - SRB
+  - SVK
+  - SVN
+  - SWE
+  - SYR
+  - TUN
+  - TUR
+  - UKR
+  - VAT
+  - YEM
+  gazetteer_entries: []
+  scale: regional
+spatial_resolution: null
+temporal:
+  central_year: 2023
+  duration: null
+  end: null
+  start: null
+temporal_resolution: null
+title: Population with access to safely managed sanitation service in % - Period 2000
+  - 2017 (MSSD indicator 15b)
+version: null
+vulnerability: null
+---

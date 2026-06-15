@@ -11,7 +11,7 @@ creator:
   email: null
   name: Pacific Community - SPC
   url: https://geonode.pacificdata.org/api/v2/users/1000
-dataset_id: rdls_lss-kir_pacificdata_annualaveragelosstropical
+dataset_id: rdls_lss-slb_pacificdata_annualaveragelosstropical
 description: 'The expected economic impact due to natural hazards is illustrated through
   an average annual loss (AAL) map, which indicates the estimated economic losses
   averaged over the 10,000 realizations of next-year activity. Economic loss is defined
@@ -34,7 +34,7 @@ lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-- href: https://geonode.pacificdata.org/catalogue/#/dataset/1751
+- href: https://geonode.pacificdata.org/catalogue/#/dataset/400
   rel: source
 loss:
   losses:
@@ -60,9 +60,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: infrastructure
@@ -88,9 +88,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: agriculture
@@ -115,9 +115,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: buildings
@@ -142,9 +142,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: infrastructure
@@ -170,9 +170,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: agriculture
@@ -197,9 +197,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: buildings
@@ -224,9 +224,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: infrastructure
@@ -252,9 +252,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: agriculture
@@ -279,9 +279,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: buildings
@@ -306,9 +306,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: infrastructure
@@ -333,9 +333,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: agriculture
@@ -360,9 +360,9 @@ loss:
           quantity_kind: currency
           unit: null
         metric: loss
-        modelling: simulated
+        modelling: inferred
         type: direct
-      loss_approach: analytical
+      loss_approach: judgement
       loss_frequency_type: probabilistic
       loss_type: ground_up
 project: null
@@ -370,7 +370,7 @@ publisher:
   affiliation: null
   email: null
   name: Earth and Oceans Observations Team Pacific Community
-  url: https://geonode.pacificdata.org/catalogue/#/dataset/1751
+  url: https://geonode.pacificdata.org/catalogue/#/dataset/400
 purpose: null
 referenced_by: []
 resources:
@@ -379,60 +379,60 @@ resources:
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
-  description: Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (GeoPackage)
-  download_url: https://geonode.pacificdata.org/api/v2/assets/1452/link
+  description: Annual Average Loss from Tropical Cyclones and Earthquakes at ward
+    level for Solomon Islands (Excel)
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Asb_ward_aal_tc_eq&outputFormat=excel&srs=EPSG%3A4326
   format: null
   id: resource_0
-  media_type: application/geopackage+sqlite3
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: ki_island_aal_tc_eq
-- access_url: https://geonode.pacificdata.org/datasets/geonode:ki_island_aal_tc_eq
-  baseline_period: null
-  climate: null
-  conforms_to: null
-  coordinate_system: EPSG:4326
-  description: 'Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (OGC WMS: geonode Service)'
-  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:ki_island_aal_tc_eq&format=image%2Fpng
-  format: null
-  id: resource_1
-  media_type: image/png
-  spatial: null
-  spatial_aggregation: null
-  spatial_resolution: null
-  temporal: null
-  temporal_resolution: null
-  title: 'OGC WMS: geonode Service'
-- access_url: https://geonode.pacificdata.org/datasets/geonode:ki_island_aal_tc_eq
-  baseline_period: null
-  climate: null
-  conforms_to: null
-  coordinate_system: EPSG:4326
-  description: 'Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (OGC WFS: geonode Service)'
-  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geonode:ki_island_aal_tc_eq&outputFormat=application%2Fjson
-  format: null
-  id: resource_2
-  media_type: application/geo+json
-  spatial: null
-  spatial_aggregation: null
-  spatial_resolution: null
-  temporal: null
-  temporal_resolution: null
-  title: 'OGC WFS: geonode Service'
+  title: Excel
 - access_url: null
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
-  description: Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (Zipped Shapefile)
-  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aki_island_aal_tc_eq&outputFormat=SHAPE-ZIP&srs=EPSG%3A4326&format_options=charset%3AUTF-8
+  description: Annual Average Loss from Tropical Cyclones and Earthquakes at ward
+    level for Solomon Islands (GML 3.1.1)
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Asb_ward_aal_tc_eq&outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&srs=EPSG%3A4326
+  format: null
+  id: resource_1
+  media_type: application/gml+xml
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: GML 3.1.1
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: EPSG:4326
+  description: Annual Average Loss from Tropical Cyclones and Earthquakes at ward
+    level for Solomon Islands (CSV)
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Asb_ward_aal_tc_eq&outputFormat=csv&srs=EPSG%3A4326
+  format: null
+  id: resource_2
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: CSV
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: EPSG:4326
+  description: Annual Average Loss from Tropical Cyclones and Earthquakes at ward
+    level for Solomon Islands (Zipped Shapefile)
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Asb_ward_aal_tc_eq&outputFormat=SHAPE-ZIP&srs=EPSG%3A4326&format_options=charset%3AUTF-8
   format: null
   id: resource_3
   media_type: application/vnd.shp
@@ -447,26 +447,26 @@ resources:
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
-  description: Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (GML 2.0)
-  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aki_island_aal_tc_eq&outputFormat=gml2&srs=EPSG%3A4326
+  description: Annual Average Loss from Tropical Cyclones and Earthquakes at ward
+    level for Solomon Islands (JSON)
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Asb_ward_aal_tc_eq&outputFormat=json&srs=EPSG%3A4326&srsName=EPSG%3A4326
   format: null
   id: resource_4
-  media_type: application/gml+xml
+  media_type: application/geo+json
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: GML 2.0
+  title: GeoJSON
 - access_url: null
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
-  description: Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (GML 3.1.1)
-  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aki_island_aal_tc_eq&outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&srs=EPSG%3A4326
+  description: Annual Average Loss from Tropical Cyclones and Earthquakes at ward
+    level for Solomon Islands (GML 2.0)
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Asb_ward_aal_tc_eq&outputFormat=gml2&srs=EPSG%3A4326
   format: null
   id: resource_5
   media_type: application/gml+xml
@@ -475,77 +475,61 @@ resources:
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: GML 3.1.1
-- access_url: null
+  title: GML 2.0
+- access_url: https://geonode.pacificdata.org/datasets/geonode:sb_ward_aal_tc_eq
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
-  description: Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (CSV)
-  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aki_island_aal_tc_eq&outputFormat=csv&srs=EPSG%3A4326
+  description: 'Annual Average Loss from Tropical Cyclones and Earthquakes at ward
+    level for Solomon Islands (OGC WMS: geonode Service)'
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:sb_ward_aal_tc_eq&format=image%2Fpng
   format: null
   id: resource_6
-  media_type: text/csv
+  media_type: image/png
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: CSV
-- access_url: null
+  title: 'OGC WMS: geonode Service'
+- access_url: https://geonode.pacificdata.org/datasets/geonode:sb_ward_aal_tc_eq
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
-  description: Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (Excel)
-  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aki_island_aal_tc_eq&outputFormat=excel&srs=EPSG%3A4326
+  description: 'Annual Average Loss from Tropical Cyclones and Earthquakes at ward
+    level for Solomon Islands (OGC WFS: geonode Service)'
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geonode:sb_ward_aal_tc_eq&outputFormat=application%2Fjson
   format: null
   id: resource_7
-  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-  spatial: null
-  spatial_aggregation: null
-  spatial_resolution: null
-  temporal: null
-  temporal_resolution: null
-  title: Excel
-- access_url: null
-  baseline_period: null
-  climate: null
-  conforms_to: null
-  coordinate_system: EPSG:4326
-  description: Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
-    (JSON)
-  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aki_island_aal_tc_eq&outputFormat=json&srs=EPSG%3A4326&srsName=EPSG%3A4326
-  format: null
-  id: resource_8
   media_type: application/geo+json
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: GeoJSON
+  title: 'OGC WFS: geonode Service'
 risk_data_type:
 - loss
 schema: rdls-10
-slug: rdls_lss-kir_pacificdata_annualaveragelosstropical
+slug: rdls_lss-slb_pacificdata_annualaveragelosstropical
 spatial:
   bbox:
-  - -174.54297899998082
-  - -11.446049999907586
-  - 176.8479960003151
-  - 4.699159999634276
+  - 155.51184800008502
+  - -12.308583999751818
+  - 168.84784000011587
+  - -4.993579999617282
   centroid: null
   countries:
-  - KIR
+  - SLB
   gazetteer_entries: []
   scale: national
 spatial_resolution: null
 temporal: null
 temporal_resolution: null
-title: Annual Average Loss from Tropical Cyclones and Earthquakes for Kiribati
+title: Annual Average Loss from Tropical Cyclones and Earthquakes at ward level for
+  Solomon Islands
 version: null
 vulnerability: null
 ---
