@@ -361,7 +361,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -390,7 +390,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: coastal_flood
       trigger: null
@@ -419,7 +419,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -657,7 +657,7 @@ vulnerability:
       hazard_analysis_type: probabilistic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: pluvial_flood
         trigger: null
@@ -685,7 +685,7 @@ vulnerability:
       hazard_analysis_type: probabilistic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
