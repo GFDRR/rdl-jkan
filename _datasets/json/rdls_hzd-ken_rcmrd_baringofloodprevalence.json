@@ -1,0 +1,102 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-ken_rcmrd_baringofloodprevalence",
+      "title": "Baringo Flood Prevalence",
+      "description": "The flood prevalence dataset quantifies the proportion of areas within Baringo County that havehistorically been affected by flooding. It is useful for understanding the extent of communitiesimpacted and guiding targeted interventions. [Source: This metadata record was automatically extracted from the GeoNode portal rcmrd]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Claire Maina",
+        "url": "https://geoportal.rcmrd.org"
+      },
+      "contact_point": {
+        "name": "Claire Maina",
+        "url": "https://geoportal.rcmrd.org/api/v2/users/1004"
+      },
+      "creator": {
+        "name": "Claire Maina",
+        "url": "https://geoportal.rcmrd.org/api/v2/users/1004"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ],
+        "bbox": [
+          35.522918700937566,
+          -0.202904775534819,
+          36.490066527548436,
+          1.65672755253479
+        ]
+      },
+      "temporal": {
+        "central_year": 2024
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Claire Maina",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Baringo Flood Prevalence (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.rcmrd.org/datasets/geonode:Flood_Prevalence",
+          "download_url": "https://geoportal.rcmrd.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:Flood_Prevalence&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WFS: geonode Service",
+          "description": "Baringo Flood Prevalence (OGC WFS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.rcmrd.org/datasets/geonode:Flood_Prevalence",
+          "download_url": "https://geoportal.rcmrd.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geonode:Flood_Prevalence&outputFormat=application%2Fjson",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.rcmrd.org/catalogue/#/dataset/440",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

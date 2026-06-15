@@ -1,0 +1,88 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-mdg_grma_landslidehazard",
+      "title": "Rainfall-induced landslide hazard",
+      "description": "Rainfall-induced landslide hazard index simulated by AXA Climate, for SSP2-4.5 and SSP5-8.5 scenarios across three time horizons (baseline, 2050, 2085).",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Global Risk Modelling Alliance",
+        "url": "https://grma.global"
+      },
+      "version": "1.0",
+      "purpose": "This dataset was developed during the first phase of GRMA's project in Madagascar. This project aimed at updating Madagascar's risk profile, and study the risk's evolution under climate change.",
+      "project": {
+        "name": "GRMA Madagascar - Phase 1",
+        "url": "https://www.resiliencemada.gov.mg"
+      },
+      "details": "The hazard index was built with BRGM landslide susceptibility map and daily precipitation dataset.",
+      "contact_point": {
+        "name": "AXA Climate",
+        "email": "science@axaclimate.com",
+        "url": "https://climate.axa"
+      },
+      "creator": {
+        "name": "AXA Climate",
+        "url": "https://climate.axa"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resources": [
+        {
+          "id": "resource_xy57HqTY",
+          "title": "ERA5 precipitation",
+          "description": "Daily precipitation from Copernicus ERA5 at 0.25° resolution was used for baseline map.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://cds.climate.copernicus.eu/datasets/derived-era5-single-levels-daily-statistics?tab=download",
+          "media_type": "application/x-hdf5",
+          "spatial_aggregation": "0.25-degree resolution grid cells"
+        },
+        {
+          "id": "resource_downscaled_precip",
+          "title": "Downscaled precipitation on ERA5 dataset",
+          "description": "GCM precipitation downscaled using AXA Climate proprietary algorithm to 0.25 degree resolution for future scenarios (SSP2-4.5 and SSP5-8.5).",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://climate.axa",
+          "media_type": "application/x-hdf5",
+          "spatial_aggregation": "0.25-degree resolution grid cells"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_YhkW50SM",
+            "hazards": [
+              {
+                "id": "hazard_pkvfr1xO",
+                "trigger": {
+                  "id": "trigger_flood",
+                  "type": "flood",
+                  "process": "pluvial_flood"
+                },
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "frequency_distribution": "user_defined",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

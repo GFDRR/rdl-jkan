@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-ken_rcmrd_kilififloodproneareas",
+      "title": "Kilifi Flood Prone Areas",
+      "description": "This dataset indicates geographic areas that are particularly susceptible to flooding based onterrain, hydrology, and historical patterns. It provides a county-level view of potential floodhotspots for planning settlement development, infrastructure investment, and disaster riskreduction. [Source: This metadata record was automatically extracted from the GeoNode portal rcmrd]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Claire Maina",
+        "url": "https://geoportal.rcmrd.org"
+      },
+      "contact_point": {
+        "name": "Claire Maina",
+        "url": "https://geoportal.rcmrd.org/api/v2/users/1004"
+      },
+      "creator": {
+        "name": "Claire Maina",
+        "url": "https://geoportal.rcmrd.org/api/v2/users/1004"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ],
+        "bbox": [
+          1191920.8410999998,
+          -444481.8443,
+          1300299.9082000004,
+          -260971.12859999947
+        ]
+      },
+      "temporal": {
+        "central_year": 2024
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Claire Maina",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard",
+              "exposure"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Kilifi Flood Prone Areas (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:32636",
+          "access_url": "https://geoportal.rcmrd.org/datasets/geonode:Flood_Prone_Areas1",
+          "download_url": "https://geoportal.rcmrd.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:Flood_Prone_Areas1&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WFS: geonode Service",
+          "description": "Kilifi Flood Prone Areas (OGC WFS: geonode Service)",
+          "coordinate_system": "EPSG:32636",
+          "access_url": "https://geoportal.rcmrd.org/datasets/geonode:Flood_Prone_Areas1",
+          "download_url": "https://geoportal.rcmrd.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geonode:Flood_Prone_Areas1&outputFormat=application%2Fjson",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.rcmrd.org/catalogue/#/dataset/471",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

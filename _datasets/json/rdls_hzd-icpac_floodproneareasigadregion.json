@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-icpac_floodproneareasigadregion",
+      "title": "Flood Prone Areas in the IGAD Region",
+      "description": "The flood prone areas are identified based on historical occurrences in the region and the layer is a vector file. [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net"
+      },
+      "contact_point": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "creator": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          21.838916933278426,
+          -4.666675568990001,
+          47.81297187561023,
+          20.999997514597453
+        ]
+      },
+      "temporal": {
+        "central_year": 2012
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ICPAC",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Flood Prone Areas in the IGAD Region (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:flood_prone_areas",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:flood_prone_areas&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WFS: geonode Service",
+          "description": "Flood Prone Areas in the IGAD Region (OGC WFS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:flood_prone_areas",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geonode:geonode:flood_prone_areas&outputFormat=application%2Fjson",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/data0:geonode:flood_prone_areas",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
