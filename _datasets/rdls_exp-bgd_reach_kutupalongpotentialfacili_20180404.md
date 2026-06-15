@@ -1,0 +1,126 @@
+---
+attributions: []
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: REACH Initiative
+  url: https://data.humdata.org/dataset/kutupalong-potential-facilities-for-upgrade
+creator:
+  affiliation: null
+  email: null
+  name: REACH Initiative
+  url: https://data.humdata.org/dataset/kutupalong-potential-facilities-for-upgrade
+dataset_id: rdls_exp-bgd_reach_kutupalongpotentialfacili_20180404
+description: 'This dataset comprises of 644 facilities that were classified as not
+  exposed to a flood or landslide hazard within the 21 Kutupalong Refugee Camps to
+  assess which facilities would be optimal for further shelter upgrades and reinforcement.
+  An index was created for prioritization and of these 644 sites, 224 were identified
+  as having optimal indicators for further site visits. Corresponding maps for these
+  224 sites can be found on the REACH Resource Centre or ReliefWeb. It should be noted
+  that ALL 644 facilities not exposed to a flood or landslide hazard should be explored
+  as viable options for awareness raising to the local Camp/Majhee populations. For
+  further information regarding the indicators used for the analysis please see the
+  caveats section below.. [Source: This metadata record was automatically extracted
+  from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/kutupalong-potential-facilities-for-upgrade]'
+details: 'Facilities incorporated into potential shelters include; Mosques, Madrassas,
+  Info Hubs, Field Offices, Community Centres, Child Friendly Spaces, & Women Friendly
+  Spaces. Facilities excluded for potential shelter assessment; Health facilities,
+  distribution centres, learning centres Indicators used for identifying optimal facilities:
+  Facility is not exposed to a flood hazard (IOM/UNHCR) or a high risk landslide hazard
+  (ADPC/UNHCR). 1. Proximity of facility to a highway/vehicle road/military road (within
+  200m) 2. Proximity of facility to a main path (within 50m) 3. Proximity of facility
+  to a Distribution Centre (within 200m) 4. Potential WASH Services - Number of functional
+  latrines that are not exposed to a flood or landslide hazard within 50m of facility
+  5. Potential WASH Services - Number of functional water points (hand pumps/tube
+  wells) that are not exposed to a flood or landslide hazard within 100m of facility
+  6. Visual assessment for capacity/structure type by photo, if available'
+exposure:
+- asset_type:
+    description: Shelter and WASH facilities in Kutupalong refugee camps classified
+      by hazard exposure status
+    id: infrastructure
+    scheme: null
+    title: null
+    uri: null
+  category: infrastructure
+  id: exposure_1
+  metrics:
+  - dimension: structure
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+hazard: null
+license: https://creativecommons.org/licenses/by-sa/4.0/
+lineage:
+  description: Direct field observations of 644 facilities across 21 Kutupalong refugee
+    camps were assessed for exposure to flood and landslide hazards. A prioritization
+    index was applied to identify 224 facilities with optimal indicators for further
+    site visits and shelter upgrades, resulting in a structured inventory of non-exposed
+    facilities suitable for infrastructure reinforcement.
+  sources:
+  - id: source_1
+    license: null
+    name: REACH Initiative
+    risk_data_type:
+    - exposure
+    type: dataset
+    url: null
+    used_in: exposure
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/kutupalong-potential-facilities-for-upgrade
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: Direct Observational Data/Anecdotal Data
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Data is from REACH's Round 4 infrastructure mapping for (21) Kutupalong
+    Refugee Camps. Flood analysis was conducted by IOM/UNHCR and landslide analysis
+    by ADPC/UNHCR.
+  download_url: https://data.humdata.org/dataset/6b4f0034-d9c8-435e-873c-97616fea4f56/resource/dbd9e668-ebb1-4d13-85d2-e4e1ac420640/download/bgd_cxb_ktp_reach_potential_facility_upgrades_03042018.xls
+  format: null
+  id: resource_dbd9e668
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: BGD_CXB_KTP_REACH_Potential_Facility_Upgrades_03042018.xls
+risk_data_type:
+- exposure
+schema: rdls-10
+slug: rdls_exp-bgd_reach_kutupalongpotentialfacili_20180404
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - BGD
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: null
+  start: '2018-04-04'
+temporal_resolution: null
+title: Bangladesh - Kutupalong Potential Facilities for Upgrade
+version: null
+vulnerability: null
+---
