@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ukr_needslist_aidresponse_2022",
+      "title": "Ukraine Aid Response",
+      "description": "Contains data on total dollar value (USD) spent on aid response and people reached per sector per oblast in Ukraine based on the activities recorded in RespondLocal-Ukraine Platform.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ukraine-aid-response]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Contains data on total dollar value (USD) spent on aid response and people reached per sector per oblast in Ukraine based on the activities recorded in RespondLocal-Ukraine Platform started from December 2022.",
+      "contact_point": {
+        "name": "NeedsList",
+        "url": "https://data.humdata.org/dataset/ukraine-aid-response"
+      },
+      "creator": {
+        "name": "NeedsList",
+        "url": "https://data.humdata.org/dataset/ukraine-aid-response"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UKR"
+        ]
+      },
+      "temporal": {
+        "start": "2022-12-15",
+        "end": "2023-06-15"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "RespondLocal-Ukraine Platform",
+            "url": "https://data.humdata.org/dataset/ukraine-aid-response"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Aid response data aggregated from activities recorded in the RespondLocal-Ukraine Platform, compiled into summary tables of total USD spending and people reached per sector and oblast. This represents post-event humanitarian response metrics rather than hazard or exposure data.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "RespondLocal-Ukraine Platform",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Administrative platform recording humanitarian aid activities, funding allocations, and beneficiary reach across Ukrainian oblasts by sector."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4136eaea",
+          "title": "Ukraine Aid Response Summary.csv",
+          "description": "Contains data on total dollar value (USD) spent on aid response and people reached per sector per oblast in Ukraine based on the activities recorded in RespondLocal-Ukraine Platform started from December 2022 till June 2023",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/24deade1-aa62-4474-bcfc-e64e27e6bebb/resource/4136eaea-1473-4675-8f79-278a0d189b8f/download/ukraine-aid-response-summary.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total USD value of aid response spending across sectors per oblast"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total people reached by aid response per sector per oblast"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ukraine-aid-response",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

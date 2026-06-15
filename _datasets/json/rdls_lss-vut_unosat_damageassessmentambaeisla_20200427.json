@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-vut_unosat_damageassessmentambaeisla_20200427",
+      "title": "Damage Assessment in Ambae Island, Penama Province, Vanuatu",
+      "description": "UNOSAT code: TC20200403VUT This map illustrates potentially damaged structures and buildings in Ambae Island, Penama Province, Vanuatu as detected by satellite image acquired after landfall of the Tropical Cyclone Harold-20 on 6 April 2020. UNITAR-UNOSAT analysis used a WorldView-2 image acquired on 20 April 2020 and Pleiades image acquired on 21 April 2020 as post event images, Within the Island extent, UNITAR-UNOSAT identified in the cloud free zones about 60 potentially damaged structures. Taking into account the pre-building footprints provided by Humanitarian OpenStreetMap, this represents about 1% of the total number of structures within the analyzed cloud free areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-ambae-island-penama-province-vanuatu]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-ambae-island-penama-province-vanuatu"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-ambae-island-penama-province-vanuatu"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2020-04-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-ambae-island-penama-province-vanuatu"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event satellite imagery (WorldView-2 acquired 20 April 2020 and Pleiades acquired 21 April 2020) was analyzed by UNITAR-UNOSAT analysts through visual comparison with pre-event building footprints sourced from Humanitarian OpenStreetMap to detect potentially damaged structures following Tropical Cyclone Harold's landfall on Ambae Island on 6 April 2020. Change detection was performed within cloud-free zones across the island extent, identifying approximately 60 potentially damaged structures. The resulting geodata provides a spatially explicit damage assessment to support humanitarian response and recovery planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "UNOSAT conducted satellite-based damage assessment using WorldView-2 imagery (20 April 2020) and Pleiades imagery (21 April 2020) as post-event images, comparing against pre-event building footprints from Humanitarian OpenStreetMap to identify approximately 60 potentially damaged structures in cloud-free zones."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_630d5ab4",
+          "title": "TC20200403VUT_gdb.zip",
+          "description": "Damage Assessment in Ambae Island, Penama Province, Vanuatu (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/VU/TC20200403VUT/TC20200403VUT_gdb.zip"
+        },
+        {
+          "id": "resource_270bf4a7",
+          "title": "TC20200403VUT_SHP.zip",
+          "description": "Damage Assessment in Ambae Island, Penama Province, Vanuatu (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/VU/TC20200403VUT/TC20200403VUT_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Potentially damaged structures and buildings on Ambae Island detected via satellite imagery comparison following Tropical Cyclone Harold landfall on 6 April 2020"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-ambae-island-penama-province-vanuatu",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

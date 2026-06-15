@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-tcd_wfp_hungermapdata_20240105",
+      "title": "Chad - HungerMap data",
+      "description": "HungerMapLIVE is the World Food Programme (WFP)'s global hunger monitoring system. It combines key metrics from various data sources - such as food security information, weather, population size, conflict, hazards, nutrition information and macro-economic data - to help assess, monitor and predict the magnitude and severity of hunger in near real-time. The resulting analysis is displayed on an interactive map that helps WFP staff, key decision makers and the broader humanitarian community to make more informed and timely decisions relating to food security. The platform covers 94 countries, including countries where WFP has operations as well as most lower and lower-middle income countries (as classified by the World Bank).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/wfp-hungermap-data-for-tcd]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-tcd"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-tcd"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TCD"
+        ]
+      },
+      "temporal": {
+        "start": "2024-01-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP HungerMap",
+            "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-tcd"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP's Hunger Monitoring Unit conducts real-time food security monitoring using observed data from multiple sources (food security surveys, weather, conflict, nutrition) and machine learning-based predictive models to estimate food security status and prevalence indicators (FCS, RCSI, health access, market access) at administrative levels in Chad.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP HungerMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "WFP's global hunger monitoring system combining food security indicators, weather data, conflict information, and macro-economic data to assess food insecurity severity and magnitude in near real-time."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9f946773",
+          "title": "wfp-hungermap-data-for-tcd.csv",
+          "description": "Chad - HungerMap data",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/33b6ad8d-8b90-4fc6-a6b6-299bbb0f6eaf/resource/9f946773-77ca-46eb-b414-0b338e48e993/download/wfp-hungermap-data-for-tcd.csv"
+        },
+        {
+          "id": "resource_a954ee22",
+          "title": "wfp-hungermap-data-for-tcd-long.csv",
+          "description": "Chad - HungerMap data long format",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/33b6ad8d-8b90-4fc6-a6b6-299bbb0f6eaf/resource/a954ee22-9be6-4f52-bba3-e3497212faa3/download/wfp-hungermap-data-for-tcd-long.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity prevalence and affected population from drought and food security crises"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/wfp-hungermap-data-for-tcd",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

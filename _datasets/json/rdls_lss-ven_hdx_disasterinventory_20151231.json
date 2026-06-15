@@ -1,0 +1,199 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ven_hdx_disasterinventory_20151231",
+      "title": "Venezuela - Disaster Inventory",
+      "description": "https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode=ven. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/venezuela-disaster-inventory]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/venezuela-disaster-inventory"
+      },
+      "creator": {
+        "name": "UNDRR",
+        "url": "https://data.humdata.org/dataset/venezuela-disaster-inventory"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VEN"
+        ]
+      },
+      "temporal": {
+        "start": "2015-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNDRR DesInventar",
+            "url": "https://data.humdata.org/dataset/venezuela-disaster-inventory"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "DesInventar is a disaster inventory system that compiles observed disaster event records from multiple sources including government agencies, media reports, and field assessments. The Venezuela dataset aggregates historical disaster events with associated hazard types, geographic distribution, temporal patterns, and impact metrics (damage, affected population, casualties). Data is organized by hazard type, geographic location, and temporal occurrence to support disaster risk assessment and historical analysis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNDRR DesInventar",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Disaster inventory system documenting observed disaster events, impacts, and damages across Venezuela. Provides empirical records of hazard occurrences with associated casualty, displacement, and damage figures."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.desinventar.net/methodology.html"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_4b1a074a",
+          "title": "DI_Stat1127_GeoDist_HXL.xls",
+          "description": "Venezuela - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4b09fe42-d91b-4343-97da-5f17fc58b09e/resource/4b1a074a-02fb-45c1-9bc7-2af001420628/download/di_stat1127_geodist_hxl.xls"
+        },
+        {
+          "id": "resource_be9caf38",
+          "title": "DI_Stat1127_Hazard.xls",
+          "description": "Venezuela - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4b09fe42-d91b-4343-97da-5f17fc58b09e/resource/be9caf38-cacb-4585-85c8-cd7ca35aa1ad/download/di_stat1127_hazard.xls"
+        },
+        {
+          "id": "resource_89ead809",
+          "title": "DI_Stat1127_Temporal.xls",
+          "description": "Venezuela - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4b09fe42-d91b-4343-97da-5f17fc58b09e/resource/89ead809-4f79-402e-8ce6-5745d99679ad/download/di_stat1127_temporal.xls"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flood events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from landslide events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by landslide events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/venezuela-disaster-inventory",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

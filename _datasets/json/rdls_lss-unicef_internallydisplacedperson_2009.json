@@ -1,0 +1,179 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-unicef_internallydisplacedperson_2009",
+      "title": "Internally displaced persons",
+      "description": "Internally displaced persons are persons or groups of persons who have been forced or obliged to flee or to leave their homes or places of habitual residence, in particular as a result of or in order to avoid the effects of armed conflict, situations of generalized violence, violations of human rights or natural or human-made disasters, and who have not crossed an internationally recognized State border. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unicef-mg-internal-disp-pers]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Please consult (see referenced_by) or email data@unicef.org",
+      "contact_point": {
+        "name": "UNICEF Data and Analytics (HQ)",
+        "url": "https://data.humdata.org/dataset/unicef-mg-internal-disp-pers"
+      },
+      "creator": {
+        "name": "UNICEF Data and Analytics (HQ)",
+        "url": "https://data.humdata.org/dataset/unicef-mg-internal-disp-pers"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2009-01-01",
+        "end": "2023-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Multiple Indicator Cluster Surveys (MICS)",
+            "url": "https://data.humdata.org/dataset/unicef-mg-internal-disp-pers"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Demographic and Health Surveys (DHS)",
+            "url": "https://data.humdata.org/dataset/unicef-mg-internal-disp-pers"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "United Nations organizations administrative sources",
+            "url": "https://data.humdata.org/dataset/unicef-mg-internal-disp-pers"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset aggregates internally displaced persons estimates from inter-agency sources, nationally representative household surveys (MICS and DHS), and UN administrative records. Data are compiled and standardized by UNICEF Data and Analytics to provide global indicators of displacement resulting from armed conflict, violence, human rights violations, and natural disasters.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Multiple Indicator Cluster Surveys (MICS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Nationally representative household surveys providing inter-agency estimates of internally displaced persons across countries"
+          },
+          {
+            "id": "source_2",
+            "name": "Demographic and Health Surveys (DHS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Nationally representative household surveys contributing displacement data from multiple countries"
+          },
+          {
+            "id": "source_3",
+            "name": "United Nations organizations administrative sources",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Administrative records from UN agencies documenting internally displaced persons from natural and human-made disasters"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://data.unicef.org"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_358b9605",
+          "title": "Internally displaced persons (CSV)",
+          "description": "Internally displaced persons (.MG_INTERNAL_DISP_PERS..?format=csv)",
+          "media_type": "text/csv",
+          "download_url": "https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,MG,1.0/.MG_INTERNAL_DISP_PERS..?format=csv"
+        },
+        {
+          "id": "resource_0b5b1d53",
+          "title": "Internally displaced persons (XML)",
+          "description": "Internally displaced persons",
+          "media_type": "application/xml",
+          "download_url": "https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,MG,1.0/.MG_INTERNAL_DISP_PERS.."
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from natural disasters including floods"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from natural disasters including earthquakes"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unicef-mg-internal-disp-pers",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

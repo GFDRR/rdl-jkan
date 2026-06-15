@@ -1,0 +1,169 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-yem_cimp_incidentscasualties_2017",
+      "title": "Yemen Civilian Impact Incidents and Civilian Casualties",
+      "description": "The Civilian Impact Monitoring Project (CIMP) is a monitoring mechanism for real-time collection, analysis and dissemination of open source data on the civilian impact from armed violence in Yemen, with the purpose of informing and complementing protection programming. CIMP is a service under the United Nations Protection Cluster for Yemen and, since going live on 01 August 2018, has reported in real-time on the impact of incidents of armed violence on civilians at the national level, divided into 5 hubs: Al-Hudaydah, Sa'ada, Sana'a, Aden and Ibb. The dataset contains the total number of incidents of armed violence reported to have impacted upon civilians each month since December 2017, and the total number of civilian casualties reported each month and per hub.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/yemen-civilian-impact-incidents-and-civilian-casualties]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Civilian Impact Monitoring Project (inactive)",
+        "url": "https://data.humdata.org/dataset/yemen-civilian-impact-incidents-and-civilian-casualties"
+      },
+      "creator": {
+        "name": "Civilian Impact Monitoring Project (inactive)",
+        "url": "https://data.humdata.org/dataset/yemen-civilian-impact-incidents-and-civilian-casualties"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "YEM"
+        ]
+      },
+      "temporal": {
+        "start": "2017-12-01",
+        "end": "2021-04-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Civilian Impact Monitoring Project (CIMP)",
+            "url": "https://data.humdata.org/dataset/yemen-civilian-impact-incidents-and-civilian-casualties"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "CIMP collects open source data on armed violence incidents affecting civilians in Yemen through real-time monitoring across 5 regional hubs (Al-Hudaydah, Sa'ada, Sana'a, Aden, Ibb). Data is analyzed and disseminated to inform protection programming, with records aggregated into incident counts and casualty figures at the national level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Civilian Impact Monitoring Project (CIMP)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Real-time open source monitoring of civilian impact from armed violence incidents in Yemen, collected and analyzed by the UN Protection Cluster through 5 regional hubs."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://civilianimpactmonitoring.org/methodology"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_ad496fd4",
+          "title": "Yemen_CIMP - Number of casualities",
+          "description": "Yemen Civilian Impact Incidents and Civilian Casualties (Number of casualties per month)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTAsAy_THJFIDLIxrPWxpQ9saFxegIV_HXTTS20e3nfSxT22zBo-HY_8w4LjijXQxT_DcEGfPoUFvnB/pub?gid=360019480&single=true&output=csv"
+        },
+        {
+          "id": "resource_0d60b429",
+          "title": "Yemen_CIMP - Number of incidents",
+          "description": "Yemen Civilian Impact Incidents and Civilian Casualties (Number of incidents per hub and per month)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTAsAy_THJFIDLIxrPWxpQ9saFxegIV_HXTTS20e3nfSxT22zBo-HY_8w4LjijXQxT_DcEGfPoUFvnB/pub?gid=0&single=true&output=csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Civilian deaths from armed violence incidents"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Civilian injuries from armed violence incidents"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Civilian incidents from armed violence"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/yemen-civilian-impact-incidents-and-civilian-casualties",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
