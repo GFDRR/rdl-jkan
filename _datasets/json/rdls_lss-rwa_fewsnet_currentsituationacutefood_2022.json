@@ -1,0 +1,98 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-rwa_fewsnet_currentsituationacutefood_2022",
+      "title": "Rwanda Current Situation FEWS NET Acute Food Insecurity Classifications Geographic Data for 2022",
+      "description": "Rwanda Current Situation FEWS NET Acute Food Insecurity Classifications Geographic data for 2022. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/rwanda_current_situation_fewsnet_ipc_shapefile_for_2022]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "IPC Classification spatial data in different IPC scenarios collected by FEWS NET enumerators on a regular schedule (typically monthly).",
+      "contact_point": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/rwanda_current_situation_fewsnet_ipc_shapefile_for_2022"
+      },
+      "creator": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/rwanda_current_situation_fewsnet_ipc_shapefile_for_2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "RWA"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-01",
+        "end": "2022-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IPC classification data collected by FEWS NET enumerators on a monthly schedule across Rwanda, spatially coded to geographic units and classified into IPC phases to represent acute food insecurity severity as a loss impact metric from underlying drought hazard.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "FEWS NET",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Integrated Food Security Phase Classification (IPC) spatial data collected through regular enumerator surveys to assess acute food insecurity severity and geographic distribution."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0f009e99",
+          "title": "January - 2022 Rwanda Current Situation FEWS NET IPC Geographic Data",
+          "description": "Rwanda Current Situation FEWS NET Acute Food Insecurity Classifications Geographic Data for 2022 (January - 2022 Rwanda Current Situation FEWS NET IPC Geographic Data)",
+          "media_type": "application/geo+json",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=RW&scenario=CS&collection_date=2022-01-01&format=geojson"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute food insecurity classifications for population affected by drought conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/rwanda_current_situation_fewsnet_ipc_shapefile_for_2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

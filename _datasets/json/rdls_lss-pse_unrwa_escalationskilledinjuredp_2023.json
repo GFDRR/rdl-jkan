@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-pse_unrwa_escalationskilledinjuredp_2023",
+      "title": "Palestine - Escalations in Gaza - Killed & Injured Persons in Gaza",
+      "description": "Dataset containing data on killed & injured Persons in Gaza.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/escalations-in-gaza-key-figures]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "United Nations Relief and Works Agency for Palestine Refugees in the Near East",
+        "url": "https://data.humdata.org/dataset/escalations-in-gaza-key-figures"
+      },
+      "creator": {
+        "name": "United Nations Relief and Works Agency for Palestine Refugees in the Near East",
+        "url": "https://data.humdata.org/dataset/escalations-in-gaza-key-figures"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-07",
+        "end": "2024-03-15"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Ministry of Health in Gaza",
+            "url": "https://data.humdata.org/dataset/escalations-in-gaza-key-figures"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA)",
+            "url": "https://data.humdata.org/dataset/escalations-in-gaza-key-figures"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Casualty data collected through direct observation and anecdotal reporting by the Ministry of Health in Gaza and compiled by UNRWA. Records document killed and injured persons resulting from the 2023 escalation in Gaza, aggregated from health facility reports and field assessments.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Ministry of Health in Gaza",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational records of killed and injured persons from official health authority in Gaza"
+          },
+          {
+            "id": "source_2",
+            "name": "United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Compilation and validation of casualty data from humanitarian operations in Gaza"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b87bbff0",
+          "title": "Data on Killed and Injured Persons - Gaza 2023",
+          "description": "Palestine - Escalations in Gaza - Killed & Injured Persons in Gaza (Data on killed & injured Persons in Gaza.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/1TNL1kx13vPC6KmpB8CFeEqjjj-ea7DP6X4BFOGsD_ew/edit?https://docs.google.com/spreadsheets/d/1TNL1kx13vPC6KmpB8CFeEqjjj-ea7DP6X4BFOGsD_ew/edit?usp=sharing"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct fatalities from conflict-violence escalation in Gaza"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct injuries from conflict-violence escalation in Gaza"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/escalations-in-gaza-key-figures",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

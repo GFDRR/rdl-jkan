@@ -1,0 +1,108 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_integratedphaseclassifica_2021",
+      "title": "Sudan: Integrated Phase Classification data",
+      "description": "Latest data shows that an estimated 7.3 million people in Sudan (16% of the population analyzed) are in high levels of acute food insecurity (IPC Phase 3 or above) between April and May (current period) and require urgent action. Of these, around 5.5 million people are classified in Crisis (IPC Phase 3) while around 1.8 million are critically food insecure classified in Emergency (IPC Phase 4). The most affected localities of Red Sea State (Halaib and Jubayt-el-maaadin) are classified in Emergency (IPC Phase 4). An increase in localized conflicts triggered population displacement, which, combined with the deterioration of the economy, led to higher than usual levels of acute food insecurity. As a result, the highest prevalence of population in Crisis (IPC Phase 3) or worse are observed in North Darfur (25%), followed by West Darfur (22%), North Kordofan (20%), South Kordofan (20%), Gedarif (19%) and Central, East and South Darfur states, ranging from 17-18%.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sudan-ipc-2021-2022]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/sudan-ipc-2021-2022"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/sudan-ipc-2021-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2021-05-01",
+        "end": "2022-03-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Integrated Phase Classification (IPC)",
+            "url": "https://data.humdata.org/dataset/sudan-ipc-2021-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IPC classification data aggregated by OCHA Sudan from direct observational and anecdotal data collection across Sudan localities. Population counts are classified into IPC phases (3-4 representing high acute food insecurity) to quantify food insecurity-related impacts on affected populations during April-May assessment period.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Integrated Phase Classification (IPC)",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Standardized classification system for food insecurity that integrates household food consumption, livelihood coping strategies, and nutritional status to classify populations into phases of food insecurity severity."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bb62f8f8",
+          "title": "Sudan IPC 2021-2022.xlsx",
+          "description": "Sudan Integrated Food Security Phase Classification (IPC) ACUTE FOOD INSECURITY ANALYSIS APRIL 2021 - FEBRUARY 2022-Issued May 2021",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a6210b6d-12ba-49da-b0e9-79e6d349ffd6/resource/bb62f8f8-d2bd-40a1-b063-4383a537375b/download/sudan-ipc-2021-2022.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by acute food insecurity classified by IPC phase"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sudan-ipc-2021-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-pak_ochapak_numbertdps_20150131",
+      "title": "Pakistan - Number of TDPs",
+      "description": "Number of Temporarily Displaced People (TDPs) from FATA region registered by UNHCR verified through National Database & Registration Authority (NADRA). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/number-of-tdps]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Pakistan",
+        "url": "https://data.humdata.org/dataset/number-of-tdps"
+      },
+      "creator": {
+        "name": "OCHA Pakistan",
+        "url": "https://data.humdata.org/dataset/number-of-tdps"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2015-01-31"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNHCR",
+            "url": "https://data.humdata.org/dataset/number-of-tdps"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "National Database & Registration Authority (NADRA)",
+            "url": "https://data.humdata.org/dataset/number-of-tdps"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Displaced population data collected through UNHCR registration processes and verified against Pakistan's national identity database (NADRA) to ensure accuracy of displacement counts from the FATA region.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNHCR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registration data of temporarily displaced persons collected through UNHCR field operations"
+          },
+          {
+            "id": "source_2",
+            "name": "National Database & Registration Authority (NADRA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Verification of displaced persons through national identity database cross-referencing"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b4d67a5c",
+          "title": "TDPs_31 Jan 2015.xlsx",
+          "description": "Pakistan - Number of TDPs (TDPs_31 Jan 2015.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/9d9d120a-f995-4d89-8058-a2a9557eb0f2/resource/b4d67a5c-2d99-4c94-87e9-ed43caa3106c/download/tdps-31-jan-2015.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Temporarily displaced population from FATA region due to conflict/crisis events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/number-of-tdps",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

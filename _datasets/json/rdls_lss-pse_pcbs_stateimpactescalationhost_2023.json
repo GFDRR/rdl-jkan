@@ -1,0 +1,199 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-pse_pcbs_stateimpactescalationhost_2023",
+      "title": "State of Palestine: Impact of the Escalation of Hostilities",
+      "description": "This dataset shows key figures from the escalation of hostilities since 7 October 2023.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/the-state-of-palestine-escalation-of-hostilities]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "PCBS will update the figures once it is received from different data sources. The data discrepancies between PCBS and Shireen website is due to the date and time of update.",
+      "contact_point": {
+        "name": "Palestinian Central Bureau of Statistics",
+        "url": "https://data.humdata.org/dataset/the-state-of-palestine-escalation-of-hostilities"
+      },
+      "creator": {
+        "name": "Palestinian Central Bureau of Statistics",
+        "url": "https://data.humdata.org/dataset/the-state-of-palestine-escalation-of-hostilities"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-07",
+        "end": "2026-01-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Palestinian Central Bureau of Statistics (PCBS)",
+            "url": "https://data.humdata.org/dataset/the-state-of-palestine-escalation-of-hostilities"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Palestinian Ministry of Health",
+            "url": "https://data.humdata.org/dataset/the-state-of-palestine-escalation-of-hostilities"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Impact data compiled from official Palestinian Central Bureau of Statistics registry and Palestinian Ministry of Health records documenting key figures (affected population, casualties, injuries, displacement) resulting from the escalation of hostilities since 7 October 2023.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Palestinian Central Bureau of Statistics (PCBS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official registry of impact figures and affected population statistics from the escalation of hostilities since 7 October 2023."
+          },
+          {
+            "id": "source_2",
+            "name": "Palestinian Ministry of Health",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Health sector data on casualties and injuries from the conflict escalation."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_429619ed",
+          "title": "opt_-escalation-of-hostilities-impact.xlsx",
+          "description": "State of Palestine: Impact of the Escalation of Hostilities (Spreadsheet showing figures of the impact of hostilities.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a02d750c-b2f7-4e22-b884-e9e495209a3a/resource/429619ed-8b50-4a01-a2b3-88601bc606ce/download/opt_-escalation-of-hostilities-impact.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Affected population from conflict-related hostilities escalation"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from conflict-related hostilities escalation"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injured persons from conflict-related hostilities escalation"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Displaced population from conflict-related hostilities escalation"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/the-state-of-palestine-escalation-of-hostilities",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

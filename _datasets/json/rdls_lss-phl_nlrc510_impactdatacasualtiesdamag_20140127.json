@@ -1,0 +1,159 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-phl_nlrc510_impactdatacasualtiesdamag_20140127",
+      "title": "Philippines - Impact data - casualties and damage - Typhoon Haiyan (Yolanda)",
+      "description": "Counts of damage and casualties from official data sets. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haiyan-yolanda]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haiyan-yolanda"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haiyan-yolanda"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2014-01-27"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Post-event impact data compiled from official government sources (DSWD DROMIC consolidated reports) and census records documenting casualties and building damage caused by Typhoon Haiyan. Data aggregated and standardized by Netherlands Red Cross for humanitarian response documentation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Netherlands Red Cross - 510",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official casualty and damage assessment data compiled from census records and government sources (DSWD DROMIC) following Typhoon Haiyan impact in the Philippines."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e2c6c7b4",
+          "title": "Effects of typhoon Yolanda - Casualties.xlsx",
+          "description": "Philippines - Impact data - casualties and damage - Typhoon Haiyan (Yolanda) (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/23efa9ad-5b20-43e1-bf2b-0c90226ff956/resource/e2c6c7b4-ea5c-4ad3-90f1-447cef0ec334/download/effects-of-typhoon-yolanda-casualties.xlsx"
+        },
+        {
+          "id": "resource_39008847",
+          "title": "Typhoon-Yolanda-DSWD-DROMIC-Consolidated-27Jan2014.xlsx",
+          "description": "Philippines - Impact data - casualties and damage - Typhoon Haiyan (Yolanda) (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/23efa9ad-5b20-43e1-bf2b-0c90226ff956/resource/39008847-ae7b-4873-8396-a3ea4f578da2/download/typhoon-yolanda-dswd-dromic-consolidated-27jan2014.xlsx"
+        },
+        {
+          "id": "resource_70241948",
+          "title": "Typhoon-Yolanda-DSWD-DROMIC-Consolidated-27Jan2014_pcoded.csv",
+          "description": "Philippines - Impact data - casualties and damage - Typhoon Haiyan (Yolanda) (removed formatting and pcoded version)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/23efa9ad-5b20-43e1-bf2b-0c90226ff956/resource/70241948-30cf-465f-818f-12a3af30e4ae/download/typhoon-yolanda-dswd-dromic-consolidated-27jan2014_pcoded.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Typhoon Haiyan"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from Typhoon Haiyan"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injuries from Typhoon Haiyan"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haiyan-yolanda",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_floodaffectedpeople201320_20191027",
+      "title": "Sudan Flood Affected people from 2013 to 2019",
+      "description": "Flood affected people in Sudan by state for the last few years.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sudan-flood-affected-people-from-2013-to-2019]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/sudan-flood-affected-people-from-2013-to-2019"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/sudan-flood-affected-people-from-2013-to-2019"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2019-10-27"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "lineage": {
+        "description": "Post-event flood impact data aggregated from multiple sources by OCHA Sudan, compiled into a state-level registry documenting affected population counts across Sudan from 2013 to 2019.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Sudan",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registry of flood-affected populations compiled from multiple sources across Sudan states for the period 2013-2019"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1ef32c2a",
+          "title": "floods-affected-people_Sudan_2013-to-2019.xlsx",
+          "description": "Flood affected people from 2013 to 2019 across Sudan, with different states. Only 2014 is missing.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/74eafdd9-1be5-40bd-8ce0-1e103f0918d0/resource/1ef32c2a-0179-4528-b6a8-d06b51ef29dc/download/floods-affected-people_sudan_2013-to-2019.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flooding in Sudan by state from 2013 to 2019"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sudan-flood-affected-people-from-2013-to-2019",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

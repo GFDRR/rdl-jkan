@@ -1,0 +1,173 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-npl_ochanpl_officialfigurescasualties_20150605",
+      "title": "Nepal: Official figures for casualties and damage",
+      "description": "Contains frequently updated figures for deaths, injuries, and damaged government and public buildings, by district.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/official-figures-for-casualties-and-damage]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Check for updates. Data will be updated as figures become available.",
+      "contact_point": {
+        "name": "OCHA Nepal (inactive)",
+        "url": "https://data.humdata.org/dataset/official-figures-for-casualties-and-damage"
+      },
+      "creator": {
+        "name": "OCHA Nepal (inactive)",
+        "url": "https://data.humdata.org/dataset/official-figures-for-casualties-and-damage"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-06-05"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Ministry of Home Affairs, Nepal",
+            "url": "https://data.humdata.org/dataset/official-figures-for-casualties-and-damage"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Nepali Police",
+            "url": "https://data.humdata.org/dataset/official-figures-for-casualties-and-damage"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event impact data compiled from official reports by Nepal's Ministry of Home Affairs and Nepali Police, aggregating deaths, injuries, and building damage assessments by district following an earthquake event. Data is frequently updated as assessments progress.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Ministry of Home Affairs, Nepal",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official government casualty and damage figures compiled from post-earthquake assessments"
+          },
+          {
+            "id": "source_2",
+            "name": "Nepali Police",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Police records contributing to official casualty and damage statistics"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_af078993",
+          "title": "MoHA/NEOC Official Figures",
+          "description": "Nepal: Official figures for casualties and damage (MoHA/NEOC Official Figures)",
+          "format": "Google Sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/1MCsMtcfN8jwGg4qdzYZCKyxpYp8cdqRSrEpF1WpR6ZE/edit#gid=1367273225"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from earthquake affecting government and public buildings by district"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Earthquake-related deaths by district"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Earthquake-related injuries by district"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/official-figures-for-casualties-and-damage",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

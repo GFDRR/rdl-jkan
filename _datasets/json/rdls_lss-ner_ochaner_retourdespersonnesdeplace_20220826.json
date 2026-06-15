@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ner_ochaner_retourdespersonnesdeplace_20220826",
+      "title": "Niger : Retour des Personnes Déplacées Internes",
+      "description": "Ce jeu de données donne la planification des retours des personnes déplacées internes à Diffa.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/niger-retour-des-personnes-deplacees-internes]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Niger",
+        "url": "https://data.humdata.org/dataset/niger-retour-des-personnes-deplacees-internes"
+      },
+      "creator": {
+        "name": "OCHA Niger",
+        "url": "https://data.humdata.org/dataset/niger-retour-des-personnes-deplacees-internes"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NER"
+        ]
+      },
+      "temporal": {
+        "start": "2022-08-26"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Comité National de collecte de Données Personnes Déplacées Internes",
+            "url": "https://data.humdata.org/dataset/niger-retour-des-personnes-deplacees-internes"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Registry-based administrative data collected by the National IDP Data Collection Committee documenting the planned return of internally displaced persons from Diffa region, compiled as of phase 2 in August 2022.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Comité National de collecte de Données Personnes Déplacées Internes",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National registry of internally displaced persons collecting displacement and return data through administrative records and surveys in Niger"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ba3d2c05",
+          "title": "Retours PDI_au phase 2_Diffa_26082022.xlsx",
+          "description": "Niger : Retour des Personnes Déplacées Internes (Retour des PDIs par village - Août 2022)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c7cb4aa8-1d2d-4589-b266-5fb46d4df687/resource/ba3d2c05-d74c-40d3-95b9-864f2ed0dade/download/retours-pdi_au-phase-2_diffa-26082022.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons returning to Diffa region, with displacement triggered by flood hazard"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/niger-retour-des-personnes-deplacees-internes",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

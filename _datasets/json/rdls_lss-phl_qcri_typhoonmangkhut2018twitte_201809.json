@@ -1,0 +1,180 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-phl_qcri_typhoonmangkhut2018twitte_201809",
+      "title": "Philippines - Typhoon Mangkhut 2018 Twitter Data",
+      "description": "This is a Twitter dataset collected during the typhoon Mangkhut 2018 in the Philippines. The data was collected, processed, and analyzed by the AIDR (http://aidr.qcri.org) platform using state of the art machine learning techniques. The data includes the reports of number of injured and dead people, infrastructure damage reports, missing or found people, urgent needs and donation offers for each hour. Due to Twitter TOS, we do not share full tweets content on HDX. Please contact us via HDX or on aidr.qcri@gmail.com to get tweet ids of the dataset along with a tool which can be used to rehydrate tweets from tweet ids.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/typhoon-mangkhut-2018-twitter-data]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/typhoon-mangkhut-2018-twitter-data"
+      },
+      "creator": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/typhoon-mangkhut-2018-twitter-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2018-09-16",
+        "end": "2018-09-26"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "AIDR (Artificial Intelligence for Disaster Response)",
+            "url": "https://data.humdata.org/dataset/typhoon-mangkhut-2018-twitter-data"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Twitter",
+            "url": "https://data.humdata.org/dataset/typhoon-mangkhut-2018-twitter-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Twitter data was collected during Typhoon Mangkhut 2018 in the Philippines and processed through the AIDR platform using deep learning techniques to automatically extract and classify disaster impact reports including injured/dead persons, infrastructure damage, missing/found people, urgent needs, and donation offers aggregated by hourly intervals.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "AIDR (Artificial Intelligence for Disaster Response)",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Machine learning platform using deep learning techniques to process textual and imagery content from social media to extract and classify disaster impact reports including casualties, infrastructure damage, and humanitarian needs."
+          },
+          {
+            "id": "source_2",
+            "name": "Twitter",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Social media platform providing real-time crowdsourced reports of disaster impacts during Typhoon Mangkhut 2018 in the Philippines."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://aidr.qcri.org"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_0a9ae82c",
+          "title": "Typhoon_Mangkhut_2018_Twitter_AIDR_Data_Analysis.xlsx",
+          "description": "Typhoon Mangkhut, known in the Philippines as Typhoon Ompong, was an extremely powerful tropical cyclone that brought widespread damages to Guam, the Philippines and South China in mid September in 2018. This dataset was collected from Twitter during the typhoon Mangkhut. The dataset was processed and analyzed using the AIDR (http://aidr.qcri.org) platform.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6504f826-7974-42ce-817a-49d87ea0a930/resource/0a9ae82c-5cfc-4dce-b5ae-fb878a69d46a/download/typhoon_mangkhut_2018_twitter_aidr_data_analysis.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Infrastructure damage reports from Typhoon Mangkhut extracted from social media"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injured persons reported during Typhoon Mangkhut from social media analysis"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities reported during Typhoon Mangkhut from social media analysis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/typhoon-mangkhut-2018-twitter-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ssd_unosat_damagedensitymapyeinahrye_20170408",
+      "title": "South Sudan - Damage density map, Yei, Nahr Yei district",
+      "description": "This map illustrates satellite-detected damage density at and around the city of Yei, Nahr Yei district, Central Equatoria, South Sudan. Using satellite imagery acquired 05 March 2017, UNITAR - UNOSAT identified a total of about 6,300 destroyed structures within the area of the current map (approximately 700 square kilometers). Most of the damage is concentrated in the outskirts of the city. The whole analysis over the Nahr Yei district covers an area of approximately 3,640 square kilometers, and the results show over 18,300 destroyed structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-density-map-yei-nahr-yei-district-south-sudan]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-density-map-yei-nahr-yei-district-south-sudan"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-density-map-yei-nahr-yei-district-south-sudan"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2017-04-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery acquired on 05 March 2017 with baseline imagery to detect structural damage through visual interpretation, identifying approximately 6,300 destroyed structures in the mapped area and 18,300 across the full Nahr Yei district analysis zone.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-detected damage assessment using multi-temporal imagery comparison to identify destroyed structures in conflict-affected areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_18c8f4e5",
+          "title": "CE20131218SSD_Yei_5Mar2017.gdb.zip",
+          "description": "South Sudan - Damage density map, Yei, Nahr Yei district (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_Yei_5Mar2017.gdb.zip"
+        },
+        {
+          "id": "resource_8af89f88",
+          "title": "CE20131218SSD_Yei_5Mar2017_shp.zip",
+          "description": "South Sudan - Damage density map, Yei, Nahr Yei district (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_Yei_5Mar2017_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessed from satellite imagery in Yei district"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-density-map-yei-nahr-yei-district-south-sudan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
