@@ -337,7 +337,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: PGA:g
       process: ground_motion
       trigger: null
@@ -363,7 +363,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -388,7 +388,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: PGA:g
       process: ground_motion
       trigger: null
@@ -413,7 +413,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -739,7 +739,7 @@ vulnerability:
       hazard_analysis_type: deterministic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
@@ -765,7 +765,7 @@ vulnerability:
       hazard_analysis_type: deterministic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
@@ -792,7 +792,7 @@ vulnerability:
       hazard_analysis_type: deterministic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
@@ -821,7 +821,7 @@ vulnerability:
       hazard_analysis_type: deterministic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
