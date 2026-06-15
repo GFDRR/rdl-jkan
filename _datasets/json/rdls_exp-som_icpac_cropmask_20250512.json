@@ -1,0 +1,89 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-som_icpac_cropmask_20250512",
+      "title": "Somalia Crop Mask",
+      "description": "The dataset contains global crop at 0.0089286 deg resolution (about 1 squared kilometer). Each pixel represents the area fraction of the specific cover (i.e. percentage of the pixel with rangelands). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-somalia-crop-mask]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Time period is set to publication date rather than the date the data covers",
+      "contact_point": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-somalia-crop-mask"
+      },
+      "creator": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-somalia-crop-mask"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2025-05-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Global crop mask generated from remote sensing data at approximately 1 km² resolution, with each pixel representing the fractional area of cropland cover. The dataset provides agricultural exposure information for Somalia and globally, enabling assessment of crop-based assets at risk to hazards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Global crop mask derived from remote sensing at 0.0089286 degree resolution, providing pixel-level crop area fractions for agricultural exposure mapping"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2ec6c1cd",
+          "title": "Somalia Crop Mask GeoTIFF",
+          "description": "GeoTIFF file. The dataset contains global crop at 0.0089286 deg resolution (about 1 squared kilometer). Each pixel represents the area fraction of the specific cover (i.e. percentage of the pixel with rangelands)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__SOM_crop_negative1_normalized&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Crop area fraction per pixel at 1 km² resolution showing percentage of land cover classified as cropland"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/icpac-geonode-somalia-crop-mask",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

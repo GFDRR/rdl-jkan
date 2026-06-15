@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-som_wfp_roadnetworkaccessconstrai_20170411",
+      "title": "Somalia - road network and access constraints",
+      "description": "This dataset is an extraction of the WFP database following UNSDI-T standards. See 'Attributes' tab for more information on the data structure. Roads are displayed here according to their functional class (fclass). It contains as well information on current status of the roads, as per latest Road Access Constraints map from Logistics Cluster. The dataset was updated on 11 April 2017. For more information on attributes, please go check the layer on WFP geonode:. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-road-network-and-access-constraints]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/somalia-road-network-and-access-constraints"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/somalia-road-network-and-access-constraints"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2017-04-11"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP database",
+            "url": "https://data.humdata.org/dataset/somalia-road-network-and-access-constraints"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Logistics Cluster Road Access Constraints map",
+            "url": "https://data.humdata.org/dataset/somalia-road-network-and-access-constraints"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Road network data extracted from WFP database following UNSDI-T standards, with functional classification (fclass), surface conditions, and current access constraints from Logistics Cluster integrated as attributes. The dataset represents the spatial infrastructure inventory for Somalia as of April 2017.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP database",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Road network inventory following UNSDI-T standards with functional classification and surface condition attributes"
+          },
+          {
+            "id": "source_2",
+            "name": "Logistics Cluster Road Access Constraints map",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Current road access status and constraints information integrated into the road network dataset"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_007d05cc",
+          "title": "SOM_trs_roads_wfp",
+          "description": "Somalia - road network and access constraints (Shapefile)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://ogcserver.gis.wfp.org/geoserver/ows?&version=1.0.0&service=WFS&request=GetFeature&typename=geonode:som_trs_roads_osm&outputFormat=SHAPE-ZIP",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road network with functional classification, surface conditions, and access constraints"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-road-network-and-access-constraints",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-sdn_worldpop_griddedpopulationestimate",
+      "title": "Gridded population estimates for Sudan using UN COD-PS estimates 2022, version 2.0",
+      "description": "These data were produced by WorldPop at the University of Southampton. These data include gridded estimates of population at approximately 100m and 1km for 2022, along with estimates of the number of people belonging to individual age-gender groups. These results were produced using subnational population estimates for Sudan in 2022 provided in the Common Operational Dataset on Population Statistics ( COD-PS ) and built-up surfaces/volumes covariates extracted from GHSL datasets ; GHS-BUILT-Surface epoch 2020 layer , combined with Digitize Africa building footprints , were used to delineate settled areas. The constrained and unconstrained top-down disaggregation method was used to produce the datasets, i.e. population was only estimated within areas classified as containing built settlement. The modelling work and geospatial data processing was led by Bondarenko M. and Leasure D.R.. Oversight was provided by Tatem A.J. For further details, please, read the Release Statement . Recommended citations Bondarenko M., Leasure D.R., and Tatem A.J. 2023 Gridded population estimates for Sudan using UN COD-PS estimates 2022, version 2.0. WorldPop, University of Southampton. doi:10.5258/SOTON/WP00761 License These data may be distributed using a Creative Commons Attribution 4.0 International (CC BY 4.0) License, specified in legal code. Contact release@worldpop.org for more information. The authors followed rigorous procedures designed to ensure that the used data, the applied method and thus the results are appropriate and of reasonable quality. If users encounter apparent errors or misstatements, they should contact WorldPop at release@worldpop.org. WorldPop, University of Southampton, and their sponsors offer these data on a 'where is, as is' basis; do not offer an express or implied warranty of any kind; do not guarantee the quality, applicability, accuracy, reliability or completeness of any data provided; and shall not be liable for incidental, consequential, or special damages arising out of the use of any data that they offer.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/gridded-population-estimates-for-sudan-using-un-cod-ps-estimates-2022-v2]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "CITATION Bondarenko M., Leasure D.R., and Tatem A.J. 2023 Gridded population estimates for Sudan using UN COD-PS estimates 2022, version 2.0. WorldPop, University of Southampton. doi:10.5258/SOTON/WP00761",
+      "contact_point": {
+        "name": "WorldPop",
+        "url": "https://data.humdata.org/dataset/gridded-population-estimates-for-sudan-using-un-cod-ps-estimates-2022-v2"
+      },
+      "creator": {
+        "name": "WorldPop",
+        "url": "https://data.humdata.org/dataset/gridded-population-estimates-for-sudan-using-un-cod-ps-estimates-2022-v2"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Common Operational Dataset on Population Statistics (COD-PS)",
+            "url": "https://data.humdata.org/dataset/gridded-population-estimates-for-sudan-using-un-cod-ps-estimates-2022-v2"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Global Human Settlement Layer (GHSL)",
+            "url": "https://data.humdata.org/dataset/gridded-population-estimates-for-sudan-using-un-cod-ps-estimates-2022-v2"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Subnational population estimates from COD-PS for Sudan 2022 were spatially disaggregated using WorldPop's dasymetric mapping methodology, with built-up area and volume covariates from GHSL datasets as spatial predictors, to produce gridded population estimates at 100m and 1km resolution with age-gender and school-age breakdowns.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Common Operational Dataset on Population Statistics (COD-PS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Subnational population estimates for Sudan in 2022 that provided the baseline population counts used to calibrate the gridded population model"
+          },
+          {
+            "id": "source_2",
+            "name": "Global Human Settlement Layer (GHSL)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Built-up surfaces and volumes covariates used as spatial predictors in the population disaggregation model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://data.humdata.org/dataset/cod-ps-sdn"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://ghsl.jrc.ec.europa.eu/download.php"
+        },
+        {
+          "id": "reference_3",
+          "name": "Methodology documentation",
+          "url": "http://digitizeafrica.ai/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_ec0b359d",
+          "title": "SDN_population_v2_0_README.pdf",
+          "description": "This README file provides information about the data included in the data release, how it was produced, source data that were used.",
+          "media_type": "application/pdf",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/SDN_population_v2_0_README.pdf"
+        },
+        {
+          "id": "resource_f63e89ac",
+          "title": "sdn_population_2022_100m_constrained_v2.zip",
+          "description": "This geotiff raster, at a spatial resolution of 3 arc-seconds (approximately 100m at the equator), contains estimates of total population size per grid cell across Sudan. NA values represent areas that were mapped as unsettled based on the GHSL settlement layer and Digitize Africa building footprints . These data are stored as floating-point numbers rather than integers to avoid rounding errors in aggregated populations for larger areas.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/100m/sdn_population_2022_100m_constrained_v2.zip"
+        },
+        {
+          "id": "resource_069876d5",
+          "title": "sdn_agegender_2022_100m_constrained_v2.zip",
+          "description": "This zip file contains raster files in geotiff format at a spatial resolution of 3 arc-seconds (approximately 100m at the equator). Each raster provides gridded population estimates for an age-gender group of settled areas (NA represent unsettled areas). Files are labelled with either an 'M' (male) or an 'F' (female) followed by the age-range of the group (five year bins). For instance, 'F_00_04' and 'M_05_09' are population counts of under 5 year olds for females and between 5 and 9 years old for males, respectively. Eighty year olds and over are represented in the groups 'F_80Plus' and 'M_80Plus'. These data were produced using age-gender national proportions from COD-PS . The age-gender proportions were applied to the gridded population estimates (sdn_pop_2022_100m_constrained_v1) to allocate the population to the different age-gender classes. While this data represents population counts, values contain decimals, i.e. fractions of people. This is because we do not estimate which grid cell each individual in a given age group occupies and are maintaining the UN COD-PS numbers. For this reason, it is advised to aggregate the rasters at a coarser scale. For example, if four grid cells next to each other have values of 0.25 this indicates that there is estimated to be 1 person of that age group somewhere in those four grid cells.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/100m/sdn_agesex_2022_100m_constrained_v2.zip"
+        },
+        {
+          "id": "resource_95e6cacd",
+          "title": "sdn_population_2022_1km_constrained_v2.zip",
+          "description": "This geotiff raster, at a spatial resolution of 30 arc-seconds (approximately 1km at the equator), contains estimates of total population size per grid cell across Sudan. NA values represent areas that were mapped as unsettled based on the GHSL settlement layer. The dataset was produced by aggregating sdn_population_2022_100m_constrained_v1.tif dataset to 1km.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/1km/sdn_population_2022_1km_constrained_v2.zip"
+        },
+        {
+          "id": "resource_28028b48",
+          "title": "sdn_agegender_2022_1km_constrained_v2.zip",
+          "description": "This zip file contains rasters in geotiff format at a spatial resolution of 30 arc-seconds (approximately 1km at the equator). Each raster provides gridded population estimates for an age-gender group of settled areas (NA represent unsettled areas). These datasets were produced by aggregating sdn_agegender_2022_100m_constrained_v1_0 datasets respectively to 1km.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/1km/sdn_agesex_2022_1km_constrained_v2.zip"
+        },
+        {
+          "id": "resource_10243d1d",
+          "title": "sdn_school_age_2022_1km_constrained_v2.zip",
+          "description": "This zip file contains rasters in geotiff format at a spatial resolution of 30 arc-seconds (approximately 1km at the equator). Each raster provides gridded population estimates for children, broken down in differing school attendance age groupings (0 to 5 years old, 0 to 17 years old, 6 to 13 years old and 14 to 17 years old) for settled areas (NA represent unsettled areas). Files are labelled with either an 'M' (male) or an 'F' (female) or 'F_M' for both male and female. These data were created by applying Sprague multipliers to 'sdn_agegender_2022_1km_constrained_v2 ' raster data. Sprague multipliers are used to interpolate data and obtain population estimates by single years of age and these are then aggregated to obtain differing age groupings.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/1km/sdn_school_age_2022_1km_constrained_v2.zip"
+        },
+        {
+          "id": "resource_d3f18b0c",
+          "title": "sdn_school_age_adm2_2022.zip",
+          "description": "This zip file contains the zonal statistics calculated using 'sdn_school_age_2022_1km_constrained_v2 ' and level 2 of Subnational Administrative Boundaries for Sudan provided by OCHA on HDX: https://data.humdata.org/dataset/cod-ab-sdn",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/csv/sdn_school_age_adm2_2022.zip"
+        },
+        {
+          "id": "resource_25114237",
+          "title": "sdn_pop_adm2_2022.zip",
+          "description": "This zip file contains the zonal statistics of total population calculated using 'sdn_agegender_2022_100m_constrained_v2' and level 2 of Subnational Administrative Boundaries for Sudan provided by OCHA on HDX: https://data.humdata.org/dataset/cod-ab-sdn",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/csv/sdn_pop_adm2_2022.zip"
+        },
+        {
+          "id": "resource_760ad53c",
+          "title": "sdn_agegender_2022_100m_unconstrained_v2.zip",
+          "description": "This zip file contains raster files in geotiff format at a spatial resolution of 3 arc-seconds (approximately 100m at the equator). Each raster provides gridded population estimates for an age-gender group of settled areas (NA represent surface waters). Files are labelled with either an 'M' (male) or an 'F' (female) followed by the age-range of the group (five year bins). For instance, 'F_00_04' and 'M_05_09' are population counts of under 5 year olds for females and between 5 and 9 years old for males, respectively. Eighty year olds and over are represented in the groups 'F_80Plus' and 'M_80Plus'. These data were produced using age-gender national proportions from COD-PS . The age-gender proportions were applied to the gridded population estimates (sdn_pop_2022_100m_uconstrained_v1) to allocate the population to the different age-gender classes. While this data represents population counts, values contain decimals, i.e. fractions of people. This is because we do not estimate which grid cell each individual in a given age group occupies. For this reason, it is advised to aggregate the rasters at a coarser scale. For example, if four grid cells next to each other have values of 0.25 this indicates that there is 1 person of that age group somewhere in those four grid cells.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/unconstrained/100m/sdn_agesex_2022_100m_unconstrained_v2.zip"
+        },
+        {
+          "id": "resource_332d937b",
+          "title": "sdn_population_2022_100m_unconstrained_v2.zip",
+          "description": "This geotiff raster, at a spatial resolution of 3 arc-seconds (approximately 100m at the equator), contains estimates of total population size per grid cell across Sudan. NA values represent areas that were mapped as water. These data are stored as floating-point numbers rather than integers to avoid rounding errors in aggregated populations for larger areas.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/unconstrained/100m/sdn_population_2022_100m_unconstrained_v2.zip"
+        },
+        {
+          "id": "resource_67c88931",
+          "title": "sdn_agegender_2022_1km_unconstrained_v2.zip",
+          "description": "This zip file contains raster files in geotiff format at a spatial resolution of 30 arc-seconds (approximately 1km at the equator). Each raster provides gridded population estimates for an age-gender group of settled areas (NA represent surface waters). Files are labelled with either an 'M' (male) or an 'F' (female) followed by the age-range of the group (five year bins). For instance, 'F_00_04' and 'M_05_09' are population counts of under 5 year olds for females and between 5 and 9 years old for males, respectively. Eighty year olds and over are represented in the groups 'F_80Plus' and 'M_80Plus'. These data were produced using age-gender national proportions from COD-PS . The age-gender proportions were applied to the gridded population estimates (sdn_pop_2022_1km_uconstrained_v1) to allocate the population to the different age-gender classes. While this data represents population counts, values contain decimals, i.e. fractions of people. This is because we do not estimate which grid cell each individual in a given age group occupies. For this reason, it is advised to aggregate the rasters at a coarser scale. For example, if four grid cells next to each other have values of 0.25 this indicates that there is 1 person of that age group somewhere in those four grid cells.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/unconstrained/1km/sdn_agesex_2022_1km_unconstrained_v2.zip"
+        },
+        {
+          "id": "resource_fb20bcd0",
+          "title": "sdn_population_2022_1km_unconstrained_v2.zip",
+          "description": "This geotiff raster, at a spatial resolution of 30 arc-seconds (approximately 1km at the equator), contains estimates of total population size per grid cell across Sudan. NA values represent areas that were mapped as water. The dataset was produced by aggregating sdn_pop_2022_100m_unconstrained_v1_0.tif dataset to 1km.",
+          "media_type": "application/zip",
+          "download_url": "https://data.worldpop.org/repo/wopr/SDN/population/v2/unconstrained/1km/sdn_population_2022_1km_unconstrained_v2.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population estimates for Sudan at 100m and 1km resolution, including age-gender disaggregation and school-age population"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/gridded-population-estimates-for-sudan-using-un-cod-ps-estimates-2022-v2",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
