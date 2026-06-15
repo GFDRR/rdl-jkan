@@ -1,0 +1,3169 @@
+---
+attributions: []
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: WorldPop
+  url: https://data.humdata.org/dataset/worldpop-age-and-gender-structures-for-united-republic-of-tanzania
+creator:
+  affiliation: null
+  email: null
+  name: WorldPop
+  url: https://data.humdata.org/dataset/worldpop-age-and-gender-structures-for-united-republic-of-tanzania
+dataset_id: rdls_exp-tza_worldpop_unitedrepublicagegenderst_2000
+description: 'WorldPop produces different types of gridded population count datasets,
+  depending on the methods used and end application. Please make sure you have read
+  our Mapping Populations overview page before choosing and downloading a dataset.
+  A description of the modelling methods used for age and gender structures can be
+  found in Tatem et al and Pezzulo et al . Details of the input population count datasets
+  used can be found here , and age/gender structure proportion datasets here . Both
+  top-down ''unconstrained'' and ''constrained'' versions of the datasets are available,
+  and the differences between the two methods are outlined here . The datasets represent
+  the outputs from a project focused on construction of consistent 100m resolution
+  population count datasets for all countries of the World structured by male/female
+  and 5-year age classes (plus a <1 year class). These efforts necessarily involved
+  some shortcuts for consistency. The unconstrained datasets are available for each
+  year from 2000 to 2020. The constrained datasets are only available for 2020 at
+  present, given the time periods represented by the building footprint and built
+  settlement datasets used in the mapping. Data for earlier dates is available directly
+  from WorldPop. WorldPop (www.worldpop.org - School of Geography and Environmental
+  Science, University of Southampton; Department of Geography and Geosciences, University
+  of Louisville; Departement de Geographie, Universite de Namur) and Center for International
+  Earth Science Information Network (CIESIN), Columbia University (2018). Global High
+  Resolution Population Denominators Project - Funded by The Bill and Melinda Gates
+  Foundation (OPP1134076). https://dx.doi.org/10.5258/SOTON/WP00646. [Source: This
+  metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/worldpop-age-and-gender-structures-for-united-republic-of-tanzania]'
+details: null
+exposure:
+- asset_type:
+    description: Gridded population counts disaggregated by age group (0-1, 5-year
+      intervals to 80+) and gender for Tanzania in 2020
+    id: population
+    scheme: null
+    title: null
+    uri: null
+  category: population
+  id: exposure_1
+  metrics:
+  - dimension: population
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: WorldPop applied spatial disaggregation methods (Tatem et al., Pezzulo
+    et al.) to census and survey population data to produce age-gender structured
+    population counts at 100m grid resolution (3 arc-seconds) for Tanzania in 2020.
+    The dataset provides estimates of total people per grid cell stratified by gender
+    and 5-year age groups from 0-1 to 80+ years.
+  sources:
+  - id: source_1
+    license: null
+    name: WorldPop
+    risk_data_type:
+    - exposure
+    type: dataset
+    url: null
+    used_in: exposure
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/worldpop-age-and-gender-structures-for-united-republic-of-tanzania
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_80_2020.tif
+  format: null
+  id: resource_9556b77d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_80_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_75_2020.tif
+  format: null
+  id: resource_732c1c91
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_75_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_70_2020.tif
+  format: null
+  id: resource_75b89c32
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_70_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_65_2020.tif
+  format: null
+  id: resource_937b18f2
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_65_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_60_2020.tif
+  format: null
+  id: resource_632a449d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_60_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_5_2020.tif
+  format: null
+  id: resource_d1a5ff3c
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_5_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_55_2020.tif
+  format: null
+  id: resource_45a8bc0e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_55_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_50_2020.tif
+  format: null
+  id: resource_ce796ce8
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_50_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_45_2020.tif
+  format: null
+  id: resource_768861ce
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_45_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_40_2020.tif
+  format: null
+  id: resource_faa73a2c
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_40_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_35_2020.tif
+  format: null
+  id: resource_c9ceb395
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_35_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_30_2020.tif
+  format: null
+  id: resource_7083311c
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_30_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_25_2020.tif
+  format: null
+  id: resource_a918de2f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_25_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_20_2020.tif
+  format: null
+  id: resource_34876cb0
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_20_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_1_2020.tif
+  format: null
+  id: resource_5db558d6
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_1_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_15_2020.tif
+  format: null
+  id: resource_908ba245
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_15_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_10_2020.tif
+  format: null
+  id: resource_47e3bddf
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_10_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_m_0_2020.tif
+  format: null
+  id: resource_eb9064c4
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_0_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_80_2020.tif
+  format: null
+  id: resource_e3d1a6a1
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_80_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_75_2020.tif
+  format: null
+  id: resource_1d8925bb
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_75_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_70_2020.tif
+  format: null
+  id: resource_1481bc29
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_70_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_65_2020.tif
+  format: null
+  id: resource_c14ad8ab
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_65_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_60_2020.tif
+  format: null
+  id: resource_32c9d87e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_60_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_5_2020.tif
+  format: null
+  id: resource_66a10e65
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_5_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_55_2020.tif
+  format: null
+  id: resource_a85203df
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_55_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_50_2020.tif
+  format: null
+  id: resource_2c7d91db
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_50_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_45_2020.tif
+  format: null
+  id: resource_3dc887dd
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_45_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_40_2020.tif
+  format: null
+  id: resource_103ba424
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_40_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_35_2020.tif
+  format: null
+  id: resource_b0339d46
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_35_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_30_2020.tif
+  format: null
+  id: resource_a2162ce7
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_30_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_25_2020.tif
+  format: null
+  id: resource_1b294a65
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_25_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_20_2020.tif
+  format: null
+  id: resource_65485734
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_20_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_1_2020.tif
+  format: null
+  id: resource_b3ec7862
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_1_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_15_2020.tif
+  format: null
+  id: resource_f83fb2f5
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_15_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_10_2020.tif
+  format: null
+  id: resource_9137c7de
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_10_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2020)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/TZA/tza_f_0_2020.tif
+  format: null
+  id: resource_a4b9433d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_0_2020.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_80_2019.tif
+  format: null
+  id: resource_65a9886d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_80_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_75_2019.tif
+  format: null
+  id: resource_928dee4e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_75_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_70_2019.tif
+  format: null
+  id: resource_04013190
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_70_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_65_2019.tif
+  format: null
+  id: resource_5bda6622
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_65_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_60_2019.tif
+  format: null
+  id: resource_a77bcc06
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_60_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_5_2019.tif
+  format: null
+  id: resource_c6c7c094
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_5_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_55_2019.tif
+  format: null
+  id: resource_2471e378
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_55_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_50_2019.tif
+  format: null
+  id: resource_57117885
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_50_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_45_2019.tif
+  format: null
+  id: resource_20a51a5b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_45_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_40_2019.tif
+  format: null
+  id: resource_2ea0860a
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_40_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_35_2019.tif
+  format: null
+  id: resource_74317c4b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_35_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_30_2019.tif
+  format: null
+  id: resource_f266318c
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_30_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_25_2019.tif
+  format: null
+  id: resource_6b06a742
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_25_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_20_2019.tif
+  format: null
+  id: resource_383ea883
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_20_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_1_2019.tif
+  format: null
+  id: resource_bd381119
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_1_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_15_2019.tif
+  format: null
+  id: resource_ac85bde0
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_15_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_10_2019.tif
+  format: null
+  id: resource_1016c2ba
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_10_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_m_0_2019.tif
+  format: null
+  id: resource_ed12ae15
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_0_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_80_2019.tif
+  format: null
+  id: resource_486e31ff
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_80_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_75_2019.tif
+  format: null
+  id: resource_2de993ce
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_75_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_70_2019.tif
+  format: null
+  id: resource_2c1eb52a
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_70_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_65_2019.tif
+  format: null
+  id: resource_09b6abba
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_65_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_60_2019.tif
+  format: null
+  id: resource_fcca7d5f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_60_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_5_2019.tif
+  format: null
+  id: resource_e41a57e1
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_5_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_55_2019.tif
+  format: null
+  id: resource_4b905725
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_55_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_50_2019.tif
+  format: null
+  id: resource_df26379b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_50_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_45_2019.tif
+  format: null
+  id: resource_fb710092
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_45_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_40_2019.tif
+  format: null
+  id: resource_e450354b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_40_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_35_2019.tif
+  format: null
+  id: resource_bf476588
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_35_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_30_2019.tif
+  format: null
+  id: resource_67378c18
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_30_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_25_2019.tif
+  format: null
+  id: resource_7e9c028a
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_25_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_20_2019.tif
+  format: null
+  id: resource_0a139128
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_20_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_1_2019.tif
+  format: null
+  id: resource_24c35dae
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_1_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_15_2019.tif
+  format: null
+  id: resource_901ae072
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_15_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_10_2019.tif
+  format: null
+  id: resource_571a3abb
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_10_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2019)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2019/TZA/tza_f_0_2019.tif
+  format: null
+  id: resource_3f308157
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_0_2019.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_80_2018.tif
+  format: null
+  id: resource_ca12c700
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_80_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_75_2018.tif
+  format: null
+  id: resource_6403b358
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_75_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_70_2018.tif
+  format: null
+  id: resource_fe062411
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_70_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_65_2018.tif
+  format: null
+  id: resource_d999fff6
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_65_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_60_2018.tif
+  format: null
+  id: resource_76ba4338
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_60_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_5_2018.tif
+  format: null
+  id: resource_86d258aa
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_5_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_55_2018.tif
+  format: null
+  id: resource_87387c0d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_55_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_50_2018.tif
+  format: null
+  id: resource_36e03674
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_50_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_45_2018.tif
+  format: null
+  id: resource_934d7f0f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_45_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_40_2018.tif
+  format: null
+  id: resource_fe1a0e4a
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_40_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_35_2018.tif
+  format: null
+  id: resource_f1561ca2
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_35_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_30_2018.tif
+  format: null
+  id: resource_581eb585
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_30_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_25_2018.tif
+  format: null
+  id: resource_0cd20499
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_25_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_20_2018.tif
+  format: null
+  id: resource_4f51a479
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_20_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_1_2018.tif
+  format: null
+  id: resource_71417e09
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_1_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_15_2018.tif
+  format: null
+  id: resource_e57b516c
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_15_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_10_2018.tif
+  format: null
+  id: resource_86ba7294
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_10_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_m_0_2018.tif
+  format: null
+  id: resource_b6e4dbf5
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_0_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_80_2018.tif
+  format: null
+  id: resource_950bee5e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_80_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_75_2018.tif
+  format: null
+  id: resource_8b458edc
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_75_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_70_2018.tif
+  format: null
+  id: resource_9e24a4fc
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_70_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_65_2018.tif
+  format: null
+  id: resource_8b09f37a
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_65_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_60_2018.tif
+  format: null
+  id: resource_e6384636
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_60_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_5_2018.tif
+  format: null
+  id: resource_da77b85c
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_5_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_55_2018.tif
+  format: null
+  id: resource_e70bdf7b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_55_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_50_2018.tif
+  format: null
+  id: resource_a78134d1
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_50_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_45_2018.tif
+  format: null
+  id: resource_f59e42e8
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_45_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_40_2018.tif
+  format: null
+  id: resource_85965171
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_40_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_35_2018.tif
+  format: null
+  id: resource_1d8cbfe3
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_35_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_30_2018.tif
+  format: null
+  id: resource_61c0b192
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_30_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_25_2018.tif
+  format: null
+  id: resource_92b45449
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_25_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_20_2018.tif
+  format: null
+  id: resource_3df076d2
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_20_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_1_2018.tif
+  format: null
+  id: resource_eea49586
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_1_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_15_2018.tif
+  format: null
+  id: resource_f1dd4c66
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_15_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_10_2018.tif
+  format: null
+  id: resource_c0d7a83d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_10_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2018)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2018/TZA/tza_f_0_2018.tif
+  format: null
+  id: resource_b1650d15
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_0_2018.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_80_2017.tif
+  format: null
+  id: resource_cde8e035
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_80_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_75_2017.tif
+  format: null
+  id: resource_0769acf8
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_75_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_70_2017.tif
+  format: null
+  id: resource_a445c05f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_70_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_65_2017.tif
+  format: null
+  id: resource_593ff86e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_65_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_60_2017.tif
+  format: null
+  id: resource_56b8d427
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_60_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_5_2017.tif
+  format: null
+  id: resource_1291602f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_5_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_55_2017.tif
+  format: null
+  id: resource_5f3f38b8
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_55_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_50_2017.tif
+  format: null
+  id: resource_f1d9b463
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_50_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_45_2017.tif
+  format: null
+  id: resource_bfee1055
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_45_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_40_2017.tif
+  format: null
+  id: resource_b0db7ab8
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_40_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_35_2017.tif
+  format: null
+  id: resource_ed61154f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_35_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_30_2017.tif
+  format: null
+  id: resource_12e43970
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_30_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_25_2017.tif
+  format: null
+  id: resource_b92dd540
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_25_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_20_2017.tif
+  format: null
+  id: resource_dd5d4270
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_20_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_1_2017.tif
+  format: null
+  id: resource_3a3f9d8d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_1_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_15_2017.tif
+  format: null
+  id: resource_a00e2aa6
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_15_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_10_2017.tif
+  format: null
+  id: resource_3f9f4980
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_10_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_m_0_2017.tif
+  format: null
+  id: resource_67d60bd0
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_0_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_80_2017.tif
+  format: null
+  id: resource_f355e16b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_80_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_75_2017.tif
+  format: null
+  id: resource_919f7a13
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_75_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_70_2017.tif
+  format: null
+  id: resource_543e919f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_70_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_65_2017.tif
+  format: null
+  id: resource_5fe78210
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_65_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_60_2017.tif
+  format: null
+  id: resource_145ac0cb
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_60_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_5_2017.tif
+  format: null
+  id: resource_50354ae9
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_5_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_55_2017.tif
+  format: null
+  id: resource_43688ad6
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_55_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_50_2017.tif
+  format: null
+  id: resource_750a07d7
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_50_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_45_2017.tif
+  format: null
+  id: resource_a76067a8
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_45_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_40_2017.tif
+  format: null
+  id: resource_993e7b7e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_40_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_35_2017.tif
+  format: null
+  id: resource_395094cb
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_35_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_30_2017.tif
+  format: null
+  id: resource_ddb05da9
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_30_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_25_2017.tif
+  format: null
+  id: resource_de304378
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_25_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_20_2017.tif
+  format: null
+  id: resource_92042db2
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_20_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_1_2017.tif
+  format: null
+  id: resource_5e7d5196
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_1_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_15_2017.tif
+  format: null
+  id: resource_dcfe88ed
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_15_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_10_2017.tif
+  format: null
+  id: resource_18dfcaa6
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_10_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2017)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2017/TZA/tza_f_0_2017.tif
+  format: null
+  id: resource_1262fa08
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_0_2017.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_80_2016.tif
+  format: null
+  id: resource_cd53be3e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_80_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_75_2016.tif
+  format: null
+  id: resource_924e16ec
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_75_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_70_2016.tif
+  format: null
+  id: resource_b8734943
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_70_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_65_2016.tif
+  format: null
+  id: resource_43166fb1
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_65_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_60_2016.tif
+  format: null
+  id: resource_79307593
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_60_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_5_2016.tif
+  format: null
+  id: resource_5f46fe34
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_5_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_55_2016.tif
+  format: null
+  id: resource_748df15b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_55_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_50_2016.tif
+  format: null
+  id: resource_662bca5f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_50_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_45_2016.tif
+  format: null
+  id: resource_4867c9be
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_45_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_40_2016.tif
+  format: null
+  id: resource_1a213a9f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_40_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_35_2016.tif
+  format: null
+  id: resource_9e227d4e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_35_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_30_2016.tif
+  format: null
+  id: resource_8d1d6b00
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_30_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_25_2016.tif
+  format: null
+  id: resource_78b1fb6c
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_25_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_20_2016.tif
+  format: null
+  id: resource_29ca1aa5
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_20_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_1_2016.tif
+  format: null
+  id: resource_30f7907f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_1_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_15_2016.tif
+  format: null
+  id: resource_a030b4f0
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_15_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_10_2016.tif
+  format: null
+  id: resource_3a8864d8
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_10_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_m_0_2016.tif
+  format: null
+  id: resource_84397d05
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_m_0_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_80_2016.tif
+  format: null
+  id: resource_0bc5e7ca
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_80_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_75_2016.tif
+  format: null
+  id: resource_367a5a78
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_75_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_70_2016.tif
+  format: null
+  id: resource_ce48329e
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_70_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_65_2016.tif
+  format: null
+  id: resource_f618a346
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_65_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_60_2016.tif
+  format: null
+  id: resource_5f26d96d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_60_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_5_2016.tif
+  format: null
+  id: resource_99a2ac4b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_5_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_55_2016.tif
+  format: null
+  id: resource_420b63c9
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_55_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_50_2016.tif
+  format: null
+  id: resource_66590925
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_50_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_45_2016.tif
+  format: null
+  id: resource_fe70cddd
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_45_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_40_2016.tif
+  format: null
+  id: resource_680b8f30
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_40_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_35_2016.tif
+  format: null
+  id: resource_3d5da70b
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_35_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_30_2016.tif
+  format: null
+  id: resource_f6696603
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_30_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_25_2016.tif
+  format: null
+  id: resource_8e0359fc
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_25_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_20_2016.tif
+  format: null
+  id: resource_2d7e2025
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_20_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_1_2016.tif
+  format: null
+  id: resource_9cc21676
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_1_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_15_2016.tif
+  format: null
+  id: resource_7e1d3bfe
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_15_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_10_2016.tif
+  format: null
+  id: resource_58bd96b5
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_10_2016.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: United Republic of Tanzania - Age and gender structures (Tanzania 100m
+    Age structures in 2016)
+  download_url: https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2016/TZA/tza_f_0_2016.tif
+  format: null
+  id: resource_f3dc713d
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: tza_f_0_2016.tif
+risk_data_type:
+- exposure
+schema: rdls-10
+slug: rdls_exp-tza_worldpop_unitedrepublicagegenderst_2000
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - TZA
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2020-12-31'
+  start: '2000-01-01'
+temporal_resolution: null
+title: United Republic of Tanzania - Age and gender structures
+version: null
+vulnerability: null
+---
