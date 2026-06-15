@@ -1,0 +1,85 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-dma_uscensus_dominicagriddedpopulation",
+      "title": "Dominica Gridded Population Dataset",
+      "description": "The geodatabase contains gridded population rasters which can be used to identify the population for a custom area.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/dominica-gridded-population-dataset]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "U.S. Census Bureau",
+        "url": "https://data.humdata.org/dataset/dominica-gridded-population-dataset"
+      },
+      "creator": {
+        "name": "U.S. Census Bureau",
+        "url": "https://data.humdata.org/dataset/dominica-gridded-population-dataset"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DMA"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Subnational census population data were disaggregated into a gridded raster using a random forest model trained on human and physical geography datasets as inputs, with dasymetric mapping applied to create a spatially explicit population distribution dataset for Dominica.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "U.S. Census Bureau",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Subnational census data providing population counts disaggregated into gridded format using dasymetric mapping techniques"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_10a8a289",
+          "title": "DemobaseDominica.gdb.zip",
+          "description": "The geodatabase contains six rasters representing density, people per hectare, and people per pixel, for the census year (2011) and 2021.",
+          "format": "Geodatabase",
+          "download_url": "https://data.humdata.org/dataset/0a3aff95-e37e-48f4-844b-a105cd2325e8/resource/10a8a289-0fb4-4f39-8909-eb1369c03d96/download/demobasedominica.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution derived from census data disaggregated using dasymetric mapping and random forest weighting"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/dominica-gridded-population-dataset",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
