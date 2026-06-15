@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-dma_mapaction_dominicaredcrossassessmen_20150917",
+      "title": "Dominica Red Cross Assessment Data 20150917",
+      "description": "Shapefile containing numbers of affected people and households in Dominica. The data also shows number of damaged buildings (destroyed, major and minor) as collated by the Dominica Red Cross as of 17 September 2015.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/dominica-red-cross-assessment-data-20150917]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "MapAction",
+        "url": "https://data.humdata.org/dataset/dominica-red-cross-assessment-data-20150917"
+      },
+      "creator": {
+        "name": "MapAction",
+        "url": "https://data.humdata.org/dataset/dominica-red-cross-assessment-data-20150917"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DMA"
+        ]
+      },
+      "temporal": {
+        "start": "2015-09-17"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Dominica Red Cross Society",
+            "url": "https://data.humdata.org/dataset/dominica-red-cross-assessment-data-20150917"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Dominica Red Cross conducted a sample survey-based damage assessment following a convective storm event, collecting point-based observations of affected households, people, and building damage severity (destroyed/major/minor). Data was compiled and georeferenced as a shapefile by MapAction for spatial analysis of disaster impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Dominica Red Cross Society",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment survey collecting affected people, households, and building damage classifications across Dominica as of 17 September 2015."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_53eb310a",
+          "title": "dma_situ_aff_pt_s0_dana_pp_assessmentdata_20150917.zip",
+          "description": "Dominica Red Cross Assessment Data 20150917 (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/4b48d41a-ac0c-4e08-b912-f43356ce9cc3/resource/53eb310a-16e3-4f52-9a7b-a2c142adaadb/download/dma_situ_aff_pt_s0_dana_pp_assessmentdata_20150917.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population affected by convective storm event in Dominica"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage (destroyed, major, minor) from convective storm event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/dominica-red-cross-assessment-data-20150917",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

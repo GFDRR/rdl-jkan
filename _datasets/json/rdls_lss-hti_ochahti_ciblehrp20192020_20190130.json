@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_ochahti_ciblehrp20192020_20190130",
+      "title": "Haiti Cible HRP 2019-2020",
+      "description": "This dataset is produced by the United Nations for the Coordination of Humanitarian Affairs (OCHA) in collaboration with humanitarian partners in Haiti. It contains the estimation of people aggregated per geographic locations, sex and age who have been targeted for urgent humanitarian response in Haiti. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-cible-hrp-2019-2020]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Haiti",
+        "url": "https://data.humdata.org/dataset/haiti-cible-hrp-2019-2020"
+      },
+      "creator": {
+        "name": "OCHA Haiti",
+        "url": "https://data.humdata.org/dataset/haiti-cible-hrp-2019-2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2019-01-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
+            "url": "https://data.humdata.org/dataset/haiti-cible-hrp-2019-2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "OCHA Haiti compiled humanitarian response plan targeting data for 2019-2020 by aggregating people in need estimates from multisector humanitarian partners, stratified by geographic administrative divisions, sex, and age groups to support humanitarian response planning and resource allocation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian response plan targeting data compiled by OCHA Haiti in collaboration with humanitarian partners to estimate people in need of urgent humanitarian response"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.humanitarianresponse.info/en/operations/haiti/document/ha%C3%AFti-plan-de-r%C3%A9ponse-humanitaire-2019-2020-janvier-2019"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_ee6b4c0c",
+          "title": "Haiti Ciblage HRP 2019-2020.xlsx",
+          "description": "This dataset contains the estimation of people aggregated per geographic locations, sex and age who have been targeted for urgent humanitarian response in Haiti",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/45544045-0601-4424-9d8e-ececefd889d0/resource/ee6b4c0c-6d2a-4d87-9f73-4ad34e79c66c/download/haiti-ciblage-hrp-2019-2020.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People targeted for humanitarian response in Haiti, aggregated by geographic location, sex, and age"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-cible-hrp-2019-2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

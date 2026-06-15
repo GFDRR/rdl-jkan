@@ -1,0 +1,106 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ecu_brc_earthquakedamageapril2016_20160418",
+      "title": "Ecuador Earthquake damage - April 2016",
+      "description": "Damage data from Ecuador Government in google spreadsheets. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ecuador-earthquake-damage-april-2016]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "British Red Cross Maps Team",
+        "url": "https://data.humdata.org/dataset/ecuador-earthquake-damage-april-2016"
+      },
+      "creator": {
+        "name": "British Red Cross Maps Team",
+        "url": "https://data.humdata.org/dataset/ecuador-earthquake-damage-april-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ECU"
+        ]
+      },
+      "temporal": {
+        "start": "2016-04-18"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Ecuador Government",
+            "url": "https://data.humdata.org/dataset/ecuador-earthquake-damage-april-2016"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Damage data from Ecuador Government post-event assessment reports were scraped and compiled into a structured spreadsheet by the British Red Cross Maps Team to document direct building impacts from the April 2016 earthquake.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Ecuador Government",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment reports documenting building damage from the April 2016 earthquake, compiled and scraped by BRC Maps Team"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_86babc61",
+          "title": "Ecuador Earthquake damage",
+          "description": "Damage data from Ecuador Government in google spreadsheets: http://www.gestionderiesgos.gob.ec/informes-de-situacion-actual-terremoto-magnitud-7-8/",
+          "format": "Google Sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/1klRixK82iRk1JnDOpAqKrry4VQiFcTGrfFZWr9ih-Z8/export?format=csv&id=1klRixK82iRk1JnDOpAqKrry4VQiFcTGrfFZWr9ih-Z8&gid=0"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from April 2016 earthquake in Ecuador"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ecuador-earthquake-damage-april-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

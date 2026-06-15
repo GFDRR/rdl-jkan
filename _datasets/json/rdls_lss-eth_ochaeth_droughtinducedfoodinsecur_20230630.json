@@ -1,0 +1,106 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-eth_ochaeth_droughtinducedfoodinsecur_20230630",
+      "title": "Ethiopia - Drought Induced Food Insecurity",
+      "description": "The dataset contains the number of people targeted by the food cluster in relation to drought in Ethiopia.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ethiopia-targeted-populaton-food-cluster]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Ethiopia",
+        "url": "https://data.humdata.org/dataset/ethiopia-targeted-populaton-food-cluster"
+      },
+      "creator": {
+        "name": "OCHA Ethiopia",
+        "url": "https://data.humdata.org/dataset/ethiopia-targeted-populaton-food-cluster"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2023-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Food Security Cluster",
+            "url": "https://data.humdata.org/dataset/ethiopia-targeted-populaton-food-cluster"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The Food Security Cluster aggregated multiple data sources and food security indicators to estimate the population affected by drought-induced food insecurity in Ethiopia. The dataset represents targeted beneficiaries requiring food assistance, derived from cluster-coordinated assessments and partner reporting.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Food Security Cluster",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-source food security assessment data integrating various indicators to estimate drought-induced food insecurity and population in need of food assistance"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f6f7f298",
+          "title": "Ethiopia Food Insecurity",
+          "description": "Ethiopia - Drought Induced Food Insecurity (Ethiopia Food Insecurity)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRppQx8JTKkKRCKmzfnCMmTFEcvCpkbP9PdHs1sQTUyacmbsx8tlAXpgBLFce-lcehukreGGuXjA_4S/pub?gid=1859457158&single=true&output=csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecure population targeted by food cluster response due to drought"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ethiopia-targeted-populaton-food-cluster",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

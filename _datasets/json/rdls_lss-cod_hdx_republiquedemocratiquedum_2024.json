@@ -1,0 +1,140 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cod_hdx_republiquedemocratiquedum_2024",
+      "title": "République Démocratique du Congo : Malnutrition Aiguë",
+      "description": "Ce jeu de données présente l'analyse de la malnutrition aiguë de l'IPC (AMN).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/rdc-ipc-amn]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Limites de l'analyse : Le niveau de désagrégation de l'analyse n'a pas pu systématiquement se faire jusqu'au niveau Zone de Santé.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/rdc-ipc-amn"
+      },
+      "creator": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/rdc-ipc-amn"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2024-06-01",
+        "end": "2026-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IPC (Integrated Food Security Phase Classification)",
+            "url": "https://data.humdata.org/dataset/rdc-ipc-amn"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "ENN (Emergency Nutrition Network)",
+            "url": "https://data.humdata.org/dataset/rdc-ipc-amn"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IPC Acute Malnutrition analysis for Democratic Republic of Congo, classifying malnutrition severity (global and severe acute malnutrition) among children under 5 and pregnant/lactating women by health zone. Data covers two annual periods (July 2024-June 2025 and July 2025-June 2026) with treatment need estimates derived from IPC standardized protocols.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IPC (Integrated Food Security Phase Classification)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IPC Acute Malnutrition (AMN) analysis providing standardized classification of malnutrition severity and affected population counts by health zone"
+          },
+          {
+            "id": "source_2",
+            "name": "ENN (Emergency Nutrition Network)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Contributing technical expertise and data to the IPC AMN assessment methodology"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_869a29e1",
+          "title": "rdc-ipc-amn-juillet2025-juin2026",
+          "description": "Analyse de la malnutrition aiguë de l'IPC (AMN) pour la période de Juillet 2025 à Juin 2026, au niveau des provinces, territoires et zones de santé.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/163d1b22-52d4-4f26-80bf-d5da720dda8f/resource/869a29e1-a2b4-41fa-9838-49f10f882d87/download/rdc-ipc-amn-juillet2025-juin2026.xlsx"
+        },
+        {
+          "id": "resource_9784c335",
+          "title": "rdc-ipc-amn-july2024-june2025",
+          "description": "Analyse de la malnutrition aiguë de l'IPC (AMN) pour la période de Juillet 2024 à Juin 2025, au niveau des provinces, territoires et zones de santé.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/163d1b22-52d4-4f26-80bf-d5da720dda8f/resource/9784c335-cba0-49d2-805d-c5e4e2281ee1/download/rdc-ipc-amn-july2024-june2025.xlsx"
+        },
+        {
+          "id": "resource_eba74ba3",
+          "title": "rdc-ipc-amn-july2024-june2025",
+          "description": "Analyse de la malnutrition aiguë de l'IPC (AMN) pour la période de Juillet 2024 à Juin 2025, au niveau des provinces, territoires et zones de santé.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/163d1b22-52d4-4f26-80bf-d5da720dda8f/resource/eba74ba3-f8d4-4fe9-a612-e1d2f170902b/download/rdc-ipc-amn-july2024-june2025.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute malnutrition cases in children under 5 and pregnant/lactating women requiring treatment, classified by severity (global and severe acute malnutrition)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/rdc-ipc-amn",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_idpsanualdepartamental_1996",
+      "title": "Colombia - IDPs anual departamental",
+      "description": "De acuerdo con el Observatorio del Programa Presidencial de Derechos Humanos y Derecho Internacional Humanitario, se entiende por desplazamiento un evento en el cual una o varias personas se han visto forzadas a migrar dentro del territorio nacional, abandonando su localidad de residencia o actividades económicas habituales, porque su vida, su integridad física, su seguridad o libertad personales han sido vulneradas o se encuentran directamente amenazadas, con ocasión de cualquiera de las siguientes situaciones: conflicto armado interno, disturbios y tensiones interiores, violencia generalizada, violaciones masivas de los derechos humanos, infracciones al Derecho Internacional Humanitario u otras circunstancias emanadas de las situaciones anteriores, que puedan alterar o alteren drásticamente el orden público.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/idps-anual-departamental]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "Los datos están actualizados hasta la fecha carga de los datos, sin embargo estos pueden cambiar ya que las víctimas de desplazamiento tienen dos años desde la ocurrencia del hecho victimizante para declarar ante el Ministerio Público. A partir de esta declaración, la UARIV dispone de 60 días hábiles para surtir el proceso de valoración y decidir la inclusión o no en el Registro Único de Víctimas.",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/idps-anual-departamental"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/idps-anual-departamental"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "1996-12-01",
+        "end": "2015-06-23"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UARIV (Unidad para la Atención y Reparación Integral a las Víctimas)",
+            "url": "https://data.humdata.org/dataset/idps-anual-departamental"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Annual departmental IDP counts compiled from the UARIV registry, which documents forced displacement events within Colombia caused by armed conflict, internal disturbances, and generalized violence. Data aggregated by administrative department to track displacement trends over time.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UARIV (Unidad para la Atención y Reparación Integral a las Víctimas)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official registry of internally displaced persons in Colombia, maintained by the government agency responsible for victim assistance and reparation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1f56da93",
+          "title": "IDPs anuales departamentales Junio 23 de 2015.csv",
+          "description": "Colombia - IDPs anual departamental (La periodicidad de actualización de los datos será mensualmente)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/87d5eb5f-cbeb-4a2f-81a1-a002f12e5156/resource/1f56da93-6622-477f-9b55-b109def3f248/download/idps-anuales-departamentales-junio-23-de-2015.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Annual internally displaced persons (IDPs) by department due to armed conflict, violence, and internal disturbances"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/idps-anual-departamental",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

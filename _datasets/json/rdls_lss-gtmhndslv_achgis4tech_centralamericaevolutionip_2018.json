@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-gtmhndslv_achgis4tech_centralamericaevolutionip_2018",
+      "title": "Central America - Evolution of the IPC",
+      "description": "The dataset displays the Integrated Food Security Phase Classification (IPC), a standardized global scale used to measure the severity and magnitude of food insecurity and malnutrition. The data, compared with a five-year historical series for the countries of El Salvador, Guatemala, and Honduras, have been assessed based on information obtained from the IPC portal. For more information contact GIS4Tech: info@gis4tech.com. You can also visit the PREDISAN platform https://predisan.gis4tech.com/ca4 for detailed, accurate information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/central-america-evolution-of-the-ipc]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-evolution-of-the-ipc"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-evolution-of-the-ipc"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "SLV",
+          "GTM",
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2018-12-01",
+        "end": "2025-05-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Integrated Food Security Phase Classification (IPC)",
+            "url": "https://data.humdata.org/dataset/central-america-evolution-of-the-ipc"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IPC classification documents were obtained from the IPC portal, scraped for relevant information, standardized, and loaded into tabular format with population estimates and phase distribution percentages across administrative divisions in El Salvador, Guatemala, and Honduras over a five-year historical series.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Integrated Food Security Phase Classification (IPC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Standardized global scale measuring severity and magnitude of food insecurity and malnutrition. Data sourced from IPC portal and processed into tabular format for Central American countries."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7723f7ed",
+          "title": "evolution_of_the _IPC.csv",
+          "description": "Central America - Evolution of the IPC (Evolution of the IPC by ACH-GIS4Tech.csv)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/9d01fed3-74b6-490f-a035-1a9d43c65b2a/resource/7723f7ed-42e2-4c8f-bdc3-be8c9708702d/download/evolution_of_the-_ipc.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity phase classification affecting population in Central America"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/central-america-evolution-of-the-ipc",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

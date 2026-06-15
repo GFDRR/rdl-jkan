@@ -1,0 +1,215 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_ochahti_floods_202306",
+      "title": "Haiti - Floods",
+      "description": "This dataset shows the people affected by floods in Haiti. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-floods]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Haiti",
+        "url": "https://data.humdata.org/dataset/haiti-floods"
+      },
+      "creator": {
+        "name": "OCHA Haiti",
+        "url": "https://data.humdata.org/dataset/haiti-floods"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2023-06-02",
+        "end": "2023-06-03"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "General Directorate of Civil Protection (DGPC)",
+            "url": "https://data.humdata.org/dataset/haiti-floods"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian partners",
+            "url": "https://data.humdata.org/dataset/haiti-floods"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event flood impact data collected through direct observation and anecdotal reports by the General Directorate of Civil Protection, OCHA Haiti, and humanitarian partners. Data aggregated by department covering casualties, displacement, building damage, and livestock losses from flood events in Haiti.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "General Directorate of Civil Protection (DGPC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational data on flood impacts collected by Haiti's civil protection authority"
+          },
+          {
+            "id": "source_2",
+            "name": "OCHA Haiti",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian impact data compiled by the UN Office for the Coordination of Humanitarian Affairs"
+          },
+          {
+            "id": "source_3",
+            "name": "Humanitarian partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Field-based impact assessments from humanitarian organizations responding to flood events"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bbd92704",
+          "title": "Floods Haiti Floods .xlsx",
+          "description": "As of 6 June 2023, the DGPC's provisional assessment of the impact of the weekend's extreme weather has risen sharply, with 39,458 households affected, 3,586 people evacuated or sheltered, 51 deaths, 140 people injured, 18 people missing, 31,591 homes flooded and 2,445 homes destroyed or damaged. Numerous infrastructures, schools and health centres were damaged in the departments of Ouest, Nippes, Sud-Est, Nord-Ouest, Centre and Sud. Ouest, including the Port-au-Prince metropolitan area (ZMPAP), was the worst affected department, particularly in the communes of Léogâne (24 deaths reported), Gressier, Cité Soleil and Tabarre",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c42d243a-e0a9-4b11-9d07-406c81e6db58/resource/bbd92704-303b-43ef-b873-684afdf328a1/download/floods-haiti-floods-.xlsx"
+        },
+        {
+          "id": "resource_6ec447fa",
+          "title": "Haiti Floods - 2023.xlsx",
+          "description": "The torrential rains that fell on at least six departments of the country on 2nd and 3rd June, 2023 killed 42 people. At least 11 people are missing. In the departments affected, more than 13,500 homes were flooded.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c42d243a-e0a9-4b11-9d07-406c81e6db58/resource/6ec447fa-47b9-4e6c-a522-0ff20271591a/download/haiti-floods-2023.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Count of houses flooded and destroyed or damaged by floods"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced and evacuated to shelters due to floods"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths and missing persons caused by floods"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Loss of livestock due to floods"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-floods",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

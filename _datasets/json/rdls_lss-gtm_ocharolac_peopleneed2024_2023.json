@@ -1,0 +1,137 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-gtm_ocharolac_peopleneed2024_2023",
+      "title": "Guatemala - People in Need 2024",
+      "description": "The dataset contains information on the number of people in need in Guatemala in 2024 at the admin 2 level.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/guatemala-people-in-need-2024]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/guatemala-people-in-need-2024"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/guatemala-people-in-need-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GTM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "JIAF 2.0",
+            "url": "https://data.humdata.org/dataset/guatemala-people-in-need-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "HNO 2023 Guatemala",
+            "url": "https://data.humdata.org/dataset/guatemala-people-in-need-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "People in need figures were derived from multiple sources integrated through the JIAF 2.0 methodology as documented in the 2023 HNO. The dataset aggregates humanitarian needs assessments at admin 2 level for Guatemala in 2024, combining multi-hazard and multi-sectoral impact data.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "JIAF 2.0",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Joint Impact and Accountability Framework methodology used to assess humanitarian needs and severity across multiple hazard contexts"
+          },
+          {
+            "id": "source_2",
+            "name": "HNO 2023 Guatemala",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian Needs Overview document providing multi-sectoral needs assessment data at admin 2 level"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://reliefweb.int/attachments/b31b5b19-fcad-4fe9-acad-4620ed02e91c/HNO%20GT%202023%20eng.pdf"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://analysis.jiaf.info/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_e8c9046f",
+          "title": "guatemala-pin-hno-2024 v2-.csv",
+          "description": "The dataset contains information on the number of people in need in Guatemala in 2024 at the admin 2 level.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/70741d48-f37e-4bd4-9f2d-331b033a0a49/resource/e8c9046f-b4bf-47e8-b64e-4c271204f866/download/guatemala-pin-hno-2024-v2-.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need in Guatemala derived from multi-hazard humanitarian needs assessment"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/guatemala-people-in-need-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

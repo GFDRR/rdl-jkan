@@ -1,0 +1,213 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hdx_numberpeoplemadehomelessn_20141111",
+      "title": "Number of people made homeless by natural disasters",
+      "description": "Number of people made homeless by natural disasasters disaggregated by country and year. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/number-of-people-made-homeless-by-natural-disasters]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/number-of-people-made-homeless-by-natural-disasters"
+      },
+      "creator": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/number-of-people-made-homeless-by-natural-disasters"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2014-11-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Centre for Research on the Epidemiology of Disasters (CRED)",
+            "url": "https://data.humdata.org/dataset/number-of-people-made-homeless-by-natural-disasters"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event homelessness data compiled from the EM-DAT (Emergency Events Database) maintained by CRED, aggregating reported displacement figures from natural disasters by country and year. Data represents direct impacts of multiple hazard types on populations, with records sourced from official disaster reports and humanitarian assessments.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Centre for Research on the Epidemiology of Disasters (CRED)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "EM-DAT database providing post-event disaster impact records including homelessness figures disaggregated by country and year across multiple natural hazard types."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.emdat.be/explanatory-notes"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_b4ba3634",
+          "title": "homeless-natural-disasters.xlsx",
+          "description": "Number of people made homeless by natural disasters (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d2ec211d-faf6-4fb5-a46c-2094dc5830af/resource/b4ba3634-14d6-468d-81ef-18b096c1cf85/download/homeless-natural-disasters.xlsx"
+        },
+        {
+          "id": "resource_70f102af",
+          "title": "homeless-natural-disasters.csv",
+          "description": "Number of people made homeless by natural disasters (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/d2ec211d-faf6-4fb5-a46c-2094dc5830af/resource/70f102af-6d2b-461b-9676-c597e7bf33d4/download/homeless-natural-disasters.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People made homeless by flood events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People made homeless by earthquake events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People made homeless by strong wind events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People made homeless by landslide events"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People made homeless by volcanic events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/number-of-people-made-homeless-by-natural-disasters",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

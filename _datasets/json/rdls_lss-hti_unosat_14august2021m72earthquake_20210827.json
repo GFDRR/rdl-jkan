@@ -1,0 +1,138 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_unosat_14august2021m72earthquake_20210827",
+      "title": "14 August 2021 M7.2 Haiti Earthquake. Preliminary Satellite-Based Comprehensive Damage Assessment Report",
+      "description": "UNOSAT code: EQ20210814HTI This report describes preliminary building damage analysis covering the departments of South, Grande Anse, and Nippes of Haiti, for a total area of approximately 550 Km2. A building damage analysis and a rapid assessment of transportation network conditions was conducted by comparing a series of satellite imageries acquired from the International Charter Space and Major Disasters, before and after the earthquake. The preliminary analysis extent within South, Grande Anse, and Nippes departments identify a total of 1,842 buildings/structures with visible damages and approximately 130 locations with visible road obstacles and/or access constraints.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/14-august-2021-m7-2-haiti-earthquake-preliminary-satellite-based-comprehensive-damage-asse]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/14-august-2021-m7-2-haiti-earthquake-preliminary-satellite-based-comprehensive-damage-asse"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/14-august-2021-m7-2-haiti-earthquake-preliminary-satellite-based-comprehensive-damage-asse"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2021-08-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Charter Space and Major Disasters",
+            "url": "https://data.humdata.org/dataset/14-august-2021-m7-2-haiti-earthquake-preliminary-satellite-based-comprehensive-damage-asse"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts conducted post-event damage assessment by comparing multi-temporal satellite imagery from the International Charter Space and Major Disasters acquired before and after the 14 August 2021 M7.2 Haiti earthquake. Building damage and transportation network conditions were visually interpreted and classified across South, Grande Anse, and Nippes departments, with results delivered as vector geodatabase and shapefile formats.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Charter Space and Major Disasters",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery acquired before and after the earthquake event used for comparative damage assessment analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a24d9f64",
+          "title": "EQ20210814HTI_gdb.zip",
+          "description": "14 August 2021 M7.2 Haiti Earthquake. Preliminary Satellite-Based Comprehensive Damage Assessment Report (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/HT/EQ20210814HTI/EQ20210814HTI_gdb.zip"
+        },
+        {
+          "id": "resource_12273d20",
+          "title": "EQ20210814HTI_shp.zip",
+          "description": "14 August 2021 M7.2 Haiti Earthquake. Preliminary Satellite-Based Comprehensive Damage Assessment Report (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/HT/EQ20210814HTI/EQ20210814HTI_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from the 14 August 2021 M7.2 earthquake in Haiti"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to transportation network infrastructure from the earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/14-august-2021-m7-2-haiti-earthquake-preliminary-satellite-based-comprehensive-damage-asse",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

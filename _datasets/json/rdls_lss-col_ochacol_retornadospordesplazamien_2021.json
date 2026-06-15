@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_retornadospordesplazamien_2021",
+      "title": "Colombia Retornados por Desplazamiento",
+      "description": "Retornados por desplazamiento forzado. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/colombia-retornados-por-desplazamiento]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/colombia-retornados-por-desplazamiento"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/colombia-retornados-por-desplazamiento"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-01",
+        "end": "2024-11-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian partners",
+            "url": "https://data.humdata.org/dataset/colombia-retornados-por-desplazamiento"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Registry data compiled by humanitarian partners documenting internally displaced persons (IDPs) and returnees from forced displacement events in Colombia. Data includes displacement events categorized by type (confinement, disaster), affected populations disaggregated by demographics (gender, age, ethnicity), and geographic origin at departmental and municipal levels, with status tracking as of 12 January 2024.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registry of internally displaced persons and returnees from forced displacement events, compiled by humanitarian partners working in Colombia"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4f6a8430",
+          "title": "Desplazamientos segun estado 2024.xlsx",
+          "description": "Colombia Retornados por Desplazamiento (Estado de desplazamientos 2024)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3cce0af3-bb8a-488b-985a-5f76f9da9913/resource/4f6a8430-d096-417b-9ce9-d0441fc7e18d/download/desplazamientos-segun-estado-2024.xlsx"
+        },
+        {
+          "id": "resource_ae834513",
+          "title": "desplazados_retornados_corte_12012024.xlsx",
+          "description": "Colombia Retornados por Desplazamiento (Desplazados retornados corte 12-01-2024)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3cce0af3-bb8a-488b-985a-5f76f9da9913/resource/ae834513-2690-4551-a915-cb3c5756a1d8/download/desplazados_retornados_corte_12012024.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced by forced displacement events including confinement and disasters"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced by convective storm and disaster events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/colombia-retornados-por-desplazamiento",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

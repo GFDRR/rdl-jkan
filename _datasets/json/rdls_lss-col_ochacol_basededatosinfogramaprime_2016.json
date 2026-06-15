@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_basededatosinfogramaprime_2016",
+      "title": "Colombia - Base de datos Infograma primer semestre del 2016",
+      "description": "Tasas departamentales, municipales y tasa nacional de variables como: desplazamiento, homicidios, Victimas de explosivos, desapariciones y personas afectadas por desastres naturales.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/base-de-datos-infograma-primer-semestre-del-2016]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/base-de-datos-infograma-primer-semestre-del-2016"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/base-de-datos-infograma-primer-semestre-del-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2016-01-01",
+        "end": "2016-06-30"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "lineage": {
+        "description": "Administrative registry compiled by OCHA Colombia aggregating departmental and municipal-level impact data from conflict-violence and natural disaster events during the first semester of 2016, presented as rates and counts across multiple impact categories.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Colombia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registry of departmental and municipal-level impact statistics including displacement, homicides, explosive victims, disappearances, and people affected by natural disasters for the first semester of 2016."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3fcb3189",
+          "title": "infograma 2016-I.xlsx",
+          "description": "Datos oficiales tomados de UARIV, CODHES, DIJIN, INML, UNGRD y monitor de OCHA. Recopilado y organizado por UMAIC",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d0a48593-af8d-49b0-8d4f-39ce2f620108/resource/3fcb3189-97a2-4137-8ffb-f85219d0b3da/download/infograma-2016-i.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People affected by natural disasters including floods at departmental and municipal levels"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Victims of explosives (interpreted as blast/explosive events) at departmental and municipal levels"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/base-de-datos-infograma-primer-semestre-del-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_flowminder_hurricanematthewestimated_20161024",
+      "title": "Hurricane Matthew Haiti estimated population movement as of 24 October 2016",
+      "description": "Summary of estimated population movement in Haiti as of 24 October 2016. The estimated distribution of people for whom their home Section Communale in the pre-hurricane period was in either Grande Anse, Sud or Nippes départment, and as of 24 October had moved to another Section Communale. Estimates are based on movements of de-identified Digicel SIM cards which made or received at least one call pre-hurricane and on 24 October 2016. The SIM card movements are combined with available population data derived from estimates for the year 2015.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-24-october-2016]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "Flowminder (inactive)",
+        "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-24-october-2016"
+      },
+      "creator": {
+        "name": "Flowminder (inactive)",
+        "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-24-october-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-24"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Digicel",
+            "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-24-october-2016"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Population estimates 2015",
+            "url": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-24-october-2016"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Population displacement estimates derived from de-identified Digicel SIM card movements (calls made or received pre-hurricane and on 24 October 2016) in three affected départments (Grande Anse, Sud, Nippes), scaled using 2015 population estimates to produce Section Communale-level displacement matrices.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Digicel",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Mobile phone SIM card movement data tracking population displacement through call records from de-identified users in affected regions"
+          },
+          {
+            "id": "source_2",
+            "name": "Population estimates 2015",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Baseline population data used to scale SIM card movements into estimated population displacement figures"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8c54f74e",
+          "title": "FINAL_Flowminder_Digicel-Haiti_Matthew_Internal-Population-Displacement_20161024.pdf",
+          "description": "Estimated population movement in Haiti based on mobile operator data as of 24 October 2016.",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/4bacb766-6fe9-4240-bec5-4c5690bf317f/resource/8c54f74e-2991-4493-9370-e707591af39a/download/final_flowminder_digicel-haiti_matthew_internal-population-displacement_20161024.pdf"
+        },
+        {
+          "id": "resource_b745ca94",
+          "title": "hti_adm3_scaled_inflow_20161024.csv",
+          "description": "Estimated number of people away from their home Section Communale (out of those living pre-hurricane in Grande Anse, Sud and Nippes only). Section Communales are left blank where insufficient data is available.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/4bacb766-6fe9-4240-bec5-4c5690bf317f/resource/b745ca94-499f-4b7e-9444-bce288110149/download/hti_adm3_scaled_inflow_20161024.csv"
+        },
+        {
+          "id": "resource_03ef6f38",
+          "title": "hti_admnbnda_adm3_CNIGS2013_scaled_inflow_20161024.zip",
+          "description": "Haiti admin level 3 shapefile, including estimated number of people away from their home Section Communale (out of those living pre-hurricane in Grande Anse, Sud and Nippes only) as of 24th October 2016.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/4bacb766-6fe9-4240-bec5-4c5690bf317f/resource/03ef6f38-30d4-493c-b83c-17cadf60486b/download/hti_admnbnda_adm3_cnigs2013_scaled_inflow_20161024.zip"
+        },
+        {
+          "id": "resource_01918f20",
+          "title": "pap_metro_area_pcods.csv",
+          "description": "This is the list of Section Communale included in the Port-au-Prince metropolitan area used for the infographic. Note that this is NOT an official definition of the Port-au-Prince metropolitan area.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/4bacb766-6fe9-4240-bec5-4c5690bf317f/resource/01918f20-dda0-44fd-8c21-40d7bcea5c69/download/pap_metro_area_pcods.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement from Hurricane Matthew in Haiti as of 24 October 2016"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hurricane-matthew-haiti-estimated-population-movement-as-of-24-october-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

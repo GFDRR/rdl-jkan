@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-caf_unosat_geodatadamageassessmentma_20140708",
+      "title": "Geodata of Damage Assessment in Marcounda Sub-Prefecture, Central African Republic",
+      "description": "This map illustrates locations of destroyed structures in the area of Marcounda Sub-Prefecture in the Central African Republic. Using satellite images acquired 21 June, 23 June & 7 July 2014, UNOSAT reviewed almost 4,500 square kilometers of Marcounda to locate signs of destroyed structures. An estimated 3,840 damaged structures are visible across 50 distinct locations in the sub-prefecture. Destruction in many cases was likely due to arson based on appearance of structural remains. In addition, it appears violence and destruction continued between 21 June and 7 July, and heavy rains apparently caused significant damage to structures as well. Overall, UNOSAT estimates that approximately 40% of structures in Marcounda Sub-Prefecture have been completely destroyed and many others are likely damaged to some degree. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-assessment-in-marcounda-sub-prefecture-central-african-repu-july-08-2014]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-marcounda-sub-prefecture-central-african-repu-july-08-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-marcounda-sub-prefecture-central-african-repu-july-08-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CAF"
+        ]
+      },
+      "temporal": {
+        "start": "2014-07-08"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed multi-temporal satellite imagery of Marcounda Sub-Prefecture acquired across three dates in June-July 2014, comparing images to detect structural damage through visual interpretation. Approximately 4,500 km² was analyzed, identifying 3,840 damaged structures across 50 distinct locations through change detection methodology.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis (Landsat/SPOT) acquired 21 June, 23 June, and 7 July 2014 to identify and map destroyed structures through multi-temporal change detection"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_922bfa20",
+          "title": "CE20131212CAF_shp.zip",
+          "description": "Geodata of Damage Assessment in Marcounda Sub-Prefecture, Central African Republic (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/CF/CE20131212CAF/CE20131212CAF_shp.zip"
+        },
+        {
+          "id": "resource_74415725",
+          "title": "CE20131212CAF.gdb.zip",
+          "description": "Geodata of Damage Assessment in Marcounda Sub-Prefecture, Central African Republic (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/CF/CE20131212CAF/CE20131212CAF.gdb.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from conflict-related destruction assessed via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-marcounda-sub-prefecture-central-african-repu-july-08-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

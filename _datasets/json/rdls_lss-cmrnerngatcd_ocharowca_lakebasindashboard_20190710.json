@@ -1,0 +1,134 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cmrnerngatcd_ocharowca_lakebasindashboard_20190710",
+      "title": "Lake Chad Basin Dashboard",
+      "description": "This data is about the displacements, the food insecurity in the Lake Chad Basin and also the current funding status.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/lake-chad-basin-dashboard]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "OCHA West and Central Africa (ROWCA)",
+        "url": "https://data.humdata.org/dataset/lake-chad-basin-dashboard"
+      },
+      "creator": {
+        "name": "OCHA West and Central Africa (ROWCA)",
+        "url": "https://data.humdata.org/dataset/lake-chad-basin-dashboard"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "TCD",
+          "CMR",
+          "NER",
+          "NGA"
+        ]
+      },
+      "temporal": {
+        "start": "2019-07-10"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Multiple Sources",
+            "url": "https://data.humdata.org/dataset/lake-chad-basin-dashboard"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Dataset aggregates displacement counts and food insecurity classifications from multiple sources across the Lake Chad Basin, compiled by OCHA ROWCA to track humanitarian impacts from complex emergency and conflict-driven crises.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Multiple Sources",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Aggregated data from multiple organizations on displacement and food insecurity in Lake Chad Basin region"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_12d37440",
+          "title": "lcb_dashboard_data_July2019.xlsx",
+          "description": "Lake Chad Basin Dashboard (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/2edb49da-9dd2-4ae1-99f3-485e68256e19/resource/12d37440-7dcc-43fd-86f6-73ce07d22f89/download/lcb_dashboard_data_july2019.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from complex emergency and conflict in Lake Chad Basin"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity affecting population in Lake Chad Basin"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/lake-chad-basin-dashboard",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

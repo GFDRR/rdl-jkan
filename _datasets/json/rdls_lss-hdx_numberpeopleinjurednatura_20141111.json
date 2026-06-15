@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hdx_numberpeopleinjurednatura_20141111",
+      "title": "Number of people injured in natural disasters",
+      "description": "Number of people injured in natural disasters. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/number-of-people-injured-in-natural-disasters]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/number-of-people-injured-in-natural-disasters"
+      },
+      "creator": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/number-of-people-injured-in-natural-disasters"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2014-11-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Centre for Research on the Epidemiology of Disasters (CRED) - EM-DAT",
+            "url": "https://data.humdata.org/dataset/number-of-people-injured-in-natural-disasters"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Injury counts from natural disaster events were extracted from the EM-DAT database maintained by the Centre for Research on the Epidemiology of Disasters (CRED). EM-DAT compiles disaster impact data from multiple sources including UN agencies, governments, and NGOs. The dataset aggregates injured person counts across natural disaster events, likely organized by country and/or year.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Centre for Research on the Epidemiology of Disasters (CRED) - EM-DAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "EM-DAT is a global database of natural and technological disasters maintained by CRED, recording disaster occurrence and impacts including casualties. It provides the injured counts per disaster event used in this dataset."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.emdat.be/explanatory-notes"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_db014a67",
+          "title": "injured-natural-disasters.xlsx",
+          "description": "Number of people injured in natural disasters (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/0255cf49-2c13-430d-b738-aebdc9733bdd/resource/db014a67-98d4-4826-a9a2-7fc11ad269c5/download/injured-natural-disasters.xlsx"
+        },
+        {
+          "id": "resource_b0633fdd",
+          "title": "injured-natural-disasters.csv",
+          "description": "Number of people injured in natural disasters (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/0255cf49-2c13-430d-b738-aebdc9733bdd/resource/b0633fdd-85c8-41c9-8b84-02b0dd896777/download/injured-natural-disasters.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Number of people injured by natural disasters (multiple hazard types) compiled from EM-DAT historical event records"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/number-of-people-injured-in-natural-disasters",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

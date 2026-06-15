@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cog_wfp_hungermapdata_2024",
+      "title": "Congo - HungerMap data",
+      "description": "HungerMapLIVE is the World Food Programme (WFP)'s global hunger monitoring system. It combines key metrics from various data sources - such as food security information, weather, population size, conflict, hazards, nutrition information and macro-economic data - to help assess, monitor and predict the magnitude and severity of hunger in near real-time. The resulting analysis is displayed on an interactive map that helps WFP staff, key decision makers and the broader humanitarian community to make more informed and timely decisions relating to food security. The platform covers 94 countries, including countries where WFP has operations as well as most lower and lower-middle income countries (as classified by the World Bank).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/wfp-hungermap-data-for-cog]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-cog"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-cog"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COG"
+        ]
+      },
+      "temporal": {
+        "start": "2024-03-11",
+        "end": "2024-05-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP HungerMap",
+            "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-cog"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP's Hunger Monitoring Unit aggregates food security metrics from multiple data sources including food consumption scores (FCS), reduced coping strategy indices (RCSI), health access, and market access indicators. Machine learning-based predictive models estimate food security conditions in data-sparse areas. The resulting prevalence and affected population counts are compiled into a near-real-time monitoring system to track food insecurity trends.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP HungerMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "WFP's real-time food security monitoring system combining food security indicators (FCS, RCSI), health access, and market access data to assess hunger severity and magnitude."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5aa17402",
+          "title": "wfp-hungermap-data-for-cog.csv",
+          "description": "Congo - HungerMap data",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/cbbf0304-fc68-4b13-a0ae-bda26c383be5/resource/5aa17402-b888-405d-8ec8-94180e081ce4/download/wfp-hungermap-data-for-cog.csv"
+        },
+        {
+          "id": "resource_82a61be5",
+          "title": "wfp-hungermap-data-for-cog-long.csv",
+          "description": "Congo - HungerMap data long format",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/cbbf0304-fc68-4b13-a0ae-bda26c383be5/resource/82a61be5-be70-49f8-9b13-dc10fa6339e4/download/wfp-hungermap-data-for-cog-long.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity prevalence and affected population from drought and food security crises"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/wfp-hungermap-data-for-cog",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
