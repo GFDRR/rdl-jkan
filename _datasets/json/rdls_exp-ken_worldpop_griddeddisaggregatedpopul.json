@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ken_worldpop_griddeddisaggregatedpopul",
+      "title": "Gridded disaggregated population estimates for Kenya , version 2.0",
+      "description": "These data were produced by the WorldPop Research Group at the University of Southampton. This work was part of the GRID3 project with funding from the United Nations Children's Fund ( UNICEF ) - Population Modelling for use in Routine Health Planning and Monitoring project (contract no. 43335861). Projects partners included the Kenya Unicef Regional and Country Offices, WorldPop research group at the University of Southampton and the Center for International Earth Science Information Network in the Columbia Climate School at Columbia University. Assane Gadiaga (WorldPop) led the input processing and the modelling work following the Random Forest (RF)-based dasymetric mapping approach developed by Stevens et al. (2015). Thomas Abbott supported the covariates processing work. In-country engagements were done by David Kyalo, Olena Borkovska ( GRID3 , Maria Muniz (Unicef). Using the 2009 and 2019 census data from the Kenya's National Bureau of Statistics (KNBS), the US Census Bureau released the census-based total population projections, population by age and gender and digital sub-counties boundaries. Duygu Cihan helped in the preparation of these input population data. Attila N Lazar, Edith Darin and Heather Chamberlain advised on the modelling procedure. The work was overseen by Attila N Lazar and Andy J Tatem. Recommended citations Gadiaga A. N., Abbott T. J., Chamberlain H., Lazar A. N., Darin E., Tatem A. J. 2023. Census disaggregated gridded population estimates for Kenya (2022), version 2.0. University of Southampton. doi:10.5258/SOTON/WP00762 License These data may be distributed using a Creative Commons Attribution 4.0 International (CC BY 4.0) License, specified in legal code. Contact release[at]worldpop.org for more information . The authors followed rigorous procedures designed to ensure that the used data, the applied method and thus the results are appropriate and of reasonable quality. If users encounter apparent errors or misstatements, they should contact WorldPop at release[at]worldpop.org. WorldPop , University of Southampton, and their sponsors offer these data on a 'where is, as is' basis; do not offer an express or implied warranty of any kind; do not guarantee the quality, applicability, accuracy, reliability or completeness of any data provided; and shall not be liable for incidental, consequential, or special damages arising out of the use of any data that they offer.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/gridded-disaggregated-population-estimates-for-kenya-version-2-0]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "WorldPop",
+        "url": "https://data.humdata.org/dataset/gridded-disaggregated-population-estimates-for-kenya-version-2-0"
+      },
+      "creator": {
+        "name": "WorldPop",
+        "url": "https://data.humdata.org/dataset/gridded-disaggregated-population-estimates-for-kenya-version-2-0"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop Research Group",
+            "url": "https://data.humdata.org/dataset/gridded-disaggregated-population-estimates-for-kenya-version-2-0"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "GRID3 project",
+            "url": "https://data.humdata.org/dataset/gridded-disaggregated-population-estimates-for-kenya-version-2-0"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Gridded population estimates were produced by WorldPop Research Group using census data and spatial disaggregation modelling techniques as part of the GRID3 project funded by UNICEF. The dataset includes total population counts and age-gender disaggregated estimates at high spatial resolution across Kenya for use in health planning and disaster risk assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop Research Group",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population modelling methodology and gridded population estimates produced by WorldPop at the University of Southampton using census data and spatial modelling techniques."
+          },
+          {
+            "id": "source_2",
+            "name": "GRID3 project",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Funding and coordination framework for population modelling for routine health planning and monitoring in Kenya, supported by UNICEF."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3d3e7279",
+          "title": "KEN_population_v2_0_README.pdf",
+          "description": "This README file provides information about the data included in the data release, how it was produced, source data that were used, and known assumptions and limitations of the results.",
+          "media_type": "application/pdf",
+          "download_url": "https://wopr.worldpop.org/download/546"
+        },
+        {
+          "id": "resource_7d02a7a8",
+          "title": "KEN_population_v2_0_gridded.tif",
+          "description": "This geotiff raster, at a spatial resolution of 3 arc-seconds (approximately 100m at the equator), contains estimates of the total population size per grid cell across Kenya. NA values represent areas that were mapped as unsettled based on gridded building patterns derived from building footprints (Dooley and Tatem, 2020). These data are stored as floating-point numbers rather than integers to avoid rounding errors in aggregated population totals for larger areas.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/549"
+        },
+        {
+          "id": "resource_6b55dabd",
+          "title": "KEN_population_ v2_0_agegender.zip",
+          "description": "This zip file contains 40 GeoTIFF rasters representing estimated population counts for specific age and gender groups within grid cells of approximately 100m. We provide 36 rasters for the commonly reported age-gender groupings of sequential age classes for males and females separately. These are labelled with either an 'm' (male) or an 'f' (female) followed by the number of the first year of the age class represented by the data. 'f0' and 'm0' are population counts of under 1-year olds for females and males, respectively. 'f1' and 'm1' are population counts of 1 to 4 year olds for females and males, respectively. Over 4 years old, the age groups are in five-year bins labelled with a '5', '10', etc. Eighty year olds and over are represented in the groups 'f80' and 'm80'. We provide four additional rasters that represent demographic groups often targeted by programmes and interventions. These are 'under1' (all females and males under the age of 1), 'under5' (all females and males under the age of 5), 'under15' (all females and males under the age of 15) and 'f1549' (all females between the ages of 15 and 49, inclusive). These data were produced post-hoc by multiplying the total population counts provided in the KEN_population_v2_0_gridded.tif raster and age and gender proportions derived the US Census bureau age-gender projections for each sub-county. While this data represents population counts, values contain decimals, i.e. fractions of people. This is because both the input population data and age-gender proportions contain decimals. For this reason, it is advised to aggregate the rasters at a coarser scale. For example, if four grid cells next to each other have values of 0.25 this indicates that there is 1 person of that age group somewhere in those four grid cells.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/548"
+        },
+        {
+          "id": "resource_599c1689",
+          "title": "KEN_population_ v2_0_mastergrid.tif",
+          "description": "This geotiff raster contains the rasterised administrative units used to perform the population disaggregation, with a spatial resolution of approximately 100m grid cell (0.0008333 decimal degrees). The pixel values are IDs referring to the administrative boundary polygons (sub-counties) that match the corresponding units in the input population data.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/547"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded disaggregated population estimates for Kenya at high spatial resolution, including age and gender disaggregation"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/gridded-disaggregated-population-estimates-for-kenya-version-2-0",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

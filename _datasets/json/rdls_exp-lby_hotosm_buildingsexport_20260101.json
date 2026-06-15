@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-lby_hotosm_buildingsexport_20260101",
+      "title": "Libya Buildings (OpenStreetMap Export)",
+      "description": "OpenStreetMap contains roughly 1.3 million buildings in this region. Based on AI-mapped estimates, this is approximately 39% of the total buildings.The average age of data for this region is 5 years ( Last edited 3 months ago ) and 4% buildings were added or updated in the last 6 months. Read about what this summary means : indicators , metrics This theme includes all OpenStreetMap features in this area matching ( Learn what tags means here ) : tags['building'] IS NOT NULL Features may have these attributes: name name:en building building:levels building:materials addr:full addr:housenumber addr:street addr:city office source name:ar This dataset is one of many OpenStreetMap exports on HDX . See the Humanitarian OpenStreetMap Team website for more information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hotosm_lby_buildings]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "OpenStreetMap data is crowd sourced and cannot be considered to be exhaustive",
+      "contact_point": {
+        "name": "Humanitarian OpenStreetMap Team (HOT)",
+        "url": "https://data.humdata.org/dataset/hotosm_lby_buildings"
+      },
+      "creator": {
+        "name": "Humanitarian OpenStreetMap Team (HOT)",
+        "url": "https://data.humdata.org/dataset/hotosm_lby_buildings"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LBY"
+        ]
+      },
+      "temporal": {
+        "start": "2026-01-01"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OpenStreetMap contributors",
+            "url": "https://data.humdata.org/dataset/hotosm_lby_buildings"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building footprints were extracted from OpenStreetMap using the Humanitarian OpenStreetMap Team's raw data API and exported in multiple geospatial formats (SHP, GeoJSON, KML, GeoPackage, CSV). AI-based analysis estimated that the 1.3 million mapped buildings represent approximately 39% of total building stock in Libya, with data currency assessed at an average age of 5 years.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OpenStreetMap contributors",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Volunteered geographic information providing building footprint geometries and attributes across Libya, with AI-assisted mapping to estimate coverage completeness."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_be582053",
+          "title": "hotosm_lby_buildings_polygons_shp.zip",
+          "description": "Libya Buildings (OpenStreetMap Export) (ESRI Shapefile)",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://s3.dualstack.us-east-1.amazonaws.com/production-raw-data-api/ISO3/LBY/buildings/polygons/hotosm_lby_buildings_polygons_shp.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "resource_89fdd855",
+          "title": "hotosm_lby_buildings_polygons_kml.zip",
+          "description": "Libya Buildings (OpenStreetMap Export) (ZIP archive)",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://s3.dualstack.us-east-1.amazonaws.com/production-raw-data-api/ISO3/LBY/buildings/polygons/hotosm_lby_buildings_polygons_kml.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "resource_cf46bf3f",
+          "title": "hotosm_lby_buildings_polygons_geojson.zip",
+          "description": "Libya Buildings (OpenStreetMap Export) (ZIP archive)",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://s3.dualstack.us-east-1.amazonaws.com/production-raw-data-api/ISO3/LBY/buildings/polygons/hotosm_lby_buildings_polygons_geojson.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "resource_ea538dab",
+          "title": "hotosm_lby_buildings_polygons_csv.zip",
+          "description": "Libya Buildings (OpenStreetMap Export) (CSV Output along with centroid of feature)",
+          "media_type": "application/zip",
+          "download_url": "https://s3.us-east-1.amazonaws.com/exports-stage.hotosm.org/hotosm_lby_buildings_polygons_csv_csv_uid_0d39935b-a882-47f0-80f3-4f9e1344337c.zip"
+        },
+        {
+          "id": "resource_74671c7a",
+          "title": "hotosm_lby_buildings_polygons_gpkg.zip",
+          "description": "Libya Buildings (OpenStreetMap Export) (ZIP archive)",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://s3.dualstack.us-east-1.amazonaws.com/production-raw-data-api/ISO3/LBY/buildings/polygons/hotosm_lby_buildings_polygons_gpkg.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints and inventory across Libya with approximately 1.3 million mapped structures"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hotosm_lby_buildings",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
