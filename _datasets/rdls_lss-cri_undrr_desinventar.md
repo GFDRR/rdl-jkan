@@ -1,0 +1,1992 @@
+---
+attributions: []
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Comision Nacional de Prevencion de Riesgos y Atencion de Emergencias (CNE)
+  url: https://data.humdata.org/dataset/84aa5ccd-46eb-4bde-b39a-f9cb1a159fc3
+creator:
+  affiliation: null
+  email: isdr@un.org
+  name: United Nations Office for Disaster Risk Reduction (UNDRR)
+  url: https://www.desinventar.net/
+dataset_id: rdls_lss-cri_undrr_desinventar
+description: 'National disaster loss inventory for Costa Rica from the DesInventar
+  Sendai Framework Monitor database, compiled by Comision Nacional de Prevencion de
+  Riesgos y Atencion de Emergencias (CNE) and published by the United Nations Office
+  for Disaster Risk Reduction (UNDRR). Contains 13,693 event-level loss records covering
+  1970-2016, with observed impacts from coastal_flood, convective_storm, drought,
+  earthquake, flood, landslide, strong_wind, wildfire events. Loss data includes human
+  casualties, displacement, building damage, economic losses, agricultural damage,
+  and infrastructure impacts. [Source: This metadata record was automatically extracted
+  from the Humanitarian Data Exchange (HDX) at https://data.humdata.org] [Original
+  dataset: https://data.humdata.org/dataset/84aa5ccd-46eb-4bde-b39a-f9cb1a159fc3]'
+details: 'Event-level disaster loss records from the DesInventar database for Costa
+  Rica, maintained by Comision Nacional de Prevencion de Riesgos y Atencion de Emergencias
+  (CNE). Covers 13,693 observed disaster events from 1970-2016. Data collected through
+  direct observational reporting and includes human impacts (deaths, injuries, missing,
+  affected, evacuated, relocated), physical impacts (houses destroyed/damaged, education
+  centres, hospitals, roads), economic losses (local currency and USD), and agricultural
+  impacts (crop damage in hectares, livestock losses). Methodology: Direct Observational
+  Data / Anecdotal Data.'
+exposure: []
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: Event-level disaster loss records collected through the DesInventar
+    Sendai system, a standardised methodology for building national disaster loss
+    databases developed by LA RED / UNDRR. National disaster events are documented
+    through systematic review of local and national newspapers, official reports from
+    civil protection agencies, national statistics offices, and other primary administrative
+    sources. Each record represents a discrete observed disaster event with associated
+    human impacts (deaths, injuries, missing persons, affected and evacuated populations),
+    physical impacts (houses destroyed and damaged), agricultural losses (crop area
+    damaged in hectares), and economic losses (local currency and USD where reported).
+    Data collection and quality assurance was performed by national counterpart institutions
+    under UNDRR coordination as part of the Sendai Framework Monitoring initiative.
+    Datasets were published on the Humanitarian Data Exchange (HDX) platform by UNDRR.
+  sources:
+  - id: source_desinventar
+    license: null
+    name: DesInventar Sendai
+    risk_data_type: null
+    type: dataset
+    url: https://www.desinventar.net/
+    used_in: loss
+  - id: source_hdx
+    license: null
+    name: Humanitarian Data Exchange (HDX)
+    risk_data_type: null
+    type: dataset
+    url: https://data.humdata.org/dataset/84aa5ccd-46eb-4bde-b39a-f9cb1a159fc3
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/84aa5ccd-46eb-4bde-b39a-f9cb1a159fc3
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons indirectly affected (disruption to services, commerce,
+      work) from coastal flood (SURGE) events in Costa Rica. DesInventar records:
+      1 events with data out of 59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_001_coastalflood_affected
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed metres of transport networks destroyed from coastal flood
+      (SURGE) events in Costa Rica. DesInventar records: 2 events with data out of
+      59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_002_coastalflood_damages_in_roads_mts
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed deaths directly caused by disaster events from coastal
+      flood (SURGE) events in Costa Rica. DesInventar records: 5 events with data
+      out of 59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_003_coastalflood_deaths
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons temporarily evacuated from homes or workplaces
+      from coastal flood (SURGE) events in Costa Rica. DesInventar records: 3 events
+      with data out of 59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_004_coastalflood_evacuated
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes with non-structural damage, still habitable from
+      coastal flood (SURGE) events in Costa Rica. DesInventar records: 22 events with
+      data out of 59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_005_coastalflood_houses_damaged
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes destroyed beyond habitability from coastal flood
+      (SURGE) events in Costa Rica. DesInventar records: 6 events with data out of
+      59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_006_coastalflood_houses_destroyed
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons injured or made sick directly by disaster events
+      from coastal flood (SURGE) events in Costa Rica. DesInventar records: 2 events
+      with data out of 59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_007_coastalflood_injured
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in local currency from coastal flood
+      (SURGE) events in Costa Rica. DesInventar records: 1 events with data out of
+      59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_008_coastalflood_losses_local
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: CRC
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons whose goods/services suffered serious damage from
+      coastal flood (SURGE) events in Costa Rica. DesInventar records: 17 events with
+      data out of 59 total coastal flood events (1970-2015).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: loss_009_coastalflood_victims
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes with non-structural damage, still habitable from
+      convective storm (HAILSTORM) events in Costa Rica. DesInventar records: 2 events
+      with data out of 2 total convective storm events (1993-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_convective_storm
+      intensity_measure: sws_10m:m/s
+      process: tornado
+      trigger: null
+      type: convective_storm
+    id: loss_010_convectivestorm_houses_damaged
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons whose goods/services suffered serious damage from
+      convective storm (HAILSTORM) events in Costa Rica. DesInventar records: 1 events
+      with data out of 2 total convective storm events (1993-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_convective_storm
+      intensity_measure: sws_10m:m/s
+      process: tornado
+      trigger: null
+      type: convective_storm
+    id: loss_011_convectivestorm_victims
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: agriculture
+    asset_dimension: product
+    description: 'Observed hectares of crops/woods destroyed or affected from drought
+      (DROUGHT) events in Costa Rica. DesInventar records: 29 events with data out
+      of 438 total drought events (1972-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: loss_012_drought_damages_in_crops_ha
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: area
+          unit: hectare
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in local currency from drought (DROUGHT)
+      events in Costa Rica. DesInventar records: 25 events with data out of 438 total
+      drought events (1972-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: loss_013_drought_losses_local
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: CRC
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in US Dollars from drought (DROUGHT)
+      events in Costa Rica. DesInventar records: 18 events with data out of 438 total
+      drought events (1972-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: loss_014_drought_losses_usd
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: USD
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: agriculture
+    asset_dimension: product
+    description: 'Observed livestock lost from drought (DROUGHT) events in Costa Rica.
+      DesInventar records: 1 events with data out of 438 total drought events (1972-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: loss_015_drought_lost_cattle
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons whose goods/services suffered serious damage from
+      drought (DROUGHT) events in Costa Rica. DesInventar records: 22 events with
+      data out of 438 total drought events (1972-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: loss_016_drought_victims
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed deaths directly caused by disaster events from earthquake
+      (EARTHQUAKE) events in Costa Rica. DesInventar records: 15 events with data
+      out of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_017_earthquake_deaths
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed educational facilities destroyed or affected from earthquake
+      (EARTHQUAKE) events in Costa Rica. DesInventar records: 77 events with data
+      out of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_018_earthquake_education_centers
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons temporarily evacuated from homes or workplaces
+      from earthquake (EARTHQUAKE) events in Costa Rica. DesInventar records: 10 events
+      with data out of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_019_earthquake_evacuated
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed health facilities destroyed or affected from earthquake
+      (EARTHQUAKE) events in Costa Rica. DesInventar records: 22 events with data
+      out of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_020_earthquake_hospitals
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes with non-structural damage, still habitable from
+      earthquake (EARTHQUAKE) events in Costa Rica. DesInventar records: 148 events
+      with data out of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_021_earthquake_houses_damaged
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes destroyed beyond habitability from earthquake (EARTHQUAKE)
+      events in Costa Rica. DesInventar records: 132 events with data out of 348 total
+      earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_022_earthquake_houses_destroyed
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in local currency from earthquake
+      (EARTHQUAKE) events in Costa Rica. DesInventar records: 6 events with data out
+      of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_023_earthquake_losses_local
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: CRC
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in US Dollars from earthquake (EARTHQUAKE)
+      events in Costa Rica. DesInventar records: 2 events with data out of 348 total
+      earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_024_earthquake_losses_usd
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: USD
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: agriculture
+    asset_dimension: product
+    description: 'Observed livestock lost from earthquake (EARTHQUAKE) events in Costa
+      Rica. DesInventar records: 2 events with data out of 348 total earthquake events
+      (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_025_earthquake_lost_cattle
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons missing or unaccounted for after disaster events
+      from earthquake (EARTHQUAKE) events in Costa Rica. DesInventar records: 1 events
+      with data out of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_026_earthquake_missing
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons permanently relocated from homes from earthquake
+      (EARTHQUAKE) events in Costa Rica. DesInventar records: 2 events with data out
+      of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_027_earthquake_relocated
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons whose goods/services suffered serious damage from
+      earthquake (EARTHQUAKE) events in Costa Rica. DesInventar records: 150 events
+      with data out of 348 total earthquake events (1973-2012).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_028_earthquake_victims
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons indirectly affected (disruption to services, commerce,
+      work) from flood (FLOOD) events in Costa Rica. DesInventar records: 105 events
+      with data out of 8,334 total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_029_flood_affected
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: agriculture
+    asset_dimension: product
+    description: 'Observed hectares of crops/woods destroyed or affected from flood
+      (FLOOD) events in Costa Rica. DesInventar records: 10 events with data out of
+      8,334 total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_030_flood_damages_in_crops_ha
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: area
+          unit: hectare
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed metres of transport networks destroyed from flood (FLOOD)
+      events in Costa Rica. DesInventar records: 49 events with data out of 8,334
+      total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_031_flood_damages_in_roads_mts
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed deaths directly caused by disaster events from flood (FLOOD)
+      events in Costa Rica. DesInventar records: 68 events with data out of 8,334
+      total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_032_flood_deaths
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed educational facilities destroyed or affected from flood
+      (FLOOD) events in Costa Rica. DesInventar records: 170 events with data out
+      of 8,334 total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_033_flood_education_centers
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons temporarily evacuated from homes or workplaces
+      from flood (FLOOD) events in Costa Rica. DesInventar records: 795 events with
+      data out of 8,334 total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_034_flood_evacuated
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed health facilities destroyed or affected from flood (FLOOD)
+      events in Costa Rica. DesInventar records: 25 events with data out of 8,334
+      total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_035_flood_hospitals
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes with non-structural damage, still habitable from
+      flood (FLOOD) events in Costa Rica. DesInventar records: 3,716 events with data
+      out of 8,334 total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_036_flood_houses_damaged
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes destroyed beyond habitability from flood (FLOOD)
+      events in Costa Rica. DesInventar records: 220 events with data out of 8,334
+      total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_037_flood_houses_destroyed
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons injured or made sick directly by disaster events
+      from flood (FLOOD) events in Costa Rica. DesInventar records: 10 events with
+      data out of 8,334 total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_038_flood_injured
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in local currency from flood (FLOOD)
+      events in Costa Rica. DesInventar records: 25 events with data out of 8,334
+      total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_039_flood_losses_local
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: CRC
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in US Dollars from flood (FLOOD)
+      events in Costa Rica. DesInventar records: 4 events with data out of 8,334 total
+      flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_040_flood_losses_usd
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: USD
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons missing or unaccounted for after disaster events
+      from flood (FLOOD) events in Costa Rica. DesInventar records: 13 events with
+      data out of 8,334 total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_041_flood_missing
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons permanently relocated from homes from flood (FLOOD)
+      events in Costa Rica. DesInventar records: 19 events with data out of 8,334
+      total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_042_flood_relocated
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons whose goods/services suffered serious damage from
+      flood (FLOOD) events in Costa Rica. DesInventar records: 2,394 events with data
+      out of 8,334 total flood events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_043_flood_victims
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons indirectly affected (disruption to services, commerce,
+      work) from landslide (LANDSLIDE) events in Costa Rica. DesInventar records:
+      44 events with data out of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_044_landslide_affected
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: agriculture
+    asset_dimension: product
+    description: 'Observed hectares of crops/woods destroyed or affected from landslide
+      (LANDSLIDE) events in Costa Rica. DesInventar records: 4 events with data out
+      of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_045_landslide_damages_in_crops_ha
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: area
+          unit: hectare
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed metres of transport networks destroyed from landslide (LANDSLIDE)
+      events in Costa Rica. DesInventar records: 212 events with data out of 3,596
+      total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_046_landslide_damages_in_roads_mts
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed deaths directly caused by disaster events from landslide
+      (LANDSLIDE) events in Costa Rica. DesInventar records: 85 events with data out
+      of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_047_landslide_deaths
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed educational facilities destroyed or affected from landslide
+      (LANDSLIDE) events in Costa Rica. DesInventar records: 33 events with data out
+      of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_048_landslide_education_centers
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons temporarily evacuated from homes or workplaces
+      from landslide (LANDSLIDE) events in Costa Rica. DesInventar records: 106 events
+      with data out of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_049_landslide_evacuated
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed health facilities destroyed or affected from landslide
+      (LANDSLIDE) events in Costa Rica. DesInventar records: 3 events with data out
+      of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_050_landslide_hospitals
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes with non-structural damage, still habitable from
+      landslide (LANDSLIDE) events in Costa Rica. DesInventar records: 1,402 events
+      with data out of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_051_landslide_houses_damaged
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes destroyed beyond habitability from landslide (LANDSLIDE)
+      events in Costa Rica. DesInventar records: 154 events with data out of 3,596
+      total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_052_landslide_houses_destroyed
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons injured or made sick directly by disaster events
+      from landslide (LANDSLIDE) events in Costa Rica. DesInventar records: 14 events
+      with data out of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_053_landslide_injured
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in local currency from landslide
+      (LANDSLIDE) events in Costa Rica. DesInventar records: 24 events with data out
+      of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_054_landslide_losses_local
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: CRC
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in US Dollars from landslide (LANDSLIDE)
+      events in Costa Rica. DesInventar records: 8 events with data out of 3,596 total
+      landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_055_landslide_losses_usd
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: USD
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: agriculture
+    asset_dimension: product
+    description: 'Observed livestock lost from landslide (LANDSLIDE) events in Costa
+      Rica. DesInventar records: 2 events with data out of 3,596 total landslide events
+      (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_056_landslide_lost_cattle
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons missing or unaccounted for after disaster events
+      from landslide (LANDSLIDE) events in Costa Rica. DesInventar records: 7 events
+      with data out of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_057_landslide_missing
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons permanently relocated from homes from landslide
+      (LANDSLIDE) events in Costa Rica. DesInventar records: 7 events with data out
+      of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_058_landslide_relocated
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons whose goods/services suffered serious damage from
+      landslide (LANDSLIDE) events in Costa Rica. DesInventar records: 680 events
+      with data out of 3,596 total landslide events (1970-2016).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: loss_059_landslide_victims
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed deaths directly caused by disaster events from strong wind
+      (STORM) events in Costa Rica. DesInventar records: 3 events with data out of
+      14 total strong wind events (1995-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_strong_wind
+      intensity_measure: sws_10m:m/s
+      process: extratropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: loss_060_strongwind_deaths
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes with non-structural damage, still habitable from
+      strong wind (STORM) events in Costa Rica. DesInventar records: 12 events with
+      data out of 14 total strong wind events (1995-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_strong_wind
+      intensity_measure: sws_10m:m/s
+      process: extratropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: loss_061_strongwind_houses_damaged
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes destroyed beyond habitability from strong wind (STORM)
+      events in Costa Rica. DesInventar records: 2 events with data out of 14 total
+      strong wind events (1995-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_strong_wind
+      intensity_measure: sws_10m:m/s
+      process: extratropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: loss_062_strongwind_houses_destroyed
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons whose goods/services suffered serious damage from
+      strong wind (STORM) events in Costa Rica. DesInventar records: 10 events with
+      data out of 14 total strong wind events (1995-2014).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_strong_wind
+      intensity_measure: sws_10m:m/s
+      process: extratropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: loss_063_strongwind_victims
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons indirectly affected (disruption to services, commerce,
+      work) from wildfire (FIRE) events in Costa Rica. DesInventar records: 10 events
+      with data out of 902 total wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_064_wildfire_affected
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed deaths directly caused by disaster events from wildfire
+      (FIRE) events in Costa Rica. DesInventar records: 56 events with data out of
+      902 total wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_065_wildfire_deaths
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed educational facilities destroyed or affected from wildfire
+      (FIRE) events in Costa Rica. DesInventar records: 12 events with data out of
+      902 total wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_066_wildfire_education_centers
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: 'Observed health facilities destroyed or affected from wildfire (FIRE)
+      events in Costa Rica. DesInventar records: 1 events with data out of 902 total
+      wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_067_wildfire_hospitals
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes with non-structural damage, still habitable from
+      wildfire (FIRE) events in Costa Rica. DesInventar records: 202 events with data
+      out of 902 total wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_068_wildfire_houses_damaged
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: structure
+    description: 'Observed homes destroyed beyond habitability from wildfire (FIRE)
+      events in Costa Rica. DesInventar records: 463 events with data out of 902 total
+      wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_069_wildfire_houses_destroyed
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons injured or made sick directly by disaster events
+      from wildfire (FIRE) events in Costa Rica. DesInventar records: 1 events with
+      data out of 902 total wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_070_wildfire_injured
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: casualty_count
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in local currency from wildfire (FIRE)
+      events in Costa Rica. DesInventar records: 242 events with data out of 902 total
+      wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_071_wildfire_losses_local
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: CRC
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: buildings
+    asset_dimension: content
+    description: 'Observed total economic losses in US Dollars from wildfire (FIRE)
+      events in Costa Rica. DesInventar records: 229 events with data out of 902 total
+      wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_072_wildfire_losses_usd
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: currency
+          unit: USD
+        metric: loss
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons permanently relocated from homes from wildfire
+      (FIRE) events in Costa Rica. DesInventar records: 1 events with data out of
+      902 total wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_073_wildfire_relocated
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: 'Observed persons whose goods/services suffered serious damage from
+      wildfire (FIRE) events in Costa Rica. DesInventar records: 172 events with data
+      out of 902 total wildfire events (1980-2013).'
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_wildfire
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: loss_074_wildfire_victims
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project:
+  name: DesInventar Sendai - Disaster Information Management System
+  url: https://www.desinventar.net/
+publisher:
+  affiliation: null
+  email: isdr@un.org
+  name: United Nations Office for Disaster Risk Reduction (UNDRR)
+  url: https://www.undrr.org/
+purpose: To document historical disaster losses in Costa Rica from the DesInventar
+  national disaster loss inventory, supporting disaster risk reduction monitoring
+  under the Sendai Framework.
+referenced_by: []
+resources:
+- access_url: https://data.humdata.org/dataset/84aa5ccd-46eb-4bde-b39a-f9cb1a159fc3
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: DesInventar Disaster Loss and Damage Dataset for Costa Rica (Disaster
+    data for Costa Rica)
+  download_url: https://data.humdata.org/dataset/84aa5ccd-46eb-4bde-b39a-f9cb1a159fc3/resource/293b09b9-84bb-44e2-a674-6a2d6d219100/download/costarica.zip
+  format: null
+  id: resource_001
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Disaster data for Costa Rica
+- access_url: https://data.humdata.org/dataset/84aa5ccd-46eb-4bde-b39a-f9cb1a159fc3
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: DesInventar Disaster Loss and Damage Dataset for Costa Rica (Disaster
+    tabular data for Costa Rica)
+  download_url: https://data.humdata.org/dataset/84aa5ccd-46eb-4bde-b39a-f9cb1a159fc3/resource/d574ac1d-d41e-436a-b108-905d6de744e0/download/di_report-costarica.xls
+  format: null
+  id: resource_002
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Disaster tabular data for Costa Rica
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-cri_undrr_desinventar
+spatial:
+  bbox:
+  - -87.12
+  - 5.52
+  - -82.56
+  - 11.21
+  centroid: null
+  countries:
+  - CRI
+  gazetteer_entries:
+  - description: Costa Rica
+    id: gazetteer_1
+    scheme: GEONAMES
+    uri: https://www.geonames.org/3624060/costa-rica.html
+  scale: national
+spatial_resolution: null
+temporal: null
+temporal_resolution: null
+title: DesInventar Disaster Loss and Damage Dataset for Costa Rica
+version: '1'
+vulnerability: null
+---
