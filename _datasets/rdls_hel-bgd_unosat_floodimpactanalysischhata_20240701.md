@@ -4,7 +4,7 @@ attributions:
     affiliation: null
     email: null
     name: UN Operational Satellite Applications Programme (UNOSAT)
-    url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+    url: https://data.humdata.org/dataset/flood-impact-analysis-in-chhatak-upazila-sunamganj-district-sylhet-division-bangladesh-as-
   id: attribution_1
   role: collaborator
 catalog: Humanitarian Data Exchange
@@ -12,24 +12,23 @@ contact_point:
   affiliation: null
   email: null
   name: United Nations Satellite Centre (UNOSAT)
-  url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+  url: https://data.humdata.org/dataset/flood-impact-analysis-in-chhatak-upazila-sunamganj-district-sylhet-division-bangladesh-as-
 creator:
   affiliation: null
   email: null
   name: United Nations Satellite Centre (UNOSAT)
-  url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
-dataset_id: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
-description: "UNOSAT code: FL20250220BWA, GDACS ID: 1103128 This map illustrates the\
-  \ satellite-detected accumulated flood extent in Gaborone, South East District,\
-  \ Botswana, as observed from Planet imagery and very high-resolution Pleiades imagery\
-  \ acquired between 23 and 25 February 2025. Within the analyzed area of approximately\
-  \ 700 km\xB2, an estimated 30 km\xB2 appears to be affected by floodwaters. UNITAR-UNOSAT\
-  \ has identified around 900 potentially affected structures, along with 24 affected\
-  \ road segments and 10 affected bridges within the analyzed area. This is a preliminary\
-  \ analysis and has not yet been validated in the field. Please send ground feedback\
-  \ to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record\
-  \ was automatically extracted from the Humanitarian Data Exchange (HDX); Original\
-  \ dataset: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-]"
+  url: https://data.humdata.org/dataset/flood-impact-analysis-in-chhatak-upazila-sunamganj-district-sylhet-division-bangladesh-as-
+dataset_id: rdls_hel-bgd_unosat_floodimpactanalysischhata_20240701
+description: "UNOSAT code: FL20240502BGD, GDACS ID: 1102700 This map illustrates satellite-detected\
+  \ surface waters in Chhatak Upazila, Sunamganj District, Sylhet division, as observed\
+  \ from a GLOBAL satellite image acquired on 26 June 2024 at 05:58 local time. Within\
+  \ the analysed area, about 20 km\xC2\xB2 of land appears to be flooded. Furthermore,\
+  \ within the analysed area, about 3,350 structures are identified as potentially\
+  \ affected by the floods (30% of the total structures in the analysed area), along\
+  \ with about 40 km of roads, as of 26 June 2024 This is a preliminary analysis and\
+  \ has not yet been validated in the field. Please send ground feedback to the United\
+  \ Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically\
+  \ extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/flood-impact-analysis-in-chhatak-upazila-sunamganj-district-sylhet-division-bangladesh-as-]"
 details: This is a preliminary assessment and has not yet been validated in the field.
   It is important to consider the characteristics of the source imagery used in the
   analyses when interpreting results. For damage assessments it should be noted that
@@ -41,8 +40,8 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure:
 - asset_type:
-    description: Building structures identified as potentially affected by floodwaters
-      in the analyzed area
+    description: Building structures in Chhatak Upazila identified as potentially
+      affected by flood inundation
     id: buildings
     scheme: null
     title: null
@@ -56,7 +55,8 @@ exposure:
       quantity_kind: count
       unit: count
 - asset_type:
-    description: Road segments and bridges within the flood-affected area
+    description: Road network segments in the analysed area potentially affected by
+      flooding
     id: infrastructure
     scheme: null
     title: null
@@ -67,8 +67,8 @@ exposure:
   - dimension: structure
     id: metric_1
     measurement:
-      quantity_kind: count
-      unit: count
+      quantity_kind: length
+      unit: null
 hazard:
   event_sets_by_hazard_type:
     flood:
@@ -90,13 +90,12 @@ hazard:
   event_sets_count: 1
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
-  description: "UNOSAT analysts processed Planet and Pleiades satellite imagery acquired\
-    \ 23-25 February 2025 over Gaborone, South East District, and Kgatleng Districts,\
-    \ Botswana. Multi-temporal image comparison identified notable changes in water\
-    \ extent, delineating accumulated flood areas of approximately 30 km\xB2. Spatial\
-    \ analysis of the flood extent polygon identified 900 potentially affected structures\
-    \ and 34 affected infrastructure elements (roads and bridges) within the 700 km\xB2\
-    \ study area."
+  description: UNOSAT analysts processed satellite imagery acquired on 26 June 2024
+    over Chhatak Upazila, comparing multi-temporal images to detect notable changes
+    in surface water extent. Flooded areas were delineated, and spatial overlays with
+    building footprints and road networks were performed to quantify potentially affected
+    structures and infrastructure. This post-event empirical analysis provides rapid
+    damage assessment for humanitarian response.
   sources:
   - id: source_1
     license: null
@@ -109,14 +108,14 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-- href: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+- href: https://data.humdata.org/dataset/flood-impact-analysis-in-chhatak-upazila-sunamganj-district-sylhet-division-bangladesh-as-
   rel: source
 loss:
   losses:
   - asset_category: buildings
     asset_dimension: structure
-    description: Approximately 900 potentially affected structures identified from
-      satellite imagery analysis
+    description: Approximately 3,350 structures identified as potentially affected
+      by floods (30% of total structures in analysed area)
     disaster_identifiers: []
     hazard:
       classification: null
@@ -139,7 +138,7 @@ loss:
       loss_type: ground_up
   - asset_category: infrastructure
     asset_dimension: structure
-    description: 24 affected road segments and 10 affected bridges from fluvial flooding
+    description: Approximately 40 km of roads potentially affected by flood inundation
     disaster_identifiers: []
     hazard:
       classification: null
@@ -154,7 +153,7 @@ loss:
         measurement:
           quantity_kind: count
           unit: null
-        metric: exposure
+        metric: loss
         modelling: observed
         type: direct
       loss_approach: empirical
@@ -174,46 +173,46 @@ resources:
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Accumulated satellite-detected water extents in Gaborone, South East
-    and Kgatleng Districts, Botswana as of 23 to 25 February 2025 (Zipped geodatabase)
-  download_url: https://unosat.org/static/unosat_filesystem/4081/FL20250220BWA_gdb.zip
+  description: Flood impact analysis in Chhatak Upazila, Sunamganj District, Sylhet
+    Division, Bangladesh as of 26 June 2024 (Zipped geodatabase)
+  download_url: https://unosat.org/static/unosat_filesystem/3889/TC20240502BGD_GDB.zip
   format: Geodatabase
-  id: resource_c47f1554
+  id: resource_c0dc723b
   media_type: null
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: FL20250220BWA_gdb.zip
+  title: TC20240502BGD_GDB.zip
 - access_url: null
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Accumulated satellite-detected water extents in Gaborone, South East
-    and Kgatleng Districts, Botswana as of 23 to 25 February 2025 (Zipped shapefile)
-  download_url: https://unosat.org/static/unosat_filesystem/4081/FL20250220BWA_SHP.zip
+  description: Flood impact analysis in Chhatak Upazila, Sunamganj District, Sylhet
+    Division, Bangladesh as of 26 June 2024 (Zipped shapefile)
+  download_url: https://unosat.org/static/unosat_filesystem/3889/TC20240502BGD_SHP.zip
   format: null
-  id: resource_152df5c6
+  id: resource_ded83847
   media_type: application/vnd.shp
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: FL20250220BWA_SHP.zip
+  title: TC20240502BGD_SHP.zip
 risk_data_type:
 - hazard
 - exposure
 - loss
 schema: rdls-10
-slug: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
+slug: rdls_hel-bgd_unosat_floodimpactanalysischhata_20240701
 spatial:
   bbox: null
   centroid: null
   countries:
-  - BWA
+  - BGD
   gazetteer_entries: []
   scale: national
 spatial_resolution: null
@@ -221,10 +220,10 @@ temporal:
   central_year: null
   duration: null
   end: null
-  start: '2025-02-27'
+  start: '2024-07-01'
 temporal_resolution: null
-title: Accumulated satellite-detected water extents in Gaborone, South East and Kgatleng
-  Districts, Botswana as of 23 to 25 February 2025
+title: Flood impact analysis in Chhatak Upazila, Sunamganj District, Sylhet Division,
+  Bangladesh as of 26 June 2024
 version: null
 vulnerability: null
 ---

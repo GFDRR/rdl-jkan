@@ -1,0 +1,262 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: WorldPop Research Group, University of Southampton
+    url: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-zambia-2019-version-1-0
+  id: attribution_1
+  role: collaborator
+- entity:
+    affiliation: null
+    email: null
+    name: GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development)
+    url: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-zambia-2019-version-1-0
+  id: attribution_2
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: GRID3
+  url: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-zambia-2019-version-1-0
+creator:
+  affiliation: null
+  email: null
+  name: GRID3
+  url: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-zambia-2019-version-1-0
+dataset_id: rdls_exp-zmb_grid3_modelledgriddedpopulation_202004
+description: 'These data were produced by the WorldPop Research Group at the University
+  of Southampton. This work is part of the GRID3 (Geo-Referenced Infrastructure and
+  Demographic Data for Development) project funded by the Bill and Melinda Gates Foundation
+  (BMGF) and the United Kingdom''s Department for International Development (OPP1182408).
+  Project partners include WorldPop at the University of Southampton, the United Nations
+  Population Fund ( UNFPA ), Center for International Earth Science Information Network
+  ( CIESIN ) in the Earth Institute at Columbia University, and the Flowminder Foundation.
+  The Zambia Statistics Agency supported and facilitated this work, and provided the
+  household survey datasets. The modelling work was led by Claire A. Dooley with support
+  from Douglas R. Leasure. Geospatial data processing was carried out by Heather R.
+  Chamberlain, Claire A. Dooley and Oliver Pannell. Coordination and stakeholder engagement
+  was led by Heather R. Chamberlain and Claire A. Dooley with support from Polly Marshall.
+  Oversight was provided by Andrew J. Tatem and Attila N. Lazar. Note, these data
+  are operational population estimates and are not official government statistics
+  For further details, please, read ZMB_population_v1_0_README.pdf Recommended citation
+  WorldPop (School of Geography and Environmental Science, University of Southampton).
+  2020. Bottom-up gridded population estimates for Zambia, version 1.0. https://dx.doi.org/10.5258/SOTON/WP00662.
+  [Source: This metadata record was automatically extracted from the Humanitarian
+  Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-zambia-2019-version-1-0]'
+details: Modelled gridded population estimates for Zambia 2019, version 1.0 For further
+  details, please, read [ZMB_population_v1_0_README.pdf](http://wopr.worldpop.org/download/27)
+  __Recommended citation__ _WorldPop (School of Geography and Environmental Science,
+  University of Southampton). 2020. Bottom-up gridded population estimates for Zambia,
+  version 1.0. https://dx.doi.org/10.5258/SOTON/WP00662_
+exposure:
+- asset_type:
+    description: Gridded population estimates for Zambia disaggregated by age and
+      sex at high spatial resolution
+    id: population
+    scheme: null
+    title: null
+    uri: null
+  category: population
+  id: exposure_1
+  metrics:
+  - dimension: population
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+hazard: null
+license: https://creativecommons.org/licenses/by-sa/4.0/
+lineage:
+  description: Census population data for Zambia was processed by the WorldPop Research
+    Group using spatial modeling techniques to produce high-resolution gridded population
+    estimates disaggregated by age and sex. The resulting dataset provides baseline
+    exposure data for population at risk across administrative and custom grid boundaries,
+    supporting disaster risk assessment and development planning.
+  sources:
+  - id: source_1
+    license: null
+    name: WorldPop Research Group, University of Southampton
+    risk_data_type:
+    - exposure
+    type: dataset
+    url: null
+    used_in: exposure
+  - id: source_2
+    license: null
+    name: GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development)
+    risk_data_type:
+    - exposure
+    type: dataset
+    url: null
+    used_in: exposure
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-zambia-2019-version-1-0
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: Census
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Bottom-up gridded population estimates (~100m) for Zambia. This zip
+    file contains a geotiff raster with estimates of total population size for each
+    approximately 100 m grid cell across the study area. It also contains a geotiff
+    raster with estimates of uncertainty in the population estimates.
+  download_url: https://wopr.worldpop.org/download/25
+  format: null
+  id: resource_99bf0aa5
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ZMB_population_v1_0_gridded.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Bottom-up gridded population estimates (~100m) for specific age-sex
+    groups. This zip file contains geotiff rasters with estimates of population sizes
+    for individual age-sex groups for each approximately 100 m grid cell across the
+    study area.
+  download_url: https://wopr.worldpop.org/download/29
+  format: null
+  id: resource_9b3d2fe1
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ZMB_population_v1_0_agesex.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Bottom-up population totals for administrative units. This zip file
+    contains population totals for administrative units in Zambia (i.e. provinces
+    and districts). The boundaries are included as shapefiles with the population
+    estimates included in the attribute tables.
+  download_url: https://wopr.worldpop.org/download/26
+  format: null
+  id: resource_fee20215
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ZMB_population_v1_0_admin.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Mastergrid for gridded population estimates. This geotiff raster contains
+    the mastergrid used to define where population estimates were made. It contains
+    a value of 1 where population estimates were made and a value of 0 or NA everywhere
+    else. Cell IDs from the mastergrid can be used to lookup values in the SQL database.
+  download_url: https://wopr.worldpop.org/download/28
+  format: null
+  id: resource_4eb7cc53
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ZMB_population_v1_0_mastergrid.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'README: ZMB Population v1.0. This README file provides information
+    about the data included in the data release, how it was produced, source data
+    that were used, and known assumptions and limitations of the results.'
+  download_url: https://wopr.worldpop.org/download/27
+  format: null
+  id: resource_3aec8d7f
+  media_type: application/pdf
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ZMB_population_v1_0_README.pdf
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: SQL database with Bayesian posterior population predictions. This SQLite
+    database contains samples from the Bayesian posterior predictions of population
+    size in each grid cell. The database can be used to develop applications that
+    query the population estimates.
+  download_url: https://wopr.worldpop.org/download/30
+  format: SQL
+  id: resource_dbb9ad99
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ZMB_population_v1_0_sql.sql
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Image tiles for gridded population estimates. These image tiles (XYZ
+    format) allow for rapid display of the 100 m gridded population estimates across
+    the study area in web applications.
+  download_url: https://wopr.worldpop.org/download/31
+  format: PNG
+  id: resource_b6cc7633
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ZMB_population_v1_0_tiles.zip
+risk_data_type:
+- exposure
+schema: rdls-10
+slug: rdls_exp-zmb_grid3_modelledgriddedpopulation_202004
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - ZMB
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2020-04-09'
+  start: '2020-04-02'
+temporal_resolution: null
+title: Modelled gridded population estimates for Zambia 2019, version 1.0
+version: null
+vulnerability: null
+---

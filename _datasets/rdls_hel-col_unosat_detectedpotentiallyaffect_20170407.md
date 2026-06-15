@@ -1,35 +1,30 @@
 ---
-attributions:
-- entity:
-    affiliation: null
-    email: null
-    name: UN Operational Satellite Applications Programme (UNOSAT)
-    url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
-  id: attribution_1
-  role: collaborator
+attributions: []
 catalog: Humanitarian Data Exchange
 contact_point:
   affiliation: null
   email: null
   name: United Nations Satellite Centre (UNOSAT)
-  url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+  url: https://data.humdata.org/dataset/satellite-detected-potentially-affected-zones-by-the-mudflow-in-mocoa-colombia
 creator:
   affiliation: null
   email: null
   name: United Nations Satellite Centre (UNOSAT)
-  url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
-dataset_id: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
-description: "UNOSAT code: FL20250220BWA, GDACS ID: 1103128 This map illustrates the\
-  \ satellite-detected accumulated flood extent in Gaborone, South East District,\
-  \ Botswana, as observed from Planet imagery and very high-resolution Pleiades imagery\
-  \ acquired between 23 and 25 February 2025. Within the analyzed area of approximately\
-  \ 700 km\xB2, an estimated 30 km\xB2 appears to be affected by floodwaters. UNITAR-UNOSAT\
-  \ has identified around 900 potentially affected structures, along with 24 affected\
-  \ road segments and 10 affected bridges within the analyzed area. This is a preliminary\
-  \ analysis and has not yet been validated in the field. Please send ground feedback\
-  \ to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record\
-  \ was automatically extracted from the Humanitarian Data Exchange (HDX); Original\
-  \ dataset: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-]"
+  url: https://data.humdata.org/dataset/satellite-detected-potentially-affected-zones-by-the-mudflow-in-mocoa-colombia
+dataset_id: rdls_hel-col_unosat_detectedpotentiallyaffect_20170407
+description: 'This map illustrates satellite-detected water bodies and inundated areas
+  in Mocoa city, Putumayo department in Colombia as seen on Resourcesat-2 satellite
+  imagery collected 04 April 2017. Heavy rainfall in the area caused flooding, landslides
+  and mudflow that affected the city. UNOSAT extracted a water index from the satellite
+  image to determine areas of standing water as well as soils with varying levels
+  of water content (i.e. mud). Within the city of Mocoa and the current map extent,
+  about 18 km of roads are potentially affected. About 2900 buildings are within areas
+  which experienced floods and mudflow. It is likely that flood waters and inundation
+  have been systematically underestimated along highly vegetated areas and within
+  built-up urban areas because of the special characteristics of the satellite data
+  used. This analysis has not yet been validated in the field. Please send ground
+  feedback to UNITAR /UNOSAT.. [Source: This metadata record was automatically extracted
+  from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-potentially-affected-zones-by-the-mudflow-in-mocoa-colombia]'
 details: This is a preliminary assessment and has not yet been validated in the field.
   It is important to consider the characteristics of the source imagery used in the
   analyses when interpreting results. For damage assessments it should be noted that
@@ -41,8 +36,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure:
 - asset_type:
-    description: Building structures identified as potentially affected by floodwaters
-      in the analyzed area
+    description: Building stock within flood and mudflow-affected zones in Mocoa city
     id: buildings
     scheme: null
     title: null
@@ -56,7 +50,7 @@ exposure:
       quantity_kind: count
       unit: count
 - asset_type:
-    description: Road segments and bridges within the flood-affected area
+    description: Road network potentially affected by flooding and mudflow
     id: infrastructure
     scheme: null
     title: null
@@ -67,11 +61,11 @@ exposure:
   - dimension: structure
     id: metric_1
     measurement:
-      quantity_kind: count
-      unit: count
+      quantity_kind: length
+      unit: null
 hazard:
   event_sets_by_hazard_type:
-    flood:
+    landslide:
     - analysis_type: empirical
       calculation_method: observed
       event_count: 0
@@ -80,27 +74,25 @@ hazard:
       hazards:
       - classification: null
         id: hazard_1
-        intensity_measure: AA:km2
-        process: fluvial_flood
+        intensity_measure: LSI:-
+        process: landslide_mudflow
         trigger: null
-        type: flood
+        type: landslide
       id: event_set_1
       occurrence_range: null
       seasonality: null
   event_sets_count: 1
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
-  description: "UNOSAT analysts processed Planet and Pleiades satellite imagery acquired\
-    \ 23-25 February 2025 over Gaborone, South East District, and Kgatleng Districts,\
-    \ Botswana. Multi-temporal image comparison identified notable changes in water\
-    \ extent, delineating accumulated flood areas of approximately 30 km\xB2. Spatial\
-    \ analysis of the flood extent polygon identified 900 potentially affected structures\
-    \ and 34 affected infrastructure elements (roads and bridges) within the 700 km\xB2\
-    \ study area."
+  description: UNOSAT analysts processed Resourcesat-2 satellite imagery from 4 April
+    2017 to extract a water index identifying standing water and mud-saturated soils
+    in Mocoa following heavy rainfall-triggered flooding and mudflow. Satellite-detected
+    inundated zones were mapped as polygons with area calculations and overlaid with
+    building footprints and road networks to quantify exposure and direct impacts.
   sources:
   - id: source_1
     license: null
-    name: UN Operational Satellite Applications Programme (UNOSAT)
+    name: United Nations Satellite Centre (UNOSAT)
     risk_data_type:
     - hazard
     type: dataset
@@ -109,22 +101,21 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-- href: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+- href: https://data.humdata.org/dataset/satellite-detected-potentially-affected-zones-by-the-mudflow-in-mocoa-colombia
   rel: source
 loss:
   losses:
   - asset_category: buildings
     asset_dimension: structure
-    description: Approximately 900 potentially affected structures identified from
-      satellite imagery analysis
+    description: Buildings within satellite-detected mudflow and inundated areas
     disaster_identifiers: []
     hazard:
       classification: null
-      id: hazard_flood
-      intensity_measure: AA:km2
+      id: hazard_landslide
+      intensity_measure: LSI:-
       process: null
       trigger: null
-      type: flood
+      type: landslide
     id: loss_1
     impact_and_losses:
       impact:
@@ -139,22 +130,22 @@ loss:
       loss_type: ground_up
   - asset_category: infrastructure
     asset_dimension: structure
-    description: 24 affected road segments and 10 affected bridges from fluvial flooding
+    description: Road infrastructure affected by mudflow and flooding
     disaster_identifiers: []
     hazard:
       classification: null
-      id: hazard_flood
-      intensity_measure: AA:km2
+      id: hazard_landslide
+      intensity_measure: LSI:-
       process: null
       trigger: null
-      type: flood
+      type: landslide
     id: loss_2
     impact_and_losses:
       impact:
         measurement:
           quantity_kind: count
           unit: null
-        metric: exposure
+        metric: loss
         modelling: observed
         type: direct
       loss_approach: empirical
@@ -174,46 +165,46 @@ resources:
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Accumulated satellite-detected water extents in Gaborone, South East
-    and Kgatleng Districts, Botswana as of 23 to 25 February 2025 (Zipped geodatabase)
-  download_url: https://unosat.org/static/unosat_filesystem/4081/FL20250220BWA_gdb.zip
+  description: Colombia - Satellite detected potentially affected zones by the mudflow
+    in Mocoa. (Zipped geodatabase)
+  download_url: https://unosat-maps.web.cern.ch/unosat-maps/CO/LS20170403COL/LS20170403COL.gdb.zip
   format: Geodatabase
-  id: resource_c47f1554
+  id: resource_138d2460
   media_type: null
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: FL20250220BWA_gdb.zip
+  title: LS20170403COL.gdb.zip
 - access_url: null
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Accumulated satellite-detected water extents in Gaborone, South East
-    and Kgatleng Districts, Botswana as of 23 to 25 February 2025 (Zipped shapefile)
-  download_url: https://unosat.org/static/unosat_filesystem/4081/FL20250220BWA_SHP.zip
+  description: Colombia - Satellite detected potentially affected zones by the mudflow
+    in Mocoa. (Zipped shapefile)
+  download_url: https://unosat-maps.web.cern.ch/unosat-maps/CO/LS20170403COL/LS20170403COL_SHP.zip
   format: null
-  id: resource_152df5c6
+  id: resource_931361be
   media_type: application/vnd.shp
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: FL20250220BWA_SHP.zip
+  title: LS20170403COL_SHP.zip
 risk_data_type:
 - hazard
 - exposure
 - loss
 schema: rdls-10
-slug: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
+slug: rdls_hel-col_unosat_detectedpotentiallyaffect_20170407
 spatial:
   bbox: null
   centroid: null
   countries:
-  - BWA
+  - COL
   gazetteer_entries: []
   scale: national
 spatial_resolution: null
@@ -221,10 +212,10 @@ temporal:
   central_year: null
   duration: null
   end: null
-  start: '2025-02-27'
+  start: '2017-04-07'
 temporal_resolution: null
-title: Accumulated satellite-detected water extents in Gaborone, South East and Kgatleng
-  Districts, Botswana as of 23 to 25 February 2025
+title: Colombia - Satellite detected potentially affected zones by the mudflow in
+  Mocoa.
 version: null
 vulnerability: null
 ---
