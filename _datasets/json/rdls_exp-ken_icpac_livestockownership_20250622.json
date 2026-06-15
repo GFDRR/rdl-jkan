@@ -1,0 +1,100 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ken_icpac_livestockownership_20250622",
+      "title": "Kenya Livestock_Ownership",
+      "description": "This is Kenya , livestock ownership with a resolution of 0.05 , approximately 5000 metres Source : DHS 2022. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-kenya-livestock-ownership]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Time period is set to publication date rather than the date the data covers",
+      "contact_point": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-kenya-livestock-ownership"
+      },
+      "creator": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-kenya-livestock-ownership"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2025-06-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DHS 2022",
+            "url": "https://data.humdata.org/dataset/icpac-geonode-kenya-livestock-ownership"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Livestock ownership data from the 2022 Demographic and Health Survey was spatially interpolated and gridded to a 0.05-degree resolution (approximately 5 km) to create a continuous raster surface of livestock distribution across Kenya for exposure assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DHS 2022",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Demographic and Health Survey 2022 providing household-level livestock ownership data for Kenya"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b1469d11",
+          "title": "Kenya Livestock_Ownership GeoTIFF",
+          "description": "GeoTIFF file. This is Kenya , livestock ownership with a resolution of 0.05 , approximately 5000 metres Source : DHS 2022",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__Livestock_OwnershipNorm_Copy0&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Spatial distribution of livestock ownership across Kenya at 5 km resolution"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/icpac-geonode-kenya-livestock-ownership",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

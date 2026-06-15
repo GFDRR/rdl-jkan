@@ -1,0 +1,178 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-metad4g_continentafricahighresolu_2018",
+      "title": "Continent of Africa: High Resolution Population Density Maps",
+      "description": "This zip file contains 28 cloud optimized tiff files that cover the continent of Africa. Each of the 28 files represents a region or area - these are not divided by country. Notes: The country-by-country files that were previously hosted here have been moved into separate datasets. You can find all of them here . South Sudan, Sudan, Somalia and Ethiopia are intentionally omitted from this dataset. However, a country-level dataset for Ethiopia can be found here . These 28 tiff files represent 2015 population estimates. However, please note that many of the country-level files include 2020 population estimates including: Angola, Benin, Botswana, Burundi, Cameroon, Cabo Verde, Cote d'Ivoire, Djibouti, Eritrea, Eswatini, The Gambia, Ghana, Lesotho, Liberia, Mozambique, Namibia, Sao Tome & Principe, Sierra Leone, South Africa, Togo, Zambia, and Zimbabwe.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/highresolutionpopulationdensitymaps]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "To reference this data, please use the following citation: Facebook Connectivity Lab and Center for International Earth Science Information Network - CIESIN - Columbia University. 2016. High Resolution Settlement Layer (HRSL). Source imagery for HRSL © 2016 DigitalGlobe. Accessed DAY MONTH YEAR.'",
+      "contact_point": {
+        "name": "AI and Data for Good at Meta",
+        "url": "https://data.humdata.org/dataset/highresolutionpopulationdensitymaps"
+      },
+      "creator": {
+        "name": "AI and Data for Good at Meta",
+        "url": "https://data.humdata.org/dataset/highresolutionpopulationdensitymaps"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "DZA",
+          "AGO",
+          "BEN",
+          "BWA",
+          "BFA",
+          "BDI",
+          "CMR",
+          "CPV",
+          "CAF",
+          "TCD",
+          "COM",
+          "COG",
+          "COD",
+          "CIV",
+          "DJI",
+          "EGY",
+          "GNQ",
+          "ERI",
+          "SWZ",
+          "ETH",
+          "GAB",
+          "GMB",
+          "GHA",
+          "GIN",
+          "GNB",
+          "KEN",
+          "LSO",
+          "LBR",
+          "LBY",
+          "MDG",
+          "MWI",
+          "MLI",
+          "MRT",
+          "MUS",
+          "MAR",
+          "MOZ",
+          "NAM",
+          "NER",
+          "NGA",
+          "RWA",
+          "STP",
+          "SEN",
+          "SYC",
+          "SLE",
+          "ZAF",
+          "SSD",
+          "TZA",
+          "TGO",
+          "TUN",
+          "UGA",
+          "ZMB",
+          "ZWE"
+        ]
+      },
+      "temporal": {
+        "start": "2018-10-01",
+        "end": "2019-04-08"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Columbia University",
+            "url": "https://data.humdata.org/dataset/highresolutionpopulationdensitymaps"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "High-resolution population density maps were created by applying machine learning algorithms to identify buildings from commercial satellite imagery, then overlaying general population estimates derived from publicly available census data and demographic statistics. The resulting cloud-optimized GeoTIFF files provide gridded population density across 28 African regions at continental scale.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "AI and Data for Good at Meta",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Machine learning-based building detection from satellite imagery combined with census-based population estimation to generate high-resolution population density maps"
+          },
+          {
+            "id": "source_2",
+            "name": "Columbia University",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population estimates and demographic data integration for overlay with building detection results"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://dataforgood.fb.com/docs/methodology-high-resolution-population-density-maps-demographic-estimates/"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://dataforgood.fb.com/docs/high-resolution-population-density-maps-demographic-estimates-documentation/"
+        },
+        {
+          "id": "reference_3",
+          "name": "Methodology documentation",
+          "url": "https://dataforgood.fb.com/docs/census-information-for-high-resolution-population-density-maps/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_7b3ef0ae",
+          "title": "All Files - Africa High Resolution Population Density.zip",
+          "description": "This zip file contains 28 cloud optimized tiff files that cover the continent of Africa. Each of the 28 files represents a region or area - these are not divided by country.",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/dbd7b22d-7426-4eb0-b3c4-faa29a87f44b/resource/7b3ef0ae-a37d-4a42-a2c9-6b111e592c2c/download/population_af_2018-10-01.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "High-resolution gridded population density estimates derived from satellite imagery and census data across Africa"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/highresolutionpopulationdensitymaps",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
