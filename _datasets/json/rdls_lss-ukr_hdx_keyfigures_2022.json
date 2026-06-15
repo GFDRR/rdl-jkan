@@ -1,0 +1,169 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ukr_hdx_keyfigures_2022",
+      "title": "Ukraine Key Figures",
+      "description": "Key Figures extracted from Ukraine Flash Appeal, FTS and the daily Situation Reports.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ukraine-key-figures-2022]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "Key Figures extracted from Ukraine Flash Appeal, FTS and the daily SitReps (i.e https://reliefweb.int/sites/reliefweb.int/files/resources/2022-03-07_Ukraine%20Humanitarian%20Impact%20SitRep_final.pdf)",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/ukraine-key-figures-2022"
+      },
+      "creator": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/ukraine-key-figures-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UKR"
+        ]
+      },
+      "temporal": {
+        "start": "2022-03-03",
+        "end": "2023-07-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OCHA Situation Reports",
+            "url": "https://data.humdata.org/dataset/ukraine-key-figures-2022"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "FTS (Financial Tracking Service)",
+            "url": "https://data.humdata.org/dataset/ukraine-key-figures-2022"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Flash Appeal",
+            "url": "https://data.humdata.org/dataset/ukraine-key-figures-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Key figures aggregated from OCHA Situation Reports, FTS funding data, and Flash Appeal documents to compile consolidated impact metrics including affected population and casualty counts from the Ukraine humanitarian crisis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Situation Reports",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Daily situation reports documenting humanitarian impact and affected populations in Ukraine"
+          },
+          {
+            "id": "source_2",
+            "name": "FTS (Financial Tracking Service)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Funding and resource allocation data for humanitarian response"
+          },
+          {
+            "id": "source_3",
+            "name": "Flash Appeal",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian appeal documenting needs and impact figures"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_22fb535c",
+          "title": "Key figures",
+          "description": "Ukraine Key Figures (Key figures)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQIdedbZz0ehRC0b4fsWiP14R7MdtU1mpmwAkuXUPElSah2AWCURKGALFDuHjvyJUL8vzZAt3R1B5qg/pub?output=csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total affected population from the Ukraine conflict and humanitarian crisis"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Casualty figures from the Ukraine conflict"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ukraine-key-figures-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

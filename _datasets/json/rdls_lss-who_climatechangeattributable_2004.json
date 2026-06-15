@@ -1,0 +1,94 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-who_climatechangeattributable_2004",
+      "title": "Climate Change Attributable Deaths",
+      "description": "Climate Change Attributable Deaths. Climate Change Attributable Deaths Per Capita. Measuring the health effects from climate change can only be very approximate. Nevertheless, a assessment coordinated by WHO, taking into account only a subset of the possible health impacts, concluded that the modest climate change that has occurred since the 1970s was already causing over 140 000 excess deaths annually by the year 2004.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/climate-change-attributable-deaths]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "World Health Organization",
+        "url": "https://data.humdata.org/dataset/climate-change-attributable-deaths"
+      },
+      "creator": {
+        "name": "World Health Organization",
+        "url": "https://data.humdata.org/dataset/climate-change-attributable-deaths"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2004-01-01",
+        "end": "2004-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "WHO coordinated a burden of disease assessment attributing excess mortality to climate change by integrating health impact data from multiple climate-related hazards. Deaths and DALYs were calculated as population health metrics reflecting premature mortality and disability from climate change exposure since the 1970s, with estimates of over 140,000 annual excess deaths by 2004.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "World Health Organization",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "WHO burden of disease assessment coordinating the attribution of excess deaths to climate change impacts, accounting for health effects from temperature extremes and weather-related hazards since the 1970s."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8502baa3",
+          "title": "Climate Change Attributable Deaths",
+          "description": "Climate Change Attributable Deaths",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/4b2ca75a-e24e-4f16-9098-77327bf9ecf2/resource/8502baa3-a6a5-4e4b-b834-ceacce1ff233/download/climate_change_attributable_deaths.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_extreme_temperature",
+              "type": "extreme_temperature",
+              "intensity_measure": "AirTemp:C"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct mortality attributable to climate change and associated extreme temperature and weather events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/climate-change-attributable-deaths",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

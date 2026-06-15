@@ -1,0 +1,155 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-unicef_newinternaldisplacements_2008",
+      "title": "New internal displacements",
+      "description": "New internal displacements. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unicef-mg-new-internal-disp]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Please consult (see referenced_by) or email data@unicef.org",
+      "contact_point": {
+        "name": "UNICEF Data and Analytics (HQ)",
+        "url": "https://data.humdata.org/dataset/unicef-mg-new-internal-disp"
+      },
+      "creator": {
+        "name": "UNICEF Data and Analytics (HQ)",
+        "url": "https://data.humdata.org/dataset/unicef-mg-new-internal-disp"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2008-01-01",
+        "end": "2023-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Multiple Indicator Cluster Surveys (MICS)",
+            "url": "https://data.humdata.org/dataset/unicef-mg-new-internal-disp"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Demographic and Health Surveys (DHS)",
+            "url": "https://data.humdata.org/dataset/unicef-mg-new-internal-disp"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "United Nations organizations administrative sources",
+            "url": "https://data.humdata.org/dataset/unicef-mg-new-internal-disp"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Displacement indicator data compiled from inter-agency estimates and nationally representative household surveys (MICS, DHS) supplemented with administrative records from UN organizations. Data aggregated to produce global estimates of new internal displacements, with disaggregation by demographic groups (children, men) and contextual factors (COVID-19, migration).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Multiple Indicator Cluster Surveys (MICS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Nationally representative household survey data providing displacement indicators across countries"
+          },
+          {
+            "id": "source_2",
+            "name": "Demographic and Health Surveys (DHS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Nationally representative household survey data on population displacement and migration patterns"
+          },
+          {
+            "id": "source_3",
+            "name": "United Nations organizations administrative sources",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Administrative records from UN agencies documenting internal displacement events and populations"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://data.unicef.org"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_7a32b853",
+          "title": "New internal displacements (CSV)",
+          "description": "New internal displacements (.MG_NEW_INTERNAL_DISP..?format=csv)",
+          "media_type": "text/csv",
+          "download_url": "https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,MG,1.0/.MG_NEW_INTERNAL_DISP..?format=csv"
+        },
+        {
+          "id": "resource_4f89eb8f",
+          "title": "New internal displacements (XML)",
+          "description": "New internal displacements",
+          "media_type": "application/xml",
+          "download_url": "https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,MG,1.0/.MG_NEW_INTERNAL_DISP.."
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement counts attributed to drought and climate-related stressors"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unicef-mg-new-internal-disp",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

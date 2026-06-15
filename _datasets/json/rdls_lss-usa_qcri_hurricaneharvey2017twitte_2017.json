@@ -1,0 +1,198 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-usa_qcri_hurricaneharvey2017twitte_2017",
+      "title": "United States - Hurricane Harvey 2017 Twitter data",
+      "description": "This resource is comprised of Twitter data collected and processed by the AIDR system during the 2017 hurricane Harvey. The data contains information about number of people affected, injured, dead, reports of damages, missing people and so on. The data was automatically classified using state of the art machine learning techniques.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hurricane-harvey-2017-twitter-data]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Please contact us if you need full dataset with tweets content.",
+      "contact_point": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/hurricane-harvey-2017-twitter-data"
+      },
+      "creator": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/hurricane-harvey-2017-twitter-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "USA"
+        ]
+      },
+      "temporal": {
+        "start": "2017-08-25",
+        "end": "2017-09-05"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Twitter API",
+            "url": "https://data.humdata.org/dataset/hurricane-harvey-2017-twitter-data"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "AIDR system",
+            "url": "https://data.humdata.org/dataset/hurricane-harvey-2017-twitter-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Real-time Twitter data was collected via the public API during Hurricane Harvey 2017 and processed through the AIDR (Artificial Intelligence for Disaster Response) machine learning system to automatically classify and extract impact metrics including affected populations, injuries, fatalities, and damage reports.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Twitter API",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Public social media data collected via Twitter's public API during Hurricane Harvey 2017"
+          },
+          {
+            "id": "source_2",
+            "name": "AIDR system",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Automatic machine learning classification system used to extract and categorize impact information (affected, injured, dead, damaged) from unstructured Twitter text"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_aea0e67a",
+          "title": "Hurricane_harvey_twitter_text_data_processed_by_AIDR.xlsx",
+          "description": "This resource is comprised of Twitter data collected and processed by the AIDR system during the 2017 hurricane Harvey. The data contains information about number of people affected, injured, dead, reports of damages, missing people and so on. Please contact us if you need full dataset with tweets content.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/2dd2e855-9d60-4dd1-86a7-be43e0dde7e8/resource/aea0e67a-b129-4f0a-8d20-e46aa5532fb1/download/hurricane_harvey_twitter_text_data_processed_by_aidr.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by Hurricane Harvey reported via social media"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injuries from Hurricane Harvey reported via social media"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from Hurricane Harvey reported via social media"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage reports from Hurricane Harvey via social media"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hurricane-harvey-2017-twitter-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

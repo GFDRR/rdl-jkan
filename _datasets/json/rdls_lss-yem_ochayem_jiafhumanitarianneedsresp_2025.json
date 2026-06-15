@@ -1,0 +1,156 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-yem_ochayem_jiafhumanitarianneedsresp_2025",
+      "title": "Yemen: JIAF Humanitarian Needs and Response Plan",
+      "description": "The dataset provides a full breakdown of the affected population, people in need, severity, planned target by cluster, population group, and SADD at the ADM2 level.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/yem-jiaf-humanitarian-needs-and-response-plan]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Yemen",
+        "url": "https://data.humdata.org/dataset/yem-jiaf-humanitarian-needs-and-response-plan"
+      },
+      "creator": {
+        "name": "OCHA Yemen",
+        "url": "https://data.humdata.org/dataset/yem-jiaf-humanitarian-needs-and-response-plan"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "YEM"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Joint Intersectoral Analysis Framework (JIAF)",
+            "url": "https://data.humdata.org/dataset/yem-jiaf-humanitarian-needs-and-response-plan"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian partners",
+            "url": "https://data.humdata.org/dataset/yem-jiaf-humanitarian-needs-and-response-plan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset aggregates humanitarian needs assessments from multiple sectors using the JIAF methodology, which integrates data from humanitarian partners operating across Yemen. People in need figures are calculated at ADM2 (district) level and disaggregated by severity classification, population group (IDPs vs. residents), and demographic characteristics (age/gender), with planned response targets by cluster.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Joint Intersectoral Analysis Framework (JIAF)",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-sectoral analytical framework used to assess humanitarian needs, severity, and response requirements across sectors (WASH, Shelter, Nutrition, Education, Health, FSAC, CCCM) at district level in Yemen"
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Field-based data collection from humanitarian organizations operating in Yemen contributing to the needs assessment"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_28750f50",
+          "title": "JIAF_HNRP_Yemen_2025",
+          "description": "Yemen - JIAF - HNRP - affected population, PiN, and planned by cluster, population group, and SADD at the ADM2 level.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/72077980-b6b2-41e4-bbaf-fe2cb9df7695/resource/28750f50-f323-4203-9793-f94f4c2d1c2b/download/yemen-hnrp-2025.xlsx"
+        },
+        {
+          "id": "resource_df7f3ebe",
+          "title": "JIAF-2-Technical-Manual_Final-for-2025-HPC.pdf",
+          "description": "Yemen: JIAF Humanitarian Needs and Response Plan (JIAF Methodology)",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/72077980-b6b2-41e4-bbaf-fe2cb9df7695/resource/df7f3ebe-9346-4c7c-847f-ed88c1e732ff/download/jiaf-2-technical-manual_final-for-2025-hpc.pdf"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need affected by humanitarian crisis in Yemen, disaggregated by severity, population group, and administrative division"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons (IDPs) identified as people in need in Yemen"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/yem-jiaf-humanitarian-needs-and-response-plan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
