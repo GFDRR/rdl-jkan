@@ -1,0 +1,89 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-som_icpac_populationdensity_20250512",
+      "title": "Somalia Population Density",
+      "description": "Population density (in agriculture: standing stock or plant density) is a measurement of population per unit land area.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-somalia-population-density]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Time period is set to publication date rather than the date the data covers",
+      "contact_point": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-somalia-population-density"
+      },
+      "creator": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-somalia-population-density"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2025-05-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Population density was calculated as population per unit land area and distributed spatially across Somalia as a gridded GeoTIFF raster dataset to support disaster risk assessment and spatial planning applications.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population density gridded dataset for Somalia derived from census or demographic data sources"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_658f5521",
+          "title": "Somalia Population Density GeoTIFF",
+          "description": "GeoTIFF file. Population density (in agriculture: standing stock or plant density) is a measurement of population per unit land area.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__SOM_population_density_normalized&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population density distribution across Somalia at sub-national spatial resolution"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/icpac-geonode-somalia-population-density",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

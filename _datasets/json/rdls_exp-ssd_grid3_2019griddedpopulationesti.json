@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ssd_grid3_2019griddedpopulationesti",
+      "title": "South Sudan 2019 gridded population estimates from census projections adjusted for displacement, version 1.0",
+      "description": "These data were produced by the WorldPop Research Group at the University of Southampton. This work was funded by the Bill and Melinda Gates Foundation (BMGF) and the United Kingdom's Department for International Development (OPP1182408). The primary intended use of these data was aiding the BMGF field teams. The modelling work was led by Claire Dooley with support from Chris Jochem and oversight by WorldPop director Andy Tatem and GRID3 lead Attila Lazar. The support of the whole WorldPop group is acknowledged, as well as the our GRID3 partners ( UNFPA , Columbia University and Flowminder ). We thank the teams at IOM and ACLED for their excellent work in collecting data and making it freely available. This work was supported with funding from the Bill & Melinda Gates Foundation (BMGF) and the United Kingdom's Department for International Development (DFID). These data may be distributed using a Creative Commons Attribution Share-Alike 4.0 License. DATA DESCRIPTION This dataset provides population estimates for each settled 100m grid square in South Sudan. The grid square values were derived using the National Bureau of Statistics' 2019 population projection estimates that were adjusted to account for displacement of people. The locations people have been displaced to were directly obtained from IOM's Displacement Tracking Matrix (DTM). The locations people have been displaced from were derived using DTM and the Armed Conflict Locations and Events Database (ACLED). Numbers of displaced people per location were calculated using recorded numbers of international refugees and internally displaced persons. For further details, please, read SSD_population_v1_0_README.pdf Recommended citation WorldPop (School of Geography and Environmental Science, University of Southampton). 2020. South Sudan 2019 gridded population estimates from census projections adjusted for displacement, version 1.0. https://dx.doi.org/10.5258/SOTON/WP00659. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/south-sudan-2019-gridded-population-estimates]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "South Sudan 2019 gridded population estimates from census projections adjusted for displacement, version 1.0 For further details, please, read SSD_population_v1_0_README.pdf Contact release@worldpop.org for more information.",
+      "contact_point": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/south-sudan-2019-gridded-population-estimates"
+      },
+      "creator": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/south-sudan-2019-gridded-population-estimates"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop Research Group",
+            "url": "https://data.humdata.org/dataset/south-sudan-2019-gridded-population-estimates"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development)",
+            "url": "https://data.humdata.org/dataset/south-sudan-2019-gridded-population-estimates"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Census population data for South Sudan were spatially modeled by WorldPop using their standard gridding methodology and adjusted for internal displacement patterns. The resulting gridded population estimates at high spatial resolution were produced to support BMGF field operations and development planning in a context of significant population displacement.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop Research Group",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial population modeling methodology that integrates census data with displacement adjustments to produce gridded population estimates at fine resolution for development and humanitarian planning."
+          },
+          {
+            "id": "source_2",
+            "name": "GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Geo-referenced demographic data infrastructure providing census-based population projections and displacement-adjusted estimates for South Sudan."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a14174fc",
+          "title": "SSD_population_v1_0_gridded.zip",
+          "description": "Top-down gridded population estimates (~100m) for South Sudan. This zip file contains a geotiff raster with estimates of total population size for each approximately 100 m grid cell across the study area.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/23"
+        },
+        {
+          "id": "resource_9a283e16",
+          "title": "SSD_population_v1_0_README.pdf",
+          "description": "README: SSD Population v1.0. This README file provides information about the data included in the data release, how it was produced, source data that were used, and known assumptions and limitations of the results.",
+          "media_type": "application/pdf",
+          "download_url": "https://wopr.worldpop.org/download/24"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population estimates at high spatial resolution, adjusted for internal displacement from census projections"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/south-sudan-2019-gridded-population-estimates",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
