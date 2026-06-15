@@ -112,7 +112,7 @@
       "loss": {
         "losses": [
           {
-            "id": "loss_flood",
+            "id": "loss_flood_buildings",
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "hazard": {
@@ -124,6 +124,7 @@
                 "type": "direct",
                 "modelling": "simulated",
                 "metric": "loss",
+                "loss_statistic": "annual_average",
                 "measurement": {
                   "quantity_kind": "currency"
                 }
@@ -132,10 +133,58 @@
               "loss_approach": "analytical",
               "loss_frequency_type": "probabilistic"
             },
-            "description": "Component of a single composite annual average loss (AAL); the source value is one aggregate across all perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, infrastructure, crops) and is NOT decomposed by peril or asset class."
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of pluvial and coastal flood x buildings, not a separate per-cell value."
           },
           {
-            "id": "loss_strong_wind",
+            "id": "loss_flood_infrastructure",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "hazard": {
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of pluvial and coastal flood x major infrastructure, not a separate per-cell value."
+          },
+          {
+            "id": "loss_flood_agriculture",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "hazard": {
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of pluvial and coastal flood x crops, not a separate per-cell value."
+          },
+          {
+            "id": "loss_strong_wind_buildings",
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "hazard": {
@@ -148,6 +197,7 @@
                 "type": "direct",
                 "modelling": "simulated",
                 "metric": "loss",
+                "loss_statistic": "annual_average",
                 "measurement": {
                   "quantity_kind": "currency"
                 }
@@ -156,10 +206,60 @@
               "loss_approach": "analytical",
               "loss_frequency_type": "probabilistic"
             },
-            "description": "Component of a single composite annual average loss (AAL); the source value is one aggregate across all perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, infrastructure, crops) and is NOT decomposed by peril or asset class."
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of tropical cyclone wind x buildings, not a separate per-cell value."
           },
           {
-            "id": "loss_earthquake",
+            "id": "loss_strong_wind_infrastructure",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "hazard": {
+              "type": "strong_wind",
+              "process": "tropical_cyclone",
+              "intensity_measure": "PGWS:m/s"
+            },
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of tropical cyclone wind x major infrastructure, not a separate per-cell value."
+          },
+          {
+            "id": "loss_strong_wind_agriculture",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "hazard": {
+              "type": "strong_wind",
+              "process": "tropical_cyclone",
+              "intensity_measure": "PGWS:m/s"
+            },
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of tropical cyclone wind x crops, not a separate per-cell value."
+          },
+          {
+            "id": "loss_earthquake_buildings",
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "hazard": {
@@ -172,6 +272,7 @@
                 "type": "direct",
                 "modelling": "simulated",
                 "metric": "loss",
+                "loss_statistic": "annual_average",
                 "measurement": {
                   "quantity_kind": "currency"
                 }
@@ -180,10 +281,60 @@
               "loss_approach": "analytical",
               "loss_frequency_type": "probabilistic"
             },
-            "description": "Component of a single composite annual average loss (AAL); the source value is one aggregate across all perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, infrastructure, crops) and is NOT decomposed by peril or asset class."
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of earthquake ground shaking x buildings, not a separate per-cell value."
           },
           {
-            "id": "loss_tsunami",
+            "id": "loss_earthquake_infrastructure",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "hazard": {
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            },
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of earthquake ground shaking x major infrastructure, not a separate per-cell value."
+          },
+          {
+            "id": "loss_earthquake_agriculture",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "hazard": {
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            },
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of earthquake ground shaking x crops, not a separate per-cell value."
+          },
+          {
+            "id": "loss_tsunami_buildings",
             "asset_category": "buildings",
             "asset_dimension": "structure",
             "hazard": {
@@ -196,6 +347,7 @@
                 "type": "direct",
                 "modelling": "simulated",
                 "metric": "loss",
+                "loss_statistic": "annual_average",
                 "measurement": {
                   "quantity_kind": "currency"
                 }
@@ -204,7 +356,57 @@
               "loss_approach": "analytical",
               "loss_frequency_type": "probabilistic"
             },
-            "description": "Component of a single composite annual average loss (AAL); the source value is one aggregate across all perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, infrastructure, crops) and is NOT decomposed by peril or asset class."
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of tsunami x buildings, not a separate per-cell value."
+          },
+          {
+            "id": "loss_tsunami_infrastructure",
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "hazard": {
+              "type": "tsunami",
+              "process": "tsunami",
+              "intensity_measure": "h_tsi:m"
+            },
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of tsunami x major infrastructure, not a separate per-cell value."
+          },
+          {
+            "id": "loss_tsunami_agriculture",
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "hazard": {
+              "type": "tsunami",
+              "process": "tsunami",
+              "intensity_measure": "h_tsi:m"
+            },
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average loss (AAL) composite covering perils (pluvial and coastal flood, tropical cyclone wind, earthquake ground shaking, tsunami) and assets (buildings, major infrastructure, crops); the source value is a SINGLE aggregate and is NOT decomposed by peril or asset class. This entry documents coverage of tsunami x crops, not a separate per-cell value."
           }
         ]
       },
