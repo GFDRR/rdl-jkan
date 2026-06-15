@@ -1,0 +1,129 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-coclico_bcstats",
+      "title": "CoCliCo - Damage Costs - statistics",
+      "description": "Projections of the cost of buildings exposed to coastal flooding, integrating future flood risk models and current buildings. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "contact_point": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "creator": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -81.12146941539005,
+          -29.12357316038395,
+          93.1752791130622,
+          37.855412297701754
+        ]
+      },
+      "temporal": {
+        "start": "2010",
+        "end": "2010"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Projections of the cost of buildings exposed to coastal flooding, integrating future flood risk models and current buildings.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "BRGM",
+            "type": "dataset",
+            "url": "www.brgm.fr",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss"
+          },
+          {
+            "id": "source_2",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_citation",
+          "name": "In preparation",
+          "url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/bc_stats/collection.json"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Damage Costs - statistics [bc_stats]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/bc_stats/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Damage Costs - statistics",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/download/storage/v1/b/coclico-data-public/o/coclico%2Fassets%2Fthumbnails%2Fbc_stats.png?alt=media"
+        },
+        {
+          "id": "resource_geoparquetstacitems",
+          "title": "GeoParquet STAC items",
+          "description": "CoCliCo - Damage Costs - statistics (Snapshot of the collection's STAC items exported to GeoParquet format.)",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "https://storage.googleapis.com/coclico-data-public/coclico/bc_stats/bc_stats.parquet"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "type": "flood",
+              "intensity_measure": "wd:m",
+              "process": "coastal_flood"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "EUR"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "analysis_details": "hazard.type=coastal_flood (cue: 'coastal flood' in title/description) | asset_category=buildings (cue: 'building') | measurement.unit=EUR (inferred - CoCliCo is an EU H2020 project; verify against data files) | loss_frequency_type=deterministic (inferred — no probabilistic cue) | loss_type=ground_up (default — pre-insurance gross figure) | loss_approach=analytical (default for model-derived projections)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
