@@ -165,6 +165,7 @@ def make_event(event):
 
 
 def make_event_set(event_set):
+    events = [make_event(event) for event in event_set.get("events", [])]
     return {
         # required; throw if missing
         "id": event_set["id"],
@@ -174,9 +175,9 @@ def make_event_set(event_set):
         "frequency_distribution": event_set.get("frequency_distribution"),
         "seasonality": event_set.get("seasonality"),
         "calculation_method": event_set.get("calculation_method"),
-        "event_count": event_set.get("event_count"),
+        "event_count": event_set.get("event_count") or len(events),
         "occurrence_range": event_set.get("occurrence_range"),
-        "events": [make_event(event) for event in event_set.get("events", [])],
+        "events": events,
     }
 
 
@@ -211,44 +212,29 @@ def make_hazard_top_level(hazard):
     if hazard is None:
         return None
     event_sets = [make_event_set(event_set) for event_set in hazard["event_sets"]]
-
-    analysis_types = []
-    calculation_methods = []
-    hazard_types = []
-    intensity_measures = []
-    occurrence_ranges = []
-    processes = []
+    event_sets_by_hazard_type = {}
+    
     for event_set in event_sets:
-        analysis_types.append(event_set["analysis_type"])
-        calculation_methods.append(event_set["calculation_method"])
-        if event_set["occurrence_range"] is not None:
-            occurrence_ranges.append(event_set["occurrence_range"])
-        for hazard in event_set.get("hazards",[]):
-            hazard_types.append(hazard["type"])
-            processes.append(hazard["process"])
-            intensity_measures.append(hazard["intensity_measure"])
-        for event in event_set.get("events",[]):
-            hazard_types.append(event["hazard"]["type"])
-            processes.append(event["hazard"]["process"])
-            intensity_measures.append(event["hazard"]["intensity_measure"])
-   
+        if event_set.get('hazards'):
+            hazard_type = event_set['hazards'][0].get('type')
+            
+            if hazard_type not in event_sets_by_hazard_type:
+                event_sets_by_hazard_type[hazard_type] = []
+            
+            event_sets_by_hazard_type[hazard_type].append(event_set)
+    
     return {
-        "event_sets": event_sets,
-        "analysis_types":", ".join(list(set(analysis_types))),
-        "calculation_methods":", ".join(list(set(calculation_methods))),
-        "occurrence_ranges":", ".join(list(set(occurrence_ranges))),
-        "intensity_measures":", ".join(list(set(intensity_measures))),
-        "processes":", ".join(list(set(processes))),
-        "types":", ".join(list(set(hazard_types)))
+        "event_sets_count": len(event_sets),
+        "event_sets_by_hazard_type": event_sets_by_hazard_type
     }
 
 
 def make_hazard(hazard):
     return {
         # required; throw if missing
-        "id": hazard["id"],
+        "id": hazard.get("id"),
         "type": hazard["type"],
-        "process": hazard["process"],
+        "process": hazard.get("process"),
         "intensity_measure": hazard["intensity_measure"],
         # optional
         "classification": make_classification(hazard.get("classification")),
