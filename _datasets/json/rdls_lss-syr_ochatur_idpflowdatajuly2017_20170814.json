@@ -1,0 +1,106 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-syr_ochatur_idpflowdatajuly2017_20170814",
+      "title": "Syria IDP flow data - July 2017",
+      "description": "Data contains Syria IDP arrival estimations for July 2017, January 2016-July 2017 summary and table shows origin to destination estimation by governorate for July 2017.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/syria-idp-flow-data-july-2017]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Türkiye (inactive)",
+        "url": "https://data.humdata.org/dataset/syria-idp-flow-data-july-2017"
+      },
+      "creator": {
+        "name": "OCHA Türkiye (inactive)",
+        "url": "https://data.humdata.org/dataset/syria-idp-flow-data-july-2017"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2017-08-14"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Syria IDP Task Force",
+            "url": "https://data.humdata.org/dataset/syria-idp-flow-data-july-2017"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IDP displacement data consolidated from multiple monitoring hubs (OCHA regional offices, CCCM cluster, and NPM) that track population movements between Syrian governorates. Monthly arrival estimations and cumulative flow summaries from January 2016 to July 2017 were aggregated using each hub's defined methodology to produce origin-destination matrices.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Syria IDP Task Force",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-agency consolidated IDP arrival and flow data from OCHA Turkey, OCHA Jordan, OCHA Damascus, CCCM cluster and NPM monitoring networks across Syria."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_110b7c51",
+          "title": "IDPflowData_share_Jul2017.xlsx",
+          "description": "Data contains Syria IDP arrival estimations for July 2017, January 2016-July 2017 summary and table shows origin to destination estimation by governorate for July 2017.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a6c54722-a085-46d0-88b0-4ff02b09f648/resource/110b7c51-5868-4144-a90b-eaf791f00f06/download/idpflowdata_share_jul2017.xlsx.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from Syria with origin-destination flow estimates for July 2017"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/syria-idp-flow-data-july-2017",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

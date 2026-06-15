@@ -1,0 +1,148 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-phl_unosat_damageassessmentdinagatis_20220107",
+      "title": "Damage assessment in Dinagat Island, Region XIII of Philippines as of 23 December 2021",
+      "description": "UNOSAT code: TC20211216PHL This map illustrates potentially damaged structures and buildings in Dinagat Island, Region XIII, the Philippines as observed from a Pleiades image acquired on 23 December 2021. Within the analyzed area, UNOSAT and Copernicus EMS identified 3,278 damaged structures, 523 potentially damaged structures, and 3 potentially damaged ports. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-dinagat-island-region-xiii-of-philippines-as-of-23-december-2021]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-dinagat-island-region-xiii-of-philippines-as-of-23-december-2021"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-dinagat-island-region-xiii-of-philippines-as-of-23-december-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-07"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Copernicus Emergency Management Service (EMS)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-dinagat-island-region-xiii-of-philippines-as-of-23-december-2021"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts conducted post-event damage assessment by comparing Pleiades satellite imagery acquired on 23 December 2021 with pre-event reference imagery, identifying structural changes indicative of damage. Damaged and potentially damaged buildings and ports were manually delineated and classified. This preliminary analysis was conducted without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from Pleiades satellite imagery acquired 23 December 2021, identifying damaged and potentially damaged structures through multi-temporal image comparison."
+          },
+          {
+            "id": "source_2",
+            "name": "Copernicus Emergency Management Service (EMS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Collaborative damage mapping and validation contributing to the identification of damaged structures and ports in Dinagat Island."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d574216e",
+          "title": "TC20211216PHL_gdb.zip",
+          "description": "Damage assessment in Dinagat Island, Region XIII of Philippines as of 23 December 2021 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/PH/TC20211216PHL/TC20211216PHL_gdb.zip"
+        },
+        {
+          "id": "resource_039b8436",
+          "title": "TC20211216PHL_SHP.zip",
+          "description": "Damage assessment in Dinagat Island, Region XIII of Philippines as of 23 December 2021 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/PH/TC20211216PHL/TC20211216PHL_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from tropical cyclone (Typhoon Rai) assessed via satellite imagery"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to port infrastructure from tropical cyclone"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-dinagat-island-region-xiii-of-philippines-as-of-23-december-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

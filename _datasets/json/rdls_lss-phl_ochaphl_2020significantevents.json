@@ -1,0 +1,151 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-phl_ochaphl_2020significantevents",
+      "title": "PHILIPPINES: 2020 Significant events",
+      "description": "Consolidated information of different events happened in the Philippines in 2020 such, Taal volcano eruption, COVID-19, earthquakes, and typhoons.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-2020-significant-events]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Philippines",
+        "url": "https://data.humdata.org/dataset/philippines-2020-significant-events"
+      },
+      "creator": {
+        "name": "OCHA Philippines",
+        "url": "https://data.humdata.org/dataset/philippines-2020-significant-events"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine government websites",
+            "url": "https://data.humdata.org/dataset/philippines-2020-significant-events"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Consolidated event data collected from multiple Philippine government websites documenting significant natural hazard events (volcanic, seismic, and meteorological) that occurred in 2020, cleaned and geocoded for spatial reference.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine government websites",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official government records of significant events including volcanic eruptions, earthquakes, and typhoons in 2020"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f423f5f9",
+          "title": "Philippines_2020 Significant events.xlsx",
+          "description": "PHILIPPINES: 2020 Significant events (Philippines_2020 Significant events.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6a6dc47a-ee7d-4421-8f93-559f9b166fdc/resource/f423f5f9-c980-4a74-95d5-a1e4ac3820a2/download/philippines_2020-significant-events.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by Taal volcano eruption in 2020"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquakes in 2020"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by typhoons in 2020"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-2020-significant-events",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

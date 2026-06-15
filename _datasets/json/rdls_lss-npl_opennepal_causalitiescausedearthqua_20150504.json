@@ -1,0 +1,178 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-npl_opennepal_causalitiescausedearthqua_20150504",
+      "title": "Nepal - Causalities caused by earthquake,2015",
+      "description": "This dataset contains causualities such as death,injury,displaced population and other damages caused by earthquake, 2015. This dataset was extracted from Nepal Disaster Risk Reduction portal. Link: http://drrportal.gov.np/. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/causalities-caused-by-earthquake-2015]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OpenNepal (inactive)",
+        "url": "https://data.humdata.org/dataset/causalities-caused-by-earthquake-2015"
+      },
+      "creator": {
+        "name": "OpenNepal (inactive)",
+        "url": "https://data.humdata.org/dataset/causalities-caused-by-earthquake-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-05-04"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Nepal Disaster Risk Reduction portal",
+            "url": "https://data.humdata.org/dataset/causalities-caused-by-earthquake-2015"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event impact data extracted from the Nepal Disaster Risk Reduction portal documenting direct casualties (deaths, injuries), displacement, and damages caused by the 2015 earthquake. The dataset aggregates observed impact records from the official national disaster risk reduction information system.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Nepal Disaster Risk Reduction portal",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event impact records documenting casualties, injuries, displacement, and damages from the 2015 earthquake in Nepal."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_12f2a269",
+          "title": "clipboard_0.csv",
+          "description": "Nepal - Causalities caused by earthquake,2015 (CSV)",
+          "media_type": "text/csv",
+          "download_url": "http://data.opennepal.net/sites/all/modules/pubdlcnt/pubdlcnt.php?file=http://data.opennepal.net/sites/default/files/resources/clipboard_0.csv&nid=5362"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct fatalities from the 2015 earthquake in Nepal"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct injuries from the 2015 earthquake in Nepal"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced by the 2015 earthquake in Nepal"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage caused by the 2015 earthquake in Nepal"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/causalities-caused-by-earthquake-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

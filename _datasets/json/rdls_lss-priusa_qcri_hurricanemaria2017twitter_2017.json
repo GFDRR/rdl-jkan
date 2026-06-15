@@ -1,0 +1,199 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-priusa_qcri_hurricanemaria2017twitter_2017",
+      "title": "United States, Puerto Rico - Hurricane Maria 2017 Twitter Data",
+      "description": "This resource is comprised of Twitter data collected and processed by the AIDR system during the 2017 hurricane Maria. The data contains information about number of people affected, injured, dead, reports of damages, missing people and so on. Please contact us if you need full dataset with tweets content.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hurricane-maria-2017-twitter-data]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Please contact us if you need full dataset with tweets content.",
+      "contact_point": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/hurricane-maria-2017-twitter-data"
+      },
+      "creator": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/hurricane-maria-2017-twitter-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "USA",
+          "PRI"
+        ]
+      },
+      "temporal": {
+        "start": "2017-09-20",
+        "end": "2017-10-03"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Twitter",
+            "url": "https://data.humdata.org/dataset/hurricane-maria-2017-twitter-data"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "AIDR (Artificial Intelligence for Disaster Response)",
+            "url": "https://data.humdata.org/dataset/hurricane-maria-2017-twitter-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Public tweets were collected in real-time via the Twitter API during Hurricane Maria 2017 and processed using the AIDR machine learning system to automatically extract and classify impact information including affected populations, injuries, fatalities, and damage reports. The processed data was aggregated into a summary table with structured impact metrics.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Twitter",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Public tweets collected via Twitter API containing crowdsourced reports of impacts, damages, and humanitarian needs during Hurricane Maria 2017"
+          },
+          {
+            "id": "source_2",
+            "name": "AIDR (Artificial Intelligence for Disaster Response)",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Machine learning system used to automatically process, classify, and analyze Twitter data to extract structured impact metrics including affected populations, injuries, deaths, and damage assessments"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d734df32",
+          "title": "Maria_Text_Image_Data_Analysis_SummaryTable.xlsx",
+          "description": "This resource is comprised of Twitter data collected and processed by the AIDR system during the 2017 hurricane Maria. The data contains information about number of people affected, injured, dead, reports of damages, missing people and so on. The data was automatically classified using state of the art machine learning techniques.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/71ac6a0c-88a3-456b-86b5-7120f9005684/resource/d734df32-bd40-47d2-8bf6-8ee3ea8b457c/download/maria_text_image_data_analysis_summarytable.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by Hurricane Maria 2017"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injuries caused by Hurricane Maria 2017"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths caused by Hurricane Maria 2017"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage reports from Hurricane Maria 2017"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hurricane-maria-2017-twitter-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

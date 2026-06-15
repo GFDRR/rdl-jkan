@@ -1,0 +1,180 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-som_drc_subnationaldisplacementfo_2025",
+      "title": "Somalia - Subnational Displacement Forecasts",
+      "description": "Displacement forecasts for Somalia at admin 2 level for the coming three month period based on the AHEAD model. The files contain two types of values: 'data' values are drawn from official sources on the numbers of displaced in each area. 'model' values are model estimates of how displacement is projected to evolve in the next three to four months from the point of now.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-subnational-displacement-forecasts]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The model structure treats the months with missing displacement data as additional parameters to be inferred and this allows us to work with datasets on displacement that contain gaps and missing information.",
+      "contact_point": {
+        "name": "Danish Refugee Council",
+        "url": "https://data.humdata.org/dataset/somalia-subnational-displacement-forecasts"
+      },
+      "creator": {
+        "name": "Danish Refugee Council",
+        "url": "https://data.humdata.org/dataset/somalia-subnational-displacement-forecasts"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2025-09-01",
+        "end": "2026-03-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IOM & UNHCR",
+            "url": "https://data.humdata.org/dataset/somalia-subnational-displacement-forecasts"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Official IDP counts from IOM and UNHCR are integrated into a Bayesian state-space model (AHEAD) to generate probabilistic forecasts of displacement evolution over 3-4 month horizons. Displacement is disaggregated by triggering hazard type (conflict, drought, flood) at Somalia admin 2 (district) level, with model outputs including point estimates and confidence intervals.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Danish Refugee Council",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Primary organization developing the AHEAD Bayesian state-space model for IDP forecasting and providing displacement data compilation."
+          },
+          {
+            "id": "source_2",
+            "name": "IOM & UNHCR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Contributing sources of official internally displaced persons data used as observational inputs to the forecasting model."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://danishrefugeecouncil.shinyapps.io/DRC_AHEAD_Dashboard/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_3c1f4304",
+          "title": "Somalia - Displacement forecasts Dec25 + Q1 26.xlsx",
+          "description": "Somalia - Subnational Displacement Forecasts (Somalia - Displacement forecasts Dec25 + Q1 26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ebf888df-66b6-4a2f-ae4f-de777eb52c20/resource/3c1f4304-bd71-430e-9619-2a85b98f4db1/download/somalia-displacement-forecasts-dec25-q1-26.xlsx"
+        },
+        {
+          "id": "resource_a2682b8e",
+          "title": "Somalia - Displacement forecasts Q4 2025.xlsx",
+          "description": "Somalia - Subnational Displacement Forecasts (Somalia - Displacement forecasts Q4 2025.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ebf888df-66b6-4a2f-ae4f-de777eb52c20/resource/a2682b8e-1d6e-4fde-a4be-2304ac04bbc9/download/somalia-displacement-forecasts-q4-2025.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Conflict-induced internal displacement forecasts at admin 2 level"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Drought-induced internal displacement forecasts at admin 2 level"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Flood-induced internal displacement forecasts at admin 2 level"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-subnational-displacement-forecasts",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

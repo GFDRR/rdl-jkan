@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-phl_nlrc510_typhoonimpactdata20142020_2014",
+      "title": "The Philippines - Typhoon Impact Data 2014 - 2020",
+      "description": "This dataset has been consolidated from NDRMC / DROMIC reports from 2014 - 2020 to summarize the number of people affected and houses damaged in the Philippines as a result of typhoons.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-typhoon-impact-data-2014-2020]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/philippines-typhoon-impact-data-2014-2020"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/philippines-typhoon-impact-data-2014-2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2014-01-01",
+        "end": "2022-12-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "NDRMC / DROMIC reports",
+            "url": "https://data.humdata.org/dataset/philippines-typhoon-impact-data-2014-2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event impact data were consolidated from NDRMC DROMIC PDF reports covering typhoon events in the Philippines from 2014-2020. The reports document direct impacts including affected population counts and damaged house counts aggregated at the national level for each typhoon event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "NDRMC / DROMIC reports",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage and impact assessments from the National Disaster Risk Management Council Disaster Response Operations Monitoring and Information Center, consolidated from PDF reports available on ReliefWeb for each typhoon event."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_70fb3b7a",
+          "title": "Philippines Typhoon Impact Data 2014-2020",
+          "description": "This dataset has been consolidated from NDRMC / DROMIC reports from 2014 - 2020 to summarize the number of people affected and houses damaged in the Philippines as a result of typhoons.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/7579a8b1-0112-4447-8753-2dc64e246b12/resource/70fb3b7a-078c-40c7-b601-0b265a6c71df/download/typhonn-impacts.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population impact from typhoons"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from typhoons"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-typhoon-impact-data-2014-2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

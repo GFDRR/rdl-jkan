@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-pse_unosat_geodata20092014densitycom_20140919",
+      "title": "Palestine - Geodata of 2009-2014 Density Comparison of Destroyed and Severely Damaged Structures in Gaza Strip, Occupied Palestinian Territory",
+      "description": "This map illustrates a density comparison of satellite-detected damages in Gaza Strip, which resulted from recent conflicts in this area in both 2009 and 2014. Damage levels used in this density analysis only concern structures that were destroyed or severely damaged. The 2014 analysis was generated using Pleiades imagery taken 14, 27 & 28th August 2014 and compared with a pre-crisis a Pleiades image collected 6 July 2014. The 2009 analysis was generated using WorldView 02 and GeoEye imagery taken 10 & 21st January 2009. The 2009 imagery however was reduced resolution so damages may have been underestimated for that time period. This Density comparison is to illustrate the level of damaged observed by UNOSAT between the two conflict events. This is a preliminary analysis & has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-2009-2014-density-comparison-of-destroyed-and-severely-damaged-str-september-19-2014]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-2009-2014-density-comparison-of-destroyed-and-severely-damaged-str-september-19-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-2009-2014-density-comparison-of-destroyed-and-severely-damaged-str-september-19-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2014-09-19"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts performed multi-temporal satellite image comparison (pre-crisis baseline imagery versus post-event imagery from August 2014 and January 2009) to detect and classify structural damage in Gaza Strip. Damage polygons were extracted and categorized by severity level (destroyed/severely damaged only), with confidence ratings and validation flags assigned. Density analysis was performed on the resulting damage inventory to compare spatial patterns across the two conflict periods.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-detected damage assessments using multi-temporal Pleiades and WorldView/GeoEye imagery to identify destroyed and severely damaged structures through change detection analysis."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4389a9aa",
+          "title": "CE20140715PSE.shp.zip",
+          "description": "Palestine - Geodata of 2009-2014 Density Comparison of Destroyed and Severely Damaged Structures in Gaza Strip, Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.shp.zip"
+        },
+        {
+          "id": "resource_c2c1ba1f",
+          "title": "CE20140715PSE.gdb.zip",
+          "description": "Palestine - Geodata of 2009-2014 Density Comparison of Destroyed and Severely Damaged Structures in Gaza Strip, Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.gdb.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage (destroyed and severely damaged structures) from conflict-related impacts in Gaza Strip"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-2009-2014-density-comparison-of-destroyed-and-severely-damaged-str-september-19-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

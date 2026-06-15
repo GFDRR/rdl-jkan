@@ -1,0 +1,106 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_idppopulationdtmiom_20200229",
+      "title": "IDP Population DTM IOM - Sudan",
+      "description": "IDP population in Sudan through Displacement Tracking Matrix by IOM. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/idp-population-dtm-iom-sudan]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/idp-population-dtm-iom-sudan"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/idp-population-dtm-iom-sudan"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2020-02-29"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IOM Sudan",
+            "url": "https://data.humdata.org/dataset/idp-population-dtm-iom-sudan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IDP population data collected through IOM's Displacement Tracking Matrix (DTM) registration methodology, which systematically tracks internally displaced persons across Sudan to document displacement counts and population movements resulting from various hazards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IOM Sudan",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Displacement Tracking Matrix (DTM) registration data capturing IDP populations and their displacement status in Sudan"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1eae3776",
+          "title": "Sudan DTM IDPs DATASET 29Feb20 (003).xlsx",
+          "description": "IDP Population DTM IOM - Sudan (Internally Displaced Population)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/7e86e642-d1e0-4c03-8943-075936e46bce/resource/1eae3776-bc50-4105-a32b-1fec5bf10cda/download/sudan-dtm-idps-dataset-29feb20-003.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from various hazards including flooding tracked through DTM registration"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/idp-population-dtm-iom-sudan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

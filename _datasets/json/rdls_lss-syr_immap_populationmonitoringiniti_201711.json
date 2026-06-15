@@ -1,0 +1,98 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-syr_immap_populationmonitoringiniti_201711",
+      "title": "Syrian Arab Republic - Population Monitoring Initiative - November 2017",
+      "description": "The November 2017 dataset of the iMMAP Population Monitoring Initiative for South Syria.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/population-monitoring-initiative-november-2017-dataset]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/population-monitoring-initiative-november-2017-dataset"
+      },
+      "creator": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/population-monitoring-initiative-november-2017-dataset"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2017-11-15",
+        "end": "2017-11-19"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Census-based enumeration of internally displaced populations in South Syria conducted by iMMAP in November 2017, providing direct counts of displacement impacts from conflict.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "iMMAP Inc.",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Population Monitoring Initiative conducting census-based enumeration of internally displaced persons in South Syria"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e76d2db0",
+          "title": "PMI_SSyria_Master_Dataset_Nov_2017_Public_Final.xlsx",
+          "description": "Syrian Arab Republic - Population Monitoring Initiative - November 2017 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d920e1a6-c68e-4a9b-a855-07b2cdf1be2c/resource/e76d2db0-246d-4474-8909-dc9f4c2ed55b/download/pmi_ssyria_master_dataset_nov_2017_public_final.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons monitored through population census in South Syria"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/population-monitoring-initiative-november-2017-dataset",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

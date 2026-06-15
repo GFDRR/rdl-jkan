@@ -1,0 +1,184 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ssd_unicefesaro_situationresponsejuly2017_20170731",
+      "title": "UNICEF South Sudan Situation and Response July 2017",
+      "description": "This infographics is about South Sudan Situation and needs. It also shown UNICEF targets/results and HAC Funding as of 31 July 2017. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unicef-south-sudan-situation-and-response-31-july-2017]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "UNICEF Eastern and Southern Africa Regional Office (ESARO) (inactive)",
+        "url": "https://data.humdata.org/dataset/unicef-south-sudan-situation-and-response-31-july-2017"
+      },
+      "creator": {
+        "name": "UNICEF Eastern and Southern Africa Regional Office (ESARO) (inactive)",
+        "url": "https://data.humdata.org/dataset/unicef-south-sudan-situation-and-response-31-july-2017"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2017-07-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNICEF Country Office Situation Report",
+            "url": "https://data.humdata.org/dataset/unicef-south-sudan-situation-and-response-31-july-2017"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "FEWSNET Food Security Classification",
+            "url": "https://data.humdata.org/dataset/unicef-south-sudan-situation-and-response-31-july-2017"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "UNOCHA",
+            "url": "https://data.humdata.org/dataset/unicef-south-sudan-situation-and-response-31-july-2017"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "IOM",
+            "url": "https://data.humdata.org/dataset/unicef-south-sudan-situation-and-response-31-july-2017"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Situation report aggregating food security classifications from FEWSNET, displacement data from IOM, and humanitarian needs assessments from UNICEF CO and UNOCHA as of July 2017 to document the humanitarian impact of drought-driven food insecurity in South Sudan.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNICEF Country Office Situation Report",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "UNICEF CO sitrep providing humanitarian needs and response data for South Sudan"
+          },
+          {
+            "id": "source_2",
+            "name": "FEWSNET Food Security Classification",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Integrated Food Security Phase Classification (IPC) data indicating food insecurity severity"
+          },
+          {
+            "id": "source_3",
+            "name": "UNOCHA",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "UN Office for the Coordination of Humanitarian Affairs humanitarian situation data"
+          },
+          {
+            "id": "source_4",
+            "name": "IOM",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "International Organization for Migration displacement and IDP data"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_974b46a0",
+          "title": "Regional db_aug16- ESARO.xlsx",
+          "description": "Excel Database relating to UNICEF South Sudan Situation and Response Infographics",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c92c5884-7009-490b-be50-82f50d2a2ee3/resource/974b46a0-400f-4704-a309-df03ed96daf5/download/regional-db_aug16-esaro.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by food insecurity classified by IPC phase"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from drought-related food insecurity"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unicef-south-sudan-situation-and-response-31-july-2017",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_iom_displacementdataregistrat_20190930",
+      "title": "Sudan Displacement Data - Registration [IOM DTM]",
+      "description": "This dataset reflects the aggregation of the registration exercises conducted in Sudan since 2010, contains IDPs, households and Returnees by age and sex. All DTM registration and assessment exercises were jointly conducted in collaboration with Humanitarian Aid Commission (HAC).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sudan-registration-data-iom-dtm]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/sudan-registration-data-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/sudan-registration-data-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2019-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "url": "https://data.humdata.org/dataset/sudan-registration-data-iom-dtm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM conducted registration and assessment exercises in Sudan since 2010 in collaboration with HAC, aggregating data on internally displaced persons, households, and returnees. The dataset captures displacement populations disaggregated by age and sex, representing post-displacement impact records from multiple hazard events.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registration exercises conducted in Sudan since 2010 documenting IDPs, households, and returnees. Data collected jointly with Humanitarian Aid Commission (HAC) using DTM standard methodology."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_90ee46eb",
+          "title": "DTM Sudan Registration",
+          "description": "Aggregation of the registration exercises conducted in Sudan since 2010. The dataset has individuals and households by gender and age dis-aggregated and return locations.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/132c64c2-53e6-4e45-8364-35bf4e22987f/resource/90ee46eb-ab51-4095-8c32-b9f8361364b5/download/dtm-sudan-registration.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons and returnees registered through DTM exercises, disaggregated by age and sex"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sudan-registration-data-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

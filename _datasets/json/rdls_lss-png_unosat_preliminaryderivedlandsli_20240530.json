@@ -1,0 +1,138 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-png_unosat_preliminaryderivedlandsli_20240530",
+      "title": "Papua New Guinea - Preliminary satellite-derived landslide impact assessment",
+      "description": "UNOSAT code: LS20240525PNG, GDACS ID: 1102646 Status: Damaged structures observed Further action(s): Continue monitoring Damaged structures, roads and landslide area observed in Lagaip/Pogera District, Enga Province, Papua New Guinea as of 24 May 2024.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-derived-landslide-impact-assessment]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-landslide-impact-assessment"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-landslide-impact-assessment"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PNG"
+        ]
+      },
+      "temporal": {
+        "start": "2024-05-30"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-landslide-impact-assessment"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery acquired on or before 24 May 2024 was analyzed by UNOSAT analysts using visual interpretation and change detection techniques to identify damaged structures, roads, and the landslide extent in Lagaip/Pogera District, Enga Province, Papua New Guinea (GDACS event 1102646). Results were digitized into vector geodatabase and shapefile formats capturing site-level damage observations with confidence ratings and sensor metadata.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "UNOSAT analysts reviewed pre- and post-event satellite imagery to identify and map damaged structures, roads, and the landslide area in Enga Province, Papua New Guinea. The assessment was conducted using change detection methods applied to multi-temporal satellite imagery."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d41459c7",
+          "title": "LS20240525PNG_gdb.zip",
+          "description": "Papua New Guinea - Preliminary satellite-derived landslide impact assessment (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3859/LS20240525PNG_gdb.zip"
+        },
+        {
+          "id": "resource_b724b1f8",
+          "title": "LS20240525PNG_SHP.zip",
+          "description": "Papua New Guinea - Preliminary satellite-derived landslide impact assessment (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3859/LS20240525PNG_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Satellite-derived assessment of damaged structures observed in Lagaip/Pogera District, Enga Province, Papua New Guinea following a landslide event on 24 May 2024"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Satellite-derived assessment of damaged roads observed in Lagaip/Pogera District, Enga Province, Papua New Guinea following a landslide event on 24 May 2024"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-derived-landslide-impact-assessment",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
