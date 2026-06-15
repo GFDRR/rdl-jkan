@@ -4,7 +4,7 @@ attributions:
     affiliation: null
     email: null
     name: UN Operational Satellite Applications Programme (UNOSAT)
-    url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+    url: https://data.humdata.org/dataset/flood-impact-assessment-in-east-sao-vicente-municipality-cabo-verde-as-of-14-august-2025
   id: attribution_1
   role: collaborator
 catalog: Humanitarian Data Exchange
@@ -12,24 +12,21 @@ contact_point:
   affiliation: null
   email: null
   name: United Nations Satellite Centre (UNOSAT)
-  url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+  url: https://data.humdata.org/dataset/flood-impact-assessment-in-east-sao-vicente-municipality-cabo-verde-as-of-14-august-2025
 creator:
   affiliation: null
   email: null
   name: United Nations Satellite Centre (UNOSAT)
-  url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
-dataset_id: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
-description: "UNOSAT code: FL20250220BWA, GDACS ID: 1103128 This map illustrates the\
-  \ satellite-detected accumulated flood extent in Gaborone, South East District,\
-  \ Botswana, as observed from Planet imagery and very high-resolution Pleiades imagery\
-  \ acquired between 23 and 25 February 2025. Within the analyzed area of approximately\
-  \ 700 km\xB2, an estimated 30 km\xB2 appears to be affected by floodwaters. UNITAR-UNOSAT\
-  \ has identified around 900 potentially affected structures, along with 24 affected\
-  \ road segments and 10 affected bridges within the analyzed area. This is a preliminary\
-  \ analysis and has not yet been validated in the field. Please send ground feedback\
-  \ to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record\
-  \ was automatically extracted from the Humanitarian Data Exchange (HDX); Original\
-  \ dataset: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-]"
+  url: https://data.humdata.org/dataset/flood-impact-assessment-in-east-sao-vicente-municipality-cabo-verde-as-of-14-august-2025
+dataset_id: rdls_hel-cpv_unosat_floodimpactassessmenteast_20250815
+description: "UNOSAT code: FL20250812CPV This map illustrates satellite-detected mudflow\
+  \ extent in East Sao Vicente Municipality, Cabo Verde as observed from Pleiades\
+  \ very high-resolution satellite image acquired on 14 August 2025 at 11:43 local\
+  \ time (12:43 UTC). Within the analyzed area of approximately 35 km\xB2, about 3\
+  \ km\xB2 of land appears to be affected by flood. UNOSAT identified around 1,000\
+  \ affected/potentially affected buildings and approximately 15 km of affected roads..\
+  \ [Source: This metadata record was automatically extracted from the Humanitarian\
+  \ Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/flood-impact-assessment-in-east-sao-vicente-municipality-cabo-verde-as-of-14-august-2025]"
 details: This is a preliminary assessment and has not yet been validated in the field.
   It is important to consider the characteristics of the source imagery used in the
   analyses when interpreting results. For damage assessments it should be noted that
@@ -41,8 +38,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure:
 - asset_type:
-    description: Building structures identified as potentially affected by floodwaters
-      in the analyzed area
+    description: Building stock affected by mudflow in East Sao Vicente Municipality
     id: buildings
     scheme: null
     title: null
@@ -56,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 - asset_type:
-    description: Road segments and bridges within the flood-affected area
+    description: Road network affected by mudflow in the study area
     id: infrastructure
     scheme: null
     title: null
@@ -67,8 +63,8 @@ exposure:
   - dimension: structure
     id: metric_1
     measurement:
-      quantity_kind: count
-      unit: count
+      quantity_kind: length
+      unit: null
 hazard:
   event_sets_by_hazard_type:
     flood:
@@ -80,7 +76,7 @@ hazard:
       hazards:
       - classification: null
         id: hazard_1
-        intensity_measure: AA:km2
+        intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
@@ -90,38 +86,36 @@ hazard:
   event_sets_count: 1
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
-  description: "UNOSAT analysts processed Planet and Pleiades satellite imagery acquired\
-    \ 23-25 February 2025 over Gaborone, South East District, and Kgatleng Districts,\
-    \ Botswana. Multi-temporal image comparison identified notable changes in water\
-    \ extent, delineating accumulated flood areas of approximately 30 km\xB2. Spatial\
-    \ analysis of the flood extent polygon identified 900 potentially affected structures\
-    \ and 34 affected infrastructure elements (roads and bridges) within the 700 km\xB2\
-    \ study area."
+  description: "UNOSAT analysts processed Pleiades very high-resolution satellite\
+    \ imagery acquired on 14 August 2025 over East Sao Vicente Municipality, Cabo\
+    \ Verde, comparing pre- and post-event images to detect mudflow extent and identify\
+    \ affected assets. Visual interpretation and change detection methods were applied\
+    \ to delineate the ~3 km\xB2 inundated area and quantify impacts on ~1,000 buildings\
+    \ and ~15 km of roads within the ~35 km\xB2 study area."
   sources:
   - id: source_1
     license: null
     name: UN Operational Satellite Applications Programme (UNOSAT)
     risk_data_type:
-    - hazard
+    - loss
     type: dataset
     url: null
-    used_in: hazard
+    used_in: loss
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-- href: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+- href: https://data.humdata.org/dataset/flood-impact-assessment-in-east-sao-vicente-municipality-cabo-verde-as-of-14-august-2025
   rel: source
 loss:
   losses:
   - asset_category: buildings
     asset_dimension: structure
-    description: Approximately 900 potentially affected structures identified from
-      satellite imagery analysis
+    description: Buildings affected or potentially affected by mudflow inundation
     disaster_identifiers: []
     hazard:
       classification: null
       id: hazard_flood
-      intensity_measure: AA:km2
+      intensity_measure: wd:m
       process: null
       trigger: null
       type: flood
@@ -131,7 +125,7 @@ loss:
         measurement:
           quantity_kind: count
           unit: null
-        metric: loss
+        metric: exposure
         modelling: observed
         type: direct
       loss_approach: empirical
@@ -139,12 +133,12 @@ loss:
       loss_type: ground_up
   - asset_category: infrastructure
     asset_dimension: structure
-    description: 24 affected road segments and 10 affected bridges from fluvial flooding
+    description: Road infrastructure affected by mudflow
     disaster_identifiers: []
     hazard:
       classification: null
       id: hazard_flood
-      intensity_measure: AA:km2
+      intensity_measure: wd:m
       process: null
       trigger: null
       type: flood
@@ -174,46 +168,46 @@ resources:
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Accumulated satellite-detected water extents in Gaborone, South East
-    and Kgatleng Districts, Botswana as of 23 to 25 February 2025 (Zipped geodatabase)
-  download_url: https://unosat.org/static/unosat_filesystem/4081/FL20250220BWA_gdb.zip
+  description: Flood impact assessment in East Sao Vicente Municipality, Cabo Verde
+    as of 14 August 2025 (Zipped geodatabase)
+  download_url: https://unosat.org/static/unosat_filesystem/4172/FL20250812CPV_GDB.zip
   format: Geodatabase
-  id: resource_c47f1554
+  id: resource_0fe563b0
   media_type: null
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: FL20250220BWA_gdb.zip
+  title: FL20250812CPV_GDB.zip
 - access_url: null
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Accumulated satellite-detected water extents in Gaborone, South East
-    and Kgatleng Districts, Botswana as of 23 to 25 February 2025 (Zipped shapefile)
-  download_url: https://unosat.org/static/unosat_filesystem/4081/FL20250220BWA_SHP.zip
+  description: Flood impact assessment in East Sao Vicente Municipality, Cabo Verde
+    as of 14 August 2025 (Zipped shapefile)
+  download_url: https://unosat.org/static/unosat_filesystem/4172/FL20250812CPV_SHP.zip
   format: null
-  id: resource_152df5c6
+  id: resource_f97f4008
   media_type: application/vnd.shp
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: FL20250220BWA_SHP.zip
+  title: FL20250812CPV_SHP.zip
 risk_data_type:
 - hazard
 - exposure
 - loss
 schema: rdls-10
-slug: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
+slug: rdls_hel-cpv_unosat_floodimpactassessmenteast_20250815
 spatial:
   bbox: null
   centroid: null
   countries:
-  - BWA
+  - CPV
   gazetteer_entries: []
   scale: national
 spatial_resolution: null
@@ -221,10 +215,10 @@ temporal:
   central_year: null
   duration: null
   end: null
-  start: '2025-02-27'
+  start: '2025-08-15'
 temporal_resolution: null
-title: Accumulated satellite-detected water extents in Gaborone, South East and Kgatleng
-  Districts, Botswana as of 23 to 25 February 2025
+title: Flood impact assessment in East Sao Vicente Municipality, Cabo Verde as of
+  14 August 2025
 version: null
 vulnerability: null
 ---

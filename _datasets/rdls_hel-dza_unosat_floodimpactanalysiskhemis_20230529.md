@@ -4,7 +4,7 @@ attributions:
     affiliation: null
     email: null
     name: UN Operational Satellite Applications Programme (UNOSAT)
-    url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+    url: https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger
   id: attribution_1
   role: collaborator
 catalog: Humanitarian Data Exchange
@@ -12,24 +12,23 @@ contact_point:
   affiliation: null
   email: null
   name: United Nations Satellite Centre (UNOSAT)
-  url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+  url: https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger
 creator:
   affiliation: null
   email: null
   name: United Nations Satellite Centre (UNOSAT)
-  url: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
-dataset_id: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
-description: "UNOSAT code: FL20250220BWA, GDACS ID: 1103128 This map illustrates the\
-  \ satellite-detected accumulated flood extent in Gaborone, South East District,\
-  \ Botswana, as observed from Planet imagery and very high-resolution Pleiades imagery\
-  \ acquired between 23 and 25 February 2025. Within the analyzed area of approximately\
-  \ 700 km\xB2, an estimated 30 km\xB2 appears to be affected by floodwaters. UNITAR-UNOSAT\
-  \ has identified around 900 potentially affected structures, along with 24 affected\
-  \ road segments and 10 affected bridges within the analyzed area. This is a preliminary\
-  \ analysis and has not yet been validated in the field. Please send ground feedback\
-  \ to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record\
-  \ was automatically extracted from the Humanitarian Data Exchange (HDX); Original\
-  \ dataset: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-]"
+  url: https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger
+dataset_id: rdls_hel-dza_unosat_floodimpactanalysiskhemis_20230529
+description: 'UNOSAT code FL20230526DZA, GDACS Id: 1102025 This map illustrates satellite-detected
+  flash floods in Khemisti, Bou Ismail and Bouharoun Communes, Wilaya of Tipaza, Algeria
+  as observed using Sentinel-2 satellite imagery acquired on 27 May 2023 at 11:36
+  local time. Within the surface analysed of 12,000 ha, about 63 ha of potentially
+  affected area observed. UNOSAT identified 2 damaged ports, 794 affected and potentially
+  affected structures & 31 affected and potentially affected roads. This is a preliminary
+  analysis and has not yet been validated in the field. Please send ground feedback
+  to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was
+  automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset:
+  https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger]'
 details: This is a preliminary assessment and has not yet been validated in the field.
   It is important to consider the characteristics of the source imagery used in the
   analyses when interpreting results. For damage assessments it should be noted that
@@ -41,8 +40,8 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure:
 - asset_type:
-    description: Building structures identified as potentially affected by floodwaters
-      in the analyzed area
+    description: Affected and potentially affected structures identified through satellite
+      imagery analysis
     id: buildings
     scheme: null
     title: null
@@ -56,7 +55,8 @@ exposure:
       quantity_kind: count
       unit: count
 - asset_type:
-    description: Road segments and bridges within the flood-affected area
+    description: Affected and potentially affected roads and ports in the flood-impacted
+      area
     id: infrastructure
     scheme: null
     title: null
@@ -80,8 +80,8 @@ hazard:
       hazards:
       - classification: null
         id: hazard_1
-        intensity_measure: AA:km2
-        process: fluvial_flood
+        intensity_measure: wd:m
+        process: pluvial_flood
         trigger: null
         type: flood
       id: event_set_1
@@ -90,13 +90,12 @@ hazard:
   event_sets_count: 1
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
-  description: "UNOSAT analysts processed Planet and Pleiades satellite imagery acquired\
-    \ 23-25 February 2025 over Gaborone, South East District, and Kgatleng Districts,\
-    \ Botswana. Multi-temporal image comparison identified notable changes in water\
-    \ extent, delineating accumulated flood areas of approximately 30 km\xB2. Spatial\
-    \ analysis of the flood extent polygon identified 900 potentially affected structures\
-    \ and 34 affected infrastructure elements (roads and bridges) within the 700 km\xB2\
-    \ study area."
+  description: Sentinel-2 satellite imagery acquired on 27 May 2023 was analyzed by
+    UNOSAT analysts through multi-temporal comparison to detect flash flood extent
+    and identify surface water changes. Affected structures and infrastructure were
+    identified through visual interpretation of the satellite imagery within the 12,000
+    ha study area. The preliminary analysis maps flood-affected areas and counts of
+    impacted assets without field validation.
   sources:
   - id: source_1
     license: null
@@ -106,22 +105,29 @@ lineage:
     type: dataset
     url: null
     used_in: hazard
+  - id: source_2
+    license: null
+    name: UN Operational Satellite Applications Programme (UNOSAT)
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-- href: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-23-
+- href: https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger
   rel: source
 loss:
   losses:
   - asset_category: buildings
     asset_dimension: structure
-    description: Approximately 900 potentially affected structures identified from
-      satellite imagery analysis
+    description: Affected and potentially affected structures from flash flooding
     disaster_identifiers: []
     hazard:
       classification: null
       id: hazard_flood
-      intensity_measure: AA:km2
+      intensity_measure: wd:m
       process: null
       trigger: null
       type: flood
@@ -131,7 +137,7 @@ loss:
         measurement:
           quantity_kind: count
           unit: null
-        metric: loss
+        metric: exposure
         modelling: observed
         type: direct
       loss_approach: empirical
@@ -139,12 +145,12 @@ loss:
       loss_type: ground_up
   - asset_category: infrastructure
     asset_dimension: structure
-    description: 24 affected road segments and 10 affected bridges from fluvial flooding
+    description: Affected and potentially affected roads and ports from flash flooding
     disaster_identifiers: []
     hazard:
       classification: null
       id: hazard_flood
-      intensity_measure: AA:km2
+      intensity_measure: wd:m
       process: null
       trigger: null
       type: flood
@@ -174,46 +180,63 @@ resources:
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Accumulated satellite-detected water extents in Gaborone, South East
-    and Kgatleng Districts, Botswana as of 23 to 25 February 2025 (Zipped geodatabase)
-  download_url: https://unosat.org/static/unosat_filesystem/4081/FL20250220BWA_gdb.zip
+  description: Flood impact analysis in Khemisti, Bou Ismail and Bouharoun Communes,
+    Wilaya of Tipaza, Algeria as of 27 May 2023 (Zipped geodatabase)
+  download_url: https://unosat.org/static/unosat_filesystem/3603/FL20230526DZA_gdb.zip
   format: Geodatabase
-  id: resource_c47f1554
+  id: resource_30f1f174
   media_type: null
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: FL20250220BWA_gdb.zip
+  title: FL20230526DZA_gdb.zip
 - access_url: null
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Accumulated satellite-detected water extents in Gaborone, South East
-    and Kgatleng Districts, Botswana as of 23 to 25 February 2025 (Zipped shapefile)
-  download_url: https://unosat.org/static/unosat_filesystem/4081/FL20250220BWA_SHP.zip
+  description: Flood impact analysis in Khemisti, Bou Ismail and Bouharoun Communes,
+    Wilaya of Tipaza, Algeria as of 27 May 2023 (Zipped shapefile)
+  download_url: https://unosat.org/static/unosat_filesystem/3603/FL20230526DZA_SHP.zip
   format: null
-  id: resource_152df5c6
+  id: resource_3ce9c1d4
   media_type: application/vnd.shp
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: FL20250220BWA_SHP.zip
+  title: FL20230526DZA_SHP.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Flood impact analysis in Khemisti, Bou Ismail and Bouharoun Communes,
+    Wilaya of Tipaza, Algeria as of 27 May 2023 (Excel file)
+  download_url: https://unosat.org/static/unosat_filesystem/3603/PopulationExposure_FL20230526DZA_29May2023.xlsx
+  format: null
+  id: resource_868b31ce
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: PopulationExposure_FL20230526DZA_29May2023.xlsx
 risk_data_type:
 - hazard
 - exposure
 - loss
 schema: rdls-10
-slug: rdls_hel-bwa_unosat_accumulateddetectedwatere_20250227
+slug: rdls_hel-dza_unosat_floodimpactanalysiskhemis_20230529
 spatial:
   bbox: null
   centroid: null
   countries:
-  - BWA
+  - DZA
   gazetteer_entries: []
   scale: national
 spatial_resolution: null
@@ -221,10 +244,10 @@ temporal:
   central_year: null
   duration: null
   end: null
-  start: '2025-02-27'
+  start: '2023-05-29'
 temporal_resolution: null
-title: Accumulated satellite-detected water extents in Gaborone, South East and Kgatleng
-  Districts, Botswana as of 23 to 25 February 2025
+title: Flood impact analysis in Khemisti, Bou Ismail and Bouharoun Communes, Wilaya
+  of Tipaza, Algeria as of 27 May 2023
 version: null
 vulnerability: null
 ---
