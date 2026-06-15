@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mrtsen_achgis4tech_sahelcropsvegetationstand_2020",
+      "title": "Sahel Crops Vegetation and Standardized Precipitation Index",
+      "description": "Dataset containing information related to precipitation indices useful for analyzing and comparing variations in precipitation over time and across different geographical regions, alongside indices used in the analysis of vegetation and crops to monitor their activity and detect their presence in the territory. Key variables include the Atmospherically Resistant Vegetation Index (ARVI), Normalized Difference Vegetation Index (NDVI), Enhanced Vegetation Index (EVI), and Structure Insensitive Pigment Index (SIPI) for monitoring vegetation. For rainfall information, the Standardized Precipitation Index (SPI1, SPI3, SPI6, SPI9, and SPI12) is used, where SPI1 to SPI3 are indicators for immediate impacts and SPI6 to SPI12 measure medium-term impacts. Each index is based on data that can be collected through remote sensing, such as satellite imagery, and is designed to measure different characteristics of vegetation and crops. The data are categorized by country, department, and municipality and by year and month, referring to the monthly average. This information belongs to the Food and Nutrition Security Monitoring and Prediction System in the Sahel (PREDISAN) Project, funded by the Agencia Andaluza de Cooperación Internacional para el Desarrollo (AACID) and the University of Granada (UGR). The PREDISAN AI-SAHEL Project focuses on the Monitoring and Prediction System for Humanitarian Vulnerability of Pastoral and Agro-pastoral Populations in the Western Sahel, based on GIS Analysis and Artificial Intelligence. For more information, contact GIS4Tech at info@gis4tech.com or visit the PREDISAN platform at https://predisan.gis4tech.com/sahel.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/senegal-and-mauritania-crops-vegetation-and-standardized-precipitation-index]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/senegal-and-mauritania-crops-vegetation-and-standardized-precipitation-index"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/senegal-and-mauritania-crops-vegetation-and-standardized-precipitation-index"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "SEN",
+          "MRT"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-01",
+        "end": "2026-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "MODIS",
+            "url": "https://data.humdata.org/dataset/senegal-and-mauritania-crops-vegetation-and-standardized-precipitation-index"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "CHIRPS",
+            "url": "https://data.humdata.org/dataset/senegal-and-mauritania-crops-vegetation-and-standardized-precipitation-index"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "MODIS satellite data and CHIRPS precipitation records were processed to derive vegetation indices (NDVI, EVI, ARVI, SIPI) and Standardized Precipitation Index (SPI) at 1, 3, 6, 9, and 12-month timescales. Data were aggregated to municipality level by calculating median values across each administrative unit in Senegal and Mauritania, enabling temporal and spatial monitoring of drought conditions and crop/vegetation activity.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "MODIS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-derived vegetation indices (NDVI, EVI, ARVI, SIPI) used to monitor crop and vegetation activity across municipalities"
+          },
+          {
+            "id": "source_2",
+            "name": "CHIRPS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite precipitation data used to calculate Standardized Precipitation Index (SPI) at multiple timescales for drought monitoring"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_254e4601",
+          "title": "Senegal-and-Mauritania-Crops-Vegetation-and-Standardized-Precipitation-Index.csv",
+          "description": "Senegal and Mauritania Monthly Crops Vegetation and Precipitation Index since 2020 by ACH-GIS4Tech.csv",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/96564b62-dede-44a5-9a50-84c14f652c18/resource/254e4601-d19d-46bd-989a-2ea0e5a77e55/download/senegal-and-mauritania-crops-vegetation-and-standardized-precipitation-index.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Vegetation and crop activity monitoring through NDVI, EVI, ARVI, and SIPI indices derived from MODIS satellite data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/senegal-and-mauritania-crops-vegetation-and-standardized-precipitation-index",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-pak_unosat_detectedwaterextentsswatl_20250703",
+      "title": "Satellite detected water extents in Swat, Lower Dir and Malakand Districts, Khyber Pakhtunkhwa Province, Pakistan as of 1 July 2025",
+      "description": "UNOSAT code: FL20250630PAK This map illustrates the satellite detected water extent in Swat, Lower Dir and Malakand Districts, Pakistan as observed from a Sentinel-2 satellite image acquired on 1 July 2025 at 10:56 local time (05:56 UTC). Within the analyzed area of approximately 900 km², about 40 km² of land appears to be affected by floodwaters. Based on WorldPop population data and the flood extent, approximately 105,000 people are potentially exposed or living close to the flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-in-swat-lower-dir-and-malakand-districts-khyber-pakhtunkhwa-province-pakista]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-swat-lower-dir-and-malakand-districts-khyber-pakhtunkhwa-province-pakista"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-swat-lower-dir-and-malakand-districts-khyber-pakhtunkhwa-province-pakista"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2025-07-03"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/water-extents-in-swat-lower-dir-and-malakand-districts-khyber-pakhtunkhwa-province-pakista"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/water-extents-in-swat-lower-dir-and-malakand-districts-khyber-pakhtunkhwa-province-pakista"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on 1 July 2025 and delineated water extent through visual interpretation and change detection methods. The detected flood extent (40 km²) was intersected with WorldPop gridded population data to estimate approximately 105,000 people potentially exposed to floodwaters in the three districts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multispectral satellite image acquired on 1 July 2025 used to detect and delineate water extent through visual analysis and change detection"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate the number of people potentially exposed to the detected flood extent"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f2238bc5",
+          "title": "FL20250630PAK_gdb.zip",
+          "description": "Satellite detected water extents in Swat, Lower Dir and Malakand Districts, Khyber Pakhtunkhwa Province, Pakistan as of 1 July 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4143/FL20250630PAK_gdb.zip"
+        },
+        {
+          "id": "resource_f313d1a2",
+          "title": "FL20250630PAK_SHP.zip",
+          "description": "Satellite detected water extents in Swat, Lower Dir and Malakand Districts, Khyber Pakhtunkhwa Province, Pakistan as of 1 July 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4143/FL20250630PAK_SHP.zip"
+        },
+        {
+          "id": "resource_d316087b",
+          "title": "UNOSAT_FL20250630PAK_PopulationExposed_Swat_1July2025.xlsx",
+          "description": "Satellite detected water extents in Swat, Lower Dir and Malakand Districts, Khyber Pakhtunkhwa Province, Pakistan as of 1 July 2025 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4143/UNOSAT_FL20250630PAK_PopulationExposed_Swat_1July2025.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-in-swat-lower-dir-and-malakand-districts-khyber-pakhtunkhwa-province-pakista",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

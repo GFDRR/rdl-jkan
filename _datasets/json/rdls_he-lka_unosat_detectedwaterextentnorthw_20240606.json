@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-lka_unosat_detectedwaterextentnorthw_20240606",
+      "title": "Satellite detected water extent in North Western Province, Sri Lanka as of 04 June 2024",
+      "description": "UNOSAT code: FL20240603LKA, GDACS ID: 1102660 This map illustrates satellite-detected water extent in the North Western Province, Sri Lanka, as observed from a Sentinel-1 image acquired on June 4, 2024, at 00:25 UTC. Within the analyzed area of about 4,000 km², a total of about 46 km² of land appears to be affected by floodwaters. The water extent appears to have receded by about 34 km² since May 23, 2024. Based on WorldPop population data and the flood extent, approximately 16,000 people are potentially exposed. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT). Important note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extent-in-north-western-province-sri-lanka-as-of-04-june-2024]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-north-western-province-sri-lanka-as-of-04-june-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-north-western-province-sri-lanka-as-of-04-june-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LKA"
+        ]
+      },
+      "temporal": {
+        "start": "2024-06-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1 SAR imagery",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-north-western-province-sri-lanka-as-of-04-june-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-north-western-province-sri-lanka-as-of-04-june-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1 SAR imagery acquired on June 4, 2024 was analyzed by UNOSAT analysts through visual interpretation and change detection comparison with historical imagery from May 23, 2024 to delineate water extent polygons. The resulting flood extent (46 km²) was overlaid with WorldPop population data to estimate approximately 16,000 people potentially exposed to floodwaters in the North Western Province study area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1 SAR imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar satellite imagery acquired on June 4, 2024 at 00:25 UTC used to detect water extent through change detection analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population exposure to detected flood extent"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_638122b5",
+          "title": "FL20240603LKA_gdb.zip",
+          "description": "Satellite detected water extent in North Western Province, Sri Lanka as of 04 June 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3873/FL20240603LKA_gdb.zip"
+        },
+        {
+          "id": "resource_4157733a",
+          "title": "FL20240603LKA_SHP.zip",
+          "description": "Satellite detected water extent in North Western Province, Sri Lanka as of 04 June 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3873/FL20240603LKA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed to flood extent based on WorldPop data overlay"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-north-western-province-sri-lanka-as-of-04-june-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-gtm_unosat_volcanodefuegoestimationd_20180607",
+      "title": "Volcano de Fuego: Estimation of damaged buildings in San Miguel de Los Lotes and surrouding area, Guatemala",
+      "description": "This map illustrates an estimation of the number of buildings potentially affected by pyroclastic flow detected by Copernicus EMS using a Sentinel-2 satellite image collected on 4 June 2018. UNITAR-UNOSAT estimates 411 buildings / structures within the pyroclastic flow, ~ 260 of which are located inside the community of San Miguel de Los Lotes. Industrial sites and the resort of La Reunion are also included in the extent of this pyroclastic flow. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/volcano-de-fuego-estimation-of-damaged-buildings-in-san-miguel-de-los-lotes-and-surrouding-area-]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/volcano-de-fuego-estimation-of-damaged-buildings-in-san-miguel-de-los-lotes-and-surrouding-area-"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/volcano-de-fuego-estimation-of-damaged-buildings-in-san-miguel-de-los-lotes-and-surrouding-area-"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GTM"
+        ]
+      },
+      "temporal": {
+        "start": "2018-06-07"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Copernicus Emergency Management Service (EMS)",
+            "url": "https://data.humdata.org/dataset/volcano-de-fuego-estimation-of-damaged-buildings-in-san-miguel-de-los-lotes-and-surrouding-area-"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UNITAR-UNOSAT",
+            "url": "https://data.humdata.org/dataset/volcano-de-fuego-estimation-of-damaged-buildings-in-san-miguel-de-los-lotes-and-surrouding-area-"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-2 satellite imagery from 4 June 2018 was analyzed by Copernicus EMS to delineate the pyroclastic flow extent from the Volcán de Fuego eruption. UNITAR-UNOSAT then conducted a spatial overlay analysis to estimate the number of buildings and structures intersecting the pyroclastic flow polygon, identifying 411 affected buildings including residential structures in San Miguel de Los Lotes, industrial sites, and the La Reunion resort. This preliminary assessment was not validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Copernicus Emergency Management Service (EMS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Sentinel-2 satellite imagery analysis detecting pyroclastic flow extent from the 3 June 2018 Volcán de Fuego eruption"
+          },
+          {
+            "id": "source_2",
+            "name": "UNITAR-UNOSAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Building damage assessment and estimation within the mapped pyroclastic flow extent using satellite image interpretation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cf36a3f6",
+          "title": "VO20180605GTM_shp.zip",
+          "description": "Volcano de Fuego: Estimation of damaged buildings in San Miguel de Los Lotes and surrouding area, Guatemala (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/GT/VO20180605GTM/VO20180605GTM_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "pyroclastic_flow",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock within pyroclastic flow extent in San Miguel de Los Lotes and surrounding area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Estimated count of buildings affected by pyroclastic flow from Volcán de Fuego"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/volcano-de-fuego-estimation-of-damaged-buildings-in-san-miguel-de-los-lotes-and-surrouding-area-",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

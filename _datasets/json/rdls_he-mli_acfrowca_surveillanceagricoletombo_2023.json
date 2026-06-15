@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mli_acfrowca_surveillanceagricoletombo_2023",
+      "title": "Mali - Surveillance Agricole à Tombouctou et Youwarou",
+      "description": "Ces données sont accessibles librement à des fins humanitaires ou de recherche. L'exploitation commerciale de tout ou partie de ces données est interdite. Aucune compensation ne peut être exigée en échange de la diffusion de ces données. Action Contre la Faim (ACF), International Rescue Committee (IRC) et la Direction du Développement et de la Coopération Suisse (DDC) doivent être mentionnés pour l'utilisation de ces données. Pour plus d'informations, veuillez visiter : www.sigsahel.info These data are freely accessible for humanitarian or research purposes. Any commercial exploitation of this data is prohibited. No compensation can be demanded in exchange for the dissemination of this data. Action Against Hunger (ACF), the International Rescue Committee (IRC), and the Swiss Agency for Development and Cooperation (SDC) must be credited for the use of this data. For more information, please visit: www.sigsahel.info. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/surveillance-agricole-a-tombouctou-et-youwarou-au-mali]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "Action Against Hunger ACF - Regional Office for West and Central Africa ROWCA",
+        "url": "https://data.humdata.org/dataset/surveillance-agricole-a-tombouctou-et-youwarou-au-mali"
+      },
+      "creator": {
+        "name": "Action Against Hunger ACF - Regional Office for West and Central Africa ROWCA",
+        "url": "https://data.humdata.org/dataset/surveillance-agricole-a-tombouctou-et-youwarou-au-mali"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MLI"
+        ]
+      },
+      "temporal": {
+        "start": "2023-07-11",
+        "end": "2025-01-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Action Contre la Faim (ACF) - Regional Office West and Central Africa",
+            "url": "https://data.humdata.org/dataset/surveillance-agricole-a-tombouctou-et-youwarou-au-mali"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Agricultural surveillance data collected through systematic field monitoring of sampled parcels in Timbuktu and Youwarou regions from July 2023 to January 2025. Observations include crop phenology stages, rainfall and irrigation water availability, temperature stress, and estimated production outcomes. Spatial parcel boundaries are provided as shapefiles to enable geographic analysis of agricultural drought impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Action Contre la Faim (ACF) - Regional Office West and Central Africa",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Agricultural surveillance monitoring program collecting empirical field observations on crop phenology, water stress, climate conditions, and production outcomes through sample surveys of agricultural parcels"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3f36d097",
+          "title": "ACF_Donnees_Surveillance_Agricole_Tombouctou_Youwarou_20230711-20250131.xlsx",
+          "description": "Mali - Surveillance Agricole à Tombouctou et Youwarou (Données Surveillance Agricole Tombouctou)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a92ca34c-2a28-4986-8213-95e6477e5dd6/resource/3f36d097-d150-4f41-b191-cfa0f6d1db2e/download/acf_donnees_surveillance_agricole_tombouctou_youwarou_20230711-20250131.xlsx"
+        },
+        {
+          "id": "resource_0c5c0e7f",
+          "title": "ACF_Parcelles_Surveillance_Agricole_Tombouctou_Youwarou.xlsx",
+          "description": "Informations et localisation des parcelles surveillées. Informations and localisation of the monitored parcels.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a92ca34c-2a28-4986-8213-95e6477e5dd6/resource/0c5c0e7f-a9b7-4ecf-9fa6-b030392da78f/download/acf_parcelles_surveillance_agricole_tombouctou_youwarou.xlsx"
+        },
+        {
+          "id": "resource_01549a8d",
+          "title": "ACF_Parcelles_Surveillance_Agricole_Tombouctou_Youwarou.zip",
+          "description": "Polygones des parcelles surveillées. Polygons of the monitored parcels.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/a92ca34c-2a28-4986-8213-95e6477e5dd6/resource/01549a8d-2173-46e5-86b0-a133a5cb4526/download/acf_parcelles_surveillance_agricole_tombouctou_youwarou.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "agricultural_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural parcels under surveillance with spatial boundaries and crop production characteristics"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/surveillance-agricole-a-tombouctou-et-youwarou-au-mali",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

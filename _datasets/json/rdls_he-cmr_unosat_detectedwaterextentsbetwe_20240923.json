@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-cmr_unosat_detectedwaterextentsbetwe_20240923",
+      "title": "Satellite detected water extents between 18 and 22 September 2024 over Far-North Region, Cameroon",
+      "description": "UNOSAT code: FL20240821CMR This map illustrates cumulative satellite-detected water extent in Farth-North Region, Cameroon between 18 to 22 September 2024. Within the cloud free analysed areas of about 34,000 km², a total of about 6,000 km² of lands appear to be affected with flood waters. Water extent appears to have increased of about 1,800 km² since the period between 16 to 20 August 2024. Based on Worldpop population data and the maximum flood water extent, ~415,000 people in Far-North Region are potentially exposed or living close to flooded areas, amongst which ~270,000 people in Logone-et-Chari Department and ~125,000 people in Mayo-Danay Department. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-between-18-and-22-september-2024-over-far-north-region-cameroon]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-between-18-and-22-september-2024-over-far-north-region-cameroon"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-between-18-and-22-september-2024-over-far-north-region-cameroon"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CMR"
+        ]
+      },
+      "temporal": {
+        "start": "2024-09-23"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/water-extents-between-18-and-22-september-2024-over-far-north-region-cameroon"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery from multiple sensors was analyzed by UNOSAT analysts comparing images from 18-22 September 2024 to detect changes in water extent. The maximum flood water extent polygon was overlaid with WorldPop population data to estimate exposure. Results are provided as vector geometries (shapefile, geodatabase) and tabular population exposure statistics.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate the number of people potentially exposed to the satellite-detected flood extent"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_91601ec9",
+          "title": "FL20240821CMR_gdb.zip",
+          "description": "Satellite detected water extents between 18 and 22 September 2024 over Far-North Region, Cameroon (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3979/FL20240821CMR_gdb.zip"
+        },
+        {
+          "id": "resource_472eb5f2",
+          "title": "FL20240821CMR_SHP.zip",
+          "description": "Satellite detected water extents between 18 and 22 September 2024 over Far-North Region, Cameroon (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3979/FL20240821CMR_SHP.zip"
+        },
+        {
+          "id": "resource_5793e22c",
+          "title": "UNOSAT_Population_Exposure_FL20240821CMR_18Sep_22Sep2024_CMR.xlsx",
+          "description": "Satellite detected water extents between 18 and 22 September 2024 over Far-North Region, Cameroon (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3979/UNOSAT_Population_Exposure_FL20240821CMR_18Sep_22Sep2024_CMR.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed to or living close to flooded areas, estimated at approximately 415,000 people based on WorldPop data and maximum flood extent"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-between-18-and-22-september-2024-over-far-north-region-cameroon",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

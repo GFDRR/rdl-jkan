@@ -1,0 +1,155 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-hnd_ocharolac_poblacionmediaanualexpues_20180518",
+      "title": "Honduras Población Media Anual Expuesta a Terremotos 2012",
+      "description": "El indicador estima la población anualmente expuesta que habita en áreas con amenaza sísmica en base al Mapa de Amenaza de Sismos resultado del 'análisis de máxima aceleración del suelo para un periodo de retorno de 500 años que representa la máxima aceleración horizontal del suelo esperada para los próximos 50 años- IHCIT,2012'. El resultado es la composición de capas de las zonas con una amenaza alta o muy alta y el total de la población que habita sobre dicha área.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-terremotos-2012]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "* [INFORM Honduras.](http://www.inform-index.org/Subnational/Honduras) * Dimensión: Peligro y Exposición * Categoría: Peligros Naturales * Componente: Terremoto",
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-terremotos-2012"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-terremotos-2012"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2018-05-18"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Instituto Hondureño de Ciencias de la Tierra (IHCIT)",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-terremotos-2012"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "El Instituto Nacional de Estadística (INE)",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-terremotos-2012"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset integrates a probabilistic seismic hazard map (maximum horizontal soil acceleration at 500-year return period from IHCIT) with national population data (INE) through spatial overlay analysis to estimate the annual average population exposed to high and very high earthquake hazard zones in Honduras.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Instituto Hondureño de Ciencias de la Tierra (IHCIT)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Generated the seismic hazard map based on maximum soil acceleration analysis for 500-year return period representing expected maximum horizontal ground acceleration for the next 50 years"
+          },
+          {
+            "id": "source_2",
+            "name": "El Instituto Nacional de Estadística (INE)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Provided population data used to estimate the population exposed to high and very high seismic hazard zones"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1af8e6c2",
+          "title": "1-PE.NAT.TRM-ABS - Población Media Anual Expuesta a Terremotos (absoluto).xlsx",
+          "description": "Población promedio anual expuesta que habita en áreas propensas a amenaza sísmica.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/da4c0739-d6ee-47ae-bcc9-4fe99ce7748a/resource/1af8e6c2-0ef6-4a33-be97-8126040a794f/download/1-pe.nat.trm-abs-poblacion-media-anual-expuesta-a-terremotos-absoluto.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_500yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_earthquake",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500,
+                    "event_rate": 0.002
+                  }
+                },
+                "description": "Probabilistic earthquake ground motion hazard model representing maximum horizontal soil acceleration for a 500-year return period"
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Annual average population exposed to high and very high seismic hazard zones"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-terremotos-2012",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-gum_wfpadam_guamcyclonetropicalstormj_2023",
+      "title": "Guam: Cyclone - Tropical storm - Jun 2023",
+      "description": "A cyclone (tropical storm) during the period May 20 2023-Jun 03 2023 in Guam. It impacted 171500 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/guam-cyclone-1000972]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/guam-cyclone-1000972"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/guam-cyclone-1000972"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GUM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-05-20",
+        "end": "2023-06-03"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/guam-cyclone-1000972"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and analyzed geospatial data on the tropical cyclone track, wind speeds, and affected population during the May 20 - June 3, 2023 event in Guam. The dataset integrates observed hazard parameters (wind speed, cyclone classification) with exposure data (population counts by area) to support operational response dashboards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting, analysing and mapping geospatial information following tropical storm events, providing alert levels and hazard track data with wind speed measurements"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9e8834a0",
+          "title": "ADAM_TS_1000972_57_shp.zip",
+          "description": "Guam: Cyclone - Tropical storm - Jun 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://adam-project-prod.s3-eu-west-1.amazonaws.com/adam_ts/events/2023/06/1000972_57/ADAM_TS_1000972_57_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone winds in Guam"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by tropical cyclone winds during June 2023 event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/guam-cyclone-1000972",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

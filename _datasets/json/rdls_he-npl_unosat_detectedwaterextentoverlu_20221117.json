@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-npl_unosat_detectedwaterextentoverlu_20221117",
+      "title": "Satellite detected water extent over Lumbini and Sudurpaschim Provinces, Nepal as of 15 October 2022",
+      "description": "UNOSAT code FL20221117NPL This map illustrates satellite-detected surface waters in Sudurpaschim and Lumbini Provinces, Nepal as observed from a Sentinel-2 image acquired on 15 October 2022. Within the total analyzed area of about 4,700 km², ~70 km² of lands appear to be flooded. Based on Worldpop population data and the detected surface waters about 35,000 people are potentially exposed or living close to flooded areas, of which 18,000 are located In Janaki, Tikapur, Geruwa, Rajapur, Thakurbaba & Madhuwan Palikas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-over-lumbini-and-sudurpaschim-provinces-nepal-as-of-15-october-2022]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-over-lumbini-and-sudurpaschim-provinces-nepal-as-of-15-october-2022"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-over-lumbini-and-sudurpaschim-provinces-nepal-as-of-15-october-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2022-11-17"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/water-extent-over-lumbini-and-sudurpaschim-provinces-nepal-as-of-15-october-2022"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/water-extent-over-lumbini-and-sudurpaschim-provinces-nepal-as-of-15-october-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on 15 October 2022 and performed visual change detection to identify surface water extent across ~4,700 km² in Sudurpaschim and Lumbini Provinces. Detected water polygons were intersected with WorldPop gridded population data to estimate potentially exposed population. The resulting dataset provides observed flood extent and derived population exposure metrics for post-event impact assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Optical satellite imagery acquired on 15 October 2022 used to detect surface water extent through visual analysis and change detection"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset intersected with detected water extent to estimate population exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_de2b1345",
+          "title": "FL20221117NPL_gdb.zip",
+          "description": "Satellite detected water extent over Lumbini and Sudurpaschim Provinces, Nepal as of 15 October 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3447/FL20221117NPL_gdb.zip"
+        },
+        {
+          "id": "resource_0c1b8ec4",
+          "title": "FL20221117NPL_SHP.zip",
+          "description": "Satellite detected water extent over Lumbini and Sudurpaschim Provinces, Nepal as of 15 October 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3447/FL20221117NPL_SHP.zip"
+        },
+        {
+          "id": "resource_36ad0e82",
+          "title": "UNOSAT_Population_Exposure_FL20221117NPL_Bardiya_KailaliDistricts_Nepal_15Oct2022.xlsx",
+          "description": "Satellite detected water extent over Lumbini and Sudurpaschim Provinces, Nepal as of 15 October 2022 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3447/UNOSAT_Population_Exposure_FL20221117NPL_Bardiya_KailaliDistricts_Nepal_15Oct2022.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas, derived from WorldPop data intersected with detected water extent"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-over-lumbini-and-sudurpaschim-provinces-nepal-as-of-15-october-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

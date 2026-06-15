@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-cod_unosat_couleedelaveetstructuresa_20210525",
+      "title": "Coulée de lave et structures affectées suite à l'éruption volcanique du Nyiragongo, Province du Nord-Kivu, RD Congo",
+      "description": "UNOSAT code: VO20210523COD Cette carte illustre les structures et bâtiments potentiellement impactées par la coulée de lave dans le district de Nyiragongo, province du Nord-Kivu en République Démocratique du Congo suite à l'éruption du volcan Nyiragongo du 22 mai 2021. A partir de l'analyse d'une image radar TerraSAR-X acquise le 24 mai 2021 à 16:13 UTC, UNITAR-UNOSAT a observé une coulée de lave qui s'est arrêtée à 700m des installations aéroportuaires. Sur l'étendue de l'analyse, environ 1,600 structures sont potentiellement impactées par la coulée de lave à la date d'acquisition de l'image radar. Ceci est une analyse préliminaire et n'a pas encore été validée sur le terrain. Veuillez d'envoyer vos commentaires à UNITAR-UNOSAT. Note: L'analyse de coulée de lave à partir d'une image radar peut surestimer la trace de la coulée de lave à cause du coefficient de rétrodiffusion du signal radar.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/coulee-de-lave-et-structures-affectees-suite-a-l-eruption-volcanique-du-nyiragongo-provinc]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/coulee-de-lave-et-structures-affectees-suite-a-l-eruption-volcanique-du-nyiragongo-provinc"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/coulee-de-lave-et-structures-affectees-suite-a-l-eruption-volcanique-du-nyiragongo-provinc"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2021-05-25"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/coulee-de-lave-et-structures-affectees-suite-a-l-eruption-volcanique-du-nyiragongo-provinc"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed TerraSAR-X radar imagery from 24 May 2021 to delineate the lava flow extent from the Nyiragongo eruption and overlay building footprints to identify structures within the hazard zone. The analysis identified approximately 1,600 buildings potentially impacted by the lava flow that had advanced to within 700 m of airport installations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "TerraSAR-X radar satellite imagery acquired 24 May 2021 used to map lava flow extent and identify affected structures through change detection analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_fbd5b88b",
+          "title": "VO20210523COD_gdb.zip",
+          "description": "Coulée de lave et structures affectées suite à l'éruption volcanique du Nyiragongo, Province du Nord-Kivu, RD Congo (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/CD/VO20210523COD/VO20210523COD_gdb.zip"
+        },
+        {
+          "id": "resource_b386fcc9",
+          "title": "VO20210523COD_SHP.zip",
+          "description": "Coulée de lave et structures affectées suite à l'éruption volcanique du Nyiragongo, Province du Nord-Kivu, RD Congo (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/CD/VO20210523COD/VO20210523COD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "lava",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures in Nyiragongo district potentially impacted by lava flow"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from lava flow inundation, approximately 1,600 structures affected"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/coulee-de-lave-et-structures-affectees-suite-a-l-eruption-volcanique-du-nyiragongo-provinc",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-fji_unosat_detectedwaterssavuareanai_20160222",
+      "title": "Satellite Detected Waters in Savu Area, Naitasiri Province, Central Division, Fiji",
+      "description": "This map illustrates satellite-detected waters in Savu area, Naitasiri Province situated in the south of Viti Levu Island (Fiji). Using satellite imagery collected by RADARSAT-2 on 21 February 2016 and 08 April 2015, UNOSAT identified ~ 1,100 hectares of land to be potentially affected by waters. Most of the affected areas are agricultural fields located along the banks of River Rewa.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-waters-in-savu-area-naitasiri-province-central-division-fiji]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT. Satellite Data: RADARSAT-2",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-in-savu-area-naitasiri-province-central-division-fiji"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-in-savu-area-naitasiri-province-central-division-fiji"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "FJI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-02-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "RADARSAT-2",
+            "url": "https://data.humdata.org/dataset/satellite-detected-waters-in-savu-area-naitasiri-province-central-division-fiji"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "RADARSAT-2 synthetic aperture radar imagery from February 2016 and April 2015 was analyzed by UNOSAT to detect and delineate water extent in the Savu area. Satellite-detected waters were mapped and quantified to identify approximately 1,100 hectares of land potentially affected by fluvial flooding along River Rewa in agricultural zones.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "RADARSAT-2",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite synthetic aperture radar imagery collected on 21 February 2016 and 08 April 2015 used to detect water extent and identify flood-affected areas"
+          },
+          {
+            "id": "source_2",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite image analysis and interpretation to delineate water-affected areas and quantify extent in hectares"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b82da55a",
+          "title": "TC20160219FJI_shp.zip",
+          "description": "Satellite Detected Waters in Savu Area, Naitasiri Province, Central Division, Fiji (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/e65a452e-8154-49cf-afe5-9425563675ab/resource/b82da55a-279d-4cc5-8b82-bc4520c64356/download/tc20160219fji_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural fields located along River Rewa banks in Savu area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-waters-in-savu-area-naitasiri-province-central-division-fiji",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-bgdindmmr_wfpadam_cyclonecategory1oct2023_202310",
+      "title": "Bangladesh: Cyclone - Category 1 - Oct 2023",
+      "description": "ADAM ID: 1001029_6 Cyclone (category 1) during the period Oct 23 2023-Oct 24 2023 in Bangladesh, India, Myanmar. It impacted 3946522 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/bangladesh-cyclone-1001029]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/bangladesh-cyclone-1001029"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/bangladesh-cyclone-1001029"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "BGD",
+          "IND",
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-23",
+        "end": "2023-10-24"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/bangladesh-cyclone-1001029"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system processed observed tropical cyclone track data and wind speed measurements to generate spatial hazard polygons with wind speed classifications. Population exposure was estimated by intersecting cyclone wind speed zones with gridded population data, stratified by wind speed thresholds (60, 90, 120 kph). Total affected population count aggregated across administrative divisions.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analysing and mapping geospatial and socio-economic information following sudden onset emergencies; provides cyclone track data, wind speed fields, and population impact estimates."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_790ffabc",
+          "title": "1001029-7-adam-ts-1001029-7-shp.zip",
+          "description": "Bangladesh: Cyclone - Category 1 - Oct 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/d60e3dfb-3195-41dd-bdad-34c8e1070f2b/resource/790ffabc-4ff6-45cf-ac8b-d934bb00529b/download/1001029-7-adam-ts-1001029-7-shp.zip"
+        },
+        {
+          "id": "resource_b7eff828",
+          "title": "1001029-7-adam-ts-1001029-7-pop-estimation.csv",
+          "description": "Bangladesh: Cyclone - Category 1 - Oct 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/d60e3dfb-3195-41dd-bdad-34c8e1070f2b/resource/b7eff828-e855-4f8d-bcbb-515c055e73f7/download/1001029-7-adam-ts-1001029-7-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to cyclone wind speeds at multiple thresholds (60, 90, 120 kph)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Total population affected by Category 1 tropical cyclone"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/bangladesh-cyclone-1001029",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

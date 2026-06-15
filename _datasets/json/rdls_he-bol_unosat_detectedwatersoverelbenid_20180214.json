@@ -1,0 +1,133 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-bol_unosat_detectedwatersoverelbenid_20180214",
+      "title": "Satellite detected waters over El Beni department, Bolivia",
+      "description": "This map illustrates satellite-detected standing water over the El Beni department in Bolivia, as of the 12 February 2018, following heavy rainfalls that caused severe flooding in the area. The analysis was conducted using Radarsat-2 image from 12 February 2018. UNITAR-UNOSAT identified in the analyzed area of the El Beni Department around 52,670 Ha of land that seem to be inundated, most of which are agricultural fields and swamps. The Rio Mamore has expanded along the banks. According to the analysis, the most affected province is Moxos, where more than 35,500 Ha are submerged. In the municipality of Trinidad 6,900 Ha are detected as inundated. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-waters-over-el-beni-department-bolivia]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-over-el-beni-department-bolivia"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-over-el-beni-department-bolivia"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BOL"
+        ]
+      },
+      "temporal": {
+        "start": "2018-02-14"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/satellite-detected-waters-over-el-beni-department-bolivia"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Radarsat-2 satellite imagery from 12 February 2018 was analyzed by UNOSAT analysts through visual interpretation and multi-temporal comparison to detect standing water and inundated areas. The analysis identified approximately 52,670 hectares of inundated land, primarily agricultural fields and swamps, with spatial delineation provided as polygon vector data in shapefile format.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Radarsat-2 satellite imagery acquired on 12 February 2018 and analyzed to detect standing water extent and inundated areas in El Beni Department following heavy rainfall events"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_92907c45",
+          "title": "FL20180209BOL_shp.zip",
+          "description": "Satellite detected waters over El Beni department, Bolivia (zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/BO/FL20180209BOL/FL20180209BOL_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural fields inundated by fluvial flooding in El Beni Department"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "natural_environment",
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "Swampland and riparian zones affected by river expansion and inundation"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-waters-over-el-beni-department-bolivia",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-bhs_unosat_populationexposuretablewi_20190901",
+      "title": "Population exposure table by windspeed zone at district level in Bahamas",
+      "description": "Pivot table summarizing total population potentially exposed to strong winds. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/population-exposure-table-by-windspeed-zone-at-district-level-in-bahamas]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/population-exposure-table-by-windspeed-zone-at-district-level-in-bahamas"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/population-exposure-table-by-windspeed-zone-at-district-level-in-bahamas"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BHS"
+        ]
+      },
+      "temporal": {
+        "start": "2019-09-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/population-exposure-table-by-windspeed-zone-at-district-level-in-bahamas"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT processed satellite data and operational cyclone information to delineate wind speed zones across Bahamas districts, then intersected with population distribution data using GIS to generate exposure pivot tables summarizing population counts by wind hazard intensity zone.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-derived wind speed zone mapping for Hurricane Dorian tropical cyclone event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_17f1bcdf",
+          "title": "UNOSAT_TropicalCyclone_Dorian_Population_Exposure_Analysis.xlsx",
+          "description": "Population exposure table by windspeed zone at district level in Bahamas (Population exposure to wind speed zones table by district in Bahamas)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3810410c-9069-4795-8bf3-c74d6707279c/resource/17f1bcdf-9dd0-47bc-9ad2-fcac174fd68c/download/unosat_tropicalcyclone_dorian_population_exposure_analysis.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to strong wind hazard zones at district level"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/population-exposure-table-by-windspeed-zone-at-district-level-in-bahamas",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

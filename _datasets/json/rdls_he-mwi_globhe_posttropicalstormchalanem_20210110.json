@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mwi_globhe_posttropicalstormchalanem_20210110",
+      "title": "Post Tropical Storm Chalane Mapping, Thyolo, Malawi",
+      "description": "Drone orthomosaic. Post Tropical Storm Chalane Mapping, Malawi conducted with Crowddroning by GLOBHE. More maps and data available on demand upon request from locations globally at: https://globhe.com/ MORE CROWDDRONING BY GLOBHE Web: https://globhe.com/ Facebook: https://www.facebook.com/Crowddroning Twitter: https://twitter.com/globhedrones Instagram: https://www.instagram.com/globhedrones/ LinkedIn: https://www.linkedin.com/company/globhedrones/. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-thyolo-malawi]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Globhe Drones",
+        "url": "https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-thyolo-malawi"
+      },
+      "creator": {
+        "name": "Globhe Drones",
+        "url": "https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-thyolo-malawi"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-10"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "GLOBHE (Crowddroning)",
+            "url": "https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-thyolo-malawi"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Drone orthomosaic imagery was acquired post-event over Thyolo district, Malawi following Tropical Storm Chalane. The aerial imagery was processed by GLOBHE using crowddroning methodology to create georeferenced orthomosaics documenting physical storm impacts on buildings and landscape features.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "GLOBHE (Crowddroning)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Drone-based orthomosaic imagery acquisition and processing for post-event damage assessment in Thyolo district following Tropical Storm Chalane"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_52a9dd3b",
+          "title": "Orthomosaic map (TIFF)",
+          "description": "Drone orthomosaic. Post Tropical Storm Chalane Mapping, Malawi conducted with Crowddroning by GLOBHE. More maps and data available on demand upon request from locations globally at https://globhe.com/",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://www.dropbox.com/s/j39vtioeywmkhxw/Post%20Tropical%20Storm%20Chalane%20Mapping%2C%20Thyolo%2C%20Malawi.tif?dl=1"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures and infrastructure visible in drone orthomosaic imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "natural_environment",
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "Vegetation and land cover features affected by storm impacts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-thyolo-malawi",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

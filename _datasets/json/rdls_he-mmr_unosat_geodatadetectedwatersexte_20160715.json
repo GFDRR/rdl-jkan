@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mmr_unosat_geodatadetectedwatersexte_20160715",
+      "title": "Geodata of Satellite Detected Waters Extent Over Northwestern Rakhine State, Myanmar",
+      "description": "This map illustrates satellite-detected flood waters in the northwestern part of Rakhine State in the townships of Kyauktaw, Mrauk-U and Ponnagyun, Myanmar as imaged by the SENTINEL-1 satellite on 14 July 2016. Heavy rains at the onset of the monsoon season have caused flooding. The most affected lands seem to be mainly agricultural and/or paddy fields, many of which are of course frequently inundated at other times as well. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-satellite-detected-waters-extent-over-northwestern-rakhine-state-m-july-15-2016]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-satellite-detected-waters-extent-over-northwestern-rakhine-state-m-july-15-2016"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-satellite-detected-waters-extent-over-northwestern-rakhine-state-m-july-15-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2016-07-15"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts processed SENTINEL-1 satellite imagery acquired on 14 July 2016 by comparing pre- and post-monsoon onset images to detect notable changes in water extent. Flood water polygons were delineated through visual interpretation and digitized into vector shapefiles with area calculations in square meters and hectares. This preliminary analysis represents observed flood extent without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "SENTINEL-1 satellite imagery analysis detecting flood water extent through comparison of pre- and post-event imagery using visual interpretation and change detection methods"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bebc717e",
+          "title": "FL20160714MMR_shp.zip",
+          "description": "Geodata of Satellite Detected Waters Extent Over Northwestern Rakhine State, Myanmar (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MM/FL20160714MMR/FL20160714MMR_shp.zip"
+        },
+        {
+          "id": "resource_db58d1f2",
+          "title": "FL20160714MMR.gdb.zip",
+          "description": "Geodata of Satellite Detected Waters Extent Over Northwestern Rakhine State, Myanmar (Geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MM/FL20160714MMR/FL20160714MMR.gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural and paddy fields affected by satellite-detected flood waters"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-satellite-detected-waters-extent-over-northwestern-rakhine-state-m-july-15-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

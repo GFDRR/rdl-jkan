@@ -1,0 +1,136 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-idn_ocharoap_populationaffectedvillage_20181011",
+      "title": "Indonesia - Population of Affected Villages of Central Sulawesi EQ",
+      "description": "The spreadsheet have 2 worksheet (Pop and Geoimpact). Geoimpact is the result of overlaying the shakemap with admin4 (village) boundaries from BPS. This processing and analysis was done by the World Food Programme (WFP).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/central-sulawesi-population-2017]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "The datasets only contain areas experience mmi 5 above.",
+      "contact_point": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/central-sulawesi-population-2017"
+      },
+      "creator": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/central-sulawesi-population-2017"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-10-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "BPS (Badan Pusat Statistik - Statistics Indonesia)",
+            "url": "https://data.humdata.org/dataset/central-sulawesi-population-2017"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Shakemap (USGS/Indonesian Geological Agency)",
+            "url": "https://data.humdata.org/dataset/central-sulawesi-population-2017"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Observed shakemap from the 2017 Central Sulawesi earthquake was spatially overlaid with village-level administrative boundaries and census population data from BPS by WFP to identify populations exposed to ground motion intensities of MMI 5 and above.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "BPS (Badan Pusat Statistik - Statistics Indonesia)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Administrative level 4 (village) boundaries and census population data used for spatial overlay with shakemap"
+          },
+          {
+            "id": "source_2",
+            "name": "Shakemap (USGS/Indonesian Geological Agency)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Observed earthquake ground motion intensity map from the 2017 Central Sulawesi earthquake"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f826ca43",
+          "title": "Palu_eq_pop_adm4_mmi5above_kemendagri_2017.xlsx",
+          "description": "This data is extracted from the SIAK database (Population Information Administration System - https://id.wikipedia.org/wiki/Sistem_informasi_administrasi_kependudukan) of the Ministry of Home Affairs - MoHA. The data is served as GIS REST Services and is available publicly.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8622492e-0108-4569-8aae-3a4316871dcf/resource/f826ca43-91a9-45d4-b9c5-52dbab7446aa/download/palu_eq_pop_adm4_mmi5above_kemendagri_2017.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population of villages exposed to earthquake ground motion (MMI ≥5)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/central-sulawesi-population-2017",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

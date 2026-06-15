@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-vnm_unosat_detectedwatersngheprovinc_20201102",
+      "title": "Satellite detected waters in Nghe An Province of Viet Nam as of 31 October 2020",
+      "description": "UNOSAT code: TC20201028VNM This map illustrates satellite-detected surface waters in Nghe An Province of Viet Nam as observed from a Radarsat Constellation 1 image acquired on 31 October 2020 at about 17:56 local time. Within the analyzed area of about 8,000 km2, a total of about 400 km2 of lands appear to be flooded. Based on Worldpop population data and the detected surface waters, about 300,000 people are potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT. Important Note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-waters-in-nghe-an-province-of-viet-nam-as-of-31-october-2020]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-in-nghe-an-province-of-viet-nam-as-of-31-october-2020"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-in-nghe-an-province-of-viet-nam-as-of-31-october-2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VNM"
+        ]
+      },
+      "temporal": {
+        "start": "2020-11-02"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Radarsat Constellation 1",
+            "url": "https://data.humdata.org/dataset/satellite-detected-waters-in-nghe-an-province-of-viet-nam-as-of-31-october-2020"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/satellite-detected-waters-in-nghe-an-province-of-viet-nam-as-of-31-october-2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery from Radarsat Constellation 1 acquired on 31 October 2020 was analyzed by UNOSAT to detect surface water extent through visual interpretation and multi-temporal comparison. Detected flooded areas (~400 km²) were intersected with WorldPop population data to estimate approximately 300,000 people potentially exposed to flooding in Nghe An Province. This is a preliminary post-event damage assessment not yet validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Radarsat Constellation 1",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite synthetic aperture radar imagery providing observed surface water detection on 31 October 2020"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population exposure to detected flooded areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f6faf2ec",
+          "title": "TC20201028VNM_gdb.zip",
+          "description": "Satellite detected waters in Nghe An Province of Viet Nam as of 31 October 2020 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/VN/TC20201028VNM/TC20201028VNM_gdb.zip"
+        },
+        {
+          "id": "resource_575644b8",
+          "title": "TC20201028VNM_SHP.zip",
+          "description": "Satellite detected waters in Nghe An Province of Viet Nam as of 31 October 2020 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/VN/TC20201028VNM/TC20201028VNM_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to satellite-detected flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-waters-in-nghe-an-province-of-viet-nam-as-of-31-october-2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

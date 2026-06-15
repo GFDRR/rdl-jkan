@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mdg_unosat_detectedwaterextentsmidon_20220304",
+      "title": "Satellite detected water extents in Midongy-Atsimo District, Atsimo Atsinanana Region, Madagascar as of 24 February 2022",
+      "description": "UNOSAT code: TC20220221MDG This map illustrates satellite-detected surface waters in Midongy-Atsimo District, Atsimo Atsinanana Region, Madagascar as observed from a Sentinel-2 image acquired on 24 February 2022 at 10:00 local time. Within the analyzed area about 1,200 km2, a total of about 90 km2 of lands appear to be flooded. Based on Worldpop population data and the detected surface waters, about 5,000 people are potentially exposed or living close to flooded areas. This is a preliminary analysis that has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-in-midongy-atsimo-district-atsimo-atsinanana-region-madagascar-as-of-24-febr]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-midongy-atsimo-district-atsimo-atsinanana-region-madagascar-as-of-24-febr"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-midongy-atsimo-district-atsimo-atsinanana-region-madagascar-as-of-24-febr"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2022-03-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2",
+            "url": "https://data.humdata.org/dataset/water-extents-in-midongy-atsimo-district-atsimo-atsinanana-region-madagascar-as-of-24-febr"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/water-extents-in-midongy-atsimo-district-atsimo-atsinanana-region-madagascar-as-of-24-febr"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-2 satellite imagery from 24 February 2022 was analyzed by UNOSAT to detect surface water extents through visual interpretation and multi-temporal comparison. Detected water polygons (90 km² total) were intersected with WorldPop population grids to estimate approximately 5,000 people potentially exposed to flooded areas in the 1,200 km² study area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery acquired on 24 February 2022 used to detect surface water extents through visual analysis and change detection"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population data used to estimate population exposure to detected flooded areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_38194f82",
+          "title": "TC20220221MDG_gdb.zip",
+          "description": "Satellite detected water extents in Midongy-Atsimo District, Atsimo Atsinanana Region, Madagascar as of 24 February 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/MG/TC20220221MDG/TC20220221MDG_gdb.zip"
+        },
+        {
+          "id": "resource_39b58440",
+          "title": "TC20220221MDG_SHP.zip",
+          "description": "Satellite detected water extents in Midongy-Atsimo District, Atsimo Atsinanana Region, Madagascar as of 24 February 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/MG/TC20220221MDG/TC20220221MDG_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to detected flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-in-midongy-atsimo-district-atsimo-atsinanana-region-madagascar-as-of-24-febr",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

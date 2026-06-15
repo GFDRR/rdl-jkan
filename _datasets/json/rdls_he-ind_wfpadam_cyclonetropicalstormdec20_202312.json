@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-ind_wfpadam_cyclonetropicalstormdec20_202312",
+      "title": "India: Cyclone - Tropical storm - Dec 2023",
+      "description": "ADAM ID: 1001037_6 Cyclone (tropical storm) during the period Dec 03 2023-Dec 04 2023 in India. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/india-cyclone-1001037]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/india-cyclone-1001037"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/india-cyclone-1001037"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IND"
+        ]
+      },
+      "temporal": {
+        "start": "2023-12-03",
+        "end": "2023-12-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/india-cyclone-1001037"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and processed geospatial data on the December 2023 tropical cyclone event in India, generating cyclone track geometries with wind speed attributes and estimating population exposure at wind speed thresholds (60 km/h and 90 km/h) across administrative divisions for operational emergency response mapping.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting and mapping geospatial information on tropical storms, providing cyclone track geometry and wind speed fields for emergency response"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3ed80991",
+          "title": "1001037-8-adam-ts-1001037-8-shp.zip",
+          "description": "India: Cyclone - Tropical storm - Dec 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/4f000868-164e-40ca-8519-e123bf320d69/resource/3ed80991-1272-48bb-8be1-08a65b757784/download/1001037-8-adam-ts-1001037-8-shp.zip"
+        },
+        {
+          "id": "resource_d50fff90",
+          "title": "1001037-8-adam-ts-1001037-8-pop-estimation.csv",
+          "description": "India: Cyclone - Tropical storm - Dec 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/4f000868-164e-40ca-8519-e123bf320d69/resource/d50fff90-3231-470b-9eaa-2f5cee31bd81/download/1001037-8-adam-ts-1001037-8-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at 60 km/h and 90 km/h thresholds"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/india-cyclone-1001037",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

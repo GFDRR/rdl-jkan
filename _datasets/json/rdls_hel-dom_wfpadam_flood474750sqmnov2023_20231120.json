@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-dom_wfpadam_flood474750sqmnov2023_20231120",
+      "title": "Dominican Republic: Flood - 47475.0 sq m - Nov 2023",
+      "description": "ADAM ID: FL-20231120-DOM-00 Flood covering 47475.0 sq m on Nov 20 2023 in Dominican Republic. It impacted 349525 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/dominican-republic-flood-fl-20231120-dom-00]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/dominican-republic-flood-fl-20231120-dom-00"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/dominican-republic-flood-fl-20231120-dom-00"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DOM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-20"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/dominican-republic-flood-fl-20231120-dom-00"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM collected and mapped observed flood extent (47,475 sq m) from the November 20, 2023 flood event in Dominican Republic. Flood boundaries were intersected with gridded population and cropland datasets to quantify directly affected population (349,525 people) and flooded agricultural area. Data were processed into geospatial formats (GeoJSON, GeoTIFF, GeoPackage) for operational response dashboards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational geospatial and socio-economic data collection system for sudden-onset emergencies. ADAM integrates flood extent mapping with population and agricultural exposure data to generate post-event impact assessments."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4c5e9067",
+          "title": "FL-20231120-DOM-00.geojson",
+          "description": "Dominican Republic: Flood - 47475.0 sq m - Nov 2023 (GeoJSON File)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/b9265db1-88a2-4dd0-99b5-778d02116ebc/resource/4c5e9067-0ba3-4f3a-a188-703efea15dcf/download/fl-20231120-dom-00.geojson"
+        },
+        {
+          "id": "resource_212099e1",
+          "title": "FL-20231120-DOM-00.tiff",
+          "description": "Dominican Republic: Flood - 47475.0 sq m - Nov 2023 (GeoTIFF File)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/b9265db1-88a2-4dd0-99b5-778d02116ebc/resource/212099e1-ea1f-4369-9af5-b74cef80fdea/download/fl-20231120-dom-00.tiff"
+        },
+        {
+          "id": "resource_10174472",
+          "title": "FL-20231120-DOM-00.gpkg",
+          "description": "Dominican Republic: Flood - 47475.0 sq m - Nov 2023 (Geopackage File)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/b9265db1-88a2-4dd0-99b5-778d02116ebc/resource/10174472-e232-45be-97a9-f4942326fe93/download/fl-20231120-dom-00.gpkg"
+        },
+        {
+          "id": "resource_c9c24137",
+          "title": "metadata.txt",
+          "description": "Dominican Republic: Flood - 47475.0 sq m - Nov 2023 (Metadata File)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/b9265db1-88a2-4dd0-99b5-778d02116ebc/resource/c9c24137-4d4a-4daa-ab5e-6a75fed5794d/download/metadata.txt"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Total population in the flood-affected area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland area within the flood extent"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population affected by flood inundation"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct agricultural loss from flooded cropland area"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/dominican-republic-flood-fl-20231120-dom-00",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
