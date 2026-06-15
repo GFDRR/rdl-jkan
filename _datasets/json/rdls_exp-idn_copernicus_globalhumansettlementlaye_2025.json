@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-idn_copernicus_globalhumansettlementlaye_2025",
+      "title": "Indonesia: Copernicus Global Human Settlement Layer (GHSL)",
+      "description": "Open and free data for assessing the human presence on the planet. The Global Human Settlement Layer (GHSL) project produces global spatial information, evidence-based analytics, and knowledge describing the human presence on the planet. The GHSL relies on the design and implementation of spatial data processing technologies that allow automatic data analytics and information extraction from large amounts of heterogeneous geospatial data including global, fine-scale satellite image data streams, census data, and crowd sourced or volunteered geographic information sources. The JRC, together with the Directorate-General for Regional and Urban Policy (DG REGIO) and Directorate-General for Defence Industry and Space (DG DEFIS) are working towards a regular and operational monitoring of global built-up and population based on the processing of Sentinel Earth Observation data produced by European Copernicus space program. In addition, the EU Agency for the Space Programme (EUSPA) undertakes activities related to user uptake of data, information and services.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/idn-ghsl]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Pesaresi M., Politis P. (2023): GHS-BUILT-S R2023A - GHS built-up surface grid, derived from Sentinel2 composite and Landsat, multitemporal (1975-2030). European Commission, Joint Research Centre (JRC) PID: http://data.europa.eu/89h/9f06f36f-4b11-47ec-abb0-4f8b7b1d72ea doi:10.2905/9F06F36F-4B11-47EC-ABB0-4F8B7B1D72EA Schiavina M., Freire S., Carioli A., MacManus K. (2023): GHS-POP R2023A - GHS population grid multitemporal (1975-2030). European Commission, Joint Research Centre (JRC) PID: http://data.europa.eu/89h/2ff68a52-5b5b-4a22-8f40-c41da8332cfe doi:10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE",
+      "contact_point": {
+        "name": "Copernicus",
+        "url": "https://data.humdata.org/dataset/idn-ghsl"
+      },
+      "creator": {
+        "name": "Copernicus",
+        "url": "https://data.humdata.org/dataset/idn-ghsl"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "European Commission, Joint Research Centre (JRC)",
+            "url": "https://data.humdata.org/dataset/idn-ghsl"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The GHSL dataset integrates fine-scale satellite imagery, census data, and crowdsourced geographic information through automated spatial data processing technologies to produce gridded estimates of built-up surfaces and population distribution. The resulting GeoTIFF rasters represent the spatial extent and density of human settlements at global scale.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "European Commission, Joint Research Centre (JRC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite image data streams, census data, and volunteered geographic information processed to generate global human settlement layers including built-up surface and population grids."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://human-settlement.emergency.copernicus.eu/documents/GHSL_Data_Package_2023.pdf?t=1727170839"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_45b20f39",
+          "title": "GHS Built-up Surface",
+          "description": "Product: GHS-BUILT-S, Epoch: 2025, Resolution: 100m, Coordinate system: Mollweide, Classification: total - residential (RES) & non residential (NRES) classification.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/62213465-0b90-486f-b34a-9bf3790ce17f/resource/45b20f39-8477-4238-935e-0fa4090dff87/download/ghs_built_s_e2025_r2023a_54009_100_v1_0_idn.tif"
+        },
+        {
+          "id": "resource_1c9370ff",
+          "title": "GHS Population Grid",
+          "description": "Indonesia: Copernicus Global Human Settlement Layer (GHSL) (Product: GHS-POP, Epoch: 2025, Resolution: 100m, Coordinate system: Mollweide)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/62213465-0b90-486f-b34a-9bf3790ce17f/resource/1c9370ff-8122-487d-8588-34d5367b97f3/download/ghs_pop_e2025_r2023a_54009_100_v1_0_idn.tif"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Built-up surface area derived from satellite imagery classification"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution estimated from census data and satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/idn-ghsl",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
