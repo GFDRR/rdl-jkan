@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_philsa_floodingnovember022022_20221102",
+      "title": "Flooding in the Philippines on November 02, 2022",
+      "description": "This dataset shows the actual extent of flooding in the Philippines caused by typhoons or tropical cyclones as of November 02, 2022, as observed through available satellite imagery. The dataset can be used to track the progression of floods over time, identify areas at risk, and assess the impact of these natural disasters on infrastructure, agriculture, and local populations.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-20221102]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset has not been validated using ground-truth data.",
+      "contact_point": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20221102"
+      },
+      "creator": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20221102"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2022-11-02"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine Space Agency",
+            "url": "https://data.humdata.org/dataset/philippines-flood-20221102"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite synthetic aperture radar (SAR) imagery from Sentinel-1 was processed by the Philippine Space Agency to detect and map the actual extent of flooding caused by tropical cyclone activity on November 2, 2022. The processing pipeline involved image classification and vectorization to produce both raster (PNG) and vector (shapefile) representations of the flood-affected areas for disaster impact assessment and tracking.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine Space Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite image processing and analysis to delineate actual flood extent from Sentinel-1 SAR imagery during the November 2, 2022 typhoon event in the Philippines."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_267dee7f",
+          "title": "20221102_0600_fld_s1_maps.zip",
+          "description": "Flooding extents on November 02, 2022 at 06:00 AM using Sentinel-1 satellite image",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/71cc8db6-a8c1-48e0-92a0-b321d50b63a0/resource/267dee7f-54db-41cd-8204-a550aa2eab14/download/20221102_0600_fld_s1_maps.zip"
+        },
+        {
+          "id": "resource_c80ad1af",
+          "title": "20221102_0600_fld_s1_shp.zip",
+          "description": "Flooding extents on November 02, 2022 at 06:00 AM using Sentinel-1 satellite image",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/71cc8db6-a8c1-48e0-92a0-b321d50b63a0/resource/c80ad1af-f267-467a-85b5-72b93548b05a/download/20221102_0600_fld_s1_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on infrastructure and agriculture from observed flood extent"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-20221102",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

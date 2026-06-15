@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-syr_unosat_damageassessmentkilliidli_20230306",
+      "title": "Damage Assessment in Killi (Idlib District), Syria as of 16 February 2023",
+      "description": "UNOSAT code EQ20230206SYR, GDACS Id: 1357372 This map illustrates the potentially damaged structures/buildings affected by the 6th of February 2023 earthquake in Killi in Idlib district (Aleppo governorate), Syria as detected from a Pleiades very highresolution satellite image acquired on 16 February 2023. UNOSAT 11 potentially damaged structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-killi-idlib-district-syria-as-of-16-february-2023]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-killi-idlib-district-syria-as-of-16-february-2023"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-killi-idlib-district-syria-as-of-16-february-2023"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2023-03-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts performed visual interpretation and change detection analysis on Pleiades satellite imagery acquired 16 February 2023 to identify structural damage from the 6 February 2023 earthquake in Killi. Potentially damaged buildings were mapped as vector features with area measurements. This is a preliminary assessment not yet validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from Pleiades very high-resolution satellite imagery acquired 16 February 2023, identifying 11 potentially damaged structures through visual interpretation and change detection analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6d8ed490",
+          "title": "EQ20230206SYR_gdb.zip",
+          "description": "Damage Assessment in Killi (Idlib District), Syria as of 16 February 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3516/EQ20230206SYR_gdb.zip"
+        },
+        {
+          "id": "resource_90ff2442",
+          "title": "EQ20230206SYR_SHP.zip",
+          "description": "Damage Assessment in Killi (Idlib District), Syria as of 16 February 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3516/EQ20230206SYR_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage assessment from the 6 February 2023 earthquake detected via satellite imagery in Killi, Idlib"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-killi-idlib-district-syria-as-of-16-february-2023",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

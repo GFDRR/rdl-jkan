@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_nlrc510_typhoonninawindspeedrainf_20161226",
+      "title": "Philippines - Typhoon Nina - windspeed, rainfall and priority index",
+      "description": "This dataset contains: windspeeds of Typhoon Nina rainfall of Typhoon Nina Priority Index of Typhoon Nina The predicted priority index of Typhoon Nina is produced by a machine learning algorithm that was trained on five past typhoons: Haiyan, Melor, Hagupit and Rammasun and Haima, It uses base line data for the whole country, combined with impact data of windspeeds and rains, and trained on counts by the Philippine government on houses damaged and completely destroyed. The output is a weighted index between partially damaged and completely damaged, where partially damaged is counted as 25% of the completely damaged. This has proven to give he highest accuracy. The absolute number of houses damaged / people affected is insufficiently validated at the moment, and should just be used for further trainng and ground-truthing. Scoring The model has an best r2 score of 0.794933727 and an accuracy of 0.699470899 Data sources: Administrative boundaries (P_Codes) - Philippines Government; Published by GADM and UN OCHA (HDX) Census 2015 (population) - Philippine Statistics Authority; received from UN OCHA (HDX) Avg. wind speed (mph) - University College London Typhoon path - University College London Houses damaged - NDRRMC Rainfall - GPM Poverty - Pantawid pamilyang pilipino program (aggregated) Roof and wall materials New geographical features All the columns with feat_ indicates the importance of that feature, if not present that feature was not used. learn_matrix name of the learning matrix with the 5 typhoons run_name unique run name (pickle files and csv files have this name for this model) typhoon_to_predict name of a new typhoon to predict val_accuracy accuracy based on 10 categories of damage 0% 10% 20% ... val_perc_down perc of underpredicted categories val_perc_up perc of overpredicted categories Val_best_score best r2 score Val_stdev_best_score error on best score based on the CV Val_score_test r2 score on the test set (this should be around +- 5% of the previus number to not overfit Val_mean_error_num_houses average error on the number of houses val_median_error_num_houses median val_std_error_num_houses std deviation of the errors (lower is better) Algorithm developed by 510.global the data innovation initiative of the Netherlands Red Cross.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/typhoon-nina-windspeed-rainfall-and-priority-index]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "See https://data.humdata.org/dataset/philippines-typhoon-haima-priority-index",
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/typhoon-nina-windspeed-rainfall-and-priority-index"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/typhoon-nina-windspeed-rainfall-and-priority-index"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2016-12-26"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine government",
+            "url": "https://data.humdata.org/dataset/typhoon-nina-windspeed-rainfall-and-priority-index"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Observed windspeed and rainfall data from Typhoon Nina were combined with baseline country-wide exposure data and historical damage counts from five past typhoons to train a machine learning algorithm that produces a weighted priority index indicating the degree of building damage (partial to complete destruction) at sub-national locations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine government",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official counts of houses damaged and completely destroyed by past typhoons (Haiyan, Melor, Hagupit, Rammasun, Haima) used to train the machine learning priority index model"
+          },
+          {
+            "id": "source_2",
+            "name": "Netherlands Red Cross - 510",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Observed windspeed and rainfall measurements for Typhoon Nina"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://data.humdata.org/dataset/philippines-typhoon-haima-priority-index"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_0e11586a",
+          "title": "Typhoon Nina Windspeed.zip",
+          "description": "Philippines - Typhoon Nina - windspeed, rainfall and priority index (Windspeed data provided by Mark Saunders, University College London)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/5d75ef75-e57a-45a3-8992-84af62db0b3c/resource/0e11586a-5549-4df3-a999-7cd9df7f8848/download/typhoon-nina-windspeed.zip"
+        },
+        {
+          "id": "resource_1bb5fd80",
+          "title": "Typhoon Nina - rainfall.csv",
+          "description": "Philippines - Typhoon Nina - windspeed, rainfall and priority index (Rainfall between december 24-26th 2016 in the Philippines)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5d75ef75-e57a-45a3-8992-84af62db0b3c/resource/1bb5fd80-997d-4143-ae3b-bb04ef9a9085/download/typhoon-nina-rainfall.csv"
+        },
+        {
+          "id": "resource_fb8817df",
+          "title": "Typhoon Nina - Priority Index.csv",
+          "description": "Philippines - Typhoon Nina - windspeed, rainfall and priority index (GradientBoosting best algorithm outcome)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5d75ef75-e57a-45a3-8992-84af62db0b3c/resource/fb8817df-6b9d-4b15-a540-f15ee6310118/download/typhoon-nina-priority-index.csv"
+        },
+        {
+          "id": "resource_6189c788",
+          "title": "Nock-Ten damage data.xlsx",
+          "description": "SitRep No.13 re Preparedness Measures and Effects of TY NINA (NOCK-TEN) as of 09 January 2017, 8:00 AM",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5d75ef75-e57a-45a3-8992-84af62db0b3c/resource/6189c788-ea52-4366-a290-614e4e252c80/download/nock-ten-damage-data.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "inferred",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Direct building damage (partial and complete destruction) from Typhoon Nina"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/typhoon-nina-windspeed-rainfall-and-priority-index",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

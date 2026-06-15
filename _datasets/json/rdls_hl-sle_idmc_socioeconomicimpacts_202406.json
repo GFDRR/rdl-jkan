@@ -1,0 +1,141 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-sle_idmc_socioeconomicimpacts_202406",
+      "title": "Socio economic impacts of internal displacement in Sierra Leone",
+      "description": "This dataset contains both quantitative and qualitative data, as well as financial information, measuring the impacts of internal displacement in Plantain Island, Sierra Leone as a result of rising sea levels. It includes data on both economic and non-economic losses experienced by internally displaced people (IDPs) and host communities and covers various dimensions such as livelihoods, housing, health, security and education. Methodology: Developed in 2019, IDMC's survey tool collects quantitative and qualitative data, as well as financial information, to measure the impacts of internal displacement. The survey captures both economic and non-economic losses experienced by internally displaced people (IDPs) and host communities and covers key dimensions including livelihoods, housing, health, security and education. It allows for data disaggregation by sex, age, disability status, income and education levels, area of origin, duration of displacement and ethnolinguistic identity, helping to identify overlapping vulnerabilities. Data compilation process: Data was collected using a combination of random walk and respondent-driven sampling techniques. On Plantain Island, enumerators employed a random walk approach to select participants, while in Tombo and Tissana, respondent-driven sampling was used to identify people displaced from the island. Primary sources: IDMC and the Sierra Leone National Disaster Management Agency (NDMA).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/socio-economic-impacts-of-internal-displacement-in-sierra-leone]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "The study includes interviews from 197 IDPs and 31 of their non-displaced counterparts across Plantain Island, Shenge, Tissana and Tombo. Given the small sample size of host community members, the analysis focused primarily on the IDPs. The findings are not nationally representative and should be interpreted as indicative of the situation of people displaced by disasters living in those specific locations. Report published: https://doi.org/10.55363/IDMC.UCXV2874",
+      "contact_point": {
+        "name": "Internal Displacement Monitoring Centre (IDMC)",
+        "url": "https://data.humdata.org/dataset/socio-economic-impacts-of-internal-displacement-in-sierra-leone"
+      },
+      "creator": {
+        "name": "Internal Displacement Monitoring Centre (IDMC)",
+        "url": "https://data.humdata.org/dataset/socio-economic-impacts-of-internal-displacement-in-sierra-leone"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SLE"
+        ]
+      },
+      "temporal": {
+        "start": "2024-06-01",
+        "end": "2024-06-27"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IDMC's standardized survey tool administered in 2019 collected quantitative, qualitative, and financial data from internally displaced persons and host communities in Plantain Island, Sierra Leone. Data covers multiple dimensions of displacement impact including livelihoods, housing, health, security, and education, with specific focus on sea level rise as the triggering hazard.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Internal Displacement Monitoring Centre (IDMC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Survey-based collection of quantitative and qualitative data on socioeconomic impacts of internal displacement, including household demographics, housing conditions, livelihoods, health, security, and education outcomes for IDPs and host communities."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e5b5d002",
+          "title": "idmc_sierra_leone_socioeconomicimpact_idps_01062024_27062024.xlsx",
+          "description": "Socio economic impacts of internal displacement in Sierra Leone (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5e9d9557-2a0e-40eb-ab3f-90af68176830/resource/e5b5d002-43d5-477e-8f7f-fd81c7ece8ee/download/idmc_sierra_leone_socioeconomicimpact_idps_01062024_27062024.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "sea_level_rise",
+                "process": "sea_level_rise",
+                "intensity_measure": "slr:cm"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_sea_level_rise",
+              "type": "sea_level_rise",
+              "intensity_measure": "slr:cm"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Internally displaced persons from sea level rise in Plantain Island"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_sea_level_rise",
+              "type": "sea_level_rise",
+              "intensity_measure": "slr:cm"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Economic losses experienced by IDPs and host communities including housing and livelihood impacts"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/socio-economic-impacts-of-internal-displacement-in-sierra-leone",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

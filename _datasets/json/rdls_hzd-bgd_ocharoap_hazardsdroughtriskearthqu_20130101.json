@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-bgd_ocharoap_hazardsdroughtriskearthqu_20130101",
+      "title": "Bangladesh - Hazards (Drought risk, Earthquake risk, Flood risk and River erosion risk)",
+      "description": "This spatial dataset provides Hazard data of Bangladesh. Drought risk, Earthquake risk, Flood risk and River erosion risk are included as separated datasets with different attributes. The source of the data is Bangladesh Agricultural Research Council (BARC). Dataset records are updated by WFP, Map Action and OCHA.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/bangladesh-hazards]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Date of the dataset is unclear.",
+      "contact_point": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/bangladesh-hazards"
+      },
+      "creator": {
+        "name": "OCHA Regional Office for Asia and the Pacific (ROAP)",
+        "url": "https://data.humdata.org/dataset/bangladesh-hazards"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2013-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Bangladesh Agricultural Research Council (BARC)",
+            "url": "https://data.humdata.org/dataset/bangladesh-hazards"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Spatial hazard datasets were compiled by Bangladesh Agricultural Research Council (BARC) and subsequently updated and maintained by WFP, Map Action, and OCHA. The datasets classify Bangladesh into hazard zones for four distinct hazard types (drought, earthquake, flood, river erosion) based on historical occurrence patterns and geographic/climatic characteristics, with results stored as polygon shapefiles at thana (sub-district) and zone administrative levels.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Bangladesh Agricultural Research Council (BARC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Primary source organization providing spatial hazard data for drought, earthquake, flood, and river erosion risk zones across Bangladesh administrative divisions."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8f974cee",
+          "title": "bgd_nhr_drought_barc.zip",
+          "description": "Bangladesh - Hazards (Drought risk, Earthquake risk, Flood risk and River erosion risk) (Drought risk by BARC - Drought class 1 to 10)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/7362ef2d-7282-459f-bc1b-0347076fcc12/resource/8f974cee-89d9-4818-a05a-f0263f939923/download/bgd_nhr_drought_barc.zip"
+        },
+        {
+          "id": "resource_994c0647",
+          "title": "bgd_nhr_earthquake_barc.zip",
+          "description": "Bangladesh - Hazards (Drought risk, Earthquake risk, Flood risk and River erosion risk) (Earthquake risk by BARC - Zone I, II, III)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/7362ef2d-7282-459f-bc1b-0347076fcc12/resource/994c0647-dc44-400f-b969-4f41dc3df812/download/bgd_nhr_earthquake_barc.zip"
+        },
+        {
+          "id": "resource_ca979980",
+          "title": "bgd_nhr_floods_barc.zip",
+          "description": "Flood risk by BARC- Flood cat 0 - Not flood proned, 1 - Severe River Flooding, 8 - Moderate Tidal Surge",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/7362ef2d-7282-459f-bc1b-0347076fcc12/resource/ca979980-e533-43f8-83c9-2a6b5ac570c6/download/bgd_nhr_floods_barc.zip"
+        },
+        {
+          "id": "resource_b9845724",
+          "title": "bgd_nhr_rivererosion_barc.zip",
+          "description": "Bangladesh - Hazards (Drought risk, Earthquake risk, Flood risk and River erosion risk) (River erosion risk by BARC)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/7362ef2d-7282-459f-bc1b-0347076fcc12/resource/b9845724-c2d2-4fd5-9513-98b1f0cc0d25/download/bgd_nhr_rivererosion_barc.zip"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/bangladesh-hazards",
+          "rel": "source"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "es_flood",
+            "hazards": [
+              {
+                "id": "es_flood_hzd",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_earthquake",
+            "hazards": [
+              {
+                "id": "es_earthquake_hzd",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred"
+          },
+          {
+            "id": "es_drought",
+            "hazards": [
+              {
+                "id": "es_drought_hzd",
+                "type": "drought",
+                "process": "agricultural_drought",
+                "intensity_measure": "NDVI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      }
+    }
+  ]
+}

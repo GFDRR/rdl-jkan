@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-cpv_hdx_dailysummariesprecipitati_20151223",
+      "title": "Daily Summaries of Precipitation Indicators for Cabo Verde",
+      "description": "This dataset contains the daily summaries on base stations across Cabo Verde . The four indicators included are: * TPCP : Total precipitation * MXSD : Maximum snow depth * TSNW : Total snow fall * EMXP : Extreme maximum daily precipitation Indicators are compiled by the National Centers for Environmental Information (NCEI), which is administrated by National Oceanic and Atmospheric Administration (NOAA) an organization part of the United States government. NOAA has access to data collected from thousands of base stations around the world, which collect data periodically on weather and climate conditions. This dataset contains the latest 5 years of available data .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-cabo-verde]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Due to late-arriving data, the number of recent records is likely underrepresented in all categories, but the ratio of records (warm to cold, for example) should be a fairly strong estimate of a final outcome.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-cabo-verde"
+      },
+      "creator": {
+        "name": "National Centers for Environmental Information (NCEI / NOAA)",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-cabo-verde"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CPV"
+        ]
+      },
+      "temporal": {
+        "start": "2015-12-23"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-cabo-verde"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Daily precipitation indicators were collected from meteorological base stations across Cabo Verde by NOAA/NCEI. Stations were selected based on a minimum 30-year record of service with at least 182 complete days per year. Four indicators (total precipitation, maximum snow depth, total snowfall, extreme maximum daily precipitation) were compiled into daily summaries for drought and precipitation hazard characterization.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Observational precipitation and snow data collected from meteorological base stations across Cabo Verde, compiled and quality-controlled by NOAA's NCEI with a minimum 30-year record requirement"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncdc.noaa.gov/cdo-web/datatools/records"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_b2c0fe8a",
+          "title": "precipitation_cpv.csv",
+          "description": "Daily Summaries of Precipitation Indicators for Cabo Verde (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5a46fce4-d14d-4248-aca7-cba08043cde2/resource/b2c0fe8a-64e6-4498-8f49-8039b09a15ef/download/precipitation_cpv.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "TPCP:mm"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-cabo-verde",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

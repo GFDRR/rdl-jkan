@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-som_iom_droughtdisplacementtracki_2016",
+      "title": "Somalia - Drought Displacement Tracking",
+      "description": "Drought displacement tracking for somalia. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-drought-displacement-tracking]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "Note that this dataset contains observational data and it does not follow the same guidelines and quality assurance of the regular DTMs methodologies. Please use this information with caution.",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/somalia-drought-displacement-tracking"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/somalia-drought-displacement-tracking"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2016-12-01",
+        "end": "2017-01-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Displacement tracking data collected through direct observation and anecdotal reports by IOM field teams monitoring population movements triggered by drought conditions in Somalia. Data represents post-event impact records of drought-induced displacement.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational tracking of drought-induced displacement events in Somalia through field monitoring and anecdotal data collection"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7689902d",
+          "title": "Drought Displacement Tracking",
+          "description": "Somalia - Drought Displacement Tracking (Drought Displacement Tracking)",
+          "format": "Google Sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/1-sC4D34q5xeMhaCk-7Mkqh9oKLMcMTGYzJd6juhleX4/edit?usp=drive_web"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement caused by drought conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-drought-displacement-tracking",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

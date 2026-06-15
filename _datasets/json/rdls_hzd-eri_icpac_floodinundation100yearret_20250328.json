@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-eri_icpac_floodinundation100yearret_20250328",
+      "title": "Eritrea Flood Inundation (100 year return period)",
+      "description": "This dataset is the output from the Global Flood Model intercomparison project undertaken on behalf of the Global Flood Partnership. The methodology is described in Trigg et al., 2016, 'The credibility challenge for global fluvial flood risk analysis,' published in the Environmental Research Letters Journal. Each file is a geospatial, WGS84, 1/1200 decimal degrees resolution (~90m) GeoTIFF raster with a classified integer value representing how many out of the 6 models agree that a cell is wet (note 0 - dry/no data). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-eritrea-flood-inundation-100-year-return-period]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Time period is set to publication date rather than the date the data covers",
+      "contact_point": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-eritrea-flood-inundation-100-year-return-period"
+      },
+      "creator": {
+        "name": "IGAD Climate Prediction and Applications Center (ICPAC)",
+        "url": "https://data.humdata.org/dataset/icpac-geonode-eritrea-flood-inundation-100-year-return-period"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ERI"
+        ]
+      },
+      "temporal": {
+        "start": "2025-03-28"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Global Flood Model intercomparison project",
+            "url": "https://data.humdata.org/dataset/icpac-geonode-eritrea-flood-inundation-100-year-return-period"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Fluvial flood inundation extents for Eritrea were generated through a multi-model intercomparison project coordinated by the Global Flood Partnership, where 6 independent global flood models were run for the 100-year return period. The output raster (90m resolution) classifies each cell by the number of models agreeing on inundation, providing a probabilistic consensus-based hazard map. Methodology is documented in Trigg et al. (2016) in Environmental Research Letters.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Global Flood Model intercomparison project",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multi-model ensemble of 6 global flood models producing probabilistic fluvial flood inundation estimates. Output represents model agreement on wet cells, providing a consensus-based hazard assessment."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_70d2f5cf",
+          "title": "Eritrea Flood Inundation (100 year return period) GeoTIFF",
+          "description": "GeoTIFF file. This dataset is the output from the Global Flood Model intercomparison project undertaken on behalf of the Global Flood Partnership. The methodology is described in Trigg et al., 2016, 'The credibility challenge for global fluvial flood risk analysis,' published in the Environmental Research Letters Journal. Each file is a geospatial, WGS84, 1/1200 decimal degrees resolution (~90m) GeoTIFF raster with a classified integer value representing how many out of the 6 models agree that a cell is wet (note 0 - dry/no data)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__Eritrea_flood_inundation&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_100yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01
+                  }
+                },
+                "description": "Probabilistic fluvial flood hazard model showing inundation extent at 100-year return period based on multi-model consensus from 6 global flood models"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/icpac-geonode-eritrea-flood-inundation-100-year-return-period",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

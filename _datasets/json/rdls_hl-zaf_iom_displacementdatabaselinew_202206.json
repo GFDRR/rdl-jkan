@@ -1,0 +1,159 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-zaf_iom_displacementdatabaselinew_202206",
+      "title": "South Africa Displacement Data - Baseline Ward Assessment [IOM DTM]",
+      "description": "Dataset has IDPs, Households, challenges faced by IDPs etc. On 11-13 April, severe flooding and landslides caused by heavy rainfall affected southern and south-eastern South Africa. In response to the need for accurate information on internally displaced persons (IDPs) in South Africa, the International Organization for Migration (IOM) in partnership with the South Africa Red Cross Society and in coordination with provincial and local authorities, deployed teams from June 2022 to conduct baseline assessments at ward level. The project is supporting the Government of South Africa and other humanitarian response partners to conduct IDPs assessments in a systematic way as well as to establish a profile of the IDP population.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/south-africa-displacement-data-baeline-ward-assessment-iom-dtm]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/south-africa-displacement-data-baeline-ward-assessment-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/south-africa-displacement-data-baeline-ward-assessment-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ZAF"
+        ]
+      },
+      "temporal": {
+        "start": "2022-06-13",
+        "end": "2022-06-17"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "South Africa Red Cross Society",
+            "url": "https://data.humdata.org/dataset/south-africa-displacement-data-baeline-ward-assessment-iom-dtm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "In response to severe flooding and landslides triggered by heavy rainfall in southern and south-eastern South Africa on 11-13 April 2022, IOM in partnership with the South Africa Red Cross Society and provincial/local authorities deployed assessment teams from June 2022 onwards to conduct baseline ward-level surveys of internally displaced persons using DTM methodology. The dataset captures IDP counts, household information, and reported challenges at the ward administrative level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IOM Displacement Tracking Matrix (DTM) baseline ward-level assessments of internally displaced persons, households, and challenges faced by IDPs in South Africa following April 2022 flooding and landslides."
+          },
+          {
+            "id": "source_2",
+            "name": "South Africa Red Cross Society",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Partner organization contributing to field assessments and data collection for IDP baseline characterization."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e324caa4",
+          "title": "South Africa - Baseline Ward Assessment - Round 1",
+          "description": "On 11-13 April, severe flooding and landslides caused by heavy rainfall affected southern and south-eastern South Africa, particularly the provinces of KwaZulu-Natal and Eastern Cape. According to national authorities, at least 123,808 people were affected, 448 people died and over 30,000 are displaced, mostly in collective evacuation centres. The devastation in the most affected areas of KwaZulu-Natal and Eastern Cape provinces is immense: nearly 12,500 homes have been destroyed or damaged, 66 health centres affected, and 600 schools devastated which will put 270,000 students at risk. A National State of Disaster has been declared in response to the floods and landslides, and rescue teams have been deployed to the affected areas to provide humanitarian assistance to those most affected. To better assist authorities and partners to respond to the situation, IOM in partnership with the South Africa Red Cross Society and in coordination with provincial and local authorities, deployed teams from 13 to 17 June to conduct baseline assessments at ward level. These assessments provide a snapshot of the number of displaced persons residing in 26 of the most affected wards in Ethekwini district. The assessments also provide an overview of the sectoral needs, gaps and potential solutions, including water and sanitation (WASH), food security, health, infrastructure and protection. Finally, a list of priority locations for further assessment were identified.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4fcca449-1751-4560-b7ac-5d207ab53480/resource/e324caa4-9152-4cc3-9cd7-228335e06632/download/hdx_ward_baseline_assessment_kzn2022.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from flooding and landslides assessed at ward level"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from landslides assessed at ward level"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/south-africa-displacement-data-baeline-ward-assessment-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

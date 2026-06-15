@@ -1,0 +1,313 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-ethzurich_earthquakeshazarddatadisa_1905",
+      "title": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries)",
+      "description": "Earthquake hazard sets at 150 arcsec (ca. 4km) resolution, available for the entire globe and per country. Available as historic records from the USGS epicentres database and as a simple probabilistic sampling starting from the historic earthquake catalog, with 9 synthetic events per historic record. The presented data are maximum intensity on the Modified Mercalli intensity scale (MMI) over the historic record 1904-2017.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/climada-earthquake-dataset]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "In this API we provide datasets in a form that can readily be used in CLIMADA analyses. Users should determine whether these datasets are suitable for a particular purpose or application, considering factors such as resolution (for example, a 4km grid is not suitable for modelling risk at the neighborhood level), the way that hazards are represented in the dataset (for example, specific events, event thresholds, probabilistic event sets, etc.), the way that exposure is represented, and other aspects. Data provided with no warranty of any kind under CC BY 4.0. See respective API metadata and referenced publications for details and limitations.",
+      "contact_point": {
+        "name": "ETH Zürich - Weather and Climate Risks",
+        "url": "https://data.humdata.org/dataset/climada-earthquake-dataset"
+      },
+      "creator": {
+        "name": "ETH Zürich - Weather and Climate Risks",
+        "url": "https://data.humdata.org/dataset/climada-earthquake-dataset"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "COD",
+          "PSE",
+          "SYR",
+          "VEN",
+          "YEM",
+          "AFG",
+          "BFA",
+          "BDI",
+          "CMR",
+          "CAF",
+          "TCD",
+          "COL",
+          "ETH",
+          "HTI",
+          "MLI",
+          "MOZ",
+          "MMR",
+          "NER",
+          "NGA",
+          "SOM",
+          "SSD",
+          "SDN",
+          "UGA",
+          "ZWE"
+        ]
+      },
+      "temporal": {
+        "start": "1905-02-17",
+        "end": "2017-12-03"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "USGS Earthquake Hazards Program epicentre database",
+            "url": "https://data.humdata.org/dataset/climada-earthquake-dataset"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "CLIMADA (Climate Adaptation and Mitigation Project)",
+            "url": "https://data.humdata.org/dataset/climada-earthquake-dataset"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historic earthquake epicentres from the USGS database (1904-2017) were processed through the CLIMADA API to generate gridded maximum Modified Mercalli intensity (MMI) hazard data at 4km resolution. The dataset represents observed intensity patterns derived from the instrumental earthquake catalog, aggregated to administrative boundaries (admin1 level) for selected countries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "USGS Earthquake Hazards Program epicentre database",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Historic earthquake epicentre records from 1904-2017 used as the observational basis for MMI intensity calculations"
+          },
+          {
+            "id": "source_2",
+            "name": "CLIMADA (Climate Adaptation and Mitigation Project)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Open-source probabilistic disaster risk assessment platform used to process earthquake records and generate spatially gridded MMI hazard data"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://github.com/CLIMADA-project/climada_petals/tree/feature/quake"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_dbf9b4bd",
+          "title": "admin1-summaries-earthquake.csv",
+          "description": "Maximum earthquake intensity over the period 1905-2017 at admin1 level for the HRP countries",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/dbf9b4bd-1321-4846-b6f0-4654509d3626/download/admin1-summaries-earthquake.csv"
+        },
+        {
+          "id": "resource_c0f26186",
+          "title": "admin1-timeseries-summaries-earthquake.csv",
+          "description": "Maximum earthquake intensity by admin1 or admin2 for each earthquake for HRP countries",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/c0f26186-5d48-4369-a9b6-9fedda623e99/download/admin1-timeseries-summaries-earthquake.csv"
+        },
+        {
+          "id": "resource_04618b65",
+          "title": "afghanistan-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Afghanistan with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/04618b65-4dad-439f-b7c9-7dfab145be47/download/afghanistan-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_b0b2a3bb",
+          "title": "burkina-faso-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Burkina Faso with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/b0b2a3bb-f337-4735-8f37-4adfb499b322/download/burkina-faso-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_d816f779",
+          "title": "burundi-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Burundi with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/d816f779-a802-49b1-afda-f400be00ed43/download/burundi-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_d4f6eed1",
+          "title": "cameroon-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Cameroon with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/d4f6eed1-02f4-4aa9-b4b8-fa6f638921dd/download/cameroon-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_8d5e0d66",
+          "title": "central-african-republic-admin1-earthquake.csv",
+          "description": "Gridded maximum earthquake intensity for Central African Republic with admin1 name column",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/8d5e0d66-2103-4ce3-9a6f-019c7bb2ef00/download/central-african-republic-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_27507eaa",
+          "title": "chad-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Chad with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/27507eaa-1366-42c0-9243-39c4dd0d3d74/download/chad-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_158110b9",
+          "title": "colombia-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Colombia with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/158110b9-25f3-4c4b-bc1f-678e4138b8ed/download/colombia-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_c0d51e02",
+          "title": "dr-congo-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for DR Congo with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/c0d51e02-2065-487b-8261-ecce427b0b1b/download/dr-congo-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_de67ee9c",
+          "title": "ethiopia-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Ethiopia with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/de67ee9c-651f-413b-8af8-45aa19ae985c/download/ethiopia-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_75dcbaf5",
+          "title": "haiti-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Haiti with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/75dcbaf5-d7d5-48ce-a0e2-8450e2813cae/download/haiti-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_984ac6bb",
+          "title": "mali-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Mali with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/984ac6bb-fc18-4c5b-97d4-11b0ffe40dc8/download/mali-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_63234e04",
+          "title": "mozambique-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Mozambique with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/63234e04-ceb5-4290-8b8b-85ad64527a02/download/mozambique-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_45401093",
+          "title": "myanmar-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Myanmar with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/45401093-802f-4caa-927d-3705d3bc2355/download/myanmar-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_3c1c4419",
+          "title": "niger-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Niger with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/3c1c4419-1ab6-44dc-a83b-3a908dce7409/download/niger-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_c66c8126",
+          "title": "nigeria-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Nigeria with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/c66c8126-93a8-4c2f-9c62-3fe716d82aff/download/nigeria-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_cb17f6dd",
+          "title": "somalia-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Somalia with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/cb17f6dd-b08b-45c4-8d8d-a718bc98f897/download/somalia-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_79ffe939",
+          "title": "south-sudan-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for South Sudan with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/79ffe939-a6f7-46b9-8c64-ee9c33b901ed/download/south-sudan-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_12c2825e",
+          "title": "state-of-palestine-admin1-earthquake.csv",
+          "description": "Gridded maximum earthquake intensity for State of Palestine with admin1 name column",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/12c2825e-eab8-48a8-ba23-56aa5a9c093a/download/state-of-palestine-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_0e213b93",
+          "title": "sudan-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Sudan with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/0e213b93-9e3c-47cb-a22a-18e78ab77ddf/download/sudan-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_f558dbf5",
+          "title": "syrian-arab-republic-admin1-earthquake.csv",
+          "description": "Gridded maximum earthquake intensity for Syrian Arab Republic with admin1 name column",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/f558dbf5-715d-4100-b96b-2608513154bf/download/syrian-arab-republic-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_29976fec",
+          "title": "ukraine-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Ukraine with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/29976fec-7e8c-43c9-9a70-54b17a1a476f/download/ukraine-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_229a25c4",
+          "title": "venezuela-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Venezuela with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/229a25c4-4178-4a93-beb7-cdce16661b1e/download/venezuela-admin1-earthquake.csv"
+        },
+        {
+          "id": "resource_c4cb4c8b",
+          "title": "yemen-admin1-earthquake.csv",
+          "description": "Earthquakes: Hazard Data for Disaster Risk Assessment (selected countries) (Gridded maximum earthquake intensity for Yemen with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/744f4f0b-3172-4397-9609-5ec0b9d34fcb/resource/c4cb4c8b-3dde-49e9-b3b4-905018740b08/download/yemen-admin1-earthquake.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/climada-earthquake-dataset",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

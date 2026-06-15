@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-som_unosat_floodingbeletweynetownbel_20180506",
+      "title": "Somalia flooding Belet Weyne Town, Belet Weyne District, Hiiran Region",
+      "description": "UNOSAT produced satellite-detected flood water extent and IDP distribtuion within the town of Belet Weyne in Belet Weyne District,Hiiran Region, Somalia. The analysis was conducted analyzing GeoEye-1 & WorldView-3 images acquired on the 30 April & 1 May 2018. As observed from the satellite image, the town of Belet Weyne is completely affected by the floods. Around 70% of the extension of the town is totally inundated, being the districts of Bulahabley, Bundaweyn, Dhagahjebis, Hilac, Hindab and Lamagalay Regional Military Based, Radar and Kutimbo completely submerged in water. The flood waters inside areas of partially flooded districts are receding. More than 110 IDP sites are located inside the town, and 50% of them are inside areas completly flooded. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-flooding-belet-weyne-town-belet-weyne-district-hiiran-region]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR UNOSAT.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/somalia-flooding-belet-weyne-town-belet-weyne-district-hiiran-region"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/somalia-flooding-belet-weyne-town-belet-weyne-district-hiiran-region"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2018-05-06"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analyzed multispectral satellite imagery (GeoEye-1 and WorldView-3) acquired on 30 April and 1 May 2018 to delineate flood water extent polygons in Belet Weyne town, with confidence levels and field validation. IDP distribution was analyzed concurrently to assess population displacement impacts from the observed inundation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-detected flood water extent mapping from GeoEye-1 and WorldView-3 optical imagery with confidence classifications and field validation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_48bc87d0",
+          "title": "RS20180506_GE20180430_beletweyne_Flood_Analysis.zip",
+          "description": "Somalia flooding Belet Weyne Town, Belet Weyne District, Hiiran Region (Satellite detected water & IDP distribution over Belet Weyne Town)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/6bcd7188-24a8-4b2f-8d1e-fc30f5144589/resource/48bc87d0-7e6c-4b33-8414-6e936f06520c/download/rs20180506_ge20180430_beletweyne_flood_analysis.zip"
+        },
+        {
+          "id": "resource_8a61c22d",
+          "title": "IDP_analysis_Belet_Weyne_Flood.xlsx",
+          "description": "Somalia flooding Belet Weyne Town, Belet Weyne District, Hiiran Region (IDP distribution over Belet Weyne Town)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6bcd7188-24a8-4b2f-8d1e-fc30f5144589/resource/8a61c22d-57cb-429e-9d54-599f1ab2b91c/download/idp_analysis_belet_weyne_flood.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "IDP distribution and displacement from flooding in Belet Weyne town"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-flooding-belet-weyne-town-belet-weyne-district-hiiran-region",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

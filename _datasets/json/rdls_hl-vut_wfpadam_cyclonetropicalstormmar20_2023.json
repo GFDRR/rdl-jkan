@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-vut_wfpadam_cyclonetropicalstormmar20_2023",
+      "title": "Vanuatu: Cyclone - Tropical storm - Mar 2023",
+      "description": "A cyclone (tropical storm) during the period Feb 27 2023-Mar 03 2023 in Vanuatu. It impacted 190950 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/vanuatu-cyclone-1000965]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1000965"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1000965"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2023-02-27",
+        "end": "2023-03-03"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1000965"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM collected and analyzed geospatial and socio-economic data following the tropical cyclone event in Vanuatu (Feb 27 - Mar 03, 2023). The system aggregated impact information to produce a response dashboard with affected population counts and event mapping.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analysing and mapping geospatial and socio-economic information following sudden onset humanitarian emergencies, including tropical storm impact assessments."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b4fdbef9",
+          "title": "ADAM_TS_1000965_18_shp.zip",
+          "description": "Vanuatu: Cyclone - Tropical storm - Mar 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://adam-project-prod.s3-eu-west-1.amazonaws.com/adam_ts/events/2023/03/1000965_18/ADAM_TS_1000965_18_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Total population affected by tropical cyclone in Vanuatu, March 2023"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/vanuatu-cyclone-1000965",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

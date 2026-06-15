@@ -1,0 +1,134 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-gin_wfp_rainfallindicatorssubnati_1981",
+      "title": "Guinea: Rainfall Indicators at Subnational Level",
+      "description": "This dataset contains dekadal rainfall indicators, computed from Climate Hazards Group InfraRed Precipitation satellite imagery with insitu Station data (CHIRPS) version 2 and the CHIRPS-GEFS short term rainfall forecasts, aggregated by subnational administrative units. Included indicators are (for each dekad): 10 day rainfall [mm] ( rfh ) rainfall 1-month rolling aggregation [mm] ( r1h ) rainfall 3-month rolling aggregation [mm] ( r3h ) rainfall long term average [mm] ( rfh_avg ) rainfall 1-month rolling aggregation long term average [mm] ( r1h_avg ) rainfall 3-month rolling aggregation long term average [mm] ( r3h_avg ) rainfall anomaly [%] ( rfq ) rainfall 1-month anomaly [%] ( r1q ) rainfall 3-month anomaly [%] ( r3q ) The administrative units used for aggregation are based on WFP data and contain a Pcode reference attributed to each unit. The number of input pixels used to create the aggregates, is provided in the n_pixels column. Finally, the type column indicates if the value is based on a forecast, a preliminary or a final product. Forecasts are issued on the 6th, 16th, and 26th of each month for the upcoming 10-day period (dekad), then updated with improved versions on the 1st, 11th, and 21st. Preliminary observations replace the previous dekad's forecast on the 3rd, 13th, and 23rd, and are later replaced by final observations-published mid-month (13th or 23rd)-covering all three dekads of the prior month. Please find a summary below: Publication Day: Forecast type, Covers (Dekad) 1st: Updated forecast, 1-10 of the same month 6th: Initial forecast, 11-20 of the same month 11th: Updated forecast, 1-10 of the same month 16th: Initial forecast, 21-end of the same month 21st: Updated forecast, 11-20 of the same month 26th: Initial forecast, 1-10 of the following month For more on CHIRPS-GEFS forecasts, see: https://www.chc.ucsb.edu/data/chirps-gefs For further details, please see the methodology section.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/gin-rainfall-subnational]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "To provide real-time data, the prelim version is used which then gets replaced successively by final data as it becomes available. For more information about differences between prelim and final see [CHIRPS Reality Checks](https://wiki.chc.ucsb.edu/CHIRPS_Reality_Checks). Forecast data is successively replaced by preliminary and final data.",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/gin-rainfall-subnational"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/gin-rainfall-subnational"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GIN"
+        ]
+      },
+      "temporal": {
+        "start": "1981-01-01",
+        "end": "2026-01-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Climate Hazards Group InfraRed Precipitation with Stations (CHIRPS) version 2",
+            "url": "https://data.humdata.org/dataset/gin-rainfall-subnational"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "CHIRPS-GEFS short term rainfall forecasts",
+            "url": "https://data.humdata.org/dataset/gin-rainfall-subnational"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Rainfall data derived from CHIRPS satellite observations merged with station measurements, aggregated into dekadal indicators (10-day, 1-month, and 3-month rolling totals) and compared against long-term averages at subnational administrative units to generate meteorological drought monitoring indicators.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Climate Hazards Group InfraRed Precipitation with Stations (CHIRPS) version 2",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-based rainfall estimates combined with in-situ rain gauge observations providing dekadal precipitation measurements"
+          },
+          {
+            "id": "source_2",
+            "name": "CHIRPS-GEFS short term rainfall forecasts",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Short-term rainfall forecast model providing predictive rainfall indicators"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://chc.ucsb.edu/data/chirps"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://chc.ucsb.edu/data/chirps-gefs"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_3dc7f12c",
+          "title": "gin-rainfall-subnat-full.csv",
+          "description": "This resource contains the full timeseries to date. File id: 20260123T135526993287_a9eef543",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/2eab4635-eeff-4179-b415-5c03298b400b/resource/3dc7f12c-0cd9-4187-b053-664a4852572d/download/gin-rainfall-subnat-full.csv"
+        },
+        {
+          "id": "resource_0bb0446d",
+          "title": "gin-rainfall-subnat-5ytd.csv",
+          "description": "This resource contains a subset of the full timeseries covering the past five years to date. File id: 20260123T135526993287_a9eef543",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/2eab4635-eeff-4179-b415-5c03298b400b/resource/0bb0446d-d870-46bd-839e-1119415a8e22/download/gin-rainfall-subnat-5ytd.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SMA:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/gin-rainfall-subnational",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

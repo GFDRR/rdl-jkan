@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_wfpadam_earthquake63msep2023_20230912",
+      "title": "Philippines: Earthquake - 6.3M - Sep 2023",
+      "description": "ADAM ID: eq_us7000kv90 Magnitude 6.3 earthquake at 41.281 depth occurred on Sep 12 2023 in 29km W of Calayan. It impacted 11275 people. The epicentre was at latitude 19.2687 longitude 121.2178.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-earthquake-eq-us7000kv90]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/philippines-earthquake-eq-us7000kv90"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/philippines-earthquake-eq-us7000kv90"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-12"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/philippines-earthquake-eq-us7000kv90"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "ADAM system processed the 6.3 magnitude earthquake event (USGS ID: us7000kv90) occurring 29 km west of Calayan on 12 September 2023, deriving population exposure to ground motion intensity zones (MMI 3-6) by administrative division using shakemap outputs and gridded population data.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting and mapping geospatial and socio-economic information following sudden-onset emergencies; provides earthquake alerts and response dashboards aggregating affected population estimates by administrative division and intensity zone."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3e8b195b",
+          "title": "sm-us7000kv90-sm-us7000kv90-pop-estimation.csv",
+          "description": "Philippines: Earthquake - 6.3M - Sep 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/90b74ae0-4809-42d2-a84a-65c7319d56d6/resource/3e8b195b-d923-41df-8029-7a10062f98d4/download/sm-us7000kv90-sm-us7000kv90-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake ground shaking across MMI intensity zones"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-earthquake-eq-us7000kv90",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
