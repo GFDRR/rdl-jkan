@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-gtm_nlrc510_aibuildingfootprintsouthe_20201120",
+      "title": "AI building footprint in southern Guatemala",
+      "description": "Southern Guatemala: AI predictions of building footprint on Bing Maps images (approximately 2016-2019), see https://github.com/rodekruis/automated-building-detection. Produced in support to DRRT Guatemala for hurricane Eta and Iota. Coordinate reference system: WGS 84 / EPSG:4326. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ai-building-footprint-in-southern-guatemala]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Buildings might be missing, complement if possible.",
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/ai-building-footprint-in-southern-guatemala"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/ai-building-footprint-in-southern-guatemala"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GTM"
+        ]
+      },
+      "temporal": {
+        "start": "2020-11-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Bing Maps",
+            "url": "https://data.humdata.org/dataset/ai-building-footprint-in-southern-guatemala"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Netherlands Red Cross - 510 automated-building-detection",
+            "url": "https://data.humdata.org/dataset/ai-building-footprint-in-southern-guatemala"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building footprints were automatically detected using AI algorithms applied to Bing Maps satellite imagery (2016-2019) covering southern Guatemala. The methodology leverages machine learning for feature extraction from optical satellite data to generate vector building geometries. The dataset was produced to support disaster risk assessment for hurricanes Eta and Iota in Guatemala.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Bing Maps",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite imagery source (approximately 2016-2019) used as input for AI-based building detection"
+          },
+          {
+            "id": "source_2",
+            "name": "Netherlands Red Cross - 510 automated-building-detection",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "AI algorithm for automated building footprint detection from satellite imagery"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://github.com/rodekruis/automated-building-detection"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_287b4426",
+          "title": "buildings_guatemala.geojson",
+          "description": "Southern Guatemala: AI predictions of building footprint on Bing Maps images (approximately 2016-2019), see https://github.com/rodekruis/automated-building-detection. Produced in support to DRRT Guatemala for hurricane Eta and Iota. Coordinate reference system: WGS 84 / EPSG:4326",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/5ff73bdc-09cf-450a-9efd-ea81258f9006/resource/287b4426-299f-4cf5-b492-261e43128d88/download/buidings_guatemala.geojson"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "AI-detected building footprints in southern Guatemala derived from satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ai-building-footprint-in-southern-guatemala",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
