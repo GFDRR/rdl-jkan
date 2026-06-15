@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-tcd_unosat_detectedwaterextentndjame_20221021",
+      "title": "Satellite detected water extent in N'Djamena department, N'Djamena Region, Chad as of 20 October 2022",
+      "description": "UNOSAT code FL20221019TCD This map illustrates satellite-detected surface waters in N'Djamena Department, N'Djamena Region, Chad as observed from a Sentinel-2 image acquired on 20 October 2022 at 10:20 local time. Within the map extent of about 100 km2, about 42 km2 of lands appear to be flooded and 5,408 structures are potentially affected by the floods. Based on Worldpop population data and the detected surface waters, about 160,000 people are potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-in-n-djamena-department-n-djamena-region-chad-as-of-20-october-2022]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-n-djamena-department-n-djamena-region-chad-as-of-20-october-2022"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-n-djamena-department-n-djamena-region-chad-as-of-20-october-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TCD"
+        ]
+      },
+      "temporal": {
+        "start": "2022-10-21"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/water-extent-in-n-djamena-department-n-djamena-region-chad-as-of-20-october-2022"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/water-extent-in-n-djamena-department-n-djamena-region-chad-as-of-20-october-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on 20 October 2022 and performed visual change detection to delineate surface water extent in N'Djamena department. Detected flood polygons were intersected with building footprints and WorldPop population grids to estimate structural and population exposure. Results represent preliminary satellite-based assessment not yet validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multispectral satellite image acquired on 20 October 2022 used to detect surface water extent through visual analysis and change detection"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate population exposure to detected flood areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c8cefb64",
+          "title": "FL20221019TCD_gdb.zip",
+          "description": "Satellite detected water extent in N'Djamena department, N'Djamena Region, Chad as of 20 October 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3422/FL20221019TCD_gdb.zip"
+        },
+        {
+          "id": "resource_2038ddfe",
+          "title": "FL20221019TCD_SHP.zip",
+          "description": "Satellite detected water extent in N'Djamena department, N'Djamena Region, Chad as of 20 October 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3422/FL20221019TCD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures potentially affected by detected flood waters"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-in-n-djamena-department-n-djamena-region-chad-as-of-20-october-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

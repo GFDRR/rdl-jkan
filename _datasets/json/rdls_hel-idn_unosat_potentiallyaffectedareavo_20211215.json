@@ -1,0 +1,188 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-idn_unosat_potentiallyaffectedareavo_20211215",
+      "title": "Potentially affected area by volcanic eruption effect of the 4 Dec 2021 in Java Province, Indonesia as of 10&11 Dec 2021",
+      "description": "UNOSAT code: VO20211205IDN This map illustrates the potentially affected areas by Lahar and Pyroclastic density currents (PDCs) including geological information of Mount Semeru, Java province, Indonesia as detected by satellite images acquired after the eruption of the Mount Semeru on 4 Dec 2021. UNITAR-UNOSAT analysis used Pleiades images acquired on 10 & 11 Dec 2021 to estimate the affected area by Lahar and Pyroclastic density currents. Within the analyzed area, about 3,220 ha appear to be affected. Based on Worldpop population data and affected area by Lahar and pyroclastic density currents, about 8,400 people are potentially exposed or living close to pyroclastic density area. In addition, base on Esri 2020 Land Cover, potentially affected in tree area ~2,100ha, scrub/shrub area ~ 400 ha, cropland ~ 165 ha, built area ~ 140 ha. Important note: Pyroclastic density currents (PDCs) are perhaps the most hazardous events to local areas during explosive volcanic eruptions. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/potentially-affected-area-by-volcanic-eruption-effect-of-the-4-dec-2021-in-java-province-i]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/potentially-affected-area-by-volcanic-eruption-effect-of-the-4-dec-2021-in-java-province-i"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/potentially-affected-area-by-volcanic-eruption-effect-of-the-4-dec-2021-in-java-province-i"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2021-12-15"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Pleiades satellite imagery",
+            "url": "https://data.humdata.org/dataset/potentially-affected-area-by-volcanic-eruption-effect-of-the-4-dec-2021-in-java-province-i"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/potentially-affected-area-by-volcanic-eruption-effect-of-the-4-dec-2021-in-java-province-i"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre- and post-eruption Pleiades satellite imagery acquired on 10-11 December 2021 to detect and delineate areas affected by lahar and pyroclastic density currents from the Mount Semeru eruption. WorldPop population data was overlaid on the affected area polygons to estimate potentially affected population. The resulting dataset provides post-event hazard extent and exposure estimates for volcanic hazards in Java Province.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Pleiades satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "High-resolution satellite images acquired on 10-11 December 2021 used to detect and delineate lahar and pyroclastic density current affected areas"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate potentially affected population within the hazard-affected area"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3c5a15c7",
+          "title": "VO20211205IDN_gdb.zip",
+          "description": "Potentially affected area by volcanic eruption effect of the 4 Dec 2021 in Java Province, Indonesia as of 10&11 Dec 2021 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/ID/VO20211205IDN/VO20211205IDN_gdb.zip"
+        },
+        {
+          "id": "resource_6d419058",
+          "title": "VO20211205IDN_shp.shp",
+          "description": "Potentially affected area by volcanic eruption effect of the 4 Dec 2021 in Java Province, Indonesia as of 10&11 Dec 2021 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/ID/VO20211205IDN/VO20211205IDN_shp.shp"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "lahar",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population in areas affected by lahar and pyroclastic density currents based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "natural_environment",
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "Land area affected by volcanic hazards including lahar and pyroclastic density currents"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct area loss from lahar and pyroclastic density current inundation affecting approximately 3,220 hectares"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/potentially-affected-area-by-volcanic-eruption-effect-of-the-4-dec-2021-in-java-province-i",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

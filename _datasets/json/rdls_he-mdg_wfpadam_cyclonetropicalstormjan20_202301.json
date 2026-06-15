@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mdg_wfpadam_cyclonetropicalstormjan20_202301",
+      "title": "Madagascar: Cyclone - Tropical storm - Jan 2023",
+      "description": "ADAM ID: 1000957_6 Cyclone (tropical storm) during the period Jan 18 2023-Jan 29 2023 in Madagascar. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/madagascar-cyclone-1000957]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/madagascar-cyclone-1000957"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/madagascar-cyclone-1000957"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2023-01-18",
+        "end": "2023-01-29"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/madagascar-cyclone-1000957"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and mapped tropical cyclone track data and wind speed measurements for the January 2023 cyclone event in Madagascar. The shapefile contains event episode information, cyclone classification, wind speed measurements, and population exposure data aggregated from operational emergency response monitoring.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting, analysing and mapping geospatial information following sudden onset humanitarian emergencies, providing tropical storm track and wind speed data"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a0a434b0",
+          "title": "1000957-42-adam-ts-1000957-42-shp.zip",
+          "description": "Madagascar: Cyclone - Tropical storm - Jan 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/3931bb8b-332a-4449-b989-bb7d75fcfb73/resource/a0a434b0-5d2c-4822-8e7c-e2df231e6655/download/1000957-42-adam-ts-1000957-42-shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone hazard in Madagascar"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/madagascar-cyclone-1000957",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

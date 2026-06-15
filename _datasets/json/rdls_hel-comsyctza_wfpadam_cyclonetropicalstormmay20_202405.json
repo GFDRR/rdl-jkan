@@ -1,0 +1,148 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-comsyctza_wfpadam_cyclonetropicalstormmay20_202405",
+      "title": "Comoros: Cyclone - Tropical storm - May 2024",
+      "description": "ADAM ID: 1001060_14 Cyclone (tropical storm) during the period May 01 2024-May 04 2024 in Tanzania, Seychelles, Comoros. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/comoros-cyclone-1001060]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/comoros-cyclone-1001060"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/comoros-cyclone-1001060"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "COM",
+          "TZA",
+          "SYC"
+        ]
+      },
+      "temporal": {
+        "start": "2024-05-01",
+        "end": "2024-05-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/comoros-cyclone-1001060"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and analyzed geospatial data from the May 2024 tropical cyclone event affecting Comoros, Tanzania, and Seychelles. Population exposure was estimated at administrative levels (ADM0-ADM2) for wind speed thresholds of 60 km/h and 90 km/h, generating impact estimates aggregated by administrative boundaries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting, analysing and mapping geospatial information following sudden onset humanitarian emergencies, providing tropical storm hazard alerts and response dashboards"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9dc3a875",
+          "title": "1001060-15-adam-ts-1001060-15-pop-estimation.csv",
+          "description": "Comoros: Cyclone - Tropical storm - May 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/3c283ec8-dc26-43cb-a25c-139a80b69daa/resource/9dc3a875-1714-4bba-a74e-9afe7252a4b7/download/1001060-15-adam-ts-1001060-15-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at 60 km/h and 90 km/h thresholds"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by tropical cyclone winds during May 2024 event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/comoros-cyclone-1001060",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

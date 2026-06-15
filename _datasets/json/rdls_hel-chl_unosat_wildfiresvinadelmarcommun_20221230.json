@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-chl_unosat_wildfiresvinadelmarcommun_20221230",
+      "title": "Wildfires in Viña del Mar Commune, Valparaíso Province, Valparaíso Region, Chile as of 29 December 2022",
+      "description": "UNOSAT code FR20221229CHL This map illustrates satellite-detected burned areas in Viña del Mar Commune, Valparaíso Province, Valparaíso and Metropolitan Regions, Chile based on Sentinel-2 images acquired on 29 December 2022 at 11:52 local time. Within the map extent of about 1,700 ha, about 120 km² of lands appear to be potentially burned. Based on Worldpop population data and the burned area extent, about 4,000 people are potentially exposed or living close to burned areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/wildfires-in-vina-del-mar-commune-valparaiso-province-valparaiso-region-chile-as-of-29-dec]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/wildfires-in-vina-del-mar-commune-valparaiso-province-valparaiso-region-chile-as-of-29-dec"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/wildfires-in-vina-del-mar-commune-valparaiso-province-valparaiso-region-chile-as-of-29-dec"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CHL"
+        ]
+      },
+      "temporal": {
+        "start": "2022-12-30"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/wildfires-in-vina-del-mar-commune-valparaiso-province-valparaiso-region-chile-as-of-29-dec"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/wildfires-in-vina-del-mar-commune-valparaiso-province-valparaiso-region-chile-as-of-29-dec"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on 29 December 2022 and compared it with reference imagery to identify and delineate burned area polygons through visual interpretation. Burned area extents were then intersected with WorldPop gridded population data to estimate population exposure. This preliminary post-event damage assessment has not been validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multi-spectral satellite imagery acquired on 29 December 2022 used to detect and delineate burned area extent through visual analysis and change detection"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate the number of people potentially exposed to burned areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b640523c",
+          "title": "FR20221229CHL_gdb.zip",
+          "description": "Wildfires in Viña del Mar Commune, Valparaíso Province, Valparaíso Region, Chile as of 29 December 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3469/FR20221229CHL_gdb.zip"
+        },
+        {
+          "id": "resource_152dded9",
+          "title": "FR20221229CHL_SHP.zip",
+          "description": "Wildfires in Viña del Mar Commune, Valparaíso Province, Valparaíso Region, Chile as of 29 December 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3469/FR20221229CHL_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "FWI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population living close to or potentially exposed to burned areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct land area burned by wildfire in Viña del Mar Commune"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/wildfires-in-vina-del-mar-commune-valparaiso-province-valparaiso-region-chile-as-of-29-dec",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

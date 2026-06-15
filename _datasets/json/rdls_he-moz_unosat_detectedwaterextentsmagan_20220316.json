@@ -1,0 +1,141 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-moz_unosat_detectedwaterextentsmagan_20220316",
+      "title": "Satellite detected water extents in Maganja Da Costa & Namacurra Districts, Mozambique as of 16 March 2022",
+      "description": "UNOSAT code: TC20220311MOZ This map illustrates satellite-detected surface waters in Nante, Macuze & Namacurra posto, Zambezia Province, Mozambique as observed from a TerraSAR-X image acquired on 16 March 2022 at 05:10 local time. Within the analyzed area of about 12,400 ha, about 3,180 ha of lands appear to be flooded. Based on GRID3 settlement extent data and the detected surface waters, about 60 ha of the urban area is potentially exposed to floodwaters. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT). Important note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-in-maganja-da-costa-namacurra-districts-mozambique-as-of-16-march-2022]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-maganja-da-costa-namacurra-districts-mozambique-as-of-16-march-2022"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-maganja-da-costa-namacurra-districts-mozambique-as-of-16-march-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2022-03-16"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "GRID3 settlement extent data",
+            "url": "https://data.humdata.org/dataset/water-extents-in-maganja-da-costa-namacurra-districts-mozambique-as-of-16-march-2022"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "TerraSAR-X satellite imagery",
+            "url": "https://data.humdata.org/dataset/water-extents-in-maganja-da-costa-namacurra-districts-mozambique-as-of-16-march-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed TerraSAR-X satellite imagery acquired on 16 March 2022 through visual interpretation and change detection to identify surface water extents in the study area. Detected water polygons were then intersected with GRID3 settlement extent data to quantify urban exposure to floodwaters. The analysis represents a preliminary post-event assessment without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "GRID3 settlement extent data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Settlement boundary dataset used to identify urban areas overlapping with satellite-detected water extents"
+          },
+          {
+            "id": "source_2",
+            "name": "TerraSAR-X satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar satellite image acquired on 16 March 2022 used to detect surface water extent through change detection analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e5a7b0bb",
+          "title": "TC20220311MOZ_gdb.zip",
+          "description": "Satellite detected water extents in Maganja Da Costa & Namacurra Districts, Mozambique as of 16 March 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/MZ/TC20220311MOZ/TC20220311MOZ_gdb.zip"
+        },
+        {
+          "id": "resource_76601f57",
+          "title": "TC20220311MOZ_SHP.zip",
+          "description": "Satellite detected water extents in Maganja Da Costa & Namacurra Districts, Mozambique as of 16 March 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/MZ/TC20220311MOZ/TC20220311MOZ_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Urban settlement areas potentially exposed to detected floodwaters based on GRID3 settlement extent data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-in-maganja-da-costa-namacurra-districts-mozambique-as-of-16-march-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

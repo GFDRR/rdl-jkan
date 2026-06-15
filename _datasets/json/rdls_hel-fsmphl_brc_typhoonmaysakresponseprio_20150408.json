@@ -1,0 +1,183 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-fsmphl_brc_typhoonmaysakresponseprio_20150408",
+      "title": "Micronesia, Philippines - Typhoon Maysak Response Priority Index",
+      "description": "A priority index created for use in the response to Typhoon Maysak using a combination of pre-disaster and disaster data. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/typhoon-maysak-response-priority-index]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "British Red Cross Maps Team",
+        "url": "https://data.humdata.org/dataset/typhoon-maysak-response-priority-index"
+      },
+      "creator": {
+        "name": "British Red Cross Maps Team",
+        "url": "https://data.humdata.org/dataset/typhoon-maysak-response-priority-index"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "FSM",
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-04-08"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Census 2000",
+            "url": "https://data.humdata.org/dataset/typhoon-maysak-response-priority-index"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Census 2010",
+            "url": "https://data.humdata.org/dataset/typhoon-maysak-response-priority-index"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "UCL",
+            "url": "https://data.humdata.org/dataset/typhoon-maysak-response-priority-index"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Pre-disaster population exposure data from Census 2000 and 2010 were combined with observed Typhoon Maysak event data and UCL analysis to create a composite priority index for humanitarian response allocation, integrating baseline vulnerability with event-specific impact assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Census 2000",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population census data providing baseline demographic distribution for exposure assessment"
+          },
+          {
+            "id": "source_2",
+            "name": "Census 2010",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Updated population census data for refined exposure mapping"
+          },
+          {
+            "id": "source_3",
+            "name": "UCL",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "University College London analysis or modeling contribution to typhoon impact assessment"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_14fe9ef4",
+          "title": "Typhoon_Maysak_priority_index_v2.xlsx",
+          "description": "Micronesia, Philippines - Typhoon Maysak Response Priority Index (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ba4f8543-3639-4a2b-9271-6f07f9954462/resource/14fe9ef4-a0dd-4fc9-88b1-928a6169ba60/download/typhoon-maysak-priority-index-v2.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population distribution from Census 2000 and 2010 data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by Typhoon Maysak used to prioritize response"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/typhoon-maysak-response-priority-index",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

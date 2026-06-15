@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-cog_unosat_detectedwaterextentsbetwe_20240108",
+      "title": "Satellite detected water extents between 29 December 2023 and 2 January 2024 over Republic of Congo",
+      "description": "UNOSAT code: FL20240102COG This map illustrates cumulative satellite-detected minimum floodwater using VIIRS in Republic of Congo between 29 December 2023 and 2 January 2024. Within the cloud free analysed area of about 330,000 km2, a total of about 1,000 km2 of lands appear to be affected with flood waters. Based on Worldpop population data and the minimum flood water coverage, ~114,000 people are potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please provide ground feedback to the United Nations Satellite Centre (UNOSAT). Important note: Minimum floodwater extent indicates the portion of the pixel (375m) covered by 80 to 100% of flood water.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-between-29-december-2023-and-2-january-2024-over-republic-of-congo]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-between-29-december-2023-and-2-january-2024-over-republic-of-congo"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-between-29-december-2023-and-2-january-2024-over-republic-of-congo"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COG"
+        ]
+      },
+      "temporal": {
+        "start": "2024-01-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extents-between-29-december-2023-and-2-january-2024-over-republic-of-congo"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/water-extents-between-29-december-2023-and-2-january-2024-over-republic-of-congo"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared VIIRS satellite imagery acquired between 29 December 2023 and 2 January 2024 to detect cumulative floodwater extent through visual interpretation of notable changes. Detected water areas (~1,000 km2) were intersected with WorldPop population data to estimate ~114,000 people potentially exposed to flooded areas. This is preliminary post-event observed hazard data not yet validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using VIIRS to detect minimum floodwater extent through multi-temporal comparison of satellite images"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population exposure to detected flood extents"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6b52cf61",
+          "title": "FL20240102COG_gdb.zip",
+          "description": "Satellite detected water extents between 29 December 2023 and 2 January 2024 over Republic of Congo (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3783/FL20240102COG_gdb.zip"
+        },
+        {
+          "id": "resource_63a9ee8f",
+          "title": "FL20240102COG_SHP.zip",
+          "description": "Satellite detected water extents between 29 December 2023 and 2 January 2024 over Republic of Congo (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3783/FL20240102COG_SHP.zip"
+        },
+        {
+          "id": "resource_d8fe0dd8",
+          "title": "UNOSAT_Population_Exposure_FL20230102COG_29Dec2023_02Jan2024_Congo (1).xlsx",
+          "description": "Satellite detected water extents between 29 December 2023 and 2 January 2024 over Republic of Congo (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3783/UNOSAT_Population_Exposure_FL20230102COG_29Dec2023_02Jan2024_Congo%20(1).xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to satellite-detected flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-between-29-december-2023-and-2-january-2024-over-republic-of-congo",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

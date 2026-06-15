@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-hnd_unosat_detectedwaterextentsbetwe_20201118",
+      "title": "Satellite detected water extents between 13 & 17 November 2020 in Honduras",
+      "description": "UNOSAT code: TC20201116HND This map illustrates satellite-detected surface waters (cumulative) aggregated using NOAA20-VIIRS in Honduras between 13 and 17 November 2020. Based on Worldpop spatial demographic data, about 140,000 people are exposed or living close to flooded areas. The potentially exposed population is mainly located in the department of Cortes with ~80,000 people, Choluteca with ~23,000 people, and Valle with ~14,000 people. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extents-between-13-17-november-2020-in-honduras]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-13-17-november-2020-in-honduras"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-13-17-november-2020-in-honduras"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2020-11-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-13-17-november-2020-in-honduras"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "NOAA20-VIIRS",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-13-17-november-2020-in-honduras"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed NOAA20-VIIRS satellite imagery from 13-17 November 2020 to detect cumulative surface water extents in Honduras. Detected water polygons were overlaid with WorldPop spatial demographic data to estimate potentially exposed population by administrative department. This is a preliminary post-event assessment based on satellite observation without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial demographic data used to estimate population exposure to detected water extents"
+          },
+          {
+            "id": "source_2",
+            "name": "NOAA20-VIIRS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery source for detecting surface water extents during the November 2020 event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_66f6867a",
+          "title": "TC20201116HND_gdb.zip",
+          "description": "Satellite detected water extents between 13 & 17 November 2020 in Honduras (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/HN/TC20201116HND/TC20201116HND_gdb.zip"
+        },
+        {
+          "id": "resource_f53ab353",
+          "title": "TC20201116HND_SHP.zip",
+          "description": "Satellite detected water extents between 13 & 17 November 2020 in Honduras (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/HN/TC20201116HND/TC20201116HND_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed or living close to satellite-detected flooded areas, aggregated by department"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-13-17-november-2020-in-honduras",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

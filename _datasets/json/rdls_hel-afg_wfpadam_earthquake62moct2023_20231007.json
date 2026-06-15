@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-afg_wfpadam_earthquake62moct2023_20231007",
+      "title": "Afghanistan: Earthquake - 6.2M - Oct 2023",
+      "description": "ADAM ID: eq_us6000ldpg Magnitude 6.2 earthquake at 10.0 depth occurred on Oct 07 2023 in 30km SW of Koshk. It impacted 983360 people. The epicentre was at latitude 34.6259 longitude 61.926.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/afghanistan-earthquake-eq-us6000ldpg]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/afghanistan-earthquake-eq-us6000ldpg"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/afghanistan-earthquake-eq-us6000ldpg"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-07"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/afghanistan-earthquake-eq-us6000ldpg"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "USGS earthquake parameters (magnitude 6.2, epicenter coordinates, depth) were used to generate Modified Mercalli Intensity (MMI) distribution across administrative divisions. Population exposure data was intersected with MMI zones to estimate affected population counts by intensity level and administrative area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analysing and mapping geospatial and socio-economic information following sudden-onset humanitarian emergencies; provides earthquake impact assessments and affected population estimates"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9f019482",
+          "title": "sm-us6000ldpg-sm-us6000ldpg-pop-estimation.csv",
+          "description": "Afghanistan: Earthquake - 6.2M - Oct 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ef6bc5e1-7141-47ec-8450-c2c6a1a5602a/resource/9f019482-676b-4200-b9f3-c60cc083827b/download/sm-us6000ldpg-sm-us6000ldpg-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population distribution by administrative division exposed to earthquake ground shaking"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total affected population (983,360 people) from 6.2 magnitude earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/afghanistan-earthquake-eq-us6000ldpg",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

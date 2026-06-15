@@ -1,0 +1,212 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-dza_unosat_zonesincendieesle25juille_20230726",
+      "title": "Algeria - Zones incendiées le 25 juillet 2023 dans les communes de Melbou et Ziama Mansouria, Wilayas de Bejaia et Jijel, Algérie",
+      "description": "UNOSAT code FR20230724DZA, GDACS Id: 1015944 Cette carte illustre les zones incendiées telles qu'observées à partir d'une image Sentinel-2 acquise le 25 juillet 2023 à 18:56 heure locale dans les communes de Melbou et Mansouria. Sur les 44 km² de la zone observée, environ 11 km² et 7 km² de végétation semblent avoir brûlé dans les communes de Melbou et Ziama Mansouria. En se basant sur les données démographiques Worldpop, dans les communes de Melbou et Ziama Mansouria environ 1,900 et 5,800 personnes sont potentiellement impactées par les feux de forêt. Ceci est une analyse préliminaire et n'a pas encore été validée sur le terrain. Ne pas hésiter à envoyer vos commentaires au Centre Satellitaire des Nations Unies (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-les-communes-de-melbou-et-ziama-mansouria-wilayas]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-les-communes-de-melbou-et-ziama-mansouria-wilayas"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-les-communes-de-melbou-et-ziama-mansouria-wilayas"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DZA"
+        ]
+      },
+      "temporal": {
+        "start": "2023-07-26"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-les-communes-de-melbou-et-ziama-mansouria-wilayas"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-les-communes-de-melbou-et-ziama-mansouria-wilayas"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed Sentinel-2 satellite imagery acquired on 25 July 2023 to identify burned vegetation through visual interpretation and change detection, delineating wildfire extent polygons. Population exposure was estimated by intersecting burned areas with WorldPop demographic data to quantify potentially affected residents in the two communes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multispectral satellite image acquired on 25 July 2023 used to map burned vegetation extent through change detection analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population density dataset used to estimate residential population exposure in the affected communes"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8e37b83b",
+          "title": "FR20230724DZA_gdb.zip",
+          "description": "Algeria - Zones incendiées le 25 juillet 2023 dans les communes de Melbou et Ziama Mansouria, Wilayas de Bejaia et Jijel, Algérie (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3643/FR20230724DZA_gdb.zip"
+        },
+        {
+          "id": "resource_f6292260",
+          "title": "FR20230724DZA_SHP.zip",
+          "description": "Algeria - Zones incendiées le 25 juillet 2023 dans les communes de Melbou et Ziama Mansouria, Wilayas de Bejaia et Jijel, Algérie (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3643/FR20230724DZA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "FWI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population in Melbou and Ziama Mansouria communes potentially exposed to wildfire hazard, derived from WorldPop demographic data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "natural_environment",
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "Vegetation and forest cover in the study area subject to wildfire"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct vegetation loss from wildfire, with approximately 11 km² burned in Melbou and 7 km² in Ziama Mansouria"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population potentially affected by wildfire, estimated at 1,900 persons in Melbou and 5,800 in Ziama Mansouria"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-les-communes-de-melbou-et-ziama-mansouria-wilayas",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

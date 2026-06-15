@@ -1,0 +1,167 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-cod_ochacod_nyiragongo2021eruptionaff",
+      "title": "DR Congo - Nyiragongo 2021 Eruption - Affected schools",
+      "description": "Nyiragongo 2021 eruption - List of affected schools (calcined or hosting displaced people).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/nyiragongo-2021-eruption-affected-schools]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Democratic Republic of the Congo (DRC)",
+        "url": "https://data.humdata.org/dataset/nyiragongo-2021-eruption-affected-schools"
+      },
+      "creator": {
+        "name": "OCHA Democratic Republic of the Congo (DRC)",
+        "url": "https://data.humdata.org/dataset/nyiragongo-2021-eruption-affected-schools"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Cluster Education",
+            "url": "https://data.humdata.org/dataset/nyiragongo-2021-eruption-affected-schools"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Direct observational data collected by the Cluster Education from field assessments of schools in the Nyiragongo eruption impact zone, documenting structures calcined by lava and those repurposed to shelter displaced populations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Cluster Education",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational assessment of schools affected by the 2021 Nyiragongo eruption, including damage status and displacement hosting capacity"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c88339bf",
+          "title": "09062021_Master_Effectifs ecoles touchees.xlsx",
+          "description": "DR Congo - Nyiragongo 2021 Eruption - Affected schools (Liste des écoles affectées par l'éruption volcanique.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b8f49314-3e25-4fd9-b17b-e0921b6493f4/resource/c88339bf-265c-4d1e-af04-61f82413bc64/download/09062021_master_effectifs-ecoles-touchees.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "lava",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "School buildings and educational infrastructure affected by lava or hosting displaced populations"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Schools calcined or destroyed by lava from the 2021 Nyiragongo eruption"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Schools repurposed to host displaced populations following the eruption"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/nyiragongo-2021-eruption-affected-schools",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

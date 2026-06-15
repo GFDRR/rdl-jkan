@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mdg_wfpadam_cyclonetropicalstormjan20_2023",
+      "title": "Madagascar: Cyclone - Tropical storm - Jan 2024",
+      "description": "ADAM ID: 1001040_10 Cyclone (tropical storm) during the period Dec 31 2023-Jan 03 2024 in Madagascar. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/madagascar-cyclone-1001040]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/madagascar-cyclone-1001040"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/madagascar-cyclone-1001040"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2023-12-31",
+        "end": "2024-01-03"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/madagascar-cyclone-1001040"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and mapped tropical cyclone track data and wind speed observations from the January 2024 Madagascar event. Geospatial hazard data (shapefile with wind_speed field) was integrated with administrative boundary population data to estimate population exposure at wind speed thresholds of 60 km/h and 90 km/h.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting, analysing and mapping geospatial information following sudden onset emergencies; provides tropical storm track geometry, wind speed measurements, and alert classifications."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a0fb7379",
+          "title": "1001040-13-adam-ts-1001040-13-shp.zip",
+          "description": "Madagascar: Cyclone - Tropical storm - Jan 2024 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/b2b4c3eb-da43-4e84-a596-28b0b6dd0aa0/resource/a0fb7379-5f57-48ef-b442-6e98052f8cf0/download/1001040-13-adam-ts-1001040-13-shp.zip"
+        },
+        {
+          "id": "resource_c340199e",
+          "title": "1001040-13-adam-ts-1001040-13-pop-estimation.csv",
+          "description": "Madagascar: Cyclone - Tropical storm - Jan 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/b2b4c3eb-da43-4e84-a596-28b0b6dd0aa0/resource/c340199e-0d49-42d5-a3e4-e2188e1fe3d8/download/1001040-13-adam-ts-1001040-13-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at 60 km/h and 90 km/h thresholds"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/madagascar-cyclone-1001040",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

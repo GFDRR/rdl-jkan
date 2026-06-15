@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-cod_wfp_integratedcontextanalysis_2018",
+      "title": "Democratic Republic of the Congo: Integrated Context Analysis (ICA), 2018",
+      "description": "The ICA is a process of consultations supported by mapped-out data that produces a strategic plan describing where different combinations of programme themes are appropriate to achieve goals of reducing food insecurity and climate related shock risk. The ICA combines multi-year food security trends with natural shock risk data to highlight sub-national areas where different programme strategies make sense. Food security trend maps shows areas where safety nets can address regular food insecurity, and others where shocks make recovery more important. Climate-related natural shock risk maps show where DRR, preparedness and early warning efforts can complement food-security objectives. Atop this core foundation, mapped data on subjects including nutrition, gender, livelihoods and resilience can enrich theme-level strategic planning in which all pieces work together. The full group of ICA partners discuss these analytical results to arrive at strategic programmatic directions.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/wfp_ica_cod_2018]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp_ica_cod_2018"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp_ica_cod_2018"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2018-01-01",
+        "end": "2018-12-31"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "World Food Programme",
+            "url": "https://data.humdata.org/dataset/wfp_ica_cod_2018"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The ICA integrates multi-year food security trend data (EFSA 2012-2018) with climate-related natural shock risk assessments to identify sub-national areas where food insecurity is recurrent or shock-driven, enabling targeted programme strategy recommendations for reducing food insecurity and climate shock vulnerability.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "World Food Programme",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-year food security trend data and Early Food Security Assessment (EFSA) 2012-2018 documenting recurrence of food insecurity"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e31cb251",
+          "title": "ICA Democratic Republic of Congo, 2017 - Recurrence of Food Insecurity, EFSA 2012-2018",
+          "description": "This layer contains information about the recurrence of food insecurity - by second-level administrative area - resulting from the Emergency Food Security Assessments (EFSAs) used to integrate the food security analysis performed for the Integrated Context Analysis (ICA) run in Democratic Republic of Congo in 2017. The emergency assessments were performed in the hot-spot province of Sud-Kivu. Data source: Emergency Food Security Assessment (EFSA), 2012-2018. The main indicator used for the analysis was the recurrence of food insecurity conditions, using a threshold set to 20%. Cette couche contient les données d'une analyse de tendance de la sécurité alimentaire - par unité administrative de deuxième niveau - utilisée au fin de intégrer l'analyse employée pendant l'Analyse Integrée de Contexte (AIC) exécuté en République Démocratique du Congo en 2017. L'analyse additionelle a été executée dans trois dans la province de Sud-Kivu. Source des données: Emergency Food Security Assessment (EFSA), 2012-2018. L'indicateur principale utilisé pour l'analyse était la récurrence d'insécurité alimentaire, avec un seuil fixé à 20%.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unwfp.maps.arcgis.com/sharing/rest/content/items/1bcfd972bf264f538b324275e1dbb47f/data"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to recurrent food insecurity and climate-related shocks"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural areas subject to food insecurity trends and shock risk"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity impact from drought and climate-related shocks on agricultural populations"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/wfp_ica_cod_2018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-unosat_tropicalcycloneirma17popu_20170907",
+      "title": "Tropical Cyclone IRMA-17 : Population Exposure estimates",
+      "description": "Population exposure estimates based on tropical cyclone IRMA-17 path observed and predicted at 7 September 2017.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/population-exposure-estimates-based-on-tropical-cyclone-irma-s-path]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "This is a preliminary analysis and has not yet been validated in the field.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/population-exposure-estimates-based-on-tropical-cyclone-irma-s-path"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/population-exposure-estimates-based-on-tropical-cyclone-irma-s-path"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "BES",
+          "USA",
+          "ATG",
+          "BRB",
+          "DMA",
+          "DOM",
+          "GRD",
+          "HTI",
+          "JAM",
+          "KNA",
+          "LCA",
+          "VCT",
+          "VGB",
+          "VIR",
+          "PRI",
+          "TCA"
+        ]
+      },
+      "temporal": {
+        "start": "2017-09-07"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT derived the observed and predicted track of tropical cyclone IRMA-17 from satellite data as of 7 September 2017. Population exposure was estimated by intersecting the cyclone track corridor with gridded or administrative-level population data to quantify the number of people in the path of the storm.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-derived tropical cyclone track observations and predictions for IRMA-17, integrated with population distribution data to estimate exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4dd75d03",
+          "title": "Admin_Pop.zip",
+          "description": "Population exposure estimates based on tropical cyclone IRMA-17 path observed and predicted at 7 September 2017. The tropical cyclone path and wind speed zones were derived from Joint Research Centre data (Warning 33 issued the 07 th September 2017 at 09:00 UTC). This is a preliminary analysis and has not yet been validated in the field.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/f5a928ff-c23b-4c44-9a48-94d7197b48ba/resource/4dd75d03-5928-4061-91d0-d6481178d5c5/download/admin_pop.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone IRMA-17 path by administrative boundary"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/population-exposure-estimates-based-on-tropical-cyclone-irma-s-path",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

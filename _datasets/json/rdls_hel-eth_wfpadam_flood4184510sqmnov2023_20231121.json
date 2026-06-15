@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-eth_wfpadam_flood4184510sqmnov2023_20231121",
+      "title": "Ethiopia: Flood - 418451.0 sq m - Nov 2023",
+      "description": "ADAM ID: FL-20231121-ETH-01 Flood covering 418451.0 sq m on Nov 21 2023 in Ethiopia. It impacted 295186 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ethiopia-flood-fl-20231121-eth-01]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/ethiopia-flood-fl-20231121-eth-01"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/ethiopia-flood-fl-20231121-eth-01"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-21"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/ethiopia-flood-fl-20231121-eth-01"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system processed satellite imagery and geospatial data to delineate observed flood extent on November 21, 2023 in Ethiopia. The flood polygon was intersected with population and cropland datasets to quantify directly affected populations (295,186 people) and flooded agricultural area. Data is provided in multiple geospatial formats (GeoJSON, GeoTIFF, GeoPackage) for operational response mapping.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analyzing and mapping geospatial and socio-economic information following sudden-onset humanitarian emergencies. ADAM aggregates flood extent, affected population, and cropland impact data from satellite imagery and field assessments."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f66114d1",
+          "title": "FL-20231121-ETH-01.geojson",
+          "description": "Ethiopia: Flood - 418451.0 sq m - Nov 2023 (GeoJSON File)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/71829376-b8a9-4513-9ca7-cc4575cc5210/resource/f66114d1-9d70-4e23-bcb6-c56ed9ddfd08/download/fl-20231121-eth-01.geojson"
+        },
+        {
+          "id": "resource_cfcbf25b",
+          "title": "FL-20231121-ETH-01.tiff",
+          "description": "Ethiopia: Flood - 418451.0 sq m - Nov 2023 (GeoTIFF File)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/71829376-b8a9-4513-9ca7-cc4575cc5210/resource/cfcbf25b-686b-43ca-82ef-724237d473cc/download/fl-20231121-eth-01.tiff"
+        },
+        {
+          "id": "resource_96a00dc4",
+          "title": "FL-20231121-ETH-01.gpkg",
+          "description": "Ethiopia: Flood - 418451.0 sq m - Nov 2023 (Geopackage File)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/71829376-b8a9-4513-9ca7-cc4575cc5210/resource/96a00dc4-fbcc-497c-b140-f85adfe136c2/download/fl-20231121-eth-01.gpkg"
+        },
+        {
+          "id": "resource_b414f14e",
+          "title": "metadata.txt",
+          "description": "Ethiopia: Flood - 418451.0 sq m - Nov 2023 (Metadata File)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/71829376-b8a9-4513-9ca7-cc4575cc5210/resource/b414f14e-4ccc-4fe2-9f54-d857661ade3d/download/metadata.txt"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland area exposed to flooding, including total croplands and flooded croplands"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Total population and directly affected population in flooded areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on cropland area from fluvial flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population affected by fluvial flooding event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ethiopia-flood-fl-20231121-eth-01",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

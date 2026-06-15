@@ -1,0 +1,134 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-idn_unfpaidn_populationinfrastructuree_20210122",
+      "title": "Indonesia - Population and Infrastructure Exposed by West Sulawesi EQ",
+      "description": "West Sulawesi Data on population and infrastructure that are affected by the Earthquake. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/population-and-infrastructure-exposed-by-west-sulawesi-eq]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "UNFPA Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/population-and-infrastructure-exposed-by-west-sulawesi-eq"
+      },
+      "creator": {
+        "name": "UNFPA Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/population-and-infrastructure-exposed-by-west-sulawesi-eq"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "BNPB",
+            "url": "https://data.humdata.org/dataset/population-and-infrastructure-exposed-by-west-sulawesi-eq"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Baseline exposure data for West Sulawesi combining population and infrastructure inventories with observed earthquake hazard event information from BNPB to quantify assets at risk from the earthquake.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "BNPB",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Indonesian National Disaster Management Authority provided the earthquake hazard event data for West Sulawesi"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a7a036a9",
+          "title": "WestSulawesi_Baseline_Data_Exposed.xlsx",
+          "description": "West Sulawesi Data on population and infrastructure that are affected by the Earthquake",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6b5867f7-9037-4863-b0e2-b58f63661680/resource/a7a036a9-3b95-4318-824d-abdd83467a0b/download/westsulawesi_baseline_data_exposed.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to West Sulawesi earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Infrastructure facilities exposed to West Sulawesi earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/population-and-infrastructure-exposed-by-west-sulawesi-eq",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-col_3is_estimacionesafectacionesp_2025",
+      "title": "Colombia: Estimaciones afectaciones por fenómenos hidrometeorológicos",
+      "description": "Con base en los escenarios de predicción del Instituto de Hidrología, Meteorología y Estudios Ambientales (IDEAM), se identificaron las zonas con susceptibilidad a inundaciones y deslizamientos durante el segundo trimestre de 2025. El archivo de Excel que acompaña esta publicación contiene ocho hojas con información desagregada sobre personas, hogares, viviendas, zonas de cultivos, instituciones educativas y centros de salud localizados en zonas susceptibles. Además, para cada municipio se incluye el nivel de riesgo estimado, calculado mediante el Índice Municipal de Riesgo Ajustado por Capacidades, desarrollado por el Departamento Nacional de Planeación (DNP).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/estimaciones-afectaciones-por-fenomenos-hidrometeorologicos_ii-sem_colombia]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset is a forecast.",
+      "contact_point": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/estimaciones-afectaciones-por-fenomenos-hidrometeorologicos_ii-sem_colombia"
+      },
+      "creator": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/estimaciones-afectaciones-por-fenomenos-hidrometeorologicos_ii-sem_colombia"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2025-07-01",
+        "end": "2025-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Instituto de Hidrología, Meteorología y Estudios Ambientales (IDEAM)",
+            "url": "https://data.humdata.org/dataset/estimaciones-afectaciones-por-fenomenos-hidrometeorologicos_ii-sem_colombia"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IDEAM hydrometeorological prediction scenarios were used to identify flood and landslide susceptibility zones. Spatial analysis overlaid these hazard zones with administrative boundaries and asset inventories (population, dwellings, agricultural areas, educational and health facilities) to quantify exposure by municipality. Municipal risk indices (IMGRAC) were calculated to support disaster risk planning and management.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Instituto de Hidrología, Meteorología y Estudios Ambientales (IDEAM)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Hydrometeorological prediction scenarios identifying flood and landslide susceptibility zones for Q2 2025"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a0b94c74",
+          "title": "Elementos_expuestos_inundación_AMJ_2025_HDX.xlsx",
+          "description": "Colombia: Estimaciones afectaciones por fenómenos hidrometeorológicos (Forecast data)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d85d0585-4122-4f3c-8df9-789659eb4cf4/resource/a0b94c74-ea90-4218-b81c-bcaa20db9580/download/elementos_expuestos_inundacion_amj_2025_hdx.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Rural and urban population residing in flood-susceptible zones by municipality"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Residential dwellings and households in flood-susceptible zones, disaggregated by rural and urban areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural crop zones exposed to flood hazard"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_4",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Educational institutions and health facilities located in flood-susceptible zones"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population exposed to flood hazard in susceptible zones for April-June 2025"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Dwellings and households exposed to flood hazard in susceptible zones"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population exposed to landslide hazard in susceptible zones for April-June 2025"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Dwellings and households exposed to landslide hazard in susceptible zones"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/estimaciones-afectaciones-por-fenomenos-hidrometeorologicos_ii-sem_colombia",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

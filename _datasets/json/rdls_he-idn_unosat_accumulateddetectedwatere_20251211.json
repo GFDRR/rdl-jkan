@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-idn_unosat_accumulateddetectedwatere_20251211",
+      "title": "Accumulated satellite-detected water extents in Ache Province, Indonesia as of 27 Nov. to 4 Dec. 2025",
+      "description": "UNOSAT code: FL20251126IDN, GDACS ID: 1103633 This map illustrates cumulative satellite-detected water extent in Ache Province, Indonesia as observed from multiple satellite imagery acquired between 27 Nov. and 4 Dec. 2025. Within the analysed areas of about 56,800 km², a total of about 1,430 km² of lands appear to be affected with flood waters. Based on Worldpop spatial demographic data, about 226,000 people in Ache Province are exposed to or living close to flooded areas from 27 Nov. and 4 Dec. 2025. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/accumulated-water-extents-in-ache-province-indonesia-as-of-27-nov-to-4-dec-2025]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/accumulated-water-extents-in-ache-province-indonesia-as-of-27-nov-to-4-dec-2025"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/accumulated-water-extents-in-ache-province-indonesia-as-of-27-nov-to-4-dec-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2025-12-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/accumulated-water-extents-in-ache-province-indonesia-as-of-27-nov-to-4-dec-2025"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/accumulated-water-extents-in-ache-province-indonesia-as-of-27-nov-to-4-dec-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared multiple satellite images acquired between 27 Nov and 4 Dec 2025 to detect notable changes in water extent, identifying cumulative flood inundation across Aceh Province. WorldPop spatial demographic data was overlaid on the satellite-detected water extent polygons to estimate population exposure. This preliminary analysis has not been field-validated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial demographic data providing gridded population distribution used to estimate population exposure to flooded areas"
+          },
+          {
+            "id": "source_2",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis detecting water extent changes between multiple satellite images to map cumulative flood inundation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_546b4d0c",
+          "title": "FL20251126IDN_GDB.zip",
+          "description": "Accumulated satellite-detected water extents in Ache Province, Indonesia as of 27 Nov. to 4 Dec. 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4226/FL20251126IDN_GDB.zip"
+        },
+        {
+          "id": "resource_e08ecdb0",
+          "title": "FL20251126IDN_SHP.zip",
+          "description": "Accumulated satellite-detected water extents in Ache Province, Indonesia as of 27 Nov. to 4 Dec. 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4226/FL20251126IDN_SHP.zip"
+        },
+        {
+          "id": "resource_1aff3c3f",
+          "title": "UNOSAT_PopulationExposure_FL20251126IDN_Aceh_29Nov2025.xlsx",
+          "description": "Accumulated satellite-detected water extents in Ache Province, Indonesia as of 27 Nov. to 4 Dec. 2025 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4226/UNOSAT_PopulationExposure_FL20251126IDN_Aceh_29Nov2025.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to or living close to flooded areas based on WorldPop spatial demographic data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/accumulated-water-extents-in-ache-province-indonesia-as-of-27-nov-to-4-dec-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
