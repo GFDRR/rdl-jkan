@@ -5,15 +5,15 @@ contact_point:
   affiliation: null
   email: null
   name: Internal Displacement Monitoring Centre (IDMC)
-  url: https://data.humdata.org/dataset/idmc-event-data-for-bfa
+  url: https://data.humdata.org/dataset/idmc-event-data-for-ago
 creator:
   affiliation: null
   email: null
   name: Internal Displacement Monitoring Centre (IDMC)
-  url: https://data.humdata.org/dataset/idmc-event-data-for-bfa
-dataset_id: rdls_lss-bfa_idmc_displacementsupdatesiduev_2025
-description: 'Conflict and disaster population movement (flows) data for Burkina Faso.
-  The IDU (Internal Displacement Updates) dataset , provided by the Internal Displacement
+  url: https://data.humdata.org/dataset/idmc-event-data-for-ago
+dataset_id: rdls_lss-ago_idmc_displacementsupdatesiduev_2025
+description: 'Conflict and disaster population movement (flows) data for Angola. The
+  IDU (Internal Displacement Updates) dataset , provided by the Internal Displacement
   Monitoring Centre (IDMC) , offers timely event data and provisional information
   on new internal displacements caused by conflicts and disasters. Representing the
   most recent available information over a 180-day time period, the IDU is updated
@@ -41,7 +41,7 @@ description: 'Conflict and disaster population movement (flows) data for Burkina
   made accessible through the Global Internal Displacement Database (GIDD) . The IDU
   dataset comprises preliminary estimates aggregated from various publishers or sources..
   [Source: This metadata record was automatically extracted from the Humanitarian
-  Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/idmc-event-data-for-bfa]'
+  Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/idmc-event-data-for-ago]'
 details: 'Please note that most of the figures are estimates. The definition highlights
   two issues: 1) The coercive or otherwise involuntary character of movement. The
   definition mentions some of the most common causes of involuntary movements, such
@@ -62,11 +62,11 @@ exposure: []
 hazard: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
-  description: IDMC collects event data on internal displacements triggered by natural
-    hazards and conflict-related violence through systematic monitoring and reporting.
-    Each event is georeferenced and includes displacement figures, dates, and triggering
-    causes. The dataset represents provisional, near-real-time displacement flows
-    aggregated at the event level for Burkina Faso.
+  description: IDMC collects and validates event data on internal displacements from
+    multiple sources, classifying incidents by hazard type (natural disasters including
+    floods and cyclones) and conflict. The dataset records displacement flows with
+    geographic coordinates, dates, and affected population figures, updated daily
+    with a 180-day rolling window of recent events.
   sources:
   - id: source_1
     license: null
@@ -79,7 +79,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-- href: https://data.humdata.org/dataset/idmc-event-data-for-bfa
+- href: https://data.humdata.org/dataset/idmc-event-data-for-ago
   rel: source
 loss:
   losses:
@@ -108,16 +108,15 @@ loss:
       loss_type: ground_up
   - asset_category: population
     asset_dimension: population
-    description: Internal displacement of population caused by conflict and violence
-      events
+    description: Internal displacement of population caused by cyclone/hurricane events
     disaster_identifiers: []
     hazard:
       classification: null
-      id: hazard_convective_storm
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: null
       trigger: null
-      type: convective_storm
+      type: strong_wind
     id: loss_2
     impact_and_losses:
       impact:
@@ -144,27 +143,27 @@ resources:
   climate: null
   conforms_to: null
   coordinate_system: null
-  description: Burkina Faso - Internal Displacements Updates (IDU) (event data) (idmc
-    event data for Burkina Faso)
-  download_url: https://data.humdata.org/dataset/5110aba6-f927-4dd2-80ec-5e7f56684895/resource/9e835ef8-2455-47c6-a277-6da0f8124f12/download/event_data_bfa.csv
+  description: Angola - Internal Displacements Updates (IDU) (event data) (idmc event
+    data for Angola)
+  download_url: https://data.humdata.org/dataset/201cad63-a43b-4e60-97a4-9557c894211a/resource/73233c19-f6ba-4988-b440-835619756f91/download/event_data_ago.csv
   format: null
-  id: resource_9e835ef8
+  id: resource_73233c19
   media_type: text/csv
   spatial: null
   spatial_aggregation: null
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: idmc event data for BFA
+  title: idmc event data for AGO
 risk_data_type:
 - loss
 schema: rdls-10
-slug: rdls_lss-bfa_idmc_displacementsupdatesiduev_2025
+slug: rdls_lss-ago_idmc_displacementsupdatesiduev_2025
 spatial:
   bbox: null
   centroid: null
   countries:
-  - BFA
+  - AGO
   gazetteer_entries: []
   scale: national
 spatial_resolution: null
@@ -174,7 +173,7 @@ temporal:
   end: '2026-02-02'
   start: '2025-08-06'
 temporal_resolution: null
-title: Burkina Faso - Internal Displacements Updates (IDU) (event data)
+title: Angola - Internal Displacements Updates (IDU) (event data)
 version: null
 vulnerability: null
 ---
