@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-undrr_globalmodeltsunamihazardr_20150101",
+      "title": "Global model of tsunami hazard (run up) return period of 500 years",
+      "description": "Global model of tsunami hazard (run up) return period of 500 years.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/tsunami-hazard-run-up-rp-500-years]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset was generated using other global datasets; it should not be used for local applications (such as land use planning). The main purpose of GAR 2015 datasets is to broadly identify high risk areas at global level and for identification of areas where more detailed data should be collected. Some areas may be underestimated or overestimated. Given this analysis was conducted using global datasets, the resolution of which is not sufficient for in-situ planning, it should not be used for critical (like life saving) decisions. UNISDR and collaborators should in no case be liable for misuse or misinterpretation of the presented results. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. This analysis was conducted using global datasets, the resolution of which is not relevant for in-situ planning and should not be used for life and death decisions. UNISDR and collaborators should in no case be liable for misuse of the presented results.",
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/tsunami-hazard-run-up-rp-500-years"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/tsunami-hazard-run-up-rp-500-years"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2015-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNISDR",
+            "url": "https://data.humdata.org/dataset/tsunami-hazard-run-up-rp-500-years"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Global tsunami hazard model generated using UNISDR's integrated global datasets and modeling methodology to produce probabilistic run-up heights at 500-year return period, representing inundation depth hazard across coastal zones worldwide.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNISDR",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Global tsunami hazard modeling framework used to generate probabilistic run-up estimates at 500-year return period"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_fa1cd272",
+          "title": "Tsunami_RunUp_RP500.zip",
+          "description": "Global model of tsunami hazard (run up) return period of 500 years (Zipped file of tsunami run up (39,557 kb).)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/0ab99df0-17d4-4582-9e16-790308905993/resource/fa1cd272-e6ea-4160-abfd-10fcbb43a398/download/tsunami-runup-rp500.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "tsunami",
+                "process": "tsunami",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_500yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_tsunami",
+                  "type": "tsunami",
+                  "process": "tsunami",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500,
+                    "event_rate": 0.002
+                  }
+                },
+                "description": "Probabilistic tsunami hazard model with run-up heights at 500-year return period"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/tsunami-hazard-run-up-rp-500-years",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

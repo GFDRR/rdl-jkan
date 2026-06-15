@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-undrr_globaldroughtsevents_1980",
+      "title": "Global droughts events",
+      "description": "This dataset includes an estimate of global drought annual repartition based on Standardized Precipitation Index. It is based on two sources: 1) A global monthly gridded precipitation dataset obtained from the Climatic Research Unit (University of East Anglia). 2) A GIS modeling of global Standardized Precipitation Index based on Brad Lyon (IRI, Columbia University) methodology. This product was designed by UNEP/GRID-Europe for the Project of Risk Evaluation, Vulnerability, Information & Early Warning (PreView). It was modeled using global data. Credit: UNEP/GRID-Europe. [Preview this dataset] (http://preview.grid.unep.ch/index.php?preview=data&events=droughts&evcat=1&lang=eng). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/global-droughts-events-1980-2001]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/global-droughts-events-1980-2001"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/global-droughts-events-1980-2001"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "1980-01-01",
+        "end": "2001-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Climatic Research Unit (University of East Anglia)",
+            "url": "https://data.humdata.org/dataset/global-droughts-events-1980-2001"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "International Research Institute for Climate and Society (IRI, Columbia University)",
+            "url": "https://data.humdata.org/dataset/global-droughts-events-1980-2001"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Global monthly gridded precipitation data from the Climatic Research Unit was processed using the Standardized Precipitation Index methodology (Brad Lyon, IRI) via GIS modeling to estimate annual drought event distribution worldwide. The dataset was developed by UNEP/GRID-Europe for the PreView project to support risk evaluation and early warning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Climatic Research Unit (University of East Anglia)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Global monthly gridded precipitation dataset used as input for SPI calculation"
+          },
+          {
+            "id": "source_2",
+            "name": "International Research Institute for Climate and Society (IRI, Columbia University)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Standardized Precipitation Index methodology developed by Brad Lyon applied to global precipitation data"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_52263859",
+          "title": "dr-events-20150505221917-shapefile.zip",
+          "description": "Zipped shapefile of droughts events from 1980 to 2001. (15,637 kb)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/f5e8b21e-bb71-40e3-8129-5378ebc42e33/resource/52263859-fdfa-4622-bfb0-34ba82cc6729/download/dr-events-20150505221917-shapefile.zip"
+        },
+        {
+          "id": "resource_222389aa",
+          "title": "dr_events.csv",
+          "description": "Global droughts events (CSV files of drought events from 1980 to 2001 (1,704 kb))",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/f5e8b21e-bb71-40e3-8129-5378ebc42e33/resource/222389aa-9089-428d-8d60-1f6895df6618/download/dr-events.csv"
+        },
+        {
+          "id": "resource_e83b61bf",
+          "title": "Url link to drought events 1980-2001.",
+          "description": "Global droughts events (Url link to drought events 1980-2001.)",
+          "access_url": "http://preview.grid.unep.ch/index.php?preview=data&events=droughts&evcat=1&lang=eng",
+          "media_type": "text/html"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/global-droughts-events-1980-2001",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

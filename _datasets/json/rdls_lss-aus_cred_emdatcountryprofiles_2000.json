@@ -1,0 +1,156 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-aus_cred_emdatcountryprofiles_2000",
+      "title": "EM-DAT - Country Profiles, Australia",
+      "description": "Aggregated figures for natural hazard related events in EM-DAT: Australia Documentation on the Country Profiles available here How to cite the EM-DAT Project here Main dataset on HDX: EM-DAT - Country Profiles More on the EM-DAT database : website / data portal Each line corresponds to a given combination of year, country, disaster subtype and reports figures for : number of disasters total number of people affected total number of deaths economic losses (original value and adjusted). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/emdat-country-profiles-aus]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/emdat-country-profiles-aus"
+      },
+      "creator": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/emdat-country-profiles-aus"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AUS"
+        ]
+      },
+      "temporal": {
+        "start": "2000-01-01",
+        "end": "2025-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "EM-DAT (Emergency Events Database)",
+            "url": "https://data.humdata.org/dataset/emdat-country-profiles-aus"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "EM-DAT aggregates post-event disaster impact data from multiple sources (government agencies, UN bodies, NGOs, media) into a standardized registry. This country profile dataset presents time-series summaries of natural hazard impacts for Australia, organized by disaster type and subtype, with totals for affected populations, deaths, and economic damages in both original and inflation-adjusted USD values.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "EM-DAT (Emergency Events Database)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Comprehensive registry of natural disaster events with aggregated impact statistics including affected populations, fatalities, and economic losses compiled by the Centre for Research on the Epidemiology of Disasters."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0a689879",
+          "title": "EMDAT-country-profiles_AUS_2026_01_30.xlsx",
+          "description": "EM-DAT - Country Profiles, Australia (Version: 2026-01-30)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b449ddd7-f193-4bf5-bb0e-d3cebd6abd1e/resource/0a689879-9f80-4131-8a3a-7454a10134d1/download/emdat-country-profiles_aus_2026_01_30.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total population affected by natural hazard events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total deaths from natural hazard events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total economic damage in USD from natural hazard events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/emdat-country-profiles-aus",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

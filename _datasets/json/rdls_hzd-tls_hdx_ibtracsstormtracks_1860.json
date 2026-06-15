@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-tls_hdx_ibtracsstormtracks_1860",
+      "title": "Timor-Leste: IBTrACS Storm Tracks",
+      "description": "The International Best Track Archive for Climate Stewardship (IBTrACS) project is the most complete global collection of tropical cyclones available. It merges recent and historical tropical cyclone data from multiple agencies to create a unified, publicly available, best-track dataset that improves inter-agency comparisons. Fields available: SID: A unique storm identifier (SID) assigned by IBTrACS algorithm. ISO_TIME: Time of the observation in ISO format (YYYY-MM-DD hh:mm:ss) BASIN: Basin of the current storm position SUBBASIN: Sub-basin of the current storm position NATURE: Type of storm (a combination of the various types from the available sources) NUMBER: Number of the storm for the year (restarts at 1 for each year LAT: Mean position - latitude (a combination of the available positions) LON: Mean position - longitude (a combination of the available positions) WMO_WIND: Maximum sustained wind speed assigned by the responsible WMO agency WMO_PRES: Minimum central pressure assigned by the responsible WMO agency.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/tls-ibtracs-tropical-storm-tracks]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Some early (pre-1950) storms were not correctly matched, so the number of storms in the record is artificially high. For example, SIO storms in 1901 are not matched, so the same storm is tracked by the following identifiers: ds824, td9636, and reunion. This storm is broken into different tracks because of temporal differences in the storm data.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/tls-ibtracs-tropical-storm-tracks"
+      },
+      "creator": {
+        "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+        "url": "https://data.humdata.org/dataset/tls-ibtracs-tropical-storm-tracks"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TLS"
+        ]
+      },
+      "temporal": {
+        "start": "1860-02-21",
+        "end": "2026-01-24"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+            "url": "https://data.humdata.org/dataset/tls-ibtracs-tropical-storm-tracks"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IBTrACS v04r01 tropical cyclone best-track data was sourced from NOAA/NCEI, which aggregates and harmonizes storm track observations from multiple national meteorological agencies into a single unified archive. The global dataset was spatially filtered to retain only storm tracks relevant to Timor-Leste, and exported in both tabular (CSV) and vector line (GeoJSON) formats containing storm position, wind speed, pressure, basin, and classification fields.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "IBTrACS v04r01 is a globally unified best-track tropical cyclone dataset that merges historical and recent storm track records from multiple meteorological agencies. It provides standardized storm position, intensity, and classification data used as the primary source for this dataset."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-07/IBTrACS_version4r01_Technical_Details.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_5ffbeedf",
+          "title": "ibtracs_ALL_list_v04r01_TLS.csv",
+          "description": "IBTrACS storm tracks from 1860 to date that pass within 2000 kilometers of Timor-Leste.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/05de919e-1709-43a1-bbb8-b64ae697e59e/resource/5ffbeedf-f821-42ae-829b-8d83c4c94605/download/ibtracs_all_list_v04r01_tls.csv"
+        },
+        {
+          "id": "resource_a65a0894",
+          "title": "ibtracs_ALL_list_v04r01_lines_TLS.geojson",
+          "description": "IBTrACS storm tracks from 1860 to date that pass within 2000 kilometers of Timor-Leste.",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/05de919e-1709-43a1-bbb8-b64ae697e59e/resource/a65a0894-17ec-4534-803f-7ebb9b0b5631/download/ibtracs_all_list_v04r01_lines_tls.geojson"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/tls-ibtracs-tropical-storm-tracks",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

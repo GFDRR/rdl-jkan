@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-undrr_globalcatalogearthquakes_1970",
+      "title": "Global catalog of earthquakes",
+      "description": "Catalog of Earthquakes 1970-2014, Source: ANSS - USGS The ANSS Comprehensive Catalog (ComCat) contains earthquake source parameters (e.g. hypocenters, magnitudes, phase picks and amplitudes) and other products (e.g. moment tensor solutions, macroseismic information, tectonic summaries, maps) produced by contributing seismic networks.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "This dataset was generated using other global datasets; it should not be used for local applications (such as land use planning). The main purpose of GAR 2015 datasets is to broadly identify high risk areas at global level and for identification of areas where more detailed data should be collected. Some areas may be underestimated or overestimated. Given this analysis was conducted using global datasets, the resolution of which is not sufficient for in-situ planning, it should not be used for critical (like life saving) decisions. UNISDR and collaborators should in no case be liable for misuse or misinterpretation of the presented results. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. Disclaimer: The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. This analysis was conducted using global datasets, the resolution of which is not relevant for in-situ planning and should not be used for life and death decisions. UNISDR and collaborators should in no case be liable for misuse of the presented results.",
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "1970-01-01",
+        "end": "2014-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "ANSS Comprehensive Catalog (ComCat)",
+            "url": "https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Earthquake source parameters were compiled from the ANSS Comprehensive Catalog (ComCat), a multi-network observational dataset maintained by USGS. The catalog contains direct observational data from seismic networks including hypocenters, magnitudes, phase picks, amplitudes, and derived products such as moment tensor solutions and macroseismic information for the period 1970-2014.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ANSS Comprehensive Catalog (ComCat)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "USGS seismic network compilation providing earthquake source parameters, hypocenters, magnitudes, phase picks, and moment tensor solutions from contributing seismic networks worldwide."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5d4ed071",
+          "title": "earthquakes1970-2014.zip",
+          "description": "Global catalog of earthquakes (Zipped shapefiles of earthquakes catalogue from 1970-2014 (264kb))",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/4881d82b-ba63-4515-b748-c364f3d05b42/resource/5d4ed071-d580-40d9-95a5-5a001fc02f30/download/earthquakes1970-2014.zip"
+        },
+        {
+          "id": "resource_e5722a70",
+          "title": "earthquakes1970-2014.json",
+          "description": "Global catalog of earthquakes (Json file of earthquakes catalogue from 1970-2014 (1,552 kb))",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/4881d82b-ba63-4515-b748-c364f3d05b42/resource/e5722a70-d599-47b9-b7b8-17ed63107076/download/earthquakes1970-2014.json"
+        },
+        {
+          "id": "resource_10ac8776",
+          "title": "earthquakes1970-2014.csv",
+          "description": "Global catalog of earthquakes (Csv file of earthquakes catalogue from 1970 to 2014 (602 kb).)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/4881d82b-ba63-4515-b748-c364f3d05b42/resource/10ac8776-5141-494b-b3cd-bf7764b2f964/download/earthquakes1970-2014.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
