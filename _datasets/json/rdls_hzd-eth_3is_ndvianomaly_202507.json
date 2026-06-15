@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-eth_3is_ndvianomaly_202507",
+      "title": "Ethiopia: NDVI Anomaly",
+      "description": "NDVI Anomaly is a geospatial metric used to measure how current vegetation conditions deviate from what is considered 'normal' or average for a specific location and time period. It helps identify abnormal vegetation growth, whether better or worse than expected, and is especially valuable in agriculture, drought monitoring, food security, and environmental management. The dataset used for this analysis is the MOD13Q1 V6.1 product, which provides a Vegetation Index (VI) value on a per-pixel basis. For this study, we used MODIS data from July for the past three years, along with historical data spanning from 2010 to 2020.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ethiopia-ndvi-anomaly-july-2025]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/ethiopia-ndvi-anomaly-july-2025"
+      },
+      "creator": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/ethiopia-ndvi-anomaly-july-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2025-07-01",
+        "end": "2025-07-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "MODIS MOD13Q1 V6.1",
+            "url": "https://data.humdata.org/dataset/ethiopia-ndvi-anomaly-july-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "MODIS MOD13Q1 V6.1 NDVI data from July across three years (2023-2025) was processed using Google Earth Engine remote sensing analysis to calculate anomalies by comparing current vegetation conditions against historical baselines, generating geospatial rasters of vegetation deviation to support drought monitoring and food security assessment in Ethiopia.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "MODIS MOD13Q1 V6.1",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Moderate Resolution Imaging Spectroradiometer vegetation index product providing per-pixel NDVI values at 16-day temporal resolution, processed via Google Earth Engine for anomaly calculation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cdb26f94",
+          "title": "NDVI Anomaly Ethiopia Month of July.pdf",
+          "description": "Ethiopia: NDVI Anomaly (NDVI Anomaly Ethiopia Month of July.pdf)",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/a9d1996e-a265-485d-aa9c-c65817c2204c/resource/cdb26f94-73a4-4e15-a176-ceb34ca2fdac/download/ndvi-anomaly-ethiopia-month-of-july.pdf"
+        },
+        {
+          "id": "resource_d52ec573",
+          "title": "NDVI_Anomaly_Ethiopia_202507.tif",
+          "description": "Ethiopia: NDVI Anomaly",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/a9d1996e-a265-485d-aa9c-c65817c2204c/resource/d52ec573-bc7f-4204-ab19-4cb456f114fb/download/ndvi_anomaly_ethiopia_202507.tif"
+        },
+        {
+          "id": "resource_f6d507b9",
+          "title": "NDVI_Anomaly_Ethiopia_202407.tif",
+          "description": "Ethiopia: NDVI Anomaly",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/a9d1996e-a265-485d-aa9c-c65817c2204c/resource/f6d507b9-45eb-467d-af4b-e8fa6ffd127f/download/ndvi_anomaly_ethiopia_202407.tif"
+        },
+        {
+          "id": "resource_b3ae3c62",
+          "title": "NDVI_Anomaly_Ethiopia_202307.tif",
+          "description": "Ethiopia: NDVI Anomaly",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/a9d1996e-a265-485d-aa9c-c65817c2204c/resource/b3ae3c62-cd31-478e-9340-e6f41cea0e4f/download/ndvi_anomaly_ethiopia_202307.tif"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "NDVI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ethiopia-ndvi-anomaly-july-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

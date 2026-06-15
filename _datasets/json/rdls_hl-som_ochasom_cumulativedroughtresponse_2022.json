@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-som_ochasom_cumulativedroughtresponse_2022",
+      "title": "Somalia - Cumulative Drought Response",
+      "description": "This data is produced by OCHA Somalia in collaboration with humanitarian partners. It provides information on the worsening drought situation in Somalia in 2022. It indicates the drought response by clusters in this period. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-cumulative-drought-response-2022]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/somalia-cumulative-drought-response-2022"
+      },
+      "creator": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/somalia-cumulative-drought-response-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-01",
+        "end": "2022-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian partner organisations",
+            "url": "https://data.humdata.org/dataset/somalia-cumulative-drought-response-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "OCHA Somalia compiled cumulative drought response data from multiple humanitarian partner organizations operating through the cluster system during the 2022 drought crisis. The dataset aggregates affected population figures and cluster-level response information collected through humanitarian coordination mechanisms to document the scale and progression of the drought impact.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Somalia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Primary data producer coordinating drought response information and affected population figures from humanitarian partners"
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian partner organisations",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multiple partner organizations contributing cluster-based response data and affected population counts"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a22a5c1a",
+          "title": "somalia-cumulative_drought_response_jan-june.xlsx",
+          "description": "Somalia - Cumulative Drought Response (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f0432d4c-d2f9-40f3-9b76-85352ec931c0/resource/a22a5c1a-5282-4ece-be0b-bf2dcf60d207/download/somalia-cumulative_drought_response_jan-june-1.xlsx"
+        },
+        {
+          "id": "resource_7630eb1d",
+          "title": "Cumulative_Drought_Response_Jan-Apr 2022.xlsx",
+          "description": "Somalia - Cumulative Drought Response (Cumulative_Drought_Response_Jan-Apr 2022.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f0432d4c-d2f9-40f3-9b76-85352ec931c0/resource/7630eb1d-8b9d-40f7-83b8-4175d433aedb/download/cumulative_drought_response_jan-apr-2022.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Cumulative affected population from drought response operations across clusters"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-cumulative-drought-response-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

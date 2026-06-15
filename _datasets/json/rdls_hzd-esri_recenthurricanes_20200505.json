@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-esri_recenthurricanes_20200505",
+      "title": "Recent Hurricanes",
+      "description": "Living Atlas live feed sources for hurricane path, observed path, forecast path, and intensity of tropical cyclone activity (hurricanes, typhoons, cyclones) from the National Hurricane Center and Joint Typhoon Warning Center. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/recent-hurricanes]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Esri",
+        "url": "https://data.humdata.org/dataset/recent-hurricanes"
+      },
+      "creator": {
+        "name": "Esri",
+        "url": "https://data.humdata.org/dataset/recent-hurricanes"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2020-05-05"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Hurricane Center",
+            "url": "https://data.humdata.org/dataset/recent-hurricanes"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Joint Typhoon Warning Center",
+            "url": "https://data.humdata.org/dataset/recent-hurricanes"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Live feed sources aggregating observed tropical cyclone tracks and intensity measurements from the National Hurricane Center (Atlantic/Eastern Pacific) and Joint Typhoon Warning Center (Western Pacific/Indian Ocean), providing real-time hazard monitoring of active hurricane, typhoon, and cyclone activity.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Hurricane Center",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Observed hurricane path, forecast path, and intensity data for Atlantic and Eastern Pacific tropical cyclones"
+          },
+          {
+            "id": "source_2",
+            "name": "Joint Typhoon Warning Center",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Observed typhoon and cyclone path, forecast path, and intensity data for Western Pacific and Indian Ocean tropical cyclones"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5db4f414",
+          "title": "Hurricane and Cyclone App",
+          "description": "This map contains live feed sources for hurricane path and forecast path of tropical activity from the National Hurricane Center and Joint Typhoon Warning Center.",
+          "access_url": "https://www.arcgis.com/home/item.html?id=c6da831d21d1468d8ec830773e5b0d7f",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_82f10e26",
+          "title": "Active Hurricanes, Cyclones and Typhoons",
+          "description": "This layer describes the observed path, forecast track, and intensity of tropical cyclone activity (hurricanes, typhoons, cyclones) from the National Hurricane Center (NHC) and Joint Typhoon Warning Center (JTWC).",
+          "access_url": "https://www.arcgis.com/home/item.html?id=248e7b5827a34b248647afb012c58787",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_e33ed170",
+          "title": "Recent Hurricanes, Cyclones and Typhoons",
+          "description": "This layer describes the observed path, forecast track, and intensity of tropical cyclone activity (hurricanes, typhoons, cyclones) from the National Hurricane Center (NHC) and Joint Typhoon Warning Center (JTWC).",
+          "access_url": "https://www.arcgis.com/home/item.html?id=248e7b5827a34b248647afb012c58787",
+          "media_type": "text/html"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "PGWS:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/recent-hurricanes",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

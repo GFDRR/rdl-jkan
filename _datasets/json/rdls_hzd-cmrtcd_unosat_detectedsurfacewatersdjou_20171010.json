@@ -1,0 +1,94 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-cmrtcd_unosat_detectedsurfacewatersdjou_20171010",
+      "title": "Satellite Detected Surface Waters in D'joumane/Bongor areas, Chad",
+      "description": "This map illustrates the satellite-detected surface water extent over D'joumane/Bongor and surroundings in Chad along the Logone River as observed from the Radarsat-2 SAR image acquired on 5 October 2017. The analysis of the image indicate that localized standing flood water with very little impact on population and agriculture area. Within the analyzed area (11,680 km2), 15,331 ha of surface water extent was observed of which 6667 ha in Chad and 8664 ha in Cameroon. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-surface-waters-in-d-joumane-bongor-areas-chad-2706]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-surface-waters-in-d-joumane-bongor-areas-chad-2706"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-surface-waters-in-d-joumane-bongor-areas-chad-2706"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "TCD",
+          "CMR"
+        ]
+      },
+      "temporal": {
+        "start": "2017-10-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "Radarsat-2 SAR satellite image acquired on 5 October 2017 was analyzed by UNOSAT through visual interpretation and comparison with reference imagery to detect and delineate surface water extent. The resulting vector geodatabase and shapefile contain mapped flood water polygons with area measurements in hectares across the 11,680 km² study area covering D'joumane/Bongor and surrounding regions along the Logone River.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Radarsat-2 SAR satellite imagery analysis providing observed surface water extent mapping through visual interpretation and change detection methodology"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d24e7356",
+          "title": "FL20170926TCD_gdb.zip",
+          "description": "Satellite Detected Surface Waters in D'joumane/Bongor areas, Chad (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/TD/FL20170926TCD/FL20170926TCD_gdb.zip"
+        },
+        {
+          "id": "resource_6b4652f5",
+          "title": "FL20170926TCD_shp.zip",
+          "description": "Satellite Detected Surface Waters in D'joumane/Bongor areas, Chad (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/TD/FL20170926TCD/FL20170926TCD_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-surface-waters-in-d-joumane-bongor-areas-chad-2706",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

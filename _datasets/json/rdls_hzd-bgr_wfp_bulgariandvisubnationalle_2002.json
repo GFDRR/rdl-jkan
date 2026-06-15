@@ -1,0 +1,134 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-bgr_wfp_bulgariandvisubnationalle_2002",
+      "title": "Bulgaria: NDVI at Subnational Level",
+      "description": "This dataset contains dekadal NDVI indicators computed from NASA's Moderate Resolution Imaging Spectroradiometer (MODIS) collection 6.1 from the Aqua and Terra satellite aggregated by sub-national administrative units. Included indicators are (for each dekad): 10 day NDVI ( vim ) NDVI long term average ( vim_lta ) 10 day NDVI anomaly [%] ( viq ) The administrative units used for aggregation are based on WFP data and contain a Pcode reference attributed to each unit. The number of input pixels used to create the aggregates, is provided in the n_pixels column.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/bgr-ndvi-subnational]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Due to the nature of the Whittaker filter, the update of the timeseries (i.e. the addition of a new dekad) has an effect of preceding dekads which diminishes going back in time. Therefore slight variations can be expected for a certain number of dekads for every update.",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/bgr-ndvi-subnational"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/bgr-ndvi-subnational"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGR"
+        ]
+      },
+      "temporal": {
+        "start": "2002-07-01",
+        "end": "2026-01-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "NASA Moderate Resolution Imaging Spectroradiometer (MODIS)",
+            "url": "https://data.humdata.org/dataset/bgr-ndvi-subnational"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WFP",
+            "url": "https://data.humdata.org/dataset/bgr-ndvi-subnational"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Raw MODIS AQUA and TERRA 16-day composite products (MYD13C1 and MOD13C1) were combined into 8-day synthetic products and processed to compute dekadal NDVI indicators (vim, vim_lta, viq) aggregated by WFP-defined subnational administrative units with Pcode references. NDVI anomalies were calculated as percentage deviations from long-term averages to support agricultural drought monitoring.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "NASA Moderate Resolution Imaging Spectroradiometer (MODIS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-derived 16-day composite products (MYD13C1 and MOD13C1 collection 6.1) from Aqua and Terra satellites providing raw vegetation reflectance data processed into synthetic 8-day NDVI products"
+          },
+          {
+            "id": "source_2",
+            "name": "WFP",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Administrative boundary definitions and Pcode references for subnational units used to aggregate satellite-derived NDVI indicators"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://lpdaac.usgs.gov/products/myd13c1v061/"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://lpdaac.usgs.gov/products/mod13c1v061/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_1b30946a",
+          "title": "bgr-ndvi-subnat-full.csv",
+          "description": "This resource contains the full timeseries to date. File id: 20260123T135633023605_ff3842a3",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/4b617bf1-d153-41f1-a3a6-ce32f5d3480a/resource/1b30946a-b05a-4a9a-a30d-f452ca3b3d5c/download/bgr-ndvi-subnat-full.csv"
+        },
+        {
+          "id": "resource_0ebecf72",
+          "title": "bgr-ndvi-subnat-5ytd.csv",
+          "description": "This resource contains a subset of the full timeseries covering the past five years to date. File id: 20260123T135633023605_ff3842a3",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/4b617bf1-d153-41f1-a3a6-ce32f5d3480a/resource/0ebecf72-2f00-4acc-bd45-51e02468a37b/download/bgr-ndvi-subnat-5ytd.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "agricultural_drought",
+                "intensity_measure": "NDVI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/bgr-ndvi-subnational",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

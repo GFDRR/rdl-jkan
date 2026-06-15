@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-nga_unosat_livewebmapfloods2024_20240911",
+      "title": "UNOSAT Live Web map - Floods in Nigeria, 2024",
+      "description": "UNOSAT code: FL20240902NGA, GDACS ID: 1102720 This application provides flood impact assessments for Nigeria in September 2024.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-live-web-map-floods-in-nigeria-2024]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-live-web-map-floods-in-nigeria-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-live-web-map-floods-in-nigeria-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NGA"
+        ]
+      },
+      "temporal": {
+        "start": "2024-09-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-live-web-map-floods-in-nigeria-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts performed multi-temporal satellite imagery comparison to detect notable changes in inundation patterns during the September 2024 flood event in Nigeria. Flood extent polygons were delineated through visual interpretation and change detection analysis, with area measurements calculated in square meters and hectares. The resulting geodatabase and shapefile products represent observed flood impact footprints suitable for emergency response and damage assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and change detection methodology to identify flood-affected areas and produce impact assessments from multi-temporal remote sensing data"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_512dcce8",
+          "title": "FL20240902NGA_gdb.zip",
+          "description": "UNOSAT Live Web map - Floods in Nigeria, 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3961/FL20240902NGA_gdb.zip"
+        },
+        {
+          "id": "resource_98161fc5",
+          "title": "FL20240902NGA_SHP.zip",
+          "description": "UNOSAT Live Web map - Floods in Nigeria, 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3961/FL20240902NGA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Flood-inundated area extent derived from satellite imagery comparison"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-live-web-map-floods-in-nigeria-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

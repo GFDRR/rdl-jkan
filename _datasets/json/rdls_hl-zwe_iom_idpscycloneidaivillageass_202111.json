@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-zwe_iom_idpscycloneidaivillageass_202111",
+      "title": "Zimbabwe - [IDPs] - Cyclone IDAI - Village Assessment - [IOM DTM]",
+      "description": "The data contains number of IDPs dis-aggregated by gender, age at village level.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/zimbabwe-idps-cyclone-idai-village-assessment-iom-dtm]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/zimbabwe-idps-cyclone-idai-village-assessment-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/zimbabwe-idps-cyclone-idai-village-assessment-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ZWE"
+        ]
+      },
+      "temporal": {
+        "start": "2021-11-12",
+        "end": "2021-11-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "url": "https://data.humdata.org/dataset/zimbabwe-idps-cyclone-idai-village-assessment-iom-dtm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM conducted village-level assessments in Matabeleland South and Masvingo Provinces following Cyclone IDAI, enumerating internally displaced persons and disaggregating counts by gender and age groups using standardized DTM methodology to document post-event displacement impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event displacement assessment using DTM standard methodology to enumerate and disaggregate internally displaced persons by demographic characteristics at village level following Cyclone IDAI."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5e42b51e",
+          "title": "DTM Zimbabwe Village Assessment - Matabeleland South and Masvingo Provinces (November 2021)",
+          "description": "Electronic questionnaires were used to collect the data and purposive sampling was used for sample selection. Eighty-nine enumerators were trained on the multisectoral village assessment questionnaires as well as data collection techniques. Multi-sectoral village assessments were conducted through focus group discussions with key informants in villages identified through baseline assessments which were conducted during the same period to capture population estimates, multi-sectoral needs, vulnerabilities and livelihood opportunities. The key informants included village heads, village health workers, childcare workers, village secretaries, chiefs, religious leaders, community members, education officers.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/62bc7aff-287a-4426-a63d-6c322989357a/resource/5e42b51e-8395-40ec-90dc-fa4d20d90307/download/3-hdx_bha_livelihood_msva_pulicdataset_rev-final.xlsx"
+        },
+        {
+          "id": "resource_09bf1d18",
+          "title": "DTM Zimbabwe IDAI Village Round 4",
+          "description": "Zimbabwe - [IDPs] - Cyclone IDAI - Village Assessment - [IOM DTM] (DTM Zimbabwe IDAI Village Round 4)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/62bc7aff-287a-4426-a63d-6c322989357a/resource/09bf1d18-5541-4b1d-aa81-45ad9f7a5813/download/dtm-zimbabwe-idai-village-round-4.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from Cyclone IDAI disaggregated by gender and age at village level"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/zimbabwe-idps-cyclone-idai-village-assessment-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

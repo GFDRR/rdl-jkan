@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-vut_wfpadam_earthquake65maug2023_20230816",
+      "title": "Vanuatu: Earthquake - 6.5M - Aug 2023",
+      "description": "ADAM ID: eq_us7000knq0 Magnitude 6.5 earthquake at 192.955 depth occurred on Aug 16 2023 in 33km W of Vétuboso. It impacted 3825 people. The epicentre was at latitude -13.8814 longitude 167.1582.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000knq0]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000knq0"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000knq0"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2023-08-16"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000knq0"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "ADAM system processed observed earthquake parameters (magnitude 6.5, epicenter location, depth) and derived ground motion intensity (MMI) distribution across administrative divisions. Population exposure data was intersected with MMI intensity zones to estimate affected population counts by intensity level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting and mapping geospatial and socio-economic information following sudden-onset emergencies; provides earthquake impact assessments and population exposure analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3274351c",
+          "title": "sm-us7000knq0-sm-us7000knq0-pop-estimation.csv",
+          "description": "Vanuatu: Earthquake - 6.5M - Aug 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/389e4855-da34-4498-986b-82298f1aec60/resource/3274351c-c513-48bd-9fb2-83bab24a7013/download/sm-us7000knq0-sm-us7000knq0-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by earthquake ground shaking at different MMI intensity levels"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000knq0",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-acfrowca_burntareasince2018",
+      "title": "West and Central Africa - Burnt Area since 2018",
+      "description": "Monthly and annual burnt area statistics (in sqkm) are calculated from 2018 onwards at Admin 0, 1, and 2 levels. The source data is the Burnt Area (BA) product from COPERNICUS Land Monitoring Service v4 (300m resolution), reprocessed to extract bushfire occurrence statistics. Administrative boundaries are provided by OCHA https://data.humdata.org/dataset/west-and-central-africa-administrative-boundaries-levels GeoTIFF raster files and shapefile vector files are available for download at https://geosahel.info For more information, please visit: www.sigsahel.info Des statistiques mensuelles et annuelles de surfaces brûlées (en km²) sont calculées à partir de 2018 aux niveaux administratif 0, 1 et 2. La source des données est le produit « Burnt Area (BA) » du service de surveillance des terres COPERNICUS v4 (résolution de 300 m), retraité pour extraire des statistiques sur les feux de brousse. Les limites administratives sont fournies par OCHA : https://data.humdata.org/dataset/west-and-central-africa-administrative-boundaries-levels Les fichiers raster GeoTIFF et les fichiers vectoriels shapefile sont disponibles au téléchargement sur https://geosahel.info Pour plus d'informations, veuillez consulter : www.sigsahel.info. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/west-and-central-africa-burnt-area]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Action Against Hunger ACF - Regional Office for West and Central Africa ROWCA",
+        "url": "https://data.humdata.org/dataset/west-and-central-africa-burnt-area"
+      },
+      "creator": {
+        "name": "Action Against Hunger ACF - Regional Office for West and Central Africa ROWCA",
+        "url": "https://data.humdata.org/dataset/west-and-central-africa-burnt-area"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "BEN",
+          "BFA",
+          "CAF",
+          "TCD",
+          "CIV",
+          "GMB",
+          "GHA",
+          "GIN",
+          "GNB",
+          "KEN",
+          "LBR",
+          "MLI",
+          "MRT",
+          "NER",
+          "NGA",
+          "SEN",
+          "SLE",
+          "TGO"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "COPERNICUS Land Monitoring Service Burnt Area (BA) product v4",
+            "url": "https://data.humdata.org/dataset/west-and-central-africa-burnt-area"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "OCHA Administrative Boundaries",
+            "url": "https://data.humdata.org/dataset/west-and-central-africa-burnt-area"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Monthly and annual burnt area statistics were calculated from COPERNICUS Land Monitoring Service Burnt Area product v4 (300m resolution) through reprocessing of remote sensing data. Burnt area values were aggregated at administrative levels (Admin 0, 1, and 2) using OCHA administrative boundaries to produce tabular statistics in spreadsheet format covering West and Central Africa from 2018 onwards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "COPERNICUS Land Monitoring Service Burnt Area (BA) product v4",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Remote sensing-based burnt area product at 300m resolution providing monthly and annual burnt area statistics. Reprocessed to extract bushfire occurrence statistics at administrative levels."
+          },
+          {
+            "id": "source_2",
+            "name": "OCHA Administrative Boundaries",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Administrative boundary geometries (Admin 0, 1, and 2 levels) used to aggregate burnt area statistics by administrative units."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0ae1bf20",
+          "title": "BURNT-AREA_ADM0.xlsx",
+          "description": "West and Central Africa - Burnt Area since 2018 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://geosahel.info/MetaDownload/FireMonitor/BURNT-AREA_ADM0.xlsx"
+        },
+        {
+          "id": "resource_37525680",
+          "title": "BURNT-AREA_ADM1.xlsx",
+          "description": "West and Central Africa - Burnt Area since 2018 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://geosahel.info/MetaDownload/FireMonitor/BURNT-AREA_ADM1.xlsx"
+        },
+        {
+          "id": "resource_d4a558f9",
+          "title": "BURNT-AREA_ADM2.xlsx",
+          "description": "West and Central Africa - Burnt Area since 2018 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://geosahel.info/MetaDownload/FireMonitor/BURNT-AREA_ADM2.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/west-and-central-africa-burnt-area",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

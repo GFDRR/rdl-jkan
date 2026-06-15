@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_wfpadam_earthquake60mdec2023_20231202",
+      "title": "Philippines: Earthquake - 6.0M - Dec 2023",
+      "description": "ADAM ID: eq_us7000lfmi Magnitude 6.0 earthquake at 49.093 depth occurred on Dec 02 2023 in 56km E of Hinatuan. It impacted 6315 people. The epicentre was at latitude 8.3525 longitude 126.8427.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-earthquake-eq-us7000lfmi]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/philippines-earthquake-eq-us7000lfmi"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/philippines-earthquake-eq-us7000lfmi"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-12-02"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/philippines-earthquake-eq-us7000lfmi"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system processed observed earthquake parameters (magnitude 6.0, epicenter location, depth) and integrated gridded population data to estimate affected population counts stratified by Modified Mercalli Intensity (MMI) levels across administrative divisions in Davao Oriental province.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting and mapping geospatial and socio-economic information following sudden-onset emergencies; provides earthquake impact assessment and population exposure analysis."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b720bc5f",
+          "title": "sm-us7000lfmi-sm-us7000lfmi-pop-estimation.csv",
+          "description": "Philippines: Earthquake - 6.0M - Dec 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ecc66016-eba8-4ead-a59d-3aecb5659c57/resource/b720bc5f-acf1-40cd-ba65-4ba11c040674/download/sm-us7000lfmi-sm-us7000lfmi-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake ground shaking across MMI intensity levels"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-earthquake-eq-us7000lfmi",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

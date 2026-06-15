@@ -1,0 +1,120 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-achgis4tech_centralamericacropsvegeta_2020",
+      "title": "Central America - Crops Vegetation and Standardized Precipitation Index",
+      "description": "Database containing information related to precipitation indices useful for analysing and comparing variations in precipitation over time and in different geographical regions and indices used in the analysis of vegetation and crops to monitor their activity and detect their presence in the territory. Key variables: Atmospherically Resistant Vegetation Index (ARVI), Normalized Difference Vegetation (NDVI), Enhanced Vegetation Index (EVI) and Structure Insensitive Pigment Index (SIPI) for rainfall information and Standardized Precipitation Index (SPI1, SPI3, SPI6, SPI9 and SPI12) for vegetation information. The indicators between SPI1 - SPI3 refer to short time periods (indicator for immediate impacts) while SPI3 - SPI12 is for more medium-term impact measurements. Each vegetation index is based on a set of data that can be collected through remote sensing, such as satellite imagery, and is designed to measure different vegetation and crop characteristics. The data are categorised by country, department and municipality and by year and month. The indices refer to the monthly average. Vegetation and precipitation data have been produced and transformed by GIS4Tech. For more information contact GIS4Tech: info@gis4tech.com. You can also visit the PREDISAN platform: https://predisan.gis4tech.com/ca4. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/central-america-crops-vegetation-and-precipitation-index]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-crops-vegetation-and-precipitation-index"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-crops-vegetation-and-precipitation-index"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "GTM",
+          "HND",
+          "SLV",
+          "NIC",
+          "CRI",
+          "PAN",
+          "BLZ"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-01",
+        "end": "2026-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "MODIS",
+            "url": "https://data.humdata.org/dataset/central-america-crops-vegetation-and-precipitation-index"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "CHIRPS",
+            "url": "https://data.humdata.org/dataset/central-america-crops-vegetation-and-precipitation-index"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Monthly vegetation and precipitation indices were derived from MODIS and CHIRPS satellite data collected from 2020 onwards. Vegetation indices (NDVI, EVI, ARVI, SIPI) and Standardized Precipitation Index (SPI) at multiple timescales were calculated and aggregated to municipal level using median values across each geographic area to monitor drought conditions and crop/vegetation activity in Central America.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "MODIS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite data providing vegetation indices (NDVI, EVI, ARVI, SIPI) used to monitor crop and vegetation activity"
+          },
+          {
+            "id": "source_2",
+            "name": "CHIRPS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite precipitation data used to calculate Standardized Precipitation Index for drought monitoring"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8cc5b059",
+          "title": "Central America Monthly Crops Vegetation and Precipitation Index since 2020 by ACH-GIS4Tech.csv",
+          "description": "Central America Monthly Crops Vegetation and Precipitation Index since 2020 by ACH-GIS4Tech.csv",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/9af68a9c-c7a9-4ce7-afdd-bf23e2c48ae5/resource/8cc5b059-5976-4901-8375-b580ad628622/download/spi_crops.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/central-america-crops-vegetation-and-precipitation-index",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

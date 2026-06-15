@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-eth_3is_palmerdroughtseverityinde_2020",
+      "title": "Ethiopia - Palmer Drought Severity Index (PDSI)",
+      "description": "This dataset provides Palmer Drought Severity Index (PDSI) values for Ethiopia from 2020 to 2024, offering insights into drought conditions across the country. The PDSI is a widely used drought index that measures deviations in soil moisture conditions from the long-term average, helping to identify both drought and wet conditions. Unlike traditional PDSI calculations that rely on the Thornthwaite method for estimating potential evapotranspiration (ET), this dataset utilizes a more physically based Penman-Monteith reference ET, which accounts for: Solar radiation Temperature Humidity Windspeed Interpretation of PDSI Values: PDSI between -0.5 and 0.5 → Near-normal soil moisture conditions PDSI < -4 → Extreme drought PDSI > 4 → Very wet conditions. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ethiopia-palmer-drought-severity-index-pdsi-2020-2024]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/ethiopia-palmer-drought-severity-index-pdsi-2020-2024"
+      },
+      "creator": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/ethiopia-palmer-drought-severity-index-pdsi-2020-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Google Earth Engine",
+            "url": "https://data.humdata.org/dataset/ethiopia-palmer-drought-severity-index-pdsi-2020-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "TerraClimate",
+            "url": "https://data.humdata.org/dataset/ethiopia-palmer-drought-severity-index-pdsi-2020-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "PDSI values were computed from remote sensing data accessed via Google Earth Engine, utilizing TerraClimate climate inputs and a physically-based Penman-Monteith method for potential evapotranspiration estimation rather than the traditional Thornthwaite approach. The resulting drought index measures deviations in soil moisture conditions from long-term averages across Ethiopia for the 2020-2024 period.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Google Earth Engine",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Remote sensing platform providing climate and environmental data used to derive PDSI calculations with physically-based Penman-Monteith reference evapotranspiration"
+          },
+          {
+            "id": "source_2",
+            "name": "TerraClimate",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Global climate dataset providing solar radiation, temperature, and other meteorological inputs for PDSI computation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_23dfe928",
+          "title": "Ethiopia - Palmer Drought Severity Index (PDSI) - 2022-2024.png",
+          "description": "Ethiopia - Palmer Drought Severity Index (PDSI) - 2022-2024.png",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/ee3b87ce-ff6d-433b-89db-faa25337954e/resource/23dfe928-f9bb-482d-9e62-50480e16fb3a/download/ethiopia-palmer-drought-severity-index-pdsi-2022-2024.png"
+        },
+        {
+          "id": "resource_e6eb79ba",
+          "title": "PSDI TerraClimate - 2020-2024.pdf",
+          "description": "Ethiopia - Palmer Drought Severity Index (PDSI) (PSDI TerraClimate - 2020-2024.pdf)",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/ee3b87ce-ff6d-433b-89db-faa25337954e/resource/e6eb79ba-f940-49ec-9757-58c07d1ce3bf/download/psdi-terraclimate-2020-2024.pdf"
+        },
+        {
+          "id": "resource_10609243",
+          "title": "PSDI TerraClimate - 2020-2024.xlsx",
+          "description": "Ethiopia - Palmer Drought Severity Index (PDSI) (PSDI TerraClimate - 2020-2024.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ee3b87ce-ff6d-433b-89db-faa25337954e/resource/10609243-8e62-408f-a553-198c4f3a0ff8/download/psdi-terraclimate-2020-2024.xlsx"
+        },
+        {
+          "id": "resource_ae275c78",
+          "title": "Admin1.kml",
+          "description": "Ethiopia - Palmer Drought Severity Index (PDSI) (Administrative Boundaries Level 1 - Region)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://data.humdata.org/dataset/ee3b87ce-ff6d-433b-89db-faa25337954e/resource/ae275c78-427a-4f38-8dc8-9c4d867f0971/download/admin1.kml"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "PDSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ethiopia-palmer-drought-severity-index-pdsi-2020-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
