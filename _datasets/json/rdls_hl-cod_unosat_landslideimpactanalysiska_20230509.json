@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-cod_unosat_landslideimpactanalysiska_20230509",
+      "title": "Landslide impact analysis in Kalehe Territory, Sud-Kivu Province, Democratic Republic of the Congo as of 7 May 2023",
+      "description": "UNOSAT code FL20230508COD, GDACS Id: 1101981 This map illustrates satellite-detected landslides/mudflow-related impact in Kalehe Territory, Sud-Kivu Province, Democratic Republic of the Congo as observed from a Sentinel-2 image acquired on 7 May 2023. Within the analysed area of about 9,000 ha, 90 ha of landslide scars were observed. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/landslide-impact-analysis-in-kalehe-territory-sud-kivu-province-democratic-republic-of-the]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-kalehe-territory-sud-kivu-province-democratic-republic-of-the"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-kalehe-territory-sud-kivu-province-democratic-republic-of-the"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2023-05-09"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-kalehe-territory-sud-kivu-province-democratic-republic-of-the"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts interpreted Sentinel-2 satellite imagery acquired on 7 May 2023 over Kalehe Territory, comparing multi-temporal images to identify notable changes and detect landslide scars and mudflow features. The analysis identified 90 hectares of landslide impacts within a 9,000 hectare study area and produced vector geodatabase and shapefile outputs with spatial extent and area measurements.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using Sentinel-2 to detect and map landslide scars and mudflow-related impacts through visual interpretation and change detection between satellite images"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_67a2f997",
+          "title": "FL20230508COD_gdb.zip",
+          "description": "Landslide impact analysis in Kalehe Territory, Sud-Kivu Province, Democratic Republic of the Congo as of 7 May 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3582/FL20230508COD_gdb.zip"
+        },
+        {
+          "id": "resource_78144f39",
+          "title": "FL20230508COD_SHP.zip",
+          "description": "Landslide impact analysis in Kalehe Territory, Sud-Kivu Province, Democratic Republic of the Congo as of 7 May 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3582/FL20230508COD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Land area affected by landslide scars and mudflow impacts"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/landslide-impact-analysis-in-kalehe-territory-sud-kivu-province-democratic-republic-of-the",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

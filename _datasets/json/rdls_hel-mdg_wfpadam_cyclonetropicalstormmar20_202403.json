@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-mdg_wfpadam_cyclonetropicalstormmar20_202403",
+      "title": "Madagascar: Cyclone - Tropical storm - Mar 2024",
+      "description": "ADAM ID: 1001057_8 Cyclone (tropical storm) during the period Mar 25 2024-Mar 28 2024 in Madagascar. It impacted 536830 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/madagascar-cyclone-1001057]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/madagascar-cyclone-1001057"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/madagascar-cyclone-1001057"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2024-03-25",
+        "end": "2024-03-28"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/madagascar-cyclone-1001057"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "ADAM collected observed tropical cyclone track data and wind speed measurements for the March 2024 event in Madagascar. Wind speed thresholds (60, 90, 120 kph) were intersected with gridded population data to estimate population exposure and affected counts at administrative levels (ADM0-ADM2), generating both spatial hazard layers and tabular impact summaries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting and mapping tropical storm tracks, wind speed fields, and alert levels following sudden-onset emergencies"
+          },
+          {
+            "id": "source_2",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Population impact assessment and affected population counts derived from tropical storm exposure analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a1d7fc40",
+          "title": "1001057-11-adam-ts-1001057-11-shp.zip",
+          "description": "Madagascar: Cyclone - Tropical storm - Mar 2024 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/bc5ffd34-ab1b-49ae-9bfb-b80898bceb7a/resource/a1d7fc40-e35c-4ccd-b285-fa2ee8e1581c/download/1001057-11-adam-ts-1001057-11-shp.zip"
+        },
+        {
+          "id": "resource_bc8c9304",
+          "title": "1001057-11-adam-ts-1001057-11-pop-estimation.csv",
+          "description": "Madagascar: Cyclone - Tropical storm - Mar 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/bc5ffd34-ab1b-49ae-9bfb-b80898bceb7a/resource/bc8c9304-b13d-4da5-96d2-23c60176889c/download/1001057-11-adam-ts-1001057-11-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at multiple thresholds (60, 90, 120 kph)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Total population affected by tropical cyclone event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/madagascar-cyclone-1001057",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

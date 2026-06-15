@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-ken_iom_internallydisplacedpeople_2022",
+      "title": "Kenya - Internally Displaced People due to Drought",
+      "description": "IDPs due to drought in five counties in Kenya; Marsabit, Garissa, Isiolo, Samburu, Turkana. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/kenya-internally-displaced-people-due-to-drought]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/kenya-internally-displaced-people-due-to-drought"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/kenya-internally-displaced-people-due-to-drought"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2022-10-31",
+        "end": "2023-04-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IOM conducted a registry-based survey to enumerate internally displaced persons in five drought-affected counties (Marsabit, Garissa, Isiolo, Samburu, Turkana) in Kenya, recording IDP estimates by county with source attribution and comments.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registry-based enumeration of internally displaced persons attributed to drought conditions in five Kenyan counties"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b43ffad8",
+          "title": "HoA Drought Related Data - Kenya Drought Related IDPs.csv",
+          "description": "Kenya - Internally Displaced People due to Drought (HoA Drought Related Data - Kenya Drought Related IDPs.csv)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/549063dc-e76d-4c8d-b4bc-9b102ed20330/resource/b43ffad8-3684-4de0-bc51-9d15b111d4d2/download/hoa-drought-related-data-kenya-drought-related-idps.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons due to drought in Marsabit, Garissa, Isiolo, Samburu, and Turkana counties"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/kenya-internally-displaced-people-due-to-drought",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

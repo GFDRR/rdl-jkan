@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-bgd_iscg_coxsbazarfireaffectedarea_20210322",
+      "title": "Bangladesh - Cox's Bazar: Fire Affected Area at Rohingya Refugee Camps",
+      "description": "A massive fire swept through three IOM-managed sites on 22 March 2021 displacing Rohingya refugees and causing catastrophic damage in the world's largest refugee camp, Cox's Bazar, Bangladesh.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cox-s-bazar-fire-incident-area-at-rohingya-refugee-camps-in-march-2021]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "Inter Sector Coordination Group",
+        "url": "https://data.humdata.org/dataset/cox-s-bazar-fire-incident-area-at-rohingya-refugee-camps-in-march-2021"
+      },
+      "creator": {
+        "name": "Inter Sector Coordination Group",
+        "url": "https://data.humdata.org/dataset/cox-s-bazar-fire-incident-area-at-rohingya-refugee-camps-in-march-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2021-03-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Fire extent was mapped through direct observational data collection following the 22 March 2021 wildfire event at three IOM-managed sites in Cox's Bazar refugee camps. The resulting shapefile delineates the spatial extent of fire-affected areas, enabling quantification of displaced populations and damaged shelter infrastructure.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Inter Sector Coordination Group",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational mapping of fire extent and affected areas at IOM-managed refugee camp sites in Cox's Bazar following the 22 March 2021 wildfire event."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_834dc826",
+          "title": "Fire_Extent_shapefile.zip",
+          "description": "Bangladesh - Cox's Bazar: Fire Affected Area at Rohingya Refugee Camps (The source of the data is IOM Cox's Bazar)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/302060fa-b0b2-41af-8c82-ec12979f8f20/resource/834dc826-4a6d-4d72-9498-1d2980531bfb/download/fire_extent_shapefile.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "FWI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from wildfire at refugee camp shelters"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Rohingya refugees displaced by the wildfire event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cox-s-bazar-fire-incident-area-at-rohingya-refugee-camps-in-march-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

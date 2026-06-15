@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-sdn_unosat_detectedwaterextentsas25a_20190828",
+      "title": "Satellite detected water extents, as of 25 August 2019 over White Nile, Sennar and El Gazira states in Sudan",
+      "description": "UNOSAT code: FL20190815SDN This map illustrates the extent of surface waters detected over El Gazira, White Nile and Sennar states located in the southern part of Sudan as detected by VIIRS-NOAA satellite between 22 & 25 August 2019. In the analysed area, a total of about 7000 km2 are likely flooded and about 250,000 people might be affected by taking into account the WorldPop population estimates. This is a preliminary analysis that has not yet been validated in the field. Please send any field-based comments to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-as-of-25-august-2019-over-white-nile-sennar-and-el-gazira-states-in-sudan]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-as-of-25-august-2019-over-white-nile-sennar-and-el-gazira-states-in-sudan"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-as-of-25-august-2019-over-white-nile-sennar-and-el-gazira-states-in-sudan"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2019-08-28"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "VIIRS-NOAA satellite imagery",
+            "url": "https://data.humdata.org/dataset/water-extents-as-of-25-august-2019-over-white-nile-sennar-and-el-gazira-states-in-sudan"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population estimates",
+            "url": "https://data.humdata.org/dataset/water-extents-as-of-25-august-2019-over-white-nile-sennar-and-el-gazira-states-in-sudan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared VIIRS-NOAA satellite imagery acquired between 22-25 August 2019 to detect surface water extent changes over El Gazira, White Nile, and Sennar states. Detected water bodies were mapped as polygons with area calculations (7000 km² total). WorldPop population estimates were overlaid to estimate approximately 250,000 affected people. This is a preliminary post-event assessment not yet validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "VIIRS-NOAA satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite remote sensing data used to detect surface water extent through multi-temporal image comparison"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population estimates",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population density data used to estimate affected population in flooded areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_63b615c4",
+          "title": "FL20190815SDN_gdb.zip",
+          "description": "Satellite detected water extents, as of 25 August 2019 over White Nile, Sennar and El Gazira states in Sudan (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SD/FL20190815SDN/FL20190815SDN_gdb.zip"
+        },
+        {
+          "id": "resource_05606005",
+          "title": "FL20190815SDN_SHP.zip",
+          "description": "Satellite detected water extents, as of 25 August 2019 over White Nile, Sennar and El Gazira states in Sudan (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SD/FL20190815SDN/FL20190815SDN_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population estimated from WorldPop data in flood-affected areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by detected flood extent based on WorldPop estimates"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-as-of-25-august-2019-over-white-nile-sennar-and-el-gazira-states-in-sudan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

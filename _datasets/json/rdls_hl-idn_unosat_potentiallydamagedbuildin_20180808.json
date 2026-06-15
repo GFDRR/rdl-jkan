@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-idn_unosat_potentiallydamagedbuildin_20180808",
+      "title": "Potentially Damaged Buildings & Gathering Sites over Gili Islands, Lombok Utara District, Indonesia",
+      "description": "This map illustrates satellite-detected potentially damaged buildings and gathering sites over Gili Islands as of 8 August 2018, after the 6.9 earthquake, that stroke Lombok Island on 5 August 2018. The analysis was conducted using a post-event Pleiades satellite image acquired on 8 August 2018. UNITAR-UNOSAT analysis identified minor damage over Gili Islands, 15 potentially damaged buildings, mainly observed in Gili Air and 6 potentially gatherings sites in Gili Trawangan island. Kindly note that Google Earth was used as Pre-event imagery, it might have decreased the confidence level of the analysis. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/potentially-damaged-buildings-gathering-sites-over-gili-islands-lombok-utara-district-indonesia-2837]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/potentially-damaged-buildings-gathering-sites-over-gili-islands-lombok-utara-district-indonesia-2837"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/potentially-damaged-buildings-gathering-sites-over-gili-islands-lombok-utara-district-indonesia-2837"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-08-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts conducted post-event damage assessment by comparing Pleiades satellite imagery (8 August 2018) with pre-event Google Earth imagery to identify structural damage from the 6.9 magnitude earthquake. Damage features were manually delineated and classified by confidence level, producing a vector dataset of potentially damaged buildings and gathering sites across Gili Islands.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event Pleiades satellite imagery acquired on 8 August 2018 analyzed through visual comparison with pre-event Google Earth imagery to identify and map potentially damaged buildings and gathering sites"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8b82bdea",
+          "title": "EQ20180805IDN_shp.zip",
+          "description": "Potentially Damaged Buildings & Gathering Sites over Gili Islands, Lombok Utara District, Indonesia (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/ID/EQ20180805IDN/EQ20180805IDN_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Satellite-detected potentially damaged buildings (15 identified) in Gili Islands following the 6.9 magnitude earthquake"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Satellite-detected potentially damaged gathering sites (6 identified) in Gili Trawangan island following the earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/potentially-damaged-buildings-gathering-sites-over-gili-islands-lombok-utara-district-indonesia-2837",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

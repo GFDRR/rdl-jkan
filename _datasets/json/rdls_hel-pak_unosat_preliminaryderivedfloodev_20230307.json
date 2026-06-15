@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-pak_unosat_preliminaryderivedfloodev_20230307",
+      "title": "Preliminary Satellite Derived Flood Evolution Assessment, Islamic Republic of Pakistan - 07 March 2023",
+      "description": "UNOSAT code FL20221121PAK Status: Overall decrease of flood waters observed Further action(s): continue monitoring Evolution of Cumulative Flood Waters over I.R. of Pakistan (11-15 February 2023 Vs 24-28 February 2023): Between 24 and 28 February 2023 approximately 1.8 million people are potentially exposed or living close to maximum floodwaters areas( ); Approximately 420,000 people are potentially exposed or living close to minimum floodwaters areas( *) between 24 and 28 February 2023; Based on satellite observations between 11 and 15 February 2023 and compared with observations between 24 and 28 February 2023 , the maximum flood water extent appears to continue to retract with approximately ~ -850 km² in Sindh , ~ - 150 km² in Punjab, ~ -140 km² in Balochistan and ~ - 60 km² in Khyber Pakhtunkhwa.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-07-m]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-07-m"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-07-m"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2023-03-07"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-07-m"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery acquired between 11-15 February 2023 and 24-28 February 2023 to identify and map cumulative floodwater extents across Pakistan. Flood polygons were digitized from satellite observations and attributed with confidence levels, sensor information, and area measurements. Population exposure estimates were derived by overlaying flood extent data with population distribution data to quantify people living in or near maximum and minimum floodwater areas.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis comparing multi-temporal observations to derive flood extent and cumulative floodwater areas through visual interpretation of satellite imagery"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f07c9c17",
+          "title": "FL20221121PAK_gdb.zip",
+          "description": "Preliminary Satellite Derived Flood Evolution Assessment, Islamic Republic of Pakistan - 07 March 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3519/FL20221121PAK_gdb.zip"
+        },
+        {
+          "id": "resource_6441752a",
+          "title": "FL20221121PAK_SHP.zip",
+          "description": "Preliminary Satellite Derived Flood Evolution Assessment, Islamic Republic of Pakistan - 07 March 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3519/FL20221121PAK_SHP.zip"
+        },
+        {
+          "id": "resource_d128f87c",
+          "title": "UNOSAT_Population_Exposure_FL20221121PAK_WeeklyUpdate_24Feb2023_28Feb2023_Pakistan.xlsx",
+          "description": "Preliminary Satellite Derived Flood Evolution Assessment, Islamic Republic of Pakistan - 07 March 2023 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3519/UNOSAT_Population_Exposure_FL20221121PAK_WeeklyUpdate_24Feb2023_28Feb2023_Pakistan.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to maximum and minimum floodwater areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population exposed to floodwaters during February 2023 event in Pakistan"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-islamic-republic-of-pakistan-07-m",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

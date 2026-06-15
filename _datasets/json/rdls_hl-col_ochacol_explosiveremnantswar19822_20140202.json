@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-col_ochacol_explosiveremnantswar19822_20140202",
+      "title": "Explosive Remnants of War in Colombia, 1982-2013",
+      "description": "Data on ERG accidents and events, mostly involving antipersonnel mines, by municipality between 1982 and December 2013. Accident data is defined as events resulting in injury or death. Event data includes both accidents and other events such as ERG detection or minefield deactivation. This data is also available online and updated, at http://www.accioncontraminas.gov.co/Paginas/AICMA.aspx. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/explosive-remnants-of-war-in-colombia]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "Georeferencing in this dataset is only available to the municipal level. Georeferencing by defect is made at the municipal seat coordinates, although most events or accidents occur in rural areas of the municipality. Some of this same data is also available with more precise georeferencing, but not in this dataset.",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/explosive-remnants-of-war-in-colombia"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/explosive-remnants-of-war-in-colombia"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2014-02-02"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Programa Presidencial para la Acción Integral contra Minas Antipersonal",
+            "url": "https://data.humdata.org/dataset/explosive-remnants-of-war-in-colombia"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event registry data compiled by the Colombian Presidential Program for Comprehensive Action Against Antipersonnel Mines, documenting all recorded ERG accidents (resulting in injury or death) and detection/deactivation events by municipality from 1982 through December 2013.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Programa Presidencial para la Acción Integral contra Minas Antipersonal",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official registry of explosive remnants of war incidents, accidents, and events in Colombia maintained by the Presidential Program for Comprehensive Action Against Antipersonnel Mines."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8cb71bd4",
+          "title": "Situación_Minas_Diciembre_2013.xls",
+          "description": "Explosive Remnants of War in Colombia, 1982-2013 (See description and caveats.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b6d4823e-af32-4549-a9d0-598057d0405a/resource/8cb71bd4-572d-43be-8772-c5313b4745b9/download/situacion-minas-diciembre-2013.xls"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "pest_infestation",
+                "process": "pest",
+                "intensity_measure": "Pest:count/area"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_pest_infestation",
+              "type": "pest_infestation",
+              "intensity_measure": "Pest:count/area"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injuries from antipersonnel mine accidents"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_pest_infestation",
+              "type": "pest_infestation",
+              "intensity_measure": "Pest:count/area"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from antipersonnel mine accidents"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/explosive-remnants-of-war-in-colombia",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

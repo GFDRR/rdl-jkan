@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-vut_wfpadam_earthquake61msep2023_20230921",
+      "title": "Vanuatu: Earthquake - 6.1M - Sep 2023",
+      "description": "ADAM ID: eq_us7000kx7j Magnitude 6.1 earthquake at 188.419 depth occurred on Sep 21 2023 in 31km W of Vétuboso. It impacted 4814 people. The epicentre was at latitude -14.0039 longitude 167.1898.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000kx7j]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000kx7j"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000kx7j"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-21"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP ADAM (Advanced Disaster Analysis & Mapping)",
+            "url": "https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000kx7j"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "USGS shakemap data for the M6.1 earthquake (event ID us7000kx7j) was ingested by WFP ADAM, which overlaid MMI intensity zones with gridded population data to estimate the number of people exposed at each shaking level per administrative unit. The resulting CSV provides population-by-MMI estimates at ADM2 level for Vanuatu.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP ADAM (Advanced Disaster Analysis & Mapping)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "ADAM is an operational system that collects, analyses and maps geospatial and socio-economic information following sudden-onset humanitarian emergencies. It aggregates shakemap and population exposure data to generate impact estimates for earthquakes."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4308f9d3",
+          "title": "sm-us7000kx7j-sm-us7000kx7j-pop-estimation.csv",
+          "description": "Vanuatu: Earthquake - 6.1M - Sep 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/037c2008-a9bd-49ee-8c9f-48794025aebe/resource/4308f9d3-990e-4a1c-a551-8033d2fda158/download/sm-us7000kx7j-sm-us7000kx7j-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population counts per administrative unit exposed to different MMI shaking intensity levels"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Estimated number of people affected by the M6.1 earthquake in Vanuatu, September 2023"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/vanuatu-earthquake-eq-us7000kx7j",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

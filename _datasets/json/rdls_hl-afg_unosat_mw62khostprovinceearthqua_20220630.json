@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-afg_unosat_mw62khostprovinceearthqua_20220630",
+      "title": "Mw 6.2 Khost Province Earthquake, Afghanistan, 21 June 2022 - UNOSAT Live Web Map",
+      "description": "UNOSAT code: EQ20220622AFG Live web map providing geospatial information about damaged caused by the earthquake that stroke Afghanistan on 21 June 2022. This web map gives an updated overview over potentially damaged and damaged buildings based on very high-resolution satellite images. Furthermore, the application also gives an overview over identified shelters.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mw-6-2-khost-province-earthquake-afghanistan-21-june-2022-unosat-live-web-map]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mw-6-2-khost-province-earthquake-afghanistan-21-june-2022-unosat-live-web-map"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mw-6-2-khost-province-earthquake-afghanistan-21-june-2022-unosat-live-web-map"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2022-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/mw-6-2-khost-province-earthquake-afghanistan-21-june-2022-unosat-live-web-map"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared very high-resolution satellite imagery acquired before and after the 21 June 2022 earthquake to identify notable changes in building structures. Damaged and potentially damaged buildings were manually delineated and classified based on visual interpretation of satellite imagery, with results delivered as geospatial vector data (geodatabase and shapefile formats).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Very high-resolution satellite imagery analysis comparing pre- and post-event images to identify and classify damaged and potentially damaged buildings in Khost Province"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8da4c5ee",
+          "title": "EQ20220622AFG_gdb.zip",
+          "description": "Mw 6.2 Khost Province Earthquake, Afghanistan, 21 June 2022 - UNOSAT Live Web Map (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/AF/EQ20220622AFG/EQ20220622AFG_gdb.zip"
+        },
+        {
+          "id": "resource_b213c3a0",
+          "title": "EQ20220622AFG_SHP.zip",
+          "description": "Mw 6.2 Khost Province Earthquake, Afghanistan, 21 June 2022 - UNOSAT Live Web Map (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/AF/EQ20220622AFG/EQ20220622AFG_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage assessment from satellite imagery analysis of the Mw 6.2 earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mw-6-2-khost-province-earthquake-afghanistan-21-june-2022-unosat-live-web-map",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-phl_unosat_damageassessmentjimalalud_20211230",
+      "title": "Damage assessment in Jimalalud and La Libertad municipalities, Negros Oriental Province, Region VII, Philippines",
+      "description": "UNOSAT code: TC20211216PHL This map illustrates potentially damaged structures and buildings in Jimalalud and La Libertad municipalities, Negros Oriental province, Region VII (Central Visayas), Philippines as observed from a Pleiades image acquired on 22 December 2021. Within the analyzed area, UNOSAT identified 566 damaged structures and 154 potentially damaged structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-jimalalud-and-la-libertad-municipalities-negros-oriental-province-reg]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-jimalalud-and-la-libertad-municipalities-negros-oriental-province-reg"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-jimalalud-and-la-libertad-municipalities-negros-oriental-province-reg"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2021-12-30"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-jimalalud-and-la-libertad-municipalities-negros-oriental-province-reg"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Pleiades satellite imagery acquired on 22 December 2021 and compared it with reference imagery to identify structural damage in two municipalities affected by Typhoon Odette. Damage assessment was conducted through visual interpretation of satellite imagery without field validation, resulting in counts of confirmed and potential building damage.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis (Pleiades image, 22 December 2021) identifying damaged and potentially damaged structures through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f0c8581a",
+          "title": "TC20211216PHL_gdb.zip",
+          "description": "Damage assessment in Jimalalud and La Libertad municipalities, Negros Oriental Province, Region VII, Philippines (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/PH/TC20211216PHL/TC20211216PHL_gdb.zip"
+        },
+        {
+          "id": "resource_bc27ecca",
+          "title": "TC20211216PHL_SHP.zip",
+          "description": "Damage assessment in Jimalalud and La Libertad municipalities, Negros Oriental Province, Region VII, Philippines (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/PH/TC20211216PHL/TC20211216PHL_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures in Jimalalud and La Libertad municipalities assessed for damage"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from tropical cyclone (566 damaged, 154 potentially damaged structures)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-jimalalud-and-la-libertad-municipalities-negros-oriental-province-reg",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

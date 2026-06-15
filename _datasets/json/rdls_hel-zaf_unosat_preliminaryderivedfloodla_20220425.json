@@ -1,0 +1,190 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-zaf_unosat_preliminaryderivedfloodla_20220425",
+      "title": "South Africa - PRELIMINARY SATELLITE-DERIVED FLOOD AND LANDSLIDE ASSESSMENT",
+      "description": "UNOSAT code: FL20220418ZAF SUMMARY OF FINDINGS: Increased water level, inundated infrastructure & damaged road observed along the Mlazi river as of 14 April 2022; Inundated SAPREF Oil Refinery as of 14 April 2022; Increased water level and damaged roadway observed along the Mhlatuzana river as of 14 April 2022; Inundated area observed along the Umbilo river as of 14 April 2022; Increased water level and landslide observed along the Palmiet river as of 14 April 2022. Status: : Increased water level and landslides observed Further action(s): Continue monitoring. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-derived-flood-and-landslide-assessment]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-and-landslide-assessment"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-and-landslide-assessment"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ZAF"
+        ]
+      },
+      "temporal": {
+        "start": "2022-04-25"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-and-landslide-assessment"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts conducted comparative satellite imagery analysis of the Durban region as of 14 April 2022, identifying changes in water levels, inundation extents, and landslide occurrence across five river systems (Mlazi, Mhlatuzana, Umbilo, Palmiet) and critical infrastructure (SAPREF Oil Refinery). Results were delivered as vector geodatabase and shapefile formats with spatial extent and area measurements.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis comparing pre- and post-event images to identify flood inundation extents, increased water levels, and landslide occurrence across multiple river systems in South Africa."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_27b61c3c",
+          "title": "FL20220418ZAF_gdb.zip",
+          "description": "South Africa - PRELIMINARY SATELLITE-DERIVED FLOOD AND LANDSLIDE ASSESSMENT (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/ZA/FL20220418ZAF/FL20220418ZAF_gdb.zip"
+        },
+        {
+          "id": "resource_1b759aae",
+          "title": "FL20220418ZAF_SHP.zip",
+          "description": "South Africa - PRELIMINARY SATELLITE-DERIVED FLOOD AND LANDSLIDE ASSESSMENT (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/ZA/FL20220418ZAF/FL20220418ZAF_SHP.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road networks and oil refinery infrastructure exposed to flood inundation"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to roads and SAPREF Oil Refinery from fluvial flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct landslide impact observed along Palmiet river"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-and-landslide-assessment",
+          "rel": "source"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "es_flood",
+            "hazards": [
+              {
+                "id": "es_flood_hzd",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_landslide",
+            "hazards": [
+              {
+                "id": "es_landslide_hzd",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "pgd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      }
+    }
+  ]
+}

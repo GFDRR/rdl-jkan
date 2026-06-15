@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-phl_wfpadam_cyclonecategory4aug2023_202308",
+      "title": "Philippines: Cyclone - Category 4 - Aug 2023",
+      "description": "A cyclone (category 4) during the period Aug 23 2023-Aug 29 2023 in Philippines. It impacted 3624 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-cyclone-1000999]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/philippines-cyclone-1000999"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/philippines-cyclone-1000999"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-08-23",
+        "end": "2023-08-29"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/philippines-cyclone-1000999"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM collected observed tropical cyclone track geometry and wind speed data for the August 2023 Category 4 typhoon event in the Philippines. Population exposure was estimated within the affected area using spatial analysis, and affected population counts were derived from the intersection of cyclone impact zones with population data.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting and mapping geospatial information on tropical cyclone tracks, wind speeds, and affected populations following sudden-onset emergencies."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_431dfa5a",
+          "title": "ADAM_TS_1000999_23_shp.zip",
+          "description": "Philippines: Cyclone - Category 4 - Aug 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://adam-project-prod.s3-eu-west-1.amazonaws.com/adam_ts/events/2023/08/1000999_23/ADAM_TS_1000999_23_shp.zip"
+        },
+        {
+          "id": "resource_6b0b077a",
+          "title": "ADAM_TS_1000999_23_pop_estimation.csv",
+          "description": "Philippines: Cyclone - Category 4 - Aug 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://adam-project-prod.s3-eu-west-1.amazonaws.com/adam_ts/events/2023/08/1000999_23/ADAM_TS_1000999_23_pop_estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone winds in affected areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by Category 4 tropical cyclone"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-cyclone-1000999",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

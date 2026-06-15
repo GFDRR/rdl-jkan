@@ -1,0 +1,217 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-npl_ochanpl_earthquakeseverityindex_20150430",
+      "title": "Nepal Earthquake Severity Index",
+      "description": "The Nepal Earthquake Severity Index is designed to provide an overview of estimated severity of impacts resulting from the earthquake of 25 April 2015. It is not a replacement for first hand damage and needs assessment information, but can support prioritisation during early stages of the response. It estimates severity based on: 1) the intensity of the earthquake; 2) population; 3) vulnerability of housing and population. This index will be updated to take account of: validation against first hand reports and improvements to the severity model; improved sources of data (quality, timeliness and scale); changing requirements as the response continues. Version 2 is the latest version of the Index. Please see the Nepal Earthquake Severity Index (Version 4 - 30 April 2015) for more information. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/nepal-earthquake-severity-index]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Nepal (inactive)",
+        "url": "https://data.humdata.org/dataset/nepal-earthquake-severity-index"
+      },
+      "creator": {
+        "name": "OCHA Nepal (inactive)",
+        "url": "https://data.humdata.org/dataset/nepal-earthquake-severity-index"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-04-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "European Commission Joint Research Centre",
+            "url": "https://data.humdata.org/dataset/nepal-earthquake-severity-index"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "OCHA Nepal",
+            "url": "https://data.humdata.org/dataset/nepal-earthquake-severity-index"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The Nepal Earthquake Severity Index integrates observed ground motion intensity from the 25 April 2015 earthquake with gridded population data and housing vulnerability assessments to produce a composite severity index. The methodology follows the INFORM framework, combining hazard intensity, exposure, and vulnerability to estimate spatial patterns of earthquake impact severity for early-stage response prioritization.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "European Commission Joint Research Centre",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Developed the severity index methodology based on INFORM framework integrating earthquake intensity, population exposure, and housing vulnerability"
+          },
+          {
+            "id": "source_2",
+            "name": "OCHA Nepal",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Contributed to index development and validation for the 25 April 2015 earthquake response"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.inform-index.org/InDepth"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "http://www.inform-index.org/In-depth/Methodology"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_16614d38",
+          "title": "Nepal Earthquake Severity Index Latest Version",
+          "description": "Nepal Earthquake Severity Index (Excel file (32MB))",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://docs.google.com/uc?id=0BxQd-YLTwrcnVkw1dWJZM0UxVTQ&export=download"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Housing stock classified by structural vulnerability"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to earthquake ground shaking"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Estimated severity of building damage from earthquake ground shaking"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Estimated population affected by earthquake severity"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/nepal-earthquake-severity-index",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

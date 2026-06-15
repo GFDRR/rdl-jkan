@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-mdg_iom_displacementdatabaselinea_202209",
+      "title": "Madagascar Displacement Data - Baseline Assessment - Drought in Grand Sud [IOM DTM]",
+      "description": "The Grand Sud of Madagascar has been affected by consecutive droughts during the rainy seasons from 2019 to 2021. In 2021, 36% of the Grand Sud was classified as severe drought and 1% as extreme drought. Nearly 1.47 million people were severely food insecure (IPC 3+) and four districts - Amboasary Atsimo, Ambovombe Androy, Tsihombe and Ampanihy West - were in IPC Phase 4 (Emergency).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/madagascar-displacement-data-baseline-assessment-drought-in-grand-sud-iom-dtm]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/madagascar-displacement-data-baseline-assessment-drought-in-grand-sud-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/madagascar-displacement-data-baseline-assessment-drought-in-grand-sud-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2022-09-01",
+        "end": "2022-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "url": "https://data.humdata.org/dataset/madagascar-displacement-data-baseline-assessment-drought-in-grand-sud-iom-dtm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM conducted a baseline sample survey in September 2022 to assess displacement outcomes in Grand Sud Madagascar following consecutive droughts (2019-2021). Survey data captured internally displaced persons, returnees, and food insecurity classifications (IPC phases) across four emergency-phase districts, integrating drought severity observations with population displacement and food security impact metrics.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Sample survey-based assessment of displacement, internally displaced persons, and returnees in drought-affected Grand Sud region, conducted September 2022"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0247ce98",
+          "title": "DTM Madagascar - BA Drought in Gand Sud - Sep 2022",
+          "description": "The dataset presents the result of evaluations conducted in September 2022 in 20 municipalities: Ambovombe (Ambanisarika, Maroalomainty, Maroalipoty, Marovato Befeno, Sihanamaro), Tsihombe (Anjapaly, Ankilivalo, Betanty, Imongy, Tsihombe, Amboasary Atsimo (Amboasary Atsimo, Behara, Ebelo, Ifotaka, Sampoana), Ampanihy Andrefana (Amboropotsy, Ampanihy Andrefana, Androka, Ankiliabo, Beahitse).",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a73a71cd-c356-4f21-b6dd-8452bf5245c8/resource/0247ce98-26d6-4d87-96b5-e977138fac47/download/dtm_madagascar_baseline_assessment_round_1_sep_2022.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population severely food insecure (IPC 3+) due to drought in Grand Sud"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons and returnees resulting from drought-induced displacement"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/madagascar-displacement-data-baseline-assessment-drought-in-grand-sud-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

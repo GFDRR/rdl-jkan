@@ -1,0 +1,224 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-npl_nga_earthquakedisasteratlas_20150504",
+      "title": "Nepal Earthquake Disaster Atlas",
+      "description": "Web Map for access and download of MGRS based Disaster Atlases in support of ongoing Nepal Earthquake operations. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/disaster-atlas]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "US National Geospatial-Intelligence Agency (inactive)",
+        "url": "https://data.humdata.org/dataset/disaster-atlas"
+      },
+      "creator": {
+        "name": "US National Geospatial-Intelligence Agency (inactive)",
+        "url": "https://data.humdata.org/dataset/disaster-atlas"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-05-04"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "US National Geospatial-Intelligence Agency (NGA)",
+            "url": "https://data.humdata.org/dataset/disaster-atlas"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "OpenStreetMap (OSM)",
+            "url": "https://data.humdata.org/dataset/disaster-atlas"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event disaster atlas compiled from NGA geospatial intelligence and OSM exposure data to support Nepal earthquake response operations, integrating observed earthquake impacts with spatial asset inventories for disaster management.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "US National Geospatial-Intelligence Agency (NGA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Geospatial intelligence and disaster mapping data for earthquake impact assessment"
+          },
+          {
+            "id": "source_2",
+            "name": "OpenStreetMap (OSM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Building footprints, infrastructure networks, and settlement data for exposure mapping"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6a655070",
+          "title": "Nepal Earthquake Disaster Atlas Web-Service",
+          "description": "Web Map URL: http://nga.maps.arcgis.com/apps/MapJournal/index.html?appid=bbbb3a2d7d8d42969f6ddeeb5d8c0e73",
+          "access_url": "http://ngamaps.geointapps.org/arcgis/rest/services/NEPAL/Nepal_DisasterMappingAtlas/MapServer/0",
+          "media_type": "text/html"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock and structures affected by earthquake in Nepal"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Infrastructure assets including roads and utilities affected by earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population distribution and settlements in earthquake-affected areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage and destruction from earthquake ground motion"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by earthquake disaster"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/disaster-atlas",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

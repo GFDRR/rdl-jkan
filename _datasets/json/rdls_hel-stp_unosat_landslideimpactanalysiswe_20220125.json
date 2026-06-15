@@ -1,0 +1,195 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-stp_unosat_landslideimpactanalysiswe_20220125",
+      "title": "Sao Tome and Principe - Landslide impact analysis in western part of Lembá district, São Tomé province, São Tomé and Príncipe as of 23 Jan 2022",
+      "description": "UNOSAT code: FL20220119STP This map illustrates satellite-detected landslides/mudflow in western part of Lembá district, São Tomé province, São Tomé and Príncipe as observed in Pleiades satellite imagery acquired on 23 January 2022 at 10:12 local time. Within the analyzed area, about 5 structures appear to be affected, and 23 structures are potentially affected. 2 road obstacles, 2 affected bridges, and a potentially affected bridge were also identified. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/landslide-impact-analysis-in-western-part-of-lemba-district-sao-tome-province-sao-tome-and]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-western-part-of-lemba-district-sao-tome-province-sao-tome-and"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-western-part-of-lemba-district-sao-tome-province-sao-tome-and"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "STP"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-25"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-western-part-of-lemba-district-sao-tome-province-sao-tome-and"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Pleiades satellite imagery acquired on 23 January 2022 was analyzed by UNOSAT analysts through visual interpretation and comparison with reference imagery to detect landslide and mudflow features. Affected and potentially affected structures and infrastructure were identified and mapped in vector format (geodatabase and shapefile). This preliminary post-event damage assessment has not been field-validated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using Pleiades imagery to detect and map landslide/mudflow features and assess impacts on structures and infrastructure through visual interpretation and change detection"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_04956c9d",
+          "title": "FL20220119STP_gdb.zip",
+          "description": "Sao Tome and Principe - Landslide impact analysis in western part of Lembá district, São Tomé province, São Tomé and Príncipe as of 23 Jan 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/ST/FL20220119STP/FL20220119STP_gdb.zip"
+        },
+        {
+          "id": "resource_48d571ae",
+          "title": "FL20220119STP_SHP.zip",
+          "description": "Sao Tome and Principe - Landslide impact analysis in western part of Lembá district, São Tomé province, São Tomé and Príncipe as of 23 Jan 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/ST/FL20220119STP/FL20220119STP_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures in the affected area, classified by damage status (affected vs. potentially affected)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road and bridge infrastructure in the study area, including obstacles and damage status"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from landslide/mudflow events: 5 structures affected, 23 potentially affected"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct infrastructure damage from landslide/mudflow events: 2 road obstacles, 2 affected bridges, 1 potentially affected bridge"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/landslide-impact-analysis-in-western-part-of-lemba-district-sao-tome-province-sao-tome-and",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

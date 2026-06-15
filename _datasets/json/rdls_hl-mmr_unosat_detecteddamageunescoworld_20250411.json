@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-mmr_unosat_detecteddamageunescoworld_20250411",
+      "title": "Myanmar - Satellite-detected damage in the UNESCO World Heritage Site, Bagan: Component 7 as of 03 April 2025",
+      "description": "UNOSAT code: EQ20250328MMR, GDACS ID: 1474477 The map shows no visible damage within the World Heritage Site when analysed using a very high resolution image collected 3 April 2025 when compared to imagery from May 2023. The USGS shake map indicates the intensity of the earthquake measured 5.5-6.5 in this area. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-in-the-unesco-world-heritage-site-bagan-component-7-as-of-03-april-2025]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-in-the-unesco-world-heritage-site-bagan-component-7-as-of-03-april-2025"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-in-the-unesco-world-heritage-site-bagan-component-7-as-of-03-april-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2025-04-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "United States Geological Survey (USGS)",
+            "url": "https://data.humdata.org/dataset/damage-in-the-unesco-world-heritage-site-bagan-component-7-as-of-03-april-2025"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-in-the-unesco-world-heritage-site-bagan-component-7-as-of-03-april-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared very high resolution satellite imagery from May 2023 (pre-event baseline) with imagery acquired on 3 April 2025 (post-earthquake) to detect visible damage in the Bagan UNESCO World Heritage Site. Ground motion intensity data from USGS shake maps (MMI 5.5-6.5) provided hazard context. This is a preliminary satellite-based damage assessment pending field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United States Geological Survey (USGS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "USGS shake map providing observed ground motion intensity measurements (MMI 5.5-6.5) for the earthquake event"
+          },
+          {
+            "id": "source_2",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre-event (May 2023) and post-event (3 April 2025) very high resolution imagery to detect building damage in the World Heritage Site"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a90ee2f6",
+          "title": "GDB.zip",
+          "description": "Myanmar - Satellite-detected damage in the UNESCO World Heritage Site, Bagan: Component 7 as of 03 April 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4101/GDB.zip"
+        },
+        {
+          "id": "resource_e22bab9f",
+          "title": "SHP.zip",
+          "description": "Myanmar - Satellite-detected damage in the UNESCO World Heritage Site, Bagan: Component 7 as of 03 April 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4101/SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Satellite-detected damage assessment in Bagan World Heritage Site showing no visible damage as of 3 April 2025"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-in-the-unesco-world-heritage-site-bagan-component-7-as-of-03-april-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

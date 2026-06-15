@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-cod_unosat_livewebmapfloodsdr_20250411",
+      "title": "UNOSAT Live web map - Floods in D.R. of the Congo",
+      "description": "UNOSAT code: FL20250408COD This application provides flood impact assessment in Kinshasa, Democratic Republic of the Congo The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations. The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-live-web-map-floods-in-d-r-of-the-congo]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-live-web-map-floods-in-d-r-of-the-congo"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-live-web-map-floods-in-d-r-of-the-congo"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2025-04-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-live-web-map-floods-in-d-r-of-the-congo"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery to identify flood-affected areas in Kinshasa. The resulting flood extent polygons with area measurements (m² and hectares) represent direct observation of inundated zones from remote sensing data, classified as post-event impact assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and interpretation to map flood extent and impact areas in Kinshasa, Democratic Republic of the Congo"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_99220bf2",
+          "title": "FL20250408COD_gdb.zip",
+          "description": "UNOSAT Live web map - Floods in D.R. of the Congo (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4099/FL20250408COD_gdb.zip"
+        },
+        {
+          "id": "resource_7394a0d6",
+          "title": "FL20250408COD_SHP.zip",
+          "description": "UNOSAT Live web map - Floods in D.R. of the Congo (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4099/FL20250408COD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Flood-affected area extent in Kinshasa mapped from satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-live-web-map-floods-in-d-r-of-the-congo",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

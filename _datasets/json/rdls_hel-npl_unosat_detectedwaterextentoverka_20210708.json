@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-npl_unosat_detectedwaterextentoverka_20210708",
+      "title": "Satellite detected water extent over Kaski and Syangja districts, Gandaki province, Nepal as of 4 July 2021",
+      "description": "UNOSAT code: FL20210630NPL This map illustrates satellite-detected surface waters in Kaski and Syangja districts, Gandaki province, Nepal as observed from a Sentinel-2 image acquired on 4 July 2021 at 10:41 local time. Within the analyzed cloud free zones of about 500 km2, a total of about 25km2 of lands appear to be flooded. Based on Worldpop population data and the detected surface waters, about 17,000 people are potentially exposed or living close to flooded areas. The potentially exposed population is mainly located in the Kaski district with ~16,000 people. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-over-kaski-and-syangja-districts-gandaki-province-nepal-as-of-4-july-2021]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-over-kaski-and-syangja-districts-gandaki-province-nepal-as-of-4-july-2021"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-over-kaski-and-syangja-districts-gandaki-province-nepal-as-of-4-july-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2021-07-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/water-extent-over-kaski-and-syangja-districts-gandaki-province-nepal-as-of-4-july-2021"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/water-extent-over-kaski-and-syangja-districts-gandaki-province-nepal-as-of-4-july-2021"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on 4 July 2021 to detect surface water extent through visual comparison and change detection methods. Detected flooded areas (~25 km²) were intersected with WorldPop gridded population data to estimate approximately 17,000 people potentially exposed to flooding in Kaski and Syangja districts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multispectral satellite image acquired on 4 July 2021 used to detect surface water extent through visual analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population dataset used to estimate population potentially exposed to detected flooded areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_88df6ce1",
+          "title": "FL20210630NPL_gdb.zip",
+          "description": "Satellite detected water extent over Kaski and Syangja districts, Gandaki province, Nepal as of 4 July 2021 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/NP/FL20210630NPL/FL20210630NPL_gdb.zip"
+        },
+        {
+          "id": "resource_1d785915",
+          "title": "FL20210630NPL_SHP.zip",
+          "description": "Satellite detected water extent over Kaski and Syangja districts, Gandaki province, Nepal as of 4 July 2021 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/NP/FL20210630NPL/FL20210630NPL_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to satellite-detected flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population potentially exposed to flooded areas as of 4 July 2021"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-over-kaski-and-syangja-districts-gandaki-province-nepal-as-of-4-july-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

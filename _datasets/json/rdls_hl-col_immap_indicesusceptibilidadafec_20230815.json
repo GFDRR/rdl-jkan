@@ -1,0 +1,185 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-col_immap_indicesusceptibilidadafec_20230815",
+      "title": "Colombia - Índice susceptibilidad afectaciones Fenómeno de El Niño - Clúster SAN",
+      "description": "Esta base contiene los datos utilizados en el cálculo del índice de afectación y susceptibilidad en Inseguridad alimentaria y desnutrición aguda por el Fenómeno de El Niño a nivel municipal. Los cálculos se realizaron a partir de fuentes oficiales como DANE, SIVIGILA, IDEAM y cumple con los criterios estadísticos como temporalidad, representatividad y municipalización de la información.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/indice-susceptibilidad-afectaciones-fenomeno-de-el-nino-cluster-san]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/indice-susceptibilidad-afectaciones-fenomeno-de-el-nino-cluster-san"
+      },
+      "creator": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/indice-susceptibilidad-afectaciones-fenomeno-de-el-nino-cluster-san"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-08-15"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DANE",
+            "url": "https://data.humdata.org/dataset/indice-susceptibilidad-afectaciones-fenomeno-de-el-nino-cluster-san"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "SIVIGILA",
+            "url": "https://data.humdata.org/dataset/indice-susceptibilidad-afectaciones-fenomeno-de-el-nino-cluster-san"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "IDEAM",
+            "url": "https://data.humdata.org/dataset/indice-susceptibilidad-afectaciones-fenomeno-de-el-nino-cluster-san"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Municipal-level susceptibility and impact index calculated from standardized indicators of acute malnutrition, food insecurity, and climate conditions derived from official Colombian sources (DANE, SIVIGILA, IDEAM). Data was standardized and aggregated to municipal administrative units to assess population vulnerability to El Niño drought phenomenon impacts on food security and nutrition.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DANE",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Colombian National Administrative Department of Statistics providing demographic and socioeconomic baseline data for vulnerability assessment"
+          },
+          {
+            "id": "source_2",
+            "name": "SIVIGILA",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Colombian epidemiological surveillance system providing acute malnutrition and health impact data"
+          },
+          {
+            "id": "source_3",
+            "name": "IDEAM",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Colombian Institute of Hydrology, Meteorology and Environmental Studies providing climate and meteorological data for El Niño impact assessment"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_32013730",
+          "title": "Índice susceptibilidad afectaciones Fenómeno de El Niño - Clúster SAN.xlsx",
+          "description": "Esta base contiene información relevante sobre: i. prevalencia desnutrición estandarizado, ii. bajo peso estandarizado, iii. inflación estándar y iii. personas susceptibles al Fenómeno del Niño.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/fdb7dd18-008b-4787-850e-d97eecbd9528/resource/32013730-801a-4e21-8bab-fcdd26f24a73/download/indice-susceptibilidad-afectaciones-fenomeno-de-el-nino-cluster-san.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population susceptible to acute food insecurity and malnutrition from El Niño drought conditions"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Agricultural production affected by El Niño-induced drought with impacts on food security"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/indice-susceptibilidad-afectaciones-fenomeno-de-el-nino-cluster-san",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

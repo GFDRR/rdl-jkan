@@ -1,0 +1,162 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-hnd_ocharolac_poblacionmediaanualexpues_20180518",
+      "title": "Honduras Población Media Anual Expuesta a Sequía 2000-2015",
+      "description": "El indicador presenta la población anual promedio afectada por sequía, según registros históricos del 2000-2015, en la base de datos DesInventar y para el evento del sequia del 2015 realizado por el Comité Interinstitucional de Gestión de Riesgo por Sequía.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-sequia-2000-2015]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "* [INFORM Honduras.](http://www.inform-index.org/Subnational/Honduras) * Dimensión: Peligro y Exposición * Categoría: Peligros Naturales * Componente: Sequía",
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-sequia-2000-2015"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-sequia-2000-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2018-05-18"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DesInventar",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-sequia-2000-2015"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Comité Interinstitucional de Gestión de Riesgo por Sequía",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-sequia-2000-2015"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Instituto Nacional de Estadística (INE)",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-sequia-2000-2015"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Annual average population affected by drought was calculated from historical drought event records in the DesInventar database (2000-2015) and supplemented with data from the Interinstitutional Drought Risk Management Committee for the 2015 drought event, using population statistics from the National Statistics Institute to quantify exposure.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DesInventar",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Historical disaster impact registry providing documented drought events and affected population counts for 2000-2015"
+          },
+          {
+            "id": "source_2",
+            "name": "Comité Interinstitucional de Gestión de Riesgo por Sequía",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Institutional drought risk management committee data for the 2015 drought event in Honduras"
+          },
+          {
+            "id": "source_3",
+            "name": "Instituto Nacional de Estadística (INE)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National statistics institute providing population baseline data for affected population calculations"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_37e28bfa",
+          "title": "6- PE.NAT.SQA-ABS - Población Media Anual Afectada por Sequía.xlsx",
+          "description": "Honduras Población Media Anual Expuesta a Sequía 2000-2015 (Población promedio anual afectada por sequía.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f47aac91-c94a-4e1d-a49a-bf1c24e00e13/resource/37e28bfa-e35a-4c78-a932-99ac9a6a750e/download/6-pe.nat.sqa-abs-poblacion-media-anual-afectada-por-sequia.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Annual average population affected by drought events from 2000-2015 and 2015 drought event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-sequia-2000-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

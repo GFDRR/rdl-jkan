@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ken_wfpadam_flood5437930sqmnov2023_20231121",
+      "title": "Kenya: Flood - 543793.0 sq m - Nov 2023",
+      "description": "ADAM ID: FL-20231121-KEN-03 Flood covering 543793.0 sq m on Nov 21 2023 in Kenya. It impacted 242812 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/kenya-flood-fl-20231121-ken-03]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/kenya-flood-fl-20231121-ken-03"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/kenya-flood-fl-20231121-ken-03"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-21"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/kenya-flood-fl-20231121-ken-03"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM collected and mapped geospatial flood extent data and socio-economic information following the November 2023 flood event in Kenya. Flood boundaries were delineated from satellite or field observations, overlaid with population and cropland datasets to quantify direct impacts on people and agricultural assets.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational geospatial and socio-economic data collection system for sudden-onset humanitarian emergencies. ADAM provides post-event flood extent mapping, affected population counts, and cropland impact assessment."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5d14fa34",
+          "title": "FL-20231121-KEN-03.geojson",
+          "description": "Kenya: Flood - 543793.0 sq m - Nov 2023 (GeoJSON File)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/f1b3e7d8-6fb9-4f43-846e-ff04e814aeab/resource/5d14fa34-666a-4e2e-b5b4-20c1a315fe8e/download/fl-20231121-ken-03.geojson"
+        },
+        {
+          "id": "resource_533e3889",
+          "title": "FL-20231121-KEN-03.tiff",
+          "description": "Kenya: Flood - 543793.0 sq m - Nov 2023 (GeoTIFF File)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/f1b3e7d8-6fb9-4f43-846e-ff04e814aeab/resource/533e3889-3b71-4132-927b-97cfd64db3ae/download/fl-20231121-ken-03.tiff"
+        },
+        {
+          "id": "resource_92b4f835",
+          "title": "FL-20231121-KEN-03.gpkg",
+          "description": "Kenya: Flood - 543793.0 sq m - Nov 2023 (Geopackage File)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/f1b3e7d8-6fb9-4f43-846e-ff04e814aeab/resource/92b4f835-3497-47c7-bb9a-ae92385ac89a/download/fl-20231121-ken-03.gpkg"
+        },
+        {
+          "id": "resource_5b30ce47",
+          "title": "metadata.txt",
+          "description": "Kenya: Flood - 543793.0 sq m - Nov 2023 (Metadata File)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/f1b3e7d8-6fb9-4f43-846e-ff04e814aeab/resource/5b30ce47-2e28-45a8-90ec-56524f0d6ffd/download/metadata.txt"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Total population in the affected flood area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland area affected by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population affected by the November 2023 flood event in Kenya"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct cropland loss from flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/kenya-flood-fl-20231121-ken-03",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

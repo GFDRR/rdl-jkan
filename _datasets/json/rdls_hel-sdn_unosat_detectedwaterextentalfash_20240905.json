@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-sdn_unosat_detectedwaterextentalfash_20240905",
+      "title": "Satellite detected water extent in Al Fashir City, Al Fasher Department, Al Fasher State, Sudan as of 3 September 2024",
+      "description": "UNOSAT code: FL20240826SDN, GDACS ID: 1102854 This map illustrates satellite-detected water extent in Al Fashir City, Al Fasher Department, Al Fasher State, Sudan as observed from a WorldView-2 satellite image acquired on 3 September 2024 at 10:43 local time (08:43 UTC). Within analysed area of about 270km², a total of about 100 km² of land appears to be affected by floodwaters. UNITAR-UNOSAT identified about 1,600 potentially affected structures within the analysed area. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-in-al-fashir-city-al-fasher-department-al-fasher-state-sudan-as-of-3-septembe]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-al-fashir-city-al-fasher-department-al-fasher-state-sudan-as-of-3-septembe"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-al-fashir-city-al-fasher-department-al-fasher-state-sudan-as-of-3-septembe"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2024-09-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extent-in-al-fashir-city-al-fasher-department-al-fasher-state-sudan-as-of-3-septembe"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed WorldView-2 satellite imagery acquired on 3 September 2024 over Al Fashir City, comparing multi-temporal images to detect changes in water extent and identify potentially affected structures. The analysis delineated approximately 100 km² of floodwaters within a 270 km² study area and mapped 1,600 potentially affected building structures.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using WorldView-2 to detect water extent and identify affected structures through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f260b18e",
+          "title": "FL20240826SDN_gdb.zip",
+          "description": "Satellite detected water extent in Al Fashir City, Al Fasher Department, Al Fasher State, Sudan as of 3 September 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3948/FL20240826SDN_gdb.zip"
+        },
+        {
+          "id": "resource_94ba7a44",
+          "title": "FL20240826SDN_SHP.zip",
+          "description": "Satellite detected water extent in Al Fashir City, Al Fasher Department, Al Fasher State, Sudan as of 3 September 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3948/FL20240826SDN_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures identified within the analyzed area of Al Fashir City"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Potentially affected structures identified within satellite-detected flood extent"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-in-al-fashir-city-al-fasher-department-al-fasher-state-sudan-as-of-3-septembe",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

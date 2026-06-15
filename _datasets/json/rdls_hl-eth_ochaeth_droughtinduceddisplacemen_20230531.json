@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-eth_ochaeth_droughtinduceddisplacemen_20230531",
+      "title": "Ethiopia - Drought Induced Displacement Estimates",
+      "description": "The dataset contains the number of newly displaced persons by Woreda due to the current drought in Ethiopia. It does not include protracted IDPs (people displaced due to previous droughts).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ethiopia-drought-induced-displacement]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Ethiopia",
+        "url": "https://data.humdata.org/dataset/ethiopia-drought-induced-displacement"
+      },
+      "creator": {
+        "name": "OCHA Ethiopia",
+        "url": "https://data.humdata.org/dataset/ethiopia-drought-induced-displacement"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2023-05-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IOM-DTM (International Organization for Migration - Displacement Tracking Matrix)",
+            "url": "https://data.humdata.org/dataset/ethiopia-drought-induced-displacement"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Displacement estimates derived from IOM-DTM site assessment data collected over 12 months, calculating net increments between successive assessment rounds for sites where drought was identified as the primary displacement cause by the majority of IDPs.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IOM-DTM (International Organization for Migration - Displacement Tracking Matrix)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Site assessment data tracking internally displaced persons over 12-month period, identifying net displacement increments and primary displacement causes"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e7c868d3",
+          "title": "Drought Induced Displacement",
+          "description": "Ethiopia - Drought Induced Displacement Estimates (Drought Induced Displacement)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRppQx8JTKkKRCKmzfnCMmTFEcvCpkbP9PdHs1sQTUyacmbsx8tlAXpgBLFce-lcehukreGGuXjA_4S/pub?gid=961087049&single=true&output=csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Newly displaced persons due to drought-induced displacement by Woreda"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ethiopia-drought-induced-displacement",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
