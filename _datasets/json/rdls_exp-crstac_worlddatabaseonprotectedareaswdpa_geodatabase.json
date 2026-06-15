@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_worlddatabaseonprotectedareaswdpa_geodatabase",
+      "title": "World Database on Protected Areas (WDPA) - Geodatabase",
+      "description": "Protected areas in geodatabase format [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "UNEP-WCMC",
+        "url": "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA"
+      },
+      "purpose": "data are updated monthly",
+      "contact_point": {
+        "name": "UNEP-WCMC",
+        "url": "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA"
+      },
+      "creator": {
+        "name": "UNEP-WCMC",
+        "url": "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "temporal": {
+        "start": "1800",
+        "end": "2026"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html",
+      "lineage": {
+        "description": "The World Database on Protected Areas (WDPA) is the most comprehensive global database of marine and terrestrial protected areas. It is a joint project between UN Environment Programme and the International Union for Conservation of Nature (IUCN), and is managed by UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC), in collaboration with governments, non-governmental organisations, academia and industry."
+      },
+      "referenced_by": [
+        {
+          "id": "ref_pub_publicationlink",
+          "name": "Publication link",
+          "url": "http://wcmc.io/WDPA_Manual"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: World Database on Protected Areas (WDPA) - Geodatabase",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/land-use/world-database-on-protected-areas-wdpa/geodatabase/geodatabase.json",
+          "spatial_aggregation": "feature level"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "World Database on Protected Areas (WDPA) - Geodatabase - data file",
+          "description": "World Database on Protected Areas (WDPA) - Geodatabase - data file",
+          "media_type": "application/x-filegdb",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA",
+          "spatial_aggregation": "feature level"
+        },
+        {
+          "id": "resource_link_publicationlink",
+          "title": "Publication link",
+          "description": "World Database on Protected Areas (WDPA) - Geodatabase (Publication link)",
+          "format": "Web reference",
+          "access_url": "http://wcmc.io/WDPA_Manual",
+          "spatial_aggregation": "feature level"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "natural_environment",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "land use/land cover footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

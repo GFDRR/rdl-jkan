@@ -1,0 +1,95 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_glofasglobalfloodmonitoringglofasgfm_observedfloodextent",
+      "title": "GloFAS Global Flood Monitoring (GloFAS-GFM) - Observed flood extent",
+      "description": "Composite of the flooded areas mapped as the difference between S-1 observed water extent and the reference water mask [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "JRC",
+        "url": "https://global-flood.emergency.copernicus.eu/general-information/data-and-services/"
+      },
+      "purpose": "user account needed for data download",
+      "contact_point": {
+        "name": "JRC",
+        "url": "https://global-flood.emergency.copernicus.eu/general-information/data-and-services/"
+      },
+      "creator": {
+        "name": "JRC",
+        "url": "https://global-flood.emergency.copernicus.eu/general-information/data-and-services/"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 10,
+      "temporal": {
+        "start": "2015",
+        "end": "2026"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "A continuous monitoring of floods worldwide by immediately processing and analyzing all incoming Copernicus Sentinel-1 Synthetic Aperture Radar (SAR) satellite data",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "Sentinel-1 SAR",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: GloFAS Global Flood Monitoring (GloFAS-GFM) - Observed flood extent",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/flood/glofas-global-flood-monitoring-glofas-gfm/observed-flood-extent/observed-flood-extent.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "GloFAS Global Flood Monitoring (GloFAS-GFM) - Observed flood extent - data file",
+          "description": "GloFAS Global Flood Monitoring (GloFAS-GFM) - Observed flood extent - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://global-flood.emergency.copernicus.eu/general-information/data-and-services/"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

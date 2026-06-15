@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-coclico_coastalgrid",
+      "title": "CoCliCo - Coastal Grid",
+      "description": "The Coastal Grid dataset provides a global tiling system for geospatial analytics in coastal areas. It supports scalable data processing workflows by offering structured grids at varying zoom levels (2, 3, 4, 5, 6, 7, 8, 9, 10) and buffer sizes (500m, 1000m, 2000m, 5000m, 10000m, 15000m). Each tile contains information on intersecting countries, continents, and Sentinel-2 MGRS tiles as nested JSON lists. The dataset is particularly suited for applications requiring global coastal coverage, such as satellite-based coastal monitoring, spatial analytics, and large-scale data processing. Key Features: Global coverage of the coastal zone, derived from OpenStreetMap's generalized coastline (2023-02). Precomputed intersections with countries, continents, and MGRS tiles. Designed for use in scalable geospatial workflows. This dataset is structured as a STAC collection, with individual items for each zoom level and buffer size combination. Users can filter items by the zoom and buffer_size fields in the STAC metadata. Please consider the following citation when using this dataset: Floris Reinier Calkoen, Arjen Pieter Luijendijk, Kilian Vos, Etiënne Kras, Fedor Baart, Enabling coastal analytics at planetary scale, Environmental Modelling & Software, 2024, 106257, ISSN 1364-8152, https://doi.org/10.1016/j.envsoft.2024.106257. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -78.87279612057878,
+          180.0,
+          83.79921585603272
+        ]
+      },
+      "temporal": {
+        "start": "2023",
+        "end": "2023"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "The Coastal Grid dataset provides a global tiling system for geospatial analytics in coastal areas. It supports scalable data processing workflows by offering structured grids at varying zoom levels (2, 3, 4, 5, 6, 7, 8, 9, 10) and buffer sizes (500m, 1000m, 2000m, 5000m, 10000m, 15000m). Each tile contains information on intersecting countries, continents, and Sentinel-2 MGRS tiles as nested JSON lists. The dataset is particularly suited for applications requiring global coastal coverage, such as satellite-based coastal monitoring, spatial analytics, and large-scale data processing. Key Features: Global coverage of the coastal zone, derived from OpenStreetMap's generalized coastline (2023-02). Precomputed intersections with countries, continents, and MGRS tiles. Designed for use in scalable geospatial workflows. This dataset is structured as a STAC collection, with individual items for each zoom level and buffer size combination. Users can filter items by the zoom and buffer_size fields in the STAC metadata. Please consider the following citation when using this dataset: Floris Reinier Calkoen, Arjen Pieter Luijendijk, Kilian Vos, Etiënne Kras, Fedor Baart, Enabling coastal analytics at planetary scale, Environmental Modelling & Software, 2024, 106257, ISSN 1364-8152, https://doi.org/10.1016/j.envsoft.2024.106257.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_pub_1",
+          "name": "Floris Reinier Calkoen, Arjen Pieter Luijendijk, Kilian Vos, Etiënne Kras, Fedor Baart, Enabling coastal analytics at planetary scale, Environmental Modelling & Software, 2024, 106257, ISSN 1364-8152, https://doi.org/10.1016/j.envsoft.2024.106257.",
+          "doi": "10.1016/j.envsoft.2024.106257",
+          "url": "https://doi.org/10.1016/j.envsoft.2024.106257"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Coastal Grid [coastal-grid]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/coastal-grid/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Coastal Grid",
+          "media_type": "image/jpeg",
+          "access_url": "https://coclico.blob.core.windows.net/assets/thumbnails/coastal-grid-thumbnail.jpeg"
+        },
+        {
+          "id": "resource_geoparquetstacitems",
+          "title": "GeoParquet STAC items",
+          "description": "CoCliCo - Coastal Grid (Snapshot of the collection's STAC items exported to GeoParquet format.)",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "https://coclico.blob.core.windows.net/items/coastal-grid.parquet"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "CoCliCo - Coastal Grid (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1016/j.envsoft.2024.106257"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "natural_environment",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "land use/land cover footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

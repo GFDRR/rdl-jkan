@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_riverdischargeglobalfloodawarenesssystemglofas_forecasteddata",
+      "title": "River discharge Global Flood Awareness System (GloFAS) - Forecasted data",
+      "description": "This dataset provides an ensemble of forecast time series of gridded hydrological data. The data set is a product of the Global Flood Awareness System (GloFAS) and offers a consistent representation of key hydrological variables across the global domain [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Copernicus Emergency Management Service",
+        "url": "https://doi.org/10.24381/cds.2d78664e"
+      },
+      "purpose": "data download via interface or API",
+      "contact_point": {
+        "name": "Copernicus Emergency Management Service",
+        "url": "https://doi.org/10.24381/cds.2d78664e"
+      },
+      "creator": {
+        "name": "Copernicus Emergency Management Service",
+        "url": "https://doi.org/10.24381/cds.2d78664e"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -60.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 5550,
+      "temporal": {
+        "start": "2019",
+        "end": "2026"
+      },
+      "temporal_resolution": "P1D",
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "GloFAS datasets provide daily simulations of river discharge, covering the globe with the exception of Antarctica",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "LISFLOOD + ECMWF forecast",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.24381/cds.ff1aef77",
+          "url": "https://doi.org/10.24381/cds.ff1aef77"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: River discharge Global Flood Awareness System (GloFAS) - Forecasted data",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/flood/river-discharge-global-flood-awareness-system-glofas/forecasted-data/forecasted-data.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "River discharge Global Flood Awareness System (GloFAS) - Forecasted data - data file",
+          "description": "River discharge Global Flood Awareness System (GloFAS) - Forecasted data - data file",
+          "media_type": "application/grib2",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://doi.org/10.24381/cds.ff1aef77"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

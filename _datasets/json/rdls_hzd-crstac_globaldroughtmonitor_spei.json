@@ -1,0 +1,96 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_globaldroughtmonitor_spei",
+      "title": "Global Drought Monitor - SPEI",
+      "description": "SPEI Global Drought Monitor is based on the Thortnthwaite equation for estimating potential evapotranspiration, PET [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Spanish National Research Council (CSIC)",
+        "url": "https://spei.csic.es/map/maps.html#months=1#month=5#year=2024"
+      },
+      "purpose": "data download via interface",
+      "contact_point": {
+        "name": "Spanish National Research Council (CSIC)",
+        "url": "https://spei.csic.es/map/maps.html#months=1#month=5#year=2024"
+      },
+      "creator": {
+        "name": "Spanish National Research Council (CSIC)",
+        "url": "https://spei.csic.es/map/maps.html#months=1#month=5#year=2024"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 111000,
+      "temporal": {
+        "start": "1955",
+        "end": "2026"
+      },
+      "temporal_resolution": "P1M",
+      "license": "https://spdx.org/licenses/ODbL-1.0.html",
+      "lineage": {
+        "description": "The SPEI Global Drought Monitor offers near real-time information about drought conditions at the global scale, with a 1 degree spatial resolution and a monthly time resolution. SPEI time-scales between 1 and 48 months are provided.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "NOAA",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Global Drought Monitor - SPEI",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/precipitation-related/global-drought-monitor/spei/spei.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Global Drought Monitor - SPEI - data file",
+          "description": "Global Drought Monitor - SPEI - data file",
+          "media_type": "application/x-netcdf",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://spei.csic.es/map/maps.html#months=1#month=5#year=2024"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "spi:dimensionless"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

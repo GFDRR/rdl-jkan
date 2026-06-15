@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_globalurbanfootprintguf_04arcseconds",
+      "title": "Global Urban Footprint (GUF) - 0.4 arc seconds",
+      "description": "Binary settlement mask at 0.4 arc seconds resolution [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "German Aerospace Center (DLR)",
+        "url": "www.dlr.de/eoc/en/desktopdefault.aspx/tabid-9628/16557_read-40454/"
+      },
+      "purpose": "upon request by filling in user form: https://www.dlr.de/de/eoc/downloads/dokumente/guf/DLR-GUF_LicenseAgreement-and-OrderForm.pdf/@@download/file",
+      "contact_point": {
+        "name": "German Aerospace Center (DLR)",
+        "url": "www.dlr.de/eoc/en/desktopdefault.aspx/tabid-9628/16557_read-40454/"
+      },
+      "creator": {
+        "name": "German Aerospace Center (DLR)",
+        "url": "www.dlr.de/eoc/en/desktopdefault.aspx/tabid-9628/16557_read-40454/"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 12,
+      "temporal": {
+        "start": "2012",
+        "end": "2012"
+      },
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "Provides a binary settlement mask which at a unprecedented spatial resolution gives a complete picture of urban and rural settlements.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "TerraSAR-X",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "TanDEM-X satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1016/j.isprsjprs.2017.10.012",
+          "url": "https://doi.org/10.1016/j.isprsjprs.2017.10.012"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Global Urban Footprint (GUF) - 0.4 arc seconds",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/land-use/global-urban-footprint-guf/04-arc-seconds/04-arc-seconds.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "www.dlr.de/eoc/en/desktopdefault.aspx/tabid-9628/16557_read-40454/",
+          "description": "Global Urban Footprint (GUF) - 0.4 arc seconds (www.dlr.de/eoc/en/desktopdefault.aspx/tabid-9628/16557_read-40454/)",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "www.dlr.de/eoc/en/desktopdefault.aspx/tabid-9628/16557_read-40454/"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Global Urban Footprint (GUF) - 0.4 arc seconds (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1016/j.isprsjprs.2017.10.012"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "urban/built-up footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

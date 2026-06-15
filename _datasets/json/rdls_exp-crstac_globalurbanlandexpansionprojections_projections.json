@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_globalurbanlandexpansionprojections_projections",
+      "title": "Projections",
+      "description": "The data present the scenario projections of global urban land expansion under the framework of the shared socioeconomic pathways (SSPs) every 10 years from 2015 to 2100. Our projections feature a fine spatial resolution of 1 km that preserves spatial details and avoids potential distortions in urban land patterns. Climate scenarios (as published): \"SSPs\" [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Pangaea",
+        "url": "https://doi.org/10.1594/PANGAEA.905890"
+      },
+      "contact_point": {
+        "name": "Pangaea",
+        "url": "https://doi.org/10.1594/PANGAEA.905890"
+      },
+      "creator": {
+        "name": "Pangaea",
+        "url": "https://doi.org/10.1594/PANGAEA.905890"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 926,
+      "temporal": {
+        "start": "2015",
+        "end": "2100"
+      },
+      "temporal_resolution": "P10Y",
+      "license": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html",
+      "lineage": {
+        "description": "The data present the scenario projections of global urban land expansion under the framework of the shared socioeconomic pathways (SSPs) every 10 years from 2015 to 2100. Our projections feature a fine spatial resolution of 1 km that preserves spatial details and avoids potential distortions in urban land patterns.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "GHSL and other",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/s41467-020-14386-x",
+          "url": "https://doi.org/10.1038/s41467-020-14386-x"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Projections",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/land-use/global-urban-land-expansion-projections/projections/projections.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Projections - data file",
+          "description": "Projections - data file",
+          "media_type": "application/zip",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://hs.pangaea.de/Maps/ChenG-etal_2019/Global-urban-product_SSPs_2015_2100.zip"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Projections (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/s41467-020-14386-x"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "urban/built-up footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

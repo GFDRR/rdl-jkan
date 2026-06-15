@@ -1,0 +1,96 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-coclico_driverstwl",
+      "title": "CoCliCo - Drivers of Total Water Level",
+      "description": "Drivers of Total Water Level indicate the (statistical) contributions of the individual components (drivers) in the Total Water Level (TWL). These are the mean significant wave height (Hs), the 99th percentile of storm surge level, the 50th percentile of Sea Level Rise and the mean tidal range. Spatial coverage: European coastline at coastal target points. Sources: Observational records, climate models, Copernicus Marine Servic, Sea Level Rise projections Common usage: Flood hazard mapping, storm surge modelling, coastal resilience planning. More info about the dataset: User Handbook. Variants in the source dataset - time: 2010.0, 2100.0 - Time slice applied to the data. Either present-day (2010) or future state representing medium (2030 till 2050) and long term (2050 till 2100) outlook; scenarios: SSP245 (SSP2-4.5), SSP585 (SSP5-8.5), none - Climate scenarios based on IPCC's Shared Socioeconomic Pathways (SSPs). High-end (if applicable) refers to P83 of SSP5-8.5, taking into account low-confidence processes. Other scenarios use the P50; variable: hs (Wave height (Hs)), ssl (Storm surge level (SSL)), slr (Sea level rise (SLR)), tidal_range (Tidal range) - Different variables included in the dataset; lon: -18.168, 34.5992 - longitude; lat: 27.6298, 71.1914 - latitude. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Universidad de Cantabria, Instituto de Hidraulica Ambiental de la Universidad de Cantabria 'IHCantabria'",
+        "url": "www.ihcantabria.com"
+      },
+      "contact_point": {
+        "name": "Universidad de Cantabria, Instituto de Hidraulica Ambiental de la Universidad de Cantabria 'IHCantabria'",
+        "url": "www.ihcantabria.com"
+      },
+      "creator": {
+        "name": "Universidad de Cantabria, Instituto de Hidraulica Ambiental de la Universidad de Cantabria 'IHCantabria'",
+        "url": "www.ihcantabria.com"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Drivers of Total Water Level indicate the (statistical) contributions of the individual components (drivers) in the Total Water Level (TWL). These are the mean significant wave height (Hs), the 99th percentile of storm surge level, the 50th percentile of Sea Level Rise and the mean tidal range. Spatial coverage: European coastline at coastal target points. Sources: Observational records, climate models, Copernicus Marine Servic, Sea Level Rise projections Common usage: Flood hazard mapping, storm surge modelling, coastal resilience planning. More info about the dataset: User Handbook",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Universidad de Cantabria, Instituto de Hidraulica Ambiental de la Universidad de Cantabria 'IHCantabria'",
+            "type": "dataset",
+            "url": "www.ihcantabria.com",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Drivers of Total Water Level [drivers_twl]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/drivers_twl/collection.json"
+        },
+        {
+          "id": "resource_data",
+          "title": "EU Coastal Target Points - Coastal marine climatologies zarr root",
+          "description": "The root of the EU Coastal Target Points - Coastal marine climatologies zarr dataset on public Google Cloud Storage.",
+          "download_url": "https://storage.googleapis.com/coclico-data-public/coclico/drivers_twl.zarr",
+          "media_type": "application/vnd.zarr"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Drivers of Total Water Level",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/download/storage/v1/b/coclico-data-public/o/coclico%2Fassets%2Fthumbnails%2Fdrivers_twl.png?alt=media"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

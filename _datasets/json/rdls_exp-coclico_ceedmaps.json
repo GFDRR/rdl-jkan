@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-coclico_ceedmaps",
+      "title": "CoCliCo - Critical Infrastructure",
+      "description": "Critical infrastructure represents EU-wide high-resolution object-based maps of economic assets and infrastructure systems in coastal flood-prone areas. Grey polygons represent buildings of any kind, blue lines indicate line elements like roads, railways or powerlines and red dots show objects related to for instance power or telecom. Spatial coverage: Coastal LAU (municipality level) Sources: Satellite imagery and opensource databases (OpenStreetMap among others) Common usage: Supports building exposure assessments, informs coastal resilience and adaptation planning, engages stakeholders with accessible data, and helps prioritize investments and strategic land-use decisions. More Info about the dataset: User Handbook. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Institute for Environmental Studies, Vrije Universiteit Amsterdam",
+        "url": "www.ivm.nl"
+      },
+      "contact_point": {
+        "name": "Institute for Environmental Studies, Vrije Universiteit Amsterdam",
+        "url": "www.ivm.nl"
+      },
+      "creator": {
+        "name": "Institute for Environmental Studies, Vrije Universiteit Amsterdam",
+        "url": "www.ivm.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -10.677069663150457,
+          34.541584997191165,
+          34.53596939451993,
+          70.12228553984926
+        ]
+      },
+      "temporal": {
+        "start": "2021",
+        "end": "2021"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Critical infrastructure represents EU-wide high-resolution object-based maps of economic assets and infrastructure systems in coastal flood-prone areas. Grey polygons represent buildings of any kind, blue lines indicate line elements like roads, railways or powerlines and red dots show objects related to for instance power or telecom. Spatial coverage: Coastal LAU (municipality level) Sources: Satellite imagery and opensource databases (OpenStreetMap among others) Common usage: Supports building exposure assessments, informs coastal resilience and adaptation planning, engages stakeholders with accessible data, and helps prioritize investments and strategic land-use decisions. More Info about the dataset: User Handbook",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Institute for Environmental Studies, Vrije Universiteit Amsterdam",
+            "type": "dataset",
+            "url": "www.ivm.nl",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_2",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Critical Infrastructure [ceed_maps]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/ceed_maps/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Critical Infrastructure",
+          "media_type": "image/jpeg",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/ceed_maps.jpeg"
+        },
+        {
+          "id": "resource_geoparquetstacitems",
+          "title": "GeoParquet STAC items",
+          "description": "CoCliCo - Critical Infrastructure (Snapshot of the collection's STAC items exported to GeoParquet format.)",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "gs://coclico-data-public/coclico/items/ceed_maps.parquet"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "infrastructure footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

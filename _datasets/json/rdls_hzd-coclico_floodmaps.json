@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-coclico_floodmaps",
+      "title": "CoCliCo - Floodmaps",
+      "description": "Dataset indicating flood extents as a result of climate change projections (0-4 m SLR, per 0.5 m). By relating very high-resolution topography maps to projected SLR, areas prone to marine submergence are identified. Coastal defenses (natural and man-made) are ought transparent for the calculations. This dataset is hosted through WMS servers from BRGM (https://sealevelrise.brgm.fr/slr). See this article (https://doi.org/10.1007/978-3-319-74669-2_12) for more dataset-specific information. Variants in the source dataset - slr: 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, ... (1 more). [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "temporal": {
+        "start": "2015"
+      },
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "Dataset indicating flood extents as a result of climate change projections (0-4 m SLR, per 0.5 m). By relating very high-resolution topography maps to projected SLR, areas prone to marine submergence are identified. Coastal defenses (natural and man-made) are ought transparent for the calculations. This dataset is hosted through WMS servers from BRGM (https://sealevelrise.brgm.fr/slr). See this article (https://doi.org/10.1007/978-3-319-74669-2_12) for more dataset-specific information.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://www.deltares.nl",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Floodmaps [floodmaps]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/floodmaps/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Floodmaps",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/floodmaps.png"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_slr_scenarios",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Sea-level rise scenarios (metres)",
+                    "thresholds": [
+                      "0.0 m",
+                      "0.5 m",
+                      "1.0 m",
+                      "1.5 m",
+                      "2.0 m",
+                      "2.5 m",
+                      "3.0 m",
+                      "3.5 m",
+                      "4.0 m"
+                    ]
+                  }
+                },
+                "description": "Sea-level rise scenario sweep (source: Collection.summaries.slr)."
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-coclico_coastalmask",
+      "title": "CoCliCo - Coastal Mask",
+      "description": "Coastal mask that is derived from Copernicus elevation data combined with a maximum distanceto coastal water bodies. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.00041666666667,
+          -60.000416666666666,
+          179.99958333333333,
+          84.99958333333333
+        ]
+      },
+      "temporal": {
+        "start": "2022",
+        "end": "2022"
+      },
+      "license": "https://spdx.org/licenses/ODbL-1.0.html",
+      "lineage": {
+        "description": "Coastal mask that is derived from Copernicus elevation data combined with a maximum distanceto coastal water bodies.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_2",
+            "name": "Global Climate Forum",
+            "type": "dataset",
+            "url": "https://globalclimateforum.org",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_citation",
+          "name": "Lincke et al., 2023, in progress",
+          "url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/coastal-mask/collection.json"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Coastal Mask [coastal-mask]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/coastal-mask/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Coastal Mask",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/cm.png"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "natural_environment",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "land use/land cover footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

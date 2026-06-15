@@ -1,0 +1,96 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-coclico_smd",
+      "title": "CoCliCo - Global shoreline morphodynamics",
+      "description": "Global long-term (1984-2015) shoreline evolution based on satellite observations. Per transect location (500 m spaced) it is assessed what the change from land to sea, land to active zone and active zone to sea (erosion) as well as sea to land, sea to active zone and active zone to land (accretion) is. This dataset is part of the LISCOAST (https://data.jrc.ec.europa.eu/collection/LISCOAST) project. See this article (https://doi.org/10.1038/s41598-018-30904-w) for more dataset-specific information. Variants in the source dataset - lon: -179.999350134, 179.999547763 - longitude; lat: -62.9936453412, 62.9965817763 - latitude. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "Global long-term (1984-2015) shoreline evolution based on satellite observations. Per transect location (500 m spaced) it is assessed what the change from land to sea, land to active zone and active zone to sea (erosion) as well as sea to land, sea to active zone and active zone to land (accretion) is. This dataset is part of the LISCOAST (https://data.jrc.ec.europa.eu/collection/LISCOAST) project. See this article (https://doi.org/10.1038/s41598-018-30904-w) for more dataset-specific information.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://www.deltares.nl",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Global shoreline morphodynamics [smd]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/smd/collection.json"
+        },
+        {
+          "id": "resource_data",
+          "title": "smd zarr root",
+          "description": "CoCliCo - Global shoreline morphodynamics (The root of the smd zarr dataset on public Google Cloud Storage.)",
+          "download_url": "https://storage.googleapis.com/coclico-data-public/coclico/global_shoreline_morphodynamics.zarr",
+          "media_type": "application/vnd.zarr"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Global shoreline morphodynamics",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/smd.png"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "erosion",
+                "process": "coastal_erosion",
+                "intensity_measure": "Er:m/yr"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

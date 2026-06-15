@@ -1,0 +1,115 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_currentandfutureglobalmapsdataaqueduct40_waterstresshistoric",
+      "title": "Current and Future Global Maps Data (Aqueduct 4.0) - Water Stress historic",
+      "description": "Aqueduct Baseline Water Stress from 1979-2019, provided at sub-basin scale [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Aqueduct",
+        "url": "https://www.wri.org/data/aqueduct-global-maps-40-data"
+      },
+      "purpose": "The water stress indicator is a proxy for competition on water, as it accounts for both multi-sectoral water demand, relative to the abundance of water. Aqueduct data is provided at sub-basin scale. These data can be interesected with the area of interest, so to derieve an aggregate value weighted by the relative area of each catchment with the area of interest.",
+      "contact_point": {
+        "name": "Aqueduct",
+        "url": "https://www.wri.org/data/aqueduct-global-maps-40-data"
+      },
+      "creator": {
+        "name": "Aqueduct",
+        "url": "https://www.wri.org/data/aqueduct-global-maps-40-data"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "temporal": {
+        "start": "1979",
+        "end": "2019"
+      },
+      "temporal_resolution": "P1M",
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "This dataset provides users with Aqueduct™ 4.0, the latest iteration of WRI's water risk framework designed to translate complex hydrological data into intuitive indicators of water-related risk. It consists of 13 baseline water risk indicators spanning quantity, quality, and reputational concerns. Aqueduct 4.0 adds new future projections of water supply, demand, stress, depletion, and variability based on CMIP6 climate projections for 3 milestone years: 2030, 2050, and 2080.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "Several data sources (see methodology for further details)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.46830/writn.23.00061",
+          "url": "https://doi.org/10.46830/writn.23.00061"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Current and Future Global Maps Data (Aqueduct 4.0) - Water Stress historic",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/land-use/current-and-future-global-maps-data-aqueduct-40/water-stress-historic/water-stress-historic.json",
+          "spatial_aggregation": "hydrological sub-basins"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Current and Future Global Maps Data (Aqueduct 4.0) - Water Stress historic - data file",
+          "description": "Current and Future Global Maps Data (Aqueduct 4.0) - Water Stress historic - data file",
+          "media_type": "application/zip",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://files.wri.org/aqueduct/aqueduct-4-0-water-risk-data.zip",
+          "spatial_aggregation": "hydrological sub-basins"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Current and Future Global Maps Data (Aqueduct 4.0) - Water Stress historic (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.46830/writn.23.00061",
+          "spatial_aggregation": "hydrological sub-basins"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "natural_environment",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "land use/land cover footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

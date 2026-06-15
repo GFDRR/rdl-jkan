@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_globalfuturepopulation_projections",
+      "title": "Global future population - Projections",
+      "description": "Global 30 arc seconds (∼1 km at the equator) population projection dataset covering each year from 2010 to 2100 that is consistent with both country level population and gridded urban fractions from the Coupled Model Intercomparison Project 6 (CMIP6), based on RCP and SSP scenarios. Climate scenarios (as published): \"SSP-RCP combinations\" [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "DataGURU",
+        "url": "https://doi.org/10.18161/global_popcount.201610"
+      },
+      "purpose": "6 combinations of SSPs and RCPs from CMIP available; download via interface or ftp",
+      "contact_point": {
+        "name": "DataGURU",
+        "url": "https://doi.org/10.18161/global_popcount.201610"
+      },
+      "creator": {
+        "name": "DataGURU",
+        "url": "https://doi.org/10.18161/global_popcount.201610"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -56.0,
+          180.0,
+          84.0
+        ]
+      },
+      "spatial_resolution": 926,
+      "temporal": {
+        "start": "2010",
+        "end": "2100"
+      },
+      "temporal_resolution": "P1Y",
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Global 30 arc seconds (∼1 km at the equator) population projection dataset covering each year from 2010 to 2100 that is consistent with both country level population and gridded urban fractions from the Coupled Model Intercomparison Project 6 (CMIP6), based on RCP and SSP scenarios.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "urban fraction (CMIP6)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_3",
+            "name": "roads",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_4",
+            "name": "urban extent",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/niklasbokeolen/world_population",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1016/j.dib.2022.107804",
+          "url": "https://doi.org/10.1016/j.dib.2022.107804"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Global future population - Projections",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/population/global-future-population/projections/projections.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Global future population - Projections - data file",
+          "description": "Global future population - Projections - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://doi.org/10.18161/global_popcount.201610"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Global future population - Projections (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1016/j.dib.2022.107804"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Global future population - Projections (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/niklasbokeolen/world_population"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "population",
+            "description": "population number"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
