@@ -19,24 +19,22 @@ description: 'Regional sea level data from IPCC AR5 distributed in netCDF format
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    sea_level_rise:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: wd:m
-        process: sea_level_rise
-        trigger: null
-        type: sea_level_rise
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: sea_level_rise
+      trigger: null
+      type: sea_level_rise
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://example.org/license/unknown
 lineage:
   description: Regional sea level data from IPCC AR5 distributed in netCDF format
@@ -54,8 +52,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -24,51 +24,49 @@ description: 'Dataset indicating flood extents as a result of climate change pro
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: 'Sea-level rise scenario sweep (source: Collection.summaries.slr).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_slr_scenarios
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Sea-level rise scenarios (metres)
-            thresholds:
-            - 0.0 m
-            - 0.5 m
-            - 1.0 m
-            - 1.5 m
-            - 2.0 m
-            - 2.5 m
-            - 3.0 m
-            - 3.5 m
-            - 4.0 m
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: 'Sea-level rise scenario sweep (source: Collection.summaries.slr).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_slr_scenarios
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Sea-level rise scenarios (metres)
+          thresholds:
+          - 0.0 m
+          - 0.5 m
+          - 1.0 m
+          - 1.5 m
+          - 2.0 m
+          - 2.5 m
+          - 3.0 m
+          - 3.5 m
+          - 4.0 m
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://example.org/license/unknown
 lineage:
   description: Dataset indicating flood extents as a result of climate change projections
@@ -89,8 +87,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null
