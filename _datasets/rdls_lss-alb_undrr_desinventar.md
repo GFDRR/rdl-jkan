@@ -75,7 +75,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: coastal_flood
       trigger: null
@@ -100,7 +100,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: tornado
       trigger: null
@@ -125,7 +125,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: tornado
       trigger: null
@@ -150,7 +150,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: tornado
       trigger: null
@@ -175,7 +175,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: tornado
       trigger: null
@@ -200,7 +200,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: tornado
       trigger: null
@@ -225,7 +225,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: tornado
       trigger: null
@@ -250,7 +250,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: tornado
       trigger: null
@@ -275,7 +275,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: tornado
       trigger: null
@@ -300,7 +300,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_drought
       intensity_measure: SPI:-
       process: meteorological_drought
       trigger: null
@@ -325,7 +325,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -350,7 +350,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -375,7 +375,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -400,7 +400,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -425,7 +425,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -450,7 +450,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -475,7 +475,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -500,7 +500,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -525,7 +525,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -550,7 +550,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -575,7 +575,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: ground_motion
       trigger: null
@@ -600,7 +600,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: MMI:-
       process: liquefaction
       trigger: null
@@ -625,7 +625,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_cold
       trigger: null
@@ -650,7 +650,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_cold
       trigger: null
@@ -675,7 +675,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_cold
       trigger: null
@@ -700,7 +700,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_cold
       trigger: null
@@ -725,7 +725,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_cold
       trigger: null
@@ -750,7 +750,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_cold
       trigger: null
@@ -775,7 +775,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_heat
       trigger: null
@@ -800,7 +800,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_heat
       trigger: null
@@ -825,7 +825,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_extreme_temperature
       intensity_measure: AirTemp:C
       process: extreme_heat
       trigger: null
@@ -850,7 +850,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -875,7 +875,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -900,7 +900,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -925,7 +925,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -950,7 +950,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -975,7 +975,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1000,7 +1000,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1025,7 +1025,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1050,7 +1050,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1075,7 +1075,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1100,7 +1100,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1125,7 +1125,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1150,7 +1150,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1175,7 +1175,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1200,7 +1200,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1225,7 +1225,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: fluvial_flood
       trigger: null
@@ -1250,7 +1250,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1275,7 +1275,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1300,7 +1300,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1325,7 +1325,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1350,7 +1350,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1375,7 +1375,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1400,7 +1400,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1425,7 +1425,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1450,7 +1450,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1475,7 +1475,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1499,7 +1499,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1524,7 +1524,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1549,7 +1549,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -1574,7 +1574,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1599,7 +1599,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1624,7 +1624,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1649,7 +1649,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1674,7 +1674,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1699,7 +1699,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1724,7 +1724,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1749,7 +1749,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1774,7 +1774,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1799,7 +1799,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1824,7 +1824,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1848,7 +1848,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1873,7 +1873,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1898,7 +1898,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_general
       trigger: null
@@ -1923,7 +1923,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: landslide_mudflow
       trigger: null
@@ -1948,7 +1948,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: snow_avalanche
       trigger: null
@@ -1973,7 +1973,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: snow_avalanche
       trigger: null
@@ -1998,7 +1998,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: snow_avalanche
       trigger: null
@@ -2023,7 +2023,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: snow_avalanche
       trigger: null
@@ -2048,7 +2048,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: snow_avalanche
       trigger: null
@@ -2072,7 +2072,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: snow_avalanche
       trigger: null
@@ -2097,7 +2097,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: snow_avalanche
       trigger: null
@@ -2122,7 +2122,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_landslide
       intensity_measure: LSI:-
       process: snow_avalanche
       trigger: null
@@ -2147,7 +2147,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2172,7 +2172,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2197,7 +2197,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2222,7 +2222,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2247,7 +2247,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2272,7 +2272,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2297,7 +2297,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2322,7 +2322,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2347,7 +2347,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2372,7 +2372,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2397,7 +2397,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2422,7 +2422,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2447,7 +2447,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2472,7 +2472,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: sws_10m:m/s
       process: extratropical_cyclone
       trigger: null
@@ -2497,7 +2497,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2522,7 +2522,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2547,7 +2547,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2572,7 +2572,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2597,7 +2597,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2622,7 +2622,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2647,7 +2647,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2672,7 +2672,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2697,7 +2697,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2722,7 +2722,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2747,7 +2747,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2772,7 +2772,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2797,7 +2797,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null
@@ -2822,7 +2822,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_wildfire
       intensity_measure: FWI:-
       process: wildfire
       trigger: null

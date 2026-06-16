@@ -1,0 +1,89 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-jrc_drmkc_oilinfrastructure",
+      "title": "Global Oil Infrastructure",
+      "description": "Global dataset of crude oil and natural gas liquids (NGL) transmission pipeline projects",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "version": "2025",
+      "purpose": "To provide comprehensive global data on crude oil and natural gas liquids (NGL) transmission pipelines for energy infrastructure analysis, planning, and policy development.",
+      "project": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "details": "The Global Oil Infrastructure Tracker (GOIT) is an information resource on crude oil and natural gas liquids (NGL) transmission pipeline projects and their development. Currently, GOIT attempts to include all global crude oil and NGL transmission pipelines of any status, though availability on this infrastructure varies across countries and regions, and some are researched more completely than others.",
+      "contact_point": {
+        "name": "Baird Langenbrunner",
+        "email": "baird.langenbrunner@globalenergymonitor.org",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "creator": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "Entity_1",
+          "entity": {
+            "name": "Global Energy Monitor",
+            "url": "https://globalenergymonitor.org/"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "Source_1",
+            "name": "Global Energy Monitor",
+            "url": "https://globalenergymonitor.org/",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Global Oil and Gas Infrastructure Tracker maintained by Global Energy Monitor (GEM). Tracks oil and gas pipelines, refineries, storage terminals, and associated infrastructure worldwide. Data compiled through open-source research using public records, regulatory filings, and satellite imagery. Updated continuously; global spatial coverage."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "infrastructure",
+          "title": "Global Oil Infrastructure",
+          "description": "Global Oil Infrastructure (Access limited via request form)",
+          "access_url": "https://globalenergymonitor.org/projects/global-gas-infrastructure-tracker/download-data/",
+          "media_type": "application/json"
+        }
+      ],
+      "exposure": [
+        {
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "oil_ngl_pipelines",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "id": "exp_1"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

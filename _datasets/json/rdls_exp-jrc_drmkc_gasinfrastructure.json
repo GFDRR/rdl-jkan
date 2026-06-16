@@ -1,0 +1,98 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-jrc_drmkc_gasinfrastructure",
+      "title": "Global Gas Infrastructure",
+      "description": "Global dataset of natural gas transmission pipeline projects and liquefied natural gas and terminals",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "version": "2024",
+      "purpose": "To provide comprehensive global data on natural gas transmission pipelines and liquefied natural gas (LNG) import and export terminals for energy infrastructure analysis, planning, and policy development.",
+      "project": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "details": "The Global Gas Infrastructure Tracker (GGIT) is an information resource on natural gas transmission pipeline projects and liquefied natural gas (LNG) import and export terminals. Currently, GGIT aims to include all LNG terminals regardless of threshold, as well as all global gas transmission pipelines over predetermined size thresholds.",
+      "contact_point": {
+        "name": "Baird Langenbrunner",
+        "email": "baird.langenbrunner@globalenergymonitor.org",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "creator": {
+        "name": "Global Energy Monitor",
+        "url": "https://globalenergymonitor.org/"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "Entity_1",
+          "entity": {
+            "name": "Global Energy Monitor",
+            "url": "https://globalenergymonitor.org/"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "Source_1",
+            "name": "Global Energy Monitor",
+            "url": "https://globalenergymonitor.org/",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Global Gas Infrastructure Tracker maintained by Global Energy Monitor (GEM), a non-profit organisation conducting open-source research on energy infrastructure. Tracks gas pipelines, LNG terminals, compressor stations, and storage facilities worldwide. Data compiled through analysis of public records, regulatory filings, satellite imagery, and company disclosures. Updated continuously; global spatial coverage."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "infrastructure",
+          "title": "Global Gas Infrastructure",
+          "description": "Global Gas Infrastructure (Access limited via request form)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://globalenergymonitor.org/projects/global-gas-infrastructure-tracker/download-data/",
+          "media_type": "application/json"
+        }
+      ],
+      "exposure": [
+        {
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "gas_pipelines",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "lng_terminals",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "id": "exp_1"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
