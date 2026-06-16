@@ -1,0 +1,108 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-npl_hdx_earthquaketoplinefigures_20150601",
+      "title": "Nepal Earthquake Topline Figures",
+      "description": "Topline figures dataset for the Nepal Earthquake crisis page. Figures for Number of People in Need of Assistance are sourced from the UN RCO (Nepal) situation reports .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/nep-earthquake-topline-figure]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "This dataset contains data about an ongoing situation.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/nep-earthquake-topline-figure"
+      },
+      "creator": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/nep-earthquake-topline-figure"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-06-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN RCO (Nepal)",
+            "url": "https://data.humdata.org/dataset/nep-earthquake-topline-figure"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Topline figures aggregated from UN RCO situation reports documenting humanitarian needs and impacts from the Nepal earthquake crisis. Data represents direct observational records of affected populations requiring assistance.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN RCO (Nepal)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Situation reports from the United Nations Resident Coordinator's Office providing figures on people in need of assistance following the earthquake crisis."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a699046b",
+          "title": "topline_figures.csv",
+          "description": "Nepal Earthquake Topline Figures (Flat CSV file.)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/1V8cK8LJnRHS1BIx34KzG8z1Z4mR7hE_R-PW-wTFj4hI/export?format=csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Number of people in need of assistance following the Nepal earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/nep-earthquake-topline-figure",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-som_rcmrd_foodinsecurityphaseeastaf_20110722",
+      "title": "Somalia Food Insecurity Phase (East Africa Drought 2011) FEWSNET",
+      "description": "Food security classification at administrative level 1 in Somalia in relation to drought in the Horn of Africa. Source: FEWS Net. Date: 07/22/2011.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-food-insecurity-phase-east-africa-drought-2011-fewsnet-07-22-2011]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "This dataset has been made available on HDX by a direct link to Regional Centre for mapping of Resources for development portal",
+      "contact_point": {
+        "name": "Regional Centre for Mapping of Development Resources (RCMRD) (inactive)",
+        "url": "https://data.humdata.org/dataset/somalia-food-insecurity-phase-east-africa-drought-2011-fewsnet-07-22-2011"
+      },
+      "creator": {
+        "name": "Regional Centre for Mapping of Development Resources (RCMRD) (inactive)",
+        "url": "https://data.humdata.org/dataset/somalia-food-insecurity-phase-east-africa-drought-2011-fewsnet-07-22-2011"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2011-07-22"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "FEWS Net",
+            "url": "https://data.humdata.org/dataset/somalia-food-insecurity-phase-east-africa-drought-2011-fewsnet-07-22-2011"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "FEWS Net conducted sample surveys and integrated drought hazard information with population vulnerability data to classify food insecurity phases at administrative level 1 in Somalia during the 2011 East Africa drought crisis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "FEWS Net",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Food security classification system providing IPC-equivalent food insecurity phases based on vulnerability assessment and hazard exposure analysis."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c6e5f4ca",
+          "title": "Food security classification at administrative level 1 in Somalia",
+          "description": "Food security classification at administrative level 1 in Somalia in relation to drought in the Horn of Africa. Source: FEWS Net. Date: 07/22/2011.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "http://horn.rcmrd.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Asom_food_security_apr_sep11&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/vnd.shp"
+        },
+        {
+          "id": "resource_968f9103",
+          "title": "Food security classification at administrative level 1 in Somalia in relation to drought in the Horn of Africa",
+          "description": "Food security classification at administrative level 1 in Somalia in relation to drought in the Horn of Africa. Source: FEWS Net. Date: 07/22/2011.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "http://horn.rcmrd.org/geoserver/wfs?typename=geonode%3Aeri_affected_regions&outputFormat=json&version=1.0.0&request=GetFeature&service=WFS",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity classification of population affected by East Africa drought"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-food-insecurity-phase-east-africa-drought-2011-fewsnet-07-22-2011",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-syrtur_hdx_earthquakekeyfigures_2023",
+      "title": "Türkiye and Syria Earthquake - Key Figures",
+      "description": "Key Figures extracted from OCHA daily Situation Reports. On 6 February as a 7.7 magnitude earthquake struck southern Türkiye at 4:17 am. This is Türkiye's most powerful earthquake recorded since 1939. At least 78 aftershocks have been reported followed by a second earthquake of 7.5 magnitude at 13:24 with the epicenter in Ekinozu/Kahramanmaras province. Tremors were reportedly felt in Gaziantep and neighboring provinces. The Government of Türkiye has since issued a Level 4 alarm, calling for international assistance.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/turkiye-syria-earthquake-key-figures]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "Key Figures extracted from OCHA daily SitReps (i.e https://reliefweb.int/search/results?search=+Earthquake%3A+T%C3%BCrkiye+and+north-west+Syria+Flash+Update+) Glide: EQ-2023-000015-TUR",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/turkiye-syria-earthquake-key-figures"
+      },
+      "creator": {
+        "name": "Government and Local Authorities in Türkiye and Syria via OCHA Situation Reports",
+        "url": "https://data.humdata.org/dataset/turkiye-syria-earthquake-key-figures"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR",
+          "TUR"
+        ]
+      },
+      "temporal": {
+        "start": "2023-02-06",
+        "end": "2023-03-09"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Government and Local Authorities in Türkiye and Syria via OCHA Situation Reports",
+            "url": "https://data.humdata.org/dataset/turkiye-syria-earthquake-key-figures"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Key impact figures were extracted from OCHA daily Situation Reports, which aggregated data reported by government and local authorities in Türkiye and Syria following the 6 February 2023 earthquake sequence (Mw 7.7 and Mw 7.5). The data was compiled into a structured Google Sheet tracking casualties, damage assessments, and other humanitarian indicators over time.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Government and Local Authorities in Türkiye and Syria via OCHA Situation Reports",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official government and local authority impact figures compiled by OCHA into daily Situation Reports following the February 2023 earthquake sequence. These reports provide key figures on casualties, displacement, and damage assessments."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d5ef53ae",
+          "title": "Turkiye & Syria Earthquakes - OCHA SitReps",
+          "description": "Türkiye and Syria Earthquake - Key Figures (Turkiye & Syria Earthquakes - OCHA SitReps)",
+          "format": "Google Sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTcEvZdAS-H1cf9WLw3I0ESAJV4G5qTpj5lEM0-qYuCD6tt_X1MQCNWgmfNenXSePS3ZcIfw2xOfCbm/pub?output=xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Casualty figures (deaths, injuries, affected persons) from the February 2023 Türkiye-Syria earthquakes extracted from OCHA Situation Reports"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage assessment figures from the February 2023 Türkiye-Syria earthquakes extracted from OCHA Situation Reports"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/turkiye-syria-earthquake-key-figures",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

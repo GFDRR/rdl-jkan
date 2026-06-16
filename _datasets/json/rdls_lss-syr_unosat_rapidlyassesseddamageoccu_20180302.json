@@ -1,0 +1,97 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-syr_unosat_rapidlyassesseddamageoccu_20180302",
+      "title": "Rapidly assessed damage occurring between 23 February 2018 and 2 March 2018 in Douma, Eastern Ghouta Area, Syria",
+      "description": "This map illustrates satellite-detected damage in the city of Douma, in Eastern Ghouta Area, Syrian Arab Republic. Using satellite imagery collected 2 March 2018 and comparing with imagery acquired 23 February 2018, UNITAR - UNOSAT conducted a Rapid Damage Assessment, over a total area of 17.1 square kilometers, to provide an overview of areas of recent damage. The area analyzed was divided in cells and each cell was assessed searching for presence of damage. Our analysis shows that 17% of the cells were affected by major new damage, with presence of buildings completely destroyed or severely damaged between 23 February 2018 and 2 March 2018. In addition 22% of the cells showed signs of minor new damage, with visible impact craters, debris or moderately damaged structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/rapidly-assessed-damage-occurring-february-march-douma-eastern-ghouta-area-syria]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/rapidly-assessed-damage-occurring-february-march-douma-eastern-ghouta-area-syria"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/rapidly-assessed-damage-occurring-february-march-douma-eastern-ghouta-area-syria"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2018-03-02"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery acquired on 23 February 2018 and 2 March 2018 over a 17.1 km² area in Douma, Eastern Ghouta, Syria. The study area was divided into cells and each cell was assessed for presence of damage, with results indicating 17% of cells affected by major new damage including completely destroyed or severely damaged buildings. This rapid damage assessment provides post-event impact records of building destruction.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Rapid damage assessment conducted through satellite imagery analysis comparing pre- and post-event imagery to identify building destruction and severe damage in Douma, Eastern Ghouta."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_aba47a63",
+          "title": "UNOSAT_Damascus_RDA_20180302_shp.zip",
+          "description": "Rapidly assessed damage occurring between 23 February 2018 and 2 March 2018 in Douma, Eastern Ghouta Area, Syria (zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SY/CE20130604SYR/UNOSAT_Damascus_RDA_20180302_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessed from satellite imagery comparison between 23 February and 2 March 2018"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/rapidly-assessed-damage-occurring-february-march-douma-eastern-ghouta-area-syria",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

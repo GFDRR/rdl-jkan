@@ -1,0 +1,151 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_ica2018naturalshockrisk_20181122",
+      "title": "ICA Sudan, 2018 - Natural Shock Risk",
+      "description": "This layer contains information about the natural shock risk (floods and droughts) estimated during the Integrated Context Analysis (ICA) performed in Sudan in 2018. Data sources: UNEP/UNISDR GAR 2013, HQ VAM Analysis of CHIRPS Rainfall Estimates (RFE) 1982-2017.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ica-sudan-2018-natural-shock-risk]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "https://geonode.wfp.org/layers/geonode%3Asdn_ica_naturalshockrisk_geonode_20180201",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-natural-shock-risk"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-natural-shock-risk"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-11-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNEP/UNISDR GAR 2013",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-natural-shock-risk"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "HQ VAM Analysis of CHIRPS Rainfall Estimates (RFE) 1982-2017",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-natural-shock-risk"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The ICA Sudan 2018 integrated natural shock risk assessment by combining UNEP/UNISDR GAR 2013 baseline hazard data with WFP VAM analysis of CHIRPS rainfall estimates (1982-2017) to classify flood and drought risk at administrative level 2. Risk classifications were derived through empirical analysis of historical rainfall variability and established hazard frameworks, producing categorical risk classes for policy and planning purposes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNEP/UNISDR GAR 2013",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Global Assessment Report 2013 providing natural hazard risk baseline data for flood and drought assessment"
+          },
+          {
+            "id": "source_2",
+            "name": "HQ VAM Analysis of CHIRPS Rainfall Estimates (RFE) 1982-2017",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "WFP Vulnerability Analysis and Mapping rainfall analysis using CHIRPS satellite data to characterize drought risk patterns"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_42486832",
+          "title": "ICA Sudan, 2018 - Natural Shock Risk",
+          "description": "This layer contains information about the natural shock risk (floods and droughts) estimated during the Integrated Context Analysis (ICA) performed in Sudan in 2018. Data sources: UNEP/UNISDR GAR 2013, HQ VAM Analysis of CHIRPS Rainfall Estimates (RFE) 1982-2017.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Asdn_ica_naturalshockrisk_geonode_20180201&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Natural shock risk classification indicating flood vulnerability at administrative level 2"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Natural shock risk classification indicating drought vulnerability at administrative level 2"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ica-sudan-2018-natural-shock-risk",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_ica2018estimatednumbersfo_20181122",
+      "title": "ICA Sudan, 2018 - Estimated Numbers of Food Insecure People, 2014-2017",
+      "description": "This layer contains information about the numbers of food insecure people - by first-level administrative unit - estimated for the purposes of the Integrated Context Analysis (ICA) run in Mali in 2017. It should be noted that estimates of food insecure people were available only starting from 2014 onwards and, due to access constraints, some of the states were not covered by the survey. Data source: Integrated Phase Classification (IPC), 2014-2017. The main indicators used for the analysis were the percentage of food insecure population for long-term planning and the additional population figures in case of a major shock.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ica-sudan-2018-estimated-numbers-of-food-insecure-people-2014-2017]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "https://geonode.wfp.org/layers/geonode%3Asdn_ica_adm1_estimatedfipeople_geonode_20180201",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-estimated-numbers-of-food-insecure-people-2014-2017"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-estimated-numbers-of-food-insecure-people-2014-2017"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-11-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Integrated Phase Classification (IPC)",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-estimated-numbers-of-food-insecure-people-2014-2017"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Food insecurity population estimates were sourced from IPC phase classifications (2014–2017) and aggregated to first-level administrative units in Sudan. The Integrated Context Analysis (ICA) framework applied by WFP used these figures—including long-term planning population percentages and additional food insecure population counts—to characterize chronic and acute food insecurity conditions, with some states excluded due to access constraints.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Integrated Phase Classification (IPC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IPC food insecurity phase classifications providing estimates of food insecure population percentages and counts by administrative unit in Sudan from 2014 to 2017, used as the primary data source for the ICA analysis."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6b1148b8",
+          "title": "ICA Sudan, 2018 - Estimated Numbers of Food Insecure People, 2014-2017",
+          "description": "This layer contains information about the numbers of food insecure people - by first-level administrative unit - estimated for the purposes of the Integrated Context Analysis (ICA) run in Mali in 2017. It should be noted that estimates of food insecure people were available only starting from 2014 onwards and, due to access constraints, some of the states were not covered by the survey. Data source: Integrated Phase Classification (IPC), 2014-2017. The main indicators used for the analysis were the percentage of food insecure population for long-term planning and the additional population figures in case of a major shock.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Asdn_ica_adm1_estimatedfipeople_geonode_20180201&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Estimated numbers of food insecure people by first-level administrative unit in Sudan, derived from IPC classifications for 2014-2017, including long-term planning population and additional food insecure population figures"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ica-sudan-2018-estimated-numbers-of-food-insecure-people-2014-2017",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

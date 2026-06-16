@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-pak_ochapak_totalidps_20210601",
+      "title": "Pakistan Total IDPs",
+      "description": "Pakistan district wise Total IDPs from areas of origin and by host location. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pakistan-idps-data]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Pakistan",
+        "url": "https://data.humdata.org/dataset/pakistan-idps-data"
+      },
+      "creator": {
+        "name": "OCHA Pakistan",
+        "url": "https://data.humdata.org/dataset/pakistan-idps-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2021-06-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "CEW PDMA Khyber Pakhtoonkhwa",
+            "url": "https://data.humdata.org/dataset/pakistan-idps-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IDP registry data collected by PDMA Khyber Pakhtoonkhwa through the Common Emergency Workspace (CEW) system, aggregated to district level to track displacement flows from origin areas to host locations across Pakistan.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "CEW PDMA Khyber Pakhtoonkhwa",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registry of internally displaced persons maintained by the Provincial Disaster Management Authority, providing district-level counts of IDPs by area of origin and host location."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_496f4397",
+          "title": "Pakistan IDPs by Area of Origin",
+          "description": "Pakistan Total IDPs from areas of origin with PCodes",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3ecf5c88-9b54-43cc-b47c-8523b0e80519/resource/496f4397-99b0-4381-8c44-80584d1f8738/download/pakistan-total-idps-till-date.xlsx"
+        },
+        {
+          "id": "resource_99e1e07f",
+          "title": "Pakistan Current IDPs",
+          "description": "Pakistan Total IDPs (Pakistan Current IDPs by host location)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3ecf5c88-9b54-43cc-b47c-8523b0e80519/resource/99e1e07f-d839-4d3e-b884-0a01a7045d64/download/pakistan-current-idps.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from flood-affected areas of origin and current host locations in Pakistan"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pakistan-idps-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

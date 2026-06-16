@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-som_unhcr_internallydisplacedperson_2016",
+      "title": "Somalia: Internally Displaced Persons (IDPs)",
+      "description": "Data collated by UNHCR - Protection and Return Monitoring Network (PRMN), contains internally displaced persons. The data includes regions (departure and arrival), districts (departure and arrival), reasons of displacements and the IDPs from January 2016 - October 2022.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-internally-displaced-persons-idps]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/somalia-internally-displaced-persons-idps"
+      },
+      "creator": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/somalia-internally-displaced-persons-idps"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2016-01-01",
+        "end": "2023-08-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNHCR Protection and Return Monitoring Network (PRMN)",
+            "url": "https://data.humdata.org/dataset/somalia-internally-displaced-persons-idps"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNHCR PRMN collects displacement monitoring data through field surveys and administrative records across Somalia, tracking IDP movements between regions and districts with associated reasons and humanitarian needs from January 2016 onwards. Data is aggregated by month and week to produce displacement flow statistics.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNHCR Protection and Return Monitoring Network (PRMN)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Monitoring network tracking internally displaced persons movements, reasons for displacement, and priority needs across Somalia by region and district"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://data.unhcr.org/en/documents/download/53888"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_981e0a25",
+          "title": "SOM_UNHCR-PRMN-Displacement-Dataset-August-2023",
+          "description": "Somalia: Internally Displaced Persons (IDPs) (Internal displacements from January 2016 - August 2023 at district level)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/475e2e3c-3cec-4961-b73c-d8e68791ce60/resource/981e0a25-8a83-48a2-a46c-0be81a881856/download/unhcr-prmn-displacement-dataset-1.xlsx"
+        },
+        {
+          "id": "resource_fca8af92",
+          "title": "SOM_UNHCR-PRMN_Displacement-Dataset.csv",
+          "description": "Somalia: Internally Displaced Persons (IDPs) (Internal displacements as at 30th November 2022 district level)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/475e2e3c-3cec-4961-b73c-d8e68791ce60/resource/fca8af92-f589-4604-be97-f55bd57f228f/download/som_prmn_map_data.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from January 2016 to October 2022 with origin and destination regions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-internally-displaced-persons-idps",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

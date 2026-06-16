@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-phl_unosat_damageassessmenttayumtown_20220803",
+      "title": "Damage Assessment in Tayum Town, Abra Province, Cordillera Administrative Region, Philippines",
+      "description": "UNOSAT code: EQ20220727PHL This map illustrates potentially damaged buildings and damaged buildings in Tayum Town, Abra Province, Cordillera Administrative Region, Philippines as detected by Pléiades satellite image acquired on 29 July 2022. Within the analyzed area, UNOSAT has identified 37 potentially damaged buildings and 1 damaged buildings. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-tayum-town-abra-province-cordillera-administrative-region-philippines]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-tayum-town-abra-province-cordillera-administrative-region-philippines"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-tayum-town-abra-province-cordillera-administrative-region-philippines"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2022-08-03"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared pre- and post-event Pléiades satellite imagery acquired on 29 July 2022 to detect structural damage in buildings. Visual interpretation of satellite imagery identified notable changes in building structures, classifying them as either potentially damaged or confirmed damaged. This preliminary assessment has not been field-validated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from Pléiades satellite imagery acquired 29 July 2022, identifying 37 potentially damaged and 1 confirmed damaged buildings in Tayum Town following the earthquake."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_13154063",
+          "title": "EQ20220727PHL_gdb.zip",
+          "description": "Damage Assessment in Tayum Town, Abra Province, Cordillera Administrative Region, Philippines (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/PH/EQ20220727PHL/EQ20220727PHL_gdb.zip"
+        },
+        {
+          "id": "resource_ec9b265b",
+          "title": "EQ20220727PHL_shp.zip",
+          "description": "Damage Assessment in Tayum Town, Abra Province, Cordillera Administrative Region, Philippines (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "ttps://unosat-maps.web.cern.ch/PH/EQ20220727PHL/EQ20220727PHL_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from earthquake detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-tayum-town-abra-province-cordillera-administrative-region-philippines",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

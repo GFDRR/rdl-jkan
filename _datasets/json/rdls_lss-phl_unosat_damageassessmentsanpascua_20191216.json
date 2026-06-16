@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-phl_unosat_damageassessmentsanpascua_20191216",
+      "title": "Philippines - Damage Assessment of San Pascual Municipality, Northeastern Part of the Masbate Region, Bicol Region Province",
+      "description": "UNOSAT code: TC20191202PHL This map illustrates satellite-based structural damage assessment in San Pascual municipality in the northeastern part of Masbate region, Bicol Region province, in the Philippines. The area was affected by Typhoon Kammuri that made landfall on 3 December 2019. UNITAR-UNOSAT identified 16 potentially damaged structures around San Pascual town, in the San Pascual municipality, within the extent of this map. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-of-san-pascual-municipality-northeastern-part-of-the-masbate-region-bico]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-san-pascual-municipality-northeastern-part-of-the-masbate-region-bico"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-san-pascual-municipality-northeastern-part-of-the-masbate-region-bico"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2019-12-16"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared multi-temporal satellite imagery acquired before and after Typhoon Kammuri's landfall on 3 December 2019 to identify structural changes and damage signatures. Potentially damaged structures (n=16) were manually delineated and mapped as point or polygon features with damage indicators and metadata in geodatabase and shapefile formats.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based structural damage assessment using multi-temporal satellite imagery comparison to identify and map damaged structures in San Pascual municipality following Typhoon Kammuri landfall."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_05edb575",
+          "title": "TC20191202PHL_gdb.zip",
+          "description": "Philippines - Damage Assessment of San Pascual Municipality, Northeastern Part of the Masbate Region, Bicol Region Province (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/PH/TC20191202PHL/TC20191202PHL_gdb.zip"
+        },
+        {
+          "id": "resource_b3cc73d2",
+          "title": "TC20191202PHL_SHP.zip",
+          "description": "Philippines - Damage Assessment of San Pascual Municipality, Northeastern Part of the Masbate Region, Bicol Region Province (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/PH/TC20191202PHL/TC20191202PHL_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct structural damage to buildings from Typhoon Kammuri assessed via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-of-san-pascual-municipality-northeastern-part-of-the-masbate-region-bico",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-phl_nlrc510_impactdatacasualtiesdamag_20161024",
+      "title": "Philippines - Impact data - casualties and damage - Typhoon Haima (Lawin)",
+      "description": "NDRRMC report of October 28th 2016. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haima-lawin]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "The NDRRMC report of October 24th 2016 seems to be a partial count of municipalities affected",
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haima-lawin"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haima-lawin"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-24"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "NDRRMC (National Disaster Risk Reduction and Management Council)",
+            "url": "https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haima-lawin"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event damage and casualty data collected by NDRRMC through field assessments and compiled into situation reports (SitReps) dated October 25-November 2, 2016. Data includes municipality-level damage counts, house damage records with geographic coding (pcode), and comparative analysis between predicted and actual impacts. The dataset represents direct observational records of building damage and affected populations following Typhoon Haima's passage through the Philippines.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "NDRRMC (National Disaster Risk Reduction and Management Council)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment and casualty records from the official Philippine disaster management authority's situation reports and DROMIC (Disaster-Related Operations Monitoring and Information Center) database for Typhoon Haima."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9dd32a91",
+          "title": "haima_houses_damaged_pcoded.csv",
+          "description": "Philippines - Impact data - casualties and damage - Typhoon Haima (Lawin) (pcoded and cleaned version of the impact data)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/42aeff07-3962-4195-95f1-9251f3205438/resource/9dd32a91-77aa-45b7-8441-8ce5af6b08f2/download/haima_houses_damaged_pcoded.csv"
+        },
+        {
+          "id": "resource_f49520fe",
+          "title": "prediction_reality_comparison.csv",
+          "description": "comparison between prediction and real value for the haima data, it includes priority zone comparison as well",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/42aeff07-3962-4195-95f1-9251f3205438/resource/f49520fe-09ec-4ba0-8609-de0895b28042/download/prediction_reality_comparison.csv"
+        },
+        {
+          "id": "resource_86ef2533",
+          "title": "PHL_haima_houses_damaged_pcoded_ndrrmc_sitrep_9_20161025.csv",
+          "description": "Philippines - Impact data - casualties and damage - Typhoon Haima (Lawin) (NDRRCM counts)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/42aeff07-3962-4195-95f1-9251f3205438/resource/86ef2533-b72c-4029-a86e-66e2529fe7dc/download/phl_haima_houses_damaged_pcoded_ndrrmc_sitrep_9_20161025.csv"
+        },
+        {
+          "id": "resource_14bc94e3",
+          "title": "2016_11_02_RII_damage_by_municipality_pcoded.xlsx",
+          "description": "Philippines - Impact data - casualties and damage - Typhoon Haima (Lawin) (DSWD counts)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/42aeff07-3962-4195-95f1-9251f3205438/resource/14bc94e3-f629-40dd-a7a8-957606ef8ed9/download/2016_11_02_rii_damage_by_municipality_pcoded.xlsx"
+        },
+        {
+          "id": "resource_aa1b7fe6",
+          "title": "DROMIC-STY-Lawin-Master-Excel-as-of-2-Nov-2016-9PM_PCODED.csv",
+          "description": "Philippines - Impact data - casualties and damage - Typhoon Haima (Lawin) (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/42aeff07-3962-4195-95f1-9251f3205438/resource/aa1b7fe6-0e15-46b2-b7dd-d42acad6f62e/download/dromic-sty-lawin-master-excel-as-of-2-nov-2016-9pm_pcoded.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Typhoon Haima (tropical cyclone)"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Casualties and affected population from Typhoon Haima"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/impact-data-casualties-and-damage-typhoon-haima-lawin",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

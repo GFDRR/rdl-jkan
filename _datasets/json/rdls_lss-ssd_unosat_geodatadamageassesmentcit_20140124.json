@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ssd_unosat_geodatadamageassesmentcit_20140124",
+      "title": "Geodata of Damage Assesment in the City of Malakal, Upper Nile State, South Sudan",
+      "description": "This map illustrates satellite-detected areas of destruction in the town of Malakal as seen by the WorldView-2 satellite on 18 January 2014. UNOSAT identified a total of 515 destroyed residential and related structures and a total of 58 warehouse or commercial structures were identified throughout the area analyzed, with the heaviest damage in the downtown area and along primary roads bordering the town. In addition, multiple indications of looting are evident in the warehouse area and in residential areas along the southeast edge of town. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-assesment-in-the-city-of-malakal-upper-nile-state-south-sud-january-24-2014]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assesment-in-the-city-of-malakal-upper-nile-state-south-sud-january-24-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assesment-in-the-city-of-malakal-upper-nile-state-south-sud-january-24-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2014-01-24"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery from WorldView-2 acquired on 18 January 2014 with reference imagery to detect structural damage in Malakal. Destroyed buildings were manually identified and classified by type (residential vs. commercial/warehouse), with confidence assessments and field validation flags recorded for each feature.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-detected damage assessment using WorldView-2 imagery from 18 January 2014, identifying 515 destroyed residential structures and 58 warehouse/commercial structures through multi-temporal image comparison analysis."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cf6086e8",
+          "title": "CE20131218SSD_shp.zip",
+          "description": "Geodata of Damage Assesment in the City of Malakal, Upper Nile State, South Sudan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_shp.zip"
+        },
+        {
+          "id": "resource_5a7f8e96",
+          "title": "CE20131218SSD.gdb.zip",
+          "description": "Geodata of Damage Assesment in the City of Malakal, Upper Nile State, South Sudan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD.gdb.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from conflict-related destruction in Malakal identified via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-assesment-in-the-city-of-malakal-upper-nile-state-south-sud-january-24-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

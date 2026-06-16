@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-syr_wfp_arabrepublichungermapdata_2025",
+      "title": "Syrian Arab Republic - HungerMap data",
+      "description": "HungerMapLIVE is the World Food Programme (WFP)'s global hunger monitoring system. It combines key metrics from various data sources - such as food security information, weather, population size, conflict, hazards, nutrition information and macro-economic data - to help assess, monitor and predict the magnitude and severity of hunger in near real-time. The resulting analysis is displayed on an interactive map that helps WFP staff, key decision makers and the broader humanitarian community to make more informed and timely decisions relating to food security. The platform covers 94 countries, including countries where WFP has operations as well as most lower and lower-middle income countries (as classified by the World Bank).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/wfp-hungermap-data-for-syr]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-syr"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-syr"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-06",
+        "end": "2026-01-31"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Hunger Monitoring Unit",
+            "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-syr"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP's Hunger Monitoring Unit integrates multiple real-time food security data sources (FCS, RCSI, health/market access indicators) with machine learning-based predictive models to estimate food insecurity prevalence and affected populations at sub-national administrative levels in Syria, enabling near real-time monitoring of hunger severity.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Hunger Monitoring Unit",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Real-time food security monitoring data combining observed food consumption scores (FCS), reduced coping strategy indices (RCSI), health access, and market access indicators to assess food insecurity severity and prevalence."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2a08c1c4",
+          "title": "wfp-hungermap-data-for-syr.csv",
+          "description": "Syrian Arab Republic - HungerMap data",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5be668ad-8702-4f89-a64d-69dfdaad4d98/resource/2a08c1c4-a951-40cd-8c2b-240e7b1df0d1/download/wfp-hungermap-data-for-syr.csv"
+        },
+        {
+          "id": "resource_87759e84",
+          "title": "wfp-hungermap-data-for-syr-long.csv",
+          "description": "Syrian Arab Republic - HungerMap data long format",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5be668ad-8702-4f89-a64d-69dfdaad4d98/resource/87759e84-0165-40bc-b3d3-103fa63cfbe8/download/wfp-hungermap-data-for-syr-long.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity prevalence and affected population from drought and conflict-driven food security deterioration"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/wfp-hungermap-data-for-syr",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

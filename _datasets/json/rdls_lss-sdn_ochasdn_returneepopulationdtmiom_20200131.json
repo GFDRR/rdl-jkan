@@ -1,0 +1,106 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_returneepopulationdtmiom_20200131",
+      "title": "Returnee population of Sudan DTM - IOM",
+      "description": "Returnee population of Sudan through DTM - IOM. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/returnee-population-of-sudan-dtm-iom]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/returnee-population-of-sudan-dtm-iom"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/returnee-population-of-sudan-dtm-iom"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-31"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IOM Sudan",
+            "url": "https://data.humdata.org/dataset/returnee-population-of-sudan-dtm-iom"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM Sudan conducted DTM registration surveys to track and enumerate returnee populations across Sudan, recording displacement and return movements as post-event impact data for humanitarian response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IOM Sudan",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Displacement Tracking Matrix (DTM) registration data capturing returnee population movements and counts in Sudan"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bb24994f",
+          "title": "Sudan DTM Returnees dataset 31Jan20..xlsx",
+          "description": "Returnee population of Sudan through DTM - IOM",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/cffef2ae-b0b2-4996-8dfb-8c4d64bf4bbc/resource/bb24994f-0568-4161-9c48-fe2a40900015/download/sudan-dtm-returnees-dataset-31jan20..xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced and returning to Sudan, tracked through DTM registration"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/returnee-population-of-sudan-dtm-iom",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

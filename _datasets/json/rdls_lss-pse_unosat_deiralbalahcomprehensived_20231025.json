@@ -1,0 +1,97 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-pse_unosat_deiralbalahcomprehensived_20231025",
+      "title": "Palestine - UNOSAT Deir Al-Balah Comprehensive Damage Assessment - Gaza Strip - 21 October 2023",
+      "description": "UNOSAT code CE20231007PSE UNOSAT conducted a satellite-imagery based comprehensive damage assessment to detected damage and destruction to structures within the area of interest in the Deir Al-Balah Governorate, Gaza Strip, using an image collected on 21 October 2023 and compared it to an image collected on 15 October 2023. According to the satellite imagery analysis, UNOSAT identified a total of 197 destroyed structures, 143 severely damaged structures, and 435 moderately damaged structures, for a total of 775 affected structures as of 21 October 2023. This corresponds to less than 2% of the total structures in the Deir Al-Balah Governorate. The most affected area appears to be the Al Bureij Camp neighborhood, where the number of damaged structures per square kilometer is the highest, followed by the Al Awda neighborhood. Among the newly affected structures, UNOSAT identified a mosque, namely the Al-Salam Mosque, visibly destroyed. Additionally, UNOSAT identified 42 affected road sections, either by impact craters or by debris. This is a preliminary analysis and has not yet been validated in the field.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-deir-al-balah-comprehensive-damage-assessment-gaza-strip-21-october-2023]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-deir-al-balah-comprehensive-damage-assessment-gaza-strip-21-october-2023"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-deir-al-balah-comprehensive-damage-assessment-gaza-strip-21-october-2023"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-25"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts conducted multi-temporal satellite imagery analysis comparing images from 15 October 2023 and 21 October 2023 to detect and classify structural damage in Deir Al-Balah. Damage was categorized into three severity classes (destroyed, severely damaged, moderately damaged) through visual interpretation of satellite imagery, resulting in a comprehensive post-event damage inventory of 775 affected structures.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery-based damage assessment comparing pre- and post-event imagery to identify destroyed, severely damaged, and moderately damaged structures in Deir Al-Balah Governorate."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5d7ee960",
+          "title": "UNOSAT_CE20231007PSE_GDB_20231025.zip",
+          "description": "Palestine - UNOSAT Deir Al-Balah Comprehensive Damage Assessment - Gaza Strip - 21 October 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3707/UNOSAT_CE20231007PSE_GDB_20231025.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from armed conflict/hostilities in Deir Al-Balah"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-deir-al-balah-comprehensive-damage-assessment-gaza-strip-21-october-2023",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

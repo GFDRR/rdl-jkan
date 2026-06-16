@@ -1,0 +1,130 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_peopleaffectedfloods_20201006",
+      "title": "Sudan People Affected by Floods",
+      "description": "The data shows the number of people, Household, houses damaged and destroyed by floods and was shared by the government of Sudan (HAC). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sudan-people-affected-by-floods-as-of-6-october-2020]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/sudan-people-affected-by-floods-as-of-6-october-2020"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/sudan-people-affected-by-floods-as-of-6-october-2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2020-10-06"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Government of Sudan - HAC",
+            "url": "https://data.humdata.org/dataset/sudan-people-affected-by-floods-as-of-6-october-2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event impact data collected from the field by the Government of Sudan Humanitarian Aid Commission (HAC) documenting people affected, households impacted, and buildings damaged or destroyed by floods, aggregated by state and locality.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Government of Sudan - HAC",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Field-collected post-event impact data on people affected, households, and buildings damaged/destroyed by floods across Sudan states and localities."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9bcb9d2d",
+          "title": "SDN_HAC_Flood data by state and locality_07102020.xlsx",
+          "description": "Sudan People Affected by Floods (SDN_HAC_Flood data by state and locality_07102020.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6fbfb14c-5a27-44ff-86c6-9d028756f262/resource/9bcb9d2d-3bb5-432f-8e81-27265bbe93cd/download/sdn_hac_flood-data-by-state-and-locality_07102020.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flooding in Sudan"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flooding in Sudan"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sudan-people-affected-by-floods-as-of-6-october-2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
