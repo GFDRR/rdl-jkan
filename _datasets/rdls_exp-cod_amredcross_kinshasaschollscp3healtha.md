@@ -62,8 +62,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/scholls-in-the-cp3-health-areas
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

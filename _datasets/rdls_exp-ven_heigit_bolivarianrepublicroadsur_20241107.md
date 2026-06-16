@@ -118,8 +118,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/venezuela-bolivarian-republic-of-road-surface-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

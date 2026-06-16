@@ -93,8 +93,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/spatialized-100m-school-age-population-grid-for-haiti-by-educational-level-and-sex
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

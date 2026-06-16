@@ -64,24 +64,22 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: "Satellite imagery from Radarsat Constellation 1 acquired on 31 October\
@@ -112,8 +110,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/satellite-detected-waters-in-nghe-an-province-of-viet-nam-as-of-31-october-2020
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

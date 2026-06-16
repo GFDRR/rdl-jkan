@@ -71,8 +71,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/atmeh-idp-settlement-shelter-density-in-dana-subdistrict-harem-district-idlib-governorate-syria-2744
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

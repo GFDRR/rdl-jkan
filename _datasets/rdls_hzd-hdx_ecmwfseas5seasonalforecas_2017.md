@@ -55,24 +55,22 @@ details: The gridded product from ECMWF is provided at a 1 degree resolution. Fo
   and 'valid_' dates is captured by the 'lead_time' variable.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: SMA:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: SMA:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: ECMWF SEAS5 ensemble seasonal precipitation forecasts are post-processed
@@ -102,8 +100,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/ecmwf-anomalous-precipitation
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

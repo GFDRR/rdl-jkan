@@ -93,8 +93,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/2018-population-projection-central-sulawesi-province
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

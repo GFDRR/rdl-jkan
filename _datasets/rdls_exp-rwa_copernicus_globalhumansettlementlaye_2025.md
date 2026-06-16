@@ -92,8 +92,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/rwa-ghsl
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

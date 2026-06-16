@@ -101,8 +101,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/united-states-high-resolution-population-density-maps-demographic-estimates
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

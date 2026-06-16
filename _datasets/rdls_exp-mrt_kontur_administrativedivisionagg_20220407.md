@@ -127,8 +127,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kontur-boundaries-mauritania
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

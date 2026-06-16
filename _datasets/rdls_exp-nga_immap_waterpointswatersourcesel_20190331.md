@@ -67,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/water-sources-for-eleven-hotspot-lgas-in-borno-state-north-eastern-nigeria-march-2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

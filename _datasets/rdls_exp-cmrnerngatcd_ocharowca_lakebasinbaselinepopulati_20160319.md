@@ -64,8 +64,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/lake-chad-basin-baseline-population
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

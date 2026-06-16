@@ -98,8 +98,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-domiz-refugee-camp-duhok-governorate-iraq-january-10-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -82,24 +82,22 @@ details: 'Data source: https://pmm.nasa.gov/data-access/downloads/gpm Admin area
   what the people at NASA expected. I can check with them if you like.'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    convective_storm:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: AA:km2
-        process: tornado
-        trigger: null
-        type: convective_storm
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: AA:km2
+      process: tornado
+      trigger: null
+      type: convective_storm
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Accumulated precipitation data for Hurricane Matthew (October 3-6,
@@ -121,8 +119,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/accumulated-gpm-imerg-data-for-haiti-hurricane-matthew-october-3-6th-2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

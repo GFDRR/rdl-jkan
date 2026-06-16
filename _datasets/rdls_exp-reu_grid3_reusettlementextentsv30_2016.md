@@ -102,8 +102,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/grid3-reu-settlement-extents-v3-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -54,24 +54,22 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    landslide:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: LSI:-
-        process: landslide_mudflow
-        trigger: null
-        type: landslide
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: LSI:-
+      process: landslide_mudflow
+      trigger: null
+      type: landslide
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on\
@@ -94,8 +92,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/landslide-extent-along-the-kaipito-river-in-hograno-kia-havulei-constituency-isabel-provin
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

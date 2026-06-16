@@ -75,8 +75,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/osm-roads-data-attributed-with-road-surface-classification
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -63,8 +63,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/myanmar-buildings-overture-maps-export
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

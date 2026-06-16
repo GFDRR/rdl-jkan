@@ -28,56 +28,52 @@ description: 'This spatial dataset provides Hazard data of Bangladesh. Drought r
 details: Date of the dataset is unclear.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: es_drought_hzd
-        intensity_measure: NDVI:-
-        process: agricultural_drought
-        trigger: null
-        type: drought
-      id: es_drought
-      occurrence_range: null
-      seasonality: null
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: es_earthquake_hzd
-        intensity_measure: PGA:g
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: es_earthquake
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: es_flood_hzd
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: es_flood
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 3
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: es_flood_hzd
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: es_flood
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: es_earthquake_hzd
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: es_earthquake
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: es_drought_hzd
+      intensity_measure: NDVI:-
+      process: agricultural_drought
+      trigger: null
+      type: drought
+    id: es_drought
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Spatial hazard datasets were compiled by Bangladesh Agricultural Research
@@ -100,8 +96,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/bangladesh-hazards
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

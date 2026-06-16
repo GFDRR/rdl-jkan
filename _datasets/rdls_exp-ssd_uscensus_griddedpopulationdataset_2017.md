@@ -54,8 +54,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/south-sudan-gridded-population-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -31,24 +31,22 @@ description: 'Volcanic activity risk has been assessed based on data obtained fr
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    volcanic:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: h_vaf:mm
-        process: ashfall
-        trigger: null
-        type: volcanic
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: h_vaf:mm
+      process: ashfall
+      trigger: null
+      type: volcanic
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Active volcano locations from El Salvador's Ministry of Environment
@@ -71,8 +69,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/volcanic-activity-risk-in-central-america
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

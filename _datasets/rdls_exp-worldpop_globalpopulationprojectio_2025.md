@@ -105,8 +105,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/futurepop_1km_grid_population_2025-2100_ssp_v0_2
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

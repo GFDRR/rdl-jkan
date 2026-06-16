@@ -69,8 +69,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_hrv_buildings
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

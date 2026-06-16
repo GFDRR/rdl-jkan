@@ -52,8 +52,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/population-sadd-car-2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -97,8 +97,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/grid3-nga-settlement-extents-v3_1
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

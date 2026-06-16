@@ -42,144 +42,142 @@ details: 'This project is based on analyses of other spatial datasets and should
   for International Law of Peace and Armed Conflict.'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Probabilistic drought hazard model based on 6-month Standardised
-          Precipitation Evapotranspiration Index (SPEI) extreme value analysis at
-          6 return periods globally
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_25yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.04
-            probability: null
-            return_period: 25
-      - calculation_method: simulated
-        description: Probabilistic drought hazard model based on 6-month Standardised
-          Precipitation Evapotranspiration Index (SPEI) extreme value analysis at
-          6 return periods globally
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_50yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: Probabilistic drought hazard model based on 6-month Standardised
-          Precipitation Evapotranspiration Index (SPEI) extreme value analysis at
-          6 return periods globally
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_100yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: Probabilistic drought hazard model based on 6-month Standardised
-          Precipitation Evapotranspiration Index (SPEI) extreme value analysis at
-          6 return periods globally
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_250yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.004
-            probability: null
-            return_period: 250
-      - calculation_method: simulated
-        description: Probabilistic drought hazard model based on 6-month Standardised
-          Precipitation Evapotranspiration Index (SPEI) extreme value analysis at
-          6 return periods globally
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_500yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: Probabilistic drought hazard model based on 6-month Standardised
-          Precipitation Evapotranspiration Index (SPEI) extreme value analysis at
-          6 return periods globally
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_1000yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001
-            probability: null
-            return_period: 1000
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Probabilistic drought hazard model based on 6-month Standardised
+        Precipitation Evapotranspiration Index (SPEI) extreme value analysis at 6
+        return periods globally
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
         intensity_measure: SPI:-
         process: meteorological_drought
         trigger: null
         type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_25yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.04
+          probability: null
+          return_period: 25
+    - calculation_method: simulated
+      description: Probabilistic drought hazard model based on 6-month Standardised
+        Precipitation Evapotranspiration Index (SPEI) extreme value analysis at 6
+        return periods globally
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: event_50yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: Probabilistic drought hazard model based on 6-month Standardised
+        Precipitation Evapotranspiration Index (SPEI) extreme value analysis at 6
+        return periods globally
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: event_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: Probabilistic drought hazard model based on 6-month Standardised
+        Precipitation Evapotranspiration Index (SPEI) extreme value analysis at 6
+        return periods globally
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: event_250yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.004
+          probability: null
+          return_period: 250
+    - calculation_method: simulated
+      description: Probabilistic drought hazard model based on 6-month Standardised
+        Precipitation Evapotranspiration Index (SPEI) extreme value analysis at 6
+        return periods globally
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: event_500yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: Probabilistic drought hazard model based on 6-month Standardised
+        Precipitation Evapotranspiration Index (SPEI) extreme value analysis at 6
+        return periods globally
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: event_1000yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001
+          probability: null
+          return_period: 1000
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Monthly SPEI raster data from the Global SPEI Database (1902-2018)
@@ -202,8 +200,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/global-drought-hazard
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

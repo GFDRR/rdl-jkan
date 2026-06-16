@@ -74,8 +74,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/worldpop-population-density-for-svalbard-and-jan-mayen-islands
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

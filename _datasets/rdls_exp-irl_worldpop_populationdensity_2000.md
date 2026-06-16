@@ -72,8 +72,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/worldpop-population-density-for-ireland
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

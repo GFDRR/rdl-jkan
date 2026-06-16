@@ -93,8 +93,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/mrt-ghsl
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

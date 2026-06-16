@@ -100,8 +100,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-cod-2018-v2
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

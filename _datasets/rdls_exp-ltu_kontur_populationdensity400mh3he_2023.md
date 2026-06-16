@@ -158,8 +158,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kontur-population-lithuania
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

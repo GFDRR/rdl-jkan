@@ -139,8 +139,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/madagascar-settlement-catchment-areas
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

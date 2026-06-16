@@ -41,24 +41,22 @@ description: "This dataset provides Palmer Drought Severity Index (PDSI) values 
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: PDSI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: PDSI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: PDSI values were computed from remote sensing data accessed via Google
@@ -89,8 +87,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/ethiopia-palmer-drought-severity-index-pdsi-2020-2024
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

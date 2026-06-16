@@ -68,8 +68,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_mar_education_facilities
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

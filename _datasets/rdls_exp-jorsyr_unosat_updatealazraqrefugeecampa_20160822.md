@@ -69,8 +69,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/update-al-azraq-refugee-camp-az-zarqa-governorate-jordan
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

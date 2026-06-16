@@ -125,8 +125,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/existing-and-planned-roads-of-kutupalong-balukhali-rohingya-refugee-sites
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

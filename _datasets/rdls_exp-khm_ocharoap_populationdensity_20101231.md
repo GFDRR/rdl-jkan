@@ -61,8 +61,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/cambodia-population-statistics-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

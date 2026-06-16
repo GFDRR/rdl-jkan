@@ -99,8 +99,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-idp-shelters-in-un-house-compound-juba-central-equatoria-south-sud-october-14-2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

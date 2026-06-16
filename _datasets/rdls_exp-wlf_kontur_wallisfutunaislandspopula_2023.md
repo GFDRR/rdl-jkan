@@ -144,8 +144,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kontur-population-wallis-and-futuna-islands
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

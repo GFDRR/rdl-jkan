@@ -70,8 +70,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-idp-shelter-density-in-daynile-and-dharkenley-district-mogadishu-november-10-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

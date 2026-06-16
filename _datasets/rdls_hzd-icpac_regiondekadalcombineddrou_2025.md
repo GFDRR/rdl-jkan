@@ -25,24 +25,22 @@ details: In applying the classification scheme, a temporal lag between the three
   (days 1-10; days 11-20; day 21 to the end of the month).
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: CDI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: CDI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: The CDI is a composite drought monitoring index implemented by ICPAC's
@@ -64,8 +62,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/igad-region-dekadal-combined-drought-indicator-cdi-2025
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

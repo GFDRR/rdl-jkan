@@ -25,24 +25,22 @@ description: 'Generated in Google Earth Engine using Sentinel 1 A data.. [Source
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: wd:m
-        process: coastal_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Sentinel-1A SAR data was processed in Google Earth Engine to detect
@@ -63,8 +61,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/standing-water-typhoon-ompong-cagayan-philippines
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

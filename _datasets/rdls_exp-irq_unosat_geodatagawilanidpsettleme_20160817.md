@@ -67,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-gawilan-idp-settlement-al-hamdaniya-ninawa-province-iraq-august-17-2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

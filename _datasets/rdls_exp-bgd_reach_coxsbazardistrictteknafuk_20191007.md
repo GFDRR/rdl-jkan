@@ -88,8 +88,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/cox-s-bazar-district-teknaf-and-ukhiya-upazila-cyclone-shelter-locations
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

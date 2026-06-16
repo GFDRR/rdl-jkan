@@ -80,8 +80,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-sujjo-idp-camp-azaz-district-aleppo-governorate-syria-june-19-2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

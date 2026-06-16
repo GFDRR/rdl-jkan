@@ -92,8 +92,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/spatialized-100m-school-age-population-grid-for-togo-by-educational-level-and-sex-2020
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

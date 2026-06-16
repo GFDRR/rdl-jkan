@@ -71,8 +71,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gaza-osm-buildings-baseline-before-october-7-2023
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

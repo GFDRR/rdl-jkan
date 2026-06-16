@@ -70,40 +70,37 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: es_flood_hzd
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: es_flood
-      occurrence_range: null
-      seasonality: null
-    landslide:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: es_landslide_hzd
-        intensity_measure: pgd:m
-        process: landslide_mudflow
-        trigger: null
-        type: landslide
-      id: es_landslide
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 2
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: es_landslide_hzd
+      intensity_measure: pgd:m
+      process: landslide_mudflow
+      trigger: null
+      type: landslide
+    id: es_landslide
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: es_flood_hzd
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: es_flood
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: "Post-event landslide and flood inventories were created by visual\
@@ -142,8 +139,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/tropical-cyclone-maria-inventory-of-landslides-and-flooded-areas-2762
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

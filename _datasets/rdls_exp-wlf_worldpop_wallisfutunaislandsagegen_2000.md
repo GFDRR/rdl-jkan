@@ -74,8 +74,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/worldpop-age-and-gender-structures-for-wallis-and-futuna-islands
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

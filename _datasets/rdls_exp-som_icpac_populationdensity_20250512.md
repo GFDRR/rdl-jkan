@@ -53,8 +53,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/icpac-geonode-somalia-population-density
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

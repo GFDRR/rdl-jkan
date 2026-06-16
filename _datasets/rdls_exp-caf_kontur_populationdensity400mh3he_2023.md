@@ -156,8 +156,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kontur-population-central-african-republic
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

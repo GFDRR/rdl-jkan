@@ -53,8 +53,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/mexico-mapaton-nacional-2025
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

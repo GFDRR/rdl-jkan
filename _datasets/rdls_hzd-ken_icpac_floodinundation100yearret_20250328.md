@@ -31,43 +31,41 @@ description: 'This dataset is the output from the Global Flood Model intercompar
 details: Time period is set to publication date rather than the date the data covers
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: Probabilistic fluvial flood hazard model for Kenya at 100-year
-          return period, derived from multi-model ensemble agreement
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_100yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: Probabilistic fluvial flood hazard model for Kenya at 100-year
+        return period, derived from multi-model ensemble agreement
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Fluvial flood inundation depths were simulated using an ensemble of
@@ -90,8 +88,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/icpac-geonode-kenya-flood-inundation-100-year-return-period
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

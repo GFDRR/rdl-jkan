@@ -69,8 +69,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-mentao-refugee-camp-in-soum-district-sahel-province-burkina-faso-january-15-2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

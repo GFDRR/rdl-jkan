@@ -84,8 +84,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-idp-settlements-and-shelters-in-kismayo-lower-juba-somalia-april-30-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

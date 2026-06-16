@@ -126,8 +126,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kontur-boundaries-suriname
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

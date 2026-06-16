@@ -99,8 +99,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gridded-population-estimates-for-turkey-using-un-cod-ps-estimates-2021-version-1-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -40,24 +40,22 @@ details: 'The study includes interviews from 197 IDPs and 31 of their non-displa
   Report published: https://doi.org/10.55363/IDMC.UCXV2874'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    sea_level_rise:
-    - analysis_type: probabilistic
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: slr:cm
-        process: sea_level_rise
-        trigger: null
-        type: sea_level_rise
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: slr:cm
+      process: sea_level_rise
+      trigger: null
+      type: sea_level_rise
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: IDMC's standardized survey tool administered in 2019 collected quantitative,

@@ -65,8 +65,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/guatemala-densidad-de-carreteras-2013
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

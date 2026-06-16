@@ -26,24 +26,22 @@ description: 'This dataset contains Nepal''s station wise rainfall for 2001 to 2
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: SPI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://opendatacommons.org/licenses/odbl/1-0/
 lineage:
   description: Annual rainfall data were extracted from Nepal's official Environmental
@@ -65,8 +63,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/annual-rainfall-by-station-2001-2012
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

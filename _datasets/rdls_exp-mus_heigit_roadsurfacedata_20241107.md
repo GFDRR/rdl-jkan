@@ -119,8 +119,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/mauritius-road-surface-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -26,24 +26,22 @@ description: 'Includes a binary GeoTIFF where 0 values are non-flooded and 1 val
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: wd:m
-        process: pluvial_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Sentinel-1 SAR satellite imagery from 13 June 2018 was processed to
@@ -64,8 +62,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/cloud-to-street-rohingya-refugees-flood-maps-2018-06-13-based-on-sentinel-1-imagery
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

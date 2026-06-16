@@ -101,8 +101,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gridded-population-estimates-for-sudan-using-un-cod-ps-estimates-2022-v2
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

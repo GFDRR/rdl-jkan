@@ -63,24 +63,22 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: UNOSAT analysts compared Sentinel-2 satellite imagery acquired on 04
@@ -110,8 +108,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/water-extent-between-01-august-2019-and-04-october-2021-along-lake-albert-in-d-r-of-the-co
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -82,8 +82,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-oncunipar-refugee-camp-merkez-district-kilis-province-turkey-june-16-2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

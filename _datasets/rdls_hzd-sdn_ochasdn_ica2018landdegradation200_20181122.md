@@ -51,24 +51,22 @@ description: 'This layer contains information about the land degradation phenome
 details: https://geonode.wfp.org/layers/geonode%3Asdn_ica_landdegradation_geonode_20180201
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    erosion:
-    - analysis_type: empirical
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: Er:T/ha
-        process: soil_erosion
-        trigger: null
-        type: erosion
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: Er:T/ha
+      process: soil_erosion
+      trigger: null
+      type: erosion
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Multi-source satellite and topographic data (MODIS 2001-2012, WorldClim,
@@ -115,8 +113,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

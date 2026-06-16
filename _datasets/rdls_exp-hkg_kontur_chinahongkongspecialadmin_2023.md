@@ -158,8 +158,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kontur-population-china-hong-kong-special-administrative-region
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

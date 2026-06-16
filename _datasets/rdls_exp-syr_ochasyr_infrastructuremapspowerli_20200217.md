@@ -77,8 +77,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/syria-infrastructure-maps-power-line-water-way-dam-highway
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

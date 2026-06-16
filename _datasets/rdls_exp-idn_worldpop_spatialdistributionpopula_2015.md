@@ -77,8 +77,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/worldpop-population-counts-2015-2030-idn
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

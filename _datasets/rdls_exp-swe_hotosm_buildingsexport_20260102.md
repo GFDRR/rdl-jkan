@@ -67,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_swe_buildings
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

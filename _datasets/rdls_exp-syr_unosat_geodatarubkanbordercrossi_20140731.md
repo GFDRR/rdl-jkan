@@ -70,8 +70,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-rubkan-border-crossing-idp-settlement-homs-governorate-syria-july-31-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

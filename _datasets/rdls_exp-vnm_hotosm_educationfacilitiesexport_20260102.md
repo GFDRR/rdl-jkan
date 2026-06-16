@@ -66,8 +66,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_vnm_education_facilities
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

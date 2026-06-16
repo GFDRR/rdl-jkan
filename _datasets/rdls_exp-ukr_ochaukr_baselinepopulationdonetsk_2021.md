@@ -64,8 +64,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/ukraine-baseline-population-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

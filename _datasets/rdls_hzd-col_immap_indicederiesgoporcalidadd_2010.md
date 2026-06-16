@@ -26,24 +26,22 @@ details: "Los datos originales pueden ser obtenidos de la p\xE1gina oficial de S
   \ https://www.ins.gov.co/sivicap/Paginas/sivicap.aspx"
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: IRCA:-
-        process: hydrological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: IRCA:-
+      process: hydrological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: IRCA municipal indices were compiled from the SIVICAP (Sistema de Vigilancia
@@ -65,8 +63,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/indice-de-riesgo-por-calidad-del-agua-para-consumo-humano-irca-municipal-2010-2019-en-colombia
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

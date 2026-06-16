@@ -77,8 +77,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_mda_buildings
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

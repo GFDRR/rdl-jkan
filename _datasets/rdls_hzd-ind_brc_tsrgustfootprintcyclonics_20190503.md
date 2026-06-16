@@ -33,24 +33,22 @@ description: 'TSR gust footprint for Cyclonic Storm FANI - 2019-May 3 - Credit: 
 details: 'Credit: Tropical Storm Risk/UCL'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: tropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: "TSR gust footprint model generated approximately 3 hours after Cyclone\
@@ -72,8 +70,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/tsr-gust-footprint-for-cyclonic-storm-fani
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

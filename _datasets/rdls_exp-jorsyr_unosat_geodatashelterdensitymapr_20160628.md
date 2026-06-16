@@ -74,8 +74,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-shelter-density-map-at-rukban-border-crossing-jordan-syria-border-june-28-2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

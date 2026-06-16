@@ -87,8 +87,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/pakistan-india_all-files-high-resolution-population-density-maps
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

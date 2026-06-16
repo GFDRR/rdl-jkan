@@ -63,8 +63,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/mimu-geonode-myanmar-road-network
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

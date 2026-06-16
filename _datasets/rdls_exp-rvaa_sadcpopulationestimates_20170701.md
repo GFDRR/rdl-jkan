@@ -59,8 +59,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/sadc-population-estimates-06-july-2018
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

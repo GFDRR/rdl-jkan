@@ -74,8 +74,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-al-zaatari-refugee-camp-mafraq-governorate-jordan-november-19-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

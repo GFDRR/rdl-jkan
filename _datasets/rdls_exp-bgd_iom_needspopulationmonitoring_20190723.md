@@ -109,8 +109,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/iom-bangladesh-needs-and-population-monitoring-npm-uav-imagery-and-gis-package-by-camp-july-2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

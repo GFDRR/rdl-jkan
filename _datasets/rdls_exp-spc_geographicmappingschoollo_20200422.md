@@ -64,8 +64,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/pdh-geographic-mapping-of-school-locations-in-the-pacific
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

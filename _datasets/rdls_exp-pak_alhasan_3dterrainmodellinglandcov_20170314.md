@@ -81,8 +81,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/3d-terrain-modelling-land-cover-map-of-district-swat
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

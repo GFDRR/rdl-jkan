@@ -34,24 +34,22 @@ description: 'These datasets provide Ethiopia''s Temperature Condition Index (TC
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    extreme_temperature:
-    - analysis_type: empirical
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: TCI:-
-        process: extreme_heat
-        trigger: null
-        type: extreme_temperature
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: TCI:-
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Land Surface Temperature data from MODIS satellite platform were processed
@@ -73,8 +71,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/ethiopia-seasonal-temperature-condition-index-june-july-august-september
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

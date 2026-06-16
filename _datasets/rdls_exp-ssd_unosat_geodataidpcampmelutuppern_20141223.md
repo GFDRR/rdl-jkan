@@ -83,8 +83,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-idp-camp-in-melut-upper-nile-state-south-sudan-december-23-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

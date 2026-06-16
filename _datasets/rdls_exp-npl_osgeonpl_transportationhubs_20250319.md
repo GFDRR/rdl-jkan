@@ -64,8 +64,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/osgeonepal_npl_transportation_hubs
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

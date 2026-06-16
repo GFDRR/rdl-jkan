@@ -91,8 +91,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/bottom-up-gridded-population-estimates-for-nigeria-version-2-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

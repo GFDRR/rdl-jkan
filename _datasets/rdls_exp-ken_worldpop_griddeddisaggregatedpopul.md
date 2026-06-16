@@ -104,8 +104,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gridded-disaggregated-population-estimates-for-kenya-version-2-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

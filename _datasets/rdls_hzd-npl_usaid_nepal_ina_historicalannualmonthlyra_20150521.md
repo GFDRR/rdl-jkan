@@ -29,24 +29,22 @@ details: The datasets were generated from spatial interpolation of observed rain
   2000-2003. All datasets are zipped GRID raster files.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: RF:mm
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: RF:mm
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Rainfall data were collected from approximately 200 meteorological
@@ -68,8 +66,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/nepal-historical-annual-and-monthly-rainfall-distribution-for-monsoon-months
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

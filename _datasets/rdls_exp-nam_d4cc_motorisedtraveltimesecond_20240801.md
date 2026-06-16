@@ -77,8 +77,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/namibia-motorised-travel-time-in-seconds-to-nearest-health-centre
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

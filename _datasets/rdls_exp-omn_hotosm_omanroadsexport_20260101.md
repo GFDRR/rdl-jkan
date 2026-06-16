@@ -70,8 +70,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_omn_roads
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

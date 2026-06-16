@@ -67,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_khm_airports
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

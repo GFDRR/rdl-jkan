@@ -153,8 +153,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gar15-global-exposure-dataset-for-macedonia-the-former-yugoslav-republic-of
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

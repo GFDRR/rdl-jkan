@@ -96,8 +96,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-zambia-2019-version-1-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

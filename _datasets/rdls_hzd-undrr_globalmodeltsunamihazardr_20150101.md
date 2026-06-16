@@ -44,43 +44,41 @@ details: This dataset was generated using other global datasets; it should not b
   results.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    tsunami:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: Probabilistic tsunami hazard model with run-up heights at 500-year
-          return period
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_tsunami
-          intensity_measure: wd:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: event_500yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002
-            probability: null
-            return_period: 500
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: Probabilistic tsunami hazard model with run-up heights at 500-year
+        return period
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_tsunami
         intensity_measure: wd:m
         process: tsunami
         trigger: null
         type: tsunami
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_500yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002
+          probability: null
+          return_period: 500
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: tsunami
+      trigger: null
+      type: tsunami
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Global tsunami hazard model generated using UNISDR's integrated global
@@ -100,8 +98,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/tsunami-hazard-run-up-rp-500-years
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

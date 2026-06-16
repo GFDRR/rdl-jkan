@@ -119,8 +119,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/saint-vincent-and-the-grenadines-road-surface-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

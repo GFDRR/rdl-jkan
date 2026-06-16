@@ -60,8 +60,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/2020-census-total-population-by-barangay_admin4
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

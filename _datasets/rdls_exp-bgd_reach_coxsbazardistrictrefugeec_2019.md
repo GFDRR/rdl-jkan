@@ -84,8 +84,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/cox-s-bazar-district-refugee-camp-wash-infrastructure-coding-2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

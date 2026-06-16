@@ -32,24 +32,22 @@ description: 'NDVI Anomaly is a geospatial metric used to measure how current ve
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: NDVI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: NDVI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: MODIS MOD13Q1 V6.1 NDVI data from July across three years (2023-2025)
@@ -71,8 +69,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/ethiopia-ndvi-anomaly-july-2025
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

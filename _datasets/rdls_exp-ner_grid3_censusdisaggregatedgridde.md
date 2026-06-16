@@ -88,8 +88,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/census-disaggregated-gridded-population-estimates-for-niger-2021-version-1-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

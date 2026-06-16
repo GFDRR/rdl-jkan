@@ -61,8 +61,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/population-density-of-kenya-in-1989
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

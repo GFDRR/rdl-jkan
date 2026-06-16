@@ -46,24 +46,22 @@ description: "Monthly and annual burnt area statistics (in sqkm) are calculated 
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    wildfire:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: AA:km2
-        process: wildfire
-        trigger: null
-        type: wildfire
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: AA:km2
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Monthly and annual burnt area statistics were calculated from COPERNICUS
@@ -93,8 +91,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/west-and-central-africa-burnt-area
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

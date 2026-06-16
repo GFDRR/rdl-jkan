@@ -32,24 +32,22 @@ details: Georeferencing in this dataset is only available to the municipal level
   data is also available with more precise georeferencing, but not in this dataset.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    pest_infestation:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: Pest:count/area
-        process: pest
-        trigger: null
-        type: pest_infestation
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: Pest:count/area
+      process: pest
+      trigger: null
+      type: pest_infestation
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Post-event registry data compiled by the Colombian Presidential Program

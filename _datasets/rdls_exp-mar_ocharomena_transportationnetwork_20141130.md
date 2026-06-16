@@ -75,8 +75,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/morocco-transportation-network
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null
