@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-coclico_shorelineprojectionsedito",
+      "title": "CoCliCo - Global Shoreline Change Projections",
+      "description": "Shoreline change projections under different climate scenarios (SSPs). Includes structured sample-wise accretion/erosion and sea level rise (SLR) projections with per-transect median and percentile summaries. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://deltares.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -179.84900256923657,
+          -68.93437164540674,
+          179.8812171641805,
+          80.71599602776956
+        ]
+      },
+      "temporal": {
+        "start": "2030",
+        "end": "2100"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Shoreline change projections under different climate scenarios (SSPs). Includes structured sample-wise accretion/erosion and sea level rise (SLR) projections with per-transect median and percentile summaries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_citation",
+          "name": "Calkoen et al., 2025. Present-day coastal erosion threatens buildings globally with sea-level rise increasing future risk.",
+          "url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/shoreline-projections-edito/collection.json"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Global Shoreline Change Projections [shoreline-projections-edito]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/shoreline-projections-edito/collection.json"
+        },
+        {
+          "id": "resource_data",
+          "title": "Shoreline Projections",
+          "description": "Shoreline change projections for global coastal transects, combining accretion/erosion trends and sea level rise impacts with spatial output in point format.",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "az://items/shoreline-projections-edito.parquet"
+        },
+        {
+          "id": "resource_geoparquetstacitems",
+          "title": "GeoParquet STAC items",
+          "description": "CoCliCo - Global Shoreline Change Projections (Snapshot of the collection's STAC items exported to GeoParquet format.)",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "https://coclico.blob.core.windows.net/items/shoreline-projections-edito.parquet"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "erosion",
+                "process": "coastal_erosion",
+                "intensity_measure": "Er:m/yr"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

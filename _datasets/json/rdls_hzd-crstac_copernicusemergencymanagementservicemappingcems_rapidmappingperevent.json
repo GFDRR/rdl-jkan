@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_copernicusemergencymanagementservicemappingcems_rapidmappingperevent",
+      "title": "Copernicus Emergency Management Service - Mapping (CEMS) - Rapid mapping per event",
+      "description": "This service consists of the on-demand and fast provision (hours-days) of geospatial information in support of emergency management activities immediately following disaster. The service is based on the acquisition, processing and analysis, in rapid mode, of satellite imagery and other geospatial raster and vector data sources, and social media when relevant. A Rapid Mapping activation is defined by one event and a location. There can be more than one area of interest (AOI) in an activation but these need to be linked to the same event. AOIs represent the geographical areas to be analysed and mapped. There can be more than one product per AOI [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "CEMS",
+        "url": "https://mapping.emergency.copernicus.eu/"
+      },
+      "purpose": "Download per event/case study possible",
+      "contact_point": {
+        "name": "CEMS",
+        "url": "https://mapping.emergency.copernicus.eu/"
+      },
+      "creator": {
+        "name": "CEMS",
+        "url": "https://mapping.emergency.copernicus.eu/"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "temporal": {
+        "start": "2017",
+        "end": "2026"
+      },
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "The Copernicus Emergency Management Service (CEMS) uses satellite imagery and other geospatial data to provide free of charge mapping service in cases of natural disasters, human-made emergency situations and humanitarian crises throughout the world. It covers the following hazards relevant for climate risk assessments: floods, severe storms, fires",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "satellite imagery and local data",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_pub_publicationlink",
+          "name": "Publication link",
+          "url": "https://mapping.emergency.copernicus.eu/about/rapid-mapping-manual/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Copernicus Emergency Management Service - Mapping (CEMS) - Rapid mapping per event",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/environmental/copernicus-emergency-management-service-mapping-cems/rapid-mapping-per-event/rapid-mapping-per-event.json",
+          "spatial_aggregation": "event level"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Copernicus Emergency Management Service - Mapping (CEMS) - Rapid mapping per event - data file",
+          "description": "Copernicus Emergency Management Service - Mapping (CEMS) - Rapid mapping per event - data file",
+          "media_type": "application/x-shapefile",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://mapping.emergency.copernicus.eu/activations/",
+          "spatial_aggregation": "event level"
+        },
+        {
+          "id": "resource_link_publicationlink",
+          "title": "Publication link",
+          "description": "Copernicus Emergency Management Service - Mapping (CEMS) - Rapid mapping per event (Publication link)",
+          "format": "Web reference",
+          "access_url": "https://mapping.emergency.copernicus.eu/about/rapid-mapping-manual/",
+          "spatial_aggregation": "event level"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "burnedarea:ha"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

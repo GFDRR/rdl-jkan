@@ -50,7 +50,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: coastal_flood
       trigger: null

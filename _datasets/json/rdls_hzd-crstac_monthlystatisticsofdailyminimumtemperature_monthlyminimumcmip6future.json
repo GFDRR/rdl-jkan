@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_monthlystatisticsofdailyminimumtemperature_monthlyminimumcmip6future",
+      "title": "Monthly statistics of daily minimum temperature - Monthly minimum CMIP 6 future",
+      "description": "Monthly minimum of daily minimum near-surface (2 meters) air temperature. Climate scenarios (as published): \"SSP-RCP combinations\" [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Copernicus Climate Data Store",
+        "url": "https://doi.org/10.24381/cds.5292a2b0"
+      },
+      "purpose": "data download via interface or API",
+      "contact_point": {
+        "name": "Copernicus Climate Data Store",
+        "url": "https://doi.org/10.24381/cds.5292a2b0"
+      },
+      "creator": {
+        "name": "Copernicus Climate Data Store",
+        "url": "https://doi.org/10.24381/cds.5292a2b0"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -60.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 111000,
+      "temporal": {
+        "start": "2015",
+        "end": "2100"
+      },
+      "temporal_resolution": "P1M",
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "This catalogue entry provides gridded data from global (CMIP5 and CMIP6) projections included in the IPCC Interactive Atlas, a novel contribution from Working Group I (WGI) to the IPCC Sixth Assessment Report (AR6).",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "CMIP6",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/IPCC-WG1/Atlas/tree/main",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.24381/cds.5292a2b0",
+          "url": "https://doi.org/10.24381/cds.5292a2b0"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Monthly statistics of daily minimum temperature - Monthly minimum CMIP 6 future",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/temperature-related/monthly-statistics-of-daily-minimum-temperature/monthly-minimum-cmip-6-future/monthly-minimum-cmip-6-future.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Monthly statistics of daily minimum temperature - Monthly minimum CMIP 6 future - data file",
+          "description": "Monthly statistics of daily minimum temperature - Monthly minimum CMIP 6 future - data file",
+          "media_type": "application/x-netcdf",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://doi.org/10.24381/cds.5292a2b0"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Monthly statistics of daily minimum temperature - Monthly minimum CMIP 6 future (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/IPCC-WG1/Atlas/tree/main"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "extreme_temperature",
+                "process": "extreme_cold",
+                "intensity_measure": "AirTemp:C"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_humanfootprint_y20002018",
+      "title": "Human footprint - Y2000-2018",
+      "description": "The annual dynamics of the global Human Footprint, the pressure imposed on the eco-environment by changing ecological processes and natural landscapes, from 2000 to 2018 based on eight variables that reflect different aspects of human pressures [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Figshare",
+        "url": "https://doi.org/10.6084/m9.figshare.16571064"
+      },
+      "contact_point": {
+        "name": "Figshare",
+        "url": "https://doi.org/10.6084/m9.figshare.16571064"
+      },
+      "creator": {
+        "name": "Figshare",
+        "url": "https://doi.org/10.6084/m9.figshare.16571064"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 1000,
+      "temporal": {
+        "start": "2000",
+        "end": "2018"
+      },
+      "temporal_resolution": "P1Y",
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "The annual dynamics of the global Human Footprint, the pressure imposed on the eco-environment by changing ecological processes and natural landscapes, from 2000 to 2018 based on eight variables that reflect different aspects of human pressures.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "nighttime lights",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "ESA CCI land cover",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_3",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_4",
+            "name": "OSM",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/HaoweiGis/humanFootprintMapping/",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/s41597-022-01284-8",
+          "url": "https://doi.org/10.1038/s41597-022-01284-8"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Human footprint - Y2000-2018",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/land-use/human-footprint/y2000-2018/y2000-2018.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Human footprint - Y2000-2018 - data file",
+          "description": "Human footprint - Y2000-2018 - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:54009",
+          "download_url": "https://figshare.com/ndownloader/articles/16571064/versions/7"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Human footprint - Y2000-2018 (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/s41597-022-01284-8"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Human footprint - Y2000-2018 (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/HaoweiGis/humanFootprintMapping/"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "urban/built-up footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

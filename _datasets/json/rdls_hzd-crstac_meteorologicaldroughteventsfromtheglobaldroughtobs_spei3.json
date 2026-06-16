@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_meteorologicaldroughteventsfromtheglobaldroughtobs_spei3",
+      "title": "Meteorological drought events from the Global Drought Observatory (GDO) - SPEI3",
+      "description": "Drought events based on Standard Precipitation and Evaporation Index for 3 months [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Global Drought Observatory",
+        "url": "https://data.jrc.ec.europa.eu/collection/id-00321"
+      },
+      "contact_point": {
+        "name": "Global Drought Observatory",
+        "url": "https://data.jrc.ec.europa.eu/collection/id-00321"
+      },
+      "creator": {
+        "name": "Global Drought Observatory",
+        "url": "https://data.jrc.ec.europa.eu/collection/id-00321"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 55500,
+      "temporal": {
+        "start": "1951",
+        "end": "2016"
+      },
+      "temporal_resolution": "P1M",
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "More than 4500 drought events classified using a few indicators as the SPI and the SPEI at different temporal scales. The database of drought events has specific entries for each macro-region and country.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "GPCC",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "CRU TS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1016/j.ejrh.2019.100593",
+          "url": "https://doi.org/10.1016/j.ejrh.2019.100593"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Meteorological drought events from the Global Drought Observatory (GDO) - SPEI3",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/precipitation-related/meteorological-drought-events-from-the-global-drought-observatory-gdo/spei3/spei3.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Meteorological drought events from the Global Drought Observatory (GDO) - SPEI3 - data file",
+          "description": "Meteorological drought events from the Global Drought Observatory (GDO) - SPEI3 - data file",
+          "media_type": "application/x-netcdf",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://data.jrc.ec.europa.eu/collection/id-00321"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Meteorological drought events from the Global Drought Observatory (GDO) - SPEI3 (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1016/j.ejrh.2019.100593"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "spi:dimensionless"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

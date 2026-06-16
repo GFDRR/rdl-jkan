@@ -1,0 +1,130 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_urbanlandprojections_18degreenetcdf",
+      "title": "Urban land projections - 1/8 degree netcdf",
+      "description": "Urban land projections under the Shared Socioeconomic Pathways (SSPs) until 2100 at 1/8 degree resolution and in netcdf format. Climate scenarios (as published): \"SSPs\" [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Havard Dataverse",
+        "url": "https://dataverse.harvard.edu/dataverse/geospatial_human_dimensions_data"
+      },
+      "contact_point": {
+        "name": "Havard Dataverse",
+        "url": "https://dataverse.harvard.edu/dataverse/geospatial_human_dimensions_data"
+      },
+      "creator": {
+        "name": "Havard Dataverse",
+        "url": "https://dataverse.harvard.edu/dataverse/geospatial_human_dimensions_data"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 13889,
+      "temporal": {
+        "start": "2010",
+        "end": "2100"
+      },
+      "temporal_resolution": "P10Y",
+      "license": "https://spdx.org/licenses/CC0-1.0.html",
+      "lineage": {
+        "description": "Urban land projections based on the Shared Socioeconomic Pathways (SSPs) developed by Gao Lab",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "based on GHSL",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "population projections from Jones & O'Neill 2016",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_3",
+            "name": "and other input data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/s41467-020-15788-7",
+          "url": "https://doi.org/10.1038/s41467-020-15788-7"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Urban land projections - 1/8 degree netcdf",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/land-use/urban-land-projections/18-degree-netcdf/18-degree-netcdf.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Urban land projections - 1/8 degree netcdf - data file",
+          "description": "Urban land projections - 1/8 degree netcdf - data file",
+          "media_type": "application/x-netcdf",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/ZHMI1L/Q4S9QA&version=1.0"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Urban land projections - 1/8 degree netcdf (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/s41467-020-15788-7"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "urban/built-up footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+---
+attributions: []
+catalog: null
+contact_point:
+  affiliation: null
+  email: null
+  name: Deltares
+  url: https://www.deltares.nl
+creator:
+  affiliation: null
+  email: null
+  name: Deltares
+  url: https://www.deltares.nl
+dataset_id: rdls_hzd-coclico_wef
+description: 'Dataset with extreme Wave Energy Flux (WEF) at the Global scale. WEF
+  is estimated for a scenario with high emission of greenhouse gases (RCP8.5) for
+  eight different return periods (5, 10, 20, 50, 100, 200, 500 and 1000) and for eleven
+  decades (1995, 2010-2100). This dataset is part of the LISCOAST (https://data.jrc.ec.europa.eu/collection/LISCOAST)
+  project. See this article (https://doi.org/10.1002/2016GL072488) for more dataset-specific
+  information. Variants in the source dataset - rp: 5.0, 10.0, 20.0, 50.0, 100.0,
+  200.0, 500.0, 1000.0; time: 1995.0, 2010.0, 2020.0, 2030.0, 2040.0, 2050.0, 2060.0,
+  2070.0, ... (3 more); lon: -180.003, 181.622 - longitude; lat: -60.337, 77.942 -
+  latitude. [Source: This metadata record was automatically extracted from the STAC
+  catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]'
+details: null
+exposure: []
+hazard:
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 8
+    events:
+    - calculation_method: simulated
+      description: 'Return period 5 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_5
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5.0
+    - calculation_method: simulated
+      description: 'Return period 10 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_10
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10.0
+    - calculation_method: simulated
+      description: 'Return period 20 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20.0
+    - calculation_method: simulated
+      description: 'Return period 50 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50.0
+    - calculation_method: simulated
+      description: 'Return period 100 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100.0
+    - calculation_method: simulated
+      description: 'Return period 200 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_200
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200.0
+    - calculation_method: simulated
+      description: 'Return period 500 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500.0
+    - calculation_method: simulated
+      description: 'Return period 1000 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_1000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000.0
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
+license: https://example.org/license/unknown
+lineage:
+  description: Dataset with extreme Wave Energy Flux (WEF) at the Global scale. WEF
+    is estimated for a scenario with high emission of greenhouse gases (RCP8.5) for
+    eight different return periods (5, 10, 20, 50, 100, 200, 500 and 1000) and for
+    eleven decades (1995, 2010-2100). This dataset is part of the LISCOAST (https://data.jrc.ec.europa.eu/collection/LISCOAST)
+    project. See this article (https://doi.org/10.1002/2016GL072488) for more dataset-specific
+    information.
+  sources:
+  - id: source_1
+    license: null
+    name: Deltares
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: https://www.deltares.nl
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+loss: null
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Deltares
+  url: https://www.deltares.nl
+purpose: null
+referenced_by: []
+resources:
+- access_url: https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/wef/collection.json
+  baseline_period: null
+  climate: null
+  conforms_to: https://api.stacspec.org/v1.0.0/
+  coordinate_system: null
+  description: Source STAC Collection metadata for this dataset, hosted as part of
+    the CoCliCo catalog. Conforms to STAC v1.0.0.
+  download_url: null
+  format: null
+  id: resource_stac_collection
+  media_type: application/json
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: 'STAC Collection: CoCliCo - Wave energy flux [wef]'
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: The root of the Global Wave Energy Flux zarr dataset on public Google
+    Cloud Storage.
+  download_url: https://storage.googleapis.com/coclico-data-public/coclico/global_wave_energy_flux.zarr
+  format: null
+  id: resource_data
+  media_type: application/vnd.zarr
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Global Wave Energy Flux zarr root
+- access_url: https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/wef.png
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: CoCliCo - Wave energy flux
+  download_url: null
+  format: null
+  id: resource_thumbnail
+  media_type: image/png
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Thumbnail
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-coclico_wef
+spatial:
+  bbox:
+  - -180.0
+  - -90.0
+  - 180.0
+  - 90.0
+  centroid: null
+  countries:
+  - GLO
+  gazetteer_entries: []
+  scale: global
+spatial_resolution: null
+temporal: null
+temporal_resolution: null
+title: CoCliCo - Wave energy flux
+version: null
+vulnerability: null
+---

@@ -1,0 +1,134 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_myriadhazardeventssetsmyriadhes_multihazardeventssets",
+      "title": "MYRIAD Hazard Events Sets (MYRIAD-HES) - Multi-hazard events sets",
+      "description": "A global multi-hazard event set database, spanning from 2004 to 2017, which includes eleven hazards (coldwaves, heatwaves, droughts, earthquakes, extreme wind events, floods, landslides, tropical cyclones, tsunamis, volcanic eruptions, and wildfires) [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Zenodo",
+        "url": "https://doi.org/10.5281/ZENODO.8269680"
+      },
+      "purpose": "Calculated with the MYRIAD - Hazard Event Sets Algorithm (MYRIAD-HESA); also includes non-climatic hazards (i.e. earthquakes, volcanic eruptions)",
+      "contact_point": {
+        "name": "Zenodo",
+        "url": "https://doi.org/10.5281/ZENODO.8269680"
+      },
+      "creator": {
+        "name": "Zenodo",
+        "url": "https://doi.org/10.5281/ZENODO.8269680"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "temporal": {
+        "start": "2004",
+        "end": "2017"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "A global multi-hazard event set database, spanning from 2004 to 2017, which includes eleven hazards (coldwaves, heatwaves, droughts, earthquakes, extreme wind events, floods, landslides, tropical cyclones, tsunamis, volcanic eruptions, and wildfires).",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "variety of datasets",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "partially included in this catalog as well",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://doi.org/10.5281/zenodo.8272754",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/s41598-023-40400-5",
+          "url": "https://doi.org/10.1038/s41598-023-40400-5"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: MYRIAD Hazard Events Sets (MYRIAD-HES) - Multi-hazard events sets",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/multi-hazard/myriad-hazard-events-sets-myriad-hes/multi-hazard-events-sets/multi-hazard-events-sets.json",
+          "spatial_aggregation": "event level"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "MYRIAD Hazard Events Sets (MYRIAD-HES) - Multi-hazard events sets - data file",
+          "description": "MYRIAD Hazard Events Sets (MYRIAD-HES) - Multi-hazard events sets - data file",
+          "media_type": "application/zip",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://zenodo.org/records/8269680/files/MYRIAD-HES.zip?download=1",
+          "spatial_aggregation": "event level"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "MYRIAD Hazard Events Sets (MYRIAD-HES) - Multi-hazard events sets (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/s41598-023-40400-5",
+          "spatial_aggregation": "event level"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "MYRIAD Hazard Events Sets (MYRIAD-HES) - Multi-hazard events sets (Code link)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.5281/zenodo.8272754",
+          "spatial_aggregation": "event level"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

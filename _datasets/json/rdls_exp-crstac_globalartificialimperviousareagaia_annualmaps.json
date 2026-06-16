@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_globalartificialimperviousareagaia_annualmaps",
+      "title": "Global Artificial Impervious Area (GAIA) - Annual maps",
+      "description": "Annual maps of artificial impervious area, a predominant indicator of human settlement. Values range from 0 to 34. 0 represents non-human settlements, 1 represents increased human settlements in 2017, 2 represents increased settlements in 2016, ..., 33 represents new settlements in 1985 and before [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Star Cloud Data Service Platform",
+        "url": "https://data-starcloud.pcl.ac.cn/resource/13"
+      },
+      "purpose": "user account needed; data doanloadable by tile",
+      "contact_point": {
+        "name": "Star Cloud Data Service Platform",
+        "url": "https://data-starcloud.pcl.ac.cn/resource/13"
+      },
+      "creator": {
+        "name": "Star Cloud Data Service Platform",
+        "url": "https://data-starcloud.pcl.ac.cn/resource/13"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 31,
+      "temporal": {
+        "start": "1985",
+        "end": "2018"
+      },
+      "temporal_resolution": "P1Y",
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Annual maps of artificial impervious area, a predominant indicator of human settlement. Values range from 0 to 34. 0 represents non-human settlements, 1 represents increased human settlements in 2017, 2 represents increased settlements in 2016, ..., 33 represents new settlements in 1985 and before.",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "Nighttime lights",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "Sentinel 1",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_underlying_3",
+            "name": "Landsat",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1016/j.rse.2019.111510",
+          "url": "https://doi.org/10.1016/j.rse.2019.111510"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Global Artificial Impervious Area (GAIA) - Annual maps",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/land-use/global-artificial-impervious-area-gaia/annual-maps/annual-maps.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Global Artificial Impervious Area (GAIA) - Annual maps - data file",
+          "description": "Global Artificial Impervious Area (GAIA) - Annual maps - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://data-starcloud.pcl.ac.cn/resource/13"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Global Artificial Impervious Area (GAIA) - Annual maps (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1016/j.rse.2019.111510"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area",
+                "unit": "square_metre"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "urban/built-up footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
