@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ven_c4ven_internallydisplacedpopula",
+      "title": "Venezuela - Internally Displaced Population",
+      "description": "Contains data crowdsourced from Venezuelans through the Premise Data mobile application. The survey is presented only once to users that were identified to have moved in the past year and aims to capture principal motivations for the relocation. More relevant information below: The booklet included HERE goes into more details on how Premise's crowdsourcing works.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/open_one_time_internal_displacement]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "Code for Venezuela",
+        "url": "https://data.humdata.org/dataset/open_one_time_internal_displacement"
+      },
+      "creator": {
+        "name": "Code for Venezuela",
+        "url": "https://data.humdata.org/dataset/open_one_time_internal_displacement"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VEN"
+        ]
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Premise Data",
+            "url": "https://data.humdata.org/dataset/open_one_time_internal_displacement"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Internally displaced population data collected through Premise Data's crowdsourcing mobile application targeting Venezuelan users identified as having relocated within the past year. Survey responses capture principal motivations for relocation and displacement patterns, aggregated by Code for Venezuela to document internal displacement impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Premise Data",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Mobile crowdsourcing platform collecting survey responses from Venezuelans who relocated within the past year, capturing displacement motivations and population movement data"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1b0684c7",
+          "title": "open_one_time_internal_displacement.csv",
+          "description": "Venezuela - Internally Displaced Population (CSV file with a row per each survey response)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/a961cf0f-e0ed-4fb0-bce5-943e1d94d618/resource/1b0684c7-29b5-4138-820d-8479617a5f34/download/open_one_time_internal_displacement.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement from Venezuela captured through crowdsourced survey of internally displaced persons"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/open_one_time_internal_displacement",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

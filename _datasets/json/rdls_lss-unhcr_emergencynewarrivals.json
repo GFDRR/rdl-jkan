@@ -1,0 +1,177 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-unhcr_emergencynewarrivals",
+      "title": "Sudan Emergency: New arrivals from Sudan",
+      "description": "Following the outbreak of armed conflict in Sudan on 15 April 2023, large numbers of civilians have been forced to flee, including people who were already internally displaced because of previous conflicts in Sudan and refugees from other countries who had sought safety in Sudan. In addition to new internal displacement, hundreds of thousands of people, including Sudanese refugees and refugees of other nationalities hosted by Sudan have fled Sudan to neighbouring countries or returned home in adverse circumstances - notably to Chad, South Sudan, the Central African Republic, Egypt and Ethiopia. UNHCR Operational Data Portal for the Sudan Situation: https://data.unhcr.org/en/situations/sudansituation. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/new-arrivals-from-sudan]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "UNHCR Operational Data Portal for the Sudan Situation: https://data.unhcr.org/en/situations/sudansituation",
+      "contact_point": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/new-arrivals-from-sudan"
+      },
+      "creator": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/new-arrivals-from-sudan"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "SDN",
+          "TCD",
+          "SSD",
+          "CAF",
+          "EGY",
+          "ETH"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNHCR",
+            "url": "https://data.humdata.org/dataset/new-arrivals-from-sudan"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Government",
+            "url": "https://data.humdata.org/dataset/new-arrivals-from-sudan"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "IOM",
+            "url": "https://data.humdata.org/dataset/new-arrivals-from-sudan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Registry-based data compiled from UNHCR, government, and IOM sources tracking new arrivals and displacement flows from Sudan following the April 2023 armed conflict outbreak. Data aggregates cross-border population movements into neighbouring countries (Chad, South Sudan, Central African Republic, Egypt, Ethiopia) and includes both Sudanese refugees and third-country nationals previously hosted in Sudan.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNHCR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registry data on new arrivals from Sudan, tracking displaced persons and refugees crossing borders into neighbouring countries"
+          },
+          {
+            "id": "source_2",
+            "name": "Government",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National government records contributing to displacement and arrival statistics"
+          },
+          {
+            "id": "source_3",
+            "name": "IOM",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "International Organization for Migration data on population movements and displacement flows"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a9950d94",
+          "title": "UNHCR - New Arrivals from Sudan",
+          "description": "New arrivals from Sudan to Chad, Egypt and Ethiopia, South Sudan, the Central African Republic since 16 April, 2023.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/1G5FSrIZ5qvyrMSps4xE3vZf6kIQ9311Wm-mSx7HcPog/edit?usp=drive_web"
+        },
+        {
+          "id": "resource_51677222",
+          "title": "UNHCR - New Arrivals from Sudan per day",
+          "description": "Daily new arrivals from Sudan to Chad, Egypt and Ethiopia, South Sudan, the Central African Republic since 16 April, 2023.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/1MEDlbvR09E4xcKtjJDnF6mQtb11NhuI_BEDPxkIuSfY/edit?usp=drive_web"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement and forced migration due to armed conflict in Sudan"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "New arrivals and returnees from Sudan to neighbouring countries"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/new-arrivals-from-sudan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

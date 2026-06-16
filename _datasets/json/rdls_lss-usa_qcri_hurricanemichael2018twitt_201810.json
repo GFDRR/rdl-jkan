@@ -1,0 +1,204 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-usa_qcri_hurricanemichael2018twitt_201810",
+      "title": "United States - Hurricane Michael 2018 Twitter Data",
+      "description": "About the dataset: Hurricane Michael was the third-most intense Atlantic hurricane to make landfall in the United States in terms of pressure. This dataset was collected from Twitter during Hurricane Michael. The dataset was processed and analyzed using the AIDR (http://aidr.qcri.org) platform. Dataset Description: This is a Twitter dataset collected during Hurricane Michael 2018. The data was collected, processed, and analyzed by the AIDR (http://aidr.qcri.org) platform using state-of-the-art machine learning techniques. The data includes the number of injured and dead people, infrastructure damage reports, missing or found people, urgent needs and donation offers for each hour. Due to Twitter TOS, we do not share full tweets content on HDX. Please contact us via HDX or on aidr.qcri@gmail.com to get tweet ids of the dataset along with a tool which can be used to rehydrate tweets from tweet ids.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hurricane-michael-2018-twitter-data]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/hurricane-michael-2018-twitter-data"
+      },
+      "creator": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/hurricane-michael-2018-twitter-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "USA"
+        ]
+      },
+      "temporal": {
+        "start": "2018-10-10",
+        "end": "2018-10-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Twitter",
+            "url": "https://data.humdata.org/dataset/hurricane-michael-2018-twitter-data"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "AIDR (Artificial Intelligence for Disaster Response)",
+            "url": "https://data.humdata.org/dataset/hurricane-michael-2018-twitter-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Twitter data was collected during Hurricane Michael 2018 and processed through the AIDR platform using deep learning algorithms to automatically extract and classify impact reports including casualties, injuries, infrastructure damage, and displacement from unstructured social media text and imagery.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Twitter",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Social media posts collected during Hurricane Michael 2018 containing reports of casualties, damage, and displacement"
+          },
+          {
+            "id": "source_2",
+            "name": "AIDR (Artificial Intelligence for Disaster Response)",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Machine learning platform using deep learning techniques to process textual and imagery content from social media for automated impact classification and extraction"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://aidr.qcri.org"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_cf031d00",
+          "title": "Hurricane_Michael_Twitter_Data_Analysis_SummaryTable.xlsx",
+          "description": "This is a Twitter dataset collected during Hurricane Michael 2018. The data was collected, processed, and analyzed by the AIDR (http://aidr.qcri.org) platform using state-of-the-art machine learning techniques. The data includes the number of injured and dead people, infrastructure damage reports, missing or found people, urgent needs and donation offers for each hour. Due to Twitter TOS, we do not share full tweets content on HDX. Please contact us via HDX or on aidr.qcri@gmail.com to get tweet ids of the dataset along with a tool which can be used to rehydrate tweets from tweet ids.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/bc7525cb-a7ac-482f-8961-c5234d8c3275/resource/cf031d00-b817-4f6f-ac58-6bf74a000cb6/download/hurricane_michael_twitter_data_analysis_summarytable.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Infrastructure damage reports from Hurricane Michael extracted from social media"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injured persons from Hurricane Michael reported via Twitter"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from Hurricane Michael reported via Twitter"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Displaced persons from Hurricane Michael extracted from social media"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hurricane-michael-2018-twitter-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

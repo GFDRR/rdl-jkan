@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ukr_unhcr_estimatesinternallydispla_20220311",
+      "title": "Ukraine - Estimates on Internally Displaced People",
+      "description": "Estimates of the number of internally displaced persons (IDPs) in Ukraine. The estimates are based on data received from authorities, partners, and colleagues present in the field. It considers a clusterized approach (applying various estimation methodology based on geographic location and context), on top of the historical data from the past, and the refugee flows. For any queries, please contact: ukraineinfomanagement@unhcr.org or protectionclusterukraine@unhcr.org. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ukraine-estimates-on-internally-displaced-people]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/ukraine-estimates-on-internally-displaced-people"
+      },
+      "creator": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/ukraine-estimates-on-internally-displaced-people"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UKR"
+        ]
+      },
+      "temporal": {
+        "start": "2022-03-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Protection Cluster Ukraine",
+            "url": "https://data.humdata.org/dataset/ukraine-estimates-on-internally-displaced-people"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UNHCR",
+            "url": "https://data.humdata.org/dataset/ukraine-estimates-on-internally-displaced-people"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IDP estimates were generated through a clusterized estimation approach applied by the Protection Cluster Ukraine, integrating field reports from authorities and humanitarian partners with historical displacement data and refugee flow information. The methodology varies by geographic location and operational context to account for data availability and security constraints across Ukraine.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Protection Cluster Ukraine",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Field-based estimates of internally displaced persons compiled from authorities, humanitarian partners, and field staff using clusterized estimation methodology adapted to geographic context."
+          },
+          {
+            "id": "source_2",
+            "name": "UNHCR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "UN Refugee Agency data on displacement flows and historical IDP trends integrated into estimation models."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.understandingwar.org/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_013ffdf6",
+          "title": "idp_estimation_08_03_2022-unhcr-protection-cluster",
+          "description": "Ukraine - Estimates on Internally Displaced People (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/697c4fb9-1b76-4a66-808a-9a8fb5ffff1a/resource/013ffdf6-1b14-4a25-a194-4acf82251c75/download/idp_estimation_08_03_2022-unhcr-protection-cluster_.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from conflict-related violence in Ukraine"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ukraine-estimates-on-internally-displaced-people",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
