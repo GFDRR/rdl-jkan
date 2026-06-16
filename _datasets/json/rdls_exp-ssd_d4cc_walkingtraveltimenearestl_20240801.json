@@ -1,0 +1,110 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ssd_d4cc_walkingtraveltimenearestl_20240801",
+      "title": "South Sudan Walking Travel Time to nearest Level IV health centre",
+      "description": "A 100 m spatial resolution geotiff of walking travel time in seconds to nearest health facility in South Sudan. The data was generated using the Child Poverty and Access to Services (CPAS) software (10.5281/zenodo.4638563) and was created as part of the CPAS project within the Data for Children Collaborative. The travel time is calculated assuming walking speeds on all roads, tracks, paths and land cover types. A full description is available here a video description of the data is also available here Projection system is: GCS_WGS_1984 EPSG 4326 for all. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/south-sudan-walking-travel-time-to-nearest-level-iv-health-centre]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The United Nations Office for the Coordination of Humanitarian Affairs (OCHA) Common Operational Datasets (COD) Administration Level 0 boundary polygons were used in instances where geoBoundaries simplified polygons were not available. Where countries were not included in the health facility data published by Maina et al. (2019) we used data from the Global Health sites Mapping Project published on Humanitarian Data Exchange (this included: Egypt, Libya, Tunisia, Algeria, Morocco). For each country we removed health sites that were unlikely to offer child focused services and vaccinations. Facilities that were removed included: pharmacy, dentist, veterinary, café/pharmacy, social facility. The accuracy of the road data sets has not been validated, [Maina et al. (2019)](https://www.nature.com/articles/s41597-019-0142-2)",
+      "contact_point": {
+        "name": "Data for Children Collaborative",
+        "url": "https://data.humdata.org/dataset/south-sudan-walking-travel-time-to-nearest-level-iv-health-centre"
+      },
+      "creator": {
+        "name": "Data for Children Collaborative",
+        "url": "https://data.humdata.org/dataset/south-sudan-walking-travel-time-to-nearest-level-iv-health-centre"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2024-08-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Child Poverty and Access to Services (CPAS) software",
+            "url": "https://data.humdata.org/dataset/south-sudan-walking-travel-time-to-nearest-level-iv-health-centre"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Walking travel time to health facilities was calculated using the CPAS software implementing a least cost path method. A friction/cost allocation surface was created representing travel effort across different land cover and road types, then used to compute minimum walking time in seconds to the nearest Level IV health centre for each 100m pixel across South Sudan.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Child Poverty and Access to Services (CPAS) software",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Least cost path algorithm that calculates walking travel time by creating friction surfaces representing effort to traverse different road types, tracks, paths and land cover types."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.nature.com/articles/s41597-022-01274-w"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://zenodo.org/records/4638563#.YOycpRNKg6g"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_d9ae81a1",
+          "title": "service-area-south-sudan-walking.tif",
+          "description": "This file is a zip archive containing travel time map in Geotiff format and a thumbnail image in PNG format.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://s3.eidf.ac.uk/eidf158-walkingtraveltimemaps/service_area_South%20Sudan_walking.tif"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Walking travel time in seconds to nearest Level IV health facility across South Sudan at 100m resolution"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "disruption",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/south-sudan-walking-travel-time-to-nearest-level-iv-health-centre",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

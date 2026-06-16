@@ -1,0 +1,137 @@
+---
+attributions: []
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: United Nations Satellite Centre (UNOSAT)
+  url: https://data.humdata.org/dataset/geodata-of-delthoma-idp-camp-melut-district-upper-nile-state-south-sudan-december-03-2015
+creator:
+  affiliation: null
+  email: null
+  name: United Nations Satellite Centre (UNOSAT)
+  url: https://data.humdata.org/dataset/geodata-of-delthoma-idp-camp-melut-district-upper-nile-state-south-sudan-december-03-2015
+dataset_id: rdls_exp-ssd_unosat_geodatadelthomaidpcampmel_20151203
+description: 'This map illustrates satellite-detected shelters and other buildings
+  at the Delthoma IDP camp in Upper Nile State, South Sudan, as seen by the WorldView-1
+  satellite on 29 November 2015. This camp lies approximatively 5 km east of Melut
+  and UNOSAT analyzed a total of 3,993 IDP structures (3,172 tent shelters, 239 improvised
+  shelters and 582 tukuls) as well as 118 administrative structures. The camp is split
+  into 5 individual camps and occupies a total area of 114.9 ha. This is a preliminary
+  analysis and has not yet been validated in the field. Please send ground feedback
+  to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from
+  the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-delthoma-idp-camp-melut-district-upper-nile-state-south-sudan-december-03-2015]'
+details: This is a preliminary assessment and has not yet been validated in the field.
+  It is important to consider the characteristics of the source imagery used in the
+  analyses when interpreting results. For damage assessments it should be noted that
+  only significant damage to the structural integrity of the buildings analyzed can
+  be seen in imagery, while minor damage such as cracks or holes may not be visible
+  at all. For flood extractions using radar data it is important to note that urban
+  areas and highly vegetated areas may mask the flood signature and result in underestimation
+  of flood waters. Users with specific questions or concerns should contact unosat@unitar.org
+  to seek clarification.
+exposure:
+- asset_type:
+    description: IDP camp shelter structures including tents, improvised shelters,
+      and tukuls identified from satellite imagery
+    id: buildings
+    scheme: null
+    title: null
+    uri: null
+  category: buildings
+  id: exposure_1
+  metrics:
+  - dimension: structure
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: UNOSAT analysts reviewed WorldView-1 satellite imagery acquired on
+    29 November 2015 and manually identified and classified 3,993 IDP structures (tents,
+    improvised shelters, tukuls) and 118 administrative structures through visual
+    interpretation, producing a spatial inventory of camp infrastructure across 114.9
+    hectares.
+  sources:
+  - id: source_1
+    license: null
+    name: United Nations Satellite Centre (UNOSAT)
+    risk_data_type:
+    - exposure
+    type: dataset
+    url: null
+    used_in: exposure
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/geodata-of-delthoma-idp-camp-melut-district-upper-nile-state-south-sudan-december-03-2015
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Geodata of Delthoma IDP Camp, Melut District, Upper Nile State, South
+    Sudan (Shapefile)
+  download_url: https://unosat-maps.web.cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_Delthoma_shp.zip
+  format: null
+  id: resource_cd593461
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: CE20131218SSD_Delthoma_shp.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Geodata of Delthoma IDP Camp, Melut District, Upper Nile State, South
+    Sudan (Shapefile)
+  download_url: https://unosat-maps.web.cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_Delthoma_gdb.zip
+  format: null
+  id: resource_9326b15c
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: CE20131218SSD_Delthoma_gdb.zip
+risk_data_type:
+- exposure
+schema: rdls-10
+slug: rdls_exp-ssd_unosat_geodatadelthomaidpcampmel_20151203
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - SSD
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: null
+  start: '2015-12-03'
+temporal_resolution: null
+title: Geodata of Delthoma IDP Camp, Melut District, Upper Nile State, South Sudan
+version: null
+vulnerability: null
+---

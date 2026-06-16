@@ -1,0 +1,127 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-slb_spc_coastalproximitypopulatio_20190930",
+      "title": "Coastal proximity of populations in 22 Pacific Island Countries and Territories - Dataset - Solomon Islands",
+      "description": "Spatial datasets utilized to conduct the spatial analysis and additional information from the research article: Coastal proximity of populations in 22 Pacific Island Countries and Territories. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223249 https://sdd.spc.int/mapping-coastal Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-solomon-]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-solomon-"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-solomon-"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SLB"
+        ]
+      },
+      "temporal": {
+        "start": "2019-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Pacific Community Statistics for Development Division (SDD)",
+            "url": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-solomon-"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Population counts from Solomon Islands census data were spatially aggregated by enumeration area and intersected with coastal buffer zones (1km, 5km, 10km) to quantify populations at varying distances from the coast. A 1km gridded population raster was derived from these enumeration area-level counts to support spatial analysis of coastal population exposure.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Pacific Community Statistics for Development Division (SDD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Census-derived population data and enumeration area boundaries for Solomon Islands used to quantify populations within coastal proximity zones"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_23cab2c3",
+          "title": "SLB EA boundaries",
+          "description": "Coastal proximity of populations in 22 Pacific Island Countries and Territories - Dataset - Solomon Islands (SLB EA boundaries)",
+          "media_type": "application/geo+json",
+          "download_url": "https://pacificdata.org/data/dataset/14645f67-bd3f-4b72-9918-4f0dc8e88dee/resource/30d713a3-32bd-4315-8274-40e4b18289f3/download/eaid_4326_totpop.geojson"
+        },
+        {
+          "id": "resource_2c35fb4a",
+          "title": "SLB 1km Coastal Buffer",
+          "description": "Coastal proximity of populations in 22 Pacific Island Countries and Territories - Dataset - Solomon Islands (SLB 1km Coastal Buffer)",
+          "media_type": "application/geo+json",
+          "download_url": "https://pacificdata.org/data/dataset/14645f67-bd3f-4b72-9918-4f0dc8e88dee/resource/72398e19-a752-4380-8797-7b63fc0b35a5/download/slb1kmbuff_4326.geojson"
+        },
+        {
+          "id": "resource_65a3cc48",
+          "title": "SLB 5km Coastal Buffer",
+          "description": "Coastal proximity of populations in 22 Pacific Island Countries and Territories - Dataset - Solomon Islands (SLB 5km Coastal Buffer)",
+          "media_type": "application/geo+json",
+          "download_url": "https://pacificdata.org/data/dataset/14645f67-bd3f-4b72-9918-4f0dc8e88dee/resource/2e115edc-d439-4dbf-b614-689430f5dd78/download/slb5kmbuff_4326.geojson"
+        },
+        {
+          "id": "resource_811473d8",
+          "title": "SLB 10km Coastal Buffer",
+          "description": "Coastal proximity of populations in 22 Pacific Island Countries and Territories - Dataset - Solomon Islands (SLB 10km Coastal Buffer)",
+          "media_type": "application/geo+json",
+          "download_url": "https://pacificdata.org/data/dataset/14645f67-bd3f-4b72-9918-4f0dc8e88dee/resource/97fb1dea-4281-4b21-8481-a24c06e29967/download/slb10kmbuff_4326.geojson"
+        },
+        {
+          "id": "resource_e7132a1d",
+          "title": "SLB PopGrid",
+          "description": "This spatial 1km resolution grid contains population data generated from 2009 Solomon Islands PHC. For more information about this dataset please check on https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223249 https://sdd.spc.int/mapping-coastal",
+          "format": "zipped tif",
+          "download_url": "https://pacificdata.org/data/dataset/14645f67-bd3f-4b72-9918-4f0dc8e88dee/resource/ceaf2f36-0f1d-4f12-bb92-30ab74ecc427/download/rmgps_popgrid.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Census-based population counts in enumeration areas with coastal proximity analysis at 1km, 5km, and 10km buffer zones"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-solomon-",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
