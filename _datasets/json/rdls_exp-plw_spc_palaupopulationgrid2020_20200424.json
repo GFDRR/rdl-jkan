@@ -1,0 +1,138 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-plw_spc_palaupopulationgrid2020_20200424",
+      "title": "Palau_Population_Grid_2020",
+      "description": "Population Raster Palau 2020 Data Input: Household locations from 2015 Household listing and population at Enumeration Area level extracted from 2015 Population and Housing Census conducted by Palau's Bureau of Budget & Planning Year Population Growth Rate of 0.6 % has been applied to update population up to 2020 Household locations vector layer transformed into a 100m resolution raster. Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-palau_population_grid_2020]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-palau_population_grid_2020"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-palau_population_grid_2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PLW"
+        ]
+      },
+      "temporal": {
+        "start": "2020-04-24"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Palau Bureau of Budget & Planning",
+            "url": "https://data.humdata.org/dataset/pdh-palau_population_grid_2020"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "SPC Statistics for Development Division (SDD)",
+            "url": "https://data.humdata.org/dataset/pdh-palau_population_grid_2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Household locations from the 2015 Palau Population and Housing Census were transformed into a vector layer and rasterized to 100m resolution. Population counts at enumeration area level were distributed across the raster grid. A 0.6% annual population growth rate was applied to project the 2015 census baseline to 2020.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Palau Bureau of Budget & Planning",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "2015 Population and Housing Census providing enumeration area-level population counts and household locations used as the foundation for the gridded population model"
+          },
+          {
+            "id": "source_2",
+            "name": "SPC Statistics for Development Division (SDD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Pacific Community division that processed and gridded the census data into a 100m resolution raster product"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bc503b41",
+          "title": "PLW_PopGrid_2020",
+          "description": "Data Input: Household locations from 2015 Household listing and population at Enumeration Area level extracted from 2015 Population and Housing Census conducted by Palau's Bureau of Budget & Planning Year Population Growth Rate of 0.6 % has been applied to update population up to 2020",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://pacificdata.org/data/dataset/b3c609bf-10a7-47ce-9dfd-5eda86770bd4/resource/7de46192-6b1f-4604-95c4-92887d787234/download/plw_rastpop2020rps_100m.tif"
+        },
+        {
+          "id": "resource_4ae1c31a",
+          "title": "PLW_PopGrid_2020_README",
+          "description": "Palau_Population_Grid_2020 (Text)",
+          "media_type": "text/plain",
+          "download_url": "https://pacificdata.org/data/dataset/b3c609bf-10a7-47ce-9dfd-5eda86770bd4/resource/c93f3767-9aa8-4321-936e-f04dd2130895/download/plw_rastpop2020rps_100m.txt"
+        },
+        {
+          "id": "resource_1201549a",
+          "title": "PLW_PopGrid_2020_Atlas",
+          "description": "Palau_Population_Grid_2020 (Static maps of the Palau Population Grid 2020)",
+          "format": "zip",
+          "download_url": "https://pacificdata.org/data/dataset/b3c609bf-10a7-47ce-9dfd-5eda86770bd4/resource/a2c3844e-c1be-41d7-bcce-7b4ce421c3be/download/plw_pg_maps.zip"
+        },
+        {
+          "id": "resource_57ef5a8e",
+          "title": "PLW_PopGrid_2020_Web Mapping Service",
+          "description": "Palau_Population_Grid_2020 (PLW_PopGrid_2020_Web Mapping Service)",
+          "access_url": "https://tiles.arcgis.com/tiles/OAxZXfmfGWlgx9kD/arcgis/rest/services/PLW_PPG_MS/MapServer",
+          "media_type": "text/html"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution at 100m resolution derived from 2015 census enumeration areas with 0.6% annual growth applied to 2020"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-palau_population_grid_2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

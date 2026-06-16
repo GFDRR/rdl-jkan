@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-niu_spc_niuepopulationgrid2020_20210212",
+      "title": "Niue_Population_Grid_2020",
+      "description": "Population Raster Niue 2020 Data Input: Household locations from Open Street Maps - HOSM Niue Building footprint. https://data.humdata.org/dataset/hotosm_niu_buildings Population allocated proportionally using 2011 census population counts at enumeration area level. Year Population Growth Rate of 0.76% has been applied to update population up to 2020 The human settlement footprint with census population allocated has been converted into a 100 m resolution raster. Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-niue_population_grid_2020]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-niue_population_grid_2020"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-niue_population_grid_2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NIU"
+        ]
+      },
+      "temporal": {
+        "start": "2021-02-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap Team (HOT) Niue Building Footprint",
+            "url": "https://data.humdata.org/dataset/pdh-niue_population_grid_2020"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "2011 Census Population Counts (Enumeration Area Level)",
+            "url": "https://data.humdata.org/dataset/pdh-niue_population_grid_2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building footprints from HOT/OpenStreetMap were intersected with 2011 census population counts at enumeration area level. Population was allocated proportionally to building locations, then grown to 2020 using a 0.76% annual growth rate. The resulting human settlement footprint with allocated population was converted to a 100m resolution raster.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian OpenStreetMap Team (HOT) Niue Building Footprint",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Building footprint spatial data from OpenStreetMap used to allocate census population proportionally across settlements"
+          },
+          {
+            "id": "source_2",
+            "name": "2011 Census Population Counts (Enumeration Area Level)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Official census population data at enumeration area level used as the baseline for population allocation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b1eccc6b",
+          "title": "NIU_Pop_Grid_2020",
+          "description": "Niue_Population_Grid_2020 (Population Raster Niue 2020)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://pacificdata.org/data/dataset/f0ae6b16-af3d-40d4-b8f2-a04b2744f9e5/resource/85b5e76d-0f83-4cde-899b-0c2df1a8137f/download/niu_pop_grid_2020.tif.tif"
+        },
+        {
+          "id": "resource_8104b89b",
+          "title": "NIU_Pop_Grid_2020_README",
+          "description": "Niue_Population_Grid_2020 (Text)",
+          "media_type": "text/plain",
+          "download_url": "https://pacificdata.org/data/dataset/f0ae6b16-af3d-40d4-b8f2-a04b2744f9e5/resource/d60bc776-25f7-47f8-86ee-85268dece672/download/niu_pop_grid_2020_readme.txt"
+        },
+        {
+          "id": "resource_15ad2009",
+          "title": "NIU_PopGrid_2020_ATLAS",
+          "description": "Niue_Population_Grid_2020 (Static maps of the Niue Population Grid 2020)",
+          "format": "JPEG",
+          "download_url": "https://pacificdata.org/data/dataset/f0ae6b16-af3d-40d4-b8f2-a04b2744f9e5/resource/0dc1eba9-75a0-4c78-862b-cb00c1709ef0/download/niue.jpg"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution at 100m resolution derived from census enumeration areas and building footprints"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-niue_population_grid_2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

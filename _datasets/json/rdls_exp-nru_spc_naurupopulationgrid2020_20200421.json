@@ -1,0 +1,120 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-nru_spc_naurupopulationgrid2020_20200421",
+      "title": "Nauru_Population_Grid_2020",
+      "description": "Population Raster Nauru 2020 Data Input: Household locations from 2019 Population and Housing Census conducted using Survey Solutions CAPI (Computer Assisted Personal Interview). Year Population Growth Rate of 0.8% has been applied to update population up to 2020 Household locations vector layer has been transformed into a 100m resolution raster. Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-nauru_population_grid_2020]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-nauru_population_grid_2020"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-nauru_population_grid_2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NRU"
+        ]
+      },
+      "temporal": {
+        "start": "2020-04-21"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "SPC Statistics for Development Division (SDD)",
+            "url": "https://data.humdata.org/dataset/pdh-nauru_population_grid_2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Household locations from the 2019 Population and Housing Census (collected via CAPI survey) were transformed into a 100m resolution raster grid. A 0.8% population growth rate was applied to project the 2019 census data to 2020. The resulting gridded population dataset provides spatially explicit exposure information for Nauru at national scale.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "SPC Statistics for Development Division (SDD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "2019 Population and Housing Census conducted using Survey Solutions CAPI, providing household location data that was gridded and projected to 2020 using 0.8% annual growth rate"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0e40ab45",
+          "title": "NRU_PopGrid_2020",
+          "description": "Population Raster Nauru 2020 Household locations vector layer transformed into a 100m resolution raster. This is a demo version, SDD is still evaluating the methodology but given the COVID outbreak the dataset has been early released.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://pacificdata.org/data/dataset/4d516c3f-e19c-40c0-9b00-5c434e578cc0/resource/4ae0314a-a5f4-46e0-ac06-718054bf69f6/download/nru_rastpop2020rps_100m.tif"
+        },
+        {
+          "id": "resource_93ed3152",
+          "title": "NRU_PopGrid_2020_README",
+          "description": "Nauru_Population_Grid_2020 (Text)",
+          "media_type": "text/plain",
+          "download_url": "https://pacificdata.org/data/dataset/4d516c3f-e19c-40c0-9b00-5c434e578cc0/resource/d840c712-3bc7-4ee2-9573-38924b6cf429/download/nru_rastpop2020rps_100m.txt"
+        },
+        {
+          "id": "resource_d1306737",
+          "title": "NRU_PopGrid_2020_Map",
+          "description": "Nauru_Population_Grid_2020 (Static map of the Nauru Population Grid 2020)",
+          "format": "JPEG",
+          "download_url": "https://pacificdata.org/data/dataset/4d516c3f-e19c-40c0-9b00-5c434e578cc0/resource/da56c333-28ee-4ed0-b332-853a6f9e1e2f/download/nru_popgrid_2020_map.jpg"
+        },
+        {
+          "id": "resource_4c4e8e76",
+          "title": "NRU_PopGrid_2020_Web Mapping Service",
+          "description": "Nauru_Population_Grid_2020 (NRU_PopGrid_2020_Web Mapping Service)",
+          "access_url": "https://tiles.arcgis.com/tiles/OAxZXfmfGWlgx9kD/arcgis/rest/services/NRU_PPG_MS/MapServer",
+          "media_type": "text/html"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution at 100m resolution derived from 2019 census household locations with 0.8% growth rate applied to 2020"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-nauru_population_grid_2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
