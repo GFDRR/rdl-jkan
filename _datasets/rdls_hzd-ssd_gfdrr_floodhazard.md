@@ -31,140 +31,137 @@ description: River flood hazard extent (perimeter) in South Sudan derived from F
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 4
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FL
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '5'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FL
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FL
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FL
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '250'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 250
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 4
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: FL
         intensity_measure: fl_wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: Fathom2_extents
-      occurrence_range: 5, 20, 100, 250 years
-      seasonality: null
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 1
-      events:
-      - calculation_method: observed
-        description: null
-        disaster_identifiers:
-        - description: null
-          id: FL-2019-000062-SSD
-          scheme: GLIDE
-          title: null
-          uri: null
-        hazard:
-          classification: null
-          id: FL
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '0'
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: 100
-            temporal: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: '5'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: FL
         intensity_measure: fl_wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: Flood_2019
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 2
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FL
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FL
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '250'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 250
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: FL
+      intensity_measure: fl_wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: Fathom2_extents
+    occurrence_range: 5, 20, 100, 250 years
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 1
+    events:
+    - calculation_method: observed
+      description: null
+      disaster_identifiers:
+      - description: null
+        id: FL-2019-000062-SSD
+        scheme: GLIDE
+        title: null
+        uri: null
+      hazard:
+        classification: null
+        id: FL
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '0'
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: 100
+          temporal: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: FL
+      intensity_measure: fl_wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: Flood_2019
+    occurrence_range: null
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: South Sudan Multi-hazard risk assessment
   url: null

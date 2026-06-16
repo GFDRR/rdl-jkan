@@ -51,8 +51,7 @@ lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: South Sudan Multi-hazard risk assessment
   url: null

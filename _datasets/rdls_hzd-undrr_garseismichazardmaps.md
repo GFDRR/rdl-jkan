@@ -59,37 +59,34 @@ details: This dataset was developed in the framework of an analysis with a globa
   of its frontiers or boundaries.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: poisson
-      hazards:
-      - classification: null
-        id: hazard_YiqnwZuB
-        intensity_measure: AvgSa:cm/s2
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      - classification: null
-        id: hazard_5xnQJjDo
-        intensity_measure: PGA:cm/s2
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: event_set_xjZnwJUB
-      occurrence_range: RP 250, 475, 975, 1500, 2475 years
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: poisson
+    hazards:
+    - classification: null
+      id: hazard_YiqnwZuB
+      intensity_measure: AvgSa:cm/s2
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    - classification: null
+      id: hazard_5xnQJjDo
+      intensity_measure: PGA:cm/s2
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_xjZnwJUB
+    occurrence_range: RP 250, 475, 975, 1500, 2475 years
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: GAR Atlas
   url: https://www.preventionweb.net/english/hyogo/gar/atlas/

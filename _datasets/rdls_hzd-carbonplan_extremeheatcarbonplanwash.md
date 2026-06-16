@@ -35,61 +35,58 @@ description: The final output dataset includes historical and future estimates o
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    extreme_temperature:
-    - analysis_type: empirical
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
-        id: '0'
-        intensity_measure: WBGT:c
-        process: extreme_heat
-        trigger: null
-        type: extreme_temperature
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
       id: '0'
-      occurrence_range: null
-      seasonality: user_defined
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
-        id: '0'
-        intensity_measure: WBGT:c
-        process: extreme_heat
-        trigger: null
-        type: extreme_temperature
-      id: '1'
-      occurrence_range: null
-      seasonality: user_defined
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
-        id: '0'
-        intensity_measure: WBGT:c
-        process: extreme_heat
-        trigger: null
-        type: extreme_temperature
-      id: '2'
-      occurrence_range: null
-      seasonality: user_defined
-  event_sets_count: 3
+      intensity_measure: WBGT:c
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: '0'
+    occurrence_range: null
+    seasonality: user_defined
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
+      id: '0'
+      intensity_measure: WBGT:c
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: '1'
+    occurrence_range: null
+    seasonality: user_defined
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
+      id: '0'
+      intensity_measure: WBGT:c
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: '2'
+    occurrence_range: null
+    seasonality: user_defined
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Modeling extreme heat in a changing climate
   url: null

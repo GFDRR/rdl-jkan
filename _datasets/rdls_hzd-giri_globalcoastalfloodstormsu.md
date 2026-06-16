@@ -55,173 +55,170 @@ details: Storm surge hazard is modeled only along the coastline. The process inv
   Europe, neither strong wings nor storm surge were modeled for European countries.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 7
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CF
-          intensity_measure: Wd:M
-          process: coastal_flood
-          trigger:
-            process: null
-            type: flood
-          type: flood
-        id: '10'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CF
-          intensity_measure: Wd:M
-          process: coastal_flood
-          trigger:
-            process: null
-            type: flood
-          type: flood
-        id: '25'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 25
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CF
-          intensity_measure: Wd:M
-          process: coastal_flood
-          trigger:
-            process: null
-            type: flood
-          type: flood
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CF
-          intensity_measure: Wd:M
-          process: coastal_flood
-          trigger:
-            process: null
-            type: flood
-          type: flood
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CF
-          intensity_measure: Wd:M
-          process: coastal_flood
-          trigger:
-            process: null
-            type: flood
-          type: flood
-        id: '250'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 250
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CF
-          intensity_measure: Wd:M
-          process: coastal_flood
-          trigger:
-            process: null
-            type: flood
-          type: flood
-        id: '500'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CF
-          intensity_measure: Wd:M
-          process: coastal_flood
-          trigger:
-            process: null
-            type: flood
-          type: flood
-        id: '1000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 7
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: CF
         intensity_measure: Wd:M
         process: coastal_flood
         trigger:
-          process: coastal_flood
+          process: null
           type: flood
         type: flood
-      id: HST
-      occurrence_range: Return period 10 to 1,000 years
-      seasonality: null
-  event_sets_count: 1
+      id: '10'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CF
+        intensity_measure: Wd:M
+        process: coastal_flood
+        trigger:
+          process: null
+          type: flood
+        type: flood
+      id: '25'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 25
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CF
+        intensity_measure: Wd:M
+        process: coastal_flood
+        trigger:
+          process: null
+          type: flood
+        type: flood
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CF
+        intensity_measure: Wd:M
+        process: coastal_flood
+        trigger:
+          process: null
+          type: flood
+        type: flood
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CF
+        intensity_measure: Wd:M
+        process: coastal_flood
+        trigger:
+          process: null
+          type: flood
+        type: flood
+      id: '250'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 250
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CF
+        intensity_measure: Wd:M
+        process: coastal_flood
+        trigger:
+          process: null
+          type: flood
+        type: flood
+      id: '500'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CF
+        intensity_measure: Wd:M
+        process: coastal_flood
+        trigger:
+          process: null
+          type: flood
+        type: flood
+      id: '1000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: CF
+      intensity_measure: Wd:M
+      process: coastal_flood
+      trigger:
+        process: coastal_flood
+        type: flood
+      type: flood
+    id: HST
+    occurrence_range: Return period 10 to 1,000 years
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Global Infrastructure Risk Model and Resilience Index (GIRI)
   url: https://giri.unepgrid.ch/

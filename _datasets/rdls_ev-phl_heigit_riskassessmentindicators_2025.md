@@ -144,8 +144,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/philippines---risk-assessment-indicators
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

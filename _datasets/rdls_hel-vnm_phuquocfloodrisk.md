@@ -124,377 +124,375 @@ exposure:
       quantity_kind: area
       unit: null
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 5
-      events:
-      - calculation_method: simulated
-        description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-5
-          year return period event on Phu Quoc Island. Current climate baseline, Do
-          Nothing (S0) scenario. File: G1_S0_05.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial_pluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G1_S0_RP5
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-10
-          year return period event on Phu Quoc Island. Current climate baseline, Do
-          Nothing (S0) scenario. File: G1_S0_10.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial_pluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G1_S0_RP10
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-20
-          year return period event on Phu Quoc Island. Current climate baseline, Do
-          Nothing (S0) scenario. File: G1_S0_20.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial_pluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G1_S0_RP20
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-50
-          year return period event on Phu Quoc Island. Current climate baseline, Do
-          Nothing (S0) scenario. File: G1_S0_50.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial_pluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G1_S0_RP50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-100
-          year return period event on Phu Quoc Island. Current climate baseline, Do
-          Nothing (S0) scenario. File: G1_S0_100.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial_pluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G1_S0_RP100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_fluvial_flood
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 5
+    events:
+    - calculation_method: simulated
+      description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-5
+        year return period event on Phu Quoc Island. Current climate baseline, Do
+        Nothing (S0) scenario. File: G1_S0_05.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial_pluvial
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      - classification: null
-        id: hazard_pluvial_flood
+      id: event_G1_S0_RP5
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-10
+        year return period event on Phu Quoc Island. Current climate baseline, Do
+        Nothing (S0) scenario. File: G1_S0_10.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial_pluvial
         intensity_measure: wd:m
-        process: pluvial_flood
+        process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_fluvial_pluvial
-      occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 5
-      events:
-      - calculation_method: simulated
-        description: 'Coastal flood hazard map showing water depth for a 1-in-5 year
-          return period event on Phu Quoc Island. Storm surge and tidal flooding.
-          Current climate baseline, Do Nothing (S0) scenario. File: G2_S0_05.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_G2_S0_RP5
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Coastal flood hazard map showing water depth for a 1-in-10 year
-          return period event on Phu Quoc Island. Current climate baseline, Do Nothing
-          (S0) scenario. File: G2_S0_10.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_G2_S0_RP10
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Coastal flood hazard map showing water depth for a 1-in-20 year
-          return period event on Phu Quoc Island. Current climate baseline, Do Nothing
-          (S0) scenario. File: G2_S0_20.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_G2_S0_RP20
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: 'Coastal flood hazard map showing water depth for a 1-in-50 year
-          return period event on Phu Quoc Island. Current climate baseline, Do Nothing
-          (S0) scenario. File: G2_S0_50.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_G2_S0_RP50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Coastal flood hazard map showing water depth for a 1-in-100
-          year return period event on Phu Quoc Island. Current climate baseline, Do
-          Nothing (S0) scenario. File: G2_S0_100.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_G2_S0_RP100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_G1_S0_RP10
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-20
+        year return period event on Phu Quoc Island. Current climate baseline, Do
+        Nothing (S0) scenario. File: G1_S0_20.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial_pluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_G1_S0_RP20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-50
+        year return period event on Phu Quoc Island. Current climate baseline, Do
+        Nothing (S0) scenario. File: G1_S0_50.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial_pluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_G1_S0_RP50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Fluvial/pluvial flood hazard map showing water depth for a 1-in-100
+        year return period event on Phu Quoc Island. Current climate baseline, Do
+        Nothing (S0) scenario. File: G1_S0_100.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial_pluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_G1_S0_RP100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_fluvial_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    - classification: null
+      id: hazard_pluvial_flood
+      intensity_measure: wd:m
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_fluvial_pluvial
+    occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 5
+    events:
+    - calculation_method: simulated
+      description: 'Coastal flood hazard map showing water depth for a 1-in-5 year
+        return period event on Phu Quoc Island. Storm surge and tidal flooding. Current
+        climate baseline, Do Nothing (S0) scenario. File: G2_S0_05.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_coastal
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: event_set_coastal
-      occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 5
-      events:
-      - calculation_method: simulated
-        description: 'Combined (compound) flood hazard map showing water depth for
-          a 1-in-5 year return period event on Phu Quoc Island. Combines fluvial,
-          pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0)
-          scenario. File: G3_S0_05.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_combined
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G3_S0_RP5
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Combined (compound) flood hazard map showing water depth for
-          a 1-in-10 year return period event on Phu Quoc Island. Combines fluvial,
-          pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0)
-          scenario. File: G3_S0_10.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_combined
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G3_S0_RP10
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Combined (compound) flood hazard map showing water depth for
-          a 1-in-20 year return period event on Phu Quoc Island. Combines fluvial,
-          pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0)
-          scenario. File: G3_S0_20.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_combined
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G3_S0_RP20
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: 'Combined (compound) flood hazard map showing water depth for
-          a 1-in-50 year return period event on Phu Quoc Island. Combines fluvial,
-          pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0)
-          scenario. File: G3_S0_50.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_combined
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G3_S0_RP50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Combined (compound) flood hazard map showing water depth for
-          a 1-in-100 year return period event on Phu Quoc Island. Combines fluvial,
-          pluvial, and coastal flooding. Current climate baseline, Do Nothing (S0)
-          scenario. File: G3_S0_100.tif.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_combined
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_G3_S0_RP100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_fluvial_flood
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      - classification: null
-        id: hazard_pluvial_flood
-        intensity_measure: wd:m
-        process: pluvial_flood
-        trigger: null
-        type: flood
-      - classification: null
-        id: hazard_coastal_flood
+      id: event_G2_S0_RP5
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Coastal flood hazard map showing water depth for a 1-in-10 year
+        return period event on Phu Quoc Island. Current climate baseline, Do Nothing
+        (S0) scenario. File: G2_S0_10.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: event_set_combined
-      occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
-      seasonality: null
-  event_sets_count: 3
+      id: event_G2_S0_RP10
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Coastal flood hazard map showing water depth for a 1-in-20 year
+        return period event on Phu Quoc Island. Current climate baseline, Do Nothing
+        (S0) scenario. File: G2_S0_20.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_G2_S0_RP20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: 'Coastal flood hazard map showing water depth for a 1-in-50 year
+        return period event on Phu Quoc Island. Current climate baseline, Do Nothing
+        (S0) scenario. File: G2_S0_50.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_G2_S0_RP50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Coastal flood hazard map showing water depth for a 1-in-100 year
+        return period event on Phu Quoc Island. Current climate baseline, Do Nothing
+        (S0) scenario. File: G2_S0_100.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_G2_S0_RP100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_coastal
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_coastal
+    occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 5
+    events:
+    - calculation_method: simulated
+      description: 'Combined (compound) flood hazard map showing water depth for a
+        1-in-5 year return period event on Phu Quoc Island. Combines fluvial, pluvial,
+        and coastal flooding. Current climate baseline, Do Nothing (S0) scenario.
+        File: G3_S0_05.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_combined
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_G3_S0_RP5
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Combined (compound) flood hazard map showing water depth for a
+        1-in-10 year return period event on Phu Quoc Island. Combines fluvial, pluvial,
+        and coastal flooding. Current climate baseline, Do Nothing (S0) scenario.
+        File: G3_S0_10.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_combined
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_G3_S0_RP10
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Combined (compound) flood hazard map showing water depth for a
+        1-in-20 year return period event on Phu Quoc Island. Combines fluvial, pluvial,
+        and coastal flooding. Current climate baseline, Do Nothing (S0) scenario.
+        File: G3_S0_20.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_combined
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_G3_S0_RP20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: 'Combined (compound) flood hazard map showing water depth for a
+        1-in-50 year return period event on Phu Quoc Island. Combines fluvial, pluvial,
+        and coastal flooding. Current climate baseline, Do Nothing (S0) scenario.
+        File: G3_S0_50.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_combined
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_G3_S0_RP50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Combined (compound) flood hazard map showing water depth for a
+        1-in-100 year return period event on Phu Quoc Island. Combines fluvial, pluvial,
+        and coastal flooding. Current climate baseline, Do Nothing (S0) scenario.
+        File: G3_S0_100.tif.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_combined
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_G3_S0_RP100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_fluvial_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    - classification: null
+      id: hazard_pluvial_flood
+      intensity_measure: wd:m
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    - classification: null
+      id: hazard_coastal_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_combined
+    occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Flood risk assessment for Phu Quoc Island, Kien Giang Province, Viet
