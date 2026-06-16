@@ -1,0 +1,212 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-bgd_unosat_detectedwaterextentchitta_20170531",
+      "title": "Bangladesh - Satellite Detected Water Extent in Chittagong District, Chittagong Division",
+      "description": "This map illustrates the satellite-detected water extent in the District of Chittagong, Chittagong Division, in the southeastern part of Bangladesh after the tropical cyclone Mora-17. The UNITAR-UNOSAT analysis used a Sentinel-1 satellite image acquired on the 30 May 2017 and detected several areas with standing waters. In the district of Chittagong ~4,790 ha are likely flooded and almost 12 km of the local roads seem to be affected. The population exposure analysis using WorldPop data shows that ~70,000 people are potentially affected by floods within map extent. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extent-in-chittagong-district-chittagong-division-bangladesh]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-chittagong-district-chittagong-division-bangladesh"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-chittagong-district-chittagong-division-bangladesh"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2017-05-31"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1 satellite imagery",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-chittagong-district-chittagong-division-bangladesh"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-chittagong-district-chittagong-division-bangladesh"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared Sentinel-1 satellite imagery acquired on 30 May 2017 with reference imagery to detect standing water extent following tropical cyclone Mora-17. Population exposure was assessed by overlaying detected flood areas with WorldPop gridded population data to estimate affected population. Road network impacts were identified through visual interpretation of satellite imagery.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar satellite image acquired 30 May 2017 used to detect standing water extent following tropical cyclone Mora-17"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used for population exposure analysis in the affected area"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5f18dc4d",
+          "title": "TC20170529BGD_gdb.zip",
+          "description": "Bangladesh - Satellite Detected Water Extent in Chittagong District, Chittagong Division (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/BD/TC20170529BGD/TC20170529BGD_gdb.zip"
+        },
+        {
+          "id": "resource_ab30dd07",
+          "title": "TC20170529BGD_SHP.zip",
+          "description": "Bangladesh - Satellite Detected Water Extent in Chittagong District, Chittagong Division (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/BD/TC20170529BGD/TC20170529BGD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Local road network affected by standing water"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population potentially affected by floods using WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct impact to local roads from coastal flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population potentially affected by coastal flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-chittagong-district-chittagong-division-bangladesh",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

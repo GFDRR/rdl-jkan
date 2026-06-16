@@ -1,0 +1,212 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-dza_unosat_floodimpactanalysiskhemis_20230529",
+      "title": "Flood impact analysis in Khemisti, Bou Ismail and Bouharoun Communes, Wilaya of Tipaza, Algeria as of 27 May 2023",
+      "description": "UNOSAT code FL20230526DZA, GDACS Id: 1102025 This map illustrates satellite-detected flash floods in Khemisti, Bou Ismail and Bouharoun Communes, Wilaya of Tipaza, Algeria as observed using Sentinel-2 satellite imagery acquired on 27 May 2023 at 11:36 local time. Within the surface analysed of 12,000 ha, about 63 ha of potentially affected area observed. UNOSAT identified 2 damaged ports, 794 affected and potentially affected structures & 31 affected and potentially affected roads. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DZA"
+        ]
+      },
+      "temporal": {
+        "start": "2023-05-29"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-2 satellite imagery acquired on 27 May 2023 was analyzed by UNOSAT analysts through multi-temporal comparison to detect flash flood extent and identify surface water changes. Affected structures and infrastructure were identified through visual interpretation of the satellite imagery within the 12,000 ha study area. The preliminary analysis maps flood-affected areas and counts of impacted assets without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using Sentinel-2 data to detect flash flood extent and map inundated areas through multi-temporal image comparison"
+          },
+          {
+            "id": "source_2",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment identifying affected structures, roads, and ports through visual interpretation of satellite imagery"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_30f1f174",
+          "title": "FL20230526DZA_gdb.zip",
+          "description": "Flood impact analysis in Khemisti, Bou Ismail and Bouharoun Communes, Wilaya of Tipaza, Algeria as of 27 May 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3603/FL20230526DZA_gdb.zip"
+        },
+        {
+          "id": "resource_3ce9c1d4",
+          "title": "FL20230526DZA_SHP.zip",
+          "description": "Flood impact analysis in Khemisti, Bou Ismail and Bouharoun Communes, Wilaya of Tipaza, Algeria as of 27 May 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3603/FL20230526DZA_SHP.zip"
+        },
+        {
+          "id": "resource_868b31ce",
+          "title": "PopulationExposure_FL20230526DZA_29May2023.xlsx",
+          "description": "Flood impact analysis in Khemisti, Bou Ismail and Bouharoun Communes, Wilaya of Tipaza, Algeria as of 27 May 2023 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3603/PopulationExposure_FL20230526DZA_29May2023.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Affected and potentially affected structures identified through satellite imagery analysis"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Affected and potentially affected roads and ports in the flood-impacted area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Affected and potentially affected structures from flash flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Affected and potentially affected roads and ports from flash flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/flood-impact-analysis-in-khemisti-bou-ismail-and-bouharoun-communes-wilaya-of-tipaza-alger",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

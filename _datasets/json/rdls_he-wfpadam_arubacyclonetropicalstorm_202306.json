@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-wfpadam_arubacyclonetropicalstorm_202306",
+      "title": "Aruba: Cyclone - Tropical storm - Jun 2023",
+      "description": "ADAM ID: 1000977_4 Cyclone (tropical storm) during the period Jun 19 2023-Jun 24 2023 in Colombia, Venezuela, Aruba, Netherlands Antilles, Grenada, Saint Vincent and the Grenadines, Martinique, Saint Lucia, Barbados. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/aruba-cyclone-1000977]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/aruba-cyclone-1000977"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/aruba-cyclone-1000977"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "ABW",
+          "COL",
+          "VEN",
+          "GRD",
+          "VCT",
+          "MTQ",
+          "LCA",
+          "BRB"
+        ]
+      },
+      "temporal": {
+        "start": "2023-06-19",
+        "end": "2023-06-24"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP ADAM",
+            "url": "https://data.humdata.org/dataset/aruba-cyclone-1000977"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM collected and mapped tropical cyclone track data and wind speed measurements from the June 2023 tropical storm event affecting the Caribbean region. The shapefile contains observed storm track geometry with associated wind speed and alert level attributes derived from meteorological monitoring.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP ADAM",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "WFP Advanced Disaster Analysis & Mapping operational system providing geospatial mapping of tropical storm tracks, wind speeds, and spatial extent for humanitarian emergency response"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_549ef1b2",
+          "title": "1000977-22-adam-ts-1000977-22-shp.zip",
+          "description": "Aruba: Cyclone - Tropical storm - Jun 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/b4dfe0f5-65a8-4e05-ba66-9b2d306f2277/resource/549ef1b2-dde7-4443-9a88-53b5c66cb2d4/download/1000977-22-adam-ts-1000977-22-shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone winds in affected countries"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/aruba-cyclone-1000977",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

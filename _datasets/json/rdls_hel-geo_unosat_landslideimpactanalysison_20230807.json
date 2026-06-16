@@ -1,0 +1,170 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-geo_unosat_landslideimpactanalysison_20230807",
+      "title": "Landslide impact analysis in Oni District, Racha-Lechkhumi and Kvemo Svaneti Region, Georgia as of 06 August 2023",
+      "description": "UNOSAT code LS20230804GEO, GDACS Id: 1102154 This map illustrates satellite-detected landslides/mudflow in Oni District, Racha-Lechkhumi and Kvemo Svaneti Region, Georgia as observed from a Pléiades imagery acquired on 06 August 2023 at 14:30 local time. Within the analyzed area of 9,600 ha, about 220 ha of landslide scars were observed. UNITAR-UNOSAT identified 30 affected structures and 6 potentially affected structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/landslide-impact-analysis-in-oni-district-racha-lechkhumi-and-kvemo-svaneti-region-georgia]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-oni-district-racha-lechkhumi-and-kvemo-svaneti-region-georgia"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-oni-district-racha-lechkhumi-and-kvemo-svaneti-region-georgia"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GEO"
+        ]
+      },
+      "temporal": {
+        "start": "2023-08-07"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/landslide-impact-analysis-in-oni-district-racha-lechkhumi-and-kvemo-svaneti-region-georgia"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Pléiades very-high-resolution satellite imagery acquired on 06 August 2023 was analyzed by UNOSAT analysts through visual interpretation and change detection to map landslide and mudflow scars and identify affected structures in Oni District, Georgia. The resulting geodatabase and shapefile products include delineated hazard extents, road network attributes, and structure impact classifications. This is a preliminary post-event satellite-derived analysis intended to support emergency response and has not been field-validated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "UNOSAT analysts performed satellite image analysis using Pléiades imagery to detect and delineate landslide scars and assess structural damage. The analysis provides preliminary, pre-field-validation impact mapping for emergency response."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b91c0e88",
+          "title": "LS20230804GEO_gdb.zip",
+          "description": "Landslide impact analysis in Oni District, Racha-Lechkhumi and Kvemo Svaneti Region, Georgia as of 06 August 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3653/LS20230804GEO_gdb.zip"
+        },
+        {
+          "id": "resource_9afdf68c",
+          "title": "LS20230804GEO_SHP.zip",
+          "description": "Landslide impact analysis in Oni District, Racha-Lechkhumi and Kvemo Svaneti Region, Georgia as of 06 August 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3653/LS20230804GEO_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Structures identified within the landslide-affected area in Oni District, classified as affected or potentially affected"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road network within the analyzed area, with attributes describing surface type, condition, operational status, and weather-related passability"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Count of structures directly affected or potentially affected by landslide/mudflow in Oni District as of 06 August 2023"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/landslide-impact-analysis-in-oni-district-racha-lechkhumi-and-kvemo-svaneti-region-georgia",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-idn_wfpadam_earthquake60msep2023_20230909",
+      "title": "Indonesia: Earthquake - 6.0M - Sep 2023",
+      "description": "ADAM ID: eq_us7000kulj Magnitude 6.0 earthquake at 9.854 depth occurred on Sep 09 2023 in 71km SW of Tinombo. It impacted 157836 people. The epicentre was at latitude 0.0054 longitude 119.7709.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000kulj]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000kulj"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000kulj"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-09"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000kulj"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system processed observed earthquake parameters (magnitude 6.0, epicenter location, depth) and derived ground motion intensity (MMI) distribution across administrative divisions. Population exposure data was intersected with intensity zones to estimate affected population counts by MMI level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analyzing and mapping geospatial and socio-economic information following sudden-onset emergencies; provides earthquake impact assessments and population exposure estimates"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_16c9e481",
+          "title": "sm-us7000kulj-sm-us7000kulj-pop-estimation.csv",
+          "description": "Indonesia: Earthquake - 6.0M - Sep 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/b79c4b0b-ebf2-4baa-a6f9-3743aaa54e43/resource/16c9e481-ace1-40b6-9f29-48f6b69c4005/download/sm-us7000kulj-sm-us7000kulj-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population distribution by administrative division exposed to earthquake ground motion"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by earthquake ground motion across intensity zones"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/indonesia-earthquake-eq-us7000kulj",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

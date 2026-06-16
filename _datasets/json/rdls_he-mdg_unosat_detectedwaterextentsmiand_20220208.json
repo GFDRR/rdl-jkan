@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mdg_unosat_detectedwaterextentsmiand_20220208",
+      "title": "Satellite detected water extents in Miandrivozo district, Menabe region, Madagascar as of 7 February 2022",
+      "description": "UNOSAT code: TC20220201MDG This map illustrates satellite-detected surface waters over Miandrivozo district, Menabe region, Madagascar observed from Sentinel-2 image acquired on 7 February 2022 at 10:12 local time. Within the analyzed cloud free zones of about ~1,000 km2, a total of about 53 km2 of lands appear to be flooded. Based on Worldpop population data and the detected surface waters, about 1,200 people are potentially exposed or living close to flooded areas. This is a preliminary analysis that has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-in-miandrivozo-district-menabe-region-madagascar-as-of-7-february-2022]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-miandrivozo-district-menabe-region-madagascar-as-of-7-february-2022"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-miandrivozo-district-menabe-region-madagascar-as-of-7-february-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2022-02-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2",
+            "url": "https://data.humdata.org/dataset/water-extents-in-miandrivozo-district-menabe-region-madagascar-as-of-7-february-2022"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/water-extents-in-miandrivozo-district-menabe-region-madagascar-as-of-7-february-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on 7 February 2022 over Miandrivozo district, comparing cloud-free zones (~1,000 km²) to detect surface water changes indicative of flooding. Detected water extents (53 km²) were intersected with WorldPop population data to estimate exposed population (~1,200 people). This is a preliminary post-event damage assessment based on satellite observation without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery used to detect surface water extents through visual analysis and comparison of multi-temporal images"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population data used to estimate population exposure to detected flooded areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0627b019",
+          "title": "TC20220201MDG_gdb.zip",
+          "description": "Satellite detected water extents in Miandrivozo district, Menabe region, Madagascar as of 7 February 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/MG/TC20220201MDG/TC20220201MDG_gdb.zip"
+        },
+        {
+          "id": "resource_10ff2447",
+          "title": "TC20220201MDG_SHP.zip",
+          "description": "Satellite detected water extents in Miandrivozo district, Menabe region, Madagascar as of 7 February 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/MG/TC20220201MDG/TC20220201MDG_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-in-miandrivozo-district-menabe-region-madagascar-as-of-7-february-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

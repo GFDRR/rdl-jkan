@@ -1,0 +1,185 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-afg_unosat_geodataupdatelandslideabb_20140508",
+      "title": "Geodata of Update: Landslide in Ab Barek, Badakshan Province, Afghanistan",
+      "description": "This map illustrates satellite-detected areas of landslide damage in the village of Ab Barek, Badakshan, Afghanistan. Following heavy rains in the region, a landslide partially buried Ab Barek on 2 May 2014. Using a satellite image acquired 5 May 2014 by the WorldView-2 satellite, UNOSAT delineated the landslide area. In addition, areas of IDPs, relief operations, and water pooling due to the landslide are indicated as of 5 May. The 5 May 2014 image was compared to an image from 7 June 2013 in an attempt to determine how many structures were buried, and a total of 87 such structures were located. However, between 7 June 2013 and the occurrence of the landslide Ab Barek had changed and grown considerably, and thus its possible additional buried structures exist which are not identified in this analysis. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-landslide-in-ab-barek-badakshan-province-afghanistan-may-08-2014]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-landslide-in-ab-barek-badakshan-province-afghanistan-may-08-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-landslide-in-ab-barek-badakshan-province-afghanistan-may-08-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2014-05-08"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts performed multi-temporal satellite image analysis comparing WorldView-2 imagery from 5 May 2014 (post-event) with baseline imagery from 7 June 2013 to detect and delineate the landslide area triggered by heavy rainfall on 2 May 2014. Change detection methods were applied to identify buried structures (87 counted) and map concurrent impacts including IDP locations and water pooling. Vector geometries were produced in shapefile and geodatabase formats.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis using WorldView-2 imagery acquired 5 May 2014, compared with baseline imagery from 7 June 2013 to delineate landslide extent and quantify structural damage through change detection methodology"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1a6add88",
+          "title": "FL20140430AFG_shp.zip",
+          "description": "Geodata of Update: Landslide in Ab Barek, Badakshan Province, Afghanistan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/AF/FL20140430AFG/FL20140430AFG_shp.zip"
+        },
+        {
+          "id": "resource_943b9100",
+          "title": "FL20140430AFG.gdb.zip",
+          "description": "Geodata of Update: Landslide in Ab Barek, Badakshan Province, Afghanistan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/AF/FL20140430AFG/FL20140430AFG.gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures in Ab Barek village identified and mapped via satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons (IDPs) identified in affected areas as of 5 May 2014"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from landslide burial; 87 structures identified as buried by satellite analysis"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons resulting from landslide event in Ab Barek"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-landslide-in-ab-barek-badakshan-province-afghanistan-may-08-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

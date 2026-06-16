@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-idn_unosat_mountsemeruvolcanicerupti_20221213",
+      "title": "Mount Semeru volcanic eruption, Jawa Timur Province, Indonesia - UNOSAT Live Web Map",
+      "description": "UNOSAT code VO20221206IDN, GDACS Id: 1000057 Live web map providing geospatial information potentially affected areas by pyroclastic flow/deposits after the December 2022 Mount Semeru volcanic eruption in East Java. This web map gives an updated overview over potentially affected structures and affected structures based on very high-resolution satellite images and also Pyroclastic flow/deposits.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mount-semeru-volcanic-eruption-jawa-timur-province-indonesia-unosat-live-web-map]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mount-semeru-volcanic-eruption-jawa-timur-province-indonesia-unosat-live-web-map"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mount-semeru-volcanic-eruption-jawa-timur-province-indonesia-unosat-live-web-map"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2022-12-13"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared very high-resolution satellite imagery acquired after the December 2022 Mount Semeru eruption to delineate pyroclastic flow and deposit extents, then overlaid building footprints to identify potentially and confirmed affected structures in East Java Province, Indonesia.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Very high-resolution satellite imagery analysis identifying pyroclastic flow/deposit extent and affected structures through multi-temporal image comparison and damage assessment methodology"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5fa5c1ae",
+          "title": "VO20221206IDN_gdb.zip",
+          "description": "Mount Semeru volcanic eruption, Jawa Timur Province, Indonesia - UNOSAT Live Web Map (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3463/VO20221206IDN_gdb.zip"
+        },
+        {
+          "id": "resource_ff0a0ad6",
+          "title": "VO202212006IDN_SHP.zip",
+          "description": "Mount Semeru volcanic eruption, Jawa Timur Province, Indonesia - UNOSAT Live Web Map (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3463/VO202212006IDN_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "pyroclastic_flow",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures in areas potentially affected by pyroclastic flow deposits"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from pyroclastic flow and volcanic deposits"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mount-semeru-volcanic-eruption-jawa-timur-province-indonesia-unosat-live-web-map",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

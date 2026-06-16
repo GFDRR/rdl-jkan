@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-ssd_unosat_detectedwaterextentsbetwe_20211026",
+      "title": "Satellite detected water extents between 20 and 24 October 2021 over South Sudan",
+      "description": "UNOSAT code: FL20211015SSD This map illustrates cumulative satellite-detected water using VIIRS in South Sudan between 20 to 25 October 2021 compared with the period between 15 to 19 October 2021. Within the cloud free analyzed areas of about 630,000 km2, a total of about 36,000 km2 of lands appear to be affected with flood waters. Water extent appears to have decreased of about 12,000 km2 since the period between 15 to 19 October 2021. Based on Worldpop population data and the detected surface waters, ~1,040,000 people are potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extents-between-20-and-24-october-2021-over-south-sudan]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-20-and-24-october-2021-over-south-sudan"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-20-and-24-october-2021-over-south-sudan"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2021-10-26"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-20-and-24-october-2021-over-south-sudan"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-20-and-24-october-2021-over-south-sudan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared VIIRS satellite imagery from two time periods (15-19 October and 20-25 October 2021) to detect changes in water extent across South Sudan. Cloud-free areas of approximately 630,000 km² were analyzed, and detected water extents were intersected with WorldPop population data to estimate exposed population. The dataset represents observed flood inundation extent derived from satellite remote sensing.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using VIIRS to detect water extents and map cumulative flood inundation areas through multi-temporal image comparison"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population exposure to detected flood waters"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5fc8b963",
+          "title": "FL20211015SSD_gdb.zip",
+          "description": "Satellite detected water extents between 20 and 24 October 2021 over South Sudan (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/SS/FL20211015SSD/FL20211015SSD_gdb.zip"
+        },
+        {
+          "id": "resource_15a1ea8e",
+          "title": "FL20211015SSD_SHP.zip",
+          "description": "Satellite detected water extents between 20 and 24 October 2021 over South Sudan (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/SS/FL20211015SSD/FL20211015SSD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to detected flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extents-between-20-and-24-october-2021-over-south-sudan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

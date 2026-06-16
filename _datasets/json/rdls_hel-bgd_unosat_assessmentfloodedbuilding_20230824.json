@@ -1,0 +1,224 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-bgd_unosat_assessmentfloodedbuilding_20230824",
+      "title": "Assessment of Flooded Buildings in Bandarban, Cox's Bazaar, Chattogram, and Rangamati Districts, Chattogram Division, Bangladesh as of 12 to 22 August 2023",
+      "description": "UNOSAT code FL20230807BGD This map illustrate the number of affected buildings within specific district boundaries of interest in Bandarban, Cox's Bazar, Chattogram, and Rangamati Districts, located in Chattogram Division, Bangladesh as of 12 to August 2023. And using an automated analysis with Artificial Intelligence based methods. Within the analyzed area of about 17,000 km2 and, about 350km2 of lands appear to be flooded. Based on Worldpop population data from 2020, the flood water extent and Microsoft building footprint , ~415,000 people are potentially exposed or living close to flooded areas and about 932 building potentially affected by floods. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/assessment-of-flooded-buildings-in-bandarban-cox-s-bazaar-chattogram-and-rangamati-distric]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/assessment-of-flooded-buildings-in-bandarban-cox-s-bazaar-chattogram-and-rangamati-distric"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/assessment-of-flooded-buildings-in-bandarban-cox-s-bazaar-chattogram-and-rangamati-distric"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2023-08-24"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Microsoft building footprint dataset",
+            "url": "https://data.humdata.org/dataset/assessment-of-flooded-buildings-in-bandarban-cox-s-bazaar-chattogram-and-rangamati-distric"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data (2020)",
+            "url": "https://data.humdata.org/dataset/assessment-of-flooded-buildings-in-bandarban-cox-s-bazaar-chattogram-and-rangamati-distric"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Satellite imagery",
+            "url": "https://data.humdata.org/dataset/assessment-of-flooded-buildings-in-bandarban-cox-s-bazaar-chattogram-and-rangamati-distric"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed multi-temporal satellite imagery using artificial intelligence-based automated analysis methods to delineate flood extent (~350 km²) across four districts in Chattogram Division. Building footprints from Microsoft and population data from WorldPop 2020 were spatially intersected with the mapped flood extent to quantify affected buildings and exposed population during the August 2023 flooding event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Microsoft building footprint dataset",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Global building footprint inventory used to identify and count structures within the flood-affected area"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data (2020)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate population exposure to flood waters"
+          },
+          {
+            "id": "source_3",
+            "name": "Satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multi-temporal satellite imagery analyzed using AI-based automated methods to delineate flood extent and identify affected buildings"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c865350c",
+          "title": "UNOSAT_FloodAssessment_FL20230807BGD_24Aug2023.xlsx",
+          "description": "Assessment of Flooded Buildings in Bandarban, Cox's Bazaar, Chattogram, and Rangamati Districts, Chattogram Division, Bangladesh as of 12 to 22 August 2023 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3660/UNOSAT_FloodAssessment_FL20230807BGD_24Aug2023.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints from Microsoft dataset within the flood-affected districts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population from WorldPop 2020 data potentially exposed to flood waters"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Number of affected buildings identified through satellite imagery analysis in flooded areas"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population potentially exposed to flooding based on flood extent and population distribution"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/assessment-of-flooded-buildings-in-bandarban-cox-s-bazaar-chattogram-and-rangamati-distric",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

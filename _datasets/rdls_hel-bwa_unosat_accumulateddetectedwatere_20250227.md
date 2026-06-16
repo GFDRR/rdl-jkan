@@ -118,7 +118,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: AA:km2
       process: null
       trigger: null
@@ -141,7 +141,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: AA:km2
       process: null
       trigger: null

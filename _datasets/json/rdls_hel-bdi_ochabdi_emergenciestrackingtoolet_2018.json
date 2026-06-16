@@ -1,0 +1,231 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-bdi_ochabdi_emergenciestrackingtoolet_2018",
+      "title": "Burundi: Emergencies Tracking Tool - ETT",
+      "description": "The dataset contains information on natural disasters, such as floods and heavy rains, in Burundi.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/burundi-emergencies-tracking-tool-ett]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Burundi",
+        "url": "https://data.humdata.org/dataset/burundi-emergencies-tracking-tool-ett"
+      },
+      "creator": {
+        "name": "OCHA Burundi",
+        "url": "https://data.humdata.org/dataset/burundi-emergencies-tracking-tool-ett"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BDI"
+        ]
+      },
+      "temporal": {
+        "start": "2018-01-01",
+        "end": "2023-05-19"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration",
+            "url": "https://data.humdata.org/dataset/burundi-emergencies-tracking-tool-ett"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The Emergencies Tracking Tool (ETT) aggregates direct observational data and anecdotal reports collected by IOM field teams across Burundi documenting flood and heavy rainfall events. Data collection spans January 2018 to May 2023 with incident-level records including spatial location (admin divisions), event date, and detailed damage assessments across residential buildings, infrastructure, and agricultural assets. The dataset represents post-event impact documentation rather than hazard modeling.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Primary data source providing direct observational and anecdotal field reports of flood events, damage assessments, and affected populations across Burundi from January 2018 to May 2023"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_25331ba5",
+          "title": "EET dataset_Jan_2018_to_May_2023",
+          "description": "Data about natural disasters such as floods and heavy rains in Burundi from January 2018 to May 2023.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4749e6e5-a7ec-4954-9df5-c4625ab1c34d/resource/25331ba5-b9f6-4b7c-a272-0745585627c2/download/eet-dataset_2018_to_20_mai-2023.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Residential housing stock affected by flooding, classified by damage state (destroyed, partially destroyed, flooded)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Critical infrastructure assets including schools, health facilities, bridges, roads, water systems, religious buildings, markets, and administrative offices"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural land and crop fields destroyed by flooding events"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to residential housing from flooding, including total destruction, partial destruction, and inundation"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to critical infrastructure including schools, health facilities, bridges, roads, water systems, and administrative buildings"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to agricultural fields and crops from flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/burundi-emergencies-tracking-tool-ett",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

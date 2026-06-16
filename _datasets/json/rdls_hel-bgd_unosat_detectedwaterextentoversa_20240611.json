@@ -1,0 +1,213 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-bgd_unosat_detectedwaterextentoversa_20240611",
+      "title": "Satellite detected water extent over Satkhira and Khulna Districts, Khulna Divisions, Bangladesh as of 1 June 2024",
+      "description": "UNOSAT code: FL20240502BGD, GDACS ID: 1001064 This map illustrates satellite-detected surface waters in Satkhira and Khulna Districts, Khulna Divisions, Bangladesh as observed from TANDEM_X images acquired on 1 June 2024 at 18:01 local time. Within the analyzed area of about 1,100 km2, about 200 km2 of land appears to be flooded. Based on Worldpop population data and the detected surface waters in the analyzed area, 124,000 people are potentially exposed or living close to the affected areas. UNITAR-UNOSAT identified 76,000 structures potentially exposed to floods in the analyzed area. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT). Important note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to the backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-over-satkhira-and-khulna-districts-khulna-divisions-bangladesh-as-of-1-june-2]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-over-satkhira-and-khulna-districts-khulna-divisions-bangladesh-as-of-1-june-2"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-over-satkhira-and-khulna-districts-khulna-divisions-bangladesh-as-of-1-june-2"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2024-06-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extent-over-satkhira-and-khulna-districts-khulna-divisions-bangladesh-as-of-1-june-2"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/water-extent-over-satkhira-and-khulna-districts-khulna-divisions-bangladesh-as-of-1-june-2"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "TANDEM_X satellite imagery acquired on 1 June 2024 was analyzed by UNOSAT analysts to detect surface water extent through change detection and image comparison techniques, delineating approximately 200 km2 of flooded land within a 1,100 km2 study area. The detected flood extent was intersected with WorldPop population data to estimate exposed populations and with structural datasets to identify potentially affected buildings. The dataset supports rapid emergency response and situational awareness for the flood event (GDACS ID: 1001064) affecting Satkhira and Khulna Districts, Bangladesh.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "UNOSAT processed TANDEM_X satellite imagery acquired on 1 June 2024 to delineate surface water extent and identify flooded areas in Satkhira and Khulna Districts, Bangladesh."
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "WorldPop gridded population data was used to estimate the number of people potentially exposed to or living close to the detected flooded areas."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_acd604a9",
+          "title": "TC20240502BGD_GDB.zip",
+          "description": "Satellite detected water extent over Satkhira and Khulna Districts, Khulna Divisions, Bangladesh as of 1 June 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3878/TC20240502BGD_GDB.zip"
+        },
+        {
+          "id": "resource_4fd05c08",
+          "title": "TC20240502BGD_SHP.zip",
+          "description": "Satellite detected water extent over Satkhira and Khulna Districts, Khulna Divisions, Bangladesh as of 1 June 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3878/TC20240502BGD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Structures potentially exposed to flood waters as identified by UNOSAT within the analyzed area of Satkhira and Khulna Districts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas, estimated using WorldPop population data intersected with detected surface waters"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "inferred",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Count of structures potentially exposed to flood inundation in Satkhira and Khulna Districts as of 1 June 2024"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "inferred",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Estimated number of people potentially exposed or living close to flooded areas based on WorldPop data and satellite-detected water extent"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-over-satkhira-and-khulna-districts-khulna-divisions-bangladesh-as-of-1-june-2",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

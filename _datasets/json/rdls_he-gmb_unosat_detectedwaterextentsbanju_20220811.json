@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-gmb_unosat_detectedwaterextentsbanju_20220811",
+      "title": "Satellite detected water extents in Banjul, Kanifing, and Brikama Regions, Gambia as of 10 August 2022",
+      "description": "UNOSAT code: FL20220801GMB This map illustrates satellite-detected surface waters in Satellite detected water in Banjul, Kanifing, and Brikama Regions, Gambia as observed from a Sentinel-2 image acquired on 10 Aug 2021 at 18:18 local time. Within the analyzed cloud free zones of about 960 km2, about 26 km2 of lands appear to be flooded. Based on Worldpop population data and the detected surface waters in the analyzed area, the potentially exposed population is mainly located in the districts of Kanifing with ~ 7,300 people, Kombo North/St Marie with ~ 7,000 and Kombo South with ~ 4,100 people This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-in-banjul-kanifing-and-brikama-regions-gambia-as-of-10-august-2022]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-banjul-kanifing-and-brikama-regions-gambia-as-of-10-august-2022"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-banjul-kanifing-and-brikama-regions-gambia-as-of-10-august-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GMB"
+        ]
+      },
+      "temporal": {
+        "start": "2022-08-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/water-extents-in-banjul-kanifing-and-brikama-regions-gambia-as-of-10-august-2022"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/water-extents-in-banjul-kanifing-and-brikama-regions-gambia-as-of-10-august-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed Sentinel-2 satellite imagery acquired on 10 August 2022 to detect surface water extents through visual interpretation and comparison of cloud-free zones. Detected flooded areas (26 km² within 960 km² analyzed) were intersected with WorldPop population data to estimate potentially exposed populations by district.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multispectral satellite image acquired on 10 August 2022 used to detect surface water extents through visual analysis and change detection"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate potentially exposed population in the flooded areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7db8cf09",
+          "title": "FL20220801GMB_gdb.zip",
+          "description": "Satellite detected water extents in Banjul, Kanifing, and Brikama Regions, Gambia as of 10 August 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/GM/FL20220801GMB/FL20220801GMB_gdb.zip"
+        },
+        {
+          "id": "resource_7a3cb1dc",
+          "title": "FL20220801GMB_SHP.zip",
+          "description": "Satellite detected water extents in Banjul, Kanifing, and Brikama Regions, Gambia as of 10 August 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/GM/FL20220801GMB/FL20220801GMB_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Potentially exposed population in Kanifing, Kombo North/St Marie, and Kombo South districts derived from WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-in-banjul-kanifing-and-brikama-regions-gambia-as-of-10-august-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

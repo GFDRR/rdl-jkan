@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-moz_unosat_detectedwaterextentszambe_20220315",
+      "title": "Satellite detected water extents in Zambezia Province, Mozambique as of 15 March 2022",
+      "description": "UNOSAT code: TC20220311MOZ This map illustrates satellite-detected surface waters in Maganja da Costa, Moaquival and Namacurra Districts, Nampula Province, Mozambique as observed from a RCM-1 image acquired on 15 March 2022 at 05:10 local time. Within the analyzed area of about 1500 km2, about 237 km2 of lands appear to be flooded. Based on Worldpop population data and the detected surface waters, about 22,600 people are potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT). Important note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extents-in-zambezia-province-mozambique-as-of-15-march-2022]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-zambezia-province-mozambique-as-of-15-march-2022"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-zambezia-province-mozambique-as-of-15-march-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2022-03-15"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-zambezia-province-mozambique-as-of-15-march-2022"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "RCM-1 satellite imagery",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-zambezia-province-mozambique-as-of-15-march-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery from RCM-1 acquired on 15 March 2022 was analyzed by UNOSAT analysts through visual interpretation and multi-temporal comparison to detect surface water extents. Detected flooded areas (237 km²) were intersected with WorldPop gridded population data to estimate approximately 22,600 people potentially exposed to flooding in three districts of Nampula Province, Mozambique.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population exposure to detected water extents"
+          },
+          {
+            "id": "source_2",
+            "name": "RCM-1 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite remote sensing data acquired on 15 March 2022 used to detect and map surface water extents"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_563c6ab5",
+          "title": "TC20220311MOZ_gdb.zip",
+          "description": "Satellite detected water extents in Zambezia Province, Mozambique as of 15 March 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/MZ/TC20220311MOZ/TC20220311MOZ_gdb.zip"
+        },
+        {
+          "id": "resource_fcd09355",
+          "title": "TC20220311MOZ_SHP.zip",
+          "description": "Satellite detected water extents in Zambezia Province, Mozambique as of 15 March 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/MZ/TC20220311MOZ/TC20220311MOZ_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to satellite-detected flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-zambezia-province-mozambique-as-of-15-march-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

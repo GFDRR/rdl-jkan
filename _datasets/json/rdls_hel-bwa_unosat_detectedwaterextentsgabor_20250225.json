@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-bwa_unosat_detectedwaterextentsgabor_20250225",
+      "title": "Satellite detected water extents in Gaborone, South East Districts, Botswana as of 23 February 2025",
+      "description": "UNOSAT code: FL20250220BWA, GDACS ID: 1103128 This map illustrates the satellite-detected accumulated flood extent in Gaborone, South East District, Botswana, as observed from Planet imagery acquired on 23 February 2025. Within the analyzed area of approximately 120 km², about 10 km² of land appears to be affected by floodwaters. UNITAR-UNOSAT has identified approximately 670 potentially affected structures within the analyzed area. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-in-gaborone-south-east-districts-botswana-as-of-23-february-2025]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-gaborone-south-east-districts-botswana-as-of-23-february-2025"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-gaborone-south-east-districts-botswana-as-of-23-february-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BWA"
+        ]
+      },
+      "temporal": {
+        "start": "2025-02-25"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extents-in-gaborone-south-east-districts-botswana-as-of-23-february-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Planet satellite imagery acquired on 23 February 2025 and compared it with reference imagery to identify accumulated floodwater extent through visual interpretation. Approximately 10 km² of inundated area was delineated within a 120 km² study area, and 670 potentially affected structures were identified through spatial overlay with building inventories.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis from Planet providing observed flood water extent mapping through visual interpretation and multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_00998f75",
+          "title": "FL20250220BWA_gdb.zip",
+          "description": "Satellite detected water extents in Gaborone, South East Districts, Botswana as of 23 February 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4080/FL20250220BWA_gdb.zip"
+        },
+        {
+          "id": "resource_dd629f6b",
+          "title": "FL20250220BWA_SHP.zip",
+          "description": "Satellite detected water extents in Gaborone, South East Districts, Botswana as of 23 February 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4080/FL20250220BWA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures identified within the analyzed flood-affected area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Potentially affected structures identified within satellite-detected flood extent"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-in-gaborone-south-east-districts-botswana-as-of-23-february-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

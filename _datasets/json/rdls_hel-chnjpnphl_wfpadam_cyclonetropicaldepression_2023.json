@@ -1,0 +1,155 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-chnjpnphl_wfpadam_cyclonetropicaldepression_2023",
+      "title": "China: Cyclone - Tropical depression - Oct 2023",
+      "description": "ADAM ID: 1001018_4 Cyclone (tropical depression) during the period Sep 29 2023-Oct 10 2023 in China, Japan, Philippines. It impacted 3755569 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/china-cyclone-1001018]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/china-cyclone-1001018"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/china-cyclone-1001018"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "CHN",
+          "JPN",
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-29",
+        "end": "2023-10-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/china-cyclone-1001018"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected observed tropical cyclone track geometry and wind speed measurements during the September 29 - October 10, 2023 event. Population exposure was estimated by intersecting wind speed thresholds (60, 90, 120 kph) with gridded population data at administrative levels (ADM0, ADM1, ADM2), aggregating affected population counts by wind speed intensity zones.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system collecting and mapping tropical storm track data, wind speed fields, and alert levels for sudden-onset emergencies"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6f299345",
+          "title": "1001018-43-adam-ts-1001018-43-shp.zip",
+          "description": "China: Cyclone - Tropical depression - Oct 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/50bbe5b2-eb03-402c-9639-5e1ba1615125/resource/6f299345-b319-4939-8ff7-29038755946a/download/1001018-43-adam-ts-1001018-43-shp.zip"
+        },
+        {
+          "id": "resource_0ee22155",
+          "title": "1001018-43-adam-ts-1001018-43-pop-estimation.csv",
+          "description": "China: Cyclone - Tropical depression - Oct 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/50bbe5b2-eb03-402c-9639-5e1ba1615125/resource/0ee22155-ff8d-4fe5-8519-0dbc12343a22/download/1001018-43-adam-ts-1001018-43-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at multiple thresholds (60, 90, 120 kph)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Total population affected by tropical depression cyclone event across China, Japan, and Philippines"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/china-cyclone-1001018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

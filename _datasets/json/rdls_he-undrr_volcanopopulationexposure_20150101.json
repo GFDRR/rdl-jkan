@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-undrr_volcanopopulationexposure_20150101",
+      "title": "Volcano - Population Exposure Index(GVM)",
+      "description": "A comprehensive set of information on global volcanic hazard, historical events, population exposure, vulnerability, and impact has been provided to GAR15 by Global Volcano Model (GVM) and The International Association of Volcanology and Chemistry of the Earth's Interior (IAVCEI). This work is the first of its kind in global coverage and level of contribution from a wide network of experts and institutions around the world.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/volcano-population-exposure-index-gvm]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset was generated using other global datasets; it should not be used for local applications (such as land use planning). The main purpose of GAR 2015 datasets is to broadly identify high risk areas at global level and for identification of areas where more detailed data should be collected. Some areas may be underestimated or overestimated. Given this analysis was conducted using global datasets, the resolution of which is not sufficient for in-situ planning, it should not be used for critical (like life saving) decisions. UNISDR and collaborators should in no case be liable for misuse or misinterpretation of the presented results. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. This analysis was conducted using global datasets, the resolution of which is not relevant for in-situ planning and should not be used for life and death decisions. UNISDR and collaborators should in no case be liable for misuse of the presented results.",
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/volcano-population-exposure-index-gvm"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/volcano-population-exposure-index-gvm"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2015-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Global Volcano Model (GVM)",
+            "url": "https://data.humdata.org/dataset/volcano-population-exposure-index-gvm"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "The International Association of Volcanology and Chemistry of the Earth's Interior (IAVCEI)",
+            "url": "https://data.humdata.org/dataset/volcano-population-exposure-index-gvm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Global volcanic hazard, exposure, and vulnerability data compiled by GVM and IAVCEI experts from a worldwide network of institutions. The dataset integrates comprehensive technical information on volcanic hazards, historical events, and population exposure to produce the first global-coverage volcanic risk assessment for GAR15.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Global Volcano Model (GVM)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Provides global volcanic ash fall hazard modelling and comprehensive technical information on volcanic hazard and historical events"
+          },
+          {
+            "id": "source_2",
+            "name": "The International Association of Volcanology and Chemistry of the Earth's Interior (IAVCEI)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Contributes expert knowledge and data on volcanic hazards, exposure, and vulnerability from a global network of institutions"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9a7872e5",
+          "title": "volcano.zip",
+          "description": "Volcano - Population Exposure Index(GVM) (Zipped shapefiles of volcano PEI (98 kb).)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/a60ac839-920d-435a-bf7d-25855602699d/resource/9a7872e5-9617-4c1a-a70b-589e47ac72f0/download/volcano.zip"
+        },
+        {
+          "id": "resource_7234d067",
+          "title": "volcano.json",
+          "description": "Volcano - Population Exposure Index(GVM) (Geojson of volcano PEI (573 kb).)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/a60ac839-920d-435a-bf7d-25855602699d/resource/7234d067-2d74-449a-9c61-22ae6d98d928/download/volcano.json"
+        },
+        {
+          "id": "resource_e3b1ecf0",
+          "title": "volcano.csv",
+          "description": "Volcano - Population Exposure Index(GVM) (Csv files of volcano population exposure index (209 kb).)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/a60ac839-920d-435a-bf7d-25855602699d/resource/e3b1ecf0-ec47-49f7-9011-6bbb7403ef6d/download/volcano.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "ashfall",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposure to volcanic hazards in regions and countries with active volcanoes"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/volcano-population-exposure-index-gvm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

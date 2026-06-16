@@ -1,0 +1,136 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-dom_unosat_populationexposurewindspe_20161006",
+      "title": "Dominican Republic - Population Exposure Wind Speed from Hurricane Matthew (UNOSAT, 2016-10-06)",
+      "description": "Population Exposure Wind Speed Zones Matthew-16. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-dominicanrep-popexposure-windspeed-matthew-20161006]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics and the limitations of the sources used to implement those results.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-dominicanrep-popexposure-windspeed-matthew-20161006"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-dominicanrep-popexposure-windspeed-matthew-20161006"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DOM"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-06"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-dominicanrep-popexposure-windspeed-matthew-20161006"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT generated deterministic wind speed hazard zones from Hurricane Matthew using satellite data and meteorological modeling, then intersected with census-based population and housing data disaggregated by administrative province to create exposure layers showing population and building counts within three wind speed threshold categories (60, 90, 120 km/h).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-based analysis and modeling of Hurricane Matthew wind speed exposure zones across Dominican Republic administrative boundaries"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b03eb51e",
+          "title": "UNOSAT_DominicanRep_PopExposure_WindSpeed_Matthew_20161006",
+          "description": "Dominican Republic - Population Exposure Wind Speed from Hurricane Matthew (UNOSAT, 2016-10-06) (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/UNOSAT_DominicanRep_PopExposure_WindSpeed_Matthew_20161006.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population by gender and administrative unit exposed to hurricane wind speed zones"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Housing units (viviendas) exposed to wind speed hazard zones"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-dominicanrep-popexposure-windspeed-matthew-20161006",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mex_unosat_pijijiapanearthquakemw81p_20170908",
+      "title": "Mexico-Pijijiapan earthquake Mw 8.1 - Population Exposure Analysis",
+      "description": "Population Exposure Analysis Based on Ground Shake Data (USGS) and Population data (WorldPop).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mexico-pijijiapan-earthquake-mw-8-1-population-exposure-analysis]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mexico-pijijiapan-earthquake-mw-8-1-population-exposure-analysis"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mexico-pijijiapan-earthquake-mw-8-1-population-exposure-analysis"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MEX"
+        ]
+      },
+      "temporal": {
+        "start": "2017-09-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "USGS",
+            "url": "https://data.humdata.org/dataset/mexico-pijijiapan-earthquake-mw-8-1-population-exposure-analysis"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/mexico-pijijiapan-earthquake-mw-8-1-population-exposure-analysis"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT integrated USGS ground shake data from the Mw 8.1 Pijijiapan earthquake with WorldPop gridded population data to produce a population exposure analysis, identifying the spatial distribution of people exposed to earthquake ground motion hazard.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "USGS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Ground shake data (shakemap) for the Mw 8.1 earthquake event"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to assess population exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e9e44ba2",
+          "title": "UNOSAT_PoP_Exposure_EQ_M8.1_Mexico.xlsx",
+          "description": "Mexico-Pijijiapan earthquake Mw 8.1 - Population Exposure Analysis (Zipped shapefile)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170908MEX/UNOSAT_PoP_Exposure_EQ_M8.1_Mexico.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population distribution from WorldPop exposed to earthquake ground shaking"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mexico-pijijiapan-earthquake-mw-8-1-population-exposure-analysis",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

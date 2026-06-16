@@ -1,0 +1,188 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-afg_unosat_mudflowimpacteshkmeshdist_20240520",
+      "title": "Mudflow impact in Eshkmesh District, Takhar Province and Burka District, Baghlan Province, Afghanistan as of 15 May 2024",
+      "description": "UNOSAT code: FL20240512AFG, GDACS ID: 1102616 This map illustrates satellite-detected mudflow extent Eshkmesh District, Takhar Province and Burka District, Baghlan Province, Afghanistan as observed from a Sentinel-2 image acquired on 15 May 2024 at 14:04 local time (09:34 UTC). Within the analysed area of about 1,000 km², a total of about 65 km² of lands appear to be affected by mudflow. Based on Worldpop population data and the extent of the mudflows, about 12,000 people are potentially affected by mudflows. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mudflow-impact-in-eshkmesh-district-takhar-province-and-burka-district-baghlan-province-af]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mudflow-impact-in-eshkmesh-district-takhar-province-and-burka-district-baghlan-province-af"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mudflow-impact-in-eshkmesh-district-takhar-province-and-burka-district-baghlan-province-af"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2024-05-20"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Worldpop",
+            "url": "https://data.humdata.org/dataset/mudflow-impact-in-eshkmesh-district-takhar-province-and-burka-district-baghlan-province-af"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Sentinel-2",
+            "url": "https://data.humdata.org/dataset/mudflow-impact-in-eshkmesh-district-takhar-province-and-burka-district-baghlan-province-af"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts performed satellite-based change detection by comparing Sentinel-2 imagery acquired on 15 May 2024 with reference imagery to delineate mudflow extent across approximately 1,000 km² in Takhar and Baghlan provinces. Population exposure was estimated by overlaying the mudflow extent polygon with WorldPop gridded population data. The resulting geodatabase contains the observed hazard footprint and derived population impact estimates.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Worldpop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population density data used to estimate population exposure to mudflow extent"
+          },
+          {
+            "id": "source_2",
+            "name": "Sentinel-2",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery providing direct observation of mudflow extent through multi-temporal change detection"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e30f8db5",
+          "title": "FL20240512AFG_gdb.zip",
+          "description": "Mudflow impact in Eshkmesh District, Takhar Province and Burka District, Baghlan Province, Afghanistan as of 15 May 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3848/FL20240512AFG_gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population potentially affected by mudflow based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct land area affected by mudflow extent (approximately 65 km²)"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population potentially affected by mudflow (approximately 12,000 people)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mudflow-impact-in-eshkmesh-district-takhar-province-and-burka-district-baghlan-province-af",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
