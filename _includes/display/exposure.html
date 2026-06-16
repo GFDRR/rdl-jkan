@@ -1,0 +1,33 @@
+<div class="content-section risk-component-section exposure">
+  <h2 class="section-title">
+    <span class="component-icon exposure"></span>
+    Exposure Component
+  </h2>
+  <table class="data-table rdl-table">
+    {% for exposure in page.exposure %}
+      <tr>
+        <th>Exposure</th>
+        <th>Category</th>
+      </tr>
+      <tr>
+        <td>{{ exposure.id }}</td>
+        <td>{{ site.data.rdl-exposure_category[exposure.category] }}</td>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Metric</th>
+        <th>Dimension</th>
+        <th>Unit</th>
+      </tr>
+      {% for metric in exposure.metrics %}
+        <tr>
+          <td></td>
+          <td>{{ metric.id }}</td>
+          <td>{{ site.data.rdl-dimension[metric.dimension] }}</td>
+          <!-- TODO: update this codelist -->
+          <td>{{ site.data.rdl-impact_unit[metric.measurement.unit] }}</td>
+        </tr>
+      {% endfor %}
+    {% endfor %}
+  </table>
+</div>

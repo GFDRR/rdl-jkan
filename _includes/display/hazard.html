@@ -1,0 +1,39 @@
+<div class="content-section risk-component-section hazard">
+  <h2 class="section-title">
+    <span class="component-icon hazard"></span>
+    Hazard Component
+  </h2>
+  <table class="data-table rdl-table">
+    {% assign event_sets = page.hazard.event_sets %}
+    {% for event_set in event_sets %}
+      <tr>
+        <th>Event Set</th>
+        <th>Analysis Type</th>
+        <th>Calculation Method</th>
+      </tr>
+      <tr>
+        <td>{{ event_set.id }}</td>
+        <td>{{ site.data.rdl-analysis_type[event_set.analysis_type] }}</td>
+        <td>{{ site.data.rdl-calculation_method[event_set.calculation_method] }}</td>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Event</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Hazard Type</th>
+        <th>Hazard Process</th>
+      </tr>
+      {% for event in event_set.events %}
+        <tr>
+          <td></td>
+          <td>{{ event.id }}</td>
+          <td>{{ event.occurrence[event_set.analysis_type].temporal.start }}</td>
+          <td>{{ event.occurrence[event_set.analysis_type].temporal.end }}</td>
+          <td>{{ site.data.rdl-hazard_type[event.hazard.type] }}</td>
+          <td>{{ site.data.rdl-process_type[event.hazard.process] }}</td>
+        </tr>
+      {% endfor %}
+    {% endfor %}
+  </table>
+</div>
