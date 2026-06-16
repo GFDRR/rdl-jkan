@@ -1,0 +1,85 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-vct_uscensus_saintvincentgrenadinesgri",
+      "title": "Saint Vincent and the Grenadines Gridded Population Dataset",
+      "description": "The geodatabase contains gridded population rasters which can be used to identify the population for a custom area.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/saint-vincent-and-the-grenadines-gridded-population-dataset]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "U.S. Census Bureau",
+        "url": "https://data.humdata.org/dataset/saint-vincent-and-the-grenadines-gridded-population-dataset"
+      },
+      "creator": {
+        "name": "U.S. Census Bureau",
+        "url": "https://data.humdata.org/dataset/saint-vincent-and-the-grenadines-gridded-population-dataset"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VCT"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Subnational census data for Saint Vincent and the Grenadines were disaggregated using a random forest model trained on human and physical geography datasets to generate a population weighting layer, which was then applied via dasymetric mapping to create gridded population rasters at fine spatial resolution.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "U.S. Census Bureau",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Subnational census data for Saint Vincent and the Grenadines that were disaggregated using dasymetric mapping techniques to create gridded population estimates"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_de49ea6e",
+          "title": "DemobaseSVG.gdb.zip",
+          "description": "The geodatabase contains six rasters representing density, people per hectare, and people per pixel, for the census year (2012) and 2021.",
+          "format": "Geodatabase",
+          "download_url": "https://data.humdata.org/dataset/60967843-7a89-4c4a-b76a-543bc0a4e2bc/resource/de49ea6e-c3e7-4c3c-bef5-e49f61b7c0de/download/demobasesvg.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution derived from disaggregated subnational census data using dasymetric mapping"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/saint-vincent-and-the-grenadines-gridded-population-dataset",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
