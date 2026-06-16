@@ -1,0 +1,144 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-flowminder_mobilitypatternspopulatio_2013",
+      "title": "Mobility patterns and population densities for West Africa",
+      "description": "Here we provide version 1 Flowminder (www.flowminder.org) human mobility models for West Africa, together with WorldPop population density data for the region, to support ongoing efforts to control the ebola outbreak. Before downloading any data, please read the documention carefully as it provides details on the datasets and models provided through the links below. The mobility data refer to estimated patterns before the Ebola outbreak and should be interpreted with caution for Ebola affected countries as mobility patters are known to have changed. Additional discussion by the authors around the use of mobile operator data for epidemilogical research see: http://currents.plos.org/outbreaks/article/containing-the-ebola-outbreak-the-potential-and-challenge-of-mobile-network-data/. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mobility-patterns-west-africa]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The mobility data refer to estimated patterns before the Ebola outbreak and should be interpreted with caution for Ebola affected countries as mobility patters are known to have changed. Please see the detailed documentation provided.",
+      "contact_point": {
+        "name": "Flowminder (inactive)",
+        "url": "https://data.humdata.org/dataset/mobility-patterns-west-africa"
+      },
+      "creator": {
+        "name": "Flowminder (inactive)",
+        "url": "https://data.humdata.org/dataset/mobility-patterns-west-africa"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "BEN",
+          "BFA",
+          "CIV",
+          "GHA",
+          "GIN",
+          "GMB",
+          "GNB",
+          "LBR",
+          "MLI",
+          "MRT",
+          "NER",
+          "SEN",
+          "SLE",
+          "TGO"
+        ]
+      },
+      "temporal": {
+        "start": "2013-01-01",
+        "end": "2014-04-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Flowminder",
+            "url": "https://data.humdata.org/dataset/mobility-patterns-west-africa"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/mobility-patterns-west-africa"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WorldPop population density data were generated from census records and satellite-derived settlement maps at 100x100m resolution. Flowminder mobility models were developed from mobile phone call detail records and statistical inference to estimate human movement patterns. Both datasets were compiled for West Africa to support disease outbreak response planning, with mobility patterns representing pre-outbreak baseline conditions.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Flowminder",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Human mobility models estimating population movement patterns and flows across West Africa based on mobile phone data and statistical methods."
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "High-resolution gridded population density estimates at 100x100m spatial resolution derived from census data, satellite imagery, and statistical modeling."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.worldpop.org.uk/ebola/Flowminder-Mobility-Data-21.08.14.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_d9899ae6",
+          "title": "Estimated mobility patterns for West Africa",
+          "description": "Documentation: http://www.worldpop.org.uk/ebola/Flowminder-Mobility-Data-21.08.14.pdf Spatial data files: http://www.worldpop.org.uk/ebola/Spatial_Data.7z",
+          "media_type": "application/zip",
+          "download_url": "http://www.worldpop.org.uk/ebola/mobility_data/mobility-data-1stSept14.zip"
+        },
+        {
+          "id": "resource_3d39aa14",
+          "title": "Estimated high resolution population densities for West Africa (100x100m), 2014",
+          "description": "The data show newly created WorldPop datasets of estimated population counts per 100m x 100m grid cell for West African countries, adjusted to match the latest UN estimates for 2014. The WorldPop methods page (http://www.worldpop.org.uk/data/methods/) provides information on the approaches and input datasets used to construct the estimates.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "http://www.worldpop.org.uk/ebola/"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "High-resolution gridded population density at 100x100m resolution for West Africa, 2014"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mobility-patterns-west-africa",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

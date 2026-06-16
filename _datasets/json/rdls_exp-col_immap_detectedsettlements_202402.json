@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-col_immap_detectedsettlements_202402",
+      "title": "Colombia: Detected Settlements",
+      "description": "Detected settlements, as well as information on the validation processes carried out through the Premise platform and other organizations. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/detected-settlements-col]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/detected-settlements-col"
+      },
+      "creator": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/detected-settlements-col"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2024-02-01",
+        "end": "2024-02-29"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Premise platform",
+            "url": "https://data.humdata.org/dataset/detected-settlements-col"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Settlement locations were detected through remote sensing or field surveys and validated through the Premise crowdsourcing platform and partner organizations. The dataset contains spatial inventories of detected settlements with dwelling counts and population estimates across Colombian departments and municipalities.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Premise platform",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Crowdsourced validation data for settlement identification and verification"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_65bc0964",
+          "title": "asentamientos.csv",
+          "description": "Colombia: Detected Settlements (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/d0cbb46a-d196-4413-9b5e-402a807d4ea4/resource/65bc0964-c097-4364-bd8c-226bd40ed633/download/asentamientos.csv"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Detected settlements with housing unit counts and structural inventory"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population inferred from settlement detection and dwelling counts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/detected-settlements-col",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
