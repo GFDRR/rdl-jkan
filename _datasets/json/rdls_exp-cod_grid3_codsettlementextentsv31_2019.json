@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-cod_grid3_codsettlementextentsv31_2019",
+      "title": "DR Congo - GRID3 COD - Settlement Extents v3.1",
+      "description": "The GRID3 COD - Settlement Extents v3.1 consists of a geographic representation of settlements in the Democratic Republic of the Congo, in two forms: 1) settlement polygons, and 2) spatial points depicting the centroids of settled grid cells at 3-arc seconds (or ~100 meters) contained within settlement polygons. Both layers include attributes as described in the codebooks. Data inputs and methodology to derive the 2 layers are described in this document. The current version supersedes GRID3 COD - Settlement Extents v3.0; the following changes were made: ● Corrections on imputed values for building count and building areas. ● Corrections on probability values from field-collected data ● Edits in the Data Release Notes. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/grid3-cod-settlement-extents-v3-1]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "CIESIN, Columbia University, and its co-authors follow procedures designed to ensure that data disseminated by the project are of reasonable quality. If, despite these procedures, users encounter apparent errors or misstatements in the data, they should contact CIESIN, info@ciesin.columbia.edu. CIESIN, Columbia University, its co-authors, and their sponsors do not guarantee the accuracy, reliability, or completeness of any data provided. We provide these data without warranty of any kind whatsoever, either expressed or implied, and shall not be liable for incidental, consequential, or special damages arising out of the use of any data provided.",
+      "contact_point": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/grid3-cod-settlement-extents-v3-1"
+      },
+      "creator": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/grid3-cod-settlement-extents-v3-1"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2019-01-01",
+        "end": "2023-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Center for International Earth Science Information Network (CIESIN)",
+            "url": "https://data.humdata.org/dataset/grid3-cod-settlement-extents-v3-1"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Settlement extents were derived from satellite imagery and ancillary geospatial data to create polygon boundaries and 3-arc-second (~100 meter) grid cell centroids representing settled areas. The dataset provides a spatial inventory of population distribution across settlements in the DRC, enabling exposure assessment for disaster risk applications.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Center for International Earth Science Information Network (CIESIN)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Primary data source providing settlement extent mapping and spatial population distribution data for the Democratic Republic of the Congo"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c87b6a5a",
+          "title": "GRID3_COD_settlement_grid_v3_1_gpkg.zip",
+          "description": "DR Congo - GRID3 COD - Settlement Extents v3.1 (A spatial layer representing the centroids of settled grid cells.)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/335743dd-f27f-4382-9586-c5bfdf281aa0/resource/c87b6a5a-7a80-4ccb-85b3-c995a659e2f8/download/grid3_cod_settlement_grid_v3_1_gpkg.zip"
+        },
+        {
+          "id": "resource_cd6afdc2",
+          "title": "GRID3_COD_settlement_extents_v3_1_gpkg.zip",
+          "description": "DR Congo - GRID3 COD - Settlement Extents v3.1 (A spatial layer representing settlement polygons.)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/335743dd-f27f-4382-9586-c5bfdf281aa0/resource/cd6afdc2-fbd1-43cb-bc92-d1c7b3aed0cc/download/grid3_cod_settlement_extents_v3_1_gpkg.zip"
+        },
+        {
+          "id": "resource_92aad250",
+          "title": "GRID3 COD - Settlement Extents v3.1 - Data Release Notes.pdf",
+          "description": "Data inputs and methodology to derive the 2 layers are described in this document.",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/335743dd-f27f-4382-9586-c5bfdf281aa0/resource/92aad250-d38b-4ff7-ab1e-63a005e81701/download/grid3-cod-settlement-extents-v3.1-data-release-notes.pdf"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Spatial distribution of settled population represented as grid cells and settlement polygons at ~100 meter resolution"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/grid3-cod-settlement-extents-v3-1",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

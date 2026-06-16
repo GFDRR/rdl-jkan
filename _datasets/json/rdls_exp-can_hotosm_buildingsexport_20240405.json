@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-can_hotosm_buildingsexport_20240405",
+      "title": "Canada Buildings (OpenStreetMap Export)",
+      "description": "OpenStreetMap exports for use in GIS applications. This theme includes all OpenStreetMap features in this area matching ( Learn what tags means here ) : tags['building'] IS NOT NULL Features may have these attributes: name name:en building building:levels building:materials addr:full addr:housenumber addr:street addr:city office source name:fr This dataset is one of many OpenStreetMap exports on HDX . See the Humanitarian OpenStreetMap Team website for more information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hotosm_can_buildings]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "OpenStreetMap data is crowd sourced and cannot be considered to be exhaustive",
+      "contact_point": {
+        "name": "Humanitarian OpenStreetMap Team (HOT)",
+        "url": "https://data.humdata.org/dataset/hotosm_can_buildings"
+      },
+      "creator": {
+        "name": "Humanitarian OpenStreetMap Team (HOT)",
+        "url": "https://data.humdata.org/dataset/hotosm_can_buildings"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CAN"
+        ]
+      },
+      "temporal": {
+        "start": "2024-04-05"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OpenStreetMap contributors",
+            "url": "https://data.humdata.org/dataset/hotosm_can_buildings"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building footprints were extracted from OpenStreetMap using feature filtering on the 'building' tag. The dataset includes polygon geometries with attributes such as building type, number of levels, and address information, compiled from volunteer contributions to OpenStreetMap.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OpenStreetMap contributors",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Volunteered geographic information providing building footprint geometries and attributes for Canada"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5590395d",
+          "title": "hotosm_can_buildings_polygons_shp.zip",
+          "description": "Canada Buildings (OpenStreetMap Export) (ESRI Shapefile)",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://s3.dualstack.us-east-1.amazonaws.com/production-raw-data-api/ISO3/CAN/buildings/polygons/hotosm_can_buildings_polygons_shp.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "resource_1cc890ed",
+          "title": "hotosm_can_buildings_polygons_kml.zip",
+          "description": "Canada Buildings (OpenStreetMap Export) (ZIP archive)",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://s3.dualstack.us-east-1.amazonaws.com/production-raw-data-api/ISO3/CAN/buildings/polygons/hotosm_can_buildings_polygons_kml.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "resource_89deaf9d",
+          "title": "hotosm_can_buildings_polygons_geojson.zip",
+          "description": "Canada Buildings (OpenStreetMap Export) (ZIP archive)",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://s3.dualstack.us-east-1.amazonaws.com/production-raw-data-api/ISO3/CAN/buildings/polygons/hotosm_can_buildings_polygons_geojson.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "resource_4d51bae5",
+          "title": "hotosm_can_buildings_polygons_gpkg.zip",
+          "description": "Canada Buildings (OpenStreetMap Export) (ZIP archive)",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://s3.dualstack.us-east-1.amazonaws.com/production-raw-data-api/ISO3/CAN/buildings/polygons/hotosm_can_buildings_polygons_gpkg.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints across Canada with attributes including building type, levels, and address information"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hotosm_can_buildings",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
