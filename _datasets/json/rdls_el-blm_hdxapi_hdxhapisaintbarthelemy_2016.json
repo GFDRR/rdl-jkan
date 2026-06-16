@@ -1,0 +1,162 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-blm_hdxapi_hdxhapisaintbarthelemy_2016",
+      "title": "HDX HAPI Data for Saint Barthélemy",
+      "description": "This dataset contains data obtained from the HDX Humanitarian API (HDX HAPI), which provides standardized humanitarian indicators designed for seamless interoperability from multiple sources. The data facilitates automated workflows and visualizations to support humanitarian decision making. For more information, please see the HDX HAPI landing page and documentation .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hdx-hapi-blm]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "HDX HAPI is refreshed daily, but the source datasets may have different update schedules. Please refer to the source datasets for each subcategory to verify their specific update frequency.",
+      "contact_point": {
+        "name": "HDX Humanitarian API Data",
+        "url": "https://data.humdata.org/dataset/hdx-hapi-blm"
+      },
+      "creator": {
+        "name": "HDX Humanitarian API Data",
+        "url": "https://data.humdata.org/dataset/hdx-hapi-blm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BLM"
+        ]
+      },
+      "temporal": {
+        "start": "2016-01-01",
+        "end": "2026-01-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Armed Conflict Location & Event Data Project (ACLED)",
+            "url": "https://data.humdata.org/dataset/hdx-hapi-blm"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "OCHA Latin America and the Caribbean (ROLAC)",
+            "url": "https://data.humdata.org/dataset/hdx-hapi-blm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The HDX HAPI aggregates standardized humanitarian indicators from multiple authoritative sources (ACLED for conflict events, OCHA ROLAC for population baselines) and provides them through a unified API interface. Data is organized by administrative level with reference periods and includes conflict-related fatalities and baseline population demographics to support humanitarian decision-making.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Armed Conflict Location & Event Data Project (ACLED)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Provides conflict event records including event type, location, and fatality counts for Saint Barthélemy"
+          },
+          {
+            "id": "source_2",
+            "name": "OCHA Latin America and the Caribbean (ROLAC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Provides baseline population data disaggregated by gender and age range for administrative divisions"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6d49267d",
+          "title": "Coordination & Context: Conflict Events for Saint Barthélemy",
+          "description": "Conflict Event data from HDX HAPI, please see the documentation for more information Source: Armed Conflict Location & Event Data Project (ACLED) License: By using ACLED data you agree to abide by the Terms of Use and Attribution Policy .",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/561d2c98-aa5b-4d33-8468-45ca6516ed04/resource/6d49267d-73ad-4c6d-9068-520fd583fdf9/download/hdx_hapi_conflict_event_blm.csv"
+        },
+        {
+          "id": "resource_509821fc",
+          "title": "Geography & Infrastructure: Baseline Population for Saint Barthélemy",
+          "description": "Baseline Population data from HDX HAPI, please see the documentation for more information Source: OCHA Latin America and the Caribbean (ROLAC) License: humanitarian use only",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/561d2c98-aa5b-4d33-8468-45ca6516ed04/resource/509821fc-8d66-4ca4-a8bc-15a9e07d4100/download/hdx_hapi_population_blm.csv"
+        },
+        {
+          "id": "resource_5dfb7859",
+          "title": "Metadata: Data Availability for Saint Barthélemy",
+          "description": "Data Availability Data from HDX HAPI. Each row in this resource represents an administrative division for which data is available, by subcategory. Please see the documentation for more information Source: HDX HAPI License: Creative Commons Attribution for Intergovernmental Organisations",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/561d2c98-aa5b-4d33-8468-45ca6516ed04/resource/5dfb7859-06d8-415d-bf47-985b1f6b62f5/download/hdx_hapi_data_availability_blm.csv"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Baseline population by gender and age range at administrative levels"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from conflict and violence events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hdx-hapi-blm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

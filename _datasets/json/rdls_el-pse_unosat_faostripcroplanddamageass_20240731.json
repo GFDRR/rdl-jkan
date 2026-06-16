@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-pse_unosat_faostripcroplanddamageass_20240731",
+      "title": "Palestine - UNOSAT - FAO Gaza Strip Cropland Damage Assessment - July 2024",
+      "description": "UNOSAT code: CE20231007PSE This map illustrates satellite-detected changes in cropland areas of the Gaza Strip resulting from the decline in the health and density of crops due to the ongoing conflict. UNOSAT conducted an analysis utilising satellite imagery collected by the Sentinel-2 satellite between July 2017 and 2024, performing a Normalized Difference Vegetation Index (NDVI) analysis as well as a multitemporal classification to identify notable changes taking place in agricultural areas during that timeframe. The methodology evaluated the damage as a decline in the health and density of crops in July 2024, in comparison to the preceding seven seasons spanning from 2017 to 2024. The decline in the health and density of the crops can be observed due to the impact of activities such as razing, heavy vehicle activity, bombing, shelling, and other conflict-related dynamics. The analysis includes damage assessment for orchards and other trees, field crops and vegetables. UNOSAT analysis shows that the agricultural extent in the Gaza Strip is estimated to be 150 sq. km, accounting for approximately 41% of the total area of the Gaza Strip, following an extensive land-cover analysis. Compared to the average of the previous seven years, approximately 65% of the permanent crop fields in the Gaza Strip exhibited a significant decline in health and density in July 2024. In a comprehensive evaluation, it was found that there has been a 4% increase in the proportion of cropland that has been damaged since the previous analysis conducted in June 2024. Additionally, the analysis indicates a notable rise in the destruction of the orchards and other trees, field crops and vegetables in the Gaza Governorate, with a 4-percentage point increase compared to the previous June 2024 analysis. Moreover, there has been a notable escalation in the destruction of cropland within the Rafah Governorate, with the percentage rising from 52% in June 2024 to 55% in July 2024. This is a preliminary analysis and has not yet been validated in the field.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-fao-gaza-strip-cropland-damage-assessment-july-2024]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-fao-gaza-strip-cropland-damage-assessment-july-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-fao-gaza-strip-cropland-damage-assessment-july-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2024-07-31"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-fao-gaza-strip-cropland-damage-assessment-july-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Food and Agriculture Organization (FAO)",
+            "url": "https://data.humdata.org/dataset/unosat-fao-gaza-strip-cropland-damage-assessment-july-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-2 satellite imagery from July 2017 to July 2024 was analyzed using Normalized Difference Vegetation Index (NDVI) and multitemporal classification methods to detect changes in cropland vegetation health and density. The analysis identified areas of crop damage resulting from the ongoing conflict, with results compiled into a geodatabase for spatial assessment of agricultural losses.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using Sentinel-2 imagery and NDVI analysis to detect changes in cropland health and density in Gaza Strip between July 2017 and July 2024"
+          },
+          {
+            "id": "source_2",
+            "name": "Food and Agriculture Organization (FAO)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Agricultural area inventory and classification framework for Gaza Strip croplands"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b47db9df",
+          "title": "FAO-PAL-009_UNOSAT_Agriculture_DA_GDB_July2024_v2.zip",
+          "description": "Palestine - UNOSAT - FAO Gaza Strip Cropland Damage Assessment - July 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3905/FAO-PAL-009_UNOSAT_Agriculture_DA_GDB_July2024_v2.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland areas in Gaza Strip classified by vegetation health and density status"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct agricultural damage from crop health decline and vegetation loss detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-fao-gaza-strip-cropland-damage-assessment-july-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

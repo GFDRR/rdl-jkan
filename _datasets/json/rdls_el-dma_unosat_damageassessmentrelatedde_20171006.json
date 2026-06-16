@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-dma_unosat_damageassessmentrelatedde_20171006",
+      "title": "Damage Assessment & Related Density in the Central & Southern Parts of Dominica",
+      "description": "This map illustrates potentially damaged structures and buildings in the Central and Southern parts of Dominica (St. Patrick, St. Mak, St. George, St. Luke, St. David & St. Paul Parishes) as detected by satellite image acquired after landfall of the Tropical Cyclone Maria-17 on 19 September 2017. The UNITAR-UNOSAT analysis combined with Copernicus analysis, identified 12,873 potentially damaged structures in this zone. Taking into account the pre-building footprints provided by Humanitarian OpenStreetMap, this represents about 70 % of the total number of structures within the analyzed areas. Please note that some areas could not be analyzed due to the cloud cover. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-related-density-in-the-central-southern-parts-of-dominica-2704]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-related-density-in-the-central-southern-parts-of-dominica-2704"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-related-density-in-the-central-southern-parts-of-dominica-2704"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DMA"
+        ]
+      },
+      "temporal": {
+        "start": "2017-10-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Copernicus",
+            "url": "https://data.humdata.org/dataset/damage-assessment-related-density-in-the-central-southern-parts-of-dominica-2704"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/damage-assessment-related-density-in-the-central-southern-parts-of-dominica-2704"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery acquired before and after Tropical Cyclone Maria's landfall on 19 September 2017 to detect structural changes. Copernicus analysis contributed to the damage detection methodology. Pre-event building footprints from Humanitarian OpenStreetMap were used as a baseline to calculate that 12,873 potentially damaged structures represented approximately 70% of total structures in the analyzed parishes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite image analysis comparing pre- and post-event imagery to detect structural damage from Tropical Cyclone Maria landfall on 19 September 2017"
+          },
+          {
+            "id": "source_2",
+            "name": "Copernicus",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery and analysis contributing to damage detection methodology"
+          },
+          {
+            "id": "source_3",
+            "name": "Humanitarian OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Pre-event building footprints used to establish baseline structure inventory and calculate damage ratio"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2b1642f8",
+          "title": "TC20170918DMA_gdb.zip",
+          "description": "Damage Assessment & Related Density in the Central & Southern Parts of Dominica (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/DM/TC20170918DMA/TC20170918DMA_gdb.zip"
+        },
+        {
+          "id": "resource_fed434e4",
+          "title": "TC20170918DMA_shp.zip",
+          "description": "Damage Assessment & Related Density in the Central & Southern Parts of Dominica (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/DM/TC20170918DMA/TC20170918DMA_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints and structures in Central and Southern Dominica parishes"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Tropical Cyclone Maria detected via satellite imagery analysis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-related-density-in-the-central-southern-parts-of-dominica-2704",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

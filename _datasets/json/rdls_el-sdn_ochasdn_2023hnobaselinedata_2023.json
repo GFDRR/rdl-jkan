@@ -1,0 +1,159 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-sdn_ochasdn_2023hnobaselinedata_2023",
+      "title": "Sudan: 2023 HNO Baseline Data",
+      "description": "Dataset contains Sudan baseline data -population,IDPs,Refugees,GAM,IPC- and the overall number of people in need(PIN ) and by sector down to admin 2 level.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sudan-2023-hno-baseline-data]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/sudan-2023-hno-baseline-data"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/sudan-2023-hno-baseline-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian partners",
+            "url": "https://data.humdata.org/dataset/sudan-2023-hno-baseline-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Baseline data aggregated from humanitarian partners' field assessments and administrative records at admin 2 level, integrating population counts, IDP/refugee figures, Global Acute Malnutrition (GAM) prevalence, and Integrated Food Security Phase Classification (IPC) assessments to estimate sectoral people in need (PIN) for the 2023 Humanitarian Needs Overview.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-agency compilation of baseline population, displacement, food security, and nutrition data collected through humanitarian assessments and monitoring systems across Sudan."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://reliefweb.int/report/sudan/sudan-humanitarian-needs-overview-2023-november-2022"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_bc8b7b00",
+          "title": "SDN 2023 HNO.xlsx",
+          "description": "Dataset contains Sudan baseline data -population, IDPs, Refugees, GAM, IPC- and the overall number of people in need (PIN ) and PIN by sector. All data is disaggregated down to admin 2 level.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/74569091-7cce-4f18-8ae7-f187945fef24/resource/bc8b7b00-8a64-4b3d-97dc-8c0470f0cc03/download/sdn-2023-hno.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Baseline population including IDPs, refugees, and returnees at admin 2 level"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity and malnutrition impacts measured via IPC classification and GAM prevalence"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons and refugees as humanitarian consequences"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sudan-2023-hno-baseline-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

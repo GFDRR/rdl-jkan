@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-pse_unosat_governoratedamageassessme_20231020",
+      "title": "Palestine - UNOSAT Gaza Governorate Damage Assessment Update",
+      "description": "UNOSAT code CE20231007PS UNOSAT's satellite-detected damage and destruction to buildings within the area of interest in the Gaza Governorate, Gaza Strip, based on an image collected on 15 October 2023 compared to an image collected on 10 October 2023 (partially clouded), and 10 May 2023 shows a total of 533 destroyed structures, 640 severely damaged structures, and 1273 moderately damaged structures, for a total of 2246 affected buildings as of 15 October 2023. The most affected area appears to be the one south of Ash Shuja'iyeh neighborhood (inset 1), with clouds covered on the 10 October 2023 image. Among the new affected structures, UNOSAT identified two school compounds, namely the Elnoor W Alaml School, moderately affected, and the Islamic University of Gaza, previously cloud-covered and now severely damaged. Additionally, UNOSAT identified 45 affected road sections, either by impact craters or by debris. This is a preliminary analysis and has not yet been validated in the field.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-gaza-governorate-damage-assessment-update]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-gaza-governorate-damage-assessment-update"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-gaza-governorate-damage-assessment-update"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-20"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-gaza-governorate-damage-assessment-update"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery from 15 October 2023 against baseline images from 10 May 2023 and 10 October 2023 to detect structural damage through visual interpretation of notable changes in building footprints and conditions. Damage classifications (destroyed, severely damaged, moderately damaged) were assigned to individual structures and aggregated to produce impact statistics for the Gaza Governorate.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-detected damage assessment using multi-temporal imagery comparison to identify destroyed, severely damaged, and moderately damaged structures in Gaza Governorate as of 15 October 2023."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2077f7f8",
+          "title": "CE20231007PSE_Gaza_20231015_GDB.zip",
+          "description": "Palestine - UNOSAT Gaza Governorate Damage Assessment Update (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3698/CE20231007PSE_Gaza_20231015_GDB.zip"
+        },
+        {
+          "id": "resource_6fa137dc",
+          "title": "CE20231007PSE_North_Gaza_Governorate_DA_20231015.kmz",
+          "description": "Palestine - UNOSAT Gaza Governorate Damage Assessment Update (KML file)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3698/CE20231007PSE_North_Gaza_Governorate_DA_20231015.kmz"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock classified by damage severity (destroyed, severely damaged, moderately damaged)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from conflict-related destruction assessed via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-gaza-governorate-damage-assessment-update",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

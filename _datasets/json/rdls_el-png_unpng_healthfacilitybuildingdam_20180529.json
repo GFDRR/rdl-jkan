@@ -1,0 +1,200 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-png_unpng_healthfacilitybuildingdam_20180529",
+      "title": "Papua New Guinea - Health Facility Building Damage Status",
+      "description": "Health Facility Building Damage Status - data source from DFAT, CARDNO, WHO, NDOH and ICRC. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "UN in Papua New Guinea",
+        "url": "https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018"
+      },
+      "creator": {
+        "name": "UN in Papua New Guinea",
+        "url": "https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PNG"
+        ]
+      },
+      "temporal": {
+        "start": "2018-05-29"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DFAT",
+            "url": "https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "CARDNO",
+            "url": "https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "WHO",
+            "url": "https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "NDOH",
+            "url": "https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_5",
+          "entity": {
+            "name": "ICRC",
+            "url": "https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Health facility building damage status compiled from multi-agency assessments (DFAT, CARDNO, WHO, NDOH, ICRC) following a disaster event in Papua New Guinea. Data aggregates structural damage observations and operational status of health facilities into a registry format for humanitarian response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DFAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Damage assessment data contributing to health facility damage status"
+          },
+          {
+            "id": "source_2",
+            "name": "CARDNO",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Damage assessment data contributing to health facility damage status"
+          },
+          {
+            "id": "source_3",
+            "name": "WHO",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Health facility damage and operational status data"
+          },
+          {
+            "id": "source_4",
+            "name": "NDOH",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National health facility registry and damage information"
+          },
+          {
+            "id": "source_5",
+            "name": "ICRC",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Damage assessment data contributing to health facility damage status"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1f4410a7",
+          "title": "180528_Health Facility Status.xlsx",
+          "description": "Papua New Guinea - Health Facility Building Damage Status (180528_Health Facility Status.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a957bea9-aaa3-44b2-85f2-a8534007bb7c/resource/1f4410a7-2795-439f-b464-8443a1c49d08/download/180528_health-facility-status.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Health facility building stock with structural damage assessment"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage to health facilities from earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/health-facility-building-damage-status-as-of-28-may-2018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

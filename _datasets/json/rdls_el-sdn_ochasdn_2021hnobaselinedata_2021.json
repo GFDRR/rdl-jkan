@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-sdn_ochasdn_2021hnobaselinedata_2021",
+      "title": "Sudan: 2021 HNO Baseline Data",
+      "description": "Dataset contains Sudan baseline data -population,IDPs,Refugees,GAM,IPC- and the overall number of people in need(PIN ) and by sector down to admin 2 level.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/2021_hno-baseline_data]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/2021_hno-baseline_data"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/2021_hno-baseline_data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-01",
+        "end": "2021-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Baseline data compiled from sample surveys across Sudan at admin 2 level, integrating population counts, displacement figures (IDPs and refugees), food security classifications (IPC), and nutritional status (GAM) to establish humanitarian needs assessment baseline for 2021.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Sudan",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian Needs Overview baseline data compiled from sample surveys capturing population vulnerability indicators including IPC food security classifications and malnutrition prevalence"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_57501c43",
+          "title": "SUDAN_HNO 2021_Baseline Data.xlsx",
+          "description": "Dataset contains Sudan baseline data -population,IDPs,Refugees,GAM,IPC- and the overall number of people in need(PIN ) and by sector down to admin 2 level.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/92134b91-578b-4f0e-90ef-9d63170e9ead/resource/57501c43-83a4-4e7c-b69f-b034f65b9cd2/download/sudan_hno-2021_baseline-data.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Total population including IDPs, refugees, and returnees at admin 2 level"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity classification (IPC) and Global Acute Malnutrition (GAM) prevalence among affected population"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons (IDPs) and refugees as displacement outcomes"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/2021_hno-baseline_data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-nga_unosat_displacedpersonssheltersd_20161117",
+      "title": "Displaced Persons Shelters in Dalakaleri, Nigeria",
+      "description": "This map illustrates satellite-detected displaced persons shelters in the Muna settlement near Dalakaleri, Nigeria, 6 km east of Maidugur's city on the main road that connect Maidugur to Dikwa. UNITAR-UNOSAT analysis of satellite imagery acquired 5 September 2016 revealed a total of 2,597 shelters and 22 infrastructure and support buildings within the Muna compound. In addition there are 203 detected shelters outside the settlement, grouped across the road. Finally, as of 5 September 2016 there are 120 newly constructed shelters arranged in five rows in the norther part of the Muna compound. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/displaced-persons-shelters-in-dalakaleri-nigeria]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/displaced-persons-shelters-in-dalakaleri-nigeria"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/displaced-persons-shelters-in-dalakaleri-nigeria"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NGA"
+        ]
+      },
+      "temporal": {
+        "start": "2016-11-17"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed satellite imagery acquired on 5 September 2016 and compared multi-temporal images to detect and map displaced persons shelters and support infrastructure in the Muna settlement. Shelter counts and spatial locations were extracted through manual interpretation of satellite imagery with confidence assessments and field validation flags recorded for each detected structure.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite imagery analysis detecting displaced persons shelter locations and infrastructure in the Muna settlement near Dalakaleri, Nigeria as of 5 September 2016"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cfeeb0f9",
+          "title": "CE20140617NGA_Muna_20160905.gdb.zip",
+          "description": "Displaced Persons Shelters in Dalakaleri, Nigeria (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://cern.ch/unosat-maps/NG/CE20140617NGA/CE20140617NGA_Muna_20160905.gdb.zip"
+        },
+        {
+          "id": "resource_ef2b6d9d",
+          "title": "CE20140617NGA_Muna_20160905_shp.zip",
+          "description": "Displaced Persons Shelters in Dalakaleri, Nigeria (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/NG/CE20140617NGA/CE20140617NGA_Muna_20160905_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Displaced persons shelters detected via satellite imagery, including temporary structures and support buildings in the Muna settlement"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Displaced persons shelters affected by complex emergency/conflict in Dalakaleri, Nigeria"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/displaced-persons-shelters-in-dalakaleri-nigeria",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

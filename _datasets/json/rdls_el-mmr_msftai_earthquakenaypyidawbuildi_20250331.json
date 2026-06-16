@@ -1,0 +1,138 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-mmr_msftai_earthquakenaypyidawbuildi_20250331",
+      "title": "Myanmar Earthquake: Naypyidaw Building Damage Assessment",
+      "description": "Microsoft AI for Good Lab ran their damage assessment AI models on images provided by Planet and have mapped out the affected buildings in Naypyidaw, Myanmar.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/myanmar-earthquake-naypyidaw-building-damage-assessment-from-03-31-2025]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "While the data provides a valuable first look, it should serve as a preliminary guide and will require on-the-ground verification for a complete understanding.",
+      "contact_point": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/myanmar-earthquake-naypyidaw-building-damage-assessment-from-03-31-2025"
+      },
+      "creator": {
+        "name": "Microsoft AI for Good Lab",
+        "url": "https://data.humdata.org/dataset/myanmar-earthquake-naypyidaw-building-damage-assessment-from-03-31-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2025-03-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Planet",
+            "url": "https://data.humdata.org/dataset/myanmar-earthquake-naypyidaw-building-damage-assessment-from-03-31-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Microsoft AI for Good Lab applied trained damage assessment AI models to Planet SkySat satellite imagery of Naypyidaw to automatically detect and classify earthquake-damaged buildings, producing a geospatial inventory of affected structures mapped to building footprints.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Microsoft AI for Good Lab",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Damage assessment AI models applied to satellite imagery to classify building damage states"
+          },
+          {
+            "id": "source_2",
+            "name": "Planet",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "High-resolution satellite imagery (SkySat) used as input for damage assessment analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a75f3991",
+          "title": "naypyidaw_myanmar_results_03313025_skysat.gpkg",
+          "description": "The images cover Naypyidaw, Myanmar. Analysis was done on Planet imagery captured 03/31/2025. -19,837 buildings with damage fraction between 0% and 20% -19 buildings with damage fraction between 40% and 60% -14 buildings with damage fraction between 60% and 80% -24 buildings with damage fraction between 80% and 100% -70 buildings with damage fraction between 20% and 40% While the data provides a valuable first look, it should serve as a preliminary guide and will require on-the-ground verification for a complete understanding. The result file contains the following fields for each building footprint: -damage_pct_0m - the fraction of the building footprint's area that is classified as damaged by our model -damaged - 1 if damage_pct_0m > 0 else 0 -unknown_pct - fraction of the pixels within the building footprint that we think are obstructed (clouds, smoke, haze, too dark to evaluate)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/9f86fdc7-b4b3-4efc-a003-10134cdcd2ae/resource/a75f3991-02cd-4836-8b4f-b57f91cf1f6c/download/naypyidaw_myanmar_results_03313025_skysat.gpkg"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints in Naypyidaw classified by damage state from earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from earthquake event in Naypyidaw"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/myanmar-earthquake-naypyidaw-building-damage-assessment-from-03-31-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

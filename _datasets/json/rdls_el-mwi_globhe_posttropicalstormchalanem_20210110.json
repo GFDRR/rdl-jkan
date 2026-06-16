@@ -1,0 +1,167 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-mwi_globhe_posttropicalstormchalanem_20210110",
+      "title": "Post Tropical Storm Chalane Mapping, Chikwawa, Malawi",
+      "description": "Drone orthomosaic. Post Tropical Storm Chalane Mapping, Malawi conducted with Crowddroning by GLOBHE. More maps and data available on demand upon request from locations globally at https://globhe.com/ MORE CROWDDRONING BY GLOBHE Webb: https://globhe.com/ Facebook: https://www.facebook.com/Crowddroning Twitter: https://twitter.com/globhedrones Instagram: https://www.instagram.com/globhedrones/ LinkedIn: https://www.linkedin.com/company/globhedrones/. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-chikwawa-malawi]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Globhe Drones",
+        "url": "https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-chikwawa-malawi"
+      },
+      "creator": {
+        "name": "Globhe Drones",
+        "url": "https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-chikwawa-malawi"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-10"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "GLOBHE (Crowddroning)",
+            "url": "https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-chikwawa-malawi"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event drone orthomosaic imagery was collected by GLOBHE using crowddroning methodology over Chikwawa, Malawi following Tropical Storm Chalane to document and map direct damage to buildings and natural environment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "GLOBHE (Crowddroning)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Drone-based orthomosaic imagery collected post-event to map damage from Tropical Storm Chalane in Chikwawa district"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0a9cb594",
+          "title": "Orthomosaic map (TIFF)",
+          "description": "Drone orthomosaic. Post Tropical Storm Chalane Mapping, Malawi conducted with Crowddroning by GLOBHE. More maps and data available on demand upon request from locations globally at https://globhe.com/",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://www.dropbox.com/s/uou3cn722tgrzoy/Post%20Tropical%20Storm%20Chalane%20Mapping%2C%20Chikwawa%2C%20Malawi.tif?dl=1"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures and infrastructure visible in post-event drone orthomosaic imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "natural_environment",
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "Land cover and vegetation damage assessment from aerial imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Tropical Storm Chalane assessed via drone orthomosaic"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to vegetation and natural environment from Tropical Storm Chalane"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-chikwawa-malawi",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-mmr_unosat_m7728march2025sagaingeart_20250613",
+      "title": "Myanmar - M7.7 28 March 2025 Sagaing Earthquake, Satellite-Based Comprehensive Damage Assessment Report",
+      "description": "UNOSAT code: EQ20250328MMR, GDACS ID: 1474477 This report provides a comprehensive damage assessment based on satellite analysis and mapping efforts carried out by UNOSAT and other agencies such as Copernicus-EMS and SERTIT to support emergency operations following the M7.7 Sagaing earthquake of 28 March 2025.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/m7-7-28-march-2025-sagaing-earthquake-satellite-based-comprehensive-damage-assessment-repo]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/m7-7-28-march-2025-sagaing-earthquake-satellite-based-comprehensive-damage-assessment-repo"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/m7-7-28-march-2025-sagaing-earthquake-satellite-based-comprehensive-damage-assessment-repo"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2025-06-13"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/m7-7-28-march-2025-sagaing-earthquake-satellite-based-comprehensive-damage-assessment-repo"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Copernicus-EMS",
+            "url": "https://data.humdata.org/dataset/m7-7-28-march-2025-sagaing-earthquake-satellite-based-comprehensive-damage-assessment-repo"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "SERTIT",
+            "url": "https://data.humdata.org/dataset/m7-7-28-march-2025-sagaing-earthquake-satellite-based-comprehensive-damage-assessment-repo"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery from multiple sensors was acquired before and after the 28 March 2025 M7.7 Sagaing earthquake. UNOSAT analysts compared multi-temporal imagery to identify notable changes in building structures and classify damage levels. Results were validated through field observations and integrated with assessments from Copernicus-EMS and SERTIT to produce a comprehensive post-event damage inventory supporting emergency response operations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment through comparative analysis of pre- and post-event imagery to identify building damage"
+          },
+          {
+            "id": "source_2",
+            "name": "Copernicus-EMS",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Contributing satellite mapping and damage assessment analysis"
+          },
+          {
+            "id": "source_3",
+            "name": "SERTIT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Contributing satellite-based emergency mapping and damage assessment"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e9fdeac6",
+          "title": "EQ20250328MMR_gdb.zip",
+          "description": "Myanmar - M7.7 28 March 2025 Sagaing Earthquake, Satellite-Based Comprehensive Damage Assessment Report (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4141/EQ20250328MMR_gdb.zip"
+        },
+        {
+          "id": "resource_ccac6b67",
+          "title": "EQ20250328MMR_SHP.zip",
+          "description": "Myanmar - M7.7 28 March 2025 Sagaing Earthquake, Satellite-Based Comprehensive Damage Assessment Report (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4141/EQ20250328MMR_SHP.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock assessed for damage from the M7.7 Sagaing earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from M7.7 Sagaing earthquake based on satellite imagery analysis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/m7-7-28-march-2025-sagaing-earthquake-satellite-based-comprehensive-damage-assessment-repo",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

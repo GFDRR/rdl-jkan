@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-ukr_unosat_mariupolupdatedbuildingda_20220615",
+      "title": "Ukraine - Mariupol Updated Building Damage Assessment Overview Map - Livoberezhnyi and Zhovtnevyi Districts",
+      "description": "UNOSAT code: CE20220223UKR This map illustrates a satellite imagery based damage analysis within an area of interest (AOI) in the residential area of Mariupol City, Ukraine. Based on imagery collected on 7, 8, 12 May 2022 and 14 March 2022, and 21 June 2021, analysts found that 5,647 structures sustained visible damage in the AOI. This represents approximately 32% of the structures. Out of these, 315 are destroyed, 2,132 severely damaged, 3,002 moderately damaged and 194 possibly damaged. Compared to the 14 March 2022 analysis, 5% of previously affected buildings sustained additional damage, and the total damage has increased by 28%, with 4,910 new damaged buildings. While no complete count of buildings for Mariupol is available, an open source dataset, which is visibly incomplete indicates at least 17,568 structures in the area. This analysis is based on structures visibly damaged as of 12, 8, 7 May 2022 and 14 March 2022 as seen in marginally degraded satellite imagery. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mariupol-updated-building-damage-assessment-overview-map-livoberezhnyi-and-zhovtnevyi-dist]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mariupol-updated-building-damage-assessment-overview-map-livoberezhnyi-and-zhovtnevyi-dist"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mariupol-updated-building-damage-assessment-overview-map-livoberezhnyi-and-zhovtnevyi-dist"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UKR"
+        ]
+      },
+      "temporal": {
+        "start": "2022-06-15"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/mariupol-updated-building-damage-assessment-overview-map-livoberezhnyi-and-zhovtnevyi-dist"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery acquired on 14 March 2022 (baseline) with imagery from 7, 8, 12 May 2022 (post-event) to detect visible structural damage in residential areas of Mariupol. Buildings were classified into four damage categories (destroyed, severely damaged, moderately damaged, possibly damaged) based on visual interpretation of satellite imagery changes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery-based damage assessment comparing pre- and post-event imagery to identify and classify building damage by severity level"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_21f8f5ce",
+          "title": "UNOSAT_LivoberezhnyiDistrict_DamageAssessment_12May2022.gdb.zip",
+          "description": "Ukraine - Mariupol Updated Building Damage Assessment Overview Map - Livoberezhnyi and Zhovtnevyi Districts (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/UA/CE20220223UKR/UNOSAT_LivoberezhnyiDistrict_DamageAssessment_12May2022.gdb.zip"
+        },
+        {
+          "id": "resource_6fab7ef3",
+          "title": "UNOSAT_LivoberezhnyiDistrict_DamageAssessment_12May2022_shp.zip",
+          "description": "Ukraine - Mariupol Updated Building Damage Assessment Overview Map - Livoberezhnyi and Zhovtnevyi Districts (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/UA/CE20220223UKR/UNOSAT_LivoberezhnyiDistrict_DamageAssessment_12May2022_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Mariupol residential districts classified by damage severity"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from conflict-related destruction in Mariupol"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mariupol-updated-building-damage-assessment-overview-map-livoberezhnyi-and-zhovtnevyi-dist",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

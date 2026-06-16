@@ -1,0 +1,167 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-pse_unosat_geodatadamageassessmentno_20140727",
+      "title": "Palestine - Geodata of Damage Assessment in Northeastern Gaza Strip - Occupied Palestinian Territory",
+      "description": "This map illustrates satellite-detected damage and destruction in the northeastern portion of the Gaza Strip, including areas of Gaza City, Toffah, Shija'ia, and Shaaf, resulting from ongoing violence in the area. Using a satellite image collected 25 July 2014 by the Pleiades satellite, and compared with a pre-crisis Pleiades image collected 6 July 2014, UNOSAT analysis has identified 700 destroyed structures, 316 severely damaged structures, and 102 moderately damaged structures. In addition, 404 craters on roads and in agricultural and non-urbanized areas are also visible as of 25 July 2014. Further analysis will be done as additional imagery is collected. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR/UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-assessment-in-northeastern-gaza-strip-occupied-palestinian-july-27-2014]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-northeastern-gaza-strip-occupied-palestinian-july-27-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-northeastern-gaza-strip-occupied-palestinian-july-27-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2014-07-27"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared pre-crisis and post-crisis Pleiades satellite imagery collected on 6 July 2014 and 25 July 2014 respectively, visually identifying and classifying damage to structures and infrastructure in northeastern Gaza Strip. Damage was categorized into severity classes (destroyed, severely damaged, moderately damaged) and infrastructure impacts (road craters), with results stored as vector geometries with damage attributes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using multi-temporal Pleiades imagery (6 July 2014 and 25 July 2014) with visual interpretation to identify and classify structural damage and infrastructure impacts."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_72cb6db1",
+          "title": "CE20140715PSE.SHP.zip",
+          "description": "Palestine - Geodata of Damage Assessment in Northeastern Gaza Strip - Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.SHP.zip"
+        },
+        {
+          "id": "resource_2ef3e08c",
+          "title": "CE20140715PSE.gdb.zip",
+          "description": "Palestine - Geodata of Damage Assessment in Northeastern Gaza Strip - Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock classified by damage severity (destroyed, severely damaged, moderately damaged)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road infrastructure with crater damage counts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from conflict-related violence with 700 destroyed, 316 severely damaged, and 102 moderately damaged structures"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct infrastructure damage with 404 craters on roads and in agricultural areas"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-northeastern-gaza-strip-occupied-palestinian-july-27-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

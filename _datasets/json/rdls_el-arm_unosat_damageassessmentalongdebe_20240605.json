@@ -1,0 +1,237 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-arm_unosat_damageassessmentalongdebe_20240605",
+      "title": "Damage assessment along the Debed river in Tashir, Stepanavan & Tumanian Municipalites, Lori Province, Armenia as of 03 June 2024",
+      "description": "UNOSAT code: FL20240528ARM, GDACS ID: 1102647 This map illustrates satellite based structure damage assessment along the Debed river in Tashir, Stepanavan and Tumanian Municipalities, Lori Province as observed from a SPOT 6 imagery acquired on the 03 June 2024 at 14:35 local time & a Pléiades imagery acquired on the 29 May 2024 at 11:39 local time. UNOSAT observed 124 potentially affected buildings, 18 potentially affected bridges, 29 potentially affected road segments and 9 potentially affected railway segments. Based on Worldpop population data and within the analysed area, about 7,500 people live within 200m from the Debed river. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-along-the-debed-river-in-tashir-stepanavan-tumanian-municipalites-lori-p]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-along-the-debed-river-in-tashir-stepanavan-tumanian-municipalites-lori-p"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-along-the-debed-river-in-tashir-stepanavan-tumanian-municipalites-lori-p"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ARM"
+        ]
+      },
+      "temporal": {
+        "start": "2024-06-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-along-the-debed-river-in-tashir-stepanavan-tumanian-municipalites-lori-p"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/damage-assessment-along-the-debed-river-in-tashir-stepanavan-tumanian-municipalites-lori-p"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal satellite imagery (SPOT 6 from 03 June 2024 and Pléiades from 29 May 2024) to detect structural damage along the Debed river. Damage assessments were classified by confidence level and cross-referenced with WorldPop population data to estimate affected populations. The resulting geodatabase contains 124 damaged buildings, 18 affected bridges, 29 road segments, and 9 railway segments with spatial geometry and damage classification attributes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using SPOT 6 and Pléiades imagery to identify and classify potentially affected buildings, bridges, and road/railway segments from the 2024 Debed river flooding event."
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population exposure within the analysed flood-affected area."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_27d4adce",
+          "title": "FL20240528ARM_gdb.zip",
+          "description": "Damage assessment along the Debed river in Tashir, Stepanavan & Tumanian Municipalites, Lori Province, Armenia as of 03 June 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3869/FL20240528ARM_gdb.zip"
+        },
+        {
+          "id": "resource_267c8676",
+          "title": "FL20240528ARM_SHP.zip",
+          "description": "Damage assessment along the Debed river in Tashir, Stepanavan & Tumanian Municipalites, Lori Province, Armenia as of 03 June 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3869/FL20240528ARM_SHP.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock affected by flooding along the Debed river, classified by damage status"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road and railway segments affected by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to flooding based on WorldPop data within the analysed area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from fluvial flooding observed via satellite imagery"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to bridges and road/railway segments from fluvial flooding"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flooding based on spatial overlap with damaged structures"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-along-the-debed-river-in-tashir-stepanavan-tumanian-municipalites-lori-p",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

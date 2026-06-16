@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-syr_unosat_geodatapercentagesbuildin_20160218",
+      "title": "Geodata of Percentages of Buildings Damaged, Aleppo, Syria",
+      "description": "This map illustrates the percentages of buildings damaged in the city of Aleppo, Syrian Arab Republic, as determined by satellite imagery analysis. Using satellite imagery acquired 01 May 2015, 26 April 2015, 23 May 2014, 23 September 2013, and 21 November 2010, UNITAR - UNOSAT identified a total of 12,065 damaged structures within the extent of this map. These damaged structures are compared with total numbers of buildings found in a pre-conflict satellite image collected in 2009 to determine the percentage of damaged buildings across the city. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-percentages-of-buildings-damaged-aleppo-syria-february-18-2016]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-percentages-of-buildings-damaged-aleppo-syria-february-18-2016"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-percentages-of-buildings-damaged-aleppo-syria-february-18-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2016-02-18"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal satellite imagery (baseline 2009, and post-conflict acquisitions from 2013-2015) to identify damaged building structures through visual interpretation. A total of 12,065 damaged structures were identified and compared against the total building count from the 2009 pre-conflict baseline to calculate damage percentages across Aleppo city.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis from multiple dates (2009-2015) used to identify and quantify building damage through visual interpretation and change detection methodology."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_faf61623",
+          "title": "UNOSAT_CE20130404SYR_DamageAssessment_OFDA_REACH_UPDATE3_shp.zip",
+          "description": "Geodata of Percentages of Buildings Damaged, Aleppo, Syria (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SY/CE20130604SYR/UNOSAT_CE20130404SYR_DamageAssessment_OFDA_REACH_UPDATE3_shp.zip"
+        },
+        {
+          "id": "resource_14361421",
+          "title": "UNOSAT_CE20130604SYR_OFDA_REACH_DA_UPDATE3.gdb.zip",
+          "description": "Geodata of Percentages of Buildings Damaged, Aleppo, Syria (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SY/CE20130604SYR/UNOSAT_CE20130604SYR_OFDA_REACH_DA_UPDATE3.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock inventory in Aleppo city derived from pre-conflict 2009 satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessed through satellite imagery comparison between 2009 baseline and 2013-2015 post-conflict periods"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Percentage of buildings damaged relative to total building stock in Aleppo city"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-percentages-of-buildings-damaged-aleppo-syria-february-18-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

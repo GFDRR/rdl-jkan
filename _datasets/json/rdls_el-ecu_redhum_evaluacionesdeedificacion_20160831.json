@@ -1,0 +1,127 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-ecu_redhum_evaluacionesdeedificacion_20160831",
+      "title": "Ecuador - Evaluaciones de edificaciones y viviendas_MIDUVI 20160831",
+      "description": "Evaluaciones de edificaciones y viviendas hasta el 31 de agosto.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/evaluaciones-de-edificaciones-y-viviendas-miduvi-20160831]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Redhum (inactive)",
+        "url": "https://data.humdata.org/dataset/evaluaciones-de-edificaciones-y-viviendas-miduvi-20160831"
+      },
+      "creator": {
+        "name": "Redhum (inactive)",
+        "url": "https://data.humdata.org/dataset/evaluaciones-de-edificaciones-y-viviendas-miduvi-20160831"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ECU"
+        ]
+      },
+      "temporal": {
+        "start": "2016-08-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "MIDUVI (Ministerio de Desarrollo Urbano y Vivienda)",
+            "url": "https://data.humdata.org/dataset/evaluaciones-de-edificaciones-y-viviendas-miduvi-20160831"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building and housing damage assessments conducted by MIDUVI following the April 2016 Ecuador earthquake, compiled through field evaluations and aggregated as of 31 August 2016 to document direct structural impacts on the building stock.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "MIDUVI (Ministerio de Desarrollo Urbano y Vivienda)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event structural assessments of buildings and housing conducted by Ecuador's Ministry of Urban Development and Housing following the 2016 earthquake."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d2ecf4e5",
+          "title": "MIDUVI_EVALUACIONEDIFICACIONES_20160831.xls",
+          "description": "Ecuador - Evaluaciones de edificaciones y viviendas_MIDUVI 20160831 (Evaluaciones de edificaciones y viviendas por MIDUVI fecha de corte 31-08-2016)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d0f8719a-427a-4027-abfb-7a99b48eaaf2/resource/d2ecf4e5-a1f7-41ab-86dd-c95bd3a3bf9f/download/miduvi_evaluacionedificaciones_20160831.xls"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building and housing stock assessed for structural condition and damage"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Post-event building and housing damage assessments from earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/evaluaciones-de-edificaciones-y-viviendas-miduvi-20160831",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

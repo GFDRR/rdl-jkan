@@ -1,0 +1,172 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-irnirq_unosat_shelterspeoplegatheringsi_20171117",
+      "title": "Shelters and people gathering sites in Sarpol-e-Zahab, Kermanshah, Iran",
+      "description": "Satellite Data (1): Pleiades Imagery Dates: 16 November 2017 Resolution: 50 cm Copyright: CNES 2017, distribution AIRBUS Defense and Space Source: Airbus Defense and Space Satellite Data (2): Resurs-P Imagery Dates: 14 November 2017 Resolution:1m Copyright: Roscosmos Source: Roscosomos Baseline Data: GADM, OpenStreetMap Analysis :UNITAR - UNOSAT/Iranian Space Agency Production: UNITAR - UNOSAT. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/shelters-and-people-gathering-sites-in-sarpol-e-zahab-kermanshah-iran-2729]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/shelters-and-people-gathering-sites-in-sarpol-e-zahab-kermanshah-iran-2729"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/shelters-and-people-gathering-sites-in-sarpol-e-zahab-kermanshah-iran-2729"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IRQ",
+          "IRN"
+        ]
+      },
+      "temporal": {
+        "start": "2017-11-17"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Airbus Defense and Space",
+            "url": "https://data.humdata.org/dataset/shelters-and-people-gathering-sites-in-sarpol-e-zahab-kermanshah-iran-2729"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Roscosmos",
+            "url": "https://data.humdata.org/dataset/shelters-and-people-gathering-sites-in-sarpol-e-zahab-kermanshah-iran-2729"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "UNITAR - UNOSAT",
+            "url": "https://data.humdata.org/dataset/shelters-and-people-gathering-sites-in-sarpol-e-zahab-kermanshah-iran-2729"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "High-resolution satellite imagery from Pleiades and Resurs-P acquired immediately after the 12 November 2017 Sarpol-e-Zahab earthquake was analyzed by UNOSAT analysts through visual interpretation and comparison with baseline data (GADM, OpenStreetMap) to identify and map shelter facilities and people gathering sites. The resulting geodatabase contains site locations, areas, confidence levels, and field validation status.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Airbus Defense and Space",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Pleiades satellite imagery (50 cm resolution, 16 November 2017) used for visual identification of shelter and gathering sites"
+          },
+          {
+            "id": "source_2",
+            "name": "Roscosmos",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Resurs-P satellite imagery (1 m resolution, 14 November 2017) used for visual identification of shelter and gathering sites"
+          },
+          {
+            "id": "source_3",
+            "name": "UNITAR - UNOSAT",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite image analysis and manual interpretation to identify and map shelter locations and assess their status post-earthquake"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0bc7b864",
+          "title": "EQ20171112IRQ_gdb.zip",
+          "description": "Shelters and people gathering sites in Sarpol-e-Zahab, Kermanshah, Iran (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/IQ/EQ20171112IRQ/EQ20171112IRQ_gdb.zip"
+        },
+        {
+          "id": "resource_308c3fcd",
+          "title": "EQ20171112IRQ_shp.zip",
+          "description": "Shelters and people gathering sites in Sarpol-e-Zahab, Kermanshah, Iran (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/IQ/EQ20171112IRQ/EQ20171112IRQ_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Shelter facilities and people gathering sites identified from satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Post-earthquake assessment of shelter and gathering site locations and capacity"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/shelters-and-people-gathering-sites-in-sarpol-e-zahab-kermanshah-iran-2729",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

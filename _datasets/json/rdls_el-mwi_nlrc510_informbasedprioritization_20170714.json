@@ -1,0 +1,228 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-mwi_nlrc510_informbasedprioritization_20170714",
+      "title": "Malawi - INFORM-based prioritization of Enumeration Areas",
+      "description": "A crude version of the INFORM risk-framework is applied to Enumeration Areas (which is unofficial, but is deeper than admin-3), in Southern Malawi. This is done specifically for area selection regarding the ECHO2 project in 3 TA's: Mwambo (Zomba district), Makhwira (Chikwawa district) and Ndamera (Nsanje district). Scope Enumeration areas are retrieved from http://www.masdap.mw/layers/geonode%3Aeas_bnd. These are used, because we want to prioritize on a deeper level than Traditional Authority (admin-3) level, and there are no other official boundaries available. The dataset in principle data for the whole of Malawi, but contains 4 filters, which can be applied, which are the following: Filter_south: this filters out only the South of Malawi, for which the drough and flood analysis has been carried out (see details below). Filter_district: contains all EA's from the 3 pre-identified districts Zomba, Chikwawa and Nsanje. Filter_TA: contains all EA's from the 3 pre-identified TAs Mwambo, Makhwira and Ndamera. Filter_GVH: there are also 44 Group Village Heads pre-identified for the project. As these GVH's are points on a map, all EA's are selected here which have a GVH within their boundaries or very close to their boundaries. INFORM risk-framework The INFORM framework (http://www.inform-index.org/) is applied to assess risk per community, which is considered the main criteria for prioritization within the project. Because of low data availability we apply a crude version for now, with only some important indicators of the framework actually used. Since we feel that these indicators (see below) still constitute together a current good assessment of risk, and we want to stimulate the use and acceptance of the INFORM-framework, we choose to use it anyway. The INFORM risk-score consists of 3 main components: hazards, vulnerability and coping capacity. Hazard: For hazard we focus - in line with the ECHO2 project - on floods and droughts only. Analysis has been carried out (see more details below), to determine flood and drought risk on a scale from 0-10 with a resolution of 250meter grid cells. This has subsequently been aggregated to Enumeration Areas, by taking a population-weighted average. Thereby taking into account where people actually live within the Enumeration Areas. (Population data source: Worldpop: http://www.worldpop.org.uk/data/summary/?doi=10.5258/SOTON/WP00155) Vulnerability: Vulnerability is operationalized here through poverty incidence. Poverty rate (living below $1.25/day) is retrieved from Worldpop (http://www.worldpop.org.uk/data/summary/?doi=10.5258/SOTON/WP00157) and again transformed from a 1km resolution grid to Enumeration Areas through a population-weighted average. Lack of Coping capacity: Coping capacity is measured through traveltimes to various facilities, namely traveltime to nearest hospistal, traveltime to nearest trading centre and traveltime to nearest secondary school. Together these are all proxies of being near/far to facilities, and thereby an indicator of having higher/lower coping capacity. See https://510.global/developing-and-field-testing-a-remoteness-indicator-in-malawi/ for more information on how these traveltimes were calculated and validated. Use All features are stored in a CSV, but can easily be joined to the geographic shapefile to make maps on EACODE. Flood and Drought calculations Drought layer The drought risk map was created by analyzing rainfall data in the past 20 years using standard precipitation index (SPI) , which is a widely used index in drought analysis. Based on SPI6 values for the period October-march, which is the main rainy season in Malawi. Each pixel is classified to drought or no drought for each year based on SPI6 values, drought year if SPI value for a pixel is less than -1. Next, relative frequency is calculated, the number of times drought has occurred in the considered 20 year period. This frequency is then converted to probability of drought occurrence in a given year. We validated our analysis by comparing NDVI values for the drought year against long term average values. Flood layer To identify flood moments in Malawi Landsat imagery was studied (1984-2017). Floods were clearly evidenced in 9 dates. For the clearest and most representative layers the mNDWI (modified Normalized Water Index) was calculated. The index mNDWI (McFeeters 1996; Xu 2006) for Landsat bands is calculated as follows: (b2GREEN-b7MIRSWIR/b2GREEN+b7MIRSWIR). In this variation of the index the higher values are the wettest. A threshold was applied to the mNDWI to separate flood from non-flood or water from non-water pixels. The resulting layers were aggregated and the final stretched from 0-10, where 0 are the pixels where no flood is expected while pixels with 10 are where most frequent flood has been evidenced and therefore expected. The largest flood was observed in 2015, as the scenes were cloudy the flood extent was manually interpreted from several scenes. The evidenced flood dates are: 29 Feb. 1988 low flood, 19 march 1989, 17 march 1997, Feb 1998, March 1999 low flood, 2001 since February 16 until end of April, 2007 17 February since early Feb., 2008 Feb. medium flood, 2015 January - March. The water bodies in this layer are not represented and have a value of 0 like the rest of land where flood is absent.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/inform-based-prioritization-of-enumeration-areas-in-malawi]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/inform-based-prioritization-of-enumeration-areas-in-malawi"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/inform-based-prioritization-of-enumeration-areas-in-malawi"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2017-07-14"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "INFORM Risk Framework",
+            "url": "https://data.humdata.org/dataset/inform-based-prioritization-of-enumeration-areas-in-malawi"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Malawi Spatial Data Platform (MASDAP)",
+            "url": "https://data.humdata.org/dataset/inform-based-prioritization-of-enumeration-areas-in-malawi"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Enumeration area boundaries from MASDAP were combined with drought and flood susceptibility indicators and socioeconomic vulnerability data (poverty, accessibility to services) within the INFORM risk framework to generate composite hazard, vulnerability, and risk scores for area-level prioritization in the ECHO2 project across three Traditional Authorities in Southern Malawi.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "INFORM Risk Framework",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-hazard risk assessment methodology combining hazard, exposure, and vulnerability indicators to generate composite risk scores for prioritization"
+          },
+          {
+            "id": "source_2",
+            "name": "Malawi Spatial Data Platform (MASDAP)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Source of enumeration area boundaries and administrative divisions for spatial analysis"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://www.masdap.mw/layers/geonode%3Aeas_bnd"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "http://www.inform-index.org/"
+        },
+        {
+          "id": "reference_3",
+          "name": "Methodology documentation",
+          "url": "http://www.worldpop.org.uk/data/summary/?doi=10.5258/SOTON/WP00155"
+        },
+        {
+          "id": "reference_4",
+          "name": "Methodology documentation",
+          "url": "http://www.worldpop.org.uk/data/summary/?doi=10.5258/SOTON/WP00157"
+        },
+        {
+          "id": "reference_5",
+          "name": "Methodology documentation",
+          "url": "https://510.global/developing-and-field-testing-a-remoteness-indicator-in-malawi/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_798d8c8f",
+          "title": "MW_INFORM_EA.csv",
+          "description": "CSV with INFORM risk-score per Enumeration Area for whole of Malawi, including underlying components and indicators. Can be joined with shapefile on EACODE.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/7160a127-d351-40e8-b8ed-244fa9a68a27/resource/798d8c8f-b8b3-482b-97a9-9f45cdcdab47/download/mw_inform_ea.csv"
+        },
+        {
+          "id": "resource_4d6bbbea",
+          "title": "ECHO2_prioritization.zip",
+          "description": "Shapefile on Enumeration Area level (deeper than TA / admin-3). Source: NSO (http://www.masdap.mw/layers/geonode%3Aeas_bnd). Join the CSV to this shapefile on EACODE, to visualize various attributes.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/7160a127-d351-40e8-b8ed-244fa9a68a27/resource/4d6bbbea-416e-4347-a628-2fcc7d40f720/download/echo2_prioritization.zip"
+        },
+        {
+          "id": "resource_c7aff886",
+          "title": "drought_adm4_new.csv",
+          "description": "Most up-to-date drought risk indicator (this one should be used instead of the one in MW_INFORM_EA.csv). This can also be joined to the shapefile on EACODE. This probability (between 0 and 0.25) is later linearly transformed to a 0-10 score.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/7160a127-d351-40e8-b8ed-244fa9a68a27/resource/c7aff886-d5c1-4e5f-b4fa-35ce02757a88/download/drought_adm4_new.csv"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population counts per enumeration area in Southern Malawi"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Health facilities and secondary schools as accessibility indicators per enumeration area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population exposure to drought risk based on INFORM prioritization scores"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population exposure to flood risk based on INFORM prioritization scores"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/inform-based-prioritization-of-enumeration-areas-in-malawi",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

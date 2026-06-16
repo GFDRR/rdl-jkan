@@ -1,0 +1,144 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-som_ochasom_droughtresponseoperationa_2022",
+      "title": "Somalia Drought Response and Operational Presence",
+      "description": "This dataset organizes data on operational presence and response around the drought crisis in Somalia.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-drought-response-operationalpresence2022]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "This dataset is created to present together drought related datasets.",
+      "contact_point": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/somalia-drought-response-operationalpresence2022"
+      },
+      "creator": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/somalia-drought-response-operationalpresence2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-01",
+        "end": "2022-11-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian Partners",
+            "url": "https://data.humdata.org/dataset/somalia-drought-response-operationalpresence2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "This dataset aggregates operational and impact data from multiple humanitarian partners responding to the Somalia drought crisis. Data sources include population assessments, IPC food insecurity classifications (October-December 2022 projections), and humanitarian access severity ratings, compiled into a registry format to support operational coordination and response prioritization.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian Partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-agency compilation of drought impact data including population in need, IPC food insecurity projections, and humanitarian access constraints across Somalia"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ba355403",
+          "title": "Population, IDPs, PIN, Priority Areas, IPC5 (Oct-Dec 2022 proj.), Severity of Access",
+          "description": "Drought related data: Population, IDPs, Affected Population, Priority Areas, IPC 5 (Oct - Dec 2022 projection), Severity of Access",
+          "access_url": "https://data.humdata.org/dataset/ocha-somalia-population-idp-pin-operational-priority-areas-access-ipc5",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_9c49551b",
+          "title": "Drought Response",
+          "description": "Somalia Drought Response and Operational Presence (Response to the drought crisis in Somalia)",
+          "access_url": "https://data.humdata.org/dataset/ocha-somalia-drought-response-2022",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_57cfa4da",
+          "title": "Operational Presence",
+          "description": "Somalia Drought Response and Operational Presence (Operational presence in Somalia for the drought crisis)",
+          "access_url": "https://data.humdata.org/dataset/ocha-somalia-operational-presence-2022",
+          "media_type": "text/html"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population in need (PIN) and internally displaced persons (IDPs) affected by drought in Somalia"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by drought crisis in Somalia, including IPC5 food insecurity classifications"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-drought-response-operationalpresence2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

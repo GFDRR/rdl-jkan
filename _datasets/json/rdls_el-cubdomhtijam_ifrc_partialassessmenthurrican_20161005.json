@@ -1,0 +1,180 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-cubdomhtijam_ifrc_partialassessmenthurrican_20161005",
+      "title": "Partial Assessment for Hurricane Matthew",
+      "description": "Includes Assessment, two shapefiles: basemaps. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/partial-assessment-for-hurricane-matthew-as-of-05-10-2016]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+        "url": "https://data.humdata.org/dataset/partial-assessment-for-hurricane-matthew-as-of-05-10-2016"
+      },
+      "creator": {
+        "name": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+        "url": "https://data.humdata.org/dataset/partial-assessment-for-hurricane-matthew-as-of-05-10-2016"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "HTI",
+          "DOM",
+          "CUB",
+          "JAM"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-05"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Federation of Red Cross and Red Crescent Societies (IFRC) DCPPRR Americas Team",
+            "url": "https://data.humdata.org/dataset/partial-assessment-for-hurricane-matthew-as-of-05-10-2016"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event damage assessment data collected by IFRC through census-based 3W/4W/5W methodology documenting building damage and affected populations from Hurricane Matthew. Data compiled into a consolidated assessment spreadsheet with geographic reference shapefiles for the Americas region.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Federation of Red Cross and Red Crescent Societies (IFRC) DCPPRR Americas Team",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment and humanitarian response data collected through 3W/4W/5W methodology documenting impacts and organizational response to Hurricane Matthew across affected countries."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b5fecfda",
+          "title": "Assessment_3W_05.10.2016_Hurricane_Matthew.xlsx",
+          "description": "Partial assessment and 3 W's (Who, What,Where) as of 05/10/2015. only official information confimed has been included.",
+          "format": "Google Sheet",
+          "download_url": "https://drive.google.com/file/d/0B5OTV5P-3yL8ZDd6Yk5uZml1ZW8/view?usp=drive_web"
+        },
+        {
+          "id": "resource_51b37019",
+          "title": "CountriesAmericas.shp.zip",
+          "description": "Partial Assessment for Hurricane Matthew (Countries in Americas)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/7ab8f4af-d867-49c4-af17-9fa7b625967b/resource/51b37019-fb35-4fda-b270-20b9c3dc713d/download/countriesamericas.shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock affected by Hurricane Matthew"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population in areas affected by Hurricane Matthew"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Hurricane Matthew"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by Hurricane Matthew"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/partial-assessment-for-hurricane-matthew-as-of-05-10-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

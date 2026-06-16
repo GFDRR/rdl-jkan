@@ -1,0 +1,187 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-npl_nga_latestdamageassessmentspo_20150429",
+      "title": "Nepal - Latest NGA Damage Assessments Points",
+      "description": "NGA Damage Assessment Centroids, IDP Camps, Coverd Roads Nepal Earthquake. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/http-nepal-nga-opendata-arcgis-com-datasets-eb0bba9bbb0d46c69b4bdf541ea2300e-0]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "US National Geospatial-Intelligence Agency (inactive)",
+        "url": "https://data.humdata.org/dataset/http-nepal-nga-opendata-arcgis-com-datasets-eb0bba9bbb0d46c69b4bdf541ea2300e-0"
+      },
+      "creator": {
+        "name": "US National Geospatial-Intelligence Agency (inactive)",
+        "url": "https://data.humdata.org/dataset/http-nepal-nga-opendata-arcgis-com-datasets-eb0bba9bbb0d46c69b4bdf541ea2300e-0"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-04-29"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "US National Geospatial-Intelligence Agency (NGA)",
+            "url": "https://data.humdata.org/dataset/http-nepal-nga-opendata-arcgis-com-datasets-eb0bba9bbb0d46c69b4bdf541ea2300e-0"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event damage assessments conducted by NGA using direct observational and anecdotal data collection methods following the Nepal earthquake. Damage centroids, IDP camp locations, and affected road infrastructure were georeferenced and compiled into a centralized GeoJSON dataset for spatial analysis of earthquake impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "US National Geospatial-Intelligence Agency (NGA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational damage assessment data collected post-earthquake, including building damage centroids, IDP camp locations, and affected road networks in Nepal."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5265b11a",
+          "title": "Latest NGA Damage Assessments Points",
+          "description": "Nepal - Latest NGA Damage Assessments Points (NGA Damage Assessment Centroids, IDP Camps, Coverd Roads Nepal Earthquake)",
+          "media_type": "application/geo+json",
+          "download_url": "http://nepal.nga.opendata.arcgis.com/datasets/eb0bba9bbb0d46c69b4bdf541ea2300e_0.geojson"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures assessed for damage from the Nepal earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road network coverage assessed post-earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons in IDP camps"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessments from the Nepal earthquake"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement recorded in IDP camps following the earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/http-nepal-nga-opendata-arcgis-com-datasets-eb0bba9bbb0d46c69b4bdf541ea2300e-0",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

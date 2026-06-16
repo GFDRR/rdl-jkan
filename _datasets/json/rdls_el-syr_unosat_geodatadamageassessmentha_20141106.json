@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-syr_unosat_geodatadamageassessmentha_20141106",
+      "title": "Geodata of Damage Assessment of Hama, Hama Governorate, Syria",
+      "description": "This map illustrates satellite-detected damage and destruction in a portion of the city of Hama, Hama Governorate, Syria. Using satellite imagery acquired 05 March 2014, 26 September 2013, and 06 August 2010, UNITAR / UNOSAT identified a total of 4,976 affected structures within the area of this map. Approximately 4,492 of these were destroyed, 174 severely damaged, and 310 moderately damaged. The city-wide analysis of Hama revealed a total of 5,233 affected structures, of which 4,671 were destroyed, 216 severely damaged, and 346 moderately damaged. While most of the city was damaged by 26 September 2013, 308 structures were newly damaged and 6 structures experienced an increase in damage between that date and 05 March 2014. This analysis was done of the REACH initiative for the U.S. Office of Foreign Disaster Assistance. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-assessment-of-hama-hama-governorate-syria-november-06-2014]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-hama-hama-governorate-syria-november-06-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-hama-hama-governorate-syria-november-06-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2014-11-06"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OFDA-REACH",
+            "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-hama-hama-governorate-syria-november-06-2014"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal satellite imagery (06 August 2010, 26 September 2013, 05 March 2014) of Hama city to identify structural changes and classify affected buildings into damage categories (destroyed, severely damaged, moderately damaged) through visual interpretation. Building footprints and damage states were vectorized into shapefiles with damage classification attributes, producing a post-event damage inventory for humanitarian response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing multi-temporal images (August 2010, September 2013, March 2014) to detect and classify building damage states through visual interpretation of structural changes."
+          },
+          {
+            "id": "source_2",
+            "name": "OFDA-REACH",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Contributing partner organization for damage assessment coordination in the Syria complex emergency response."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ce76107b",
+          "title": "UNOSAT_DamageAssessment_OFDA-REACH_CE20130604SYR_shp.zip",
+          "description": "Geodata of Damage Assessment of Hama, Hama Governorate, Syria (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/SY/CE20130604SYR/UNOSAT_DamageAssessment_OFDA-REACH_CE20130604SYR_shp.zip"
+        },
+        {
+          "id": "resource_a9c490f8",
+          "title": "UNOSAT_DamageAssessment_OFDA-REACH_CE20130604SYR.gdb.zip",
+          "description": "Geodata of Damage Assessment of Hama, Hama Governorate, Syria (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/SY/CE20130604SYR/UNOSAT_DamageAssessment_OFDA-REACH_CE20130604SYR.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Hama city classified by damage state (destroyed, severely damaged, moderately damaged)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from conflict-related destruction in Hama"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-hama-hama-governorate-syria-november-06-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

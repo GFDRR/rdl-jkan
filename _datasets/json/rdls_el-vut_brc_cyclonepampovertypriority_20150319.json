@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-vut_brc_cyclonepampovertypriority_20150319",
+      "title": "Vanuatu - Cyclone Pam Poverty Priority Index",
+      "description": "An index to target those in poverty and affected by cyclone Pam. Methodology and contact available on tab in spreadsheet.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cyclone-pam-poverty-priority-index]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "British Red Cross Maps Team",
+        "url": "https://data.humdata.org/dataset/cyclone-pam-poverty-priority-index"
+      },
+      "creator": {
+        "name": "British Red Cross Maps Team",
+        "url": "https://data.humdata.org/dataset/cyclone-pam-poverty-priority-index"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2015-03-19"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "The dataset combines poverty indicators with cyclone Pam impact data to create a priority index for targeting vulnerable populations. The methodology integrates socioeconomic vulnerability with cyclone exposure to identify populations requiring humanitarian assistance.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "British Red Cross Maps Team",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event assessment and poverty data integrated to create a priority targeting index for cyclone Pam affected populations in Vanuatu"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_337cfeaa",
+          "title": "cyclone_pan_priority_index.xlsx",
+          "description": "Vanuatu - Cyclone Pam Poverty Priority Index (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c05f1fe5-f49b-40d7-89bf-da0d3ddbf25d/resource/337cfeaa-11e6-4c2a-aad6-20d839ebc1eb/download/cyclone-pan-priority-index.xlsx"
+        },
+        {
+          "id": "resource_66f63888",
+          "title": "cyclone_pam_area_council_priority_index.zip",
+          "description": "Vanuatu - Cyclone Pam Poverty Priority Index (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/c05f1fe5-f49b-40d7-89bf-da0d3ddbf25d/resource/66f63888-e830-42ca-99c1-043bb5ee0caf/download/cyclone-pam-area-council-priority-index.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population in poverty classified by vulnerability to cyclone Pam impacts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "index"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by cyclone Pam prioritized by poverty status"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cyclone-pam-poverty-priority-index",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

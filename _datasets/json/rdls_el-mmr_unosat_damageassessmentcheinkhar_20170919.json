@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-mmr_unosat_damageassessmentcheinkhar_20170919",
+      "title": "Damage assessment in the Chein Khar Li (Ku Lar) village, Rakhine state, Myanmar",
+      "description": "This map illustrates satellite-detected damage in the village of Chein Khar Li (Ku Lar), Koe Tan Kauk tract, Rathedaung township, Rakhine state, Myanmar. Using imagery collected on 31 August 2017, and comparing with imagery collected on 16 May 2017, UNOSAT identified 671 destroyed structures whitin the village. Analysis showed visible signs of scorching with darkened soils and burned vegetation. Almost the entire village appears destroyed. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-the-chein-khar-li-ku-lar-village-rakhine-state-myanmar]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-the-chein-khar-li-ku-lar-village-rakhine-state-myanmar"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-the-chein-khar-li-ku-lar-village-rakhine-state-myanmar"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2017-09-19"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery from 16 May 2017 (pre-event) and 31 August 2017 (post-event) over Chein Khar Li village to detect structural damage through visual interpretation of darkened soils, scorching, and burned vegetation patterns, identifying 671 destroyed structures as direct impacts from the conflict event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-event conditions to identify destroyed structures and damage signatures including scorching and burned vegetation in conflict-affected areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f937bad2",
+          "title": "CE20130326MMR_ToeKan_20170831.gdb.zip",
+          "description": "Damage assessment in the Chein Khar Li (Ku Lar) village, Rakhine state, Myanmar (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://cern.ch/unosat-maps/MM/CE20130326MMR/CE20130326MMR_ToeKan_20170831.gdb.zip"
+        },
+        {
+          "id": "resource_0a5e45b5",
+          "title": "CE20130326MMR_ToeKan_20170831_shp.zip",
+          "description": "Damage assessment in the Chein Khar Li (Ku Lar) village, Rakhine state, Myanmar (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/MM/CE20130326MMR/CE20130326MMR_ToeKan_20170831_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures in Chein Khar Li village identified through satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building destruction from wildfire with 671 destroyed structures identified via satellite damage assessment"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-the-chein-khar-li-ku-lar-village-rakhine-state-myanmar",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

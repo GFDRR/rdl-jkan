@@ -1,0 +1,334 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-som_ochasom_floods_2023",
+      "title": "Somalia : Floods",
+      "description": "This dataset is from preliminary reports by the Ministry of Humanitarian Affairs and Disaster Management, South West State and humanitarian partners.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-floods]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/somalia-floods"
+      },
+      "creator": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/somalia-floods"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-10",
+        "end": "2025-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Ministry of Humanitarian Affairs and Disaster Management, South West State",
+            "url": "https://data.humdata.org/dataset/somalia-floods"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian partners",
+            "url": "https://data.humdata.org/dataset/somalia-floods"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event flood impact data compiled from direct observational reports and anecdotal data collected by the Ministry of Humanitarian Affairs and Disaster Management in South West State and humanitarian partners. Data aggregated by administrative divisions (state, region, district) documenting affected populations, casualties, displacement, and damage to shelters, infrastructure, and agricultural assets across multiple flood events in 2023-2025.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Ministry of Humanitarian Affairs and Disaster Management, South West State",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Preliminary flood impact reports from the South West State government documenting affected populations, displaced persons, and infrastructure damage."
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Field observations and direct assessments from humanitarian organizations documenting flood impacts and humanitarian response reach across affected regions."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_fa987309",
+          "title": "Gu_Floods_IMPACT_Respons_2025.xlsx",
+          "description": "Somalia : Floods (Flood data consolidated from the Gu season.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5ac53a1a-5dc2-4750-8b96-0b421d140cd3/resource/fa987309-7061-4518-ba5f-8708ebf6e08b/download/gu_floods_impact_respons_template_2025.xlsx"
+        },
+        {
+          "id": "resource_b3cde4cc",
+          "title": "Floods_Mastertable_2024.xlsx",
+          "description": "Somalia : Floods (Floods in Somalia from as of May 2024)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5ac53a1a-5dc2-4750-8b96-0b421d140cd3/resource/b3cde4cc-eeea-4daf-9e35-6a3f44b780e9/download/floods_mastertable_2024.xlsx"
+        },
+        {
+          "id": "resource_b5877c1c",
+          "title": "Floods_Mastertable_2023.xlsx - Floods_data.csv",
+          "description": "Somalia : Floods (Floods in Somalia from 30 November 2023)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5ac53a1a-5dc2-4750-8b96-0b421d140cd3/resource/b5877c1c-f1ac-4009-8548-061478f02ee7/download/floods_mastertable_2023.xlsx-floods_data.csv"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population in flood-affected areas by administrative division"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Shelters and schools affected or destroyed by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Water points, latrines, bridges, and roads affected by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_4",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Farmland affected by flooding and livestock losses"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct count of people affected by flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced and relocated due to flooding"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities directly caused by flooding"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Shelters and schools damaged or destroyed by flooding"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Water points, latrines, bridges, and roads damaged by flooding"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Farmland and livestock losses from flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-floods",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

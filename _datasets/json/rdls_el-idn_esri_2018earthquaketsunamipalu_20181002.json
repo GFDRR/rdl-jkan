@@ -1,0 +1,158 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-idn_esri_2018earthquaketsunamipalu_20181002",
+      "title": "Indonesia: 2018 Earthquake-Tsunami in Palu",
+      "description": "Imagery captured by Digital Globe on 2 October 2018 of Palu, Indonesia. The data is available as a service https://www.arcgis.com/home/item.html?id=d0ff196041e04e0d8d3a09e1e435625d where the tiffs can also be downloaded.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/digital-globe-palu-indonesia-oct-2]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "https://www.digitalglobe.com/opendata/indonesia-earthquake-tsunami/post-event https://www.digitalglobe.com/opendata/indonesia-earthquake-tsunami/license",
+      "contact_point": {
+        "name": "Esri",
+        "url": "https://data.humdata.org/dataset/digital-globe-palu-indonesia-oct-2"
+      },
+      "creator": {
+        "name": "Esri",
+        "url": "https://data.humdata.org/dataset/digital-globe-palu-indonesia-oct-2"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-10-02"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DigitalGlobe",
+            "url": "https://data.humdata.org/dataset/digital-globe-palu-indonesia-oct-2"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event satellite imagery acquired by DigitalGlobe on 2 October 2018 of Palu, Indonesia, providing visual documentation of building damage and urban impacts from the earthquake-tsunami event. The imagery is distributed as GeoTIFF files through ArcGIS services for damage assessment and loss quantification.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DigitalGlobe",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "High-resolution satellite imagery captured on 2 October 2018 documenting post-event conditions in Palu following the earthquake-tsunami"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_851558ce",
+          "title": "Palu Earthquake-Tsunami.lpkx",
+          "description": "Indonesia: 2018 Earthquake-Tsunami in Palu (Palu Earthquake-Tsunami.lpkx)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/88e41aff-5251-426b-b1e3-69944f499f64/resource/851558ce-d964-4785-a162-1431a0fc7ffc/download/palu-earthquake-tsunami.lpkx"
+        },
+        {
+          "id": "resource_b009cbd8",
+          "title": "Palu Earthquake-Tsunami.lyrx",
+          "description": "Indonesia: 2018 Earthquake-Tsunami in Palu (Palu Earthquake-Tsunami.lyrx)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/88e41aff-5251-426b-b1e3-69944f499f64/resource/b009cbd8-f980-4f44-aa1c-207715562c80/download/palu-earthquake-tsunami.lyrx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints and structures in Palu visible in post-event satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from the 2018 Palu earthquake-tsunami event"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_tsunami",
+              "type": "tsunami",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from the 2018 Palu tsunami"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/digital-globe-palu-indonesia-oct-2",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

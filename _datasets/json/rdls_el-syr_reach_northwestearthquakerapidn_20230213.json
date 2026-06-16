@@ -1,0 +1,203 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-syr_reach_northwestearthquakerapidn_20230213",
+      "title": "North-West Syria - Earthquake Rapid Needs Assessment",
+      "description": "The dataset contains community-level information from key informants (KIs) in 607 assessed communities across Greater Idleb and Northern Aleppo. The full survey was carried out in communities reporting direct earthquake impact (damage/service disruption) and/or arrival of new IDPs since the initial earthquake, with sections covering: 1) Population & Displacement, 2) CCCM, 3) Shelter damage & SNFI emergency needs, 4) Nutrition & Protection 5) Key Infrastructure Impacts & Service Access, 6) Priority Needs and 7) Humanitarian Assistance. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/nws-earthquake-rapid-needs-assessment]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "Assessment carried out in collaboration with the NWS NGO Forum. Glide: EQ-2023-000015-TUR",
+      "contact_point": {
+        "name": "REACH Initiative",
+        "url": "https://data.humdata.org/dataset/nws-earthquake-rapid-needs-assessment"
+      },
+      "creator": {
+        "name": "REACH Initiative",
+        "url": "https://data.humdata.org/dataset/nws-earthquake-rapid-needs-assessment"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2023-02-13"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Community-level data collected through key informant surveys in 607 communities across Greater Idleb and Northern Aleppo that reported direct earthquake damage or new IDP arrivals. Survey sections covered population displacement, shelter damage, infrastructure impacts, and humanitarian needs. Data aggregated to provide rapid post-earthquake needs assessment for humanitarian response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "REACH Initiative",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Community-level rapid needs assessment survey conducted through key informant interviews in 607 communities across Greater Idleb and Northern Aleppo, capturing post-earthquake impacts on shelter, infrastructure, and population displacement."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ead8a670",
+          "title": "REACH_NWS-NGO-Forum_Earthquake_RNA_Dataset_to-share.xlsx",
+          "description": "North-West Syria - Earthquake Rapid Needs Assessment (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/fecb8b5c-a587-4b6e-a7cb-ca870e78f74a/resource/ead8a670-1d6f-4820-a770-653c6bede77d/download/reach_nws-ngo-forum_earthquake_rna_dataset_to-share.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Shelter infrastructure and damage status across 607 assessed communities"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Key infrastructure facilities and service access points in assessed communities"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Displaced populations and community demographics in affected areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct shelter damage and SNFI emergency needs from earthquake impact"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Service disruption and key infrastructure impacts from earthquake"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement and arrival of new IDPs following earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/nws-earthquake-rapid-needs-assessment",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
