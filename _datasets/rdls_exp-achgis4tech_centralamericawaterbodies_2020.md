@@ -64,8 +64,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/central-america-water-bodies-percentage-by-ach-gis4tech
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null
