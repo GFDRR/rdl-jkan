@@ -1,0 +1,162 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-ukr_aqlity_frontlinemonitoring_2024",
+      "title": "Ukraine - Frontline Monitoring",
+      "description": "This dataset is part of AQLITY's Security, Logistics, Access and Cash Feasibility (SLAC) Monitoring tool. It captures granular, settlement-level data collected through direct observation and key informant interviews across eastern Ukraine. The dataset includes information on population presence and vulnerability, access constraints, availability of basic services, market functionality, infrastructure damage, and cash feasibility. Each record reflects a specific assessment round in a given settlement and contributes to tracking humanitarian access and service availability in hard-to-reach and high-risk areas. The dataset is intended to provide operational data for humanitarian organisations and prompt further assessment and/or principled response.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ukraine]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "SLAC data is collected through direct observation and key informant interviews by trained field teams using a harmonised tool. While it offers timely, settlement-level insights, it is not statistically representative and reflects conditions at the time of visit. Access challenges, limited civilian presence, or security risks may constrain data completeness. In some cases, data is based solely on observation or information from neighbouring areas. Findings are intended to support operational planning, access monitoring, and response feasibility rather than replace multisectoral needs assessments.",
+      "contact_point": {
+        "name": "AQLITY",
+        "url": "https://data.humdata.org/dataset/ukraine"
+      },
+      "creator": {
+        "name": "AQLITY",
+        "url": "https://data.humdata.org/dataset/ukraine"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UKR"
+        ]
+      },
+      "temporal": {
+        "start": "2024-08-20",
+        "end": "2025-02-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Settlement-level data collected through direct observation and key informant interviews across eastern Ukraine, organized into demographic, security, access, services, infrastructure, and cash feasibility blocks. Multiple assessment rounds (August 2024 - February 2025) tracked changes in humanitarian conditions and infrastructure status in conflict-affected areas.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "AQLITY",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational and key informant interview data on population presence, vulnerability, access constraints, service availability, infrastructure damage, and cash feasibility collected at settlement level across eastern Ukraine."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ed35c7f7",
+          "title": "AQLITY_dataset 082024_022025.xlsx",
+          "description": "Ukraine - Frontline Monitoring (AQLITY_dataset 082024_022025.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/0b24b3cf-6463-48c7-8201-7e6d87f629d6/resource/ed35c7f7-ec33-4ead-b3c1-e58632032262/download/aqlity_dataset-082024_022025.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Civilian population presence and demographic composition at settlement level"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Basic services infrastructure and facilities availability including health, water, and market functionality"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Infrastructure damage and service disruption from conflict-related security incidents"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Affected civilian population and vulnerability indicators from conflict exposure"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ukraine",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

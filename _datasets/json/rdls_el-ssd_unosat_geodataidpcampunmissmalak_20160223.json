@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-ssd_unosat_geodataidpcampunmissmalak_20160223",
+      "title": "Geodata of IDP Camp in UNMISS Malakal Base, Malakal, South Sudan",
+      "description": "This map illustrates satellite-detected areas of IDPs in the UNMISS Malakal base as seen by the WorldView-2 satellite. As of 20 February 2016, 6,438 shelters as well as 228 infrastructure and support buildings were identified. Burned areas in sectors 1, 2 and 3 were also visible. A total of 2,839 structures were burned, including 96 camp infrastructure buildings and 2,743 shelters. As can be seen from the imagery, the number of structures in the initial Protection of Civilians (PoC) zones 1, 2, 3 and 4 has increased since the fire, and an additional area has been set up with shelters. Sectors 1 and 2 are newer PoC extensions with larger shelters, each holding up to 30 people. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-idp-camp-in-unmiss-malakal-base-malakal-south-sudan-february-23-2016]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-idp-camp-in-unmiss-malakal-base-malakal-south-sudan-february-23-2016"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-idp-camp-in-unmiss-malakal-base-malakal-south-sudan-february-23-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2016-02-23"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared multi-temporal WorldView-2 satellite imagery to identify shelter and infrastructure structures in the UNMISS Malakal PoC camp and detect burned areas resulting from a fire event. Structures were manually delineated and classified by type (shelter vs. infrastructure) and damage status, producing a geospatial inventory of camp assets and direct fire impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis using WorldView-2 to detect and map shelter structures, infrastructure, and fire-damaged areas in the Malakal IDP camp as of February 2016."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2d07305d",
+          "title": "CE20131218SSD_Malakal_20Feb2016.shp.zip",
+          "description": "Geodata of IDP Camp in UNMISS Malakal Base, Malakal, South Sudan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_Malakal_20Feb2016.shp.zip"
+        },
+        {
+          "id": "resource_2413c2b7",
+          "title": "CE20131218SSD_Malakal_20Feb2016.gdb.zip",
+          "description": "Geodata of IDP Camp in UNMISS Malakal Base, Malakal, South Sudan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_Malakal_20Feb2016.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Shelter structures and camp infrastructure buildings in UNMISS Malakal PoC zones identified via satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons population residing in the Malakal IDP camp"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from fire event affecting shelters and camp infrastructure in Malakal PoC zones"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-idp-camp-in-unmiss-malakal-base-malakal-south-sudan-february-23-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

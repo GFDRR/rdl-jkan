@@ -1,0 +1,257 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-mmr_hdx_disasterinventory_1952",
+      "title": "Myanmar - Disaster Inventory",
+      "description": "https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode=mmr. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/myanmar-disaster-inventory]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/myanmar-disaster-inventory"
+      },
+      "creator": {
+        "name": "UNDRR",
+        "url": "https://data.humdata.org/dataset/myanmar-disaster-inventory"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "1952-01-01",
+        "end": "2019-11-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNDRR DesInventar",
+            "url": "https://data.humdata.org/dataset/myanmar-disaster-inventory"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "DesInventar is a standardized disaster inventory system that compiles historical disaster event records from multiple sources including government agencies, media reports, and field assessments. The Myanmar inventory aggregates multi-hazard events with associated impact metrics (deaths, injuries, affected persons, damaged structures, economic losses) organized by geographic location, hazard type, and temporal occurrence.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNDRR DesInventar",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Disaster inventory system documenting historical disaster events, impacts, and damages across Myanmar with geographic, hazard, and temporal distributions"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.desinventar.net/methodology.html"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_48429f13",
+          "title": "DI_Stat1123_GeoDist_HXL.xls",
+          "description": "Myanmar - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5f5de424-3648-42fa-a62e-2fb6c975deed/resource/48429f13-b98f-4502-ad10-f19b3528a914/download/di_stat1123_geodist_hxl.xls"
+        },
+        {
+          "id": "resource_4afa317a",
+          "title": "DI_Stat1123_Hazard.xls",
+          "description": "Myanmar - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5f5de424-3648-42fa-a62e-2fb6c975deed/resource/4afa317a-3527-4c92-a133-d0fcf29d9acf/download/di_stat1123_hazard.xls"
+        },
+        {
+          "id": "resource_e762ae4e",
+          "title": "DI_Stat1123_Temporal.xls",
+          "description": "Myanmar - Disaster Inventory (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5f5de424-3648-42fa-a62e-2fb6c975deed/resource/e762ae4e-882b-4a6d-8f0d-5bac45942c76/download/di_stat1123_temporal.xls"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock affected by recorded disaster events"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to and affected by disaster events"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Infrastructure assets impacted by disasters"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage from flood events recorded in disaster inventory"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage from strong wind/cyclone events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage from earthquake events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/myanmar-disaster-inventory",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

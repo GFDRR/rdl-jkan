@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-per_ifrc_floodsdamageneedsassessme_20170522",
+      "title": "Peru - Floods damage and needs assessment matrix",
+      "description": "Peru-Floods: damage and needs assessment matrix, GLIDE NUMBER:FL2017-000014. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/peru-floods-dana-matrix-glide-number-fl2017-000014]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+        "url": "https://data.humdata.org/dataset/peru-floods-dana-matrix-glide-number-fl2017-000014"
+      },
+      "creator": {
+        "name": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+        "url": "https://data.humdata.org/dataset/peru-floods-dana-matrix-glide-number-fl2017-000014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PER"
+        ]
+      },
+      "temporal": {
+        "start": "2017-05-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Post-event damage and needs assessment matrix compiled by IFRC following the 2017 Peru floods using census methodology to document direct impacts on buildings and population across affected areas.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage and needs assessment conducted through census methodology following the 2017 Peru floods (GLIDE FL2017-000014)"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_98189d1d",
+          "title": "DC_OP4_DANA.xlsx",
+          "description": "Peru - Floods damage and needs assessment matrix (Peru-Floods: damage and needs assessment matrix, GLIDE NUMBER:FL2017-000014)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/1oC0U_uzbeOuk2XBbagUY9Mwz0vkMaAoQ4nGd-7AknO0/edit?usp=sharing"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock affected by the 2017 flood event in Peru"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population affected by the 2017 flood event in Peru"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from the 2017 Peru flood event"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by the 2017 Peru flood event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/peru-floods-dana-matrix-glide-number-fl2017-000014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-hti_unosat_preliminarybaseddamageass_20161015",
+      "title": "Preliminary Satellite Based Damage Assessment Report: Grand Anse Département, Haiti",
+      "description": "This report highlights the preliminary building damage analysis including a rapid assessment of transportation network conditions and locations of spontaneous people gathering sites covering Jérémie Commune and surrounding areas.The analysis was conducted by comparing the post-disaster satellite images (Pleiades acquired on 7/10/2016) with available pre-disaster images (WorldView-1 on 01/05/2015 and 08/12/2014).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-based-damage-assessment-report-grand-anse-departement-haiti]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-based-damage-assessment-report-grand-anse-departement-haiti"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-based-damage-assessment-report-grand-anse-departement-haiti"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-15"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "Satellite-based damage assessment conducted by UNOSAT analysts comparing post-disaster Pleiades imagery acquired 7 October 2016 with pre-disaster WorldView-1 imagery from May and August 2014. Visual interpretation identified notable changes in building structures and transportation networks in Jérémie Commune, Haiti following a tropical cyclone event, with results delivered as vector geodatabase and shapefile formats.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-disaster satellite imagery (Pleiades 7/10/2016) compared with pre-disaster imagery (WorldView-1 01/05/2015 and 08/12/2014) to identify building damage and infrastructure impacts from tropical cyclone"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f95700e9",
+          "title": "TC20161003THI_combined_gdb.zip",
+          "description": "Preliminary Satellite Based Damage Assessment Report: Grand Anse Département, Haiti (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/TC20161003THI_combined_gdb.zip"
+        },
+        {
+          "id": "resource_463c6f04",
+          "title": "TC20161003THI_combined_shp.zip",
+          "description": "Preliminary Satellite Based Damage Assessment Report: Grand Anse Département, Haiti (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/TC20161003THI_combined_shp.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock assessed for damage in Jérémie Commune and surrounding areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Transportation network conditions assessed post-disaster"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from tropical cyclone assessed via satellite imagery comparison"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct transportation network damage from tropical cyclone"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-based-damage-assessment-report-grand-anse-departement-haiti",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

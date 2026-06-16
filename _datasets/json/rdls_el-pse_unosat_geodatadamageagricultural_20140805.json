@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-pse_unosat_geodatadamageagricultural_20140805",
+      "title": "Palestine - Geodata of Damage to Agricultural Fields, Gaza Strip - Occupied Palestinian Territory",
+      "description": "This map illustrates satellite-detected changes in agricultural fields of the Gaza Strip resulting from ongoing violence in the area. Using a satellite image collected 30 July 2014 by the Landsat-8 satellite, and compared with a pre-crisis Landsat-8 image collected 7 July 2014, UNOSAT analyzed the Normalized Difference Vegetation Index for agricultural fields to locate areas of significant change. UNOSAT analysis indicates that ~2000 ha hectares of agricultural fields that have likely been razed or heavily damaged in the intervening period. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR/UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-to-agricultural-fields-gaza-strip-occupied-palestinian-terr-august-05-2014]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-to-agricultural-fields-gaza-strip-occupied-palestinian-terr-august-05-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-to-agricultural-fields-gaza-strip-occupied-palestinian-terr-august-05-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2014-08-05"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared Landsat-8 satellite imagery from 7 July 2014 (pre-crisis baseline) with imagery from 30 July 2014 (post-event) over the Gaza Strip. Normalized Difference Vegetation Index analysis was applied to detect significant vegetation changes in agricultural fields, identifying approximately 2000 hectares of razed or heavily damaged agricultural land. Results were vectorized as polygon geometries with damage confidence ratings and field validation attributes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using Landsat-8 imagery comparison (pre- and post-crisis) with Normalized Difference Vegetation Index analysis to detect agricultural field damage"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a4cc977e",
+          "title": "CE20140715PSE.SHP.zip",
+          "description": "Palestine - Geodata of Damage to Agricultural Fields, Gaza Strip - Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.SHP.zip"
+        },
+        {
+          "id": "resource_997e1060",
+          "title": "CE20140715PSE.gdb.zip",
+          "description": "Palestine - Geodata of Damage to Agricultural Fields, Gaza Strip - Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural field inventory with spatial extent and damage classification"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct agricultural field damage from conflict-related violence detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-to-agricultural-fields-gaza-strip-occupied-palestinian-terr-august-05-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

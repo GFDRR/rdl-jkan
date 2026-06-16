@@ -1,0 +1,236 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-bgd_unbgd_informsubnationalmodel_2023",
+      "title": "INFORM subnational model of Bangladesh",
+      "description": "The Bangladesh INFORM model provides a solid baseline for risk indexing and monitoring in each of Bangladesh's 64 districts (2nd administrative tier) and 553 Upazilas and/or Thanas (3rd administrative tier). The index has been developed under coordination of Ministry of Disaster Management and Relief of the Government of Bangladesh and United Nations Resident Coordinator office in Bangladesh, with support from UNDRR.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/inform-subnational-model-of-bangladesh]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "UN in Bangladesh",
+        "url": "https://data.humdata.org/dataset/inform-subnational-model-of-bangladesh"
+      },
+      "creator": {
+        "name": "UN in Bangladesh",
+        "url": "https://data.humdata.org/dataset/inform-subnational-model-of-bangladesh"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2023-05-01",
+        "end": "2024-05-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Ministry of Disaster Management and Relief of the Government of Bangladesh",
+            "url": "https://data.humdata.org/dataset/inform-subnational-model-of-bangladesh"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "United Nations Resident Coordinator office in Bangladesh",
+            "url": "https://data.humdata.org/dataset/inform-subnational-model-of-bangladesh"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "UNDRR",
+            "url": "https://data.humdata.org/dataset/inform-subnational-model-of-bangladesh"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The INFORM subnational risk index for Bangladesh integrates hazard exposure, vulnerability, and coping capacity data at district and upazila administrative levels, developed through coordination between the Government of Bangladesh, UNRCO, and UNDRR. The index synthesizes direct observational data and anecdotal information to produce composite risk scores for 64 districts and 553 administrative subdivisions, enabling baseline risk monitoring and comparison across subnational geographies.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Ministry of Disaster Management and Relief of the Government of Bangladesh",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Government disaster management data and administrative coordination for risk indexing"
+          },
+          {
+            "id": "source_2",
+            "name": "United Nations Resident Coordinator office in Bangladesh",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "UN coordination and data aggregation for subnational risk assessment"
+          },
+          {
+            "id": "source_3",
+            "name": "UNDRR",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "INFORM risk indexing methodology and framework applied to Bangladesh subnational context"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0dbe4cba",
+          "title": "INFORM_Sub-national Risk Index for Bangladesh_ 2022_Admin Level-2_V1.xlsx",
+          "description": "The INFORM Risk Index for 2022 contains all the source data and the calculation steps for functional levels, categories, and dimensions on admin level 2.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/78e579a9-9c34-4c05-b36d-78b68f9aebe8/resource/0dbe4cba-004a-4ee2-92e5-5cde09600a3e/download/inform_sub-national-risk-index-for-bangladesh_-2022_admin-level-2_v1.xlsx"
+        },
+        {
+          "id": "resource_f3594557",
+          "title": "INFORM_Sub-national Risk Index for Bangladesh_ 2022_Admin Level 3_V1.xlsx",
+          "description": "The INFORM Risk Index for 2022 contains all the source data and the calculation steps for functional levels, categories, and dimensions on admin level 3.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/78e579a9-9c34-4c05-b36d-78b68f9aebe8/resource/f3594557-45c8-4200-a1b6-83f75cb36fa3/download/inform_sub-national-risk-index-for-bangladesh_-2022_admin-level-3_v1.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Subnational population exposure and vulnerability indexed across 64 districts and 553 upazilas/thanas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "index"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "economic_indicator",
+          "asset_type": {
+            "id": "economic_indicator",
+            "description": "Economic and development indicators contributing to risk assessment at district and upazila levels"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "index",
+              "measurement": {
+                "quantity_kind": "index"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Modeled risk index combining hazard, exposure, and vulnerability for flood-prone populations"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Modeled risk index combining hazard, exposure, and vulnerability for earthquake-prone populations"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Modeled risk index combining hazard, exposure, and vulnerability for cyclone-prone populations"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/inform-subnational-model-of-bangladesh",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

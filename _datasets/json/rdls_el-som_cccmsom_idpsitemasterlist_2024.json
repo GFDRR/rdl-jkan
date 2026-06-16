@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-som_cccmsom_idpsitemasterlist_2024",
+      "title": "Somalia CCCM IDP Site Master List",
+      "description": "Households and population estinamtes in IDP site locations in Somalia as verified in the District wide site verification exercises across Somalia and supplemented by Detailed Site Assessment surveys where site verification coverage is not current.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cccm-somalia-idp-site-master-list-q2-2024]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "CCCM Cluster Somalia",
+        "url": "https://data.humdata.org/dataset/cccm-somalia-idp-site-master-list-q2-2024"
+      },
+      "creator": {
+        "name": "CCCM Cluster Somalia",
+        "url": "https://data.humdata.org/dataset/cccm-somalia-idp-site-master-list-q2-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2024-04-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IDP population data collected through direct site visits and community representative interviews, verified via district-wide site verification exercises and supplemented by Detailed Site Assessment surveys. GPS-referenced site locations enable spatial analysis of displacement patterns and population distribution across Somalia.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "CCCM Cluster Somalia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Site verification assessments and Detailed Site Assessment surveys providing verified IDP household and population counts at specific geographic locations with GPS coordinates across Somalia"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1519fb91",
+          "title": "IDP Site Master List - 4th Quarter 2024.xlsx",
+          "description": "Somalia CCCM IDP Site Master List (IDP Site Master List - 4th Quarter 2024.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5c334c3d-3b40-4819-ae8d-450f7e5fc104/resource/1519fb91-f1a8-4723-bdaa-0d6f5f768e1d/download/idp-site-master-list-4th-quarter-2024.xlsx"
+        },
+        {
+          "id": "resource_4e529083",
+          "title": "IDP Site Master List - 3rd Quarter 2024.xlsx",
+          "description": "Somalia CCCM IDP Site Master List (IDP Site Master List - 3rd Quarter 2024.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5c334c3d-3b40-4819-ae8d-450f7e5fc104/resource/4e529083-9305-49e7-b679-931351f6e28d/download/idp-site-master-list-3rd-quarter-2024.xlsx"
+        },
+        {
+          "id": "resource_1ad45641",
+          "title": "IDP Site Master List -2nd Quarter 2024.xlsx",
+          "description": "Somalia CCCM IDP Site Master List (IDP Site Master List -2nd Quarter 2024.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5c334c3d-3b40-4819-ae8d-450f7e5fc104/resource/1ad45641-8088-4506-85bf-434c7768c9af/download/idp-site-master-list-2nd-quarter-2024.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced population residing in IDP sites across Somalia with household and individual counts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced population from flood-related displacement in Somalia"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cccm-somalia-idp-site-master-list-q2-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

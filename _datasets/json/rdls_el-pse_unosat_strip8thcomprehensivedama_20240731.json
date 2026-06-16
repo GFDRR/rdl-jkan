@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-pse_unosat_strip8thcomprehensivedama_20240731",
+      "title": "Palestine - UNOSAT Gaza Strip 8th Comprehensive Damage Assessment - July 2024",
+      "description": "UNOSAT code: CE20231007PSE This map illustrates a satellite imagery-based comprehensive assessment of damage and destruction to structures within the area of interest in the Gaza Strip, Occupied Palestinian Territory, based on images collected on 6 July 2024 when compared to images collected on 1 May 2023, 10 May 2023, 18 September 2023, 15 October 2023, 7 November 2023, 26 November 2023, 6-7 January 2024, 29 February 2024, 31 March - 1 April 2024, and 3 May 2024. According to satellite imagery analysis, UNOSAT identified 46,223 destroyed structures, 18,478 severely damaged structures, 55,954 moderately damaged structures, and 35,754 possibly damaged structures for a total of 156,409 structures. These correspond to around 63% of the total structures in the Gaza Strip and a total of 215,137 estimated damaged housing units. The governorates of North Gaza and Rafah have experienced the highest rise in damage compared to the 3 May 2024 analysis, with around 2,300 new structures damaged in North Gaza and around 15,030 in Rafah. Within Rafah, Rafah City municipality had the highest number of newly damaged structures, totalling almost 10,100. This is a preliminary analysis and has not yet been validated in the field.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-gaza-strip-8th-comprehensive-damage-assessment-july-2024]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-gaza-strip-8th-comprehensive-damage-assessment-july-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-gaza-strip-8th-comprehensive-damage-assessment-july-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2024-07-31"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts conducted multi-temporal satellite imagery analysis comparing images from May 2023 through July 2024 to detect structural damage and destruction in Gaza Strip. Satellite imagery was visually interpreted to classify buildings into damage categories (destroyed, severely damaged, moderately damaged, possibly damaged) based on observable changes in structure integrity and footprint.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery-based damage assessment comparing multi-temporal imagery from May 2023 to July 2024 to identify destroyed and damaged structures in Gaza Strip"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_96c525fd",
+          "title": "OCHA_OPT-015_UNOSAT_GazaStrip_OPT_CDA_06July2024_GDB.zip",
+          "description": "Palestine - UNOSAT Gaza Strip 8th Comprehensive Damage Assessment - July 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3904/OCHA_OPT-015_UNOSAT_GazaStrip_OPT_CDA_06July2024_GDB.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock classified by damage state (destroyed, severely damaged, moderately damaged, possibly damaged)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from conflict-related destruction assessed via satellite imagery comparison"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-gaza-strip-8th-comprehensive-damage-assessment-july-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

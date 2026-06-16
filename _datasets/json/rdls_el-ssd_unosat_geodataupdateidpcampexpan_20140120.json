@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-ssd_unosat_geodataupdateidpcampexpan_20140120",
+      "title": "Geodata of Update: IDP Camp Expansion in UNMISS Base, Juba Airport, South Sudan",
+      "description": "This map illustrates the camp for internally displaced persons (IDPs) in the UNMISS base at Juba airport as seen by the WorldView-1, Pleiades and WorldView-2 satellites on 19 January 2014, 7 January 2014 and 28 December 2013. As of 28 December a significant portion of the airport is used by IDP?s shelters, occupying approximately 7 ha. Since then the camp extent has moderately increased its area. Imagery acquired on 19 January 2014 shows that the total area of IDP?s occupies 8.9 ha, compared to the 7.9 ha detected on 7 January 2014. Note that IDP occupied areas include improvised shelters and, in some cases, administrative support and other structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-idp-camp-expansion-in-unmiss-base-juba-airport-south-sudan-january-20-2014]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-idp-camp-expansion-in-unmiss-base-juba-airport-south-sudan-january-20-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-idp-camp-expansion-in-unmiss-base-juba-airport-south-sudan-january-20-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2014-01-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal satellite imagery (December 2013 to January 2014) of the UNMISS base at Juba Airport to detect and map IDP shelter locations and quantify camp area expansion over time using visual interpretation and change detection methods.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite imagery analysis (WorldView-1, Pleiades, WorldView-2) detecting IDP camp spatial extent and shelter locations through multi-temporal change detection"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8b9c6768",
+          "title": "CE20131218SSD_shp.zip",
+          "description": "Geodata of Update: IDP Camp Expansion in UNMISS Base, Juba Airport, South Sudan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_shp.zip"
+        },
+        {
+          "id": "resource_95345d6e",
+          "title": "CE20131218SSD.gdb.zip",
+          "description": "Geodata of Update: IDP Camp Expansion in UNMISS Base, Juba Airport, South Sudan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons sheltering in UNMISS base camp at Juba Airport"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Displaced population from complex emergency/conflict requiring shelter in IDP camp"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-idp-camp-expansion-in-unmiss-base-juba-airport-south-sudan-january-20-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

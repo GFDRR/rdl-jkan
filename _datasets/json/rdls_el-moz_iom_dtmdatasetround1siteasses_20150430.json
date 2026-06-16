@@ -1,0 +1,129 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-moz_iom_dtmdatasetround1siteasses_20150430",
+      "title": "IOM DTM Mozambique Dataset Round 1 - Site assessment data",
+      "description": "This data is about the site assessments conducted in Zambezia Province (April 2015). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/iom-dtm-mozambique-datset-round-1]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "DTM Round I",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/iom-dtm-mozambique-datset-round-1"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/iom-dtm-mozambique-datset-round-1"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2015-04-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) DTM",
+            "url": "https://data.humdata.org/dataset/iom-dtm-mozambique-datset-round-1"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM conducted direct observational site assessments in Zambezia Province in April 2015 to enumerate internally displaced persons and document displacement site characteristics. The data captures post-event displacement impacts from flooding through field-based enumeration and anecdotal reporting.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) DTM",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational site assessment data collecting enumeration and characteristics of internally displaced persons in displacement sites following flood events in Zambezia Province."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3ae3f0fe",
+          "title": "04_IOM DTM Mozambique_Dataset_Round 1 Report_20150424.xlsx",
+          "description": "IOM DTM Mozambique Dataset Round 1 - Site assessment data (04_IOM DTM Mozambique_Dataset_Round 1 Report_20150424.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/fb0e16af-f9bb-4aa2-b275-4801bcdf40a3/resource/3ae3f0fe-6fbc-4a51-8650-b142c9227c1f/download/04-iom-dtm-mozambique-dataset-round-1-report-20150424.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons enumerated through site assessments in displacement sites"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced population from flooding in Zambezia Province"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/iom-dtm-mozambique-datset-round-1",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

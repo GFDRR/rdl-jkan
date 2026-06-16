@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-hti_hdx_foodsecurityoutlookliveli_20160930",
+      "title": "Haiti Food Security Outlook, and Livelihood Zones by Admin 3 for September 2016",
+      "description": "This dataset contains the integrated phase classification (IPC) for September 2016, and livelihood zones for Haiti, extracted to each administrative level 3 unit (sections). It also contains the population for each admin 3 unit based on WorldPop (2015 v2b UN adjusted). Source datasets: IPC and Livelihoods Administrative Boundaries (version released 6-Oct-2016). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-population-food-security-outlook-and-livelihood-zones-by-admin-3-for-september-2016]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/haiti-population-food-security-outlook-and-livelihood-zones-by-admin-3-for-september-2016"
+      },
+      "creator": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/haiti-population-food-security-outlook-and-livelihood-zones-by-admin-3-for-september-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Fews.net IPC and Livelihoods",
+            "url": "https://data.humdata.org/dataset/haiti-population-food-security-outlook-and-livelihood-zones-by-admin-3-for-september-2016"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/haiti-population-food-security-outlook-and-livelihood-zones-by-admin-3-for-september-2016"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "CNIGS Administrative Boundaries",
+            "url": "https://data.humdata.org/dataset/haiti-population-food-security-outlook-and-livelihood-zones-by-admin-3-for-september-2016"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IPC food security classifications and livelihood zone attributes were extracted via spatial join from Fews.net source data to Haiti administrative level 3 polygons. Population estimates were derived as zonal sums of WorldPop gridded population density (2015 v2b UN adjusted) within each admin 3 unit. The integrated dataset provides food security outlook and population exposure by livelihood zone at the section administrative level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Fews.net IPC and Livelihoods",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Integrated Phase Classification (IPC) food security outlook and livelihood zone classifications for Haiti September 2016"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population density layer (2015 v2b UN adjusted) aggregated to administrative boundaries"
+          },
+          {
+            "id": "source_3",
+            "name": "CNIGS Administrative Boundaries",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Haiti administrative level 3 (sections) boundary polygons released October 2016"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_947d4b2d",
+          "title": "hti_ipc2016ML1_livelihoods_adm3.csv",
+          "description": "Haiti Food Security Outlook, and Livelihood Zones by Admin 3 for September 2016 (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/c61c7d46-0f42-44b4-9d39-142e5a1d4b19/resource/947d4b2d-93e7-44ba-a468-7c99a1a091f0/download/hti_ipc2016ml1_livelihoods_adm3.csv"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population by administrative level 3 unit based on WorldPop 2015 v2b UN adjusted"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity classification (IPC) for population by livelihood zone"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-population-food-security-outlook-and-livelihood-zones-by-admin-3-for-september-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-aoav_explosiveschools20112017_20180727",
+      "title": "Explosive violence in schools 2011-2017",
+      "description": "Using data from AOAV's explosive violence monitor, this dataset focuses on the casualties recorded from the use of explosive weapons in/on schools globally, between 2011-2017.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/explosive-violence-in-schools-2011-2017]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset only includes attacks on schools using explosive weapons and where at least one death or injury was recorded.",
+      "contact_point": {
+        "name": "Action on Armed Violence",
+        "url": "https://data.humdata.org/dataset/explosive-violence-in-schools-2011-2017"
+      },
+      "creator": {
+        "name": "Action on Armed Violence",
+        "url": "https://data.humdata.org/dataset/explosive-violence-in-schools-2011-2017"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2018-07-27"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "AOAV's explosive violence monitor",
+            "url": "https://data.humdata.org/dataset/explosive-violence-in-schools-2011-2017"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "AOAV compiled incident-level casualty records from explosive violence events occurring in or on schools worldwide between 2011-2017 using their explosive violence monitoring methodology. The dataset aggregates observed post-event impact data (deaths and injuries) by incident location and date to create a global inventory of school-based explosive violence impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "AOAV's explosive violence monitor",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Observational records of casualties from explosive weapons use globally. Provides incident-level data on deaths and injuries from explosive violence events in school settings."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://aoav.org.uk/explosiveviolence/methodology/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_810ac409",
+          "title": "explosive violence in schools.xlsx",
+          "description": "explosive violence in schools.xlsx",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/7c1477ce-83a4-4c97-bf00-78ca52407ea5/resource/810ac409-7bab-42fa-8960-39a5f8978466/download/explosive-violence-in-schools.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "School facilities exposed to explosive violence"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Casualty figures from explosive violence incidents in schools"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injury counts from explosive violence incidents in schools"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/explosive-violence-in-schools-2011-2017",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

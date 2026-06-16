@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-irq_unosat_geodatadamageassessmentra_20150122",
+      "title": "Geodata of Damage Assessment of Ramadi, Al Anbar Province, Iraq",
+      "description": "This map illustrates satellite-detected damage and destruction in a portion of the city of Ramadi, Al Anbar Province, Iraq. Using satellite imagery acquired 02 December, 11 November and 06 July 2014, UNOSAT identified a total of 168 affected structures within the area of this map. Approximatively 61 of these were destroyed, 24 severely damaged and 83 moderately damaged. The city-wide analysis of Ramadi revealed a total of 208 affected structures, of which 72 were destroyed, 33 severely damaged and 103 moderately damaged. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-assessment-of-ramadi-al-anbar-province-iraq-january-22-2015]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-ramadi-al-anbar-province-iraq-january-22-2015"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-ramadi-al-anbar-province-iraq-january-22-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IRQ"
+        ]
+      },
+      "temporal": {
+        "start": "2015-01-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery acquired on 02 December, 11 November, and 06 July 2014 to identify structural damage through visual interpretation of notable changes between images. Buildings were classified into three damage categories (destroyed, severely damaged, moderately damaged) based on satellite-detected changes, producing a preliminary damage assessment dataset without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing multi-temporal images (July, November, December 2014) to detect and classify building damage in Ramadi through visual interpretation of structural changes."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0b034301",
+          "title": "CE20140613IRQ_Ramadi_shp.zip",
+          "description": "Geodata of Damage Assessment of Ramadi, Al Anbar Province, Iraq (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/IQ/CE20140613IRQ/CE20140613IRQ_Ramadi_shp.zip"
+        },
+        {
+          "id": "resource_6f83a479",
+          "title": "CE20140613IRQ_Ramadi.gdb.zip",
+          "description": "Geodata of Damage Assessment of Ramadi, Al Anbar Province, Iraq (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/IQ/CE20140613IRQ/CE20140613IRQ_Ramadi.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Ramadi classified by damage severity from satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from conflict-related destruction in Ramadi"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-ramadi-al-anbar-province-iraq-january-22-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

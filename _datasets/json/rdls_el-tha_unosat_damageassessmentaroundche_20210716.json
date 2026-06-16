@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-tha_unosat_damageassessmentaroundche_20210716",
+      "title": "Damage assessment around the chemical factory, Samut Prakan Province, Thailand",
+      "description": "UNOSAT code: AC20210705THA This map illustrates the damage assessment after the blast of the 5th July 2021 in Bang Phli Yai sub-district, Bang Phli district, Samut Prakan province, Thailand. UNITAR - UNOSAT identified 328 potentially damaged structures of which 13 are destroyed and 315 are severely or moderately damaged. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-around-the-chemical-factory-samut-prakan-province-thailand]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-around-the-chemical-factory-samut-prakan-province-thailand"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-around-the-chemical-factory-samut-prakan-province-thailand"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "THA"
+        ]
+      },
+      "temporal": {
+        "start": "2021-07-16"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery before and after the 5 July 2021 chemical factory blast in Samut Prakan Province, Thailand, to identify and classify structural damage. Building footprints were extracted and damage severity was assessed through visual interpretation of satellite imagery, resulting in a preliminary damage inventory of 328 structures classified by damage level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and damage assessment identifying 328 potentially damaged structures (13 destroyed, 315 severely or moderately damaged) from the chemical factory blast event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_691363ee",
+          "title": "AC20210705THA_GDB.zip",
+          "description": "Damage assessment around the chemical factory, Samut Prakan Province, Thailand (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/TH/AC20210705THA/AC20210705THA_GDB.zip"
+        },
+        {
+          "id": "resource_27a6d029",
+          "title": "AC20210705THA_SHP.zip",
+          "description": "Damage assessment around the chemical factory, Samut Prakan Province, Thailand (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/TH/AC20210705THA/AC20210705THA_SHP.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Bang Phli Yai sub-district assessed for damage from the chemical factory blast"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from the 5 July 2021 chemical factory blast in Samut Prakan Province"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-around-the-chemical-factory-samut-prakan-province-thailand",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

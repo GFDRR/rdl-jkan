@@ -1,0 +1,141 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-yem_cimp_infrastructure_20210430",
+      "title": "Yemen Impact on Civilian Infrastructure.",
+      "description": "The Civilian Impact Monitoring Project (CIMP) is a monitoring mechanism for real-time collection, analysis and dissemination of open source data on the civilian impact from armed violence in Yemen, with the purpose of informing and complementing protection programming. CIMP is a service under the United Nations Protection Cluster for Yemen and, since going live on 01 August 2018, has reported in real-time on the impact of incidents of armed violence on civilians at the national level, divided into 5 hubs: Al-Hudaydah, Sa'ada, Sana'a, Aden and Ibb. The dataset shows the number of incidents to have impacted upon civilian houses, farms, vehicles, businesses and markets and the number of incidents to have impacted upon civilian infrastructure sites since December 2017.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/yemen-impact-on-civilian-infrastructure]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Civilian Impact Monitoring Project (inactive)",
+        "url": "https://data.humdata.org/dataset/yemen-impact-on-civilian-infrastructure"
+      },
+      "creator": {
+        "name": "Civilian Impact Monitoring Project (inactive)",
+        "url": "https://data.humdata.org/dataset/yemen-impact-on-civilian-infrastructure"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "YEM"
+        ]
+      },
+      "temporal": {
+        "start": "2021-04-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Civilian Impact Monitoring Project (CIMP)",
+            "url": "https://data.humdata.org/dataset/yemen-impact-on-civilian-infrastructure"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "CIMP collects open source data on armed violence incidents affecting civilians in Yemen through real-time monitoring across 5 regional hubs (Al-Hudaydah, Sa'ada, Sana'a, Aden, Ibb). Incident data are analyzed to quantify direct damage to civilian infrastructure and structures, with results disseminated to inform UN Protection Cluster programming.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Civilian Impact Monitoring Project (CIMP)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Real-time open source monitoring of civilian impact from armed violence incidents in Yemen, collected and analyzed through 5 regional hubs with incident-level damage assessments."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://civilianimpactmonitoring.org/methodology"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_e21a03c5",
+          "title": "Yemen_CIMP - Civilian Structure",
+          "description": "Number of incidents to have impacted upon civilian houses, farms, vehicles, businesses and markets since December 2017",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTAsAy_THJFIDLIxrPWxpQ9saFxegIV_HXTTS20e3nfSxT22zBo-HY_8w4LjijXQxT_DcEGfPoUFvnB/pub?gid=246191683&single=true&output=csv"
+        },
+        {
+          "id": "resource_d0479d98",
+          "title": "Yemen_CIMP - Civilian Infrastructure damaged",
+          "description": "Number of incidents to have impacted upon civilian infrastructure sites since December 2017.",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTAsAy_THJFIDLIxrPWxpQ9saFxegIV_HXTTS20e3nfSxT22zBo-HY_8w4LjijXQxT_DcEGfPoUFvnB/pub?gid=91397303&single=true&output=csv"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Civilian infrastructure facilities and structures exposed to armed violence"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to civilian infrastructure from armed violence incidents"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/yemen-impact-on-civilian-infrastructure",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

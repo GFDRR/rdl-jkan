@@ -1,0 +1,198 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-ocharosea_humanitariandataregion_2011",
+      "title": "Humanitarian Data for Eastern Africa Region",
+      "description": "This dataset includes the Refugee, IDPs, People in need by Sector, Humanitarian Funding, inform indexes and humanitarian priorites data for countries in the wider horn of Africa Region from 2011 to date. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/humanitarian-data-for-eastern-africa-region]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The dataset is not complete and may be out of date for some columns e.g funding, some of the details are subject for verification. A zero entry may mean that the particular information is unavailable and not actually zero.",
+      "contact_point": {
+        "name": "OCHA Regional Office for Southern and Eastern Africa (ROSEA)",
+        "url": "https://data.humdata.org/dataset/humanitarian-data-for-eastern-africa-region"
+      },
+      "creator": {
+        "name": "OCHA Regional Office for Southern and Eastern Africa (ROSEA)",
+        "url": "https://data.humdata.org/dataset/humanitarian-data-for-eastern-africa-region"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "DZA",
+          "BDI",
+          "DJI",
+          "ERI",
+          "ETH",
+          "KEN",
+          "SOM",
+          "SSD",
+          "UGA",
+          "TZA"
+        ]
+      },
+      "temporal": {
+        "start": "2011-06-09",
+        "end": "2015-06-09"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNOCHA",
+            "url": "https://data.humdata.org/dataset/humanitarian-data-for-eastern-africa-region"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UNHCR",
+            "url": "https://data.humdata.org/dataset/humanitarian-data-for-eastern-africa-region"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "FEWSNET",
+            "url": "https://data.humdata.org/dataset/humanitarian-data-for-eastern-africa-region"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Regional humanitarian data aggregated from multiple UN and specialized agency sources (UNOCHA, UNHCR, FEWSNET) covering refugee populations, internally displaced persons, people in need by sector, and humanitarian funding requirements across the Horn of Africa from 2011 onwards. Data was compiled from the Financial Tracking Service and other authoritative humanitarian information systems to support regional humanitarian analysis and prioritization.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNOCHA",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian needs and funding data compiled by the United Nations Office for the Coordination of Humanitarian Affairs"
+          },
+          {
+            "id": "source_2",
+            "name": "UNHCR",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Refugee and internally displaced person population statistics from the UN Refugee Agency"
+          },
+          {
+            "id": "source_3",
+            "name": "FEWSNET",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Food security and food insecurity impact assessments from the Famine Early Warning Systems Network"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c4a88eb9",
+          "title": "East Africa Humanitarian Data.csv",
+          "description": "Humanitarian Data for Eastern Africa Region (East Africa Humanitarian Data.csv)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/507f8e56-eb0b-4daa-bf0b-974d7777a4fb/resource/c4a88eb9-e445-4a48-8f4f-563189b5e137/download/fundingcleaned.csv"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Refugee and internally displaced person populations in the Horn of Africa region"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need by sector due to drought and food insecurity in the Horn of Africa"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons and refugees from drought-affected areas"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/humanitarian-data-for-eastern-africa-region",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

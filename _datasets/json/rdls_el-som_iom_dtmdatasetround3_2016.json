@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-som_iom_dtmdatasetround3_2016",
+      "title": "Somalia - IOM DTM Dataset - Round 3",
+      "description": "Round III of DTM captured information on variables about the population of concern, disaggregated at the settlement level in Somalia. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-iom-dtm-dataset-round-3]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/somalia-iom-dtm-dataset-round-3"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/somalia-iom-dtm-dataset-round-3"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-01",
+        "end": "2017-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IOM DTM Round 3 collected settlement-level registry data on displaced persons, returnees, and baseline populations in Somalia through direct field enumeration and community informant networks. Data was disaggregated by population group and geographic settlement to provide a snapshot of displacement and migration patterns in response to drought and conflict-related hazards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IOM Displacement Tracking Matrix (DTM) registry data capturing population of concern including IDPs, returnees, and baseline populations at settlement level through direct enumeration and community-based monitoring."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b52ba891",
+          "title": "DTM Round 3 Dataset.xlsx",
+          "description": "Somalia - IOM DTM Dataset - Round 3 (DTM Round 3 Dataset.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/305c976b-6b41-4d0b-aee9-6bcbb46538dd/resource/b52ba891-4ef4-42d6-834e-36bfc795a347/download/dtm-round-3-dataset.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons, returnees, and baseline population disaggregated at settlement level in Somalia"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons and returnee populations affected by drought and conflict-related displacement"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-iom-dtm-dataset-round-3",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-bgd_cxbedu_learningcentresaffectedro_20190124",
+      "title": "Bangladesh - Learning Centres Affected by Road Closures",
+      "description": "Pcodes and information on road closures and affected learning centres. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/learning-centres-affected-by-road-closures]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "THIS DOCUMENT IS DEVELOPED FOR SITE MANAGEMENT SECTOR, COX'S BAZAR STAKEHOLDERS ONLY. IT PRESENTS INFRASTRUCTURE INCIDENTS IN THE KUTUPALONG-BALUKHALI EXPANSION (KBE) AND TEKNAF EXPANSION SITES USING INFORMATION AVAILABLE AT THE TIME OF PUBLICATION. DATA IS COLLECTED DAILY THROUGH DIRECT SURV EYS AND REPORTED INFORMATION. IT HAS BEEN CREATED W ITH THE HIGHEST DEGREE OF ACCURACY POSSIBLE HOWEV ER, SM SECTOR CANNOT BE HELD RESPONSIBLE FOR ANY DAM AGES DU E TO ERRORS OR OMISSIONS IN THIS PRODUCT. DEPICTION OF BOUNDARIES IS NOT AUTHORATIVE.",
+      "contact_point": {
+        "name": "Cox's Bazar Education Sector",
+        "url": "https://data.humdata.org/dataset/learning-centres-affected-by-road-closures"
+      },
+      "creator": {
+        "name": "Cox's Bazar Education Sector",
+        "url": "https://data.humdata.org/dataset/learning-centres-affected-by-road-closures"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2019-01-24"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Direct observational data collected by Cox's Bazar Education Sector documenting road closures and their impact on learning centre accessibility. Data compiled from field observations and anecdotal reports to identify which schools are affected by road disruptions, enabling assessment of indirect disaster impacts on education service delivery.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Cox's Bazar Education Sector",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational and anecdotal data on road closures and affected learning centres collected through field monitoring in Cox's Bazar district"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_dd18a448",
+          "title": "LC affected by Road_20190214.xlsx",
+          "description": "Bangladesh - Learning Centres Affected by Road Closures (LC affected by Road_20190214.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/29e43086-15a8-40ce-8c9d-24298e62db3c/resource/dd18a448-6942-4e47-99aa-306463d0fd19/download/lc-affected-by-road_20190214.xlsx"
+        },
+        {
+          "id": "resource_da4098c5",
+          "title": "190124 Road_ADB_Packages_KTP(1).pdf",
+          "description": "Bangladesh - Learning Centres Affected by Road Closures (image of affected roads)",
+          "media_type": "application/pdf",
+          "download_url": "https://data.humdata.org/dataset/29e43086-15a8-40ce-8c9d-24298e62db3c/resource/da4098c5-3143-49bc-9918-807c93efcf16/download/190124-road_adb_packages_ktp1.pdf"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road network infrastructure with closure status and affected segments"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Learning centres (schools) with spatial location and accessibility status"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Road closures affecting accessibility and service disruption"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Learning centres affected by road closures and reduced accessibility"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/learning-centres-affected-by-road-closures",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

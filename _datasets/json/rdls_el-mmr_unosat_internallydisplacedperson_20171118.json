@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-mmr_unosat_internallydisplacedperson_20171118",
+      "title": "Internally Displaced Persons Shelters in Maungdaw Township of Rakhine State in Myanmar",
+      "description": "This map illustrates satellite-detected internally displaced persons shelters in the village tract of Nyaung Pin Gyi, Maungdaw Township, Rakhine State. Using satellite imagery collected on 6 November 2017 UNOSAT identified a total of 457 shelters in a beach area 7 km south of Maungdaw town, next to the mouth of the Naf River between Myanmar and Bangladesh. Several unidentified trucks are observed on the road located adjacent to the internally displaced persons settlement. As of 11 November 2017, 307 shelters were identified which represents a 33 percent decrease from 6 November. Additionally, several likely rafts are observed by the shoreline on 11 November 2017. Additional imagery analysis indicates this settlement began before 6 October and grew quickly, with shelters starting to decrease after 11 November as noted. A smaller camp is located 7 km southeast in the village tract of Ka Nyin Tan Alel Than Kyaw Ka Nyin Tan with approximately 200 shelters as of 11 November 2017. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/internally-displaced-persons-shelters-in-maungdaw-township-of-rakhine-state-in-myanmar-2731]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/internally-displaced-persons-shelters-in-maungdaw-township-of-rakhine-state-in-myanmar-2731"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/internally-displaced-persons-shelters-in-maungdaw-township-of-rakhine-state-in-myanmar-2731"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2017-11-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery from 6 November 2017 and 11 November 2017 over Nyaung Pin Gyi village tract to detect and map internally displaced persons shelter structures, recording confidence levels and temporal trends in shelter presence and status.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite imagery analysis identifying shelter structures and their temporal changes through multi-date image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ec2352f3",
+          "title": "unosat-maps\\MM\\CE20130326MMR\\CE20130326MMR_IDPs_20171111.gdb.zip",
+          "description": "Internally Displaced Persons Shelters in Maungdaw Township of Rakhine State in Myanmar (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps\\MM\\CE20130326MMR\\CE20130326MMR_IDPs_20171111.gdb.zip"
+        },
+        {
+          "id": "resource_b8649e44",
+          "title": "unosat-maps\\MM\\CE20130326MMR\\IDP_Structures_11November2017.zip",
+          "description": "Internally Displaced Persons Shelters in Maungdaw Township of Rakhine State in Myanmar (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps\\MM\\CE20130326MMR\\IDP_Structures_11November2017.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Satellite-detected shelter structures occupied by internally displaced persons"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Shelter structures affected by complex emergency displacement, with temporal change in shelter count"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/internally-displaced-persons-shelters-in-maungdaw-township-of-rakhine-state-in-myanmar-2731",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-pse_unosat_geodatadamageassessmentst_20140926",
+      "title": "Palestine - Geodata of Damage Assessment in Gaza Strip, Occupied Palestinian Territory",
+      "description": "This map illustrates satellite-detected damage and destruction of health facilities in Gaza Strip, resulting from recent conflicts in the area. Using satellite imagery collected 14 August 2014 and 27-28 August 2014 by the Pleiades satellite, and compared with a pre-crisis Pleiades image collected 6 July 2014, UNOSAT analysis has identified 4 destroyed structures, 1 severely damaged structures, 13 moderately damaged structures and 5 possibly damaged structures from a total of 101 hospitals in the Gaza Strip. The Governorate of Gaza represents 74% of the total damaged hosptial structures. This is a preliminary analysis & has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-health-facilities-damage-assessment-in-gaza-strip-occupied-palesti-september-26-2014]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-health-facilities-damage-assessment-in-gaza-strip-occupied-palesti-september-26-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-health-facilities-damage-assessment-in-gaza-strip-occupied-palesti-september-26-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PSE"
+        ]
+      },
+      "temporal": {
+        "start": "2014-09-26"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal Pleiades satellite imagery (pre-crisis baseline from 6 July 2014 versus post-crisis imagery from 14 and 27-28 August 2014) to identify and classify damage to 101 health facilities across Gaza Strip. Damage was categorized into four severity classes (destroyed, severely damaged, moderately damaged, possibly damaged) with spatial coordinates and confidence levels recorded for each facility.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre-crisis (6 July 2014) and post-crisis (14 and 27-28 August 2014) Pleiades satellite imagery to detect structural damage to health facilities in Gaza Strip"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d7bb7fca",
+          "title": "CE20140715PSE.shp.zip",
+          "description": "Palestine - Geodata of Damage Assessment in Gaza Strip, Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.shp.zip"
+        },
+        {
+          "id": "resource_68c82f5b",
+          "title": "CE20140715PSE.gdb.zip",
+          "description": "Palestine - Geodata of Damage Assessment in Gaza Strip, Occupied Palestinian Territory (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/PS/CE20140715PSE/CE20140715PSE.gdb.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Health facility infrastructure (hospitals) in Gaza Strip with structural inventory"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct damage to health facilities from conflict-related destruction"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-health-facilities-damage-assessment-in-gaza-strip-occupied-palesti-september-26-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

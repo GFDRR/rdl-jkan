@@ -1,0 +1,128 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-lbr_ochalb_affectedpersonslocations_20110101",
+      "title": "Liberia - Affected Persons Locations",
+      "description": "Ivorian Refugees location in Liberia in 2011 The file was given to OCHA on July 2011 by UNHCR Liberia and represents ivorian refugees location in Liberia and host community. The typology (refugees in camp or hosted), geographic coordinates and the ratio was indicated.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/liberia-affected-persons-locations]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "**Most Recent Changes:** (2014-11-18) metadata updated **Languages:** EN",
+      "contact_point": {
+        "name": "OCHA Liberia (inactive)",
+        "url": "https://data.humdata.org/dataset/liberia-affected-persons-locations"
+      },
+      "creator": {
+        "name": "OCHA Liberia (inactive)",
+        "url": "https://data.humdata.org/dataset/liberia-affected-persons-locations"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LBR"
+        ]
+      },
+      "temporal": {
+        "start": "2011-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "United Nations High Commissioner for Refugees (UNHCR) Liberia",
+            "url": "https://data.humdata.org/dataset/liberia-affected-persons-locations"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNHCR Liberia compiled refugee registration data in July 2011 documenting Ivorian refugee locations across Liberia, including camp-based and host community settlements with geographic coordinates and population ratios. The dataset represents post-displacement population distribution used for humanitarian response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations High Commissioner for Refugees (UNHCR) Liberia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Administrative refugee registration and location data collected in July 2011, providing geographic coordinates and settlement typology for displaced populations"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8201cc03",
+          "title": "refugees_location.xls",
+          "description": "Liberia - Affected Persons Locations (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6a57dc3f-e0c2-4cb0-be74-38790375ac06/resource/8201cc03-86dc-40e6-824a-c3fbabf42243/download/refugees_location.xls"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Ivorian refugee and host community populations with geographic locations and settlement typology"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Ivorian refugee displacement from conflict in Côte d'Ivoire, located in Liberia"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/liberia-affected-persons-locations",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

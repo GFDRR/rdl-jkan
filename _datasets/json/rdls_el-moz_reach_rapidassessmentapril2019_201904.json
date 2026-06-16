@@ -1,0 +1,181 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-moz_reach_rapidassessmentapril2019_201904",
+      "title": "Mozambique rapid assessment April 2019",
+      "description": "Data from the Cyclone Idai UNDAC A&A Cell Mozambique Rapid Assessment covering Sofala and Manica provinces in April 2019.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/moz-rapid-assessment-april2019]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "REACH Initiative",
+        "url": "https://data.humdata.org/dataset/moz-rapid-assessment-april2019"
+      },
+      "creator": {
+        "name": "REACH Initiative",
+        "url": "https://data.humdata.org/dataset/moz-rapid-assessment-april2019"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-04-01",
+        "end": "2019-04-17"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNDAC A&A Cell Mozambique",
+            "url": "https://data.humdata.org/dataset/moz-rapid-assessment-april2019"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Rapid assessment data collected by UNDAC A&A Cell in Sofala and Manica provinces during April 2019 following Cyclone Idai, compiled and processed by REACH Initiative using sample survey methodology to document post-event exposure and impact on buildings and population.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNDAC A&A Cell Mozambique",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Rapid assessment data collection from UNDAC Assessment and Analysis Cell documenting post-cyclone impacts in Sofala and Manica provinces"
+          },
+          {
+            "id": "source_2",
+            "name": "REACH Initiative",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Survey methodology and data compilation for rapid needs assessment following Cyclone Idai"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7dd2f6ec",
+          "title": "MOZ_MRA_Dataset_April2019.xlsx",
+          "description": "Mozambique rapid assessment April 2019 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c2c461a3-acb6-42b9-ae22-a37ab2156f53/resource/7dd2f6ec-b1e6-44a3-8586-820ab6803b8e/download/moz_mra_dataset_april2019.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock assessed in Sofala and Manica provinces affected by Cyclone Idai"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population in affected areas of Sofala and Manica provinces"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from Cyclone Idai strong winds and associated impacts"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by Cyclone Idai in rapid assessment survey"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/moz-rapid-assessment-april2019",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

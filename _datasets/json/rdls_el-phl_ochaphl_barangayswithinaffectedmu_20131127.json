@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-phl_ochaphl_barangayswithinaffectedmu_20131127",
+      "title": "Philippines - Barangays within affected municipalities (Typhoon Haiyan)",
+      "description": "The dataset used the list of affected municipalities based on DSWD DROMIC to identify affected barangays by Typhoon Haiyan/Yolanda. It contains the list of barangays within affected municipalities based on DSWD DROMIC (Typhoon Haiyan/Yolanda). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-affected-persons-locations-0]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "**Languages:** EN",
+      "contact_point": {
+        "name": "OCHA Philippines",
+        "url": "https://data.humdata.org/dataset/philippines-affected-persons-locations-0"
+      },
+      "creator": {
+        "name": "OCHA Philippines",
+        "url": "https://data.humdata.org/dataset/philippines-affected-persons-locations-0"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2013-11-27"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DSWD DROMIC",
+            "url": "https://data.humdata.org/dataset/philippines-affected-persons-locations-0"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "NSO",
+            "url": "https://data.humdata.org/dataset/philippines-affected-persons-locations-0"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset identifies barangays within municipalities officially listed as affected by Typhoon Haiyan by DSWD DROMIC, and integrates NSO population data to characterize the exposed population. This administrative-level exposure and loss dataset supports displacement and humanitarian response assessment in the Philippines.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DSWD DROMIC",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official list of municipalities affected by Typhoon Haiyan/Yolanda from the Department of Social Welfare and Development Disaster Response Operations Monitoring and Information Center"
+          },
+          {
+            "id": "source_2",
+            "name": "NSO",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population data from the National Statistics Office of the Philippines used to characterize barangay-level population in affected areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cbe8b279",
+          "title": "Typhoon Haiyan Affected Barangays.zip",
+          "description": "Philippines - Barangays within affected municipalities (Typhoon Haiyan) (Typhoon Haiyan Affected Barangays.zip)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/941248ab-1281-4064-94fb-e630aa67340a/resource/cbe8b279-a3f6-4ebe-934d-52da1aad9737/download/typhoon-haiyan-affected-barangays.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population in barangays within Typhoon Haiyan-affected municipalities"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement from Typhoon Haiyan in affected barangays"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-affected-persons-locations-0",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

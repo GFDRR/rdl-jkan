@@ -1,0 +1,244 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-unicefesaro_riskanalysis_20201031",
+      "title": "Eastern and Southern Africa Risk Analysis",
+      "description": "Eastern and Southern Africa Risk Analysis based on Inform, FEWSNET, OCHA, UNICEF and others. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/eastern-and-southern-africa-risk-analysis]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "UNICEF Eastern and Southern Africa Regional Office (ESARO) (inactive)",
+        "url": "https://data.humdata.org/dataset/eastern-and-southern-africa-risk-analysis"
+      },
+      "creator": {
+        "name": "UNICEF Eastern and Southern Africa Regional Office (ESARO) (inactive)",
+        "url": "https://data.humdata.org/dataset/eastern-and-southern-africa-risk-analysis"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "AGO",
+          "BWA",
+          "COM",
+          "DZA",
+          "ERI",
+          "ETH",
+          "KEN",
+          "LSO",
+          "MDG",
+          "MOZ",
+          "MUS",
+          "MWI",
+          "NAM",
+          "RWA",
+          "SYC",
+          "SOM",
+          "ZAF",
+          "SSD",
+          "SWZ",
+          "TZA",
+          "UGA",
+          "ZMB",
+          "ZWE"
+        ]
+      },
+      "temporal": {
+        "start": "2020-10-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "INFORM",
+            "url": "https://data.humdata.org/dataset/eastern-and-southern-africa-risk-analysis"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "FEWSNET",
+            "url": "https://data.humdata.org/dataset/eastern-and-southern-africa-risk-analysis"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "OCHA",
+            "url": "https://data.humdata.org/dataset/eastern-and-southern-africa-risk-analysis"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "UNICEF",
+            "url": "https://data.humdata.org/dataset/eastern-and-southern-africa-risk-analysis"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Multi-source risk analysis integrating drought hazard indicators from FEWSNET, humanitarian impact data from OCHA, vulnerability indices from INFORM, and population exposure data from UNICEF to assess food security and displacement risks across Eastern and Southern Africa at country level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "INFORM",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-hazard risk assessment framework providing composite risk indices for humanitarian crises"
+          },
+          {
+            "id": "source_2",
+            "name": "FEWSNET",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Food security and livelihood monitoring data tracking drought impacts and food insecurity classifications"
+          },
+          {
+            "id": "source_3",
+            "name": "OCHA",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian situation reports and impact assessments from the UN Office for the Coordination of Humanitarian Affairs"
+          },
+          {
+            "id": "source_4",
+            "name": "UNICEF",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population and vulnerability data on children and households at risk in Eastern and Southern Africa"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1d4d976f",
+          "title": "UNICEF ESARO RISK ANALYSIS - Oct 2020.xlsx",
+          "description": "Eastern and Southern Africa Risk Analysis based on Inform, FEWSNET, OCHA, UNICEF and others",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/271ef920-e9dd-43c5-9ad6-e6553d29347c/resource/1d4d976f-c1e0-4c1f-bbd7-164d6ca11426/download/unicef-esaro-risk-analysis-oct-2020.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural land and crop production areas vulnerable to drought in Eastern and Southern Africa"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population dependent on agriculture and food production in drought-affected regions"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity and agricultural impact from drought in Eastern and Southern Africa"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement resulting from drought-induced food insecurity and livelihood loss"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/eastern-and-southern-africa-risk-analysis",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

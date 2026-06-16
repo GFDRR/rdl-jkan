@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-nga_iom_nigeriacdwbaselineassessm_2014",
+      "title": "Nigeria_CDW_Baseline_Assessments_Dec14_Oct17",
+      "description": "Nigeria Baseline data from Dec 14 to Oct 17. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/nigeria-cdw-baseline-assessments-dec14-oct17]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/nigeria-cdw-baseline-assessments-dec14-oct17"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/nigeria-cdw-baseline-assessments-dec14-oct17"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NGA"
+        ]
+      },
+      "temporal": {
+        "start": "2014-12-01",
+        "end": "2017-10-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IOM conducted sample survey-based baseline assessments of internally displaced persons across Nigeria from December 2014 to October 2017, documenting displacement counts and affected population characteristics through the Displacement Tracking Matrix methodology.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IOM Displacement Tracking Matrix (DTM) baseline assessments documenting internally displaced persons and displacement-related impacts across Nigeria"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d7e53d2e",
+          "title": "Nigeria_CDW_Baseline_Assessments_Dec14_Oct17.xlsx",
+          "description": "Nigeria_CDW_Baseline_Assessments_Dec14_Oct17 (Nigeria Baseline data from Dec 14 to Oct 17)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/ebb19588-8465-4507-8a14-e8b51038ca9f/resource/d7e53d2e-f613-4775-8c93-b73e241b5dca/download/nigeria_cdw_baseline_assessments_dec14_oct17.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Internally displaced persons and affected populations in Nigeria from baseline assessments"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from flood-related displacement events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/nigeria-cdw-baseline-assessments-dec14-oct17",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

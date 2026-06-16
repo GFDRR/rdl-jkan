@@ -1,0 +1,128 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-uga_ugrc_districtsaffectedfloodsri_20200612",
+      "title": "Uganda Districts affected by Floods and Rising Water Levels",
+      "description": "This data is about Uganda Districts affected by Floods and Rising Water Levels in Lakes as of Friday, 12th June 2020. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/uganda-districts-affected-by-floods-and-rising-water-levels]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This data is generated from Uganda Red Cross Society disaster reporting. For any queries, please contact Joel Kitutu (jkitutu@redcrossug.org).",
+      "contact_point": {
+        "name": "Uganda Red Cross Society (inactive)",
+        "url": "https://data.humdata.org/dataset/uganda-districts-affected-by-floods-and-rising-water-levels"
+      },
+      "creator": {
+        "name": "Uganda Red Cross Society (inactive)",
+        "url": "https://data.humdata.org/dataset/uganda-districts-affected-by-floods-and-rising-water-levels"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UGA"
+        ]
+      },
+      "temporal": {
+        "start": "2020-06-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Uganda Red Cross Society",
+            "url": "https://data.humdata.org/dataset/uganda-districts-affected-by-floods-and-rising-water-levels"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Uganda Red Cross Society field disaster reports were collected and processed using QGIS software to generate a spatial dataset identifying districts affected by floods and rising water levels. The dataset integrates administrative district boundaries with population statistics and flood impact observations from June 2020.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Uganda Red Cross Society",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Field disaster reports documenting districts affected by floods and rising water levels in Uganda lakes as of June 2020"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ff4084ef",
+          "title": "Map of Uganda Showing Districts affected by Floods and Rising Water Levels in Lakes as of Friday 12th June 2020.kml",
+          "description": "Layer of Uganda Districts affected by Floods and Rising Water Levels in Lakes as of Friday, 12th June 2020",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://data.humdata.org/dataset/6241b9fd-712c-4588-9e41-6ad113cc7c53/resource/ff4084ef-72b8-4cf0-a454-b445ddfe4a50/download/map-of-uganda-showing-districts-affected-by-floods-and-rising-water-levels-in-lakes-as-of-friday.kml"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "District-level population data including male, female, and total population counts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Districts affected by floods and rising water levels as of June 12, 2020"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/uganda-districts-affected-by-floods-and-rising-water-levels",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

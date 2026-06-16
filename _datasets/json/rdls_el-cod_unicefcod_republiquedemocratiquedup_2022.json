@@ -1,0 +1,191 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_el-cod_unicefcod_republiquedemocratiquedup_2022",
+      "title": "République Démocratique du Congo: Priorisation Juin 2024",
+      "description": "Priorisation du cluster nutrition qui se base sur plusieurs facteurs aggravants pour permettre de mettre en avant les zones de santé les plus sensibles à la malnutrition alors que les données provenant des enquêtes nutritionnelles sont vieillissantes pour certaine Zone de santé.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/priorisation-s1-2021]",
+      "risk_data_type": [
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "UNICEF Democratic Republic of Congo",
+        "url": "https://data.humdata.org/dataset/priorisation-s1-2021"
+      },
+      "creator": {
+        "name": "UNICEF Democratic Republic of Congo",
+        "url": "https://data.humdata.org/dataset/priorisation-s1-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2022-06-21",
+        "end": "2024-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNICEF RDC",
+            "url": "https://data.humdata.org/dataset/priorisation-s1-2021"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Cluster Nutrition RDC",
+            "url": "https://data.humdata.org/dataset/priorisation-s1-2021"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Nutritional survey data (GAM, SAM, MAM, stunting prevalence) and food security classifications (IPC) from multiple years are aggregated at health zone level. A multi-factor prioritization algorithm applies scoring weights to prevalence indicators, aggravating factors (chronic malnutrition, epidemics, population displacement), and coverage of nutrition interventions to generate priority rankings for humanitarian response targeting.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNICEF RDC",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Nutritional survey data and SNSAP alerts providing malnutrition prevalence estimates and food security classifications (IPC) at health zone level"
+          },
+          {
+            "id": "source_2",
+            "name": "Cluster Nutrition RDC",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Prioritization methodology combining multiple aggravating factors (malnutrition prevalence, stunting, IPC classification, epidemics, population displacement) to identify health zones most vulnerable to malnutrition"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://reliefweb.int/report/democratic-republic-congo/republique-democratique-du-congo-lignes-directrices-du-cluster-nutrition-2022"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_5d8779e7",
+          "title": "RDC_Priorisation S1 2024",
+          "description": "Priorisation du cluster nutrition January 2024 - June 2024. Source des données: DRC Cluster Nutrition.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/0e58c4cc-9dc8-4f82-bec4-e808be8bd064/resource/5d8779e7-8d97-4ae9-bc24-894f59300bd6/download/rdc_priorisation-s1-2024-cluster-nutrition.xlsx"
+        },
+        {
+          "id": "resource_84b2072f",
+          "title": "Priorisartion S1 2023",
+          "description": "Priorisation du cluster nutrition January 2024 - June 2023. Source des données: DRC Cluster Nutrition.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/0e58c4cc-9dc8-4f82-bec4-e808be8bd064/resource/84b2072f-56fc-485c-862a-88886371f95e/download/priorisartion-s1-2023-vf.xlsx"
+        },
+        {
+          "id": "resource_b7eab54e",
+          "title": "priorisation-s2 2022",
+          "description": "Priorisation du cluster nutrition pour les 6 prochains mois Juin 2022 - Novembre 2022. Source des données: enquêtes SMART, MICS 2018, Cluster Santé, IPC AFI 20ème cycle, OCHA, PRONANUT.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/0e58c4cc-9dc8-4f82-bec4-e808be8bd064/resource/b7eab54e-1a8b-4fe1-acfd-6445d1465a1e/download/priorisation-s2-2022.xlsx"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population by age/sex groups (total, men, women, children 6-59 months, children 6-23 months, pregnant and lactating women) at health zone level"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute malnutrition prevalence (GAM, SAM, MAM) in children and pregnant/lactating women derived from nutritional surveys"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Chronic malnutrition (stunting) prevalence in children as aggravating factor"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/priorisation-s1-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
