@@ -25,168 +25,166 @@ description: 'Dataset with extreme Wave Energy Flux (WEF) at the Global scale. W
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 8
-      events:
-      - calculation_method: simulated
-        description: 'Return period 5 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_5
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5.0
-      - calculation_method: simulated
-        description: 'Return period 10 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_10
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10.0
-      - calculation_method: simulated
-        description: 'Return period 20 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_20
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20.0
-      - calculation_method: simulated
-        description: 'Return period 50 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50.0
-      - calculation_method: simulated
-        description: 'Return period 100 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100.0
-      - calculation_method: simulated
-        description: 'Return period 200 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_200
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200.0
-      - calculation_method: simulated
-        description: 'Return period 500 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_500
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500.0
-      - calculation_method: simulated
-        description: 'Return period 1000 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_1000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000.0
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 8
+    events:
+    - calculation_method: simulated
+      description: 'Return period 5 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_rp_5
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5.0
+    - calculation_method: simulated
+      description: 'Return period 10 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_10
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10.0
+    - calculation_method: simulated
+      description: 'Return period 20 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20.0
+    - calculation_method: simulated
+      description: 'Return period 50 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50.0
+    - calculation_method: simulated
+      description: 'Return period 100 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100.0
+    - calculation_method: simulated
+      description: 'Return period 200 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_200
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200.0
+    - calculation_method: simulated
+      description: 'Return period 500 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500.0
+    - calculation_method: simulated
+      description: 'Return period 1000 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_rp_1000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000.0
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://example.org/license/unknown
 lineage:
   description: Dataset with extreme Wave Energy Flux (WEF) at the Global scale. WEF
@@ -207,8 +205,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

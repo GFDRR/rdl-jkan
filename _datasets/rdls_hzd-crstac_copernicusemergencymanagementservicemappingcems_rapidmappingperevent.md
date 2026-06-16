@@ -25,24 +25,22 @@ description: 'This service consists of the on-demand and fast provision (hours-d
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    wildfire:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: burnedarea:ha
-        process: wildfire
-        trigger: null
-        type: wildfire
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: burnedarea:ha
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://example.org/license/unknown
 lineage:
   description: 'The Copernicus Emergency Management Service (CEMS) uses satellite
@@ -62,8 +60,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

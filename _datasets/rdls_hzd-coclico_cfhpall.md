@@ -35,70 +35,17 @@ description: 'Flood Maps represent the flood simulations across Europe (at 25 m 
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: 'Return period 1 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_1
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1.0
-      - calculation_method: simulated
-        description: 'Return period 100 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100.0
-      - calculation_method: simulated
-        description: 'Return period 1000 year(s) (source: Collection.summaries.rp).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_rp_1000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000.0
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: 'Return period 1 year(s) (source: Collection.summaries.rp).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
@@ -116,7 +63,7 @@ hazard:
       disaster_identifiers: []
       hazard:
         classification: null
-        id: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
@@ -134,7 +81,7 @@ hazard:
       disaster_identifiers: []
       hazard:
         classification: null
-        id: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
