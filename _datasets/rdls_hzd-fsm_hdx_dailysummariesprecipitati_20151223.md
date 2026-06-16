@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Daily precipitation indicators were collected from base weather stations
     across Federated States of Micronesia and compiled by NOAA's National Centers

@@ -57,7 +57,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Facility infrastructure point data was collected through direct observational
     surveys and anecdotal reports by sector working groups, IOM-NPM, UNHCR, and ISCG

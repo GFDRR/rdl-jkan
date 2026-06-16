@@ -27,7 +27,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: This dataset is a representation of the roads that exist on OpenStreetMap
     as at October 2019. Most of the roads were added by students from the State University

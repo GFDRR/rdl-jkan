@@ -57,7 +57,7 @@ hazard:
     id: es_drought
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Hazard data compiled from direct observational records and anecdotal
     reports by humanitarian partners operating in Sudan. Flood and drought hazard

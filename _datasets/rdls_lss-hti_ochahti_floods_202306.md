@@ -32,7 +32,7 @@ description: 'This dataset shows the people affected by floods in Haiti. [Source
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event flood impact data collected through direct observation and
     anecdotal reports by the General Directorate of Civil Protection, OCHA Haiti,

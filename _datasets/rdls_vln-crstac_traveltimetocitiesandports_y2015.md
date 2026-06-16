@@ -21,7 +21,7 @@ description: 'The dataset is a suite of global travel-time accessibility indicat
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The dataset is a suite of global travel-time accessibility indicators
     for the year 2015, at approximately one-kilometre spatial resolution for the entire

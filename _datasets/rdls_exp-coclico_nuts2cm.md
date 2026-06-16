@@ -34,7 +34,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'NUTS 2 Regions are medium-sized administrative divisions in the EU,
     used for regional planning and statistical analysis. Spatial coverage: Entire

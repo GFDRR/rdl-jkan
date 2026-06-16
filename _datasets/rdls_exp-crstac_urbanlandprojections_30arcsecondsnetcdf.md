@@ -33,7 +33,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC0-1.0.html
+license: CC0-1.0
 lineage:
   description: Urban land projections based on the Shared Socioeconomic Pathways (SSPs)
     developed by Gao Lab

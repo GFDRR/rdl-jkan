@@ -35,7 +35,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The dataset includes the occurrence, seasonality, recurrence, transitions,
     and maximum water extent for different temporal moment at global scale

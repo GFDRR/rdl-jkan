@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Population and household data extracted from Kenya's 2009 national
     census conducted by the Kenya National Bureau of Statistics, aggregated at sub-location

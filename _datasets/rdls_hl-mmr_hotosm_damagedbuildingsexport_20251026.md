@@ -55,7 +55,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Local OpenStreetMap mappers conducted crowdsourced damage assessment
     by comparing pre- and post-disaster satellite imagery (Maxar and Planet) to identify

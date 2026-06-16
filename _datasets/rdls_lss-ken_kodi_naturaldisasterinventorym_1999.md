@@ -28,7 +28,7 @@ details: This dataset has been sourced automatically from the Kenya Open data in
   portal
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The National Disaster Inventory is a census-based record compiled by
     Kenya's National Disaster Preparedness Centre documenting natural disaster events

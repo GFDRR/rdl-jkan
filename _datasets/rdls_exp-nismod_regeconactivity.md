@@ -233,7 +233,7 @@ lineage:
     url: https://ghsl.jrc.ec.europa.eu/
     used_in: exposure
   - id: source_overture
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0/
     name: Overture Maps Places
     risk_data_type: null
     type: dataset

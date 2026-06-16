@@ -36,7 +36,7 @@ description: "Para el a\xF1o 2025 la estimaci\xF3n de las Personas en Necesidad 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: PiN and intersectoral severity estimates for Colombia in 2025 were
     generated using the JIAF 2.0 global methodology, which integrates multi-sectoral

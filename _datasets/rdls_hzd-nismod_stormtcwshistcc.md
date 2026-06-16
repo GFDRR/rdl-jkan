@@ -2111,7 +2111,7 @@ hazard:
     id: event_set_storm_cc_tropical_cyclone
     occurrence_range: 1/10 to 1/10000 years
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Tropical cyclone wind speed return period grids produced using the
     STORM (Synthetic Tropical cyclOne geneRation Model) model. Historical storm tracks
@@ -2128,14 +2128,14 @@ lineage:
     url: https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5
     used_in: hazard
   - id: source_2
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: International Best Track Archive for Climate Stewardship (IBTrACS)
     risk_data_type: null
     type: dataset
     url: https://www.ncei.noaa.gov/products/international-best-track-archive
     used_in: hazard
   - id: source_3
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: STORM - Synthetic Tropical cyclOne geneRation Model
     risk_data_type: null
     type: dataset

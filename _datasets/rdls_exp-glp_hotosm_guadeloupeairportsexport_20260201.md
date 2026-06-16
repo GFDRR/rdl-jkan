@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Airport and aerodrome infrastructure features were extracted from OpenStreetMap
     using standardized tag queries (aeroway, building=aerodrome, emergency:helipad,

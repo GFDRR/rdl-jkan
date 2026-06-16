@@ -34,7 +34,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC0-1.0.html
+license: CC0-1.0
 lineage:
   description: The Gridded Livestock of the World maps (GLW) show the density of eight
     different livestock animals in 2010 and 2015.

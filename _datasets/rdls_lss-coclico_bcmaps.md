@@ -36,7 +36,7 @@ description: 'Damage Costs of Exposed Buildings evaluates the potential damage c
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Damage Costs of Exposed Buildings evaluates the potential damage costs
     to coastal buildings from flooding under different climate change and sea level

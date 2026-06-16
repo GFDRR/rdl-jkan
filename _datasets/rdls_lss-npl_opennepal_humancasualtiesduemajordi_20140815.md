@@ -28,7 +28,7 @@ description: 'This dataset contains human casualties due to major disater such a
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Human casualty data extracted from Nepal's Environmental Statistics
     2013 publication, compiled by the Central Bureau of Statistics from official disaster

@@ -36,7 +36,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: A global daily drought index dataset named as daily evapotranspiration
     deficit index (DEDI) is constructed using daily actual evapotranspiration and

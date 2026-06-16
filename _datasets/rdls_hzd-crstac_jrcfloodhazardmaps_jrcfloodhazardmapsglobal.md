@@ -37,7 +37,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The datasets included in this collection depict flood prone areas in
     Europe and the World for river flood events of different magnitude, i.e. different

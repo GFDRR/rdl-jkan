@@ -25,7 +25,7 @@ description: 'The location of centralized IDP was extracted from geotag photos o
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Centralized IDP locations were extracted from geotagged photographs
     of displacement sites in Mamuju, West Sulawesi following an earthquake event.

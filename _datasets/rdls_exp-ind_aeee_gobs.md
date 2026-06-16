@@ -68,7 +68,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Building footprint, height, and land use dataset for India produced
     by the Alliance for an Energy Efficient Economy (AEEE). Building footprints and
@@ -98,7 +98,7 @@ lineage:
     url: https://sites.research.google/gr/open-buildings/temporal/
     used_in: exposure
   - id: source_3
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0/
     name: OpenStreetMap
     risk_data_type: null
     type: dataset

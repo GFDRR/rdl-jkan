@@ -18,7 +18,7 @@ description: 'GDP projections per SSP from 2030-2100 at 30 arc seconds resolutio
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Global gridded GDP datasets consistent with the shared socioeconomic
     pathways (Wang & Sun 2022)

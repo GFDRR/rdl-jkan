@@ -56,7 +56,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: "Commercial establishment locations and attributes were compiled from\
     \ three sources: official business registry (C\xE1mara de Comercio de la Guajira),\

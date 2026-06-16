@@ -410,14 +410,14 @@ lineage:
     url: null
     used_in: hazard
   - id: source_gem_ged4all
-    license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+    license: CC-BY-NC-SA-4.0
     name: GEM Foundation Global Seismic Risk Model - GED4ALL Exposure Database
     risk_data_type: null
     type: dataset
     url: https://www.globalquakemodel.org/gem
     used_in: exposure
   - id: source_freetown_portfolio
-    license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+    license: CC-BY-NC-SA-4.0
     name: Freetown building portfolio (disaggregated exposure)
     risk_data_type: null
     type: dataset

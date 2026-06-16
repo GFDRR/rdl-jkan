@@ -19,7 +19,7 @@ description: 'Tasas departamentales, municipales y tasa nacional de variables co
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Administrative registry compiled by OCHA Colombia aggregating departmental
     and municipal-level impact data from conflict-violence and natural disaster events

@@ -33,7 +33,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The World Settlement Footprint (WSF) is a 10m resolution binary mask
     outlining the extent of human settlements globally derived by means of multitemporal

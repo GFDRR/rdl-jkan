@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event registry data compiled by the Colombian Presidential Program
     for Comprehensive Action Against Antipersonnel Mines, documenting all recorded

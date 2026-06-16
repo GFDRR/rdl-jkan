@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Water and sanitation facility locations were collected through community-based
     participatory mapping by Map Kibera and compiled into a spatial registry (shapefile)

@@ -35,7 +35,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/ODbL-1.0.html
+license: ODbL-1.0
 lineage:
   description: The Global SPEI database, SPEIbase, offers long-time, robust information
     about drought conditions at the global scale, with a 0.5 degrees spatial resolution

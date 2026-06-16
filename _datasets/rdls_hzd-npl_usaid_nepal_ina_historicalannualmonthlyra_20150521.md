@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Rainfall data were collected from approximately 200 meteorological
     stations operated by the Government of Nepal's Department of Hydrology and Meteorology

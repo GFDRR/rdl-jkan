@@ -58,7 +58,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Thermal hotspot data are collected from VIIRS and MODIS satellite sensors
     and processed by NASA LANCE and EOSDIS systems to detect active fire thermal signatures.

@@ -27,7 +27,7 @@ description: "Resultados del c\xE1lculo del PiN para el \xE1rea de responsabilid
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: PiN 2025 severity and needs assessment calculated for Colombia's child
     protection area of responsibility by aggregating indicators across recruitment,

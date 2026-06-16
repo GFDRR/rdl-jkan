@@ -38,7 +38,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+license: CC-BY-NC-SA-4.0
 lineage:
   description: 'Geographical Resolutions Available (with count): 1. Province (6) 2.
     Island (61) 3. Area Council (62) 4. Enumeration Area (624)'

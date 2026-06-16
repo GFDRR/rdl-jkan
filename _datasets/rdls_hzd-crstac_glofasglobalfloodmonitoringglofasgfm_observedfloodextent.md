@@ -34,7 +34,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: A continuous monitoring of floods worldwide by immediately processing
     and analyzing all incoming Copernicus Sentinel-1 Synthetic Aperture Radar (SAR)

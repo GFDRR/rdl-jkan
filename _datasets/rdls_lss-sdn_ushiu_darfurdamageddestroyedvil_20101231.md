@@ -29,7 +29,7 @@ details: All data are strictly unclassified with no restrictions on distribution
   Accuracy of geographic data is not assured by the U.S. Department of State.
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Village-level damage assessments were compiled by the U.S. Department
     of State Humanitarian Information Unit through government confirmation processes

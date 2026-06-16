@@ -64,7 +64,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA combines historical hazard occurrence data (floods, droughts,
     earthquakes, landslides 1905-2015) with multi-year food security trend analysis

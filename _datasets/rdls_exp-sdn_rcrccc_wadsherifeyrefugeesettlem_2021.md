@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Building footprints were collected through OpenStreetMap via a Humanitarian
     OpenStreetMap Team (HOT) task coordinated by the Netherlands Red Cross Missing

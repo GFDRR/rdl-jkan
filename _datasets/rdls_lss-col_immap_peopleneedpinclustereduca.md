@@ -26,7 +26,7 @@ description: "La base de datos contiene los c\xE1lculos de People in Need (PiN) 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: People in Need calculations derived from Ministry of Education registry
     data, processed through the Colombia Humanitarian Programme Cycle 2022 methodology

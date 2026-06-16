@@ -27,7 +27,7 @@ details: This dataset has been made available on HDX by a direct link to Regiona
   Centre for mapping of Resources for development portal
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: FEWS Net conducted sample surveys and integrated drought hazard information
     with population vulnerability data to classify food insecurity phases at administrative

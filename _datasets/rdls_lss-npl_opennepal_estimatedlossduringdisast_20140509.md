@@ -27,7 +27,7 @@ description: 'This data set include impact of disaster i.e estimated loss due to
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Post-event disaster impact data compiled by Nepal's Ministry of Home
     and Affairs from official disaster reports covering 2012-2013. Economic losses

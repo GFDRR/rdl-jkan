@@ -68,7 +68,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Critical infrastructure point and polygon data were compiled from multiple
     national government sources including the National Disaster Management Centre,

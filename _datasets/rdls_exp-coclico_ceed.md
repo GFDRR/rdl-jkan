@@ -34,7 +34,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: EU-wide high-resolution object-based maps of economic assets and infrastructure
     systems in coastal flood-prone areas that combined the automated extraction of

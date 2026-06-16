@@ -27,7 +27,7 @@ description: 'This dataset contains the final result of the calculation of sever
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The dataset applies the Global Protection Cluster methodology to calculate
     severity indices and Population in Need estimates for protection-related humanitarian

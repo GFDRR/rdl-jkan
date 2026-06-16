@@ -71,7 +71,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA integrates multi-year food security trend data from SETSAN
     and VAC surveys with historical hazard occurrence maps (flood 1975-2012, drought

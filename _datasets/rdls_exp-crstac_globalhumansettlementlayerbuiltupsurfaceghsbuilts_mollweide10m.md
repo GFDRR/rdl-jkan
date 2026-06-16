@@ -34,7 +34,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: GHS built-up surface spatial raster dataset, derived from Sentinel-2
     composite (2018) and Landsat, multitemporal (1975-2030)

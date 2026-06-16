@@ -36,7 +36,7 @@ description: 'Cost-benefit Analysis of Coastal Adaptation identifies the most co
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Cost-benefit Analysis of Coastal Adaptation identifies the most cost-effective
     adaptation strategies - protection, retreat, or accommodation - to manage coastal

@@ -33,7 +33,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'A global coastal digital terrain model, based on CopernicusDEM, ESA
     WorldCover, ICESat-2 and GEDI data. For more information, see Pronk et al. (2024)

@@ -200,7 +200,7 @@ hazard:
     id: event_set_debris_flow_quito
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities
     GCRF Urban Disaster Risk Hub. OpenStreetMap building footprints were classified
@@ -215,7 +215,7 @@ lineage:
     from the JRC European flood damage database.
   sources:
   - id: source_1
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: Building footprints and exposure data
     risk_data_type: null
     type: dataset

@@ -32,7 +32,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/ODbL-1.0.html
+license: ODbL-1.0
 lineage:
   description: Coastal mask that is derived from Copernicus elevation data combined
     with a maximum distanceto coastal water bodies.

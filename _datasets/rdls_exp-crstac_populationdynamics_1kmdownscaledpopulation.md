@@ -38,7 +38,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Global urban, rural, and total population projection grids have been
     produced based on Shared Socioeconomic Pathways (SSPs) at resolutions of one km

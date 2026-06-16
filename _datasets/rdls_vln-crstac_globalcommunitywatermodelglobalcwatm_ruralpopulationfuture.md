@@ -21,7 +21,7 @@ description: 'Percentage of total population in a country or region that lives i
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/GNU General Public License.html
+license: GPL
 lineage:
   description: Global CWatM is based on the IIASA Community Water Model (CWatM)
   sources:

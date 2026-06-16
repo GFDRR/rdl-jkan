@@ -33,7 +33,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/ODbL-1.0.html
+license: ODbL-1.0
 lineage:
   description: OpenStreetMap is a free, editable map of the whole world that is being
     built by volunteers largely from scratch and released with an open-content license.

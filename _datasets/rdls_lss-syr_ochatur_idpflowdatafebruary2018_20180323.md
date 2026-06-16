@@ -54,7 +54,7 @@ description: 'Data contains Syria IDP arrival estimations for February 2018, Jan
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IDP flow data consolidated from multiple OCHA regional hubs (Turkey,
     Jordan, Damascus), PMI, and CCCM cluster, each applying their own defined methodology

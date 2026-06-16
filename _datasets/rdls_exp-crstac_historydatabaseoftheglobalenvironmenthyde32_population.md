@@ -32,7 +32,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: This database presents an update and expansion of the History Database
     of the Global Environment (HYDE, v 3.2.1). HYDE is and internally consistent combination

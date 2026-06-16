@@ -29,7 +29,7 @@ details: The numbers reflect people who have been assessed and verified as affec
   has not resulted in flooding yet
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event flood impact data compiled from direct observational reports
     and anecdotal information provided by humanitarian partners operating in South

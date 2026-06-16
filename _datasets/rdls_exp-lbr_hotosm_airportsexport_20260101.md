@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: OpenStreetMap contributors provided volunteered geographic information
     on airport and helipad infrastructure in Liberia. Features were extracted using

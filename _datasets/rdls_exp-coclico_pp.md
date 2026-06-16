@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Population projections (regionalised) provide insights into current
     and future population dynamics. The produced grids have a spatial resolution of

@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Building damage data collected through direct field observation and
     anecdotal reports by UNFPA Indonesia following the West Sulawesi earthquake event,

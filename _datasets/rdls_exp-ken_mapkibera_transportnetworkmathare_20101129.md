@@ -40,7 +40,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Transport network geometry was collected through community-based mapping
     by Map Kibera and compiled into a shapefile registry of routes in the Mathare

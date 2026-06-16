@@ -18,7 +18,7 @@ description: 'Flood affected people in Sudan by state for the last few years.. [
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Flood-affected population data compiled from administrative records
     and humanitarian assessments by OCHA Sudan covering the period 2013-2021, aggregated

@@ -33,7 +33,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The Annual Global High-Resolution Extreme Heat Estimates (GEHE), 1983-2016
     data set provides global 0.05 degrees (~5 km) gridded annual counts of the number

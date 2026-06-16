@@ -27,7 +27,7 @@ description: 'This datasets include Maldives Disaster Record recorded in Desinve
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Historical disaster records from the Desinventar database were extracted
     for Maldives and cleaned by the Faculty of Engineering, Science and Technology

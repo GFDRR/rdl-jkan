@@ -31,7 +31,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-NC-SA-4.0.html
+license: CC-BY-NC-SA-4.0
 lineage:
   description: The World Database on Protected Areas (WDPA) is the most comprehensive
     global database of marine and terrestrial protected areas. It is a joint project

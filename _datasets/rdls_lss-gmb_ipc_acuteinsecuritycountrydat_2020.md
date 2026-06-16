@@ -30,7 +30,7 @@ description: 'The IPC Acute Food Insecurity (IPC AFI) classification provides st
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The dataset aggregates IPC Acute Food Insecurity classifications produced
     by Gambia's National IPC Technical Working Group using the standardized IPC Manual

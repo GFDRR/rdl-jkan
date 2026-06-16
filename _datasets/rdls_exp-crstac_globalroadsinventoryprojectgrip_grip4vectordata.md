@@ -32,7 +32,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC0-1.0.html
+license: CC0-1.0
 lineage:
   description: The Global Roads Inventory Project (GRIP) dataset was developed to
     provide a more recent and consistent global roads dataset for use in global environmental

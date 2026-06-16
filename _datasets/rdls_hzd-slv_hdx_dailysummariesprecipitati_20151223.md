@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Daily precipitation data were collected from weather stations across
     El Salvador by NOAA/NCEI. Stations were filtered to meet a 30-year record requirement

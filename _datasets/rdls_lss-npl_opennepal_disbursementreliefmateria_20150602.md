@@ -27,7 +27,7 @@ description: 'This datasets contain list of all food and non food items which ar
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Relief material disbursement records were collected by local bodies
     in earthquake-affected districts of Nepal and compiled by the Nepal Disaster Risk

@@ -44,7 +44,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: OpenStreetMap features tagged as populated places (cities, towns, villages,
     hamlets, isolated dwellings) or residential landuse were extracted for Sierra

@@ -25,7 +25,7 @@ description: 'Building Exposure Model: This global dataset on exposure includes 
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-3.0-IGO.html
+license: https://creativecommons.org/licenses/by-sa/3.0/igo/
 lineage:
   description: The Global Infrastructure Risk Model and Resilience Index (GIRI) is
     the first publicly available, fully probabilistic risk model to estimate risk

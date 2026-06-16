@@ -43,7 +43,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Power infrastructure features were extracted from OpenStreetMap using
     tag-based filtering (power=tower and power=line) for Mokwa Town, Nigeria. Data

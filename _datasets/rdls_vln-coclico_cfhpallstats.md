@@ -24,7 +24,7 @@ description: 'This dataset combines local administrative units (LAUs) with NUTS2
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: This dataset combines local administrative units (LAUs) with NUTS2
     and NUTS3 classifications and aggregates flood statistics for multiple scenarios.

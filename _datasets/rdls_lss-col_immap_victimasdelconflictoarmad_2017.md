@@ -28,7 +28,7 @@ description: "Esta base de datos, extra\xEDda del portal de datos abiertos de la
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Administrative registry data extracted from the Colombian government's
     UARIV open data portal, documenting individual victimization events from armed

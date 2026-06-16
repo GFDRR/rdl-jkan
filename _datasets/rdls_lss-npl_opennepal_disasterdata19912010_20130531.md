@@ -26,7 +26,7 @@ description: 'The dataset includes the disasters that occurred in Nepal from the
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Historical disaster impact data compiled from DesInventar, a global
     disaster inventory system, documenting reported events in Nepal from 1971-1990

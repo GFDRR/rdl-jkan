@@ -46,7 +46,7 @@ description: "La metodolog\xEDa para el c\xE1lculo de personas en necesidad -PiN
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The PiN dataset applies the global JIAF methodology to Colombia 2023
     HNO, integrating primary needs assessments (MIRA/MIRE/WASH), secondary indicators

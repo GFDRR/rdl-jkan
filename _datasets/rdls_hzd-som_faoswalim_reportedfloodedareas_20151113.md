@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Flooded area extents were identified and mapped through sample survey
     methodology conducted by FAO SWALIM across Somalia. The survey data was compiled

@@ -213,7 +213,7 @@ hazard:
     id: event_set_flood_daressalaam
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities
     GCRF Urban Disaster Risk Hub. OpenStreetMap building footprints were classified
@@ -228,7 +228,7 @@ lineage:
     from the JRC European flood damage database.
   sources:
   - id: source_1
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0/
     name: OpenStreetMap building footprints
     risk_data_type: null
     type: dataset
@@ -270,7 +270,7 @@ lineage:
     url: null
     used_in: vulnerability
   - id: source_7
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: HAZUS infrastructure fragility functions
     risk_data_type: null
     type: model

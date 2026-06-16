@@ -29,7 +29,7 @@ description: "Para el a\xF1o 2024 la estimaci\xF3n de las Personas en Necesidad 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The dataset was produced using the JIAF 2.0 global methodology, which
     integrates multi-sectoral humanitarian indicators across clusters (health, shelter,

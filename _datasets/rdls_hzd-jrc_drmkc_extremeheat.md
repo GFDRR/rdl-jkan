@@ -108,7 +108,7 @@ hazard:
     id: Extreme_Heat_Hazard
     occurrence_range: 1/5 to 1/100 years
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: null
   sources:

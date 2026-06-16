@@ -51,7 +51,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Daily precipitation and snow measurements were collected from weather
     base stations across Democratic Republic of Congo by NOAA's National Centers for

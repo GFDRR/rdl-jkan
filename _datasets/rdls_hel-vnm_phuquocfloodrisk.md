@@ -508,7 +508,7 @@ lineage:
     tourist populations from current and projected density datasets.
   sources:
   - id: source_hecras
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: HEC-RAS 2D hydraulic model
     risk_data_type: null
     type: model

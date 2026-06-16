@@ -31,7 +31,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The Critical Infrastructure Spatial Index (CISI) is calculated from
     39 critical infrastructure types (e.g. airports, clinics, landfills, reservoirs,

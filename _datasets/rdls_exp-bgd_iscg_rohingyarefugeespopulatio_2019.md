@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Rohingya refugee population estimates were generated through triangulation
     of visual observations from key informants and data from RRRC-UNHCR Family Counting

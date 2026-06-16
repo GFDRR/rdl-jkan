@@ -54,7 +54,7 @@ description: 'Data contains Syria IDP arrival estimations for January 2018, Janu
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IDP flow data consolidated from multiple humanitarian coordination
     hubs (Turkey, Jordan, Damascus) using their established tracking methodologies.

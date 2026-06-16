@@ -89,7 +89,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA combines multi-year food security trend data (2013-2017) with
     natural shock risk layers (flood risk 2013, drought risk 1981-2015) and exposure

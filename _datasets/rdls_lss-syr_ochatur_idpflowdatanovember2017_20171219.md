@@ -54,7 +54,7 @@ description: 'Data contains Syria IDP arrival estimations for November 2017, Jan
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IDP flow data consolidated from multiple humanitarian coordination
     hubs (Turkey, Jordan, Damascus) and cluster partners using their established tracking

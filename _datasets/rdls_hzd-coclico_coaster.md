@@ -39,7 +39,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Coastal Change Segments uses the historical shoreline change regime
     from the ''Coastal Typologies and Erosion for Risk'' (CoasTER) database which

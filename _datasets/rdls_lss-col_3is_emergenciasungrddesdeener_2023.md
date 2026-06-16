@@ -26,7 +26,7 @@ description: 'Datos de emergencias de la UNGRD desde Enero 2023 a Agosto 2024 a 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event emergency impact data compiled by UNGRD from January 2023
     to August 2024, aggregated monthly at municipal level across Colombian departments.

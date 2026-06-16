@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Education facility features were extracted from the OpenStreetMap database
     using tag filters (amenity/building IN kindergarten, school, college, university)

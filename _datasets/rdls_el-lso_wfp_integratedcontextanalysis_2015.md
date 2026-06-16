@@ -81,7 +81,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA combines multi-year food security trends (2010-2015) with natural
     shock risk data derived from observed flood (2013), drought (1998-2013), and land

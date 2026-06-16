@@ -34,7 +34,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: GHS settlement layers, application of the Degree of Urbanisation methodology
     (stage I) to GHS-POP R2023A and GHS-BUILT-S R2023A, multitemporal (1975-2030)

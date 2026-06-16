@@ -32,7 +32,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: This dataset merges Google's V3 Open Buildings and Microsoft's latest
     Building Footprints.

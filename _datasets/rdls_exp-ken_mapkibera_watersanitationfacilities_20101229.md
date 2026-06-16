@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Water and sanitation facilities were inventoried through community-based
     participatory mapping by Map Kibera in Mukuru settlements. The registry data was

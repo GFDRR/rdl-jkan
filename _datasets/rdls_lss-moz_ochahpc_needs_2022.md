@@ -38,7 +38,7 @@ details: Humanitarian needs data up to 2024 were provided manually from OCHA fie
   automatically through OCHA's HPC tools API.
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The dataset aggregates humanitarian needs assessments compiled by UNOCHA
     on behalf of the Humanitarian Country Team, integrating multi-sector cluster analyses

@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Building footprints were extracted from OpenStreetMap, a crowdsourced
     geographic database maintained by volunteer contributors. The dataset was compiled

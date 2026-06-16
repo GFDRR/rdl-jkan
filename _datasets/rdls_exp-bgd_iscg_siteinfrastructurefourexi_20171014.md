@@ -85,7 +85,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Multi-agency field data collection using GPS in four makeshift refugee
     settlements (KMS, BMS, LMS, Shamlapur) in July 2017, capturing spatial locations

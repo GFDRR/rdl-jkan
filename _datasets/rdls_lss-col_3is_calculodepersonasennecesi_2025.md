@@ -62,7 +62,7 @@ description: "Esta base contiene el resultado final del c\xE1lculo las Personas 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The dataset integrates population baseline data from DANE with multi-sectoral
     WASH indicators (water access, sanitation, waste collection), health surveillance

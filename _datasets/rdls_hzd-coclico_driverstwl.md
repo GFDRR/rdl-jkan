@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Drivers of Total Water Level indicate the (statistical) contributions
     of the individual components (drivers) in the Total Water Level (TWL). These are

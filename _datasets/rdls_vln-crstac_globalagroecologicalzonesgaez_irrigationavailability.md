@@ -17,7 +17,7 @@ description: 'Cropland equipped for full control irrigation (%) [Source: This me
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-NC-SA-4.0.html
+license: CC-BY-NC-SA-4.0
 lineage:
   description: GAEZ v4 is the most ambitious global assessment to date and this Data
     Portal has been developed to make the database widely and easily accessible for

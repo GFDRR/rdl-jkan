@@ -37,7 +37,7 @@ description: 'This dataset provides a globally consistent, high-resolution (100 
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'This dataset provides a globally consistent, high-resolution (100
     m) coastal typology, derived from satellite imagery and elevation data using a

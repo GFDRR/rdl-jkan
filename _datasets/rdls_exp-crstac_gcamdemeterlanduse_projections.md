@@ -36,7 +36,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/ODC-By-1.0.html
+license: ODbL-1.0
 lineage:
   description: The dataset includes the projected global gridded land cover (excluding
     the Antarctic) for the period of 2015-2100 at 0.05-degree resolution and 5-year

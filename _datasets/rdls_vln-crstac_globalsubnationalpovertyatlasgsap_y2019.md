@@ -19,7 +19,7 @@ description: 'This data entry includes lined-up subnational poverty estimates (b
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: This data entry includes lined-up subnational poverty estimates (based
     on international poverty line(s)) in 2019 for more than 168 economies at the administrative

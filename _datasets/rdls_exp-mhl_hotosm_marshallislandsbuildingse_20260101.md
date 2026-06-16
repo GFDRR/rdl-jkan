@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Building footprints and attributes were extracted from OpenStreetMap
     for the Marshall Islands region. The dataset represents approximately 100% coverage

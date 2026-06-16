@@ -78,7 +78,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA combines multi-year food security trend data (2011-2019) with
     observed natural hazard data (flood extent from 2013, drought recurrence from

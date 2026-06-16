@@ -652,7 +652,7 @@ lineage:
     url: https://human-settlement.emergency.copernicus.eu/ghs_buS2023.php
     used_in: exposure
   - id: source_osm_networks
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0/
     name: OpenStreetMap road and rail networks
     risk_data_type: null
     type: dataset
@@ -673,7 +673,7 @@ lineage:
     url: https://doi.org/10.5281/zenodo.3628142
     used_in: exposure
   - id: source_natural_earth
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: Natural Earth Admin 0 Map Units
     risk_data_type: null
     type: dataset

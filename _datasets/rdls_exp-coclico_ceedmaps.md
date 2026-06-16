@@ -39,7 +39,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Critical infrastructure represents EU-wide high-resolution object-based
     maps of economic assets and infrastructure systems in coastal flood-prone areas.

@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Direct observational field survey data collected end of December 2017
     documenting water supply infrastructure (reservoirs, water points, taps, distribution

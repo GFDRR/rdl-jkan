@@ -63,7 +63,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Road network geometries were digitized from multiple sources including
     Site Planning and Development taskforce records, UAV satellite imagery, GPS field

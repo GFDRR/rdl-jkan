@@ -48,7 +48,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Road network data was collected through OpenStreetMap volunteered geographic
     information contributions and processed by the Humanitarian OpenStreetMap Team's

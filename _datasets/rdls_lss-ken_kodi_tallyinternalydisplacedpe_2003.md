@@ -27,7 +27,7 @@ description: 'This data-set shows the Number of people affected by Disasters in 
 details: This dataset has been sourced from Kenya open data portal
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event impact data compiled from the National Disaster inventory
     maintained by Kenya's National Disaster preparedness centre, recording internally

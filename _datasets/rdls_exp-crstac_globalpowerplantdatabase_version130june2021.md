@@ -35,7 +35,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The Global Power Plant Database is a comprehensive, open source database
     of power plants around the world. It centralizes power plant data to make it easier

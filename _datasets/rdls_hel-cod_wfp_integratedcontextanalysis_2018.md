@@ -81,7 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA integrates multi-year food security trend data (EFSA 2012-2018)
     with climate-related natural shock risk assessments to identify sub-national areas

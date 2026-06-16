@@ -81,7 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: 'The data has been produced using the Fathom global flood hazard modelling
     framework (a development of Sampson et al., 2015 and Smith et al., 2015). The

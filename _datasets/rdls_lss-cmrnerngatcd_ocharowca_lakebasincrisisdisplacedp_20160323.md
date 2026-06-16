@@ -41,7 +41,7 @@ details: Only includes those administrative level 1 units which are considered t
   have displacement driven primarily by the conflict in the Lake Chad region.
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Displacement figures aggregated from IOM, UNHCR, and UNOCHA sources
     tracking population movements in the Lake Chad Basin Crisis. Data compiled through

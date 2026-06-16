@@ -79,7 +79,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Primary data collected through direct observation using KoboToolbox
     in Sotik and Chepalungu subcounties by IFRC-coordinated teams including Community
