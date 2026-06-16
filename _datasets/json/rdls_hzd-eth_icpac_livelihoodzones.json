@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-eth_icpac_livelihoodzones",
+      "title": "Ethiopia Livelihood zones",
+      "description": "Livelihood zone maps define geographic areas of a country where people generally share similar options for obtaining food and income and similar access to markets. An understanding of geographic livelihood systems is a key component in Vulnerability Assesment for both Drought and Floods - The livelihood zones of resolution approximately 5000 metres ( 0.05×0.05) Referenced September 2019 [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net"
+      },
+      "purpose": "component : Exposure Relationship to vulnerability component - Positive Zones in drought prone areas tend to be less vulnerable if they are characterized by multiple livelihood options (This is tied to other factors such as income levels).",
+      "contact_point": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net/api/v2/users/1001"
+      },
+      "creator": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net/api/v2/users/1001"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ],
+        "bbox": [
+          33.083,
+          3.433,
+          47.933,
+          14.833
+        ]
+      },
+      "temporal": {
+        "central_year": 2025
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IGAD DRM Team",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Ethiopia Livelihood zones (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:Normalized_Biomes",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:Normalized_Biomes&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "Ethiopia Livelihood zones (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:Normalized_Biomes",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:Normalized_Biomes",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/Normalized_Biomes:geonode:Normalized_Biomes",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

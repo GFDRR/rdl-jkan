@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-mdg_grma_pm10dustproxy",
+      "title": "Tiomena Particulate Matter PM10 (CAMS)",
+      "description": "This dataset provides the sub-daily atmospheric concentrations of particulate matter with a diameter smaller than 10 micrometers (PM10).",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Global Risk Modelling Alliance",
+        "url": "https://grma.global"
+      },
+      "version": "1.0",
+      "purpose": "This dataset was developed during the first phase of GRMA's project in Madagascar. This project aimed at updating Madagascar's risk profile, and see the risk evolution under climate change.",
+      "project": {
+        "name": "GRMA Madagascar - Phase 1",
+        "url": "https://www.resiliencemada.gov.mg"
+      },
+      "details": "This dataset is used as a proxy for dust storms occurence, it is extracted over Madagascar from the CAMS global reanalysis EAC4 (ECMWF Atmospheric Composition Reanalysis 4) at a 0.75° resolution, available from 2003 to 2023 (Inness et al., 2019). Daily average values were computed to produce the statistics.",
+      "contact_point": {
+        "name": "AXA Climate",
+        "email": "science@axaclimate.com"
+      },
+      "creator": {
+        "name": "AXA Climate",
+        "url": "https://climate.axa"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "referenced_by": [
+        {
+          "author_names": [
+            "Inness, A., Ades, M., Agustí-Panareda, A., Barré, J., Benedictow, A., Blechschmidt, A.-M., Dominguez, J. J., Engelen, R., Eskes, H., Flemming, J., Huijnen, V., Jones, L., Kipling, Z., Massart, S., Parrington, M., Peuch, V.-H., Razinger, M., Remy, S., Schulz, M., and Suttie, M."
+          ],
+          "name": "The CAMS reanalysis of atmospheric composition",
+          "url": "https://acp.copernicus.org/articles/19/3515/2019/",
+          "doi": "https://doi.org/10.5194/acp-19-3515-2019",
+          "id": "reference_bguYe1Yo"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_jb84s2Hu",
+          "title": "CAMS Reanalysis",
+          "description": "CAMS global reanalysis EAC4 (ECMWF Atmospheric Composition Reanalysis 4) in netcdf format.",
+          "spatial_resolution": 75000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://ads.atmosphere.copernicus.eu/datasets/cams-global-reanalysis-eac4",
+          "download_url": "https://ads.atmosphere.copernicus.eu/datasets/cams-global-reanalysis-eac4",
+          "temporal": {
+            "start": "2003",
+            "end": "2023"
+          },
+          "media_type": "application/netcdf"
+        },
+        {
+          "id": "resource_ouyEI56f",
+          "title": "Crops location",
+          "description": "High resolution land cover from ESA's WorldCover data v200. The field crops grid points are extracted to describe agricultural regions that could be exposed to Tiomena.",
+          "spatial_resolution": 10,
+          "access_url": "https://www.resiliencemada.gov.mg/catalogue/#/dataset/1162",
+          "download_url": "https://www.resiliencemada.gov.mg/catalogue/#/dataset/1162",
+          "temporal": {
+            "start": "2021",
+            "end": "2021"
+          },
+          "coordinate_system": "EPSG:4326",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "id": "resource_eIpuXA7j",
+          "title": "Population exposure dataset",
+          "description": "WordPop population count dataset for Madagascar (2020). The original dataset was aggregated to 10km resolution.",
+          "spatial_resolution": 10000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://www.worldpop.org/",
+          "download_url": "https://www.worldpop.org/",
+          "temporal": {
+            "start": "2020",
+            "end": "2020"
+          },
+          "media_type": "image/tiff;application=geotiff",
+          "spatial_aggregation": "10km resolution grid cells"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_dust_001",
+            "hazards": [
+              {
+                "id": "hazard_dust_001",
+                "type": "strong_wind",
+                "process": "extratropical_cyclone",
+                "intensity_measure": "MHI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

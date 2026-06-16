@@ -1,0 +1,115 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-som_icpac_livelihoodzones",
+      "title": "Somalia Livelihood Zones",
+      "description": "Livelihood zones - Anthromes (Anthropogenic Biomes) represent the globally significant patterns of Earth's ecology created and sustained by human populations and their use of land, including Intensive anthromes (dense settlements, villages, croplands, and rangelands), Cultured anthromes (low intensity use woodlands and drylands), and Wildlands without evidence of human populations or land use. These maps illustrate human cultural transformation and use of the terrestrial biosphere over the past 12,000 years at 60 time points between 10,000 BCE and 2017 CE, at the scale of regional landscapes (~100 km2), using a Discrete Global Grid system (DGG) that divides Earth's land into 1,429,024 equal area hexagons. [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net"
+      },
+      "details": "Processing Guide Download the Anthromes-12k-DGG shapefile from Anthromes 12K DGG (V1) Full Dataset - Anthromes 12K DGG Dataverse. Load the file in your QGIS and export the id and 2017AD columns to a csv. Re-rank the anthromes in the 2017AD column for each id based on your thematic expertise analysis (as suggested in the sample ranking above). Export your results into a new CSV, do a join with the shapefile, and map based on the new ranking.",
+      "contact_point": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net/api/v2/users/1001"
+      },
+      "creator": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net/api/v2/users/1001"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ],
+        "bbox": [
+          40.976011762,
+          -1.686411878,
+          51.426011762,
+          12.013588122
+        ]
+      },
+      "temporal": {
+        "central_year": 2025
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IGAD DRM Team",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Somalia Livelihood Zones (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:som_Livelihood_zones1_normalized",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:som_Livelihood_zones1_normalized&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "Somalia Livelihood Zones (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:som_Livelihood_zones1_normalized",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:som_Livelihood_zones1_normalized",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "natural_environment",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "economic_indicator",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "index",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/som_Livelihood_zones1_normalized:geonode:som_Livelihood_zones1_normalized",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

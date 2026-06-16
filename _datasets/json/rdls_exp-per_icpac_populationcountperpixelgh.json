@@ -1,0 +1,101 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-per_icpac_populationcountperpixelgh",
+      "title": "Population Count per pixel for GHA region 2015",
+      "description": "The population count for a pixel size of 1km x 1km is provided to show distribution and patterns of population agglomeration in the GHA region. The estimate is given for 2015. [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net"
+      },
+      "contact_point": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "creator": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PER"
+        ],
+        "bbox": [
+          21.838949203491335,
+          -11.745695112739995,
+          51.41394920349154,
+          23.145971553926913
+        ]
+      },
+      "temporal": {
+        "central_year": 2017
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ICPAC",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Population Count per pixel for GHA region 2015 (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:population2015_sedac",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:population2015_sedac&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "Population Count per pixel for GHA region 2015 (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:population2015_sedac",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:population2015_sedac",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/population2015_sedac:geonode:population2015_sedac",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

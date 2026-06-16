@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-gha_icpac_ghahospitals",
+      "title": "GHA_HOSPITALS",
+      "description": "Shows Hospitals in the East Africa Region Healthsites.io (The Global Healthsites Mapping Project) is a collaborative mapping project that aims to create a free, curated, global dataset of health facility locations and their service information. It integrates with OpenStreetMap (OSM), the world's largest open geographic database. This theme includes all OpenStreetMap features in this area matching ( Learn what tags means here ) : tags['healthcare'] IS NOT NULL OR tags['amenity'] IN ('doctors', 'dentist', 'clinic', 'hospital', 'pharmacy') Features may have these attributes: name name:en amenity building healthcare healthcare:speciality operator:type capacity:persons addr:full addr:city source name:sw This dataset is one of many OpenStreetMap exports on HDX. [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net"
+      },
+      "contact_point": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net/api/v2/users/1001"
+      },
+      "creator": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net/api/v2/users/1001"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GHA"
+        ],
+        "bbox": [
+          22.1589333,
+          -11.289713,
+          50.22922,
+          19.7112135
+        ]
+      },
+      "temporal": {
+        "central_year": 2025
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IGAD DRM Team",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "GHA_HOSPITALS (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:GHA_HOSPITALS",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:GHA_HOSPITALS&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WFS: geonode Service",
+          "description": "GHA_HOSPITALS (OGC WFS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:GHA_HOSPITALS",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geonode:geonode:GHA_HOSPITALS&outputFormat=application%2Fjson",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/icpac_geoportal_data:geonode:GHA_HOSPITALS",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

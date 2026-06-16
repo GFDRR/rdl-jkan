@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-mnp_pacificdata_northernmarianaislandspop",
+      "title": "Northern Mariana Islands Population Grid 2020",
+      "description": "Data Input: HH locations from Broadband Survey 2014 conducted PAPI and GPS. Population at village level extracted from 2010 Census Year Population Growth Rate of 0.51% has been applied to update population up to 2020 HH locations vector layer with population estimates calculated from 2010 Census transformed into a 100m resolution raster. [Source: This metadata record was automatically extracted from the GeoNode portal pacificdata]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Luis Rua",
+        "url": "https://geonode.pacificdata.org"
+      },
+      "contact_point": {
+        "name": "Luis Rua",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/1038"
+      },
+      "creator": {
+        "name": "Luis Rua",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/1038"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MNP"
+        ],
+        "bbox": [
+          144.90801632544702,
+          14.037641379037915,
+          146.19901632544702,
+          15.375641379037914
+        ]
+      },
+      "temporal": {
+        "central_year": 2024
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Luis Rua",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WCS: geonode Service",
+          "description": "Northern Mariana Islands Population Grid 2020 (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:mnp_pop_grid_2020",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__mnp_pop_grid_2020",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "id": "resource_1",
+          "title": "GeoTIFF",
+          "description": "Northern Mariana Islands Population Grid 2020",
+          "media_type": "image/tiff;application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__mnp_pop_grid_2020&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512"
+        },
+        {
+          "id": "resource_2",
+          "title": "OGC WMS: geonode Service",
+          "description": "Northern Mariana Islands Population Grid 2020 (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:mnp_pop_grid_2020",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:mnp_pop_grid_2020&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geonode.pacificdata.org/catalogue/#/dataset/1038",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

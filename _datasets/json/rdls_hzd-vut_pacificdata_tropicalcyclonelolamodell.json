@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-vut_pacificdata_tropicalcyclonelolamodell",
+      "title": "Tropical Cyclone Lola - modelled maximum storm tide_ Vanuatu",
+      "description": "Maximum storm tide around Vanuatu during tropical cyclone Lola simulated by the ADCIRC+SWAN coupled hydrodynamic and wave model developed by OPM-SPC for the PARTneR-2 project. Water levels are in meters from the mean sea level and account for astronomical tide and storm surge (including wave setup but not wave runup). This information supports the verification of the cyclone simulation and the timing between the astronomical tide and the movement of the cyclone and identifies those areas potentially affected by the cyclone's storm tide. [Source: This metadata record was automatically extracted from the GeoNode portal pacificdata]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org"
+      },
+      "purpose": "The dataset was developed as part of the PARTneR 2 project, funded by the New Zealand Ministry of Foreign Affairs and Trade (MFAT) and was jointly delivered by the Pacific Community (SPC) and NIWA, in collaboration with the partner countries. It aimed to help countries in the Pacific become more resilient to the impacts of climate-related hazards, while building on the pilot PARTneR project, which ran from 2016-2019. The project activities included co-developing national risk models and assessment tools. The coastal flood bathtub models were developed for Tonga, Samoa, Cook Islands, Republic of Marshall Islands, Vanuatu and Tuvalu, based on requests from in-country consultations.",
+      "details": "SPC undertook the rapid coastal inundation assessment based on the first available TC vitals after cyclone landfall. Storm surges and waves are simulated with the ADCIRC+SWAN coupled wave circulation model (Dietrich et al., 2011), running in a non-structured mesh. Atmospheric forcings (i.e., surface pressure and winds) are generated with the parametric Dynamic Holland Model (Flemming et al., 2007), and tidal forcing along the boundaries comes from TPXO8 (Egbert and Erofeeva, 2002).",
+      "contact_point": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/817"
+      },
+      "creator": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/817"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ],
+        "bbox": [
+          163.6250322130433,
+          -22.31524043182589,
+          173.00746342564005,
+          -11.80028843137081
+        ]
+      },
+      "temporal": {
+        "central_year": 2024
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "lineage": {
+        "description": "This raster map has been produced with the ADCIRC+SWAN modelling suite using TPXO 8 to define the astronomical tide and the Dynamical Holland Vortex model feed with the official TC track provided by RSMC Fiji to define the meteorological forcing (i.e., wind and atmospheric pressure fields).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Earth and Oceans Observations Team Pacific Community",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "GeoTIFF",
+          "description": "Tropical Cyclone Lola - modelled maximum storm tide_ Vanuatu",
+          "media_type": "image/tiff;application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__tc_lola_zeta_max&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WMS: geonode Service",
+          "description": "Tropical Cyclone Lola - modelled maximum storm tide_ Vanuatu (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:tc_lola_zeta_max",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:tc_lola_zeta_max&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_2",
+          "title": "OGC WCS: geonode Service",
+          "description": "Tropical Cyclone Lola - modelled maximum storm tide_ Vanuatu (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:tc_lola_zeta_max",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__tc_lola_zeta_max",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "convective_storm",
+                "process": "thunderstorm",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geonode.pacificdata.org/catalogue/#/dataset/817",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

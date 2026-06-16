@@ -1,0 +1,374 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hevl-mdg_grma_fluvialfloodrisk",
+      "title": "Fluvial Flood Risk Assessment for Madagascar",
+      "description": "Comprehensive fluvial flood risk assessment for Madagascar, integrating flood hazard maps (maximum depth rasters), economic loss estimates (GDP), and population impact assessments at the commune level (ADM3). The assessment covers historical conditions and projected future scenarios (2050 and 2085) under multiple socioeconomic pathways, combining hydrodynamic flood simulations with spatially distributed economic and demographic exposure data and flood damage functions.",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "vulnerability",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Global Risk Modelling Alliance",
+        "url": "https://grma.global"
+      },
+      "version": "1.0",
+      "purpose": "This dataset was developed during the first phase of GRMA's project in Madagascar. This project aimed at updating Madagascar's risk profile, and see the risk evolution under climate change.",
+      "project": {
+        "name": "GRMA Madagascar - Phase 1",
+        "url": "https://www.resiliencemada.gov.mg"
+      },
+      "details": "This dataset merges three components of Madagascar's fluvial flood risk profile. Hazard: Maximum flood depth rasters (30 m resolution) produced by simulating design flood events across eight return periods with the hydrodynamic model SFINCS, forced by boundary condition hydrographs from the hydrological model WFlow. Historical simulations (1998-2024) used observed GPM precipitation; future simulations used ISIMIP3b discharge projections. Economic exposure: Spatial GDP distribution from LitPop (2020) for baseline and Wang et al. (2023) SSP-based 1 km gridded GDP projections for future scenarios. Population exposure: WorldPop (2020) gridded population at 100 m resolution, validated against INSTAT administrative counts, with Wang et al. (2022) SSP-based 1 km population projections for future scenarios. Vulnerability: Flood damage curves for Sub-Saharan Africa (Englhardt et al., 2019) linking flood depth to relative asset loss.",
+      "contact_point": {
+        "name": "Alvaro Prida",
+        "email": "alvaro.prida@axaclimate.com"
+      },
+      "creator": {
+        "name": "AXA Climate",
+        "url": "https://climate.axa"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_fl_sfincs",
+            "name": "SFINCS hydrodynamic model",
+            "url": "https://sfincs.readthedocs.io/en/latest/",
+            "type": "model",
+            "license": "https://opensource.org/licenses/MIT",
+            "used_in": "hazard",
+            "description": "SFINCS (Super-Fast INundation of CoastS) is a reduced-complexity hydrodynamic model designed for efficient simulation of compound pluvial, fluvial and coastal flooding processes. Lineage: This model was used to simulate design fluvial flood events and generate maximum flood depth rasters for each scenario."
+          },
+          {
+            "id": "source_fl_wflow",
+            "name": "WFlow hydrological model",
+            "url": "https://deltares.github.io/Wflow.jl/dev/",
+            "type": "model",
+            "license": "https://opensource.org/licenses/MIT",
+            "used_in": "hazard",
+            "description": "WFlow is a distributed, process-based hydrological modelling framework used to simulate rainfall-runoff processes and generate discharge and hydrograph boundary conditions. Lineage: This model was used to compute design hydrographs at upstream boundary sections forcing the hydrodynamic fluvial simulations."
+          },
+          {
+            "id": "source_fl_hazard_layers",
+            "name": "Flood hazard layers for Madagascar",
+            "url": "https://www.resiliencemada.gov.mg/catalogue/uuid/b5d5de9e-843a-4384-84f3-6b8d4e1baae9",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "hazard",
+            "description": "Maximum flood depth rasters (30-meter resolution) for fluvial flooding in Madagascar under different return periods, time horizons, and socioeconomic pathways. Lineage: These layers were generated using hydrodynamic and hydrological models for GRMA Madagascar - Phase 1 and serve as hazard inputs for fluvial flood risk calculations."
+          },
+          {
+            "id": "source_fl_litpop_gdp",
+            "name": "LitPop GDP (2020)",
+            "url": "https://climada-python.readthedocs.io/en/stable/user-guide/climada_entity_LitPop.html",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "LitPop GDP gridded dataset representing gridded GDP proxy at high resolution, combining lit (nighttime lights) and population data for 2020. Lineage: Used as an exposure layer to estimate economic asset distribution."
+          },
+          {
+            "id": "source_fl_projected_gdp",
+            "name": "Projected 1 km GDP distributions (2020–2100) under SSPs",
+            "url": "https://zenodo.org/records/7898409",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Gridded GDP projections at 1 km resolution globally from 2020 to 2100 under Shared Socioeconomic Pathways, used to quantify future economic exposure. Lineage: Used to estimate future spatial distribution of economic assets for scenario-based risk assessment."
+          },
+          {
+            "id": "source_fl_worldpop",
+            "name": "WorldPop Population (2020)",
+            "url": "https://hub.worldpop.org/geodata/summary?id=49697",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Gridded population dataset for Madagascar for the year 2020, providing population counts at 100m resolution. Lineage: Used to estimate population exposure to flood hazard."
+          },
+          {
+            "id": "source_fl_instat",
+            "name": "INSTAT Population (Madagascar)",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Administrative-level population counts for Madagascar from the National Institute of Statistics (INSTAT), used to validate gridded population datasets and aggregate exposure to communes. Lineage: Used as a reference and validation for population exposure calculations."
+          },
+          {
+            "id": "source_fl_projected_pop",
+            "name": "Projected 1 km population distributions (2020–2100) under SSPs",
+            "url": "https://figshare.com/articles/dataset/Projecting_1_km-grid_population_distributions_from_2020_to_2100_globally_under_shared_socioeconomic_pathways/19608594",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Gridded population projections at 1 km resolution from 2020 to 2100 derived under Shared Socioeconomic Pathways (SSPs), suitable for exposure analysis in climate risk assessments. Lineage: Used to estimate future population exposure for scenario-based risk assessments."
+          },
+          {
+            "id": "source_fl_damage_curves",
+            "name": "Flood damage curves for Sub-Saharan Africa",
+            "url": "https://nhess.copernicus.org/articles/19/1703/2019/",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "vulnerability",
+            "description": "Economic damage functions for fluvial flooding in Sub-Saharan Africa, linking maximum flood depth to relative asset loss. Lineage: Used to compute economic loss by combining flood hazard layers with asset exposure."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_fl_grma_report",
+          "author_names": [
+            "Prida, A. et al."
+          ],
+          "name": "Rapport méthodologique (GRMA) - English version",
+          "url": "https://www.resiliencemada.gov.mg/catalogue/#/document/1290"
+        },
+        {
+          "id": "reference_fl_litpop",
+          "author_names": [
+            "Eberenz, S., et al."
+          ],
+          "name": "LitPop GDP: High-Resolution Gridded GDP Based on Lights and Population",
+          "url": "https://climada-python.readthedocs.io/en/stable/user-guide/climada_entity_LitPop.html"
+        },
+        {
+          "id": "reference_fl_wang_gdp",
+          "author_names": [
+            "Wang, T., Sun, F."
+          ],
+          "name": "Projecting 1 km-grid GDP distributions from 2020 to 2100 under Shared Socioeconomic Pathways",
+          "date_published": "2022-10-07",
+          "url": "https://www.nature.com/articles/s41597-022-01300-x",
+          "doi": "https://doi.org/10.1038/s41597-022-01300-x"
+        },
+        {
+          "id": "reference_fl_englhardt",
+          "author_names": [
+            "Englhardt et al."
+          ],
+          "name": "Enhancement of large-scale flood risk assessments using building-material-based vulnerability curves for an object-based approach in urban and rural areas",
+          "url": "https://nhess.copernicus.org/articles/19/1703/2019/",
+          "doi": "https://doi.org/10.5194/nhess-19-1703-2019"
+        },
+        {
+          "id": "reference_fl_worldpop",
+          "author_names": [
+            "WorldPop Project"
+          ],
+          "name": "WorldPop Population Count Dataset, Madagascar 2020",
+          "url": "https://hub.worldpop.org/geodata/summary?id=49697"
+        },
+        {
+          "id": "reference_fl_wang_pop",
+          "author_names": [
+            "Wang, T., Sun, F."
+          ],
+          "name": "Projecting 1 km-grid population distributions from 2020 to 2100 globally under shared socioeconomic pathways",
+          "date_published": "2022-04-20",
+          "url": "https://www.nature.com/articles/s41597-022-01675-x",
+          "doi": "https://doi.org/10.1038/s41597-022-01675-x"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_fl_hazard_maps",
+          "title": "Fluvial Flood - Hazard Maps",
+          "description": "Maximum flood depth rasters (30-meter resolution) produced by simulating design flood events with the hydrodynamic model SFINCS, forced by boundary condition hydrographs from WFlow. Covers historical and projected conditions across eight return periods.",
+          "spatial_resolution": 30,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://www.resiliencemada.gov.mg/catalogue/uuid/b5d5de9e-843a-4384-84f3-6b8d4e1baae9",
+          "media_type": "image/tiff;application=geotiff",
+          "spatial_aggregation": "30-metre resolution grid cells"
+        },
+        {
+          "id": "resource_fl_economic_risk",
+          "title": "Fluvial Flood - Economic Risk per Commune",
+          "description": "Aggregated annual average economic loss (GDP) due to fluvial flooding at the commune level (ADM3) in Madagascar, for different time horizons and socioeconomic pathways.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://www.resiliencemada.gov.mg/catalogue/uuid/b5d5de9e-843a-4384-84f3-6b8d4e1baae9",
+          "media_type": "application/geopackage+sqlite3",
+          "spatial_aggregation": "Commune level (administrative level 3, ADM3)"
+        },
+        {
+          "id": "resource_fl_population_risk",
+          "title": "Fluvial Flood - Population Impacts per Commune",
+          "description": "Aggregated annual average affected population due to fluvial flooding at the commune level (ADM3) in Madagascar, for different time horizons and socioeconomic pathways.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://www.resiliencemada.gov.mg/catalogue/uuid/bdf20e69-7399-4079-8cdd-396f38176a36",
+          "media_type": "application/geopackage+sqlite3",
+          "spatial_aggregation": "Commune level (administrative level 3, ADM3)"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_fl_001",
+            "hazards": [
+              {
+                "id": "hazard_fl_001",
+                "trigger": {
+                  "id": "trigger_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood"
+                },
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "frequency_distribution": "generalized_extreme_value",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_economic_001",
+          "metrics": [
+            {
+              "id": "metric_gdp",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "currency",
+                "unit": "USD"
+              }
+            }
+          ],
+          "category": "economic_indicator"
+        },
+        {
+          "id": "exposure_population_001",
+          "metrics": [
+            {
+              "id": "metric_pop",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "category": "population"
+        }
+      ],
+      "vulnerability": {
+        "functions": {
+          "vulnerability": [
+            {
+              "id": "vuln_fl_economic",
+              "approach": "hybrid",
+              "relationship": "math_bespoke",
+              "hazard_analysis_type": "deterministic",
+              "category": "economic_indicator",
+              "analysis_details": "Flood damage curves for Sub-Saharan Africa (Englhardt et al., 2019)",
+              "hazard_primary": {
+                "id": "hazard_flood",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              }
+            },
+            {
+              "id": "vuln_fl_population",
+              "approach": "hybrid",
+              "relationship": "math_bespoke",
+              "hazard_analysis_type": "deterministic",
+              "category": "population",
+              "analysis_details": "Flood damage curves for Sub-Saharan Africa (Englhardt et al., 2019)",
+              "hazard_primary": {
+                "id": "hazard_flood",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              },
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_fl_economic",
+            "asset_category": "economic_indicator",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "damage",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
+              "loss_type": "gross",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Annual average GDP loss from fluvial flooding per commune",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          },
+          {
+            "id": "loss_fl_population",
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "count",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Annual average affected population from fluvial flooding per commune",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            }
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

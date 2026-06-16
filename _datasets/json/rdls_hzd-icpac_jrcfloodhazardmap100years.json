@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-icpac_jrcfloodhazardmap100years",
+      "title": "JRC Flood Hazard Map for 100 years return period for the GHoA Region (excluding Djibuti)",
+      "description": "JRC Flood Hazard Map for 100 years return period for the GHoA Region (excluding Djibuti). The map has a resolution of 30 arc seconds (~1 km at the equator), it is taken from the dataset by Dottori et al. (2016) assuming no flood protections. [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net"
+      },
+      "contact_point": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "creator": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          21.83334554,
+          -12.008235677,
+          51.416678874,
+          22.216764323
+        ]
+      },
+      "temporal": {
+        "central_year": 2021
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ICPAC",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "JRC Flood Hazard Map for 100 years return period for the GHoA Region (excluding Djibuti) (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:hazmap_icpac_historical_100_indifesa_wgs",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:hazmap_icpac_historical_100_indifesa_wgs&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "JRC Flood Hazard Map for 100 years return period for the GHoA Region (excluding Djibuti) (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:hazmap_icpac_historical_100_indifesa_wgs",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:hazmap_icpac_historical_100_indifesa_wgs",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/hazmap_icpac_historical_100_indifesa_wgs:geonode:hazmap_icpac_historical_100_indifesa_wgs",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

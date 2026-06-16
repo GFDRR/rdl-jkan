@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-icpac_gar2015floodhazardmap25ye",
+      "title": "GAR 2015 Flood Hazard Map for 25 years return period for Djibuti",
+      "description": "Flood Hazard Map for 25 years return period for Djibuti developed for the GAR 2015 Risk Atlas. The map has a resolution of 90 m at the equator, assuming no flood protections. [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net"
+      },
+      "contact_point": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "creator": {
+        "name": "ICPAC",
+        "url": "https://geoportal.icpac.net/api/v2/users/1000"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          41.77125,
+          10.91458,
+          43.41792,
+          12.70708
+        ]
+      },
+      "temporal": {
+        "central_year": 2021
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "ICPAC",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WCS: geonode Service",
+          "description": "GAR 2015 Flood Hazard Map for 25 years return period for Djibuti (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:hazardmap_dj_25_reg_m",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:hazardmap_dj_25_reg_m",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WMS: geonode Service",
+          "description": "GAR 2015 Flood Hazard Map for 25 years return period for Djibuti (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:hazardmap_dj_25_reg_m",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:hazardmap_dj_25_reg_m&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/hazardmap_dj_25_reg_m:geonode:hazardmap_dj_25_reg_m",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
