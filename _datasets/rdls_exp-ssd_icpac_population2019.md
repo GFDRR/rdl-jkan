@@ -45,8 +45,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/s_sudan_pop_2019:geonode:s_sudan_pop_2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

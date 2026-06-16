@@ -46,8 +46,7 @@ links:
   rel: describedby
 - href: https://gishub.kemenhub.go.id/catalogue/#/dataset/6
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

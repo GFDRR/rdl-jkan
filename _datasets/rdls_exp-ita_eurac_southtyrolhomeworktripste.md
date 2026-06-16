@@ -60,8 +60,7 @@ links:
   rel: describedby
 - href: https://maps.eurac.edu/catalogue/#/dataset/1122
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

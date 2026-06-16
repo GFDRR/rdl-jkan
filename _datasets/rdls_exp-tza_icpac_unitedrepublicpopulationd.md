@@ -47,8 +47,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/tz_pop_2050_unadj_constrained_def:geonode:tz_pop_2050_unadj_constrained_def
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

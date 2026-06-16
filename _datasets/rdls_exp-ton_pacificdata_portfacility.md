@@ -53,8 +53,7 @@ links:
   rel: describedby
 - href: https://geonode.pacificdata.org/catalogue/#/dataset/866
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

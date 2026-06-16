@@ -43,8 +43,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:tza_admn_ad3_py_s1_wards_tnbs_ocha_
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

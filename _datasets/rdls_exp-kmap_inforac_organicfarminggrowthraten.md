@@ -50,8 +50,7 @@ links:
   rel: describedby
 - href: https://kmap.info-rac.org/catalogue/#/dataset/1201
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

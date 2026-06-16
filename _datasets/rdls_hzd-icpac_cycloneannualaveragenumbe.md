@@ -23,24 +23,22 @@ description: 'Annual average number of people potentially displaced by cyclone e
 details: Nessuna informazione fornita
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    convective_storm:
-    - analysis_type: probabilistic
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: tornado
-        trigger: null
-        type: convective_storm
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tornado
+      trigger: null
+      type: convective_storm
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: null
@@ -58,8 +56,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/icpac_geoportal_data:geonode:Somalia_cycloneAAD_perc
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

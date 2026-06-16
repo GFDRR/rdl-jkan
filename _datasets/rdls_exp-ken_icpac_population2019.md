@@ -45,8 +45,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/kenya_pop_2019:geonode:kenya_pop_2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

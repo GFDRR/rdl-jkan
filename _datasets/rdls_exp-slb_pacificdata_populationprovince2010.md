@@ -54,8 +54,7 @@ links:
   rel: describedby
 - href: https://geonode.pacificdata.org/catalogue/#/dataset/73
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

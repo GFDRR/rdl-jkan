@@ -45,8 +45,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/population2015_sedac:geonode:population2015_sedac
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

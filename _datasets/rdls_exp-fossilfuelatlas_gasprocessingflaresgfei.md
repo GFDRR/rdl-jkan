@@ -57,8 +57,7 @@ links:
   rel: describedby
 - href: https://www.fossilfuelatlasportal.org/catalogue/#/dataset/855
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

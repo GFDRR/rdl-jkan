@@ -44,8 +44,7 @@ links:
   rel: describedby
 - href: https://maps.eurac.edu/catalogue/#/dataset/704
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

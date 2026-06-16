@@ -56,8 +56,7 @@ links:
   rel: describedby
 - href: https://maps.eurac.edu/catalogue/#/dataset/496
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

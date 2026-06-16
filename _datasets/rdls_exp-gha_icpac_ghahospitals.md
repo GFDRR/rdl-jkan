@@ -61,8 +61,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/icpac_geoportal_data:geonode:GHA_HOSPITALS
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

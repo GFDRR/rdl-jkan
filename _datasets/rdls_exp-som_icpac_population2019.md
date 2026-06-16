@@ -45,8 +45,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/somalia_pop_2019:geonode:somalia_pop_2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

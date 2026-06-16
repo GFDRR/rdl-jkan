@@ -43,8 +43,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:uga_villages_jan_2009
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

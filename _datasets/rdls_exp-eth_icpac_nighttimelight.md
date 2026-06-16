@@ -47,8 +47,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/Normalized_Night.Time.Light:geonode:Normalized_Night_Time_Light
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

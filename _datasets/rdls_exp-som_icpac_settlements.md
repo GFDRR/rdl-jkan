@@ -45,8 +45,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:som_settlements
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

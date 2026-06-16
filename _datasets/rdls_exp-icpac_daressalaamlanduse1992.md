@@ -55,8 +55,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:dar_es_salaam_luse_1992
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

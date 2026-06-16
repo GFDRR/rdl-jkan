@@ -50,26 +50,24 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: generalized_extreme_value
-      hazards:
-      - classification: null
-        id: hazard_fl_001
-        intensity_measure: wd:m
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: generalized_extreme_value
+    hazards:
+    - classification: null
+      id: hazard_fl_001
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger:
         process: fluvial_flood
-        trigger:
-          process: fluvial_flood
-          type: flood
         type: flood
-      id: event_set_fl_001
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      type: flood
+    id: event_set_fl_001
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: null

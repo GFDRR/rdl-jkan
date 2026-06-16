@@ -20,31 +20,28 @@ details: "This dataset is used as a proxy for dust storms occurence, it is extra
   \ al., 2019). Daily average values were computed to produce the statistics."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: empirical
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_dust_001
-        intensity_measure: MHI:-
-        process: extratropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_dust_001
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_dust_001
+      intensity_measure: MHI:-
+      process: extratropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_dust_001
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: GRMA Madagascar - Phase 1
   url: https://www.resiliencemada.gov.mg

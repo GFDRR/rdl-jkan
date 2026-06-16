@@ -56,8 +56,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/monthly_growing_areas:geonode:monthly_growing_areas
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

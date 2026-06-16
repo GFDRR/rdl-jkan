@@ -43,8 +43,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:s_sudan_airfied_undp
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

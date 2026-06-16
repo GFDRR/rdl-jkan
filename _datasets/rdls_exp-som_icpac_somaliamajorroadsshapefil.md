@@ -43,8 +43,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:somalia_major_rds
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

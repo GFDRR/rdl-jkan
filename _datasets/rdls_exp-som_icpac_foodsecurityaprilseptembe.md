@@ -44,8 +44,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:som_food_security_apr_sep_2011
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null
