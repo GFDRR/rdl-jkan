@@ -1,0 +1,189 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-swz_crosscut_settlements_2021",
+      "title": "Eswatini - Settlements",
+      "description": "This dataset shows Eswatini catchment areas with information on total population disaggregated by sex and age and number of buildings.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/eswatini-settlements]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Crosscut",
+        "url": "https://data.humdata.org/dataset/eswatini-settlements"
+      },
+      "creator": {
+        "name": "Crosscut",
+        "url": "https://data.humdata.org/dataset/eswatini-settlements"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SWZ"
+        ]
+      },
+      "temporal": {
+        "start": "2021-04-01",
+        "end": "2023-11-06"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/eswatini-settlements"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Kontur",
+            "url": "https://data.humdata.org/dataset/eswatini-settlements"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "Meta",
+            "url": "https://data.humdata.org/dataset/eswatini-settlements"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/eswatini-settlements"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_5",
+          "entity": {
+            "name": "Google",
+            "url": "https://data.humdata.org/dataset/eswatini-settlements"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Settlement catchment areas were delineated by identifying population clusters from gridded population data (WorldPop, Kontur, Meta), assigning representative points to each cluster, and generating Voronoi-based catchment areas. Population counts were disaggregated by sex and age from multiple demographic sources, and building inventories were compiled from OpenStreetMap and Google building detection datasets with varying confidence levels.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population estimates for 2020 used to identify settlement clusters and disaggregate population by location"
+          },
+          {
+            "id": "source_2",
+            "name": "Kontur",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population density data from 2022 integrated into settlement population estimates"
+          },
+          {
+            "id": "source_3",
+            "name": "Meta",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Demographic data from 2023 providing sex and age-disaggregated population counts for settlements"
+          },
+          {
+            "id": "source_4",
+            "name": "OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Building footprint data from 2023 contributing to building stock inventory"
+          },
+          {
+            "id": "source_5",
+            "name": "Google",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "High-confidence building detection data from 2021 with multiple confidence thresholds and average footprint measurements"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a9d25757",
+          "title": "Eswatini_2024-01-11.geojson",
+          "description": "Eswatini - Settlements (GeoJSON)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/6bb02296-89ad-4a69-8ce0-2aed3b0d8e00/resource/a9d25757-0a60-4222-ad22-9e8fd175a7af/download/eswatini_2024-01-11.geojson"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population disaggregated by sex and age groups in settlement catchment areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock counts from multiple sources (OpenStreetMap, Google) with confidence levels and average footprint area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/eswatini-settlements",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
