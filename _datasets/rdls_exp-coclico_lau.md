@@ -36,7 +36,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The LAUs are a administrative to help ensure that data are readily
     available and policies can be implemented effectively using these units, a subdivision

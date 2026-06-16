@@ -25,7 +25,7 @@ description: 'IOM through DTM registration of IDPs in Sudan. [Source: This metad
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IOM DTM conducted direct registration of internally displaced persons
     in Sudan, collecting administrative data on displaced populations through field

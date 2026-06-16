@@ -26,7 +26,7 @@ description: "Esta base contiene el resultado final del c\xE1lculo de las severi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: PiN severity scores were calculated using a standardized methodology
     (documented in the ReliefWeb methodological note) that integrates multi-sectoral

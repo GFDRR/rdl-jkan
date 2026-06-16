@@ -58,7 +58,7 @@ description: 'We determine efficient coastal adaptation pathways for each coasta
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'We determine efficient coastal adaptation pathways for each coastal
     floodplain management unit at the European coastline based on a dynamic (inter-temporal)

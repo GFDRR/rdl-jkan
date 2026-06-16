@@ -67,7 +67,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event damage assessments conducted by NGA using direct observational
     and anecdotal data collection methods following the Nepal earthquake. Damage centroids,

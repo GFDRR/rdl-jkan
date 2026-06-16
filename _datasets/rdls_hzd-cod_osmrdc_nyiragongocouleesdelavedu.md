@@ -54,7 +54,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Lava flow polygons were manually digitized by OpenStreetMap RDC from
     Sentinel-1 SAR data acquired on 25 May 2021, three days after the Nyiragongo eruption

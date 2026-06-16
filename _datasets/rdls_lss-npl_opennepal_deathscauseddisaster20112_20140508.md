@@ -27,7 +27,7 @@ description: 'This file include no of death caused by disaster, according to the
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Post-event mortality data extracted from the official Nepal Disaster
     Report 2013 published by the Ministry of Home Affairs, aggregating deaths caused

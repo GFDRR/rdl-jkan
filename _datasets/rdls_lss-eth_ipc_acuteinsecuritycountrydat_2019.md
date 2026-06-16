@@ -30,7 +30,7 @@ description: 'The IPC Acute Food Insecurity (IPC AFI) classification provides st
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The IPC Acute Food Insecurity classification system aggregates multi-sectoral
     evidence on food security conditions to assign populations to standardized phases

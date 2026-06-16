@@ -166,7 +166,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The Nexus Risk Index integrates 100 curated indicators from over 30
     data sources using the IPBES Nexus Assessment framework methodology. High-resolution

@@ -71,7 +71,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event rapid needs assessment conducted by OCHA following severe
     flash flooding on 26 December 2018 in north-west Syria. Data compiled from field

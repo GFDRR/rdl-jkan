@@ -22,7 +22,7 @@ description: 'Estimated GDPs by 1/12-degree grids during 1850-2100 by 10 year in
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Estimated GDPs by 1/12-degree grids during 1850-2100 by 10 year intervals.
     In the estimation, national GDP data (past data until 2010; future projection

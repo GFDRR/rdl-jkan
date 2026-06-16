@@ -56,7 +56,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Road network data and population statistics were extracted from Nepal's
     Environmental Statistics 2013 publication and compiled at the district level,

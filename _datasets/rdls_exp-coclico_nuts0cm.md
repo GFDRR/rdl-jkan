@@ -35,7 +35,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'NUTS 0 Regions represent national-level administrative divisions across
     the EU, providing a standardized framework for regional statistics and policy

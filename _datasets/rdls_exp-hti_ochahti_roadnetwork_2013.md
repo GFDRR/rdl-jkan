@@ -41,7 +41,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: "Road network data was digitized by the Centre National de l'Information\
     \ G\xE9o-Spatiale (CNIGS) and includes geometric representation of road segments\

@@ -56,7 +56,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: District-level population and land statistics extracted from Nepal's
     2011 census as published in the Environment Statistics of Nepal 2013 report by

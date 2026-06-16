@@ -105,7 +105,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Flood Maps represent the flood simulations across Europe (at 25 m
     resolution), indicating the maximum flood extent and depth, for different emission

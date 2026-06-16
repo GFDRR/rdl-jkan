@@ -37,7 +37,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC0-1.0.html
+license: CC0-1.0
 lineage:
   description: These data represent fractional land use and land cover patterns annually
     for the years 1500 - 2100 for the globe at 0.5-degree (~50-km) spatial resolution.

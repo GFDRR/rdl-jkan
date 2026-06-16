@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'Building Exposure identifies the vulnerability of buildings in low
     elevation coastal zones (LECZ) to coastal flooding under various climate change

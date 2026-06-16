@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IDP settlement data collected through direct observation and anecdotal
     reporting by UNHCR Sudan field teams, organized by administrative locality and

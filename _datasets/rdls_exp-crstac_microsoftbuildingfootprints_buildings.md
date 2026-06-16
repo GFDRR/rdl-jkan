@@ -32,7 +32,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/ODbL-1.0.html
+license: ODbL-1.0
 lineage:
   description: Building footprint polygon geometries located around the world
   sources:

@@ -34,7 +34,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Annual maps of artificial impervious area, a predominant indicator
     of human settlement. Values range from 0 to 34. 0 represents non-human settlements,

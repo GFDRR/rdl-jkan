@@ -44,7 +44,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Point location data for energy infrastructure facilities (gas stations,
     power stations, substations, transformers) were collected and mapped by Uganda

@@ -25,7 +25,7 @@ description: 'Returnee population of Sudan through DTM - IOM. [Source: This meta
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IOM Sudan conducted DTM registration surveys to track and enumerate
     returnee populations across Sudan, recording displacement and return movements

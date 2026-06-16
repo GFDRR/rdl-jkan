@@ -34,7 +34,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+license: CC-BY-NC-SA-4.0
 lineage:
   description: 'Geographical Resolutions Available (with count): 1. Province (20)
     2. District (87) 3. Local Level Government (297) 4. Census Unit (21,850)'

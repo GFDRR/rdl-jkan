@@ -33,7 +33,7 @@ description: 'Contains frequently updated figures for deaths, injuries, and dama
 details: Check for updates. Data will be updated as figures become available.
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event impact data compiled from official reports by Nepal's Ministry
     of Home Affairs and Nepali Police, aggregating deaths, injuries, and building

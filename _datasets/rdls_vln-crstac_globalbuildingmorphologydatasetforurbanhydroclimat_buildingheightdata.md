@@ -18,7 +18,7 @@ description: 'The BH_100m contains the building height files where each file is 
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: GLobAl building MOrphology dataset for URban climate modelling (GLAMOUR)
     offers the building footprint and height files at the resolution of 100 m in global

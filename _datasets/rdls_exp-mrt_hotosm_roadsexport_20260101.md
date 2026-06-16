@@ -49,7 +49,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Road network data was extracted from OpenStreetMap using the HOT Raw
     Data API, representing volunteered geographic information contributed by the OpenStreetMap

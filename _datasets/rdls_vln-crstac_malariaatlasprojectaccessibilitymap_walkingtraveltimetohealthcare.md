@@ -19,7 +19,7 @@ description: 'This layer map provides estimates of time to travel (in minutes) f
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: High resolution global maps of travel time to public services
   sources:

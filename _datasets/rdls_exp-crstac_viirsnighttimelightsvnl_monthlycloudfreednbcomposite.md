@@ -32,7 +32,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: As the pioneer of the nocturnal remote sensing technology, Earth Observation
     Group (EOG) had been collecting nighttime satellite imagery and produce global

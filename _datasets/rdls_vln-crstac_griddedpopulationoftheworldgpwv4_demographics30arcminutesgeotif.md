@@ -18,7 +18,7 @@ description: 'Demographic characteristics for all 5-year age groups and genders 
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The Gridded Population of the World (GPW) collection, now in its fourth
     version (GPWv4), models the distribution of human population (counts and densities)

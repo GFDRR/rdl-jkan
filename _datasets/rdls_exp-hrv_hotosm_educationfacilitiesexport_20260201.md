@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Education facility data was extracted from OpenStreetMap using tag
     filters for amenity and building types associated with educational use (kindergarten,

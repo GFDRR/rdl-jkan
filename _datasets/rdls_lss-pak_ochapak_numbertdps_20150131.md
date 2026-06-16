@@ -33,7 +33,7 @@ description: 'Number of Temporarily Displaced People (TDPs) from FATA region reg
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Displaced population data collected through UNHCR registration processes
     and verified against Pakistan's national identity database (NADRA) to ensure accuracy

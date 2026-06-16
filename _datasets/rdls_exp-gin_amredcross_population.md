@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Population data derived from national census conducted by Institut
     National de la Statistique, aggregated and distributed by prefecture administrative

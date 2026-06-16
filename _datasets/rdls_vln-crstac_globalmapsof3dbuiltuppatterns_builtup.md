@@ -18,7 +18,7 @@ description: 'Building footprint, height and volume provided at 30 arc seconds s
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC0-1.0.html
+license: CC0-1.0
 lineage:
   description: Building footprint, height and volume provided at 30 arc seconds spatial
     resolution

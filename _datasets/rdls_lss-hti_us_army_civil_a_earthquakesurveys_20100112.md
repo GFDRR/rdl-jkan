@@ -25,7 +25,7 @@ description: 'The US Army Civil Affairs collected surveys after the 2010 Haiti e
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: The US Army Civil Affairs conducted field surveys following the January
     2010 Haiti earthquake to assess damage to buildings and civil infrastructure.

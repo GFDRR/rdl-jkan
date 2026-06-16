@@ -20,7 +20,7 @@ description: 'Future GDP per capita. Data is available as global grids at a 30 a
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/GNU General Public License.html
+license: GPL
 lineage:
   description: Global CWatM is based on the IIASA Community Water Model (CWatM)
   sources:

@@ -27,7 +27,7 @@ description: 'This datasets contain list of all food and non food items which ar
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Relief material allocation records were compiled by the Nepal Disaster
     Risk Reduction Portal following the earthquake event. The dataset documents food

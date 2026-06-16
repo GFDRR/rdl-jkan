@@ -40,7 +40,7 @@ description: "Esta base de datos contiene la tasa de personas afectadas por desa
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Disaster-affected population counts from UNGRD registry were aggregated
     by municipality and time period (2019-2020), then normalized by corresponding

@@ -35,7 +35,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: "Global 30 arc seconds (\u223C1 km at the equator) population projection\
     \ dataset covering each year from 2010 to 2100 that is consistent with both country\

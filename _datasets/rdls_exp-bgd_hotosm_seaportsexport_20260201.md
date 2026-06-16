@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: OpenStreetMap features matching port and ferry terminal tags were extracted
     for Bangladesh and exported by the Humanitarian OpenStreetMap Team (HOT) in multiple

@@ -39,7 +39,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The Flood Product is a daily, near-global, ~250 m resolution product
     showing flood and surface water detected from the twice-daily overpass of the

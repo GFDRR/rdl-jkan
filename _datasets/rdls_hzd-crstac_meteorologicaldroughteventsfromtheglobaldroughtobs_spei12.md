@@ -34,7 +34,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: More than 4500 drought events classified using a few indicators as
     the SPI and the SPEI at different temporal scales. The database of drought events

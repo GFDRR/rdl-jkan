@@ -17,7 +17,7 @@ description: 'Data in ascii format [Source: This metadata record was automatical
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The Global Gridded Geographically Based Economic Data (G-Econ), Version
     4 contains derived one degree grid cells of Gross Domestic Product (GDP) data

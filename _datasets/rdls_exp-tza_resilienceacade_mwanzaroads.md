@@ -34,7 +34,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: This data resulted from a data cleaning exercise of existing road data
     in OpenStreetMap using the Maxar satelite imagery as the base layer. The imagery

@@ -25,7 +25,7 @@ description: 'Kelurahan affected by flood on January 2020, in Bekasi City West J
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event observational data collected by UNFPA Indonesia documenting
     administrative areas impacted by fluvial flooding in Bekasi City during January

@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: OpenStreetMap features matching port-related tags (amenity=ferry_terminal,
     building=ferry_terminal, port=*) were extracted and exported in multiple geospatial

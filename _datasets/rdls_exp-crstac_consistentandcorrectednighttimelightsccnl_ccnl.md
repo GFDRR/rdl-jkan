@@ -38,7 +38,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'DMSP-OLS provides the longest observations of NTL information, from
     1992 to 2013, an unparalleled dataset for studying historical artificial lights.

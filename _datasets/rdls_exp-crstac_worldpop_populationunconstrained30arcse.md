@@ -34,7 +34,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Open access spatial demographic datasets built using transparent approaches.
   sources:

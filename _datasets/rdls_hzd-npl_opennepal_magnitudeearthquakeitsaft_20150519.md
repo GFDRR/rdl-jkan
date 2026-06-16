@@ -44,7 +44,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Earthquake magnitude, latitude, longitude, and time data were collected
     from the official Seismological Centre of Nepal (seismonepal.gov.np) for all seismic

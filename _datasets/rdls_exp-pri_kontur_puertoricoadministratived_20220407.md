@@ -57,7 +57,7 @@ details: "**Dataset codebook (may be different for previous versions)**: **fid**
   \ **maritime**: (boolean) flag which demonstrates if the border segment overlaps\
   \ with the maritime area. **Copyright** Wikidata. Hierarchical Administrative Subdivision\
   \ codes to represent country subdivisions is available under the [Creative Commons\
-  \ CC0 License](https://creativecommons.org/publicdomain/zero/1.0/): [HASC - Wikidata](https://www.wikidata.org/wiki/Property:P8119)\
+  \ CC0 License](CC0-1.0): [HASC - Wikidata](https://www.wikidata.org/wiki/Property:P8119)\
   \ Facebook High Resolution Settlement data: Facebook Connectivity Lab and Center\
   \ for International Earth Science Information Network - CIESIN - Columbia University.\
   \ 2016. High Resolution Settlement Layer (HRSL). Source imagery for HRSL \xC2\xA9\
@@ -98,7 +98,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Administrative boundaries for Puerto Rico were extracted from OpenStreetMap
     and enhanced with proprietary methods. Population counts were aggregated from

@@ -38,7 +38,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The ESA Land Cover Climate Change Initiative Project is part of the
     European Space Agency's Climate Change Initiative to produce long term datasets

@@ -29,7 +29,7 @@ description: 'Contains data crowdsourced from Venezuelans through the Premise Da
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Internally displaced population data collected through Premise Data's
     crowdsourcing mobile application targeting Venezuelan users identified as having

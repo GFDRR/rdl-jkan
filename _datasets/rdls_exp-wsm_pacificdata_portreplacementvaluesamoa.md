@@ -27,7 +27,7 @@ exposure:
       quantity_kind: currency
       unit: USD
 hazard: null
-license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+license: CC-BY-NC-SA-4.0
 lineage:
   description: null
   sources:

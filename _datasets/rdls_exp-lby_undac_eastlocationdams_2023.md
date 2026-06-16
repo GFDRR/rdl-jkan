@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Dam locations in East Libya were identified and mapped using Maxar
     and BING satellite imagery and geospatial reference data. The resulting point

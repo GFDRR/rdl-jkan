@@ -34,7 +34,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC0-1.0.html
+license: CC0-1.0
 lineage:
   description: Datasets generated with the synthetic resampling algorithm STORM
   sources:

@@ -28,7 +28,7 @@ description: "Esta base contiene el resultado final del c\xE1lculo de las severi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Population in Need (PiN) figures were calculated by the Early Recovery
     Cluster using a standardized methodology that assesses severity levels across

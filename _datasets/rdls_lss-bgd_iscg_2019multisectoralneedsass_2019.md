@@ -37,7 +37,7 @@ description: 'In successive waves over four decades, Rohingya refugees have been
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Sample survey methodology applied to Rohingya refugee and host community
     populations in Cox's Bazar during September-October 2019. Data collection captured

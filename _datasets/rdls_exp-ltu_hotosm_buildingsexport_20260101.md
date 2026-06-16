@@ -49,7 +49,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Building footprint polygons were extracted from OpenStreetMap using
     the Humanitarian OpenStreetMap Team (HOT) Raw Data API, based on volunteered geographic

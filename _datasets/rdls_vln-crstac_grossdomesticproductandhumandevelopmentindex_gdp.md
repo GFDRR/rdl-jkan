@@ -24,7 +24,7 @@ description: 'This global dataset represents the gross domestic production (GDP)
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC0-1.0.html
+license: CC0-1.0
 lineage:
   description: An increasing amount of high-resolution global spatial data are available,
     and used for various assessments. However, key economic and human development

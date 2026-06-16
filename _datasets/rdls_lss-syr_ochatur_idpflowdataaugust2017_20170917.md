@@ -26,7 +26,7 @@ description: 'Data contains Syria IDP arrival estimations for August 2017, Janua
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IDP displacement data consolidated from multiple monitoring hubs (OCHA
     regional offices, CCCM cluster, and NPM) tracking internal population movements

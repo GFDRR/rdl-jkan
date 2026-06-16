@@ -233,7 +233,7 @@ lineage:
     standardised and processed using the open-gira and snkit toolkits.
   sources:
   - id: source_osm
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0/
     name: OpenStreetMap
     risk_data_type: null
     type: dataset
@@ -247,7 +247,7 @@ lineage:
     url: https://datacatalog.worldbank.org/search/dataset/0038117/Global-Airports
     used_in: exposure
   - id: source_ourairports
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: OurAirports
     risk_data_type: null
     type: dataset
@@ -268,7 +268,7 @@ lineage:
     url: https://portwatch.imf.org/
     used_in: exposure
   - id: source_usgs
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: USGS Africa Infrastructure Database
     risk_data_type: null
     type: dataset

@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Landslide locations were identified and mapped from satellite imagery
     acquired after the 25 April 2015 earthquake in Nepal, using direct observational

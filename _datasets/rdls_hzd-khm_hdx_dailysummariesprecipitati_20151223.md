@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Daily precipitation and snow observations were collected from meteorological
     stations across Cambodia by NOAA's National Centers for Environmental Information.

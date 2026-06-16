@@ -32,7 +32,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Provides time-series of nighttime stable lights. The data needs to
     be calibrated for inter-annual comparison.

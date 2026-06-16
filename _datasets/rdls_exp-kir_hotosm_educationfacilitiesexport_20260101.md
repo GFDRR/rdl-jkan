@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Education facilities in Kiribati were extracted from OpenStreetMap
     using amenity and building tags matching kindergarten, school, college, and university

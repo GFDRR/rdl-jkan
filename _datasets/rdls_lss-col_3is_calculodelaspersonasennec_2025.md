@@ -26,7 +26,7 @@ description: "El archivo tiene los resultados del c\xE1lculo de las Personas en 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: PiN and severity data compiled from multiple administrative and survey
     sources including DANE statistics, aggregated through registry methodology to

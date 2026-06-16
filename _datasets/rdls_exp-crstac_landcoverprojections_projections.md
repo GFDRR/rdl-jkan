@@ -33,7 +33,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Land cover projections under SSP-RCP combinations 2020-2100 with a
     spatial resolution of ~1 km

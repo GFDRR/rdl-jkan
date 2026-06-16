@@ -52,7 +52,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA combines multi-year food security trend data (2010-2014) with
     natural shock risk assessments (2011-2015) at sub-national level to produce strategic

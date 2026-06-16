@@ -103,7 +103,7 @@ description: "La metodolog\xEDa para el c\xE1lculo de personas en necesidad -PiN
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: "The PiN dataset aggregates multi-sectoral administrative records and\
     \ survey data from 11 Colombian government and humanitarian sources (2019-2021)\

@@ -44,7 +44,7 @@ details: "* [INFORM Guatemala.](http://www.inform-index.org/Subnational/Guatemal
   \ y Exposici\xF3n"
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Historical registry of natural disaster events in Guatemala compiled
     from 1530 to 2015 by CONRED and partners, disaggregated at municipal level. Data

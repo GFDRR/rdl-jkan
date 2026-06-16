@@ -34,7 +34,7 @@ description: "Esta base de datos contiene los c\xE1lculos de People in Need (PiN
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: People in Need estimates were calculated by the Food Security and Nutrition
     Cluster (SAN-SP) using CARI-WFP food insecurity classifications and SIVIGILA-INS

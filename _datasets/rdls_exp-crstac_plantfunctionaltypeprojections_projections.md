@@ -33,7 +33,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Global land projection based on plant functional types with a 1-km
     resolution under socio-climatic scenarios (SSP-RCP combinations).

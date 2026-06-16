@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Village-level population baseline data from civil registration was
     spatially intersected with flood-affected areas delineated by BNPB to produce

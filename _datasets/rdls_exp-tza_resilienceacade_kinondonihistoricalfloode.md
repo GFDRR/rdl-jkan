@@ -33,7 +33,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: This is community generated data where individuals were asked to reflect
     on historical flood extents; this comes with inherent subjectivity based on their

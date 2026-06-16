@@ -18,7 +18,7 @@ description: 'This dataset shows the number of people affected by elnino rains p
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: "Kenya Red Cross Society compiled direct observational and anecdotal\
     \ data on populations affected by El Ni\xF1o-induced flooding across Kenyan counties\

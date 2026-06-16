@@ -44,7 +44,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Population estimates were derived by integrating UNFPA data with the
     most recently available national census data for each country in the Lake Chad

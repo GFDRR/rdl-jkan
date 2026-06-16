@@ -24,7 +24,7 @@ details: This data must be interpreted and used in accordance with the Afghanist
   data provider (source).
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Provincial-level vulnerability and needs indicators were compiled from
     multiple sources through sample survey methodology and aggregated into composite

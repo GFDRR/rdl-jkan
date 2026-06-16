@@ -36,7 +36,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+license: CC-BY-NC-SA-4.0
 lineage:
   description: 'Geographical Resolutions Available (with count): 1. Province (10)
     2. Ward (183) 3. Enumeration Area (1,143)'

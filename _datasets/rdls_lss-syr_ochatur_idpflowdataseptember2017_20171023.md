@@ -26,7 +26,7 @@ description: 'Data contains Syria IDP arrival estimations for September 2017, Ja
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IDP displacement data consolidated from multiple humanitarian coordination
     hubs (OCHA regional offices and cluster partners) tracking internal population

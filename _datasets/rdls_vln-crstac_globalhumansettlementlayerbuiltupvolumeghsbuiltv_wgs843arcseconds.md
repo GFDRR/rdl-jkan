@@ -20,7 +20,7 @@ description: 'GHS built-up volume grid, derived from GHS-BUILT-S-R2023A and GHS-
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: GHS built-up volume grid, derived from GHS-BUILT-S-R2023A and GHS-BUILT-H-R2023A,
     multi-temporal (1975-2030)

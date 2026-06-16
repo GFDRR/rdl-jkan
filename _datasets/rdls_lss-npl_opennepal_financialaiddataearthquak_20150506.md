@@ -56,7 +56,7 @@ description: 'This dataset accumulates all foreign and national aid: Relief and 
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: This dataset aggregates financial aid and relief funding mobilized
     in response to the 2015 Nepal earthquake from multiple sources including bilateral/multilateral

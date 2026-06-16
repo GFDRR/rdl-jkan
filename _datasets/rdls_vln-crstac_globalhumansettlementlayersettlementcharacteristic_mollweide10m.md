@@ -22,7 +22,7 @@ description: 'GHS Settlement Characteristics (e.g. vegetation surfaces, water su
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: GHS Settlement Characteristics, derived from Sentinel2 composite (2018)
     and other GHS R2023A data

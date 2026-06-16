@@ -43,7 +43,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Earthquake event data extracted from Nepal's official Environment Statistics
     2013 publication, containing observed seismic parameters (epicenter location,

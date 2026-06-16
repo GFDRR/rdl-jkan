@@ -35,7 +35,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The GISCO statistical unit dataset represents the NUTS (nomenclature
     of territorial units for statistics) and statistical regions by means of multipart

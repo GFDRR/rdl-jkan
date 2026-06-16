@@ -33,7 +33,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Population projections under the Shared Socioeconomic Pathways (SSPs)
     until 2100 based on random forest modeling

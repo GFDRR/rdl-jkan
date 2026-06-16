@@ -50,7 +50,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Water point infrastructure data was collected through volunteered geographic
     information via OpenStreetMap mapping activities in rural Niger's Sahel region.

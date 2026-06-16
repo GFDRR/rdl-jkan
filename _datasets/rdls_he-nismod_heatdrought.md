@@ -423,7 +423,7 @@ hazard:
     id: event_set_heatwave_exposure
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Annual probability grids for extreme heat and drought events derived
     from bias-corrected ISIMIP2b climate impact model outputs. Daily maximum temperature
@@ -434,7 +434,7 @@ lineage:
     Exposure Processing Pipeline.
   sources:
   - id: source_1
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: ISIMIP2b Impact Model Output Data
     risk_data_type: null
     type: dataset

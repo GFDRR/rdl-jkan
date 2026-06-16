@@ -36,7 +36,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The Global Flood Database provides satellite-derived flood footprints
     and depths for 913 floods that occurred between 2000 and 2018.

@@ -34,7 +34,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/ODbL-1.0.html
+license: ODbL-1.0
 lineage:
   description: The SPEI Global Drought Monitor offers near real-time information about
     drought conditions at the global scale, with a 1 degree spatial resolution and

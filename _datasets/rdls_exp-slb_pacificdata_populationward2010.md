@@ -36,7 +36,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+license: CC-BY-NC-SA-4.0
 lineage:
   description: 1. This population database is misaligned due to the source data provided
     in the SPC's PopGIS data set. This misalignment is not linear and the largest

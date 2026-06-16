@@ -114,7 +114,7 @@ lineage:
     corrected using snkit.
   sources:
   - id: source_1
-    license: https://opendatacommons.org/licenses/odbl/1-0/
+    license: ODbL-1.0/
     name: OpenStreetMap
     risk_data_type: null
     type: dataset
@@ -142,7 +142,7 @@ lineage:
     url: https://ghsl.jrc.ec.europa.eu/ghs_smod2019.php
     used_in: exposure
   - id: source_5
-    license: https://creativecommons.org/publicdomain/zero/1.0/
+    license: CC0-1.0
     name: NASA SRTM Digital Elevation Model
     risk_data_type: null
     type: dataset

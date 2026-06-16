@@ -38,7 +38,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Cross-shore coastal transects are essential to coastal monitoring,
     offering a consistent reference line to measure coastal change, while providing

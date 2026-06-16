@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Census data from Geo Bolivia was spatially referenced and compiled
     into a settlement-level geodataset with population and dwelling unit counts, classified

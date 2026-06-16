@@ -21,7 +21,7 @@ description: 'The subnational Human Development Index (SHDI) is calculated from 
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: 'The subnational Human Development Index (SHDI) is calculated from
     three dimensions: education, health and standard of living. All indicators used

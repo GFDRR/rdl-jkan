@@ -44,7 +44,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Railway infrastructure data was extracted from OpenStreetMap using
     feature filters for railway tags (rail lines and stations), then exported by the

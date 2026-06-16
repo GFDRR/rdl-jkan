@@ -26,7 +26,7 @@ description: 'Data contains Syria IDP arrival estimations for July 2017, January
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IDP displacement data consolidated from multiple monitoring hubs (OCHA
     regional offices, CCCM cluster, and NPM) that track population movements between

@@ -50,7 +50,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Building polygons were extracted from OpenStreetMap database for Bosnia
     and Herzegovina using the Humanitarian OpenStreetMap Team (HOT) raw data API.

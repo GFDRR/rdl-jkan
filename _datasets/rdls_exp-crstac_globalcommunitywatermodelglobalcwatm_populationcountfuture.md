@@ -33,7 +33,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/GNU General Public License.html
+license: GPL
 lineage:
   description: Global CWatM is based on the IIASA Community Water Model (CWatM)
   sources:

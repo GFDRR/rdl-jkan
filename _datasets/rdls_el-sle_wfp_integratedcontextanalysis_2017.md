@@ -66,7 +66,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA integrates multi-year food security trend data with natural
     shock risk assessments (flood and landslide) to identify sub-national areas where

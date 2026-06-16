@@ -29,7 +29,7 @@ description: 'This dataset provides information on internally displaced persons 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Monthly IDP movement and spontaneous return data consolidated from
     multiple hubs operating across Syria since January 2016 (returns since August

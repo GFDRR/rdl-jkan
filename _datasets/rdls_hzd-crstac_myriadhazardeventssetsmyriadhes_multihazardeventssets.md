@@ -36,7 +36,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: A global multi-hazard event set database, spanning from 2004 to 2017,
     which includes eleven hazards (coldwaves, heatwaves, droughts, earthquakes, extreme

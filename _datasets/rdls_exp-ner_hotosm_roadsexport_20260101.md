@@ -48,7 +48,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Road network data extracted from OpenStreetMap via Humanitarian OpenStreetMap
     Team's raw data API, representing 248.4 thousand km of mapped roads in Niger with

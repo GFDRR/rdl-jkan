@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: "Population projections from the official Instituto Nacional de Estad\xED\
     stica (INE) publication were aggregated and classified by administrative hierarchies\

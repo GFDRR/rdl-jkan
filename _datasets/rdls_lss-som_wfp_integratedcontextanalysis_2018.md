@@ -36,7 +36,7 @@ description: 'The ICA is a process of consultations supported by mapped-out data
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA combines multi-year food security trends (2012-2017) with observed
     natural shock hazard data (floods 2002-2006 & 2017; droughts 1998-2017) and land

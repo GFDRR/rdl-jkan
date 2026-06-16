@@ -37,7 +37,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: Data on global urban extent dynamics from 1870 to 2100, using a urban
     cellular automata (CA) model with consideration of historical trends of urban

@@ -71,7 +71,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: 'Road features within the Kutupalong-Balukhali Rohingya refugee sites
     were digitized by combining multiple sources: Site Planning and Development taskforce

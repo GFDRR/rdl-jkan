@@ -48,7 +48,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Road network data extracted from OpenStreetMap volunteered geographic
     information database for State of Palestine. Data includes 48.5 thousand km of

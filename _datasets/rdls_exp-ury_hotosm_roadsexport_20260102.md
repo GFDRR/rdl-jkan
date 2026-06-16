@@ -48,7 +48,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Road network data extracted from OpenStreetMap via the Humanitarian
     OpenStreetMap Team's raw data API, covering approximately 103.8 thousand km of

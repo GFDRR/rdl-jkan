@@ -71,7 +71,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Municipal-level data aggregated from official Colombian government
     information systems (UNGRD disaster records, DANE census and education statistics)

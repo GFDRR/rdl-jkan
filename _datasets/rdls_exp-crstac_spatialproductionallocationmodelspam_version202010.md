@@ -32,7 +32,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: SPAM is a global crop distribution model covering 42 crops and four
     different technologies available for 2010 (latest). The model outputs include

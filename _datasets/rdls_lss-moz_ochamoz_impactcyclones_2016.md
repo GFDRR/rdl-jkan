@@ -25,7 +25,7 @@ description: 'Impact of cyclones (people affected and injured by cyclones) in Mo
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Post-event impact data compiled by INGD from sample surveys documenting
     cyclone-affected and injured populations across Mozambique from 2017 to 2025,

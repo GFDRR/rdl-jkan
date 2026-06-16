@@ -27,7 +27,7 @@ description: "Esta base contiene el resultado final del c\xE1lculo de las severi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Population in Need (PiN) estimates were calculated by the Food Security
     and Nutrition Cluster through severity assessments and population disaggregations.

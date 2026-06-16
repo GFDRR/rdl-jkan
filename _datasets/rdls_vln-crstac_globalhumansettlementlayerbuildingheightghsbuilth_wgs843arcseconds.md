@@ -20,7 +20,7 @@ description: 'GHS building height, derived from AW3D30, SRTM30, and Sentinel2 co
 details: null
 exposure: []
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: GHS building height, derived from AW3D30, SRTM30, and Sentinel2 composite
     (2018)

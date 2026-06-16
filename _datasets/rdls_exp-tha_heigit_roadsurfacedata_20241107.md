@@ -95,7 +95,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: OSM road network data for Thailand was processed using a hybrid deep
     learning approach developed by HeiGIT to classify road surfaces as paved or unpaved

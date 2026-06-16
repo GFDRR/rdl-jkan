@@ -40,7 +40,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: Population density was derived from Kenya National Bureau of Statistics
     census data for 1999, calculating the number of people per square kilometer and

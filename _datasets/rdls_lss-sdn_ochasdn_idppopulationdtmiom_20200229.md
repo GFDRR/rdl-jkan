@@ -25,7 +25,7 @@ description: 'IDP population in Sudan through Displacement Tracking Matrix by IO
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: IDP population data collected through IOM's Displacement Tracking Matrix
     (DTM) registration methodology, which systematically tracks internally displaced

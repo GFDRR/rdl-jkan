@@ -78,7 +78,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: The ICA integrates historical natural shock risk data (flood, mudflow,
     drought 1998-2011) with food security trend analysis (2008-2012) and land degradation/cover

@@ -56,7 +56,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Geospatial infrastructure data were extracted from OpenStreetMap, processed
     and cleaned by OCHA Syria to create eight thematic layers covering power infrastructure

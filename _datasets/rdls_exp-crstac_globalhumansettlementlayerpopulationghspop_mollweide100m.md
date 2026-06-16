@@ -32,7 +32,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: The Global Human Settlement Layer Population (GHS-POP) datasets are
     available in two different coordinate systems and two spatial resolutions each

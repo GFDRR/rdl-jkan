@@ -47,7 +47,7 @@ description: 'In response to Turkey Syria Earthquake 2023, Source data includes 
 details: OpenStreetMap data is crowd sourced and cannot be considered to be exhaustive
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Destroyed buildings were identified by OpenStreetMap volunteers and
     Map Roulette contributors using aerial imagery from Copernicus EMS and Istanbul

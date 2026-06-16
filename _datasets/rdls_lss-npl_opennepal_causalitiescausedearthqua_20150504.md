@@ -27,7 +27,7 @@ description: 'This dataset contains causualities such as death,injury,displaced 
 details: null
 exposure: []
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: Post-event impact data extracted from the Nepal Disaster Risk Reduction
     portal documenting direct casualties (deaths, injuries), displacement, and damages

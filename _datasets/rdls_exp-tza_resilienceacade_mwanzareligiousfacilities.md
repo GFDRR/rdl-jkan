@@ -35,7 +35,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: This dataset was generated from a field survey by using the OpenDataKit
     app. It was created during a 12 week period between September and December 2020.

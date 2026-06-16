@@ -70,7 +70,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: CC0-1.0
 lineage:
   description: "Population in need (PiN) calculated by integrating DANE census data\
     \ on WASH infrastructure coverage (unimproved water sources, lack of sewerage,\

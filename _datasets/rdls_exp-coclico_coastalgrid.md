@@ -47,7 +47,7 @@ exposure:
       quantity_kind: area
       unit: square_metre
 hazard: null
-license: https://spdx.org/licenses/CC-BY-4.0.html
+license: CC-BY-4.0
 lineage:
   description: "The Coastal Grid dataset provides a global tiling system for geospatial\
     \ analytics in coastal areas. It supports scalable data processing workflows by\

@@ -85,7 +85,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://opendatacommons.org/licenses/odbl/1-0/
+license: ODbL-1.0/
 lineage:
   description: "Population exposure estimates were calculated by overlaying tropical\
     \ cyclone Megh's projected rainfall (\xE2\u2030\xA52 inches for 9-11 November)\
