@@ -1,0 +1,194 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-gnq_unosat_areasburnedfebruary3rd18t_20240223",
+      "title": "Areas burned from February 3rd to 18th, 2024, around the Pico Basil Volcano on Bioko Island, Equatorial Guinea",
+      "description": "UNOSAT code: FR20240222GNQ This map illustrates the burned areas as observed from Sentinel-2 images acquired on the 3rd and 18th of February 2024, over the Pico Basil Volcano on Bioko Island, Equatorial Guinea. Approximately 3 km2 of vegetation appeared to have burned around the Pico Basil Volcano as of February 3rd, 2024, increasing to about 6 km2 by 18th of February 2024. UNOSAT has identified 16 potentially affected structures and potentially affected roads approximately 2 kilometers. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/areas-burned-from-february-3rd-to-18th-2024-around-the-pico-basil-volcano-on-bioko-island-]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/areas-burned-from-february-3rd-to-18th-2024-around-the-pico-basil-volcano-on-bioko-island-"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/areas-burned-from-february-3rd-to-18th-2024-around-the-pico-basil-volcano-on-bioko-island-"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GNQ"
+        ]
+      },
+      "temporal": {
+        "start": "2024-02-23"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/areas-burned-from-february-3rd-to-18th-2024-around-the-pico-basil-volcano-on-bioko-island-"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed Sentinel-2 satellite imagery acquired on 3 and 18 February 2024, comparing multi-temporal images to identify and delineate burned vegetation areas around Pico Basil Volcano. Spatial analysis identified 16 potentially affected structures and affected road segments within 2 km of the burned perimeter. Results are preliminary and field-validated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Sentinel-2 satellite imagery analysis identifying burned area extent and changes between 3-18 February 2024 through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bb0e75cb",
+          "title": "FR20240222GNQ_gdb.zip",
+          "description": "Areas burned from February 3rd to 18th, 2024, around the Pico Basil Volcano on Bioko Island, Equatorial Guinea (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3799/FR20240222GNQ_gdb.zip"
+        },
+        {
+          "id": "resource_62d7b209",
+          "title": "FR20240222GNQ_SHP.zip",
+          "description": "Areas burned from February 3rd to 18th, 2024, around the Pico Basil Volcano on Bioko Island, Equatorial Guinea (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3799/FR20240222GNQ_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Potentially affected structures identified within 2 km of burned areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Potentially affected road network within 2 km of burned areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Potentially affected structures from wildfire around Pico Basil Volcano"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Burned vegetation area expanding from 3 km² to 6 km² between 3-18 February 2024"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/areas-burned-from-february-3rd-to-18th-2024-around-the-pico-basil-volcano-on-bioko-island-",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

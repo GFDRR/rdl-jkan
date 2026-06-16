@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-hti_unosat_populationexposedwindspee_20161006",
+      "title": "Haiti - Population Exposed to Wind Speed Zones",
+      "description": "Population Exposed to Wind Speed Zones. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/population-exposed-to-wind-speed-zones]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics and the limitations of the sources used to implement those results.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/population-exposed-to-wind-speed-zones"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/population-exposed-to-wind-speed-zones"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-06"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/population-exposed-to-wind-speed-zones"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Population census data was spatially intersected with observed tropical cyclone wind speed zones from Hurricane Matthew to quantify population exposure across different wind intensity categories.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite-derived population exposure data mapped to wind speed zones from Tropical Cyclone Matthew using census methodology"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a0c2eccc",
+          "title": "UNOSAT_TropicalCyclone_Matthew_Population_Exposure_WindSpeed_Update20161006",
+          "description": "Haiti - Population Exposed to Wind Speed Zones (Population Exposed to Wind Speed Zones)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/UNOSAT_TropicalCyclone_Matthew_Population_Exposure_WindSpeed_Update20161006.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to wind speed zones from tropical cyclone"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/population-exposed-to-wind-speed-zones",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

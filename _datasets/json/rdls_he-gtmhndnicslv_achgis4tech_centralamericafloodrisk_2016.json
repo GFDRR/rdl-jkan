@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-gtmhndnicslv_achgis4tech_centralamericafloodrisk_2016",
+      "title": "Central America - Flood risk",
+      "description": "Flood risk has been assessed based on data obtained from European Commission's Joint Research Centre. In this analysis, the amount of surface for each municipality that is in flood risk areas has been compiled. The hazard classification is determined using Jenks Natural Breaks Classification (or Optimization) system. The information is showed by country, department and municipality of Central America (Nicaragua, Honduras, Guatemala, El Salvador). For more information contact GIS4Tech: info@gis4tech.com. You can also visit the PREDISAN platform https://predisan.gis4tech.com/ca4 for detailed, accurate information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/central-america-flood-risk]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-flood-risk"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-flood-risk"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "NIC",
+          "HND",
+          "GTM",
+          "SLV"
+        ]
+      },
+      "temporal": {
+        "start": "2016-01-01",
+        "end": "2016-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "European Commission Joint Research Centre",
+            "url": "https://data.humdata.org/dataset/central-america-flood-risk"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Flood hazard data from the European Commission's Joint Research Centre was obtained and processed to calculate the surface area in flood risk zones for each municipality across Central America. Municipal-level flood risk areas were classified using Jenks Natural Breaks Optimization, with municipalities having zero flood hazard records assigned to the 'Low' category and remaining municipalities distributed across medium, high, and very high risk classes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "European Commission Joint Research Centre",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Flood hazard data providing the basis for flood risk assessment across Central America municipalities"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_39aa7d81",
+          "title": "flood_risk.csv",
+          "description": "Central America - Flood risk (Flood risk)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/75b4d2a3-80ec-4a81-b066-bfc890ac40e2/resource/39aa7d81-9e25-4fa2-a3ed-79366d4abd4f/download/flood_risk.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Municipal surface area classified by flood risk category"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/central-america-flood-risk",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

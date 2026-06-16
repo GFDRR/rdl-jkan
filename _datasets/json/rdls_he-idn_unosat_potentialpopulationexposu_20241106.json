@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-idn_unosat_potentialpopulationexposu_20241106",
+      "title": "Indonesia - Potential population exposure around Lewotobi Laki-Laki volcano",
+      "description": "UNOSAT code: VO20241105IDN, GDACS ID: 1000099 This map illustrates the population potentially exposed following the Lewotobi Laki-Laki volcanic eruption. Based on Worldpop spatial demographic data, ~11,400; ~26,000 and 37,000 people live within a 5km; 7.5km and 10km radius zone from the volcano crater. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/potential-population-exposure-around-lewotobi-laki-laki-volcano]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/potential-population-exposure-around-lewotobi-laki-laki-volcano"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/potential-population-exposure-around-lewotobi-laki-laki-volcano"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2024-11-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/potential-population-exposure-around-lewotobi-laki-laki-volcano"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed satellite imagery of the Lewotobi Laki-Laki volcanic eruption and delineated hazard exposure zones at 5km, 7.5km, and 10km radial distances from the crater. WorldPop spatial demographic data was intersected with these zones to estimate the population potentially exposed to volcanic hazards in each buffer area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial demographic data providing gridded population distribution used to estimate population counts within hazard exposure zones"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_564e58c2",
+          "title": "VO20241105IDN_gdb.zip",
+          "description": "Indonesia - Potential population exposure around Lewotobi Laki-Laki volcano (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4019/VO20241105IDN_gdb.zip"
+        },
+        {
+          "id": "resource_0299edef",
+          "title": "VO20241105IDN_SHP.zip",
+          "description": "Indonesia - Potential population exposure around Lewotobi Laki-Laki volcano (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4019/VO20241105IDN_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "ashfall",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed within concentric distance zones from the volcano crater based on WorldPop spatial demographic data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/potential-population-exposure-around-lewotobi-laki-laki-volcano",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

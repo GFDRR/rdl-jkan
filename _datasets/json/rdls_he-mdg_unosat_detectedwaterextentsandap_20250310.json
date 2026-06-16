@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mdg_unosat_detectedwaterextentsandap_20250310",
+      "title": "Satellite detected water extents in Andapa District, Sava Region, Madagascar as of 9 March 2025",
+      "description": "UNOSAT code: TC20250308MDG, GDACS ID: 1154 This map illustrates the potentially affected cropland in Andapa District, Sava Region, Madagascar, based on RCM-2 satellite images acquired on 9 March 2025. In the analyzed area of approximately 680 km², about 145 km² of cropland is identified, of which about 20 km² appears to be affected by floodwaters. This is a preliminary analysis and has not yet been validated on the ground. Ground feedback is requested and can be sent to the United Nations Satellite Centre (UNOSAT). Important Note: Flood analysis based on radar images may underestimate the presence of standing water in built-up or densely vegetated areas due to the backscattering properties of the radar signal. as of 9 March 2025. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-in-andapa-district-sava-region-madagascar-as-of-9-march-2025]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-andapa-district-sava-region-madagascar-as-of-9-march-2025"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-in-andapa-district-sava-region-madagascar-as-of-9-march-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2025-03-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extents-in-andapa-district-sava-region-madagascar-as-of-9-march-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "RCM-2 satellite radar images acquired on 9 March 2025 were analyzed by UNOSAT analysts using change detection methodology comparing pre- and post-event imagery to delineate water extents and quantify flood-affected cropland area (20 km² of 145 km² total cropland) in Andapa District. The analysis is preliminary and unvalidated on the ground.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-based water extent detection using RCM-2 radar imagery and change detection analysis to identify flood-affected areas in near-real-time"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a51e2448",
+          "title": "TC20250308MDG_gdb.zip",
+          "description": "Satellite detected water extents in Andapa District, Sava Region, Madagascar as of 9 March 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4086/TC20250308MDG_gdb.zip"
+        },
+        {
+          "id": "resource_a5b16dfc",
+          "title": "TC20250308MDG_SHP.zip",
+          "description": "Satellite detected water extents in Andapa District, Sava Region, Madagascar as of 9 March 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4086/TC20250308MDG_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland inventory in Andapa District classified by flood exposure status"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-in-andapa-district-sava-region-madagascar-as-of-9-march-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-mozmwiswzzafzwe_wfpadam_cyclonetropicalstormmar20_202403",
+      "title": "Mozambique: Cyclone - Tropical storm - Mar 2024",
+      "description": "ADAM ID: 1001053_10 Cyclone (tropical storm) during the period Mar 03 2024-Mar 13 2024 in Mozambique, South Africa, Eswatini, Zimbabwe, Malawi. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-cyclone-1001053]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/mozambique-cyclone-1001053"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/mozambique-cyclone-1001053"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "MOZ",
+          "ZAF",
+          "SWZ",
+          "ZWE",
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2024-03-03",
+        "end": "2024-03-13"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/mozambique-cyclone-1001053"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "ADAM collected and mapped observed tropical cyclone track data and wind speed measurements from the March 2024 cyclone event. Population exposure was estimated by intersecting wind speed thresholds (60 km/h and 90 km/h) with gridded population data at administrative levels (ADM0-ADM2), producing both spatial vector data and tabular population estimates by wind speed zone.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting and mapping geospatial information on tropical storms, providing observed cyclone tracks, wind speed fields, and population exposure estimates"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_fea886c3",
+          "title": "1001053-15-adam-ts-1001053-15-shp.zip",
+          "description": "Mozambique: Cyclone - Tropical storm - Mar 2024 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/3342649b-1740-40c3-8246-4ed362b28bbc/resource/fea886c3-9ec5-48b0-9ccb-8d092f4f5f1f/download/1001053-15-adam-ts-1001053-15-shp.zip"
+        },
+        {
+          "id": "resource_6fc0e690",
+          "title": "1001053-15-adam-ts-1001053-15-pop-estimation.csv",
+          "description": "Mozambique: Cyclone - Tropical storm - Mar 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/3342649b-1740-40c3-8246-4ed362b28bbc/resource/6fc0e690-f91a-449c-9513-c9c7a7a9cfb6/download/1001053-15-adam-ts-1001053-15-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at 60 km/h and 90 km/h thresholds"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-cyclone-1001053",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

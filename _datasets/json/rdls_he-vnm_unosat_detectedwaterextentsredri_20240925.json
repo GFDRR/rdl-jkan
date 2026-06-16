@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-vnm_unosat_detectedwaterextentsredri_20240925",
+      "title": "Satellite detected water extents in Red River Delta, Viet Nam as of 25 September 2024",
+      "description": "UNOSAT code: TC20240905VNM, GDACS ID: 1001090 Satellite detected water extents in Red River Delta, Viet Nam as of 25 September 2024 This map illustrates the floods using Sentinel-1 images acquired on 25 September 2024 at 05:58 local time. Within the analysed area of about 38,000 km², a total of about 600 km² of land appears to be affected by flood waters. Flood extent appears to have decreased by about 700 km² since 13 September 2024. Based on Worldpop spatial demographic data, about 400,000 people are exposed or living close to flooded areas as of 25 September 2024. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT). Important note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to the backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extents-in-red-river-delta-viet-nam-as-of-25-september-2024]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-red-river-delta-viet-nam-as-of-25-september-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-red-river-delta-viet-nam-as-of-25-september-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VNM"
+        ]
+      },
+      "temporal": {
+        "start": "2024-09-25"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1 satellite imagery",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-red-river-delta-viet-nam-as-of-25-september-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop spatial demographic data",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-red-river-delta-viet-nam-as-of-25-september-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed Sentinel-1 SAR imagery acquired on 25 September 2024 to detect water extents through comparison with reference imagery, delineating flooded areas as vector polygons with area measurements. Population exposure was calculated by intersecting the flood extent polygons with WorldPop gridded demographic data to estimate affected population counts. The dataset represents post-event observed flood conditions in the Red River Delta during the September 2024 typhoon event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar (SAR) satellite imagery acquired on 25 September 2024 used to detect and delineate flood water extents through change detection analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop spatial demographic data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate the number of people exposed to or living in proximity to detected flood waters"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4c7550d5",
+          "title": "TC20240905VNM_GDB.zip",
+          "description": "Satellite detected water extents in Red River Delta, Viet Nam as of 25 September 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3981/TC20240905VNM_GDB.zip"
+        },
+        {
+          "id": "resource_662f4241",
+          "title": "TC20240910VNM_SHP.zip",
+          "description": "Satellite detected water extents in Red River Delta, Viet Nam as of 25 September 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3981/TC20240910VNM_SHP.zip"
+        },
+        {
+          "id": "resource_6753744e",
+          "title": "UNOSAT_PopulationExposureAnalysis_Flood_TCYAGI_VIETNAM_25SEP2024.xlsx",
+          "description": "Satellite detected water extents in Red River Delta, Viet Nam as of 25 September 2024 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3981/UNOSAT_PopulationExposureAnalysis_Flood_TCYAGI_VIETNAM_25SEP2024.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed or living close to flooded areas in Red River Delta, approximately 400,000 people based on WorldPop spatial demographic data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extents-in-red-river-delta-viet-nam-as-of-25-september-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

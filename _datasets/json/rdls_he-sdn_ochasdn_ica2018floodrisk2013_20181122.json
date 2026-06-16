@@ -1,0 +1,136 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-sdn_ochasdn_ica2018floodrisk2013_20181122",
+      "title": "ICA Sudan, 2018 - Flood Risk, 2013",
+      "description": "This layer contains information about the flood risk - by second-level administrative area - estimated during the Integrated Context Analysis (ICA) run in Sudan in 2018. Data sources: UNEP/UNISDR, GAR 2013. The main indicators used for the analysis were the percentage of district surface at flood risk and the maximum expected frequency of flood events with a 100-year return period.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ica-sudan-2018-flood-risk-2013]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-flood-risk-2013"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-flood-risk-2013"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-11-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNEP/UNISDR GAR 2013",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-flood-risk-2013"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The Integrated Context Analysis (ICA) Sudan 2018 integrated flood risk data from UNEP/UNISDR GAR 2013 to estimate probabilistic flood hazard at the second-level administrative district scale. Key indicators include the percentage of district surface area at flood risk and maximum expected frequency of flood events at the 100-year return period, aggregated by administrative boundaries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNEP/UNISDR GAR 2013",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Global Assessment Report 2013 flood risk assessment methodology and data used to estimate district-level flood hazard frequencies and risk percentages"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b3a9fddc",
+          "title": "ICA Sudan, 2018 - Flood Risk, 2013",
+          "description": "This layer contains information about the flood risk - by second-level administrative area - estimated during the Integrated Context Analysis (ICA) run in Sudan in 2018. Data sources: UNEP/UNISDR, GAR 2013. The main indicators used for the analysis were the percentage of district surface at flood risk and the maximum expected frequency of flood events with a 100-year return period.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Asdn_ica_floodrisk_geonode_20180201&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "inferred",
+            "events": [
+              {
+                "id": "event_100yr",
+                "calculation_method": "inferred",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01
+                  }
+                },
+                "description": "Probabilistic flood hazard assessment by administrative district with maximum expected frequency at 100-year return period"
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population distribution across districts with percentage of surface area at flood risk"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ica-sudan-2018-flood-risk-2013",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

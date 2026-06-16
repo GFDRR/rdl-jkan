@@ -1,0 +1,177 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-cod_unosat_detectedwaterlandslideext_20240118",
+      "title": "Satellite detected water and landslide extents in Kinshasa Province, Democratic Republic of The Congo as of 13 January 2024",
+      "description": "UNOSAT code: FL20231229COD This map illustrates satellite-detected surface waters and landslide location in Kinshasa Province, Democratic Republic of The Congo, as observed from a WorldView-3 image acquired on 13 January 2024, at 10:36 local time. Within the analysed area of 130km2, approximately 4 km2 of land appear to be flooded and a landslide location observed. Within the analysed area 9,352 buildings are identified as potentially affected by the floods and landslide. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-13]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-13"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-13"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2024-01-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-13"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed WorldView-3 satellite imagery acquired on 13 January 2024 over Kinshasa Province, comparing multi-temporal images to detect surface water extent (approximately 4 km² flooded) and identify a landslide location. Building footprints were extracted and spatially intersected with hazard extents to estimate exposure and direct impacts within the 130 km² analysis area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using WorldView-3 to detect surface water extent and landslide locations through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_24771c7c",
+          "title": "FL20231229COD_gdb.zip",
+          "description": "Satellite detected water and landslide extents in Kinshasa Province, Democratic Republic of The Congo as of 13 January 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3786/FL20231229COD_gdb.zip"
+        },
+        {
+          "id": "resource_5c8a6869",
+          "title": "FL20231229COD_SHP.zip",
+          "description": "Satellite detected water and landslide extents in Kinshasa Province, Democratic Republic of The Congo as of 13 January 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3786/FL20231229COD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints identified within the 130 km² analysis area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Buildings potentially affected by satellite-detected flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Buildings potentially affected by detected landslide location"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-13",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

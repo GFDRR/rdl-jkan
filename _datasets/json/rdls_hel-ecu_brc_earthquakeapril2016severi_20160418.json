@@ -1,0 +1,181 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ecu_brc_earthquakeapril2016severi_20160418",
+      "title": "Ecuador Earthquake - April 2016 - Severity index",
+      "description": "A predictive severity index created using population * poverty * MMI Population and Poverty from: https://data.hdx.rwlabs.org/dataset/poverty-and-population MMI from: http://earthquake.usgs.gov/earthquakes/eventpage/us20005j32#shakemap. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ecuador-earthquake-april-2016-severity-index]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "British Red Cross Maps Team",
+        "url": "https://data.humdata.org/dataset/ecuador-earthquake-april-2016-severity-index"
+      },
+      "creator": {
+        "name": "British Red Cross Maps Team",
+        "url": "https://data.humdata.org/dataset/ecuador-earthquake-april-2016-severity-index"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ECU"
+        ]
+      },
+      "temporal": {
+        "start": "2016-04-18"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "USGS Earthquake Hazards Program",
+            "url": "https://data.humdata.org/dataset/ecuador-earthquake-april-2016-severity-index"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "HDX Poverty and Population Dataset",
+            "url": "https://data.humdata.org/dataset/ecuador-earthquake-april-2016-severity-index"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "A predictive severity index was calculated by multiplying gridded population data from census sources, poverty indices, and observed Modified Mercalli Intensity values from the USGS shakemap of the April 2016 Ecuador earthquake. This composite index identifies areas of highest humanitarian concern by combining hazard intensity with population vulnerability and economic deprivation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "USGS Earthquake Hazards Program",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Modified Mercalli Intensity shakemap for the April 16, 2016 Ecuador earthquake event (magnitude 7.8)"
+          },
+          {
+            "id": "source_2",
+            "name": "HDX Poverty and Population Dataset",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Census-based population counts and poverty indices used to weight earthquake exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_58069fa8",
+          "title": "Ecuador Earthquake - April 2016 - Severity index",
+          "description": "A predictive severity index created using population * poverty * Mw Population and Poverty from: https://data.hdx.rwlabs.org/dataset/poverty-and-population Mw from: http://earthquake.usgs.gov/earthquakes/eventpage/us20005j32#shakemap Please note data was missing for 4 Cantons: Las Golondrinas Manga Del Cura El Piedrero La Concordia",
+          "format": "Google Sheet",
+          "download_url": "https://docs.google.com/spreadsheets/d/1OlxhQ_ejRKNvohbnfJ7yJPKD6U6pXcPPfsFnwBbP2nc/edit?usp=drive_web"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Census population distribution across Ecuador"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "economic_indicator",
+          "asset_type": {
+            "id": "economic_indicator",
+            "description": "Poverty index by geographic area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "index",
+              "measurement": {
+                "quantity_kind": "index"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Predictive severity index combining population exposure, poverty vulnerability, and earthquake ground motion intensity"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ecuador-earthquake-april-2016-severity-index",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

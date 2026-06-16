@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-npl_ochanaas_estimatedpopulationexpose_20150425",
+      "title": "Estimated Population Exposed to Nepal Earthquake shaking",
+      "description": "Population data by district and severity class. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/estimated-population-exposed-to-earthquake-shaking]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "OCHA Needs Assessment and Analysis Section (NAAS) (inactive)",
+        "url": "https://data.humdata.org/dataset/estimated-population-exposed-to-earthquake-shaking"
+      },
+      "creator": {
+        "name": "OCHA Needs Assessment and Analysis Section (NAAS) (inactive)",
+        "url": "https://data.humdata.org/dataset/estimated-population-exposed-to-earthquake-shaking"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-04-25"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPoP Project",
+            "url": "https://data.humdata.org/dataset/estimated-population-exposed-to-earthquake-shaking"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "USGS-Pager",
+            "url": "https://data.humdata.org/dataset/estimated-population-exposed-to-earthquake-shaking"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "OCHA",
+            "url": "https://data.humdata.org/dataset/estimated-population-exposed-to-earthquake-shaking"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "USGS-Pager earthquake ground motion data (PGA severity classes) was intersected with WorldPoP gridded population distribution to estimate population exposure by district and shaking intensity level. Census administrative boundaries were used to aggregate results at the district level for needs assessment purposes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPoP Project",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population counts by district and severity class"
+          },
+          {
+            "id": "source_2",
+            "name": "USGS-Pager",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "USGS Prompt Assessment of Global Earthquakes for Response (PAGER) system providing rapid earthquake impact assessment and ground motion severity classification"
+          },
+          {
+            "id": "source_3",
+            "name": "OCHA",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Administrative boundary and coordination data supporting the needs assessment analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_730c55b0",
+          "title": "PGA_AffectedDistricts_POP.xlsx",
+          "description": "Estimated Population Exposed to Nepal Earthquake shaking (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4ae4f428-f959-4413-b752-5736f19ed70d/resource/730c55b0-f4a5-49b6-a750-a223e5262867/download/pga-affecteddistricts-pop.xlsx"
+        },
+        {
+          "id": "resource_3165c3f0",
+          "title": "PGA_AffectedDistricts_POP.csv",
+          "description": "Estimated Population Exposed to Nepal Earthquake shaking (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/4ae4f428-f959-4413-b752-5736f19ed70d/resource/3165c3f0-eb74-4d7b-bb8e-a1ae9e9c6586/download/pga-affecteddistricts-pop.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population by district exposed to earthquake ground shaking at different severity levels"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/estimated-population-exposed-to-earthquake-shaking",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

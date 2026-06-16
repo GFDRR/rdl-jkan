@@ -1,0 +1,165 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-hnd_ocharolac_poblacionexpuestadeslizam_20180518",
+      "title": "Honduras Población Expuesta a Deslizamientos 2012",
+      "description": "El indicador estima la población expuesta que habita en zonas propensa a deslizamientos, en base al Mapa de Susceptibilidad a Movimientos de Laderas. El resultado es la composición de capas de las zonas con una amenaza alta o muy alta y el total de la población que habita sobre dicha área.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/honduras-poblacion-expuesta-a-deslizamientos-2012]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "* [INFORM Honduras.](http://www.inform-index.org/Subnational/Honduras) * Dimensión: Peligro y Exposición * Categoría: Peligros Naturales * Componente: Deslizamiento",
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-poblacion-expuesta-a-deslizamientos-2012"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-poblacion-expuesta-a-deslizamientos-2012"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2018-05-18"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Instituto Hondureño de Ciencias de la Tierra (IHCIT)",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-expuesta-a-deslizamientos-2012"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Instituto Nacional de Estadística (INE)",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-expuesta-a-deslizamientos-2012"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Landslide susceptibility zones from IHCIT were overlaid with population distribution data from INE census to estimate the absolute number of people residing in areas classified as high or very high landslide hazard. The result is a spatial composition of susceptible zones and the total exposed population inhabiting those areas.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Instituto Hondureño de Ciencias de la Tierra (IHCIT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Landslide susceptibility mapping identifying zones prone to slope movements"
+          },
+          {
+            "id": "source_2",
+            "name": "Instituto Nacional de Estadística (INE)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population census data providing baseline population counts by geographic area"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_717ca106",
+          "title": "5-PE.NAT.DLZ-ABS - Población Expuesta a Deslizamientos (absoluto).xlsx",
+          "description": "Honduras Población Expuesta a Deslizamientos 2012 (Población expuesta que habita en zonas susceptibles a movimientos de laderas.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/92a24a44-b37d-4afe-a493-5e2184e2a563/resource/717ca106-dd46-4ed9-8a3b-57d6ed55c8bf/download/5-pe.nat.dlz-abs-poblacion-expuesta-a-deslizamientos-absoluto.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population residing in landslide-prone zones classified by susceptibility level"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "inferred",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Population exposed to landslide hazard in high and very high susceptibility zones"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/honduras-poblacion-expuesta-a-deslizamientos-2012",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

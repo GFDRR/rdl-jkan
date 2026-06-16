@@ -1,0 +1,172 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-gtmmex_unosat_detectedwaterspetendepart_20201123",
+      "title": "Satellite detected waters in Peten Department of Guatemala & Chiapas State of Mexico as of 22 November 2020",
+      "description": "UNOSAT code: TC20201119GTM This map illustrates satellite-detected surface waters in Peten, Alta Verapaz and Quiche departments of Guatemala & Chiapas state of Mexico as observed from a Sentinel-1 image acquired on 22 November 2020 at 05:53 Local time. Within the analyzed area of about 10,000 km2, a total of about 380 km2 of lands appear to be flooded. Based on Worldpop population data and the detected surface waters, about 24,000 people are potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT. Important Note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/waters-in-peten-department-of-guatemala-chiapas-state-of-mexico-as-of-22-november-2020]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/waters-in-peten-department-of-guatemala-chiapas-state-of-mexico-as-of-22-november-2020"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/waters-in-peten-department-of-guatemala-chiapas-state-of-mexico-as-of-22-november-2020"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "GTM",
+          "MEX"
+        ]
+      },
+      "temporal": {
+        "start": "2020-11-23"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1 SAR imagery",
+            "url": "https://data.humdata.org/dataset/waters-in-peten-department-of-guatemala-chiapas-state-of-mexico-as-of-22-november-2020"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/waters-in-peten-department-of-guatemala-chiapas-state-of-mexico-as-of-22-november-2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts performed change detection analysis on Sentinel-1 SAR imagery acquired 22 November 2020 to identify surface water extent across approximately 10,000 km2 in Guatemala and Mexico. Detected flooded areas (380 km2) were intersected with WorldPop gridded population data to estimate approximately 24,000 people potentially exposed to flooding. This is a preliminary post-event damage assessment not yet validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1 SAR imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar satellite image acquired 22 November 2020 used to detect surface water extent through change detection analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate population exposure to detected flooded areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cc358d14",
+          "title": "TC20201119GTM_gdb.zip",
+          "description": "Satellite detected waters in Peten Department of Guatemala & Chiapas State of Mexico as of 22 November 2020 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/GT/TC20201119GTM/TC20201119GTM_gdb.zip"
+        },
+        {
+          "id": "resource_2f061449",
+          "title": "TC20201119GTM_SHP.zip",
+          "description": "Satellite detected waters in Peten Department of Guatemala & Chiapas State of Mexico as of 22 November 2020 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/GT/TC20201119GTM/TC20201119GTM_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to satellite-detected flooded areas, estimated at approximately 24,000 people using WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by satellite-detected flooding in Peten, Alta Verapaz, Quiche (Guatemala) and Chiapas (Mexico)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/waters-in-peten-department-of-guatemala-chiapas-state-of-mexico-as-of-22-november-2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

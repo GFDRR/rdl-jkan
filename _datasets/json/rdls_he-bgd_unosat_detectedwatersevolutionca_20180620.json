@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-bgd_unosat_detectedwatersevolutionca_20180620",
+      "title": "Satellite Detected Waters Evolution by Camp Extent in Cox's Bazar District, Chittagong Division, Bangladesh",
+      "description": "This map illustrates the evolution of satellite detected waters and the related wet conditions in the Cox's Bazar Myanmar nationals refugee camps located in Ukhia Upazilla, as deduced from the analysis of two Radarsat-2 Spotlight images with 0.5m resolution acquired on 16 June 2018 & 23 May 2018. The evolution of surface waters was classified into three classes of change: low, moderate and high. This analysis shows that some camps experienced a lower increase of wet conditions/surface waters, as camp 1W and camp 2E. Whereas some have moderately changed, as camp 2W, camp 6 and camp 14, others have greatly changed, as camp 17, camp 8W and camp 20 and its extension. It is likely that flood waters have been systematically underestimated along highly vegetated areas along main river banks and within built-up urban areas because of the special characteristics of the satellite data used. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-waters-evolution-by-camp-extent-in-cox-s-bazar-district-chittagong-division-]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-evolution-by-camp-extent-in-cox-s-bazar-district-chittagong-division-"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-evolution-by-camp-extent-in-cox-s-bazar-district-chittagong-division-"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2018-06-20"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNOSAT",
+            "url": "https://data.humdata.org/dataset/satellite-detected-waters-evolution-by-camp-extent-in-cox-s-bazar-district-chittagong-division-"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Two Radarsat-2 Spotlight SAR images (0.5m resolution) acquired on 23 May 2018 and 16 June 2018 were analyzed by UNOSAT to detect changes in surface water extent within Myanmar nationals refugee camps in Ukhia Upazilla, Cox's Bazar. Change in mean backscatter values between the two acquisition dates was computed per camp polygon and classified into three levels of wet condition change (low, moderate, high). The resulting dataset provides a spatially explicit record of flood/inundation evolution overlaid on camp boundaries to support humanitarian response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNOSAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "UNOSAT analysts processed two Radarsat-2 Spotlight SAR images (0.5m resolution, acquired 23 May 2018 and 16 June 2018) to detect and classify the evolution of surface water and wet conditions within refugee camp extents in Cox's Bazar."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6fc9affc",
+          "title": "FL20180518BGD_SHP.zip",
+          "description": "Satellite Detected Waters Evolution by Camp Extent in Cox's Bazar District, Chittagong Division, Bangladesh (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/BD/FL20180518BGD/FL20180518BGD_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Myanmar nationals refugee camp populations in Ukhia Upazilla, Cox's Bazar, spatially delineated by camp extent polygons"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-waters-evolution-by-camp-extent-in-cox-s-bazar-district-chittagong-division-",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

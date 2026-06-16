@@ -1,0 +1,278 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-col_3is_precipitacionesyeventosde_2014",
+      "title": "Colombia - Precipitaciones y Eventos de Inundaciones - 1990 - 2020",
+      "description": "Esta base de datos compila información detallada sobre los eventos de inundaciones ocurridos en Colombia entre 1990 y 2020, enriquecida con datos de precipitación asociados a cada evento. La precipitación diaria se ha obtenido de la fuente CHIRPS (Climate Hazards Group InfraRed Precipitation with Station data), una de las referencias más confiables para datos climáticos a nivel global. La integración de datos de inundaciones con información precisa de precipitación permite un análisis profundo de los patrones asociados al fenómeno de La Niña, un evento climático que ha tenido un impacto significativo en la región. Esta base de datos es una herramienta invaluable para quienes están involucrados en la investigación y modelado de fenómenos climáticos, así como en la planificación y prevención de desastres. Además de su utilidad para estudios históricos, esta base de datos puede servir como insumo en modelos predictivos para anticipar futuros eventos relacionados con La Niña, contribuyendo a la toma de decisiones informadas y a la implementación de medidas de mitigación en sectores vulnerables.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/colombia-precipitaciones-y-eventos-de-inundaciones-1990-2020]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/colombia-precipitaciones-y-eventos-de-inundaciones-1990-2020"
+      },
+      "creator": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/colombia-precipitaciones-y-eventos-de-inundaciones-1990-2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2014-01-01",
+        "end": "2020-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "CHIRPS (Climate Hazards Group InfraRed Precipitation with Station data)",
+            "url": "https://data.humdata.org/dataset/colombia-precipitaciones-y-eventos-de-inundaciones-1990-2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event flood occurrence data from Colombian administrative records (1990-2020) was integrated with daily precipitation measurements from CHIRPS to create a comprehensive database linking rainfall patterns to documented flood events. The dataset enables analysis of precipitation-flood associations and La Niña climate phenomenon impacts on Colombian flood hazards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "CHIRPS (Climate Hazards Group InfraRed Precipitation with Station data)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Global daily precipitation dataset providing rainfall measurements integrated with flood event records to analyze precipitation-flood relationships"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8b550712",
+          "title": "Datos_Precipitaciones_Inundaciones_1990_2020_Colombia.xlsx",
+          "description": "Esta base de datos compila información detallada sobre los eventos de inundaciones ocurridos en Colombia entre 1990 y 2020, enriquecida con datos de precipitación asociados a cada evento. La precipitación diaria se ha obtenido de la fuente CHIRPS (Climate Hazards Group InfraRed Precipitation with Station data), una de las referencias más confiables para datos climáticos a nivel global. La integración de datos de inundaciones con información precisa de precipitación permite un análisis profundo de los patrones asociados al fenómeno de La Niña, un evento climático que ha tenido un impacto significativo en la región. Esta base de datos es una herramienta invaluable para quienes están involucrados en la investigación y modelado de fenómenos climáticos, así como en la planificación y prevención de desastres. Además de su utilidad para estudios históricos, esta base de datos puede servir como insumo en modelos predictivos para anticipar futuros eventos relacionados con La Niña, contribuyendo a la toma de decisiones informadas y a la implementación de medidas de mitigación en sectores vulnerables.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/5501ca60-ece4-4dd1-8063-aadcf9895377/resource/8b550712-79ef-4ef7-aff2-cf2aa3bab83a/download/datos_precipitaciones_inundaciones_1990_2020_colombia.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "Precip:mm"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Residential and community buildings affected by flood events"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Roads, bridges, water supply and sanitation infrastructure damaged by floods"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to flood events in Colombian municipalities"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "Precip:mm"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct fatalities from flood events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "Precip:mm"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct injuries from flood events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "Precip:mm"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced by flood events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "Precip:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Residential buildings destroyed or damaged by floods"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "Precip:mm"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Agricultural land area affected by flood events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/colombia-precipitaciones-y-eventos-de-inundaciones-1990-2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

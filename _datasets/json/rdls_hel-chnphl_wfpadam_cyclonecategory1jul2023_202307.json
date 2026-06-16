@@ -1,0 +1,147 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-chnphl_wfpadam_cyclonecategory1jul2023_202307",
+      "title": "China: Cyclone - Category 1 - Jul 2023",
+      "description": "ADAM ID: 1000985_9 Cyclone (category 1) during the period Jul 21 2023-Jul 28 2023 in China, Philippines. It impacted 23921068 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/china-cyclone-1000985]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/china-cyclone-1000985"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/china-cyclone-1000985"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "CHN",
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-07-21",
+        "end": "2023-07-28"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/china-cyclone-1000985"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and analyzed geospatial cyclone track data with wind speed measurements and overlaid population exposure data to generate alerts and impact dashboards for the July 2023 Category 1 cyclone event affecting China and Philippines.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting and mapping geospatial information on tropical cyclone tracks, wind speeds, and affected populations following sudden-onset emergencies."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d1c090b2",
+          "title": "1000985-28-adam-ts-1000985-28-shp.zip",
+          "description": "China: Cyclone - Category 1 - Jul 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/c2cd7ab4-da41-48ec-aaec-2a0c38a0218f/resource/d1c090b2-36c8-4d04-a79d-59d55768bfac/download/1000985-28-adam-ts-1000985-28-shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone hazard in affected areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Total population affected by Category 1 tropical cyclone event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/china-cyclone-1000985",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

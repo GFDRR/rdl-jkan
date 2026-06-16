@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-chl_wfpadam_earthquake62msep2023_20230906",
+      "title": "Chile: Earthquake - 6.2M - Sep 2023",
+      "description": "A magnitude 6.2 earthquake at 41.368 depth occurred on Sep 06 2023 in 42km SW of Coquimbo. It impacted 349977 people. The epicentre was at latitude -30.2775 longitude -71.536.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/chile-earthquake-eq-us7000ktti]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/chile-earthquake-eq-us7000ktti"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/chile-earthquake-eq-us7000ktti"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/chile-earthquake-eq-us7000ktti"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "ADAM collected observed earthquake parameters (magnitude 6.2, depth, epicenter coordinates) from seismic monitoring and integrated gridded population exposure data to estimate affected population counts in the impact zone near Coquimbo, Chile.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analyzing and mapping geospatial and socio-economic information following sudden-onset humanitarian emergencies, aggregating earthquake impact assessments and population exposure data."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_238cecf8",
+          "title": "sm_us7000ktti_pop_estimation.csv",
+          "description": "Chile: Earthquake - 6.2M - Sep 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://adam-project-prod.s3-eu-west-1.amazonaws.com/adam_eq/events/2023/09/sm_us7000ktti/sm_us7000ktti_pop_estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population exposed to earthquake ground motion in the affected region"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct population impact from earthquake ground motion"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/chile-earthquake-eq-us7000ktti",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

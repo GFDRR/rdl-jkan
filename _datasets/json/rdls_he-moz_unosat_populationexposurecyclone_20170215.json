@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-moz_unosat_populationexposurecyclone_20170215",
+      "title": "Mozambique - Population Exposure-Cyclone Dineo-17",
+      "description": "The Tropical Cyclone Dineo-17, is approaching Mozambique coasts and is expected to make landfall The 16 February 2017 in the central province of Inhambane. Potential heavy rainfall are also expected according microwave satellite sensors and might induce flooding in the affected areas. This report provides an analysis on the potentially exposed population per wind speed zones in Mozambique. According to our analysis approximately 250,000 people in Mozambique may be exposed to over 120km/h sustainable wind speeds and 59,000 people might be exposed to 90km/h wind speed. About 1,160,000 people might be exposed to moderate winds of 60km/h.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/population-exposure-cyclone-dineo-17-mozambique]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/population-exposure-cyclone-dineo-17-mozambique"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/population-exposure-cyclone-dineo-17-mozambique"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2017-02-15"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed satellite imagery from Tropical Cyclone Dineo-17 to delineate wind speed hazard zones across Mozambique. Gridded population data was intersected with wind speed zones (90 km/h and 120 km/h thresholds) to estimate population exposure per wind speed category, producing a deterministic exposure assessment for the approaching cyclone event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis of Tropical Cyclone Dineo-17 wind speed zones and spatial extent over Mozambique, derived from microwave satellite sensors and comparative image analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e82c7420",
+          "title": "UNOSAT_Pop_exposure_dineo17_20170215.xlsx",
+          "description": "Mozambique - Population Exposure-Cyclone Dineo-17 (Zipped shapefile)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/FL20170118MOZ/UNOSAT_Pop_exposure_dineo17_20170215.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speed zones in Mozambique"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/population-exposure-cyclone-dineo-17-mozambique",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

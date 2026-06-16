@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-dom_unosat_detectedwaterextentcibaon_20231122",
+      "title": "Satellite detected water extent in Cibao Nordeste Region, Dominican Republic as of 21 November 2023",
+      "description": "UNOSAT code: FL20231120DOM, GDACS ID: 1102342 This map illustrates cumulative satellite-detected water extent in Cibao Nordeste Region, Dominican Republic as observed from a Sentinel-2 image acquired on the 21 November 2023 at 11:17 local time. Within the cloud free analysed area of about 920 km² , about 190 km² of land appears to be affected with flood waters and 13,000 people are potentially exposed to flood waters. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-in-cibao-nordeste-region-dominican-republic-as-of-21-november-2023]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-cibao-nordeste-region-dominican-republic-as-of-21-november-2023"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-cibao-nordeste-region-dominican-republic-as-of-21-november-2023"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DOM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-22"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extent-in-cibao-nordeste-region-dominican-republic-as-of-21-november-2023"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-2 satellite image acquired on 21 November 2023 was analyzed by UNOSAT through visual interpretation and multi-temporal comparison to detect cumulative water extent changes. The resulting water extent polygon (190 km² within 920 km² cloud-free area) was vectorized and intersected with population data to estimate exposure. This preliminary post-event damage assessment has not been field-validated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Sentinel-2 satellite imagery analysis providing observed water extent mapping and flood inundation detection through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_fbe0fdd4",
+          "title": "FL20231120DOM_gdb.zip",
+          "description": "Satellite detected water extent in Cibao Nordeste Region, Dominican Republic as of 21 November 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3750/FL20231120DOM_gdb.zip"
+        },
+        {
+          "id": "resource_35686693",
+          "title": "FL20231120DOM_SHP.zip",
+          "description": "Satellite detected water extent in Cibao Nordeste Region, Dominican Republic as of 21 November 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3750/FL20231120DOM_SHP.zip"
+        },
+        {
+          "id": "resource_85f52cad",
+          "title": "UNOSAT_Population_Exposure_FL20231120DOM_21Nov2023.xlsx",
+          "description": "Satellite detected water extent in Cibao Nordeste Region, Dominican Republic as of 21 November 2023 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3750/UNOSAT_Population_Exposure_FL20231120DOM_21Nov2023.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed to flood waters based on satellite-detected inundation extent"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-in-cibao-nordeste-region-dominican-republic-as-of-21-november-2023",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

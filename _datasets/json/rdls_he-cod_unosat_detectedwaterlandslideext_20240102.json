@@ -1,0 +1,155 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-cod_unosat_detectedwaterlandslideext_20240102",
+      "title": "Satellite detected water and landslide extents in Kinshasa Province, Democratic Republic of The Congo as of 28 December 2023",
+      "description": "UNOSAT code: FL20231229COD This map illustrates satellite-detected surface waters and landslides in Kinshasa Province, Democratic Republic of The Congo, as observed from a Sentinel-2 image acquired on 28 December 2023, at 10:21 local time. Within the analysed area of 44,000 ha, approximately 3 ha of landslide scars are observed and about 460 ha of land appear to be flooded. Based on Worldpop population data, the detected surface waters and the landslide scar extent, about 25,000 people are potentially exposed or living close to landslide and flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please provide ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-28]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-28"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-28"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2024-01-02"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-28"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop population data",
+            "url": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-28"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts visually interpreted Sentinel-2 satellite imagery acquired on 28 December 2023 to detect and delineate surface water and landslide scar extents within a 44,000 ha study area in Kinshasa Province. Detected hazard polygons were intersected with WorldPop gridded population data to estimate exposed population. The resulting geodatabase and shapefile products provide post-event observed hazard extents and exposure estimates.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multispectral satellite imagery acquired on 28 December 2023 used for visual interpretation and delineation of water and landslide extents"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop population data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution dataset used to estimate population exposure to detected hazard extents"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7c0d4a66",
+          "title": "FL20231229COD_gdb.zip",
+          "description": "Satellite detected water and landslide extents in Kinshasa Province, Democratic Republic of The Congo as of 28 December 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3778/FL20231229COD_gdb.zip"
+        },
+        {
+          "id": "resource_7b486610",
+          "title": "FL20231229COD_SHP.zip",
+          "description": "Satellite detected water and landslide extents in Kinshasa Province, Democratic Republic of The Congo as of 28 December 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3778/FL20231229COD_SHP.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed to flooded and landslide-affected areas based on WorldPop data, approximately 25,000 people"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-and-landslide-extents-in-kinshasa-province-democratic-republic-of-the-congo-as-of-28",
+          "rel": "source"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "es_flood",
+            "hazards": [
+              {
+                "id": "es_flood_hzd",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_landslide",
+            "hazards": [
+              {
+                "id": "es_landslide_hzd",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "pgd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      }
+    }
+  ]
+}

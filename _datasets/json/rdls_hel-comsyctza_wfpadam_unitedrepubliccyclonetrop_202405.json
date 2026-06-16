@@ -1,0 +1,148 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-comsyctza_wfpadam_unitedrepubliccyclonetrop_202405",
+      "title": "United Republic of Tanzania: Cyclone - Tropical storm - May 2024",
+      "description": "ADAM ID: 1001060_10 Cyclone (tropical storm) during the period May 01 2024-May 04 2024 in Tanzania, Seychelles, Comoros. It impacted 8846 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/united-republic-of-tanzania-cyclone-1001060]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/united-republic-of-tanzania-cyclone-1001060"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/united-republic-of-tanzania-cyclone-1001060"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "TZA",
+          "SYC",
+          "COM"
+        ]
+      },
+      "temporal": {
+        "start": "2024-05-01",
+        "end": "2024-05-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/united-republic-of-tanzania-cyclone-1001060"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected observed tropical cyclone wind speed data and integrated it with gridded population estimates to quantify population exposure at three wind speed thresholds (60, 90, 120 km/h) during the May 2024 cyclone event in Tanzania, Seychelles, and Comoros, producing administrative-level impact summaries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analysing and mapping geospatial and socio-economic information following sudden onset humanitarian emergencies, providing post-event impact assessments and population exposure estimates for tropical storms"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_92a407a0",
+          "title": "1001060-14-adam-ts-1001060-14-pop-estimation.csv",
+          "description": "United Republic of Tanzania: Cyclone - Tropical storm - May 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/d94b7874-8dd0-416f-ad78-476ac36ceb64/resource/92a407a0-630b-42a3-a798-cb357c738b26/download/1001060-14-adam-ts-1001060-14-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speed thresholds at 60, 90, and 120 km/h"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by tropical cyclone with 8,846 people impacted during May 2024 event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/united-republic-of-tanzania-cyclone-1001060",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

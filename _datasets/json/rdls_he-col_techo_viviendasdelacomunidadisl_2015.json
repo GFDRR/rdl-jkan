@@ -1,0 +1,136 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-col_techo_viviendasdelacomunidadisl_2015",
+      "title": "Colombia - Viviendas de la Comunidad 'Isla de León' en Cartagena",
+      "description": "Muestra las viviendas, iglesias y tiendas presentes en la Comunidad 'Isla de León' en Cartagena. Resalta las viviendas de emergencia de TECHO COL en pilotis (elevadas a 1 metro y 50 centímetros) ya que se presentan inundaciones frecuentes. Capas vectoriales de poligonos.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/viviendas-de-la-comunidad-isla-de-leon-en-cartagena]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "La cartografía corresponde al estado de las viviendas de la Comunidad hasta la fecha del 12 de Abril de 2015, ya que después de ello se presento una invasión en el territorio que modificó lo inicialmente mapeado.",
+      "contact_point": {
+        "name": "TECHO Colombia (inactive)",
+        "url": "https://data.humdata.org/dataset/viviendas-de-la-comunidad-isla-de-leon-en-cartagena"
+      },
+      "creator": {
+        "name": "TECHO Colombia (inactive)",
+        "url": "https://data.humdata.org/dataset/viviendas-de-la-comunidad-isla-de-leon-en-cartagena"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-01-12",
+        "end": "2015-05-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "TECHO Colombia",
+            "url": "https://data.humdata.org/dataset/viviendas-de-la-comunidad-isla-de-leon-en-cartagena"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap Team (HOT)",
+            "url": "https://data.humdata.org/dataset/viviendas-de-la-comunidad-isla-de-leon-en-cartagena"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Community-level building inventory created through HOT mapping methodology combining JOSM digitization with Field Papers ground validation. The dataset documents residential structures, religious facilities, and commercial establishments in Isla de León, with explicit notation of TECHO Colombia emergency housing elevated at 1.5 meters to mitigate frequent flooding, providing both exposure and implicit hazard evidence.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "TECHO Colombia",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Field-mapped inventory of emergency housing structures (pilotis) and community infrastructure in Isla de León, Cartagena"
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian OpenStreetMap Team (HOT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Mapping methodology and field validation approach using JOSM and Field Papers for community-level building and facility inventory"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a913e649",
+          "title": "Isla_Viviendas.zip",
+          "description": "Colombia - Viviendas de la Comunidad 'Isla de León' en Cartagena (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/b4f7dbb1-5e98-4e6e-a3d5-a7e91a313b0b/resource/a913e649-4dc7-44b6-a7db-f56be0705e25/download/isla-viviendas.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Residential buildings, churches, and shops in Isla de León community, including emergency housing structures elevated on stilts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/viviendas-de-la-comunidad-isla-de-leon-en-cartagena",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

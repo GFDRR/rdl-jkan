@@ -1,0 +1,183 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-eth_ochaeth_droughtprioritizationresu_20221130",
+      "title": "Ethiopia - Drought Prioritization Results",
+      "description": "Dataset provides the prioritization results of the drought affected areas in Ethiopia.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ethiopia-drought-prioritization-results]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Ethiopia",
+        "url": "https://data.humdata.org/dataset/ethiopia-drought-prioritization-results"
+      },
+      "creator": {
+        "name": "OCHA Ethiopia",
+        "url": "https://data.humdata.org/dataset/ethiopia-drought-prioritization-results"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2022-11-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Drought-affected areas in Ethiopia were prioritized using a multi-criteria assessment methodology that integrates drought severity indicators and vulnerability factors to identify populations and regions requiring humanitarian response. The results classify geographic areas by priority level for drought intervention.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Ethiopia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Drought prioritization assessment identifying affected areas and populations requiring humanitarian assistance in Ethiopia"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.humanitarianresponse.info/sites/www.humanitarianresponse.info/files/documents/files/ethiopia_-_drought_priority_areas_-_november_2022.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_032bba27",
+          "title": "Ethiopia_November_2022_Drought_Operational_Prioritization_Results.xlsx",
+          "description": "Ethiopia - Drought Prioritization Results (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4a63ddeb-ca64-4af6-9a03-976ab4db1fe5/resource/032bba27-456d-45d2-b9f1-1c2b783c62ff/download/ethiopia_november_2022_drought_operational_prioritization_results.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population in drought-affected areas prioritized for humanitarian response"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Agricultural land and livelihoods affected by drought conditions"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by drought in prioritized areas"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Agricultural losses and livelihood impacts from drought"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ethiopia-drought-prioritization-results",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

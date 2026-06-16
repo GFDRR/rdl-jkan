@@ -1,0 +1,219 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-dza_unosat_zonesincendieesle25juille_20230727",
+      "title": "Algeria - Zones incendiées le 25 juillet 2023 dans la Wilaya de Bejaia, Algérie",
+      "description": "UNOSAT code FR20230724DZA, GDACS Id: 1015944 Cette carte illustre les zones incendiées telles qu'observées à partir d'une image Sentinel-2 acquise le 25 juillet 2023 à 18:56 heure locale dans la Wilaya de Bejaia, Algérie. Sur les 540 km² de la zone observée, environ 180 km² de végétation semblent avoir brûlé dans la Wilaya de Bejaia. En se basant sur les données démographiques Worldpop, dans les communes de Semaoune, Beni Djellil et Timzrit respectivement environ 7,200, 4,800 et 4,600 personnes sont potentiellement impactées par les feux de forêt. Ceci est une analyse préliminaire et n'a pas encore été validée sur le terrain. Ne pas hésiter à envoyer vos commentaires au Centre Satellitaire des Nations Unies (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-la-wilaya-de-bejaia-algerie]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-la-wilaya-de-bejaia-algerie"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-la-wilaya-de-bejaia-algerie"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DZA"
+        ]
+      },
+      "temporal": {
+        "start": "2023-07-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-la-wilaya-de-bejaia-algerie"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop demographic data",
+            "url": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-la-wilaya-de-bejaia-algerie"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts interpreted Sentinel-2 satellite imagery acquired on 25 July 2023 to delineate wildfire burn extent in Bejaia Wilaya. Burned area polygons were extracted and quantified (approximately 180 km² of 540 km² observed area). Population exposure was estimated by intersecting burned area with WorldPop gridded demographic data for three communes (Semaoune, Beni Djellil, Timzrit), yielding approximately 16,600 potentially affected persons.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multispectral satellite image acquired on 25 July 2023 used to map burned area extent through visual interpretation and change detection analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop demographic data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population density data used to estimate population exposure in affected communes"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9724da17",
+          "title": "FR20230724DZA_gdb.zip",
+          "description": "Algeria - Zones incendiées le 25 juillet 2023 dans la Wilaya de Bejaia, Algérie (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3644/FR20230724DZA_gdb.zip"
+        },
+        {
+          "id": "resource_c0e84176",
+          "title": "FR20230724DZA_SHP.zip",
+          "description": "Algeria - Zones incendiées le 25 juillet 2023 dans la Wilaya de Bejaia, Algérie (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3644/FR20230724DZA_SHP.zip"
+        },
+        {
+          "id": "resource_89336cbe",
+          "title": "UNOSAT_PopulationExposed_BurnedArea_Bejaia_FR20230724DZA_25072023.xlsx",
+          "description": "Algeria - Zones incendiées le 25 juillet 2023 dans la Wilaya de Bejaia, Algérie (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3644/UNOSAT_PopulationExposed_BurnedArea_Bejaia_FR20230724DZA_25072023.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population in communes of Semaoune, Beni Djellil, and Timzrit potentially exposed to wildfire"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "natural_environment",
+          "asset_type": {
+            "id": "natural_environment",
+            "description": "Vegetation and forest area burned by wildfire"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population potentially impacted by wildfire in three communes based on burned area extent and demographic data"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Vegetation and forest area destroyed by wildfire (approximately 180 km² burned)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/zones-incendiees-le-25-juillet-2023-dans-la-wilaya-de-bejaia-algerie",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

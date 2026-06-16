@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-hti_unosat_hazardfloodzones_20161006",
+      "title": "Haiti - Hazard Flood Zones",
+      "description": "Population Living Within Hazard Flood Zones in Haiti. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hazard-flood-zones]",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics and the limitations of the sources used to implement those results.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/hazard-flood-zones"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/hazard-flood-zones"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-06"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/hazard-flood-zones"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Flood hazard zones were delineated using satellite imagery and operational analysis by UNOSAT. Population exposure was derived by intersecting census data with the mapped hazard zones to quantify the number of people living in flood-prone areas of Haiti.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-derived flood hazard zone mapping for Haiti using remote sensing analysis and census data integration to identify areas prone to fluvial flooding."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_00d1d28a",
+          "title": "UNOSAT_Pop_Living_FloodHazard_Zones_20161006",
+          "description": "Haiti - Hazard Flood Zones (Hazard Flood Zones)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/UNOSAT_Pop_Living_FloodHazard_Zones_20161006.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population living within delineated flood hazard zones"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hazard-flood-zones",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-fji_unosat_geodatadamageassessmentgr_20160225",
+      "title": "Geodata of Damage Assessment in Greater Lautoka Area, Ba Province, Western Division, Fiji",
+      "description": "This map illustrates the damage assessment in the Lautoka city and greater area in Ba Province in the northwestern part of Viti Levu Island, Fiji, as determined by satellite imagery analysis. Using imagery acquired 22 February 2016, UNITAR-UNOSAT identified a total of 900 damaged structures, of which 433 were within the city limits. In the greater Lautoka area, 74 structures were identified to be destroyed, 152 were severely damaged, and 674 have suffered moderate damages. These damaged structures were compared with total number of buildings/structures ( ~17,500) in the region and the percentage of damaged buildings across the area was estimated to be about 5%. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-assessment-in-greater-lautoka-area-ba-province-western-divi-february-25-2016]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-greater-lautoka-area-ba-province-western-divi-february-25-2016"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-greater-lautoka-area-ba-province-western-divi-february-25-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "FJI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-02-25"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared satellite imagery acquired on 22 February 2016 with baseline imagery to identify structural damage caused by tropical cyclone. Damaged structures were classified into three severity categories (destroyed, severely damaged, moderately damaged) and compared against the total building inventory (~17,500 structures) in the Greater Lautoka region to assess impact extent.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-event images to identify and classify structural damage from tropical cyclone impact in Greater Lautoka area"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_52520696",
+          "title": "TC20160219FJI_shp.zip",
+          "description": "Geodata of Damage Assessment in Greater Lautoka Area, Ba Province, Western Division, Fiji (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/FJ/TC20160219FJI/TC20160219FJI_shp.zip"
+        },
+        {
+          "id": "resource_38b24dc0",
+          "title": "TC20160219FJI.gdb.zip",
+          "description": "Geodata of Damage Assessment in Greater Lautoka Area, Ba Province, Western Division, Fiji (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/FJ/TC20160219FJI/TC20160219FJI.gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Greater Lautoka area comprising approximately 17,500 structures"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from tropical cyclone assessed via satellite imagery: 74 destroyed, 152 severely damaged, 674 moderately damaged structures"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-assessment-in-greater-lautoka-area-ba-province-western-divi-february-25-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

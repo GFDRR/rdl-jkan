@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-grd_wfpadam_grenadacyclonecategory4ju_202406",
+      "title": "Grenada: Cyclone - Category 4 - Jun 2024",
+      "description": "ADAM ID: 1001067_3 Cyclone (category 4) during the period Jun 28 2024-Jun 30 2024 in Grenada. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/grenada-cyclone-1001067]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/grenada-cyclone-1001067"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/grenada-cyclone-1001067"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GRD"
+        ]
+      },
+      "temporal": {
+        "start": "2024-06-28",
+        "end": "2024-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/grenada-cyclone-1001067"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM collected observed tropical cyclone track data and wind speed measurements for the Category 4 cyclone event in Grenada (June 28-30, 2024). Population exposure was estimated at multiple wind speed thresholds (60, 90, 120 kph) by intersecting the hazard field with gridded population data at administrative levels.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting and mapping tropical storm tracks, wind speed fields, and geospatial analysis following sudden-onset emergencies"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7ed7a17a",
+          "title": "1001067-7-adam-ts-1001067-7-shp.zip",
+          "description": "Grenada: Cyclone - Category 4 - Jun 2024 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/6f65ef94-a20e-4cc5-9c1e-790cc979264a/resource/7ed7a17a-b062-4c29-81bc-7b3e77482c7d/download/1001067-7-adam-ts-1001067-7-shp.zip"
+        },
+        {
+          "id": "resource_7c2a621f",
+          "title": "1001067-7-adam-ts-1001067-7-pop-estimation.csv",
+          "description": "Grenada: Cyclone - Category 4 - Jun 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/6f65ef94-a20e-4cc5-9c1e-790cc979264a/resource/7c2a621f-fd2f-4c19-9d2b-40b305f25e4b/download/1001067-7-adam-ts-1001067-7-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at multiple thresholds (60, 90, 120 kph)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by tropical cyclone winds in Grenada"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/grenada-cyclone-1001067",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
