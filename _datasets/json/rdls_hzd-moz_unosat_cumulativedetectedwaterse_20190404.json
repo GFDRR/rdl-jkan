@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-moz_unosat_cumulativedetectedwaterse_20190404",
+      "title": "Cumulative Satellite detected waters extent overview between 13 & 26 March 2019 over Sofala province, Mozambique",
+      "description": "This map illustrates the cumulative satellite-detected surface waters in central provinces of Mozambique and particularly the Sofala province and its surroundings, as observed from the Sentinel-1 imagery acquired between 13 & 26 March 2019. Within the analysis extent. over Sofala and Manica provinces, a total of 170,000 km2 of surface imagery were analyzed and about 10,000 km2 of lands experienced floods within this period. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT. Satellite data : Sentinel-1 Imagery date: 13-14-19-20-26 March 2019 Resolution: 10 m Copyright: Copernicus 2019/ESA Source:ESA Boundary data: OCHA ROSEA Water body & waterway: COD Analysis : UNITAR-UNOSAT Production:UNITAR - UNOSAT. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cumulative-satellite-detected-waters-extent-13-26-march-2019-over-sofala-province-mozambique]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/cumulative-satellite-detected-waters-extent-13-26-march-2019-over-sofala-province-mozambique"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/cumulative-satellite-detected-waters-extent-13-26-march-2019-over-sofala-province-mozambique"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-04-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1 satellite imagery",
+            "url": "https://data.humdata.org/dataset/cumulative-satellite-detected-waters-extent-13-26-march-2019-over-sofala-province-mozambique"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1 SAR imagery acquired over Sofala province between 13-26 March 2019 was analyzed by UNOSAT analysts through multi-temporal change detection, comparing pre- and post-event images to delineate cumulative surface water extent. The resulting flood extent polygons were digitized and attributed with area measurements in hectares and square meters, representing observed inundation during the cyclone event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar (SAR) satellite imagery acquired between 13-26 March 2019 used to detect surface water extent through change detection analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "UNOSAT analyst interpretation and manual delineation of satellite-detected flood extent through comparative image analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_65c538f6",
+          "title": "TC20190312MOZ_SHP.zip",
+          "description": "Cumulative Satellite detected waters extent overview between 13 & 26 March 2019 over Sofala province, Mozambique (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/TC20190312MOZ/TC20190312MOZ_SHP.zip"
+        },
+        {
+          "id": "resource_4e88ddb4",
+          "title": "TC20190312MOZ.gdb.zip",
+          "description": "Cumulative Satellite detected waters extent overview between 13 & 26 March 2019 over Sofala province, Mozambique (Geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/TC20190312MOZ/TC20190312MOZ.gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cumulative-satellite-detected-waters-extent-13-26-march-2019-over-sofala-province-mozambique",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

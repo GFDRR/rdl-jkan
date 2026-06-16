@@ -1,0 +1,368 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: European Commission, Joint Research Centre (JRC)
+    url: https://data.humdata.org/dataset/mlt-anomalies-fapar-viirs
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/mlt-anomalies-fapar-viirs
+creator:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/mlt-anomalies-fapar-viirs
+dataset_id: rdls_hzd-mlt_copernicus_maltavegetationindexanoma_2012
+description: 'Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) is
+  a biophysical dimensionless quantity (its values range from 0/no absorption to 1/total
+  absorption) used to assess the greenness and health of vegetation. FAPAR anomalies
+  can be used as an indicator to detect and monitor the impacts of agricultural drought
+  on the growth and productivity of vegetation. The data is presented in 10-day time
+  composite of the Visible Infrared Imaging Radiometer Suite (VIIRS).. [Source: This
+  metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/mlt-anomalies-fapar-viirs]'
+details: Variations in the vegetation health and/or cover could be related to stress
+  factors not related to droughts (e.g., plant diseases, pests, hail, flooding). To
+  determine if changes in FAPAR are linked with a drought event or not, FAPAR data
+  should be interpreted jointly with other indicators (as in the EDO Combined Drought
+  Indicator).
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    drought:
+    - analysis_type: empirical
+      calculation_method: inferred
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: FAPAR:-
+        process: agricultural_drought
+        trigger: null
+        type: drought
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: FAPAR values from VIIRS 10-day composites are compared against a long-term
+    mean baseline (2012 onwards) at each grid cell to calculate anomalies, which serve
+    as an empirical indicator of agricultural drought impacts on vegetation greenness
+    and productivity across Malta.
+  sources:
+  - id: source_1
+    license: null
+    name: European Commission, Joint Research Centre (JRC)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/mlt-anomalies-fapar-viirs
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://drought.emergency.copernicus.eu/data/factsheets/factsheet_fapar_viirs.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2026-01-01 to 2026-01-10)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/68d276db-31eb-4fb8-8c25-ff5eebd269f9/download/mlt_fpanv_m_gdo_20260101_20260101_t.zip
+  format: null
+  id: resource_68d276db
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20260101_20260101_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2025-01-01 to 2025-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/523a9dee-3f65-477f-ab05-8ffb0dcd77b5/download/mlt_fpanv_m_gdo_20250101_20251221_t.zip
+  format: null
+  id: resource_523a9dee
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20250101_20251221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2024-01-01 to 2024-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/a5004039-3b9e-4d1b-a13c-bad554430194/download/mlt_fpanv_m_gdo_20240101_20241221_t.zip
+  format: null
+  id: resource_a5004039
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20240101_20241221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2023-01-01 to 2023-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/917e6b08-84d8-460b-8708-e2e211d088d2/download/mlt_fpanv_m_gdo_20230101_20231221_t.zip
+  format: null
+  id: resource_917e6b08
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20230101_20231221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2022-01-01 to 2022-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/3c649cf3-24c0-4a70-9cda-427f4bc5d4f7/download/mlt_fpanv_m_gdo_20220101_20221221_t.zip
+  format: null
+  id: resource_3c649cf3
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20220101_20221221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2021-01-01 to 2021-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/8b7477e1-37af-4950-b61c-47ec3bfe4d35/download/mlt_fpanv_m_gdo_20210101_20211221_t.zip
+  format: null
+  id: resource_8b7477e1
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20210101_20211221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2020-01-01 to 2020-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/366f609d-28ae-48ae-8616-6ce651c92b03/download/mlt_fpanv_m_gdo_20200101_20201221_t.zip
+  format: null
+  id: resource_366f609d
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20200101_20201221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2019-01-01 to 2019-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/70801fe1-fa17-42d7-9205-0e2e45a52ce3/download/mlt_fpanv_m_gdo_20190101_20191221_t.zip
+  format: null
+  id: resource_70801fe1
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20190101_20191221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2018-01-01 to 2018-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/37871ab6-b4e0-49df-a8ff-1fcfd6925f26/download/mlt_fpanv_m_gdo_20180101_20181221_t.zip
+  format: null
+  id: resource_37871ab6
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20180101_20181221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2017-01-01 to 2017-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/d94ddaef-cc1d-4e6f-b494-08eb8c650150/download/mlt_fpanv_m_gdo_20170101_20171221_t.zip
+  format: null
+  id: resource_d94ddaef
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20170101_20171221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2016-01-01 to 2016-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/570f925a-2ccf-41da-964e-73187722fee4/download/mlt_fpanv_m_gdo_20160101_20161221_t.zip
+  format: null
+  id: resource_570f925a
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20160101_20161221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2015-01-01 to 2015-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/f52c5aa9-6e57-4df0-9d98-24008de8d437/download/mlt_fpanv_m_gdo_20150101_20151221_t.zip
+  format: null
+  id: resource_f52c5aa9
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20150101_20151221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2014-01-01 to 2014-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/647d9956-945f-4b49-bea8-211574556cad/download/mlt_fpanv_m_gdo_20140101_20141221_t.zip
+  format: null
+  id: resource_647d9956
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20140101_20141221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2013-01-01 to 2013-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/bd9c013c-0155-4d79-ab6c-2cb5774f549a/download/mlt_fpanv_m_gdo_20130101_20131221_t.zip
+  format: null
+  id: resource_bd9c013c
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20130101_20131221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2012-01-21 to 2012-12-31)'
+  download_url: https://data.humdata.org/dataset/ca5bf466-6e9a-4f8b-8e3b-45e29df32141/resource/004c9659-e066-428e-918c-d2a932cdde35/download/mlt_fpanv_m_gdo_20120121_20121221_t.zip
+  format: null
+  id: resource_004c9659
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: mlt_fpanv_m_gdo_20120121_20121221_t.zip
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-mlt_copernicus_maltavegetationindexanoma_2012
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - MLT
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2026-01-10'
+  start: '2012-01-21'
+temporal_resolution: null
+title: 'Malta: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)'
+version: null
+vulnerability: null
+---

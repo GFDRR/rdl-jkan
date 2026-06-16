@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-gtmhndnicslv_achgis4tech_centralamericavolcanicact_2016",
+      "title": "Central America - Volcanic activity risk",
+      "description": "Volcanic activity risk has been assessed based on data obtained from the Ministry of Environment of El Salvador. In this analysis, circular areas have been delineated around the location of each active volcano. The hazard classification is determined by the proximity of a specific area to a volcano. The information is showed by country, department and municipality of Central America (Nicaragua, Honduras, Guatemala, El Salvador) For more information contact GIS4Tech: info@gis4tech.com. You can also visit the PREDISAN platform https://predisan.gis4tech.com/ca4 for detailed, accurate information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/volcanic-activity-risk-in-central-america]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/volcanic-activity-risk-in-central-america"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/volcanic-activity-risk-in-central-america"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "SLV",
+          "HND",
+          "GTM",
+          "NIC"
+        ]
+      },
+      "temporal": {
+        "start": "2016-01-01",
+        "end": "2016-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Ministry of Environment of El Salvador",
+            "url": "https://data.humdata.org/dataset/volcanic-activity-risk-in-central-america"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Active volcano locations from El Salvador's Ministry of Environment were used to delineate circular hazard zones around each volcano. Volcanic risk levels (0-3) were assigned to administrative units (municipalities) based on maximum proximity to volcanoes, with level 0 indicating no volcanic danger and levels 1-3 indicating increasing risk. The dataset aggregates this classification across four Central American countries at the municipality level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Ministry of Environment of El Salvador",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Provided active volcano locations and baseline volcanic activity data used to delineate hazard zones and assign risk classifications by proximity"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_85f49572",
+          "title": "Volcanic activity risk in Central America (Nicaragua, Honduras, Guatemala, El Salvador)",
+          "description": "Central America - Volcanic activity risk (Volcanic activity risk in Central America)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/dc2c25fe-8ab3-4d24-a0f9-da85a93ef15a/resource/85f49572-b83e-4d44-affe-9880b2f248b2/download/volcanic_activity_risk.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "ashfall",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/volcanic-activity-risk-in-central-america",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

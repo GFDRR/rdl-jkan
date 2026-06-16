@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-lao_unosat_detectedwaterextentsanamx_20170804",
+      "title": "Satellite Detected Water Extent in the Sanamxay District, Attapeu Province, Lao PDR",
+      "description": "This map illustrates the satellite-detected water extent in the District of Sanamay, Attapeu Province, in the southwestern part of Lao People's Democratic Republic after the tropical storm SONCA-17. The UNITAR-UNOSAT analysis used a Sentinel-1 satellite image acquired on the 30 July 2017 and detected several areas with potentially standing waters. In the district of Sanamxay ~5,225 ha are likely flooded.This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extent-in-the-sanamxay-district-attapeu-province-lao-pdr]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-the-sanamxay-district-attapeu-province-lao-pdr"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-the-sanamxay-district-attapeu-province-lao-pdr"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LAO"
+        ]
+      },
+      "temporal": {
+        "start": "2017-08-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts processed Sentinel-1 satellite imagery acquired on 30 July 2017 following tropical storm SONCA-17, comparing pre- and post-event images to detect notable changes in water extent. The analysis identified standing water areas across Sanamxay District and quantified the flooded area as approximately 5,225 hectares, delivered as vector geodatabase and shapefile formats.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Sentinel-1 satellite imagery analysis detecting water extent changes post-event through multi-temporal image comparison methodology"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_201e194a",
+          "title": "TC20170731LAO.gdb.zip",
+          "description": "Satellite Detected Water Extent in the Sanamxay District, Attapeu Province, Lao PDR (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://cern.ch/unosat-maps/LA/TC20170731LAO/TC20170731LAO.gdb.zip"
+        },
+        {
+          "id": "resource_635a2900",
+          "title": "TC20170731LAO_shp.zip",
+          "description": "Satellite Detected Water Extent in the Sanamxay District, Attapeu Province, Lao PDR (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/LA/TC20170731LAO/TC20170731LAO_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extent-in-the-sanamxay-district-attapeu-province-lao-pdr",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

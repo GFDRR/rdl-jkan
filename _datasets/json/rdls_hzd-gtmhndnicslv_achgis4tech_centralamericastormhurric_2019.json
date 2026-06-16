@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-gtmhndnicslv_achgis4tech_centralamericastormhurric_2019",
+      "title": "Central America - Storm and Hurricane Risk",
+      "description": "Storm and hurricane risk has been assessed based on a database called IBTrACS obtained from the NOAA (National Centers for Environmental Information). The hazard classification is determined by the frequency of the events. The information is showed by country, department and municipality of Central America (Nicaragua, Honduras, Guatemala, El Salvador) For more information contact GIS4Tech: info@gis4tech.com. You can also visit the PREDISAN platform https://predisan.gis4tech.com/ca4 for detailed, accurate information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/central-america-storm-and-hurricane-risk]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-storm-and-hurricane-risk"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-storm-and-hurricane-risk"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "NIC",
+          "HND",
+          "GTM",
+          "SLV"
+        ]
+      },
+      "temporal": {
+        "start": "2019-01-01",
+        "end": "2019-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IBTrACS (International Best Track Archive for Climate Stewardship)",
+            "url": "https://data.humdata.org/dataset/central-america-storm-and-hurricane-risk"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historical storm and hurricane events were extracted from the IBTrACS database maintained by NOAA. Event frequency per municipality was calculated and categorized into four risk levels (low, medium, high, very high) based on the number of registered events. Risk classifications were assigned to administrative units (country, department, municipality) across Central America.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IBTrACS (International Best Track Archive for Climate Stewardship)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Historical tropical cyclone track and intensity database maintained by NOAA's National Centers for Environmental Information, used to derive storm and hurricane event frequency for risk classification"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_edf4c3fb",
+          "title": "storm_and_hurricane_risk.csv",
+          "description": "Central America - Storm and Hurricane Risk (Storm and hurricane risk in Central America)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/17fbd26e-3bba-46ac-a63f-ab95c2b5afe2/resource/edf4c3fb-0593-4140-84b5-0fe3410138da/download/storm_and_hurricane_risk.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/central-america-storm-and-hurricane-risk",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

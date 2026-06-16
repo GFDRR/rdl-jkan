@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-hti_soil_capfloodeventextents_20220201",
+      "title": "Haiti - Cap Haitien Flood Event Extents",
+      "description": "This file contains shapefiles depicting the extent of 5-, 25-, and 100- year flood recurrence events. This data was created by the World Bank and should be credited as follows: Plan d'Élaboration propre basée sur les données de la Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cap-haitien-haiti-flood-event-extents]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "This data was created by the World Bank and should be credited as follows: Plan d'Élaboration propre basée sur les données de la Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans)",
+      "contact_point": {
+        "name": "Sustainable Organic Integrated Livelihoods",
+        "url": "https://data.humdata.org/dataset/cap-haitien-haiti-flood-event-extents"
+      },
+      "creator": {
+        "name": "Sustainable Organic Integrated Livelihoods",
+        "url": "https://data.humdata.org/dataset/cap-haitien-haiti-flood-event-extents"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2022-02-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://data.humdata.org/dataset/cap-haitien-haiti-flood-event-extents"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The World Bank developed probabilistic flood hazard models for Cap Haitien, generating inundation extent shapefiles at 5-, 25-, and 100-year return periods. The dataset represents simulated flood extents derived from hydrological and hydraulic modeling, with elevation data included to characterize flood depths across the urban area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "World Bank",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Probabilistic flood hazard modeling and inundation extent mapping for Cap Haitien at multiple return periods"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0cb67376",
+          "title": "World_Bank_Flood_Extents_CapHaitien.zip",
+          "description": "Flood extent data in Cap Haitien, Haiti for 5 year/ 25 year/ and 100 year flood recurrence events.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/5deac5b5-f135-45e2-9994-bf555c38ed22/resource/0cb67376-e085-4862-b3c8-86f0dded3cd3/download/world_bank_flood_extents_caphaitien.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_5yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5,
+                    "event_rate": 0.2
+                  }
+                },
+                "description": "Probabilistic fluvial flood hazard model depicting inundation extents at 5-, 25-, and 100-year return periods for Cap Haitien"
+              },
+              {
+                "id": "event_25yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25,
+                    "event_rate": 0.04
+                  }
+                },
+                "description": "Probabilistic fluvial flood hazard model depicting inundation extents at 5-, 25-, and 100-year return periods for Cap Haitien"
+              },
+              {
+                "id": "event_100yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01
+                  }
+                },
+                "description": "Probabilistic fluvial flood hazard model depicting inundation extents at 5-, 25-, and 100-year return periods for Cap Haitien"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cap-haitien-haiti-flood-event-extents",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

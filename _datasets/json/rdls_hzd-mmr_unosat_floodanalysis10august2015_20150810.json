@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-mmr_unosat_floodanalysis10august2015_20150810",
+      "title": "Flood analysis for Myanmar (10 August 2015)",
+      "description": "This is 'Flood vectors - TerraSAR-X (10 August 2015)' of the Flood analysis for Myanmar which began on 03 July 2015. It includes 36,947 satellite detected water bodies with a spatial extent of 1,398.96 square kilometers derived from the TerraSAR-X image a.... [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/fl20150703mmr-flood-vectors-terrasarx-10-august-2015]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/fl20150703mmr-flood-vectors-terrasarx-10-august-2015"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/fl20150703mmr-flood-vectors-terrasarx-10-august-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2015-08-10"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts processed TerraSAR-X satellite imagery acquired on 10 August 2015, comparing multi-temporal images to detect and delineate flood water bodies. The resulting vector dataset contains 36,947 satellite-detected water bodies representing observed flood extent during the active flood phase of the July-August 2015 Myanmar event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "TerraSAR-X satellite imagery analysis detecting water body extent and spatial distribution during the 2015 Myanmar flood event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d2b57bb4",
+          "title": "mapImage.kmz",
+          "description": "Flood analysis for Myanmar (10 August 2015) (KMZ)",
+          "access_url": "https://unosatgis.cern.ch/arcgis/rest/services/FP02/FP02_FL_20150703_MMR_20150810_Flood_TerraSARX/MapServer/kml/mapImage.kmz",
+          "media_type": "application/vnd.google-earth.kmz"
+        },
+        {
+          "id": "resource_a09a2ea8",
+          "title": "FL20150703MMR_gdb.zip",
+          "description": "Flood analysis for Myanmar (10 August 2015) (Geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://floods.unosat.org/geoportal/FP02/FL20150703MMR_gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/fl20150703mmr-flood-vectors-terrasarx-10-august-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

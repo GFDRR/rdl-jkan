@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-guy_unosat_detectedwaterextentregion_20210614",
+      "title": "Satellite detected water extent in Region 9-Upper Takutu-Upper Essequibo, Guyana as of 12 June 2021",
+      "description": "UNOSAT code: FL20210520GUY This map illustrates satellite-detected surface waters along the Rupununi river in Upper Takutu-Upper Essequibo Region of Guyana as observed from Sentinel-1 image acquired on 12 June 2021 at 09:45 UTC. Within the analyzed area of about 6,500 km2, a total of about 235 km2 of lands were observed as flooded and the road about 26 km are potentially affected by the floods. This is a preliminary analysis that has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT. Important note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-in-region-9-upper-takutu-upper-essequibo-guyana-as-of-12-june-2021]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-region-9-upper-takutu-upper-essequibo-guyana-as-of-12-june-2021"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-region-9-upper-takutu-upper-essequibo-guyana-as-of-12-june-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GUY"
+        ]
+      },
+      "temporal": {
+        "start": "2021-06-14"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extent-in-region-9-upper-takutu-upper-essequibo-guyana-as-of-12-june-2021"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1 SAR imagery acquired on 12 June 2021 was analyzed by UNOSAT analysts through visual interpretation and multi-temporal comparison to detect surface water extent. The resulting flood extent polygons (235 km² flooded area) and affected infrastructure (26 km of roads) were extracted and provided as geodatabase and shapefile formats for the Upper Takutu-Upper Essequibo region.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Sentinel-1 synthetic aperture radar imagery analyzed to detect surface water extent and map flooded areas during the June 2021 flood event in Guyana"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c888e19e",
+          "title": "FL20210520GUY_gdb.zip",
+          "description": "Satellite detected water extent in Region 9-Upper Takutu-Upper Essequibo, Guyana as of 12 June 2021 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/GY/FL20210520GUY/FL20210520GUY_gdb.zip"
+        },
+        {
+          "id": "resource_066db74f",
+          "title": "FL20210520GUY_SHP.zip",
+          "description": "Satellite detected water extent in Region 9-Upper Takutu-Upper Essequibo, Guyana as of 12 June 2021 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/GY/FL20210520GUY/FL20210520GUY_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-in-region-9-upper-takutu-upper-essequibo-guyana-as-of-12-june-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

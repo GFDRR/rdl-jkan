@@ -1,0 +1,95 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-hti_wfp_magnitude59earthquakeinte_20181007",
+      "title": "Haiti Magnitude 5.9 Earthquake Interferogram",
+      "description": "Sentinel 1 interferogram of Haiti Magnitude 5.9 earthquake on Oct 7, 2018. Images used were 26 September and 8 October 2018.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-magnitude-5-0-earthquake-interferogram]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/haiti-magnitude-5-0-earthquake-interferogram"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/haiti-magnitude-5-0-earthquake-interferogram"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2018-10-07"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1 Copernicus",
+            "url": "https://data.humdata.org/dataset/haiti-magnitude-5-0-earthquake-interferogram"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1 SAR images acquired on 26 September and 8 October 2018 were processed using interferometric techniques to generate a phase interferogram (VV polarization) that captures ground surface deformation caused by the magnitude 5.9 earthquake on 7 October 2018 in Haiti.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1 Copernicus",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar (SAR) satellite imagery from the Copernicus program used to generate interferometric phase data capturing earthquake-induced ground deformation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_97f75e6c",
+          "title": "Phase_ifg_VV_08Oct2018_26Sep2018.kmz",
+          "description": "Haiti magnitude 5.9 earthquake (south of epicenter)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://data.humdata.org/dataset/212d4e38-7e0c-4a4f-af2a-d851d593aaf3/resource/97f75e6c-5d38-4707-b95b-557241b61143/download/phase_ifg_vv_08oct2018_26sep2018.kmz"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-magnitude-5-0-earthquake-interferogram",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
