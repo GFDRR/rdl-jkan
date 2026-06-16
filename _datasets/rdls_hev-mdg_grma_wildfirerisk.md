@@ -53,31 +53,28 @@ exposure:
       quantity_kind: currency
       unit: USD
 hazard:
-  event_sets_by_hazard_type:
-    wildfire:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_wildfire_001
-        intensity_measure: MHI:-
-        process: wildfire
-        trigger: null
-        type: wildfire
-      id: event_set_wildfire_001
-      occurrence_range: null
-      seasonality: user_defined
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_wildfire_001
+      intensity_measure: MHI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: event_set_wildfire_001
+    occurrence_range: null
+    seasonality: user_defined
 license: https://creativecommons.org/licenses/by/4.0/
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: GRMA Madagascar - Phase 1
   url: https://www.resiliencemada.gov.mg

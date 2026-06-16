@@ -65,8 +65,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/som_Livelihood_zones1_normalized:geonode:som_Livelihood_zones1_normalized
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

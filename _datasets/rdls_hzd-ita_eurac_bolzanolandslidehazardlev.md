@@ -18,24 +18,22 @@ description: 'Gravitational mass movement hazard level maps of the province of B
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    landslide:
-    - analysis_type: probabilistic
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: PGA:g
-        process: landslide_general
-        trigger: null
-        type: landslide
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: PGA:g
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: None.
@@ -53,8 +51,7 @@ links:
   rel: describedby
 - href: https://maps.eurac.edu/catalogue/#/dataset/478
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

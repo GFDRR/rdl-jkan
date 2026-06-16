@@ -45,8 +45,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:ken_sorghum_production_stats
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

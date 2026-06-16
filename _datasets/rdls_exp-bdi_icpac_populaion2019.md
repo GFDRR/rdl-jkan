@@ -45,8 +45,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/burundi_pop_2019:geonode:burundi_pop_2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

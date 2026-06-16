@@ -18,33 +18,30 @@ details: The hazard index was built with BRGM landslide susceptibility map and d
   precipitation dataset.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    landslide:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
-        id: hazard_pkvfr1xO
-        intensity_measure: LSI:-
-        process: landslide_general
-        trigger:
-          process: pluvial_flood
-          type: flood
-        type: landslide
-      id: event_set_YhkW50SM
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
+      id: hazard_pkvfr1xO
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger:
+        process: pluvial_flood
+        type: flood
+      type: landslide
+    id: event_set_YhkW50SM
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: GRMA Madagascar - Phase 1
   url: https://www.resiliencemada.gov.mg

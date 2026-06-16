@@ -43,8 +43,7 @@ links:
   rel: describedby
 - href: https://kmap.info-rac.org/catalogue/#/dataset/883
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

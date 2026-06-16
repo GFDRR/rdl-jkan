@@ -46,8 +46,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/ss_crop_highres_def:geonode:ss_crop_highres_def
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

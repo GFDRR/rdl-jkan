@@ -29,60 +29,58 @@ description: 'The data presented here show the modelled water depth for flood ev
 details: EPSG:4326 - WGS 84 - Geographic.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 2
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_100yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_200yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.005
-            probability: null
-            return_period: 200
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 2
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_200yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.005
+          probability: null
+          return_period: 200
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://opendatacommons.org/licenses/odbl/1-0/
 lineage:
   description: 'The data has been produced using the Fathom global flood hazard modelling
@@ -118,8 +116,7 @@ links:
   rel: describedby
 - href: https://crd.resilienceacademy.ac.tz/catalogue/#/dataset/700
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

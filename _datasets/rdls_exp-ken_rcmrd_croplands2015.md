@@ -48,8 +48,7 @@ links:
   rel: describedby
 - href: https://geoportal.rcmrd.org/catalogue/#/dataset/2
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

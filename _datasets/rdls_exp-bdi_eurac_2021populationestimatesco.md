@@ -51,8 +51,7 @@ links:
   rel: describedby
 - href: https://maps.eurac.edu/catalogue/#/dataset/604
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

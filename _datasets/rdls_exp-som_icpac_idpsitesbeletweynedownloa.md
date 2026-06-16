@@ -44,8 +44,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:idp_sites_beletweyne_wv3_20180505
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

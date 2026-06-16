@@ -44,8 +44,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/data0:geonode:uganda_populated_places
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

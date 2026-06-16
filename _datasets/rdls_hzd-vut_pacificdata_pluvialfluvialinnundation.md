@@ -20,42 +20,40 @@ description: 'Modelled flooding maps from rain and rivers for an event of 12 hou
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_50yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_50yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: null
@@ -73,8 +71,7 @@ links:
   rel: describedby
 - href: https://geonode.pacificdata.org/catalogue/#/dataset/815
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

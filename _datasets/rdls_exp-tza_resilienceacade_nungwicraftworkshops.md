@@ -57,8 +57,7 @@ links:
   rel: describedby
 - href: https://crd.resilienceacademy.ac.tz/catalogue/#/dataset/729
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -51,8 +51,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/Normalized_Global_Biomess:geonode:Normalized_Global_Biomess
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -28,24 +28,22 @@ details: SPC undertook the rapid coastal inundation assessment based on the firs
   and tidal forcing along the boundaries comes from TPXO8 (Egbert and Erofeeva, 2002).
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    convective_storm:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: thunderstorm
-        trigger: null
-        type: convective_storm
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: thunderstorm
+      trigger: null
+      type: convective_storm
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 lineage:
   description: This raster map has been produced with the ADCIRC+SWAN modelling suite
@@ -66,8 +64,7 @@ links:
   rel: describedby
 - href: https://geonode.pacificdata.org/catalogue/#/dataset/817
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

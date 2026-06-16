@@ -28,24 +28,22 @@ description: "Seismic Hazard Map showing mean Peak Ground Acceleration (PGA) in 
 details: OGC:CRS84 - WGS 84 (CRS84) - Geographic.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: PGA:g
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Data collected and curated through the Resilience Academy community
@@ -64,8 +62,7 @@ links:
   rel: describedby
 - href: https://crd.resilienceacademy.ac.tz/catalogue/#/dataset/701
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

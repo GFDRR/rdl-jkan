@@ -46,8 +46,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/et_grazing_highres_area_def:geonode:et_grazing_highres_area_def
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

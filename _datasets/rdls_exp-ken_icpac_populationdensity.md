@@ -48,8 +48,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/Normalized_popdensityNorm_Copy:geonode:Normalized_popdensityNorm_Copy
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

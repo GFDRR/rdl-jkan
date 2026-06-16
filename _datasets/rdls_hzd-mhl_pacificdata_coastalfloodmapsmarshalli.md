@@ -41,42 +41,40 @@ details: The modified 5m DEMs, completed as part of the PARTneR 2 project, can b
   surface that intersects the 5 m DEM to produce the inundation maps.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_100yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: The coastal flood map rasters were created based on a modified 5m DEM
@@ -99,8 +97,7 @@ links:
   rel: describedby
 - href: https://geonode.pacificdata.org/catalogue/#/dataset/574
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null
