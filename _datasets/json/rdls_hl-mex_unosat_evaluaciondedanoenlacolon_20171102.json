@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-mex_unosat_evaluaciondedanoenlacolon_20171102",
+      "title": "Mexico - Evaluación de daño en la colonia Capultitlan, Ciudad de México",
+      "description": "Este mapa ilustra las estructuras potencialmente dañadas por el sismo del 19 de septiembre de 2017 con intensidad de 7.1 grados en la escala de Richter, que fueron detectadas a través de imágenes de satélite para la colonia Capultitlan en la Ciudad de México. Se identificaron 17 estructuras potencialmente dañadas dentro de la imagen de satélite base, de las cuales 12 se encuentran dentro del límite administrativo de la colonia. En análisis se realizó con una imagen WorldView-2, adquirida el 26 de septiembre de 2017, caracterizándose como un análisis preliminar que aún no es validado en campo.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/evaluacion-de-dano-en-la-colonia-capultitlan-ciudad-de-mexico-2713]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/evaluacion-de-dano-en-la-colonia-capultitlan-ciudad-de-mexico-2713"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/evaluacion-de-dano-en-la-colonia-capultitlan-ciudad-de-mexico-2713"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MEX"
+        ]
+      },
+      "temporal": {
+        "start": "2017-11-02"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts performed change detection analysis on WorldView-2 satellite imagery acquired 7 days post-earthquake to identify potentially damaged building structures in Capultitlan. Preliminary damage assessment identified 17 structures with notable changes in the satellite imagery, of which 12 fell within the administrative boundary of the neighborhood. This represents an unvalidated, image-based damage count requiring field verification.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from WorldView-2 satellite imagery acquired 26 September 2017, identifying 17 potentially damaged structures through change detection analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e3ac67d2",
+          "title": "EQ20170919MEX_gdb.zip",
+          "description": "Mexico - Evaluación de daño en la colonia Capultitlan, Ciudad de México (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170919MEX/EQ20170919MEX_gdb.zip"
+        },
+        {
+          "id": "resource_759ddd30",
+          "title": "EQ20170919MEX_shp.zip",
+          "description": "Mexico - Evaluación de daño en la colonia Capultitlan, Ciudad de México (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170919MEX/EQ20170919MEX_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage detected via satellite imagery in Capultitlan, Mexico City from the 2017 earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/evaluacion-de-dano-en-la-colonia-capultitlan-ciudad-de-mexico-2713",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

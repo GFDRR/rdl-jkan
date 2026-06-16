@@ -1,0 +1,212 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-tha_unosat_detectedwaterextents1augu_20241016",
+      "title": "Thailand - Satellite detected water extents from 1 August 2024 to 12 October 2024 over Phayao Province",
+      "description": "UNOSAT code: FL20240912THA This map illustrates cumulative detected water using multiple satellites and drone in Phayao Province, Thailand from 1 August to 12 October 2024. Within the analysed area of about 6,200 km², a total of about 360 km² of land appears to be affected by flood waters, with around 330 km² of cropland inundated. Based on Worldpop spatial demographic data, about 13,500 people are exposed or living close to flooded areas from 1 August to 12 October 2024. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-from-1-august-2024-to-12-october-2024-over-phayao-province]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-from-1-august-2024-to-12-october-2024-over-phayao-province"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-from-1-august-2024-to-12-october-2024-over-phayao-province"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "THA"
+        ]
+      },
+      "temporal": {
+        "start": "2024-10-16"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/water-extents-from-1-august-2024-to-12-october-2024-over-phayao-province"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extents-from-1-august-2024-to-12-october-2024-over-phayao-province"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed multi-satellite and drone imagery from 1 August to 12 October 2024, comparing temporal image pairs to detect notable changes and delineate water extents. Detected water polygons were intersected with WorldPop population grids and agricultural land use data to estimate exposure and direct impacts. The analysis covers approximately 6,200 km² in Phayao Province, Thailand.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial demographic data providing gridded population distribution used to estimate population exposure to flooded areas"
+          },
+          {
+            "id": "source_2",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multi-satellite and drone imagery analysis detecting cumulative water extents through temporal comparison of satellite images"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cd4e3993",
+          "title": "FL20240912THA_GDB.zip",
+          "description": "Thailand - Satellite detected water extents from 1 August 2024 to 12 October 2024 over Phayao Province (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4003/FL20240912THA_GDB.zip"
+        },
+        {
+          "id": "resource_7efe4382",
+          "title": "FL20240912THA_SHP.zip",
+          "description": "Thailand - Satellite detected water extents from 1 August 2024 to 12 October 2024 over Phayao Province (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4003/FL20240912THA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland inundated by flood waters, approximately 330 km² affected"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed or living close to flooded areas based on WorldPop spatial demographic data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct cropland inundation from flood event, approximately 330 km² of agricultural land affected"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population exposed or living close to flooded areas, approximately 13,500 people affected"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-from-1-august-2024-to-12-october-2024-over-phayao-province",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

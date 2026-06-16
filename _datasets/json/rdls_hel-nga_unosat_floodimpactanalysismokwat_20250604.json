@@ -1,0 +1,177 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-nga_unosat_floodimpactanalysismokwat_20250604",
+      "title": "Flood impact analysis in Mokwa Town, Niger Local Government Area, Niger State, Nigeria as of 2 June 2025",
+      "description": "UNOSAT code: FL20250601NGA, GDACS ID: 1103303 This map illustrates the satellite-detected water extent in Mokwa Town, Niger Local Government Area, Niger State, Nigeria as observed from a GeoEye-1 imagery acquired on 2 June 2025 at 11:24 local time. Within the analysed area of approximately 100 km², an estimated 1.5 km² of land appears to be affected by floodwaters. UNOSAT has identified within this area 470 damaged structures and 199 potentially affected structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/flood-impact-analysis-in-mokwa-town-niger-local-government-area-niger-state-nigeria-as-of-]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flood-impact-analysis-in-mokwa-town-niger-local-government-area-niger-state-nigeria-as-of-"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flood-impact-analysis-in-mokwa-town-niger-local-government-area-niger-state-nigeria-as-of-"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NGA"
+        ]
+      },
+      "temporal": {
+        "start": "2025-06-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/flood-impact-analysis-in-mokwa-town-niger-local-government-area-niger-state-nigeria-as-of-"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "GeoEye-1 satellite imagery acquired on 2 June 2025 was analyzed by UNOSAT analysts through visual interpretation and multi-temporal comparison to delineate flood water extent and identify structural damage. Building damage and affected structure counts were derived from direct visual assessment of satellite-detected changes within the 100 km² study area of Mokwa Town.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis using GeoEye-1 to detect water extent and identify damaged and potentially affected structures through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a3468584",
+          "title": "FL20250601NGA_gdb.zip",
+          "description": "Flood impact analysis in Mokwa Town, Niger Local Government Area, Niger State, Nigeria as of 2 June 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4139/FL20250601NGA_gdb.zip"
+        },
+        {
+          "id": "resource_b56c59c5",
+          "title": "FL20250601NGA_SHP.zip",
+          "description": "Flood impact analysis in Mokwa Town, Niger Local Government Area, Niger State, Nigeria as of 2 June 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4139/FL20250601NGA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures in Mokwa Town identified through satellite imagery analysis"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "470 damaged structures directly affected by floodwaters in Mokwa Town"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "199 potentially affected structures in the flood-impacted area"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/flood-impact-analysis-in-mokwa-town-niger-local-government-area-niger-state-nigeria-as-of-",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

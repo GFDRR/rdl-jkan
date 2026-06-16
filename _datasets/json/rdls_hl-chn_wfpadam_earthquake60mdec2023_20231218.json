@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-chn_wfpadam_earthquake60mdec2023_20231218",
+      "title": "China: Earthquake - 6.0M - Dec 2023",
+      "description": "ADAM ID: eq_us7000ljvg Magnitude 6.0 earthquake at 10.0 depth occurred on Dec 18 2023 in 5km NW of Jishishan Bonan. It impacted 867547 people. The epicentre was at latitude 35.7339 longitude 102.8364.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/china-earthquake-eq-us7000ljvg]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/china-earthquake-eq-us7000ljvg"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/china-earthquake-eq-us7000ljvg"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CHN"
+        ]
+      },
+      "temporal": {
+        "start": "2023-12-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/china-earthquake-eq-us7000ljvg"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event earthquake impact assessment derived from USGS ShakeMaps (ADAM ID: us7000ljvg) intersected with gridded population data to estimate affected population counts by Modified Mercalli Intensity (MMI) zones across administrative divisions in the Jishishan region.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting and mapping geospatial and socio-economic information following sudden-onset emergencies; provides population impact estimates by earthquake intensity zones"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_fe37ca6b",
+          "title": "sm-us7000ljvg-sm-us7000ljvg-pop-estimation.csv",
+          "description": "China: Earthquake - 6.0M - Dec 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/f86746c9-95b0-49c7-b06e-fc9dcbc78d48/resource/fe37ca6b-a574-40d3-9317-e0531c23870b/download/sm-us7000ljvg-sm-us7000ljvg-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by earthquake ground shaking at different MMI intensity levels"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/china-earthquake-eq-us7000ljvg",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-som_wfpadam_flood5766830sqmnov2023_20231114",
+      "title": "Somalia: Flood - 576683.0 sq m - Nov 2023",
+      "description": "ADAM ID: FL-20231114-SOM-00 Flood covering 576683.0 sq m on Nov 14 2023 in Somalia. It impacted 320755 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-flood-fl-20231114-som-00]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/somalia-flood-fl-20231114-som-00"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/somalia-flood-fl-20231114-som-00"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-14"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/somalia-flood-fl-20231114-som-00"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM collected and mapped observed flood extent and socio-economic impacts following the 14 November 2023 flood event in Somalia. Geospatial flood boundaries were intersected with population and cropland datasets to quantify directly affected populations (320,755 people) and flooded cropland area. The resulting multi-format dataset (GeoJSON, GeoTIFF, GeoPackage) provides post-event loss assessment for humanitarian response.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational geospatial and socio-economic data collection system for sudden-onset humanitarian emergencies. ADAM provides post-event flood extent mapping, affected population counts, and cropland impact assessment following the November 2023 flood in Somalia."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8f7fdd98",
+          "title": "FL-20231114-SOM-00.geojson",
+          "description": "Somalia: Flood - 576683.0 sq m - Nov 2023 (GeoJSON File)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/598b87ec-3f17-4051-91f9-a86124f811eb/resource/8f7fdd98-8ceb-4a43-a644-3bdaf638fc57/download/fl-20231114-som-00.geojson"
+        },
+        {
+          "id": "resource_d5d7c3ca",
+          "title": "FL-20231114-SOM-00.tiff",
+          "description": "Somalia: Flood - 576683.0 sq m - Nov 2023 (GeoTIFF File)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/598b87ec-3f17-4051-91f9-a86124f811eb/resource/d5d7c3ca-f9d6-438b-b32f-eb885762893c/download/fl-20231114-som-00.tiff"
+        },
+        {
+          "id": "resource_36a3ed4e",
+          "title": "FL-20231114-SOM-00.gpkg",
+          "description": "Somalia: Flood - 576683.0 sq m - Nov 2023 (Geopackage File)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/598b87ec-3f17-4051-91f9-a86124f811eb/resource/36a3ed4e-c7b7-417f-b432-6db2ab62776c/download/fl-20231114-som-00.gpkg"
+        },
+        {
+          "id": "resource_002bb4a4",
+          "title": "metadata.txt",
+          "description": "Somalia: Flood - 576683.0 sq m - Nov 2023 (Metadata File)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/598b87ec-3f17-4051-91f9-a86124f811eb/resource/002bb4a4-7193-417f-ad30-d31d2c4433eb/download/metadata.txt"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland area affected by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population directly affected by the flood event"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population impact from observed flood event in November 2023"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct cropland loss from observed flood inundation"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-flood-fl-20231114-som-00",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ton_unosat_damageassessmentnomukavil_20220117",
+      "title": "Tonga - Damage assessment in Nomuka village, Mu'omu'a district, Ha'apai division, Nomuka Island, as of 17 January 2022",
+      "description": "UNOSAT code: VO20220115TON This map illustrates effects of the Hunga Tonga-hunga Ha'apai volcanic eruption in Nomuka island (Mu'omu'a district, Tonga) and damage assessment as detected from a Pleiades image acquired on 17 January 2022, 10:53 local time. In this island we identified~250 structures. 104 structures were analyzed in the cloud-free area and 41 structures were identified as damaged and almost all the structures were covered with ash. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-nomuka-village-mu-omu-a-district-ha-apai-division-nomuka-island-as-of]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-nomuka-village-mu-omu-a-district-ha-apai-division-nomuka-island-as-of"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-nomuka-village-mu-omu-a-district-ha-apai-division-nomuka-island-as-of"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TON"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-17"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-nomuka-village-mu-omu-a-district-ha-apai-division-nomuka-island-as-of"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Pleiades satellite imagery acquired on 17 January 2022 following the Hunga Tonga-Hunga Ha'apai volcanic eruption, comparing multi-temporal images to detect changes in building condition and ashfall coverage. Damage assessment was conducted through visual interpretation of the cloud-free area covering 104 structures, identifying 41 damaged buildings and widespread ash deposition across the island.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using Pleiades imagery acquired 17 January 2022, comparing pre- and post-eruption satellite images to identify structural damage and ashfall extent in Nomuka village"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8a2f8e90",
+          "title": "VO20220115TON_gdb.zip",
+          "description": "Tonga - Damage assessment in Nomuka village, Mu'omu'a district, Ha'apai division, Nomuka Island, as of 17 January 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/TO/VO20220115TON/VO20220115TON_gdb.zip"
+        },
+        {
+          "id": "resource_4cd6e756",
+          "title": "VO20220115TON_SHP.zip",
+          "description": "Tonga - Damage assessment in Nomuka village, Mu'omu'a district, Ha'apai division, Nomuka Island, as of 17 January 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/TO/VO20220115TON/VO20220115TON_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "ashfall",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Nomuka village identified from satellite imagery, approximately 250 structures total"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from volcanic ashfall, with 41 structures identified as damaged out of 104 analyzed in cloud-free areas"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-nomuka-village-mu-omu-a-district-ha-apai-division-nomuka-island-as-of",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

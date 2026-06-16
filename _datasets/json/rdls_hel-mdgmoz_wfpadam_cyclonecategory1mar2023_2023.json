@@ -1,0 +1,147 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-mdgmoz_wfpadam_cyclonecategory1mar2023_2023",
+      "title": "Madagascar: Cyclone - Category 1 - Mar 2023",
+      "description": "ADAM ID: 1000961_60 Cyclone (category 1) during the period Feb 06 2023-Mar 12 2023 in Mozambique, Madagascar. It impacted 1327678 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/madagascar-cyclone-1000961]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/madagascar-cyclone-1000961"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/madagascar-cyclone-1000961"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "MDG",
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2023-02-06",
+        "end": "2023-03-12"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/madagascar-cyclone-1000961"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and mapped tropical cyclone track geometry and wind speed observations during the February-March 2023 cyclone event in Madagascar and Mozambique, integrating geospatial hazard data with population exposure to generate impact assessments of affected populations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analysing and mapping geospatial and socio-economic information following sudden onset humanitarian emergencies, providing cyclone track data and impact assessments"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7a28b6ee",
+          "title": "1000961-60-adam-ts-1000961-60-shp.zip",
+          "description": "Madagascar: Cyclone - Category 1 - Mar 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/2b416d3c-2808-4b22-b856-95b31ba5a7a7/resource/7a28b6ee-be29-44a0-804d-ee025d606c03/download/1000961-60-adam-ts-1000961-60-shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone hazard in affected areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by Category 1 tropical cyclone event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/madagascar-cyclone-1000961",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

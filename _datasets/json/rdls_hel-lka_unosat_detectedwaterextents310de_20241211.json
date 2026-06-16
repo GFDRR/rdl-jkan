@@ -1,0 +1,254 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-lka_unosat_detectedwaterextents310de_20241211",
+      "title": "Satellite detected water extents from 3 to 10 December 2024 in the Jaffna District, Northern Province, Sri Lanka",
+      "description": "UNOSAT code: FL20241128LKA This map illustrates cumulative satellite-detected water extent from multiple satellites in the Jaffna District, Northern Province, Sri Lanka from 3 to 10 December 2024. Within the cloud-free analysed area of approximately 760 km², an estimated 84 km² of land is observed to be affected by floodwaters, with around 43 km² of cropland Based on WorldPop spatial demographic data, approximately 2,400 people are exposed to or living near the flooded areas. Additionally, 3,400 buildings have been identified as potentially affected. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extents-from-3-to-10-december-2024-in-the-jaffna-district-northern-province-sri-lank]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-from-3-to-10-december-2024-in-the-jaffna-district-northern-province-sri-lank"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extents-from-3-to-10-december-2024-in-the-jaffna-district-northern-province-sri-lank"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LKA"
+        ]
+      },
+      "temporal": {
+        "start": "2024-12-11"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/water-extents-from-3-to-10-december-2024-in-the-jaffna-district-northern-province-sri-lank"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extents-from-3-to-10-december-2024-in-the-jaffna-district-northern-province-sri-lank"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared multiple satellite images from 3-10 December 2024 to detect cumulative water extent changes in Jaffna District. Water-classified pixels were extracted and vectorized into geodatabase and shapefile formats. Population and building exposure were overlaid using WorldPop demographic data to estimate affected populations and structures. The dataset represents post-event observed flood extent from satellite detection.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial demographic data providing gridded population distribution used to estimate population exposure to flooded areas"
+          },
+          {
+            "id": "source_2",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multi-satellite imagery analysis detecting cumulative water extents through comparative image analysis and change detection"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_132b59e5",
+          "title": "FL20241128LKA_gdb.zip",
+          "description": "Satellite detected water extents from 3 to 10 December 2024 in the Jaffna District, Northern Province, Sri Lanka (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4046/FL20241128LKA_gdb.zip"
+        },
+        {
+          "id": "resource_67b73443",
+          "title": "FL20241128LKA_SHP.zip",
+          "description": "Satellite detected water extents from 3 to 10 December 2024 in the Jaffna District, Northern Province, Sri Lanka (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4046/FL20241128LKA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock potentially affected by floodwaters in Jaffna District"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to or living near flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland affected by floodwaters in the study area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Buildings potentially affected by floodwaters in Jaffna District"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population exposed to or living near flooded areas"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Cropland affected by floodwaters"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extents-from-3-to-10-december-2024-in-the-jaffna-district-northern-province-sri-lank",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

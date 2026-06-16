@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-irnirq_unosat_damagedstructuresrelatedd_20171120",
+      "title": "Damaged structures and related density map in Sarpol-e-Zahab, Kermanshah, Iran",
+      "description": "This map illustrates potentially damaged structures/buildings and related density in Sarpol-e-Zahab, Kermanshah, Iran as detected by a Pleiades satellite image acquired on 16 November 2017. The UNITAR-UNOSAT analysis identified 683 damaged structures. Taking into account the pre-building footprints provided by Humanitarian OpenStreetMap (~9700 structures), this represents about 7 % of the total number of structures within Sarpol-e-Zahab. The damage density highlights that the neighbourhood of Maskane Mahar and the area around the Post Office are amongst the most affected zones. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damaged-structures-and-related-density-map-in-sarpol-e-zahab-kermanshah-iran-2732]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damaged-structures-and-related-density-map-in-sarpol-e-zahab-kermanshah-iran-2732"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damaged-structures-and-related-density-map-in-sarpol-e-zahab-kermanshah-iran-2732"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IRQ",
+          "IRN"
+        ]
+      },
+      "temporal": {
+        "start": "2017-11-20"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/damaged-structures-and-related-density-map-in-sarpol-e-zahab-kermanshah-iran-2732"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre- and post-event Pleiades satellite imagery acquired on 16 November 2017 to detect structural damage in Sarpol-e-Zahab following the 12 November 2017 earthquake. Detected damage (683 structures) was mapped and density-analyzed relative to pre-event building footprints from Humanitarian OpenStreetMap to quantify impact extent and spatial distribution.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Pre-event building footprints (~9700 structures) used as baseline inventory to calculate damage ratio and contextualize the 683 damaged structures detected by UNOSAT"
+          },
+          {
+            "id": "source_2",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite image analysis and damage detection methodology applied to Pleiades imagery to identify damaged structures"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4042adaf",
+          "title": "EQ20171112IRQ_gdb.zip",
+          "description": "Damaged structures and related density map in Sarpol-e-Zahab, Kermanshah, Iran (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/IQ/EQ20171112IRQ/EQ20171112IRQ_gdb.zip"
+        },
+        {
+          "id": "resource_e3b7c421",
+          "title": "EQ20171112IRQ_shp.zip",
+          "description": "Damaged structures and related density map in Sarpol-e-Zahab, Kermanshah, Iran (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/IQ/EQ20171112IRQ/EQ20171112IRQ_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from earthquake detected via satellite imagery analysis (683 damaged structures identified)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damaged-structures-and-related-density-map-in-sarpol-e-zahab-kermanshah-iran-2732",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

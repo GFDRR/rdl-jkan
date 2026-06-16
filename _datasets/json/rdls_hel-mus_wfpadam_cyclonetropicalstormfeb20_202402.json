@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-mus_wfpadam_cyclonetropicalstormfeb20_202402",
+      "title": "Mauritius: Cyclone - Tropical storm - Feb 2024",
+      "description": "ADAM ID: 1001052_19 Cyclone (tropical storm) during the period Feb 19 2024-Feb 23 2024 in Miscellaneous (French) Indian Ocean Islands, Mauritius. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mauritius-cyclone-1001052]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/mauritius-cyclone-1001052"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/mauritius-cyclone-1001052"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MUS"
+        ]
+      },
+      "temporal": {
+        "start": "2024-02-19",
+        "end": "2024-02-23"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/mauritius-cyclone-1001052"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "ADAM collected observed tropical cyclone track and wind speed data from the February 2024 event in Mauritius. Population exposure was estimated by intersecting gridded population data with wind speed zones (60 km/h and 90 km/h thresholds) and aggregating by administrative divisions to quantify affected populations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting and mapping geospatial information on tropical storms, providing observed cyclone tracks, wind speed fields, and alert levels"
+          },
+          {
+            "id": "source_2",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population estimation data stratified by administrative divisions and wind speed exposure thresholds"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c446b659",
+          "title": "1001052-20-adam-ts-1001052-20-shp.zip",
+          "description": "Mauritius: Cyclone - Tropical storm - Feb 2024 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/21c9fee6-4397-4706-bb85-9191fe9a490b/resource/c446b659-7fe7-417b-81bc-9266c9189e42/download/1001052-20-adam-ts-1001052-20-shp.zip"
+        },
+        {
+          "id": "resource_2c9d2753",
+          "title": "1001052-20-adam-ts-1001052-20-pop-estimation.csv",
+          "description": "Mauritius: Cyclone - Tropical storm - Feb 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/21c9fee6-4397-4706-bb85-9191fe9a490b/resource/2c9d2753-9081-40c6-9566-abdf7692a3c4/download/1001052-20-adam-ts-1001052-20-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at 60 km/h and 90 km/h thresholds"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by tropical cyclone winds during February 2024 event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mauritius-cyclone-1001052",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

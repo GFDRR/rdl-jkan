@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-vut_unosat_damageassessmentmalampapr_20200410",
+      "title": "Damage Assessment in Malampa Province, Vanuatu",
+      "description": "UNOSAT code: TC20200403VUT This map illustrates potentially damaged structures and buildings in Malampa Province, Vanuatu as detected by satellite image acquired after landfall of the Tropical Cyclone Harold-20 on 6 April 2020. UNITAR-UNOSAT analysis used a Pleiades image acquired on 7, 8 and 9 April 2020 as post event images. Within the analysis extent, UNITAR-UNOSAT identified in the cloud free zones 25 potentially damaged structures. Taking into account the pre-building footprints provided by OpenStreetMap, this represents less than 1 % of the total number of structures within the analyzed cloud-free areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-malampa-province-vanuatu]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-malampa-province-vanuatu"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-malampa-province-vanuatu"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2020-04-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-malampa-province-vanuatu"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Pleiades satellite imagery",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-malampa-province-vanuatu"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre-event OpenStreetMap building footprints with post-event Pleiades satellite imagery (7-9 April 2020) acquired after Tropical Cyclone Harold landfall on 6 April 2020. Visual interpretation of cloud-free zones identified 25 potentially damaged structures in Malampa Province, representing <1% of total building stock in the analysis extent.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Pre-event building footprints used as reference layer for damage assessment comparison"
+          },
+          {
+            "id": "source_2",
+            "name": "Pleiades satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event satellite images acquired 7-9 April 2020 used for visual damage detection and assessment"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_2ef2e01a",
+          "title": "TC20200403VUT_gdb.zip",
+          "description": "Damage Assessment in Malampa Province, Vanuatu (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/VU/TC20200403VUT/TC20200403VUT_gdb.zip"
+        },
+        {
+          "id": "resource_d9a1c8b7",
+          "title": "TC20200403VUT_SHP.zip",
+          "description": "Damage Assessment in Malampa Province, Vanuatu (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/VU/TC20200403VUT/TC20200403VUT_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints and structures in Malampa Province derived from OpenStreetMap"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from Tropical Cyclone Harold detected via satellite imagery analysis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-malampa-province-vanuatu",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

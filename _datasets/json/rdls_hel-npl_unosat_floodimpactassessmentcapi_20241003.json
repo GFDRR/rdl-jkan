@@ -1,0 +1,254 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-npl_unosat_floodimpactassessmentcapi_20241003",
+      "title": "Flood Impact assessment of the Capital city of Kathmandu, Bagmati Province, Nepal as of 30 September 2024",
+      "description": "UNOSAT code: FL20240928NPL This map illustrates the floods using the Spot-6 image acquired on 30 September 2024 at 14:20 local time (08:35 UTC). Within the analysed area of about 450 km², a total of about 8 km² of land appears to be affected by flood waters. and about 4 km² of cropland seems to be inundated. Based on Worldpop spatial demographic data, about 46,000 people are exposed or living close to flooded areas. UNITAR-UNOSAT identified about 5,000 potentially affected structures within the analysed area. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/flood-impact-assessment-of-the-capital-city-of-kathmandu-bagmati-province-nepal-as-of-30-s]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flood-impact-assessment-of-the-capital-city-of-kathmandu-bagmati-province-nepal-as-of-30-s"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/flood-impact-assessment-of-the-capital-city-of-kathmandu-bagmati-province-nepal-as-of-30-s"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2024-10-03"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Spot-6 satellite imagery",
+            "url": "https://data.humdata.org/dataset/flood-impact-assessment-of-the-capital-city-of-kathmandu-bagmati-province-nepal-as-of-30-s"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/flood-impact-assessment-of-the-capital-city-of-kathmandu-bagmati-province-nepal-as-of-30-s"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Spot-6 satellite imagery acquired on 30 September 2024 and compared it with reference imagery to identify flood extent and inundated areas. Flood polygons were delineated and intersected with WorldPop population grids and building footprint data to estimate exposure and direct impacts. This preliminary post-event damage assessment has not yet been validated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Spot-6 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "High-resolution satellite image acquired on 30 September 2024 at 14:20 local time used to delineate flood extent and inundated areas"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Spatial demographic data used to estimate population exposure to flooded areas"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ba79356b",
+          "title": "FL20240928NPL_gdb.zip",
+          "description": "Flood Impact assessment of the Capital city of Kathmandu, Bagmati Province, Nepal as of 30 September 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3993/FL20240928NPL_gdb.zip"
+        },
+        {
+          "id": "resource_8bb80bc7",
+          "title": "FL20240928NPL_SHP.zip",
+          "description": "Flood Impact assessment of the Capital city of Kathmandu, Bagmati Province, Nepal as of 30 September 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3993/FL20240928NPL_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Approximately 5,000 potentially affected structures identified within the analysed area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Approximately 46,000 people exposed or living close to flooded areas based on WorldPop spatial demographic data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_3",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Approximately 4 km² of cropland inundated by flood waters"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on approximately 5,000 structures from flood inundation"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct exposure of approximately 46,000 people to flooded areas"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct inundation of approximately 4 km² of cropland"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/flood-impact-assessment-of-the-capital-city-of-kathmandu-bagmati-province-nepal-as-of-30-s",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-mwi_wfpadam_flood1066530sqmfeb2023_20230217",
+      "title": "Malawi: Flood - 106653.0 sq m - Feb 2023",
+      "description": "ADAM ID: FL-20230217-MWI-01 Flood covering 106653.0 sq m on Feb 17 2023 in Malawi. It impacted 182158 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/malawi-flood-fl-20230217-mwi-01]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/malawi-flood-fl-20230217-mwi-01"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/malawi-flood-fl-20230217-mwi-01"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2023-02-17"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/malawi-flood-fl-20230217-mwi-01"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event flood extent was mapped and analyzed by WFP ADAM following the February 17, 2023 flood in Malawi. Flood boundaries were delineated from geospatial analysis, overlaid with population and cropland datasets to quantify direct impacts (182,158 people affected, flooded cropland area calculated). Data compiled into multi-format geospatial products (GeoJSON, GeoTIFF, GeoPackage) for operational response.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analyzing and mapping geospatial and socio-economic information following sudden-onset humanitarian emergencies. ADAM aggregates flood extent, affected population, and cropland impact data for response dashboards."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d9e2f9a4",
+          "title": "FL-20230217-MWI-01.geojson",
+          "description": "Malawi: Flood - 106653.0 sq m - Feb 2023 (GeoJSON File)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/7e1f8b34-3e68-49e9-b7b4-29690d509546/resource/d9e2f9a4-1297-4562-b28a-e5908a01c6d5/download/fl-20230217-mwi-01.geojson"
+        },
+        {
+          "id": "resource_f1157981",
+          "title": "FL-20230217-MWI-01.tiff",
+          "description": "Malawi: Flood - 106653.0 sq m - Feb 2023 (GeoTIFF File)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/7e1f8b34-3e68-49e9-b7b4-29690d509546/resource/f1157981-4bc1-432c-b0f8-119d6d5e109f/download/fl-20230217-mwi-01.tiff"
+        },
+        {
+          "id": "resource_2d9e8b50",
+          "title": "FL-20230217-MWI-01.gpkg",
+          "description": "Malawi: Flood - 106653.0 sq m - Feb 2023 (Geopackage File)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/7e1f8b34-3e68-49e9-b7b4-29690d509546/resource/2d9e8b50-37ed-4c34-95c9-05ee84725c59/download/fl-20230217-mwi-01.gpkg"
+        },
+        {
+          "id": "resource_9ee56118",
+          "title": "metadata.txt",
+          "description": "Malawi: Flood - 106653.0 sq m - Feb 2023 (Metadata File)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/7e1f8b34-3e68-49e9-b7b4-29690d509546/resource/9ee56118-2b9a-48ad-b853-914bcebec590/download/metadata.txt"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Total population in the flood-affected area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland area affected by flooding"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population affected by the February 2023 flood event in Malawi"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct cropland loss from flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/malawi-flood-fl-20230217-mwi-01",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

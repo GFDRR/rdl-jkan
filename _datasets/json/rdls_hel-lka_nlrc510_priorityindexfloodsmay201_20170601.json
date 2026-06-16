@@ -1,0 +1,199 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-lka_nlrc510_priorityindexfloodsmay201_20170601",
+      "title": "Priority Index Sri Lanka Floods May 2017",
+      "description": "Product This priority index was derived by combining a detailed flood extent mapping with detailed human settlement geo-data. Both sources were combined to produce the location and magnitude of population living in flooded areas. This was subsequently aggregated to admin-4 areas (GND) as well as admin-3 areas (DS divisional). The flood extent mapping was derived in turn by combining two sources: Flood extent maps could be produced rather faster using satellite imageries captured by either optical sensors or Synthetic Aperture Radar (SAR) sensors. In most places flood is cause by heavy rainfall which means in most cases cloud is present, this is a limitation for optical sensors as they can't penetrate clouds. Radar sensors are not affected by cloud, which make them more useful in presence of cloud. In This analysis we analyzed sentinel2 optical image from May 28th and Sentinel 1 SAR image from May 30th. Then we combine the two results adding up the flood extents. Main cloud covered areas and permanent water bodies are removed from the flood extent map using the Sentinel 2 cloud mask. The scale/resolution of the flood extent map is 30mts where as the permanent water body map has 250m scale resolution. This will introduce some discrepancy: part of flood extent map could be permanent water body. Scope Analysis focused on 4 districts in South-West Sri Lanka based on news reports (https://www.dropbox.com/s/n0qdqe7qfgq6fyv/special_situation.pdf?dl=0). Based on the admin-3-level analysis, highest percentages of population living in flooded areas were seen in Matara district. Admin-4 level analysis concentrated only on Matara district for that reason. Caveats The dataset is showing percentage flooded. The data has not yet been corrected for small populations. We believe the product is currently pointing to the high priority areas. In the shp or csv files the user of this data could easily correct for small populations, if there is a wish to target on the amount of people affected. Data used from partners The human settlement data was retrieved from http://ciesin.columbia.edu/data/hrsl/. Facebook Connectivity Lab and Center for International Earth Science Information Network - CIESIN - Columbia University. 2016. High Resolution Settlement Layer (HRSL). Source imagery for HRSL © 2016 DigitalGlobe. Accessed 01-06-2017. The Radar imagery analysis was done by NASA JPL, whose input in this product has been crucial. Visualization An example map is available here: http://bit.ly/SriLankaFloodMap Linked data Admin boundaries 3 and 4 can be found here (link on OBJECT_ID): https://data.humdata.org/group/lka?q=&ext_page_size=25&sort=score+desc%2C+metadata_modified+desc&tags=administrative+boundaries#dataset-filter-start How to use The ratio column in the SHPs or CSVs can be multiplied by 100 to get the percentage of flooding in the area.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/priority-index-sri-lanka-floods-may-2017]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The dataset is showing percentage flooded. The data has not yet been corrected for small populations. We believe the product is currently pointing to the high priority areas. In the shapefile and csv file the user of this data could easily correct for small populations, if there is a wish to target on the volume of people affected.",
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/priority-index-sri-lanka-floods-may-2017"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/priority-index-sri-lanka-floods-may-2017"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LKA"
+        ]
+      },
+      "temporal": {
+        "start": "2017-06-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Satellite imagery (optical and SAR sensors)",
+            "url": "https://data.humdata.org/dataset/priority-index-sri-lanka-floods-may-2017"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Human settlement geo-data",
+            "url": "https://data.humdata.org/dataset/priority-index-sri-lanka-floods-may-2017"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Flood extent was mapped using satellite imagery (optical and SAR sensors) for the May 2017 event in Sri Lanka. This was intersected with detailed human settlement geo-data to identify population living in flooded areas. Results were aggregated to administrative-4 (GND) and administrative-3 (DS divisional) levels to produce a priority index for humanitarian response.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Satellite imagery (optical and SAR sensors)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Flood extent mapping derived from optical and Synthetic Aperture Radar satellite imagery to delineate inundated areas"
+          },
+          {
+            "id": "source_2",
+            "name": "Human settlement geo-data",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Detailed spatial inventory of human settlements combined with flood extent to identify population at risk"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "http://ciesin.columbia.edu/data/hrsl/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_40ae3445",
+          "title": "flood_srilanka_new.zip",
+          "description": "Flood extent. Combination of two sources (radar and optical). See description.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/21b40c8e-a436-494e-80a5-70c3eb0228d0/resource/40ae3445-05b6-4264-b06e-d4bf6e77b780/download/flood_srilanka_new.zip"
+        },
+        {
+          "id": "resource_c7c3eed1",
+          "title": "SriLankaFloods_PriorityIndex_admin3_4districts.csv",
+          "description": "Population living in flooded area per admin-3 area (DSD) for 4 districts in South-West Sri Lanka.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/21b40c8e-a436-494e-80a5-70c3eb0228d0/resource/c7c3eed1-0fb6-409a-96ee-1dcff2db1da5/download/srilankafloods_priorityindex_admin3_4districts.csv"
+        },
+        {
+          "id": "resource_9f0d425b",
+          "title": "SriLankaFloods_PriorityIndex_admin4_Matara.csv",
+          "description": "Population living in flooded area per admin-4 area (GND) for Matara district in Southern Sri Lanka.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/21b40c8e-a436-494e-80a5-70c3eb0228d0/resource/9f0d425b-9105-46e2-978f-2e52bdd990f1/download/srilankafloods_priorityindex_admin4_matara.csv"
+        },
+        {
+          "id": "resource_af1d53cf",
+          "title": "admin3_4districts.zip",
+          "description": "Population living in flooded area per admin-3 area (DSD) for 4 districts in South-West Sri Lanka.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/21b40c8e-a436-494e-80a5-70c3eb0228d0/resource/af1d53cf-8162-42e2-95de-1e2420060007/download/admin3_4districts.zip"
+        },
+        {
+          "id": "resource_5adada77",
+          "title": "admin4_matara.zip",
+          "description": "Population living in flooded area per admin-4 area (GND) for Matara district in Southern Sri Lanka.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/21b40c8e-a436-494e-80a5-70c3eb0228d0/resource/5adada77-edde-4afe-9a8b-e6997d3bf3d2/download/admin4_matara.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Human settlement population inventory geo-referenced to flood-affected areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population living in flooded areas aggregated to administrative divisions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/priority-index-sri-lanka-floods-may-2017",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

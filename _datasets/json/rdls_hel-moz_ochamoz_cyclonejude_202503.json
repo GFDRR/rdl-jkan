@@ -1,0 +1,189 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-moz_ochamoz_cyclonejude_202503",
+      "title": "Mozambique - Cyclone Jude",
+      "description": "This dataset will help the humanitarian community to understand the Needs after the cyclone Jude.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mira-tool-cyclone-jude-2025]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Mozambique",
+        "url": "https://data.humdata.org/dataset/mira-tool-cyclone-jude-2025"
+      },
+      "creator": {
+        "name": "OCHA Mozambique",
+        "url": "https://data.humdata.org/dataset/mira-tool-cyclone-jude-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2025-03-13",
+        "end": "2025-03-17"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian partners",
+            "url": "https://data.humdata.org/dataset/mira-tool-cyclone-jude-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event Multi-Indicator Rapid Assessment (MIRA) survey conducted by humanitarian partners across Mozambique following Cyclone Jude. Village-level data collected via sample survey methodology documenting pre- and post-disaster population counts, household displacement status, shelter conditions, and exposure to multiple hazard types (cyclone, flood, heavy rains, drought, violence). Data aggregated by province, district, and sub-district administrative levels to support humanitarian needs analysis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-agency post-event needs assessment survey conducted via MIRA methodology documenting population displacement, shelter conditions, and humanitarian needs following Cyclone Jude in Mozambique"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e7676caf",
+          "title": "MIRA_-_Ciclone_JUDE_2025_EN.xlsx",
+          "description": "Mozambique - Cyclone Jude (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/e120e4a2-18f8-41b3-8ed2-f70a4214dec1/resource/e7676caf-fe1e-4380-8946-4c37388c7c1d/download/mira_-_ciclone_jude_2025_en.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Residential population before and after Cyclone Jude by village and displacement status"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Household structures classified by shelter conditions and displacement status"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement and shelter conditions resulting from Cyclone Jude"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood hazard triggered by Cyclone Jude"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mira-tool-cyclone-jude-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

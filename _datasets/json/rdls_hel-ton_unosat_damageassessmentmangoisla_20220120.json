@@ -1,0 +1,177 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ton_unosat_damageassessmentmangoisla_20220120",
+      "title": "Damage assessment in Mango Island, Mu'omu'a district, Ha'apai division, Tonga as of 18 January 2022 V2",
+      "description": "UNOSAT code: VO20220115TON This map illustrates effects of the Hunga Tonga-hunga Ha'apai volcanic eruption and the subsequent tsunami in Mango island (Mu'omu'a district, Tonga) and damage assessment as detected from a Kompsat-3 image acquired on 18 January 2022, 14:22 local time. In this island, UNOSAT identified 26 structures as damaged and/or destroyed and 1 structure as potentially damaged. The entire island appears to be covered with ashes. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-mango-island-mu-omu-a-district-ha-apai-division-tonga-as-of-18-januar]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-mango-island-mu-omu-a-district-ha-apai-division-tonga-as-of-18-januar"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-mango-island-mu-omu-a-district-ha-apai-division-tonga-as-of-18-januar"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TON"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-20"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-mango-island-mu-omu-a-district-ha-apai-division-tonga-as-of-18-januar"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts performed multi-temporal satellite image analysis comparing pre- and post-eruption Kompsat-3 imagery acquired on 18 January 2022 to detect structural damage and ashfall coverage on Mango Island following the Hunga Tonga-Hunga Ha'apai volcanic eruption and subsequent tsunami. Building damage was classified as destroyed, damaged, or potentially damaged based on visual interpretation of satellite data.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis (Kompsat-3) for post-event damage assessment of structures affected by volcanic eruption and tsunami on Mango Island, Tonga"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a96007ff",
+          "title": "VO20220115TON_gdb.zip",
+          "description": "Damage assessment in Mango Island, Mu'omu'a district, Ha'apai division, Tonga as of 18 January 2022 V2 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/TO/VO20220115TON/VO20220115TON_gdb.zip"
+        },
+        {
+          "id": "resource_51bb397c",
+          "title": "VO20220115TON_SHP.zip",
+          "description": "Damage assessment in Mango Island, Mu'omu'a district, Ha'apai division, Tonga as of 18 January 2022 V2 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/TO/VO20220115TON/VO20220115TON_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "ashfall",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures on Mango Island identified and assessed for damage from volcanic eruption and tsunami"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from volcanic eruption and ashfall on Mango Island"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_tsunami",
+              "type": "tsunami",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from tsunami triggered by volcanic eruption"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-mango-island-mu-omu-a-district-ha-apai-division-tonga-as-of-18-januar",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

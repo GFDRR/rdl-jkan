@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-afg_unosat_geodatadamageassessmentku_20151028",
+      "title": "Geodata of Damage Assessment of Kunduz Area, Kunduz Province, Afghanistan",
+      "description": "This map illustrates satellite-detected potential damaged structures in the city of Kunduz in Afghanistan, approximately 200 kilometers from the epicenter of the 26 October 2015 earthquake. Using a Pléiades satellite image acquired 28 October 2015 and a WorldView-2 image acquired 21 October 2015, UNITAR/UNOSAT did not observe major destruction related to the earthquake in Kunduz. However, a total of 12 potentially affected structures in Kunduz were identified. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-assessment-of-kunduz-area-kunduz-province-afghanistan-october-28-2015]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-kunduz-area-kunduz-province-afghanistan-october-28-2015"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-kunduz-area-kunduz-province-afghanistan-october-28-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2015-10-28"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared Pléiades satellite imagery acquired 28 October 2015 with WorldView-2 imagery from 21 October 2015 to detect structural changes and identify potentially damaged buildings in Kunduz city following the 26 October 2015 earthquake. A total of 12 potentially affected structures were identified through visual interpretation of satellite imagery, representing preliminary analysis not yet validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis (Pléiades and WorldView-2) for post-earthquake damage detection and assessment of potentially affected structures in Kunduz"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cfad8c3e",
+          "title": "EQ20151026AFG_shp.zip",
+          "description": "Geodata of Damage Assessment of Kunduz Area, Kunduz Province, Afghanistan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/AF/EQ20151026AFG/EQ20151026AFG_shp.zip"
+        },
+        {
+          "id": "resource_a895bc31",
+          "title": "EQ20151026AFG.gdb.zip",
+          "description": "Geodata of Damage Assessment of Kunduz Area, Kunduz Province, Afghanistan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/AF/EQ20151026AFG/EQ20151026AFG.gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Satellite-detected potentially damaged structures in Kunduz city from the 26 October 2015 earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-assessment-of-kunduz-area-kunduz-province-afghanistan-october-28-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-zmb_wfpadam_flood23027330sqmmar2023_20230301",
+      "title": "Zambia: Flood - 2302733.0 sq m - Mar 2023",
+      "description": "ADAM ID: FL-20230301-ZMB-01 Flood covering 2302733.0 sq m on Mar 01 2023 in Zambia. It impacted 332389 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/zambia-flood-fl-20230301-zmb-01]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/zambia-flood-fl-20230301-zmb-01"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/zambia-flood-fl-20230301-zmb-01"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ZMB"
+        ]
+      },
+      "temporal": {
+        "start": "2023-03-01"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/zambia-flood-fl-20230301-zmb-01"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected post-event geospatial data and socio-economic information following the March 2023 flood in Zambia. Flood extent was mapped and overlaid with population and cropland datasets to derive direct impact metrics including affected population count and flooded cropland area. Data delivered in multiple formats (GeoJSON, GeoTIFF, GeoPackage) with administrative boundary attribution.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational geospatial and socio-economic data collection system for post-event flood mapping and impact assessment, providing observed flood extent and affected population counts"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_67eababd",
+          "title": "FL-20230301-ZMB-01.geojson",
+          "description": "Zambia: Flood - 2302733.0 sq m - Mar 2023 (GeoJSON File)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/ee1c81ba-929a-4d19-b718-863e09687a19/resource/67eababd-a120-4642-ba00-5c8bae9d2a43/download/fl-20230301-zmb-01.geojson"
+        },
+        {
+          "id": "resource_c764122e",
+          "title": "FL-20230301-ZMB-01.tiff",
+          "description": "Zambia: Flood - 2302733.0 sq m - Mar 2023 (GeoTIFF File)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/ee1c81ba-929a-4d19-b718-863e09687a19/resource/c764122e-5dc8-4c76-b392-53d027ec1d95/download/fl-20230301-zmb-01.tiff"
+        },
+        {
+          "id": "resource_2f75c837",
+          "title": "FL-20230301-ZMB-01.gpkg",
+          "description": "Zambia: Flood - 2302733.0 sq m - Mar 2023 (Geopackage File)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/ee1c81ba-929a-4d19-b718-863e09687a19/resource/2f75c837-6c7a-4d5f-b9fd-0ee988642dd5/download/fl-20230301-zmb-01.gpkg"
+        },
+        {
+          "id": "resource_6351e742",
+          "title": "metadata.txt",
+          "description": "Zambia: Flood - 2302733.0 sq m - Mar 2023 (Metadata File)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/ee1c81ba-929a-4d19-b718-863e09687a19/resource/6351e742-9df9-425e-b35e-ba9a9020ca55/download/metadata.txt"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Total population in flood-affected administrative areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland area affected by flood inundation"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population affected by March 2023 flood event in Zambia"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct cropland area loss from flood inundation"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/zambia-flood-fl-20230301-zmb-01",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

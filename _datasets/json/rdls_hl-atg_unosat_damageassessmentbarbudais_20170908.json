@@ -1,0 +1,144 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-atg_unosat_damageassessmentbarbudais_20170908",
+      "title": "Antigua and Barbuda - Damage Assessment in Barbuda Island as of 8 September 2017",
+      "description": "This dataset illustrates satellite-detected potential damaged buildings in Barbuda Island following the landfall of Tropical Cyclone IRMA-17 on September 6, 2017. The UNITAR-UNOSAT analysis used a Pleiades satellite image acquired on 8 September 2017 as post imagery. The UNITAR-UNOSAT analysis identified 1,071 potentially damaged structures within Codrington town in Barbuda. According to the pre-building footprints provided by Humanitarian Open Street Map, this represents 89% of potentially affected structures in Codrington town. The analysis could have been underestimated due to cloud cover. This is a preliminary analysis and has not yet been validated in the field.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-barbuda-island-as-of-8-september-2017]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "This is a preliminary analysis and has not yet been validated in the field.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-barbuda-island-as-of-8-september-2017"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-barbuda-island-as-of-8-september-2017"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ATG"
+        ]
+      },
+      "temporal": {
+        "start": "2017-09-08"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNITAR-UNOSAT",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-barbuda-island-as-of-8-september-2017"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian Open Street Map",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-barbuda-island-as-of-8-september-2017"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event damage assessment derived from Pleiades satellite imagery acquired 8 September 2017, compared against pre-event building footprints from Humanitarian Open Street Map to identify and count potentially damaged structures in Codrington town, Barbuda following Tropical Cyclone IRMA-17 landfall on 6 September 2017.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNITAR-UNOSAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using Pleiades imagery acquired 8 September 2017 to identify potentially damaged building structures post-event"
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian Open Street Map",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Pre-event building footprints used as reference baseline to calculate damage percentage (89% of structures in Codrington town)"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f48abf3a",
+          "title": "Barbuda_building_damage_assessment_8sept.zip",
+          "description": "Antigua and Barbuda - Damage Assessment in Barbuda Island as of 8 September 2017 (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/f894e4ee-eb01-4f17-bd07-8142d78f6f2e/resource/f48abf3a-3c69-4e47-8636-f32b8c0f8d9d/download/barbuda_building_damage_assessment_8sept.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Satellite-detected potentially damaged buildings (1,071 structures) in Codrington town following Tropical Cyclone IRMA-17"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-barbuda-island-as-of-8-september-2017",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

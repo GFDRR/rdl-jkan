@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-caf_iom_cardisplacementdatabangui_201911",
+      "title": "Central African Republic - CAR Displacement Data - Bangui Floods Oct19 - Site Assessment [IOM DTM]",
+      "description": "Following the rains that hit certain areas of the country as early as 21 October, flooding cases involving the displacement of populations are mentioned in some localities of the country. IOM through its Displacement Tracking Matrix (DTM) conducted rapid assessments in the districts of Bangui 2nd, Bangui 6th, Bangui 7th, and Bombo.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/car-displacement-data-bangui-floods-oct19-site-assessment-iom-dtm]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/car-displacement-data-bangui-floods-oct19-site-assessment-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/car-displacement-data-bangui-floods-oct19-site-assessment-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CAF"
+        ]
+      },
+      "temporal": {
+        "start": "2019-11-04",
+        "end": "2019-11-10"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix",
+            "url": "https://data.humdata.org/dataset/car-displacement-data-bangui-floods-oct19-site-assessment-iom-dtm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM conducted rapid site assessments following October 2019 rainfall events that triggered flooding and population displacement in Bangui and surrounding areas. Assessment data was collected through field surveys in affected districts to document displacement impacts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Rapid site assessments conducted by IOM DTM documenting displacement of populations affected by flooding in Bangui districts (2nd, 6th, 7th) and Bombo"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9963ba32",
+          "title": "DTM CAR Bangui Floods Oct19 Site Assessment",
+          "description": "Central African Republic - CAR Displacement Data - Bangui Floods Oct19 - Site Assessment [IOM DTM] (DTM CAR Bangui Floods Oct19 Site Assessment)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6f6a0a72-0699-498d-8e27-b6d593898aa3/resource/9963ba32-bd72-4c25-96cd-d28ad9cd7e75/download/dtm-car-bangui-floods-oct19-site-assessment.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement resulting from October 2019 flooding in Bangui"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/car-displacement-data-bangui-floods-oct19-site-assessment-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

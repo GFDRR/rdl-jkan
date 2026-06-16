@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-lao_unosat_mudflowimpactkhamdistrict_20250806",
+      "title": "Mudflow impact in Kham District, Xiengkhouang Province, Lao PDR as of 2 August 2025",
+      "description": "UNOSAT code: TC20250722LAO, GDACS ID: 1001181 This map illustrates satellite-detected mudflow extent in Kham District, Xiengkhouang Province, Lao PDR as observed from Pleiades very high-resolution satellite image acquired on 2 August 2025 at 10:31 local time (03:31 UTC). Within the analyzed area of approximately 160 km², about 8 km² of land appears to be affected by landslides/mudflow. Based on WorldPop population data and the flood extent, approximately 2,300 people are potentially exposed or living close to the flooded areas. Additionally, UNOSAT identified around 970 damaged buildings, four damaged bridges, and approximately 10 km of affected roads. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mudflow-impact-in-kham-district-xiengkhouang-province-lao-pdr-as-of-2-august-2025]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mudflow-impact-in-kham-district-xiengkhouang-province-lao-pdr-as-of-2-august-2025"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/mudflow-impact-in-kham-district-xiengkhouang-province-lao-pdr-as-of-2-august-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LAO"
+        ]
+      },
+      "temporal": {
+        "start": "2025-08-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop",
+            "url": "https://data.humdata.org/dataset/mudflow-impact-in-kham-district-xiengkhouang-province-lao-pdr-as-of-2-august-2025"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Pleiades satellite imagery",
+            "url": "https://data.humdata.org/dataset/mudflow-impact-in-kham-district-xiengkhouang-province-lao-pdr-as-of-2-august-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed Pleiades very high-resolution satellite imagery acquired on 2 August 2025 to detect mudflow extent through comparative image analysis and change detection. Detected mudflow polygons (approximately 8 km² affected area) were intersected with WorldPop gridded population data to estimate approximately 2,300 people potentially exposed. Damage assessments identified approximately 970 damaged structures through visual interpretation of satellite imagery.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population exposure to mudflow-affected areas"
+          },
+          {
+            "id": "source_2",
+            "name": "Pleiades satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Very high-resolution satellite image acquired on 2 August 2025 used to detect and delineate mudflow extent through change detection analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_be0d8ad4",
+          "title": "TC20250722LAO_gdb.zip",
+          "description": "Mudflow impact in Kham District, Xiengkhouang Province, Lao PDR as of 2 August 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4166/TC20250722LAO_gdb.zip"
+        },
+        {
+          "id": "resource_07e54d9e",
+          "title": "TC20250722LAO_SHP.zip",
+          "description": "Mudflow impact in Kham District, Xiengkhouang Province, Lao PDR as of 2 August 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4166/TC20250722LAO_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_mudflow",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to mudflow-affected areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from mudflow event in Kham District"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mudflow-impact-in-kham-district-xiengkhouang-province-lao-pdr-as-of-2-august-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

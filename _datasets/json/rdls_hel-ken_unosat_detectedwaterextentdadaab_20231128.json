@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ken_unosat_detectedwaterextentdadaab_20231128",
+      "title": "Satellite detected water extent in Dadaab Town, Dadaab County, Garissa Province, Kenya as of 21 & 26 November 2023",
+      "description": "UNOSAT code: FL20231124KEN This map illustrates satellite-detected water extent in Dadaab Town, Dadaab County, Garissa Province, Kenya as observed from a Sentinel-2 image acquired on 26 November 2023 at 10:50 local time and a Landsat 9 image acquired on 21 November 2023 at 10:30 local time. Within analysed area of about 1,000 km², a total of about 110 km² of lands appear to be affected with flood waters. Furthermore, within the analysed area, about 4,600 buildings are identified as affected by the floods. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/water-extent-in-dadaab-town-dadaab-county-garissa-province-kenya-as-of-21-26-november-2023]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-dadaab-town-dadaab-county-garissa-province-kenya-as-of-21-26-november-2023"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/water-extent-in-dadaab-town-dadaab-county-garissa-province-kenya-as-of-21-26-november-2023"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-28"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/water-extent-in-dadaab-town-dadaab-county-garissa-province-kenya-as-of-21-26-november-2023"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-2 (26 November 2023) and Landsat 9 (21 November 2023) satellite imagery were analyzed by UNOSAT to detect water extent through visual interpretation and change detection. Analysts compared pre- and post-flood imagery to delineate inundated areas (~110 km²) and identify affected buildings (~4,600 structures) within a 1,000 km² study area in Dadaab Town.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using Sentinel-2 and Landsat 9 to detect water extent and inundated areas. UNOSAT analysts compared multi-temporal satellite images to identify flood-affected lands and structures."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7ffc9c7b",
+          "title": "FL20231124KEN_gdb.zip",
+          "description": "Satellite detected water extent in Dadaab Town, Dadaab County, Garissa Province, Kenya as of 21 & 26 November 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3761/FL20231124KEN_gdb.zip"
+        },
+        {
+          "id": "resource_17b29a50",
+          "title": "FL20231124KEN_SHP.zip",
+          "description": "Satellite detected water extent in Dadaab Town, Dadaab County, Garissa Province, Kenya as of 21 & 26 November 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3761/FL20231124KEN_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Dadaab Town identified through satellite imagery analysis"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flood inundation detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/water-extent-in-dadaab-town-dadaab-county-garissa-province-kenya-as-of-21-26-november-2023",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

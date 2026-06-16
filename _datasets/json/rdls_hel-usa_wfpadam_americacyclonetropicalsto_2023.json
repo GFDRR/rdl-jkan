@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-usa_wfpadam_americacyclonetropicalsto_2023",
+      "title": "United States of America: Cyclone - Tropical storm - Sep 2023",
+      "description": "ADAM ID: 1001000_7 Cyclone (tropical storm) during the period Aug 26 2023-Sep 02 2023 in United States. It impacted 494630 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/united-states-of-america-cyclone-1001000]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/united-states-of-america-cyclone-1001000"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/united-states-of-america-cyclone-1001000"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "USA"
+        ]
+      },
+      "temporal": {
+        "start": "2023-08-26",
+        "end": "2023-09-02"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/united-states-of-america-cyclone-1001000"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected observed tropical cyclone track and wind speed data for the September 2023 event in the USA. Population exposure was estimated by intersecting wind speed fields with gridded population data at three wind speed thresholds (60, 90, 120 kph), producing affected population counts by administrative division and overall impact figures.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting and mapping tropical cyclone track data, wind speed fields, and geospatial information following sudden-onset emergencies"
+          },
+          {
+            "id": "source_2",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Population impact assessment derived from cyclone hazard exposure analysis at multiple wind speed thresholds"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_eeb33b15",
+          "title": "1001000-29-adam-ts-1001000-29-shp.zip",
+          "description": "United States of America: Cyclone - Tropical storm - Sep 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/206e6979-1bce-434c-9a7f-8e1994a856bc/resource/eeb33b15-389f-4df7-97fd-31c49bd74e30/download/1001000-29-adam-ts-1001000-29-shp.zip"
+        },
+        {
+          "id": "resource_f4836c4d",
+          "title": "1001000-29-adam-ts-1001000-29-pop-estimation.csv",
+          "description": "United States of America: Cyclone - Tropical storm - Sep 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/206e6979-1bce-434c-9a7f-8e1994a856bc/resource/f4836c4d-b1d0-4367-ab60-f40c7154548b/download/1001000-29-adam-ts-1001000-29-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at multiple thresholds (60, 90, 120 kph)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by tropical cyclone winds during September 2023 event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/united-states-of-america-cyclone-1001000",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
