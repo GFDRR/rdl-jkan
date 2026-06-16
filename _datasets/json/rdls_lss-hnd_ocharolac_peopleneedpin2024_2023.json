@@ -1,0 +1,137 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hnd_ocharolac_peopleneedpin2024_2023",
+      "title": "Honduras People in Need PIN 2024",
+      "description": "The dataset contains information on the number of people in need in Honduras in 2024 at the admin 2 level.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/honduras-people-in-need-2024]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-people-in-need-2024"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-people-in-need-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2023-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "JIAF 2.0 Methodology",
+            "url": "https://data.humdata.org/dataset/honduras-people-in-need-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Honduras Humanitarian Needs and Response Plan (HNRP) 2024",
+            "url": "https://data.humdata.org/dataset/honduras-people-in-need-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "People in need figures were derived from multiple humanitarian assessment sources using the JIAF 2.0 methodology framework. Data was aggregated at the admin 2 level with severity classifications to produce the Honduras Humanitarian Needs and Response Plan 2024, representing total affected populations across multiple hazard and vulnerability contexts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "JIAF 2.0 Methodology",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Joint Inter-Agency Analysis Framework 2.0 used to derive people in need estimates from multiple humanitarian assessment sources"
+          },
+          {
+            "id": "source_2",
+            "name": "Honduras Humanitarian Needs and Response Plan (HNRP) 2024",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-sector humanitarian needs assessment compiled by OCHA providing severity classifications and affected population counts at admin 2 level"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://reliefweb.int/report/honduras/honduras-necesidades-humanitarias-y-plan-de-respuesta-2024-enero-2024"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://analysis.jiaf.info/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_163a7d81",
+          "title": "honduras-pin-hno-2024.xlsx",
+          "description": "The dataset contains information on the number of people in need in Honduras in 2024 at the admin 2 level.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f3010e23-761e-4d55-80c1-527e6e245bd9/resource/163a7d81-b337-4d3a-8b9e-4b1653dbfd06/download/honduras-pin-hno-2024.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need across Honduras derived from multi-hazard humanitarian needs assessment"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/honduras-people-in-need-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

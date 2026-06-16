@@ -1,0 +1,208 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_immap_tasadeafectadospordesastr",
+      "title": "Colombia - Tasa de Afectados por Desastres por cada 100mil habitantes entre 2019 y 2020",
+      "description": "Esta base de datos contiene la tasa de personas afectadas por desastres por cada 100.000 habitantes en cada municipio de Colombia entre 2019 y 2020. La metodología utilizada para el cálculo de este indicador fue tomada y adaptada del Plan Nacional de Gestión del Riesgo de Desastres de la UNGRD (Unidad Nacional de Gestión del Riesgo de Desastres). La tasa se deriva de dividir el promedio del número de personas afectadas por desastres en un periodo de tiempo entre el promedio de población para dicho periodo, y posteriormente, multiplicar el resultado por 100.000. Las fuentes de información para este cálculo fueron los registros de la UNGRD y las proyecciones de población del DANE.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/tasa-de-afectados-por-desastres-por-cada-100mil-habitantes-entre-2019-y-2020]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/tasa-de-afectados-por-desastres-por-cada-100mil-habitantes-entre-2019-y-2020"
+      },
+      "creator": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/tasa-de-afectados-por-desastres-por-cada-100mil-habitantes-entre-2019-y-2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+            "url": "https://data.humdata.org/dataset/tasa-de-afectados-por-desastres-por-cada-100mil-habitantes-entre-2019-y-2020"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Departamento Nacional de Estadística (DANE)",
+            "url": "https://data.humdata.org/dataset/tasa-de-afectados-por-desastres-por-cada-100mil-habitantes-entre-2019-y-2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Disaster-affected population counts from UNGRD registry were aggregated by municipality and time period (2019-2020), then normalized by corresponding municipal population estimates from DANE to produce standardized rates per 100,000 inhabitants following UNGRD methodology.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registry of disaster-affected populations providing raw counts of people affected by natural disasters in Colombia"
+          },
+          {
+            "id": "source_2",
+            "name": "Departamento Nacional de Estadística (DANE)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National statistical agency providing population estimates by municipality for rate normalization"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_40ef29d7",
+          "title": "Tasa_Afectados_Desastres_2019_2020.xlsx",
+          "description": "Colombia - Tasa de Afectados por Desastres por cada 100mil habitantes entre 2019 y 2020 (Base de datos de población afectada por municipio en formato xlsx.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/91d0f12e-110f-4099-95a6-75d9be3bd716/resource/40ef29d7-8097-4261-be42-186705cb7473/download/tasa_afectados_desastres_2019_2020.xlsx"
+        },
+        {
+          "id": "resource_cb7b66c4",
+          "title": "Tasa_Afectados_Desastres_2019_2020.csv",
+          "description": "Colombia - Tasa de Afectados por Desastres por cada 100mil habitantes entre 2019 y 2020 (Base de datos de población afectada por municipio en formato csv.)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/91d0f12e-110f-4099-95a6-75d9be3bd716/resource/cb7b66c4-0052-4cc7-a59f-30ec32cf74de/download/tasa_afectados_desastres_2019_2020.csv"
+        },
+        {
+          "id": "resource_969983eb",
+          "title": "Diccionario_Variables_Tasa_Afectados.xlsx",
+          "description": "Colombia - Tasa de Afectados por Desastres por cada 100mil habitantes entre 2019 y 2020 (Diccionario de variables.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/91d0f12e-110f-4099-95a6-75d9be3bd716/resource/969983eb-3267-4b08-b91e-f113759ee547/download/diccionario_variables_tasa_afectados.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Rate of population affected by disasters per 100,000 inhabitants at municipal level"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Rate of population affected by disasters per 100,000 inhabitants at municipal level"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Rate of population affected by disasters per 100,000 inhabitants at municipal level"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Rate of population affected by disasters per 100,000 inhabitants at municipal level"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/tasa-de-afectados-por-desastres-por-cada-100mil-habitantes-entre-2019-y-2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

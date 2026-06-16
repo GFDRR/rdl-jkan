@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_3is_calculodelaspersonasennec_2025",
+      "title": "Colombia: Cálculo de las Personas en Necesidad (PiN) y las Severidades del clúster de Alojamientos y Asentamientos (AyA)",
+      "description": "El archivo tiene los resultados del cálculo de las Personas en Necesidad (PiN) y las Severidades del clúster de Alojamientos y Asentamientos (AyA) para el año 2025 en Colombia.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pin-y-severidades-del-cluster-de-alojamientos-y-asentamientos-aya-colombia-2025]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/pin-y-severidades-del-cluster-de-alojamientos-y-asentamientos-aya-colombia-2025"
+      },
+      "creator": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/pin-y-severidades-del-cluster-de-alojamientos-y-asentamientos-aya-colombia-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DANE",
+            "url": "https://data.humdata.org/dataset/pin-y-severidades-del-cluster-de-alojamientos-y-asentamientos-aya-colombia-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "PiN and severity data compiled from multiple administrative and survey sources including DANE statistics, aggregated through registry methodology to assess shelter and settlement needs across Colombia for 2025. The dataset represents post-event or ongoing humanitarian impact assessments classified by severity levels for the shelter cluster.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DANE",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Colombian National Administrative Department of Statistics providing administrative and demographic data for PiN calculations"
+          },
+          {
+            "id": "source_2",
+            "name": "3iS",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-source registry compilation for shelter and settlements needs assessment in Colombia"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_da069b38",
+          "title": "PiN_Severidad_A&A_Colombia_2025.xlsx",
+          "description": "Colombia: Cálculo de las Personas en Necesidad (PiN) y las Severidades del clúster de Alojamientos y Asentamientos (AyA) (PiN_Severidad_A&A_Colombia_2025.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/0a94491e-c4e4-498f-8249-02804facf4e0/resource/da069b38-fc1d-42aa-9e82-00b82a9ddaa1/download/pin_severidad_aa_colombia_2025.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in Need (PiN) and severity classifications for shelter and settlements sector in Colombia"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pin-y-severidades-del-cluster-de-alojamientos-y-asentamientos-aya-colombia-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

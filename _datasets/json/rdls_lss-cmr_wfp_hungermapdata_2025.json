@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cmr_wfp_hungermapdata_2025",
+      "title": "Cameroon - HungerMap data",
+      "description": "HungerMapLIVE is the World Food Programme (WFP)'s global hunger monitoring system. It combines key metrics from various data sources - such as food security information, weather, population size, conflict, hazards, nutrition information and macro-economic data - to help assess, monitor and predict the magnitude and severity of hunger in near real-time. The resulting analysis is displayed on an interactive map that helps WFP staff, key decision makers and the broader humanitarian community to make more informed and timely decisions relating to food security. The platform covers 94 countries, including countries where WFP has operations as well as most lower and lower-middle income countries (as classified by the World Bank).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/wfp-hungermap-data-for-cmr]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-cmr"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-cmr"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CMR"
+        ]
+      },
+      "temporal": {
+        "start": "2025-01-04",
+        "end": "2026-01-04"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP HungerMap",
+            "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-cmr"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP's Hunger Monitoring Unit conducts real-time food security monitoring using multiple data sources including food consumption scores (FCS), reduced coping strategy indices (RCSI), health access, and market access indicators. Machine learning-based predictive models estimate food security situations in data-sparse areas. Data is aggregated at administrative levels and presented with prevalence metrics and affected population counts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP HungerMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "WFP's global hunger monitoring system combining food security indicators, weather data, conflict information, hazards, nutrition data and macro-economic indicators to assess food insecurity severity in near real-time."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_dbf16819",
+          "title": "wfp-hungermap-data-for-cmr.csv",
+          "description": "Cameroon - HungerMap data",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/92f57642-6313-4b47-ae84-3216cf3ae1e9/resource/dbf16819-3c8b-46f0-99be-8f0d979739d1/download/wfp-hungermap-data-for-cmr.csv"
+        },
+        {
+          "id": "resource_c7d7a2a3",
+          "title": "wfp-hungermap-data-for-cmr-long.csv",
+          "description": "Cameroon - HungerMap data long format",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/92f57642-6313-4b47-ae84-3216cf3ae1e9/resource/c7d7a2a3-1f3e-481a-b9c8-c01ef31cc0b8/download/wfp-hungermap-data-for-cmr-long.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity prevalence and affected population from drought and other hazards affecting food security"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/wfp-hungermap-data-for-cmr",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

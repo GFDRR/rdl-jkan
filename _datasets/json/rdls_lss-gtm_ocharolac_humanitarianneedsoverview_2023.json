@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-gtm_ocharolac_humanitarianneedsoverview_2023",
+      "title": "Guatemala: Humanitarian Needs Overview",
+      "description": "This data has been produced by the United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA) on behalf of the Humanitarian Country Team and partners. The data provides the Humanitarian Country Team's shared understanding of the crisis, including the most pressing humanitarian need and the estimated number of people who need assistance. It represents a consolidated evidence base and helps inform joint strategic response planning.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/guatemala-humanitarian-needs-overview]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/guatemala-humanitarian-needs-overview"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/guatemala-humanitarian-needs-overview"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GTM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA)",
+            "url": "https://data.humdata.org/dataset/guatemala-humanitarian-needs-overview"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian partners",
+            "url": "https://data.humdata.org/dataset/guatemala-humanitarian-needs-overview"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset aggregates humanitarian needs assessments from multiple partners in Guatemala using the Joint and Intersectoral Analysis Framework (JIAF) v1.1 methodology. Field data on affected populations and humanitarian needs were consolidated by UNOCHA to produce people-in-need (PiN) estimates across multiple crisis drivers, supporting joint strategic response planning by the Humanitarian Country Team.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Consolidated humanitarian needs assessment coordinated by UNOCHA on behalf of the Humanitarian Country Team, providing estimated people in need across multiple crisis drivers."
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-agency field data and assessments aggregated through the Joint and Intersectoral Analysis Framework (JIAF) to estimate humanitarian needs and protection risks."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cb5e5337",
+          "title": "JIAF1.1_PiN_Aggregation_Guatemala_220915.xlsx",
+          "description": "The dataset contains information on the number of people in need in Guatemala in 2023.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4f7e8d59-2866-4e0b-a6dd-514579f611a3/resource/cb5e5337-b4da-404a-8a90-8c088eb6b74d/download/jiaf1.1_aggregation_scenario-b_guatemala_220915.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need due to flood-related humanitarian crisis in Guatemala"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need due to strong wind/cyclone-related humanitarian crisis in Guatemala"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/guatemala-humanitarian-needs-overview",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cpv_unosat_preliminaryderivedfloodim_20250818",
+      "title": "Preliminary Satellite-derived Flood Impact Assessment, North Santo Antao Island, Cabo Verde",
+      "description": "UNOSAT code: FL20250812CPV Status: No major damage was observed Further action(s): Continue monitoring Summary of findings: No major damage was observed in Ponta do Sol Town, Cruzinha Village, and Ribeira da Cruz Village in northern Santo Antão Island as of 16 August 2025. Possible flood evidence was observed along the waterways in Ribeira Grande Town and Coculi Town in northern Santo Antão Island as of 16 August 2025.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-north-santo-antao-island-cabo-verde]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-north-santo-antao-island-cabo-verde"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-north-santo-antao-island-cabo-verde"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CPV"
+        ]
+      },
+      "temporal": {
+        "start": "2025-08-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery acquired on 16 August 2025 with reference imagery to identify flood-related changes and damage in northern Santo Antão Island. Visual interpretation of satellite data was used to map areas with flood evidence and assess damage status in affected towns and villages.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-flood conditions to assess damage and flood evidence in settlements on Santo Antão Island, Cabo Verde."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a4616a26",
+          "title": "FL20250812CPV_GDB.zip",
+          "description": "Preliminary Satellite-derived Flood Impact Assessment, North Santo Antao Island, Cabo Verde (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4173/FL20250812CPV_GDB.zip"
+        },
+        {
+          "id": "resource_9d49ec6c",
+          "title": "FL20250812CPV_SHP.zip",
+          "description": "Preliminary Satellite-derived Flood Impact Assessment, North Santo Antao Island, Cabo Verde (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4173/FL20250812CPV_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Post-event satellite-derived assessment of building damage from flooding in Santo Antão Island"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-impact-assessment-north-santo-antao-island-cabo-verde",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

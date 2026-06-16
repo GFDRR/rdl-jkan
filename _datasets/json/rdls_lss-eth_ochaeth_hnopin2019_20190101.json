@@ -1,0 +1,97 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-eth_ochaeth_hnopin2019_20190101",
+      "title": "Ethiopia HNO PiN 2019",
+      "description": "The file contains the proposed estimated People In Need (PIN) number by admin level 3 for the 2019 Humanitarian Needs Overview (HNO). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/2019-hno-people-in-need-by-admin-level3]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Ethiopia",
+        "url": "https://data.humdata.org/dataset/2019-hno-people-in-need-by-admin-level3"
+      },
+      "creator": {
+        "name": "OCHA Ethiopia",
+        "url": "https://data.humdata.org/dataset/2019-hno-people-in-need-by-admin-level3"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2019-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "The 2019 HNO PIN dataset aggregates humanitarian needs assessments across Ethiopia at admin level 3 using sample survey methodology. PIN figures represent the total population requiring humanitarian assistance across multiple sectors (primarily food insecurity driven by drought), compiled by OCHA from partner assessments and surveys.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Ethiopia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian Needs Overview (HNO) compilation of People in Need (PIN) figures aggregated at admin level 3 from multi-sector assessments and surveys"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7eb9f710",
+          "title": "2019 Humanitarian Needs Overview - People in Need figure.csv",
+          "description": "The file contains the proposed estimated People In Need (PIN) number by admin level 3 for the 2019 Humanitarian Needs Overview (HNO). After consultation with Government and through HNO workshop consultation some figures may be revised. However to revise the figures, evidence must be provided with arguments to propose any change.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/20f319e7-e4c1-42f4-89a5-9374b31b1ede/resource/7eb9f710-2d29-4271-96b2-7319e82b1188/download/2019-humanitarian-needs-overview-people-in-need-figure.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need estimates from the 2019 Humanitarian Needs Overview, primarily driven by drought and food insecurity"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/2019-hno-people-in-need-by-admin-level3",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-eth_undrr_lossdata_20131231",
+      "title": "Disaster Loss Data for Ethiopia",
+      "description": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/climate-change-in-ethiopia]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/climate-change-in-ethiopia"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/climate-change-in-ethiopia"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2013-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNISDR",
+            "url": "https://data.humdata.org/dataset/climate-change-in-ethiopia"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Ethiopian Government Agencies",
+            "url": "https://data.humdata.org/dataset/climate-change-in-ethiopia"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event disaster loss data compiled from direct observational records and anecdotal reports collected by UNISDR and Ethiopian Government Agencies, documenting deaths, injuries, missing persons, building damage, population displacement, and crop losses across climate-related hazard events in Ethiopia.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNISDR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "United Nations International Strategy for Disaster Reduction disaster loss records and impact data compilation"
+          },
+          {
+            "id": "source_2",
+            "name": "Ethiopian Government Agencies",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational and anecdotal disaster impact data collected by Ethiopian national authorities"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b4577974",
+          "title": "ETH.zip",
+          "description": "Disaster Loss Data for Ethiopia (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/3497f102-c9b0-4959-bc74-d98985e302fc/resource/b4577974-a689-40e0-a64d-6ea232aea57b/download/eth.zip"
+        },
+        {
+          "id": "resource_e5bc14ca",
+          "title": "Ethiopa.xls",
+          "description": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops Ha.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3497f102-c9b0-4959-bc74-d98985e302fc/resource/e5bc14ca-9408-4e9d-ba04-99a273259fc6/download/ethiopa.xls"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flood events in Ethiopia"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct crop losses and damages from flood events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from flood events in Ethiopia"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injured persons from flood events in Ethiopia"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Affected population from flood events in Ethiopia"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Displaced and evacuated population from flood events"
+          },
+          {
+            "id": "loss_7",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Crop losses and damages from drought events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/climate-change-in-ethiopia",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

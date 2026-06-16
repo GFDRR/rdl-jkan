@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-dma_unosat_mariatropicalcyclonedamag_20170921",
+      "title": "Maria Tropical Cyclone. Damage Assessment in Portsmouth,Saint John Parish, Dominica",
+      "description": "This map illustrates potentially damaged structures and buildings in Portsmouth (Saint John Parish) as detected by satellite image acquired after landfall of the Tropical Cyclone Maria-17 on 19 September 2017. UNITAR-UNOSAT analysis used a Pleiades image acquired on 20 September 2017 as post imagery. UNITAR-UNOSAT identified in the analysed area (Portsmouth and surroundings) 782 potentially damaged structures. Taking into account the pre-building footprints provided by Humanitarian OpenStreetMap, this represents 55% of the total number of structures within the cloud free analysed area. The analysis could have been underestimated due to cloud cover. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/maria-tropical-cyclone-damage-assessment-in-portsmouth-saint-john-parish-dominica]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/maria-tropical-cyclone-damage-assessment-in-portsmouth-saint-john-parish-dominica"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/maria-tropical-cyclone-damage-assessment-in-portsmouth-saint-john-parish-dominica"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "DMA"
+        ]
+      },
+      "temporal": {
+        "start": "2017-09-21"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/maria-tropical-cyclone-damage-assessment-in-portsmouth-saint-john-parish-dominica"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared Pleiades satellite imagery acquired on 20 September 2017 (post-landfall) with pre-event building footprints from Humanitarian OpenStreetMap to detect structural damage in Portsmouth following Tropical Cyclone Maria landfall on 19 September 2017. Visual interpretation of satellite imagery identified 782 potentially damaged structures, representing 55% of the total building stock in the cloud-free analysis area.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event satellite damage assessment using Pleiades imagery acquired 20 September 2017, comparing pre- and post-landfall conditions to identify potentially damaged structures in Portsmouth."
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Pre-event building footprints used as reference baseline to calculate damage ratio (782 damaged structures out of 1,418 total structures = 55%)."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_34ff13ae",
+          "title": "TC20170918DMA_gdb.zip",
+          "description": "Maria Tropical Cyclone. Damage Assessment in Portsmouth,Saint John Parish, Dominica (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/DM/TC20170918DMA/TC20170918DMA_gdb.zip"
+        },
+        {
+          "id": "resource_cc2328e2",
+          "title": "TC20170918DMA_shp.zip",
+          "description": "Maria Tropical Cyclone. Damage Assessment in Portsmouth,Saint John Parish, Dominica (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/DM/TC20170918DMA/TC20170918DMA_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from tropical cyclone Maria detected via satellite imagery comparison"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/maria-tropical-cyclone-damage-assessment-in-portsmouth-saint-john-parish-dominica",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

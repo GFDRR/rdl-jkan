@@ -1,0 +1,205 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hdxapi_hdxhapicoordinationcontex_2024",
+      "title": "HDX HAPI - Coordination & Context: National Risk",
+      "description": "This dataset contains data obtained from the HDX Humanitarian API (HDX HAPI), which provides standardized humanitarian indicators designed for seamless interoperability from multiple sources. The data facilitates automated workflows and visualizations to support humanitarian decision making. For more information, please see the HDX HAPI landing page and documentation .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/hdx-hapi-national-risk]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "HDX HAPI is refreshed daily, but the source datasets may have different update schedules. Please refer to the source datasets for each subcategory to verify their specific update frequency.",
+      "contact_point": {
+        "name": "HDX Humanitarian API Data",
+        "url": "https://data.humdata.org/dataset/hdx-hapi-national-risk"
+      },
+      "creator": {
+        "name": "INFORM",
+        "url": "https://data.humdata.org/dataset/hdx-hapi-national-risk"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "BOL",
+          "BRN",
+          "COD",
+          "CPV",
+          "CZE",
+          "FSM",
+          "GBR",
+          "IRN",
+          "IRQ",
+          "KOR",
+          "MHL",
+          "MKD",
+          "NRU",
+          "PLW",
+          "PSE",
+          "STP",
+          "SWZ",
+          "SYR",
+          "TLS",
+          "TUV",
+          "USA",
+          "VEN",
+          "VNM",
+          "WSM",
+          "YEM"
+        ]
+      },
+      "temporal": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "INFORM",
+            "url": "https://data.humdata.org/dataset/hdx-hapi-national-risk"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "HDX HAPI aggregates standardized humanitarian indicators from multiple sources including INFORM risk assessments. National risk scores are calculated by combining hazard exposure, vulnerability, and coping capacity components into composite risk indices with global rankings and risk classifications.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "INFORM",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "INFORM risk index methodology that combines hazard exposure risk, vulnerability risk, and coping capacity risk into composite national risk classifications and rankings"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0af14f51",
+          "title": "Global Coordination & Context: National Risk",
+          "description": "National Risk data from HDX HAPI, please see the documentation for more information",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/856c326d-748c-43c2-89e4-8b25098a7340/resource/0af14f51-8db7-4131-87c9-30479054e629/download/hdx_hapi_national_risk_global.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "National risk classification and overall risk score aggregating hazard exposure, vulnerability, and coping capacity"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "National risk classification and overall risk score aggregating hazard exposure, vulnerability, and coping capacity"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "National risk classification and overall risk score aggregating hazard exposure, vulnerability, and coping capacity"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "National risk classification and overall risk score aggregating hazard exposure, vulnerability, and coping capacity"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/hdx-hapi-national-risk",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

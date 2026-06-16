@@ -1,0 +1,126 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hnd_ocharolac_indicedeinseguridadalimen_20180524",
+      "title": "Honduras Índice de Inseguridad Alimentaria 2012",
+      "description": "El ICA se basa en el análisis de las tendencias históricas de inseguridad alimentaria y los principales riesgos naturales, incorporara el nivel de fragilidad económica, la degradación de la tierra y los medios de vida. Se clasifica en 5 categorías, 1 representa una mayor recurrencia de inseguridad alimentaria, y 5 una menor recurrencia.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/honduras-indice-de-inseguridad-alimentaria-2012]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "* [INFORM Honduras.](http://www.inform-index.org/Subnational/Honduras) * Dimensión: Vulnerabilidad * Categoría: Grupos Vulnerables * Componente: Otros Grupos Vulnerables",
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-indice-de-inseguridad-alimentaria-2012"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-indice-de-inseguridad-alimentaria-2012"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2018-05-24"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Unidad Técnica de Seguridad Alimentaria y Nutricional (UTSAN)",
+            "url": "https://data.humdata.org/dataset/honduras-indice-de-inseguridad-alimentaria-2012"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Programa Mundial de Alimentos (PMA)",
+            "url": "https://data.humdata.org/dataset/honduras-indice-de-inseguridad-alimentaria-2012"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The Food Insecurity Index (ICA) integrates historical trends of food insecurity with natural hazard exposure, economic fragility, land degradation, and livelihood vulnerability. Data from UTSAN and WFP were analyzed to classify municipalities into 5 categories (1=highest recurrence of food insecurity, 5=lowest), producing a composite vulnerability and impact index at the national level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Unidad Técnica de Seguridad Alimentaria y Nutricional (UTSAN)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Technical unit providing food security assessment data and methodology for insecurity classification"
+          },
+          {
+            "id": "source_2",
+            "name": "Programa Mundial de Alimentos (PMA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "World Food Programme contributing food insecurity monitoring and analysis for Honduras"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_53b50091",
+          "title": "12-VU.GV.OGV.IIA - Índice de Seguridad Alimentaria.xlsx",
+          "description": "Honduras Índice de Inseguridad Alimentaria 2012 (Índice de Inseguridad Alimentaria - Análisis Integrado de Contexto (ICA) 2012.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/4267faa0-3ca2-4cf1-993a-85bb04cbc5aa/resource/53b50091-1327-4c47-9ae3-d0e448e19baf/download/12-vu.gv.ogv.iia-indice-de-seguridad-alimentaria.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity classification incorporating drought and natural hazard risks affecting agricultural livelihoods"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/honduras-indice-de-inseguridad-alimentaria-2012",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

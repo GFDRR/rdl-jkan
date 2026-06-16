@@ -1,0 +1,230 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-gtmhndnicslv_achgis4tech_centralamericadeathsdamag_2000",
+      "title": "Central America - Deaths and Damages in USD Caused by Disasters",
+      "description": "The dataset presents the number of affected people and the number of fatalities caused by natural disasters in El Salvador, Guatemala, Honduras, and Nicaragua, showing the variation over the years, differentiated by disaster type. The data have been assessed based on information obtained from EM-DAT. For more information contact GIS4Tech: info@gis4tech.com. You can also visit the PREDISAN platform https://predisan.gis4tech.com/ca4 for detailed, accurate information.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/central-america-deaths-and-damages-in-usd-caused-by-disasters]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-deaths-and-damages-in-usd-caused-by-disasters"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/central-america-deaths-and-damages-in-usd-caused-by-disasters"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "SLV",
+          "GTM",
+          "HND",
+          "NIC"
+        ]
+      },
+      "temporal": {
+        "start": "2000-01-01",
+        "end": "2025-07-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "EM-DAT",
+            "url": "https://data.humdata.org/dataset/central-america-deaths-and-damages-in-usd-caused-by-disasters"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event impact data were extracted from the EM-DAT database, standardized, and compiled into tabular format covering deaths and affected populations by disaster type and year for El Salvador, Guatemala, Honduras, and Nicaragua.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "EM-DAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Emergency Events Database providing post-disaster impact records including fatalities and affected populations across multiple hazard types in Central America."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0b5b6c7f",
+          "title": "deaths_damages_caused_by_disasters.csv",
+          "description": "Central America - Deaths and Damages in USD Caused by Disasters (Deaths and damages in USD caused by disasters by ACH-GIS4Tech.csv)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/e8c12839-2e06-4958-9d93-700b09d3355d/resource/0b5b6c7f-3aeb-46bb-8677-2d28e65299e7/download/deaths_damages_caused_by_disasters.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities caused by flood disasters"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People affected by flood disasters"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities caused by earthquake disasters"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People affected by earthquake disasters"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities caused by strong wind disasters"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People affected by strong wind disasters"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/central-america-deaths-and-damages-in-usd-caused-by-disasters",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

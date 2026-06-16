@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-fji_unosat_geodatadamageassessmentac_20160310",
+      "title": "Geodata of UNOSAT Damage Assessment Activities in Viti Levu Island, Fiji",
+      "description": "Tropical Cyclone Winston-UNOSAT Damage Assessment Activities in Viti Levu Island.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-unosat-damage-assessment-activities-in-viti-levu-island-fiji-march-10-2016]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-unosat-damage-assessment-activities-in-viti-levu-island-fiji-march-10-2016"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-unosat-damage-assessment-activities-in-viti-levu-island-fiji-march-10-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "FJI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-03-10"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts conducted post-event damage assessment by comparing satellite imagery acquired before and after Tropical Cyclone Winston (February 2016) to identify and map damaged structures in Viti Levu Island, Fiji. Damage polygons were digitized with associated metadata including sensor date, sensor ID, and affected area in hectares and square meters.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery-based damage assessment identifying building damage through multi-temporal image comparison and visual interpretation of notable changes in Viti Levu Island following Tropical Cyclone Winston."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_96bbd0b5",
+          "title": "TC20160219FJI_shp.zip",
+          "description": "Geodata of UNOSAT Damage Assessment Activities in Viti Levu Island, Fiji (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/FJ/TC20160219FJI/TC20160219FJI_shp.zip"
+        },
+        {
+          "id": "resource_46e55430",
+          "title": "TC20160219FJI.gdb.zip",
+          "description": "Geodata of UNOSAT Damage Assessment Activities in Viti Levu Island, Fiji (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/FJ/TC20160219FJI/TC20160219FJI.gdb.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessment from Tropical Cyclone Winston"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-unosat-damage-assessment-activities-in-viti-levu-island-fiji-march-10-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

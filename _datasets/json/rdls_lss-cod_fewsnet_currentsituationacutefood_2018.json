@@ -1,0 +1,105 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cod_fewsnet_currentsituationacutefood_2018",
+      "title": "The Democratic Republic of the Congo Current Situation FEWS NET Acute Food Insecurity Classifications Geographic Data for 2018",
+      "description": "The FEWS NET Data Warehouse is currently unavailable . Datasets on HDX that refer to the Data Warehouse have been archived. The Democratic Republic of the Congo Current Situation FEWS NET Acute Food Insecurity Classifications Geographic data for 2018. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/the_democratic_republic_of_the_congo_current_situation_fewsnet_ipc_shapefile_for_2018]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "IPC Classification spatial data in different IPC scenarios collected by FEWS NET enumerators on a regular schedule (typically monthly).",
+      "contact_point": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/the_democratic_republic_of_the_congo_current_situation_fewsnet_ipc_shapefile_for_2018"
+      },
+      "creator": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/the_democratic_republic_of_the_congo_current_situation_fewsnet_ipc_shapefile_for_2018"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2018-01-01",
+        "end": "2018-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "FEWS NET enumerators collected IPC classification data on a monthly schedule across the Democratic Republic of the Congo. The classifications were spatially mapped to administrative units and compiled into geographic datasets representing different food insecurity scenarios for October 2018.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "FEWS NET",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Integrated Food Security Phase Classification (IPC) spatial data collected by FEWS NET enumerators on a regular monthly schedule to assess acute food insecurity conditions."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7764bd31",
+          "title": "October - 2018 The Democratic Republic of the Congo Current Situation FEWS NET IPC Geographic Data",
+          "description": "October - 2018 The Democratic Republic of the Congo Current Situation FEWS NET IPC Geographic Data",
+          "media_type": "application/geo+json",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=CD&scenario=CS&collection_date=2018-10-01&format=geojson"
+        },
+        {
+          "id": "resource_bab13517",
+          "title": "October - 2018 The Democratic Republic of the Congo Current Situation FEWS NET IPC Geographic Data",
+          "description": "October - 2018 The Democratic Republic of the Congo Current Situation FEWS NET IPC Geographic Data",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://fdw.fews.net/api/ipcphasemap/?country=CD&scenario=CS&collection_date=2018-10-01&format=kml"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute food insecurity classification of population affected by drought conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/the_democratic_republic_of_the_congo_current_situation_fewsnet_ipc_shapefile_for_2018",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

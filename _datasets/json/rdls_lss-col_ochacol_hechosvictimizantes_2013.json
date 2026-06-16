@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_hechosvictimizantes_2013",
+      "title": "Colombia: Hechos Victimizantes",
+      "description": "Tabla con todos los hechos victimizantes reportados por UARIV por año, mes, departamento y municipio. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/colombia-hechos-victimizantes-uariv]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/colombia-hechos-victimizantes-uariv"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/colombia-hechos-victimizantes-uariv"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2013-01-01",
+        "end": "2025-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UARIV (Unidad para la Atención y Reparación Integral a las Víctimas)",
+            "url": "https://data.humdata.org/dataset/colombia-hechos-victimizantes-uariv"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Registry data compiled by UARIV documenting all reported victimization events in Colombia disaggregated by type of event, department, municipality, year, month, age group, gender identity, and ethnic pertinence. Data represents administrative records of conflict-related violence impacts on the Colombian population.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UARIV (Unidad para la Atención y Reparación Integral a las Víctimas)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official Colombian registry of victimization events (hechos victimizantes) from armed conflict and violence, providing disaggregated counts by demographic characteristics, location, and time period."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4ca10ae9",
+          "title": "Hechos victimizantes hasta 2025 UARIV.xlsx",
+          "description": "Tabla con todos los hechos victimizantes reportados por UARIV hasta junio del 2025 con desagregación por edad, grupo étnico, género, departamento y municipio. Es importante tener en cuenta que por el hecho de que puede existir alguna duplicidad de datos no se recomienda sumar la información de hechos victimizantes o dar esta información como resultados de personas.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/7a82edf4-a7e2-4492-9801-5622767a2949/resource/4ca10ae9-edc0-4c82-9c43-a27a3e416992/download/pivot_uariv_data.xlsx"
+        },
+        {
+          "id": "resource_1c03eea7",
+          "title": "hechos_victimizantes_agosto_2023.csv",
+          "description": "Tabla con todos los hechos victimizantes reportados por UARIV hasta abril del 2023 con desagregación por edad, género, etnia, departamento y municipio. Es importante tener en cuenta que por el hecho de que puede existir alguna duplicidad de datos no se recomienda sumar la información de hechos victimizantes o dar esta información como resultados de personas.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/7a82edf4-a7e2-4492-9801-5622767a2949/resource/1c03eea7-1227-42ae-a1be-e9f08fe1392f/download/hechos_victimizantes_agosto_2023.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Victimization events (conflict-related violence) affecting population by age, gender, ethnicity, and geographic location"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement resulting from victimization events, classified by displacement type"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/colombia-hechos-victimizantes-uariv",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

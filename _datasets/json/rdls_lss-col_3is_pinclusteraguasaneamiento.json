@@ -1,0 +1,170 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_3is_pinclusteraguasaneamiento",
+      "title": "Colombia - PiN Clúster Agua, Saneamiento e Higiene (WASH) 2024",
+      "description": "Esta base contiene el resultado final del cálculo de las severidades, la Población en Necesidad (PiN) y las desagregaciones poblacionales para el Clúster de Agua, Saneamiento e Higiene (WASH), Colombia 2024.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/colombia-pin-cluster-agua-saneamiento-e-higiene-wash-2024]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/colombia-pin-cluster-agua-saneamiento-e-higiene-wash-2024"
+      },
+      "creator": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/colombia-pin-cluster-agua-saneamiento-e-higiene-wash-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DANE (Departamento Administrativo Nacional de Estadística)",
+            "url": "https://data.humdata.org/dataset/colombia-pin-cluster-agua-saneamiento-e-higiene-wash-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "UNGRD (Unidad Nacional de Gestión del Riesgo de Desastres)",
+            "url": "https://data.humdata.org/dataset/colombia-pin-cluster-agua-saneamiento-e-higiene-wash-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "MONITOR (Conflict monitoring system)",
+            "url": "https://data.humdata.org/dataset/colombia-pin-cluster-agua-saneamiento-e-higiene-wash-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Population in need (PiN) calculated by integrating DANE census data on water sources, sanitation infrastructure, and waste collection with health indicators (waterborne diseases, malnutrition), natural disaster exposure from UNGRD, armed conflict data from MONITOR, and El Niño probability. Severity indices were computed for each factor, weighted and aggregated to produce final PiN estimates disaggregated by department, municipality, and population subgroups (age, rural/urban).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DANE (Departamento Administrativo Nacional de Estadística)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Population census data 2024, water source quality indicators, sanitation coverage, and waste collection statistics used to calculate severity indices"
+          },
+          {
+            "id": "source_2",
+            "name": "UNGRD (Unidad Nacional de Gestión del Riesgo de Desastres)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Natural disaster occurrence records and rates used as severity indicators for WASH needs assessment"
+          },
+          {
+            "id": "source_3",
+            "name": "MONITOR (Conflict monitoring system)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Armed conflict incident data and rates integrated as severity factor affecting WASH access"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://reliefweb.int/report/colombia/nota-metodologica-calculo-de-personas-en-necesidad-pin-wash-2024-colombia"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_1cbcdeec",
+          "title": "Matriz resultados PiN_Severidades_Desagregación - Clúster WASH 2024.xlsx",
+          "description": "Esta base contiene el resultado final del cálculo de las severidades, la Población en Necesidad (PiN) y las desagregaciones poblacionales para el Clúster de Agua, Saneamiento e Higiene (WASH), Colombia 2024. Para más información, por favor diríjase a la nota metodológica.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/17b50e0a-1100-4cac-aa32-1b70826ffe9a/resource/1cbcdeec-b216-49fd-91de-fa090e1f7129/download/matriz-resultados-pin_severidades_desagregacion-cluster-wash-2024.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population in need (PiN) for WASH cluster in Colombia 2024, calculated from water source quality, sanitation access, and natural disaster exposure"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by El Niño phenomenon probability and water quality degradation"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/colombia-pin-cluster-agua-saneamiento-e-higiene-wash-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
