@@ -60,8 +60,7 @@ lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Digital Earth for Resilient Housing and Infrastructure in the Caribbean
   url: null

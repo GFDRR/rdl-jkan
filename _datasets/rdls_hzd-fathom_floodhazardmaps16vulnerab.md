@@ -50,826 +50,823 @@ details: 'The FATHOM flood-hazard model is a global gridded dataset of flood haz
   5, 10, 20, 50, 100, 200, 500 and 1,000 years.'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 8
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '5'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '10'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '200'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '500'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '1000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      frequency_distribution: generalized_extreme_value
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 8
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: FFL
         intensity_measure: wd:cm
         process: fluvial_flood
         trigger: null
         type: flood
-      id: FFL_U
-      occurrence_range: 1/10 to 1/1000 years
-      seasonality: uniform
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 8
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '5'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '10'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '200'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '500'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FFL
-          intensity_measure: wd:cm
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '1000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      frequency_distribution: generalized_extreme_value
-      hazards:
-      - classification: null
+      id: '5'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: FFL
         intensity_measure: wd:cm
         process: fluvial_flood
         trigger: null
         type: flood
-      id: FFL_D
-      occurrence_range: 1/10 to 1/1000 years
-      seasonality: uniform
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: generalized_extreme_value
-      hazards:
-      - classification: null
-        id: PFL
+      id: '10'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
         intensity_measure: wd:cm
-        process: pluvial_flood
+        process: fluvial_flood
         trigger: null
         type: flood
-      id: PFL_D
-      occurrence_range: 1/10 to 1/1000 years
-      seasonality: uniform
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 8
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '5'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '10'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '200'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '500'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '1000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      frequency_distribution: generalized_extreme_value
-      hazards:
-      - classification: null
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '200'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '500'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '1000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    frequency_distribution: generalized_extreme_value
+    hazards:
+    - classification: null
+      id: FFL
+      intensity_measure: wd:cm
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: FFL_U
+    occurrence_range: 1/10 to 1/1000 years
+    seasonality: uniform
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 8
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '5'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '10'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '200'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '500'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FFL
+        intensity_measure: wd:cm
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '1000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    frequency_distribution: generalized_extreme_value
+    hazards:
+    - classification: null
+      id: FFL
+      intensity_measure: wd:cm
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: FFL_D
+    occurrence_range: 1/10 to 1/1000 years
+    seasonality: uniform
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: generalized_extreme_value
+    hazards:
+    - classification: null
+      id: PFL
+      intensity_measure: wd:cm
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: PFL_D
+    occurrence_range: 1/10 to 1/1000 years
+    seasonality: uniform
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 8
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: CFL
         intensity_measure: wd:cm
         process: coastal_flood
         trigger: null
         type: flood
-      id: CFL_U
-      occurrence_range: 1/10 to 1/1000 years
-      seasonality: uniform
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 8
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '5'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '10'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '200'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '500'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CFL
-          intensity_measure: wd:cm
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: '1000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      frequency_distribution: generalized_extreme_value
-      hazards:
-      - classification: null
+      id: '5'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: CFL
         intensity_measure: wd:cm
         process: coastal_flood
         trigger: null
         type: flood
-      id: CFL_D
-      occurrence_range: 1/10 to 1/1000 years
-      seasonality: uniform
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 8
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: PFL
-          intensity_measure: wd:cm
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: '5'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: PFL
-          intensity_measure: wd:cm
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: '10'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: PFL
-          intensity_measure: wd:cm
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: PFL
-          intensity_measure: wd:cm
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: PFL
-          intensity_measure: wd:cm
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: PFL
-          intensity_measure: wd:cm
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: '200'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: PFL
-          intensity_measure: wd:cm
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: '500'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: PFL
-          intensity_measure: wd:cm
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: '1000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      frequency_distribution: generalized_extreme_value
-      hazards:
-      - classification: null
+      id: '10'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '200'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '500'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '1000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    frequency_distribution: generalized_extreme_value
+    hazards:
+    - classification: null
+      id: CFL
+      intensity_measure: wd:cm
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: CFL_U
+    occurrence_range: 1/10 to 1/1000 years
+    seasonality: uniform
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 8
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '5'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '10'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '200'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '500'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CFL
+        intensity_measure: wd:cm
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: '1000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    frequency_distribution: generalized_extreme_value
+    hazards:
+    - classification: null
+      id: CFL
+      intensity_measure: wd:cm
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: CFL_D
+    occurrence_range: 1/10 to 1/1000 years
+    seasonality: uniform
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 8
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: PFL
         intensity_measure: wd:cm
         process: pluvial_flood
         trigger: null
         type: flood
-      id: PFL_U
-      occurrence_range: 1/10 to 1/1000 years
-      seasonality: uniform
-  event_sets_count: 6
+      id: '5'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: PFL
+        intensity_measure: wd:cm
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: '10'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: PFL
+        intensity_measure: wd:cm
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: PFL
+        intensity_measure: wd:cm
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: PFL
+        intensity_measure: wd:cm
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: PFL
+        intensity_measure: wd:cm
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: '200'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: PFL
+        intensity_measure: wd:cm
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: '500'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: PFL
+        intensity_measure: wd:cm
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: '1000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    frequency_distribution: generalized_extreme_value
+    hazards:
+    - classification: null
+      id: PFL
+      intensity_measure: wd:cm
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: PFL_U
+    occurrence_range: 1/10 to 1/1000 years
+    seasonality: uniform
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

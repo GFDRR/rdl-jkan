@@ -47,37 +47,16 @@ details: "The dataset comprises gridded maps of estimated annual frequency of si
   \ impact on population and the built environment."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    landslide:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 400000
-      events:
-      - calculation_method: inferred
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: RF
-          intensity_measure: ls_hzd:-
-          process: landslide_general
-          trigger:
-            process: null
-            type: convective_storm
-          type: landslide
-        id: '1'
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Median
-            thresholds:
-            - '0.001'
-            - '0.01'
-          empirical: null
-          probabilistic: null
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 400000
+    events:
+    - calculation_method: inferred
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: RF
         intensity_measure: ls_hzd:-
         process: landslide_general
@@ -85,38 +64,38 @@ hazard:
           process: null
           type: convective_storm
         type: landslide
-      id: RF_trigger-med
-      occurrence_range: null
-      seasonality: uniform
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 400000
-      events:
-      - calculation_method: inferred
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: RF
-          intensity_measure: ls_hzd:-
-          process: landslide_general
-          trigger:
-            process: null
-            type: convective_storm
-          type: landslide
-        id: '1'
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Mean
-            thresholds:
-            - '0.001'
-            - '0.01'
-          empirical: null
-          probabilistic: null
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
+      id: '1'
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Median
+          thresholds:
+          - '0.001'
+          - '0.01'
+        empirical: null
+        probabilistic: null
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
+      id: RF
+      intensity_measure: ls_hzd:-
+      process: landslide_general
+      trigger:
+        process: null
+        type: convective_storm
+      type: landslide
+    id: RF_trigger-med
+    occurrence_range: null
+    seasonality: uniform
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 400000
+    events:
+    - calculation_method: inferred
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: RF
         intensity_measure: ls_hzd:-
         process: landslide_general
@@ -124,38 +103,38 @@ hazard:
           process: null
           type: convective_storm
         type: landslide
-      id: RF_trigger-mea
-      occurrence_range: null
-      seasonality: uniform
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 130000
-      events:
-      - calculation_method: inferred
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EQ
-          intensity_measure: ls_hzd:-
-          process: landslide_general
-          trigger:
-            process: null
-            type: earthquake
-          type: landslide
-        id: '1'
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Median
-            thresholds:
-            - '0.001'
-            - '0.01'
-          empirical: null
-          probabilistic: null
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
+      id: '1'
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Mean
+          thresholds:
+          - '0.001'
+          - '0.01'
+        empirical: null
+        probabilistic: null
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
+      id: RF
+      intensity_measure: ls_hzd:-
+      process: landslide_general
+      trigger:
+        process: null
+        type: convective_storm
+      type: landslide
+    id: RF_trigger-mea
+    occurrence_range: null
+    seasonality: uniform
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 130000
+    events:
+    - calculation_method: inferred
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: EQ
         intensity_measure: ls_hzd:-
         process: landslide_general
@@ -163,17 +142,35 @@ hazard:
           process: null
           type: earthquake
         type: landslide
-      id: EQ_trigger
-      occurrence_range: null
-      seasonality: uniform
-  event_sets_count: 3
+      id: '1'
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Median
+          thresholds:
+          - '0.001'
+          - '0.01'
+        empirical: null
+        probabilistic: null
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
+      id: EQ
+      intensity_measure: ls_hzd:-
+      process: landslide_general
+      trigger:
+        process: null
+        type: earthquake
+      type: landslide
+    id: EQ_trigger
+    occurrence_range: null
+    seasonality: uniform
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

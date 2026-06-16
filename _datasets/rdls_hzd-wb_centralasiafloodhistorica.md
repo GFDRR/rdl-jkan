@@ -34,89 +34,86 @@ details: 'Data from the EU-funded ''Strengthening Financial Resilience and Accel
   scale (e.g., at Oblast scale).'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 1
-      events:
-      - calculation_method: inferred
-        description: null
-        disaster_identifiers:
-        - description: null
-          id: 2005-0370-TJK
-          scheme: EMDAT
-          title: null
-          uri: null
-        hazard:
-          classification: null
-          id: '1'
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: TJK_Hamadoni
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 3
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 1
+    events:
+    - calculation_method: inferred
+      description: null
+      disaster_identifiers:
+      - description: null
+        id: 2005-0370-TJK
+        scheme: EMDAT
+        title: null
+        uri: null
+      hazard:
+        classification: null
         id: '1'
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: CA_SFRARR_FL_hist
-      occurrence_range: null
-      seasonality: null
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '2'
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: Three_100y_events
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: 0.01
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: TJK_Hamadoni
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 3
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: '1'
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: CA_SFRARR_FL_hist
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: '2'
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: CA_SFRARR_FL_100y
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 2
+      id: Three_100y_events
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: 0.01
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: '2'
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: CA_SFRARR_FL_100y
+    occurrence_range: null
+    seasonality: null
 license: CC-BY-SA-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction
     in Central Asia

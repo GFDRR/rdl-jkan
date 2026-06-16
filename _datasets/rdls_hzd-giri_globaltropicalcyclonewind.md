@@ -48,103 +48,100 @@ details: The tropical cyclone wind hazard model uses historical track data and c
   based on climate models.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 4
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: TC
-          intensity_measure: sws_3s:km/h
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: TC
-          intensity_measure: sws_3s:km/h
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: TC
-          intensity_measure: sws_3s:km/h
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '250'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 250
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: TC
-          intensity_measure: sws_3s:km/h
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '1000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 4
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: TC
         intensity_measure: sws_3s:km/h
         process: tropical_cyclone
         trigger: null
         type: strong_wind
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: TC
+        intensity_measure: sws_3s:km/h
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: TC
+        intensity_measure: sws_3s:km/h
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '250'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 250
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: TC
+        intensity_measure: sws_3s:km/h
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '1000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
       id: TC
-      occurrence_range: Return period 50 to 1,000 years
-      seasonality: null
-  event_sets_count: 1
+      intensity_measure: sws_3s:km/h
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: TC
+    occurrence_range: Return period 50 to 1,000 years
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Global Infrastructure Risk Model and Resilience Index (GIRI)
   url: https://giri.unepgrid.ch/

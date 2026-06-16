@@ -54,193 +54,190 @@ details: The hydrological model used is the Continuum model (Silvestro et al. 20
   areas.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 9
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP2
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP5
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP10
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP25
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 25
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP200
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP500
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: FLD
-          intensity_measure: Wd:M
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: RP1000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      frequency_distribution: generalized_extreme_value
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 9
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: FLD
         intensity_measure: Wd:M
         process: fluvial_flood
         trigger: null
         type: flood
-      id: FLOOD_RP
-      occurrence_range: Return period 2 to 1,000 years
-      seasonality: null
-  event_sets_count: 1
+      id: RP2
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FLD
+        intensity_measure: Wd:M
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: RP5
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FLD
+        intensity_measure: Wd:M
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: RP10
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FLD
+        intensity_measure: Wd:M
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: RP25
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 25
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FLD
+        intensity_measure: Wd:M
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: RP50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FLD
+        intensity_measure: Wd:M
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: RP100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FLD
+        intensity_measure: Wd:M
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: RP200
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FLD
+        intensity_measure: Wd:M
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: RP500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: FLD
+        intensity_measure: Wd:M
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: RP1000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    frequency_distribution: generalized_extreme_value
+    hazards:
+    - classification: null
+      id: FLD
+      intensity_measure: Wd:M
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: FLOOD_RP
+    occurrence_range: Return period 2 to 1,000 years
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Global Infrastructure Risk Model and Resilience Index (GIRI)
   url: https://giri.unepgrid.ch/
