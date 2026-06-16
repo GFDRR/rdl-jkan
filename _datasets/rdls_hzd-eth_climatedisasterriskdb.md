@@ -244,1266 +244,1259 @@ exposure:
       quantity_kind: index
       unit: null
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Spatial dataset showing drought hazard levels across Ethiopia
-          for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard_ref
-          intensity_measure: SPI:dimensionless
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: CLARISSE_DroughtHazard_Ethiopia_2000-2004_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2004'
-              start: '2000'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing drought hazard levels across Ethiopia
-          for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard_ref
-          intensity_measure: SPI:dimensionless
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: CLARISSE_DroughtHazard_Ethiopia_2005-2009_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2009'
-              start: '2005'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing drought hazard levels across Ethiopia
-          for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard_ref
-          intensity_measure: SPI:dimensionless
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: CLARISSE_DroughtHazard_Ethiopia_2010-2014_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2014'
-              start: '2010'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing drought hazard levels across Ethiopia
-          for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard_ref
-          intensity_measure: SPI:dimensionless
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: CLARISSE_DroughtHazard_Ethiopia_2015-2019_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2019'
-              start: '2015'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing drought hazard levels across Ethiopia
-          for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard_ref
-          intensity_measure: SPI:dimensionless
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: CLARISSE_DroughtHazard_Ethiopia_2020-2024_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2024'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing drought hazard levels across Ethiopia
-          for the period 2025-2029 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard_ref
-          intensity_measure: SPI:dimensionless
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: CLARISSE_DroughtHazard_Ethiopia_2025-2029_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2029'
-              start: '2025'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Spatial dataset showing drought hazard levels across Ethiopia for
+        the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: drought_hazard_ref
         intensity_measure: SPI:dimensionless
         process: meteorological_drought
         trigger: null
         type: drought
-      id: event_set_drought
-      occurrence_range: null
-      seasonality: null
-    earthquake:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Spatial dataset showing earthquake hazard levels across Ethiopia
-          for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: earthquake_hazard_ref
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: CLARISSE_EarthquakeHazard_Ethiopia_2000-2004_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2004'
-              start: '2000'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing earthquake hazard levels across Ethiopia
-          for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: earthquake_hazard_ref
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: CLARISSE_EarthquakeHazard_Ethiopia_2005-2009_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2009'
-              start: '2005'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing earthquake hazard levels across Ethiopia
-          for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: earthquake_hazard_ref
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: CLARISSE_EarthquakeHazard_Ethiopia_2010-2014_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2014'
-              start: '2010'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing earthquake hazard levels across Ethiopia
-          for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: earthquake_hazard_ref
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: CLARISSE_EarthquakeHazard_Ethiopia_2015-2019_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2019'
-              start: '2015'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing earthquake hazard levels across Ethiopia
-          for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: earthquake_hazard_ref
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: CLARISSE_EarthquakeHazard_Ethiopia_2020-2024_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2024'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing projected earthquake hazard levels across
-          Ethiopia for the period 2025-2029 from the CLARISSE Climate and Disaster
-          Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: earthquake_hazard_ref
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: CLARISSE_EarthquakeHazard_Ethiopia_2025-2029_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2029'
-              start: '2025'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: CLARISSE_DroughtHazard_Ethiopia_2000-2004_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2004'
+            start: '2000'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing drought hazard levels across Ethiopia for
+        the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard_ref
+        intensity_measure: SPI:dimensionless
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: CLARISSE_DroughtHazard_Ethiopia_2005-2009_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2009'
+            start: '2005'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing drought hazard levels across Ethiopia for
+        the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard_ref
+        intensity_measure: SPI:dimensionless
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: CLARISSE_DroughtHazard_Ethiopia_2010-2014_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2014'
+            start: '2010'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing drought hazard levels across Ethiopia for
+        the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard_ref
+        intensity_measure: SPI:dimensionless
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: CLARISSE_DroughtHazard_Ethiopia_2015-2019_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2019'
+            start: '2015'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing drought hazard levels across Ethiopia for
+        the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard_ref
+        intensity_measure: SPI:dimensionless
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: CLARISSE_DroughtHazard_Ethiopia_2020-2024_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2024'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing drought hazard levels across Ethiopia for
+        the period 2025-2029 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard_ref
+        intensity_measure: SPI:dimensionless
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: CLARISSE_DroughtHazard_Ethiopia_2025-2029_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2029'
+            start: '2025'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: drought_hazard_ref
+      intensity_measure: SPI:dimensionless
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_drought
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Spatial dataset showing earthquake hazard levels across Ethiopia
+        for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: earthquake_hazard_ref
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_set_earthquake
-      occurrence_range: null
-      seasonality: null
-    extreme_temperature:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Spatial dataset showing heat stress hazard levels across Ethiopia
-          for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heat_stress_hazard_ref
-          intensity_measure: T:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: CLARISSE_HeatStressHazard_Ethiopia_2000-2004_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2004'
-              start: '2000'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing heat stress hazard levels across Ethiopia
-          for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heat_stress_hazard_ref
-          intensity_measure: T:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: CLARISSE_HeatStressHazard_Ethiopia_2005-2009_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2009'
-              start: '2005'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing heat stress hazard levels across Ethiopia
-          for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heat_stress_hazard_ref
-          intensity_measure: T:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: CLARISSE_HeatStressHazard_Ethiopia_2010-2014_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2014'
-              start: '2010'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing heat stress hazard levels across Ethiopia
-          for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heat_stress_hazard_ref
-          intensity_measure: T:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: CLARISSE_HeatStressHazard_Ethiopia_2015-2019_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2019'
-              start: '2015'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing heat stress hazard levels across Ethiopia
-          for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heat_stress_hazard_ref
-          intensity_measure: T:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: CLARISSE_HeatStressHazard_Ethiopia_2020-2024_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2024'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing projected heat stress hazard levels across
-          Ethiopia for the period 2025-2029 from the CLARISSE Climate and Disaster
-          Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heat_stress_hazard_ref
-          intensity_measure: T:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: CLARISSE_HeatStressHazard_Ethiopia_2025-2029_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2029'
-              start: '2025'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: heat_stress_hazard_ref
-        intensity_measure: T:C
-        process: extreme_heat
+      id: CLARISSE_EarthquakeHazard_Ethiopia_2000-2004_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2004'
+            start: '2000'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing earthquake hazard levels across Ethiopia
+        for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: earthquake_hazard_ref
+        intensity_measure: PGA:g
+        process: ground_motion
         trigger: null
-        type: extreme_temperature
-      id: event_set_heat_stress
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 5-year return
-          period across Ethiopia for the period 2000-2004 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_5rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-5RP_Ethiopia_2000-2004_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2004'
-              start: '2000'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 5-year return
-          period across Ethiopia for the period 2005-2009 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_5rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-5RP_Ethiopia_2005-2009_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2009'
-              start: '2005'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 5-year return
-          period across Ethiopia for the period 2010-2014 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_5rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-5RP_Ethiopia_2010-2014_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2014'
-              start: '2010'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 5-year return
-          period across Ethiopia for the period 2015-2019 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_5rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-5RP_Ethiopia_2015-2019_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2019'
-              start: '2015'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 5-year return
-          period across Ethiopia for the period 2020-2024 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_5rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-5RP_Ethiopia_2020-2024_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2024'
-              start: '2020'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: Spatial dataset showing projected flood hazard zones with a 5-year
-          return period across Ethiopia for the period 2025-2029 from the CLARISSE
-          Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_5rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-5RP_Ethiopia_2025-2029_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2029'
-              start: '2025'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      frequency_distribution: null
-      hazards:
-      - classification: null
+        type: earthquake
+      id: CLARISSE_EarthquakeHazard_Ethiopia_2005-2009_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2009'
+            start: '2005'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing earthquake hazard levels across Ethiopia
+        for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: earthquake_hazard_ref
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: CLARISSE_EarthquakeHazard_Ethiopia_2010-2014_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2014'
+            start: '2010'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing earthquake hazard levels across Ethiopia
+        for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: earthquake_hazard_ref
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: CLARISSE_EarthquakeHazard_Ethiopia_2015-2019_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2019'
+            start: '2015'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing earthquake hazard levels across Ethiopia
+        for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: earthquake_hazard_ref
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: CLARISSE_EarthquakeHazard_Ethiopia_2020-2024_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2024'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing projected earthquake hazard levels across
+        Ethiopia for the period 2025-2029 from the CLARISSE Climate and Disaster Risk
+        Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: earthquake_hazard_ref
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: CLARISSE_EarthquakeHazard_Ethiopia_2025-2029_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2029'
+            start: '2025'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: earthquake_hazard_ref
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_earthquake
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 5-year return
+        period across Ethiopia for the period 2000-2004 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: flood_5rp_hazard_ref
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_5rp
-      occurrence_range: null
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 20-year return
-          period across Ethiopia for the period 2000-2004 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_20rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-20RP_Ethiopia_2000-2004_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2004'
-              start: '2000'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 20-year return
-          period across Ethiopia for the period 2005-2009 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_20rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-20RP_Ethiopia_2005-2009_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2009'
-              start: '2005'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 20-year return
-          period across Ethiopia for the period 2010-2014 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_20rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-20RP_Ethiopia_2010-2014_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2014'
-              start: '2010'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 20-year return
-          period across Ethiopia for the period 2015-2019 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_20rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-20RP_Ethiopia_2015-2019_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2019'
-              start: '2015'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 20-year return
-          period across Ethiopia for the period 2020-2024 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_20rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-20RP_Ethiopia_2020-2024_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2024'
-              start: '2020'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: Spatial dataset showing projected flood hazard zones with a 20-year
-          return period across Ethiopia for the period 2025-2029 from the CLARISSE
-          Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_20rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-20RP_Ethiopia_2025-2029_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2029'
-              start: '2025'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: CLARISSE_FloodHazard-5RP_Ethiopia_2000-2004_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2004'
+            start: '2000'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 5-year return
+        period across Ethiopia for the period 2005-2009 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_5rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-5RP_Ethiopia_2005-2009_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2009'
+            start: '2005'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 5-year return
+        period across Ethiopia for the period 2010-2014 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_5rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-5RP_Ethiopia_2010-2014_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2014'
+            start: '2010'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 5-year return
+        period across Ethiopia for the period 2015-2019 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_5rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-5RP_Ethiopia_2015-2019_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2019'
+            start: '2015'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 5-year return
+        period across Ethiopia for the period 2020-2024 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_5rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-5RP_Ethiopia_2020-2024_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2024'
+            start: '2020'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: Spatial dataset showing projected flood hazard zones with a 5-year
+        return period across Ethiopia for the period 2025-2029 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_5rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-5RP_Ethiopia_2025-2029_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2029'
+            start: '2025'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: flood_5rp_hazard_ref
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_5rp
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 20-year return
+        period across Ethiopia for the period 2000-2004 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: flood_20rp_hazard_ref
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_20rp
-      occurrence_range: null
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 100-year return
-          period across Ethiopia for the period 2000-2004 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_100rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-100RP_Ethiopia_2000-2004_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2004'
-              start: '2000'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 100-year return
-          period across Ethiopia for the period 2005-2009 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_100rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-100RP_Ethiopia_2005-2009_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2009'
-              start: '2005'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 100-year return
-          period across Ethiopia for the period 2010-2014 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_100rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-100RP_Ethiopia_2010-2014_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2014'
-              start: '2010'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 100-year return
-          period across Ethiopia for the period 2015-2019 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_100rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-100RP_Ethiopia_2015-2019_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2019'
-              start: '2015'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: Spatial dataset showing flood hazard zones with a 100-year return
-          period across Ethiopia for the period 2020-2024 from the CLARISSE Climate
-          and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_100rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-100RP_Ethiopia_2020-2024_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2024'
-              start: '2020'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: Spatial dataset showing projected flood hazard zones with a 100-year
-          return period across Ethiopia for the period 2025-2029 from the CLARISSE
-          Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: flood_100rp_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: CLARISSE_FloodHazard-100RP_Ethiopia_2025-2029_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2029'
-              start: '2025'
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: CLARISSE_FloodHazard-20RP_Ethiopia_2000-2004_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2004'
+            start: '2000'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 20-year return
+        period across Ethiopia for the period 2005-2009 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_20rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-20RP_Ethiopia_2005-2009_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2009'
+            start: '2005'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 20-year return
+        period across Ethiopia for the period 2010-2014 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_20rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-20RP_Ethiopia_2010-2014_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2014'
+            start: '2010'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 20-year return
+        period across Ethiopia for the period 2015-2019 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_20rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-20RP_Ethiopia_2015-2019_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2019'
+            start: '2015'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 20-year return
+        period across Ethiopia for the period 2020-2024 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_20rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-20RP_Ethiopia_2020-2024_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2024'
+            start: '2020'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: Spatial dataset showing projected flood hazard zones with a 20-year
+        return period across Ethiopia for the period 2025-2029 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_20rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-20RP_Ethiopia_2025-2029_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2029'
+            start: '2025'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: flood_20rp_hazard_ref
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_20rp
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 100-year return
+        period across Ethiopia for the period 2000-2004 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: flood_100rp_hazard_ref
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_100rp
-      occurrence_range: null
-      seasonality: null
-    landslide:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Spatial dataset showing landslide hazard levels across Ethiopia
-          for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: landslide_hazard_ref
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: CLARISSE_LandslideHazard_Ethiopia_2000-2004_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2004'
-              start: '2000'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing landslide hazard levels across Ethiopia
-          for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: landslide_hazard_ref
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: CLARISSE_LandslideHazard_Ethiopia_2005-2009_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2009'
-              start: '2005'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing landslide hazard levels across Ethiopia
-          for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: landslide_hazard_ref
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: CLARISSE_LandslideHazard_Ethiopia_2010-2014_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2014'
-              start: '2010'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing landslide hazard levels across Ethiopia
-          for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: landslide_hazard_ref
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: CLARISSE_LandslideHazard_Ethiopia_2015-2019_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2019'
-              start: '2015'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing landslide hazard levels across Ethiopia
-          for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: landslide_hazard_ref
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: CLARISSE_LandslideHazard_Ethiopia_2020-2024_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2024'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing projected landslide hazard levels across
-          Ethiopia for the period 2025-2029 from the CLARISSE Climate and Disaster
-          Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: landslide_hazard_ref
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: CLARISSE_LandslideHazard_Ethiopia_2025-2029_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2029'
-              start: '2025'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: CLARISSE_FloodHazard-100RP_Ethiopia_2000-2004_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2004'
+            start: '2000'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 100-year return
+        period across Ethiopia for the period 2005-2009 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_100rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-100RP_Ethiopia_2005-2009_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2009'
+            start: '2005'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 100-year return
+        period across Ethiopia for the period 2010-2014 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_100rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-100RP_Ethiopia_2010-2014_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2014'
+            start: '2010'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 100-year return
+        period across Ethiopia for the period 2015-2019 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_100rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-100RP_Ethiopia_2015-2019_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2019'
+            start: '2015'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: Spatial dataset showing flood hazard zones with a 100-year return
+        period across Ethiopia for the period 2020-2024 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_100rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-100RP_Ethiopia_2020-2024_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2024'
+            start: '2020'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: Spatial dataset showing projected flood hazard zones with a 100-year
+        return period across Ethiopia for the period 2025-2029 from the CLARISSE Climate
+        and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: flood_100rp_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: CLARISSE_FloodHazard-100RP_Ethiopia_2025-2029_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2029'
+            start: '2025'
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: flood_100rp_hazard_ref
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_100rp
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Spatial dataset showing heat stress hazard levels across Ethiopia
+        for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heat_stress_hazard_ref
+        intensity_measure: T:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: CLARISSE_HeatStressHazard_Ethiopia_2000-2004_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2004'
+            start: '2000'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing heat stress hazard levels across Ethiopia
+        for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heat_stress_hazard_ref
+        intensity_measure: T:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: CLARISSE_HeatStressHazard_Ethiopia_2005-2009_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2009'
+            start: '2005'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing heat stress hazard levels across Ethiopia
+        for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heat_stress_hazard_ref
+        intensity_measure: T:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: CLARISSE_HeatStressHazard_Ethiopia_2010-2014_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2014'
+            start: '2010'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing heat stress hazard levels across Ethiopia
+        for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heat_stress_hazard_ref
+        intensity_measure: T:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: CLARISSE_HeatStressHazard_Ethiopia_2015-2019_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2019'
+            start: '2015'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing heat stress hazard levels across Ethiopia
+        for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heat_stress_hazard_ref
+        intensity_measure: T:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: CLARISSE_HeatStressHazard_Ethiopia_2020-2024_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2024'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing projected heat stress hazard levels across
+        Ethiopia for the period 2025-2029 from the CLARISSE Climate and Disaster Risk
+        Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heat_stress_hazard_ref
+        intensity_measure: T:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: CLARISSE_HeatStressHazard_Ethiopia_2025-2029_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2029'
+            start: '2025'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: heat_stress_hazard_ref
+      intensity_measure: T:C
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: event_set_heat_stress
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Spatial dataset showing landslide hazard levels across Ethiopia
+        for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: landslide_hazard_ref
         intensity_measure: LSI:-
         process: landslide_general
         trigger: null
         type: landslide
-      id: event_set_landslide
-      occurrence_range: null
-      seasonality: null
-    volcanic:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Spatial dataset showing volcanic hazard levels across Ethiopia
-          for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: volcanic_hazard_ref
-          intensity_measure: ash_thickness:cm
-          process: ashfall
-          trigger: null
-          type: volcanic
-        id: CLARISSE_VolcanicHazard_Ethiopia_2000-2004_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2004'
-              start: '2000'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing volcanic hazard levels across Ethiopia
-          for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: volcanic_hazard_ref
-          intensity_measure: ash_thickness:cm
-          process: ashfall
-          trigger: null
-          type: volcanic
-        id: CLARISSE_VolcanicHazard_Ethiopia_2005-2009_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2009'
-              start: '2005'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing volcanic hazard levels across Ethiopia
-          for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: volcanic_hazard_ref
-          intensity_measure: ash_thickness:cm
-          process: ashfall
-          trigger: null
-          type: volcanic
-        id: CLARISSE_VolcanicHazard_Ethiopia_2010-2014_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2014'
-              start: '2010'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing volcanic hazard levels across Ethiopia
-          for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: volcanic_hazard_ref
-          intensity_measure: ash_thickness:cm
-          process: ashfall
-          trigger: null
-          type: volcanic
-        id: CLARISSE_VolcanicHazard_Ethiopia_2015-2019_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2019'
-              start: '2015'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing volcanic hazard levels across Ethiopia
-          for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: volcanic_hazard_ref
-          intensity_measure: ash_thickness:cm
-          process: ashfall
-          trigger: null
-          type: volcanic
-        id: CLARISSE_VolcanicHazard_Ethiopia_2020-2024_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2024'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: Spatial dataset showing projected volcanic hazard levels across
-          Ethiopia for the period 2025-2029 from the CLARISSE Climate and Disaster
-          Risk Database.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: volcanic_hazard_ref
-          intensity_measure: ash_thickness:cm
-          process: ashfall
-          trigger: null
-          type: volcanic
-        id: CLARISSE_VolcanicHazard_Ethiopia_2025-2029_20250516
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P5Y
-              end: '2029'
-              start: '2025'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: CLARISSE_LandslideHazard_Ethiopia_2000-2004_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2004'
+            start: '2000'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing landslide hazard levels across Ethiopia
+        for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: landslide_hazard_ref
+        intensity_measure: LSI:-
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: CLARISSE_LandslideHazard_Ethiopia_2005-2009_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2009'
+            start: '2005'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing landslide hazard levels across Ethiopia
+        for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: landslide_hazard_ref
+        intensity_measure: LSI:-
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: CLARISSE_LandslideHazard_Ethiopia_2010-2014_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2014'
+            start: '2010'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing landslide hazard levels across Ethiopia
+        for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: landslide_hazard_ref
+        intensity_measure: LSI:-
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: CLARISSE_LandslideHazard_Ethiopia_2015-2019_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2019'
+            start: '2015'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing landslide hazard levels across Ethiopia
+        for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: landslide_hazard_ref
+        intensity_measure: LSI:-
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: CLARISSE_LandslideHazard_Ethiopia_2020-2024_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2024'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing projected landslide hazard levels across
+        Ethiopia for the period 2025-2029 from the CLARISSE Climate and Disaster Risk
+        Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: landslide_hazard_ref
+        intensity_measure: LSI:-
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: CLARISSE_LandslideHazard_Ethiopia_2025-2029_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2029'
+            start: '2025'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: landslide_hazard_ref
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: event_set_landslide
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Spatial dataset showing volcanic hazard levels across Ethiopia
+        for the period 2000-2004 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: volcanic_hazard_ref
         intensity_measure: ash_thickness:cm
         process: ashfall
         trigger: null
         type: volcanic
-      id: event_set_volcanic
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 8
+      id: CLARISSE_VolcanicHazard_Ethiopia_2000-2004_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2004'
+            start: '2000'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing volcanic hazard levels across Ethiopia
+        for the period 2005-2009 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: volcanic_hazard_ref
+        intensity_measure: ash_thickness:cm
+        process: ashfall
+        trigger: null
+        type: volcanic
+      id: CLARISSE_VolcanicHazard_Ethiopia_2005-2009_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2009'
+            start: '2005'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing volcanic hazard levels across Ethiopia
+        for the period 2010-2014 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: volcanic_hazard_ref
+        intensity_measure: ash_thickness:cm
+        process: ashfall
+        trigger: null
+        type: volcanic
+      id: CLARISSE_VolcanicHazard_Ethiopia_2010-2014_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2014'
+            start: '2010'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing volcanic hazard levels across Ethiopia
+        for the period 2015-2019 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: volcanic_hazard_ref
+        intensity_measure: ash_thickness:cm
+        process: ashfall
+        trigger: null
+        type: volcanic
+      id: CLARISSE_VolcanicHazard_Ethiopia_2015-2019_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2019'
+            start: '2015'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing volcanic hazard levels across Ethiopia
+        for the period 2020-2024 from the CLARISSE Climate and Disaster Risk Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: volcanic_hazard_ref
+        intensity_measure: ash_thickness:cm
+        process: ashfall
+        trigger: null
+        type: volcanic
+      id: CLARISSE_VolcanicHazard_Ethiopia_2020-2024_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2024'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: Spatial dataset showing projected volcanic hazard levels across
+        Ethiopia for the period 2025-2029 from the CLARISSE Climate and Disaster Risk
+        Database.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: volcanic_hazard_ref
+        intensity_measure: ash_thickness:cm
+        process: ashfall
+        trigger: null
+        type: volcanic
+      id: CLARISSE_VolcanicHazard_Ethiopia_2025-2029_20250516
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P5Y
+            end: '2029'
+            start: '2025'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: volcanic_hazard_ref
+      intensity_measure: ash_thickness:cm
+      process: ashfall
+      trigger: null
+      type: volcanic
+    id: event_set_volcanic
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Multi-hazard exposure and risk indicator dataset compiled from global
@@ -1592,8 +1585,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Ethiopia - Strengthening the Understanding of Urban Disaster Risk in Secondary
     Cities

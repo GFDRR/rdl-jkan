@@ -128,958 +128,954 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 15
-      events:
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - Historical baseline, 1-year return period.
-          File: hmax_historical_01_coastal_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_hist_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - Historical baseline, 2-year return period.
-          File: hmax_historical_01_coastal_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_hist_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - Historical baseline, 5-year return period.
-          File: hmax_historical_01_coastal_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_hist_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - Historical baseline, 10-year return period.
-          File: hmax_historical_01_coastal_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_hist_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - Historical baseline, 50-year return period.
-          File: hmax_historical_01_coastal_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_hist_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP4.5 scenario, 1-year return period.
-          File: hmax_RCP45_01_coastal_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp45_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP4.5 scenario, 2-year return period.
-          File: hmax_RCP45_01_coastal_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp45_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP4.5 scenario, 5-year return period.
-          File: hmax_RCP45_01_coastal_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp45_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP4.5 scenario, 10-year return period.
-          File: hmax_RCP45_01_coastal_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp45_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP4.5 scenario, 50-year return period.
-          File: hmax_RCP45_01_coastal_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp45_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP8.5 scenario, 1-year return period.
-          File: hmax_RCP85_01_coastal_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp85_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP8.5 scenario, 2-year return period.
-          File: hmax_RCP85_01_coastal_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp85_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP8.5 scenario, 5-year return period.
-          File: hmax_RCP85_01_coastal_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp85_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP8.5 scenario, 10-year return period.
-          File: hmax_RCP85_01_coastal_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp85_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Coastal flood hazard - RCP8.5 scenario, 50-year return period.
-          File: hmax_RCP85_01_coastal_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_rcp85_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 15
+    events:
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - Historical baseline, 1-year return period.
+        File: hmax_historical_01_coastal_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_coastal
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: event_set_coastal_flood
-      occurrence_range: Return periods of 1, 2, 5, 10, and 50 years under Historical,
-        RCP4.5, and RCP8.5 scenarios
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 15
-      events:
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - Historical, RP1. File: hmax_historical_02_rain_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_hist_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - Historical, RP2. File: hmax_historical_02_rain_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_hist_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - Historical, RP5. File: hmax_historical_02_rain_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_hist_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - Historical, RP10. File: hmax_historical_02_rain_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_hist_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - Historical, RP50. File: hmax_historical_02_rain_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_hist_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP1. File: hmax_RCP45_02_rain_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp45_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP2. File: hmax_RCP45_02_rain_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp45_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP5. File: hmax_RCP45_02_rain_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp45_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP10. File: hmax_RCP45_02_rain_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp45_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP50. File: hmax_RCP45_02_rain_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp45_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP1. File: hmax_RCP85_02_rain_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp85_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP2. File: hmax_RCP85_02_rain_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp85_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP5. File: hmax_RCP85_02_rain_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp85_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP10. File: hmax_RCP85_02_rain_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp85_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP50. File: hmax_RCP85_02_rain_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_pluvial
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_pluvial_rcp85_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_coastal_hist_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - Historical baseline, 2-year return period.
+        File: hmax_historical_01_coastal_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_hist_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - Historical baseline, 5-year return period.
+        File: hmax_historical_01_coastal_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_hist_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - Historical baseline, 10-year return period.
+        File: hmax_historical_01_coastal_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_hist_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - Historical baseline, 50-year return period.
+        File: hmax_historical_01_coastal_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_hist_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP4.5 scenario, 1-year return period.
+        File: hmax_RCP45_01_coastal_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp45_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP4.5 scenario, 2-year return period.
+        File: hmax_RCP45_01_coastal_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp45_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP4.5 scenario, 5-year return period.
+        File: hmax_RCP45_01_coastal_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp45_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP4.5 scenario, 10-year return period.
+        File: hmax_RCP45_01_coastal_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp45_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP4.5 scenario, 50-year return period.
+        File: hmax_RCP45_01_coastal_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp45_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP8.5 scenario, 1-year return period.
+        File: hmax_RCP85_01_coastal_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp85_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP8.5 scenario, 2-year return period.
+        File: hmax_RCP85_01_coastal_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp85_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP8.5 scenario, 5-year return period.
+        File: hmax_RCP85_01_coastal_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp85_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP8.5 scenario, 10-year return period.
+        File: hmax_RCP85_01_coastal_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp85_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Coastal flood hazard - RCP8.5 scenario, 50-year return period.
+        File: hmax_RCP85_01_coastal_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_rcp85_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_coastal
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_coastal_flood
+    occurrence_range: Return periods of 1, 2, 5, 10, and 50 years under Historical,
+      RCP4.5, and RCP8.5 scenarios
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 15
+    events:
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - Historical, RP1. File: hmax_historical_02_rain_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_pluvial
         intensity_measure: wd:m
         process: pluvial_flood
         trigger: null
         type: flood
-      id: event_set_pluvial_flood
-      occurrence_range: Return periods of 1, 2, 5, 10, and 50 years under Historical,
-        RCP4.5, and RCP8.5 scenarios
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 15
-      events:
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - Historical, RP1. File: hmax_historical_03_discharge_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_hist_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - Historical, RP2. File: hmax_historical_03_discharge_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_hist_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - Historical, RP5. File: hmax_historical_03_discharge_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_hist_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - Historical, RP10. File: hmax_historical_03_discharge_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_hist_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - Historical, RP50. File: hmax_historical_03_discharge_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_hist_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP4.5, RP1. File: hmax_RCP45_03_discharge_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp45_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP4.5, RP2. File: hmax_RCP45_03_discharge_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp45_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP4.5, RP5. File: hmax_RCP45_03_discharge_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp45_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP4.5, RP10. File: hmax_RCP45_03_discharge_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp45_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP4.5, RP50. File: hmax_RCP45_03_discharge_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp45_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP8.5, RP1. File: hmax_RCP85_03_discharge_RP001_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp85_RP001
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability: null
-            return_period: 1
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP8.5, RP2. File: hmax_RCP85_03_discharge_RP002_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp85_RP002
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.5
-            probability: null
-            return_period: 2
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP8.5, RP5. File: hmax_RCP85_03_discharge_RP005_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp85_RP005
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP8.5, RP10. File: hmax_RCP85_03_discharge_RP010_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp85_RP010
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: 'Fluvial (discharge) flood hazard - RCP8.5, RP50. File: hmax_RCP85_03_discharge_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_fluvial
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_fluvial_rcp85_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_pluvial_hist_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - Historical, RP2. File: hmax_historical_02_rain_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_hist_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - Historical, RP5. File: hmax_historical_02_rain_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_hist_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - Historical, RP10. File: hmax_historical_02_rain_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_hist_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - Historical, RP50. File: hmax_historical_02_rain_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_hist_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP1. File: hmax_RCP45_02_rain_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp45_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP2. File: hmax_RCP45_02_rain_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp45_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP5. File: hmax_RCP45_02_rain_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp45_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP10. File: hmax_RCP45_02_rain_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp45_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP4.5, RP50. File: hmax_RCP45_02_rain_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp45_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP1. File: hmax_RCP85_02_rain_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp85_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP2. File: hmax_RCP85_02_rain_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp85_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP5. File: hmax_RCP85_02_rain_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp85_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP10. File: hmax_RCP85_02_rain_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp85_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Pluvial (rainfall) flood hazard - RCP8.5, RP50. File: hmax_RCP85_02_rain_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_pluvial
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_pluvial_rcp85_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_pluvial
+      intensity_measure: wd:m
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_pluvial_flood
+    occurrence_range: Return periods of 1, 2, 5, 10, and 50 years under Historical,
+      RCP4.5, and RCP8.5 scenarios
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 15
+    events:
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - Historical, RP1. File: hmax_historical_03_discharge_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_fluvial
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_fluvial_flood
-      occurrence_range: Return periods of 1, 2, 5, 10, and 50 years under Historical,
-        RCP4.5, and RCP8.5 scenarios
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: 'Compound flood hazard combining coastal surge, pluvial rainfall,
-          and fluvial discharge at 50-year return period - Historical baseline. File:
-          hmax_historical_04_compound_RP050_RP050_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_compound
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_compound_hist_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Compound flood hazard combining coastal surge, pluvial rainfall,
-          and fluvial discharge at 50-year return period - RCP4.5 scenario. File:
-          hmax_RCP45_04_compound_RP050_RP050_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_compound
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_compound_rcp45_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: 'Compound flood hazard combining coastal surge, pluvial rainfall,
-          and fluvial discharge at 50-year return period - RCP8.5 scenario. File:
-          hmax_RCP85_04_compound_RP050_RP050_RP050_regrid.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_compound
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_compound_rcp85_RP050
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_fluvial_hist_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - Historical, RP2. File: hmax_historical_03_discharge_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_hist_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - Historical, RP5. File: hmax_historical_03_discharge_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_hist_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - Historical, RP10. File: hmax_historical_03_discharge_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_hist_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - Historical, RP50. File: hmax_historical_03_discharge_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_hist_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP4.5, RP1. File: hmax_RCP45_03_discharge_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp45_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP4.5, RP2. File: hmax_RCP45_03_discharge_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp45_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP4.5, RP5. File: hmax_RCP45_03_discharge_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp45_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP4.5, RP10. File: hmax_RCP45_03_discharge_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp45_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP4.5, RP50. File: hmax_RCP45_03_discharge_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp45_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP8.5, RP1. File: hmax_RCP85_03_discharge_RP001_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp85_RP001
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability: null
+          return_period: 1
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP8.5, RP2. File: hmax_RCP85_03_discharge_RP002_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp85_RP002
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.5
+          probability: null
+          return_period: 2
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP8.5, RP5. File: hmax_RCP85_03_discharge_RP005_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp85_RP005
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP8.5, RP10. File: hmax_RCP85_03_discharge_RP010_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp85_RP010
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: 'Fluvial (discharge) flood hazard - RCP8.5, RP50. File: hmax_RCP85_03_discharge_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_fluvial
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_fluvial_rcp85_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_fluvial
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_fluvial_flood
+    occurrence_range: Return periods of 1, 2, 5, 10, and 50 years under Historical,
+      RCP4.5, and RCP8.5 scenarios
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: 'Compound flood hazard combining coastal surge, pluvial rainfall,
+        and fluvial discharge at 50-year return period - Historical baseline. File:
+        hmax_historical_04_compound_RP050_RP050_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_compound
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_compound_flood
-      occurrence_range: 50-year return period compound flood (coastal + pluvial +
-        fluvial combined) under Historical, RCP4.5, and RCP8.5 scenarios
-      seasonality: null
-  event_sets_count: 4
+      id: event_compound_hist_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Compound flood hazard combining coastal surge, pluvial rainfall,
+        and fluvial discharge at 50-year return period - RCP4.5 scenario. File: hmax_RCP45_04_compound_RP050_RP050_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_compound
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_compound_rcp45_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: 'Compound flood hazard combining coastal surge, pluvial rainfall,
+        and fluvial discharge at 50-year return period - RCP8.5 scenario. File: hmax_RCP85_04_compound_RP050_RP050_RP050_regrid.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_compound
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_compound_rcp85_RP050
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_compound
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_compound_flood
+    occurrence_range: 50-year return period compound flood (coastal + pluvial + fluvial
+      combined) under Historical, RCP4.5, and RCP8.5 scenarios
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Flood impact assessment for Greater Monrovia, Liberia, produced by

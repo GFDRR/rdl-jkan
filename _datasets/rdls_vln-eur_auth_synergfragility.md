@@ -59,8 +59,7 @@ links:
   rel: describedby
 - href: https://cordis.europa.eu/project/id/244061
   rel: source
-loss:
-  losses: []
+loss: null
 project:
   name: SYNER-G - Systemic Seismic Vulnerability and Risk Analysis (EU FP7, Grant
     No. 244061)

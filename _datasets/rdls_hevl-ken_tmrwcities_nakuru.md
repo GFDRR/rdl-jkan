@@ -131,47 +131,44 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: 'Flood hazard map for Nakuru provided as PNG image only (FloodHazardMap.png,
-          13.5 MB). Critical limitation: no numerical flood depth raster or vector
-          data available - flood depths cannot be extracted for quantitative risk
-          assessment. Impact results reference flood damage but hazard is only a visual
-          map.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_nakuru
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis - return period
-              and parameters undocumented
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: 'Flood hazard map for Nakuru provided as PNG image only (FloodHazardMap.png,
+        13.5 MB). Critical limitation: no numerical flood depth raster or vector data
+        available - flood depths cannot be extracted for quantitative risk assessment.
+        Impact results reference flood damage but hazard is only a visual map.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_nakuru
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_flood_nakuru
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis - return period and
+            parameters undocumented
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_nakuru
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

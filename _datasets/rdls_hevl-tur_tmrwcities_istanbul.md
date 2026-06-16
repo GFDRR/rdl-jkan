@@ -111,47 +111,45 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 30
-      events:
-      - calculation_method: simulated
-        description: 30 simulated ground motion fields (GMs_sim_1.csv to GMs_sim_30.csv)
-          for Istanbul study area providing PGA, PGV, and Spectral Acceleration at
-          25 periods (0.05s to 5.066s) for 42 site locations. Each simulation represents
-          a stochastic realisation of the earthquake scenario. Hazard site GeoJSON
-          provides 66 point features with intensity measure values.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_istanbul_sim
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis with 30 stochastic
-              ground motion realisations
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 30
+    events:
+    - calculation_method: simulated
+      description: 30 simulated ground motion fields (GMs_sim_1.csv to GMs_sim_30.csv)
+        for Istanbul study area providing PGA, PGV, and Spectral Acceleration at 25
+        periods (0.05s to 5.066s) for 42 site locations. Each simulation represents
+        a stochastic realisation of the earthquake scenario. Hazard site GeoJSON provides
+        66 point features with intensity measure values.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_set_earthquake_istanbul
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_earthquake_istanbul_sim
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis with 30 stochastic
+            ground motion realisations
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_earthquake_istanbul
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

@@ -109,100 +109,97 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 2
-      events:
-      - calculation_method: simulated
-        description: 'Earthquake Scenario 1 for Santa Rosa area providing Peak Ground
-          Acceleration (PGA) values at 499 grid points. Tabular XLSX format with X/Y
-          projected coordinates and IM values. File: EQ-SCEN1-PGA.xlsx'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_quito_scen1
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'Earthquake Scenario 2 for Santa Rosa area providing Peak Ground
-          Acceleration (PGA) values at 499 grid points. File: EQ-SCEN2-PGA.xlsx'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_quito_scen2
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 2
+    events:
+    - calculation_method: simulated
+      description: 'Earthquake Scenario 1 for Santa Rosa area providing Peak Ground
+        Acceleration (PGA) values at 499 grid points. Tabular XLSX format with X/Y
+        projected coordinates and IM values. File: EQ-SCEN1-PGA.xlsx'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_set_earthquake_quito
-      occurrence_range: null
-      seasonality: null
-    landslide:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: 'Debris flow Scenario 01 for Santa Rosa area providing depth
-          values. Tabular XLSX format (3.0 MB). Also serves as proxy for flood hazard
-          assessment. File: DF-SCEN01-DPTH.xlsx'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_debris_flow
-          intensity_measure: wd:m
-          process: landslide_mudflow
-          trigger: null
-          type: landslide
-        id: event_debris_flow_quito_scen01
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis - return period
-              and trigger mechanism undocumented
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_earthquake_quito_scen1
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'Earthquake Scenario 2 for Santa Rosa area providing Peak Ground
+        Acceleration (PGA) values at 499 grid points. File: EQ-SCEN2-PGA.xlsx'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_earthquake
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: event_earthquake_quito_scen2
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_earthquake_quito
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: 'Debris flow Scenario 01 for Santa Rosa area providing depth values.
+        Tabular XLSX format (3.0 MB). Also serves as proxy for flood hazard assessment.
+        File: DF-SCEN01-DPTH.xlsx'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_debris_flow
         intensity_measure: wd:m
         process: landslide_mudflow
         trigger: null
         type: landslide
-      id: event_set_debris_flow_quito
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 2
+      id: event_debris_flow_quito_scen01
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis - return period and
+            trigger mechanism undocumented
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_debris_flow
+      intensity_measure: wd:m
+      process: landslide_mudflow
+      trigger: null
+      type: landslide
+    id: event_set_debris_flow_quito
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities
