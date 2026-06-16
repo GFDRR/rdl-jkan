@@ -155,66 +155,64 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 2
-      events:
-      - calculation_method: simulated
-        description: "Deterministic pluvial flood Scenario 1 for Dar es Salaam with\
-          \ 7mm rainfall over 24 hours. Simulated using high-resolution solver with\
-          \ Manning's n=0.06, 5m DTM (2017), breach threshold 200, minimum depth \u2265\
-          0.05m. Output: water depth (m) in WGS84."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_daressalaam_scenario1
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Deterministic pluvial flood Scenario 2 for Dar es Salaam with\
-          \ 19mm/hr rainfall for 6 hours (114mm total). Simulated using high-resolution\
-          \ solver with Manning's n=0.06, 5m DTM (2017), breach threshold 200, minimum\
-          \ depth \u22650.05m. Output: water depth (m) in WGS84."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_daressalaam_scenario2
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 2
+    events:
+    - calculation_method: simulated
+      description: "Deterministic pluvial flood Scenario 1 for Dar es Salaam with\
+        \ 7mm rainfall over 24 hours. Simulated using high-resolution solver with\
+        \ Manning's n=0.06, 5m DTM (2017), breach threshold 200, minimum depth \u2265\
+        0.05m. Output: water depth (m) in WGS84."
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_flood
         intensity_measure: wd:m
         process: pluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_daressalaam
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_flood_daressalaam_scenario1
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Deterministic pluvial flood Scenario 2 for Dar es Salaam with\
+        \ 19mm/hr rainfall for 6 hours (114mm total). Simulated using high-resolution\
+        \ solver with Manning's n=0.06, 5m DTM (2017), breach threshold 200, minimum\
+        \ depth \u22650.05m. Output: water depth (m) in WGS84."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_daressalaam_scenario2
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_daressalaam
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

@@ -135,127 +135,124 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 2
-      events:
-      - calculation_method: simulated
-        description: 'Deterministic earthquake Scenario 1 (Sc1) for Bairag area using
-          NGA-West2 GMPEs for active shallow crustal sources: Abrahamson et al 2014
-          (ASK14), Boore et al 2014 (BSSA14), Campbell and Bozorgnia 2014 (CB14),
-          Chiou and Youngs 2014 (CY14). Provides PGA and Spectral Acceleration at
-          0.3s, 0.7s, and 1.0s periods. Available in 32-bit and 64-bit precision.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_bairag_sc1
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'Deterministic earthquake Scenario 2 (Sc2) for Bairag area using
-          subduction zone GMPEs: Atkinson and Boore, Zhao et al. Provides PGA and
-          Spectral Acceleration at 0.3s, 0.7s, and 1.0s periods. Available in 32-bit
-          and 64-bit precision.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_bairag_sc2
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 2
+    events:
+    - calculation_method: simulated
+      description: 'Deterministic earthquake Scenario 1 (Sc1) for Bairag area using
+        NGA-West2 GMPEs for active shallow crustal sources: Abrahamson et al 2014
+        (ASK14), Boore et al 2014 (BSSA14), Campbell and Bozorgnia 2014 (CB14), Chiou
+        and Youngs 2014 (CY14). Provides PGA and Spectral Acceleration at 0.3s, 0.7s,
+        and 1.0s periods. Available in 32-bit and 64-bit precision.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_set_earthquake_bairag
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 2
-      events:
-      - calculation_method: simulated
-        description: Riverine flood scenario for Bairag area providing maximum water
-          depth (m) from fluvial flooding simulation.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_bairag_riverine
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: Pluvial (rainfall-induced) flood scenario for Bairag area providing
-          maximum water depth (m) from surface water flooding simulation.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_bairag_pluvial
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_earthquake_bairag_sc1
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'Deterministic earthquake Scenario 2 (Sc2) for Bairag area using
+        subduction zone GMPEs: Atkinson and Boore, Zhao et al. Provides PGA and Spectral
+        Acceleration at 0.3s, 0.7s, and 1.0s periods. Available in 32-bit and 64-bit
+        precision.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_earthquake
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: event_earthquake_bairag_sc2
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_earthquake_bairag
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 2
+    events:
+    - calculation_method: simulated
+      description: Riverine flood scenario for Bairag area providing maximum water
+        depth (m) from fluvial flooding simulation.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      - classification: null
-        id: hazard_flood_pluvial_flood
+      id: event_flood_bairag_riverine
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: Pluvial (rainfall-induced) flood scenario for Bairag area providing
+        maximum water depth (m) from surface water flooding simulation.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: pluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_bairag
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 2
+      id: event_flood_bairag_pluvial
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    - classification: null
+      id: hazard_flood_pluvial_flood
+      intensity_measure: wd:m
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_bairag
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities
