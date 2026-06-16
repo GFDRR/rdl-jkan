@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-jrc_drmkc_healthsites",
+      "title": "Global Healthsites Mapping",
+      "description": "Global healthcare facilities",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Healthsites",
+        "url": "https://healthsites.io/"
+      },
+      "version": "2025",
+      "purpose": "To create a comprehensive global map of healthcare facilities with accessible location details to support health service planning, emergency response, and healthcare accessibility analysis worldwide.",
+      "project": {
+        "name": "Healthsites",
+        "url": "https://healthsites.io/"
+      },
+      "details": "The Global Healthsites Mapping Project is an open-source initiative creating a comprehensive online map of healthcare facilities worldwide, making detailed location information easily accessible. The database includes diverse health facility types such as hospitals, clinics, health centers, pharmacies, and specialized care facilities across all countries and regions. Each facility entry contains geographical coordinates, facility type, name, and available attributes to support spatial analysis and healthcare planning. The platform serves multiple stakeholders including humanitarian organizations, health ministries, researchers, and emergency responders who require accurate health facility data for service delivery planning, gap analysis, emergency preparedness, and healthcare accessibility assessments. The project leverages community contributions and data partnerships to continuously expand and update the global healthcare facility inventory, supporting improved health outcomes through better spatial intelligence.",
+      "contact_point": {
+        "name": "Healthsites",
+        "email": " mark@healthsites.io",
+        "url": "https://healthsites.io/"
+      },
+      "creator": {
+        "name": "Healthsites",
+        "url": "https://healthsites.io/"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "Entity_1",
+          "entity": {
+            "name": "Healthsites",
+            "url": "https://healthsites.io/"
+          },
+          "role": "resource_provider"
+        },
+        {
+          "id": "Entity_2",
+          "entity": {
+            "name": "OpenStreetMap",
+            "url": "https://www.openstreetmap.org/"
+          },
+          "role": "rights_holder"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "Source_1",
+            "name": "Healthsites",
+            "url": "https://healthsites.io/",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Healthsites.io - a global open-data commons of health facility locations built collaboratively with OpenStreetMap. Provides georeferenced point data on healthcare facilities worldwide with standardised attributes including facility type, services, and contact details. Maintained through community contributions validated by partners including ICRC, Medecins Sans Frontieres, and the Humanitarian OpenStreetMap Team. Released under Open Database License (ODbL)."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "healthcare",
+          "title": "Global healthcare facilities",
+          "description": "This data was generated as an extract from the OpenStreetMap global open database (http://openstreetmap.org) by the Healthsites.io (http://healthsites.io) project.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://www.healthsites.io/map",
+          "download_url": "https://healthsites.io/api/public/facilities/shapefile/World/download",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "exposure": [
+        {
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "healthcare",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "id": "exp_1"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
