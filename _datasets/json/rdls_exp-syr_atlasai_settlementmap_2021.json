@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-syr_atlasai_settlementmap_2021",
+      "title": "Syria: Settlement Map",
+      "description": "A vector representation of the built-up surface, spatially aggregated within a 50m radius. From the Atlas of Human Settlements 2021 @ Syria.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/syria-settlement-map]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This limited public release covers the countries of Turkey and Syria for the year 2021, showing the extent of human settlements. This geospatial data is a machine-learning inference-based product that meets stringent model quality tests but has not been physically ground-truthed in the field.",
+      "contact_point": {
+        "name": "Atlas AI",
+        "url": "https://data.humdata.org/dataset/syria-settlement-map"
+      },
+      "creator": {
+        "name": "Atlas AI",
+        "url": "https://data.humdata.org/dataset/syria-settlement-map"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-01",
+        "end": "2021-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Atlas of Human Settlements 2021",
+            "url": "https://data.humdata.org/dataset/syria-settlement-map"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery was processed using encoder-decoder convolutional neural networks and advanced computer vision algorithms to identify built-up surfaces, then spatially aggregated within 50m radius buffers to create a vector settlement map representing the built environment across Syria.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Atlas of Human Settlements 2021",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite-derived built-up surface mapping using deep convolutional neural networks and computer vision techniques to identify settlement extents across Syria."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a17fa4a7",
+          "title": "AtlasAI_AHS_Syria_2021_Built_Up_Settlement_Map.geojson",
+          "description": "Syria: Settlement Map (settlement map of Syria in 2021)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/ffceb4a0-c977-4ff6-b32c-a46ca2caa3ff/resource/a17fa4a7-1be8-48b4-a9d4-31e41715b7c8/download/atlasai_ahs_syria_2021_built_up_settlement_map.geojson"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Built-up settlement areas mapped from satellite imagery at 50m spatial resolution"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/syria-settlement-map",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

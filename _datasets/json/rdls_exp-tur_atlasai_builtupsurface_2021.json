@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-tur_atlasai_builtupsurface_2021",
+      "title": "Turkey: Built-up Surface",
+      "description": "Built-up presence (binary) in a 10m x 10m grid. From the Atlas of Human Settlements 2021 @ Turkey.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/turkey-built-up-surface]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This limited public release covers the country of Turkey for the year 2021, showing the extent of human settlements. This geospatial data is a machine-learning inference-based product that meets stringent model quality tests but has not been physically ground-truthed in the field.",
+      "contact_point": {
+        "name": "Atlas AI",
+        "url": "https://data.humdata.org/dataset/turkey-built-up-surface"
+      },
+      "creator": {
+        "name": "Atlas AI",
+        "url": "https://data.humdata.org/dataset/turkey-built-up-surface"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TUR"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-01",
+        "end": "2021-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Atlas of Human Settlements 2021",
+            "url": "https://data.humdata.org/dataset/turkey-built-up-surface"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Built-up surface presence was derived from satellite imagery analysis using advanced deep convolutional neural networks with encoder-decoder architecture and computer vision techniques to classify 10m x 10m grid cells as built-up or non-built-up across Turkey in 2021. The resulting binary raster represents spatial distribution of human settlements and infrastructure.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Atlas of Human Settlements 2021",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite-derived built-up surface mapping using encoder-decoder convolutional neural networks and computer vision techniques to identify building presence at 10m spatial resolution"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_94645617",
+          "title": "AtlasAI_AHS_Turkey_2021_Built_Up_Surface.tif",
+          "description": "Turkey: Built-up Surface (built-up surface of Turkey in 2021)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/a68ee99b-f282-411d-a508-793e87bf314b/resource/94645617-18a9-452e-98f2-3c6d4d91cb46/download/atlasai_ahs_turkey_2021_built_up_surface.tif"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Built-up surface presence mapped at 10m resolution using satellite imagery and deep learning"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/turkey-built-up-surface",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
