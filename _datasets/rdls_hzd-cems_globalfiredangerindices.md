@@ -49,52 +49,49 @@ details: The selected data records in this data set are regularly extended with 
   of the Joint Research Centre which is the managing entity of the service.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    wildfire:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 1
-      events:
-      - calculation_method: inferred
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_kE9ObP1U
-          intensity_measure: FWI:-
-          process: wildfire
-          trigger: null
-          type: wildfire
-        id: event_F7g3L26J
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: null
-              end: '2019-12-31'
-              start: '1940-01-01'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 1
+    events:
+    - calculation_method: inferred
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_kE9ObP1U
         intensity_measure: FWI:-
         process: wildfire
         trigger: null
         type: wildfire
-      id: event_set_GO2O8zSU
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_F7g3L26J
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: null
+            end: '2019-12-31'
+            start: '1940-01-01'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_kE9ObP1U
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: event_set_GO2O8zSU
+    occurrence_range: null
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: CEMS-Fire
   url: https://confluence.ecmwf.int/display/CEMS/CEMS-Fire

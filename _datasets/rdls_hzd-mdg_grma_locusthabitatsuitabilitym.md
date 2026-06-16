@@ -46,8 +46,7 @@ lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: GRMA Madagascar - Phase 1
   url: https://www.resiliencemada.gov.mg
