@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-uga_drc_subnationaldisplacementfo_2025",
+      "title": "Uganda - Subnational Displacement Forecasts",
+      "description": "Three-month settlement-level projections for South Sudanese refugees and asylum seekers in Uganda based on the AHEAD model. The files contain two types of values: 'observed' values are drawn from official sources on the numbers of displaced in each area. 'forecasted' values are model estimates of the next three months from the point of now.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/uganda-subnational-displacement-forecasts]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The model structure treats the months with missing displacement data as additional parameters to be inferred and this allows us to work with datasets on displacement that contain gaps and missing information.",
+      "contact_point": {
+        "name": "Danish Refugee Council",
+        "url": "https://data.humdata.org/dataset/uganda-subnational-displacement-forecasts"
+      },
+      "creator": {
+        "name": "Danish Refugee Council",
+        "url": "https://data.humdata.org/dataset/uganda-subnational-displacement-forecasts"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UGA"
+        ]
+      },
+      "temporal": {
+        "start": "2025-11-01",
+        "end": "2026-03-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNHCR",
+            "url": "https://data.humdata.org/dataset/uganda-subnational-displacement-forecasts"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Settlement-level displacement data for South Sudanese refugees in Uganda were collected from official sources (UNHCR, DRC) and processed through a Bayesian state-space model (AHEAD) to generate three-month probabilistic forecasts with confidence bounds. The dataset contains both observed historical displacement counts and model-based projections for refugee populations across Ugandan settlements.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Danish Refugee Council",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Observed displacement data for South Sudanese refugees and asylum seekers in Uganda settlements"
+          },
+          {
+            "id": "source_2",
+            "name": "UNHCR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Refugee population statistics and monitoring data used as input to the AHEAD forecasting model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://danishrefugeecouncil.shinyapps.io/DRC_AHEAD_Dashboard/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_c52acd92",
+          "title": "Uganda - Displacement forecasts Jan26-Mar26.xlsx",
+          "description": "Uganda - Subnational Displacement Forecasts (Uganda - Displacement forecasts Jan26-Mar26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3ef38c14-9696-459d-9789-60049df190d0/resource/c52acd92-c907-4aaa-ac9d-96b6cb2ad035/download/uganda-displacement-forecasts-jan26-mar26.xlsx"
+        },
+        {
+          "id": "resource_c26f05a5",
+          "title": "Uganda - Displacement forecasts Dec25-Feb26.xlsx",
+          "description": "Uganda - Subnational Displacement Forecasts (Uganda - Displacement forecasts Dec25-Feb26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3ef38c14-9696-459d-9789-60049df190d0/resource/c26f05a5-2373-49cc-9daa-584f8a92abdc/download/uganda-displacement-forecasts-dec25-feb26.xlsx"
+        },
+        {
+          "id": "resource_8656f7bf",
+          "title": "Uganda - Displacement forecasts Nov25-Jan26.xlsx",
+          "description": "Uganda - Subnational Displacement Forecasts (Uganda - Displacement forecasts Nov25-Jan26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/3ef38c14-9696-459d-9789-60049df190d0/resource/8656f7bf-413e-4a8c-8939-dc919fb65eeb/download/uganda-displacement-forecasts-nov25-jan26.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Forecasted displacement of South Sudanese refugees and asylum seekers in Uganda settlements"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/uganda-subnational-displacement-forecasts",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

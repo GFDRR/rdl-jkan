@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-yem_drc_subnationaldisplacementfo_2025",
+      "title": "Yemen - Subnational Displacement Forecasts",
+      "description": "Displacement forecasts for Yemen at admin 2 level for the coming three month period based on the AHEAD model. The files contain two types of values: 'observed' values are drawn from official sources on the numbers of new displacements in each area. 'forecasted' values are model estimates of the next three months from the point of now.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/yemen-subnational-displacement-forecasts]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The model structure treats the months with missing displacement data as additional parameters to be inferred and this allows us to work with datasets on displacement that contain gaps and missing information.",
+      "contact_point": {
+        "name": "Danish Refugee Council",
+        "url": "https://data.humdata.org/dataset/yemen-subnational-displacement-forecasts"
+      },
+      "creator": {
+        "name": "Danish Refugee Council",
+        "url": "https://data.humdata.org/dataset/yemen-subnational-displacement-forecasts"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "YEM"
+        ]
+      },
+      "temporal": {
+        "start": "2025-11-01",
+        "end": "2026-03-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IOM",
+            "url": "https://data.humdata.org/dataset/yemen-subnational-displacement-forecasts"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Observed displacement data from Danish Refugee Council and IOM are integrated into a Bayesian state-space model (AHEAD) to generate probabilistic forecasts of new displacements at the district level for three-month periods. The model outputs include point estimates and uncertainty bounds (lower/upper bounds) for displacement counts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Danish Refugee Council",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official displacement data and AHEAD Bayesian state-space model for forecasting internally displaced populations at admin 2 level in Yemen"
+          },
+          {
+            "id": "source_2",
+            "name": "IOM",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IDP data contributing to the observed displacement figures used in the AHEAD forecasting model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://danishrefugeecouncil.shinyapps.io/DRC_AHEAD_Dashboard/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_746d0cc6",
+          "title": "Yemen - Displacement forecasts Jan26-Mar26.xlsx",
+          "description": "Yemen - Subnational Displacement Forecasts (Yemen - Displacement forecasts Jan26-Mar26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/2c827065-1da3-4415-8f2b-53dafebcb1f6/resource/746d0cc6-b6e7-45ed-b118-c197227e28ea/download/yemen-displacement-forecasts-jan26-mar26.xlsx"
+        },
+        {
+          "id": "resource_1808d683",
+          "title": "Yemen - Displacement forecasts Dec25-Feb26.xlsx",
+          "description": "Yemen - Subnational Displacement Forecasts (Yemen - Displacement forecasts Dec25-Feb26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/2c827065-1da3-4415-8f2b-53dafebcb1f6/resource/1808d683-70ee-45bc-b436-3fac895b21c3/download/yemen-displacement-forecasts-dec25-feb26.xlsx"
+        },
+        {
+          "id": "resource_5c91abc1",
+          "title": "Yemen - Displacement forecasts Nov25-Jan26.xlsx",
+          "description": "Yemen - Subnational Displacement Forecasts (Yemen - Displacement forecasts Nov25-Jan26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/2c827065-1da3-4415-8f2b-53dafebcb1f6/resource/5c91abc1-d452-46bb-9bf2-0bd33f628e5a/download/yemen-displacement-forecasts-nov25-jan26.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Forecasted internally displaced persons from conflict-driven displacement in Yemen"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/yemen-subnational-displacement-forecasts",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

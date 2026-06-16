@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-unhcr_globaltrendsforceddisplac_2021",
+      "title": "UNHCR Global Trends: Forced Displacement in 2021 Data",
+      "description": "This dataset contains 23 data tables on global trends in forced displacement in 2021. The data provide trends, national level summaries and the demographic composition of refugees, asylum-seekers, Venezuelans displaced abroad, internally displaced persons (IDPs), returnees (refugees and IDPs), stateless persons, and other persons of concern to UNHCR.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unhcr-global-trends-forced-displacement-in-2021-data]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/unhcr-global-trends-forced-displacement-in-2021-data"
+      },
+      "creator": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/unhcr-global-trends-forced-displacement-in-2021-data"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2021-01-01",
+        "end": "2021-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNHCR compiled national-level administrative data on forced displacement populations reported by governments according to their own definitions and methodologies. The dataset aggregates 23 tables of global trends covering demographic composition and population counts of refugees, asylum-seekers, IDPs, returnees, and stateless persons for 2021.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNHCR - The UN Refugee Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Government-reported data on forced displacement populations including refugees, asylum-seekers, IDPs, returnees, and stateless persons compiled from national administrations using their own definitions and collection methods."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e12d5189",
+          "title": "21-WRD-tables_FINAL.xlsx",
+          "description": "UNHCR Global Trends: Forced Displacement in 2021 Data (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/84e5b6b3-8d85-4755-a276-2662d3daa25c/resource/e12d5189-06e1-4a81-bd7a-0effb29d8e40/download/21-wrd-tables_final.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons and refugees displaced by various hazards and conflicts"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Asylum seekers, returnees, stateless persons and other persons of concern"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unhcr-global-trends-forced-displacement-in-2021-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

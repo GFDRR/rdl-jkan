@@ -1,0 +1,208 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-undrr_multihazardaverageannuall_20150101",
+      "title": "Multi-hazard Average Annual Loss",
+      "description": "GAR 2015 Risk results are presented as a series of probabilistic risk metrics. One of them is the multi-hazard Average Annual Loss (AAL) which is the long-term expected loss per year, averaged over many years. While there may actually be little or no losses, over a short period of time, the AAL accounts much larger losses that may occur more infrequently. AAL is also an indication of the amount of savings a nation need to set aside each year to cover the cost of long term losses from that hazard. As GAR global risk assessment is performed at global scale, the AAL calculated should be read as order of magnitude for the potential recurrent extent of losses in a country.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/multi-hazard-average-annual-loss]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset was generated using other global datasets; it should not be used for local applications (such as land use planning). The main purpose of GAR 2015 datasets is to broadly identify high risk areas at global level and for identification of areas where more detailed data should be collected. Some areas may be underestimated or overestimated. Given this analysis was conducted using global datasets, the resolution of which is not sufficient for in-situ planning, it should not be used for critical (like life saving) decisions. UNISDR and collaborators should in no case be liable for misuse or misinterpretation of the presented results. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of UNISDR or the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. This analysis was conducted using global datasets, the resolution of which is not relevant for in-situ planning and should not be used for life and death decisions. UNISDR and collaborators should in no case be liable for misuse of the presented results.",
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/multi-hazard-average-annual-loss"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/multi-hazard-average-annual-loss"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2015-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNISDR GAR 2015 Global Risk Assessment",
+            "url": "https://data.humdata.org/dataset/multi-hazard-average-annual-loss"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "GAR 2015 probabilistic risk assessment methodology integrates hazard, exposure, and vulnerability datasets at global scale to calculate multi-hazard average annual loss (AAL) per country. AAL represents the long-term expected economic loss per year, accounting for both frequent low-impact and infrequent high-impact events across five hazard types.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNISDR GAR 2015 Global Risk Assessment",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Probabilistic risk assessment integrating multi-hazard exposure and vulnerability to calculate long-term expected annual losses at country level for earthquake, cyclone wind, storm surge, tsunami, and floods."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3d22ff81",
+          "title": "gar2015.zip",
+          "description": "Multi-hazard Average Annual Loss (Zipped shapefiles of multi-hazard average annual loss (17,903 kb).)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/a3b57464-fa02-49c3-a8a0-3f26e12a7ebf/resource/3d22ff81-7d26-4729-84aa-d4fe692bdc7d/download/gar2015.zip"
+        },
+        {
+          "id": "resource_0c6bfc50",
+          "title": "GAR15 results.xlsm",
+          "description": "Multi-hazard Average Annual Loss (Excel files of multi-hazard average annual loss by country (978 kb).)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a3b57464-fa02-49c3-a8a0-3f26e12a7ebf/resource/0c6bfc50-9f85-45c4-91a9-e43b38daad01/download/gar15-results.xlsm"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Multi-hazard average annual loss from earthquake"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Multi-hazard average annual loss from cyclone wind"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m",
+              "process": "coastal_flood"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Multi-hazard average annual loss from storm surge"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_tsunami",
+              "type": "tsunami",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Multi-hazard average annual loss from tsunami"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Multi-hazard average annual loss from floods"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/multi-hazard-average-annual-loss",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

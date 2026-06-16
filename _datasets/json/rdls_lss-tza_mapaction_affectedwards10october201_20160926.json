@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-tza_mapaction_affectedwards10october201_20160926",
+      "title": "Tanzania affected wards, 10 October 2016 earthquake.",
+      "description": "Affected wards, 10 October 2016 earthquake. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/affected-and-wards-by-10-october-2016-eathquake]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "MapAction",
+        "url": "https://data.humdata.org/dataset/affected-and-wards-by-10-october-2016-eathquake"
+      },
+      "creator": {
+        "name": "MapAction",
+        "url": "https://data.humdata.org/dataset/affected-and-wards-by-10-october-2016-eathquake"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TZA"
+        ]
+      },
+      "temporal": {
+        "start": "2016-09-26"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNDAC Team - Disaster Management Dept. Tanzania",
+            "url": "https://data.humdata.org/dataset/affected-and-wards-by-10-october-2016-eathquake"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event affected ward boundaries were delineated by the UNDAC Team and Tanzanian Disaster Management Department using direct observational and anecdotal data collected in the immediate aftermath of the 10 October 2016 earthquake. Ward-level administrative polygons from TNBS/OCHA were attributed with affected status to create a spatial inventory of earthquake impact.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNDAC Team - Disaster Management Dept. Tanzania",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational and anecdotal data on affected wards following the 10 October 2016 earthquake, collected by the UN Disaster Assessment and Coordination team in Tanzania"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_33bd1497",
+          "title": "tza_admn_ad3_py_s1_wards_TNBS_OCHA_.zip",
+          "description": "Tanzania affected wards, 10 October 2016 earthquake. (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/10957fd9-4aac-4e0a-bac7-5122c8271911/resource/33bd1497-057c-4310-8666-aa68b32b55ae/download/tza_admn_ad3_py_s1_wards_tnbs_ocha_.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by the 10 October 2016 earthquake in Tanzania, mapped at ward administrative level"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/affected-and-wards-by-10-october-2016-eathquake",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
