@@ -1,0 +1,141 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-fsin_regionalreportnutritionwe_2014",
+      "title": "Regional Report on Food Security and Nutrition in West Africa and the Sahel 2024",
+      "description": "The Regional Report on Food Security and Nutrition in West Africa and the Sahel 2024 (RRSAN) provides timely and reliable data needed to address the region's increasing food security and nutrition challenges. It presents data and analyses from the latest March 2024 Cadre Harmonisé (CH) cycle and includes expanded technical analyses by the Permanent Interstate Committee for Drought Control in the Sahel (CILSS) and its partners on the 2023-2024 agricultural campaign.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/regional-report-on-food-security-and-nutrition-in-west-africa-and-the-sahel-2024]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "https://www.fsinplatform.org/regional-report-food-security-and-nutrition-west-africa-and-sahel-2024",
+      "contact_point": {
+        "name": "Food Security Information Network",
+        "url": "https://data.humdata.org/dataset/regional-report-on-food-security-and-nutrition-in-west-africa-and-the-sahel-2024"
+      },
+      "creator": {
+        "name": "Food Security Information Network",
+        "url": "https://data.humdata.org/dataset/regional-report-on-food-security-and-nutrition-in-west-africa-and-the-sahel-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CPV",
+          "BEN",
+          "BFA",
+          "CIV",
+          "GMB",
+          "GHA",
+          "GIN",
+          "GNB",
+          "LBR",
+          "MLI",
+          "MRT",
+          "NER",
+          "SEN",
+          "SLE",
+          "TGO"
+        ]
+      },
+      "temporal": {
+        "start": "2014-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Food Security Information Network (FSIN)",
+            "url": "https://data.humdata.org/dataset/regional-report-on-food-security-and-nutrition-in-west-africa-and-the-sahel-2024"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Permanent Interstate Committee for Drought Control in the Sahel (CILSS)",
+            "url": "https://data.humdata.org/dataset/regional-report-on-food-security-and-nutrition-in-west-africa-and-the-sahel-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset aggregates March 2024 Cadre Harmonisé (CH) cycle data from FSIN and CILSS partners, classifying populations across five food insecurity phases based on standardized vulnerability assessments. Population counts are disaggregated by country, geographical area, and analysis period to quantify food security impacts driven primarily by drought and agricultural stress in West Africa and the Sahel.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Food Security Information Network (FSIN)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Cadre Harmonisé (CH) food security classification data providing population counts across food insecurity phases (1-5) for West Africa and Sahel region."
+          },
+          {
+            "id": "source_2",
+            "name": "Permanent Interstate Committee for Drought Control in the Sahel (CILSS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Technical analyses and agricultural campaign data contributing to food security assessments in the Sahel region."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_94d8ef18",
+          "title": "FSIN-CILSS_RRSAN.xlsx",
+          "description": "Data from the Regional Report on Food Security and Nutrition in West Africa and the Sahel 2024.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/160b1bb3-450d-413e-8a83-2dda2486a951/resource/94d8ef18-b802-448e-9c92-afa6245cb36b/download/cilss-master.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population in food insecurity phases (3-5) due to drought and food crisis in West Africa and Sahel"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/regional-report-on-food-security-and-nutrition-in-west-africa-and-the-sahel-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

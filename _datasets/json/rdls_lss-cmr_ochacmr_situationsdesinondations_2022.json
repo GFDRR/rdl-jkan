@@ -1,0 +1,164 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cmr_ochacmr_situationsdesinondations_2022",
+      "title": "Cameroon - Cameroun - Situations des Inondations",
+      "description": "Ce jeu de données porte sur les inondations au Cameroun et leurs impacts sur la population.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cameroun-situations-des-inondations]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Cameroon",
+        "url": "https://data.humdata.org/dataset/cameroun-situations-des-inondations"
+      },
+      "creator": {
+        "name": "OCHA Cameroon",
+        "url": "https://data.humdata.org/dataset/cameroun-situations-des-inondations"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CMR"
+        ]
+      },
+      "temporal": {
+        "start": "2022-12-06",
+        "end": "2025-10-03"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Government of Cameroon",
+            "url": "https://data.humdata.org/dataset/cameroun-situations-des-inondations"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Croix-Rouge Camerounaise",
+            "url": "https://data.humdata.org/dataset/cameroun-situations-des-inondations"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Flood impact data for Cameroon was collected through direct observational and anecdotal methods by the Government of Cameroon and the Croix-Rouge Camerounaise, compiled and disseminated by OCHA Cameroon. The dataset records post-event flood impacts at the commune and department level, including number of villages touched, affected households, affected persons, and fatalities, aggregated across multiple flood events over several years.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Government of Cameroon",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official government reports providing direct observational and anecdotal data on flood impacts including affected households, persons, and fatalities at commune and department level."
+          },
+          {
+            "id": "source_2",
+            "name": "Croix-Rouge Camerounaise",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Red Cross Cameroon field data contributing to flood situation reports, including affected population counts and village-level impact assessments."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_86094846",
+          "title": "CMR_floods_data_251003.xlsx",
+          "description": "Cameroon - Cameroun - Situations des Inondations (Situation des inondations au 3 Octobre 2025)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/02d4dd29-2ded-4d2a-adeb-2f7f6dd0d69c/resource/86094846-15d0-49db-8ec8-fc67fa0a0646/download/cmr_floods_data_251003.xlsx"
+        },
+        {
+          "id": "resource_e3960cd9",
+          "title": "CMR_floodsData_20241104.xlsx",
+          "description": "Cameroon - Cameroun - Situations des Inondations (Situation des inondations au 4 Novembre 2024)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/02d4dd29-2ded-4d2a-adeb-2f7f6dd0d69c/resource/e3960cd9-45b3-4577-b539-c664fa16e22f/download/cmr_floodsdata_20241104.xlsx"
+        },
+        {
+          "id": "resource_60ec36f5",
+          "title": "CMR_EXNO_Data_InondationLC_MD_MT_V1.0_20221206.xlsx",
+          "description": "Cameroon - Cameroun - Situations des Inondations (Situation des inondations au 6 Décembre 2024)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/02d4dd29-2ded-4d2a-adeb-2f7f6dd0d69c/resource/60ec36f5-59d9-40b6-983d-195b2e660276/download/cmr_exno_data_inondationlc_md_mt_v1.0_20221206.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Number of people and households affected by flooding across communes and departments in Cameroon"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Loss of human lives (Perte en vies humaines) due to flooding events in Cameroon"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cameroun-situations-des-inondations",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

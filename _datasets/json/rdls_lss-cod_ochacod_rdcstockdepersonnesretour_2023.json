@@ -1,0 +1,108 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cod_ochacod_rdcstockdepersonnesretour_2023",
+      "title": "DR Congo - RDC stock de personnes retournées au 31 mai 2025",
+      "description": "Ce fichier contient le stock de personnes retournées au 31 mai 2025. A noter que seuls les personnes retournées au cours de la période de décembre 2023 et mai 2025 (18 derniers mois) sont concernées.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/rdc-stock-de-personnes-retournees-au-31-mai-2025]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Democratic Republic of the Congo (DRC)",
+        "url": "https://data.humdata.org/dataset/rdc-stock-de-personnes-retournees-au-31-mai-2025"
+      },
+      "creator": {
+        "name": "OCHA Democratic Republic of the Congo (DRC)",
+        "url": "https://data.humdata.org/dataset/rdc-stock-de-personnes-retournees-au-31-mai-2025"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2023-12-01",
+        "end": "2025-05-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM)",
+            "url": "https://data.humdata.org/dataset/rdc-stock-de-personnes-retournees-au-31-mai-2025"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM conducted sample surveys to track population movements and returns in the DRC over an 18-month period (December 2023 to May 2025). Data was compiled into a registry of returnees with household and individual-level records, including movement dates, origin/destination locations, and accommodation status, to document post-displacement population recovery.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Population movement tracking data collected through sample surveys documenting returnee flows in the Democratic Republic of the Congo"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_081499aa",
+          "title": "rdc_mouvement_de_population_retourne_mai_2025.xlsx",
+          "description": "DR Congo - RDC stock de personnes retournées au 31 mai 2025 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/68cd0f9e-fa8e-4db6-bda1-6990514fcdf7/resource/081499aa-8cb0-428c-9509-1c19be2bf791/download/rdc_mouvement_de_population_retourne_mai_2025.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population returns following displacement, tracked by movement date and origin/destination locations"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/rdc-stock-de-personnes-retournees-au-31-mai-2025",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

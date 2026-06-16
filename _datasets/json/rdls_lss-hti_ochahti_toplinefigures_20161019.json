@@ -1,0 +1,95 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_ochahti_toplinefigures_20161019",
+      "title": "OCHA Haiti Topline Figures",
+      "description": "Topline figures dataset for OCHA Haiti organisation page. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ocha-haiti-topline-figures]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Haiti",
+        "url": "https://data.humdata.org/dataset/ocha-haiti-topline-figures"
+      },
+      "creator": {
+        "name": "OCHA Haiti",
+        "url": "https://data.humdata.org/dataset/ocha-haiti-topline-figures"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-19"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "Topline figures aggregated from multiple sources documenting cyclone and hurricane impacts on Haiti, compiled by OCHA Haiti for situational awareness and humanitarian response coordination.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Multiple Sources",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d2530424",
+          "title": "topline_figures.csv",
+          "description": "OCHA Haiti Topline Figures (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/1K0qwvwJsluYGWOJ66203RqSSctXEgAdAliVOWdcXVXE/pub?gid=0&single=true&output=csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by cyclones and hurricanes in Haiti"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ocha-haiti-topline-figures",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hdx_totalcostdamagedonenatura_20141111",
+      "title": "Total cost of damage done by natural disasters",
+      "description": "Total cost of damage done by natural disasters. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/total-cost-of-damage-done-by-natural-disasters]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/total-cost-of-damage-done-by-natural-disasters"
+      },
+      "creator": {
+        "name": "Centre for Research on the Epidemiology of Disasters",
+        "url": "https://data.humdata.org/dataset/total-cost-of-damage-done-by-natural-disasters"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2014-11-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Centre for Research on the Epidemiology of Disasters",
+            "url": "https://data.humdata.org/dataset/total-cost-of-damage-done-by-natural-disasters"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Economic damage data compiled by the Centre for Research on the Epidemiology of Disasters from multiple institutions using heterogeneous methodologies to quantify disaster losses. Damage estimates are reported in thousands of US dollars across multiple natural hazard types globally.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Centre for Research on the Epidemiology of Disasters",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Global compilation of economic damage estimates from natural disasters across multiple hazard types and countries, aggregated from various institutional methodologies."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e88c1097",
+          "title": "total-damage-natural-disasters.xlsx",
+          "description": "Total cost of damage done by natural disasters (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f83e5a9a-67d0-4861-aff4-09fc38eb78da/resource/e88c1097-90ee-4594-a806-0db15c530dd9/download/total-damage-natural-disasters.xlsx"
+        },
+        {
+          "id": "resource_ec85d5d1",
+          "title": "total-damage-natural-disasters.csv",
+          "description": "Total cost of damage done by natural disasters (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/f83e5a9a-67d0-4861-aff4-09fc38eb78da/resource/ec85d5d1-cf04-4591-b3c7-16c74c3a421d/download/total-damage-natural-disasters.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total economic damage from flood events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total economic damage from earthquake events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total economic damage from strong wind events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total economic damage from drought events"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total economic damage from wildfire events"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Total economic damage from landslide events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/total-cost-of-damage-done-by-natural-disasters",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

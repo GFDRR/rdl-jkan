@@ -1,0 +1,110 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cod_ochacod_severityneeds",
+      "title": "Democratic Republic of the Congo: Severity of Needs",
+      "description": "The dataset contains severity score of needs per 'zone de santé' (admin level 3).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/drc-severity-of-needs]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Democratic Republic of the Congo (DRC)",
+        "url": "https://data.humdata.org/dataset/drc-severity-of-needs"
+      },
+      "creator": {
+        "name": "OCHA Democratic Republic of the Congo (DRC)",
+        "url": "https://data.humdata.org/dataset/drc-severity-of-needs"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian Partners",
+            "url": "https://data.humdata.org/dataset/drc-severity-of-needs"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Severity of needs scores were compiled from multiple humanitarian partner assessments and aggregated to zone de santé (health zone, admin level 3) administrative units. The methodology is documented in the 2021 HNO for DRC, representing post-event or ongoing humanitarian impact assessment data.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian Partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-agency humanitarian assessments aggregated to produce severity of needs scores at health zone level for the 2021 Humanitarian Needs Overview"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://reliefweb.int/sites/reliefweb.int/files/resources/hno_2021-final_0.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_22aa12e7",
+          "title": "severite_hno_2021.xlsx",
+          "description": "Democratic Republic of the Congo: Severity of Needs (Severity of needs - HNO 2021)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f3178bdb-e43c-4e4a-b60e-b2e77fd57944/resource/22aa12e7-ea7d-4aa3-bea6-6530f5b029a5/download/severite_hno_2021.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Severity of humanitarian needs per health zone derived from multi-source humanitarian partner assessments"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/drc-severity-of-needs",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

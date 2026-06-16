@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cod_ochacod_mouvementdepopulation",
+      "title": "DR Congo - Mouvement de population",
+      "description": "la valeur pour les personnes déplacées est calculé pour une période de 24 mois sur la date d'évaluation. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mouvement-de-population]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Democratic Republic of the Congo (DRC)",
+        "url": "https://data.humdata.org/dataset/mouvement-de-population"
+      },
+      "creator": {
+        "name": "OCHA Democratic Republic of the Congo (DRC)",
+        "url": "https://data.humdata.org/dataset/mouvement-de-population"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OCHA DR Congo",
+            "url": "https://data.humdata.org/dataset/mouvement-de-population"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Displacement figures were compiled by OCHA DR Congo from field assessments and administrative records, with values calculated as cumulative population movements over rolling 24-month periods relative to the assessment date.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA DR Congo",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Administrative displacement monitoring data compiled by OCHA for the Democratic Republic of the Congo, tracking population movements over 24-month periods."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0fee2f84",
+          "title": "RDC_mouvement_de_population_deplacé_Juin_2021.xlsx",
+          "description": "DR Congo - Mouvement de population (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/99c44e7b-cee4-46dd-bca9-107c1616b53d/resource/0fee2f84-061d-4d02-8185-2e05702d7265/download/rdc_mouvement_de_population_deplace_juin_2021.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement counts over a 24-month assessment period"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mouvement-de-population",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

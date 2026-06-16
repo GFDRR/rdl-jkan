@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_confinamiento_2013",
+      "title": "Colombia - Confinamiento",
+      "description": "Desde julio de 2013 la oficina de OCHA en Colombia estableció un marco para el monitoreo del confinamiento. Según este marco, una población se encuentra confinada cuando sufre limitaciones a su libre movilidad por un período igual o superior a una semana, y además tiene acceso limitado a tres bienes o servicios básicos, como: educación, salud, agua y saneamiento, medios de vida, entre otros.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/confinamiento]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "La información disponible no refleja la totalidad del fenómeno pues depende de reportes consolidados por OCHA y los Equipos Humanitarios Locales; de tal forma que puede haber vacíos de información en zonas con menos presencia de organizaciones internacionales.",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/confinamiento"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/confinamiento"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2013-01-01",
+        "end": "2015-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "OCHA Colombia established a monitoring framework in July 2013 to track population confinement through direct observational and anecdotal data collection. Confinement is defined as restricted mobility lasting ≥1 week combined with limited access to ≥3 basic services (education, health, water/sanitation, livelihoods). Monthly aggregated figures are compiled into a time-series dataset for humanitarian monitoring and response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Colombia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational monitoring data on confined populations in Colombia, tracking monthly figures of people experiencing mobility restrictions and limited access to essential services due to conflict."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3fb3f50e",
+          "title": "Confinamiento mensual.csv",
+          "description": "Colombia - Confinamiento (Confinamiento mensual.csv)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/24c09bab-af17-406f-8ec1-9bd7ddeca08d/resource/3fb3f50e-6bb7-44af-8ac9-6e50db433f67/download/confinamiento-mensual.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by conflict-related confinement with restricted access to basic services"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/confinamiento",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

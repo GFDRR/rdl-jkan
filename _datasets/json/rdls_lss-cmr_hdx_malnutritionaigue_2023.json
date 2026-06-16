@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cmr_hdx_malnutritionaigue_2023",
+      "title": "Cameroon - Cameroun : Malnutrition Aiguë",
+      "description": "Ce jeu de données présente un tableau de population détaillant la situation actuelle pour les zones analysées, incluant 32 départements, 4 régions et des sites de réfugiés centrafricains et nigérians pour la période 2023-2024.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/cameroun-analyse-analyse-ipc-de-la-malnutrition-aigue]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Le nombre de cas attendus de malnutrition aiguë chez les enfants a été calculé à l'aide de la formule suivante : n*p*k, où n est le nombre d'enfants de 6-59 projeté de 2024, p est la prévalence (MAM ou MAS) de la malnutrition aiguë et k est le facteur de correction (incidence 2,6 - MAS et 1,5 - MAM). Chez les Femmes Enceintes et Femmes Allaitantes (FEFA) les prévalences ne sont disponibles que pour les 4 régions prioritaires (EN, NO, AD, ES) et l'incidence est de k=1.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/cameroun-analyse-analyse-ipc-de-la-malnutrition-aigue"
+      },
+      "creator": {
+        "name": "IPC",
+        "url": "https://data.humdata.org/dataset/cameroun-analyse-analyse-ipc-de-la-malnutrition-aigue"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CMR"
+        ]
+      },
+      "temporal": {
+        "start": "2023-01-01",
+        "end": "2024-10-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IPC (Integrated Food Security Phase Classification)",
+            "url": "https://data.humdata.org/dataset/cameroun-analyse-analyse-ipc-de-la-malnutrition-aigue"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IPC acute malnutrition data collected and classified across 32 departments, 4 regions, and refugee sites in Cameroon for November 2023 to October 2024. Population affected by Global Acute Malnutrition (GAM) and Severe Acute Malnutrition (SAM) were assessed using IPC standardized methodology and aggregated by administrative and population group boundaries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IPC (Integrated Food Security Phase Classification)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IPC acute malnutrition classification system providing standardized assessment of malnutrition prevalence and severity across administrative divisions and refugee populations in Cameroon for 2023-2024."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ipcinfo.org/fileadmin/user_upload/ipcinfo/docs/IPC_Cameroun_Acute_Malnutrition_Nov2023_Oct2024_Report_French.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_dbd0c53b",
+          "title": "cmr-ipc-nov2023-dec2024",
+          "description": "Cameroon - Cameroun : Malnutrition Aiguë (Tableau de population de la situation actuelle pour les zones analysées)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8940bf33-e2c3-470e-8ef5-6d90ce71c23c/resource/dbd0c53b-b76c-4e49-ac66-b43455718613/download/cmr-ipc-novembre2023-decembre2024.xlsx"
+        },
+        {
+          "id": "resource_07a6d31d",
+          "title": "Cameroon_Burden et CSL 2021",
+          "description": "Cameroon - Cameroun : Malnutrition Aiguë (Cameroon_Burden et CSL 2021)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a8a3ea15-527a-425f-b4ea-d421130696cf/resource/fa35bfec-efe6-4b5c-a489-4c4b8191da06/download/cameroon_burden-et-csl-2021.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by acute malnutrition (Global Acute Malnutrition and Severe Acute Malnutrition) classified by IPC methodology"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/cameroun-analyse-analyse-ipc-de-la-malnutrition-aigue",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

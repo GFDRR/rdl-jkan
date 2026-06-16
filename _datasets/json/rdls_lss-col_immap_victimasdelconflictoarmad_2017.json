@@ -1,0 +1,156 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_immap_victimasdelconflictoarmad_2017",
+      "title": "Víctimas del conflicto armado colombiano por hechos registrados entre 2017 y 2021",
+      "description": "Esta base de datos, extraída del portal de datos abiertos de la Unidad para la Atención Integral y Reparación a las Víctimas, contiene el número de víctimas por hechos del conflicto armado en Colombia entre 2017-2021 desagregado por hecho victimizante, departamento de ocurrencia, sexo, etnia y condición de discapacidad. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/victimas-del-conflicto-armado-colombiano-por-hechos-registrados-entre-2017-y-2021]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/victimas-del-conflicto-armado-colombiano-por-hechos-registrados-entre-2017-y-2021"
+      },
+      "creator": {
+        "name": "iMMAP Inc.",
+        "url": "https://data.humdata.org/dataset/victimas-del-conflicto-armado-colombiano-por-hechos-registrados-entre-2017-y-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2017-01-01",
+        "end": "2021-12-31"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Unidad para la Atención Integral y Reparación a las Víctimas (UARIV)",
+            "url": "https://data.humdata.org/dataset/victimas-del-conflicto-armado-colombiano-por-hechos-registrados-entre-2017-y-2021"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Administrative registry data extracted from the Colombian government's UARIV open data portal, documenting individual victimization events from armed conflict between 2017-2021, disaggregated by victimization type, department, sex, ethnicity, and disability status to enable impact assessment and reparations planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Unidad para la Atención Integral y Reparación a las Víctimas (UARIV)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official registry of victims of armed conflict in Colombia, recording victimization events disaggregated by type, location, demographics, and vulnerability status."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d14adc69",
+          "title": "victimas_hecho_dpto_2017_2021.xlsx",
+          "description": "Víctimas del conflicto armado colombiano por hechos registrados entre 2017 y 2021 (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/1b2b2d17-c66a-4f67-bdbd-9bc7d32c2c04/resource/d14adc69-7ce2-43b1-91f5-c0ea2e973055/download/victimas_hecho_dpto_2017_2021.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Affected population from armed conflict violence events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from armed conflict events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from armed conflict violence"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/victimas-del-conflicto-armado-colombiano-por-hechos-registrados-entre-2017-y-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

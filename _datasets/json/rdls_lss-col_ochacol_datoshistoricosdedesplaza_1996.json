@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_ochacol_datoshistoricosdedesplaza_1996",
+      "title": "Colombia - Datos históricos de desplazamiento a nivel municipal",
+      "description": "Número de desplazados por municipio según el Registro Único de Víctimas de la Unidad de Atención y Reparación Integral a las Víctimas (UARIV).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/idps-data-by-year-and-municipality]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "Los datos para 2014 tienen como fecha de corte Septiembre de este mismo año.",
+      "contact_point": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/idps-data-by-year-and-municipality"
+      },
+      "creator": {
+        "name": "OCHA Colombia",
+        "url": "https://data.humdata.org/dataset/idps-data-by-year-and-municipality"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "1996-01-01",
+        "end": "2014-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Unidad de Atención y Reparación Integral a las Víctimas (UARIV)",
+            "url": "https://data.humdata.org/dataset/idps-data-by-year-and-municipality"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historical displacement data compiled from the UARIV registry, which systematically records internally displaced persons by municipality. The dataset aggregates administrative victim registration records covering the period 1999-2014, providing municipal-level counts of displacement events and affected populations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Unidad de Atención y Reparación Integral a las Víctimas (UARIV)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official registry of victims and displaced persons in Colombia, providing administrative records of internally displaced populations by municipality from 1999-2014."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_650ae95a",
+          "title": "Desplazamiento 1999-2014.xlsx",
+          "description": "Colombia - Datos históricos de desplazamiento a nivel municipal (Desplazamiento 1999-2014.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/404caaab-3746-43bf-a61e-23c81187ef03/resource/650ae95a-47aa-4da8-b161-13b54946c9e7/download/desplazamiento-1999-2014.xlsx"
+        },
+        {
+          "id": "resource_cbf5feee",
+          "title": "Desplazamiento 1999-2014.csv",
+          "description": "Colombia - Datos históricos de desplazamiento a nivel municipal (Desplazamiento 1999-2014.csv)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/404caaab-3746-43bf-a61e-23c81187ef03/resource/cbf5feee-daa9-47e0-8f1e-ab706cb2173e/download/desplazamiento-1999-2014.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons registered by municipality from armed conflict and violence"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/idps-data-by-year-and-municipality",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

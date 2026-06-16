@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-col_unosat_buildingdamageassessmentc_20170412",
+      "title": "Colombia - Building Damage Assessment in the city of Mocoa",
+      "description": "Following a large mudflow that hit the city of Mocoa (Department of Putumayo, Colombia) on 31 March 2017 as a consequence of the heavy rains, the International Charter Space and Major Disasters has been activated upon the request of the National Unit for Disaster Risk Management (UNGRD) / Unidad Nacional para la Gestion del Riesgo de Desastres, IDEAM. In response to this emergency, UNITAR-UNOSAT has carried out satellite based damage analysis to assess (visible) building structural damage caused by mudflows. This map illustrates satellite-detected damaged structures including building damage density in Mocoa city and its surroundings. Analysis has been undertaken by using post satellite imagery acquired by Pleiades and Geoeye-1 satellites on the 7 and 10 April 2017 and pre satellite images acquired by Worldview-2 & 1 satellites on the 21 December 2016 and 26 December 2013. As result of UNOSAT satellite analysis, a total of 1,082 buildings were detected as damaged of which 736 observed as destroyed or washed out by mudflow and 346 observed as severely damaged. Due to the pronounced incident angle and cloud cover of the satellite images, UNITAR-UNOSAT has also used orthophotos collected by Corpoamazonia in order to validate satellite based analysis. Orthophotos and additional baseline data were provided by OSM Humanitarian Mapping Unit and UMAIC (Unidad de Manejo y Analisis de Informacion de Colombia) who is also providing information management coordination support for this event. Kindly note that the number of damaged structures could have been underestimated due to the parameters of the images. This analysis has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/building-damage-assessment-in-the-city-of-mocoa-colombia]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assessment-in-the-city-of-mocoa-colombia"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assessment-in-the-city-of-mocoa-colombia"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COL"
+        ]
+      },
+      "temporal": {
+        "start": "2017-04-12"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared multi-temporal satellite imagery acquired before and after the 31 March 2017 mudflow event in Mocoa, Colombia. Notable changes in building structures were identified and classified by damage status and confidence level. The resulting geodatabase contains satellite-detected damaged building footprints with validation and confidence metadata.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using multi-temporal imagery analysis to detect visible building structural damage caused by the mudflow event in Mocoa on 31 March 2017."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3ae21d18",
+          "title": "LS20170403COL.gdb.zip",
+          "description": "Colombia - Building Damage Assessment in the city of Mocoa (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/CO/LS20170403COL/LS20170403COL.gdb.zip"
+        },
+        {
+          "id": "resource_1b5716ba",
+          "title": "LS20170403COL_SHP.zip",
+          "description": "Colombia - Building Damage Assessment in the city of Mocoa (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/CO/LS20170403COL/LS20170403COL_SHP.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building structural damage from mudflow event detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/building-damage-assessment-in-the-city-of-mocoa-colombia",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

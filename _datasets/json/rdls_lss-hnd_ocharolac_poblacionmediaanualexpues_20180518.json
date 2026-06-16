@@ -1,0 +1,126 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hnd_ocharolac_poblacionmediaanualexpues_20180518",
+      "title": "Honduras Población Media Anual Expuesta a Inundaciones 1995-2015",
+      "description": "El indicador representa la población anual promedio que pueda ser afectada, desaparecida, herida, muerta, reubicada, víctima o evacuada por inundaciones, según registros históricos en la base de datos DesInventar durante el periodo de 1995-2015.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-inundaciones-1995-2015]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "* [INFORM Honduras.](http://www.inform-index.org/Subnational/Honduras) * Dimensión: Peligro y Exposición * Categoría: Peligros Naturales * Componente: Inundaciones",
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-inundaciones-1995-2015"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-inundaciones-1995-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HND"
+        ]
+      },
+      "temporal": {
+        "start": "2018-05-18"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "DesInventar",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-inundaciones-1995-2015"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Instituto Nacional de Estadística de Guatemala - INE",
+            "url": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-inundaciones-1995-2015"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Annual average population exposure to flooding was calculated from historical disaster impact records in the DesInventar database covering 1995-2015, aggregating reported cases of affected, missing, injured, dead, displaced, and evacuated persons across Honduras to derive mean annual exposure figures.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "DesInventar",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Historical disaster impact registry database providing records of flood-affected populations in Honduras from 1995-2015"
+          },
+          {
+            "id": "source_2",
+            "name": "Instituto Nacional de Estadística de Guatemala - INE",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National statistics institute contributing demographic and disaster impact data to the compilation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_03be6f70",
+          "title": "2-PE.NAT.IND-ABS - Población Media Anual Expuesta a Inundaciones (absoluto).xlsx",
+          "description": "Honduras Población Media Anual Expuesta a Inundaciones 1995-2015 (Población promedio anual afectada por inundaciones 1995-2015)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c033299a-6a6e-4ddd-ba72-1375be682991/resource/03be6f70-ab34-48c4-8c00-86b81fffaabf/download/2-pe.nat.ind-abs-poblacion-media-anual-expuesta-a-inundaciones-absoluto.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Annual average population exposed to flooding impacts including affected, missing, injured, dead, displaced, and evacuated persons"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/honduras-poblacion-media-anual-expuesta-a-inundaciones-1995-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

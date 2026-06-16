@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-cod_fewsnet_democraticrepublicmostlik_2019",
+      "title": "Congo, The Democratic Republic of the Most Likely FEWS NET Acutely Food Insecure Population Estimates Data",
+      "description": "Congo, The Democratic Republic of the Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2019. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/congo__the_democratic_republic_of_the_most_likely_fewsnet_fipe]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Acutely Food Insecure Population Estimates in different scenarios collected by FEWS NET enumerators on a regular schedule (typically monthly).",
+      "contact_point": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/congo__the_democratic_republic_of_the_most_likely_fewsnet_fipe"
+      },
+      "creator": {
+        "name": "FEWS NET",
+        "url": "https://data.humdata.org/dataset/congo__the_democratic_republic_of_the_most_likely_fewsnet_fipe"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2019-07-01",
+        "end": "2026-05-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "FEWS NET enumerators collected acutely food insecure population estimates on a monthly schedule throughout 2019 in the Democratic Republic of the Congo, generating scenario-based estimates of populations facing acute food insecurity as a proxy impact of underlying hazards (primarily drought and conflict-related disruptions).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "FEWS NET",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Famine Early Warning Systems Network (FEWS NET) conducts regular enumerator-based assessments of acutely food insecure populations across multiple scenarios to monitor food security crises."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_858489a9",
+          "title": "Congo, The Democratic Republic of the Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2019",
+          "description": "Congo, The Democratic Republic of the Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2019",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://fdw.fews.net/api/ipcpopulationsize/?preference=best&country=CD&scenario=ML&format=xlsx"
+        },
+        {
+          "id": "resource_1cc2da66",
+          "title": "Congo, The Democratic Republic of the Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2019",
+          "description": "Congo, The Democratic Republic of the Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2019",
+          "media_type": "text/csv",
+          "download_url": "https://fdw.fews.net/api/ipcpopulationsize/?preference=best&country=CD&scenario=ML&format=csv"
+        },
+        {
+          "id": "resource_1e98f560",
+          "title": "Congo, The Democratic Republic of the Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2019",
+          "description": "Congo, The Democratic Republic of the Most Likely FEWS NET Acutely Food Insecure Population Estimates Data from 2019",
+          "media_type": "application/json",
+          "download_url": "https://fdw.fews.net/api/ipcpopulationsize/?preference=best&country=CD&scenario=ML&format=json"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acutely food insecure population estimates derived from drought-related food security assessments"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/congo__the_democratic_republic_of_the_most_likely_fewsnet_fipe",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
