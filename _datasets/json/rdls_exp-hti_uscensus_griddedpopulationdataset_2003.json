@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-hti_uscensus_griddedpopulationdataset_2003",
+      "title": "Haiti Gridded Population Dataset",
+      "description": "Haiti was chosen as the pilot country for developing our population mapping methods, based on its high frequency of hurricanes and other natural disasters in the recent past. We found a clear correlation between built-up area density derived from interpretation of high- and medium-resolution satellite imagery and data from the 2003 national census. The resulting 100-meter gridded population map is the finest-scale demographic map of the country ever produced. It was made available to the public the day after the devastating earthquake of January 2010, and has been used extensively for disaster relief. The methods used in the Haiti project are described in a paper published in the International Journal of Remote Sensing.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/haiti-gridded-population-data]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "U.S. Census Bureau",
+        "url": "https://data.humdata.org/dataset/haiti-gridded-population-data"
+      },
+      "creator": {
+        "name": "U.S. Census Bureau",
+        "url": "https://data.humdata.org/dataset/haiti-gridded-population-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2003-01-01",
+        "end": "2003-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Haiti 2003 National Census",
+            "url": "https://data.humdata.org/dataset/haiti-gridded-population-data"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "High- and medium-resolution satellite imagery",
+            "url": "https://data.humdata.org/dataset/haiti-gridded-population-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "High- and medium-resolution satellite imagery was interpreted to derive built-up area density, which was correlated with 2003 national census data to produce a 100-meter gridded population map. Multiple spatial datasets were combined with census data and estimates to generate the final gridded population layer.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Haiti 2003 National Census",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Census population data integrated with satellite-derived built-up area density to create gridded population estimates"
+          },
+          {
+            "id": "source_2",
+            "name": "High- and medium-resolution satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite imagery interpreted to derive built-up area density as a proxy for population distribution"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_5b083aed",
+          "title": "haiti-gridded-population-estimates-2003.zip",
+          "description": "Haiti Gridded Population Dataset (100-meter spatial resolution gridded population dataset.)",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/390c0013-9e21-4bbd-ba79-4439139d2086/resource/5b083aed-7642-4e6d-bc82-812ee35fd1b0/download/haiti-gridded-population-estimates-2003.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population estimates at 100-meter resolution derived from 2003 census data and built-up area density from satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/haiti-gridded-population-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
