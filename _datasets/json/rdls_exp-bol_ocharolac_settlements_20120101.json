@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-bol_ocharolac_settlements_20120101",
+      "title": "Bolivia - Settlements",
+      "description": "Populated places. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/bolivia-settlements]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "**Languages:** ES The data is updated each 10 to 12 years The source is a government open data site Geo Node Bolivia https://geo.gob.bo",
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/bolivia-settlements"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/bolivia-settlements"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BOL"
+        ]
+      },
+      "temporal": {
+        "start": "2012-01-01"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Geo Bolivia",
+            "url": "https://data.humdata.org/dataset/bolivia-settlements"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Census data from Geo Bolivia was spatially referenced and compiled into a settlement-level geodataset with population and dwelling unit counts, classified by settlement type and administrative divisions as of 2012.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Geo Bolivia",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Census-based geospatial inventory of populated places in Bolivia with population and housing unit counts by settlement."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_dcda7c81",
+          "title": "Bolivia Lugares poblados-2012.zip",
+          "description": "Bolivia - Settlements (Bolivia Lugares poblados-2012.zip)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/9fbe6437-8da6-4024-9d59-ea7fc19612a1/resource/dcda7c81-e53b-4318-89a5-d0b749fe0c3b/download/bolivia-lugares-poblados-2012.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Populated settlements with census-based population counts and household numbers"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Residential dwelling units enumerated by settlement from census data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/bolivia-settlements",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

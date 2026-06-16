@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-bfa_ochabfa_roads_20221031",
+      "title": "Burkina Faso: Roads",
+      "description": "This dataset contains roads data from OpenStreetMap for which attributes and classifications have been enhanced using maps from the government. The new classifications added based on the government maps are using the attribute igb_class: Igb_class = 2: for Major roads Igb_class = 1 or 3 : for Minor roads. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/burkina-faso-roads]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "This data was processed and validated by the humanitarian partners.",
+      "contact_point": {
+        "name": "OCHA Burkina Faso",
+        "url": "https://data.humdata.org/dataset/burkina-faso-roads"
+      },
+      "creator": {
+        "name": "OCHA Burkina Faso",
+        "url": "https://data.humdata.org/dataset/burkina-faso-roads"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BFA"
+        ]
+      },
+      "temporal": {
+        "start": "2022-10-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OpenStreetMap contributors",
+            "url": "https://data.humdata.org/dataset/burkina-faso-roads"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Government of Burkina Faso maps",
+            "url": "https://data.humdata.org/dataset/burkina-faso-roads"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Road network geometry and attributes were sourced from OpenStreetMap contributors and enhanced with government-derived road classifications (igb_class) to distinguish major and minor roads. The dataset provides a comprehensive infrastructure inventory with attributes including surface type, condition, number of lanes, and administrative classification for disaster risk assessment purposes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OpenStreetMap contributors",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Base road network geometry and attributes from OpenStreetMap"
+          },
+          {
+            "id": "source_2",
+            "name": "Government of Burkina Faso maps",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Enhanced road classification attributes (igb_class) based on government mapping data"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d579b75d",
+          "title": "bfa_roads.zip",
+          "description": "Burkina Faso: Roads (Burkina Faso road data)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/cb636d8a-2e44-46e3-8f7e-c97d76de70d5/resource/d579b75d-58d5-46f9-af8f-4211b49cac5f/download/bfa_trs_roads_osm-hdx.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road network with geometric and classification attributes including surface type, condition, and administrative classification"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/burkina-faso-roads",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

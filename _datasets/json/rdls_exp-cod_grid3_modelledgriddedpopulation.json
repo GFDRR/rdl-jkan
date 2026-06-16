@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-cod_grid3_modelledgriddedpopulation",
+      "title": "Modelled gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo 2018, version 2.0",
+      "description": "These data were produced by the WorldPop Research Group at the University of Southampton. This work is part of the GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development) project funded by the Bill and Melinda Gates Foundation (BMGF) and the United Kingdom Foreign, Commonwealth & Development Office (OPP1182425). Project partners include WorldPop at the University of Southampton, the United Nations Population Fund ( UNFPA ), Center for International Earth Science Information Network ( CIESIN ) in the Earth Institute at Columbia University, and the Flowminder Foundation. The modelling work was led by Gianluca Boo and Edith Darin with the support from Douglas R. Leasure and Claire A. Dooley. Coordination was provided by Heather R. Chamberlain and oversight by Andrew J. Tatem and Attila N. Lazar. The support of the whole WorldPop Research Group is acknowledged. The UCLA-DRC Health Research and Training Program, the Kinshasa School of Public Health (KSPH), and the Bureau Central du Recensement (BCR) coordinated and conducted the two microcensus rounds. The Oak Ridge National Laboratory contributed to the first round of microcensus. We acknowledge the contribution of the many individuals within these institutions. Recommended citation: Boo G, Darin E, Leasure DR, Dooley CA, Chamberlain HR, Lazar AN, Tatem AJ. 2020. Modelled gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo, version 2.0. WorldPop, University of Southampton. doi:10.5258/SOTON/WP00669. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-cod-2018-v2]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "details": "__Recommended citation:__ _Boo G, Darin E, Leasure DR, Dooley CA, Chamberlain HR, Lazar AN, Tatem AJ. 2020. Modelled gridded population estimates for the Kinshasa, Kongo-Central, Kwango, Kwilu, and Mai-Ndombe provinces in the Democratic Republic of the Congo, version 2.0. WorldPop, University of Southampton. doi:10.5258/SOTON/WP00669_ For further details, please, read COD_population_v2_0_README.pdf Contact release@worldpop.org for more information.",
+      "contact_point": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-cod-2018-v2"
+      },
+      "creator": {
+        "name": "GRID3",
+        "url": "https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-cod-2018-v2"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WorldPop Research Group",
+            "url": "https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-cod-2018-v2"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development)",
+            "url": "https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-cod-2018-v2"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Gridded population estimates were produced by WorldPop using census data integrated with satellite imagery and spatial modeling techniques to generate high-resolution population density grids at approximately 100m resolution. The dataset was developed as part of the GRID3 project to provide geo-referenced demographic data for development and disaster risk assessment in five provinces of the Democratic Republic of the Congo.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WorldPop Research Group",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Produces gridded population estimates using census data, satellite imagery, and spatial modeling techniques to generate high-resolution population density maps."
+          },
+          {
+            "id": "source_2",
+            "name": "GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Compilation project that integrates geo-referenced demographic and infrastructure data for development planning, funded by BMGF and UK FCDO."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1ef048d7",
+          "title": "COD_population_v2_0_gridded.zip",
+          "description": "Bottom-up gridded population estimates (100m) for Democratic Republic of the Congo. This zip file contains a geotiff raster with estimates of total population size for each approximately 100 m grid cell across the study area. It also contains a geotiff raster with estimates of uncertainty in the population estimates.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/113"
+        },
+        {
+          "id": "resource_14bff7cf",
+          "title": "COD_population_v2_0_agesex.zip",
+          "description": "Bottom-up gridded population estimates (~100m) for specific age-sex groups. This zip file contains geotiff rasters with estimates of population sizes for individual age-sex groups for each approximately 100 m grid cell across the study area.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/120"
+        },
+        {
+          "id": "resource_2e148d79",
+          "title": "COD_population_v2_0_mastergrid.tif",
+          "description": "Mastergrid for gridded population estimates. This geotiff raster contains the mastergrid used to define where population estimates were made. It contains a value of 1 where population estimates were made and a value of 0 or NA everywhere else. Cell IDs from the mastergrid can be used to lookup values in the SQL database.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://wopr.worldpop.org/download/117"
+        },
+        {
+          "id": "resource_a7d68735",
+          "title": "COD_population_v2_0_README.pdf",
+          "description": "README: COD Population v2.0. This README file provides information about the data included in the data release, how it was produced, source data that were used, and known assumptions and limitations of the results.",
+          "media_type": "application/pdf",
+          "download_url": "https://wopr.worldpop.org/download/114"
+        },
+        {
+          "id": "resource_427c1736",
+          "title": "COD_population_v2_0_sql.sql",
+          "description": "SQL database with Bayesian posterior population predictions. This SQLite database contains samples from the Bayesian posterior predictions of population size in each grid cell. The database can be used to develop applications that query the population estimates",
+          "format": "SQL",
+          "download_url": "https://wopr.worldpop.org/download/115"
+        },
+        {
+          "id": "resource_f3e6ec8d",
+          "title": "COD_population_v2_0_tiles.zip",
+          "description": "Image tiles for gridded population estimates. These image tiles (XYZ format) allow for rapid display of the 100 m gridded population estimates across the study area in web applications.",
+          "format": "PNG",
+          "download_url": "https://wopr.worldpop.org/download/116"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population estimates by age and sex for five provinces in Democratic Republic of the Congo"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/modelled-gridded-population-estimates-for-cod-2018-v2",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
