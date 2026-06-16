@@ -1,0 +1,114 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ssd_unosat_damagedensitymapmorobokay_20170408",
+      "title": "South Sudan - Damage density map in Morobo-Kaya road, Nahr Yei district",
+      "description": "This map illustrates satellite-detected damage density along the road connecting the cities of Morobo and Koya, Nahr Yei district, Central Equatoria, South Sudan. Using satellite imagery acquired 05 March 2017, UNITAR - UNOSAT identified a total of around 7,800 destroyed structures within the analysis extent of the current map (approximately 600 square kilometers). The whole analysis over the Nahr Yei district covers an area of approximately 3,640 square kilometers, and the results show over 18,300 destroyed structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-density-map-morobo-kaya-road-nahr-yei-district-south-sudan]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-density-map-morobo-kaya-road-nahr-yei-district-south-sudan"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-density-map-morobo-kaya-road-nahr-yei-district-south-sudan"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2017-04-08"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNITAR-UNOSAT",
+            "url": "https://data.humdata.org/dataset/damage-density-map-morobo-kaya-road-nahr-yei-district-south-sudan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Damage assessment derived from visual interpretation of satellite imagery acquired 05 March 2017, comparing imagery to identify destroyed structures. Analysts reviewed imagery and classified damage density across approximately 3,640 square kilometers of Nahr Yei district.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNITAR-UNOSAT",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-event imagery to identify and classify structural damage through visual interpretation"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bc315a1f",
+          "title": "CE20131218SSD_Yei_5Mar2017.gdb.zip",
+          "description": "South Sudan - Damage density map in Morobo-Kaya road, Nahr Yei district (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_Yei_5Mar2017.gdb.zip"
+        },
+        {
+          "id": "resource_f7ef30ff",
+          "title": "CE20131218SSD_Yei_5Mar2017_shp.zip",
+          "description": "South Sudan - Damage density map in Morobo-Kaya road, Nahr Yei district (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/SS/CE20131218SSD/CE20131218SSD_Yei_5Mar2017_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Satellite-detected destroyed structures from conflict-related damage along Morobo-Kaya road corridor"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-density-map-morobo-kaya-road-nahr-yei-district-south-sudan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

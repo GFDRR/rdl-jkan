@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ner_unhcr_wfpjointassessmentmission_2022",
+      "title": "Niger - UNHCR/WFP Joint Assessment Mission in the regions of Diffa, Marradi, Tahoua,Tillabéri - Niger 2022",
+      "description": "In 2022, Niger totalled more than 700.000 displaced population of which 250000 plus were refugees and asylum seekers. In the meantime, the country suffered an unprecedented food crisis. In these settings, the UNHCR and WFP carried-out between October 12 and November 4th, 2022, a joint assessment mission (JAM) to assess the situation and provide support to refugees, asylum seekers, internally Displaced (IDPs) and Host community members in the four regions of Diffa, Maradi, Tahoua, and Tillabéri in Niger. The data was collected from about 4600+ households with the specific objectives of assessing the basic needs, shelter, food security, nutrition, water and sanitation, education, protection, security, common services, and livelihoods of forcible displaced people to inform and improve humanitarian assistance.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unhcr-ner-2022-jam-v2-1]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The data must be requested via the resource download link",
+      "contact_point": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/unhcr-ner-2022-jam-v2-1"
+      },
+      "creator": {
+        "name": "UNHCR - The UN Refugee Agency",
+        "url": "https://data.humdata.org/dataset/unhcr-ner-2022-jam-v2-1"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NER"
+        ]
+      },
+      "temporal": {
+        "start": "2022-10-12",
+        "end": "2022-11-04"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP",
+            "url": "https://data.humdata.org/dataset/unhcr-ner-2022-jam-v2-1"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sample survey data collected from 4,600+ households across four regions of Niger (Diffa, Maradi, Tahoua, Tillabéri) through face-to-face interviews conducted jointly by UNHCR and WFP between October 12 and November 4, 2022. The assessment targeted refugees, asylum seekers, internally displaced persons, and host community members to evaluate food security, health, nutrition, livelihoods, and protection needs in response to displacement crises and food insecurity.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNHCR - The UN Refugee Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Joint assessment mission data on refugee, asylum seeker, and IDP populations and their humanitarian needs"
+          },
+          {
+            "id": "source_2",
+            "name": "WFP",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Food security and nutrition assessment data from the joint assessment mission"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_02d00819",
+          "title": "Niger - UNHCR/WFP Joint Assessment Mission in the regions of Diffa, Marradi, Tahoua,Tillabéri - Niger 2022",
+          "description": "Clicking 'Download' leads outside HDX where you can request access to the data in csv, xlsx & dta formats",
+          "access_url": "https://microdata.unhcr.org/index.php/auth/login/?destination=catalog/945/get-microdata",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_f651e63d",
+          "title": "Codebook",
+          "description": "Niger - UNHCR/WFP Joint Assessment Mission in the regions of Diffa, Marradi, Tahoua,Tillabéri - Niger 2022 (Contains information about the dataset's metadata and data)",
+          "media_type": "application/pdf",
+          "download_url": "https://microdata.unhcr.org/index.php/catalog/945/pdf-documentation"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity and humanitarian needs affecting displaced populations and host communities"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons and refugee populations in Niger"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unhcr-ner-2022-jam-v2-1",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

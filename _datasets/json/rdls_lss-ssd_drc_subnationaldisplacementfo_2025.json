@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ssd_drc_subnationaldisplacementfo_2025",
+      "title": "South Sudan - Subnational Displacement Forecasts",
+      "description": "Displacement forecasts for South Sudan at admin 2 level for the coming three month period based on the AHEAD model. The files contain three types of values: 'observed' values are drawn from official sources on the numbers of displaced in each area. 'estimated' values are model estimates of how displacement has evolved up until now, based on known values of conflict, food security, etc. 'forecasted' values are model estimates of the next three months from the point of now.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/south-sudan-subnational-displacement-forecasts]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "The model structure treats the months with missing displacement data as additional parameters to be inferred and this allows us to work with datasets on displacement that contain gaps and missing information.",
+      "contact_point": {
+        "name": "Danish Refugee Council",
+        "url": "https://data.humdata.org/dataset/south-sudan-subnational-displacement-forecasts"
+      },
+      "creator": {
+        "name": "Danish Refugee Council",
+        "url": "https://data.humdata.org/dataset/south-sudan-subnational-displacement-forecasts"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SSD"
+        ]
+      },
+      "temporal": {
+        "start": "2025-11-01",
+        "end": "2026-03-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IOM",
+            "url": "https://data.humdata.org/dataset/south-sudan-subnational-displacement-forecasts"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Observed IDP counts from Danish Refugee Council and IOM are input to a Bayesian state-space model (AHEAD) that estimates current displacement evolution based on conflict and food security indicators, then generates probabilistic forecasts for the subsequent three-month period with uncertainty bounds.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Danish Refugee Council",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Provides observed displacement data and operates the AHEAD Bayesian state-space model for forecasting IDP numbers"
+          },
+          {
+            "id": "source_2",
+            "name": "IOM",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Contributes IDP observational data used as input to the displacement forecasting model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://danishrefugeecouncil.shinyapps.io/DRC_AHEAD_Dashboard/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_e1056a11",
+          "title": "South Sudan - Displacement forecasts Jan26-Mar26.xlsx",
+          "description": "South Sudan - Subnational Displacement Forecasts (South Sudan - Displacement forecasts Jan26-Mar26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/be3c828d-ae53-46cb-93de-176083bb8f80/resource/e1056a11-f88e-4b51-b786-e05c778339ed/download/south-sudan-displacement-forecasts-jan26-mar26.xlsx"
+        },
+        {
+          "id": "resource_9c051539",
+          "title": "South Sudan - Displacement forecasts Dec25-Feb26.xlsx",
+          "description": "South Sudan - Subnational Displacement Forecasts (South Sudan - Displacement forecasts Dec25-Feb26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/be3c828d-ae53-46cb-93de-176083bb8f80/resource/9c051539-10c2-41cf-a510-4ff06aee1b2e/download/south-sudan-displacement-forecasts-dec25-feb26.xlsx"
+        },
+        {
+          "id": "resource_60ab8762",
+          "title": "South Sudan - Displacement forecasts Nov25-Jan26.xlsx",
+          "description": "South Sudan - Subnational Displacement Forecasts (South Sudan - Displacement forecasts Nov25-Jan26.xlsx)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/be3c828d-ae53-46cb-93de-176083bb8f80/resource/60ab8762-e994-49a9-ad30-3d381ceb7001/download/south-sudan-displacement-forecasts-nov25-jan26.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Forecasted internally displaced persons from conflict-driven displacement using Bayesian state-space model"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/south-sudan-subnational-displacement-forecasts",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

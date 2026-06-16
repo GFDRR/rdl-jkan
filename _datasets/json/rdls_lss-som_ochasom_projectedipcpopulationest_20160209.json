@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-som_ochasom_projectedipcpopulationest_20160209",
+      "title": "Somalia - Projected IPC population Estimates February - June 2016",
+      "description": "Projected IPC population Estimates February - June 2016 by FAO-FSNAU ( http://www.fsnau.org/ipc/population-table). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/projected-ipc-population-estimates-february-june-2016]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/projected-ipc-population-estimates-february-june-2016"
+      },
+      "creator": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/projected-ipc-population-estimates-february-june-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2016-02-09"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "FAO-FSNAU",
+            "url": "https://data.humdata.org/dataset/projected-ipc-population-estimates-february-june-2016"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "FAO-FSNAU compiled projected population estimates classified by Integrated Food Security Phase Classification (IPC) levels for rural, urban, and IDP populations in Somalia during February-June 2016, reflecting drought and El Niño impacts on food security status.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "FAO-FSNAU",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Food Security and Nutrition Analysis Unit providing IPC population classifications and food security phase estimates for Somalia"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_93a361c6",
+          "title": "Rural-Urban-and-IDP-Projected-Population-February-June-2016[1].xlsx",
+          "description": "Somalia - Projected IPC population Estimates February - June 2016 (Projected IPC population Estimates February - June 2016 by FAO-FSNAU)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a2d564de-b2cf-4f93-984f-43e333c9d8cd/resource/93a361c6-ace7-4cea-8407-ffd2c30d0853/download/rural-urban-and-idp-projected-population-february-june-20161.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Projected population in need classified by IPC food security phase due to drought/El Niño conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/projected-ipc-population-estimates-february-june-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

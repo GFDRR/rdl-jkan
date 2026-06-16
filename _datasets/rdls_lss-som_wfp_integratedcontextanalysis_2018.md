@@ -1,0 +1,316 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: World Food Programme
+    url: https://data.humdata.org/dataset/wfp_ica_som_2018
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: WFP - World Food Programme
+  url: https://data.humdata.org/dataset/wfp_ica_som_2018
+creator:
+  affiliation: null
+  email: null
+  name: WFP - World Food Programme
+  url: https://data.humdata.org/dataset/wfp_ica_som_2018
+dataset_id: rdls_lss-som_wfp_integratedcontextanalysis_2018
+description: 'The ICA is a process of consultations supported by mapped-out data that
+  produces a strategic plan describing where different combinations of programme themes
+  are appropriate to achieve goals of reducing food insecurity and climate related
+  shock risk. The ICA combines multi-year food security trends with natural shock
+  risk data to highlight sub-national areas where different programme strategies make
+  sense. Food security trend maps shows areas where safety nets can address regular
+  food insecurity, and others where shocks make recovery more important. Climate-related
+  natural shock risk maps show where DRR, preparedness and early warning efforts can
+  complement food-security objectives. Atop this core foundation, mapped data on subjects
+  including nutrition, gender, livelihoods and resilience can enrich theme-level strategic
+  planning in which all pieces work together. The full group of ICA partners discuss
+  these analytical results to arrive at strategic programmatic directions.. [Source:
+  This metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/wfp_ica_som_2018]'
+details: null
+exposure: []
+hazard: null
+license: https://opendatacommons.org/licenses/odbl/1-0/
+lineage:
+  description: The ICA combines multi-year food security trends (2012-2017) with observed
+    natural shock hazard data (floods 2002-2006 & 2017; droughts 1998-2017) and land
+    degradation indices (2010-2014) through sub-national spatial analysis to identify
+    areas where different programme strategies are appropriate for reducing food insecurity
+    and climate shock risk.
+  sources:
+  - id: source_1
+    license: null
+    name: World Food Programme
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/wfp_ica_som_2018
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Food insecurity recurrence linked to flood hazard exposure, 2012-2017
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: total
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: population
+    description: Food insecurity recurrence linked to drought hazard exposure, 2012-2017
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: null
+      trigger: null
+      type: drought
+    id: loss_2
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: total
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+  - asset_category: agriculture
+    asset_dimension: product
+    description: Land degradation impact from drought, 2010-2014
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: null
+      trigger: null
+      type: drought
+    id: loss_3
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: area
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the combined natural shock (floods
+    and droughts) hazard estimated during the Integrated Context Analysis (ICA) run
+    in Somalia in 2018. Data sources: FAO SWALIM 2002-2006 & 2017, CHIRPS 1998-2017,
+    NDVI MODIS 1998-2017.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/b5644b6141724bcba96db727bbd29bce/data
+  format: null
+  id: resource_da9b2f50
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Somalia, 2018 - Combined Natural Shock Hazard (floods and droughts)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the land degradation phenomenon
+    - by livelihood zone - observed for the purposes of the Integrated Context Analysis
+    (ICA) run in Somalia in 2018. Data sources: Regional Centre for Mapping of Resources
+    for Development (RCMRD) and IGAD Climate Prediction and Applications Centre (ICPAC)/Monitoring
+    of the Environment for Security in Africa (MESA), 2010-2014. The main indicators
+    used for the analysis were the average level (severity) of degradation and the
+    percentage of surface area under moderate to very high levels of degradation by
+    livelihood zone. Average level of degradation: [Low] (< 2.34); [Medium] (2.35-3.44);
+    [High] (> 3.44). Percentage of surface area under moderate to very high levels
+    of degradation: [Low] (< 29%); [Medium] (30-70%); [High] (> 70%).'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/7c25e75bcd454d2781d1e33db4492956/data
+  format: null
+  id: resource_ef5b0023
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Somalia, 2018 - Land Degradation, 2010-2014
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the natural shock hazard (floods,
+    droughts and land degradation) - by livelihood zone - estimated during the Integrated
+    Context Analysis (ICA) performed in Somalia in 2018. Data sources: FAO SWALIM
+    2002-2006 & 2017, CHIRPS 1998-2017, NDVI MODIS 1998-2017, Regional Centre for
+    Mapping of Resources for Development (RCMRD) and IGAD Climate Prediction and Applications
+    Centre (ICPAC)/Monitoring of the Environment for Security in Africa (MESA), 2010-2014.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/aeb41ca2511f44e6ae7d9e60a768e569/data
+  format: null
+  id: resource_9a6cf1ae
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Somalia, 2018 - Natural Shock Hazard
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the food security trend analysis
+    - by livelihood zone - used for the purposes of the Integrated Context Analysis
+    (ICA) run in Somalia in 2018. Data source: Food Security and Nutrition Analysis
+    Unit - Somalia (FSNAU), 2012-2017 The main indicator used for the analysis were
+    the recurrence of IPC, multiplied by severity in order to have a weighted score,
+    and the proportion of population in phases 3 to 5, with a threshold set to 20%.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/dd047ae56bbd44a79bd089bb1f7484d3/data
+  format: null
+  id: resource_543cf023
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Somalia, 2018 - Recurrence of Food Insecurity, 2012-2017
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the malnutrition levels - by
+    livelihood zone - used for the purposes of the Integrated Context Analysis (ICA)
+    run in Somaliain 2018. Data source: Food Security and Nutrition Analysis Unit
+    - Somalia (FSNAU), 2012-2017. The main indicator used for the analysis were the
+    median Global Acute Malnutrition (GAM) rate levels - classified by the thresholds
+    suggested by the World Health Organization (WHO) - and the maximum frequency above
+    critical GAM rates.'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/1304ef547524402e89000ef506ba231f/data
+  format: null
+  id: resource_a6396052
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Somalia, 2018 - Prevalence of Global Acute Malnutrition, 2012-2017
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: "This layer contains information about the flood hazard - by livelihood\
+    \ zone - estimated during the Integrated Context Analysis (ICA) run in Somalia\
+    \ in 2018. Data sources: FAO SWALIM, 2002-2006, 2017. The main indicators used\
+    \ for the analysis were the maximum flood frequency and the percentage of surface\
+    \ area at flood hazard by livelihood zone. Percentage of surface area at flood\
+    \ hazard: [Low] (\xE2\u2030\xA4 4.3%); [Medium] (4.31-13.4%); [High] (> 13.4%).\
+    \ Maximum flood frequency: [Low] (0 events); [Medium] (1-4 events); [High] (5-8\
+    \ events)."
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/c6e4b94becfb4b4ea9128dc3ea56eaa6/data
+  format: null
+  id: resource_adee8bd3
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Somalia, 2018 - Flood Hazard, 2002-2006 & 2017
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'This layer contains information about the drought hazard - by livelihood
+    zone - estimated during the Integrated Context Analysis (ICA) run in Somalia in
+    2018. Data source: CHIRPS Rainfall Estimates 1998-2017, NDVI MODIS 1998-2017.
+    The main indicators used for the analysis were the average number of meteorological
+    - calculated from the Standardized Precipitation Index (SPI) - and agricultural
+    - calculated relying on remotely sensed Normalized Difference Vegetation Index
+    (NDVI) - droughts by livelihood zone. Average number of SPI drought seasons: [Low]
+    (< 2.55); [Medium] (2.56-3.83); [High] (> 3.83). Average number of NDVI poor growing
+    seasons: [Low] (< 0.89); [Medium] (0.9-2.2); [High] (> 2.2).'
+  download_url: https://unwfp.maps.arcgis.com/sharing/rest/content/items/3288551ebba7417fa99cf44210f1b9d1/data
+  format: null
+  id: resource_fee83d2b
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ICA Somalia, 2018 - Drought Hazard, 1998-2017
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-som_wfp_integratedcontextanalysis_2018
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - SOM
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2018-12-31'
+  start: '2018-01-01'
+temporal_resolution: null
+title: 'Somalia: Integrated Context Analysis (ICA), 2018'
+version: null
+vulnerability: null
+---

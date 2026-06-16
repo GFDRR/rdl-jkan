@@ -1,0 +1,180 @@
+---
+attributions: []
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/dtm-sudan-return-monitoring-snapshot
+creator:
+  affiliation: null
+  email: null
+  name: International Organization for Migration (IOM)
+  url: https://data.humdata.org/dataset/dtm-sudan-return-monitoring-snapshot
+dataset_id: rdls_lss-sdn_iom_returnmonitoringsnapshot_2025
+description: 'DTM Sudan defines a returnee as a person who was previously displaced
+  from their habitual residence within Sudan, due to an event dating from 2003 onwards,
+  and who has now voluntarily returned to the location of their habitual residence,
+  irrespective of whether they have returned to their former residence or to another
+  shelter type. Further verification is needed to confirm the estimated number of
+  returnees.. [Source: This metadata record was automatically extracted from the Humanitarian
+  Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/dtm-sudan-return-monitoring-snapshot]'
+details: null
+exposure: []
+hazard: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: IOM DTM Sudan collects return monitoring data through field surveys
+    following standardized DTM methodology, recording individuals and households who
+    have voluntarily returned to their habitual residence after displacement from
+    events dating 2003 onwards. Data is aggregated by administrative level (state
+    and locality) to produce periodic snapshots of return patterns and population
+    movements.
+  sources:
+  - id: source_1
+    license: null
+    name: International Organization for Migration (IOM)
+    risk_data_type:
+    - loss
+    type: dataset
+    url: null
+    used_in: loss
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/dtm-sudan-return-monitoring-snapshot
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Population displacement and return monitoring from flood-related
+      displacement events since 2003
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: null
+      trigger: null
+      type: flood
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: displaced
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://dtm.iom.int/sites/g/files/tmzbdl1461/files/DTM%20Methodological%20Framework%20-%202nd%20Edition%202022_0.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Between November 2024 and September 2025, DTM field teams recorded
+    approximately 2,618,360 returnees across 1,960 locations in Khartoum (40%), Aj
+    Jazirah (37%), Sennar (7%), Blue Nile (7%), North Darfur (4%), White Nile (4%),
+    River Nile (1%), and West Darfur (<1%). Individuals who returned were recorded
+    across Khartoum (40%), Aj Jazirah (37%), Sennar (7%), Blue Nile (7%), North Darfur
+    (4%), White Nile (4%), River Nile (1%), and West Darfur (<1%). The total number
+    of reported returns increased by 16 per cent compared to Return Monitoring Snapshot
+    (7). Of total returnees, approximately 80 per cent (2,094,516 individuals) returned
+    from internal displacement, while 20 per cent (523,844 individuals) reportedly
+    returned from abroad.
+  download_url: https://data.humdata.org/dataset/945c0421-db0b-4fe1-8f80-0cdfb45c7033/resource/dc9e97cc-3458-420d-a932-3d2d3bb146f4/download/dtm_sdn_returnees-tool_30092025-update-008_public_hdx.xlsx
+  format: null
+  id: resource_dc9e97cc
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Sudan - Return Monitoring Snapshot (08)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Between November 2024 and August 2025, DTM field teams recorded approximately
+    2,249,163 returnees across 1,845 locations in Aj Jazirah (43%), Khartoum (36%),
+    Sennar (8%), Blue Nile (7%), White Nile (4%), River Nile (2%), and West Darfur
+    (<1%). The total number of reported returns increased by 12 per cent compared
+    to Return Monitoring Snapshot (6), reflecting increased return movements and expanded
+    data collection. Of total returnees, approximately 79 per cent (1,767,825 individuals)
+    returned from internal displacement, while 21 per cent (481,338 individuals) reportedly
+    returned from abroad.
+  download_url: https://data.humdata.org/dataset/945c0421-db0b-4fe1-8f80-0cdfb45c7033/resource/0f6067ed-2514-4580-9ce2-763b5c8f9e97/download/dtm_sdn_returnees_26082025-update-007_-v2_public_hdx.xlsx
+  format: null
+  id: resource_0f6067ed
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Sudan - Return Monitoring Snapshot (07)
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Between November 2024 and July 2025, DTM field teams recorded approximately
+    2,004,302 returnees across 1,611 locations in Aj Jazirah (48%), Khartoum (30%),
+    Sennar (9%), Blue Nile (7%), White Nile (5%), River Nile (1%), and West Darfur
+    (<1%). The total number of reported returns increased by 50 per cent compared
+    to Return Monitoring Snapshot (5), reflecting increased return movements and expanded
+    data collection. Of total returnees, approximately 77 per cent (1,549,211 individuals)
+    returned from locations within Sudan, while 23 per cent (455,091 individuals)
+    reportedly returned from abroad.
+  download_url: https://data.humdata.org/dataset/945c0421-db0b-4fe1-8f80-0cdfb45c7033/resource/19d57148-1893-464d-9049-0e7a2a91147a/download/dtm_sdn_returnees-29072025-update-_06-public_hdx.xlsx
+  format: null
+  id: resource_19d57148
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: DTM Sudan - Return Monitoring Snapshot (06)
+risk_data_type:
+- loss
+schema: rdls-10
+slug: rdls_lss-sdn_iom_returnmonitoringsnapshot_2025
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - SDN
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2025-09-30'
+  start: '2025-08-18'
+temporal_resolution: null
+title: Sudan - Return Monitoring Snapshot
+version: null
+vulnerability: null
+---

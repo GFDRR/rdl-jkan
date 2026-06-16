@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_ica2018icacategoriesareas_20181122",
+      "title": "ICA Sudan, 2018 - ICA Categories & Areas",
+      "description": "This layer contains information about the final categorization resulting from the Integrated Context Analysis (ICA) performed in Sudan in 2018, showing the areas of convergence of high levels of food insecurity recurrence and major propensity to natural shocks (floods and droughts).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ica-sudan-2018-ica-categories-areas]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-ica-categories-areas"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-ica-categories-areas"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-11-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP GeoNode",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-ica-categories-areas"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The ICA Sudan 2018 dataset integrates food insecurity classification data with hazard propensity assessments for floods and droughts at the administrative level 2 (district) scale. The analysis identifies geographic areas where high recurrence of food insecurity converges with major propensity to natural shocks, producing categorized risk zones for humanitarian planning and resource allocation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP GeoNode",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Integrated Context Analysis (ICA) framework combining food insecurity data with natural hazard propensity assessments to identify areas of convergence"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_28a25171",
+          "title": "ICA Sudan, 2018 - ICA Categories & Areas",
+          "description": "This layer contains information about the final categorization resulting from the Integrated Context Analysis (ICA) performed in Sudan in 2018, showing the areas of convergence of high levels of food insecurity recurrence and major propensity to natural shocks (floods and droughts).",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Asdn_ica_categories_areas_geonode_20180201&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity classification linked to flood hazard propensity in Sudan administrative areas"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity classification linked to drought hazard propensity in Sudan administrative areas"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ica-sudan-2018-ica-categories-areas",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

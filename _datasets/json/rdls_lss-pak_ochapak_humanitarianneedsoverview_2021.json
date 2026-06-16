@@ -1,0 +1,127 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-pak_ochapak_humanitarianneedsoverview_2021",
+      "title": "Pakistan: Humanitarian Needs Overview",
+      "description": "This dataset contains the people in need by sector and area. The dataset is produced by the United Nations for the Coordination of Humanitarian Affairs (OCHA) in collaboration with humanitarian partners.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pakistan-humanitarian-needs-overview]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "The HNO is compiled by OCHA from input received from clusters/sectors and partners in-country",
+      "contact_point": {
+        "name": "OCHA Pakistan",
+        "url": "https://data.humdata.org/dataset/pakistan-humanitarian-needs-overview"
+      },
+      "creator": {
+        "name": "OCHA Pakistan",
+        "url": "https://data.humdata.org/dataset/pakistan-humanitarian-needs-overview"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-01",
+        "end": "2021-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
+            "url": "https://data.humdata.org/dataset/pakistan-humanitarian-needs-overview"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Humanitarian Partners",
+            "url": "https://data.humdata.org/dataset/pakistan-humanitarian-needs-overview"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset aggregates people in need estimates by sector and geographic area collected through direct observational data and anecdotal reports from multiple humanitarian partners coordinated by OCHA Pakistan. Data was compiled into a consolidated humanitarian needs overview to support humanitarian response planning and resource allocation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Coordinating organization that compiled humanitarian needs overview data from multiple humanitarian partners through direct observational and anecdotal data collection methods."
+          },
+          {
+            "id": "source_2",
+            "name": "Humanitarian Partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multiple humanitarian organizations contributing field-based observations and needs assessments to the consolidated humanitarian needs overview."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d20b1642",
+          "title": "PAK_HNO_2021.xlsx",
+          "description": "Pakistan: Humanitarian Needs Overview (Pakistan Humanitarian Needs Overview 2021)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a6f0f0ce-83ef-465b-8b3b-a7cb36dd1a94/resource/d20b1642-e6de-4bc1-9315-81a32eb88c3a/download/pak_hno_2021.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need by sector affected by humanitarian crisis including flood-related impacts"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pakistan-humanitarian-needs-overview",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

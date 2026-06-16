@@ -1,0 +1,154 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-npl_opennepal_deathscauseddisaster20112_20140508",
+      "title": "Nepal - Deaths caused by disaster ,2011-2012",
+      "description": "This file include no of death caused by disaster, according to their region in 2011 and 2012. It was extracted from Nepal disaster Report 2013 which was published by Ministry of Home and Affair. Link : http://www.moha.gov.np//uploads/publications/file/Nepal%20Disaster%20Rep.... [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/deaths-caused-by-disaster-2011-2012]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OpenNepal (inactive)",
+        "url": "https://data.humdata.org/dataset/deaths-caused-by-disaster-2011-2012"
+      },
+      "creator": {
+        "name": "OpenNepal (inactive)",
+        "url": "https://data.humdata.org/dataset/deaths-caused-by-disaster-2011-2012"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2014-05-08"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Nepal Disaster Report 2013",
+            "url": "https://data.humdata.org/dataset/deaths-caused-by-disaster-2011-2012"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event mortality data extracted from the official Nepal Disaster Report 2013 published by the Ministry of Home Affairs, aggregating deaths caused by natural disasters by administrative region for the years 2011-2012.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Nepal Disaster Report 2013",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Official disaster impact statistics compiled by Nepal's Ministry of Home Affairs documenting deaths caused by natural disasters aggregated by region for 2011-2012."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a808140c",
+          "title": "Deaths%20caused%20by%20disaster.csv",
+          "description": "Nepal - Deaths caused by disaster ,2011-2012 (Deaths%20caused%20by%20disaster.csv)",
+          "media_type": "text/csv",
+          "download_url": "http://data.opennepal.net/sites/all/modules/pubdlcnt/pubdlcnt.php?file=http://data.opennepal.net/sites/default/files/resources/Deaths%20caused%20by%20disaster.csv&nid=2544"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths caused by disasters (primarily earthquake) by region in Nepal 2011-2012"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths caused by disasters (primarily flood) by region in Nepal 2011-2012"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths caused by disasters (primarily landslide) by region in Nepal 2011-2012"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/deaths-caused-by-disaster-2011-2012",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

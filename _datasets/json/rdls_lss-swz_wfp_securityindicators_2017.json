@@ -1,0 +1,108 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-swz_wfp_securityindicators_2017",
+      "title": "Eswatini - Food Security Indicators",
+      "description": "The World Food Programme (WFP) launched the mobile Vulnerability Analysis and Mapping (mVAM) project in 2013, beginning in DRC and Somalia. mVAM uses mobile technology to track food security trends in real-time, providing high-frequency data that supports humanitarian decision-making. Data collection methods are tailored to the needs of each country that mVAM operates in. This dataset contains data from the mVAM databank covering various indicators (one per resource).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/wfp-food-security-indicators-for-eswatini]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-food-security-indicators-for-eswatini"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/wfp-food-security-indicators-for-eswatini"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SWZ"
+        ]
+      },
+      "temporal": {
+        "start": "2017-01-01",
+        "end": "2017-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "World Food Programme - mVAM (mobile Vulnerability Analysis and Mapping)",
+            "url": "https://data.humdata.org/dataset/wfp-food-security-indicators-for-eswatini"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP mVAM project collects food security data through mobile surveys in Eswatini, capturing household-level vulnerability indicators related to food insecurity. Survey responses are aggregated into food security statistics and indicators that characterize the affected population and food security status across the country.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "World Food Programme - mVAM (mobile Vulnerability Analysis and Mapping)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Real-time mobile survey data tracking food security trends and vulnerability indicators across Eswatini. mVAM collects high-frequency household-level data on food security status, dietary diversity, and livelihood coping strategies."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_33b7aca0",
+          "title": "pblstatssum.csv",
+          "description": "Eswatini - Food Security Indicators (pblStatsSum: Eswatini - Food Security Indicators)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/e46df1c2-4513-44ac-aa82-a1ba1af50e5e/resource/33b7aca0-750b-4242-886f-c18f1f78bb4a/download/pblstatssum.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity indicators and affected population from mVAM mobile survey data"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/wfp-food-security-indicators-for-eswatini",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

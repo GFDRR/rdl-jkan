@@ -1,0 +1,195 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-syrtur_qcri_earthquaketwitterdata_202302",
+      "title": "Türkiye Earthquake (Twitter data)",
+      "description": "This resource provides important information about individuals who were reported missing or stranded, requests and offers of shelter, and general calls for assistance, such as requests for food and donations, from Twitter data collected during The 2023 Türkiye-Syria earthquake. Additionally, the resource provides damage reports collected from Twitter in the form of images. The data provides district-level aggregation of particular type of information, raw data points, population, and a district-level impact score. The data was collected using the AIDR system (http://aidr.qcri.org/) and processed/analyzed using machine learning and rule-based techniques.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/turkiye-earthquake-feb-2023]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/turkiye-earthquake-feb-2023"
+      },
+      "creator": {
+        "name": "Qatar Computing Research Institute",
+        "url": "https://data.humdata.org/dataset/turkiye-earthquake-feb-2023"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "TUR",
+          "SYR"
+        ]
+      },
+      "temporal": {
+        "start": "2023-02-06",
+        "end": "2023-02-28"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Twitter API",
+            "url": "https://data.humdata.org/dataset/turkiye-earthquake-feb-2023"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "AIDR system",
+            "url": "https://data.humdata.org/dataset/turkiye-earthquake-feb-2023"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Twitter data was collected during the 2023 Türkiye-Syria earthquake using AIDR (Artificial Intelligence for Disaster Response) system with earthquake-related keywords. Raw tweets were processed through machine learning models and rule-based systems to classify and aggregate information into district-level impact categories including missing persons, shelter requests, assistance needs, and damage reports with associated impact scores.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Twitter API",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Social media data collected via Twitter API using earthquake-related keywords, providing crowdsourced reports of missing persons, shelter needs, and damage observations"
+          },
+          {
+            "id": "source_2",
+            "name": "AIDR system",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Machine learning and rule-based classification system used to process and categorize raw Twitter data into structured impact categories"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ae7a53d1",
+          "title": "help_requests_twitter.xlsx",
+          "description": "The file contains district-level aggregation of geo-mapped reports of general help requests collected from Twitter. Additionally, an impact score is computed that yields a measure of the impact of the earthquake on each district based on general help requests also taking into account the district population and raw tweets.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a22adc4d-4ae3-4252-a9ba-5d7278f17282/resource/ae7a53d1-7e09-4eaa-9790-13ddcb140e62/download/help_requests_twitter.xlsx"
+        },
+        {
+          "id": "resource_ed7a25db",
+          "title": "shelter_requests_twitter.xlsx",
+          "description": "The file contains district-level aggregation of geo-mapped reports of shelter requests collected from Twitter. Additionally, an impact score is computed that yields a measure of the impact of the earthquake on each district based on shelter requests also taking into account the district population and raw tweets.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a22adc4d-4ae3-4252-a9ba-5d7278f17282/resource/ed7a25db-e2fb-402a-a433-e3da0b62d3c4/download/shelter_requests_twitter.xlsx"
+        },
+        {
+          "id": "resource_1e6539f1",
+          "title": "missing_people_reports_twitter.xlsx",
+          "description": "The file contains district-level aggregation of geo-mapped reports of missing or stranded people collected from Twitter. Additionally, an impact score is computed that yields a measure of the impact of the earthquake on each district based on missing people reports also taking into account the district population and raw tweets.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a22adc4d-4ae3-4252-a9ba-5d7278f17282/resource/1e6539f1-d7c0-40d2-bfe9-09f4dd0485c7/download/missing_people_reports_twitter.xlsx"
+        },
+        {
+          "id": "resource_3f8c3277",
+          "title": "damage_images_twitter.xlsx",
+          "description": "The file contains district-level aggregation of geo-mapped damage reports in the form of images shared on Twitter. Additionally, an impact score is computed that yields a measure of the impact of the earthquake on each district based on damage reports also taking into account the district population and raw tweets.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/a22adc4d-4ae3-4252-a9ba-5d7278f17282/resource/3f8c3277-cd31-4952-884f-c8ebe2188a00/download/damage_images_twitter.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage assessed from Twitter-sourced damage images and reports"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Missing and stranded individuals reported via Twitter during the earthquake"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population requiring shelter assistance as reported via Twitter"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/turkiye-earthquake-feb-2023",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

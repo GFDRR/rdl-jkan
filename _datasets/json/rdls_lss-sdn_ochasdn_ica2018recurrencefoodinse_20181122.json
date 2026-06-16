@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sdn_ochasdn_ica2018recurrencefoodinse_20181122",
+      "title": "ICA Sudan, 2018 - Recurrence of Food Insecurity, 2010-2017",
+      "description": "This layer contains information about the food security trend analysis - by second-level administrative unit - used for the purposes of the Integrated Context Analysis (ICA) run in Sudan in 2018. Data source: Integrated Phase Classification (IPC), 2010-2017. The main indicator used for the analysis was the recurrence of IPC Phases 3 or above out of the number of available rounds.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ica-sudan-2018-recurrence-of-food-insecurity-2010-2017]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "https://geonode.wfp.org/layers/geonode%3Asdn_ica_firecurrence_geonode_20180201",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-recurrence-of-food-insecurity-2010-2017"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-recurrence-of-food-insecurity-2010-2017"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-11-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Integrated Phase Classification (IPC)",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-recurrence-of-food-insecurity-2010-2017"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IPC food security assessments from 2010-2017 were aggregated by second-level administrative unit to calculate the recurrence frequency of IPC Phases 3 or above (Crisis and Emergency levels) as a trend indicator of food insecurity vulnerability for the 2018 Integrated Context Analysis in Sudan.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Integrated Phase Classification (IPC)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-round food security assessments conducted 2010-2017 providing IPC phase classifications at sub-national level in Sudan"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_124ebcf2",
+          "title": "ICA Sudan, 2018 - Recurrence of Food Insecurity, 2010-2017",
+          "description": "This layer contains information about the food security trend analysis - by second-level administrative unit - used for the purposes of the Integrated Context Analysis (ICA) run in Sudan in 2018. Data source: Integrated Phase Classification (IPC), 2010-2017. The main indicator used for the analysis was the recurrence of IPC Phases 3 or above out of the number of available rounds.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Asdn_ica_firecurrence_geonode_20180201&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Food insecurity classification (IPC Phases 3+) as a proxy impact indicator for drought-affected populations"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ica-sudan-2018-recurrence-of-food-insecurity-2010-2017",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

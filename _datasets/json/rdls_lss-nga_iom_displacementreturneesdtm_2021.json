@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-nga_iom_displacementreturneesdtm_2021",
+      "title": "Nigeria Displacement - [Returnees] - [IOM DTM]",
+      "description": "This dataset is the result of Displacement Tracking Matrix (DTM) assessments carried out by the International Organization for Migration (IOM), aims to improve the understanding of the scope of return movements in north-east Nigeria.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/nigeria-displacements-returnees-iom-dtm]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/nigeria-displacements-returnees-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/nigeria-displacements-returnees-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NGA"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-05",
+        "end": "2022-11-09"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IOM DTM field assessments conducted across multiple rounds (Round 41 and 43) in north-east Nigeria using standardized DTM methodology to track returnee populations, household counts, and geographic locations. Data collected through direct surveys at return locations with GPS coordinates and administrative hierarchies.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IOM Displacement Tracking Matrix (DTM) assessments providing standardized tracking of displacement and return movements through field-based surveys in Nigeria."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://dtm.iom.int/sites/g/files/tmzbdl1461/files/DTM%20Methodological%20Framework%20-%202nd%20Edition%202022_0.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_e5f334a8",
+          "title": "DTM Nigeria Baseline Assessment Round 43",
+          "description": "In Round 43, 2,100,180 returnees were recorded in the assessment. This number represents an increase of 117,050 individuals or more than six per cent compared to Round 41 when 1,983,130 returnees were recorded in June 2022.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/1a37c13c-59cb-42a6-a5e2-4c66f6dae580/resource/e5f334a8-23a6-4e4c-b08b-a48f3ffb3787/download/hdx_dtm_nigeria_r43_master_list_returnees_updated.xlsx"
+        },
+        {
+          "id": "resource_4cea97e7",
+          "title": "DTM Nigeria Baseline Assessment Round 41",
+          "description": "In Round 41, 1,983,130 returnees were recorded in the assessment. This number represents an increase of 22,572 individuals or more than one per cent compared to Round 40 when 1,960,558 returnees were recorded in (March 2022).",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/1a37c13c-59cb-42a6-a5e2-4c66f6dae580/resource/4cea97e7-d483-4979-a38d-1ecd8836ac17/download/hdx_nigeria_baseline_assessement_r41.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement and return movements tracked through DTM assessments in north-east Nigeria"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/nigeria-displacements-returnees-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

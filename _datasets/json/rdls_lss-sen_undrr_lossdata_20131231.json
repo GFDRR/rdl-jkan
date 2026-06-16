@@ -1,0 +1,228 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-sen_undrr_lossdata_20131231",
+      "title": "Disaster Loss Data for Senegal",
+      "description": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/climate-change-impact-in-senegal]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/climate-change-impact-in-senegal"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/climate-change-impact-in-senegal"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SEN"
+        ]
+      },
+      "temporal": {
+        "start": "2013-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNISDR",
+            "url": "https://data.humdata.org/dataset/climate-change-impact-in-senegal"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Senegal Government Agencies",
+            "url": "https://data.humdata.org/dataset/climate-change-impact-in-senegal"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event disaster loss data compiled from UNISDR and Senegal Government Agencies through direct observational and anecdotal reporting. The dataset aggregates impacts from climate change events including deaths, injuries, housing damage, displacement, and crop losses across Senegal at the national scale.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNISDR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "United Nations International Strategy for Disaster Reduction disaster loss database providing post-event impact records"
+          },
+          {
+            "id": "source_2",
+            "name": "Senegal Government Agencies",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National government agencies contributing direct observational and anecdotal data on disaster impacts"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a93d352d",
+          "title": "Senegal.xlsx",
+          "description": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/dc29e362-55fc-458f-af09-477d3f0e2bcb/resource/a93d352d-bd3f-4161-a471-8f015b89679b/download/senegal.xlsx"
+        },
+        {
+          "id": "resource_688b6947",
+          "title": "Senegal.zip",
+          "description": "Disaster Loss Data for Senegal (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/dc29e362-55fc-458f-af09-477d3f0e2bcb/resource/688b6947-c44d-40bb-a9b0-46b4c5ae91d7/download/senegal.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct crop losses from climate change events (drought)"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Houses destroyed and damaged from climate change events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Deaths from climate change events"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injured persons from climate change events"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Victims affected and displaced by climate change events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/climate-change-impact-in-senegal",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

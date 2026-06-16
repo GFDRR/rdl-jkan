@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-pak_ochapak_returnees_20210601",
+      "title": "Pakistan Returnees",
+      "description": "Pakistan district wise Returnees with PCodes. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pakistan-returnees]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Pakistan",
+        "url": "https://data.humdata.org/dataset/pakistan-returnees"
+      },
+      "creator": {
+        "name": "OCHA Pakistan",
+        "url": "https://data.humdata.org/dataset/pakistan-returnees"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2021-06-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "CEW PDMA Khyber Pakhtoonkhwa",
+            "url": "https://data.humdata.org/dataset/pakistan-returnees"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "District-level returnee counts were compiled from CEW PDMA Khyber Pakhtunkhwa registry data, aggregated by administrative district with PCodes for spatial reference. This dataset documents post-displacement population movements and recovery patterns following flood events.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "CEW PDMA Khyber Pakhtoonkhwa",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Registry of returnees compiled by the Provincial Disaster Management Authority (PDMA) of Khyber Pakhtunkhwa province, documenting displaced populations returning to their areas of origin."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e8636257",
+          "title": "Pakistan Returnees by District",
+          "description": "Pakistan Returnees by district with PCodes",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/d6e54f33-f42f-4e1e-bfaf-fd652384ad40/resource/e8636257-9619-4798-9314-bff0eba3bf6f/download/pakistan-total-returnees.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population returnees (displaced persons returning) by district following flood displacement"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pakistan-returnees",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

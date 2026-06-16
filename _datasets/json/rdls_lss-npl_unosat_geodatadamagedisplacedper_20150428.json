@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-npl_unosat_geodatadamagedisplacedper_20150428",
+      "title": "Geodata of Damage and Displaced Persons Visible in Satellite Imagery. Kathmandu, Nepal - 27 April 2015",
+      "description": "UNITAR/UNOSAT analyzed satellite imagery collected 27 April 2015 by the Pleiades satellite over the city of Kathmandu, Nepal. Damaged structures and the locations of displaced persons were identified. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR/UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-damage-and-displaced-persons-visible-in-satellite-imagery-kathmand-april-28-2015]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-and-displaced-persons-visible-in-satellite-imagery-kathmand-april-28-2015"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-damage-and-displaced-persons-visible-in-satellite-imagery-kathmand-april-28-2015"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-04-28"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Pleiades satellite imagery acquired on 27 April 2015 over Kathmandu, comparing pre- and post-earthquake images to identify notable changes. Damaged building structures and locations of displaced persons were manually delineated and georeferenced as point and polygon features in KMZ format. This preliminary analysis was not field-validated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis from Pleiades satellite collected 27 April 2015 identifying damaged structures and displaced persons locations in Kathmandu through visual interpretation of pre- and post-event imagery."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7f39e33f",
+          "title": "Kathmandu_Nepal_27April2015_IDP_Damage.kmz",
+          "description": "Geodata of Damage and Displaced Persons Visible in Satellite Imagery. Kathmandu, Nepal - 27 April 2015 (KML)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://cern.ch/unosat-maps/NP/EQ20150425NPL/Kathmandu_Nepal_27April2015_IDP_Damage.kmz"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from earthquake identified through satellite imagery analysis"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Displaced persons identified through satellite imagery analysis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-damage-and-displaced-persons-visible-in-satellite-imagery-kathmand-april-28-2015",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

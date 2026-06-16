@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-slv_ocharolac_peopleneedpin2024_2023",
+      "title": "El Salvador People in Need PIN 2024",
+      "description": "The dataset contains information on the number of people in need in El Salvador in 2024 at the admin 1 level.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/el-salvador-people-in-need-pin-2024]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/el-salvador-people-in-need-pin-2024"
+      },
+      "creator": {
+        "name": "OCHA Latin America and the Caribbean (ROLAC)",
+        "url": "https://data.humdata.org/dataset/el-salvador-people-in-need-pin-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SLV"
+        ]
+      },
+      "temporal": {
+        "start": "2023-01-01",
+        "end": "2024-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "JIAF 2.0 Methodology",
+            "url": "https://data.humdata.org/dataset/el-salvador-people-in-need-pin-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "People in need figures were derived from multiple sources using the JIAF 2.0 methodology as documented in the 2024 Humanitarian Needs Overview for El Salvador. The dataset aggregates humanitarian needs assessments at the admin 1 level to produce a consolidated estimate of affected population requiring assistance.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "JIAF 2.0 Methodology",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Joint Inter-Agency Framework 2.0 used to derive people in need estimates from multiple humanitarian assessment sources"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://reliefweb.int/attachments/51220b12-022e-4d70-9720-cf5e2143f344/HNO_SV%202024_20240212.pdf?_gl=1*8u5sef*_ga*Mjg3NjM4MDcyLjE2OTM4NTE4ODk.*_ga_E60ZNX2F68*MTcxMjM0MTY1My4zOS4wLjE3MTIzNDE2NTMuNjAuMC4w"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://analysis.jiaf.info/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_d79ca5c2",
+          "title": "el-salvador-pin-hno-2024-.csv",
+          "description": "The dataset contains information on the number of people in need in El Salvador in 2024 at the admin 1 level.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/653ed446-b89f-4bfe-bf47-573e9aee9148/resource/d79ca5c2-9f7e-46b0-b301-707f6eb159d3/download/el-salvador-pin-hno-2024-.csv"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "People in need in El Salvador derived from multi-source humanitarian assessment"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/el-salvador-people-in-need-pin-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

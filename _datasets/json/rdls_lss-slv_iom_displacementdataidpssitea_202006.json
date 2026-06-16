@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-slv_iom_displacementdataidpssitea_202006",
+      "title": "El Salvador Displacement Data - [IDPs] - Site Assessment [IOM DTM]",
+      "description": "The dataset contains number of displaced persons by gender and age dis-aggregated. Dataset contains data on Covid-19, WASH, Shelter and other needs.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/el-salvador-displacement-data-idps-site-assessment-iom-dtm]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/el-salvador-displacement-data-idps-site-assessment-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/el-salvador-displacement-data-idps-site-assessment-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SLV"
+        ]
+      },
+      "temporal": {
+        "start": "2020-06-17",
+        "end": "2020-06-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IOM DTM conducted site assessments at IDP settlements in El Salvador across two rounds, collecting displacement counts disaggregated by gender and age, along with associated humanitarian needs data (WASH, shelter, COVID-19 status). The dataset represents post-displacement impact records from IDP populations without explicit hazard triggering information.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "DTM (Displacement Tracking Matrix) site assessment data collecting displacement figures, demographic disaggregation, and humanitarian needs (WASH, shelter, COVID-19) from IDP settlements in El Salvador."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_13243fb8",
+          "title": "DTM El Salvador Site Assessment Round 2",
+          "description": "El Salvador Displacement Data - [IDPs] - Site Assessment [IOM DTM] (DTM El Salvador Site Assessment Round 2)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c0a14c66-a782-45bd-8a7e-1a464167e9ea/resource/13243fb8-1679-496c-aa59-0edaf25dafe5/download/dtm-el-salvador-site-assessment-round-2.xlsx"
+        },
+        {
+          "id": "resource_9915b5f5",
+          "title": "DTM El Salvador Site Assessment Round 1",
+          "description": "El Salvador Displacement Data - [IDPs] - Site Assessment [IOM DTM] (DTM El Salvador Site Assessment Round 1)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/c0a14c66-a782-45bd-8a7e-1a464167e9ea/resource/9915b5f5-a716-4701-b13c-72b4cdc2fef9/download/dtm-el-salvador-site-assessment-round-1.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons by gender and age from unspecified hazard triggers"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/el-salvador-displacement-data-idps-site-assessment-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
