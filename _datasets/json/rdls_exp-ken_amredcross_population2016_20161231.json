@@ -1,0 +1,115 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ken_amredcross_population2016_20161231",
+      "title": "Kenya Population 2016",
+      "description": "2016 Kenya population density (per square km). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/kenya-population-2016]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "American Red Cross (inactive)",
+        "url": "https://data.humdata.org/dataset/kenya-population-2016"
+      },
+      "creator": {
+        "name": "American Red Cross (inactive)",
+        "url": "https://data.humdata.org/dataset/kenya-population-2016"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2016-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Kenya National Bureau of Statistics (KNBS)",
+            "url": "https://data.humdata.org/dataset/kenya-population-2016"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Satellite imagery",
+            "url": "https://data.humdata.org/dataset/kenya-population-2016"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Gridded population density dataset created by integrating Kenya National Bureau of Statistics census survey data with satellite imagery through spatial modeling techniques to produce a 2016 baseline population distribution at raster resolution across Kenya.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Kenya National Bureau of Statistics (KNBS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Census survey data providing baseline population counts and distributions used to calibrate the gridded population model"
+          },
+          {
+            "id": "source_2",
+            "name": "Satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Remote sensing data used to spatially distribute and model population density across Kenya"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bbb48739",
+          "title": "ke_pop16.tif",
+          "description": "Kenya Population 2016 (2016 kenya population per square km)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/a6518379-54f0-47eb-a463-6a1c3fbfca2d/resource/bbb48739-9772-4fa4-bdb9-fe5294025c8b/download/ke_pop16.tif"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population density derived from KNBS census surveys and satellite imagery for Kenya in 2016"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/kenya-population-2016",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

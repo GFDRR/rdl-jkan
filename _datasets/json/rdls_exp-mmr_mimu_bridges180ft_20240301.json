@@ -1,0 +1,144 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-mmr_mimu_bridges180ft_20240301",
+      "title": "Bridges (>180ft) in Myanmar",
+      "description": "Point location dataset of larger bridges (>180ft) in Myanmar. Co-produced by CDE & MIMU based on tabular data in GAD 2019 township profiles and local knowledge using mostly large scale satellite imagery to identify geographic location. Dataset of >850 larger bridges (>180 ft length) listed in GADs 2019 township profiles and >270 additional bridges based on local knowledge. For over 980 of those, centerpoint geographic coordinates were identified and added to this dataset using mostly high resolution satellite imagery. Bridge data (bridges >180ft) extracted from all GAD 2019 township profiles to an excel master list. Identification of geographic coordinate based on bridge name & location description data, high res. Satellite information (and local knowledge) Adding of some smaller bridges from GAD 2019 township profiles and based on local knowledge. Master data in excel and bridge location shapefile. ArcGIS tool to combine, filter and export a cleaned product for public sharing. Known issues: - Wa state townships not included as no GAD township profiles 2019 covering those areas available. - For some bridges no location was found - Location data based on best-guess approach (descriptive info & imagery) - some bridges might not be fully functional or damaged in 2024 - many bridges (mostly for those not listed in the GAD township profiles) lack name information - some attribute data (length, year built etc.) is missing/has not been included in the excel master list for bridges listed in GAD township profiles for which no coordinates were identified. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mimu-geonode-bridges-180ft-in-myanmar]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This product has been prepared for operational purposes only, to support humanitarian and development activities in Myanmar. Copyright ©2020 Myanmar Information Management Unit. MIMU geospatial datasets cannot be used on online platform unless with prior written agreement from MIMU. MIMU products are not for sale and can be used free of charge with attribution. For more information see http://themimu.info/mimu-terms-conditions.",
+      "contact_point": {
+        "name": "Myanmar Information Management Unit (MIMU)",
+        "url": "https://data.humdata.org/dataset/mimu-geonode-bridges-180ft-in-myanmar"
+      },
+      "creator": {
+        "name": "Myanmar Information Management Unit (MIMU)",
+        "url": "https://data.humdata.org/dataset/mimu-geonode-bridges-180ft-in-myanmar"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2024-03-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "GAD 2019 township profiles",
+            "url": "https://data.humdata.org/dataset/mimu-geonode-bridges-180ft-in-myanmar"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Local knowledge",
+            "url": "https://data.humdata.org/dataset/mimu-geonode-bridges-180ft-in-myanmar"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "High resolution satellite imagery",
+            "url": "https://data.humdata.org/dataset/mimu-geonode-bridges-180ft-in-myanmar"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Bridge infrastructure data was compiled from tabular records in GAD 2019 township profiles and supplemented with locally-identified bridges. Geographic coordinates for over 980 bridges were derived and verified using high-resolution satellite imagery to create a point-based spatial inventory of critical transportation infrastructure.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "GAD 2019 township profiles",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Tabular bridge inventory data extracted from General Administration Department 2019 township administrative profiles"
+          },
+          {
+            "id": "source_2",
+            "name": "Local knowledge",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Additional bridge locations identified through local expertise and field knowledge"
+          },
+          {
+            "id": "source_3",
+            "name": "High resolution satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Geospatial reference data used to identify and verify centerpoint coordinates of bridge locations"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_40e82f6a",
+          "title": "Bridges (>180ft) in Myanmar shapefile",
+          "description": "Zipped Shapefile. Point location dataset of larger bridges (>180ft) in Myanmar. Co-produced by CDE & MIMU based on tabular data in GAD 2019 township profiles and local knowledge using mostly large scale satellite imagery to identify geographic location.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.themimu.info/geoserver/geonode/ows?format_options=charset%3AUTF-8&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature&typename=geonode:mm_bridges_pt",
+          "media_type": "application/vnd.shp"
+        },
+        {
+          "id": "resource_81548209",
+          "title": "Bridges (>180ft) in Myanmar geojson",
+          "description": "GeoJSON file. Point location dataset of larger bridges (>180ft) in Myanmar. Co-produced by CDE & MIMU based on tabular data in GAD 2019 township profiles and local knowledge using mostly large scale satellite imagery to identify geographic location.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.themimu.info/geoserver/geonode/ows?service=WFS&version=1.0.0&request=GetFeature&outputFormat=application%2Fjson&typeName=geonode:mm_bridges_pt",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Bridge infrastructure inventory with point locations and structural identification for bridges exceeding 180 feet in length"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mimu-geonode-bridges-180ft-in-myanmar",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
