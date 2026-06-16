@@ -96,8 +96,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/the-inform-honduras-model
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

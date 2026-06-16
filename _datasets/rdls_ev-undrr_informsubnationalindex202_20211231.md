@@ -108,8 +108,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/inform-subnational-risk-index-for-caucasus-and-central-asia
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

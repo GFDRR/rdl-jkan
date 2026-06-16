@@ -53,8 +53,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/angola-and-namibia-gridded-population-dataset
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

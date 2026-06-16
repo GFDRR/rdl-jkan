@@ -99,8 +99,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/wfp_ica_afg_2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null
