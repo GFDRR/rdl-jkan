@@ -1,0 +1,147 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-laovnm_unosat_livewebmaptropicalcyclone_20250722",
+      "title": "UNOSAT Live web map - Tropical Cyclone WIPHA-25 in LAO PDR and Viet Nam",
+      "description": "UNOSAT code: TC20250722VNM, GDACS ID: 1001181 This application provides impact assessments of Tropical Cyclone WIPHA-25 in Lao PDR and Viet Nam.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-wipha-25-in-lao-pdr-and-viet-nam]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-wipha-25-in-lao-pdr-and-viet-nam"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-wipha-25-in-lao-pdr-and-viet-nam"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VNM",
+          "LAO"
+        ]
+      },
+      "temporal": {
+        "start": "2025-07-22"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-wipha-25-in-lao-pdr-and-viet-nam"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery before and after Tropical Cyclone WIPHA-25 to identify notable changes and assess impacts on population exposure in Lao PDR and Viet Nam. The resulting impact assessment dataset integrates satellite-derived observations with population data to quantify affected populations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery-based impact assessment of Tropical Cyclone WIPHA-25 through comparative analysis of pre- and post-event imagery to identify population exposure and damage patterns"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7d0ac35e",
+          "title": "UNOSAT_PopulationExposure_WiphaCyclone_22July2025_VietNam.xlsx",
+          "description": "UNOSAT Live web map - Tropical Cyclone WIPHA-25 in LAO PDR and Viet Nam (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4150/UNOSAT_PopulationExposure_WiphaCyclone_22July2025_VietNam.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to Tropical Cyclone WIPHA-25 impacts"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by Tropical Cyclone WIPHA-25 in Lao PDR and Viet Nam"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-live-web-map-tropical-cyclone-wipha-25-in-lao-pdr-and-viet-nam",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

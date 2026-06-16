@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-slb_unosat_detectedlandslideextentng_20231214",
+      "title": "Solomon Islands - Satellite detected landslide extent in the Nggela Constituency, Central Province, Solomon Island as of 14 December 2023",
+      "description": "UNOSAT code: TC20231206SLB, GDACS ID: 1001038 Satellite detected landslide extent in the Nggela Constituency, Central Province, Solomon Island as of 14 December 2023 This map illustrates satellite-detected landslides in Nggela Constituency, Central Province, Solomon Islands, as observed from a Sentinel-2 satellite acquired on 14 December 2023 at 10:39 local time. Within the analyzed area of 400 ha about 12 ha of landslide extent is observed. UNOSAT identified 7 potentially affected structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/landslide-extent-in-the-nggela-constituency-central-province-solomon-island-as-of-14-decem]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/landslide-extent-in-the-nggela-constituency-central-province-solomon-island-as-of-14-decem"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/landslide-extent-in-the-nggela-constituency-central-province-solomon-island-as-of-14-decem"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SLB"
+        ]
+      },
+      "temporal": {
+        "start": "2023-12-14"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/landslide-extent-in-the-nggela-constituency-central-province-solomon-island-as-of-14-decem"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on 14 December 2023 and compared it with reference imagery to identify notable changes indicative of landslide occurrence. Landslide polygons were manually delineated and attributed with area measurements and affected structure counts. This is a preliminary post-event damage assessment based on remote sensing observation without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using Sentinel-2 to detect and map landslide extent through visual interpretation of multi-temporal satellite imagery"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_947108e9",
+          "title": "TC20231206SLB_gdb.zip",
+          "description": "Solomon Islands - Satellite detected landslide extent in the Nggela Constituency, Central Province, Solomon Island as of 14 December 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3773/TC20231206SLB_gdb.zip"
+        },
+        {
+          "id": "resource_d835023c",
+          "title": "TC20231206SLB_SHP.zip",
+          "description": "Solomon Islands - Satellite detected landslide extent in the Nggela Constituency, Central Province, Solomon Island as of 14 December 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3773/TC20231206SLB_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Potentially affected structures identified within the landslide extent area"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Structures potentially affected by satellite-detected landslides"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/landslide-extent-in-the-nggela-constituency-central-province-solomon-island-as-of-14-decem",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

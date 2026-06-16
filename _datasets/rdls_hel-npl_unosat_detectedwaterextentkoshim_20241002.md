@@ -1,0 +1,225 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: Sentinel-1 SAR imagery
+    url: https://data.humdata.org/dataset/satellite-detected-water-extent-koshi-and-madhesh-provinces-nepal-as-of-01-october-2024
+  id: attribution_1
+  role: collaborator
+- entity:
+    affiliation: null
+    email: null
+    name: WorldPop spatial demographic data
+    url: https://data.humdata.org/dataset/satellite-detected-water-extent-koshi-and-madhesh-provinces-nepal-as-of-01-october-2024
+  id: attribution_2
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: United Nations Satellite Centre (UNOSAT)
+  url: https://data.humdata.org/dataset/satellite-detected-water-extent-koshi-and-madhesh-provinces-nepal-as-of-01-october-2024
+creator:
+  affiliation: null
+  email: null
+  name: United Nations Satellite Centre (UNOSAT)
+  url: https://data.humdata.org/dataset/satellite-detected-water-extent-koshi-and-madhesh-provinces-nepal-as-of-01-october-2024
+dataset_id: rdls_hel-npl_unosat_detectedwaterextentkoshim_20241002
+description: "UNOSAT code: FL20240928NPL This map illustrates the floods using Sentinel-1\
+  \ images acquired on 01 October 2024 at 17:59 local time (12:14 UTC). Within the\
+  \ analysed area of about 6,000 km\xB2, a total of about 55 km\xB2 of land appears\
+  \ to be affected by flood waters. Based on Worldpop spatial demographic data, about\
+  \ 18,000 people are exposed or living close to flooded areas. Water extent seems\
+  \ to have increased by about 14 km\xB2 since 27 September 2024 This is a preliminary\
+  \ analysis and has not yet been validated in the field. Please send ground feedback\
+  \ to the United Nations Satellite Centre (UNOSAT). Important note: Flood analysis\
+  \ from radar images may underestimate the presence of standing waters in built-up\
+  \ areas and densely vegetated areas due to the backscattering properties of the\
+  \ radar signal.. [Source: This metadata record was automatically extracted from\
+  \ the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extent-koshi-and-madhesh-provinces-nepal-as-of-01-october-2024]"
+details: This is a preliminary assessment and has not yet been validated in the field.
+  It is important to consider the characteristics of the source imagery used in the
+  analyses when interpreting results. For damage assessments it should be noted that
+  only significant damage to the structural integrity of the buildings analyzed can
+  be seen in imagery, while minor damage such as cracks or holes may not be visible
+  at all. For flood extractions using radar data it is important to note that urban
+  areas and highly vegetated areas may mask the flood signature and result in underestimation
+  of flood waters. Users with specific questions or concerns should contact unosat@unitar.org
+  to seek clarification.
+exposure:
+- asset_type:
+    description: Population exposed or living close to flooded areas derived from
+      WorldPop spatial demographic data
+    id: population
+    scheme: null
+    title: null
+    uri: null
+  category: population
+  id: exposure_1
+  metrics:
+  - dimension: population
+    id: metric_1
+    measurement:
+      quantity_kind: count
+      unit: count
+hazard:
+  event_sets_by_hazard_type:
+    flood:
+    - analysis_type: empirical
+      calculation_method: observed
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: AA:km2
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by-sa/4.0/
+lineage:
+  description: "Sentinel-1 SAR imagery from 01 October 2024 was analyzed by UNOSAT\
+    \ analysts through visual interpretation and multi-temporal change detection (comparing\
+    \ to 27 September 2024 imagery) to delineate flood water extent. The resulting\
+    \ water extent polygon (55 km\xB2) was spatially intersected with WorldPop demographic\
+    \ data to estimate approximately 18,000 people exposed to flooded areas in Koshi\
+    \ and Madhesh Provinces, Nepal."
+  sources:
+  - id: source_1
+    license: null
+    name: Sentinel-1 SAR imagery
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+  - id: source_2
+    license: null
+    name: WorldPop spatial demographic data
+    risk_data_type:
+    - exposure
+    type: dataset
+    url: null
+    used_in: exposure
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/satellite-detected-water-extent-koshi-and-madhesh-provinces-nepal-as-of-01-october-2024
+  rel: source
+loss:
+  losses:
+  - asset_category: population
+    asset_dimension: population
+    description: Population exposed to flood waters based on spatial overlay of satellite-detected
+      inundation and demographic data
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: AA:km2
+      process: null
+      trigger: null
+      type: flood
+    id: loss_1
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: exposure
+        modelling: observed
+        type: direct
+      loss_approach: empirical
+      loss_frequency_type: empirical
+      loss_type: ground_up
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Satellite detected water extent Koshi and Madhesh Provinces, Nepal
+    as of 01 October 2024 (Zipped geodatabase)
+  download_url: https://unosat.org/static/unosat_filesystem/3990/FL20240928NPL_gdb.zip
+  format: Geodatabase
+  id: resource_ea6cbb65
+  media_type: null
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: FL20240928NPL_gdb.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Satellite detected water extent Koshi and Madhesh Provinces, Nepal
+    as of 01 October 2024 (Zipped shapefile)
+  download_url: https://unosat.org/static/unosat_filesystem/3990/FL20240928NPL_SHP.zip
+  format: null
+  id: resource_72edb83c
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: FL20240928NPL_SHP.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Satellite detected water extent Koshi and Madhesh Provinces, Nepal
+    as of 01 October 2024 (Excel file)
+  download_url: https://unosat.org/static/unosat_filesystem/3990/UNOSAT_Population_Exposure_FL20240928NPL_01Oct2024.xlsx
+  format: null
+  id: resource_7e0f02c5
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: UNOSAT_Population_Exposure_FL20240928NPL_01Oct2024.xlsx
+risk_data_type:
+- hazard
+- exposure
+- loss
+schema: rdls-10
+slug: rdls_hel-npl_unosat_detectedwaterextentkoshim_20241002
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - NPL
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: null
+  start: '2024-10-02'
+temporal_resolution: null
+title: Satellite detected water extent Koshi and Madhesh Provinces, Nepal as of 01
+  October 2024
+version: null
+vulnerability: null
+---

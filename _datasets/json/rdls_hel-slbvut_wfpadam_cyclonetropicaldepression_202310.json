@@ -1,0 +1,154 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-slbvut_wfpadam_cyclonetropicaldepression_202310",
+      "title": "Vanuatu: Cyclone - Tropical depression - Oct 2023",
+      "description": "ADAM ID: 1001027_8 Cyclone (tropical depression) during the period Oct 21 2023-Oct 26 2023 in Vanuatu, Solomon Islands. It impacted 49248 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/vanuatu-cyclone-1001027]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1001027"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1001027"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "VUT",
+          "SLB"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-21",
+        "end": "2023-10-26"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/vanuatu-cyclone-1001027"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected observed tropical cyclone track geometry and wind speed measurements during the October 21-26, 2023 tropical depression event. Population exposure was estimated by intersecting wind speed thresholds (60, 90, 120 kph) with gridded population data at administrative levels, producing population counts exposed to each wind intensity band.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system collecting and mapping geospatial tropical storm track data, wind speed fields, and population exposure estimates following sudden-onset emergencies"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4155ffba",
+          "title": "1001027-18-adam-ts-1001027-18-shp.zip",
+          "description": "Vanuatu: Cyclone - Tropical depression - Oct 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/8e420560-3066-4c0f-9d94-4e4a188e5e4a/resource/4155ffba-041b-4392-b01d-024e1837f4b5/download/1001027-18-adam-ts-1001027-18-shp.zip"
+        },
+        {
+          "id": "resource_05abe257",
+          "title": "1001027-18-adam-ts-1001027-18-pop-estimation.csv",
+          "description": "Vanuatu: Cyclone - Tropical depression - Oct 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/8e420560-3066-4c0f-9d94-4e4a188e5e4a/resource/05abe257-62ec-4092-adfd-9860f79464eb/download/1001027-18-adam-ts-1001027-18-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at multiple thresholds (60, 90, 120 kph)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Total population affected by tropical depression cyclone event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/vanuatu-cyclone-1001027",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

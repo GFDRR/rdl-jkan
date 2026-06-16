@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-moz_unosat_buildingdamageassesmentsi_20241217",
+      "title": "Mozambique - Building Damage Assesment in Sicura & Murrebe Town, Murrebue Posto, Mecufi District as of 16 December 2024",
+      "description": "UNOSAT code: TC20241212MOZ, GDACS ID: 1001131 This map illustrates affected structures in Murrebue Posto, Mecufi District, Cabo Delgado Province as observed from a Pleiades satellite image acquired on 16 December 2024 at 07:58 Local Time. Within the analysed area, UNOSAT identified 3,367 destroyed structures and 613 damaged structures amongst a total of 3,982 structures observed. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/building-damage-assesment-in-sicura-murrebe-town-murrebue-posto-mecufi-district-as-of-16-d]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assesment-in-sicura-murrebe-town-murrebue-posto-mecufi-district-as-of-16-d"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assesment-in-sicura-murrebe-town-murrebue-posto-mecufi-district-as-of-16-d"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2024-12-17"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/building-damage-assesment-in-sicura-murrebe-town-murrebue-posto-mecufi-district-as-of-16-d"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Pleiades satellite imagery acquired on 16 December 2024 and compared it with reference imagery to identify structural damage. Buildings were classified as destroyed or damaged through visual interpretation of satellite imagery, resulting in a preliminary damage assessment of 3,982 total structures with 3,367 destroyed and 613 damaged.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis from Pleiades satellite acquired 16 December 2024 to identify and classify building damage (destroyed vs. damaged structures) in the affected area"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b4a2c454",
+          "title": "TC20241212MOZ_gdb.zip",
+          "description": "Mozambique - Building Damage Assesment in Sicura & Murrebe Town, Murrebue Posto, Mecufi District as of 16 December 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4054/TC20241212MOZ_gdb.zip"
+        },
+        {
+          "id": "resource_57217535",
+          "title": "TC20241212MOZ_SHP.zip",
+          "description": "Mozambique - Building Damage Assesment in Sicura & Murrebe Town, Murrebue Posto, Mecufi District as of 16 December 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4054/TC20241212MOZ_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building stock in Sicura and Murrebe towns, Murrebue Posto, Mecufi District"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from tropical cyclone: 3,367 destroyed and 613 damaged structures"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/building-damage-assesment-in-sicura-murrebe-town-murrebue-posto-mecufi-district-as-of-16-d",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

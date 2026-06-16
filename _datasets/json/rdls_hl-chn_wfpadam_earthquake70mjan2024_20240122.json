@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-chn_wfpadam_earthquake70mjan2024_20240122",
+      "title": "China: Earthquake - 7.0M - Jan 2024",
+      "description": "ADAM ID: eq_us7000lsze Magnitude 7.0 earthquake at 27.366 depth occurred on Jan 22 2024 in 70km W of Wushi. It impacted 24706 people. The epicentre was at latitude 41.2938 longitude 78.5937.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/china-earthquake-eq-us7000lsze]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/china-earthquake-eq-us7000lsze"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/china-earthquake-eq-us7000lsze"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CHN"
+        ]
+      },
+      "temporal": {
+        "start": "2024-01-22"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/china-earthquake-eq-us7000lsze"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event earthquake ground motion intensity (MMI) distribution derived from the USGS ShakeCast system (ADAM ID: eq_us7000lsze) for the 7.0 magnitude Wushi earthquake. Population exposure data was intersected with MMI intensity zones to estimate affected populations at different hazard intensity levels across administrative divisions.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting and mapping geospatial and socio-economic information following sudden-onset emergencies; provides population impact estimates by earthquake intensity zones"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_1e7339f9",
+          "title": "sm-us7000lsze-sm-us7000lsze-pop-estimation.csv",
+          "description": "China: Earthquake - 7.0M - Jan 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/5ac85b5f-d232-45c6-9fef-a524aed2a5dc/resource/1e7339f9-7832-4b1c-a889-784afe27f1b3/download/sm-us7000lsze-sm-us7000lsze-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by earthquake ground shaking at different Modified Mercalli Intensity levels"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/china-earthquake-eq-us7000lsze",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

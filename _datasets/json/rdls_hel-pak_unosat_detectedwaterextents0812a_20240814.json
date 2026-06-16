@@ -1,0 +1,178 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-pak_unosat_detectedwaterextents0812a_20240814",
+      "title": "Satellite detected water extents from 08 to 12 August 2024 over Pakistan",
+      "description": "UNOSAT code: FL20240804PAK This map illustrates cumulative satellite-detected water using VIIRS in Pakistan from 08 to 12 August 2024. Within the analysed area of about 800,000 km², a total of about 25,000 km² of lands appear to be affected with flood waters. Based on Worldpop population data and the maximum flood water coverage, about 9.2 million people were potentially exposed or living close to flooded areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extents-from-08-to-12-august-2024-over-pakistan]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-from-08-to-12-august-2024-over-pakistan"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-from-08-to-12-august-2024-over-pakistan"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2024-08-14"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Worldpop",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-from-08-to-12-august-2024-over-pakistan"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "VIIRS satellite imagery",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extents-from-08-to-12-august-2024-over-pakistan"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared VIIRS satellite imagery from 08-12 August 2024 to detect cumulative water extents across Pakistan. Detected water polygons were intersected with WorldPop gridded population data to estimate the number of people potentially exposed to flooded areas. The analysis covers approximately 800,000 km² and represents preliminary satellite-based damage assessment without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Worldpop",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Gridded population distribution data used to estimate population exposure to maximum flood water coverage"
+          },
+          {
+            "id": "source_2",
+            "name": "VIIRS satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Visible Infrared Imaging Radiometer Suite satellite observations used to detect and map cumulative water extents during the flood event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e6aef84e",
+          "title": "FL20240804PAK_gdb.zip",
+          "description": "Satellite detected water extents from 08 to 12 August 2024 over Pakistan (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3911/FL20240804PAK_gdb.zip"
+        },
+        {
+          "id": "resource_0a42dcab",
+          "title": "FL20240804PAK_SHP.zip",
+          "description": "Satellite detected water extents from 08 to 12 August 2024 over Pakistan (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3911/FL20240804PAK_SHP.zip"
+        },
+        {
+          "id": "resource_65573cba",
+          "title": "UNOSAT_FL20240804PAK_PopulationExposed_VIIRS_08_12_August2024.xlsx",
+          "description": "Satellite detected water extents from 08 to 12 August 2024 over Pakistan (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3911/UNOSAT_FL20240804PAK_PopulationExposed_VIIRS_08_12_August2024.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas based on WorldPop data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population exposed to satellite-detected flood waters during August 2024 event in Pakistan"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extents-from-08-to-12-august-2024-over-pakistan",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

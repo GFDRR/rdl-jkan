@@ -1,0 +1,182 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ton_unosat_damageassessmenteuaisland_20180315",
+      "title": "Damage Assessment of Eua Island, Tonga",
+      "description": "This map illustrates satellite-detected building damage assessment as of 13 February 2018, over the Island of Eua, Tonga, following the passage of the tropical cyclone GITA-18. The analysis was conducted using post-event WorldView-2 images and pre-event GeoEye-1 images as of 28 June 2017. A total of 542 buildings were detected as damaged over the towns of Houma, Ohnoua, Pangai and Tufuvai. According to the pre-building footprints provided by Humanitarian Open Street Map, this represents 47% of the total number of structures in Eua Island. The analysis could have been underestimated due to cloud cover. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-of-eua-island-tonga]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-eua-island-tonga"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-eua-island-tonga"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TON"
+        ]
+      },
+      "temporal": {
+        "start": "2018-03-15"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian Open Street Map",
+            "url": "https://data.humdata.org/dataset/damage-assessment-of-eua-island-tonga"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldView-2 satellite imagery",
+            "url": "https://data.humdata.org/dataset/damage-assessment-of-eua-island-tonga"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "GeoEye-1 satellite imagery",
+            "url": "https://data.humdata.org/dataset/damage-assessment-of-eua-island-tonga"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event damage assessment conducted by UNOSAT using multi-temporal satellite imagery comparison: pre-event GeoEye-1 imagery (28 June 2017) and post-event WorldView-2 imagery (13 February 2018) were analyzed to detect building damage from tropical cyclone GITA-18. Building footprints from Humanitarian Open Street Map provided the baseline inventory. Satellite analysts visually identified structural changes and damage signatures, resulting in detection of 542 damaged buildings representing 47% of total structures on Eua Island.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian Open Street Map",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Pre-event building footprints and structure inventory used as baseline for damage assessment"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldView-2 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event high-resolution satellite imagery acquired 13 February 2018 for damage detection"
+          },
+          {
+            "id": "source_3",
+            "name": "GeoEye-1 satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Pre-event baseline satellite imagery acquired 28 June 2017 for change detection analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ad41ad37",
+          "title": "TC20180209TON_shp.zip",
+          "description": "Damage Assessment of Eua Island, Tonga (zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://cern.ch/unosat-maps/TO/TC20180209TON/TC20180209TON_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints across Eua Island detected from pre-event satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from tropical cyclone GITA-18 assessed via satellite imagery comparison"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-of-eua-island-tonga",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

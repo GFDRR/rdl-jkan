@@ -1,0 +1,177 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-ton_unosat_damageassessmentatataisla_20220118",
+      "title": "Damage assessment in Atata Island, Kolovao district, Tongatapu division, Tonga as of 18 January 2022",
+      "description": "UNOSAT code: VO20220115TON This map illustrates impact of the Hunga Tonga-hunga Ha'apai volcanic eruption and subsequent tsunami in the Atata island (Kolovao district, Tonga) and the related damage assessment as detected from a Pleiades image acquired on 18 January 2022, 19:45 local time. Within this island, UNOSAT identified 72 structures as damaged, 28 structures as potentially damaged. Furthermore, the entire island appears to be covered with volcanic ash. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-atata-island-kolovao-district-tongatapu-division-tonga-as-of-18-janua]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-atata-island-kolovao-district-tongatapu-division-tonga-as-of-18-janua"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-atata-island-kolovao-district-tongatapu-division-tonga-as-of-18-janua"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "TON"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-atata-island-kolovao-district-tongatapu-division-tonga-as-of-18-janua"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Pleiades satellite imagery acquired on 18 January 2022 to detect post-event damage on Atata Island following the 15 January 2022 Hunga Tonga-Hunga Ha'apai volcanic eruption and subsequent tsunami. Damage assessment was conducted through visual interpretation and comparison of satellite images, identifying 72 damaged structures, 28 potentially damaged structures, and widespread volcanic ash coverage. This is a preliminary remote-sensing-based assessment not yet validated through field surveys.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis (Pleiades image acquired 18 January 2022) used to detect and classify building damage and volcanic ash coverage on Atata Island following the Hunga Tonga-Hunga Ha'apai eruption and tsunami"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_286c6b5d",
+          "title": "VO20220115TON_gdb.zip",
+          "description": "Damage assessment in Atata Island, Kolovao district, Tongatapu division, Tonga as of 18 January 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/TO/VO20220115TON/VO20220115TON_gdb.zip"
+        },
+        {
+          "id": "resource_23026a79",
+          "title": "VO20220115TON_SHP.zip",
+          "description": "Damage assessment in Atata Island, Kolovao district, Tongatapu division, Tonga as of 18 January 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/TO/VO20220115TON/VO20220115TON_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "ashfall",
+                "intensity_measure": "h_vaf:mm"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building structures on Atata Island identified and classified by damage status from satellite imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_volcanic",
+              "type": "volcanic",
+              "intensity_measure": "h_vaf:mm"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from volcanic eruption and ashfall on Atata Island (72 confirmed damaged, 28 potentially damaged)"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_tsunami",
+              "type": "tsunami",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from tsunami triggered by volcanic eruption on Atata Island"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-atata-island-kolovao-district-tongatapu-division-tonga-as-of-18-janua",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

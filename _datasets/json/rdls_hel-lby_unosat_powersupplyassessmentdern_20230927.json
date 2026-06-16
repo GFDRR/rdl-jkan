@@ -1,0 +1,152 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-lby_unosat_powersupplyassessmentdern_20230927",
+      "title": "Power Supply Assessment in Derna & Al Bayda (Libya) using Night-time Light Imagery",
+      "description": "UNOSAT code FL20230912LBY, GDACS Id: 1102204 Status: Power outage observed. Further action(s): continue monitoring Based on the estimation from night-time light, power supply of Derna reduced by more than 90% after the floods. As of 24 September 2023, the power supply of Derna has been restored to about 80% of its pre-floods level. As of 19 September 2023, the floods affected areas in Derna were still in blackout. Night-time light within the floods affected areas accounts for 30% of Derna's total night-time light. Based on the estimation from night-time light, power supply of Al Bayda reduced 60% after the floods. As of 24 Sept. 2023, the power supply of Al Bayda has been restored to 90% of the pre-floods level. After the floods, Derna suffered the most severe power outage. Outer areas of Al Bayda had more power outage than the city center. On 24 September 2023, power supply in most areas of Derna and Al Bayda has recovered to the pre-floods levels.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/power-supply-assessment-in-derna-al-bayda-libya-using-night-time-light-imagery]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/power-supply-assessment-in-derna-al-bayda-libya-using-night-time-light-imagery"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/power-supply-assessment-in-derna-al-bayda-libya-using-night-time-light-imagery"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "LBY"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/power-supply-assessment-in-derna-al-bayda-libya-using-night-time-light-imagery"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal satellite night-time light imagery before and after the September 2023 floods in Libya to quantify power supply loss and recovery. Night-time light intensity was used as a proxy indicator for electrical infrastructure functionality, with percentage changes in luminosity mapped to estimate power outage extent and restoration progress over time.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-flood night-time light emissions to assess power supply disruption and recovery in Derna and Al Bayda"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f82890e9",
+          "title": "FL20230912LBY_gdb.zip",
+          "description": "Power Supply Assessment in Derna & Al Bayda (Libya) using Night-time Light Imagery (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3681/FL20230912LBY_gdb.zip"
+        },
+        {
+          "id": "resource_e7d731bb",
+          "title": "FL20230912LBY_SHP.zip",
+          "description": "Power Supply Assessment in Derna & Al Bayda (Libya) using Night-time Light Imagery (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3681/FL20230912LBY_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Power supply infrastructure and electrical grid coverage mapped by night-time light emissions"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Power supply disruption and restoration in flood-affected areas of Derna quantified by night-time light reduction"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/power-supply-assessment-in-derna-al-bayda-libya-using-night-time-light-imagery",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

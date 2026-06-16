@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-ken_unosat_floodsnovember2023liveweb_20231124",
+      "title": "Floods in Kenya, November 2023 - UNOSAT Live webmap",
+      "description": "UNOSAT code: FL20231124KEN This application provides geospatial information about the ongoing floods in Kenya. Important note: The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/floods-in-kenya-november-2023-unosat-live-webmap]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/floods-in-kenya-november-2023-unosat-live-webmap"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/floods-in-kenya-november-2023-unosat-live-webmap"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-24"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/floods-in-kenya-november-2023-unosat-live-webmap"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared multi-temporal satellite imagery to identify and delineate flood extent changes during the November 2023 Kenya flooding event. Observed inundated areas were digitized and provided as vector geodatabase and shapefile formats with area measurements in square meters and hectares.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis and change detection methodology applied to map observed flood extents during the November 2023 Kenya flooding event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_051e6c41",
+          "title": "FL20231124KEN_gdb.zip",
+          "description": "Floods in Kenya, November 2023 - UNOSAT Live webmap (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3755/FL20231124KEN_gdb.zip"
+        },
+        {
+          "id": "resource_ac9236a9",
+          "title": "FL20231124KEN_SHP.zip",
+          "description": "Floods in Kenya, November 2023 - UNOSAT Live webmap (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3755/FL20231124KEN_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed flood extent area affected by fluvial flooding in Kenya, November 2023"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/floods-in-kenya-november-2023-unosat-live-webmap",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

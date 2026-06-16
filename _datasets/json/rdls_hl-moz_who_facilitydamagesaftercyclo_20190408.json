@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-moz_who_facilitydamagesaftercyclo_20190408",
+      "title": "Mozambique: Health Facility Damages After Cyclone Idai",
+      "description": "This dataset contains the shapefile of health facility damages due to Tropical Cyclone Idai as at 8 April 2019. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-health-facility-damages-after-cyclone-idai]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "World Health Organization",
+        "url": "https://data.humdata.org/dataset/mozambique-health-facility-damages-after-cyclone-idai"
+      },
+      "creator": {
+        "name": "World Health Organization",
+        "url": "https://data.humdata.org/dataset/mozambique-health-facility-damages-after-cyclone-idai"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-04-08"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Health Cluster Mozambique",
+            "url": "https://data.humdata.org/dataset/mozambique-health-facility-damages-after-cyclone-idai"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "MapAction",
+            "url": "https://data.humdata.org/dataset/mozambique-health-facility-damages-after-cyclone-idai"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Health facility locations and damage status were collected through direct observational assessment and anecdotal reports by WHO and Health Cluster partners following Tropical Cyclone Idai in March 2019. Facility coordinates were georeferenced using OpenStreetMap and national administrative data (INE), and damage information was compiled into shapefiles documenting facility operational status as of 8 April 2019.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "World Health Organization",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment of health facilities affected by Cyclone Idai"
+          },
+          {
+            "id": "source_2",
+            "name": "Health Cluster Mozambique",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Coordinated health sector damage and needs assessment data"
+          },
+          {
+            "id": "source_3",
+            "name": "MapAction",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Geospatial mapping and analysis of facility damage locations"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d26e6d57",
+          "title": "215_heal.zip",
+          "description": "Mozambique: Health Facility Damages After Cyclone Idai (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/429d8571-0c3e-4697-8040-2bebf8d24e40/resource/d26e6d57-ea1d-4dce-a886-d49f99b68fe1/download/215_heal.zip"
+        },
+        {
+          "id": "resource_232724ee",
+          "title": "MOZ_MissingHealthFacilities_2019Mar.kmz",
+          "description": "Mozambique: Health Facility Damages After Cyclone Idai (Additional assessed health facilities not in included in the 215_heal.zip data.)",
+          "media_type": "application/vnd.google-earth.kml+xml",
+          "download_url": "https://data.humdata.org/dataset/429d8571-0c3e-4697-8040-2bebf8d24e40/resource/232724ee-407d-4fbc-a4e6-849ce8bed58b/download/moz_missinghealthfacilities_2019mar.kmz"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct damage to health facility infrastructure from Tropical Cyclone Idai"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-health-facility-damages-after-cyclone-idai",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-rus_wfpadam_federationearthquake61mse_20230901",
+      "title": "Russian Federation: Earthquake - 6.1M - Sep 2023",
+      "description": "ADAM ID: eq_us7000ksrl Magnitude 6.1 earthquake at 141.248 depth occurred on Sep 01 2023 in 13 km ENE of Severo-Kuril'sk, Russia. It impacted 2019 people. The epicentre was at latitude 50.7026 longitude 156.316.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/russian-federation-earthquake-eq-us7000ksrl]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/russian-federation-earthquake-eq-us7000ksrl"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/russian-federation-earthquake-eq-us7000ksrl"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "RUS"
+        ]
+      },
+      "temporal": {
+        "start": "2023-09-01"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/russian-federation-earthquake-eq-us7000ksrl"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system processed observed earthquake parameters (magnitude 6.1, epicenter location, depth) and derived ground motion intensity (MMI) distribution across administrative divisions. Population exposure data was intersected with MMI intensity zones to estimate affected population counts by administrative level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analyzing and mapping geospatial and socio-economic information following sudden-onset humanitarian emergencies; provides earthquake impact assessments and population exposure analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3b84f316",
+          "title": "sm-us7000ksrl-sm-us7000ksrl-pop-estimation.csv",
+          "description": "Russian Federation: Earthquake - 6.1M - Sep 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/9f749dfe-cbfc-41f3-b056-9e865420b88d/resource/3b84f316-66cc-4aca-8ceb-c3da21650752/download/sm-us7000ksrl-sm-us7000ksrl-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population distribution by administrative division exposed to earthquake ground shaking"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by earthquake ground shaking, stratified by MMI intensity levels"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/russian-federation-earthquake-eq-us7000ksrl",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

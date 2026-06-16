@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-pak_unosat_preliminaryderivedfloodev_20220922",
+      "title": "Pakistan - Preliminary satellite-derived flood evolution assessment - 23 September 2022",
+      "description": "UNOSAT code FL20220808PAK, GDACS Id: 1101522 Status: Overall decreasing flood waters observed Further action(s): continue monitoring Evolution of Cumulative Flood Impact Assessment (08 - 14 September Vs 15-21 September 2022): From 15 to 21 September 2022 approximately 17 million people remain potentially exposed or living close to flooded areas; Based on satellite observations between 08 to 14 September 2022 and compared with observations between 15 and 21 September 2022, the overall flood waters extents appears to continue to decrease with approximately 600 km² in Balochistan, ~Punjab 1,100 km² and ~5,000 km² in Sindh.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-23-september-2022]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-23-september-2022"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-23-september-2022"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PAK"
+        ]
+      },
+      "temporal": {
+        "start": "2022-09-22"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-23-september-2022"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed multi-temporal satellite imagery from 08-14 September and 15-21 September 2022, comparing images to detect changes in flood extent and map cumulative inundation areas. Flood polygons were digitized and attributed with sensor date, area measurements, and event metadata. Population exposure was calculated by intersecting flood extent with gridded population data to estimate affected populations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis and change detection methodology to map flood extent and temporal evolution. Analysts compare multi-temporal satellite images to delineate inundated areas and track flood water recession."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8144af3b",
+          "title": "FL20220808PAK_gdb.zip",
+          "description": "Pakistan - Preliminary satellite-derived flood evolution assessment - 23 September 2022 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3376/FL20220808PAK_gdb.zip"
+        },
+        {
+          "id": "resource_7db2a7c2",
+          "title": "FL20220808PAK_SHP.zip",
+          "description": "Pakistan - Preliminary satellite-derived flood evolution assessment - 23 September 2022 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3376/FL20220808PAK_SHP.zip"
+        },
+        {
+          "id": "resource_e90f9bcd",
+          "title": "UNOSAT_Population_Exposure_FL20220808PAK_20220815_20220821_WeeklyUpdate3.xlsx",
+          "description": "Pakistan - Preliminary satellite-derived flood evolution assessment - 23 September 2022 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3376/UNOSAT_Population_Exposure_FL20220808PAK_20220815_20220821_WeeklyUpdate3.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population exposed to flood inundation based on satellite-observed flood extent"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-evolution-assessment-23-september-2022",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

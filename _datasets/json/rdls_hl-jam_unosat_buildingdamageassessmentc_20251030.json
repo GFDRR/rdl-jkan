@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-jam_unosat_buildingdamageassessmentc_20251030",
+      "title": "Jamaica - Building Damage Assessment in Crawford Village, Black River District, Saint Elizabeth Parish as of 29 October 2025",
+      "description": "UNOSAT code: TC20251026HTI, GDACS ID: 1001230 This map illustrates the structures/buildings damaged by Tropical Cyclone MELISSA-25. The analysis focuses on Crawford Village, Black River District, Saint Elizabeth Parish, as of 29 October 2025, where damage was detected using a WorldView-2 very high-resolution satellite image acquired on 29 October 2025. UNOSAT identified approximately 1,089 buildings as 100% damaged. This is a preliminary analysis and has not yet been validated in the field. Ground verification is encouraged, and feedback can be sent to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/building-damage-assessment-in-crawford-village-black-river-district-saint-elizabeth-parish]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assessment-in-crawford-village-black-river-district-saint-elizabeth-parish"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assessment-in-crawford-village-black-river-district-saint-elizabeth-parish"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "JAM"
+        ]
+      },
+      "temporal": {
+        "start": "2025-10-30"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/building-damage-assessment-in-crawford-village-black-river-district-saint-elizabeth-parish"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre- and post-event WorldView-2 satellite imagery to detect structural damage in Crawford Village caused by Tropical Cyclone MELISSA-25. Building footprints were identified and classified by damage severity, with approximately 1,089 structures mapped as 100% damaged as of 29 October 2025. This preliminary assessment was conducted without field validation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event damage assessment derived from WorldView-2 very high-resolution satellite imagery acquired on 29 October 2025, identifying building damage through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_bcde896b",
+          "title": "TC20251027JAM_GDB.zip",
+          "description": "Jamaica - Building Damage Assessment in Crawford Village, Black River District, Saint Elizabeth Parish as of 29 October 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4211/TC20251027JAM_GDB.zip"
+        },
+        {
+          "id": "resource_6426166a",
+          "title": "TC20251027JAM_SHP.zip",
+          "description": "Jamaica - Building Damage Assessment in Crawford Village, Black River District, Saint Elizabeth Parish as of 29 October 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4211/TC20251027JAM_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from Tropical Cyclone MELISSA-25, with 1,089 structures assessed as 100% damaged"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/building-damage-assessment-in-crawford-village-black-river-district-saint-elizabeth-parish",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-yem_wfpadam_cyclonetropicalstormoct20_202310",
+      "title": "Yemen: Cyclone - Tropical storm - Oct 2023",
+      "description": "ADAM ID: 1001026_9 Cyclone (tropical storm) during the period Oct 20 2023-Oct 24 2023 in Yemen. It impacted 41258 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/yemen-cyclone-1001026]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/yemen-cyclone-1001026"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/yemen-cyclone-1001026"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "YEM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-10-20",
+        "end": "2023-10-24"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/yemen-cyclone-1001026"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system processed observed tropical cyclone track and wind field data from October 20-24, 2023 to generate wind speed polygons at multiple thresholds (60, 90, 120 km/h). Population exposure was estimated by intersecting wind speed zones with gridded population data at administrative levels (ADM0-ADM2), producing both spatial (shapefile) and tabular (CSV) outputs of affected population counts.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational system for collecting, analyzing and mapping geospatial information following sudden-onset emergencies; provides tropical storm track, wind speed fields, and population exposure estimates"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7e7866f0",
+          "title": "1001026-16-adam-ts-1001026-16-shp.zip",
+          "description": "Yemen: Cyclone - Tropical storm - Oct 2023 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/1ce1fd01-ac2b-4704-9ebe-4637d123fcd9/resource/7e7866f0-2f5e-46cd-bfca-f933830935a8/download/1001026-16-adam-ts-1001026-16-shp.zip"
+        },
+        {
+          "id": "resource_1d0b7351",
+          "title": "1001026-16-adam-ts-1001026-16-pop-estimation.csv",
+          "description": "Yemen: Cyclone - Tropical storm - Oct 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/1ce1fd01-ac2b-4704-9ebe-4637d123fcd9/resource/1d0b7351-4d55-4584-94de-d37b3ba81b63/download/1001026-16-adam-ts-1001026-16-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone wind speeds at multiple thresholds (60, 90, 120 km/h)"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Total population affected by tropical cyclone event (41,258 people impacted)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/yemen-cyclone-1001026",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-vnm_unosat_tropicalcycloneyagipopula_20240910",
+      "title": "UNOSAT - Tropical Cyclone YAGI Population Exposure Analysis in Viet Nam - 07 September 2024",
+      "description": "UNOSAT code: TC20240905VNM, GDACS ID: 1001090 Tropical Cyclone Yagi, the second-most powerful storm of 2024, caused widespread devastation across Southeast Asia. It formed in early September, making landfall in the Philippines before moving toward China and Vietnam. With wind speeds exceeding 245 km/h, Yagi caused severe damage, leading to widespread power outages, destruction of infrastructure, and loss of lives. Vietnam was particularly hard hit, with at least fourteen fatalities and many injured. The storm also disrupted transportation, forcing the cancellation of hundreds of flights and the closure of schools and public services. According to the information by GDACS, tropical cyclone YAGI can have a high humanitarian impact based on the maximum sustained wind speed, exposed population, and vulnerability. Approximately 23 million people, representing a significant portion of the total population, are living within areas where wind speeds exceed 120 km/h.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-tropical-cyclone-yagi-population-exposure-analysis-in-viet-nam-07-september-2024]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-tropical-cyclone-yagi-population-exposure-analysis-in-viet-nam-07-september-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-tropical-cyclone-yagi-population-exposure-analysis-in-viet-nam-07-september-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VNM"
+        ]
+      },
+      "temporal": {
+        "start": "2024-09-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-tropical-cyclone-yagi-population-exposure-analysis-in-viet-nam-07-september-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery before and after Tropical Cyclone Yagi to identify population exposure and assess impacts. The analysis integrated observed wind field data from the cyclone event with spatial population data to quantify exposure and document direct losses including fatalities and infrastructure damage.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-event conditions to assess population exposure and damage from Tropical Cyclone Yagi in Vietnam"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0d3d88ba",
+          "title": "UNOSAT_PopulationExposureAnalysis_TC_YAGI_VIETNAM_07SEP2024_0600UTC.xlsx",
+          "description": "UNOSAT - Tropical Cyclone YAGI Population Exposure Analysis in Viet Nam - 07 September 2024 (Excel file)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3958/UNOSAT_PopulationExposureAnalysis_TC_YAGI_VIETNAM_07SEP2024_0600UTC.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to tropical cyclone Yagi in Vietnam"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct fatalities from Tropical Cyclone Yagi in Vietnam"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct infrastructure damage including power outages and transportation disruption from Tropical Cyclone Yagi"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-tropical-cyclone-yagi-population-exposure-analysis-in-viet-nam-07-september-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-som_ochasom_droughtaffectedpopulation_2022",
+      "title": "Somalia - Drought Affected Populations",
+      "description": "Drought related data: Population IDPs Affected Population Priority Areas IPC 5 (Oct - Dec 2022 projection) Severity of access.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ocha-somalia-population-idp-pin-operational-priority-areas-access-ipc5]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/ocha-somalia-population-idp-pin-operational-priority-areas-access-ipc5"
+      },
+      "creator": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/ocha-somalia-population-idp-pin-operational-priority-areas-access-ipc5"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-01",
+        "end": "2022-10-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IPC (Integrated Food Security Phase Classification)",
+            "url": "https://data.humdata.org/dataset/ocha-somalia-population-idp-pin-operational-priority-areas-access-ipc5"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "FSNAU (Food Security and Nutrition Analysis Unit)",
+            "url": "https://data.humdata.org/dataset/ocha-somalia-population-idp-pin-operational-priority-areas-access-ipc5"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Dataset aggregates drought impact data from multiple humanitarian sources (OCHA, IPC, FSNAU) combining observed population displacement, food security classifications, and humanitarian access constraints. Direct observational and anecdotal data were compiled to quantify affected populations and priority areas requiring humanitarian intervention during the 2022 drought crisis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Somalia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Humanitarian impact assessments and population data compilation for drought-affected areas"
+          },
+          {
+            "id": "source_2",
+            "name": "IPC (Integrated Food Security Phase Classification)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Food security severity classifications and projections for affected populations"
+          },
+          {
+            "id": "source_3",
+            "name": "FSNAU (Food Security and Nutrition Analysis Unit)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Food security and nutrition assessment data for drought-affected regions"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_969b60d9",
+          "title": "OCHA_SOM_Drought_Population_IDP_PIN_Priority-Areas_Access_IPC5_2022.xlsx",
+          "description": "Drought related data: Population IDPs Affected Population Priority Areas IPC 5 (Oct - Dec 2022 projection) Severity of access",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b3470d8e-cb21-4849-a587-a81f72a5ec30/resource/969b60d9-2561-40a8-b883-9ab31b84259b/download/ocha_som_drought_population_idp_pin_priority-areas_access_ipc5_2022.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population affected by drought conditions across priority areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Drought-affected population counts by administrative area and IPC severity classification"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons (IDPs) resulting from drought conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ocha-somalia-population-idp-pin-operational-priority-areas-access-ipc5",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

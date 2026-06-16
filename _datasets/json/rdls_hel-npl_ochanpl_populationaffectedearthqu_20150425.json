@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-npl_ochanpl_populationaffectedearthqu_20150425",
+      "title": "Population Affected in the Nepal Earthquake (Estimate)",
+      "description": "Population affected as calculated by GDACS .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/population-affected-in-the-nepal-earthquake-estimate]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Nepal (inactive)",
+        "url": "https://data.humdata.org/dataset/population-affected-in-the-nepal-earthquake-estimate"
+      },
+      "creator": {
+        "name": "OCHA Nepal (inactive)",
+        "url": "https://data.humdata.org/dataset/population-affected-in-the-nepal-earthquake-estimate"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NPL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-04-25"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "GDACS",
+            "url": "https://data.humdata.org/dataset/population-affected-in-the-nepal-earthquake-estimate"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "USGS",
+            "url": "https://data.humdata.org/dataset/population-affected-in-the-nepal-earthquake-estimate"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "USGS shake map data from the Nepal earthquake event was overlaid with population density data through the GDACS automatic calculation system to estimate the total population affected by ground shaking, producing a deterministic post-event impact assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "GDACS",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Automatic calculation system that integrates USGS shake map data with population density to estimate affected population"
+          },
+          {
+            "id": "source_2",
+            "name": "USGS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Shake map data providing observed ground motion intensity measurements from the earthquake event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_73e3b456",
+          "title": "Population Affected (estimate).csv",
+          "description": "Population Affected in the Nepal Earthquake (Estimate) (Population Affected (estimate).csv)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/0c8f38b4-6d30-42e3-bc27-6a5a5cf7c505/resource/73e3b456-e0fb-4e98-afe5-f7c61dd151d8/download/population-affected-estimate.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population distribution derived from population density data overlaid with earthquake shake map"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "inferred",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "deterministic"
+            },
+            "description": "Population affected by earthquake ground shaking calculated from shake map and population density"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/population-affected-in-the-nepal-earthquake-estimate",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

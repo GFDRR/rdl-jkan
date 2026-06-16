@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-wfpadam_cyclonecategory1jul2024_2024",
+      "title": "Jamaica: Cyclone - Category 1 - Jul 2024",
+      "description": "ADAM ID: 1001067_27 Cyclone (category 1) during the period Jun 28 2024-Jul 06 2024 in Haiti, Grenada, Jamaica, Trinidad and Tobago, Saint Vincent and the Grenadines, Mexico, Belize, United States. It impacted 0 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/jamaica-cyclone-1001067]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/jamaica-cyclone-1001067"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/jamaica-cyclone-1001067"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "HTI",
+          "GRD",
+          "JAM",
+          "TTO",
+          "VCT",
+          "MEX",
+          "BLZ",
+          "USA"
+        ]
+      },
+      "temporal": {
+        "start": "2024-06-28",
+        "end": "2024-07-06"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/jamaica-cyclone-1001067"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and mapped observed tropical cyclone track geometry and wind speed parameters for the July 2024 Caribbean cyclone event. Population exposure was estimated by intersecting wind speed zones (60, 90, 120 km/h) with gridded population data at administrative division levels to quantify affected populations across eight countries.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Operational geospatial system providing tropical cyclone track data, wind speed fields, and population exposure analysis for humanitarian emergency response"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3a878d2f",
+          "title": "1001067-31-adam-ts-1001067-31-shp.zip",
+          "description": "Jamaica: Cyclone - Category 1 - Jul 2024 (Shape File)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/3599f96a-6b59-494f-be05-b4441600489e/resource/3a878d2f-6a40-4f04-b887-34a1fa1946a0/download/1001067-31-adam-ts-1001067-31-shp.zip"
+        },
+        {
+          "id": "resource_d83a1023",
+          "title": "1001067-31-adam-ts-1001067-31-pop-estimation.csv",
+          "description": "Jamaica: Cyclone - Category 1 - Jul 2024 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/3599f96a-6b59-494f-be05-b4441600489e/resource/d83a1023-c738-436b-84cb-600162ee38bd/download/1001067-31-adam-ts-1001067-31-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population exposed to cyclone wind speeds at 60, 90, and 120 km/h thresholds by administrative division"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by tropical cyclone winds at multiple speed thresholds"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/jamaica-cyclone-1001067",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

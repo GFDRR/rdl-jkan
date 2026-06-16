@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-moz_unosat_buildingdamageassesmentsa_20241218",
+      "title": "Mozambique - Building Damage Assesment in Sambene, Nanguasse & Muinde villages, Mecufi Posto, Mecufi District as of 17 December 2024",
+      "description": "UNOSAT code: TC20241212MOZ, GDACS ID: 1001131 This map illustrates affected structures in Mecufi Posto, Mecufi District, Cabo Delgado Province as observed from a Pleiades satellite image acquired on 17 December 2024 at 07:51 Local Time. Within the analysed area, UNOSAT identified 2,433 destroyed structures and 1,684 damaged structures amongst a total of 4,118 structures observed. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/building-damage-assesment-in-sambene-nanguasse-muinde-villages-mecufi-posto-mecufi-distric]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assesment-in-sambene-nanguasse-muinde-villages-mecufi-posto-mecufi-distric"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/building-damage-assesment-in-sambene-nanguasse-muinde-villages-mecufi-posto-mecufi-distric"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2024-12-18"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/building-damage-assesment-in-sambene-nanguasse-muinde-villages-mecufi-posto-mecufi-distric"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed Pleiades satellite imagery acquired on 17 December 2024 over Mecufi Posto, Mecufi District, Cabo Delgado Province, Mozambique, and performed visual interpretation and change detection to classify structures as destroyed, damaged, or undamaged. The resulting damage assessment dataset contains 4,118 mapped structures with damage classification and confidence levels, representing direct impacts from tropical cyclone TC20241212MOZ.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using Pleiades imagery to identify destroyed and damaged structures through visual interpretation and change detection analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_dcd14fc1",
+          "title": "TC20241212MOZ_gdb.zip",
+          "description": "Mozambique - Building Damage Assesment in Sambene, Nanguasse & Muinde villages, Mecufi Posto, Mecufi District as of 17 December 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4056/TC20241212MOZ_gdb.zip"
+        },
+        {
+          "id": "resource_5124d6a4",
+          "title": "TC20241212MOZ_SHP.zip",
+          "description": "Mozambique - Building Damage Assesment in Sambene, Nanguasse & Muinde villages, Mecufi Posto, Mecufi District as of 17 December 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4056/TC20241212MOZ_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from tropical cyclone: 2,433 destroyed and 1,684 damaged structures identified via satellite analysis"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/building-damage-assesment-in-sambene-nanguasse-muinde-villages-mecufi-posto-mecufi-distric",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-phl_wfpadam_flood3787810sqmfeb2023_20230222",
+      "title": "Philippines: Flood - 378781.0 sq m - Feb 2023",
+      "description": "ADAM ID: FL-20230222-PHL-00 Flood covering 378781.0 sq m on Feb 22 2023 in Philippines. It impacted 2261305 people.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-fl-20230222-phl-00]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/philippines-flood-fl-20230222-phl-00"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/philippines-flood-fl-20230222-phl-00"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-02-22"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/philippines-flood-fl-20230222-phl-00"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "WFP ADAM system collected and analyzed geospatial data following the February 22, 2023 flood event in Philippines, mapping flood extent (378,781 sq m) and overlaying with population and cropland datasets to quantify direct impacts. Data aggregated by administrative boundaries (region, district) to produce impact dashboards and response assessments.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analyzing and mapping geospatial and socio-economic information following sudden-onset humanitarian emergencies. Provides post-event flood extent mapping, affected population counts, and cropland impact assessment."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9f176088",
+          "title": "FL-20230222-PHL-00.geojson",
+          "description": "Philippines: Flood - 378781.0 sq m - Feb 2023 (GeoJSON File)",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/9c73549c-af70-4382-a75a-6faa03bc3cdf/resource/9f176088-123a-45a7-a4ed-38f1ae033082/download/fl-20230222-phl-00.geojson"
+        },
+        {
+          "id": "resource_c9ac7963",
+          "title": "FL-20230222-PHL-00.tiff",
+          "description": "Philippines: Flood - 378781.0 sq m - Feb 2023 (GeoTIFF File)",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://data.humdata.org/dataset/9c73549c-af70-4382-a75a-6faa03bc3cdf/resource/c9ac7963-e915-4cf0-a590-302e4a1f491a/download/fl-20230222-phl-00.tiff"
+        },
+        {
+          "id": "resource_5f37f275",
+          "title": "FL-20230222-PHL-00.gpkg",
+          "description": "Philippines: Flood - 378781.0 sq m - Feb 2023 (Geopackage File)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/9c73549c-af70-4382-a75a-6faa03bc3cdf/resource/5f37f275-2aad-4e0b-aab6-880dfe530b50/download/fl-20230222-phl-00.gpkg"
+        },
+        {
+          "id": "resource_6c73e244",
+          "title": "metadata.txt",
+          "description": "Philippines: Flood - 378781.0 sq m - Feb 2023 (Metadata File)",
+          "media_type": "text/plain",
+          "download_url": "https://data.humdata.org/dataset/9c73549c-af70-4382-a75a-6faa03bc3cdf/resource/6c73e244-1488-4ef7-9a7e-cf3c5a4b096f/download/metadata.txt"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Total population in flood-affected administrative areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exposure_2",
+          "category": "agriculture",
+          "asset_type": {
+            "id": "agriculture",
+            "description": "Cropland area within flood-affected zones"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct population affected by February 2023 flood event"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct cropland area impacted by flood inundation"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-fl-20230222-phl-00",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

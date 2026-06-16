@@ -1,0 +1,164 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hel-mwi_iom_displacementdatasiteasses_202201",
+      "title": "Malawi Displacement Data - Site Assessment - Tropical Storm Ana - [IOM DTM]",
+      "description": "Following the passage of tropical storm Ana across southern Malawi, the districts of Chikwawa, Mulanje, Nsanje and Phalombe have been severely hit by torrential and persistent rains, although there are reports of other districts also been affected by the onset, such as Mulanje, Chiradzulu and Neno. Situational overviews conducted by the United Nations Satellite Centre (UNOSAT) reported a flooded area of 20Km2 in the districts of Balaka, Blantyre, Neno and Zomba, where 5,400 people are potentially exposed or living close to flooded areas. Also, the Malawian government agency of Department of Disaster Management Affairs (DoDMA) reported several blocked roads in the Phalombe district, which negatively affects the daily lives of several households whom are relegated to camps and obstructing their access to essential services, such as health facilities.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-tropical-storm-ana-iom-dtm]",
+      "risk_data_type": [
+        "hazard",
+        "exposure",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-tropical-storm-ana-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-tropical-storm-ana-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2022-01-28",
+        "end": "2022-01-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-tropical-storm-ana-iom-dtm"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "International Organization for Migration (IOM) DTM",
+            "url": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-tropical-storm-ana-iom-dtm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT conducted satellite-based situational overviews to map flood extent (20 km²) across Balaka, Blantyre, Neno and Zomba districts following tropical storm Ana. IOM DTM applied site assessment methodology to identify 5,400 people potentially exposed or living in flooded areas, integrating satellite hazard data with ground-based displacement and exposure surveys.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-based flood extent mapping identifying 20 km² of inundated area across affected districts"
+          },
+          {
+            "id": "source_2",
+            "name": "International Organization for Migration (IOM) DTM",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Site assessment and displacement tracking methodology documenting population exposure and impact from tropical storm Ana"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_969f3105",
+          "title": "Malawi - BA Tropical Storm Ana - R1",
+          "description": "Throughout an existing network of enumerators on site, IOM's Displacement Tracking Matrix (DTM) teams in Malawi are providing both logistical and technical support in developing rapid assessments in 131 sites from 22 Traditional Areas within the Districts of Chikwawa, Mulanje, Nsanje and Phalombe. The results of this initial assessment are based on key informant interviews with local stakeholders at District level as well as site assessments in key locations from 28th to 31st January. The results of this rapid assessment are indicative of the current situation on the ground but have yet to be validated extensively in the field.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/20c83e93-b225-4132-af68-42de799d4bd0/resource/969f3105-dd01-449c-a5e1-28a3ac6fed98/download/hdx_dtm_malawi_baseline_assessment_tc_ana_round1.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Population potentially exposed or living close to flooded areas"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by tropical storm Ana flooding in Malawi"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-tropical-storm-ana-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
