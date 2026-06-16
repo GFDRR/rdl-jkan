@@ -290,7 +290,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -314,7 +314,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -338,7 +338,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -364,7 +364,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: pluvial_flood
       trigger: null
@@ -685,7 +685,7 @@ vulnerability:
       hazard_analysis_type: deterministic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_landslide
         intensity_measure: LSI:-
         process: landslide_general
         trigger: null
@@ -710,7 +710,7 @@ vulnerability:
       hazard_analysis_type: deterministic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: pluvial_flood
         trigger: null
@@ -740,7 +740,7 @@ vulnerability:
       hazard_analysis_type: deterministic
       hazard_primary:
         classification: null
-        id: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: pluvial_flood
         trigger: null
