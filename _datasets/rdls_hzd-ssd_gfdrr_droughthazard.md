@@ -31,50 +31,46 @@ description: Drought hazard for South Sudan measured as Agricultural Stress Inde
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 1
-      events:
-      - calculation_method: inferred
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: DR
-          intensity_measure: ASI:per
-          process: agricultural_drought
-          trigger: null
-          type: drought
-        id: '0'
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Frequency of droughts affecting 1/3 or 1/2 of cropland
-              health.
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 1
+    events:
+    - calculation_method: inferred
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: DR
         intensity_measure: ASI:per
         process: agricultural_drought
         trigger: null
         type: drought
       id: '0'
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Frequency of droughts affecting 1/3 or 1/2 of cropland health.
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: DR
+      intensity_measure: ASI:per
+      process: agricultural_drought
+      trigger: null
+      type: drought
+    id: '0'
+    occurrence_range: null
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: South Sudan Multi-hazard risk assessment
   url: null

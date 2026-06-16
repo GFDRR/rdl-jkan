@@ -43,49 +43,46 @@ details: "To better understand natural hazard and disaster risk, the World Bank 
   \ This publication describes the applied methods and main results of the project."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    landslide:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '0'
-          intensity_measure: kPa
-          process: snow_avalanche
-          trigger: null
-          type: landslide
-        id: '0'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: '0'
         intensity_measure: kPa
         process: snow_avalanche
         trigger: null
         type: landslide
       id: '0'
-      occurrence_range: 100 years
-      seasonality: null
-  event_sets_count: 1
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: '0'
+      intensity_measure: kPa
+      process: snow_avalanche
+      trigger: null
+      type: landslide
+    id: '0'
+    occurrence_range: 100 years
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Afghanistan Multi-hazard risk assessment
   url: null

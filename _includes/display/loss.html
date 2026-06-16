@@ -1,0 +1,20 @@
+<div class="content-section risk-component-section loss">
+  <h2 class="section-title">
+    <span class="component-icon loss"></span>
+    Loss Component
+  </h2>
+  <table class="data-table rdl-table">
+    <tr>
+      <th>Loss</th>
+      <th>Loss Type</th>
+      <th>Impact Unit</th>
+    </tr>
+    {% for loss in page.loss.losses %}
+      <tr>
+        <td>{{ loss.id }}</td>
+        <td>{{ site.data.rdl-loss_type[loss.impact_and_losses.loss_type] }}</td>
+        <td>{{ site.data.rdl-impact_unit[loss.impact_and_losses.impact.measurement.unit] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>

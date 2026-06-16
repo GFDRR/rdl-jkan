@@ -68,8 +68,7 @@ lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction
     in Central Asia

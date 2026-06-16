@@ -8,7 +8,7 @@ import config
 
 def make_dataset_frontmatter(dataset):
     """Formats RDL v1.0 metadata into JKAN frontmatter for a dataset"""
-
+    loss = [make_loss(l) for l in dataset.get("loss", {}).get("losses", [])]
     return {
         "schema": "rdls-10",
         # try first; required by write_yaml
@@ -38,8 +38,8 @@ def make_dataset_frontmatter(dataset):
         "hazard": make_hazard_top_level(dataset.get("hazard")),
         "lineage": make_lineage(dataset["lineage"]) if "lineage" in dataset else None,
         "loss": {
-            "losses": [make_loss(l) for l in dataset.get("loss", {}).get("losses", [])]
-        },
+            "losses": loss
+        } if loss else None,
         "project": make_project(dataset["project"]) if "project" in dataset else None,
         "purpose": dataset.get("purpose"),
         "referenced_by": [
@@ -224,8 +224,7 @@ def make_hazard_top_level(hazard):
             event_sets_by_hazard_type[hazard_type].append(event_set)
     
     return {
-        "event_sets_count": len(event_sets),
-        "event_sets_by_hazard_type": event_sets_by_hazard_type
+        "event_sets": event_sets,
     }
 
 

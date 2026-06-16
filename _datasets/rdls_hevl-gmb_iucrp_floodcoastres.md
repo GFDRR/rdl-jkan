@@ -100,164 +100,161 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    erosion:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 5
-      events:
-      - calculation_method: simulated
-        description: Reference coastline linework (baseline). Delivered in the coastal
-          erosion geodatabase as 'Reference_coastline_2020'. Used as the baseline
-          shoreline for defining erosion hazard offsets/zones.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal_erosion
-          intensity_measure: Er:m/yr
-          process: coastal_erosion
-          trigger: null
-          type: erosion
-        id: event_coastal_erosion_reference_coastline_2020
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: Permanent/structural erosion zone for 2040 horizon, delivered
-          as 'Erosion_zone_2040_permanent'. Represents irreversible shoreline retreat
-          component (e.g., SLR-driven and/or structural erosion trend).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal_erosion
-          intensity_measure: Er:m/yr
-          process: coastal_erosion
-          trigger: null
-          type: erosion
-        id: event_coastal_erosion_permanent_2040
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: Combined erosion zone for 2040 horizon delivered as 'Erosion_zone_2040_permanent_and_temporary_storm_erosion'.
-          This layer represents permanent (structural) erosion plus an additional
-          temporary storm erosion buffer.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal_erosion
-          intensity_measure: Er:m/yr
-          process: coastal_erosion
-          trigger: null
-          type: erosion
-        id: event_coastal_erosion_permanent_plus_temporary_storm_2040
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: Permanent/structural erosion zone for 2070 horizon, delivered
-          as 'Erosion_zone_2070_permanent'.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal_erosion
-          intensity_measure: Er:m/yr
-          process: coastal_erosion
-          trigger: null
-          type: erosion
-        id: event_coastal_erosion_permanent_2070
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: Combined erosion zone for 2070 horizon delivered as 'Erosion_zone_2070_permanent_and_temporary_storm_erosion'.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal_erosion
-          intensity_measure: Er:m/yr
-          process: coastal_erosion
-          trigger: null
-          type: erosion
-        id: event_coastal_erosion_permanent_plus_temporary_storm_2070
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 7
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood_urban_pluvial
+      intensity_measure: wd:m
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_urban_pluvial_occurrence
+    occurrence_range: 'Time horizons: current (baseline), 2040, 2070; 7 return-period
+      rasters per horizon: T1, T4, T5, T10, T25, T100, T250 (some also provided as
+      corrected variants). Per-horizon raster naming: ''T{RP}_max_wd_{horizon}.tif''
+      (raw) and ''T{RP}_max_wd_{horizon}_corrected.tif'' (corrected).'
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 5
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood_coastal
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_coastal_flat_scenario_occurrence
+    occurrence_range: 'Time horizons: 2020, 2040, 2070; 5 probability/return-period
+      classes encoded in rasters per horizon: 0.4, 1, 10, 30, 100. Per-horizon water-level
+      values (m above datum) observed in raster filenames - 2020: {0.4: 2.38, 1: 2.42,
+      10: 2.52, 30: 2.57, 100: 2.62}; 2040: {0.4: 2.48, 1: 2.52, 10: 2.62/2.72, 30:
+      2.67, 100: 2.72}; 2070: {0.4: 2.70, 1: 2.74, 10: 2.84, 30: 2.89, 100: 2.94}.
+      File naming pattern: ''flat scenario_{water_level}m_{year}_{class}.tif''. Some
+      filenames contain minor formatting inconsistencies (spaces / double .tif) -
+      treat as semantic rather than literal string matching.'
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 5
+    events:
+    - calculation_method: simulated
+      description: Reference coastline linework (baseline). Delivered in the coastal
+        erosion geodatabase as 'Reference_coastline_2020'. Used as the baseline shoreline
+        for defining erosion hazard offsets/zones.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_coastal_erosion
         intensity_measure: Er:m/yr
         process: coastal_erosion
         trigger: null
         type: erosion
-      id: event_set_coastal_erosion_hazard_zones
-      occurrence_range: Erosion hazard lines/zones for baseline reference and future
-        horizons (2040, 2070), including permanent (structural/SLR-related) and combined
-        permanent+temporary storm erosion representations.
-      seasonality: null
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 7
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_flood_urban_pluvial
-        intensity_measure: wd:m
-        process: pluvial_flood
+      id: event_coastal_erosion_reference_coastline_2020
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: Permanent/structural erosion zone for 2040 horizon, delivered as
+        'Erosion_zone_2040_permanent'. Represents irreversible shoreline retreat component
+        (e.g., SLR-driven and/or structural erosion trend).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal_erosion
+        intensity_measure: Er:m/yr
+        process: coastal_erosion
         trigger: null
-        type: flood
-      id: event_set_flood_urban_pluvial_occurrence
-      occurrence_range: 'Time horizons: current (baseline), 2040, 2070; 7 return-period
-        rasters per horizon: T1, T4, T5, T10, T25, T100, T250 (some also provided
-        as corrected variants). Per-horizon raster naming: ''T{RP}_max_wd_{horizon}.tif''
-        (raw) and ''T{RP}_max_wd_{horizon}_corrected.tif'' (corrected).'
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 5
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_flood_coastal
-        intensity_measure: wd:m
-        process: coastal_flood
+        type: erosion
+      id: event_coastal_erosion_permanent_2040
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: Combined erosion zone for 2040 horizon delivered as 'Erosion_zone_2040_permanent_and_temporary_storm_erosion'.
+        This layer represents permanent (structural) erosion plus an additional temporary
+        storm erosion buffer.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal_erosion
+        intensity_measure: Er:m/yr
+        process: coastal_erosion
         trigger: null
-        type: flood
-      id: event_set_flood_coastal_flat_scenario_occurrence
-      occurrence_range: 'Time horizons: 2020, 2040, 2070; 5 probability/return-period
-        classes encoded in rasters per horizon: 0.4, 1, 10, 30, 100. Per-horizon water-level
-        values (m above datum) observed in raster filenames - 2020: {0.4: 2.38, 1:
-        2.42, 10: 2.52, 30: 2.57, 100: 2.62}; 2040: {0.4: 2.48, 1: 2.52, 10: 2.62/2.72,
-        30: 2.67, 100: 2.72}; 2070: {0.4: 2.70, 1: 2.74, 10: 2.84, 30: 2.89, 100:
-        2.94}. File naming pattern: ''flat scenario_{water_level}m_{year}_{class}.tif''.
-        Some filenames contain minor formatting inconsistencies (spaces / double .tif)
-        - treat as semantic rather than literal string matching.'
-      seasonality: null
-  event_sets_count: 3
+        type: erosion
+      id: event_coastal_erosion_permanent_plus_temporary_storm_2040
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: Permanent/structural erosion zone for 2070 horizon, delivered as
+        'Erosion_zone_2070_permanent'.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal_erosion
+        intensity_measure: Er:m/yr
+        process: coastal_erosion
+        trigger: null
+        type: erosion
+      id: event_coastal_erosion_permanent_2070
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: Combined erosion zone for 2070 horizon delivered as 'Erosion_zone_2070_permanent_and_temporary_storm_erosion'.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal_erosion
+        intensity_measure: Er:m/yr
+        process: coastal_erosion
+        trigger: null
+        type: erosion
+      id: event_coastal_erosion_permanent_plus_temporary_storm_2070
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_coastal_erosion
+      intensity_measure: Er:m/yr
+      process: coastal_erosion
+      trigger: null
+      type: erosion
+    id: event_set_coastal_erosion_hazard_zones
+    occurrence_range: Erosion hazard lines/zones for baseline reference and future
+      horizons (2040, 2070), including permanent (structural/SLR-related) and combined
+      permanent+temporary storm erosion representations.
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Flood and coastal risk assessment for the Greater Banjul Area (GBA),

@@ -44,172 +44,169 @@ details: "To better understand natural hazard and disaster risk, the World Bank 
   \ This publication describes the applied methods and main results of the project."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    landslide:
-    - analysis_type: probabilistic
-      calculation_method: inferred
-      event_count: 68
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '0'
-          intensity_measure: Debris flow intensity index
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '0'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '0'
-          intensity_measure: Debris flow intensity index
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '1'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '0'
-          intensity_measure: Debris flow intensity index
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '2'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '0'
-          intensity_measure: Debris flow intensity index
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '3'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 250
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '0'
-          intensity_measure: Debris flow intensity index
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '4'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '0'
-          intensity_measure: Debris flow intensity index
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '5'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: '0'
-          intensity_measure: Debris flow intensity index
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '6'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 2500
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: inferred
+    event_count: 68
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: '0'
         intensity_measure: Debris flow intensity index
         process: landslide_general
         trigger: null
         type: landslide
       id: '0'
-      occurrence_range: 10, 50, 100, 250, 500, 1000, 2500 years
-      seasonality: null
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: '1'
-        intensity_measure: Susceptibility index
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: '0'
+        intensity_measure: Debris flow intensity index
         process: landslide_general
         trigger: null
         type: landslide
       id: '1'
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 2
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: '0'
+        intensity_measure: Debris flow intensity index
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: '2'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: '0'
+        intensity_measure: Debris flow intensity index
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: '3'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 250
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: '0'
+        intensity_measure: Debris flow intensity index
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: '4'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: '0'
+        intensity_measure: Debris flow intensity index
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: '5'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: '0'
+        intensity_measure: Debris flow intensity index
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: '6'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 2500
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: '0'
+      intensity_measure: Debris flow intensity index
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: '0'
+    occurrence_range: 10, 50, 100, 250, 500, 1000, 2500 years
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: '1'
+      intensity_measure: Susceptibility index
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: '1'
+    occurrence_range: null
+    seasonality: null
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Afghanistan Multi-hazard risk assessment
   url: null

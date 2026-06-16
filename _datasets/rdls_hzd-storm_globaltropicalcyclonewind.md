@@ -72,535 +72,532 @@ details: "Datasets were generated with the statistical STORM algorithm. Present 
   \ (20-75 m s\u207B\xB9 with additional threshold values) are provided."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 28
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '10'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '30'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 30
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '40'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 40
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '60'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 60
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '70'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 70
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '80'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 80
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '90'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 90
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '200'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '300'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 300
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '400'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 400
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '500'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '600'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 600
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '700'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 700
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '800'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 800
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '900'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 900
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '1000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 1000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '2000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 2000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '3000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 3000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '4000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 4000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '5000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '6000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 6000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '7000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 7000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '8000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 8000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '9000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 9000
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_rht4Fpeu
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: '10000'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10000
-      frequency_distribution: user_defined
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 28
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_rht4Fpeu
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      id: HST
-      occurrence_range: 1/10 to 1/10000 years
-      seasonality: uniform
-  event_sets_count: 1
+      id: '10'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '30'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 30
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '40'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 40
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '60'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 60
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '70'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 70
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '80'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 80
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '90'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 90
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '200'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '300'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 300
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '400'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 400
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '500'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '600'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 600
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '700'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 700
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '800'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 800
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '900'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 900
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '1000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 1000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '2000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 2000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '3000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 3000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '4000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 4000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '5000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '6000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 6000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '7000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 7000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '8000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 8000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '9000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 9000
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_rht4Fpeu
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: '10000'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10000
+    frequency_distribution: user_defined
+    hazards:
+    - classification: null
+      id: hazard_rht4Fpeu
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: HST
+    occurrence_range: 1/10 to 1/10000 years
+    seasonality: uniform
 license: CC0-1.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: STORM - Synthetic Tropical cyclOne geneRation Model
   url: https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff

@@ -63,8 +63,7 @@ lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Global Infrastructure Risk Model and Resilience Index (GIRI)
   url: https://giri.unepgrid.ch/

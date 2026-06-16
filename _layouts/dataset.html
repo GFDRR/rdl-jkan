@@ -122,57 +122,6 @@ layout: default
               {% endfor %}
             </ul>
           </div>
-          <!-- RDL Component Info -->
-          {% for rdt in page.risk_data_type %}
-          <div class="content-section risk-component-section {{ rdt | downcase }}">
-            <h2 class="section-title">
-              <span class="component-icon {{ rdt | downcase }}"></span>
-              {{ rdt | capitalize }} Component
-            </h2>
-            <table class="data-table">
-              {% assign rdl_fields = site.data.schemas[schema][rdt] %}
-              {% for field in rdl_fields %}
-              {% if field.field_name contains "occurrence_time" %}
-              {% continue %}
-              {% endif %}
-              {% assign value = page[rdt][field.field_name] %}
-              {% if value != "" and value != null %}
-              {% if field.display_template %}
-              {% include {{ field.display_template }} field=field value=value %}
-              {% else %}
-              {% if field.field_name contains "_link" %}
-              {% if value and value contains "://" %}
-              {% capture link %} <a property="dct:page" resource="{{ value }}" href="{{ value }}">{{ value }}</a> {%
-              endcapture %}
-              {% else %}
-              {% assign link = value %}
-              {% endif %}
-              <tr>
-                <th>{{ field.label }}</th>
-                <td>{{ link }}</td>
-              </tr>
-              {% else %}
-              <tr>
-                <th>{{ field.label }}</th>
-                <td>
-                  {% if value.first %}
-                    {% for item in value %}
-                      <span class="text-badge">{{ item }}</span>
-                    {% endfor %}
-                  {% else %}
-                    {{ value }}
-                  {% endif %}
-                </td>
-              </tr>
-              {% endif %}
-              {% endif %}
-              {% endif %}
-              {% endfor %}
-            </table>
-          </div>
-          {% endfor %}
-
-          <!-- Additional Dataset Info -->
           <div class="content-section">
             <h2 class="section-title">Dataset Info</h2>
             <table class="data-table">
@@ -214,6 +163,18 @@ layout: default
               {% endif %}
             </table>
           </div>
+          {% if page.risk_data_type contains "hazard" %}
+          {% include display/hazard.html %}
+          {% endif %}
+          {% if page.risk_data_type contains "exposure" %}
+          {% include display/exposure.html %}
+          {% endif %}
+          {% if page.risk_data_type contains "loss" %}
+          {% include display/loss.html %}
+          {% endif %}
+          {% if page.risk_data_type contains "vulnerability" %}
+          {% include display/vulnerability.html %}
+          {% endif %}
         </main>
 
         <!-- Sidebar -->

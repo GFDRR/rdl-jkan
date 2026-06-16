@@ -48,98 +48,95 @@ details: The precipitation-induced landslides susceptibility map for the current
   map has global coverage and a resolution of ~90 meters at the equator.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    landslide:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 1
-      events:
-      - calculation_method: inferred
-        description: Susceptibility classes of earthquake-triggered landslides from
-          1 (very low) to 5 (very high).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: LS_EQ
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '1'
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Max
-            thresholds:
-            - 1 (very low)
-            - 2 (low)
-            - 3 (medium)
-            - 4 (high)
-            - 5 (very high)
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 1
+    events:
+    - calculation_method: inferred
+      description: Susceptibility classes of earthquake-triggered landslides from
+        1 (very low) to 5 (very high).
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: LS_EQ
         intensity_measure: LSI:-
         process: landslide_general
-        trigger:
-          process: null
-          type: earthquake
+        trigger: null
         type: landslide
+      id: '1'
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Max
+          thresholds:
+          - 1 (very low)
+          - 2 (low)
+          - 3 (medium)
+          - 4 (high)
+          - 5 (very high)
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
       id: LS_EQ
-      occurrence_range: null
-      seasonality: uniform
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 1
-      events:
-      - calculation_method: inferred
-        description: Susceptibility classes of earthquake-triggered landslides from
-          1 (very low) to 5 (very high).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: LS_RF
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: '1'
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Max
-            thresholds:
-            - 1 (very low)
-            - 2 (low)
-            - 3 (medium)
-            - 4 (high)
-            - 5 (very high)
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger:
+        process: null
+        type: earthquake
+      type: landslide
+    id: LS_EQ
+    occurrence_range: null
+    seasonality: uniform
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 1
+    events:
+    - calculation_method: inferred
+      description: Susceptibility classes of earthquake-triggered landslides from
+        1 (very low) to 5 (very high).
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: LS_RF
         intensity_measure: LSI:-
         process: landslide_general
-        trigger:
-          process: null
-          type: convective_storm
+        trigger: null
         type: landslide
+      id: '1'
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Max
+          thresholds:
+          - 1 (very low)
+          - 2 (low)
+          - 3 (medium)
+          - 4 (high)
+          - 5 (very high)
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
       id: LS_RF
-      occurrence_range: null
-      seasonality: uniform
-  event_sets_count: 2
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger:
+        process: null
+        type: convective_storm
+      type: landslide
+    id: LS_RF
+    occurrence_range: null
+    seasonality: uniform
 license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Global Infrastructure Risk Model and Resilience Index (GIRI)
   url: https://giri.unepgrid.ch/
