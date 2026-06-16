@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-afg_hdx_malnutritionprevalence_2022",
+      "title": "Afghanistan - Malnutrition Prevalence",
+      "description": "The major drivers of acute malnutrition in Afghanistan include inadequate quantity and poor quality of children diets, high prevalence of diseases (diarrhea, malaria, acute respiratory infection and measles outbreaks) and inadequate access to safe drinking water, sanitation and low hygiene practices. Additionally, reduced access to health and nutrition services, suboptimal breastfeeding practices, and high levels of food insecurity exacerbate acute malnutrition. Other risk factors like widespread shocks, including drought, flooding and population displacement continue to negatively impact the nutrition situation.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/afg-malnutrition-prevalence]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/afg-malnutrition-prevalence"
+      },
+      "creator": {
+        "name": "IPC and Partners",
+        "url": "https://data.humdata.org/dataset/afg-malnutrition-prevalence"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2022-09-01",
+        "end": "2026-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IPC and Partners",
+            "url": "https://data.humdata.org/dataset/afg-malnutrition-prevalence"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Acute malnutrition case estimates were calculated by multiplying the number of children under 5 and pregnant/breastfeeding women by prevalence rates (SAM, MAM, GAM) and applying incident correction factors, following national practices. Data aggregates provincial-level malnutrition assessments from IPC and partners across multiple time periods (2022-2026), capturing indirect impacts of drought, flooding, and food insecurity on vulnerable populations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IPC and Partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Integrated Food Security Phase Classification (IPC) and partner organizations providing malnutrition prevalence data and case estimates across Afghan provinces"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_b8d5ef8f",
+          "title": "afghanistan_malnutrition_data_jan-dec2026.xlsx",
+          "description": "Afghanistan - Malnutrition Prevalence (IPC AMN: Projection period of January - December 2026.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/9fbf1b7f-9217-4ec1-84d0-f88339fcba54/resource/b8d5ef8f-1c97-41d5-9f32-21a4cf8c78f8/download/afghanistan_malnutrition_data_jan-dec2026.xlsx"
+        },
+        {
+          "id": "resource_3defd36d",
+          "title": "afghanistan_malnutrition_data_jun2024-may2025",
+          "description": "IPC AMN: current analysis period of June - October 2024 and projection period of November 2024 - May 2025.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/9fbf1b7f-9217-4ec1-84d0-f88339fcba54/resource/3defd36d-10e5-4c84-a279-872a35df1166/download/afghanistan_malnutrition_data_jun2024-may2025.xlsx"
+        },
+        {
+          "id": "resource_c1e5582f",
+          "title": "afghanistan_malnutrition_data_sep2022-apr2023",
+          "description": "IPC AMN: current analysis period of Sep-Oct 2022 and projection period of November 2022 - April 2023.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/9fbf1b7f-9217-4ec1-84d0-f88339fcba54/resource/c1e5582f-6f77-4c4b-a31e-be22c500e0b8/download/afghanistan_malnutrition_data_sep2022-apr2023-2.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute malnutrition cases in children and pregnant/breastfeeding women, driven by drought-induced food insecurity and disease"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "indirect",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Acute malnutrition cases in children and pregnant/breastfeeding women, driven by flood-induced food insecurity and displacement"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/afg-malnutrition-prevalence",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

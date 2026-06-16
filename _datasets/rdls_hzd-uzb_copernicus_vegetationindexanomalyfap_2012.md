@@ -1,0 +1,369 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: Copernicus / European Commission Joint Research Centre (JRC)
+    url: https://data.humdata.org/dataset/uzb-anomalies-fapar-viirs
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/uzb-anomalies-fapar-viirs
+creator:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/uzb-anomalies-fapar-viirs
+dataset_id: rdls_hzd-uzb_copernicus_vegetationindexanomalyfap_2012
+description: 'Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) is
+  a biophysical dimensionless quantity (its values range from 0/no absorption to 1/total
+  absorption) used to assess the greenness and health of vegetation. FAPAR anomalies
+  can be used as an indicator to detect and monitor the impacts of agricultural drought
+  on the growth and productivity of vegetation. The data is presented in 10-day time
+  composite of the Visible Infrared Imaging Radiometer Suite (VIIRS).. [Source: This
+  metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/uzb-anomalies-fapar-viirs]'
+details: Variations in the vegetation health and/or cover could be related to stress
+  factors not related to droughts (e.g., plant diseases, pests, hail, flooding). To
+  determine if changes in FAPAR are linked with a drought event or not, FAPAR data
+  should be interpreted jointly with other indicators (as in the EDO Combined Drought
+  Indicator).
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    drought:
+    - analysis_type: empirical
+      calculation_method: inferred
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: FAPAR:-
+        process: agricultural_drought
+        trigger: null
+        type: drought
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: FAPAR values derived from VIIRS satellite observations are processed
+    into 10-day temporal composites. Anomalies are calculated at each grid cell by
+    computing the deviation from a long-term mean baseline (2012 to the last available
+    full year), producing raster datasets that serve as an empirical indicator of
+    agricultural drought stress on vegetation.
+  sources:
+  - id: source_1
+    license: null
+    name: Copernicus / European Commission Joint Research Centre (JRC)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/uzb-anomalies-fapar-viirs
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://drought.emergency.copernicus.eu/data/factsheets/factsheet_fapar_viirs.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2026-01-01 to 2026-01-10)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/b61e6b03-6e8c-457c-9286-f40af7bb87bf/download/uzb_fpanv_m_gdo_20260101_20260101_t.zip
+  format: null
+  id: resource_b61e6b03
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20260101_20260101_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2025-01-01 to 2025-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/34eafac8-87d2-410d-a67a-adc20df5c402/download/uzb_fpanv_m_gdo_20250101_20251221_t.zip
+  format: null
+  id: resource_34eafac8
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20250101_20251221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2024-01-01 to 2024-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/d193628d-60d3-4390-a7ca-849e26e3cc2f/download/uzb_fpanv_m_gdo_20240101_20241221_t.zip
+  format: null
+  id: resource_d193628d
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20240101_20241221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2023-01-01 to 2023-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/4be7e909-b813-4d16-a008-89fa2aba8cc9/download/uzb_fpanv_m_gdo_20230101_20231221_t.zip
+  format: null
+  id: resource_4be7e909
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20230101_20231221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2022-01-01 to 2022-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/00812e88-36bf-49ed-b44d-286c9df88873/download/uzb_fpanv_m_gdo_20220101_20221221_t.zip
+  format: null
+  id: resource_00812e88
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20220101_20221221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2021-01-01 to 2021-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/85e6518e-73b0-4580-aebc-c4c911c16b7b/download/uzb_fpanv_m_gdo_20210101_20211221_t.zip
+  format: null
+  id: resource_85e6518e
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20210101_20211221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2020-01-01 to 2020-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/dc6d68e3-f12a-460c-bff9-5a2e41440c98/download/uzb_fpanv_m_gdo_20200101_20201221_t.zip
+  format: null
+  id: resource_dc6d68e3
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20200101_20201221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2019-01-01 to 2019-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/c62bde4b-b4cb-4d68-b850-92f4021510b1/download/uzb_fpanv_m_gdo_20190101_20191221_t.zip
+  format: null
+  id: resource_c62bde4b
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20190101_20191221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2018-01-01 to 2018-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/c4a2aabd-b04b-4358-a190-66cbb8cf266c/download/uzb_fpanv_m_gdo_20180101_20181221_t.zip
+  format: null
+  id: resource_c4a2aabd
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20180101_20181221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2017-01-01 to 2017-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/7095ee40-26f1-4040-946d-7eb4a00645c1/download/uzb_fpanv_m_gdo_20170101_20171221_t.zip
+  format: null
+  id: resource_7095ee40
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20170101_20171221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2016-01-01 to 2016-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/9597f351-7919-44ba-8000-ab63f9af1474/download/uzb_fpanv_m_gdo_20160101_20161221_t.zip
+  format: null
+  id: resource_9597f351
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20160101_20161221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2015-01-01 to 2015-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/295e457c-cd75-46a9-8221-bd19b9cb1336/download/uzb_fpanv_m_gdo_20150101_20151221_t.zip
+  format: null
+  id: resource_295e457c
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20150101_20151221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2014-01-01 to 2014-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/69e51bd2-fd33-4538-b09e-5577b60c4a11/download/uzb_fpanv_m_gdo_20140101_20141221_t.zip
+  format: null
+  id: resource_69e51bd2
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20140101_20141221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2013-01-01 to 2013-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/739a4c42-0092-411f-b06b-5c645d9357b5/download/uzb_fpanv_m_gdo_20130101_20131221_t.zip
+  format: null
+  id: resource_739a4c42
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20130101_20131221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2012-01-21 to 2012-12-31)'
+  download_url: https://data.humdata.org/dataset/b4e7cd4c-4542-4828-9ab9-ac626d2e8189/resource/0462a36b-1643-4783-b486-caad5213ac4f/download/uzb_fpanv_m_gdo_20120121_20121221_t.zip
+  format: null
+  id: resource_0462a36b
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: uzb_fpanv_m_gdo_20120121_20121221_t.zip
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-uzb_copernicus_vegetationindexanomalyfap_2012
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - UZB
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2026-01-10'
+  start: '2012-01-21'
+temporal_resolution: null
+title: 'Uzbekistan: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)'
+version: null
+vulnerability: null
+---

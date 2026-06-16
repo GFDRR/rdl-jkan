@@ -1,0 +1,198 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-afg_ochaafg_naturaldisasterincidents1_2014",
+      "title": "Afghanistan - Natural disaster incidents from 1 January to 31 December 2014",
+      "description": "1) Natural disaster events include avalanches, extreme winter conditions, flooding, heavy rainfall, landslides & mudflows, and extreme weather (sandstorms, hail, wind, etc) as recorded by OCHA field offices and IOM Afghanistan Humanitarian Assistance Database (HADB). 2) A natural disaster incident is defined as an event that has affected (i.e. impacted) Afghans, who may or may not require humanitarian assistance. 3) HADB information is used as a main reference and supplemented by OCHA Field Office reports for those incidents where information is not available from the HADB. OCHA information includes assessment figures from OCHA, ANDMA, Red Crescent Societies, national NGOs, international NGOs, and ERM.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/natural-disaster-incidents-from-1-january-to-31-december-2014]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "These figures may fluctuate since the number of affected Afghans, people killed and injured, and houses damaged or destroyed are based on a combination of verified and non-verified reports received. Hence, these figures may change as updates are received.",
+      "contact_point": {
+        "name": "OCHA Afghanistan",
+        "url": "https://data.humdata.org/dataset/natural-disaster-incidents-from-1-january-to-31-december-2014"
+      },
+      "creator": {
+        "name": "OCHA Afghanistan",
+        "url": "https://data.humdata.org/dataset/natural-disaster-incidents-from-1-january-to-31-december-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2014-01-01",
+        "end": "2014-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "OCHA Field Offices",
+            "url": "https://data.humdata.org/dataset/natural-disaster-incidents-from-1-january-to-31-december-2014"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "IOM Afghanistan Humanitarian Assistance Database (HADB)",
+            "url": "https://data.humdata.org/dataset/natural-disaster-incidents-from-1-january-to-31-december-2014"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event natural disaster incident data compiled from IOM Afghanistan's Humanitarian Assistance Database (primary source) and supplemented by OCHA field office reports for incidents lacking HADB coverage. Data combines verified joint assessments with non-verified local reports of avalanches, extreme weather, flooding, landslides, and mudflows affecting Afghan populations during 2014.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "OCHA Field Offices",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Field office reports documenting natural disaster incidents and affected populations across Afghanistan"
+          },
+          {
+            "id": "source_2",
+            "name": "IOM Afghanistan Humanitarian Assistance Database (HADB)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Primary reference database of verified natural disaster incidents and humanitarian impacts in Afghanistan"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9bb58c34",
+          "title": "Afghanistan Natural Disaster Incidents from 1 January to 31 December 2014",
+          "description": "Natural disaster events include avalanches, extreme winter conditions, flooding, heavy rainfall, landslides & mudflows, and extreme weather (sandstorms, hail, wind, etc) as recorded by OCHA field offices and IOM Afghanistan Humanitarian Assistance Database (HADB).",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/85001b26-5007-49e1-bfae-0450a31b834d/resource/9bb58c34-33f2-4e39-a97c-a314b0432eac/download/afg-naturaldisasters2014-ocha-iom-20150111.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flooding incidents"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by landslides and mudflows"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by extreme weather including sandstorms, hail, and wind"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_extreme_temperature",
+              "type": "extreme_temperature",
+              "intensity_measure": "AirTemp:C"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by extreme winter conditions"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/natural-disaster-incidents-from-1-january-to-31-december-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -89,7 +89,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: null
       trigger: null
@@ -113,7 +113,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_convective_storm
       intensity_measure: sws_10m:m/s
       process: null
       trigger: null

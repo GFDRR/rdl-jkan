@@ -1,0 +1,184 @@
+---
+attributions: []
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: IGAD Climate Prediction and Applications Center (ICPAC)
+  url: https://data.humdata.org/dataset/icpac-geonode-somalia-regions-hit-by-2019-tropical-cyclone-pawan
+creator:
+  affiliation: null
+  email: null
+  name: IGAD Climate Prediction and Applications Center (ICPAC)
+  url: https://data.humdata.org/dataset/icpac-geonode-somalia-regions-hit-by-2019-tropical-cyclone-pawan
+dataset_id: rdls_hzd-som_icpac_regionshit2019tropicalcyc_201912
+description: 'Tropical Cyclone Pawan was named after a tropical storm initially named
+  06A formed in the northern Indian Ocean. On December 7, 2019 Cyclonic Storm Pawan
+  made landfall in Somalia just south of Eyl district with winds of around 65 mph
+  (40 mph). This layer shows TC Pawan occurence in some regions of Somalia, including
+  Bari, Mudug, Nugaal and Sanaag. The influence of TC Pawan was felt in the coastal
+  areas of Bari and Mudug Regions where moderate to heavy rains had fell and strong
+  winds were sustained on 7th and 8th December. Between 6th and 8th December 2019,
+  TC Pawan caused flash floods and windstorms in the Puntland State of Somalia. Heavy
+  rains and wind gusts of 80 km/h were reported. Pawan continued westward into Ethiopia
+  and weakened. Summary of impacts included: Nugaal, Bari, Mudug Number of people
+  affected:213600 (35600 HH) i.e. pastoralists 15,000 HH, fishing communities 7500
+  HH, rural-urban settlements 11600 HH including IDPs, farmers 1500 HH. Number of
+  households destroyed:31500 (5250 households) Puntland, Sanaag Number of people who
+  died: 2. [Source: This metadata record was automatically extracted from the Humanitarian
+  Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-somalia-regions-hit-by-2019-tropical-cyclone-pawan]'
+details: null
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    strong_wind:
+    - analysis_type: probabilistic
+      calculation_method: observed
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: Tropical Cyclone Pawan track and impact data were compiled by ICPAC
+    from meteorological observations of the cyclone's landfall near Eyl district on
+    December 7, 2019. The dataset maps the spatial extent of the cyclone's influence
+    across Somali regions (Bari, Mudug, Nugaal, Sanaag) based on observed wind speeds
+    (~65 mph) and associated rainfall patterns during December 6-8, 2019.
+  sources:
+  - id: source_1
+    license: null
+    name: IGAD Climate Prediction and Applications Center (ICPAC)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/icpac-geonode-somalia-regions-hit-by-2019-tropical-cyclone-pawan
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aa__2019_TC_Pawan&outputFormat=SHAPE-ZIP&srs=EPSG%3A4326&format_options=charset%3AUTF-8
+  baseline_period: null
+  climate: null
+  conforms_to: http://www.opengis.net/def/serviceType/ogc/wfs
+  coordinate_system: null
+  description: Zipped Shapefile file. Tropical Cyclone Pawan was named after a tropical
+    storm initially named 06A formed in the northern Indian Ocean. On December 7,
+    2019 Cyclonic Storm Pawan made landfall in Somalia just south of Eyl district
+    with winds of around 65 mph (40 mph). This layer shows TC Pawan occurence in some
+    regions of Somalia, including Bari, Mudug, Nugaal and Sanaag.
+  download_url: null
+  format: null
+  id: resource_a8c099a6
+  media_type: application/vnd.shp
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Somalia Regions hit by 2019 Tropical Cyclone Pawan Zipped Shapefile
+- access_url: https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aa__2019_TC_Pawan&outputFormat=csv&srs=EPSG%3A4326
+  baseline_period: null
+  climate: null
+  conforms_to: http://www.opengis.net/def/serviceType/ogc/wfs
+  coordinate_system: null
+  description: CSV file. Tropical Cyclone Pawan was named after a tropical storm initially
+    named 06A formed in the northern Indian Ocean. On December 7, 2019 Cyclonic Storm
+    Pawan made landfall in Somalia just south of Eyl district with winds of around
+    65 mph (40 mph). This layer shows TC Pawan occurence in some regions of Somalia,
+    including Bari, Mudug, Nugaal and Sanaag.
+  download_url: null
+  format: null
+  id: resource_060f6835
+  media_type: text/csv
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Somalia Regions hit by 2019 Tropical Cyclone Pawan CSV
+- access_url: https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aa__2019_TC_Pawan&outputFormat=excel&srs=EPSG%3A4326
+  baseline_period: null
+  climate: null
+  conforms_to: http://www.opengis.net/def/serviceType/ogc/wfs
+  coordinate_system: null
+  description: Excel file. Tropical Cyclone Pawan was named after a tropical storm
+    initially named 06A formed in the northern Indian Ocean. On December 7, 2019 Cyclonic
+    Storm Pawan made landfall in Somalia just south of Eyl district with winds of
+    around 65 mph (40 mph). This layer shows TC Pawan occurence in some regions of
+    Somalia, including Bari, Mudug, Nugaal and Sanaag.
+  download_url: null
+  format: null
+  id: resource_248cfd82
+  media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Somalia Regions hit by 2019 Tropical Cyclone Pawan Excel
+- access_url: https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aa__2019_TC_Pawan&outputFormat=json&srs=EPSG%3A4326&srsName=EPSG%3A4326
+  baseline_period: null
+  climate: null
+  conforms_to: http://www.opengis.net/def/serviceType/ogc/wfs
+  coordinate_system: null
+  description: GeoJSON file. Tropical Cyclone Pawan was named after a tropical storm
+    initially named 06A formed in the northern Indian Ocean. On December 7, 2019 Cyclonic
+    Storm Pawan made landfall in Somalia just south of Eyl district with winds of
+    around 65 mph (40 mph). This layer shows TC Pawan occurence in some regions of
+    Somalia, including Bari, Mudug, Nugaal and Sanaag.
+  download_url: null
+  format: null
+  id: resource_be262b3d
+  media_type: application/geo+json
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Somalia Regions hit by 2019 Tropical Cyclone Pawan GeoJSON
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-som_icpac_regionshit2019tropicalcyc_201912
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - SOM
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2019-12-08'
+  start: '2019-12-06'
+temporal_resolution: null
+title: Somalia Regions hit by 2019 Tropical Cyclone Pawan
+version: null
+vulnerability: null
+---

@@ -1,0 +1,105 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-vnm_un_in_viet_nam_stormtracks_1980",
+      "title": "Viet Nam: Storm Tracks",
+      "description": "The dataset consists of consolidated history of tropical storm paths over Viet Nam from 1980-2023. NOAA's International Best Track Archive for Climate Stewardship (IBTrACS) data, accessed on 20 October 2023: https://www.ncei.noaa.gov/products/international-best-track-archive?name=rsmc-data. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/viet-nam-storm-tracks]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "NOAA's International Best Track Archive for Climate Stewardship (IBTrACS) data, accessed on 20 October 2023.",
+      "contact_point": {
+        "name": "UN in Viet Nam",
+        "url": "https://data.humdata.org/dataset/viet-nam-storm-tracks"
+      },
+      "creator": {
+        "name": "UN in Viet Nam",
+        "url": "https://data.humdata.org/dataset/viet-nam-storm-tracks"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VNM"
+        ]
+      },
+      "temporal": {
+        "start": "1980-01-01",
+        "end": "2023-10-20"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "NOAA International Best Track Archive for Climate Stewardship (IBTrACS)",
+            "url": "https://data.humdata.org/dataset/viet-nam-storm-tracks"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historical tropical cyclone tracks over Vietnam were extracted from NOAA's IBTrACS database, which consolidates best-track data from multiple international meteorological agencies. The dataset contains observed storm positions, wind speeds (WMO and USA standards), central pressure, and structural parameters (wind radii) from 1980-2023, provided in shapefile and geopackage formats for spatial analysis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "NOAA International Best Track Archive for Climate Stewardship (IBTrACS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Global historical tropical cyclone track database providing observed storm positions, wind speeds, and pressure measurements compiled from multiple meteorological agencies"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7e31a39b",
+          "title": "Viet Nam storms SHP.zip",
+          "description": "This shape file consists of consolidated history of tropical storm paths over Viet Nam from 1980-2023.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/2a36548d-a9d2-4f1c-8290-77a675a43818/resource/7e31a39b-0533-4396-9f72-ea3edfe1880b/download/viet-nam-storms-shp.zip"
+        },
+        {
+          "id": "resource_0aefe296",
+          "title": "Viet Nam storms geopackage.zip",
+          "description": "Geopackage consists of consolidated history of tropical storm paths over Viet Nam from 1980-2023.",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://data.humdata.org/dataset/2a36548d-a9d2-4f1c-8290-77a675a43818/resource/0aefe296-b90e-4a9a-ab30-a991a368fef1/download/viet-nam-storms-geopackage.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/viet-nam-storm-tracks",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

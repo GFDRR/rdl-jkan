@@ -1,0 +1,182 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-ukr_ethzurich_stormeuropedatadisasterri_1940",
+      "title": "Storm Europe: Data for Disaster Risk Assessment (Ukraine Only)",
+      "description": "European winter storm [gust in meters per second] footprints for Ukraine. Data presented here is historical, observed data based on the Copernicus WISC project event footprints 1940-2014. Further modelled data are available from the CLIMADA Data API these include 50 probabilistic events per original event, at 4 kilometers resolution. Data available for European countries, and corresponds to the storm hazard today. See key reference Röösli et al. 2021. 2. Winter storm hazards generated from ERA5 (1980-2010) and CMIP6 models (1980-2010 and 2070-2100). In that second case, only Europe wide datasets are available, with lower resolution (depending on the GCM or ERA5 model). See Severino et al. 2023.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/climada-storm-europe-dataset]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "2024-01-15: Only Ukraine data since other HRP countries are not in the source",
+      "contact_point": {
+        "name": "ETH Zürich - Weather and Climate Risks",
+        "url": "https://data.humdata.org/dataset/climada-storm-europe-dataset"
+      },
+      "creator": {
+        "name": "ETH Zürich - Weather and Climate Risks",
+        "url": "https://data.humdata.org/dataset/climada-storm-europe-dataset"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UKR"
+        ]
+      },
+      "temporal": {
+        "start": "1940-11-01",
+        "end": "2013-12-05"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Copernicus WISC project",
+            "url": "https://data.humdata.org/dataset/climada-storm-europe-dataset"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "ERA5 reanalysis",
+            "url": "https://data.humdata.org/dataset/climada-storm-europe-dataset"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "CMIP6 climate models",
+            "url": "https://data.humdata.org/dataset/climada-storm-europe-dataset"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "CLIMADA",
+            "url": "https://data.humdata.org/dataset/climada-storm-europe-dataset"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historical winter storm footprints from the Copernicus WISC project (1940-2014) were used as baseline events. Wind speed fields were generated from ERA5 reanalysis (1980-2010) and CMIP6 climate model outputs (1980-2010 and 2070-2100) at 4 km resolution. The CLIMADA platform generated 50 probabilistic synthetic events per historical event to create a comprehensive probabilistic windstorm hazard dataset for Ukraine and Europe, enabling disaster risk assessment under current and future climate conditions.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Copernicus WISC project",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Historical observed winter storm event footprints for Europe (1940-2014) providing baseline hazard characterization"
+          },
+          {
+            "id": "source_2",
+            "name": "ERA5 reanalysis",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Atmospheric reanalysis data (1980-2010) used to generate historical winter storm wind speed fields"
+          },
+          {
+            "id": "source_3",
+            "name": "CMIP6 climate models",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Global climate model projections (1980-2010 and 2070-2100) used to generate future probabilistic windstorm scenarios"
+          },
+          {
+            "id": "source_4",
+            "name": "CLIMADA",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Probabilistic disaster risk modeling platform used to generate 50 synthetic events per historical event and compute hazard footprints"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.nat-hazards-earth-syst-sci-discuss.net/nhess-2020-115"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "http://dx.doi.org/10.1002/met.2035"
+        },
+        {
+          "id": "reference_3",
+          "name": "Methodology documentation",
+          "url": "https://doi.org/10.5194/egusphere-2023-205"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_d79cc454",
+          "title": "admin1-summaries-storm-europe.csv",
+          "description": "European winter storm gust wind speeds over the period 1940-2013 at admin1 level for Ukraine",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/2b6d2fcf-25ad-4783-9653-8a20cfb80b43/resource/d79cc454-2c5d-4f9c-bfd5-67760403e5a9/download/admin1-summaries-storm-europe.csv"
+        },
+        {
+          "id": "resource_11cfc323",
+          "title": "admin1-timeseries-summaries-storm-europe.csv",
+          "description": "European winter storm gust wind speeds by admin1 or admin2 for each storm for Ukraine",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/2b6d2fcf-25ad-4783-9653-8a20cfb80b43/resource/11cfc323-c4fa-4619-9562-ae63db9b94e3/download/admin1-timeseries-summaries-storm-europe.csv"
+        },
+        {
+          "id": "resource_204edb57",
+          "title": "ukraine-admin1-storm-europe.csv",
+          "description": "Gridded (4kmx4km) European winter storm gust wind speeds for Ukraine at with admin1 name column",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/2b6d2fcf-25ad-4783-9653-8a20cfb80b43/resource/204edb57-68b1-4d04-bfc6-c842f3f00e9d/download/ukraine-admin1-storm-europe.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "extratropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/climada-storm-europe-dataset",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

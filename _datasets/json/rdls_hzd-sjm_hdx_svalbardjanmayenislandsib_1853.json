@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-sjm_hdx_svalbardjanmayenislandsib_1853",
+      "title": "Svalbard and Jan Mayen Islands: IBTrACS Storm Tracks",
+      "description": "The International Best Track Archive for Climate Stewardship (IBTrACS) project is the most complete global collection of tropical cyclones available. It merges recent and historical tropical cyclone data from multiple agencies to create a unified, publicly available, best-track dataset that improves inter-agency comparisons. Fields available: SID: A unique storm identifier (SID) assigned by IBTrACS algorithm. ISO_TIME: Time of the observation in ISO format (YYYY-MM-DD hh:mm:ss) BASIN: Basin of the current storm position SUBBASIN: Sub-basin of the current storm position NATURE: Type of storm (a combination of the various types from the available sources) NUMBER: Number of the storm for the year (restarts at 1 for each year LAT: Mean position - latitude (a combination of the available positions) LON: Mean position - longitude (a combination of the available positions) WMO_WIND: Maximum sustained wind speed assigned by the responsible WMO agency WMO_PRES: Minimum central pressure assigned by the responsible WMO agency.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sjm-ibtracs-tropical-storm-tracks]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Some early (pre-1950) storms were not correctly matched, so the number of storms in the record is artificially high. For example, SIO storms in 1901 are not matched, so the same storm is tracked by the following identifiers: ds824, td9636, and reunion. This storm is broken into different tracks because of temporal differences in the storm data.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/sjm-ibtracs-tropical-storm-tracks"
+      },
+      "creator": {
+        "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+        "url": "https://data.humdata.org/dataset/sjm-ibtracs-tropical-storm-tracks"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SJM"
+        ]
+      },
+      "temporal": {
+        "start": "1853-08-30",
+        "end": "2023-09-26"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+            "url": "https://data.humdata.org/dataset/sjm-ibtracs-tropical-storm-tracks"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IBTrACS merges historical and recent tropical cyclone observations from multiple national meteorological agencies into a unified best-track dataset. Track positions, wind speeds (wmo_wind), and central pressures (wmo_pres) are recorded at regular time intervals and quality-controlled. This regional subset contains all tropical cyclone tracks affecting Svalbard and Jan Mayen Islands.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Oceanic and Atmospheric Administration (NOAA) / National Centers for Environmental Information (NCEI)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "International Best Track Archive for Climate Stewardship (IBTrACS) project providing merged tropical cyclone observations from multiple agencies with unified best-track positions, wind speeds, and pressure measurements."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-07/IBTrACS_version4r01_Technical_Details.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_4e1a6592",
+          "title": "ibtracs_ALL_list_v04r01_SJM.csv",
+          "description": "IBTrACS storm tracks from 1853 to date that pass within 2000 kilometers of Svalbard and Jan Mayen Islands.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/099af7cb-ddb5-4ec0-8838-5a8765b64d48/resource/4e1a6592-13d5-438c-a6b0-e4b16a63dc3e/download/ibtracs_all_list_v04r01_sjm.csv"
+        },
+        {
+          "id": "resource_aa687e67",
+          "title": "ibtracs_ALL_list_v04r01_lines_SJM.geojson",
+          "description": "IBTrACS storm tracks from 1853 to date that pass within 2000 kilometers of Svalbard and Jan Mayen Islands.",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/099af7cb-ddb5-4ec0-8838-5a8765b64d48/resource/aa687e67-3d5e-4e0a-bec6-0908be235cec/download/ibtracs_all_list_v04r01_lines_sjm.geojson"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "wmo_wind:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sjm-ibtracs-tropical-storm-tracks",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-alb_undrr_lossdamagedataset_20151001",
+      "title": "Disaster loss and damage dataset for Albania",
+      "description": "Disaster loss and damage data for Albania at several levels of disaggregation. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/disaster-loss-and-damage-data-for-albania]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "More information can be found here: http://www.mbrojtjacivile.al/",
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/disaster-loss-and-damage-data-for-albania"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/disaster-loss-and-damage-data-for-albania"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ALB"
+        ]
+      },
+      "temporal": {
+        "start": "2015-10-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "General Directorate of Civil Emergencies",
+            "url": "https://data.humdata.org/dataset/disaster-loss-and-damage-data-for-albania"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Disaster loss and damage data collected through direct observational methods and anecdotal reporting by Albania's General Directorate of Civil Emergencies, compiled at multiple administrative levels for national disaster risk assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "General Directorate of Civil Emergencies",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National civil protection agency providing official disaster loss and damage records collected through direct observation and administrative reporting systems."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6850c4bf",
+          "title": "Albania.zip",
+          "description": "Disaster loss and damage dataset for Albania (Disaster data for Albania)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/01c902dd-fec3-499b-a6c0-d092c18bc73e/resource/6850c4bf-cceb-4975-8716-8a5108ad82c3/download/albania.zip"
+        },
+        {
+          "id": "resource_0d9d729f",
+          "title": "DI_Report-Albania.xls",
+          "description": "Disaster loss and damage dataset for Albania (Disaster Tabular data for Albania)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/01c902dd-fec3-499b-a6c0-d092c18bc73e/resource/0d9d729f-658c-4e7d-bbf7-f2558e8a9715/download/di_report-albania.xls"
+        },
+        {
+          "id": "resource_36fd1618",
+          "title": "DataDictionary.docx",
+          "description": "Disaster loss and damage dataset for Albania (Data dictionary with variable definitions)",
+          "format": "DOCX",
+          "download_url": "https://data.humdata.org/dataset/01c902dd-fec3-499b-a6c0-d092c18bc73e/resource/36fd1618-d45a-488a-8b86-58c682314b04/download/datadictionary.docx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic losses and damage from multiple disaster types in Albania"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Building damage records from seismic events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Agricultural losses from drought events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/disaster-loss-and-damage-data-for-albania",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

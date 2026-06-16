@@ -1,0 +1,369 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: Copernicus / European Commission Joint Research Centre (JRC)
+    url: https://data.humdata.org/dataset/ury-anomalies-fapar-viirs
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/ury-anomalies-fapar-viirs
+creator:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/ury-anomalies-fapar-viirs
+dataset_id: rdls_hzd-ury_copernicus_vegetationindexanomalyfap_2012
+description: 'Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) is
+  a biophysical dimensionless quantity (its values range from 0/no absorption to 1/total
+  absorption) used to assess the greenness and health of vegetation. FAPAR anomalies
+  can be used as an indicator to detect and monitor the impacts of agricultural drought
+  on the growth and productivity of vegetation. The data is presented in 10-day time
+  composite of the Visible Infrared Imaging Radiometer Suite (VIIRS).. [Source: This
+  metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/ury-anomalies-fapar-viirs]'
+details: Variations in the vegetation health and/or cover could be related to stress
+  factors not related to droughts (e.g., plant diseases, pests, hail, flooding). To
+  determine if changes in FAPAR are linked with a drought event or not, FAPAR data
+  should be interpreted jointly with other indicators (as in the EDO Combined Drought
+  Indicator).
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    drought:
+    - analysis_type: empirical
+      calculation_method: observed
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: FAPAR:-
+        process: agricultural_drought
+        trigger: null
+        type: drought
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: FAPAR values from VIIRS satellite imagery are collected in 10-day composites
+    and processed by JRC to calculate anomalies as deviations from a long-term mean
+    baseline (2012 to present). The resulting raster datasets are distributed as annual
+    GeoTIFF files to enable temporal monitoring of agricultural drought impacts on
+    vegetation greenness and productivity across Uruguay.
+  sources:
+  - id: source_1
+    license: null
+    name: Copernicus / European Commission Joint Research Centre (JRC)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/ury-anomalies-fapar-viirs
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://drought.emergency.copernicus.eu/data/factsheets/factsheet_fapar_viirs.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2026-01-01 to 2026-01-10)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/255dd044-874a-4280-8f8d-a2d375866a87/download/ury_fpanv_m_gdo_20260101_20260101_t.zip
+  format: null
+  id: resource_255dd044
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20260101_20260101_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2025-01-01 to 2025-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/0adc0b27-615d-4d39-9990-d6f4fac92dc2/download/ury_fpanv_m_gdo_20250101_20251221_t.zip
+  format: null
+  id: resource_0adc0b27
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20250101_20251221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2024-01-01 to 2024-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/380f558e-f057-4d08-8214-5a1a63f0c224/download/ury_fpanv_m_gdo_20240101_20241221_t.zip
+  format: null
+  id: resource_380f558e
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20240101_20241221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2023-01-01 to 2023-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/9b0a7c70-60cb-4de8-ab2e-f4761bbe6738/download/ury_fpanv_m_gdo_20230101_20231221_t.zip
+  format: null
+  id: resource_9b0a7c70
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20230101_20231221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2022-01-01 to 2022-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/c2fcf2b6-8d1e-47c1-aae0-acdc0f79d8ac/download/ury_fpanv_m_gdo_20220101_20221221_t.zip
+  format: null
+  id: resource_c2fcf2b6
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20220101_20221221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2021-01-01 to 2021-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/36cef1a7-3848-468e-86e0-395091382377/download/ury_fpanv_m_gdo_20210101_20211221_t.zip
+  format: null
+  id: resource_36cef1a7
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20210101_20211221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2020-01-01 to 2020-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/6967e701-12cc-4f29-97da-4ff6a059eb15/download/ury_fpanv_m_gdo_20200101_20201221_t.zip
+  format: null
+  id: resource_6967e701
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20200101_20201221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2019-01-01 to 2019-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/7d89def1-2341-4304-a819-4548b328f228/download/ury_fpanv_m_gdo_20190101_20191221_t.zip
+  format: null
+  id: resource_7d89def1
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20190101_20191221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2018-01-01 to 2018-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/b070d97e-c3b6-4a54-a497-e08af2ebec6e/download/ury_fpanv_m_gdo_20180101_20181221_t.zip
+  format: null
+  id: resource_b070d97e
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20180101_20181221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2017-01-01 to 2017-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/5e312ec7-0ee0-4e59-8046-0532a4730c87/download/ury_fpanv_m_gdo_20170101_20171221_t.zip
+  format: null
+  id: resource_5e312ec7
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20170101_20171221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2016-01-01 to 2016-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/e54a0b84-ecd0-40c2-8575-8a5667724e6a/download/ury_fpanv_m_gdo_20160101_20161221_t.zip
+  format: null
+  id: resource_e54a0b84
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20160101_20161221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2015-01-01 to 2015-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/dc882ea3-bf49-4304-9c83-6ce4735d8db0/download/ury_fpanv_m_gdo_20150101_20151221_t.zip
+  format: null
+  id: resource_dc882ea3
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20150101_20151221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2014-01-01 to 2014-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/2e801fe5-c2f6-49eb-963b-9d1f8fe027ee/download/ury_fpanv_m_gdo_20140101_20141221_t.zip
+  format: null
+  id: resource_2e801fe5
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20140101_20141221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2013-01-01 to 2013-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/6e953942-7ad0-47c0-81d1-d20772cfa834/download/ury_fpanv_m_gdo_20130101_20131221_t.zip
+  format: null
+  id: resource_6e953942
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20130101_20131221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data
+    from 2012-01-21 to 2012-12-31)'
+  download_url: https://data.humdata.org/dataset/6f1cf805-b9de-4623-8108-16d1dba74e6d/resource/4c3b1c8e-9ace-4ec1-8282-e188c90a2421/download/ury_fpanv_m_gdo_20120121_20121221_t.zip
+  format: null
+  id: resource_4c3b1c8e
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ury_fpanv_m_gdo_20120121_20121221_t.zip
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-ury_copernicus_vegetationindexanomalyfap_2012
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - URY
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2026-01-10'
+  start: '2012-01-21'
+temporal_resolution: null
+title: 'Uruguay: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)'
+version: null
+vulnerability: null
+---

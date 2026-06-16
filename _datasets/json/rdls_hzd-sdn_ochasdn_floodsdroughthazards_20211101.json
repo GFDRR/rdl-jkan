@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-sdn_ochasdn_floodsdroughthazards_20211101",
+      "title": "Sudan - Floods and Drought Hazards",
+      "description": "This file contains the the Sudan admin2 level localities with data of the climate hazards in the country (flood affected by year and overall risk/severity and drought risk/severity.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/2021-floods-and-drought-hazards]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/2021-floods-and-drought-hazards"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/2021-floods-and-drought-hazards"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2021-11-01"
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian Partners",
+            "url": "https://data.humdata.org/dataset/2021-floods-and-drought-hazards"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Hazard data compiled from direct observational records and anecdotal reports by humanitarian partners operating in Sudan. Flood and drought hazard information was aggregated at admin2 (locality) level with annual flood occurrence records and categorical risk/severity classifications for both hazards.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian Partners",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Multiple humanitarian organizations contributing observational and anecdotal data on flood and drought hazards across Sudan localities"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_cf9e9077",
+          "title": "Hazards_Climate_2021.xlsx",
+          "description": "This file contains the the Sudan admin2 level localities with data of the climate hazards in the country (flood affected by year and overall risk/severity and drought risk/severity.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/7ba71e5d-2b95-4ba1-987a-fc99c3fc032a/resource/cf9e9077-7500-4cb3-892f-07a8d34ea20a/download/hazards_climate_2021.xlsx"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/2021-floods-and-drought-hazards",
+          "rel": "source"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "es_flood",
+            "hazards": [
+              {
+                "id": "es_flood_hzd",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_drought",
+            "hazards": [
+              {
+                "id": "es_drought_hzd",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-usa_esri_currentweatherwindstation_20200506",
+      "title": "United States - Current Weather and Wind Station data",
+      "description": "Live feed sources on severe weather across the United States. The Current Weather and Wind Station Data layer is created from hourly METAR station data provided from NOAA and contains approximately 11 weather variables for each location.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/current-weather-and-wind-station-data]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Esri",
+        "url": "https://data.humdata.org/dataset/current-weather-and-wind-station-data"
+      },
+      "creator": {
+        "name": "Esri",
+        "url": "https://data.humdata.org/dataset/current-weather-and-wind-station-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "USA"
+        ]
+      },
+      "temporal": {
+        "start": "2020-05-06"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "NOAA",
+            "url": "https://data.humdata.org/dataset/current-weather-and-wind-station-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Hourly METAR station data from NOAA are ingested and processed by Esri to create a live feed geoservice containing approximately 11 weather variables per station location, enabling real-time monitoring of severe weather and wind conditions across the United States.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "NOAA",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Hourly METAR station observations providing real-time severe weather and wind speed measurements across the United States"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f469b50f",
+          "title": "Current Weather and Wind Station Data",
+          "description": "The Current Weather and Wind Station Data layer is created from hourly METAR station data provided from NOAA and contains approximately 11 weather variables for each location.",
+          "access_url": "https://www.arcgis.com/home/item.html?id=cb1886ff0a9d4156ba4d2fadd7e8a139",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_b954d34a",
+          "title": "Severe Weather App",
+          "description": "Description Map containing live feed sources for severe weather across the United States.",
+          "access_url": "https://www.arcgis.com/home/item.html?id=250d053c7b2049548d4435ccbe8d658d",
+          "media_type": "text/html"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "extratropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/current-weather-and-wind-station-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
