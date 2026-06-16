@@ -75,7 +75,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop produced gridded population estimates for Belize using country-specific
     customized methods at 100m resolution. Population counts per grid cell were derived

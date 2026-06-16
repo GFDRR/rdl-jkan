@@ -27,7 +27,7 @@ description: 'This dataset is produced by the United Nations for the Coordinatio
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Multi-organizational humanitarian needs data aggregated by OCHA ROWCA
     from partner assessments across Sahel countries. Data covers people in need, food

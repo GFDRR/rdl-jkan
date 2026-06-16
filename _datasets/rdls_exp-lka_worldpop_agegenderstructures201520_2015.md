@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop R2025A version 1 provides spatially disaggregated population
     estimates for Sri Lanka by combining multiple demographic sources (census, surveys)

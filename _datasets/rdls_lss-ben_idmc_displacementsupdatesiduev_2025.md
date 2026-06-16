@@ -61,7 +61,7 @@ details: 'Please note that most of the figures are estimates. The definition hig
   displacement.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC collects and validates event data on internal displacements from
     multiple sources including media reports, NGO reports, and government data. Events

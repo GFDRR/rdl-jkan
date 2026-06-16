@@ -69,7 +69,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed PlanetScope satellite imagery acquired on\
     \ 26 August 2024 over N'Djamena city, comparing multi-temporal images to detect\

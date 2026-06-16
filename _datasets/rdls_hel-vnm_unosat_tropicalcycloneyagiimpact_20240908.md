@@ -71,7 +71,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed satellite imagery and JTWC tropical cyclone
     track and wind speed data to map observed and predicted wind speed zones from

@@ -59,7 +59,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Satellite-based damage assessment conducted by UNOSAT analysts comparing\
     \ post-disaster Pleiades imagery acquired 7 October 2016 with pre-disaster WorldView-1\

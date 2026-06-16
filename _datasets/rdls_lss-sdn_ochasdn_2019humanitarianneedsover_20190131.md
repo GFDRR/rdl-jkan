@@ -25,7 +25,7 @@ description: 'This data set contains people in need figures for Sudan by localit
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian needs data compiled by the Inter-Sector Coordination Group
     through direct observational and anecdotal data collection methods, aggregated

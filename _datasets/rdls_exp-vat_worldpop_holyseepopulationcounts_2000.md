@@ -90,7 +90,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop gridded population estimates for Holy See are produced by
     disaggregating census and administrative population data to 100m resolution raster

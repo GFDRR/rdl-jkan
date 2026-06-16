@@ -49,7 +49,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "TSR gust footprint model generated approximately 3 hours after Cyclone\
     \ FANI made landfall near Puri, Odisha, India. The model simulates peak wind speeds\

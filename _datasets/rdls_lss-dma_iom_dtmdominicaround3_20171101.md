@@ -18,7 +18,7 @@ description: 'Third Round, Displacement Tracking Matrix (DTM) Dominica- Hurrican
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Displacement Tracking Matrix (DTM) Round 3 data collected through direct
     observational surveys and anecdotal reports by IOM field teams in Dominica following

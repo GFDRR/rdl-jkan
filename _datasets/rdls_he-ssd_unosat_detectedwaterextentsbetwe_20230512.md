@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed VIIRS satellite imagery from two time periods\
     \ (27 April-01 May and 06-10 May 2023) to detect cumulative water extents through\

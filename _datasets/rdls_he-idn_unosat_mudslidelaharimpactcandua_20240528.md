@@ -103,7 +103,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts conducted satellite image interpretation by comparing\
     \ Pl\xE9iades (23 May 2024) and VRSS-2 (17 May 2024) imagery to detect mudslide/lahar\

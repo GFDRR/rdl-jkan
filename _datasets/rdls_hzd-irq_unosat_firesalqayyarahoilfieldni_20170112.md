@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared satellite imagery over the Al
     Qayyarah oil field complex between July 2016 and January 2017 to detect active

@@ -56,7 +56,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared Radarsat-2 radar imagery acquired on 10 July
     2018 and 24 July 2018 to detect changes in surface water extent following the

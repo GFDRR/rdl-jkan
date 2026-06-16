@@ -32,7 +32,7 @@ description: 'This layer contains information about the numbers of food insecure
 details: https://geonode.wfp.org/layers/geonode%3Asdn_ica_adm1_estimatedfipeople_geonode_20180201
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Food insecurity population estimates were sourced from IPC phase classifications\
     \ (2014\u20132017) and aggregated to first-level administrative units in Sudan.\

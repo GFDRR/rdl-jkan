@@ -29,7 +29,7 @@ description: 'This layer contains information about the food security trend anal
 details: https://geonode.wfp.org/layers/geonode%3Asdn_ica_firecurrence_geonode_20180201
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC food security assessments from 2010-2017 were aggregated by second-level
     administrative unit to calculate the recurrence frequency of IPC Phases 3 or above

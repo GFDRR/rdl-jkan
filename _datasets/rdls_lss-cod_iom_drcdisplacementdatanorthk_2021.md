@@ -20,7 +20,7 @@ description: 'The dataset contains number of people displaced and returnees at v
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM baseline assessments conducted at village level in North Kivu
     Province using standardized DTM methodology. Data collection captures displacement

@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared satellite imagery acquired on
     18 July 2017 with previous imagery from 30 June 2017 to detect structural changes

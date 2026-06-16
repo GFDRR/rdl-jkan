@@ -26,7 +26,7 @@ description: 'Google Earth file (KMZ) verion of IOM Iraq DTM Map New Displacemen
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM Iraq collected displacement tracking data through field assessments
     and community surveys during June-July 2014, documenting locations of newly displaced

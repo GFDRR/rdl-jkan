@@ -84,7 +84,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Global population counts were derived by fusing the Global Human Settlement
     Layer (GHSL) with Facebook's High Resolution Settlement Layer (HRSL) and aggregating

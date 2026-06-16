@@ -19,7 +19,7 @@ description: 'The Democratic Republic of the Congo Current Situation FEWS NET Ac
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data collected by FEWS NET enumerators on a monthly
     schedule throughout 2021, with geographic boundaries and food insecurity phase

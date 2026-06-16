@@ -24,7 +24,7 @@ description: 'In October, November and December 2016, a comprehensive mixed qual
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Secondary data review of assessment data identified IDP locations for
     populations displaced between January 2014 and March 2016. Field teams then verified

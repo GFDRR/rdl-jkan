@@ -18,7 +18,7 @@ description: 'Natural disasters data on affected and displaced people in 2019.. 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Natural disaster impact data compiled by OCHA Philippines from government
     partners documenting affected and displaced populations across multiple hazard

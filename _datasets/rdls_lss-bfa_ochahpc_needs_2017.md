@@ -31,7 +31,7 @@ details: Humanitarian needs data up to 2024 were provided manually from OCHA fie
   automatically through OCHA's HPC tools API.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOCHA compiled humanitarian needs data from multiple humanitarian
     partners through the Humanitarian Country Team coordination process. Data aggregates

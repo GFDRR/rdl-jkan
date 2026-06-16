@@ -25,7 +25,7 @@ description: 'Mozambique Rapid Needs Assessment data taken from IFRC Kobo toolbo
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Rapid needs assessment data collected through direct field observations
     and aerial surveys by IFRC teams using standardized Kobo toolbox forms in the

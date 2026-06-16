@@ -72,7 +72,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The GHSL dataset for Martinique was generated through automated spatial
     data processing of fine-scale satellite imagery, census data, and volunteered

@@ -44,7 +44,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "INFORM Colombia aggregates multiple datasets from various sources\
     \ to calculate a composite humanitarian risk index at municipal level using the\

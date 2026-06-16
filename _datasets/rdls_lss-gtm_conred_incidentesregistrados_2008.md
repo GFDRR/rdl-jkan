@@ -27,7 +27,7 @@ description: "Incidentes registrados en Guatemala por el Sistema Nacional de Ges
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event incident records compiled by Guatemala's National Risk Management
     System (CONRED) through the SISMICEDE platform, documenting disaster impacts including

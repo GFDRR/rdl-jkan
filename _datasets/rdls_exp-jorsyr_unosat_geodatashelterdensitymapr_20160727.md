@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted Demios-2 satellite imagery acquired on
     25 July 2016 of the Rukban border area, manually identifying shelter structures

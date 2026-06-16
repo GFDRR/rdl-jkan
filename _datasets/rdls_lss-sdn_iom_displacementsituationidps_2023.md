@@ -32,7 +32,7 @@ description: 'This dataset provides an overview of the total population of inter
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collects displacement data through field assessments and administrative
     tracking across Sudan at admin1 and admin2 levels. Data is compiled into bi-weekly

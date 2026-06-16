@@ -70,7 +70,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted rapid satellite imagery analysis comparing
     pre- and post-event images collected on 20 May 2021 to identify visible damage

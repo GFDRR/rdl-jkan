@@ -25,7 +25,7 @@ description: 'The dataset contains information on flood-affected people and floo
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event flood impact data collected by the Humanitarian Aid Commissioner
     through direct observation and anecdotal reports at locality and state administrative

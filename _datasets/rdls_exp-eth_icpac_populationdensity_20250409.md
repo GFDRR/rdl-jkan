@@ -44,7 +44,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population density estimates for Ethiopia in 2020 were sourced from
     WorldPop, a global gridded population dataset. The data was processed into a GeoTIFF

@@ -30,7 +30,7 @@ description: 'This dataset shows the IPC AMN analysis. The IPC Acute Malnutritio
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC AMN classification data extracted from the November 2023 to October
     2024 Yemen analysis report. The dataset aggregates MUAC screening data and historical

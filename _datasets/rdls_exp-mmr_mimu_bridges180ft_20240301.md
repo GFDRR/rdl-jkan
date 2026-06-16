@@ -77,7 +77,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Bridge infrastructure data was compiled from tabular records in GAD
     2019 township profiles and supplemented with locally-identified bridges. Geographic

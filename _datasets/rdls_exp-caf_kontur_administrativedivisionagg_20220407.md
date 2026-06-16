@@ -74,11 +74,11 @@ details: "**Dataset codebook (may be different for previous versions)**: **fid**
   \ Bert De Roo, Myroslava Lesiv, Nandin-Erdene Tsendbazar, Martin Herold, Steffen\
   \ Fritz. (2020). Copernicus Global Land Service: Land Cover 100m: collection 3:\
   \ epoch 2019: Globe (Version V3.0.1) [Data set] licensed for reuse under [CC BY\
-  \ 4.0](https://creativecommons.org/licenses/by/4.0/). [Zenodo](http://doi.org/10.5281/zenodo.3939050).\
+  \ 4.0](CC-BY-4.0). [Zenodo](http://doi.org/10.5281/zenodo.3939050).\
   \ Microsoft Buildings: (see the full list of locations in Methods). This data is\
   \ licensed by Microsoft under the Open Data Commons Open Database License (ODbL).\
   \ Land Information New Zealand (LINZ) NZ Building Outlines: sourced from the [LINZ\
-  \ Data Service](https://data.linz.govt.nz/) licensed for reuse under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).\
+  \ Data Service](https://data.linz.govt.nz/) licensed for reuse under [CC BY 4.0](CC-BY-4.0).\
   \ OpenStreetMap: Some data (c) OpenStreetMap.org Contributors [Open Data Commons\
   \ Open Database License](https://opendatacommons.org/licenses/odbl/) (ODbL)"
 exposure:

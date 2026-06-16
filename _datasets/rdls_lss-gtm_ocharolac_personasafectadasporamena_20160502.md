@@ -41,7 +41,7 @@ details: "* [INFORM Guatemala.](http://www.inform-index.org/Subnational/Guatemal
   n: Vulnerabilidad"
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Municipal-level registry of people affected by natural hazard events
     in Guatemala compiled from CONRED records and partner organizations. Data aggregates

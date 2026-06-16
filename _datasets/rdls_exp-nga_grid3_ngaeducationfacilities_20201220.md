@@ -70,7 +70,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Education facility locations were compiled from multiple administrative
     and survey sources (GRID3, NMIS, OSGOF, Proxy Logistics, eHA Polio, and Bauchi

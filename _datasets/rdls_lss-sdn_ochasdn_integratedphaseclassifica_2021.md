@@ -36,7 +36,7 @@ description: 'Latest data shows that an estimated 7.3 million people in Sudan (1
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data aggregated by OCHA Sudan from direct observational
     and anecdotal data collection across Sudan localities. Population counts are classified

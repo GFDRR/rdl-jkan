@@ -39,7 +39,7 @@ details: 'Terms of use: Users are free to download, store, access, use, copy, ad
   as set forth in this Terms of Use. Copyright 2024. The Trustees of Columbia University
   in the City of New York. Data license: The data and accompanying document are licensed
   under a Creative Commons Attribution-ShareAlike 4.0 International, CC BY-SA 4.0
-  (https://creativecommons.org/licenses/by-sa/4.0) and specified in legal code (https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+  (https://creativecommons.org/licenses/by-sa/4.0) and specified in legal code (CC-BY-SA-4.0legalcode)
   Contacts and data queries: The authors of this dataset appreciate feedback regarding
   the data, including suggestions, discovery of errors, difficulties in using the
   data, and format preferences. For dataset-related questions, please send an email
@@ -76,7 +76,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Settlement extents were delineated from remote sensing imagery and
     gridded to 3-arc-second (~100 meter) cells. Building counts and areas were imputed

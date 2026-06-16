@@ -47,7 +47,7 @@ description: 'The data represents the IPC (Integrated Food Security Phase Classi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC analysis conducted through sample survey methodology by the Food
     Security Cluster, integrating data from CSA, WFP, and FAO to classify food insecurity

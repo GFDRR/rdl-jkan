@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Direct field observations of 644 facilities across 21 Kutupalong refugee
     camps were assessed for exposure to flood and landslide hazards. A prioritization

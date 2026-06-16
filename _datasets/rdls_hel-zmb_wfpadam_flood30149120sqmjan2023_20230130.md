@@ -69,7 +69,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM system processed satellite imagery and administrative boundary
     data to delineate the observed flood extent on 30 January 2023, intersected with

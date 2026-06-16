@@ -75,7 +75,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed TerraSAR-X radar imagery from 24 May 2021
     to delineate the lava flow extent from the Nyiragongo eruption and overlay building

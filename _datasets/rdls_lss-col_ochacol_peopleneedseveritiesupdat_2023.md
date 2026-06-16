@@ -25,7 +25,7 @@ description: 'PiN and Severities update PRPC Colombia 2025. [Source: This metada
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian partners conducted complementary needs assessments across
     Colombia to estimate people in need (PiN) and sectoral severity levels. Data were

@@ -71,7 +71,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "GeoEye-1 satellite imagery acquired on 2 June 2025 was analyzed by\
     \ UNOSAT analysts through visual comparison and change detection methods to delineate\

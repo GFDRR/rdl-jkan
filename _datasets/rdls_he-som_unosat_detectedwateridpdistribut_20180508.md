@@ -67,7 +67,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared GeoEye-1 and WorldView-3 satellite images
     acquired on 30 April and 1 May 2018 to detect changes in water extent across Belet

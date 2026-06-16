@@ -28,7 +28,7 @@ details: Contains data on total dollar value (USD) spent on aid response and peo
   Platform started from December 2022.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Aid response data aggregated from activities recorded in the RespondLocal-Ukraine
     Platform, compiled into summary tables of total USD spending and people reached

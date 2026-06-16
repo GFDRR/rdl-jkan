@@ -84,7 +84,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Cambodia CCRI integrates probabilistic climate and environmental
     hazard models (drought, extreme heat, riverine floods, high wind) with subnational

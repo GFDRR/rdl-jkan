@@ -63,7 +63,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Machine learning models trained on high-resolution Digital Globe satellite
     imagery were used to identify building footprints across Eswatini. These building-level

@@ -41,7 +41,7 @@ description: 'This data is collected from the survey conducted in 14 earthquake 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "A stratified random sample survey of 2,100 households was conducted\
     \ across 14 earthquake-affected districts in Nepal in September 2017, with sampling\

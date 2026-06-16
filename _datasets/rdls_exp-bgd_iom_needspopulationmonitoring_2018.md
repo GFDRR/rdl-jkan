@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted regular drone flights and site assessments (NPM Round
     12) across refugee camps in Cox's Bazar, Bangladesh. Drone imagery and field observations

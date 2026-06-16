@@ -81,7 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR imagery from 4 November 2020 was analyzed by UNOSAT
     analysts through visual interpretation and comparison with prior imagery (29 October

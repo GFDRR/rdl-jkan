@@ -26,7 +26,7 @@ description: 'The dataset contains IDPs numbers. [Source: This metadata record w
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted site assessments in Bolivia to enumerate internally
     displaced persons and document displacement characteristics. The dataset aggregates

@@ -51,7 +51,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Sentinel-1 SAR imagery acquired on 07 November
     2016 and 01 December 2016 through visual interpretation and multi-temporal comparison

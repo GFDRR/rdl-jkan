@@ -18,7 +18,7 @@ description: 'Topline figures dataset for OCHA Haiti organisation page. [Source:
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Topline figures aggregated from multiple sources documenting cyclone
     and hurricane impacts on Haiti, compiled by OCHA Haiti for situational awareness

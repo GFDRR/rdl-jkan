@@ -54,7 +54,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Sentinel-3 imagery acquired on 6 June 2023
     and Sentinel-2 imagery from 3-5 June 2023 over Khersonska Oblast, comparing multi-temporal

@@ -114,7 +114,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: This dataset aggregates multiple risk assessment indicators for Sri
     Lanka at admin level 2 derived from HeiGIT's GAIA Pipeline, which integrates open

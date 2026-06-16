@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts manually reviewed and compared satellite imagery from
     January 2014 to April 2014 to detect shelter and infrastructure buildings at Al

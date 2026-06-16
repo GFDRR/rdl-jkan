@@ -42,7 +42,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data from Digital Chart World was extracted and classified
     for Congo, with attributes including name, axis designation, type, category, and

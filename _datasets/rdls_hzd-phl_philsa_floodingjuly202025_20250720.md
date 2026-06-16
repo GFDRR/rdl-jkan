@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Satellite radar imagery (Sentinel-1 and ALOS-2) acquired on July 20,
     2025 was processed by the Philippine Space Agency to delineate flood extent polygons

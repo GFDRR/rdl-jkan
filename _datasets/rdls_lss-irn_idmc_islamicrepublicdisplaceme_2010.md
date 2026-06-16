@@ -52,7 +52,7 @@ details: 'Please note that most of the figures are estimates. The definition hig
   displacement.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC compiles internally displaced persons data from national authorities,
     humanitarian organizations, and media reports, validated against the 1998 Guiding

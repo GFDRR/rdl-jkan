@@ -25,7 +25,7 @@ description: 'Food Security situation outlook for Kenya More Information. http:/
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC food security phase classifications were conducted by the Food
     Security and Nutrition Working Group across Kenya administrative boundaries in

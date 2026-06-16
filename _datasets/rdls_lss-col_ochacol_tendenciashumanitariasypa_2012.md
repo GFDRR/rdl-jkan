@@ -43,7 +43,7 @@ description: "El informe 'Tendencias Humanitarias y Paz noviembre 2012 - junio 2
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: This dataset aggregates humanitarian monitoring data from OCHA and
     humanitarian partners in Colombia documenting conflict-related impacts (displacement,

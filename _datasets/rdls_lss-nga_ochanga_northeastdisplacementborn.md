@@ -26,7 +26,7 @@ description: 'Northeast Nigeria displacement datasets by rounds of assessment fr
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM/DTM conducted direct observational assessments across multiple
     rounds (June and September 2022) to track displacement and return movements in

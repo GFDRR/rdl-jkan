@@ -27,7 +27,7 @@ description: 'The assessment contains IDPs and Returnees data at village level. 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted village-level assessments across South Sudan from
     May 2016 to November 2019, collecting data on IDP and returnee populations disaggregated

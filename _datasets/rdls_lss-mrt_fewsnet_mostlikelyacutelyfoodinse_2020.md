@@ -18,7 +18,7 @@ description: 'Mauritania Most Likely FEWS NET Acutely Food Insecure Population E
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (typically monthly) surveys
     across Mauritania to estimate acutely food insecure populations under different

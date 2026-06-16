@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery from 7 January 2015 and
     17 May 2015 to detect structural damage in Sadah, Saada Governorate. Buildings

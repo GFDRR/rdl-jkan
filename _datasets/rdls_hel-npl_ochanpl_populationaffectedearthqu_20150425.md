@@ -63,7 +63,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: USGS shake map data from the Nepal earthquake event was overlaid with
     population density data through the GDACS automatic calculation system to estimate

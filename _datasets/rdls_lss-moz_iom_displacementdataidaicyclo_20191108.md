@@ -26,7 +26,7 @@ description: 'DTM is tracking in/out movement of displaced people in 4 Provinces
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collected daily tracking data on population movements (in/out
     flows) at displacement sites across 4 Mozambique provinces affected by Cyclone

@@ -27,7 +27,7 @@ description: "Ce fichier contient le stock de personnes retourn\xE9es au 31 mai 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted sample surveys to track population movements and returns
     in the DRC over an 18-month period (December 2023 to May 2025). Data was compiled

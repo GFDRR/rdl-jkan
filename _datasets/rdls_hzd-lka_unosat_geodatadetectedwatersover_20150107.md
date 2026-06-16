@@ -49,7 +49,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted Sentinel-1 SAR imagery acquired on 24 November
     2014 and 18 December 2014, identifying water bodies through multi-temporal image

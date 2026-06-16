@@ -32,7 +32,7 @@ description: 'The dataset contains information on the number of people in need i
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: People in need figures were derived from multiple humanitarian assessment
     sources using the JIAF 2.0 methodology framework. Data was aggregated at the admin

@@ -25,7 +25,7 @@ description: 'Master list of IDPs currently residing in Haiti as of June 2016. [
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted direct observational assessments of displacement sites
     across Haiti to create a master list of internally displaced persons as of June

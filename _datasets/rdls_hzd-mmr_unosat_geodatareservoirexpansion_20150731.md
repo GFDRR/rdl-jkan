@@ -49,7 +49,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery from multiple sensors (Radarsat-2
     on 30 July 2015, Sentinel-1 on 18 July 2015, and Landsat-8 on 29 April 2015) to

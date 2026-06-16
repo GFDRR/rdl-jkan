@@ -56,7 +56,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Satellite imagery from four dates (15 September 2013, 02 May 2014,
     06 April 2015, and 01 August 2016) was analyzed by UNOSAT analysts through visual

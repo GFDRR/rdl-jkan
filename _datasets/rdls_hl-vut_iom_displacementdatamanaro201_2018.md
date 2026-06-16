@@ -44,7 +44,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted mixed-methodology data collection (census, key informant
     interviews, registration) to track displacement of Ambaeans evacuated from Ambae

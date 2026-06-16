@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared WorldView-2 satellite imagery
     from June 2014 against historical imagery from December 2012, manually identifying

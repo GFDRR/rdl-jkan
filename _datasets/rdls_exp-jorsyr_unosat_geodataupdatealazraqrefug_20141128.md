@@ -66,7 +66,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts processed WorldView-1 satellite imagery acquired on
     11 November 2014, comparing it with prior imagery from 26 April 2014 to detect

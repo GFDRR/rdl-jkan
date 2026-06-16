@@ -56,7 +56,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts compared pre- and post-disaster Pleiades satellite\
     \ imagery acquired in October 2016 to conduct rapid damage assessment across four\

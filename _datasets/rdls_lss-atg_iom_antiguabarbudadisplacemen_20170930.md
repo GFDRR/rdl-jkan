@@ -37,7 +37,7 @@ details: This dataset comes from the [DTM API](https://dtm.iom.int/data-and-anal
   added.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collects displacement data through field assessments and tracking
     mechanisms at multiple administrative levels in Antigua and Barbuda. Data is aggregated

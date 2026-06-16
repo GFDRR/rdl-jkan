@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared TerraSAR-X satellite imagery acquired on 11
     February 2014 and 18 February 2014 to detect changes in water body extent at Tokwe

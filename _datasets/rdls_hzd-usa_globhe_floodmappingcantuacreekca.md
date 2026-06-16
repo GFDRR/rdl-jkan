@@ -67,7 +67,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Drone operators from GLOBHE captured high-resolution aerial imagery\
     \ (5cm orthomosaic and 360\xB0 panoramas) of flood-affected areas in Cantua Creek,\

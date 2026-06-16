@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed VIIRS-NOAA satellite imagery acquired between\
     \ 9-13 February 2020 over Madagascar, detecting water extents through multi-temporal\

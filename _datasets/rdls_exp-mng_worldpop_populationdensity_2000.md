@@ -53,7 +53,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop population density estimates were derived from census data
     and spatial modeling at 1km resolution using Geographic Coordinate System WGS84.

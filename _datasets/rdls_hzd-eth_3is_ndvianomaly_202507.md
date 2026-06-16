@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: MODIS MOD13Q1 V6.1 NDVI data from July across three years (2023-2025)
     was processed using Google Earth Engine remote sensing analysis to calculate anomalies

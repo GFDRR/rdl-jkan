@@ -37,7 +37,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal optical very-high resolution
     satellite imagery to detect flood impacts on 4 dams in Benghazi and Almarj governorates.

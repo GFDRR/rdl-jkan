@@ -81,7 +81,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Gridded population estimates were produced by WorldPop using subnational
     population statistics from COD-PS 2020 and LandScan ancillary data, spatially

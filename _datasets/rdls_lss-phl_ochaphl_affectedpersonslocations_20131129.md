@@ -29,7 +29,7 @@ description: 'Priority municipalities: Within Yolanda''S 50Km Radius Haiyan (Yol
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event displacement data collected by DSWD on 3 December 2013 following
     Typhoon Haiyan (Yolanda), received as PDF and converted to Excel format with PSGC

@@ -66,7 +66,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: NPM Bangladesh conducted regular drone flights and site assessments
     to map refugee camp infrastructure and population distribution. Drone imagery

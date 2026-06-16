@@ -83,7 +83,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Sentinel-1 SAR imagery from 5 May 2023 was analyzed by UNOSAT to detect\
     \ surface water extent through comparison with baseline imagery from 3 May 2023.\

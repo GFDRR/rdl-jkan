@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted Deimos-2 satellite imagery acquired on
     29 April 2016 of the Hadalat border crossing camp, manually identifying 1,869

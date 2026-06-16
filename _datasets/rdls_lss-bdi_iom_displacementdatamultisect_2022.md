@@ -19,7 +19,7 @@ description: 'The dataset aims to collect data on population presence, living co
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated multi-sectoral location assessments (4 rounds)
     across Burundi displacement sites using standardized key informant interview methodology.

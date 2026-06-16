@@ -47,7 +47,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts performed visual interpretation and change detection
     analysis on Pleiades satellite imagery acquired 16 February 2023 to identify structural

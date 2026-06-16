@@ -25,7 +25,7 @@ description: 'Disaster loss and damage dataset for Senegal. [Source: This metada
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event disaster loss and damage data collected by Senegal's Direction
     de la Protection Civile through direct observation and anecdotal reporting, compiled

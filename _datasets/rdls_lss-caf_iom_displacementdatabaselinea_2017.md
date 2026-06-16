@@ -28,7 +28,7 @@ description: 'This dataset presents information on internally displaced persons,
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated baseline assessment surveys (Rounds 5-24)
     across Central African Republic villages and localities using standardized enumeration

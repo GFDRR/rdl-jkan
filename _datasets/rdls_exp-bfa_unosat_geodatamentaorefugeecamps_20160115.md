@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed Pleiades satellite imagery from 14 October
     2015 of the Mentao refugee camp, manually detecting and classifying 2,417 structures

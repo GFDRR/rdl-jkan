@@ -42,7 +42,7 @@ details: OHCHR documents civilian casualties by consulting a broad range of sour
   information emerges over time.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Monthly and yearly civilian casualty figures were compiled directly
     from OHCHR observational reports covering 2016-2021, disaggregated by cause of

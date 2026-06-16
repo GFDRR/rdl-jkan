@@ -31,7 +31,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts performed visual interpretation and multi-temporal\
     \ comparison of Pl\xE9iades satellite imagery acquired on 4 June 2024 to detect\

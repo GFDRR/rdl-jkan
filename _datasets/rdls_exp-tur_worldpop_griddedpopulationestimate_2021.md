@@ -70,7 +70,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Subnational population estimates from COD-PS for Turkey in 2021 were
     spatially disaggregated to 100m and 1km grid cells using WorldPop's dasymetric

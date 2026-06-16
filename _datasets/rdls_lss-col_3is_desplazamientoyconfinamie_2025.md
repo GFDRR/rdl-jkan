@@ -36,7 +36,7 @@ description: "Datos sobre estimaci\xF3n de personas que pueden ser v\xEDctima po
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Historical displacement and confinement event data (2008-2022) were
     integrated with updated registries (2023-2025) to construct a unified baseline.

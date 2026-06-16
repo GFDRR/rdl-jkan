@@ -66,7 +66,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted multi-temporal satellite imagery analysis
     comparing images from 8 July 2025 (baseline) with imagery from 22-23 September

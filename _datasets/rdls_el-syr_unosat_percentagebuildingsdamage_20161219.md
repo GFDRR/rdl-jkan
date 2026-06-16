@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (baseline
     2009, observations 2010-2016) of Aleppo city to identify structural damage through

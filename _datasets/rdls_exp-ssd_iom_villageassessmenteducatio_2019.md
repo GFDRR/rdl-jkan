@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted a village assessment survey across 182 bomas in seven
     South Sudan counties (August 2019 to March 2020), documenting education facility

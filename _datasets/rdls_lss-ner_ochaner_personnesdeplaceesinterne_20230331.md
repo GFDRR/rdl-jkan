@@ -26,7 +26,7 @@ description: 'This data is about the internally displaced persons (IDPs). [Sourc
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry data collected by the National Committee for IDP Data Collection
     in Niger, documenting population movements and displacement counts aggregated

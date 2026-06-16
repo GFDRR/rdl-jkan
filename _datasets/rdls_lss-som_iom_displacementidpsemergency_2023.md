@@ -37,7 +37,7 @@ description: 'In response to the Somalia''s severe drought beginning in November
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: DTM Somalia conducted systematic ground assessments of settlements
     across Gedo, Bay, Hiraan, Banadir, and Middle Shabelle regions, initially tracking

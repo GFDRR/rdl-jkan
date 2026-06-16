@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Satellite synthetic aperture radar imagery (ICEYE and ALOS-2) acquired
     on July 30, 2023 was processed by the Philippine Space Agency to detect surface

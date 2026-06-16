@@ -26,7 +26,7 @@ description: 'Tropical Storm VINTA (TEMBIN) Effects with PSGC code source: DSWD 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact registry compiled by DSWD DROMIC documenting effects
     of Tropical Storm VINTA (TEMBIN) in December 2017, with internally displaced persons

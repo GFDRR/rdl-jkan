@@ -83,7 +83,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: JRC tropical cyclone wind speed forecast model (issued 23 April 2019)
     was intersected with WorldPop 2015 gridded population data to quantify population

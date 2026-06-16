@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre- and post-event WorldView-2 very high-resolution
     satellite imagery to detect structural damage in Monywa Township resulting from

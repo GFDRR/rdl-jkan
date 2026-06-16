@@ -58,7 +58,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IBTrACS merges historical and recent tropical cyclone track data from
     multiple international agencies (WMO, regional meteorological centers) into a

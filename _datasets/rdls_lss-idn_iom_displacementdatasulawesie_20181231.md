@@ -26,7 +26,7 @@ description: 'The dataset contains disp at sub national level. The assessments a
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted sample survey-based site assessments in two rounds
     following the September 2018 Sulawesi earthquake in Indonesia. Field teams collected

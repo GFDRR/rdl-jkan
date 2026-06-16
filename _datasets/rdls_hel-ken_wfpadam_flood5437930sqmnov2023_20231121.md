@@ -69,7 +69,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM collected and mapped geospatial flood extent data and socio-economic
     information following the November 2023 flood event in Kenya. Flood boundaries

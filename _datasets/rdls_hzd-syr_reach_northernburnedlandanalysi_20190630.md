@@ -46,7 +46,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sentinel-2A multispectral imagery from before (6 April - 3 May 2019)
     and after (27-30 June 2019) periods was processed to calculate relativized burn

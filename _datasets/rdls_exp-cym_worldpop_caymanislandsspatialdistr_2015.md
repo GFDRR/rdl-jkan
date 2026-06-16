@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop generated gridded population estimates for Cayman Islands
     at 100m and 1km resolution for years 2015-2030 using Random Forest-based dasymetric

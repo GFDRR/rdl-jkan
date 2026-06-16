@@ -20,7 +20,7 @@ description: "Este conjunto de datos contiene los resultados del piloto MIRA Ada
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Primary observational data on humanitarian impacts from the 2022 Colombian
     winter wave (ola invernal) collected through the Premise information gathering

@@ -64,7 +64,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (21 August
     2015, 10 May 2015, 31 December 2014) of Aden city to identify structural damage

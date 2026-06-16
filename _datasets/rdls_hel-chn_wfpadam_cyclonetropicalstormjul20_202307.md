@@ -56,7 +56,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM collected and analyzed geospatial data on the tropical cyclone
     event occurring July 14-18, 2023 in China, mapping the storm track with wind speed

@@ -86,7 +86,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: 'Post-event damage assessment conducted by UNOSAT using multi-temporal
     satellite imagery comparison: pre-event GeoEye-1 imagery (28 June 2017) and post-event

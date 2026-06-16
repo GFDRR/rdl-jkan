@@ -32,7 +32,7 @@ description: 'The dataset highlights the number of IDPs in Mali by region from S
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP displacement data compiled by IOM through their Displacement Tracking
     Matrix (DTM) exercise combined with field evaluations from the Commission on Population

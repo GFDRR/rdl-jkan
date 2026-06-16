@@ -35,7 +35,7 @@ description: 'This resource is comprised of Twitter data collected and processed
 details: Please contact us if you need full dataset with tweets content.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Real-time Twitter data was collected via the public API during Hurricane
     Harvey 2017 and processed through the AIDR (Artificial Intelligence for Disaster

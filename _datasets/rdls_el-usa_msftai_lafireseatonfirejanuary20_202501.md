@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: High-resolution satellite imagery from Maxar (01/10/2025) and Planet
     (01/11/2025) was processed through Microsoft AI for Good Lab's damage assessment

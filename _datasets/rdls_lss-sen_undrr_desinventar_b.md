@@ -30,7 +30,7 @@ details: 'Event-level disaster loss records from the DesInventar database for Se
   Data.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Event-level disaster loss records collected through the DesInventar
     Sendai system, a standardised methodology for building national disaster loss

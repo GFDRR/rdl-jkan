@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census population data from Kiribati was spatially integrated with
     enumeration area administrative boundaries to conduct coastal proximity analysis.

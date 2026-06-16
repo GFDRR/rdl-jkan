@@ -40,7 +40,7 @@ details: "Los datos est\xE1n actualizados hasta la fecha carga de los datos, sin
   \ \xDAnico de V\xEDctimas."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Annual departmental IDP counts compiled from the UARIV registry, which
     documents forced displacement events within Colombia caused by armed conflict,

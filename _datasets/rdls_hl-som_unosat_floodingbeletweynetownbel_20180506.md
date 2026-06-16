@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analyzed multispectral satellite imagery (GeoEye-1 and WorldView-3)
     acquired on 30 April and 1 May 2018 to delineate flood water extent polygons in

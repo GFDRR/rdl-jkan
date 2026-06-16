@@ -20,7 +20,7 @@ description: 'The datasets cover the period of 4 September 2019 - 4 May 2025 and
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated site assessments (R3-R17, September 2019
     - May 2025) across displacement sites in 10 Nigerian states using standardized

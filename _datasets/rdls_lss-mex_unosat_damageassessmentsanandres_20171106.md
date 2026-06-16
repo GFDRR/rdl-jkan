@@ -45,7 +45,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Post-event damage assessment conducted by UNOSAT analysts through multi-temporal
     satellite imagery comparison (pre- and post-earthquake) from Digital Globe, corroborated

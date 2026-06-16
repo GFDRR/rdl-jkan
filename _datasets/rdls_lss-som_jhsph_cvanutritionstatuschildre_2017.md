@@ -21,7 +21,7 @@ description: 'This is data from a quasi-experimental prospective cohort study ex
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Prospective cohort study data collected from 2017/18 in Somalia during
     a food crisis, measuring nutrition status outcomes (acute malnutrition) in children

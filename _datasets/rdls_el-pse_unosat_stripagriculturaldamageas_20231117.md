@@ -71,7 +71,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT conducted multi-temporal satellite imagery analysis using Sentinel-2
     data from November 2017 to 2023, applying Normalised Difference Vegetation Index

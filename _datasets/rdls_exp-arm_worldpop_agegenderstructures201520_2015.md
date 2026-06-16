@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop generated gridded population estimates for Armenia by disaggregating
     census and survey data into 100m and 1km resolution rasters using geospatial modeling.

@@ -94,7 +94,7 @@ hazard:
     id: es_landslide
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts visually interpreted Sentinel-2 satellite imagery acquired
     on 28 December 2023 to detect and delineate surface water and landslide scar extents

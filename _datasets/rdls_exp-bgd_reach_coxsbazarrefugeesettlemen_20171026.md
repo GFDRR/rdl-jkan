@@ -44,7 +44,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road and footpath network was extracted through manual digitization
     of satellite imagery (October 2017) and UAV imagery by REACH/UNOSAT analysts.

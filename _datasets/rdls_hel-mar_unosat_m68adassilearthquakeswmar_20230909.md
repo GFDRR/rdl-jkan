@@ -83,7 +83,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted post-event satellite imagery analysis comparing
     pre- and post-earthquake images to identify building damage and assess population

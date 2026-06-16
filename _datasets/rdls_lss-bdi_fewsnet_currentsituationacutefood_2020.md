@@ -18,7 +18,7 @@ description: 'Burundi Current Situation FEWS NET Acute Food Insecurity Classific
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (typically monthly) field surveys
     across Burundi to assess acute food insecurity conditions and classify geographic

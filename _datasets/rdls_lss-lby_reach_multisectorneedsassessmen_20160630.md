@@ -24,7 +24,7 @@ description: 'In June 2016, a third round of the MSNA updates was initiated by R
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Community-level data collected by REACH Initiative through People with
     Knowledge (PwK) surveys in June 2016 as the third round of the Multi-Sector Needs

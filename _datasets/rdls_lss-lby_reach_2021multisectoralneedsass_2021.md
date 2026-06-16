@@ -34,7 +34,7 @@ description: 'The data summaries here include the individual indicator results f
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: A non-probability household survey was conducted by REACH Initiative
     across 45 administrative divisions (baladiyas) in Libya in 2021, with 8,871 telephone-based

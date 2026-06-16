@@ -32,7 +32,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared pre-event (2 December 2013) and post-event
     (19 April 2016) satellite imagery of the Chone area to detect structural damage

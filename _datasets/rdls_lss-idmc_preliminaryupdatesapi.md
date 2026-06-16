@@ -29,7 +29,7 @@ description: 'The IDMC''s Internal Displacement Updates (IDU) are preliminary es
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC collects and validates reports of new internal displacements from
     multiple hazard types over rolling 180-day windows. Preliminary estimates are

@@ -39,7 +39,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Built-up areas were mapped by NAMRIA using national mapping and resource
     information authority methodologies, resulting in spatial vector data (shapefiles)

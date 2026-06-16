@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldView-2 satellite imagery from 30 December 2017 was analyzed by
     UNOSAT to detect and classify 286 distinct IDP shelter sites in Baidoa town through

@@ -67,7 +67,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Building footprints from Overture Maps were intersected with high-resolution
     satellite imagery from Planet Labs (SkySat) and Maxar captured during and immediately

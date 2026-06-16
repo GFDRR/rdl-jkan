@@ -53,7 +53,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared multi-temporal satellite imagery
     to detect notable changes in surface water extent and inundation patterns. Flood-affected

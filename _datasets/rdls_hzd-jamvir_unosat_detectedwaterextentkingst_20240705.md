@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "A TerraSAR-X synthetic aperture radar (SAR) image acquired at 06:03\
     \ local time on 04 July 2024 was processed by UNOSAT analysts using radar backscatter\

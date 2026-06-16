@@ -29,7 +29,7 @@ description: 'The zipped CSV file details the estimated people in need and peopl
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian Needs Overview data for the nutrition sector in north
     east Nigeria was compiled at the Local Government Authority level, disaggregating

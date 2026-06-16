@@ -70,7 +70,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM collected and mapped observed flood extent and socio-economic
     impact data following the 17 November 2023 flood event in Tanzania. Geospatial

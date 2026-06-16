@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Building footprints were compiled by combining OpenStreetMap data\
     \ (snapshot: 1 November 2020) with AI-predicted building outlines derived from\

@@ -50,7 +50,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared satellite imagery from 12 July
     2017 against a baseline image from 22 May 2015 to detect and map shelter and infrastructure

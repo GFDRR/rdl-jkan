@@ -99,7 +99,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre- and post-eruption Pleiades satellite
     imagery acquired on 10-11 December 2021 to detect and delineate areas affected

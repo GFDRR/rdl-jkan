@@ -25,7 +25,7 @@ description: 'The dataset contains the number of people targeted by the food clu
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Food Security Cluster aggregated multiple data sources and food
     security indicators to estimate the population affected by drought-induced food

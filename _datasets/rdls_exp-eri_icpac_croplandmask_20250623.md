@@ -33,7 +33,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Global cropland mask derived from satellite or remote sensing data,\
     \ resampled to 0.0089286 degree resolution (~1 km\xB2), and extracted for Eritrea\

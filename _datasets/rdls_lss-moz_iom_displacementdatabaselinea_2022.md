@@ -31,7 +31,7 @@ description: 'The increase of security incidents in northern Mozambique since 20
 details: Round 22 is the latest Assessment as of April 2025.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM activated displacement tracking in Cabo Delgado province in
     February 2019 in response to escalating security incidents since 2017. Data collected

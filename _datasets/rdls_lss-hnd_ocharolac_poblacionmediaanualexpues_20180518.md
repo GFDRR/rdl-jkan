@@ -36,7 +36,7 @@ details: "* [INFORM Honduras.](http://www.inform-index.org/Subnational/Honduras)
   \ Inundaciones"
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Annual average population exposure to flooding was calculated from
     historical disaster impact records in the DesInventar database covering 1995-2015,

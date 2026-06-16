@@ -27,7 +27,7 @@ details: Please look at the [flow monitoring](https://data.humdata.org/dataset/a
   data which maybe useful for understanding the situation.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated baseline assessments across multiple rounds
     (1-16) using standardized methodology to track displacement populations (arrival

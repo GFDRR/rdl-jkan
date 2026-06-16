@@ -32,7 +32,7 @@ description: 'Dashboard about UNICEF Great Lakes Needs and Response (Refugees). 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNICEF ESARO compiled refugee and displacement data from UNHCR and
     country office situation reports for the Great Lakes region as of June 2017, aggregating

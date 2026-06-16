@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "WFP ADAM system collected and mapped observed flood extent (0.111\
     \ km\xC2\xB2) and documented affected population (233,237 people) following the\

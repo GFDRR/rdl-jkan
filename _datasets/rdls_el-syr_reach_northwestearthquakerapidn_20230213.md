@@ -67,7 +67,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Community-level data collected through key informant surveys in 607
     communities across Greater Idleb and Northern Aleppo that reported direct earthquake

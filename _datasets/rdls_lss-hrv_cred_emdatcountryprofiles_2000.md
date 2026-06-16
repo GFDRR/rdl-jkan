@@ -30,7 +30,7 @@ description: 'Aggregated figures for natural hazard related events in EM-DAT: Cr
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: EM-DAT country profiles are derived from the global EM-DAT disaster
     database maintained by CRED, which aggregates disaster impact data from UN agencies,

@@ -18,7 +18,7 @@ description: 'Somalia Current Situation FEWS NET Acute Food Insecurity Classific
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (monthly) field assessments
     and compiled Integrated Food Security Phase Classification (IPC) data across Somalia's

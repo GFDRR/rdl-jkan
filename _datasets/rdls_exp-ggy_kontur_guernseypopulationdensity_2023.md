@@ -111,7 +111,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Kontur Population dataset was constructed by overlapping the Global
     Human Settlement Layer (GHSL) with the Facebook High Resolution Settlement Layer

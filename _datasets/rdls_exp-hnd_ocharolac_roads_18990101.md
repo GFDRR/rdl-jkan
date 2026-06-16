@@ -38,7 +38,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network vector data sourced from UNDP and compiled by OCHA ROLAC
     as a spatial inventory of transportation infrastructure in Honduras. The dataset

@@ -22,7 +22,7 @@ details: Please disregard the 'expected update frequency.' This was a cross sect
   survey and will not be conducted again.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Cross-sectional household survey conducted in Mosul to measure mortality,
     morbidity, and kidnapping outcomes during the ISIS occupation (29 months) and

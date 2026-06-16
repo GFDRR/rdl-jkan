@@ -82,7 +82,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed VIIRS satellite imagery acquired between
     1-28 November 2022 over three provinces in DRC, comparing multi-temporal images

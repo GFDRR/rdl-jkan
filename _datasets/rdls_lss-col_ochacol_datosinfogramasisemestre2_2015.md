@@ -78,7 +78,7 @@ details: "\xCDndice INFORM esta compuesto para la gesti\xF3n del riesgo (INFORM)
   \ respuesta."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Semiannual infogram compiled from multiple Colombian government and
     UN agency administrative records (UARIV, UNGRD, DAICMA, INML, DIJIN, OCHA, UNICEF)

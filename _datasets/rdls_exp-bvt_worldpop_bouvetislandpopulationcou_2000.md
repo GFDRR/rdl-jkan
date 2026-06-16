@@ -75,7 +75,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop gridded population estimates for Bouvet Island generated using
     Random Forest modeling of census and ancillary geospatial data at 3 arc-second

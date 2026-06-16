@@ -49,7 +49,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts performed change detection analysis by comparing pre-event
     (13 February 2017) and post-event (22 September 2017) WorldView satellite imagery

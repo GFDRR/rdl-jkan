@@ -23,7 +23,7 @@ details: "We thank 'Imagery \xC2\xA9 2025 Planet Labs Inc.' for the satellite im
   \ and HOT for the roads, airports and ports vector layers used for this project."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event road damage assessment conducted by crowdsourced volunteers
     analyzing PlanetScope 3m resolution satellite imagery acquired after Hurricane

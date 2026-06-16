@@ -53,7 +53,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Radarsat-2 synthetic aperture radar (SAR) imagery acquired on 27 August
     2019 was processed and analyzed by UNOSAT analysts to detect and delineate satellite-observed

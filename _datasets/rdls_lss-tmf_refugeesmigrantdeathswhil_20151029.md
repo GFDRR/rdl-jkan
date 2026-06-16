@@ -27,7 +27,7 @@ description: 'This dataset contains a list of events from 2000 to present during
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: This dataset aggregates direct observational records of migration-related
     fatalities and missing persons incidents occurring during attempts to reach or

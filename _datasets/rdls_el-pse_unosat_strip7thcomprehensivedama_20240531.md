@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted multi-temporal satellite imagery analysis
     comparing images collected between May 2023 and May 2024 to identify and classify

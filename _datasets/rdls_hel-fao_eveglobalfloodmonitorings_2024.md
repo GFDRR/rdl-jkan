@@ -99,7 +99,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FAO EVE system processes NOAA VIIRS satellite imagery at 375m resolution
     to detect active flood extent and persistence, intersects results with ESA WorldCover

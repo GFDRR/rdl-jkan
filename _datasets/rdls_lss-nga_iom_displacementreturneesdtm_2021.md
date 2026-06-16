@@ -20,7 +20,7 @@ description: 'This dataset is the result of Displacement Tracking Matrix (DTM) a
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM field assessments conducted across multiple rounds (Round 41
     and 43) in north-east Nigeria using standardized DTM methodology to track returnee

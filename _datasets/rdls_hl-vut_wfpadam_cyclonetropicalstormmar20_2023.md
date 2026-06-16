@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM collected and analyzed geospatial and socio-economic data
     following the tropical cyclone event in Vanuatu (Feb 27 - Mar 03, 2023). The system

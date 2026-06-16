@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (16 April
     2016 and 12 May 2016) from Pleiades and Deimos-2 sensors to detect structural

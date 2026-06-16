@@ -36,7 +36,7 @@ description: 'Estimates of the number of internally displaced persons (IDPs) in 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP estimates were generated through a clusterized estimation approach
     applied by the Protection Cluster Ukraine, integrating field reports from authorities

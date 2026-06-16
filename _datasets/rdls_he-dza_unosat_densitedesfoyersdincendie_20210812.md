@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: VIIRS satellite thermal anomaly data acquired August 10-12, 2021 were
     processed by UNOSAT analysts to detect and map wildfire hotspots in two Algerian

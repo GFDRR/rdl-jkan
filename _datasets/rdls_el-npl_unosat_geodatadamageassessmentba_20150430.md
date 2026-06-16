@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed satellite imagery acquired 27 April 2015,
     comparing it with pre-event imagery to detect structural damage from the 25 April

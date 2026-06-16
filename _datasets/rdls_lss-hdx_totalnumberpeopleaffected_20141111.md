@@ -25,7 +25,7 @@ description: 'Number of people affected by natural disasters disaggregated by co
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Data compiled from the EM-DAT (Emergency Events Database) maintained
     by CRED, aggregating reported disaster impact records from multiple sources. The

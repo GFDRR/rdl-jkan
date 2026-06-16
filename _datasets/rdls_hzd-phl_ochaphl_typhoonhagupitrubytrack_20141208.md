@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Observed typhoon track data collected and compiled by PAG-ASA (Philippine
     meteorological authority) for Typhoon Hagupit as of 11 December 2014, provided

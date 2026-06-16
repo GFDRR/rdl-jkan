@@ -30,7 +30,7 @@ description: 'The 2023 Multi-Sector Needs Assessment (MSNA) in Bulgaria evaluate
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: A probability-based random sampling survey of 1,055 Ukrainian refugee
     households in Bulgaria was conducted between July 16 and August 25, 2023, using

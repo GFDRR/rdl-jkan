@@ -26,7 +26,7 @@ description: 'This dataset contains key figures and other data pertaining to the
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Situation reports and key figures from the Information Management Working
     Group documenting post-event impacts of Tropical Cyclone Idai in Mozambique. Data

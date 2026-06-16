@@ -27,7 +27,7 @@ description: "Personnes d\xE9plac\xE9es internes, retour de population, refugi\x
 details: '**Languages:** FR'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Data compiled by OCHA and humanitarian partners from administrative
     records and field reports documenting internally displaced persons, returnees,

@@ -1497,7 +1497,7 @@ hazard:
     id: event_set_volcanic
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Multi-hazard exposure and risk indicator dataset compiled from global
     sources by the World Bank Group for Ethiopia urban risk assessment. Flood inundation
@@ -1520,63 +1520,63 @@ lineage:
     url: https://www.fathom.global/
     used_in: hazard
   - id: source_2
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Downscaled CMIP6 daily maximum temperature (CCKP)
     risk_data_type: null
     type: dataset
     url: https://climateknowledgeportal.worldbank.org/download-data
     used_in: hazard
   - id: source_3
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: SPI-3 drought index from ERA5-Land via Global Drought Observatory
     risk_data_type: null
     type: dataset
     url: https://drought.emergency.copernicus.eu/tumbo/gdo/map/
     used_in: hazard
   - id: source_4
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: World Bank Global Landslide Hazard Map
     risk_data_type: null
     type: dataset
     url: https://datacatalog.worldbank.org/search/dataset/0037584/Global-landslide-hazard-map
     used_in: hazard
   - id: source_5
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global Seismic Hazard Map (GEM)
     risk_data_type: null
     type: dataset
     url: https://www.globalquakemodel.org/product/global-seismic-hazard-map
     used_in: hazard
   - id: source_6
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global Volcano Hazard Frequency and Distribution
     risk_data_type: null
     type: dataset
     url: https://www.earthdata.nasa.gov/data/catalog/sedac-ciesin-chrr-ndh-volcano-hfd-1.0
     used_in: hazard
   - id: source_7
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GHS-POP-R2023A Global Human Settlement Population
     risk_data_type: null
     type: dataset
     url: https://human-settlement.emergency.copernicus.eu/ghs_pop.php
     used_in: exposure
   - id: source_8
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GHS-BUILT-S-R2023A Global Human Settlement Built-up Surface
     risk_data_type: null
     type: dataset
     url: https://human-settlement.emergency.copernicus.eu/ghs_bu.php
     used_in: exposure
   - id: source_9
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Copernicus Digital Elevation Model (DEM)
     risk_data_type: null
     type: dataset
     url: https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM
     used_in: hazard
   - id: source_10
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: CHIRPS daily rainfall
     risk_data_type: null
     type: dataset

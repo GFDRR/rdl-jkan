@@ -31,7 +31,7 @@ description: 'The first Multi-Sector Needs Assesment (MSNA), conducted by REACH 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: REACH Initiative conducted a sample survey of households across the
     Occupied Palestinian Territory to assess multi-sectoral needs and vulnerabilities

@@ -36,7 +36,7 @@ details: 'Mobile phone use is relatively lower in several groups including women
   mobility'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population movement data derived from mobile phone records were analyzed
     to identify above-normal population flows between districts in Nepal following

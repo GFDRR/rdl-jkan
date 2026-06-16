@@ -39,7 +39,7 @@ description: "IOM conducted rapid representative surveys of the general populati
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted representative general population surveys across Ukraine's
     macro-regions (West, East, North, Center, South, and Kyiv) using probabilistic

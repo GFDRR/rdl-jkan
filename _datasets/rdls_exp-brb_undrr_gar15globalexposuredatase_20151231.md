@@ -107,7 +107,7 @@ exposure:
       quantity_kind: currency
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: National-level socio-economic and building stock statistics were transposed
     onto 5x5 km and 1x1 km gridded spatial frameworks using gridded population distribution

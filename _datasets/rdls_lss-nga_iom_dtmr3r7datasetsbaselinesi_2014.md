@@ -37,7 +37,7 @@ description: 'Since May 2013, Nigeria has seen an intensification of conflict du
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collected direct observational data on internally displaced
     populations across northeast Nigeria (Adamawa, Bauchi, Borno, Gombe, Taraba, Yobe)

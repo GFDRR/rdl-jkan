@@ -46,7 +46,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Observed tropical cyclone track data collected and compiled by ICPAC
     documenting the path, intensity, and meteorological characteristics of Tropical

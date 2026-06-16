@@ -60,7 +60,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts manually reviewed WorldView-2 satellite imagery from
     December 2013 and identified 6,242 structures across 209 hectares of Shagarab

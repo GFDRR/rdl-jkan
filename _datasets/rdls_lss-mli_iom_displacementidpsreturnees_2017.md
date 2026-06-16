@@ -31,7 +31,7 @@ description: 'The dataset contains IDPs, returnees at sub national level. The da
 details: Round 81 is the latest Assessment as of 2 January 2025.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated baseline assessment rounds (62-82) across
     Mali using standardized displacement tracking methodology to enumerate IDPs and

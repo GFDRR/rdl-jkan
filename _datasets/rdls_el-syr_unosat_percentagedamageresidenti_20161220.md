@@ -50,7 +50,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery acquired
     between 2010 and 2016 against a pre-conflict baseline image from 2009 to identify

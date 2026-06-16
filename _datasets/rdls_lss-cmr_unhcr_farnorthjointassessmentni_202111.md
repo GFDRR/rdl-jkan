@@ -46,7 +46,7 @@ description: 'UNHCR-WFP joint assessment mission (JAM) of Nigerian refugees in t
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sample survey data collected via face-to-face interviews from 607 households
     in Minawao settlement and 435 households in host communities during October 7-19,

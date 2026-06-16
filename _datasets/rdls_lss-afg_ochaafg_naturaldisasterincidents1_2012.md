@@ -49,7 +49,7 @@ details: These figures may fluctuate since the number of affected Afghans, peopl
   are received.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event disaster incident records compiled from OCHA field offices
     and the Humanitarian Affairs Database (HADB) for Afghanistan during 2012. Data

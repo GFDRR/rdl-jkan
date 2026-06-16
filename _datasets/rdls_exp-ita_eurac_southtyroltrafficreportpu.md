@@ -28,7 +28,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Original data: '\xC3\u2013ffentliche Verkehrsmittel - Trasporti pubblici'\
     \ layer of WFS service: https://geoservices2.civis.bz.it/geoserver/pczs-Traffic/wfs"

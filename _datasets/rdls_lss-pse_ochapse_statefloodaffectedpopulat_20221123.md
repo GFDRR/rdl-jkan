@@ -27,7 +27,7 @@ description: 'The dataset captures HHs flooded by community in the WB and GZ in 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event flood impact data collected by the WASH Cluster through
     direct observation and community reporting in Gaza Strip and West Bank over a

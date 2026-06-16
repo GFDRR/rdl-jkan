@@ -98,7 +98,7 @@ hazard:
     id: es_flood
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared WorldView-3 satellite imagery
     acquired on 14 April 2022 with reference imagery to detect notable changes indicative

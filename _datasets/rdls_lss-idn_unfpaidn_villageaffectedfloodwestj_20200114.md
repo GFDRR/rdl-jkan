@@ -33,7 +33,7 @@ description: 'Village affected by flood in Bogor and Lebak District - West Java 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Village-level flood impact data collected through direct observation
     by BNPB during the January 2020 flood event in Bogor and Lebak districts, West

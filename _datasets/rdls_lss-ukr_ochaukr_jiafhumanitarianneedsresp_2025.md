@@ -30,7 +30,7 @@ description: 'The dataset provides a full breakdown of the affected population, 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian partners conducted intersectoral needs assessments across
     Ukraine using the JIAF methodology to identify affected populations, people in

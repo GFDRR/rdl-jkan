@@ -62,7 +62,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (WorldView-1
     and WorldView-2) from April 2011 and February 2014 to detect structural changes

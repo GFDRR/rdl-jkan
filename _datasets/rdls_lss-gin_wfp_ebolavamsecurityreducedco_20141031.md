@@ -25,7 +25,7 @@ description: 'Reduced Coping Strategies Index and Food Prices data. Data collect
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Primary data collected through automated IVR phone surveys administered
     to households in Guinea during the Ebola epidemic, capturing food security indicators

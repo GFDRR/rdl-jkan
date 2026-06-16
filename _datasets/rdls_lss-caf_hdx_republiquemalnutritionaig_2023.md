@@ -25,7 +25,7 @@ description: "Situation de la malnutrition aigu\xEB au niveau des sous-pr\xE9fec
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC conducted multi-sectoral analysis across Central African Republic
     sub-prefectures to classify acute malnutrition phases and estimate affected populations

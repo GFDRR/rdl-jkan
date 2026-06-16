@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared very high resolution satellite imagery from
     24 February 2025, 23 March 2025, and 30 March 2025 to detect structural damage

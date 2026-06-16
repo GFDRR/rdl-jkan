@@ -221,7 +221,7 @@ exposure:
       quantity_kind: length
       unit: kilometre
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Africa Transport System Database (AFTSDB) compiled by integrating transport
     network data from multiple continental and national sources. OpenStreetMap road
@@ -240,7 +240,7 @@ lineage:
     url: https://www.openstreetmap.org/
     used_in: exposure
   - id: source_wb_airports
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: World Bank Global Airports Database
     risk_data_type: null
     type: dataset
@@ -254,14 +254,14 @@ lineage:
     url: https://ourairports.com/
     used_in: exposure
   - id: source_verschuur
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global Maritime Network
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.1038/s43247-022-00656-7
     used_in: exposure
   - id: source_portwatch
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: PortWatch
     risk_data_type: null
     type: dataset
@@ -275,7 +275,7 @@ lineage:
     url: https://doi.org/10.5066/P97EQWXP
     used_in: exposure
   - id: source_thorn
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: African Development Corridors Database
     risk_data_type: null
     type: dataset
@@ -310,7 +310,7 @@ lineage:
     url: https://nilebasin.org/
     used_in: exposure
   - id: source_hydrorivers
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: HydroRIVERS
     risk_data_type: null
     type: dataset
@@ -338,7 +338,7 @@ lineage:
     url: https://github.com/trg-rail/africa_rail_network
     used_in: exposure
   - id: source_aiddata
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: AidData Chinese Development Finance
     risk_data_type: null
     type: dataset

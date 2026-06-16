@@ -102,7 +102,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed multi-temporal satellite imagery using artificial\
     \ intelligence-based automated analysis methods to delineate flood extent (~350\

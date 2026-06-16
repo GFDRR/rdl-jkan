@@ -49,7 +49,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network features were manually digitized from Institut Geographique
     National topographic maps at 1:100,000 scale (1956-1961), with supplementary arcs

@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Gridded population estimates derived from Random Forest-based dasymetric
     redistribution of census data and ancillary geospatial variables. Data provided

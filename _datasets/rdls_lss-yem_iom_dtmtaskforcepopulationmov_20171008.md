@@ -35,7 +35,7 @@ description: 'The Task Force for Population Movement (TFPM) is a Technical Worki
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The TFPM compiled displacement and returnee data from field data collection
     activities conducted May-August 2017 across Yemen governorates. Data represents

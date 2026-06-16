@@ -37,7 +37,7 @@ description: 'IMPACT, in collaboration with UNHCR, conducted a fourth-round Mult
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household-level survey data collected via phone bank from randomly
     selected UNHCR-registered Syrian refugees across three governorates (Duhok, Erbil,

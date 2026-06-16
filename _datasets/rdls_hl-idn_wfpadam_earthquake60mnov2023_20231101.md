@@ -43,7 +43,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: 'ADAM system processed the 6.0 magnitude earthquake event (USGS ID:
     us7000l85t) occurring on Nov 1, 2023 near Oelamasi, Indonesia. Ground motion intensity

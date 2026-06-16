@@ -39,7 +39,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population estimates were derived from census data and compiled by
     the Regional Vulnerability Assessment & Analysis Programme for SADC member states,

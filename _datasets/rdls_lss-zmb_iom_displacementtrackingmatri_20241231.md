@@ -37,7 +37,7 @@ details: This dataset comes from the [DTM API](https://dtm.iom.int/data-and-anal
   added.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP displacement data collected by IOM through multiple assessment
     types (baseline, emergency tracking, site assessment) and aggregated via the DTM

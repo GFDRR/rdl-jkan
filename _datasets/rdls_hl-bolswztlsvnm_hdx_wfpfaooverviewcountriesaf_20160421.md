@@ -67,7 +67,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Joint assessment by FAO, WFP, and Global Food Security Cluster of\
     \ countries affected by the 2015-2016 El Ni\xF1o event, compiled from direct observational\

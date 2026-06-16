@@ -32,7 +32,7 @@ details: Because villages have been assessed at different times, it is possible 
   be higher than the 125
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Human Rights Watch conducted a combined ground survey and satellite
     image analysis of 790 villages and towns in western CAR from April 2013 to April

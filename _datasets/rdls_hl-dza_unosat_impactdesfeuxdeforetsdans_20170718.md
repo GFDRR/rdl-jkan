@@ -51,7 +51,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts compared Sentinel-2 satellite images from 12 July\
     \ 2017 and 9 July 2017 to detect notable changes in vegetation and identify burned\

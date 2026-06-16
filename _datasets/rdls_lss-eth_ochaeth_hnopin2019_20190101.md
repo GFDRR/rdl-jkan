@@ -19,7 +19,7 @@ description: 'The file contains the proposed estimated People In Need (PIN) numb
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The 2019 HNO PIN dataset aggregates humanitarian needs assessments
     across Ethiopia at admin level 3 using sample survey methodology. PIN figures

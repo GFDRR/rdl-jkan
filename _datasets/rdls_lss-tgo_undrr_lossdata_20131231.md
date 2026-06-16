@@ -33,7 +33,7 @@ description: 'Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damag
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event disaster loss data compiled from UNISDR and Togo Government
     Agencies through direct observational and anecdotal reporting. The dataset aggregates

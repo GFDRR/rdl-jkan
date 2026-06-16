@@ -26,7 +26,7 @@ description: 'DROMIC data by DSWD on municipalities within the 50km radius of th
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: DSWD compiled DROMIC impact data from municipalities within the 50km
     radius of Typhoon Haiyan/Yolanda track during the November 2013 response. The

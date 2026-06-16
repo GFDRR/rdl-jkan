@@ -25,7 +25,7 @@ description: 'Pakistan district wise Returnees with PCodes. [Source: This metada
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: District-level returnee counts were compiled from CEW PDMA Khyber Pakhtunkhwa
     registry data, aggregated by administrative district with PCodes for spatial reference.

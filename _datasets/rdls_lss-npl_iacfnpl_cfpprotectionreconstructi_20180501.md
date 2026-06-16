@@ -27,7 +27,7 @@ description: 'This data is the collection of perception of people affected by ea
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event perception survey conducted in 2018 across 14 Nepali districts
     with >60% earthquake damage from the 2015 event. 2,100 respondents were sampled

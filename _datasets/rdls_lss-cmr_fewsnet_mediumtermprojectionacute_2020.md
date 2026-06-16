@@ -18,7 +18,7 @@ description: 'Cameroon Medium Term Projection FEWS NET Acute Food Insecurity Cla
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (monthly) field assessments
     across Cameroon using the Integrated Food Security Phase Classification (IPC)

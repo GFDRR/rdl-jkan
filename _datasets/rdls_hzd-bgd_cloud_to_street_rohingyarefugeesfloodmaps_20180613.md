@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sentinel-1 SAR satellite imagery from 13 June 2018 was processed to
     classify pixels as flooded (1) or non-flooded (0) using radar backscatter analysis,

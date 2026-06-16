@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household member counts from the 2016 Ethiopia DHS survey were spatially
     aggregated to 645 clusters and gridded at 0.05-degree resolution (~5 km pixels)

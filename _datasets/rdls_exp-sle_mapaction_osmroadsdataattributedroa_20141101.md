@@ -46,7 +46,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: OpenStreetMap road network data from November 2014 was attributed with
     road surface material and quality classifications derived from UK Ministry of

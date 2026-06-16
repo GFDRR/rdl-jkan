@@ -21,7 +21,7 @@ description: 'This dataset is produced by the United Nations for the Coordinatio
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: OCHA Haiti aggregated humanitarian needs assessments and partner input
     to estimate populations requiring urgent humanitarian response by geographic location,

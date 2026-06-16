@@ -40,7 +40,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data collated from the Ethiopian Roads Authority registry,
     representing the national road infrastructure inventory with attributes on functional

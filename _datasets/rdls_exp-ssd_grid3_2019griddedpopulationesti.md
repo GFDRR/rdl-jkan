@@ -71,7 +71,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Census population data for South Sudan were spatially modeled by WorldPop
     using their standard gridding methodology and adjusted for internal displacement

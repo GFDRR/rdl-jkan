@@ -36,7 +36,7 @@ description: 'This data has been produced by the United Nations Office for the C
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Humanitarian Needs Overview was produced by UNOCHA and humanitarian
     partners using the Joint and Intersectoral Analysis Framework (JIAF) to consolidate

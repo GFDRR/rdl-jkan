@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Two Sentinel-1 SAR acquisitions were processed using repeat-pass interferometry
     to generate an interferogram measuring vertical ground displacement (line-of-sight)

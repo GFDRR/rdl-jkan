@@ -37,7 +37,7 @@ details: "* [INFORM Honduras.](http://www.inform-index.org/Subnational/Honduras)
   \ Otros Grupos Vulnerables"
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Food Insecurity Index (ICA) integrates historical trends of food
     insecurity with natural hazard exposure, economic fragility, land degradation,

@@ -22,7 +22,7 @@ details: "Esta informaci\xF3n es de uso interno exclusivo de OCHA Colombia. No c
   \ masivos - 2013 - Estimado OCHA a partir de fuentes oficiales y secundarias'."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Direct observational data collected by OCHA Colombia documenting mass
     displacement events (defined as >50 persons or >10 families displaced) from 2009-2014.

@@ -38,7 +38,7 @@ description: 'New internal displacements. [Source: This metadata record was auto
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Displacement indicator data compiled from inter-agency estimates and
     nationally representative household surveys (MICS, DHS) supplemented with administrative

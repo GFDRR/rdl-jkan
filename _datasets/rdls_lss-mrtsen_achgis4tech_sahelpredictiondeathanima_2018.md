@@ -36,7 +36,7 @@ description: "The model trains with the actual data of the variables to be predi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The model integrates historical livestock mortality data with agroclimatic
     indicators, biomass measurements, and violence records to train a predictive algorithm

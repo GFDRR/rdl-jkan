@@ -77,7 +77,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Fire detections from MODIS and VIIRS satellites during May 9-20, 2024
     were identified in El Fasher. UNOSAT analysts then conducted detailed satellite

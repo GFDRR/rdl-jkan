@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Satellite imagery was processed by the Philippine Space Agency to identify
     and map the actual extent of flooding caused by tropical cyclones on July 16,

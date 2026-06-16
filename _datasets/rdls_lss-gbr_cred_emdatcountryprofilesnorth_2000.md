@@ -30,7 +30,7 @@ description: 'Aggregated figures for natural hazard related events in EM-DAT: Un
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: EM-DAT aggregates disaster event data from diverse sources (UN agencies,
     governments, media, NGOs) and compiles country-level profiles with standardized

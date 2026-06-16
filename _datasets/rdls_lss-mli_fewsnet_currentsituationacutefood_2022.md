@@ -18,7 +18,7 @@ description: 'Mali Current Situation FEWS NET Acute Food Insecurity Classificati
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators collected IPC classification data on a regular
     monthly schedule across Mali in 2022. The classifications were spatially mapped

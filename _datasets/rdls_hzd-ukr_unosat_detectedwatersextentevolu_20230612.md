@@ -56,7 +56,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Multi-temporal satellite imagery (Sentinel-1 SAR on 09 June 2023, ICEYE
     SAR on 07 June 2023, and Sentinel-2 optical on 03-05 June 2023) was analyzed by

@@ -30,7 +30,7 @@ description: "Los desastres naturales tenidos en cuenta en la base de datos son:
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Annual registry of natural disaster events in Colombia compiled by
     UNGRD, documenting affected populations across 22 hazard categories including

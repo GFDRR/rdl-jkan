@@ -20,7 +20,7 @@ description: 'The FEWS NET Data Warehouse is currently unavailable . Datasets on
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data were collected by FEWS NET enumerators on a
     regular monthly schedule across Zambia in 2014. Geographic boundaries and IPC

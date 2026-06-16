@@ -94,7 +94,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road surface type, width, and passability were derived using deep learning
     models applied to PlanetScope satellite imagery from 2020 and 2024. The analysis

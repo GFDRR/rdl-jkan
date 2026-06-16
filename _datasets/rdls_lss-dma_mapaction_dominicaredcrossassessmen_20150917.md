@@ -27,7 +27,7 @@ description: 'Shapefile containing numbers of affected people and households in 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Dominica Red Cross conducted a sample survey-based damage assessment
     following a convective storm event, collecting point-based observations of affected

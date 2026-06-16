@@ -25,7 +25,7 @@ description: 'Data of affected population in the Sole Registry of Affected Perso
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event affected population data compiled from the Sole Registry
     of Affected Persons (RUD), an administrative registry maintained by Ecuadorian

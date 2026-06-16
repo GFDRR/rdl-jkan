@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted post-event satellite image analysis comparing
     multiple satellite images acquired on 7 and 9 July 2021 to identify and map damaged

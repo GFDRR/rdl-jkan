@@ -32,7 +32,7 @@ description: "Ce jeu de donn\xE9es porte sur les inondations au Cameroun et leur
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Flood impact data for Cameroon was collected through direct observational
     and anecdotal methods by the Government of Cameroon and the Croix-Rouge Camerounaise,

@@ -47,7 +47,7 @@ description: 'Following the outbreak of armed conflict in Sudan on 15 April 2023
 details: 'UNHCR Operational Data Portal for the Sudan Situation: https://data.unhcr.org/en/situations/sudansituation'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry-based data compiled from UNHCR, government, and IOM sources
     tracking new arrivals and displacement flows from Sudan following the April 2023

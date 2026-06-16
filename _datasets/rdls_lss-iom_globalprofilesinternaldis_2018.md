@@ -36,7 +36,7 @@ description: 'While the total numbers of internal displacements - by cause, loca
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: GPID aggregates internal displacement data from IDMC across multiple
     hazard causes (flood, drought, earthquake, cyclones, conflict) and enriches it

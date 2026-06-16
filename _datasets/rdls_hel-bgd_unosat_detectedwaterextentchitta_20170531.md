@@ -92,7 +92,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared Sentinel-1 satellite imagery acquired on 30
     May 2017 with reference imagery to detect standing water extent following tropical

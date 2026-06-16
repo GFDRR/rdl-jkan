@@ -20,7 +20,7 @@ description: 'The FEWS NET Data Warehouse is currently unavailable . Datasets on
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data collected by FEWS NET enumerators across Kenya
     on a monthly basis (February, June, December 2018) through field assessments and

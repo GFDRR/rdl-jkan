@@ -18,7 +18,7 @@ description: 'Includes information from several data sources about Damages and n
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Damages assessment data compiled by IFRC from multiple sources documenting
     post-event impacts of Hurricane Irma. The registry aggregates damage observations

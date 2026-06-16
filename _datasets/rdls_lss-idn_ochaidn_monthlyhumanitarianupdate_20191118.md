@@ -25,7 +25,7 @@ description: 'Monthly humanitarian update on disasters event in Indonesia (perio
 details: Updates on monthly basis based on information availability
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Monthly humanitarian impact data compiled by OCHA Indonesia from reports
     submitted by Provincial Governments to the National Disaster Management Agency

@@ -56,7 +56,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM collected observed tropical cyclone track data and wind speed
     measurements for the Category 4 cyclone event in Grenada (June 28-30, 2024). Population

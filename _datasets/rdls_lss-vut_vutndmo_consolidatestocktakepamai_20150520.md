@@ -24,7 +24,7 @@ description: 'Updated 20.5.2015. [Source: This metadata record was automatically
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event census conducted by Vanuatu NDMO on 20 May 2015 to consolidate
     and document aid supply stocktakes following Cyclone Pam impact. The dataset represents

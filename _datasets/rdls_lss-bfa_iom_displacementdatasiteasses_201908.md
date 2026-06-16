@@ -27,7 +27,7 @@ description: 'The dataset contains IDPS and returnees data from Eastern region o
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted site assessments in Eastern Burkina Faso following
     standardized displacement tracking methodology to enumerate internally displaced

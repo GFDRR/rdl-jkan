@@ -82,7 +82,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Global land cover classification produced by the ESA Climate Change
     Initiative Land Cover (CCI-LC) project from Copernicus Sentinel-3 OLCI satellite
@@ -90,7 +90,7 @@ lineage:
     an unsupervised classification approach; the 2020 reference year product was used.
   sources:
   - id: source_WFhKRWnY
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Copernicus Sentinel-3 Ocean and Land Colour Instrument (OLCI)
     risk_data_type: null
     type: dataset

@@ -26,7 +26,7 @@ description: 'DTM South Sudan Baseline Assessment from 2014 to 2017. [Source: Th
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted baseline assessments across South Sudan from February
     2014 to December 2017, tracking internally displaced persons through field surveys

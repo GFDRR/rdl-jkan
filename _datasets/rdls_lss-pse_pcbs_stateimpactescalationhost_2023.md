@@ -34,7 +34,7 @@ details: PCBS will update the figures once it is received from different data so
   of update.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Impact data compiled from official Palestinian Central Bureau of Statistics
     registry and Palestinian Ministry of Health records documenting key figures (affected

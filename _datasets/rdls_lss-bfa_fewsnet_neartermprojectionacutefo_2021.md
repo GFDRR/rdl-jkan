@@ -18,7 +18,7 @@ description: 'Burkina Faso Near Term Projection FEWS NET Acute Food Insecurity C
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data collected by FEWS NET enumerators on a monthly
     schedule throughout 2021, with spatial boundaries and classification phases representing

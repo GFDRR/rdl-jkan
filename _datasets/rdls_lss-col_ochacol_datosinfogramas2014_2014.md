@@ -60,7 +60,7 @@ details: "El \xCDndice de Riesgo de Situaci\xF3n Humanitaria (IRSH) se calcul\xF
   \ trabajando en una versi\xF3n mejorada de este \xEDndice."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Semi-annual infograms compiled from 2006 onwards by aggregating observational
     data from multiple Colombian government agencies (UARIV, UNGRD, INML, DIJIN) and

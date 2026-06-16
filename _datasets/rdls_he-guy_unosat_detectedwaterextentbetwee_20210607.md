@@ -78,7 +78,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed NOAA20-VIIRS satellite imagery acquired between
     June 2-6, 2021, comparing multiple images to detect notable changes in surface

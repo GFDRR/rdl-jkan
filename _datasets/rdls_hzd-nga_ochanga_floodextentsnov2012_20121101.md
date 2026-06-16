@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: MODIS satellite imagery from NASA was analyzed to delineate flood extent
     boundaries across Nigeria during the July-November 2012 flood event. The 250-meter

@@ -25,7 +25,7 @@ description: 'Retornados por desplazamiento forzado. [Source: This metadata reco
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry data compiled by humanitarian partners documenting internally
     displaced persons (IDPs) and returnees from forced displacement events in Colombia.

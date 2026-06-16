@@ -55,7 +55,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: High-resolution population density map generated using the POMELO super-resolution
     deep learning technique applied to Zambian census data and remote sensing imagery,

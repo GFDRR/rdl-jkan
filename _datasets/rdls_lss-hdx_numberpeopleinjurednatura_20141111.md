@@ -25,7 +25,7 @@ description: 'Number of people injured in natural disasters. [Source: This metad
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Injury counts from natural disaster events were extracted from the
     EM-DAT database maintained by the Centre for Research on the Epidemiology of Disasters

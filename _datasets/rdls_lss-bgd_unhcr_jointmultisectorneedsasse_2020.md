@@ -42,7 +42,7 @@ description: 'Since August 2017, an estimated 745,000 Rohingya refugees have arr
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sample survey data collected from 34 refugee camps in Ukhiya and Teknaf
     upazilas using random point sampling stratified by camp population figures from

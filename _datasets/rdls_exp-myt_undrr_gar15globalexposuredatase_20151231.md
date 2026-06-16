@@ -106,7 +106,7 @@ exposure:
       quantity_kind: currency
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The GAR15 global exposure dataset for Mayotte was developed using a
     top-down approach where national-level socio-economic, building type, and capital

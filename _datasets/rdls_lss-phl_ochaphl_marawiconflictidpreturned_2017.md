@@ -26,7 +26,7 @@ description: 'Marawi Conflict IDP and returned figures by month and region from 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Monthly administrative records of IDP and returned population figures
     were compiled by the Task Force Bangon Marawi Regional Subcommittee on Health

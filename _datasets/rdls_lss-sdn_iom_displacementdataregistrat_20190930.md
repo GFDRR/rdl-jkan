@@ -28,7 +28,7 @@ description: 'This dataset reflects the aggregation of the registration exercise
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted registration and assessment exercises in Sudan since
     2010 in collaboration with HAC, aggregating data on internally displaced persons,

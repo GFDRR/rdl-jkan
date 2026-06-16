@@ -73,7 +73,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The GHSL datasets are produced by the JRC using automated spatial data
     processing pipelines that integrate fine-scale satellite imagery, census data,

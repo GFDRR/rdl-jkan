@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "UNOSAT analysts compared pre- and post-earthquake satellite imagery\
     \ (WorldView-2 baseline from 26 December 2015 and Pl\xE9iades post-event from\

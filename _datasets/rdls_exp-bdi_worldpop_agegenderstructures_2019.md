@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop produced gridded population estimates for women of child-bearing
     age (15-49 years) in Burundi for 2015 using spatial modeling methods described

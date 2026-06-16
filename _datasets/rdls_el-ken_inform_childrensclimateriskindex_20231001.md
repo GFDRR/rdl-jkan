@@ -69,7 +69,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The CCRI-DRM Kenya model integrates hazard exposure data (drought via
     VCI, temperature extremes, riverine floods at 50-year return period) with child

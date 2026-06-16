@@ -50,7 +50,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed WorldView-2 satellite imagery acquired on
     13 January 2016 and compared it with previous imagery from 12 February 2015 to

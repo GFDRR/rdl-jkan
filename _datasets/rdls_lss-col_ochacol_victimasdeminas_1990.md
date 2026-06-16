@@ -31,7 +31,7 @@ description: "Seg\xFAn el Glosario Nacional de T\xE9rminos para la Acci\xF3n Int
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Annual registry of landmine victims compiled by DAICMA from incident
     reports across Colombia. Data captures direct human casualties (deaths and injuries)

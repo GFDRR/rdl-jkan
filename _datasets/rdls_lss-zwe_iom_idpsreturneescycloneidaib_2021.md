@@ -26,7 +26,7 @@ description: 'The dataset contains number of IDPs, Returnees and host communitie
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted multi-round baseline assessments following Cyclone
     IDAI in Zimbabwe, tracking displacement dynamics and humanitarian needs of IDPs,

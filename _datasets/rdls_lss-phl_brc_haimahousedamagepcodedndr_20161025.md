@@ -26,7 +26,7 @@ details: Sporadic Updates - hasn't been an update for over a week as of 2nd Nove
   2016
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event damage assessment data collected by the Philippines Government
     (NDRRMC) following Typhoon Haima, compiled and geocoded by the British Red Cross

@@ -60,7 +60,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop modelled gridded population counts for Myanmar at ~100m resolution
     (3 arc-seconds) using methods described in Tatem et al. (2013) and Pezzulo et

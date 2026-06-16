@@ -81,7 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed Sentinel-1 SAR satellite imagery acquired\
     \ on 15 October 2022 to detect surface water extents through change detection\

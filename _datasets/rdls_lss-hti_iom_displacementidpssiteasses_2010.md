@@ -26,7 +26,7 @@ description: 'The dataset contains number of IDPs and Households at camp level..
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM teams conducted repeated site assessments at IDP camps in Haiti
     following the 2010 and 2021 earthquakes, documenting displaced populations and

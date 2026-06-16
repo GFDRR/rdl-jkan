@@ -25,7 +25,7 @@ description: 'IOM DTM (Displacement Tracking Matrix) Displacement Sites as of 20
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collected displacement site data across Malawi as of May 2015,
     recording locations and populations of internally displaced persons. The dataset

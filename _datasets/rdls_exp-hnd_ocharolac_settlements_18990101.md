@@ -39,7 +39,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Spatial inventory of populated places (houses and facilities) in Honduras
     compiled from UNDP data and provided by OCHA ROLAC as a reference geodataset for

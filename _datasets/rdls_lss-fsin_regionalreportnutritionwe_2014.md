@@ -37,7 +37,7 @@ description: "The Regional Report on Food Security and Nutrition in West Africa 
 details: https://www.fsinplatform.org/regional-report-food-security-and-nutrition-west-africa-and-sahel-2024
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "The dataset aggregates March 2024 Cadre Harmonis\xE9 (CH) cycle data\
     \ from FSIN and CILSS partners, classifying populations across five food insecurity\

@@ -26,7 +26,7 @@ description: 'The dataset contains IDPs individuals and households at admin2 lev
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collects displacement data through key informant interviews
     at colline (sub-commune) level across Burundi, recording IDP household and individual

@@ -31,7 +31,7 @@ description: 'International Organization for Migration (IOM) conducted the rapid
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated rapid representative population assessments
     across Ukraine's six macro-regions to track internal displacement flows and returnee

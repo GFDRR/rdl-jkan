@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: USGS ShakeMap processed instrumental seismic data from the 7.3 magnitude
     earthquake on 25 April 2015 to generate observed ground motion intensity estimates

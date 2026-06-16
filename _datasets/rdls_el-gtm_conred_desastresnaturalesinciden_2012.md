@@ -57,7 +57,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event incident data collected and registered by CONRED through
     SISMICEDE system during 2012 across all Guatemalan territory, documenting natural

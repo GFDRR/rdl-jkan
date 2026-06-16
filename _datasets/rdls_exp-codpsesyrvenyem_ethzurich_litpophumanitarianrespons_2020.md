@@ -71,7 +71,7 @@ exposure:
       quantity_kind: currency
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Asset exposure data generated using the LitPop methodology, which disaggregates
     national asset value data proportional to a combination of nightlight intensity

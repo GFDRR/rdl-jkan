@@ -33,7 +33,7 @@ description: 'The dataset provides a full breakdown of the affected population, 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates humanitarian needs assessments from multiple
     sectors using the JIAF methodology, which integrates data from humanitarian partners

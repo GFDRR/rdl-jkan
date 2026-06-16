@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop generated gridded population estimates for Tunisia by disaggregating
     census and survey data into age-gender cohorts using statistical modeling methods

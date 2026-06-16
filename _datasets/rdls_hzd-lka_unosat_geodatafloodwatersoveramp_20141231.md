@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared Radarsat-2 satellite imagery from 30 December
     2014 and Sentinel-1 data from 18 December 2014 to detect changes and identify

@@ -34,7 +34,7 @@ description: 'This layer contains information about the natural shock risk (floo
 details: https://geonode.wfp.org/layers/geonode%3Asdn_ica_naturalshockrisk_geonode_20180201
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The ICA Sudan 2018 integrated natural shock risk assessment by combining
     UNEP/UNISDR GAR 2013 baseline hazard data with WFP VAM analysis of CHIRPS rainfall

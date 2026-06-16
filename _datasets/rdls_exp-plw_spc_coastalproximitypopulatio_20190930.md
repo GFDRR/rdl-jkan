@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population data from the 2015 Palau census was gridded at 1km resolution
     and spatially intersected with a 1km coastal buffer zone to quantify coastal population

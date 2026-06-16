@@ -31,7 +31,7 @@ description: 'Earthquake impacts mapping from drone data in Nepal (Gairagaun, Pu
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: High-resolution drone imagery was collected by GLOBHE Crowddroner over
     the earthquake-impacted area in Gairagaun, Pubichauki rural municipality ward-3,

@@ -28,7 +28,7 @@ description: 'Hotspot woreda classification is derived using six multisector ind
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Hotspot woreda classification derived from six multisector indicators
     (agriculture, nutrition, health, education, markets, population) agreed at regional

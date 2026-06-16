@@ -26,7 +26,7 @@ description: "la valeur pour les personnes d\xE9plac\xE9es est calcul\xE9 pour u
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Displacement figures were compiled by OCHA DR Congo from field assessments
     and administrative records, with values calculated as cumulative population movements

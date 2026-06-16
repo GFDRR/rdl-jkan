@@ -26,7 +26,7 @@ description: 'Zimbabwe, Tsholotsho District displacement and migration trends be
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM baseline assessment conducted in Tsholotsho District, Zimbabwe,
     documenting displacement and migration trends from pre-2016 through October 2018

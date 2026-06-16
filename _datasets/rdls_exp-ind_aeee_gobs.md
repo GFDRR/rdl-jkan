@@ -84,14 +84,14 @@ lineage:
     data quality filtering.
   sources:
   - id: source_1
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Google Open Buildings dataset (v3)
     risk_data_type: null
     type: dataset
     url: https://sites.research.google/gr/open-buildings/
     used_in: exposure
   - id: source_2
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Google Open Building 2.5D Temporal Dataset (v1)
     risk_data_type: null
     type: dataset

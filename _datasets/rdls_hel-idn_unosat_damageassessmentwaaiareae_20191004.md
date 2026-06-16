@@ -74,7 +74,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre- and post-event satellite imagery from
     the 26 September 2019 earthquake to identify structural damage in the Waai area

@@ -71,7 +71,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts compared Sentinel-2 imagery (9 February 2023) and\
     \ Worldview-2 imagery (13 February 2023) to detect satellite-observed water extent\

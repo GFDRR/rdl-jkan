@@ -74,7 +74,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: NPM baseline and subsequent monitoring rounds (R9-R15, February 2018
     - June 2019) collected spatial boundaries of majhee blocks through participatory

@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal Pleiades satellite imagery
     acquired on 18 and 20 November 2024 to detect structural damage in Bacak Village

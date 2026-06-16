@@ -53,7 +53,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Land cover classification derived from WorldView-2 very high resolution
     (1.8m) multispectral satellite imagery through remote sensing analysis. The classification

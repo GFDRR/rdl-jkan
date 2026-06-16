@@ -73,7 +73,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UAV imagery captured via drone surveys combined with ground-based site
     assessment data to produce georeferenced camp maps and GIS packages. Data integrated

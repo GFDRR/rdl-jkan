@@ -55,7 +55,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: A census-based population enumeration of Za'atari Refugee Camp was
     conducted by REACH in partnership with UNICEF between December 2014 and January

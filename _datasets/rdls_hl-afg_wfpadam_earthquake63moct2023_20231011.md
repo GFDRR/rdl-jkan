@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: 'ADAM system processed the USGS earthquake event (ADAM ID: eq_us6000len8,
     magnitude 6.3, 11 October 2023) and generated a shakemap with Modified Mercalli

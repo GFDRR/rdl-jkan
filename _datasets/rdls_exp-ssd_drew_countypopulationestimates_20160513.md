@@ -56,7 +56,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: County-level population estimates were compiled from three sources
     (WorldPop, LandScan, and UN data) covering 2008-2015, with additional processing

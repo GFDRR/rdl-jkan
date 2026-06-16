@@ -19,7 +19,7 @@ description: 'The INFORM Severity Index summarises a wide range of already exist
 details: More recent updates can be found via API at https://api.acaps.org/
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The INFORM Severity Index is a composite indicator that synthesizes
     existing quantitative data on humanitarian crisis severity across multiple dimensions

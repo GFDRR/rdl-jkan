@@ -26,7 +26,7 @@ description: 'The Task Force for Population Movement (TFPM) is a Technical Worki
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates displacement census data collected by IOM's
     Displacement Tracking Matrix (DTM) through the Task Force on Population Movement,

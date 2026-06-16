@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts manually interpreted WorldView-1 satellite imagery
     from 3 May 2014 and compared it with imagery from 5 March 2014 to identify and

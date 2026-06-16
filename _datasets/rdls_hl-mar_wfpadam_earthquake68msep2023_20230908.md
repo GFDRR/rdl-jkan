@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM system processed the USGS earthquake event (us7000kufc) and
     derived population exposure to ground shaking by intersecting MMI intensity zones

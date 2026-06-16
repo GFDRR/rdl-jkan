@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census population data from Papua New Guinea was spatially intersected
     with coastal buffer zones at 1km, 5km, and 10km distances from the coastline to

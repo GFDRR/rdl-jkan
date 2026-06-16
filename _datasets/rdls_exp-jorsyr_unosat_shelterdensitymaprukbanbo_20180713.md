@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed multispectral satellite imagery (WorldView-03
     on 23 June 2018 and GaoFen-2 on 24 June 2018) through visual interpretation and

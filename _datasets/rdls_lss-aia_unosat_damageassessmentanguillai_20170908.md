@@ -26,7 +26,7 @@ description: 'This dataset illustrates satellite-detected potential damaged buil
 details: This is a preliminary analysis and has not yet been validated in the field.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT conducted post-event satellite image analysis comparing pre-event
     imagery (Kompsat-3 from February 2017, WorldView-2 from July 2017) with post-event

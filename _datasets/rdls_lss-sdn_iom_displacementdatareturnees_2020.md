@@ -27,7 +27,7 @@ description: 'The dataset contains households and individual number of returnees
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated rounds of village-level surveys across Sudan
     to track returnee populations (both permanent and seasonal) following displacement

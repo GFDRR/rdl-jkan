@@ -35,7 +35,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Fire extent was mapped through direct observational data collection
     following the 22 March 2021 wildfire event at three IOM-managed sites in Cox's

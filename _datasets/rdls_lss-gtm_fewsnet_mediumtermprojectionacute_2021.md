@@ -18,7 +18,7 @@ description: 'Guatemala Medium Term Projection FEWS NET Acute Food Insecurity Cl
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (typically monthly) field surveys
     across Guatemala to classify acute food insecurity conditions using the IPC framework.

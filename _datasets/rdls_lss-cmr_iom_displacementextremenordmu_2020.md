@@ -25,7 +25,7 @@ description: 'This dataset contains the results of a multisectoral assessment of
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "IOM DTM conducted five rounds of multisectoral needs assessments (MSNA)\
     \ of internally displaced persons and returnees in Cameroon's Extr\xEAme-Nord\

@@ -49,7 +49,7 @@ description: 'On the 26th of October 2015, a large scale earthquake caused shelt
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Following the October 2015 earthquake in northern and central Afghanistan,
     REACH Initiative conducted a sample survey in August 2016 across 3 districts on

@@ -23,7 +23,7 @@ details: 'REACH would like to acknowledge the contribution of the following part
   and HLP Sub-Clusters. Raw data set and cleaning log are available upon request.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sample survey conducted by REACH Initiative in May 2018 to assess protection-based
     needs and vulnerabilities of conflict-affected populations in Afghanistan, with

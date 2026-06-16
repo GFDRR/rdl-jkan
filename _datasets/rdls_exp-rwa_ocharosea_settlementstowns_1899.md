@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Settlement and town locations in Rwanda were compiled by WFP VAM Rwanda
     as a spatial reference dataset for humanitarian and disaster risk assessment.

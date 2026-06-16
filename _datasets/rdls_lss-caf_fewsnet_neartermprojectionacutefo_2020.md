@@ -18,7 +18,7 @@ description: 'Central African Republic Near Term Projection FEWS NET Acute Food 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data collected by FEWS NET enumerators across Central
     African Republic on a monthly basis (October-December 2020) using standardized

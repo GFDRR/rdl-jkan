@@ -26,7 +26,7 @@ description: "Tabla con todos los hechos victimizantes reportados por UARIV por 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry data compiled by UARIV documenting all reported victimization
     events in Colombia disaggregated by type of event, department, municipality, year,

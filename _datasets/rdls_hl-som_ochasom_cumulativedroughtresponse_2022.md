@@ -43,7 +43,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: OCHA Somalia compiled cumulative drought response data from multiple
     humanitarian partner organizations operating through the cluster system during

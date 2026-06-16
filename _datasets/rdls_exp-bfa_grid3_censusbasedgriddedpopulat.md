@@ -67,7 +67,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census data from Burkina Faso were processed by WorldPop using spatial
     modeling techniques to produce gridded population estimates at fine resolution.

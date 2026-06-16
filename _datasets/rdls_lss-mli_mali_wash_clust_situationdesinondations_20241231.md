@@ -27,7 +27,7 @@ description: 'This dataset outlines the population and household figures affecte
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Post-event impact data collected through direct observation and anecdotal\
     \ reporting by Mali's Direction Nationale du D\xC3\xA9veloppement Social documenting\

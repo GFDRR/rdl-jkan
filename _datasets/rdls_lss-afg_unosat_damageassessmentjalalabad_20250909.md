@@ -33,7 +33,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared Pleiades satellite imagery acquired on September
     2, 2025 with baseline imagery to detect structural damage in Jalalabad City caused

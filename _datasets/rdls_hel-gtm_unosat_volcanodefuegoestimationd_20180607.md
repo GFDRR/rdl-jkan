@@ -77,7 +77,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Sentinel-2 satellite imagery from 4 June 2018 was analyzed by Copernicus\
     \ EMS to delineate the pyroclastic flow extent from the Volc\xE1n de Fuego eruption.\

@@ -24,7 +24,7 @@ description: 'The ninth round of Iraq''s Multi-Cluster Needs Assessment (MCNA) c
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: A sample survey of 11,645 in-camp IDP, out-of-camp IDP, and returnee
     households was conducted across 64 districts in Iraq between June and August 2021

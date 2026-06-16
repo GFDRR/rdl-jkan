@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Administrative boundary and population data from the 2010 census were
     spatially intersected with a 1km coastal buffer derived from coastline geometry

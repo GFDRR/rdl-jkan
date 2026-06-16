@@ -29,7 +29,7 @@ description: 'Large-scale flooding and landslides have been triggered in several
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact data collected by IOM through DTM standard methodology
     following heavy monsoon rainfall (12 June - 25 July 2020) that triggered widespread

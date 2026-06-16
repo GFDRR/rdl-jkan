@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household-level GPS points and population counts were collected during
     the 2009 Vanuatu National Population and Housing Census using standard census

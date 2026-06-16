@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired on 18 November
     2015 and 07 August 2014 over Sinjar town, Iraq, using visual interpretation to

@@ -28,7 +28,7 @@ details: The data includes areas with IDPs and/or returnees but with limited evi
   on the severity of their needs under the remarks column as 'lack'.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian partners contributed field assessments and needs data
     aggregated by OCHA Ethiopia into a severity of needs index at woreda administrative

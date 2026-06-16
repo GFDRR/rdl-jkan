@@ -26,7 +26,7 @@ description: 'This dataset gives estimates of the population of children and pre
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population estimates of acute malnutrition were extracted from the
     IPC Mozambique Acute Food Insecurity and Acute Malnutrition report (April 2024-March

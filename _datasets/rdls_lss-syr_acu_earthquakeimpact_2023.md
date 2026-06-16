@@ -31,7 +31,7 @@ description: 'On February 6, 2023, at dawn, a strong earthquake hit southern Tur
 details: 'Glide: EQ-2023-000015-TUR'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event damage and needs assessment data collected through direct
     field observations by the Assistance Coordination Unit's multi-departmental team

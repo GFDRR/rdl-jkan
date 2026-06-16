@@ -20,7 +20,7 @@ description: 'The DTM Emergency Event Tracking (EET) is deployed to track sudden
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM Emergency Event Tracking deploys rapid assessment teams to
     document sudden displacement events in Ag Geneina, Sudan, recording displacement

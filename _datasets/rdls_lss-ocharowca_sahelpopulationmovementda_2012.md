@@ -25,7 +25,7 @@ description: 'This data is about the refugees, IDPs, and returnees in the Sahel 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population movement data compiled from multiple humanitarian partners
     through registry methodology, documenting displacement flows (refugees, IDPs,

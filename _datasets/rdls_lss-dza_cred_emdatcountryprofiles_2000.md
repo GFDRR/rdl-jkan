@@ -31,7 +31,7 @@ description: 'Aggregated figures for natural hazard related events in EM-DAT: Al
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: EM-DAT country profile data for Algeria is derived from the EM-DAT
     global disaster database maintained by CRED, which compiles disaster impact records

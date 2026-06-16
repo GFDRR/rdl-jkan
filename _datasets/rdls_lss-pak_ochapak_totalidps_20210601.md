@@ -25,7 +25,7 @@ description: 'Pakistan district wise Total IDPs from areas of origin and by host
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP registry data collected by PDMA Khyber Pakhtoonkhwa through the
     Common Emergency Workspace (CEW) system, aggregated to district level to track

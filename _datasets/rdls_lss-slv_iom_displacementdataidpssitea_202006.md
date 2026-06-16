@@ -19,7 +19,7 @@ description: 'The dataset contains number of displaced persons by gender and age
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted site assessments at IDP settlements in El Salvador
     across two rounds, collecting displacement counts disaggregated by gender and

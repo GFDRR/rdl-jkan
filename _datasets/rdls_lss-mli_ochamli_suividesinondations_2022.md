@@ -47,7 +47,7 @@ description: "Les donn\xE9es contiennent les impacts caus\xE9s par les inondatio
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Flood impact data collected through evaluation forms and email reports
     submitted by DRDSES to OCHA Mali, compiled and maintained in a centralized database

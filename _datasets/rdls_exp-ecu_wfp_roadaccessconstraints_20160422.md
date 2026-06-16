@@ -40,7 +40,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data was compiled by WFP Logistics Cluster partners and
     Government of Ecuador following the 17 April 2016 earthquake in Ecuador. The dataset

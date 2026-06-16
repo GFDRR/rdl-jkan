@@ -30,7 +30,7 @@ description: 'The dataset contains IDPs, Returnees and Refugees at sub national 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated baseline assessments (29 rounds) of displaced
     populations in Far North Cameroon starting November 2015, collecting household

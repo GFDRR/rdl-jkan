@@ -83,7 +83,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed Sentinel-1 SAR imagery acquired on 2 October\
     \ 2021 and compared it with earlier imagery from 28 September 2021 to detect changes\

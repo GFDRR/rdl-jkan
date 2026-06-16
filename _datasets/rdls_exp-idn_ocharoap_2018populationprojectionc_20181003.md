@@ -55,7 +55,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population projection data for Central Sulawesi Province derived from
     Indonesian national census data (BPS) and compiled by BNPB with UNFPA support.

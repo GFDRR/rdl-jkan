@@ -25,7 +25,7 @@ description: 'Disaster loss and damage dataset for Madagascar. [Source: This met
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event disaster loss and damage data collected directly by Madagascar's
     national disaster management authority (CPGU) through observational and anecdotal

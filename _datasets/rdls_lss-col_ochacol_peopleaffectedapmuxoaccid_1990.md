@@ -25,7 +25,7 @@ description: 'People affected by APM/UXO accidents 1990-2019 - Afectados por MAP
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry data compiled by Descontamina Colombia documenting individuals
     affected by anti-personnel mines and unexploded ordnance accidents over a 30-year

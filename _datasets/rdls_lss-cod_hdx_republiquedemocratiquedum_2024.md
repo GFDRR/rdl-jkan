@@ -33,7 +33,7 @@ details: "Limites de l'analyse : Le niveau de d\xE9sagr\xE9gation de l'analyse n
   \ pas pu syst\xE9matiquement se faire jusqu'au niveau Zone de Sant\xE9."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC Acute Malnutrition analysis for Democratic Republic of Congo, classifying
     malnutrition severity (global and severe acute malnutrition) among children under

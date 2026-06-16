@@ -56,7 +56,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: ADAM collected observed tropical cyclone track and wind speed data
     for the September 2023 event across the Caribbean region. Population exposure

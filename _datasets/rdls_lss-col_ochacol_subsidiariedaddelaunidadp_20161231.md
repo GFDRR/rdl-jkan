@@ -29,7 +29,7 @@ description: "Corresponde a los municipios focalizados por la Unidad para la Ate
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: This dataset compiles administrative records from the Colombian Victims
     Unit (UARIV) documenting municipalities prioritized for victim assistance between

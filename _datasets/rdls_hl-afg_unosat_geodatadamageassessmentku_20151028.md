@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "UNOSAT analysts compared Pl\xE9iades satellite imagery acquired 28\
     \ October 2015 with WorldView-2 imagery from 21 October 2015 to detect structural\

@@ -69,7 +69,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Post-event flood extent was mapped and analyzed by WFP ADAM following
     the February 17, 2023 flood in Malawi. Flood boundaries were delineated from geospatial

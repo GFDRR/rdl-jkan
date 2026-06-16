@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired on April 2, 2016
     with reference imagery to detect structural damage in Jobar and Irbin. Affected

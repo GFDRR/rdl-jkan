@@ -40,7 +40,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Road network data collected by the Instituto Nacional de Estat\xED\
     stica e Censos and compiled by the World Food Programme, provided as shapefile\

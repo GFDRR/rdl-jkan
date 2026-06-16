@@ -54,7 +54,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data for Gaza was sourced from the PA Ministry of Planning
     and Administrative Development, while West Bank roads were sourced from JRC; OCHA

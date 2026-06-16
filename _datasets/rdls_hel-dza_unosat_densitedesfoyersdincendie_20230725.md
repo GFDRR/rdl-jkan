@@ -78,7 +78,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts detected active wildfire hotspots from VIIRS thermal
     satellite imagery acquired on 24 July 2023. Hotspot locations were spatially intersected

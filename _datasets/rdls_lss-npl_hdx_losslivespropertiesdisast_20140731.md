@@ -27,7 +27,7 @@ description: 'Disaster data per type of disaster from 2011 to 2014*. For more in
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event disaster impact data compiled by Nepal's Ministry of Home
     Affairs from 2011-2014 (Nepali calendar years 2068-2071), recording fatalities,

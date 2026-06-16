@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Radarsat-2 SAR satellite image acquired on 5 October 2017 was analyzed\
     \ by UNOSAT through visual interpretation and comparison with reference imagery\

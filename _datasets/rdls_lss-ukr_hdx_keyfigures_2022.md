@@ -40,7 +40,7 @@ details: Key Figures extracted from Ukraine Flash Appeal, FTS and the daily SitR
   (i.e https://reliefweb.int/sites/reliefweb.int/files/resources/2022-03-07_Ukraine%20Humanitarian%20Impact%20SitRep_final.pdf)
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Key figures aggregated from OCHA Situation Reports, FTS funding data,
     and Flash Appeal documents to compile consolidated impact metrics including affected

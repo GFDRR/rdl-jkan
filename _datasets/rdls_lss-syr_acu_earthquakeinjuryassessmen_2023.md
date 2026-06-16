@@ -36,7 +36,7 @@ description: 'The recent earthquake that struck the south of Turkey and the nort
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Assistance Coordination Unit conducted a direct observational survey
     of health facilities in northwest Syria to epidemiologically assess earthquake-induced

@@ -66,7 +66,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared satellite imagery from 30 September
     2013 and 7 January 2014 to detect shelter and infrastructure building footprints

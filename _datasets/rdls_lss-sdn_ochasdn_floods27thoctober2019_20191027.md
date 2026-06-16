@@ -26,7 +26,7 @@ details: This data will be updated whenever there are new figures from the gover
   of Sudan.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact data collected by the Government of Sudan's Humanitarian
     Aid Commission following the 27 October 2019 flooding event. The dataset contains

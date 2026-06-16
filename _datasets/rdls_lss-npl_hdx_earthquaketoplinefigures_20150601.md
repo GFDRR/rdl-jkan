@@ -26,7 +26,7 @@ description: 'Topline figures dataset for the Nepal Earthquake crisis page. Figu
 details: This dataset contains data about an ongoing situation.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Topline figures aggregated from UN RCO situation reports documenting
     humanitarian needs and impacts from the Nepal earthquake crisis. Data represents

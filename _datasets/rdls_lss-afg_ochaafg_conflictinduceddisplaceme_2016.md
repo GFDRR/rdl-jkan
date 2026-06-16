@@ -28,7 +28,7 @@ details: That dataset is a snapshot as of 04 June 2017. Assessments are ongoing 
   the field and these numbers are subject to change as new information becomes available.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Newly displaced population counts were compiled by OCHA sub-offices
     based on inter-agency assessment results conducted between 01 January and 31 December

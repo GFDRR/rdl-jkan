@@ -69,7 +69,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM system collected and analyzed geospatial data following the
     February 16, 2023 flood event in Zambia, delineating flood extent polygons and

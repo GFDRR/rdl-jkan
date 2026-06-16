@@ -32,7 +32,7 @@ description: 'The Global Report on Food Crises (GRFC) 2025 provides a global ass
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The GRFC aggregates food security assessments from multiple partner
     organizations using standardized IPC methodology to classify populations into

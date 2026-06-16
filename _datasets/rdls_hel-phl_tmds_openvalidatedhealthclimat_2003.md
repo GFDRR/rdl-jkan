@@ -155,7 +155,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset integrates 20 years (2003-2022) of climate, environmental,
     health, and socioeconomic data from multiple national government agencies (DOH,

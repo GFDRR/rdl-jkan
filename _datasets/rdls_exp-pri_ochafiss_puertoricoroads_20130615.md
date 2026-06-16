@@ -39,7 +39,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data derived from US Census Bureau geographic datasets
     (TIGER/Line 2013) providing primary and secondary road centerlines for Puerto

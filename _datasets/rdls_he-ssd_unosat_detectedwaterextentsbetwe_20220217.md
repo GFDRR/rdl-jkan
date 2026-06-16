@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "VIIRS satellite imagery from 11-15 February 2022 was analyzed and\
     \ compared with baseline imagery from 4-8 February 2022 to detect cumulative water\

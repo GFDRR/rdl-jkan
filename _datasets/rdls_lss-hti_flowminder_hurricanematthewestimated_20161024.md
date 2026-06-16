@@ -38,7 +38,7 @@ description: "Summary of estimated population movement in Haiti as of 24 October
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Population displacement estimates derived from de-identified Digicel\
     \ SIM card movements (calls made or received pre-hurricane and on 24 October 2016)\

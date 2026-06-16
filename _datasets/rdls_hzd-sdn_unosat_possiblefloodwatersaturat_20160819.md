@@ -46,7 +46,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared SPOT-6 satellite imagery from
     14 August 2016 against reference imagery to identify notable changes in flood

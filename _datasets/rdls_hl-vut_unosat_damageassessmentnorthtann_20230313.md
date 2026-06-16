@@ -55,7 +55,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared WorldView-2 satellite imagery acquired on
     04 March 2023 with pre-event baseline imagery to detect structural damage in North

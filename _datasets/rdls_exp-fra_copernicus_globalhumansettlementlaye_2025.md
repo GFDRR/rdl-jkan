@@ -72,7 +72,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: 'The GHSL dataset integrates fine-scale satellite image data streams
     with census data and crowdsourced geographic information through automated spatial

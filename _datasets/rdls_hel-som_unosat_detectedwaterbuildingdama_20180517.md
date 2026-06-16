@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Post-event satellite imagery from GeoEye-1 and WorldView-3 (30 April\u2013\
     1 May 2018) was analyzed by UNOSAT to delineate flood water extent over Belet\

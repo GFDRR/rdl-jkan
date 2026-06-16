@@ -36,7 +36,7 @@ description: 'This data has been produced by the United Nations Office for the C
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates humanitarian needs assessments from multiple
     partners in Guatemala using the Joint and Intersectoral Analysis Framework (JIAF)

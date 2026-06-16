@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "A census-based inventory of temporary shelter facilities in Nayarit\
     \ state was compiled by the Centro Nacional de Prevenci\xF3n de Desastres, documenting\

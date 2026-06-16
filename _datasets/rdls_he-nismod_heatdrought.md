@@ -441,7 +441,7 @@ lineage:
     url: https://esg.pik-potsdam.de/search/isimip/?project=ISIMIP2b&product=output
     used_in: hazard
   - id: source_2
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GHS-POP Global Population Grid R2023A
     risk_data_type: null
     type: dataset

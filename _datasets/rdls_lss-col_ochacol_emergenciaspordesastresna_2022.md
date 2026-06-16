@@ -25,7 +25,7 @@ description: "Emergencias por desastres naturales seg\xFAn reporte de la UNGRD. 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event disaster impact registry compiled by UNGRD from emergency
     reports across Colombian departments and municipalities. Data includes standardized

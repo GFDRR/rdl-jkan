@@ -62,7 +62,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed SENTINEL-1 satellite imagery acquired on 11
     July 2015 and compared it with reference imagery to detect notable changes in

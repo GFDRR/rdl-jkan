@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted MODIS satellite imagery collected on 13
     January 2015 to delineate snow cover extent across the Levant region following

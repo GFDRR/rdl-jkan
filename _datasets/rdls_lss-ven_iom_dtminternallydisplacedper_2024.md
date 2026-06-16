@@ -29,7 +29,7 @@ details: 'Sampling scheme: Indicative and by quotas, sampling by municipality to
   determining characteristics and does not represent the totality of IDPs in Venezuela.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted sample surveys via key informant interviews across
     Venezuelan municipalities to document internally displaced persons and associated

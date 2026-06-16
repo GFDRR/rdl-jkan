@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired on 30 November
     2014 and 17 May 2013 to detect structural damage in Fallujah through visual interpretation

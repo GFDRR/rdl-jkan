@@ -25,7 +25,7 @@ description: 'Damage data from Ecuador Government in google spreadsheets. [Sourc
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Damage data from Ecuador Government post-event assessment reports were
     scraped and compiled into a structured spreadsheet by the British Red Cross Maps

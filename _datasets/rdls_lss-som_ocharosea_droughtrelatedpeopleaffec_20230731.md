@@ -25,7 +25,7 @@ description: 'Drought affected areas and population in Somalia. [Source: This me
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Drought impact data aggregated from humanitarian partners operating
     in Somalia, compiled by OCHA ROSEA to track affected populations, humanitarian

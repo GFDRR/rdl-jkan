@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Post-event satellite imagery (WorldView-2 and Pleiades) acquired 20-26
     September 2017 was analyzed by UAEMex using multi-temporal comparison to detect

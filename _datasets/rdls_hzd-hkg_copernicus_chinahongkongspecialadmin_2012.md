@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FAPAR values derived from VIIRS satellite radiometer data are processed
     into 10-day time composites. Anomalies are calculated at each grid cell as the

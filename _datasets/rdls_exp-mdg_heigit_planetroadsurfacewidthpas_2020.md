@@ -94,7 +94,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network geometry and classification were sourced from OpenStreetMap's
     global arterial road dataset. Deep learning models were applied to PlanetScope

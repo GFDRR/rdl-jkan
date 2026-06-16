@@ -103,7 +103,7 @@ exposure:
       quantity_kind: length
       unit: kilometre
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Electricity transmission and distribution network derived using the
     gridfinder predictive mapping model (Arderne et al. 2020). OpenStreetMap electrical
@@ -121,21 +121,21 @@ lineage:
     url: https://planet.openstreetmap.org
     used_in: exposure
   - id: source_2
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: VIIRS Day/Night Band Nighttime Lights
     risk_data_type: null
     type: dataset
     url: https://ngdc.noaa.gov/eog/viirs/download_dnb_composites.html
     used_in: exposure
   - id: source_3
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GHS Population (GHS-POP)
     risk_data_type: null
     type: dataset
     url: https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php
     used_in: exposure
   - id: source_4
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: GHS Settlement Model (GHS-SMOD)
     risk_data_type: null
     type: dataset
@@ -149,14 +149,14 @@ lineage:
     url: http://srtm.csi.cgiar.org/srtmdata
     used_in: exposure
   - id: source_6
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: World Bank Electrification Rates
     risk_data_type: null
     type: dataset
     url: https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS
     used_in: exposure
   - id: source_7
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: ESA CCI Land Cover
     risk_data_type: null
     type: dataset

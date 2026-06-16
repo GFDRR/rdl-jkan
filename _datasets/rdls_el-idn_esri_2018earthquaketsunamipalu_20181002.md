@@ -42,7 +42,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event satellite imagery acquired by DigitalGlobe on 2 October
     2018 of Palu, Indonesia, providing visual documentation of building damage and

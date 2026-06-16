@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Baseline population estimates were derived from the 2001 Ukrainian
     state census and adjusted to reflect 2022 conditions including internally displaced

@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired 29 April 2015 with
     pre-event imagery to detect structural damage in the Hansapur area, 7.5-12 km

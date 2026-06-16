@@ -49,7 +49,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Drought hazard data generated using a soil water balance approach applied
     to global geospatial raster datasets (precipitation, evapotranspiration, rooted

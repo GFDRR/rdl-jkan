@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop generated gridded population counts for Jersey by applying
     age-gender disaggregation methods (Tatem et al., Pezzulo et al.) to baseline population

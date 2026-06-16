@@ -39,7 +39,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted rapid assessments of 43 pre-identified schools functioning
     as collective centers in Dominica following the 2017 earthquake disaster. Field

@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: 'WFP VAM processed CHIRPS rainfall estimates (1982-2017) to calculate
     two key indicators: number of poor growing seasons and inter-annual rainfall variability.

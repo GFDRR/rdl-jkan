@@ -43,7 +43,7 @@ details: These figures may fluctuate since the number of affected Afghans, peopl
   are received.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event natural disaster incident data compiled from IOM Afghanistan's
     Humanitarian Assistance Database (primary source) and supplemented by OCHA field

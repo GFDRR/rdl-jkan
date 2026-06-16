@@ -41,7 +41,7 @@ description: "Esta base contiene el resultado final del c\xE1lculo de las severi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Population in need (PiN) calculated by integrating DANE census data\
     \ on water sources, sanitation infrastructure, and waste collection with health\

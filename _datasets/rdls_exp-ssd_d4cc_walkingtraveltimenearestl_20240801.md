@@ -55,7 +55,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Walking travel time to health facilities was calculated using the CPAS
     software implementing a least cost path method. A friction/cost allocation surface

@@ -32,7 +32,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Education facilities in Cox's Bazar were assessed for damage through
     sample survey methodology, with damage reports compiled weekly from July to September

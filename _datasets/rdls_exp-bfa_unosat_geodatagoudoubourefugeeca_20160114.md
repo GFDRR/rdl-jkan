@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed GeoEye-1 satellite imagery acquired on 30
     October 2015 and manually identified and classified 2,669 shelter structures within

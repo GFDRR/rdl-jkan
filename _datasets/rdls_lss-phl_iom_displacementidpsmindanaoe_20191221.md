@@ -18,7 +18,7 @@ description: 'The dataset contains number of IDPs, families and their needs at s
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM standard methodology was applied to conduct site assessments
     across Mindanao following earthquake-triggered displacement, collecting counts

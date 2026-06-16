@@ -69,7 +69,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: TerraSar-X and Tandem-X radar satellite imagery acquired on 27 July
     2018 was analyzed by CIMA and LIST using scientifically validated change detection

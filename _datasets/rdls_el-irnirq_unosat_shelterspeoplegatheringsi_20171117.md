@@ -66,7 +66,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: High-resolution satellite imagery from Pleiades and Resurs-P acquired
     immediately after the 12 November 2017 Sarpol-e-Zahab earthquake was analyzed

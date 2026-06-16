@@ -20,7 +20,7 @@ description: 'The FEWS NET Data Warehouse is currently unavailable . Datasets on
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators collected Integrated Food Security Phase Classification
     (IPC) data on a monthly basis throughout 2019 across Ethiopia. Geographic boundaries

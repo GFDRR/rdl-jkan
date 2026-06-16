@@ -25,7 +25,7 @@ description: 'This data is a snapshot of the humanitarian situation in Burkina F
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: This Humanitarian Needs Overview aggregates impact data from multiple
     humanitarian partners operating in Burkina Faso to provide a snapshot of affected

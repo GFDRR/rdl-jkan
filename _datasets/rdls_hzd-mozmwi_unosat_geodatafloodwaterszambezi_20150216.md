@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared Landsat-7 satellite imagery acquired
     on 7 February 2015 with reference imagery to detect notable changes in water extent.

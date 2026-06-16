@@ -44,7 +44,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Flood extent data was derived from observations by Cambodia's General
     Department of Cadastre and Geography and represents the spatial extent of major

@@ -18,7 +18,7 @@ description: 'Rwanda Current Situation FEWS NET Acute Food Insecurity Classifica
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data collected by FEWS NET enumerators on a monthly
     schedule across Rwanda, spatially coded to geographic units and classified into

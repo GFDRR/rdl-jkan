@@ -18,7 +18,7 @@ description: 'Nicaragua Near Term Projection FEWS NET Acute Food Insecurity Clas
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (typically monthly) field surveys
     to collect IPC classification data across Nicaragua. Survey results were spatially

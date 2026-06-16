@@ -25,7 +25,7 @@ description: 'Number of people made homeless by natural disasasters disaggregate
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event homelessness data compiled from the EM-DAT (Emergency Events
     Database) maintained by CRED, aggregating reported displacement figures from natural

@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: VIIRS satellite observations of FAPAR are collected at 10-day intervals
     and processed by the JRC to calculate anomalies as deviations from a long-term

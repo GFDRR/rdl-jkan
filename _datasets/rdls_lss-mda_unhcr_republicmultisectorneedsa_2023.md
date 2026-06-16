@@ -27,7 +27,7 @@ description: 'The 2023 Multi-Sector Needs Assessment (MSNA) in Moldova evaluated
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: A non-probability, purposive sample survey of 850 Ukrainian refugee
     households in Moldova was conducted and stratified by region (North, Centre, Chisinau,

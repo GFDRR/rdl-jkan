@@ -70,7 +70,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed Pleiades satellite imagery acquired on 23
     January 2022 and performed visual interpretation and change detection to identify

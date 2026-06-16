@@ -25,7 +25,7 @@ description: 'https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: DesInventar is a disaster inventory system that compiles observed disaster
     event records from multiple sources including government agencies, media reports,

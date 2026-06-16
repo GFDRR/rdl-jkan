@@ -26,7 +26,7 @@ description: 'This datasets has IDPs, Household & Returnees data at Admin3 level
 details: Round 8 is the latest Assessment as of July 2024.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated Village Assessment Surveys (Rounds 1-9)
     across Niger using standardized key informant interviews and household questionnaires

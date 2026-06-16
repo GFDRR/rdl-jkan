@@ -18,7 +18,7 @@ description: 'Madagascar Current Situation FEWS NET Acute Food Insecurity Classi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (monthly) field assessments
     across Madagascar administrative units during 2021, classifying acute food insecurity

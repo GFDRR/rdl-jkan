@@ -34,7 +34,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed satellite imagery acquired on 11 June 2017
     and compared multi-temporal images to detect notable changes in building structures.

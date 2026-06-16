@@ -35,7 +35,7 @@ details: The HNO is compiled by OCHA from input received from clusters/sectors a
   partners in-country
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates people in need estimates by sector and geographic
     area collected through direct observational data and anecdotal reports from multiple

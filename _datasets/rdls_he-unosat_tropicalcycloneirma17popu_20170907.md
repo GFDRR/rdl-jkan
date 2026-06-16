@@ -49,7 +49,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT derived the observed and predicted track of tropical cyclone
     IRMA-17 from satellite data as of 7 September 2017. Population exposure was estimated

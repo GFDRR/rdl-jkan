@@ -28,7 +28,7 @@ description: 'Monthly DEEP extracts related to the Sudan Situational Analyses co
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: DFS analysts and Information Management Officers collate available
     information daily from multiple sources into the DEEP platform, tagging entries

@@ -40,7 +40,7 @@ description: 'IDP numbers in Burundi, Djibouti, DRC, Eritrea, Ethiopia, Kenya, R
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP statistics were manually aggregated from OCHA, IOM, and UNHCR sources
     across 12 Eastern African countries from December 2007 to March 2015. The dataset

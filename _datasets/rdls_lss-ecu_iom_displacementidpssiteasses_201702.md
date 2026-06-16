@@ -25,7 +25,7 @@ description: 'Site Assessment. [Source: This metadata record was automatically e
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted site assessments of displacement locations in Ecuador,
     collecting data on displaced populations and site conditions. The assessment documents

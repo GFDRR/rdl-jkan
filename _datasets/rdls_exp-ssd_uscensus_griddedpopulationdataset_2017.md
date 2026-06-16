@@ -35,7 +35,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Satellite imagery was combined with 2008 census enumeration data and
     2017 population estimates using spatial interpolation methods to produce gridded

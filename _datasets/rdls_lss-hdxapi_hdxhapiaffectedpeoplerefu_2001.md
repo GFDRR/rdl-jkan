@@ -35,7 +35,7 @@ details: HDX HAPI is refreshed daily, but the source datasets may have different
   specific update frequency.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNHCR registry data on refugee and person of concern populations aggregated
     through the HDX Humanitarian API (HDX HAPI) to provide standardized humanitarian

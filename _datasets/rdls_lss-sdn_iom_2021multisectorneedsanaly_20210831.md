@@ -19,7 +19,7 @@ description: 'This is the 2021 multisector needs analysis data (MSNA) - a compre
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The 2021 MSNA was conducted by IOM using DTM (Displacement Tracking
     Matrix) standard methodology as a comprehensive household-level survey across

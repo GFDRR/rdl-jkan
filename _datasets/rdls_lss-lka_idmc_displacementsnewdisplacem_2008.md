@@ -52,7 +52,7 @@ details: 'Please note that most of the figures are estimates. The definition hig
   displacement.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC compiled internal displacement data for Sri Lanka from multiple
     sources, disaggregating displacement events by hazard type (flood, earthquake,

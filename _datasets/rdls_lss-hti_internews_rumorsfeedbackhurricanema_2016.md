@@ -27,7 +27,7 @@ description: 'The data was collected in the most affected areas by Internews sta
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Internews staff and partner organizations conducted direct observational
     surveys and collected anecdotal feedback from beneficiaries in the most affected

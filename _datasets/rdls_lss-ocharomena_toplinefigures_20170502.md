@@ -24,7 +24,7 @@ description: 'OCHA ROMENA Topline Figures. [Source: This metadata record was aut
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: OCHA ROMENA compiled topline figures from direct observational data
     and anecdotal reports across the Middle East and North Africa region to produce

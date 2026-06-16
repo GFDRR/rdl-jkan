@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: VIIRS satellite imagery from 10-14 August 2024 was analyzed and compared
     with imagery from 01-05 August 2024 to detect cumulative water extents. Analysts

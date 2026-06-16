@@ -25,7 +25,7 @@ description: 'https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Historical disaster event records compiled by UNDRR DesInventar platform
     for Mozambique, documenting observed impacts from multiple hazard types including

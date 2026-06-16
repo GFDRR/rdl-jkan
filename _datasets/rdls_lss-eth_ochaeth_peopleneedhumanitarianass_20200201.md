@@ -55,7 +55,7 @@ description: 'This file contains the number of people in need of humanitarian as
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The 2020 Humanitarian Needs Overview (HNO) aggregated data from multiple
     sources (DTM, VAS, HEA, IPC, NDRMC) using sample survey methodology to estimate

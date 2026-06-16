@@ -25,7 +25,7 @@ description: 'Affected wards, 10 October 2016 earthquake. [Source: This metadata
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event affected ward boundaries were delineated by the UNDAC Team
     and Tanzanian Disaster Management Department using direct observational and anecdotal

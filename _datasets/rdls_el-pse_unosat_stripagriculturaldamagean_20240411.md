@@ -60,7 +60,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts performed Normalised Difference Vegetation Index (NDVI)
     analysis and multi-temporal classification on Sentinel-2 satellite imagery acquired

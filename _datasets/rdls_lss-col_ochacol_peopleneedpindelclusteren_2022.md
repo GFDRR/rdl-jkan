@@ -33,7 +33,7 @@ description: "Esta base de datos contiene los c\xE1lculos de People in Need (PiN
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: People in Need estimates were calculated from aggregated humanitarian
     partner data on food insecurity prevalence (moderate and severe) and acute malnutrition/low

@@ -54,7 +54,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed VIIRS thermal imagery from NASA FIRMS for
     October 15-16, 2019, identifying and mapping active fire hotspots through satellite

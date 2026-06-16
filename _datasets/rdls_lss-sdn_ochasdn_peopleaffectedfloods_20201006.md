@@ -26,7 +26,7 @@ description: 'The data shows the number of people, Household, houses damaged and
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact data collected from the field by the Government of
     Sudan Humanitarian Aid Commission (HAC) documenting people affected, households

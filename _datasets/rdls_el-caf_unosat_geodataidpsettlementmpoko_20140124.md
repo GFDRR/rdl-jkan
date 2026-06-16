@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed QuickBird satellite imagery acquired on 28
     December 2013 and 20 January 2014, comparing multi-temporal images to delineate

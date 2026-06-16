@@ -21,7 +21,7 @@ description: 'Emergency Tracking Tool (ETT) is implemented in Haiti to collect i
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Emergency Tracking Tool collects post-event impact data on population
     movements and casualties from climatic and security emergencies in Haiti through

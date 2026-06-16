@@ -30,7 +30,7 @@ details: "In the DTM3 Peru Survey file, you may see some questions that are not 
   \ con OIM Per\xFA (IOMPeru@iom.int)"
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "The DTM R3 dataset is a representative sample survey of displaced\
     \ populations in shelters across two districts in Piura, Peru, conducted by IOM\

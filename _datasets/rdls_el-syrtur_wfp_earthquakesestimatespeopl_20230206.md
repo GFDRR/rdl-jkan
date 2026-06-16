@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population estimates were derived from spatial analysis of the earthquake
     epicenter (7.8 magnitude, 24.1 km depth, 6 February 2023) and affected area boundaries,

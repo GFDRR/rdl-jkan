@@ -25,7 +25,7 @@ description: 'Zimbabwe Joint severity analysis.. [Source: This metadata record w
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Joint severity analysis compiled from direct observational data and
     anecdotal reports collected by humanitarian partners operating in Zimbabwe, aggregating

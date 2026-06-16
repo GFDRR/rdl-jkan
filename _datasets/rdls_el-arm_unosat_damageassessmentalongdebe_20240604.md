@@ -90,7 +90,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts conducted post-event damage assessment by comparing\
     \ Pl\xE9iades satellite imagery acquired on 29 May 2024 with reference imagery\

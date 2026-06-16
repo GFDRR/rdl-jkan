@@ -28,7 +28,7 @@ description: 'Due to Sahel Crisis, IOM DTM conducted mobility tracking in Alibor
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted field-based mobility tracking surveys in Alibori
     and Atacora departments of Benin following the Sahel crisis. Enumerators interviewed

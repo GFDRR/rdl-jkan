@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (baseline
     2009, and post-conflict acquisitions from 2013-2015) to identify damaged building

@@ -75,7 +75,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop produced gridded population estimates for Burkina Faso using
     customized methods applied to 100m resolution raster cells. Population counts

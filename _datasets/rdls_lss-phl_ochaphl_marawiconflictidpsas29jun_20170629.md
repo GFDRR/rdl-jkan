@@ -18,7 +18,7 @@ description: 'Number of IDPs affected by Marawi Conflict by municipality. [Sourc
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP counts were compiled by OCHA Philippines from field assessments
     and administrative reports by municipality during the Marawi conflict response,

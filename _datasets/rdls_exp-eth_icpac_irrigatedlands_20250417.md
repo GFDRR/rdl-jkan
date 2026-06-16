@@ -42,7 +42,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Irrigated lands in Ethiopia were mapped from satellite imagery at ~5km
     resolution for the year 2000 using the Waterdata Global Irrigated Area for Mapping

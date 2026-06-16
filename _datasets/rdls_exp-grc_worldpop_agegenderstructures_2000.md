@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop generated gridded population estimates for Greece by disaggregating
     baseline population counts into age groups (0-1, 5-year intervals to 80+) and

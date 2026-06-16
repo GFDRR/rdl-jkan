@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts performed multi-temporal satellite image comparison
     of WorldView-02 data from 06 December 2013 and 17 February 2014 to detect and

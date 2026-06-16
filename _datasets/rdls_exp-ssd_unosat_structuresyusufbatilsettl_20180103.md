@@ -64,7 +64,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts manually reviewed Pleiades satellite imagery from 31
     October 2017 of the Yusuf Batil IDP settlement in South Sudan and identified 15,970

@@ -74,7 +74,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Satellite imagery from SAR (06 May 2018) and optical VHR sensors were\
     \ analyzed by UNOSAT to detect flood water extent through multi-temporal image\

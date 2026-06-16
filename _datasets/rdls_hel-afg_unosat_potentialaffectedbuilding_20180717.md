@@ -99,7 +99,7 @@ hazard:
     id: es_flood
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared Sentinel-2 satellite imagery from 13 July
     2018 (one day post-disaster) with reference imagery to detect and delineate landslide

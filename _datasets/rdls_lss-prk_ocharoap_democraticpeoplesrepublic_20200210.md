@@ -27,7 +27,7 @@ description: 'This dataset contains the affected populations, people in need and
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates humanitarian needs assessment data collected
     by OCHA and humanitarian partners in DPR Korea through registry-based methodology.

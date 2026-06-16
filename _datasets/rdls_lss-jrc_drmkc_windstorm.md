@@ -48,33 +48,33 @@ details: 'The windstorm risk estimates are computed through a comprehensive prob
   Commission''s approach to multi-hazard risk assessment for disaster risk management.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: null
   sources:
   - id: source_1
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: European windstorm hazard
     risk_data_type: null
     type: dataset
     url: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/windstorm
     used_in: hazard
   - id: source_2
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global Human Settlement Layer - Built-up surface
     risk_data_type: null
     type: dataset
     url: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/built_up
     used_in: exposure
   - id: source_3
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global Human Settlement Layer - Population
     risk_data_type: null
     type: dataset
     url: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/atlas/metadata/population
     used_in: exposure
   - id: source_4
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: European vulnerability index
     risk_data_type: null
     type: dataset

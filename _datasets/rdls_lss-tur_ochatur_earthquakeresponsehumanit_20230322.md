@@ -26,7 +26,7 @@ details: This data has been collected by PARTNERs and OCHA Sub OSOCC staff based
   their field visits
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Direct observational and anecdotal data collected by humanitarian\
     \ partners in the field across four earthquake-affected provinces (Kahramanmaras,\

@@ -30,7 +30,7 @@ description: 'Local conflict in Benishangul Gumuz region (BSG) and East and West
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted a sample survey in September 2018 to assess displacement
     resulting from local conflict in Benishangul Gumuz region and East/West Wollega

@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Energy facility locations and types were mapped by CENACARTA through
     direct observational data collection and cartographic survey at 1:250,000 scale

@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Gridded population data generated through Random Forest-based dasymetric
     redistribution of census-derived population counts, constrained by satellite-derived

@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed SAOCOM-1A SAR satellite imagery acquired\
     \ on 3 November 2020 to detect surface water extent through visual interpretation\

@@ -32,7 +32,7 @@ description: 'Harmonised IDP data from DTM and CCCM covering all regions.. [Sour
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Harmonised IDP figures compiled from DTM and CCCM data sources covering
     all regions of Somalia. Data collected through direct observational methods and

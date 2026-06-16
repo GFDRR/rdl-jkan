@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: INFORM aggregates approximately 50 indicators from multiple sources
     into a composite risk index across three dimensions (hazards, exposure, vulnerability)

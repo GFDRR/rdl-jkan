@@ -40,7 +40,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Historical tropical cyclone events affecting Somalia from 1984-2020
     were compiled by ICPAC and spatially attributed to administrative districts (admin2

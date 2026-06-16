@@ -31,7 +31,7 @@ description: 'In early November 2020, conflict broke out in the north of Ethiopi
 details: '[DTM standard methodology](https://displacement.iom.int/system/tdf/Methodological%20Framework%20used%20in%20DTM%20Operations%20for%20Quantifying%20Displacement%20and%20Mobility.pdf?file=1&type=node&id=2389)'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM deployed Emergency Site Assessment surveys across Tigray region
     from 11 December 2020 to 14 January 2021 to capture displacement and multisectoral

@@ -52,7 +52,7 @@ details: 'Fragility functions were derived using analytical methods (nonlinear d
   into the EQvis platform.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json

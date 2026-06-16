@@ -25,7 +25,7 @@ description: 'Natural Disasters 2012-2019 (people affected) - Afectados por desa
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry data compiled by UNGRD documenting people affected by natural
     disasters in Colombia during 2012-2019. The dataset aggregates impact records

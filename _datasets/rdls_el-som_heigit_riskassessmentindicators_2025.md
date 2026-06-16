@@ -107,7 +107,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Multiple risk assessment indicators were aggregated at Somalia admin
     level 2 using HeiGIT's GAIA processing pipeline, integrating demographic, environmental,

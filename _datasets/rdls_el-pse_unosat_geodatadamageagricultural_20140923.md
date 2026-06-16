@@ -58,7 +58,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared pre-crisis Pleiades satellite imagery (6 July
     2014) with post-crisis imagery (14 August 2014) of Gaza Strip agricultural areas.

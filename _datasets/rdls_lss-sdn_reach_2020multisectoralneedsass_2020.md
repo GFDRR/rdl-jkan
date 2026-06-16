@@ -32,7 +32,7 @@ details: More information on the methodology can be found in the readme (first s
   of the spreadsheet).
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household survey data collected by REACH and OCHA across Sudan to assess
     multi-sectoral humanitarian needs of non-displaced, IDP, and refugee populations.

@@ -107,7 +107,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Multiple geospatial datasets were aggregated and processed using HeiGIT's
     GAIA (Geospatial Analysis for Integrated Assessment) framework to derive risk

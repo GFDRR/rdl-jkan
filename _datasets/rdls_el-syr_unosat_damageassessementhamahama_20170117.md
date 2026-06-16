@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: 'UNOSAT analysts compared satellite imagery acquired on multiple dates
     (06 August 2010, 26 September 2013, 05 March 2014, 30 June 2016, and 06 July 2016)

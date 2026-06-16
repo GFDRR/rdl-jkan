@@ -84,7 +84,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Satellite imagery from WorldView-3 (optical) and ICEYE (SAR) acquired\
     \ on 7 June 2023 were analyzed by UNOSAT analysts through visual interpretation\

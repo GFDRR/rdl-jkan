@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed high-resolution satellite imagery (WorldView-1)
     from February 2014 and manually identified 453 temporary shelter structures and

@@ -95,7 +95,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR imagery acquired on 28 September 2022 was analyzed by
     UNOSAT analysts to detect surface water extents through comparison with reference

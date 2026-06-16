@@ -31,7 +31,7 @@ details: Not representative or a comprehensive compilation of all events in whic
   affected is unspecified, one is counted.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Incident-level data compiled from agency reports and open source monitoring
     of attacks on healthcare facilities and workers in conflict settings. Events are

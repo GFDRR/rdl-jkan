@@ -32,7 +32,7 @@ description: 'The data is about Internally Displaced Persons, Refugees, and Retu
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry-based administrative data compiled by UNHCR and IOM documenting
     internally displaced persons, refugees, and returnees in Chad disaggregated by

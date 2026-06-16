@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM processed the magnitude 6.7 earthquake event (USGS ID us7000l9ku)
     occurring in Banda Sea on 8 November 2023 to generate empirical ground motion

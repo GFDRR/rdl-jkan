@@ -47,7 +47,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Daily rainfall observations from CHIRPS satellite data were processed
     using Google Earth Engine remote sensing analysis. Rainfall anomalies for May-July

@@ -38,7 +38,7 @@ description: "Estimated population movement in Haiti as of 8 November 2016. The 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Population displacement was estimated by tracking de-identified Digicel\
     \ SIM card movements that made or received calls both pre-hurricane and in the\

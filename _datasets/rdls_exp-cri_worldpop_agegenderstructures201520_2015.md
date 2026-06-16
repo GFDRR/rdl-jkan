@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop Global 2015-2030 R2025A version provides modeled gridded population
     counts disaggregated by gender and age structure for Costa Rica. Population estimates

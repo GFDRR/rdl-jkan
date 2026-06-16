@@ -18,7 +18,7 @@ description: 'The November 2017 dataset of the iMMAP Population Monitoring Initi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census-based enumeration of internally displaced populations in South
     Syria conducted by iMMAP in November 2017, providing direct counts of displacement

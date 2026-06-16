@@ -25,7 +25,7 @@ description: 'Geodata of nepal earthquake damages as of 28 April 2015 shared pub
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Damage assessment data collected by the US National Geospatial Agency
     through remote sensing and ground surveys following the 2015 Nepal earthquake,

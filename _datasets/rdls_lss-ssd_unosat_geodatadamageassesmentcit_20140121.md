@@ -34,7 +34,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared WorldView-1 satellite imagery acquired on
     19 January 2014 with baseline imagery to detect structural destruction in Bor

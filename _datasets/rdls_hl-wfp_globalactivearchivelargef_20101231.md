@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Dartmouth Flood Observatory compiled a global archive of large
     flood events from 1985-2010 using direct observational data and anecdotal reports.

@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts manually identified shelter structures from WorldView-3
     satellite imagery acquired on multiple dates (October 2016, December 2016, February

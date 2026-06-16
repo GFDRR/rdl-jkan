@@ -66,7 +66,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset integrates real-time hazard alerts from GDACS with PortWatch's
     spatial database of global ports and maritime chokepoints to identify port disruption

@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop modeled gridded population counts by disaggregating census
     and survey data using demographic methods (Tatem et al., Pezzulo et al.) to produce

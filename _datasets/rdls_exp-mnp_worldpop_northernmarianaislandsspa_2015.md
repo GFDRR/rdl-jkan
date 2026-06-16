@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population estimates were generated using Random Forest-based dasymetric
     redistribution methodology applied to census and survey data sources. The dataset

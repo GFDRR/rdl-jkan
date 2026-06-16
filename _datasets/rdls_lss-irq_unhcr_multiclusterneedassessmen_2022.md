@@ -36,7 +36,7 @@ description: 'The Multi Cluster Needs Assessment (MCNA) is an iterative cluster-
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household-level survey data collected through computer-assisted personal
     interviews (CAPI) across Iraq, aggregated to provide quantitative evidence on

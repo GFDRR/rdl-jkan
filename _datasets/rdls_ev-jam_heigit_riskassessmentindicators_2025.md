@@ -106,7 +106,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Risk assessment indicators were aggregated from multiple sources at
     Jamaica's admin level 2 boundaries using HeiGIT's GAIA processing pipeline. The

@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery from 16 May 2017 (pre-event)
     and 31 August 2017 (post-event) over Chein Khar Li village to detect structural

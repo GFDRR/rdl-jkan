@@ -34,7 +34,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The report which was produced after collecting this data includes extensive
     quality assurance processes to ensure the quality of the data collected. The report

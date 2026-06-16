@@ -49,7 +49,7 @@ details: The IDP/Returns/Affected Host community figures are based on reports fr
   figures is a work in progress.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Internally displaced population counts compiled from direct observational
     reports submitted by humanitarian partners operating in South Sudan. Data represents

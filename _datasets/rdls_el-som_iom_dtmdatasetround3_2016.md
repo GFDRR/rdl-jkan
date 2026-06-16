@@ -34,7 +34,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM Round 3 collected settlement-level registry data on displaced
     persons, returnees, and baseline populations in Somalia through direct field enumeration

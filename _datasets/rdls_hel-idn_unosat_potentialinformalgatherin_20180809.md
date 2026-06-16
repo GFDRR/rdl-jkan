@@ -65,7 +65,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre- and post-event Pleiades satellite imagery
     (7-8 August 2018) of Tanjung and Pemenang Districts to identify approximately

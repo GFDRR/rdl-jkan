@@ -27,7 +27,7 @@ description: 'This dataset presents compiled data from the most recent round of 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collected displacement and mobility data through standardized
     key informant interviews and community assessments across Ituri, North Kivu, South

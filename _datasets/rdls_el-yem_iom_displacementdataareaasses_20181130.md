@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM field staff and key informants conduct sub-area assessments
     to identify and enumerate IDP and returnee populations across Yemen, recording

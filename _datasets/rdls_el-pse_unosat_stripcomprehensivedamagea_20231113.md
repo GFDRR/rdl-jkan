@@ -60,7 +60,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery from 7 November 2023 against
     baseline images from May, September, and October 2023 to detect structural damage

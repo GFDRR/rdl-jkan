@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared VIIRS satellite imagery from 13-17 September
     2024 with baseline imagery from 18-22 August 2024 to detect cumulative water extents

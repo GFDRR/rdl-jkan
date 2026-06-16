@@ -41,7 +41,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: 'Data collection was carried out between July 2022 and August 2022.
     Dataset has been cleaned and quality checked by the project team. This dataset

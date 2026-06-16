@@ -61,7 +61,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared multi-temporal satellite imagery
     (12 December 2014 and 15 May 2015) of Sana'a International Airport to identify

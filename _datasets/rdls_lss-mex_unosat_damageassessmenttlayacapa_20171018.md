@@ -39,7 +39,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Post-event damage assessment derived from UAV imagery acquired on 7
     October 2017 (18 days after the 19 September 2017 M7.1 earthquake) combined with

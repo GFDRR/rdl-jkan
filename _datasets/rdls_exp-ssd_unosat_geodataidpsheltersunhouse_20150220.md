@@ -61,7 +61,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed GeoEye-1 satellite imagery acquired on 15
     February 2015 of the UN House compound in Juba and manually detected shelter structures

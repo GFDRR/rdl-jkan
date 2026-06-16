@@ -26,7 +26,7 @@ description: 'The baseline data together with the People in Need (PIN) and sever
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian needs data compiled from multiple Sudan sectors following
     the Joint Inter-Sectoral Analysis Framework methodology. Sectors estimated People

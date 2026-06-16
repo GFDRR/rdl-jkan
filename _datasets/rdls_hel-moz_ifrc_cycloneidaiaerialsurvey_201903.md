@@ -89,7 +89,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Aerial survey data collected via helicopter and fixed-wing aircraft
     over priority areas in Mozambique from 24-29 March 2019 following tropical cyclone

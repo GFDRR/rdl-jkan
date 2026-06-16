@@ -20,7 +20,7 @@ description: 'The FEWS NET Data Warehouse is currently unavailable . Datasets on
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators collected IPC classification data on a monthly
     schedule across Zimbabwe in 2016. Geographic data representing food insecurity

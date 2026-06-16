@@ -82,7 +82,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Sentinel-1 SAR imagery from 26 January 2022 was processed using automated\
     \ AI-based methods to detect surface water extent across approximately 42,000\

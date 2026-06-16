@@ -27,7 +27,7 @@ description: "Personnes d\xE9plac\xE9es du Pool. [Source: This metadata record w
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Displacement registry data collected and maintained by the Congolese
     Ministry of Social Affairs and Humanitarian Action documenting internally displaced

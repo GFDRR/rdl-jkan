@@ -71,7 +71,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM collected and analyzed geospatial data following the November
     14, 2023 flood event in Ethiopia. Flood extent was mapped from satellite or field

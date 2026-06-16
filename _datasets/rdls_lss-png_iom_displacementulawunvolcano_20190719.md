@@ -27,7 +27,7 @@ description: 'The dataset contains number of families and individuals displaced 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Displacement data collected by IOM using DTM standard methodology following
     the Ulawun volcano eruption in Papua New Guinea. Site assessments recorded the

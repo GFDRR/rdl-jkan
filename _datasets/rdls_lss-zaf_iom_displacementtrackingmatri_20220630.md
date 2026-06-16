@@ -37,7 +37,7 @@ details: This dataset comes from the [DTM API](https://dtm.iom.int/data-and-anal
   added.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP data collected through IOM's DTM framework using baseline assessments,
     emergency tracking tools, and site assessments. Data aggregated at admin 0-2 levels

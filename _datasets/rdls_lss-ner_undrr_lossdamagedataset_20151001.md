@@ -25,7 +25,7 @@ description: 'Disaster loss and damage dataset for Niger. [Source: This metadata
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Post-event disaster loss and damage data collected through the Syst\xE8\
     me d'Alerte Pr\xE9coce et de Gestion des Catastrophes (SAP) using direct observational\

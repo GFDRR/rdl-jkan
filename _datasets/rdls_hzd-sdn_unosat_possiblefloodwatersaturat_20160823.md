@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Radarsat-2 SAR imagery (12 m resolution)
     acquired on 18 August 2016 over Wad Madani, Al Jazeera State, Sudan. Multi-temporal

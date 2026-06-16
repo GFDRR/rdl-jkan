@@ -33,7 +33,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population data derived from the 2006 Egyptian national census, disaggregated
     and compiled at multiple administrative levels (province, district, sub-district)

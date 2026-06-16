@@ -63,7 +63,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre-event building footprints from Humanitarian
     OpenStreetMap with post-event Worldview 2 satellite imagery acquired 2 October

@@ -47,7 +47,7 @@ description: 'This infographics is about South Sudan Situation and needs. It als
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Situation report aggregating food security classifications from FEWSNET,
     displacement data from IOM, and humanitarian needs assessments from UNICEF CO

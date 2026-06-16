@@ -26,7 +26,7 @@ description: 'Projected IPC population Estimates February - June 2016 by FAO-FSN
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "FAO-FSNAU compiled projected population estimates classified by Integrated\
     \ Food Security Phase Classification (IPC) levels for rural, urban, and IDP populations\

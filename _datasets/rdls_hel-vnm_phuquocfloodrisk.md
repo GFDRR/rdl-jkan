@@ -493,7 +493,7 @@ hazard:
     id: event_set_combined
     occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Flood risk assessment for Phu Quoc Island, Kien Giang Province, Viet
     Nam, produced by Royal HaskoningDHV and EGIS under the GFDRR-financed Phu Quoc

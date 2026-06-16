@@ -107,7 +107,7 @@ exposure:
       quantity_kind: currency
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: National-level socio-economic, building type, and capital stock statistics
     for Lebanon were transposed onto 5x5 km and 1x1 km geographic grids using population

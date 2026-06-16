@@ -26,7 +26,7 @@ details: The NDRRMC report of October 24th 2016 seems to be a partial count of m
   affected
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event damage and casualty data collected by NDRRMC through field
     assessments and compiled into situation reports (SitReps) dated October 25-November

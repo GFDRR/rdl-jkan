@@ -27,7 +27,7 @@ description: 'The data collection exercise conducted in the villages of Aru, Dju
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated baseline assessments in Ituri Province villages
     (Aru, Djugu, Irumu, Mahagi, Mambasa) using standardized DTM methodology with key

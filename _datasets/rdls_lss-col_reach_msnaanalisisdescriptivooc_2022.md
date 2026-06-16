@@ -18,7 +18,7 @@ description: 'Descriptive statistics of the MSNA 2022 in Colombia. [Source: This
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: MSNA 2022 survey data collected through sample survey methodology in
     Colombia, processed into descriptive statistics to quantify humanitarian needs

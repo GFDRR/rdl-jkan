@@ -27,7 +27,7 @@ description: 'A site assessment is a sub-component of mobility tracking. It aims
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated site and village assessments in Lac Province,
     Chad using standardized methodology to enumerate internally displaced persons,

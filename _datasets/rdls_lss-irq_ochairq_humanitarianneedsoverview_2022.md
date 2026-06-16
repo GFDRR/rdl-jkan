@@ -40,7 +40,7 @@ details: Humanitarian partners and sectors who provided input into the developme
   and [Iraq 2022 HRP document](https://reliefweb.int/report/iraq/iraq-humanitarian-response-plan-2022-march-2022).
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates people-in-need (PIN) and acute PIN figures derived
     from direct observational data and anecdotal reports collected by humanitarian

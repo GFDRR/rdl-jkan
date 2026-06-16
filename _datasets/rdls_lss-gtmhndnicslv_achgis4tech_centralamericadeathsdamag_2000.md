@@ -30,7 +30,7 @@ description: 'The dataset presents the number of affected people and the number 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact data were extracted from the EM-DAT database, standardized,
     and compiled into tabular format covering deaths and affected populations by disaster

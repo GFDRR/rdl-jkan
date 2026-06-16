@@ -26,7 +26,7 @@ description: 'The dataset contains number of IDPs and Households at quartier lev
 details: Round 9 is the latest assessment as of December 30 2024.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated baseline assessment surveys (Rounds 0-11,
     April 2022 to September 2025) using key informant interviews at quartier and community

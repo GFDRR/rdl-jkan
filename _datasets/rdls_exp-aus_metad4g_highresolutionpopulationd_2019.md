@@ -56,7 +56,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: High-resolution population density maps were created by applying machine
     learning to satellite imagery to identify building footprints, then overlaying

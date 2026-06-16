@@ -26,7 +26,7 @@ description: "Ce jeu donne donn\xE9es donne la situation des inondations au Nige
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event flood impact data collected through direct observation and
     anecdotal reports by Niger's Ministry of Humanitarian Action and Disaster Management.

@@ -51,7 +51,7 @@ details: These figures may fluctuate since the number of affected people, people
   received.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Natural disaster incident data compiled from IOM Afghanistan's Humanitarian
     Assistance Database (HADB) as the primary source, supplemented by OCHA Field Office

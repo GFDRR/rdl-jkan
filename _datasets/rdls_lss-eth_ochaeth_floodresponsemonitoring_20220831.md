@@ -25,7 +25,7 @@ description: 'Flood events in 2022 and their impact on people.. [Source: This me
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Impact data on affected populations from 2022 flood events in Ethiopia
     were compiled by OCHA Ethiopia from regional reports submitted by the Ethiopian

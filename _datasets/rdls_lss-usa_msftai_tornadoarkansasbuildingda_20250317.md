@@ -27,7 +27,7 @@ details: While the data provides a valuable first look, it should serve as a pre
   guide and will require on-the-ground verification for a complete understanding.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Microsoft AI for Good Lab applied trained damage assessment AI models
     to Planet satellite imagery of tornado-affected areas in Jacksonport and Cave

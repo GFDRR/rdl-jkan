@@ -37,7 +37,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Spatial gridding methodology refined from Haiti application was applied
     to Pakistan using correlation between built-up areas (derived from remote sensing)

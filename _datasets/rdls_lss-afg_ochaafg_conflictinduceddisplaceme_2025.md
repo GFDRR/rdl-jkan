@@ -35,7 +35,7 @@ details: The dataset is a snapshot as of 05 January 2023. Assessments are ongoin
   available.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Conflict-induced displacement figures are compiled by OCHA Afghanistan
     sub offices from inter-agency assessment results conducted by humanitarian partners

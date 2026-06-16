@@ -39,7 +39,7 @@ description: 'This is a Twitter dataset collected during the typhoon Mangkhut 20
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Twitter data was collected during Typhoon Mangkhut 2018 in the Philippines
     and processed through the AIDR platform using deep learning techniques to automatically

@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Kenya population distribution raster derived from WorldPop 2016 census-based
     population modeling, providing gridded population counts at approximately 1 sq

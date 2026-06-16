@@ -35,7 +35,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP population data collected through direct site visits and community
     representative interviews, verified via district-wide site verification exercises

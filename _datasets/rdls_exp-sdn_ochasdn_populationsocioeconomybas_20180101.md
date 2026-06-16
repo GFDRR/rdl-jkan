@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population baseline data collected through direct observational methods
     by Sudan's Central Bureau of Statistics, providing demographic disaggregation

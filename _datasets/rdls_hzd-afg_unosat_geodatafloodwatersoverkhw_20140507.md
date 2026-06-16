@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared WorldView-2 satellite imagery acquired on
     29 April 2014 and 7 May 2014 following heavy rainfall on 23-24 April 2014 in Khwaja

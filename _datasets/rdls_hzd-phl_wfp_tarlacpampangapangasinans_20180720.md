@@ -53,7 +53,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sentinel-1A GRD SAR data acquired on 20 July 2018 was processed in
     Google Earth Engine using image processing and cloud computing to detect standing

@@ -25,7 +25,7 @@ description: 'Classification tool used for the Humanitarian Needs Overview 2015.
 details: Data is being extended to cover Jan to Sept. 2014
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Humanitarian Needs Overview 2015 classification tool aggregates
     direct observational and anecdotal data from OCHA and humanitarian clusters across

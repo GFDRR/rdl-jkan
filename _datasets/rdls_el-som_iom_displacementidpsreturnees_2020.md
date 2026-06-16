@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted multi-round baseline assessments (Rounds 0-3, 2024)
     using standardized key informant interview methodology across Somali settlements

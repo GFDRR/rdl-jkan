@@ -51,7 +51,7 @@ details: 'Please note that most of the figures are estimates. The definition hig
   displacement.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Global Internal Displacement Database (GIDD) compiles validated
     annual estimates of internal displacement from disaster events worldwide, collected

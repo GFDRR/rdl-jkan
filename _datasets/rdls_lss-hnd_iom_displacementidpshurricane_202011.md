@@ -25,7 +25,7 @@ description: 'The dataset contains IDPs and it''s needs.. [Source: This metadata
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted site assessments in Honduras following Hurricanes
     ETA and IOTA using the DTM Standard Methodology to enumerate internally displaced

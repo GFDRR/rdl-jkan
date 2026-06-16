@@ -18,7 +18,7 @@ description: 'Guatemala Current Situation FEWS NET Acute Food Insecurity Classif
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data were collected by FEWS NET enumerators on a
     monthly basis throughout 2021 across Guatemala. Geographic boundaries were delineated

@@ -70,7 +70,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Fire detections were identified from MODIS and VIIRS satellite thermal
     anomaly data collected between 25 August and 25 November 2017. UNOSAT analysts

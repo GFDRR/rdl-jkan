@@ -21,7 +21,7 @@ description: 'This dataset contains 23 data tables on global trends in forced di
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNHCR compiled national-level administrative data on forced displacement
     populations reported by governments according to their own definitions and methodologies.
