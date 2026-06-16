@@ -74,7 +74,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (Worldview-3,
     Spot 6, Sentinel-2) acquired 9-12 December 2022 to detect changes in land cover

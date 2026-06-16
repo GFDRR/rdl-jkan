@@ -25,7 +25,7 @@ description: 'Food Security Indicators for Iraq. The data is extracted from Hung
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Food security and malnutrition indicators are extracted manually from
     the WFP HungerMap LIVE platform and updated bi-weekly. The data represents population-level

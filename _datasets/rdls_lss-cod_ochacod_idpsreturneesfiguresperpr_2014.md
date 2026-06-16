@@ -32,7 +32,7 @@ description: 'IDP (displaced and returnees) per province for the 3rd quarter 201
 details: Updated every quarter
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP and returnee figures were collected by CMP (Commission Mouvements
     Population) across DRC provinces and compiled by OCHA for the third quarter of

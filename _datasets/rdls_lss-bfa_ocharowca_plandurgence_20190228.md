@@ -18,7 +18,7 @@ description: 'Burkina Faso people in need figures by province (admin 2) from the
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The 2019 Emergency Plan aggregated people in need figures from multiple
     sources and compiled them into a provincial-level registry to support humanitarian

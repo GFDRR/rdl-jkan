@@ -58,7 +58,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery from 10 May 2023 (baseline)
     and 10 October 2023 (post-event) to detect changes in building conditions across

@@ -44,7 +44,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Shelter footprints were manually digitized by REACH/UNOSAT analysts
     from best available satellite imagery acquired in February 2018 of the Kutupalong

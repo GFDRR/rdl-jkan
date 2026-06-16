@@ -28,7 +28,7 @@ description: 'This dataset shows the Shabelle and Juba Riverine Basin Population
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Flood inundation extents along the Shabelle and Juba riverine basins\
     \ were used to identify directly inundated households. Displaced population was\

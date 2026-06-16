@@ -18,7 +18,7 @@ description: 'Governorates coverage, flood impact, flood response, civilian caus
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event flood impact data collected through humanitarian cluster
     coordination and operational response monitoring by OCHA Yemen. Data aggregates

@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: School facility locations and attributes were collected through direct
     observation by the Ministry of Education and compiled with UNICEF support. The

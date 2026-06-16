@@ -55,7 +55,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Settlement extents were derived from satellite imagery and ancillary
     geospatial data to create polygon boundaries and 3-arc-second (~100 meter) grid

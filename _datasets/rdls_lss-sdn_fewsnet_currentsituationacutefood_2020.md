@@ -18,7 +18,7 @@ description: 'Sudan Current Situation FEWS NET Acute Food Insecurity Classificat
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (monthly) field assessments
     across Sudan during 2020 to classify acute food insecurity using the IPC framework.

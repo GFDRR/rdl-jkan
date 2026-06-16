@@ -58,7 +58,7 @@ details: "Estos datos son recopilados de diversas fuentes, procesados por OCHA C
   \ seg\xFAn la fecha de consulta."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: This dataset aggregates impact data from multiple Colombian government
     and humanitarian sources (OCHA-Monitor, SIGPAD, DAICMA, UARIV) covering displacement,

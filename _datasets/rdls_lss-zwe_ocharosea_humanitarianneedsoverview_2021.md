@@ -25,7 +25,7 @@ description: 'Humanitarian needs overview document for Zimbabwe 2021. [Source: T
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Humanitarian Needs Overview aggregates direct observational data
     and anecdotal reports from multiple humanitarian partners operating in Zimbabwe

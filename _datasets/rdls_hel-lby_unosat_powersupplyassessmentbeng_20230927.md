@@ -67,7 +67,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (night-time
     light imagery) acquired before and after the September 2023 floods in Libya to

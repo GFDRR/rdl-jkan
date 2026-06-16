@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event observational data from ICPAC documenting the track, intensity,
     and spatial extent of tropical cyclone TC05A as it made landfall in eastern Somalia

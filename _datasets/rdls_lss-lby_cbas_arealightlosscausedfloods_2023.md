@@ -27,7 +27,7 @@ description: 'This dataset is showing the Gap Light Index (GLI) difference in Al
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Gap Light Index (GLI) difference calculated from SDGSAT-1 satellite
     nighttime light imagery comparing pre- and post-flood conditions in Albayda and

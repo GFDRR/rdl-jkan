@@ -27,7 +27,7 @@ description: "Ces donn\xE9es du CONASUR contiennent les informations sur l'impac
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event flood impact data collected directly by CONASUR through
     observational and anecdotal methods across Burkina Faso regions from 2021-2024.

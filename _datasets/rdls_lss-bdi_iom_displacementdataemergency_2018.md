@@ -27,7 +27,7 @@ description: 'The DTM Emergency Tracking activated on an ad hoc basis. Only Emer
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM field teams conduct weekly emergency event tracking across
     Burundi's administrative divisions, collecting post-event damage assessments for

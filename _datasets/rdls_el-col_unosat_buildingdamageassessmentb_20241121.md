@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts reviewed Pleiades satellite imagery acquired on 17\
     \ November 2024 over Bojay\xE1 Municipality, Colombia and performed visual change\

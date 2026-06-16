@@ -29,7 +29,7 @@ description: 'This data has been produced by the United Nations Office for the C
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian needs data compiled by UNOCHA and humanitarian partners
     using the JIAF framework to estimate populations requiring assistance across sectors

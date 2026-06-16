@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted high-resolution WorldView-2 satellite imagery
     from December 2013 to identify and map shelter and non-shelter structures in Doro

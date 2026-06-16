@@ -91,7 +91,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Multiple data sources on the August 2017 Bangladesh floods were integrated,
     including observed water level measurements from monitoring stations across the

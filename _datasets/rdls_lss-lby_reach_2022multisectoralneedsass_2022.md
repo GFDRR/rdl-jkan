@@ -23,7 +23,7 @@ description: 'This is the data summary of the 2022 Libyan population Multi-Secto
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household survey data collected between July-October 2022 across 15
     selected administrative divisions (baladiyas) in Libya, covering 3,758 households.

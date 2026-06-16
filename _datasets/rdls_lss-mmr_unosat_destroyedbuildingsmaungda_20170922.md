@@ -38,7 +38,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts compared satellite imagery from multiple dates (25\
     \ August to 21 September 2017) to identify structural damage and fires in Maungdaw\

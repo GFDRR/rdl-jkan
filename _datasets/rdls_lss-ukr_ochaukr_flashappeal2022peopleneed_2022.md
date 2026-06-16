@@ -18,7 +18,7 @@ description: 'Ukraine Flash Appeal March to December 2022 PIN, Targets, Requirem
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Ukraine Flash Appeal 2022 aggregates humanitarian needs data collected
     through OCHA's coordinated assessment processes during the armed conflict. PIN

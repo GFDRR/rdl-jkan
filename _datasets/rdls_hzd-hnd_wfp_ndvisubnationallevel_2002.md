@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Raw MODIS AQUA and TERRA 16-day composite NDVI products (MYD13C1 and
     MOD13C1) were integrated into 8-day synthetic products and aggregated by WFP subnational

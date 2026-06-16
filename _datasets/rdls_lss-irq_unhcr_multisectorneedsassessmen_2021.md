@@ -47,7 +47,7 @@ description: 'IMPACT, in collaboration with UNHCR, conducted a sixth round of th
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household and individual-level survey data collected via computer-assisted
     personal interviews (CAPI) from Syrian refugee and host community samples across

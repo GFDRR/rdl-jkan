@@ -32,7 +32,7 @@ details: The incidents reported are not a complete nor a representative list of 
   incidents and have not been independently verified.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Post-event incident data systematically collected from open source
     reports and verified submissions from partner agencies documenting attacks on

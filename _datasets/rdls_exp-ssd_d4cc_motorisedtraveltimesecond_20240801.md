@@ -56,7 +56,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Travel time surface generated using the CPAS least cost path methodology,
     which creates a friction/cost allocation surface representing effort to travel

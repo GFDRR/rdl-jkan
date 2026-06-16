@@ -34,7 +34,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (pre-event
     WorldView-2 from 26 July 2014 and post-event Pleiades/Deimos-2 from 19 April 2016)

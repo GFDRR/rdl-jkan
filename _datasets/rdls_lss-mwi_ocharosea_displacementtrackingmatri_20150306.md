@@ -40,7 +40,7 @@ description: 'DTM (Displacement Tracking Matrix) IDP Sites in the Southern Regio
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP site locations and population counts were collected through the
     Displacement Tracking Matrix (DTM) methodology, a standardized IOM approach for

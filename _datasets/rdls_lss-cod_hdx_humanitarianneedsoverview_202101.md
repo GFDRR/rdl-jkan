@@ -26,7 +26,7 @@ description: 'The Democratic republic of the Congo Humanitarian needs overview f
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset was extracted from the published 2021 DRC Humanitarian
     Response Plan (HRP) document compiled by OCHA DRC through sample survey methodology.

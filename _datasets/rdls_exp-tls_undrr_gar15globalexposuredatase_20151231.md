@@ -107,7 +107,7 @@ exposure:
       quantity_kind: currency
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: National-level socio-economic, building type, and capital stock statistics
     for Timor-Leste were spatially disaggregated using a top-down approach onto 5x5

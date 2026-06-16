@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Integrated Context Analysis (ICA) Sudan 2018 integrated flood risk
     data from UNEP/UNISDR GAR 2013 to estimate probabilistic flood hazard at the second-level

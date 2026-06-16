@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed TerraSAR-X SAR imagery acquired on 23 February\
     \ 2023 to detect water surface extents through change detection analysis. Detected\

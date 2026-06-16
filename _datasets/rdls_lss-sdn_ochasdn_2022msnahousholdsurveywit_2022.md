@@ -32,7 +32,7 @@ description: 'The purpose of the 2022 Sudan Multi-Sector Needs Assessment (MSNA)
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household-level survey data collected through structured KOBO interviews
     across Sudan states to assess multi-sector humanitarian needs (food security,

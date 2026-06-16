@@ -81,7 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Multi-sensor satellite imagery (VIIRS, Sentinel-1 SAR, and Sentinel-2\
     \ optical) acquired between 17\u201321 March 2023 was analyzed by UNOSAT analysts\

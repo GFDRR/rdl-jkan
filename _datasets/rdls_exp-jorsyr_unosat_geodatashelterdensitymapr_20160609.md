@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts manually interpreted GeoEye-1 satellite imagery acquired
     on 23 May 2016 to identify shelter structures at the Rukban border crossing. Change

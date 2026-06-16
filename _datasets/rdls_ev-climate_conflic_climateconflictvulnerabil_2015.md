@@ -72,7 +72,7 @@ exposure:
       quantity_kind: index
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The CCVI integrates publicly available climate, conflict, and vulnerability
     data layers harmonized to a 0.5-degree global grid. Climate and conflict hazard

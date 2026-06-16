@@ -68,7 +68,7 @@ hazard:
     id: event_set_fl_001
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: null
   sources:
@@ -87,49 +87,49 @@ lineage:
     url: https://deltares.github.io/Wflow.jl/dev/
     used_in: hazard
   - id: source_fl_hazard_layers
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Flood hazard layers for Madagascar
     risk_data_type: null
     type: dataset
     url: https://www.resiliencemada.gov.mg/catalogue/uuid/b5d5de9e-843a-4384-84f3-6b8d4e1baae9
     used_in: hazard
   - id: source_fl_litpop_gdp
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: LitPop GDP (2020)
     risk_data_type: null
     type: dataset
     url: https://climada-python.readthedocs.io/en/stable/user-guide/climada_entity_LitPop.html
     used_in: exposure
   - id: source_fl_projected_gdp
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: "Projected 1 km GDP distributions (2020\u20132100) under SSPs"
     risk_data_type: null
     type: dataset
     url: https://zenodo.org/records/7898409
     used_in: exposure
   - id: source_fl_worldpop
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: WorldPop Population (2020)
     risk_data_type: null
     type: dataset
     url: https://hub.worldpop.org/geodata/summary?id=49697
     used_in: exposure
   - id: source_fl_instat
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: INSTAT Population (Madagascar)
     risk_data_type: null
     type: dataset
     url: null
     used_in: exposure
   - id: source_fl_projected_pop
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: "Projected 1 km population distributions (2020\u20132100) under SSPs"
     risk_data_type: null
     type: dataset
     url: https://figshare.com/articles/dataset/Projecting_1_km-grid_population_distributions_from_2020_to_2100_globally_under_shared_socioeconomic_pathways/19608594
     used_in: exposure
   - id: source_fl_damage_curves
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Flood damage curves for Sub-Saharan Africa
     risk_data_type: null
     type: dataset

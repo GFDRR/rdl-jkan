@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed Sentinel-1 SAR imagery from 10 August 2023\
     \ to detect surface water extent along Gudbrandsdalsl\xE5gen river through change\

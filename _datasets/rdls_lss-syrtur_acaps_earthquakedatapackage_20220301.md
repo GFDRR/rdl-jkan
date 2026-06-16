@@ -56,7 +56,7 @@ description: 'This is a collection of all the available data on Turkiye and Syri
 details: 'Glide: EQ-2023-000015-TUR'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "This dataset aggregates secondary data from multiple ACAPS products\
     \ and the INFORM Severity Index as of 10 February 2023, capturing humanitarian\

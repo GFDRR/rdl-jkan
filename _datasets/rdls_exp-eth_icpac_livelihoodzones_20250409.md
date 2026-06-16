@@ -37,7 +37,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Livelihood zones were delineated by ICPAC at approximately 5 km resolution\
     \ (0.05\xC3\u20140.05 degrees) to define geographic areas sharing similar livelihood\

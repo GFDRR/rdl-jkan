@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop R2025A version integrates multiple demographic sources including
     census data and surveys to produce spatially-disaggregated population estimates

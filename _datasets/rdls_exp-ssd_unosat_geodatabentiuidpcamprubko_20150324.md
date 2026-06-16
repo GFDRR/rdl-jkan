@@ -67,7 +67,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: High-resolution WorldView-3 satellite imagery from 07 March 2015 was
     analyzed by UNOSAT to identify and classify 9,713 structures within the Bentiu

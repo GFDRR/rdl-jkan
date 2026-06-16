@@ -96,7 +96,7 @@ hazard:
     id: es_landslide
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts interpreted WorldView-2 satellite imagery acquired
     on 8 February 2024 to manually delineate surface water and landslide/mudflow extents

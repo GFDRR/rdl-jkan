@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sentinel-1 SAR images acquired on 26 September and 8 October 2018 were
     processed using interferometric techniques to generate a phase interferogram (VV

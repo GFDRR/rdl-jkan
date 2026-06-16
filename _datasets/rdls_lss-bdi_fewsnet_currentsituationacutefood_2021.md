@@ -18,7 +18,7 @@ description: 'Burundi Current Situation FEWS NET Acute Food Insecurity Classific
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (typically monthly) field assessments
     across Burundi during 2021 to classify acute food insecurity using the IPC framework.

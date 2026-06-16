@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed VIIRS satellite imagery from 17-21 January
     2023 and compared with baseline imagery from 12-16 January 2023 to detect cumulative

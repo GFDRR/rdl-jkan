@@ -26,7 +26,7 @@ description: "IDP shapefile collected by MSF M\xE9decins Sans Fronti\xE8res (MSF
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: MSF conducted direct observational surveys of IDP settlements in Beira
     during April 2019 following Cyclone Idai. Field teams collected spatial coordinates

@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts performed change detection analysis on Pleiades satellite
     imagery acquired on 20 November 2024 to identify structural damage in Riosucio

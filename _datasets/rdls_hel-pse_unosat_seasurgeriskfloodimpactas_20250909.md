@@ -73,7 +73,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Satellite imagery from Sentinel-2 and Pleiades was acquired and analyzed
     to map the current shoreline and highest observed watermark in Gaza coastal areas.

@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed Pleiades satellite imagery acquired on 15
     November 2019 over Libenge, Democratic Republic of the Congo, comparing it with

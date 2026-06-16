@@ -47,7 +47,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: 'Post-event satellite imagery (Pleiades, 15 May 2023) was compared
     against pre-event imagery and Humanitarian OpenStreetMap building footprints to

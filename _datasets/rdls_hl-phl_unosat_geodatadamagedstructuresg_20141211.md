@@ -47,7 +47,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal Pleiades satellite imagery
     (8 December 2014 post-event vs. 7 November and 16 July 2014 baseline) to detect

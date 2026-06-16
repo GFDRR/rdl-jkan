@@ -48,7 +48,7 @@ description: "L'extrait de donn\xE9es mouvement de population (Retour) produit c
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Monthly population movement data (returnees) collected through site
     assessments by CMP, OIM, OCHA and partners following DRC methodology. Data aggregates

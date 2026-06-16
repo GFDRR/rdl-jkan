@@ -48,7 +48,7 @@ description: 'An estimated 723,000 Rohingya refugees have fled violence in Myanm
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household survey conducted by UNHCR across 31 of 34 refugee sites in
     Cox's Bazar during July 2018, capturing multi-sector needs (education, food security,

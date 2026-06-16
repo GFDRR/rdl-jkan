@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: 'Post-event earthquake ground motion intensity (MMI) distribution derived
     from the USGS ShakeCast system (ADAM ID: eq_us7000lsze) for the 7.0 magnitude

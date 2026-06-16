@@ -26,7 +26,7 @@ description: 'This dataset has been consolidated from NDRMC / DROMIC reports fro
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact data were consolidated from NDRMC DROMIC PDF reports
     covering typhoon events in the Philippines from 2014-2020. The reports document

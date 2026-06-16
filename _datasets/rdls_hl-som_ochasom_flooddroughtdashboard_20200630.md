@@ -71,7 +71,7 @@ hazard:
     id: es_drought
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates observed hazard data (river levels, rainfall)
     and post-event impact records (displacement by cause, disease burden, water prices)

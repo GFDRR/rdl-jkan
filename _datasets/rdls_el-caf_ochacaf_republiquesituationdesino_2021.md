@@ -62,7 +62,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event flood impact data compiled by OCHA from humanitarian partner
     reports across Central African Republic (2021-2024). Data collection methodology

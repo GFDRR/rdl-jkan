@@ -58,7 +58,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop gridded population raster data was aggregated to humanitarian
     edge-matched subnational administrative boundaries (ADM0-ADM4) and calibrated

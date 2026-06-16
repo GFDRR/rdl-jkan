@@ -44,7 +44,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Historical tropical cyclone tracks over Vietnam were extracted from
     NOAA's IBTrACS database, which consolidates best-track data from multiple international

@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: A deep learning model was trained on Sentinel-2 multispectral imagery
     to detect building presence, fractional counts, and heights. The model was applied

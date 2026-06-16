@@ -39,7 +39,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data sourced from Sri Lanka's Survey Department and provided
     at 1:250,000 scale in SLD-Kandawala projected coordinate system. The dataset represents

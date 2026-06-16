@@ -46,7 +46,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted SPOT-6 satellite imagery acquired on 14
     August 2016 over Abu Hamad, River Nile State, Sudan, comparing temporal images

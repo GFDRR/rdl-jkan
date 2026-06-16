@@ -25,7 +25,7 @@ description: 'Haiti natural disaster incidents dating from 1909 up to 2022.. [So
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Natural disaster incident records for Haiti were extracted from the
     EM-DAT database, which compiles historical disaster events from multiple international

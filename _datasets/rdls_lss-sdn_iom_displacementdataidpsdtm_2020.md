@@ -27,7 +27,7 @@ description: 'The dataset contains IDPs by state and year. For information on di
 details: Round 7 is the latest Assessment as of 24 May 2024.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated rounds of displacement tracking surveys
     across Sudan, collecting counts of internally displaced persons (IDPs) and households

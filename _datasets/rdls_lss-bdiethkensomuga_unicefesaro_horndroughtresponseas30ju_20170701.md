@@ -25,7 +25,7 @@ description: 'UNICEF Response Drought Horn of Africa Dashboard, June 2017. [Sour
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNICEF ESARO compiled regional drought response data from census and
     administrative records to document the humanitarian impact of the 2017 Horn of

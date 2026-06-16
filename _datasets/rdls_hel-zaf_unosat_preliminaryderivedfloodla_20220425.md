@@ -84,7 +84,7 @@ hazard:
     id: es_landslide
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted comparative satellite imagery analysis of
     the Durban region as of 14 April 2022, identifying changes in water levels, inundation

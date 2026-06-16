@@ -28,7 +28,7 @@ description: 'The assessment of drought-induced mobility dynamics, as well as th
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Baseline and Multi-Sectoral Location Assessment (BA/MSLA) data collected
     through IOM DTM standard methodology using key informant interviews across five

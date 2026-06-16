@@ -36,7 +36,7 @@ description: 'Global Acute Malnutrition (GAM) is the presence of both moderate a
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Height and body weight measurements for children aged 6-59 months were
     collected through FSNAU nutrition surveys across Somalia districts during post-Gu

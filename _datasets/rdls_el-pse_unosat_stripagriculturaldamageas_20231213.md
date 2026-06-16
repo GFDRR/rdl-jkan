@@ -69,7 +69,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Sentinel-2 satellite imagery spanning December
     2017 to December 2023, applying Normalised Difference Vegetation Index (NDVI)

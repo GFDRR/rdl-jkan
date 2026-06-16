@@ -39,7 +39,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: County-level population estimates were compiled by the South Sudan
     National Bureau of Statistics for the period 2015-2020 and provided as a spatial

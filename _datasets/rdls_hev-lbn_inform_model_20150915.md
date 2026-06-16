@@ -68,7 +68,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The INFORM Lebanon model integrates multiple indicator datasets across
     three risk dimensions (Hazards & Exposure, Vulnerability, Lack of Coping Capacity)

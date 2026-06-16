@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "REACH Initiative conducted repeated census-based infrastructure mapping\
     \ exercises (9 rounds, September 2017\xE2\u20AC\u201CNovember 2018) across Rohingya\

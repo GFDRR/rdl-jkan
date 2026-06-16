@@ -43,7 +43,7 @@ details: 'Please note that most of the figures are estimates. The definition hig
   displacement.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC collects and monitors IDP data from Equatorial Guinea through
     systematic tracking of displacement events triggered by armed conflict, generalized

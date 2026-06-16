@@ -30,7 +30,7 @@ details: A summary of JIAF methodology is available in the [Burundi HNO 2022](ht
   For more details, please contact OCHA office in Burundi.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Joint Intersectoral Analysis Framework (JIAF) 1.1 aggregates data
     from multiple humanitarian partners to analyze the magnitude and severity of needs

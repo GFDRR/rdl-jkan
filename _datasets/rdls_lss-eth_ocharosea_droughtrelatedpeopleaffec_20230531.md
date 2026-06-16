@@ -25,7 +25,7 @@ description: 'Drought affected areas and population in Ethiopia. [Source: This m
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian partners compiled drought impact data on affected populations,
     targeted beneficiaries, and reached populations across Ethiopia by geographic

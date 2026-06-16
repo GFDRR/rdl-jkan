@@ -31,7 +31,7 @@ description: 'Casualty Incident by ERW/Mine. [Source: This metadata record was a
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Casualty incident data compiled from the Cambodia Mine/ERW Victim Information
     System (CMVIS) maintained by the Cambodian Mine Action and Victim Assistance Authority

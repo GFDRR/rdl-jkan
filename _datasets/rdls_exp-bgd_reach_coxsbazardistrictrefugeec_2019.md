@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WASH infrastructure across Cox's Bazar refugee camps was comprehensively
     mapped in 2019 through a census-based approach using physical unique identifier

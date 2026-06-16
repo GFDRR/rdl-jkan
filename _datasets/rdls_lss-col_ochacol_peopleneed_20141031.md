@@ -20,7 +20,7 @@ description: 'The population in need for 2015 is an estimated humanitarian casel
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population in need estimates were derived from trend analysis of conflict
     and disaster-affected populations recorded between 2012 and 2014, with 2015 projections

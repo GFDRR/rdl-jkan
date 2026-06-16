@@ -30,7 +30,7 @@ description: 'The dataset displays the Integrated Food Security Phase Classifica
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification documents were obtained from the IPC portal, scraped
     for relevant information, standardized, and loaded into tabular format with population

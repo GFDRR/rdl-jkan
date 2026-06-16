@@ -39,7 +39,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data was sourced from the General Command of Mapping and
     provided as a shapefile containing main roads across Turkey with attributes including

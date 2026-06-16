@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Livestock ownership data from the 2022 Demographic and Health Survey
     was spatially interpolated and gridded to a 0.05-degree resolution (approximately

@@ -25,7 +25,7 @@ description: "The dataset contains severity score of needs per 'zone de sant\xE9
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Severity of needs scores were compiled from multiple humanitarian\
     \ partner assessments and aggregated to zone de sant\xE9 (health zone, admin level\

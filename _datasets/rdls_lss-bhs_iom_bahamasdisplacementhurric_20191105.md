@@ -34,7 +34,7 @@ description: 'This data was collected through 66 key informant interviews across
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event displacement and needs data collected through 66 key informant
     interviews across 23 settlements in Greater and Little Abaco between 30 October

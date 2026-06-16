@@ -18,7 +18,7 @@ description: 'The dataset has households and IDPs individuals by sex dis-aggrega
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated site assessments across North Kivu Province
     from 2017-2019, collecting household and individual-level data on internally displaced

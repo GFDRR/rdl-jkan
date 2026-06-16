@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts interpreted high-resolution WorldView-2 satellite imagery
     acquired on multiple dates (May 2017, March 2017, May 2016, and earlier) to identify

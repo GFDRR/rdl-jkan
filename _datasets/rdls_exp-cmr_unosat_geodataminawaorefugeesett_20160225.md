@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted WorldView-2 satellite imagery acquired
     on 19 November 2015, manually detecting and classifying 11,777 structures by type

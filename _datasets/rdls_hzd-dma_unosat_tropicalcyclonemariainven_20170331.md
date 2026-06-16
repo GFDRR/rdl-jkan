@@ -101,7 +101,7 @@ hazard:
     id: es_flood
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Post-event landslide and flood inventories were created by visual\
     \ interpretation of high-resolution satellite imagery (Pl\xE9iades 0.5m resolution\

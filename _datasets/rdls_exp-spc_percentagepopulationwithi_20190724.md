@@ -58,7 +58,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census population data from 22 Pacific Island Countries and Territories
     was spatially analyzed and stratified into three coastal buffer zones (1km, 5km,

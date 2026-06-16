@@ -63,7 +63,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WorldPop 100m age-sex population estimates for Haiti 2020 were disaggregated
     from 5-year age groups to single years of age using Sprague multipliers, then

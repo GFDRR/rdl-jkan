@@ -66,7 +66,7 @@ details: "_Limitantes_: Al ser un problema emergente e invisible, la disponibili
   cter de las zonas enumeradas se puede estar perdiendo el perfil rural del desplazamiento."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: In 2014, a collaborative exercise led by CIPPDV with technical support
     from JIPS and ACNUR collected household-level data on 1,300 internally displaced

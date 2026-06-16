@@ -29,7 +29,7 @@ description: 'This dataset contains the overall people in need and intersectoral
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates people in need (PiN) and intersectoral severity
     assessments collected by humanitarian partners across Mali's administrative divisions

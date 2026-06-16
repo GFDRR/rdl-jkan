@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Building and housing damage assessments conducted by MIDUVI following
     the April 2016 Ecuador earthquake, compiled through field evaluations and aggregated

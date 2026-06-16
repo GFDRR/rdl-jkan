@@ -41,7 +41,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Primary road network data was compiled and maintained by CNTIG, the\
     \ national geospatial authority of C\xF4te d'Ivoire. The dataset represents the\

@@ -27,7 +27,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The raster layer is the output of a weighted sum analysis considering
     several Points of Interests (POIs) related to the possible locations for charging

@@ -18,7 +18,7 @@ description: 'Cameroon Current Situation FEWS NET Acute Food Insecurity Classifi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC acute food insecurity phase classifications were collected by FEWS
     NET field enumerators on a monthly basis throughout 2021. Spatial data were compiled

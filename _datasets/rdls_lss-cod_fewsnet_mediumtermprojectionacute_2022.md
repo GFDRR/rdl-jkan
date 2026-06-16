@@ -19,7 +19,7 @@ description: 'The Democratic Republic of the Congo Medium Term Projection FEWS N
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators collected IPC classification data on a monthly
     schedule throughout 2022 for the Democratic Republic of the Congo. Geographic

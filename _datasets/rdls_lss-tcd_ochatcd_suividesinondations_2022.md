@@ -33,7 +33,7 @@ description: "Ce jeu de donn\xE9es est un suivi des inondations au Tchad. Il don
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event flood impact data compiled from direct observations by government
     and humanitarian partners across Chad's administrative divisions. Data includes

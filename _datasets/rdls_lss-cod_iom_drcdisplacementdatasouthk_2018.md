@@ -27,7 +27,7 @@ description: 'The dataset contains number of people displaced and returnees at v
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Village-level baseline assessments conducted through key informant
     interviews using IOM DTM standard methodology, collecting displacement counts,

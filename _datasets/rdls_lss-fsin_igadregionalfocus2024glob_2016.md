@@ -40,7 +40,7 @@ description: 'The IGAD Regional Focus of the 2024 Global Report on Food Crises i
 details: https://www.fsinplatform.org/igad-regional-focus-GRFC2024
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates acute food insecurity and malnutrition data
     from eight IGAD countries using the standardized Integrated Food Security Phase

@@ -56,7 +56,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted satellite imagery analysis by comparing multi-temporal
     images collected on 8 July 2025 to detect notable changes in road infrastructure.

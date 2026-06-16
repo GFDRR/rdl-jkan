@@ -60,7 +60,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "ICPAC documented the observed tropical cyclone Murjan event from October\
     \ 2012, recording its formation over the Arabian Sea, westward track, and landfall\

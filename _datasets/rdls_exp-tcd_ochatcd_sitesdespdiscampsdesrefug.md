@@ -55,7 +55,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Spatial inventory of IDP camps, refugee sites, and host villages compiled
     from direct field observations and multi-sectoral assessments conducted by UNHCR,

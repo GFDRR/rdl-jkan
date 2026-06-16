@@ -32,7 +32,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed satellite imagery acquired on 26 February
     2016 following Tropical Cyclone Winston and compared it with pre-event imagery

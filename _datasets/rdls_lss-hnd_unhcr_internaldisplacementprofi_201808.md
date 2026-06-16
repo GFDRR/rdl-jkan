@@ -45,7 +45,7 @@ description: 'The main objective of this study is to collect evidence that allow
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Stratified household and individual survey data collected at national
     level to profile internally displaced populations in Honduras, disaggregated by

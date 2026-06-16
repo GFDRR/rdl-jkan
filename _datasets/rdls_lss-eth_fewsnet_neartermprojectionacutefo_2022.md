@@ -18,7 +18,7 @@ description: 'Ethiopia Near Term Projection FEWS NET Acute Food Insecurity Class
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data collected by FEWS NET enumerators on a monthly
     schedule across Ethiopia. Geographic polygons represent areas classified into

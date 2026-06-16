@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population data from the 2009 Vanuatu census was spatially gridded
     at 1km resolution and intersected with coastal buffer zones (1km, 5km, 10km) to

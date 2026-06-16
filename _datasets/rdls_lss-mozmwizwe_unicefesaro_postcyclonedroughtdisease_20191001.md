@@ -53,7 +53,7 @@ description: 'Post cyclone, drought, disease outbreak for Idai countries- Mozamb
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Post-event impact data compiled by UNICEF ESARO from situation reports,\
     \ national ministry records, FEWSNET, WHO, and OCHA following Cyclone Idai in\

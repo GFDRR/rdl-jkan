@@ -70,7 +70,7 @@ details: These figures may fluctuate since the number of affected population, pe
   these figures may change as updates are received.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event natural disaster incident data compiled from field assessments
     conducted by OCHA, ANDMA, IOM, Red Crescent Societies, national and international

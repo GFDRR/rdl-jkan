@@ -25,7 +25,7 @@ description: 'Site Assessment. [Source: This metadata record was automatically e
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM Round 1 site assessment data collected in Kenya (May 2015)
     through direct enumeration and surveys of displacement sites. Data documents displaced

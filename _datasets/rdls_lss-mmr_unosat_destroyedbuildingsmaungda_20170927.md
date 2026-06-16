@@ -38,7 +38,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery from 16 and 25 September
     2017 to detect structural damage in Maungdaw and Buthindaung townships. Destroyed

@@ -25,7 +25,7 @@ description: 'Master list of IDPs currently residing in Iraq of July 2016. [Sour
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collected direct observational and anecdotal data on internally
     displaced persons residing in Iraq during July 2016 through field assessments

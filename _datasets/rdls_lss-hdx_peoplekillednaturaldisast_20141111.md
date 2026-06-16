@@ -25,7 +25,7 @@ description: 'Number of people killed in natural disasters disaggregated by coun
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Mortality data compiled from EM-DAT (Centre for Research on the Epidemiology
     of Disasters), a global database of disaster events. Deaths are disaggregated

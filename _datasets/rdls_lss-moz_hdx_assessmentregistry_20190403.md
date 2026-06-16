@@ -25,7 +25,7 @@ description: 'Rapid Assessments registry for Mozambique. [Source: This metadata 
 details: For current assessment registry please see https://www.humanitarianresponse.info/en/operations/mozambique/assessments
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Assessment Registry aggregates rapid assessments conducted by the
     Mozambique Rapid Assessment Unit and OCHA using key informant interviews and other

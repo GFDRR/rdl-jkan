@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: ADAM system processed the USGS earthquake event (us7000l7b6) with magnitude
     6.0 and depth 79.858 km, derived ground motion intensity (MMI) estimates, and

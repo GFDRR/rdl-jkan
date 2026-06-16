@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR imagery from 7 May 2018 was analyzed through visual
     interpretation and change detection to delineate flood water extent (11,329 ha)

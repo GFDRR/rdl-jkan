@@ -50,7 +50,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (Pleiades
     and WorldView-3) acquired on 8 February 2014 and 2 October 2014 to identify and

@@ -25,7 +25,7 @@ description: 'Drought Related Key Figures for Somalia. [Source: This metadata re
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Drought-related key figures aggregated from humanitarian partners operating
     in Somalia, compiled by OCHA ROSEA to track drought impacts including affected

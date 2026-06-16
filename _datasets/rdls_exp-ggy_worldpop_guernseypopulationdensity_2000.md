@@ -53,7 +53,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop population density dataset derived from census and administrative
     data using spatial modeling methods. Annual gridded estimates (2016-2020) at 1km

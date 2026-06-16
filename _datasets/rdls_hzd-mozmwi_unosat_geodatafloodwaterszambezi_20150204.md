@@ -47,7 +47,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Radarsat-2 satellite imagery from 30 January 2015 and 04 February 2015
     was analyzed by UNOSAT to detect flood water extent through visual comparison

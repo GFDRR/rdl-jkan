@@ -39,7 +39,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data collected through direct observational and anecdotal
     methods by WFP, integrated with OpenStreetMap sources (osm_id references), and

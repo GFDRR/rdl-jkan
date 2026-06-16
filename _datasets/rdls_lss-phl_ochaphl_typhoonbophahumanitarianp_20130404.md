@@ -33,7 +33,7 @@ description: 'The dataset shows the Typhoon Bopha Humanitarian Profile as of 05 
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Data was compiled by DROMIC under DSWD through field-level reporting
     of affected population counts inside and outside evacuation centers following

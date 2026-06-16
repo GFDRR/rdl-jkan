@@ -32,7 +32,7 @@ details: "Les donn\xE9es sur les r\xE9alisations (nombre de personnes vuln\xE9ra
   \ niveau des bureaux pays de la FAO."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FAO compiled a registry of response activities implemented across the
     Lake Chad Basin during 2017-2019, documenting implemented activities, funding

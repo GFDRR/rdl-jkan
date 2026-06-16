@@ -47,7 +47,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldView-2 satellite imagery acquired 16 February 2016 was analyzed
     by UNOSAT to detect and classify structures within Kapise refugee camp. Analysts

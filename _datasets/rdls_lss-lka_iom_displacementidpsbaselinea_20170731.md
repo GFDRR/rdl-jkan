@@ -25,7 +25,7 @@ description: 'The dataset contains IDPs. [Source: This metadata record was autom
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted baseline assessments (Round 1 and Round 2) of internally
     displaced persons in Sri Lanka using standardized DTM methodology. The dataset

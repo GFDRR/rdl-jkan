@@ -40,7 +40,7 @@ description: 'This dataset available on https://ehtools.org contains information
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact registry compiled from multiple humanitarian sources
     (CMP, OIM, OCHA) documenting population movements, displacement, and casualties

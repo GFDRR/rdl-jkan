@@ -33,7 +33,7 @@ description: 'This dataset contains data obtained from the HDX Humanitarian API 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Internally displaced persons data sourced from IOM registry systems
     and aggregated through the HDX Humanitarian API (HAPI) to provide standardized,

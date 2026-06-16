@@ -36,7 +36,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired on four dates (24
     October 2013, 13 May 2014, 10 May 2015, and 25 May 2016) over Deir Ez Zor city

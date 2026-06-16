@@ -98,7 +98,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Accumulated precipitation data for Hurricane Matthew (October 3-6,
     2016) was derived from Global Precipitation Measurement (GPM) IMERG satellite

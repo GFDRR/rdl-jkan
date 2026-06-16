@@ -46,7 +46,7 @@ description: 'Topline figures dataset for the Fiji Tropical Cyclone Winston disa
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Topline figures aggregated from multiple sources including Fiji Government,
     NEOC/NDMO, and NGO partners documenting post-event impacts from Tropical Cyclone

@@ -25,7 +25,7 @@ description: 'Disaster loss and damage dataset for Kenya. [Source: This metadata
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event disaster loss and damage data collected through direct observation
     and anecdotal reports by the National Disaster Operation Centre, compiled into

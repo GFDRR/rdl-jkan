@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed VIIRS satellite imagery from 01-05 March\
     \ 2025 and compared it with 01-05 February 2025 baseline imagery to detect cumulative\

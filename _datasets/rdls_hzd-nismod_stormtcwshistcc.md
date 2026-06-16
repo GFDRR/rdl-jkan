@@ -2121,7 +2121,7 @@ lineage:
     historical baseline and climate change scenario variants were produced.
   sources:
   - id: source_1
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: ERA5 - ECMWF Reanalysis v5
     risk_data_type: null
     type: dataset

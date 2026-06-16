@@ -40,7 +40,7 @@ details: While the data provides a valuable first look, it should serve as a pre
   inspected.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Microsoft AI for Good Lab applied trained damage assessment machine
     learning models to Planet satellite imagery of Passamanty, Mayotte following Cyclone

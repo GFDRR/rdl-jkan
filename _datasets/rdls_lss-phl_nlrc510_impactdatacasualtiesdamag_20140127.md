@@ -18,7 +18,7 @@ description: 'Counts of damage and casualties from official data sets. [Source: 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact data compiled from official government sources (DSWD
     DROMIC consolidated reports) and census records documenting casualties and building

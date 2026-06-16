@@ -64,7 +64,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Satellite imagery from multiple sensors was acquired before and after
     the 28 March 2025 M7.7 Sagaing earthquake. UNOSAT analysts compared multi-temporal

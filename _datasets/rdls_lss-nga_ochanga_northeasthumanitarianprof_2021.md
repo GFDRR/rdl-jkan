@@ -31,7 +31,7 @@ description: 'In the humanitarian context / humanitarian profiling, it demonstra
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population estimates derived using cohort-component methodology with
     a bottom-up approach, aggregating sub-group figures from humanitarian partners

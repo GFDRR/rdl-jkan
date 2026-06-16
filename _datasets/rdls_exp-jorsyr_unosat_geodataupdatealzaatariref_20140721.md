@@ -65,7 +65,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts manually interpreted satellite imagery acquired on
     06 July 2014, detecting and mapping individual shelter and infrastructure building

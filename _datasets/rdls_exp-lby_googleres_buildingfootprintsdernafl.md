@@ -49,7 +49,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Building footprints were extracted from high-resolution satellite imagery
     acquired in May 2023 covering the Derna flood-impacted area in Libya using Google

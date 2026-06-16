@@ -34,7 +34,7 @@ description: 'These figures were endorsed as the baseline figure of IDPs residin
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDP displacement figures were compiled from Government of Ukraine registration
     records (1.5 million baseline) and endorsed by OCHA and humanitarian partners

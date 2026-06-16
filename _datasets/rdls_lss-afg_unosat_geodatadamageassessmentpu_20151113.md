@@ -33,7 +33,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared Pleiades satellite imagery acquired 03 November
     2015 (post-event) with WorldView-2 imagery from 01 September 2014 (pre-event)

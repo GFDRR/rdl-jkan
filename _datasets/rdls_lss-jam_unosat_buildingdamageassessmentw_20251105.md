@@ -40,7 +40,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed very high-resolution NOAA aerial imagery acquired
     on 31 October 2025 and compared multi-temporal satellite images to identify structural

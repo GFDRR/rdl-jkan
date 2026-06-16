@@ -93,7 +93,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Satellite imagery from Kanopus-V acquired on 5 November 2022 was analyzed
     by UNOSAT to detect surface water extent through comparison with reference imagery.

@@ -93,7 +93,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: VIIRS satellite imagery from 1-29 August 2022 was analyzed by UNOSAT
     to detect cumulative water extents across Pakistan through multi-temporal image

@@ -18,7 +18,7 @@ description: 'Malawi Current Situation FEWS NET Acutely Food Insecure Population
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (typically monthly) surveys
     across Malawi to estimate populations acutely food insecure under different scenarios.

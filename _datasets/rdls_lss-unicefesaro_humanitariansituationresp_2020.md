@@ -53,7 +53,7 @@ description: 'UNICEF Eastern and Southern Africa Risks and Hazards- situation an
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Multi-agency humanitarian situation data aggregated from UNICEF, WHO,
     OCHA, UNHCR, IOM, and government sources for Eastern and Southern Africa in 2020.

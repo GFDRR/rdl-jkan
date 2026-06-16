@@ -34,7 +34,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre- and post-event Pleiades satellite imagery
     (6-7 June 2017) of Kutupalong Refugee Camp to detect structural changes and identify

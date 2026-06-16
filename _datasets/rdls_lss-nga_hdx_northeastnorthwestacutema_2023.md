@@ -31,7 +31,7 @@ description: 'The high-risk contributing factors to acute malnutrition in northe
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Acute malnutrition case estimates were extracted from the IPC Acute
     Malnutrition report for Nigeria covering January-April 2024. Data aggregates malnutrition

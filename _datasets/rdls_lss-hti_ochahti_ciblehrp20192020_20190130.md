@@ -28,7 +28,7 @@ description: 'This dataset is produced by the United Nations for the Coordinatio
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: OCHA Haiti compiled humanitarian response plan targeting data for 2019-2020
     by aggregating people in need estimates from multisector humanitarian partners,

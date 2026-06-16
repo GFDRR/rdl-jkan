@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts reviewed Sentinel-2 satellite imagery acquired on\
     \ 1 January 2025 and compared it with imagery from 27 December 2024 to detect\

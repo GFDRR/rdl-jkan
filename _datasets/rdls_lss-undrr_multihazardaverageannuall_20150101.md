@@ -51,7 +51,7 @@ details: This dataset was generated using other global datasets; it should not b
   results.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: GAR 2015 probabilistic risk assessment methodology integrates hazard,
     exposure, and vulnerability datasets at global scale to calculate multi-hazard

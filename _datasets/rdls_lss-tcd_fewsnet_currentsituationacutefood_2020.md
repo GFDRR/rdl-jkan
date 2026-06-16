@@ -18,7 +18,7 @@ description: 'Chad Current Situation FEWS NET Acute Food Insecurity Classificati
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data were collected by FEWS NET enumerators on a
     regular monthly schedule throughout 2020 and spatially referenced to geographic

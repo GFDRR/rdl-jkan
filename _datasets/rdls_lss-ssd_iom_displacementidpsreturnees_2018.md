@@ -25,7 +25,7 @@ description: 'The dataset contains information on IDPs and returnees at the subn
 details: Round 14 is the latest Assessment as of 24 May 2024.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "IOM DTM conducted repeated baseline assessment rounds (rounds 2\xE2\
     \u20AC\u201C16) in South Sudan using field-based enumeration at village and settlement\

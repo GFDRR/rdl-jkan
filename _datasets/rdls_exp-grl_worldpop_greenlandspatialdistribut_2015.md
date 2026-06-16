@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Census-derived population counts for Greenland are spatially disaggregated\
     \ using a Random Forest-based dasymetric mapping approach, incorporating ancillary\

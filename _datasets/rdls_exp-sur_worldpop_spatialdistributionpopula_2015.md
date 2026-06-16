@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population estimates derived from census and survey data redistributed
     to 100m grid cells using Random Forest-based dasymetric mapping methodology. Data

@@ -31,7 +31,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Education facilities were identified and geocoded through a national
     census conducted by the UN in Papua New Guinea, creating a spatial inventory of

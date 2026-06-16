@@ -69,7 +69,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Post-event rapid needs assessment data collected via key informant\
     \ interviews in November 2023 in Baardheere and Belet Weyne districts following\

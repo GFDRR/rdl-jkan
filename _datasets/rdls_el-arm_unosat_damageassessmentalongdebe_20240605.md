@@ -93,7 +93,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts compared multi-temporal satellite imagery (SPOT 6\
     \ from 03 June 2024 and Pl\xE9iades from 29 May 2024) to detect structural damage\

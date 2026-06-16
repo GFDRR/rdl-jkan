@@ -66,7 +66,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts processed ALOS-2/PALSAR satellite imagery acquired
     on 12 August 2015, comparing pre-flood and flood-period images to detect changes

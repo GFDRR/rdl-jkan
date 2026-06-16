@@ -27,7 +27,7 @@ description: "Incidentes atendidos por la CONRED del a\xF1o 2008 al a\xF1o 2017 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "CONRED (Coordinadora Nacional para la Reducci\xF3n de Desastres) compiled\
     \ incident records from emergency response operations across Guatemala from 2008-2017,\

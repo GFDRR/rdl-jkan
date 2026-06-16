@@ -97,7 +97,7 @@ hazard:
     id: es_landslide
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared satellite imagery acquired on
     or after 4 May 2023 to identify notable changes in the Sebaya River corridor and

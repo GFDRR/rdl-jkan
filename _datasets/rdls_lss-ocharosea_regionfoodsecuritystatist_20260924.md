@@ -26,7 +26,7 @@ description: 'Aggregated data on food insecure population in Kenya, Ethiopia, Ug
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Food security statistics were aggregated from FSNWG quarterly reports
     covering nine Eastern African countries from December 2010 to January 2015. Data

@@ -18,7 +18,7 @@ description: 'Number of people affected in a district level.. [Source: This meta
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: District-level census data aggregating the number of people affected
     by the May 2018 flood event in Somalia, compiled by OCHA Somalia from post-event

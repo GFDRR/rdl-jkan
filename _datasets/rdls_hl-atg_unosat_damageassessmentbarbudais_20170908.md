@@ -55,7 +55,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event damage assessment derived from Pleiades satellite imagery
     acquired 8 September 2017, compared against pre-event building footprints from

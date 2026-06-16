@@ -46,7 +46,7 @@ description: "L'extrait de donn\xE9es mouvement de population (IDP) produit chaq
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Monthly displacement data compiled from site assessments conducted
     by CMP, IOM, OCHA and partner organizations across DRC. Data includes household

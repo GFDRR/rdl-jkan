@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FAPAR values from VIIRS 10-day composites are compared against a long-term
     mean baseline (2012 onwards) at each grid cell to calculate anomalies, which serve

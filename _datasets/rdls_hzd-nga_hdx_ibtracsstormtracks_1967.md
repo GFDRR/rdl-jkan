@@ -58,7 +58,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Historical and recent tropical cyclone observations from multiple agencies
     were merged by the IBTrACS algorithm to create a unified best-track dataset. Track

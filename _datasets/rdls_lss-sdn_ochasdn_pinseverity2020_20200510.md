@@ -18,7 +18,7 @@ description: 'This data set contains people in need figures for Sudan by localit
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: People in need figures were compiled from direct observational data
     and anecdotal reports collected through the 2020 Humanitarian Profile and Cluster

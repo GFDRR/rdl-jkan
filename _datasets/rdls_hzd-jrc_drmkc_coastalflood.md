@@ -150,7 +150,7 @@ hazard:
     id: Coastal_Flood_Hazard
     occurrence_range: 1/1 to 1/1000 years
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: null
   sources:

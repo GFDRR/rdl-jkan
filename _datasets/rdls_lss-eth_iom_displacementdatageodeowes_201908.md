@@ -26,7 +26,7 @@ description: 'The DTM Rapid Response Assessment tool is designed to provide deta
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM RRA conducted sample surveys at displacement sites (collective
     centres and host communities) in Gedeo and West-Guji zones to rapidly assess displacement

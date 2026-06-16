@@ -58,7 +58,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The baseline water stress layer was derived from WRI's Aqueduct Water
     Risk Atlas methodology, which calculates the ratio of total water withdrawals

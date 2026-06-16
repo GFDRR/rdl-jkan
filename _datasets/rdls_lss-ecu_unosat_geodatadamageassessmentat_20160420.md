@@ -32,7 +32,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "UNOSAT analysts compared pre-event (WorldView-2, 18 August 2013) and\
     \ post-event (Pl\xE9iades, 18 April 2016) satellite imagery of Atacames to detect\

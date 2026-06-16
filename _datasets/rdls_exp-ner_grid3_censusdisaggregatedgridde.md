@@ -60,7 +60,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census population counts from Niger's 2021 national census were spatially
     disaggregated into gridded estimates by WorldPop using their standard dasymetric

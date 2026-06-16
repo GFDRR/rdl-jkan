@@ -75,7 +75,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop produced gridded population estimates for British Indian Ocean
     Territory by applying Random Forest spatial modeling methods to census and ancillary

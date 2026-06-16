@@ -61,7 +61,7 @@ details: 'Please note that most of the figures are estimates. The definition hig
   displacement.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC collects and monitors internal displacement events caused by natural
     hazards and conflicts through systematic event tracking. Each event record includes

@@ -50,7 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts processed TerraSAR-X satellite imagery acquired on
     13 February 2014 over Riberalta, Bolivia, detecting water signatures through multi-temporal

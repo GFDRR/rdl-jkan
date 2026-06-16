@@ -18,7 +18,7 @@ description: 'Guatemala Current Situation FEWS NET Acutely Food Insecure Populat
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (typically monthly) surveys
     across Guatemala in 2019 to estimate populations in acute food insecurity under

@@ -22,7 +22,7 @@ description: 'DTM location assessment is to collect data on population presence 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducts repeated location assessments (rounds 1-41+) to identify
     where internally displaced populations are present in Nigeria. Data is collected

@@ -52,7 +52,7 @@ hazard:
     id: event_set_drought_001
     occurrence_range: null
     seasonality: user_defined
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage: null
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json

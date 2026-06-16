@@ -48,7 +48,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts performed multi-temporal satellite imagery analysis
     comparing images collected on 18 August 2024 against baseline imagery to identify

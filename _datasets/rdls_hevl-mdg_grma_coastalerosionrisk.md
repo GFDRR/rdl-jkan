@@ -68,47 +68,47 @@ hazard:
     id: event_set_ce_001
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: null
   sources:
   - id: source_ce_liscoast
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global shoreline change projections from LISCOAST
     risk_data_type: null
     type: dataset
     url: https://doi.org/10.4121/uuid:82c1dc0d-5485-43d8-901a-ce7f26cda35d
     used_in: hazard
   - id: source_ce_litpop_gdp
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: LitPop GDP (2020)
     risk_data_type: null
     type: dataset
     url: https://climada-python.readthedocs.io/en/stable/user-guide/climada_entity_LitPop.html
     used_in: exposure
   - id: source_ce_projected_gdp
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: "Projected 1 km GDP distributions (2020\u20132100) under SSPs"
     risk_data_type: null
     type: dataset
     url: https://zenodo.org/records/7898409
     used_in: exposure
   - id: source_ce_worldpop
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: WorldPop Population (2020)
     risk_data_type: null
     type: dataset
     url: https://hub.worldpop.org/geodata/summary?id=49697
     used_in: exposure
   - id: source_ce_instat
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: INSTAT Population (Madagascar)
     risk_data_type: null
     type: dataset
     url: null
     used_in: exposure
   - id: source_ce_projected_pop
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: "Projected 1 km population distributions (2020\u20132100) under SSPs"
     risk_data_type: null
     type: dataset

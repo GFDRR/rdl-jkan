@@ -36,7 +36,7 @@ description: 'Cyclone Chido Multip-Sectoral Initial Rapid Assessment(MIRA) analy
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Multi-Sectoral Initial Rapid Assessment (MIRA) data collected via sample
     survey methodology by humanitarian partners in Mozambique following Tropical Cyclone

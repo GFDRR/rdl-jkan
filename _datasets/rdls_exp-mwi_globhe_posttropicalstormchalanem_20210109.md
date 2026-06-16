@@ -58,7 +58,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Drone orthomosaic imagery was acquired by GLOBHE using crowddroning
     methodology in the post-event period following Tropical Storm Chalane in Blantyre,

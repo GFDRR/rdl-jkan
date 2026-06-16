@@ -43,7 +43,7 @@ description: 'Internally displaced persons are persons or groups of persons who 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates internally displaced persons estimates from
     inter-agency sources, nationally representative household surveys (MICS and DHS),

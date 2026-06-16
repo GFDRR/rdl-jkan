@@ -108,7 +108,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed Pleiades very high-resolution satellite\
     \ imagery acquired 13-16 August 2025 over Sao Vicente and Santo Antao Islands,\

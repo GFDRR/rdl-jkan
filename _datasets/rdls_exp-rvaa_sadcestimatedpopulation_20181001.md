@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Baseline population estimates compiled from United Nations Population
     Division official estimates and Worldometers reference data, disaggregated by

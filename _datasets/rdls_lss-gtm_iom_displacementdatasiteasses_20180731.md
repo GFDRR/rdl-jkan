@@ -27,7 +27,7 @@ description: 'The dataset of Fuego volcano in Guatemala. The site assessments ha
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted sample surveys across displacement sites in two rounds
     to assess population presence, living conditions, and needs among internally displaced

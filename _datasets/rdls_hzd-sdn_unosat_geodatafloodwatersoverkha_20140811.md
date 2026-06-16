@@ -52,7 +52,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: TerraSAR-X satellite imagery acquired on 9 August 2014 was analyzed
     by UNOSAT analysts through visual interpretation and multi-temporal comparison

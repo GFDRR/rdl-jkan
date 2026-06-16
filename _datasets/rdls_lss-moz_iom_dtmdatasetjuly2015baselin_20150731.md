@@ -25,7 +25,7 @@ description: 'Master list of IDPs currently residing in Mozambique as of July 20
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted direct observational surveys and anecdotal data collection
     across Mozambique to compile a master list of internally displaced persons. The

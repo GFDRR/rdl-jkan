@@ -44,7 +44,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household locations from the 2016 Vanuatu Population and Housing Census
     (collected via CAPI survey) were transformed into a 100m resolution raster grid.

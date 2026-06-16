@@ -56,7 +56,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted multi-temporal satellite imagery analysis
     comparing images from 15 September 2013, 02 May 2014, 06 April 2015, and 01 August

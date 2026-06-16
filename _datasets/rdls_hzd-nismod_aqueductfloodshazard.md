@@ -14618,7 +14618,7 @@ hazard:
     occurrence_range: Return periods from 2, 5, 10, 25, 50, 100, 250, 500, and 1000
       years
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Global river flood hazard inundation layers produced by the Aqueduct
     Floods model (Ward et al., World Resources Institute). A global hydrodynamic model
@@ -14628,7 +14628,7 @@ lineage:
     to simulated discharge time series.
   sources:
   - id: source_1
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Aqueduct Floods Methodology
     risk_data_type: null
     type: model

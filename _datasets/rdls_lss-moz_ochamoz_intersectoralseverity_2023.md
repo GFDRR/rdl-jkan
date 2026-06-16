@@ -18,7 +18,7 @@ description: 'Severity level by location in 2023. [Source: This metadata record 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Severity assessments were compiled from direct observational data and
     anecdotal reports by OCHA Mozambique, classified by administrative location (ADM1

@@ -30,7 +30,7 @@ details: For more information on the methodology visit https://www.internal-disp
   For any question or API request contact us at ch.datainfo@idmc.ch.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC aggregates reported internal displacement metrics from multiple
     national and international sources covering conflict and disaster-induced displacement

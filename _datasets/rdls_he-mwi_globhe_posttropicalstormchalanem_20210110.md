@@ -74,7 +74,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Drone orthomosaic imagery was acquired post-event over Thyolo district,
     Malawi following Tropical Storm Chalane. The aerial imagery was processed by GLOBHE

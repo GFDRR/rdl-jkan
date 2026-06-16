@@ -59,7 +59,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted a rapid damage assessment by comparing satellite
     imagery acquired on 26 March 2022 with baseline imagery, identifying visible building

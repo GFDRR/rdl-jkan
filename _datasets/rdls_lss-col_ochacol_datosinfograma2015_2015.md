@@ -64,7 +64,7 @@ description: "El infograma es producido semestralmente desde 2006, usando inform
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Infograma dataset aggregates semi-annual humanitarian impact data
     from multiple Colombian government agencies (UARIV, UNGRD, INML, DAICMA, DIJIN,

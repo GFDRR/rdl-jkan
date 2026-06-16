@@ -21,7 +21,7 @@ description: 'A 6.4 magnitude earthquake has struck off Lombok, province of West
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted sample surveys across affected districts (North Lombok,
     East Lombok, West Lombok) in two rounds following the 6.4 magnitude earthquake,

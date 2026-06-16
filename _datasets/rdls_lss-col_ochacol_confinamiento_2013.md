@@ -25,7 +25,7 @@ details: "La informaci\xF3n disponible no refleja la totalidad del fen\xF3meno p
   \ de organizaciones internacionales."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "OCHA Colombia established a monitoring framework in July 2013 to track\
     \ population confinement through direct observational and anecdotal data collection.\

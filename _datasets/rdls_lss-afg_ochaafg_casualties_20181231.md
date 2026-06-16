@@ -27,7 +27,7 @@ description: 'Total number of civilian casualties documented in each of Afghanis
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Civilian casualty data compiled by UNAMA from documented incidents
     across Afghanistan's 34 provinces in 2018, with causes of death classified and

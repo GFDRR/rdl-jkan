@@ -52,7 +52,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared TerraSAR-X radar imagery acquired on 08 March
     2017 (post-cyclone ENAWO-17) with Radarsat-2 baseline imagery from 04 May 2014

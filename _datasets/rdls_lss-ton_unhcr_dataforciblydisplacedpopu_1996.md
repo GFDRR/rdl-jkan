@@ -22,7 +22,7 @@ description: 'Data collated by UNHCR, containing information about forcibly disp
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNHCR compiled forcibly displaced population statistics from Tonga
     through biannual collection from host governments and UNHCR registration systems.

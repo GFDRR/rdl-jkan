@@ -18,7 +18,7 @@ description: 'Evacuation Tracking & Monitoring Information Package for ETM Cycle
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event site assessment survey conducted by IOM during March 9-23,
     2016 to track evacuation and monitor displacement of populations affected by Tropical

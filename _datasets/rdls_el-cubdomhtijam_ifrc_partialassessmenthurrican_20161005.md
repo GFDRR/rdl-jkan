@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event damage assessment data collected by IFRC through census-based
     3W/4W/5W methodology documenting building damage and affected populations from

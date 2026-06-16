@@ -64,7 +64,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The INFORM model integrates multiple hazard, exposure, and vulnerability
     datasets from various sources (as documented in the Excel metadata sheet) to produce

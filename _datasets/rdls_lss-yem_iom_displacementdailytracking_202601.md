@@ -36,7 +36,7 @@ description: 'In Yemen, implement Rapid Displacement Tracking (RDT) to collect d
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Daily displacement tracking data collected through key informant interviews
     in accessible areas of Yemen's south (Internationally Recognized Government-administered

@@ -43,7 +43,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Building footprints were digitized remotely from satellite imagery
     (2019-2023 capture dates) by the Humanitarian OpenStreetMap Team between January-July

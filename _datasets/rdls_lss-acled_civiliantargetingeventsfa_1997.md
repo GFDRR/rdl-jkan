@@ -23,7 +23,7 @@ description: 'A weekly dataset providing the total number of reported civilian t
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: ACLED collects and codes conflict event data from multiple open sources
     including news reports, NGO databases, and government records. Civilian targeting

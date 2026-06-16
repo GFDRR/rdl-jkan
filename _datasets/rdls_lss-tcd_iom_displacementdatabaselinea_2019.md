@@ -30,7 +30,7 @@ description: "The dataset contains number and needs of returnees in Logone Orien
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted baseline assessments of returned populations in Logone
     Oriental province using standard DTM methodology, documenting household counts,

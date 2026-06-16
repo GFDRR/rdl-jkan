@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Census and administrative population data for French Polynesia were\
     \ disaggregated to a 3 arc-second (~100m) grid using a Random Forest-based dasymetric\

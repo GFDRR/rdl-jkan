@@ -27,7 +27,7 @@ description: 'Madagascar, Cyclone Enawo Final Needs Assessment data with disaggr
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Field needs assessments were undertaken by MRCS following Cyclone Enawo
     in Madagascar. Data were collected through direct field surveys and compiled with

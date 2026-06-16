@@ -45,7 +45,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted direct observational site assessments across Rohingya
     refugee settlements in Cox's Bazar following the August 2017 influx from Myanmar.

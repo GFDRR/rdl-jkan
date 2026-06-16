@@ -87,7 +87,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed SAOCOM-1A satellite imagery acquired on 26
     June 2024 over Sylhet District, Bangladesh, comparing multi-temporal images to

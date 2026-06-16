@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: CIMP collects open source data on armed violence incidents affecting
     civilians in Yemen through real-time monitoring across 5 regional hubs (Al-Hudaydah,

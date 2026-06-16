@@ -79,7 +79,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Radio station infrastructure inventory compiled from 7 sources including
     contact registries (ACORAB, BAN) and geographic databases (Infoasaid, Audio Visual

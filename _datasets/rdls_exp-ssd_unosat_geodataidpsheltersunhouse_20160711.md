@@ -57,7 +57,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted WorldView-1 satellite imagery acquired
     on 27 June 2016, manually identifying and mapping shelter structures and infrastructure

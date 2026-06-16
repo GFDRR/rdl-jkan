@@ -85,7 +85,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Nepal Earthquake Severity Index integrates observed ground motion
     intensity from the 25 April 2015 earthquake with gridded population data and housing

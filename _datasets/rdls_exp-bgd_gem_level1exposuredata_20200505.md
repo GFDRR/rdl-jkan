@@ -64,7 +64,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: This Level 1 exposure dataset was produced by the METEOR (Modelling
     Exposure Through Earth Observation Routines) project using Earth observation data

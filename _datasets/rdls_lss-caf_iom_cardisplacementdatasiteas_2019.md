@@ -18,7 +18,7 @@ description: 'The dataset contains IDPs at site level.. [Source: This metadata r
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducts periodic site assessments of IDP settlements in CAR
     using standardized methodology to enumerate displaced populations and document

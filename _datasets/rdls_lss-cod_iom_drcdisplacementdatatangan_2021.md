@@ -20,7 +20,7 @@ description: 'The dataset contains number of people displaced and returnees at v
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated baseline assessments in Tanganyika Province
     from 2018 to 2025 using standardized methodology, collecting village-level data

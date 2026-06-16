@@ -60,7 +60,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR imagery acquired on 4 May 2018 was analyzed by UNOSAT
     using satellite image comparison and change detection techniques to map inundated

@@ -96,7 +96,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: OSM arterial road network geometries were extracted and overlaid with
     PlanetScope satellite imagery from 2020 and 2024. A deep learning model was applied

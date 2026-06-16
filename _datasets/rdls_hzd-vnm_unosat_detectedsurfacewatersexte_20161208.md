@@ -51,7 +51,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR satellite images acquired on 07 November 2016 and 01
     December 2016 were analyzed by UNOSAT to detect and map surface water extent changes.

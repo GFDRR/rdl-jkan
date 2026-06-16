@@ -25,7 +25,7 @@ description: 'This data contain of scatter location of building damage that extr
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Building damage locations were extracted from geotagged photographs
     collected in the field following the West Sulawesi earthquake. Point geometries

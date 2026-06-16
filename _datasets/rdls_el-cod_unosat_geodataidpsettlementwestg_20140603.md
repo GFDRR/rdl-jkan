@@ -62,7 +62,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery from WorldView-1 (January
     2010) and WorldView-2 (February 2014) to detect structural changes in West Geti

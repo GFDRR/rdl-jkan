@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Worldview-2 satellite imagery from 21 April
     2017 and compared it with imagery from 22 January 2017 to identify shelter structures

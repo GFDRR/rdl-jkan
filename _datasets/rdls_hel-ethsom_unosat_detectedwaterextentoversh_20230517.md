@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts manually reviewed and compared Sentinel-2 satellite\
     \ imagery acquired on 14 May 2023 against prior imagery from 29 April 2023 to\

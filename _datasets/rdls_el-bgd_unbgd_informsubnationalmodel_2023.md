@@ -73,7 +73,7 @@ exposure:
       quantity_kind: index
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The INFORM subnational risk index for Bangladesh integrates hazard
     exposure, vulnerability, and coping capacity data at district and upazila administrative

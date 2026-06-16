@@ -32,7 +32,7 @@ description: 'The major drivers of acute malnutrition in Afghanistan include ina
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Acute malnutrition case estimates were calculated by multiplying the
     number of children under 5 and pregnant/breastfeeding women by prevalence rates

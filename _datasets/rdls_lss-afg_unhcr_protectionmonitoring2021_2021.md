@@ -41,7 +41,7 @@ description: 'The people of Afghanistan are facing a humanitarian, human rights 
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sample survey data collected through face-to-face interviews with displaced
     populations and persons of concern in Afghanistan, documenting protection risks

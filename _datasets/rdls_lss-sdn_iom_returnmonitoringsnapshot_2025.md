@@ -22,7 +22,7 @@ description: 'DTM Sudan defines a returnee as a person who was previously displa
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM Sudan collects return monitoring data through field surveys
     following standardized DTM methodology, recording individuals and households who

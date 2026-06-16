@@ -26,7 +26,7 @@ description: "Ce jeu de donn\xE9es porte sur la s\xE9v\xE9rit\xE9 des besoins da
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian needs severity data aggregated from multiple humanitarian
     partners across five sectors (health, education, nutrition, food security, protection)

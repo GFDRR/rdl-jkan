@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Satellite imagery from TerraSAR-X (11 August 2016) and SPOT-7 (15 August
     2016) were analyzed by UNOSAT analysts through visual comparison to detect changes

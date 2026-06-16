@@ -27,7 +27,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "(4m accuracy) Storia del dato: Carta Tecnica Regionale, rete stradale\
     \ di interesse regionale (BD mobilit\u221A\u2020 in scala 1:50.000). - Estrazione\

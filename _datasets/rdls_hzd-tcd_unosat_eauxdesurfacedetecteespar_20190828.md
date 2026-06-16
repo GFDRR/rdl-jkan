@@ -54,7 +54,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Landsat 8 satellite imagery from August 23-27,
     2019 covering the Fada region in Chad, applying change detection and visual interpretation

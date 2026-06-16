@@ -32,7 +32,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared WorldView-2 satellite imagery acquired on
     12 December 2014 (post-event) with WorldView-1 imagery from 12 July 2014 (pre-event)

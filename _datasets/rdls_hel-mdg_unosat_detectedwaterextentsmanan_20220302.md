@@ -86,7 +86,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-2 optical satellite imagery acquired on 24 February 2022 was
     analyzed by UNOSAT analysts to detect and delineate surface water extents across

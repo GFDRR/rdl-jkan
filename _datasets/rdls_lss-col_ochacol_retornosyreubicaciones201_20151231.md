@@ -26,7 +26,7 @@ description: "N\xFAmero de familias retornadas y reubicadas con acompa\xF1amient
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census data collected by UARIV documenting families who were returned
     or relocated with institutional accompaniment during 2014-2015 in Colombia. The

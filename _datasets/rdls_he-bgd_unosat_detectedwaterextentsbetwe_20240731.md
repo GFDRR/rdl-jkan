@@ -83,7 +83,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Sentinel-1 SAR imagery from two time periods (4-11 July and 16-23\
     \ July 2024) was processed using automated machine learning methods to detect\

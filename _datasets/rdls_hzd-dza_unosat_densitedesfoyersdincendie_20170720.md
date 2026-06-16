@@ -60,7 +60,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Active fire hotspots were detected from NASA MODIS satellite data via
     the FIRMS system at 1 km resolution for the period 17-19 July 2017 in northern

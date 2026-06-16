@@ -27,7 +27,7 @@ details: "Los datos para 2014 tienen como fecha de corte Septiembre de este mism
   \ a\xF1o."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Historical displacement data compiled from the UARIV registry, which
     systematically records internally displaced persons by municipality. The dataset

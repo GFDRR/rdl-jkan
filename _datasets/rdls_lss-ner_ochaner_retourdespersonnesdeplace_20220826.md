@@ -26,7 +26,7 @@ description: "Ce jeu de donn\xE9es donne la planification des retours des person
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry-based administrative data collected by the National IDP Data
     Collection Committee documenting the planned return of internally displaced persons

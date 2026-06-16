@@ -79,7 +79,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-2 satellite imagery spanning August 2017 to August 2024 was
     processed using Normalized Difference Vegetation Index (NDVI) analysis and multitemporal

@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Baseline data aggregated from humanitarian partners' field assessments
     and administrative records at admin 2 level, integrating population counts, IDP/refugee

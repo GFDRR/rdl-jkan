@@ -26,7 +26,7 @@ description: 'This data is about the displacements, the food insecurity in the L
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Dataset aggregates displacement counts and food insecurity classifications
     from multiple sources across the Lake Chad Basin, compiled by OCHA ROWCA to track

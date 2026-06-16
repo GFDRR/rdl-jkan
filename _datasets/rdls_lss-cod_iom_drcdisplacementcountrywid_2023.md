@@ -39,7 +39,7 @@ description: 'The Democratic Republic of the Congo (DRC) has a complex internal 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collected displacement baseline data through countrywide monitoring
     across multiple rounds (2023-2025) using standardized methodology applied at health

@@ -53,7 +53,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop population density grids were derived from census data and
     ancillary geospatial variables using dasymetric mapping techniques. The dataset

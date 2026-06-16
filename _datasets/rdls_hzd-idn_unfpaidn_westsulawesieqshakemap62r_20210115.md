@@ -42,7 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: USGS generated a shakemap from the 2021-01-14 magnitude 6.2 earthquake
     near Mamuju, Indonesia, producing observed Modified Mercalli Intensity (MMI) values

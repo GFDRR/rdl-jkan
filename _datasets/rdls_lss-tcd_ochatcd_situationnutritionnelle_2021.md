@@ -34,7 +34,7 @@ details: See more details on the Standardized Monitoring and Assessment of Relie
   and Transitions (SMART) methodology [here](https://smartmethodology.org/survey-planning-tools/smart-methodology/smart-methodology-manual/)
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Nutritional status data collected through sample surveys (SMART methodology)
     by the Global Nutrition Cluster across administrative divisions in Chad. Multiple

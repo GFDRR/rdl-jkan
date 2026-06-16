@@ -67,7 +67,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Six global flood models were run to simulate fluvial flood inundation
     at the 100-year return period across Uganda. Model outputs were compared and reclassified

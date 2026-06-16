@@ -81,7 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR imagery from 26 January to 2 February 2022 was processed
     using AI-based automated analysis to detect flood extent in Malawi. Detected inundation

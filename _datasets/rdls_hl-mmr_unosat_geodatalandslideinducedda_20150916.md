@@ -49,7 +49,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed Pleiades satellite imagery collected on 16
     September 2015 over Tonzang Township, Chin Division, Myanmar, comparing multi-temporal

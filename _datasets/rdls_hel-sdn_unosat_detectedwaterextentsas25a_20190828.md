@@ -77,7 +77,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts compared VIIRS-NOAA satellite imagery acquired between\
     \ 22-25 August 2019 to detect surface water extent changes over El Gazira, White\

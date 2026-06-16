@@ -59,7 +59,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted multi-temporal satellite imagery analysis
     comparing images from 1 May 2023, 10 May 2023, 18 September 2023, 15 October 2023,

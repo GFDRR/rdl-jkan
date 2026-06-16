@@ -82,7 +82,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: 'Census-derived population counts are disaggregated to a 30 arc-second
     (~1km) grid using WorldPop''s dasymetric and random forest modelling methods,

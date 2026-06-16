@@ -49,7 +49,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data compiled from multiple sources collected between
     2008 and 2010 by the Geo-IM working group network in Uganda, coordinated by UBOS

@@ -18,7 +18,7 @@ description: 'Afghanistan Current Situation FEWS NET Acute Food Insecurity Class
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators collected IPC classification data monthly throughout
     2020 across Afghanistan, classifying geographic areas into food insecurity phases.

@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts interpreted WorldView-3 satellite imagery from 30 June
     2016 of Al Azraq refugee camp in Jordan, manually identifying and counting 14,609

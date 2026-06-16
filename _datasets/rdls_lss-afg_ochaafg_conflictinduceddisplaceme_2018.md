@@ -23,7 +23,7 @@ details: The dataset is a snapshot as of 28 January 2019. Assessments are ongoin
   available.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Displacement data compiled by OCHA Afghanistan sub-offices from inter-agency
     assessment results conducted throughout 2018, aggregated at the national level

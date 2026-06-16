@@ -21,7 +21,7 @@ description: 'This is the underlying data for a manuscript published in PLOS: Cu
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: A cross-sectional survey was conducted in accessible government-controlled
     areas of Syria (April-June 2016) to identify unmet humanitarian needs and assistance

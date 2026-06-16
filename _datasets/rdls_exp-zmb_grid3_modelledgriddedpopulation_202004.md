@@ -67,7 +67,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Census population data for Zambia was processed by the WorldPop Research
     Group using spatial modeling techniques to produce high-resolution gridded population

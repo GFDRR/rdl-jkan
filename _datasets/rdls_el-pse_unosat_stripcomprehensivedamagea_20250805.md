@@ -55,7 +55,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted multi-temporal satellite image analysis comparing
     15 satellite image acquisition dates spanning May 2023 to July 2025 to detect

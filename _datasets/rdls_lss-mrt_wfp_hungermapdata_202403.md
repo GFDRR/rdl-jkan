@@ -33,7 +33,7 @@ description: 'HungerMapLIVE is the World Food Programme (WFP)''s global hunger m
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: WFP's Hunger Monitoring Unit conducts real-time food security monitoring
     using observed data from multiple sources (food security surveys, weather, conflict,

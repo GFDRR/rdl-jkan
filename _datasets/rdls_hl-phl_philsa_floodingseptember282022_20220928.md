@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Satellite imagery acquired on September 28, 2022 was processed by the
     Philippine Space Agency to delineate the actual extent of flooding caused by typhoon-induced

@@ -37,7 +37,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Data is take from the Eurostat is the statistical office of the European
     Union Dataset available on Eurostat portal https://ec.europa.eu/eurostat/web/products-datasets/-/tec00001.

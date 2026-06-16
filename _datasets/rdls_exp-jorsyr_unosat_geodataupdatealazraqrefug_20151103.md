@@ -64,7 +64,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts interpreted Pleiades satellite imagery from 5 October
     2015 of Al Azraq refugee camp, manually identifying and counting 14,227 structures

@@ -30,7 +30,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Dataset available on Eurostat portal https://ec.europa.eu/eurostat/cache/metadata/en/nrg_chdd_esms.htm
     The table is merged with the NUTS2 layer.

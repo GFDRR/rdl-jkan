@@ -18,7 +18,7 @@ description: 'The dataset contains number of IDPs, their location and needs in a
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM standard methodology applied to assess internally displaced
     persons from Hurricanes ETA and IOTA in Guatemala, collecting site-level data

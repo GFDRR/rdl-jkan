@@ -39,7 +39,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Settlement shapefile compiled by IOM from web-available sources to
     provide spatial inventory of human settlements in Mozambique for the January 2015

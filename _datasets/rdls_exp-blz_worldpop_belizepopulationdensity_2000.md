@@ -60,7 +60,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Census-derived population counts for Belize are disaggregated to a\
     \ 30 arc-second (~1km) grid using WorldPop's random forest-based dasymetric modelling\

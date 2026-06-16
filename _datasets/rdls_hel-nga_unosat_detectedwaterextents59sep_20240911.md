@@ -83,7 +83,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: VIIRS satellite imagery from 5-9 September 2024 was processed into
     a 5-day composite at 375 m resolution to detect water extents through pixelwise

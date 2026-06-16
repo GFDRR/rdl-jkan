@@ -25,7 +25,7 @@ description: 'Current and Historical Data of IDPs in Colombia. [Source: This met
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Registry-based compilation of internally displaced person (IDP) records
     from humanitarian partners in Colombia, covering both mass displacement events

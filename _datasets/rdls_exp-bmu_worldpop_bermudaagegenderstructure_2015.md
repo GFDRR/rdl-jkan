@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop integrated multiple demographic data sources to produce gridded
     population estimates disaggregated by age and gender for Bermuda at 100m and 1km

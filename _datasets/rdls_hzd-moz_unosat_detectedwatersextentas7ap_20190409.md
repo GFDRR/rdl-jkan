@@ -55,7 +55,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR imagery from 7 April 2019 and 20 March 2019 were compared
     by UNOSAT analysts to identify notable changes in surface water extent. Water

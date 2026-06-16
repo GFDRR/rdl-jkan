@@ -66,7 +66,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared satellite imagery from WorldView-2
     to detect and delineate IDP camp areas and structures in the UNMISS Malakal Base.

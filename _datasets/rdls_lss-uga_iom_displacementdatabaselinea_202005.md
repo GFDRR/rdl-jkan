@@ -25,7 +25,7 @@ description: 'The dataset contains number of IDPs, Returnees (households and ind
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted a baseline assessment using standard DTM methodology
     to enumerate internally displaced persons and returnees (households and individuals)

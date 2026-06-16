@@ -148,7 +148,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Historical tropical cyclone tracks from IBTrACS were processed with
     topography, terrain roughness, and bathymetry data to generate a probabilistic

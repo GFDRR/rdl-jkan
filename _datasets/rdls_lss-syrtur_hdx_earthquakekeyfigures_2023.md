@@ -34,7 +34,7 @@ details: 'Key Figures extracted from OCHA daily SitReps (i.e https://reliefweb.i
   Glide: EQ-2023-000015-TUR'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Key impact figures were extracted from OCHA daily Situation Reports,\
     \ which aggregated data reported by government and local authorities in T\xFC\

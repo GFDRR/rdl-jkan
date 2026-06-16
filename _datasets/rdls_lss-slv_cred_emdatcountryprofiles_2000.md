@@ -30,7 +30,7 @@ description: 'Aggregated figures for natural hazard related events in EM-DAT: El
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: EM-DAT Country Profiles aggregate historical disaster impact data from
     the EM-DAT database for El Salvador, compiled from diverse sources including government

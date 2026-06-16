@@ -26,7 +26,7 @@ description: 'The dataset contains IDPs and Returnees at sub national level.. [S
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM collects displacement event data through standardized assessments
     conducted by RRC, national NGOs, INGOs, UN agencies, and affected communities

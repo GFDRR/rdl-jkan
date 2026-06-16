@@ -65,7 +65,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Structure footprints were digitized through expert interpretation of
     IOM-NPM UAV imagery from April 2021 and historical campaigns (2017-2020) covering

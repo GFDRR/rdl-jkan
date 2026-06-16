@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted direct observational surveys via baseline assessment
     (24 December 2017 - 4 January 2018) and site assessment (15-30 January 2018) of

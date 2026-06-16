@@ -25,7 +25,7 @@ description: 'Disaster loss and damage data for Albania at several levels of dis
 details: 'More information can be found here: http://www.mbrojtjacivile.al/'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Disaster loss and damage data collected through direct observational
     methods and anecdotal reporting by Albania's General Directorate of Civil Emergencies,

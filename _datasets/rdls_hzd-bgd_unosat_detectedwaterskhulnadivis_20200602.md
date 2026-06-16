@@ -54,7 +54,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed Sentinel-1 SAR imagery acquired on 31 May\
     \ 2020 over Khulna division, Bangladesh, using multi-temporal image comparison\

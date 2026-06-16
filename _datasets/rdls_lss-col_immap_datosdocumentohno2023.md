@@ -40,7 +40,7 @@ description: "Estas bases contienen informaci\xF3n relevante, utilizada para des
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: 'The HNO 2023 dataset aggregates impact records from three administrative
     registries: armed conflict affectations from OCHA monitoring, individual displacement

@@ -32,7 +32,7 @@ description: 'The dataset contains information on the number of people in need i
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: People in need figures were derived from multiple sources integrated
     through the JIAF 2.0 methodology as documented in the 2023 HNO. The dataset aggregates

@@ -74,7 +74,7 @@ hazard:
     id: es_drought
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Spatial hazard datasets were compiled by Bangladesh Agricultural Research
     Council (BARC) and subsequently updated and maintained by WFP, Map Action, and

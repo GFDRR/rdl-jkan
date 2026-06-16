@@ -46,7 +46,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census-based enumeration of indigenous population in Guatemala, integrated
     with human development and socioeconomic indicators to identify populations with

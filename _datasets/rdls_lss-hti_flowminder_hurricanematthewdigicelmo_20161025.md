@@ -38,7 +38,7 @@ details: The network recovery effort now far advanced, but still ongoing. Note t
   primarily serves as a guide to the functionality of voice and SMS services.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Direct observational data from Digicel Haiti mobile network infrastructure
     was collected on 25 October 2016 following Hurricane Matthew. Network functionality

@@ -18,7 +18,7 @@ description: 'The dataset contains number of IDPs at sub national level.. [Sourc
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset aggregates IDP counts collected through IOM's Displacement
     Tracking Matrix (DTM) methodology across three baseline assessment rounds in Armenia.

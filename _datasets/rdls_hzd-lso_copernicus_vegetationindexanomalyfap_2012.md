@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FAPAR values are derived from 10-day temporal composites of VIIRS satellite
     imagery by the JRC Global Drought Observatory. Anomalies are computed at each

@@ -26,7 +26,7 @@ description: 'The dataset contains number of IDPs!. [Source: This metadata recor
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted site assessments in Antigua and Barbuda to enumerate
     internally displaced persons and document displacement characteristics through

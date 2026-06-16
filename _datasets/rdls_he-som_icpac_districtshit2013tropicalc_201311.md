@@ -68,7 +68,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event observational data from ICPAC documenting the 2013 Tropical
     Cyclone 3A track, wind speeds (74 kph maximum), and rainfall (100-200 mm) across

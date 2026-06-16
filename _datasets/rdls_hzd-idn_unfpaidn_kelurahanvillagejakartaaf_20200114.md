@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Flood extent boundaries were directly observed and mapped at the village
     administrative level during the January 2020 flooding event in Jakarta. The data

@@ -31,7 +31,7 @@ description: 'List of projects being developed currently in Haiti in the context
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: This dataset is a humanitarian response project registry compiled by
     OCHA Haiti documenting interventions across Food Security, Agriculture, Nutrition,

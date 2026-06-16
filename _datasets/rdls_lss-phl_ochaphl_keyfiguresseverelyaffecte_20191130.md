@@ -26,7 +26,7 @@ description: 'This data is about the key figures of the severely affected areas 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact data collected by affected local government units
     in Tulunan, Cotabato and consolidated by the National Office of Civil Defense

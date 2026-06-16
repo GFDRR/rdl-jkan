@@ -66,7 +66,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Building footprints were aggregated from four independent sources (OSM,
     Microsoft ML, Google Open Buildings, Esri Community Maps) through the Overture

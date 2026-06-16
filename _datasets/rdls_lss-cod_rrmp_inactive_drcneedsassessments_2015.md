@@ -25,7 +25,7 @@ description: 'Humanitarian needs assessment conducted in displaced and return ar
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian needs assessment conducted through sample survey methodology
     in displaced and return areas from January to March 2015, documenting population-level

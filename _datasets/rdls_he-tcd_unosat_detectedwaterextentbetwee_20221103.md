@@ -79,7 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared Sentinel-2 satellite imagery from 30 October
     2022 with historical imagery from 31 October 2018 to detect changes in surface

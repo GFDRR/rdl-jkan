@@ -70,7 +70,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Census population counts at enumeration area level from Mali Statistics
     Office (2019-2020) were combined with a Bayesian statistical model to produce

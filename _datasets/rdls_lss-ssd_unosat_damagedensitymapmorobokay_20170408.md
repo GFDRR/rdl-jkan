@@ -40,7 +40,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Damage assessment derived from visual interpretation of satellite imagery
     acquired 05 March 2017, comparing imagery to identify destroyed structures. Analysts

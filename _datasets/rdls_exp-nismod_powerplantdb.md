@@ -82,7 +82,7 @@ exposure:
       quantity_kind: energy
       unit: gigawatt_hour
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Global Power Plant Database compiled by the World Resources Institute
     (WRI) by aggregating plant-level data from the Global Energy Observatory (GEO),
@@ -128,14 +128,14 @@ lineage:
     url: null
     used_in: exposure
   - id: source_6
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Global Coal Plant Tracker
     risk_data_type: null
     type: dataset
     url: globalenergymonitor.org/projects/global-coal-plant-tracker/
     used_in: exposure
   - id: source_7
-    license: https://creativecommons.org/licenses/by/4.0/
+    license: CC-BY-4.0
     name: Enipedia
     risk_data_type: null
     type: dataset

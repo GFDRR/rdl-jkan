@@ -18,7 +18,7 @@ description: 'Humanitarian needs overview for Zimbabwe. [Source: This metadata r
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian Needs Overview (HNO) compiled from multiple observational
     and anecdotal sources by OCHA ROSEA, aggregating sectoral needs assessments to

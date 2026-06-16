@@ -28,7 +28,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population estimates provided by UNFPA using the the Institut de Statistiques
     et d'Etudes Economiques du Burundi 2008 census data. Caveats / Comments The source

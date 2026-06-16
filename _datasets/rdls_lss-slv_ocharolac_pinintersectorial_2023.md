@@ -25,7 +25,7 @@ description: 'People in Need figures from the Joint and Intersectoral Analysis F
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: People in Need figures were generated using the JIAF 2.0 methodology,
     which integrates intersectoral humanitarian data to classify and quantify affected

@@ -58,7 +58,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event drone orthomosaic imagery was collected by GLOBHE using
     crowddroning methodology over Chikwawa, Malawi following Tropical Storm Chalane

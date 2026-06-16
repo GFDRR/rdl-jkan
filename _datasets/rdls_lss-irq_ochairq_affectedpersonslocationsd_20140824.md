@@ -29,7 +29,7 @@ details: '**Most Recent Changes:** Updated as of 24 August 2014 - includes recen
   the numbers of the displaced population. **Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM Iraq conducted field-based displacement tracking between January
     and August 2014, identifying and confirming the locations of 1,668,312 internally

@@ -35,7 +35,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Global crop mask generated from remote sensing data at approximately\
     \ 1 km\xB2 resolution, with each pixel representing the fractional area of cropland\

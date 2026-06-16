@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop Global 2015-2030 R2025A dataset provides gridded population
     estimates for Dominican Republic disaggregated by age group (0-1, 5-year intervals

@@ -44,7 +44,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop gridded population density data for Kenya was processed and
     distributed by ICPAC as a GeoTIFF raster to support disaster risk reduction, resource

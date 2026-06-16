@@ -44,7 +44,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Airport and airstrip facility data compiled from direct observational
     records and anecdotal sources by WFP, including geometric locations, operational

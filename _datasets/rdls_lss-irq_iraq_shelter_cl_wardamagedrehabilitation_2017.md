@@ -28,7 +28,7 @@ details: This contains data on assessment and rehabilitation of war-damaged shel
   actors in Iraq.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Direct observational data collected by humanitarian and development
     actors conducting field assessments of war-damaged shelter, aggregated by the

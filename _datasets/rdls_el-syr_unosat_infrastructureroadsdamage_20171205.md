@@ -65,7 +65,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed satellite imagery acquired on 21 October 2017
     and compared it with reference imagery to identify notable changes and damage

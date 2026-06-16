@@ -47,7 +47,7 @@ description: "Violent extremism carried out by the Boko Haram group in Nigeria a
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "A 20% stratified sample of a full enumeration census of IDPs in Mayo-Tsanaga\
     \ conducted by UNHCR and Comit\xE9 Mixte de Protection between July-September\

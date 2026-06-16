@@ -25,7 +25,7 @@ description: 'Floods damages assessment in Mauritania This table displays floods
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event damage assessment data collected by UNDP through sample
     survey methodology in Mauritania following the 2010 floods. The dataset documents

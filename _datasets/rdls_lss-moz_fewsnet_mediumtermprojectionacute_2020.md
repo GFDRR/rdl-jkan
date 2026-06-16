@@ -18,7 +18,7 @@ description: 'Mozambique Medium Term Projection FEWS NET Acute Food Insecurity C
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators conducted regular (typically monthly) field assessments
     across Mozambique to classify acute food insecurity conditions using the IPC framework.

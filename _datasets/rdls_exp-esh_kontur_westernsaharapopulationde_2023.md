@@ -99,7 +99,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population density was derived by fusing multiple global settlement
     and building datasets (GHSL, HRSL, Microsoft Buildings, Copernicus) and allocating

@@ -33,7 +33,7 @@ details: Lisa Jordan assembled the Nigeria data set, but the original source is 
   appropriate display of IPC classes.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS.net IPC acute food security classification shapefiles for Nigeria
     (2010-2018) were obtained and analyzed by Drew University researchers to characterize

@@ -27,7 +27,7 @@ details: This data was collected via remote SMS survey following Cyclone Idai an
   a snapshot view based on those who were able to be reached via SMS.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event impact data collected via remote SMS survey from 700 affected
     respondents in Mozambique within 2 days of Cyclone Idai landfall. Survey captured

@@ -58,7 +58,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared VIIRS thermal anomaly data (27-29 July 2021)
     and Pleiades satellite imagery (29 July 2021 10:21 UTC) to detect and delineate

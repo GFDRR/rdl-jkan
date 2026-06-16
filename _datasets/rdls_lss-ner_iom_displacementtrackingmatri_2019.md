@@ -37,7 +37,7 @@ details: This dataset comes from the [DTM API](https://dtm.iom.int/data-and-anal
   added.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM field teams conduct baseline assessments, emergency tracking,
     and site assessments to enumerate internally displaced populations across Niger

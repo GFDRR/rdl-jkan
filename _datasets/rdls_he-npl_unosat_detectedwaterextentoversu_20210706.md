@@ -82,7 +82,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Sentinel-1 SAR imagery acquired on 4 July 2021 was processed using\
     \ automated machine learning methods to detect surface water extent. The resulting\

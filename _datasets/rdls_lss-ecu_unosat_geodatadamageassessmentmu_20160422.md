@@ -33,7 +33,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "UNOSAT analysts compared pre-event (12 March 2016 WorldView-3) and\
     \ post-event (20 April 2016 Pl\xE9iades) satellite imagery of Muisne to detect\

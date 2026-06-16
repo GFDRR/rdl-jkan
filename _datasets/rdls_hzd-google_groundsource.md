@@ -81,7 +81,7 @@ hazard:
     id: es_flood_empirical
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Flood event records extracted from global news media (2000-2026) using
     a four-stage LLM pipeline. News articles are retrieved from global sources across

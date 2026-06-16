@@ -81,7 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Sentinel-1 SAR satellite imagery from 27-28 August 2025 was analyzed\
     \ by UNOSAT to detect water extent through comparison of pre- and post-event images,\

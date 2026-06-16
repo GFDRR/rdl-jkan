@@ -106,7 +106,7 @@ exposure:
       quantity_kind: index
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The INFORM Guatemala model integrates 29 indicators from multiple national
     and international sources across three risk dimensions (hazard & exposure, vulnerability,

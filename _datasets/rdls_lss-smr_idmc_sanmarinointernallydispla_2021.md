@@ -43,7 +43,7 @@ details: 'Please note that most of the figures are estimates. The definition hig
   displacement.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC compiled displacement data for San Marino documenting persons
     forced to flee their homes due to armed conflict, generalized violence, violations

@@ -31,7 +31,7 @@ description: 'Afghanistan has experienced intensifying drought, severe floods an
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted a nationwide community-level assessment programme (ACVA)
     in coordination with Afghanistan's National Disaster Management Authority to evaluate

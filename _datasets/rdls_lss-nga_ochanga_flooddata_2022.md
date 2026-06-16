@@ -32,7 +32,7 @@ description: 'The dataset contains information on flood-affected people and loca
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event flood impact data collected through direct observation and
     anecdotal reports by OCHA Nigeria, NEMA, and SEMA partners across multiple years

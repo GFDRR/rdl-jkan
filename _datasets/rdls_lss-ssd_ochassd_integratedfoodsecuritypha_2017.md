@@ -35,7 +35,7 @@ description: 'South Sudan Integrated Food Security Phase classification and popu
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classifications and population figures aggregated by state and
     county from multiple sources using sample survey methodology. The IPC scale standardizes

@@ -59,7 +59,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared satellite imagery to detect shelters
     and support buildings at Sujjo IDP Camp as of June 2015, producing a spatial inventory

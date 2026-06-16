@@ -61,7 +61,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired on 14 March 2022
     (baseline) with imagery from 7, 8, 12 May 2022 (post-event) to detect visible

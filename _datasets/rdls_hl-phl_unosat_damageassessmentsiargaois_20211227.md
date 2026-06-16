@@ -54,7 +54,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre- and post-event satellite imagery (WorldView-3
     from 23 December 2021 and Pleiades from 26 December 2021) of Siargao Island to

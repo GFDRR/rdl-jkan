@@ -43,7 +43,7 @@ description: 'This dataset contains both quantitative and qualitative data and f
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IDMC's standardized survey tool (developed 2019) was administered to
     IDPs and host communities in Northwest Nigeria to collect quantitative and qualitative

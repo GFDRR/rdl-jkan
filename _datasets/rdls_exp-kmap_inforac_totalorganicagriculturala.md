@@ -32,7 +32,7 @@ exposure:
       quantity_kind: dimensionless_ratio
       unit: percent
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: null
   sources:

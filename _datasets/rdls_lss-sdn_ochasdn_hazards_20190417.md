@@ -25,7 +25,7 @@ description: 'Sudan Hazards datasets including data on AWD outbreak, Armed triba
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Observational and anecdotal impact data compiled from multiple humanitarian
     partners for the 2019 Humanitarian Needs Overview, documenting population-level

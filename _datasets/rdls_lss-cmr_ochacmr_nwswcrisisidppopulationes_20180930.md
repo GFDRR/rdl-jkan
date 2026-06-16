@@ -40,7 +40,7 @@ description: 'Internaly displaced population estimates in North West and South W
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Internally displaced population estimates were compiled from multiple
     sources including IOM, MIRA assessments, and OCHA partner organizations using

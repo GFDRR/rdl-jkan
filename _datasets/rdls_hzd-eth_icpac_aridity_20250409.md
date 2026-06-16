@@ -38,7 +38,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "The aridity index (AI) was calculated from long-term climate data\
     \ to create a spatiotemporally continuous drought hazard dataset at 0.05\xC2\xB0\

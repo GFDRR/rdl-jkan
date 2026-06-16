@@ -25,7 +25,7 @@ description: 'This data is showing the number of affected people by floods per y
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Annual flood impact data collected through direct observation and anecdotal
     reporting by the Sudan Humanitarian Aid Commission and Flood Task Force, aggregated

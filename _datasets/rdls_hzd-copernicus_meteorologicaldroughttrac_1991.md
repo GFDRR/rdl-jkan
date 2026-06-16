@@ -51,7 +51,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Standardized Precipitation Index (SPI-3) is calculated from ERA5 global
     reanalysis precipitation data with a 1991-2020 baseline. Drought events are identified

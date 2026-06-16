@@ -78,7 +78,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Post-event damage assessment derived from multi-temporal satellite
     imagery (Pleiades acquired 07 October 2016, Worldview-1 from 01 May 2015 and 08

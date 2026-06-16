@@ -36,7 +36,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts compared satellite imagery acquired on 23 February\
     \ 2018 and 6 March 2018 over a 94.7 km\xC2\xB2 study area in Eastern Ghouta, Damascus.\

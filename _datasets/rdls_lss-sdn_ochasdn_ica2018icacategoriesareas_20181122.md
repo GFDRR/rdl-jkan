@@ -27,7 +27,7 @@ description: 'This layer contains information about the final categorization res
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The ICA Sudan 2018 dataset integrates food insecurity classification
     data with hazard propensity assessments for floods and droughts at the administrative

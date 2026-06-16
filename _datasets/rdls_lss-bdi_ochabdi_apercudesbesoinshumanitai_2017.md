@@ -27,7 +27,7 @@ details: There will not be an updated HNO in 2024 as Burundi will not be an HRP 
   anymore.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian Needs Overview data compiled by OCHA Burundi from multiple
     humanitarian partners using JIAF (Joint Inter-Agency Analysis Framework) methodology

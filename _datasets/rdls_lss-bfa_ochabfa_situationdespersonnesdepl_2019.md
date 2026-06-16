@@ -36,7 +36,7 @@ description: "Situation des personnes d\xE9plac\xE9es internes au Burkina Faso. 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: 'Displacement data compiled from two primary sources: current incident-based
     registry data from GCORR capturing shock type, displacement dates, and demographic

@@ -70,7 +70,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Multi-temporal satellite imagery collected between May 2023 and February
     2025 was analyzed through visual interpretation and change detection to identify

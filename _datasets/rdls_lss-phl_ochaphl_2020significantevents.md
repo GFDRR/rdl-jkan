@@ -26,7 +26,7 @@ description: 'Consolidated information of different events happened in the Phili
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Consolidated event data collected from multiple Philippine government
     websites documenting significant natural hazard events (volcanic, seismic, and

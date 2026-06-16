@@ -58,7 +58,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Landsat 5-7 satellite imagery spanning 1988-2019 was processed through
     the SERVIR-Mekong seasonal river morphological monitoring system to detect and

@@ -30,7 +30,7 @@ description: 'The World Food Programme (WFP) launched the mobile Vulnerability A
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WFP mVAM project collects food security data through mobile surveys
     in Eswatini, capturing household-level vulnerability indicators related to food

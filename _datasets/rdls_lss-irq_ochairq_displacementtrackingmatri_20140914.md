@@ -29,7 +29,7 @@ details: IOM continues to monitor and track the situation in order to verify the
   of the displaced population.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM Iraq conducted field-based tracking of internally displaced persons
     (IDPs) across Iraq from January to September 2014, identifying 1,725,432 displaced

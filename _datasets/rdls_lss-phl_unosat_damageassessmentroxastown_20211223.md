@@ -33,7 +33,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed Pleiades satellite imagery acquired on 21
     December 2021 following Tropical Cyclone RAI-21 landfall in Roxas town, Palawan,

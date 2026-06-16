@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Floodwater depth data derived from VIIRS daily composite flood products
     at 375-m resolution, processed in near real-time at the Cooperative Institute

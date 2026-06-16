@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The HDX HAPI aggregates standardized humanitarian indicators from multiple
     authoritative sources (ACLED for conflict events, OCHA ROLAC for population baselines)

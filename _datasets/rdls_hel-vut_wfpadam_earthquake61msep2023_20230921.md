@@ -58,7 +58,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: USGS shakemap data for the M6.1 earthquake (event ID us7000kx7j) was
     ingested by WFP ADAM, which overlaid MMI intensity zones with gridded population

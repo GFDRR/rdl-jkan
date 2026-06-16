@@ -89,7 +89,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "WorldPop gridded population counts for Cameroon are produced by disaggregating\
     \ census-derived population data to 100m grid cells using dasymetric mapping and\

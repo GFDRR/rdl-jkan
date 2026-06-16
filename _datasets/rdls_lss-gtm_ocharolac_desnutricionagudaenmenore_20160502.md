@@ -30,7 +30,7 @@ details: "* [INFORM Guatemala.](http://www.inform-index.org/Subnational/Guatemal
   n: Vulnerabilidad"
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Health surveillance data from Guatemala's national health registry
     (SIGSA) documenting acute malnutrition indicators in children under 5 years, analyzed

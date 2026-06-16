@@ -48,7 +48,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery from Pleiades and WorldView-1
     sensors acquired on 11 August 2013 and 5 March 2014 to identify and map IDP shelter

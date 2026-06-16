@@ -55,7 +55,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: High-resolution WorldView-2 satellite imagery acquired on 06 December
     2013 was visually interpreted by UNOSAT analysts to identify and digitize individual

@@ -18,7 +18,7 @@ description: 'Malawi Near Term Projection FEWS NET Acute Food Insecurity Classif
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators collected IPC classification data on a monthly
     schedule across Malawi administrative areas. Geographic boundaries were classified

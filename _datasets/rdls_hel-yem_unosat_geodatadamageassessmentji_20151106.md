@@ -78,7 +78,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired before (22 August
     2015) and after (5 November 2015) Cyclone Chapala to detect damage in Jilah village.

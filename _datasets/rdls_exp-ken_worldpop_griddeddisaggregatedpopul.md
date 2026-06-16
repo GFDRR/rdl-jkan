@@ -75,7 +75,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Gridded population estimates were produced by WorldPop Research Group
     using census data and spatial disaggregation modelling techniques as part of the

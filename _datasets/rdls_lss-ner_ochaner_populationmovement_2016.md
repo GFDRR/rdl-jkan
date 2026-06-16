@@ -26,7 +26,7 @@ description: 'The dataset contains information on displaced persons in Niger, di
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Population movement data collected through a national registry system\
     \ (Comit\xE9 National de Collecte de Donn\xE9es Personnes D\xE9plac\xE9es Internes)\

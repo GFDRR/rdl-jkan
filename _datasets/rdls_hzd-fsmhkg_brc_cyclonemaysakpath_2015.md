@@ -41,7 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Cyclone track data was collected through direct observational monitoring
     by the Hong Kong Observatory and published as a GIS-compatible map. The dataset

@@ -77,7 +77,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed WorldView-3 satellite imagery from 25 September
     2015 and compared it with earlier imagery (22 August 2015) to detect shelter structures

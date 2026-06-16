@@ -41,7 +41,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared very high resolution satellite imagery from
     October 2023 and February 2024 baseline with March 2025 post-event imagery to

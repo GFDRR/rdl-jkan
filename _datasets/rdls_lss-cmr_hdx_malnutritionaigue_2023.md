@@ -33,7 +33,7 @@ details: "Le nombre de cas attendus de malnutrition aigu\xEB chez les enfants a 
   \ ES) et l'incidence est de k=1."
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC acute malnutrition data collected and classified across 32 departments,
     4 regions, and refugee sites in Cameroon for November 2023 to October 2024. Population

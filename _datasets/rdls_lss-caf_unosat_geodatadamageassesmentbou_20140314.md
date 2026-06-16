@@ -34,7 +34,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed WorldView-2 satellite imagery acquired on
     4 March 2014 and compared it with a previous image from 22 January 2014 to identify

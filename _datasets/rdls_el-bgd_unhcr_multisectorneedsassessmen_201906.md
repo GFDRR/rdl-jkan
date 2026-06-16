@@ -86,7 +86,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household survey data collected from 876 households across 33 refugee
     sites in Cox's Bazar using simple random sampling of shelter footprints. Multi-sector

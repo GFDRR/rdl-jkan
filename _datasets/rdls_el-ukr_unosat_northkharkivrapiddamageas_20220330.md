@@ -58,7 +58,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted a rapid damage building assessment by comparing
     satellite imagery acquired on 21-23 March 2022 over North Kharkiv, Ukraine. The

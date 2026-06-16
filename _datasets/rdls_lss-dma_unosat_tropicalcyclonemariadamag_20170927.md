@@ -41,7 +41,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre-event building footprints from Humanitarian
     OpenStreetMap with post-event Pleiades satellite imagery acquired on 23 September

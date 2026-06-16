@@ -75,7 +75,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal NOAA20-VIIRS satellite imagery
     from July 12-21, 2020 to detect flood extent changes during the monsoon event.

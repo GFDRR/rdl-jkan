@@ -94,7 +94,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network geometries from OpenStreetMap were extracted for arterial
     highways in British Virgin Islands. Deep learning models trained on PlanetScope

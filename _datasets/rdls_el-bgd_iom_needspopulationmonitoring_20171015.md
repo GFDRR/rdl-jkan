@@ -55,7 +55,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Direct field observation and enumeration of Rohingya refugee populations
     across all settlement sites in Cox's Bazar District, Bangladesh, conducted by

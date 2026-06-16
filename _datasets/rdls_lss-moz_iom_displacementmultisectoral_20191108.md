@@ -25,7 +25,7 @@ description: 'The dataset contains IDPs at sub national level displaced by Cyclo
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted multi-sectoral location assessments of internally
     displaced persons in Mozambique following Cyclone Kenneth, collecting displacement

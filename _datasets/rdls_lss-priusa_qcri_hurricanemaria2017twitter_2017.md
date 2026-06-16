@@ -35,7 +35,7 @@ description: 'This resource is comprised of Twitter data collected and processed
 details: Please contact us if you need full dataset with tweets content.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Public tweets were collected in real-time via the Twitter API during
     Hurricane Maria 2017 and processed using the AIDR machine learning system to automatically

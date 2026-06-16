@@ -36,7 +36,7 @@ description: 'This dataset contains the overall people in need and intersectoral
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Humanitarian partners conducted intersectoral needs assessments across
     Honduras administrative divisions using the Joint Intersectoral Analysis Framework

@@ -32,7 +32,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Census-based site assessment data collected by IOM during Fiji evacuation
     tracking and monitoring cycle 2, documenting displaced populations at evacuation

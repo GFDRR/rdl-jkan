@@ -41,7 +41,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Raw data provided by the Amt f\xC3\xBCr Arbeitsmarktbeobachtung/Ufficio\
     \ Osservazione Mercato del Lavoro of Bozen/Bolzano. Projected data is only an\

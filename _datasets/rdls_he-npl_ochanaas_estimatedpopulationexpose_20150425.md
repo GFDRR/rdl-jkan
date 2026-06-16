@@ -70,7 +70,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: USGS-Pager earthquake ground motion data (PGA severity classes) was
     intersected with WorldPoP gridded population distribution to estimate population

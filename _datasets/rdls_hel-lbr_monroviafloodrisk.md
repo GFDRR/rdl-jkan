@@ -1076,7 +1076,7 @@ hazard:
     occurrence_range: 50-year return period compound flood (coastal + pluvial + fluvial
       combined) under Historical, RCP4.5, and RCP8.5 scenarios
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Flood impact assessment for Greater Monrovia, Liberia, produced by
     Deltares using FIAT (Flood Impact Assessment Tool). Hydrodynamic flood inundation

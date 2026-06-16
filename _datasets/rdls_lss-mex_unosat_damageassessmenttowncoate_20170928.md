@@ -33,7 +33,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre-event WorldView-2 satellite imagery (17
     January 2017) with post-event WorldView-3 imagery (22 September 2017) to detect

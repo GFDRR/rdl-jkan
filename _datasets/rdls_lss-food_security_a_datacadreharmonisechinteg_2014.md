@@ -50,7 +50,7 @@ details: 'The Cadre Harmonise leads two cycle of analyses every year. One around
   data for Niger is not yet available.'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Food security and nutrition data from government sources, CILSS, and\
     \ IPC assessments are synthesized through the Cadre Harmonis\xE9 analytical framework,\

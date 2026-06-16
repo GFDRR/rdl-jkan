@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "Satellite imagery from TerraSAR-X acquired on 18 July 2020 was analyzed\
     \ by UNOSAT to detect surface water extent through comparison with reference imagery.\

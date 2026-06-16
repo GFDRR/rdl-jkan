@@ -57,7 +57,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired on 21 June 2021
     (baseline) and 14 March 2022 (post-event) over Mariupol City to identify visible

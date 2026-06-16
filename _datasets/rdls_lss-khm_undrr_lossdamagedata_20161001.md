@@ -46,7 +46,7 @@ description: 'Disaster loss and damage data for Cambodia at several levels of di
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Disaster loss and damage data compiled from direct observational records
     and anecdotal reports collected by La Red, OSSO, DNPAD, and PREDECAN. Data aggregated

@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Low elevation coastal zones (0-10m and 0-20m above sea level) were\
     \ delineated using the bathtub method applied to the ALOS AW3D30 digital surface\

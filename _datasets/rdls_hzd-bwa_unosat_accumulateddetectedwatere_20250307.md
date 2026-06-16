@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed multisatellite imagery (Sentinel-2, PlanetScope,\
     \ Kanopus-V) acquired on 4 March 2025, comparing images from 23-25 February 2025\

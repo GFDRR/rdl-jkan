@@ -25,7 +25,7 @@ description: 'Townships affected by flooding in Myanmar from 2013 to 2020.. [Sou
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Township-level flood impact data compiled from direct observational
     reports and anecdotal information provided by humanitarian partners operating

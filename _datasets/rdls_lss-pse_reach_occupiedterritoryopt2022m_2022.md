@@ -43,7 +43,7 @@ details: More information on the methodology can be found in the readme (first s
   of the spreadsheet)
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The 2022 MSNA was conducted through a sample survey methodology across
     the Occupied Palestinian Territories by REACH Initiative in collaboration with

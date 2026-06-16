@@ -18,7 +18,7 @@ description: 'Niger Medium Term Projection FEWS NET Acute Food Insecurity Classi
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FEWS NET enumerators collected IPC classification data monthly throughout
     2021 across Niger administrative areas. The data represents spatial projections

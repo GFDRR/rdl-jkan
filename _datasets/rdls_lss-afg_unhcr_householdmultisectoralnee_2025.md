@@ -33,7 +33,7 @@ description: 'The Household Multi-Sectoral Needs Assessment (HMNA) Mid-Year 2025
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNHCR conducted a household survey across all 34 Afghan provinces from
     April-June 2025 using simple random sampling to assess multi-sectoral needs of

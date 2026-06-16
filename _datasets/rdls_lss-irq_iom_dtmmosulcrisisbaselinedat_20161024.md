@@ -24,7 +24,7 @@ description: 'The Emergency Tracking (ET) system aims at tracking sudden displac
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM Emergency Tracking system collected displacement and return movement
     data via census methodology during the Mosul crisis starting October 17, 2016.

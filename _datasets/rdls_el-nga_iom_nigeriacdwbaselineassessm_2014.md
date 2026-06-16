@@ -33,7 +33,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted sample survey-based baseline assessments of internally
     displaced persons across Nigeria from December 2014 to October 2017, documenting

@@ -42,7 +42,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data sourced from Open Street Map was extracted and processed
     to delineate primary and secondary roads in DPR Korea, with broken segments merged

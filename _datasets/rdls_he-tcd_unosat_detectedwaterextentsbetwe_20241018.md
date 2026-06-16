@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts interpreted VIIRS satellite imagery acquired between\
     \ 13-17 October 2024, comparing multi-temporal scenes to detect cumulative water\

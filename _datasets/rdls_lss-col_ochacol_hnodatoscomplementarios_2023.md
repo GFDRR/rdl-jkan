@@ -25,7 +25,7 @@ description: 'Confinamientos y desplazamientos 2017-2022. [Source: This metadata
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Historical registry of confinement and displacement events compiled
     from humanitarian partner reports in Colombia between 2017 and 2022, documenting

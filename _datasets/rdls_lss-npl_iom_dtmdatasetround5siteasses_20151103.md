@@ -25,7 +25,7 @@ description: 'This data is about a preliminary assessment to displacement sites 
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted direct observational assessments of displacement sites
     across Nepal in 2015, documenting displaced populations and site characteristics

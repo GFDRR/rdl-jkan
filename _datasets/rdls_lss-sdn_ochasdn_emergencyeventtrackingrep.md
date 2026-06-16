@@ -29,7 +29,7 @@ description: 'IOM Sudan DTM teams activated EET to monitor the displacement of i
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM Sudan DTM teams conducted direct observational monitoring of displacement
     events triggered by inter-communal conflict in Ag Geneina, West Darfur, using

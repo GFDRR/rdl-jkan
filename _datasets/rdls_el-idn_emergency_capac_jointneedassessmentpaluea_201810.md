@@ -53,7 +53,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Joint needs assessment data collected via sample survey methodology
     in Palu, Indonesia following the September 2018 earthquake and tsunami. The dataset

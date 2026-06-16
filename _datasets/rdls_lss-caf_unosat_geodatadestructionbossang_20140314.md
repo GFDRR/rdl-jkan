@@ -42,7 +42,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Multi-temporal satellite imagery analysis comparing images from December
     2013, January 2014, and February 2014 to detect and geolocate destroyed structures.

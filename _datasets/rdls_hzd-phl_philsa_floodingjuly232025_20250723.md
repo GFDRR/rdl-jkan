@@ -45,7 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Satellite imagery from Sentinel-1 and RCM sensors acquired on July
     23, 2025 was processed to delineate flood extent polygons caused by typhoon-induced

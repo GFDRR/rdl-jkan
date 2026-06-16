@@ -25,7 +25,7 @@ description: 'Topline figures for the Rohingya Displacement event page. [Source:
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Topline displacement figures compiled from direct observational data
     and anecdotal reports by the Inter Sector Coordination Group documenting population

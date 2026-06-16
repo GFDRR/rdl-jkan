@@ -107,7 +107,7 @@ exposure:
       quantity_kind: currency
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: National-level socio-economic data, building type distributions, and
     capital stock for Zambia were spatially disaggregated using a top-down approach

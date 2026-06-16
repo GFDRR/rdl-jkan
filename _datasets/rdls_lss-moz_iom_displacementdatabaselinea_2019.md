@@ -28,7 +28,7 @@ description: "Tropical cyclone Idai, on March 15th 2019, brought torrential rain
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "IOM DTM conducted multi-round baseline assessments (Rounds 1, 2, 5,\
     \ and 6) following tropical cyclone Idai in March 2019 to document displacement,\

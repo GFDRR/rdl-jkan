@@ -71,7 +71,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed WorldView-3 satellite imagery acquired on
     22 November 2023, comparing it with imagery from 13 November 2023 to detect changes

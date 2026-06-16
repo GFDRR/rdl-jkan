@@ -59,7 +59,7 @@ description: 'Following the events of August 2017, the Rohingya community were a
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sample survey data collected via Computer Assisted Telephone Interview
     (CATI) from registered refugees residing in 34 camps in Ukhiya and Teknaf, Cox's

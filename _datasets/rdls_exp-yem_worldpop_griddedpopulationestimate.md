@@ -60,7 +60,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Subnational population estimates from UN COD-PS (2019, 2023, 2024)
     were spatially disaggregated to ~100m gridded resolution using WorldPop methodology,

@@ -31,7 +31,7 @@ details: The model structure treats the months with missing displacement data as
   that contain gaps and missing information.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Official IDP counts from IOM and UNHCR are integrated into a Bayesian
     state-space model (AHEAD) to generate probabilistic forecasts of displacement

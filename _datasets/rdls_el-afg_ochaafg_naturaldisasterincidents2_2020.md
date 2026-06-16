@@ -91,7 +91,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event natural disaster incident data compiled from direct field
     assessments conducted by OCHA, ANDMA, IOM, Red Crescent Societies, national and

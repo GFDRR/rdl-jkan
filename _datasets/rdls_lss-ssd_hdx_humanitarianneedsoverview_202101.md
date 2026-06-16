@@ -26,7 +26,7 @@ description: 'South Sudan Humanitarian needs overview for 2021. This data has be
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The Humanitarian Needs Overview (HNO) for South Sudan 2021 was compiled
     by OCHA South Sudan through sample survey methodology to assess humanitarian needs

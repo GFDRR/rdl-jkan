@@ -57,7 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: MODIS Aqua and Terra 16-day composite NDVI products (MYD13C1 and MOD13C1)
     were synthesized into 8-day dekadal composites and aggregated to WFP-defined subnational

@@ -52,7 +52,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "WorldPop Global 2015-2030 R2025A version integrates multiple demographic\
     \ data sources to produce gridded population estimates disaggregated by age and\

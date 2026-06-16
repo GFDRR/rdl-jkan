@@ -53,7 +53,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: WorldPop gridded population density dataset derived from census data
     and geospatial modeling techniques. Population counts are estimated at 30 arc-second

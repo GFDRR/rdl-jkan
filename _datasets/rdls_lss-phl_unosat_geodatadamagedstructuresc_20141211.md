@@ -31,7 +31,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired on 27 May 2014
     (pre-event) with imagery from 09 December 2014 (post-event) to identify structural

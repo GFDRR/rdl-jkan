@@ -40,7 +40,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Road network data sourced from the Government of Eritrea and compiled
     by OCHA ROSEA at 1:1,000,000 scale. The dataset represents the spatial inventory

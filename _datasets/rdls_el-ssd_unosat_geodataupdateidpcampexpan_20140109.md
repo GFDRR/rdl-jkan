@@ -49,7 +49,7 @@ exposure:
       quantity_kind: area
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared multi-temporal satellite imagery (WorldView-2
     and Pleiades) acquired on 20 December 2013, 28 December 2013, and 7 January 2014

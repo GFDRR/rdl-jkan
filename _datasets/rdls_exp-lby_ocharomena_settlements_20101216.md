@@ -42,7 +42,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset comprises a curated inventory of 798 populated settlements
     in Libya sourced from the National Geospatial-Intelligence Agency (NGA). The data

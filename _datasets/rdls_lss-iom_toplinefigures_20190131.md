@@ -18,7 +18,7 @@ description: 'Topline figures dataset for IOM organisation page. [Source: This m
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM compiles topline displacement figures from its global field presence
     and partner networks, aggregating internally displaced persons counts and related

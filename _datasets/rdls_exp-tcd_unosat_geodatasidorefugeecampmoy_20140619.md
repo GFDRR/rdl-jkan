@@ -64,7 +64,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared WorldView-1 and WorldView-2 satellite
     imagery from 29 January 2014 and 13 June 2014 to detect changes in refugee settlement

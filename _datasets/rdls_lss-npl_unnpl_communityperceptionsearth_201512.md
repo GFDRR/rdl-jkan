@@ -36,7 +36,7 @@ description: 'Round 6 of monthly Community Perception Survey of 1400 respondents
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Monthly community perception surveys of 1,400 respondents across 14
     earthquake-affected districts in Nepal, conducted by Accountability Lab and Local

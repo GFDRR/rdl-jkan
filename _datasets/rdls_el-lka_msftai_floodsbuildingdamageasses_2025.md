@@ -42,7 +42,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Planet satellite imagery of Colombo, Sri Lanka was acquired around
     the flood event and processed through Microsoft AI for Good Lab's damage assessment

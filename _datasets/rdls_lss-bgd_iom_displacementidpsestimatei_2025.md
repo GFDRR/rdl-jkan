@@ -47,7 +47,7 @@ description: 'Bangladesh is highly vulnerable to recurrent natural hazards inclu
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted nationwide displacement tracking surveys across Bangladesh
     administrative divisions (Division, District, Upazila) to estimate the total number

@@ -31,7 +31,7 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared pre- and post-event satellite imagery (GeoEye-1
     and Pleiades) acquired on 20-21 December 2021 to detect structural damage in Talisay

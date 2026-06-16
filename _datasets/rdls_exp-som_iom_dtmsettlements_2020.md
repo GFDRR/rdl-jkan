@@ -57,7 +57,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM Baseline 2 conducted settlement-level surveys across Somalia
     to enumerate population presence and displacement characteristics. GPS coordinates

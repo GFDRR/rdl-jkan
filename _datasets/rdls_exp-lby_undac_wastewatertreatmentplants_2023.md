@@ -40,7 +40,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Wastewater treatment plant locations in East Libya were identified
     and mapped using satellite imagery from Maxar and Bing, compiled into a GeoJSON

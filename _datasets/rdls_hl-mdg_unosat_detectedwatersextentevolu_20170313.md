@@ -52,7 +52,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed TerraSAR-X synthetic aperture radar (SAR)
     imagery from 8 and 10 March 2017 to detect and map flood water extent in the Maroantsetra

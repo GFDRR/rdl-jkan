@@ -22,7 +22,7 @@ description: 'Data collated by UNHCR, containing information about forcibly disp
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNHCR collates forcibly displaced population statistics from government
     sources and its own registration systems, compiling end-year stock figures, demographic

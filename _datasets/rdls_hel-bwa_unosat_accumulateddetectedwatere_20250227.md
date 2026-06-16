@@ -86,7 +86,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed Planet and Pleiades satellite imagery acquired\
     \ 23-25 February 2025 over Gaborone, South East District, and Kgatleng Districts,\

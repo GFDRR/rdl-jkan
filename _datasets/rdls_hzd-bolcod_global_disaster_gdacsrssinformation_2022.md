@@ -93,7 +93,7 @@ hazard:
     id: es_volcanic
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: GDACS integrates multiple hazard detection systems (automatic for seismic
     and cyclone events, manual for floods and volcanoes) to generate real-time alert

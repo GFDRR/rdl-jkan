@@ -18,7 +18,7 @@ description: 'Chad Near Term Projection FEWS NET Acute Food Insecurity Classific
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IPC classification data were collected by FEWS NET enumerators on a
     monthly schedule throughout 2016 and spatially mapped to administrative units

@@ -42,7 +42,7 @@ description: 'This datasets has IDPs, Household & Returnees data at Admin3 level
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted repeated baseline assessments (45 rounds) across
     Libya at Admin3 administrative level to track internally displaced persons and

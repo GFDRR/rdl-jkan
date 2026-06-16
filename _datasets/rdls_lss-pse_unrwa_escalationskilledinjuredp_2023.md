@@ -35,7 +35,7 @@ description: 'Dataset containing data on killed & injured Persons in Gaza.. [Sou
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Casualty data collected through direct observation and anecdotal reporting
     by the Ministry of Health in Gaza and compiled by UNRWA. Records document killed

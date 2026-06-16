@@ -29,7 +29,7 @@ description: 'Tropical Cyclone Idai made landfall in central Mozambique the nigh
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted standardized site assessments in 32 evacuation sites
     in Beira district, Sofala province following Tropical Cyclone Idai landfall on

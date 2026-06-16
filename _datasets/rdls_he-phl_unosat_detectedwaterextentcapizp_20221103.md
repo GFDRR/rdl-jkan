@@ -80,7 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: Satellite-detected water extent was derived from Sentinel-1 SAR imagery
     acquired on 2 November 2022 through visual analysis and change detection comparing

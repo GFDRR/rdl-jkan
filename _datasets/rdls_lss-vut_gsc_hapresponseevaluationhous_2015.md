@@ -35,7 +35,7 @@ details: The overall confidence level of 90% and the margin of error of 10% corr
   only be considered as indicative.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Baseline assessment team conducted a sample survey-based household
     evaluation in August 2015 following completion of shelter cluster emergency response

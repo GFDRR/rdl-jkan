@@ -66,7 +66,7 @@ details: HDX HAPI is refreshed daily, but the source datasets may have different
   specific update frequency.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: HDX HAPI aggregates standardized humanitarian indicators from multiple
     UN and international organizations (ACLED, INFORM, IOM, FTS, UNFPA, UNHCR) into

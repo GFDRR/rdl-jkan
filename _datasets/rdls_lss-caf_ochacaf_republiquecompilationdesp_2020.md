@@ -27,7 +27,7 @@ description: "Ce jeu de donn\xE9es, valid\xE9 par la commission des mouvements d
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Population movement data collected and maintained by the Commission
     des Mouvements de Population (CMP) in Central African Republic, compiled monthly

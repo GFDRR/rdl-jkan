@@ -54,7 +54,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Machine learning algorithms identified building footprints from commercial
     satellite imagery across Cameroon. Population estimates derived from publicly

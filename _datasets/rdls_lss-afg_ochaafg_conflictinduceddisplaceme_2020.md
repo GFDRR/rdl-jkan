@@ -28,7 +28,7 @@ description: 'Newly displaced population due to conflict between 01 January 2020
 details: The dataset is a snapshot as of 23 February 2021.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Newly displaced population counts were compiled by OCHA Afghanistan
     sub offices based on inter-agency assessment results conducted throughout 2020,

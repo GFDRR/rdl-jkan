@@ -50,7 +50,7 @@ details: 'Fore more information and API access, visit: https://data-in-emergenci
   Questionnaires used for data collection available [here](https://data-in-emergencies.fao.org/search?tags=household%20survey%20questionnaire''here'').'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: FAO DIEM collects primary household survey data from agricultural producers
     in 26 food crisis countries through Computer-Assisted Telephone Interviews and

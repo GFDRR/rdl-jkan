@@ -69,7 +69,7 @@ description: 'HDX Signals monitors key datasets and generates automated emails w
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: HDX Signals is an automated monitoring system that ingests multiple
     humanitarian and disaster-related datasets (ACLED, IDMC, IPC, JRC, WFP, WHO, ACAPS

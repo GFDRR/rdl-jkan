@@ -19,7 +19,7 @@ description: 'This is the 2022 multisector needs analysis data (MSNA) - a compre
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Household-level survey data collected by IOM across all Sudanese states
     using DTM (Displacement Tracking Matrix) standard methodology. The assessment

@@ -25,7 +25,7 @@ description: 'Desastres naturales en Colombia, fuentes OCHA y UNGRD. [Source: Th
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event disaster impact data compiled from direct observational
     records and anecdotal reports by the National Unit for Disaster Risk Management

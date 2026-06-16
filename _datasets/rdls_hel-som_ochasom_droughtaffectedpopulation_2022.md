@@ -63,7 +63,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Dataset aggregates drought impact data from multiple humanitarian sources
     (OCHA, IPC, FSNAU) combining observed population displacement, food security classifications,

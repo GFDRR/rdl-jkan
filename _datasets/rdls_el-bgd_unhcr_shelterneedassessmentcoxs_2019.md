@@ -51,7 +51,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: UNHCR technical staff conducted a complete enumeration shelter condition
     assessment in Cox's Bazar refugee camps in 2019 to identify shelter damage and

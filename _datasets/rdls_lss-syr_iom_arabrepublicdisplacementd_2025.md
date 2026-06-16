@@ -32,7 +32,7 @@ description: 'The Displacement Tracking Matrix (DTM) is a suite of methodologica
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: DTM Syria collected primary data on population movements through baseline
     assessments conducted monthly from February to October 2025, following the rapid

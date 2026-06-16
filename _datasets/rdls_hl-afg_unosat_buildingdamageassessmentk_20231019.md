@@ -55,7 +55,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts compared Pl\xE9iades NEO satellite imagery acquired\
     \ on 16 October 2023 (one day post-earthquake) with reference imagery to identify\

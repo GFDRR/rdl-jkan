@@ -27,7 +27,7 @@ description: 'DTM''s Displacement Tracking tool collects and reports on displace
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM field teams conduct weekly assessments across Yemen governorates
     to track internally displaced and returnee households, recording displacement

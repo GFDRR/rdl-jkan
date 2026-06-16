@@ -41,7 +41,7 @@ description: 'Idleb governorate and the surrounding opposition-held areas of wes
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Sample survey methodology conducted by REACH Initiative in August 2018
     across Idleb governorate and opposition-held areas of western Aleppo and north-western

@@ -18,7 +18,7 @@ description: 'Displacement Tracking Matrix (DTM) Dominica- Hurricane Maria Respo
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducted direct observational site assessments across multiple
     rounds (1, 3, 4) following Hurricane Maria in Dominica, collecting displacement

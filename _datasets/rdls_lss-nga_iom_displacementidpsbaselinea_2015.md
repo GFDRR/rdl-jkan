@@ -31,7 +31,7 @@ description: 'Data set has IDPs, Households, geographic locations and reasons of
 details: Round 43 is the latest Assessment as of 24 May 2024.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM DTM conducts systematic field assessments of IDP populations across
     Nigeria using standardized methodology, collecting household and individual counts,

@@ -25,7 +25,7 @@ description: 'Drought affected areas and population in Kenya. [Source: This meta
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Drought-affected population data compiled from humanitarian partners
     operating in Kenya, aggregated by geographic location to track affected populations,

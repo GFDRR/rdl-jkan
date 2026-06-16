@@ -25,7 +25,7 @@ description: 'Floods damages assessment in Senegal in 2009. The Excel file repre
 details: '**Languages:** EN'
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: Post-event damage assessment conducted by the World Bank documenting
     direct building damages from the 2009 flood event in Senegal. The dataset aggregates

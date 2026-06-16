@@ -52,7 +52,7 @@ exposure:
       quantity_kind: length
       unit: null
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: The dataset represents a comprehensive census-based inventory of Mexico's
     national road network modeled in detail and structured according to ISO 14825:2011

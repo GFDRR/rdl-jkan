@@ -27,7 +27,7 @@ details: Preliminary Assessment. Data is frequently updated. Please refer to the
   of the datasets to identify the latest information.
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: IOM conducted direct observational assessments of displacement sites
     across Nepal following the 2015 earthquake, collecting data through 5 rounds of

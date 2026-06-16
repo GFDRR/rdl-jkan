@@ -48,7 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: "UNOSAT analysts processed Radarsat RCM-3 imagery acquired on 11 and\
     \ 22 November 2023 and Worldview-2 imagery from 22 November 2023 to detect surface\

@@ -39,7 +39,7 @@ description: "This resource provides important information about individuals who
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Twitter data was collected during the 2023 T\xFCrkiye-Syria earthquake\
     \ using AIDR (Artificial Intelligence for Disaster Response) system with earthquake-related\

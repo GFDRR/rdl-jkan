@@ -27,7 +27,7 @@ description: 'Action on Armed Violence (AOAV) monitors casualties from the use o
 details: null
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: AOAV systematically monitors English-language news media to identify
     and record incidents involving explosive weapons globally. Casualty data (deaths,

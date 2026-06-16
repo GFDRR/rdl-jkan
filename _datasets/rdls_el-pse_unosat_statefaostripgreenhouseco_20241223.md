@@ -72,7 +72,7 @@ exposure:
       quantity_kind: count
       unit: count
 hazard: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared satellite imagery acquired on 3 and 23 December
     2024 against baseline images from August 2023 through April 2024 to identify and

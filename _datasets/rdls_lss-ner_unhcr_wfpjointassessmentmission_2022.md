@@ -34,7 +34,7 @@ description: "In 2022, Niger totalled more than 700.000 displaced population of 
 details: The data must be requested via the resource download link
 exposure: []
 hazard: null
-license: https://creativecommons.org/licenses/by/4.0/
+license: CC-BY-4.0
 lineage:
   description: "Sample survey data collected from 4,600+ households across four regions\
     \ of Niger (Diffa, Maradi, Tahoua, Tillab\xE9ri) through face-to-face interviews\

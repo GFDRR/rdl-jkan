@@ -71,7 +71,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
-license: https://creativecommons.org/licenses/by-sa/4.0/
+license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT integrated USGS ground shake data from the Mw 8.1 Pijijiapan
     earthquake with WorldPop gridded population data to produce a population exposure
