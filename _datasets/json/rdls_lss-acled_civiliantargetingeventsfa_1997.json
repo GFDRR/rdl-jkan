@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-acled_civiliantargetingeventsfa_1997",
+      "title": "Civilian Targeting Events and Fatalities",
+      "description": "A weekly dataset providing the total number of reported civilian targeting events and fatalities broken down by country. Civilian targeting events include violence against civilians events and explosions/remote violence events in which civilians were directly targeted. Note: These are aggregated data files organized by country-year and country-month. To access full event data, please register to use the Data Export Tool and API on the ACLED website.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/civilian-targeting-events-and-fatalities]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Armed Conflict Location & Event Data Project (ACLED)",
+        "url": "https://data.humdata.org/dataset/civilian-targeting-events-and-fatalities"
+      },
+      "creator": {
+        "name": "Armed Conflict Location & Event Data Project (ACLED)",
+        "url": "https://data.humdata.org/dataset/civilian-targeting-events-and-fatalities"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "1997-01-01",
+        "end": "2026-01-23"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "ACLED collects and codes conflict event data from multiple open sources including news reports, NGO databases, and government records. Civilian targeting events are identified and filtered according to ACLED's codebook definitions. Fatality counts are derived from source reporting and aggregated by country and temporal period (weekly, monthly, annual) to produce this summary dataset.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Armed Conflict Location & Event Data Project (ACLED)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Event-based dataset documenting civilian targeting events and associated fatalities aggregated by country and time period. Provides weekly, monthly, and annual summaries of violence against civilians and explosions/remote violence incidents."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://acleddata.com/download/2827"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://acleddata.com/acleddatanew/wp-content/uploads/dlm_uploads/2020/02/FAQs_-ACLED-Fatality-Methodology_2020.pdf"
+        },
+        {
+          "id": "reference_3",
+          "name": "Methodology documentation",
+          "url": "https://acleddata.com/acleddatanew/wp-content/uploads/dlm_uploads/2020/02/FAQs_ACLED-Sourcing-Methodology.pdf"
+        },
+        {
+          "id": "reference_4",
+          "name": "Methodology documentation",
+          "url": "https://acleddata.com/download/4404/"
+        },
+        {
+          "id": "reference_5",
+          "name": "Methodology documentation",
+          "url": "https://acleddata.com/resources/general-guides/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_fb139931",
+          "title": "civilian-targeting-events-and-fatalities_as-of-2026-01-23.xlsx",
+          "description": "A weekly dataset providing the total number of reported civilian targeting events and fatalities broken down by country and month. Civilian targeting events include violence against civilians events and explosions/remote violence events in which civilians were directly targeted.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/921fe117-7158-437b-943d-94969d545362/resource/fb139931-641f-4428-be77-429972878e19/download/civilian-targeting-events-and-fatalities.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct fatalities from civilian targeting events including violence against civilians and explosions"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Count of civilian targeting events where civilians were directly targeted"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/civilian-targeting-events-and-fatalities",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

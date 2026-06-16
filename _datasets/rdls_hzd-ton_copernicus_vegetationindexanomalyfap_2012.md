@@ -1,0 +1,378 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: European Commission, Joint Research Centre (JRC)
+    url: https://data.humdata.org/dataset/ton-anomalies-fapar-viirs
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/ton-anomalies-fapar-viirs
+creator:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/ton-anomalies-fapar-viirs
+dataset_id: rdls_hzd-ton_copernicus_vegetationindexanomalyfap_2012
+description: 'Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) is
+  a biophysical dimensionless quantity (its values range from 0/no absorption to 1/total
+  absorption) used to assess the greenness and health of vegetation. FAPAR anomalies
+  can be used as an indicator to detect and monitor the impacts of agricultural drought
+  on the growth and productivity of vegetation. The data is presented in 10-day time
+  composite of the Visible Infrared Imaging Radiometer Suite (VIIRS).. [Source: This
+  metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/ton-anomalies-fapar-viirs]'
+details: Variations in the vegetation health and/or cover could be related to stress
+  factors not related to droughts (e.g., plant diseases, pests, hail, flooding). To
+  determine if changes in FAPAR are linked with a drought event or not, FAPAR data
+  should be interpreted jointly with other indicators (as in the EDO Combined Drought
+  Indicator).
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    drought:
+    - analysis_type: empirical
+      calculation_method: observed
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: FAPAR:-
+        process: agricultural_drought
+        trigger: null
+        type: drought
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: FAPAR values from VIIRS satellite observations are collected in 10-day
+    composites and processed by JRC to calculate anomalies as deviations from long-term
+    mean values (baseline 2012 to last full year) at each grid cell. The resulting
+    raster datasets are distributed as GeoTIFF files spanning 2012-2026 for Tonga
+    to enable detection and monitoring of agricultural drought impacts on vegetation
+    growth and productivity.
+  sources:
+  - id: source_1
+    license: null
+    name: European Commission, Joint Research Centre (JRC)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+  - id: source_2
+    license: null
+    name: Copernicus
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/ton-anomalies-fapar-viirs
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://drought.emergency.copernicus.eu/data/factsheets/factsheet_fapar_viirs.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2026-01-01 to 2026-01-10)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/327fc49c-32d0-40b6-89bf-de83eed04809/download/ton_fpanv_m_gdo_20260101_20260101_t.zip
+  format: null
+  id: resource_327fc49c
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20260101_20260101_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2025-01-01 to 2025-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/27283f5f-af41-4ba4-ade5-2421dffe9a44/download/ton_fpanv_m_gdo_20250101_20251221_t.zip
+  format: null
+  id: resource_27283f5f
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20250101_20251221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2024-01-01 to 2024-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/be6f284e-e135-437e-aae3-60d6195019d7/download/ton_fpanv_m_gdo_20240101_20241221_t.zip
+  format: null
+  id: resource_be6f284e
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20240101_20241221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2023-01-01 to 2023-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/1e33c4e4-13bb-4d9c-a1f8-e9faf3358b26/download/ton_fpanv_m_gdo_20230101_20231221_t.zip
+  format: null
+  id: resource_1e33c4e4
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20230101_20231221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2022-01-01 to 2022-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/3f32e024-f06d-4292-8e00-3ca720f9b547/download/ton_fpanv_m_gdo_20220101_20221221_t.zip
+  format: null
+  id: resource_3f32e024
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20220101_20221221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2021-01-01 to 2021-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/c36c3b9e-ebfb-460e-89c5-e5ff238cfab7/download/ton_fpanv_m_gdo_20210101_20211221_t.zip
+  format: null
+  id: resource_c36c3b9e
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20210101_20211221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2020-01-01 to 2020-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/9892cf1e-e3cc-4cc9-b9c4-9b87fb9298db/download/ton_fpanv_m_gdo_20200101_20201221_t.zip
+  format: null
+  id: resource_9892cf1e
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20200101_20201221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2019-01-01 to 2019-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/c419cf31-2f69-4418-adf4-373293070632/download/ton_fpanv_m_gdo_20190101_20191221_t.zip
+  format: null
+  id: resource_c419cf31
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20190101_20191221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2018-01-01 to 2018-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/0a262507-93ea-44f6-8f44-6207fc614da4/download/ton_fpanv_m_gdo_20180101_20181221_t.zip
+  format: null
+  id: resource_0a262507
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20180101_20181221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2017-01-01 to 2017-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/3ca1a1cf-bedd-43a6-8932-e8289f7d0763/download/ton_fpanv_m_gdo_20170101_20171221_t.zip
+  format: null
+  id: resource_3ca1a1cf
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20170101_20171221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2016-01-01 to 2016-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/09351e6e-cf6f-4958-9047-4dccf6c6a27d/download/ton_fpanv_m_gdo_20160101_20161221_t.zip
+  format: null
+  id: resource_09351e6e
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20160101_20161221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2015-01-01 to 2015-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/f21d2050-0817-4845-bd05-64a20b833f62/download/ton_fpanv_m_gdo_20150101_20151221_t.zip
+  format: null
+  id: resource_f21d2050
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20150101_20151221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2014-01-01 to 2014-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/8d8bd199-fbb5-4d63-921e-b7332b72d093/download/ton_fpanv_m_gdo_20140101_20141221_t.zip
+  format: null
+  id: resource_8d8bd199
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20140101_20141221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2013-01-01 to 2013-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/b37b8dd4-d828-45c4-b1ce-f2356bef6e3d/download/ton_fpanv_m_gdo_20130101_20131221_t.zip
+  format: null
+  id: resource_b37b8dd4
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20130101_20131221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly) (Data from
+    2012-01-21 to 2012-12-31)'
+  download_url: https://data.humdata.org/dataset/e3b9fb1b-282b-44ce-ac14-e11c3b44a5e2/resource/108c8c94-3679-411b-add4-953e847e2692/download/ton_fpanv_m_gdo_20120121_20121221_t.zip
+  format: null
+  id: resource_108c8c94
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: ton_fpanv_m_gdo_20120121_20121221_t.zip
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-ton_copernicus_vegetationindexanomalyfap_2012
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - TON
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2026-01-10'
+  start: '2012-01-21'
+temporal_resolution: null
+title: 'Tonga: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)'
+version: null
+vulnerability: null
+---

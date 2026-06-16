@@ -1,0 +1,161 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-afg_ochaafg_casualties_20181231",
+      "title": "Afghanistan - Casualties",
+      "description": "Total number of civilian casualties documented in each of Afghanistan's 34 provinces, the top three causes of civilian casualties in each province, and the percentage increase or decrease compared to 2017. For more, refer to the report from UNAMA. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/afghanistan-casualties]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Afghanistan",
+        "url": "https://data.humdata.org/dataset/afghanistan-casualties"
+      },
+      "creator": {
+        "name": "OCHA Afghanistan",
+        "url": "https://data.humdata.org/dataset/afghanistan-casualties"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2018-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNAMA (United Nations Assistance Mission in Afghanistan)",
+            "url": "https://data.humdata.org/dataset/afghanistan-casualties"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Civilian casualty data compiled by UNAMA from documented incidents across Afghanistan's 34 provinces in 2018, with causes of death classified and compared to 2017 baseline to track trends in conflict-related and disaster-related mortality.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNAMA (United Nations Assistance Mission in Afghanistan)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Documented civilian casualty records aggregated by province with year-on-year comparison and leading causes of death."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.af.one.un.org/wp-content/uploads/2019/02/afghanistan_protection_of_civilians_annual_report_2018_final_24_feb_2019_v3.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_cd02b8df",
+          "title": "afg_casualties_2018.xlsx",
+          "description": "Afghanistan - Casualties (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/69c1139c-4a4c-4c39-8af9-b57a20739f6b/resource/cd02b8df-2cb9-4ca2-abba-ff73f31615a6/download/afg_casualties_2018.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Civilian fatalities from convective storms (one of top three causes)"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Civilian fatalities from earthquakes (one of top three causes)"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "death",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Civilian fatalities from strong winds (one of top three causes)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/afghanistan-casualties",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

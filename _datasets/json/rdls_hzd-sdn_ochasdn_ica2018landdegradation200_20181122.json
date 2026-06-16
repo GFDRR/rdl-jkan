@@ -1,0 +1,152 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-sdn_ochasdn_ica2018landdegradation200_20181122",
+      "title": "ICA Sudan, 2018 - Land Degradation, 2001-2013",
+      "description": "This layer contains information about the land degradation phenomenon - by second-level administrative area - observed for the purposes of the Integrated Context Analysis (ICA) run in Sudan in 2018. Data sources: HQ OSEP GIS Analysis of NASA MODIS 2001-2012, WorldClim 1970-2000, FAO and NASA SRTM Digital Elevation Model data. The main indicators used for the analysis were the average ecological changes observed between 2001-2005 and 2009-2013 and the percentage of erosion-prone surface.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "https://geonode.wfp.org/layers/geonode%3Asdn_ica_landdegradation_geonode_20180201",
+      "contact_point": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013"
+      },
+      "creator": {
+        "name": "OCHA Sudan",
+        "url": "https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SDN"
+        ]
+      },
+      "temporal": {
+        "start": "2018-11-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "NASA MODIS 2001-2012",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "WorldClim 1970-2000",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_3",
+          "entity": {
+            "name": "FAO and NASA SRTM Digital Elevation Model",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_4",
+          "entity": {
+            "name": "HQ OSEP GIS Analysis",
+            "url": "https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Multi-source satellite and topographic data (MODIS 2001-2012, WorldClim, SRTM DEM) were integrated through HQ OSEP GIS analysis to quantify ecological changes between two 5-year periods (2001-2005 vs 2009-2013) and identify erosion-prone surfaces. Results were aggregated and classified at second-level administrative boundaries to produce a land degradation hazard assessment for the 2018 Sudan Integrated Context Analysis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "NASA MODIS 2001-2012",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-derived vegetation and ecological change observations used to quantify mean ecological changes between 2001-2005 and 2009-2013 periods"
+          },
+          {
+            "id": "source_2",
+            "name": "WorldClim 1970-2000",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Climate data used as contextual input for land degradation analysis"
+          },
+          {
+            "id": "source_3",
+            "name": "FAO and NASA SRTM Digital Elevation Model",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Topographic data used to support erosion-prone surface identification and analysis"
+          },
+          {
+            "id": "source_4",
+            "name": "HQ OSEP GIS Analysis",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Integrated geospatial analysis methodology combining multiple data sources to derive land degradation indicators and erosion susceptibility classifications"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3ec6a277",
+          "title": "ICA Sudan, 2018 - Land Degradation, 2001-2013",
+          "description": "This layer contains information about the land degradation phenomenon - by second-level administrative area - observed for the purposes of the Integrated Context Analysis (ICA) run in Sudan in 2018. Data sources: HQ OSEP GIS Analysis of NASA MODIS 2001-2012, WorldClim 1970-2000, FAO and NASA SRTM Digital Elevation Model data. The main indicators used for the analysis were the average ecological changes observed between 2001-2005 and 2009-2013 and the percentage of erosion-prone surface.",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Asdn_ica_landdegradation_geonode_20180201&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/vnd.shp"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "erosion",
+                "process": "soil_erosion",
+                "intensity_measure": "Er:T/ha"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ica-sudan-2018-land-degradation-2001-2013",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

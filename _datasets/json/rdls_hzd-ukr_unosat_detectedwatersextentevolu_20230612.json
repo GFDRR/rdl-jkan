@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-ukr_unosat_detectedwatersextentevolu_20230612",
+      "title": "Satellite Detected Waters Extent and Evolution over Khersonska Oblast in Ukraine as of 09 June 2023",
+      "description": "UNOSAT code FL20230606UKR This map illustrates satellite-detected surface waters evolution using Sentinel-1 images acquired on the 09th of June 2023 at 15:36 UTC and compared with surface waters extracted using ICEYE acquired on the 07th of June 2023 compared with a pre-flood water extracted using a Sentinel-2 images acquired on the 03rd and the 05th of June 2023. Within the analysed area of 500 km², surface waters appear to have receded by about 14 km². This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/waters-extent-and-evolution-over-khersonska-oblast-in-ukraine-as-of-09-june-2023]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/waters-extent-and-evolution-over-khersonska-oblast-in-ukraine-as-of-09-june-2023"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/waters-extent-and-evolution-over-khersonska-oblast-in-ukraine-as-of-09-june-2023"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "UKR"
+        ]
+      },
+      "temporal": {
+        "start": "2023-06-12"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/waters-extent-and-evolution-over-khersonska-oblast-in-ukraine-as-of-09-june-2023"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Multi-temporal satellite imagery (Sentinel-1 SAR on 09 June 2023, ICEYE SAR on 07 June 2023, and Sentinel-2 optical on 03-05 June 2023) was analyzed by UNOSAT to detect surface water extent evolution. Pre-flood baseline water bodies were compared with post-event imagery to quantify water extent changes, resulting in vector geodatabase and shapefile outputs of detected water bodies and their spatial extent.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using Sentinel-1, ICEYE, and Sentinel-2 to detect and map surface water extent changes during the June 2023 flood event in Ukraine"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_83f726d1",
+          "title": "FL20230606UKR_gdb.zip",
+          "description": "Satellite Detected Waters Extent and Evolution over Khersonska Oblast in Ukraine as of 09 June 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3618/FL20230606UKR_gdb.zip"
+        },
+        {
+          "id": "resource_7f9f1754",
+          "title": "FL20230606UKR_SHP.zip",
+          "description": "Satellite Detected Waters Extent and Evolution over Khersonska Oblast in Ukraine as of 09 June 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3618/FL20230606UKR_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/waters-extent-and-evolution-over-khersonska-oblast-in-ukraine-as-of-09-june-2023",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
