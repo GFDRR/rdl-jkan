@@ -516,6 +516,7 @@
               "analysis_details": "Depth-damage vulnerability functions defining damage ratio as a function of water depth (0-6m at 9 discrete levels: 0, 0.5, 1, 1.5, 2, 3, 4, 5, 6m) for 7,354 building typologies classified by lateral resistance system (Adb, BrCfl, BrCri, BrM, Rci, S), code level (LC, MC, HC), storeys, and occupancy type. Includes special industrial types (SteelIndustrial). Functions based on consultation with local partners and JRC global flood depth-damage database.",
               "id": "vulnerability_function_flood_buildings",
               "hazard_primary": {
+                "id": "hazard_flood",
                 "type": "flood",
                 "process": "pluvial_flood",
                 "intensity_measure": "wd:m"
@@ -540,6 +541,7 @@
               "analysis_details": "Landslide fragility functions for 20 typologies across 3 susceptibility levels (low, medium, high), providing probability of minor, moderate, and severe damage. Building typologies: Adb+LC/MC/HC, BrM+LC/MC/HC, BrCfl+LC/MC/HC, BrCri+LC/MC/HC, Rci+LC/MC/HC, S+LC/MC/HC. Infrastructure: LSS1 (substations), roads. Total 60 entries (20 typologies × 3 susceptibility levels).",
               "id": "fragility_function_landslide_buildings",
               "hazard_primary": {
+                "id": "hazard_landslide",
                 "type": "landslide",
                 "process": "landslide_general",
                 "intensity_measure": "LSI:-"
@@ -562,6 +564,7 @@
               "analysis_details": "HAZUS-based vulnerability functions for power network infrastructure (HazusSS for substations) under flood loading.",
               "id": "fragility_function_flood_power",
               "hazard_primary": {
+                "id": "hazard_flood",
                 "type": "flood",
                 "process": "pluvial_flood",
                 "intensity_measure": "wd:m"
@@ -625,6 +628,7 @@
             "description": "Building damage state results from flood impact assessment for each community planning scenario (Elderly, Leaders, Residents, Youth) and both flood scenarios. Damage states (DS0=undamaged, DS1=damaged) derived by applying depth-damage vulnerability functions to flood water depth hazard.",
             "id": "loss_flood_buildings",
             "hazard": {
+              "id": "hazard_flood",
               "type": "flood",
               "process": "pluvial_flood",
               "intensity_measure": "wd:m"
@@ -649,6 +653,7 @@
             "description": "Casualty results from flood impact assessment for each community planning scenario, derived from building inundation and residential occupancy.",
             "id": "loss_flood_casualties",
             "hazard": {
+              "id": "hazard_flood",
               "type": "flood",
               "process": "pluvial_flood",
               "intensity_measure": "wd:m"
@@ -673,6 +678,7 @@
             "description": "Road network damage state results from flood impact assessment, with road edges flagged as damaged/undamaged based on flood inundation.",
             "id": "loss_flood_infrastructure",
             "hazard": {
+              "id": "hazard_flood",
               "type": "flood",
               "process": "pluvial_flood",
               "intensity_measure": "wd:m"
@@ -697,6 +703,7 @@
             "description": "Hospital accessibility and power availability impacts from flood, derived from road network connectivity analysis (road edges damaged by flooding) and power network assessment. Each building has hospital_access and has_power boolean attributes.",
             "id": "loss_flood_indirect",
             "hazard": {
+              "id": "hazard_flood",
               "type": "flood",
               "process": "pluvial_flood",
               "intensity_measure": "wd:m"

@@ -25,29 +25,33 @@ creator:
   email: support@tomorrowscities.org
   name: Tomorrow's Cities
   url: https://data.tomorrowscities.org/
-dataset_id: rdls_hevl-bgd_tmrwcities_chattogram
-description: Multi-hazard risk data package for the Bairag area in Chattogram, Bangladesh,
-  providing earthquake and flood hazard layers, synthetic future urban exposure datasets
-  (buildings, households, individuals, land use, road networks) for four community
-  planning scenarios (Civil Society, Farmers/Fishermen, Informal Working, Landless),
-  vulnerability/fragility functions for buildings and infrastructure, and impact assessment
-  results. Developed as part of the Tomorrow's Cities GCRF Urban Disaster Risk Hub
-  project for risk-informed decision making in urban planning.
+dataset_id: rdls_hevl-bgd_tmrwcities_coxsbazar
+description: Multi-hazard risk data package for the Jaliya Palong area in Cox's Bazar,
+  Bangladesh, providing earthquake and flood hazard layers, synthetic future urban
+  exposure datasets (buildings, households, individuals, land use, road networks,
+  power networks) for four community planning scenarios (Civil Society, Informal Working,
+  Marginal, Women), vulnerability/fragility functions for buildings and infrastructure,
+  and impact assessment results including cascading infrastructure effects. Developed
+  as part of the Tomorrow's Cities GCRF Urban Disaster Risk Hub project for risk-informed
+  decision making in urban planning.
 details: 'The dataset includes: (i) earthquake hazard GeoTIFFs for two scenarios -
   Sc1 using NGA-West2 GMPEs (Abrahamson et al 2014, Boore et al 2014, Campbell & Bozorgnia
   2014, Chiou & Youngs 2014) representing active shallow crustal sources, and Sc2
   using subduction zone GMPEs (Atkinson & Boore, Zhao et al), each providing PGA and
   Spectral Acceleration at 0.3s, 0.7s, 1.0s periods in 32-bit and 64-bit precision
-  (48 rasters total); (ii) flood hazard rasters for riverine and pluvial (rainfall)
-  scenarios with water depth as intensity measure, plus NASADEM terrain; (iii) four
-  future exposure dataset variants representing different community planning scenarios,
-  each containing building footprints with structural taxonomy (lateral resistance
-  system, code level, storeys, occupancy), household socio-economic attributes, individual
-  demographic data, land use plans, and road network topology; (iv) fragility functions
-  for earthquake (45 building typologies with 4 damage states) and depth-damage vulnerability
-  functions for flood (495 building typologies at 9 water depths); (v) infrastructure
-  fragility for roads (HAZUS HWB) and power networks (HAZUS ESS); and (vi) impact
-  results for earthquake and flood hazards by community scenario.'
+  (48 rasters total); (ii) probabilistic flood hazard rasters for 5, 10, 20, and 50-year
+  return periods with water depth as intensity measure, plus additional flood maps
+  and 1991 cyclone reference data; (iii) four future exposure dataset variants representing
+  different community planning scenarios, each containing building footprints with
+  structural taxonomy (including Steel buildings), household socio-economic attributes,
+  individual demographic data, land use plans, road network topology, and power network
+  infrastructure; (iv) fragility functions for earthquake (45 building typologies
+  with 4 damage states) and depth-damage vulnerability functions for flood (1,521
+  building typologies at 9 water depths); (v) infrastructure fragility for roads (HAZUS
+  HWB including HWB19) and power networks (HAZUS ESS with 18 classes); and (vi) comprehensive
+  impact results for earthquake and flood hazards by community scenario, including
+  building damage, casualties, road network disruption, and cascading effects on hospital
+  accessibility and power availability.'
 exposure:
 - asset_type:
     description: Building exposure classified using the GEM Global Exposure Database
@@ -120,6 +124,26 @@ exposure:
       quantity_kind: count
       unit: count
 - asset_type:
+    description: Electricity network nodes and edges derived from OpenStreetMap, classified
+      per GED4ALL infrastructure exposure framework
+    id: pwr-lin
+    scheme: GED4ALL
+    title: Infrastructure exposure - power grid
+    uri: https://wiki.openstreetmap.org/wiki/GED4ALL
+  category: infrastructure
+  id: exposure_infrastructure_power
+  metrics:
+  - dimension: structure
+    id: metric_power_node_count
+    measurement:
+      quantity_kind: count
+      unit: count
+  - dimension: structure
+    id: metric_power_edge_count
+    measurement:
+      quantity_kind: count
+      unit: count
+- asset_type:
     description: Urban land use classification areas classified per GED4ALL exposure
       framework
     id: land_use_zones
@@ -141,11 +165,12 @@ hazard:
     event_count: 2
     events:
     - calculation_method: simulated
-      description: 'Deterministic earthquake Scenario 1 (Sc1) for Bairag area using
-        NGA-West2 GMPEs for active shallow crustal sources: Abrahamson et al 2014
-        (ASK14), Boore et al 2014 (BSSA14), Campbell and Bozorgnia 2014 (CB14), Chiou
-        and Youngs 2014 (CY14). Provides PGA and Spectral Acceleration at 0.3s, 0.7s,
-        and 1.0s periods. Available in 32-bit and 64-bit precision.'
+      description: 'Deterministic earthquake Scenario 1 (Sc1) for Jaliya Palong area
+        using NGA-West2 GMPEs for active shallow crustal sources: Abrahamson et al
+        2014 (ASK14), Boore et al 2014 (BSSA14), Campbell and Bozorgnia 2014 (CB14),
+        Chiou and Youngs 2014 (CY14). Provides PGA and Spectral Acceleration at 0.3s,
+        0.7s, and 1.0s periods. Available in 32-bit and 64-bit precision. File prefix:
+        Jl_Mah_'
       disaster_identifiers: []
       hazard:
         classification: null
@@ -154,7 +179,7 @@ hazard:
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_earthquake_bairag_sc1
+      id: event_earthquake_jaliyapalong_sc1
       occurrence:
         deterministic:
           description: null
@@ -163,10 +188,10 @@ hazard:
         empirical: null
         probabilistic: null
     - calculation_method: simulated
-      description: 'Deterministic earthquake Scenario 2 (Sc2) for Bairag area using
-        subduction zone GMPEs: Atkinson and Boore, Zhao et al. Provides PGA and Spectral
-        Acceleration at 0.3s, 0.7s, and 1.0s periods. Available in 32-bit and 64-bit
-        precision.'
+      description: 'Deterministic earthquake Scenario 2 (Sc2) for Jaliya Palong area
+        using subduction zone GMPEs: Atkinson and Boore, Zhao et al. Provides PGA
+        and Spectral Acceleration at 0.3s, 0.7s, and 1.0s periods. Available in 32-bit
+        and 64-bit precision. File prefix: JL_Ram_'
       disaster_identifiers: []
       hazard:
         classification: null
@@ -175,7 +200,7 @@ hazard:
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_earthquake_bairag_sc2
+      id: event_earthquake_jaliyapalong_sc2
       occurrence:
         deterministic:
           description: null
@@ -191,16 +216,16 @@ hazard:
       process: ground_motion
       trigger: null
       type: earthquake
-    id: event_set_earthquake_bairag
+    id: event_set_earthquake_jaliyapalong
     occurrence_range: null
     seasonality: null
-  - analysis_type: deterministic
+  - analysis_type: probabilistic
     calculation_method: simulated
-    event_count: 2
+    event_count: 4
     events:
     - calculation_method: simulated
-      description: Riverine flood scenario for Bairag area providing maximum water
-        depth (m) from fluvial flooding simulation.
+      description: '5-year return period flood scenario for Jaliya Palong area providing
+        maximum water depth (m). File: 5RP.tif'
       disaster_identifiers: []
       hazard:
         classification: null
@@ -209,33 +234,71 @@ hazard:
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_flood_bairag_riverine
+      id: event_flood_jaliyapalong_5yr
       occurrence:
-        deterministic:
-          description: null
-          index_criteria: Scenario-based deterministic analysis
-          thresholds: null
+        deterministic: null
         empirical: null
-        probabilistic: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
     - calculation_method: simulated
-      description: Pluvial (rainfall-induced) flood scenario for Bairag area providing
-        maximum water depth (m) from surface water flooding simulation.
+      description: '10-year return period flood scenario for Jaliya Palong area providing
+        maximum water depth (m). File: 10RP.tif'
       disaster_identifiers: []
       hazard:
         classification: null
         id: hazard_flood
         intensity_measure: wd:m
-        process: pluvial_flood
+        process: fluvial_flood
         trigger: null
         type: flood
-      id: event_flood_bairag_pluvial
+      id: event_flood_jaliyapalong_10yr
       occurrence:
-        deterministic:
-          description: null
-          index_criteria: Scenario-based deterministic analysis
-          thresholds: null
+        deterministic: null
         empirical: null
-        probabilistic: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: '20-year return period flood scenario for Jaliya Palong area providing
+        maximum water depth (m). File: 20RP.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_jaliyapalong_20yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: '50-year return period flood scenario for Jaliya Palong area providing
+        maximum water depth (m). File: 50RP.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_jaliyapalong_50yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
     frequency_distribution: null
     hazards:
     - classification: null
@@ -244,13 +307,7 @@ hazard:
       process: fluvial_flood
       trigger: null
       type: flood
-    - classification: null
-      id: hazard_flood_pluvial_flood
-      intensity_measure: wd:m
-      process: pluvial_flood
-      trigger: null
-      type: flood
-    id: event_set_flood_bairag
+    id: event_set_flood_jaliyapalong
     occurrence_range: null
     seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
@@ -331,8 +388,8 @@ loss:
   - asset_category: buildings
     asset_dimension: structure
     description: Building damage state results from earthquake impact assessment for
-      each community planning scenario (Civil Society, Farmers/Fishermen, Informal
-      Working, Landless). Damage states derived by convolving spectral acceleration
+      each community planning scenario (Civil Society, Informal Working, Marginal,
+      Women). Damage states (DS1-DS4) derived by convolving spectral acceleration
       hazard with building fragility functions.
     disaster_identifiers: []
     hazard:
@@ -356,9 +413,9 @@ loss:
       loss_type: ground_up
   - asset_category: buildings
     asset_dimension: structure
-    description: Building damage ratio results from flood impact assessment for each
-      community planning scenario (Civil Society, Farmers/Fishermen, Informal Working,
-      Landless). Damage ratios derived by applying depth-damage vulnerability functions
+    description: Building damage state results from flood impact assessment for each
+      community planning scenario (Civil Society, Informal Working, Marginal, Women).
+      Damage states (DS0-DS1) derived by applying depth-damage vulnerability functions
       to flood water depth hazard.
     disaster_identifiers: []
     hazard:
@@ -372,19 +429,18 @@ loss:
     impact_and_losses:
       impact:
         measurement:
-          quantity_kind: dimensionless_ratio
+          quantity_kind: count
           unit: null
         metric: damage
         modelling: simulated
         type: direct
       loss_approach: analytical
-      loss_frequency_type: deterministic
+      loss_frequency_type: probabilistic
       loss_type: ground_up
   - asset_category: population
     asset_dimension: population
-    description: Affected population results from earthquake impact assessment for
-      each community planning scenario, derived from building damage states and residential
-      occupancy.
+    description: Casualty results from earthquake impact assessment for each community
+      planning scenario, derived from building damage states and residential occupancy.
     disaster_identifiers: []
     hazard:
       classification: null
@@ -393,13 +449,13 @@ loss:
       process: ground_motion
       trigger: null
       type: earthquake
-    id: loss_earthquake_population
+    id: loss_earthquake_casualties
     impact_and_losses:
       impact:
         measurement:
           quantity_kind: count
           unit: null
-        metric: displaced
+        metric: casualty_count
         modelling: simulated
         type: direct
       loss_approach: analytical
@@ -407,9 +463,8 @@ loss:
       loss_type: ground_up
   - asset_category: population
     asset_dimension: population
-    description: Affected population results from flood impact assessment for each
-      community planning scenario, derived from building inundation and residential
-      occupancy.
+    description: Casualty results from flood impact assessment for each community
+      planning scenario, derived from building inundation and residential occupancy.
     disaster_identifiers: []
     hazard:
       classification: null
@@ -418,17 +473,116 @@ loss:
       process: fluvial_flood
       trigger: null
       type: flood
-    id: loss_flood_population
+    id: loss_flood_casualties
     impact_and_losses:
       impact:
         measurement:
           quantity_kind: count
           unit: null
-        metric: displaced
+        metric: casualty_count
+        modelling: simulated
+        type: direct
+      loss_approach: analytical
+      loss_frequency_type: probabilistic
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: Road and power network damage state results from earthquake impact
+      assessment, including edge and node damage for both infrastructure types.
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_earthquake_infrastructure
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
         modelling: simulated
         type: direct
       loss_approach: analytical
       loss_frequency_type: deterministic
+      loss_type: ground_up
+  - asset_category: infrastructure
+    asset_dimension: structure
+    description: Road network damage state results from flood impact assessment, with
+      road edges flagged as damaged/undamaged based on flood inundation.
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_flood_infrastructure
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: damage
+        modelling: simulated
+        type: direct
+      loss_approach: analytical
+      loss_frequency_type: probabilistic
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: disruption
+    description: Hospital accessibility and power availability impacts from earthquake,
+      derived from road network connectivity analysis and power network damage assessment.
+      Each building has hospital_access and has_power boolean attributes.
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: loss_earthquake_indirect
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: downtime
+        modelling: simulated
+        type: indirect
+      loss_approach: analytical
+      loss_frequency_type: deterministic
+      loss_type: ground_up
+  - asset_category: population
+    asset_dimension: disruption
+    description: Hospital accessibility and power availability impacts from flood,
+      derived from road network connectivity analysis (road edges damaged by flooding)
+      and power network assessment. Flood causes significant road network disruption
+      reducing hospital accessibility.
+    disaster_identifiers: []
+    hazard:
+      classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: loss_flood_indirect
+    impact_and_losses:
+      impact:
+        measurement:
+          quantity_kind: count
+          unit: null
+        metric: downtime
+        modelling: simulated
+        type: indirect
+      loss_approach: analytical
+      loss_frequency_type: probabilistic
       loss_type: ground_up
 project:
   name: Tomorrow's Cities - GCRF Urban Disaster Risk Hub
@@ -439,7 +593,7 @@ publisher:
   name: Tomorrow's Cities
   url: https://data.tomorrowscities.org/
 purpose: To support multi-hazard risk assessment and risk-informed urban planning
-  decision making for Chattogram by providing spatial hazard, synthetic future exposure,
+  decision making for Cox's Bazar by providing spatial hazard, synthetic future exposure,
   vulnerability functions, and impact assessment datasets for participatory community
   planning scenarios.
 referenced_by:
@@ -491,7 +645,7 @@ referenced_by:
     risk assessment
   url: https://www.sciencedirect.com/science/article/pii/S2212420922005842
 resources:
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-multi-hazard-dataset
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-hazard-dataset
   baseline_period: null
   climate: null
   conforms_to: null
@@ -501,11 +655,13 @@ resources:
     2014, Campbell & Bozorgnia 2014, Chiou & Youngs 2014) for active shallow crustal
     sources, and Sc2 using subduction zone GMPEs (Atkinson & Boore, Zhao et al), each
     providing PGA and SA at 0.3s, 0.7s, 1.0s periods in 32-bit and 64-bit precision
-    (48 rasters total); (2) Flood hazard rasters for riverine and pluvial scenarios
-    with water depth; (3) Terrain DEM from NASADEM; (4) Vulnerability/fragility functions
-    for buildings, roads, and power networks. Data formats: GeoTIFF for hazard rasters,
-    Shapefile for vector flood data, Excel (XLSX) for vulnerability/fragility functions.'
-  download_url: https://data.tomorrowscities.org/dataset/91fb3483-5f0b-4eba-8815-59c3abd30889/resource/c40ab1c3-07e4-4bb3-bd9d-6fbf1f7653cb/download/chattogrammultihazarddataset.zip
+    (48 rasters total); (2) Probabilistic flood hazard rasters for 5, 10, 20, 50-year
+    return periods with water depth, plus additional flood maps and 1991 cyclone reference;
+    (3) Vulnerability/fragility functions for buildings (45 earthquake, 1521 flood
+    typologies), roads (HWB3, HWB5, HWB7, HWB19), and power networks (18 ESS/EPP/EDC/transformer
+    classes). Data formats: GeoTIFF for hazard rasters, CSV for cyclone data, Excel
+    (XLSX) for vulnerability/fragility functions.'
+  download_url: https://data.tomorrowscities.org/dataset/66ca622a-822e-4f8d-8e56-e79833251d99/resource/673394a9-520c-4b6a-819d-04b564e37936/download/coxsbazaarhazarddataset.zip
   format: null
   id: resource_hazard_multihazard
   media_type: application/zip
@@ -514,18 +670,19 @@ resources:
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: Chattogram Multi Hazard Dataset
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-future-exposure-dataset-civil-society
+  title: Cox's Bazar Hazard Dataset
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-exposure-dataset-civil-society
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
   description: 'Future urban exposure dataset for Civil Society community planning
-    scenario, including building footprints with structural taxonomy, household socio-economic
-    data, individual demographic data, land use plan, and road network. Data formats:
-    GeoJSON for spatial data (buildings, landuse, road network), JSON for tabular
-    data (households, individuals).'
-  download_url: https://data.tomorrowscities.org/dataset/ca37dabd-dd6a-4545-bae9-665943704205/resource/88f85d4b-97ed-49a8-adf7-a02fcd75b747/download/chattogramfutureexposuredataset_civil_society.zip
+    scenario, including building footprints with structural taxonomy (including Steel
+    buildings), household socio-economic data, individual demographic data, land use
+    plan, road network, and power network infrastructure. Data formats: GeoJSON for
+    spatial data (buildings, landuse, road network, power network), JSON and XLSX
+    for tabular data (households, individuals).'
+  download_url: https://data.tomorrowscities.org/dataset/89b9c298-1d19-4b84-853f-8a76ac49c8b4/resource/98731ba2-c23c-470a-b50c-607bfd6330cb/download/coxsbazarexposuredataset_civil_society.zip
   format: null
   id: resource_exposure_civil_society
   media_type: application/zip
@@ -538,42 +695,19 @@ resources:
     end: null
     start: null
   temporal_resolution: null
-  title: Chattogram Future Exposure Dataset - Civil Society
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-future-exposure-dataset-farmers-fishermen
-  baseline_period: null
-  climate: null
-  conforms_to: null
-  coordinate_system: EPSG:4326
-  description: 'Future urban exposure dataset for Farmers/Fishermen community planning
-    scenario, including building footprints with structural taxonomy, household socio-economic
-    data, individual demographic data, land use plan, and road network. Data formats:
-    GeoJSON for spatial data (buildings, landuse, road network), JSON for tabular
-    data (households, individuals).'
-  download_url: https://data.tomorrowscities.org/dataset/6f46d7af-e3b0-4fd6-bb68-398213e4ec4f/resource/c4a37c18-022d-4e22-88c3-61ad0d05c775/download/chattogramfutureexposuredataset_farmers_fishermen.zip
-  format: null
-  id: resource_exposure_farmers_fishermen
-  media_type: application/zip
-  spatial: null
-  spatial_aggregation: Individual building footprint level
-  spatial_resolution: null
-  temporal:
-    central_year: null
-    duration: P50Y
-    end: null
-    start: null
-  temporal_resolution: null
-  title: Chattogram Future Exposure Dataset - Farmers Fishermen
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-future-exposure-dataset-informal-working
+  title: Cox's Bazar Future Exposure Dataset - Civil Society
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-exposure-dataset-informal-working
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
   description: 'Future urban exposure dataset for Informal Working community planning
-    scenario, including building footprints with structural taxonomy, household socio-economic
-    data, individual demographic data, land use plan, and road network. Data formats:
-    GeoJSON for spatial data (buildings, landuse, road network), JSON for tabular
-    data (households, individuals).'
-  download_url: https://data.tomorrowscities.org/dataset/07df0763-2441-4b7d-9252-dc209e78d81a/resource/41f36288-6e2f-4e04-9363-9f8bab0150e5/download/chattogramfutureexposuredataset_informal_working.zip
+    scenario, including building footprints with structural taxonomy (including Steel
+    buildings), household socio-economic data, individual demographic data, land use
+    plan, road network, and power network infrastructure. Data formats: GeoJSON for
+    spatial data (buildings, landuse, road network, power network), JSON and XLSX
+    for tabular data (households, individuals).'
+  download_url: https://data.tomorrowscities.org/dataset/618cfee1-13ed-4702-a57f-a44d902df75f/resource/23d68778-5dd7-47c0-b642-78c2b6194108/download/coxsbazarexposuredataset_informal_working.zip
   format: null
   id: resource_exposure_informal_working
   media_type: application/zip
@@ -586,20 +720,21 @@ resources:
     end: null
     start: null
   temporal_resolution: null
-  title: Chattogram Future Exposure Dataset - Informal Working
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-future-exposure-dataset-landless
+  title: Cox's Bazar Future Exposure Dataset - Informal Working
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-exposure-dataset-marginal
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
-  description: 'Future urban exposure dataset for Landless community planning scenario,
-    including building footprints with structural taxonomy, household socio-economic
-    data, individual demographic data, land use plan, and road network. Data formats:
-    GeoJSON for spatial data (buildings, landuse, road network), JSON for tabular
-    data (households, individuals).'
-  download_url: https://data.tomorrowscities.org/dataset/5940db5c-e04f-4855-8353-54f2cf2d3466/resource/aafc37fb-1258-466f-a30f-2559bdcc422b/download/chattogramfutureexposuredataset_landless.zip
+  description: 'Future urban exposure dataset for Marginal community planning scenario,
+    including building footprints with structural taxonomy (including Steel buildings),
+    household socio-economic data, individual demographic data, land use plan, road
+    network, and power network infrastructure. Data formats: GeoJSON for spatial data
+    (buildings, landuse, road network, power network), JSON and XLSX for tabular data
+    (households, individuals), QMD for QGIS metadata.'
+  download_url: https://data.tomorrowscities.org/dataset/e1b0423f-a5e8-437f-938f-b5368a09ada3/resource/9cc73da0-e710-4bbc-8317-3402d73b0e67/download/coxsbazarexposuredataset_marginal.zip
   format: null
-  id: resource_exposure_landless
+  id: resource_exposure_marginal
   media_type: application/zip
   spatial: null
   spatial_aggregation: Individual building footprint level
@@ -610,16 +745,42 @@ resources:
     end: null
     start: null
   temporal_resolution: null
-  title: Chattogram Future Exposure Dataset - Landless
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-impact-results-civil-society
+  title: Cox's Bazar Future Exposure Dataset - Marginal
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-exposure-dataset-women
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: EPSG:4326
+  description: 'Future urban exposure dataset for Women community planning scenario,
+    including building footprints with structural taxonomy (including Steel buildings),
+    household socio-economic data, individual demographic data, land use plan, road
+    network, and power network infrastructure. Data formats: GeoJSON for spatial data
+    (buildings, landuse, road network, power network), JSON and XLSX for tabular data
+    (households, individuals), QMD for QGIS metadata.'
+  download_url: https://data.tomorrowscities.org/dataset/c0aa46d6-48bf-45e7-8406-e4e156e8eaa7/resource/9fb30762-19a6-4dc2-96ca-0a2c2ed0d796/download/coxsbazarexposuredataset_women.zip
+  format: null
+  id: resource_exposure_women
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: Individual building footprint level
+  spatial_resolution: null
+  temporal:
+    central_year: null
+    duration: P50Y
+    end: null
+    start: null
+  temporal_resolution: null
+  title: Cox's Bazar Future Exposure Dataset - Women
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-impact-results-civil-society
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
   description: 'Impact assessment results for earthquake and flood hazards under the
-    Civil Society community planning scenario, including building damage states and
-    affected population. Data formats: ESRI File Geodatabase (GDB) and GeoJSON.'
-  download_url: https://data.tomorrowscities.org/dataset/ccde0b57-a447-4e15-a018-c2a0ab5eaaea/resource/afddc29c-6187-447c-87eb-60866603bc00/download/chattogramimpactresults_civil_society.zip
+    Civil Society community planning scenario, including building damage states, casualties,
+    road network disruption, power network impacts, hospital accessibility, and power
+    availability per building. Data formats: ESRI File Geodatabase (GDB) and GeoJSON.'
+  download_url: https://data.tomorrowscities.org/dataset/1515bb10-af96-40e3-8ea5-1b2b9b9b1cbf/resource/01b8fc60-f6a2-4fc8-b7f5-974d2120b333/download/coxsbazarimpactresults_civil_society.zip
   format: File Geodatabase (gdb)
   id: resource_impact_civil_society
   media_type: null
@@ -628,34 +789,18 @@ resources:
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: Chattogram Impact Results - Civil Society
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-impact-results-farmers
+  title: Cox's Bazar Impact Results - Civil Society
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-impact-results-informal-working
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
   description: 'Impact assessment results for earthquake and flood hazards under the
-    Farmers/Fishermen community planning scenario, including building damage states
-    and affected population. Data formats: ESRI File Geodatabase (GDB) and GeoJSON.'
-  download_url: https://data.tomorrowscities.org/dataset/6f13c0b5-00c0-4bec-946d-e7644845478c/resource/5243bd1f-d134-4a14-88f6-b6f48a190748/download/chattogramimpactresults_farmers.zip
-  format: File Geodatabase (gdb)
-  id: resource_impact_farmers
-  media_type: null
-  spatial: null
-  spatial_aggregation: Individual building footprint level
-  spatial_resolution: null
-  temporal: null
-  temporal_resolution: null
-  title: Chattogram Impact Results - Farmers
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-impact-results-informal-working
-  baseline_period: null
-  climate: null
-  conforms_to: null
-  coordinate_system: EPSG:4326
-  description: 'Impact assessment results for earthquake and flood hazards under the
-    Informal Working community planning scenario, including building damage states
-    and affected population. Data formats: ESRI File Geodatabase (GDB) and GeoJSON.'
-  download_url: https://data.tomorrowscities.org/dataset/618b12f3-4839-4b6d-ae50-42d7f09fd7de/resource/cba12127-cdf0-4abd-af8d-2c1babd8c55b/download/chattogramimpactresults_informal_working.zip
+    Informal Working community planning scenario, including building damage states,
+    casualties, road network disruption, power network impacts, hospital accessibility,
+    and power availability per building. Data formats: ESRI File Geodatabase (GDB)
+    and GeoJSON.'
+  download_url: https://data.tomorrowscities.org/dataset/64489c05-9af4-49b4-aea8-85d951ff1630/resource/95b40d12-e65a-4778-abe6-43468667db89/download/coxsbazarimpactresults_informal_working.zip
   format: File Geodatabase (gdb)
   id: resource_impact_informal_working
   media_type: null
@@ -664,38 +809,59 @@ resources:
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: Chattogram Impact Results - Informal Working
-- access_url: https://data.tomorrowscities.org/dataset/chattogram-impact-results-landless
+  title: Cox's Bazar Impact Results - Informal Working
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-impact-results-marginal
   baseline_period: null
   climate: null
   conforms_to: null
   coordinate_system: EPSG:4326
   description: 'Impact assessment results for earthquake and flood hazards under the
-    Landless community planning scenario, including building damage states and affected
-    population. Data formats: ESRI File Geodatabase (GDB) and GeoJSON.'
-  download_url: https://data.tomorrowscities.org/dataset/3bc2f627-c16a-46ae-9e46-44a0fcc586b3/resource/d0a7a407-92ae-4db5-aabb-cec623611a7d/download/chattogramimpactresults_landless.zip
+    Marginal community planning scenario, including building damage states, casualties,
+    road network disruption, power network impacts, hospital accessibility, and power
+    availability per building. Data formats: ESRI File Geodatabase (GDB) and GeoJSON,
+    QMD for QGIS metadata.'
+  download_url: https://data.tomorrowscities.org/dataset/36d4d669-c16a-4aca-a17f-a4a178a4d5ef/resource/1618e2c9-7c0b-4024-ba25-ae47ff04b94a/download/coxsbazarimpactresults_marginal.zip
   format: File Geodatabase (gdb)
-  id: resource_impact_landless
+  id: resource_impact_marginal
   media_type: null
   spatial: null
   spatial_aggregation: Individual building footprint level
   spatial_resolution: null
   temporal: null
   temporal_resolution: null
-  title: Chattogram Impact Results - Landless
+  title: Cox's Bazar Impact Results - Marginal
+- access_url: https://data.tomorrowscities.org/dataset/coxs-bazar-impact-results-women
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: EPSG:4326
+  description: 'Impact assessment results for earthquake and flood hazards under the
+    Women community planning scenario, including building damage states, casualties,
+    road network disruption, power network impacts, hospital accessibility, and power
+    availability per building. Data formats: ESRI File Geodatabase (GDB) and GeoJSON.'
+  download_url: https://data.tomorrowscities.org/dataset/05faed28-08b3-4086-b1ee-316e06eaa1a1/resource/cbcd212f-60c8-45dd-9111-9fa096443175/download/coxsbazarimpactresults_women.zip
+  format: File Geodatabase (gdb)
+  id: resource_impact_women
+  media_type: null
+  spatial: null
+  spatial_aggregation: Individual building footprint level
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Cox's Bazar Impact Results - Women
 risk_data_type:
 - hazard
 - exposure
 - vulnerability
 - loss
 schema: rdls-10
-slug: rdls_hevl-bgd_tmrwcities_chattogram
+slug: rdls_hevl-bgd_tmrwcities_coxsbazar
 spatial:
   bbox:
-  - 91.8134
-  - 22.2096
-  - 91.8681
-  - 22.2534
+  - 92.0428
+  - 21.078
+  - 92.138
+  - 21.303
   centroid: null
   countries:
   - BGD
@@ -704,20 +870,20 @@ spatial:
     id: gazetteer_1
     scheme: GEONAMES
     uri: https://www.geonames.org/1210997/bangladesh.html
-  - description: Chattogram (Chittagong)
+  - description: Cox's Bazar
     id: gazetteer_2
     scheme: GEONAMES
-    uri: https://www.geonames.org/1205733/chattogram.html
-  - description: Bairag
+    uri: https://www.geonames.org/1337202/cox-s-bazar.html
+  - description: Jaliya Palong
     id: gazetteer_3
     scheme: GEONAMES
-    uri: https://www.geonames.org/11282344/bairag.html
+    uri: https://www.geonames.org/11282628/jalia-palong.html
   scale: sub-national
 spatial_resolution: null
 temporal: null
 temporal_resolution: null
-title: Tomorrow's Cities Multi-Hazard Risk Assessment Dataset for Chattogram (Bairag),
-  Bangladesh
+title: Tomorrow's Cities Multi-Hazard Risk Assessment Dataset for Cox's Bazar (Jaliya
+  Palong), Bangladesh
 version: '1'
 vulnerability:
   functions:
@@ -730,8 +896,8 @@ vulnerability:
         for each damage state, with period range (minperiod, maxperiod) for each typology.
         Building taxonomy follows {LRS}+{CodeLevel}+{Height} pattern where LRS includes
         RCi (reinforced concrete infill), BrCri (brick with concrete), BrCfl (brick
-        with flexible); CodeLevel includes LC (low code), MC (moderate code), HC (high
-        code); Height includes LR (low-rise), MR (mid-rise), HR (high-rise).
+        with flexible), S (steel); CodeLevel includes LC (low code), MC (moderate
+        code), HC (high code); Height includes LR (low-rise), MR (mid-rise), HR (high-rise).
       approach: analytical
       category: buildings
       damage_scale_name: null
@@ -756,8 +922,8 @@ vulnerability:
       relationship: math_parametric
       taxonomy: Custom
     - analysis_details: HAZUS-based fragility functions for road infrastructure (HWB3,
-        HWB5, HWB7 highway bridge classes) defining median PGA and dispersion for
-        4 damage states (slight, moderate, extensive, complete).
+        HWB5, HWB7, HWB19 highway bridge classes) defining median PGA and dispersion
+        for 4 damage states (slight, moderate, extensive, complete).
       approach: empirical
       category: infrastructure
       damage_scale_name: null
@@ -781,10 +947,13 @@ vulnerability:
         type: direct
       relationship: math_parametric
       taxonomy: HAZUS
-    - analysis_details: HAZUS-based fragility functions for power network infrastructure
-        (ESS1-ESS18 substation classes at 115/230/500 kV, anchored and unanchored
-        configurations) defining median PGA and dispersion (beta) for 4 damage states
-        (slight, moderate, extensive, complete).
+    - analysis_details: 'HAZUS-based fragility functions for power network infrastructure
+        with 18 classes: ESS1-ESS6 (substations at 115/230/500 kV, anchored/unanchored),
+        EPP1-EPP4 (power plants, small/medium-large, anchored/unanchored), EDC1-EDC2
+        (distribution circuits), and 6 transformer classes (TLAS, TLUS, TMAS, TMUS,
+        THAS, THUS for low/medium/high voltage, anchored/unanchored). Each defines
+        median PGA and dispersion (beta) for 4 damage states (slight, moderate, extensive,
+        complete).'
       approach: empirical
       category: infrastructure
       damage_scale_name: null
@@ -812,13 +981,13 @@ vulnerability:
     vulnerability:
     - analysis_details: 'Depth-damage vulnerability functions defining damage ratio
         as a function of water depth (0-6m at 9 discrete levels: 0, 0.5, 1, 1.5, 2,
-        3, 4, 5, 6m) for 495 building typologies classified by lateral resistance
-        system (BrCfl, BrCri, Rci), code level (LC, MC, HC), storeys, and occupancy
+        3, 4, 5, 6m) for 1,521 building typologies classified by lateral resistance
+        system (BrCfl, BrCri, Rci, S), code level (LC, MC, HC), storeys, and occupancy
         type (Res, Com, Edu, etc.). Functions based on consultation with local partners
         and JRC global flood depth-damage database.'
       approach: analytical
       category: buildings
-      hazard_analysis_type: deterministic
+      hazard_analysis_type: probabilistic
       hazard_primary:
         classification: null
         id: hazard_flood
