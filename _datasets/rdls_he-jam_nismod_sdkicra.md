@@ -185,422 +185,417 @@ exposure:
       quantity_kind: energy
       unit: gigawatt_hour
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: 'Historical baseline (1861-2005) annual probability of drought
-          occurrence derived from ISIMIP climate projections across multiple climate
-          models (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC5) and hydrological models.
-          Source: Russell et al. 2023, derived from Lange et al. 2020.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_drought_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P144Y
-              end: '2005'
-              start: '1861'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'RCP2.6 climate scenario annual probability of drought occurrence
-          (2006-2099) for future time periods (2030, 2050, 2080) across multiple climate
-          and hydrological models. Source: Russell et al. 2023, derived from Lange
-          et al. 2020.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_drought_rcp26
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P93Y
-              end: '2099'
-              start: '2006'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'RCP6.0 climate scenario annual probability of drought occurrence
-          (2006-2099) for future time periods (2030, 2050, 2080) across multiple climate
-          and hydrological models. Source: Russell et al. 2023, derived from Lange
-          et al. 2020.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_drought
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: event_drought_rcp60
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P93Y
-              end: '2099'
-              start: '2006'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_drought
-        intensity_measure: SPI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_drought
-      occurrence_range: Annual probability of occurrence
-      seasonality: null
-    extreme_temperature:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: 'Historical baseline (1861-2005) annual probability of extreme
-          heat occurrence derived from ISIMIP climate projections across multiple
-          climate models (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC5) and hydrological
-          models. Source: Russell et al. 2023, derived from Lange et al. 2020.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_extreme_heat
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: event_extreme_heat_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P144Y
-              end: '2005'
-              start: '1861'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'RCP2.6 climate scenario annual probability of extreme heat occurrence
-          (2006-2099) for future time periods (2030, 2050, 2080) across multiple climate
-          and hydrological models. Source: Russell et al. 2023, derived from Lange
-          et al. 2020.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_extreme_heat
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: event_extreme_heat_rcp26
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P93Y
-              end: '2099'
-              start: '2006'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'RCP6.0 climate scenario annual probability of extreme heat occurrence
-          (2006-2099) for future time periods (2030, 2050, 2080) across multiple climate
-          and hydrological models. Source: Russell et al. 2023, derived from Lange
-          et al. 2020.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_extreme_heat
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: event_extreme_heat_rcp60
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P93Y
-              end: '2099'
-              start: '2006'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_extreme_heat
-        intensity_measure: AirTemp:C
-        process: extreme_heat
-        trigger: null
-        type: extreme_temperature
-      id: event_set_extreme_heat
-      occurrence_range: Annual probability of occurrence
-      seasonality: null
-    flood:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: 'Historical baseline coastal flood inundation with subsidence
-          for multiple return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years)
-          across four time periods (hist, 2030, 2050, 2080). Source: Aqueduct Floods
-          (Ward et al. 2020).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_flood_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P100Y
-              end: '2080'
-              start: '1980'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'RCP4.5 climate scenario coastal flood inundation with subsidence
-          for multiple return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years)
-          for future time periods (2030, 2050, 2080). Source: Aqueduct Floods.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_flood_rcp45
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P50Y
-              end: '2080'
-              start: '2030'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'RCP8.5 climate scenario coastal flood inundation with subsidence
-          for multiple return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years)
-          for future time periods (2030, 2050, 2080). Source: Aqueduct Floods.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_coastal_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_coastal_flood_rcp85
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P50Y
-              end: '2080'
-              start: '2030'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: 'Historical baseline coastal flood inundation with subsidence for
+        multiple return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years) across
+        four time periods (hist, 2030, 2050, 2080). Source: Aqueduct Floods (Ward
+        et al. 2020).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_coastal_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: event_set_coastal_flood
-      occurrence_range: 2, 5, 10, 25, 50, 100, 250, 500, 1000 year return periods
-      seasonality: null
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: 'Historical baseline (1980) riverine flood inundation for multiple
-          return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years) using WATCH
-          forcing data. Source: Aqueduct Floods (Ward et al. 2020).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_river_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_river_flood_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: null
-              end: '1980'
-              start: '1980'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'RCP4.5 climate scenario riverine flood inundation for multiple
-          return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years) across five
-          GCMs (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, NorESM1-M) for
-          future time periods (2030, 2050, 2080). Source: Aqueduct Floods.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_river_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_river_flood_rcp45
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P50Y
-              end: '2080'
-              start: '2030'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'RCP8.5 climate scenario riverine flood inundation for multiple
-          return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years) across five
-          GCMs (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, NorESM1-M) for
-          future time periods (2030, 2050, 2080). Source: Aqueduct Floods.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_river_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_river_flood_rcp85
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P50Y
-              end: '2080'
-              start: '2030'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_coastal_flood_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P100Y
+            end: '2080'
+            start: '1980'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'RCP4.5 climate scenario coastal flood inundation with subsidence
+        for multiple return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years)
+        for future time periods (2030, 2050, 2080). Source: Aqueduct Floods.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_flood_rcp45
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P50Y
+            end: '2080'
+            start: '2030'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'RCP8.5 climate scenario coastal flood inundation with subsidence
+        for multiple return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years)
+        for future time periods (2030, 2050, 2080). Source: Aqueduct Floods.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_coastal_flood
+        intensity_measure: wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: event_coastal_flood_rcp85
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P50Y
+            end: '2080'
+            start: '2030'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_coastal_flood
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_coastal_flood
+    occurrence_range: 2, 5, 10, 25, 50, 100, 250, 500, 1000 year return periods
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: 'Historical baseline (1980) riverine flood inundation for multiple
+        return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years) using WATCH forcing
+        data. Source: Aqueduct Floods (Ward et al. 2020).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_river_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_river_flood
-      occurrence_range: 2, 5, 10, 25, 50, 100, 250, 500, 1000 year return periods
-      seasonality: null
-    strong_wind:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 2
-      events:
-      - calculation_method: simulated
-        description: 'Historical tropical cyclone wind speed return periods (10, 20,
-          30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900,
-          1000, 2000, 3000, 4000, 5000, 10000 years) from STORM dataset. Source: Russell
-          2022, derived from Bloemendaal et al. 2020.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_tropical_cyclone
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: event_tropical_cyclone_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: null
-              end: '2017'
-              start: '1980'
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'Climate change tropical cyclone wind speed return periods (10,
-          20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800,
-          900, 1000, 2000, 3000, 4000, 5000, 10000 years) across four high-resolution
-          climate models (CMCC-CM2-VHR4, CNRM-CM6-1-HR, EC-Earth3P-HR, HadGEM3-GC31-HM).
-          Source: Russell 2022, derived from Bloemendaal et al. 2022.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_tropical_cyclone
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: event_tropical_cyclone_climate_change
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P35Y
-              end: '2050'
-              start: '2015'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_river_flood_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: null
+            end: '1980'
+            start: '1980'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'RCP4.5 climate scenario riverine flood inundation for multiple
+        return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years) across five GCMs
+        (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, NorESM1-M) for future
+        time periods (2030, 2050, 2080). Source: Aqueduct Floods.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_river_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_river_flood_rcp45
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P50Y
+            end: '2080'
+            start: '2030'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'RCP8.5 climate scenario riverine flood inundation for multiple
+        return periods (2, 5, 10, 25, 50, 100, 250, 500, 1000 years) across five GCMs
+        (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC-ESM-CHEM, NorESM1-M) for future
+        time periods (2030, 2050, 2080). Source: Aqueduct Floods.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_river_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_river_flood_rcp85
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P50Y
+            end: '2080'
+            start: '2030'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_river_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_river_flood
+    occurrence_range: 2, 5, 10, 25, 50, 100, 250, 500, 1000 year return periods
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: 'Historical baseline (1861-2005) annual probability of extreme
+        heat occurrence derived from ISIMIP climate projections across multiple climate
+        models (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC5) and hydrological models.
+        Source: Russell et al. 2023, derived from Lange et al. 2020.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_extreme_heat
+        intensity_measure: AirTemp:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: event_extreme_heat_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P144Y
+            end: '2005'
+            start: '1861'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'RCP2.6 climate scenario annual probability of extreme heat occurrence
+        (2006-2099) for future time periods (2030, 2050, 2080) across multiple climate
+        and hydrological models. Source: Russell et al. 2023, derived from Lange et
+        al. 2020.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_extreme_heat
+        intensity_measure: AirTemp:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: event_extreme_heat_rcp26
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P93Y
+            end: '2099'
+            start: '2006'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'RCP6.0 climate scenario annual probability of extreme heat occurrence
+        (2006-2099) for future time periods (2030, 2050, 2080) across multiple climate
+        and hydrological models. Source: Russell et al. 2023, derived from Lange et
+        al. 2020.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_extreme_heat
+        intensity_measure: AirTemp:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: event_extreme_heat_rcp60
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P93Y
+            end: '2099'
+            start: '2006'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_extreme_heat
+      intensity_measure: AirTemp:C
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: event_set_extreme_heat
+    occurrence_range: Annual probability of occurrence
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: 'Historical baseline (1861-2005) annual probability of drought
+        occurrence derived from ISIMIP climate projections across multiple climate
+        models (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR, MIROC5) and hydrological models.
+        Source: Russell et al. 2023, derived from Lange et al. 2020.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: event_drought_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P144Y
+            end: '2005'
+            start: '1861'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'RCP2.6 climate scenario annual probability of drought occurrence
+        (2006-2099) for future time periods (2030, 2050, 2080) across multiple climate
+        and hydrological models. Source: Russell et al. 2023, derived from Lange et
+        al. 2020.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: event_drought_rcp26
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P93Y
+            end: '2099'
+            start: '2006'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'RCP6.0 climate scenario annual probability of drought occurrence
+        (2006-2099) for future time periods (2030, 2050, 2080) across multiple climate
+        and hydrological models. Source: Russell et al. 2023, derived from Lange et
+        al. 2020.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_drought
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: event_drought_rcp60
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P93Y
+            end: '2099'
+            start: '2006'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_drought
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_drought
+    occurrence_range: Annual probability of occurrence
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 2
+    events:
+    - calculation_method: simulated
+      description: 'Historical tropical cyclone wind speed return periods (10, 20,
+        30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
+        2000, 3000, 4000, 5000, 10000 years) from STORM dataset. Source: Russell 2022,
+        derived from Bloemendaal et al. 2020.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_tropical_cyclone
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      id: event_set_tropical_cyclone
-      occurrence_range: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500,
-        600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 10000 year return periods
-      seasonality: null
-  event_sets_count: 5
+      id: event_tropical_cyclone_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: null
+            end: '2017'
+            start: '1980'
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'Climate change tropical cyclone wind speed return periods (10,
+        20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900,
+        1000, 2000, 3000, 4000, 5000, 10000 years) across four high-resolution climate
+        models (CMCC-CM2-VHR4, CNRM-CM6-1-HR, EC-Earth3P-HR, HadGEM3-GC31-HM). Source:
+        Russell 2022, derived from Bloemendaal et al. 2022.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_tropical_cyclone
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: event_tropical_cyclone_climate_change
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P35Y
+            end: '2050'
+            start: '2015'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_tropical_cyclone
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_tropical_cyclone
+    occurrence_range: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500,
+      600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 10000 year return periods
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: Global multi-hazard infrastructure risk and resilience analysis produced
@@ -708,8 +703,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Climate Compatible Growth (CCG)
   url: https://climatecompatiblegrowth.com/

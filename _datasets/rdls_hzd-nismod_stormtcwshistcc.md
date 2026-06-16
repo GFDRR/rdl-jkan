@@ -80,2055 +80,2037 @@ details: "Datasets were generated with the statistical STORM algorithm. Present 
   \ (20-75 m s\u207B\xB9 with additional threshold values) are provided."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 44
-      events:
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP10 (10-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP10
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability:
-              span: 1
-              value: 0.1
-            return_period: 10
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP20 (20-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP20
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability:
-              span: 1
-              value: 0.05
-            return_period: 20
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP30 (30-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP30
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.033333
-            probability:
-              span: 1
-              value: 0.033333
-            return_period: 30
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP40 (40-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP40
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.025
-            probability:
-              span: 1
-              value: 0.025
-            return_period: 40
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP50 (50-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability:
-              span: 1
-              value: 0.02
-            return_period: 50
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP60 (60-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP60
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.016667
-            probability:
-              span: 1
-              value: 0.016667
-            return_period: 60
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP70 (70-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP70
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.014286
-            probability:
-              span: 1
-              value: 0.014286
-            return_period: 70
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP80 (80-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP80
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0125
-            probability:
-              span: 1
-              value: 0.0125
-            return_period: 80
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP90 (90-year
-          return period). Per-basin about 10 km grids; includes mean, standard deviation,
-          and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP90
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.011111
-            probability:
-              span: 1
-              value: 0.011111
-            return_period: 90
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP100
-          (100-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability:
-              span: 1
-              value: 0.01
-            return_period: 100
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP200
-          (200-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP200
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.005
-            probability:
-              span: 1
-              value: 0.005
-            return_period: 200
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP300
-          (300-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP300
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.003333
-            probability:
-              span: 1
-              value: 0.003333
-            return_period: 300
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP400
-          (400-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP400
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0025
-            probability:
-              span: 1
-              value: 0.0025
-            return_period: 400
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP500
-          (500-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP500
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002
-            probability:
-              span: 1
-              value: 0.002
-            return_period: 500
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP600
-          (600-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP600
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001667
-            probability:
-              span: 1
-              value: 0.001667
-            return_period: 600
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP700
-          (700-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP700
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001429
-            probability:
-              span: 1
-              value: 0.001429
-            return_period: 700
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP800
-          (800-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP800
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.00125
-            probability:
-              span: 1
-              value: 0.00125
-            return_period: 800
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP900
-          (900-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP900
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001111
-            probability:
-              span: 1
-              value: 0.001111
-            return_period: 900
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP1000
-          (1000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP1000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001
-            probability:
-              span: 1
-              value: 0.001
-            return_period: 1000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP2000
-          (2000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP2000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0005
-            probability:
-              span: 1
-              value: 0.0005
-            return_period: 2000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP3000
-          (3000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP3000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000333
-            probability:
-              span: 1
-              value: 0.000333
-            return_period: 3000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP4000
-          (4000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP4000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.00025
-            probability:
-              span: 1
-              value: 0.00025
-            return_period: 4000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP5000
-          (5000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP5000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0002
-            probability:
-              span: 1
-              value: 0.0002
-            return_period: 5000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP6000
-          (6000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP6000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000167
-            probability:
-              span: 1
-              value: 0.000167
-            return_period: 6000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP7000
-          (7000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP7000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000143
-            probability:
-              span: 1
-              value: 0.000143
-            return_period: 7000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP8000
-          (8000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP8000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000125
-            probability:
-              span: 1
-              value: 0.000125
-            return_period: 8000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP9000
-          (9000-year return period). Per-basin about 10 km grids; includes mean, standard
-          deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP9000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000111
-            probability:
-              span: 1
-              value: 0.000111
-            return_period: 9000
-      - calculation_method: simulated
-        description: STORM fixed-return-period maximum wind speed (m/s) for RP10000
-          (10000-year return period). Per-basin about 10 km grids; includes mean,
-          standard deviation, and 5-95% confidence intervals over 1,000 realizations.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS_PRESENT
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP10000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0001
-            probability:
-              span: 1
-              value: 0.0001
-            return_period: 10000
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS18MS (18 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS18MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS20MS (20 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS20MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS25MS (25 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS25MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS30MS (30 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS30MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS33MS (33 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS33MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS35MS (35 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS35MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS40MS (40 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS40MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS42MS (42 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS42MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS45MS (45 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS45MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS50MS (50 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS50MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS55MS (55 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS55MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS58MS (58 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS58MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS60MS (60 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS60MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS65MS (65 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS65MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS70MS (70 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS70MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: Per-basin ~10 km grids of return period (years) for fixed wind
-          speed WS75MS (75 m/s), from STORM fixed-wind-speed products (20-75 m/s at
-          5 m/s steps, plus 18, 33, 42, 58 m/s).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS75MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 44
+    events:
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP10 (10-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: STORM_FIXED_RETURN_PERIODS_PRESENT
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      - classification: null
+      id: RP10
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability:
+            span: 1
+            value: 0.1
+          return_period: 10
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP20 (20-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability:
+            span: 1
+            value: 0.05
+          return_period: 20
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP30 (30-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP30
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.033333
+          probability:
+            span: 1
+            value: 0.033333
+          return_period: 30
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP40 (40-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP40
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.025
+          probability:
+            span: 1
+            value: 0.025
+          return_period: 40
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP50 (50-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability:
+            span: 1
+            value: 0.02
+          return_period: 50
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP60 (60-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP60
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.016667
+          probability:
+            span: 1
+            value: 0.016667
+          return_period: 60
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP70 (70-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP70
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.014286
+          probability:
+            span: 1
+            value: 0.014286
+          return_period: 70
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP80 (80-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP80
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0125
+          probability:
+            span: 1
+            value: 0.0125
+          return_period: 80
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP90 (90-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP90
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.011111
+          probability:
+            span: 1
+            value: 0.011111
+          return_period: 90
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP100 (100-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability:
+            span: 1
+            value: 0.01
+          return_period: 100
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP200 (200-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP200
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.005
+          probability:
+            span: 1
+            value: 0.005
+          return_period: 200
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP300 (300-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP300
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.003333
+          probability:
+            span: 1
+            value: 0.003333
+          return_period: 300
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP400 (400-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP400
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0025
+          probability:
+            span: 1
+            value: 0.0025
+          return_period: 400
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP500 (500-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002
+          probability:
+            span: 1
+            value: 0.002
+          return_period: 500
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP600 (600-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP600
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001667
+          probability:
+            span: 1
+            value: 0.001667
+          return_period: 600
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP700 (700-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP700
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001429
+          probability:
+            span: 1
+            value: 0.001429
+          return_period: 700
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP800 (800-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP800
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.00125
+          probability:
+            span: 1
+            value: 0.00125
+          return_period: 800
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP900 (900-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP900
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001111
+          probability:
+            span: 1
+            value: 0.001111
+          return_period: 900
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP1000 (1000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP1000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001
+          probability:
+            span: 1
+            value: 0.001
+          return_period: 1000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP2000 (2000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP2000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0005
+          probability:
+            span: 1
+            value: 0.0005
+          return_period: 2000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP3000 (3000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP3000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000333
+          probability:
+            span: 1
+            value: 0.000333
+          return_period: 3000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP4000 (4000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP4000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.00025
+          probability:
+            span: 1
+            value: 0.00025
+          return_period: 4000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP5000 (5000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP5000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0002
+          probability:
+            span: 1
+            value: 0.0002
+          return_period: 5000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP6000 (6000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP6000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000167
+          probability:
+            span: 1
+            value: 0.000167
+          return_period: 6000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP7000 (7000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP7000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000143
+          probability:
+            span: 1
+            value: 0.000143
+          return_period: 7000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP8000 (8000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP8000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000125
+          probability:
+            span: 1
+            value: 0.000125
+          return_period: 8000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP9000 (9000-year
+        return period). Per-basin about 10 km grids; includes mean, standard deviation,
+        and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP9000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000111
+          probability:
+            span: 1
+            value: 0.000111
+          return_period: 9000
+    - calculation_method: simulated
+      description: STORM fixed-return-period maximum wind speed (m/s) for RP10000
+        (10000-year return period). Per-basin about 10 km grids; includes mean, standard
+        deviation, and 5-95% confidence intervals over 1,000 realizations.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS_PRESENT
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP10000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0001
+          probability:
+            span: 1
+            value: 0.0001
+          return_period: 10000
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS18MS (18 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: STORM_FIXED_WIND_SPEEDS
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      - classification: null
-        id: STORM_CITIES_TC_WIND_SPEED_RETURN_PERIODS
+      id: WS18MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS20MS (20 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      - classification: null
-        id: STORM_ISLANDS_TC_WIND_SPEED_RETURN_PERIODS
+      id: WS20MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS25MS (25 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      id: event_set_storm_tropical_cyclone
-      occurrence_range: 1/10 to 1/10000 years
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 44
-      events:
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP10
-          (10-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP10
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability:
-              span: 1
-              value: 0.1
-            return_period: 10
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP20
-          (20-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP20
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability:
-              span: 1
-              value: 0.05
-            return_period: 20
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP30
-          (30-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP30
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.033333
-            probability:
-              span: 1
-              value: 0.033333
-            return_period: 30
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP40
-          (40-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP40
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.025
-            probability:
-              span: 1
-              value: 0.025
-            return_period: 40
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP50
-          (50-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability:
-              span: 1
-              value: 0.02
-            return_period: 50
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP60
-          (60-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP60
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.016667
-            probability:
-              span: 1
-              value: 0.016667
-            return_period: 60
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP70
-          (70-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP70
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.014286
-            probability:
-              span: 1
-              value: 0.014286
-            return_period: 70
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP80
-          (80-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP80
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0125
-            probability:
-              span: 1
-              value: 0.0125
-            return_period: 80
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP90
-          (90-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP90
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.011111
-            probability:
-              span: 1
-              value: 0.011111
-            return_period: 90
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP100
-          (100-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability:
-              span: 1
-              value: 0.01
-            return_period: 100
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP200
-          (200-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP200
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.005
-            probability:
-              span: 1
-              value: 0.005
-            return_period: 200
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP300
-          (300-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP300
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.003333
-            probability:
-              span: 1
-              value: 0.003333
-            return_period: 300
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP400
-          (400-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP400
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0025
-            probability:
-              span: 1
-              value: 0.0025
-            return_period: 400
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP500
-          (500-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP500
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002
-            probability:
-              span: 1
-              value: 0.002
-            return_period: 500
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP600
-          (600-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP600
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001667
-            probability:
-              span: 1
-              value: 0.001667
-            return_period: 600
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP700
-          (700-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP700
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001429
-            probability:
-              span: 1
-              value: 0.001429
-            return_period: 700
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP800
-          (800-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP800
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.00125
-            probability:
-              span: 1
-              value: 0.00125
-            return_period: 800
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP900
-          (900-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP900
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001111
-            probability:
-              span: 1
-              value: 0.001111
-            return_period: 900
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP1000
-          (1,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP1000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001
-            probability:
-              span: 1
-              value: 0.001
-            return_period: 1000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP2000
-          (2,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP2000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0005
-            probability:
-              span: 1
-              value: 0.0005
-            return_period: 2000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP3000
-          (3,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP3000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000333
-            probability:
-              span: 1
-              value: 0.000333
-            return_period: 3000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP4000
-          (4,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP4000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.00025
-            probability:
-              span: 1
-              value: 0.00025
-            return_period: 4000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP5000
-          (5,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP5000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0002
-            probability:
-              span: 1
-              value: 0.0002
-            return_period: 5000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP6000
-          (6,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP6000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000167
-            probability:
-              span: 1
-              value: 0.000167
-            return_period: 6000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP7000
-          (7,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP7000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000143
-            probability:
-              span: 1
-              value: 0.000143
-            return_period: 7000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP8000
-          (8,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP8000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000125
-            probability:
-              span: 1
-              value: 0.000125
-            return_period: 8000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP9000
-          (9,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP9000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000111
-            probability:
-              span: 1
-              value: 0.000111
-            return_period: 9000
-      - calculation_method: simulated
-        description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP10000
-          (10,000-year return period) on ~10 km grids for all ocean basins (available
-          as GeoTIFF tiles and gridded NetCDF variants, including multi-model and
-          MEDIAN products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_RETURN_PERIODS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: RP10000
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0001
-            probability:
-              span: 1
-              value: 0.0001
-            return_period: 10000
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS18MS (18 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS18MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS20MS (20 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS20MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS25MS (25 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS25MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS30MS (30 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS30MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS33MS (33 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS33MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS35MS (35 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS35MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS40MS (40 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS40MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS42MS (42 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS42MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS45MS (45 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS45MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS50MS (50 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS50MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS55MS (55 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS55MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS58MS (58 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS58MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS60MS (60 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS60MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS65MS (65 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS65MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS70MS (70 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS70MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
-          speed WS75MS (75 m/s) on ~10 km grids for all ocean basins (available as
-          GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
-          products).'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: STORM_FIXED_WIND_SPEEDS
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: WS75MS
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: WS25MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS30MS (30 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS30MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS33MS (33 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS33MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS35MS (35 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS35MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS40MS (40 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS40MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS42MS (42 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS42MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS45MS (45 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS45MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS50MS (50 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS50MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS55MS (55 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS55MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS58MS (58 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS58MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS60MS (60 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS60MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS65MS (65 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS65MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS70MS (70 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS70MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: Per-basin ~10 km grids of return period (years) for fixed wind
+        speed WS75MS (75 m/s), from STORM fixed-wind-speed products (20-75 m/s at
+        5 m/s steps, plus 18, 33, 42, 58 m/s).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS75MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: STORM_FIXED_RETURN_PERIODS_PRESENT
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    - classification: null
+      id: STORM_FIXED_WIND_SPEEDS
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    - classification: null
+      id: STORM_CITIES_TC_WIND_SPEED_RETURN_PERIODS
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    - classification: null
+      id: STORM_ISLANDS_TC_WIND_SPEED_RETURN_PERIODS
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_storm_tropical_cyclone
+    occurrence_range: 1/10 to 1/10000 years
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 44
+    events:
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP10
+        (10-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: STORM_FIXED_RETURN_PERIODS
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      - classification: null
+      id: RP10
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability:
+            span: 1
+            value: 0.1
+          return_period: 10
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP20
+        (20-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability:
+            span: 1
+            value: 0.05
+          return_period: 20
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP30
+        (30-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP30
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.033333
+          probability:
+            span: 1
+            value: 0.033333
+          return_period: 30
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP40
+        (40-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP40
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.025
+          probability:
+            span: 1
+            value: 0.025
+          return_period: 40
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP50
+        (50-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability:
+            span: 1
+            value: 0.02
+          return_period: 50
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP60
+        (60-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP60
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.016667
+          probability:
+            span: 1
+            value: 0.016667
+          return_period: 60
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP70
+        (70-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP70
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.014286
+          probability:
+            span: 1
+            value: 0.014286
+          return_period: 70
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP80
+        (80-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP80
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0125
+          probability:
+            span: 1
+            value: 0.0125
+          return_period: 80
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP90
+        (90-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP90
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.011111
+          probability:
+            span: 1
+            value: 0.011111
+          return_period: 90
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP100
+        (100-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability:
+            span: 1
+            value: 0.01
+          return_period: 100
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP200
+        (200-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP200
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.005
+          probability:
+            span: 1
+            value: 0.005
+          return_period: 200
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP300
+        (300-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP300
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.003333
+          probability:
+            span: 1
+            value: 0.003333
+          return_period: 300
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP400
+        (400-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP400
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0025
+          probability:
+            span: 1
+            value: 0.0025
+          return_period: 400
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP500
+        (500-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002
+          probability:
+            span: 1
+            value: 0.002
+          return_period: 500
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP600
+        (600-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP600
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001667
+          probability:
+            span: 1
+            value: 0.001667
+          return_period: 600
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP700
+        (700-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP700
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001429
+          probability:
+            span: 1
+            value: 0.001429
+          return_period: 700
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP800
+        (800-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP800
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.00125
+          probability:
+            span: 1
+            value: 0.00125
+          return_period: 800
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP900
+        (900-year return period) on ~10 km grids for all ocean basins (available as
+        GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP900
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001111
+          probability:
+            span: 1
+            value: 0.001111
+          return_period: 900
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP1000
+        (1,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP1000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001
+          probability:
+            span: 1
+            value: 0.001
+          return_period: 1000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP2000
+        (2,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP2000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0005
+          probability:
+            span: 1
+            value: 0.0005
+          return_period: 2000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP3000
+        (3,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP3000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000333
+          probability:
+            span: 1
+            value: 0.000333
+          return_period: 3000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP4000
+        (4,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP4000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.00025
+          probability:
+            span: 1
+            value: 0.00025
+          return_period: 4000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP5000
+        (5,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP5000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0002
+          probability:
+            span: 1
+            value: 0.0002
+          return_period: 5000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP6000
+        (6,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP6000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000167
+          probability:
+            span: 1
+            value: 0.000167
+          return_period: 6000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP7000
+        (7,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP7000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000143
+          probability:
+            span: 1
+            value: 0.000143
+          return_period: 7000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP8000
+        (8,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP8000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000125
+          probability:
+            span: 1
+            value: 0.000125
+          return_period: 8000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP9000
+        (9,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP9000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000111
+          probability:
+            span: 1
+            value: 0.000111
+          return_period: 9000
+    - calculation_method: simulated
+      description: 'STORM Fixed Return Periods: maximum wind speed (m/s) for RP10000
+        (10,000-year return period) on ~10 km grids for all ocean basins (available
+        as GeoTIFF tiles and gridded NetCDF variants, including multi-model and MEDIAN
+        products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_RETURN_PERIODS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: RP10000
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0001
+          probability:
+            span: 1
+            value: 0.0001
+          return_period: 10000
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS18MS (18 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: STORM_FIXED_WIND_SPEEDS
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      - classification: null
-        id: Cities_Tables
+      id: WS18MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS20MS (20 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      - classification: null
-        id: Islands_Tables
+      id: WS20MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS25MS (25 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      id: event_set_storm_cc_tropical_cyclone
-      occurrence_range: 1/10 to 1/10000 years
-      seasonality: null
-  event_sets_count: 2
+      id: WS25MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS30MS (30 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS30MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS33MS (33 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS33MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS35MS (35 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS35MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS40MS (40 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS40MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS42MS (42 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS42MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS45MS (45 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS45MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS50MS (50 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS50MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS55MS (55 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS55MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS58MS (58 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS58MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS60MS (60 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS60MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS65MS (65 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS65MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS70MS (70 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS70MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: 'STORM Fixed Wind Speeds: return period (years) for fixed wind
+        speed WS75MS (75 m/s) on ~10 km grids for all ocean basins (available as GeoTIFF
+        tiles and gridded NetCDF variants, including multi-model and MEDIAN products).'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: STORM_FIXED_WIND_SPEEDS
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: WS75MS
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: STORM_FIXED_RETURN_PERIODS
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    - classification: null
+      id: STORM_FIXED_WIND_SPEEDS
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    - classification: null
+      id: Cities_Tables
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    - classification: null
+      id: Islands_Tables
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_storm_cc_tropical_cyclone
+    occurrence_range: 1/10 to 1/10000 years
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Tropical cyclone wind speed return period grids produced using the
@@ -2162,8 +2144,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: STORM - Synthetic Tropical cyclOne geneRation Model
   url: https://data.4tu.nl/datasets/0ea98bdd-5772-4da8-ae97-99735e891aff
