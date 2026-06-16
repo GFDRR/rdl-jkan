@@ -51,8 +51,7 @@ links:
   rel: describedby
 - href: https://geoportal.icpac.net/layers/bi_crop_highres:geonode:bi_crop_highres
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null
