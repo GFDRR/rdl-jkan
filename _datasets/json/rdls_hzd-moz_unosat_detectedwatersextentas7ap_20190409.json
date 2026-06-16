@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-moz_unosat_detectedwatersextentas7ap_20190409",
+      "title": "Satellite detected waters extent, as of 7 April 2019 over Tete and Zambezia provinces, Mozambique",
+      "description": "This map illustrates satellite-detected surface waters in Tete and Zambezia province, Mozambique as observed from Sentinel-1 imagery acquired on 7 April 2019. Within the analysed extent of about 7,800 sq km, a total about 100 sq km of lands appear to be flooded as of 7 April 2019. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT. Satellite Data (Post): Sentinel-1 Imagery Date (1): 7 April 2019 Imagery Date (2): 20 March 2019 Resolution: 10 m Copyright: Copernicus 2019 / ESA Source: ESA. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-waters-extent-as-of-7-april-2019-over-tete-and-zambezia-provinces-mozambique]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-as-of-7-april-2019-over-tete-and-zambezia-provinces-mozambique"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-as-of-7-april-2019-over-tete-and-zambezia-provinces-mozambique"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-04-09"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "European Space Agency (ESA) Sentinel-1",
+            "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-as-of-7-april-2019-over-tete-and-zambezia-provinces-mozambique"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1 SAR imagery from 7 April 2019 and 20 March 2019 were compared by UNOSAT analysts to identify notable changes in surface water extent. Water bodies were delineated through visual interpretation and change detection of radar backscatter signatures, resulting in a preliminary map of flooded areas covering approximately 100 sq km within the 7,800 sq km study area in Mozambique.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "European Space Agency (ESA) Sentinel-1",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar satellite imagery acquired on 7 April 2019 and 20 March 2019 at 10 m resolution used to detect surface water extent through change detection analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_659efece",
+          "title": "TC20190312MOZ_SHP.zip",
+          "description": "Satellite detected waters extent, as of 7 April 2019 over Tete and Zambezia provinces, Mozambique (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/TC20190312MOZ/TC20190312MOZ_SHP.zip"
+        },
+        {
+          "id": "resource_ace96a3f",
+          "title": "TC20190312MOZ.gdb.zip",
+          "description": "Satellite detected waters extent, as of 7 April 2019 over Tete and Zambezia provinces, Mozambique (GeoPackage)",
+          "media_type": "application/geopackage+sqlite3",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/TC20190312MOZ/TC20190312MOZ.gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-waters-extent-as-of-7-april-2019-over-tete-and-zambezia-provinces-mozambique",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

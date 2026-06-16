@@ -1,0 +1,369 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: European Commission, Joint Research Centre (JRC)
+    url: https://data.humdata.org/dataset/pse-anomalies-fapar-viirs
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/pse-anomalies-fapar-viirs
+creator:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/pse-anomalies-fapar-viirs
+dataset_id: rdls_hzd-pse_copernicus_statevegetationindexanoma_2012
+description: 'Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) is
+  a biophysical dimensionless quantity (its values range from 0/no absorption to 1/total
+  absorption) used to assess the greenness and health of vegetation. FAPAR anomalies
+  can be used as an indicator to detect and monitor the impacts of agricultural drought
+  on the growth and productivity of vegetation. The data is presented in 10-day time
+  composite of the Visible Infrared Imaging Radiometer Suite (VIIRS).. [Source: This
+  metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/pse-anomalies-fapar-viirs]'
+details: Variations in the vegetation health and/or cover could be related to stress
+  factors not related to droughts (e.g., plant diseases, pests, hail, flooding). To
+  determine if changes in FAPAR are linked with a drought event or not, FAPAR data
+  should be interpreted jointly with other indicators (as in the EDO Combined Drought
+  Indicator).
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    drought:
+    - analysis_type: empirical
+      calculation_method: observed
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: FAPAR:-
+        process: agricultural_drought
+        trigger: null
+        type: drought
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: FAPAR values from VIIRS satellite observations are collected at 10-day
+    intervals and processed into raster composites. Anomalies are calculated at each
+    grid cell as the deviation from a long-term mean baseline (2012 to the last available
+    full year), enabling detection and monitoring of agricultural drought impacts
+    on vegetation growth and productivity across Palestine.
+  sources:
+  - id: source_1
+    license: null
+    name: European Commission, Joint Research Centre (JRC)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/pse-anomalies-fapar-viirs
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://drought.emergency.copernicus.eu/data/factsheets/factsheet_fapar_viirs.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2026-01-01 to 2026-01-10)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/863d0975-b373-4a1b-ba68-0e5d1bccf850/download/pse_fpanv_m_gdo_20260101_20260101_t.zip
+  format: null
+  id: resource_863d0975
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20260101_20260101_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2025-01-01 to 2025-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/22870ca2-c8c8-44ab-b59d-06f114502eb1/download/pse_fpanv_m_gdo_20250101_20251221_t.zip
+  format: null
+  id: resource_22870ca2
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20250101_20251221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2024-01-01 to 2024-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/f29a07a5-fc9e-4748-b3c5-3b3a0f8db39f/download/pse_fpanv_m_gdo_20240101_20241221_t.zip
+  format: null
+  id: resource_f29a07a5
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20240101_20241221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2023-01-01 to 2023-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/89bcb951-8258-49e0-b5ad-3fa385d58971/download/pse_fpanv_m_gdo_20230101_20231221_t.zip
+  format: null
+  id: resource_89bcb951
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20230101_20231221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2022-01-01 to 2022-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/c440afc5-4da8-4846-9f58-874f9d62010f/download/pse_fpanv_m_gdo_20220101_20221221_t.zip
+  format: null
+  id: resource_c440afc5
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20220101_20221221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2021-01-01 to 2021-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/44e39f85-c989-4274-bca5-a4b01958be3a/download/pse_fpanv_m_gdo_20210101_20211221_t.zip
+  format: null
+  id: resource_44e39f85
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20210101_20211221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2020-01-01 to 2020-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/fb6fb9b8-8a68-4a96-8573-c96e2d8c547e/download/pse_fpanv_m_gdo_20200101_20201221_t.zip
+  format: null
+  id: resource_fb6fb9b8
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20200101_20201221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2019-01-01 to 2019-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/e61dbcf7-69c7-417a-a7ce-71eac2e6e811/download/pse_fpanv_m_gdo_20190101_20191221_t.zip
+  format: null
+  id: resource_e61dbcf7
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20190101_20191221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2018-01-01 to 2018-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/34c442b6-cfde-483e-b681-f0fc5a82fb16/download/pse_fpanv_m_gdo_20180101_20181221_t.zip
+  format: null
+  id: resource_34c442b6
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20180101_20181221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2017-01-01 to 2017-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/13924ca5-8f17-4680-b483-fb417738c119/download/pse_fpanv_m_gdo_20170101_20171221_t.zip
+  format: null
+  id: resource_13924ca5
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20170101_20171221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2016-01-01 to 2016-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/bd40f55f-c37f-4016-9eae-e1a78b9ad01e/download/pse_fpanv_m_gdo_20160101_20161221_t.zip
+  format: null
+  id: resource_bd40f55f
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20160101_20161221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2015-01-01 to 2015-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/55c3b7f7-077d-4f6c-a712-41212a7b0a63/download/pse_fpanv_m_gdo_20150101_20151221_t.zip
+  format: null
+  id: resource_55c3b7f7
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20150101_20151221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2014-01-01 to 2014-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/d5cd4e2c-60b9-4a7f-a6f9-3c54a9c15260/download/pse_fpanv_m_gdo_20140101_20141221_t.zip
+  format: null
+  id: resource_d5cd4e2c
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20140101_20141221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2013-01-01 to 2013-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/1896309b-9252-4097-b4ef-74d93b3143c8/download/pse_fpanv_m_gdo_20130101_20131221_t.zip
+  format: null
+  id: resource_1896309b
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20130101_20131221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)
+    (Data from 2012-01-21 to 2012-12-31)'
+  download_url: https://data.humdata.org/dataset/389c0d19-ed4f-41fa-b8a4-a6b3c03d5df2/resource/971e7ad3-7f6f-49e3-9ce7-0bc91f8b5058/download/pse_fpanv_m_gdo_20120121_20121221_t.zip
+  format: null
+  id: resource_971e7ad3
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: pse_fpanv_m_gdo_20120121_20121221_t.zip
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-pse_copernicus_statevegetationindexanoma_2012
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - PSE
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2026-01-10'
+  start: '2012-01-21'
+temporal_resolution: null
+title: 'State of Palestine: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)'
+version: null
+vulnerability: null
+---

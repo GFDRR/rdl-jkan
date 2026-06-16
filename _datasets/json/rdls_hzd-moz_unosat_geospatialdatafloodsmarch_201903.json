@@ -1,0 +1,105 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-moz_unosat_geospatialdatafloodsmarch_201903",
+      "title": "UNOSAT Geospatial Data on Floods in Mozambique - March 2019",
+      "description": "This data illustrates the satellite detected surface waters in Manica, Sofala, and Tete Provinces in Mozambique, as observed from Sentinel-1 imagery acquired on 13, 14, 19 and 20 March 2019.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-analysis-on-floods-in-mozambique-march-2019]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "From UNOSAT documentation: 'It is likely that flood waters have been systematically underestimated along highly vegetated areas along main river banks and within built-up urban areas because of the special characteristics of the satellite data used. '",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-analysis-on-floods-in-mozambique-march-2019"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/unosat-analysis-on-floods-in-mozambique-march-2019"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-03-13",
+        "end": "2019-03-20"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/unosat-analysis-on-floods-in-mozambique-march-2019"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1 SAR imagery acquired on 13, 14, 19, and 20 March 2019 was processed by UNOSAT to detect surface water through radar backscatter analysis. The resulting flood extent polygons were delineated for three provinces in Mozambique affected by cyclone-induced flooding, with area measurements calculated in square meters and hectares.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Sentinel-1 synthetic aperture radar imagery processed to detect and map surface water extent during the March 2019 flooding event in Manica, Sofala, and Tete Provinces."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9453aa3b",
+          "title": "TC20190312MOZ_SHP.zip",
+          "description": "Vector data of flooded areas in Mozambique extracted from satellite imagery in shapefile format.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/TC20190312MOZ/TC20190312MOZ_SHP.zip"
+        },
+        {
+          "id": "resource_a1d7d71c",
+          "title": "TC20190312MOZ.gdb.zip",
+          "description": "Vector data of flooded areas in Mozambique extracted from satellite imagery in ESRI geodatabase format.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/TC20190312MOZ/TC20190312MOZ.gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/unosat-analysis-on-floods-in-mozambique-march-2019",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-moz_ochamoz_rainfallinducedlandslideh_20190412",
+      "title": "Mozambique Rainfall-Induced Landslide Hazard Index",
+      "description": "Layer provides distribution of landslide hazard, describing by an index of very low to very high hazard. Data produced under the ADRF Sub Saharan Africa Risk Profiles project. The project provides also risk data produced, exposure and hazard data used in the analyses.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mozambique-rainfall-induced-landslide-hazard-index]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "OCHA Mozambique",
+        "url": "https://data.humdata.org/dataset/mozambique-rainfall-induced-landslide-hazard-index"
+      },
+      "creator": {
+        "name": "OCHA Mozambique",
+        "url": "https://data.humdata.org/dataset/mozambique-rainfall-induced-landslide-hazard-index"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2019-04-12"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Mozambique National Disasters Management Institute",
+            "url": "https://data.humdata.org/dataset/mozambique-rainfall-induced-landslide-hazard-index"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "ADRF Sub Saharan Africa Risk Profiles project",
+            "url": "https://data.humdata.org/dataset/mozambique-rainfall-induced-landslide-hazard-index"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Landslide hazard index derived from direct observational and anecdotal data collected by Mozambique National Disasters Management Institute, processed and classified into a susceptibility index ranging from very low to very high under the ADRF Sub Saharan Africa Risk Profiles project to characterize rainfall-induced landslide hazard distribution.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Mozambique National Disasters Management Institute",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Primary data source providing observational and anecdotal landslide hazard information for Mozambique"
+          },
+          {
+            "id": "source_2",
+            "name": "ADRF Sub Saharan Africa Risk Profiles project",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Project framework that produced the rainfall-induced landslide hazard index through integration of observational data"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_79d3bae2",
+          "title": "moz_haz_rn_2010.zip",
+          "description": "Shapefile of distribution of landslide hazard, describing by an index of very low to very high hazard",
+          "media_type": "application/vnd.shp",
+          "download_url": "http://geonode.ingc.gov.mz/qgis-server/download-zip/moz_haz_rn_2010?access_token=27cdcae85d3711e9932e02967b3ca6c8"
+        },
+        {
+          "id": "resource_58635362",
+          "title": "moz_haz_rn_2010.zip",
+          "description": "Distribution of landslide hazard, describing by an index of very low to very high hazard in GeoTIFF format.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "http://geonode.ingc.gov.mz/qgis-server/geotiff/moz_haz_rn_2010?access_token=27cdcae85d3711e9932e02967b3ca6c8"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mozambique-rainfall-induced-landslide-hazard-index",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

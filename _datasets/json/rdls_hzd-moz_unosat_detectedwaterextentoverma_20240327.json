@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-moz_unosat_detectedwaterextentoverma_20240327",
+      "title": "Satellite detected water extent over Maputo province, Mozambique, as of 23 March 2024",
+      "description": "UNOSAT code: TC20240313MOZ, GDACS ID: 1001053 This map illustrates satellite detected surface waters in Maputo province, Mozambique, as observed from a Sentinel-1 images acquired on 23 March 2024 at 05:19 local time (03:19 UTC). Within the analyzed areas of about 950 km², a total of about 10 km² of lands appear to be flooded. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extent-over-maputo-province-mozambique-as-of-23-march-2024]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-over-maputo-province-mozambique-as-of-23-march-2024"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-over-maputo-province-mozambique-as-of-23-march-2024"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2024-03-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-over-maputo-province-mozambique-as-of-23-march-2024"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Sentinel-1 SAR satellite imagery acquired on 23 March 2024 was analyzed by UNOSAT analysts through visual interpretation and multi-temporal comparison to detect changes in surface water extent. Water bodies were classified and digitized into vector geometries with confidence levels and field validation flags. The resulting dataset represents observed flood extent at a single point in time during a cyclone event.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Sentinel-1 SAR satellite imagery analysis providing observed surface water extent mapping for flood hazard detection in post-event assessment"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6d7d6b6c",
+          "title": "TC20240313MOZ_gdb.zip",
+          "description": "Satellite detected water extent over Maputo province, Mozambique, as of 23 March 2024 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3811/TC20240313MOZ_gdb.zip"
+        },
+        {
+          "id": "resource_0fed9a67",
+          "title": "TC20240313MOZ_shp.zip",
+          "description": "Satellite detected water extent over Maputo province, Mozambique, as of 23 March 2024 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3811/TC20240313MOZ_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extent-over-maputo-province-mozambique-as-of-23-march-2024",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-isr_hdx_dailysummariesprecipitati_20151223",
+      "title": "Daily Summaries of Precipitation Indicators for Israel",
+      "description": "This dataset contains the daily summaries on base stations across Israel . The four indicators included are: * TPCP : Total precipitation * MXSD : Maximum snow depth * TSNW : Total snow fall * EMXP : Extreme maximum daily precipitation Indicators are compiled by the National Centers for Environmental Information (NCEI), which is administrated by National Oceanic and Atmospheric Administration (NOAA) an organization part of the United States government. NOAA has access to data collected from thousands of base stations around the world, which collect data periodically on weather and climate conditions. This dataset contains the latest 5 years of available data .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-israel]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Due to late-arriving data, the number of recent records is likely underrepresented in all categories, but the ratio of records (warm to cold, for example) should be a fairly strong estimate of a final outcome.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-israel"
+      },
+      "creator": {
+        "name": "National Centers for Environmental Information (NCEI / NOAA)",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-israel"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ISR"
+        ]
+      },
+      "temporal": {
+        "start": "2015-12-23"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-israel"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Daily precipitation data collected from thousands of meteorological base stations across Israel by NOAA/NCEI, filtered to include only stations with minimum 30 years of service and >182 complete days annually, compiled into daily summary indicators of total precipitation, maximum snow depth, total snowfall, and extreme maximum daily precipitation.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Long-term daily precipitation and snow observations from meteorological stations meeting 30-year minimum data quality standards with >182 complete days per year"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncdc.noaa.gov/cdo-web/datatools/records"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_8c046b20",
+          "title": "precipitation_isr.csv",
+          "description": "Daily Summaries of Precipitation Indicators for Israel (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/24ebd37d-3125-496b-b44e-e4d7b5515057/resource/8c046b20-3f43-414c-8d1a-827b68deaeb9/download/precipitation_isr.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-israel",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

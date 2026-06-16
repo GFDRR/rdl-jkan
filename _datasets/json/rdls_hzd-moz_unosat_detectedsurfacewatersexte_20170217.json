@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-moz_unosat_detectedsurfacewatersexte_20170217",
+      "title": "Mozambique - Satellite Detected Surface Waters Extent and Evolution along Save River",
+      "description": "This map illustrates satellite-detected flood waters over Save River in Mozambique as observed from the Radarsat-2 images acquired on 17 February 2017 and 05 February 2017. A decrease of surface waters was observed in the 17 February 2017 image compared to the 05 February 2017 image along the Save river. It is likely that flood waters have been systematically underestimated along highly vegetated areas along main river banks and within built-up urban areas because of the special characteristics of the satellite data used. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-surface-waters-extent-and-evolution-along-save-river-mozambique]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-surface-waters-extent-and-evolution-along-save-river-mozambique"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-surface-waters-extent-and-evolution-along-save-river-mozambique"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MOZ"
+        ]
+      },
+      "temporal": {
+        "start": "2017-02-17"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts processed Radarsat-2 SAR imagery acquired on 05 February 2017 and 17 February 2017 over the Save River in Mozambique, comparing the two images to detect changes in surface water extent and map flood water boundaries. The resulting geodatabase and shapefile products contain polygon geometries of detected water surfaces with area measurements in square meters and hectares.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using Radarsat-2 synthetic aperture radar to detect and map surface water extent and changes along the Save River during the 2017 flood event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7ded7b8d",
+          "title": "FL20170118MOZ.gdb.zip",
+          "description": "Mozambique - Satellite Detected Surface Waters Extent and Evolution along Save River (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/FL20170118MOZ/FL20170118MOZ.gdb.zip"
+        },
+        {
+          "id": "resource_c5a37c66",
+          "title": "FL20170118MOZ_SHP.zip",
+          "description": "Mozambique - Satellite Detected Surface Waters Extent and Evolution along Save River (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MZ/FL20170118MOZ/FL20170118MOZ_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-surface-waters-extent-and-evolution-along-save-river-mozambique",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

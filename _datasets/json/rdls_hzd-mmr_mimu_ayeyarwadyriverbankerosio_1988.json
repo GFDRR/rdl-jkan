@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-mmr_mimu_ayeyarwadyriverbankerosio_1988",
+      "title": "Myanmar - Ayeyarwady river bank erosion",
+      "description": "Outputs from seasonal river morphological monitoring system showing erosion and deposition areas along the Ayeyarwady River, Myanmar after the end of every monsoon season developed under the USAID funded SERVIR-Mekong programme. This dataset uses on Landsat 5-7 satellite data series covering 31-year time scale from 1988 to 2019. You can find tiff files from 1988 to 2019 here : http://geonode.themimu.info/static/riverbankerosin.html https://myit-servir.adpc.net/ Original dataset title: Ayeyarwady river bank erosion 1988-2019. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mimu-geonode-ayeyarwady-river-bank-erosion]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This product has been prepared for operational purposes only, to support humanitarian and development activities in Myanmar. Copyright ©2020 Myanmar Information Management Unit. MIMU geospatial datasets cannot be used on online platform unless with prior written agreement from MIMU. MIMU products are not for sale and can be used free of charge with attribution. For more information see http://themimu.info/mimu-terms-conditions.",
+      "contact_point": {
+        "name": "Myanmar Information Management Unit (MIMU)",
+        "url": "https://data.humdata.org/dataset/mimu-geonode-ayeyarwady-river-bank-erosion"
+      },
+      "creator": {
+        "name": "Myanmar Information Management Unit (MIMU)",
+        "url": "https://data.humdata.org/dataset/mimu-geonode-ayeyarwady-river-bank-erosion"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "1988-01-01",
+        "end": "2019-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Landsat 5-7 satellite data series",
+            "url": "https://data.humdata.org/dataset/mimu-geonode-ayeyarwady-river-bank-erosion"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "SERVIR-Mekong programme",
+            "url": "https://data.humdata.org/dataset/mimu-geonode-ayeyarwady-river-bank-erosion"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Landsat 5-7 satellite imagery spanning 1988-2019 was processed through the SERVIR-Mekong seasonal river morphological monitoring system to detect and map erosion and deposition areas along the Ayeyarwady River. Multi-temporal analysis of optical satellite data identifies changes in river bank position and sediment dynamics at the end of each monsoon season, producing vector outputs (shapefile and GeoJSON) of erosion-affected zones.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Landsat 5-7 satellite data series",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "31-year optical satellite imagery (1988-2019) used to detect and map river bank erosion and deposition areas through multi-temporal analysis"
+          },
+          {
+            "id": "source_2",
+            "name": "SERVIR-Mekong programme",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "USAID-funded seasonal river morphological monitoring system that processes satellite data to identify erosion and deposition patterns along the Ayeyarwady River"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_a39f84e2",
+          "title": "Ayeyarwady river bank erosion shapefile",
+          "description": "Zipped Shapefile. Outputs from seasonal river morphological monitoring system showing erosion and deposition areas along the Ayeyarwady River, Myanmar after the end of every monsoon season developed under the USAID funded SERVIR-Mekong programme. This dataset uses on Landsat 5-7 satellite data series covering 31-year time scale from 1988 to 2019. You can find tiff files from 1988 to 2019 here : http://geonode.themimu.info/static/riverbankerosin.html",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.themimu.info/geoserver/geonode/ows?format_options=charset%3AUTF-8&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature&typename=geonode:river_bank_erosion_2019",
+          "media_type": "application/vnd.shp"
+        },
+        {
+          "id": "resource_3f742e65",
+          "title": "Ayeyarwady river bank erosion geojson",
+          "description": "GeoJSON file. Outputs from seasonal river morphological monitoring system showing erosion and deposition areas along the Ayeyarwady River, Myanmar after the end of every monsoon season developed under the USAID funded SERVIR-Mekong programme. This dataset uses on Landsat 5-7 satellite data series covering 31-year time scale from 1988 to 2019. You can find tiff files from 1988 to 2019 here : http://geonode.themimu.info/static/riverbankerosin.html",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geonode.themimu.info/geoserver/geonode/ows?service=WFS&version=1.0.0&request=GetFeature&outputFormat=application%2Fjson&typeName=geonode:river_bank_erosion_2019",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "erosion",
+                "process": "soil_erosion",
+                "intensity_measure": "Er:T/ha"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mimu-geonode-ayeyarwady-river-bank-erosion",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-mdg_unosat_detectedwatersextentantsa_20170310",
+      "title": "Madagascar - Satellite Detected Waters Extent in Antsahanoro commune, Antalaha district",
+      "description": "This map illustrates satellite-detected water extent as of 10 March 2017 over Antsahanoro commune, Antalaha district in Madagascar as detected by TerraSAR-X. As of 10 March 2017, ~ 335 Ha of land over Antsahanoro commune seem to be inundated and have experienced an increase of standing waters. These zones are mainly agricultural and/or swamps in the commune of Antsahanoro. These waters seem to be the results of the recent heavy rain related also to the cyclone ENAWO-17 which made landfall the 07 March 2017. It is likely that flood waters have been systematically underestimated along highly vegetated areas along main river banks and within built-up urban areas because of the special characteristics of the satellite data used. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-waters-extent-in-antsahanoro-commune-antalaha-district-madagascar]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-antsahanoro-commune-antalaha-district-madagascar"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-antsahanoro-commune-antalaha-district-madagascar"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MDG"
+        ]
+      },
+      "temporal": {
+        "start": "2017-03-10"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared pre- and post-event TerraSAR-X satellite imagery acquired on 6 and 10 March 2017 to detect changes in water extent following cyclone ENAWO-17 landfall. Water-inundated areas were manually delineated and quantified (335 Ha identified in Antsahanoro commune), with confidence levels and field validation flags recorded in the geodatabase output.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using TerraSAR-X to detect and map water extent and inundation areas post-event through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_867851ae",
+          "title": "TC20170306MDG_gdb.zip",
+          "description": "Madagascar - Satellite Detected Waters Extent in Antsahanoro commune, Antalaha district (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MD/TC20170306MDG/TC20170306MDG_gdb.zip"
+        },
+        {
+          "id": "resource_08baa36d",
+          "title": "TC20170306MDG_SHP.zip",
+          "description": "Madagascar - Satellite Detected Waters Extent in Antsahanoro commune, Antalaha district (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MD/TC20170306MDG/TC20170306MDG_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-waters-extent-in-antsahanoro-commune-antalaha-district-madagascar",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
