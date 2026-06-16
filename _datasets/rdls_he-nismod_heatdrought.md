@@ -65,367 +65,364 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: "Annual probability of drought occurrence for historical scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
-          \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5) combined with 9 hydrological models\
-          \ (CLM4.5, H08, JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB,\
-          \ WaterGAP2), totaling 144 model-scenario combinations at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: drought_occurrence_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Annual probability of drought occurrence for RCP2.6 scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
-          \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5) combined with 8 hydrological models\
-          \ (CLM4.5, H08, JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB),\
-          \ totaling 128 model-scenario combinations at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: drought_occurrence_rcp26
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Annual probability of drought occurrence for RCP6.0 scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
-          \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5) combined with 8 hydrological models\
-          \ (CLM4.5, H08, JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB),\
-          \ totaling 128 model-scenario combinations at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: drought_occurrence_rcp60
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: "Annual probability of drought occurrence for historical scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
+        \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5) combined with 9 hydrological models (CLM4.5,\
+        \ H08, JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB, WaterGAP2),\
+        \ totaling 144 model-scenario combinations at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: drought_hazard
         intensity_measure: SPI:-
         process: meteorological_drought
         trigger: null
         type: drought
-      id: event_set_drought_occurrence
-      occurrence_range: null
-      seasonality: null
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: "Expected rural population exposure to drought for historical\
-          \ scenario across 4 time periods (2020, 2030, 2050, 2080). Rural population\
-          \ fixed at 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
-          \ IPSL-CM5A-LR, MIROC5) combined with 9 hydrological models (CLM4.5, H08,\
-          \ JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB, WaterGAP2), totaling\
-          \ 144 exposure grids at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: drought_exposure_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Expected rural population exposure to drought for RCP2.6 scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Rural population fixed\
-          \ at 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
-          \ IPSL-CM5A-LR, MIROC5) combined with 8 hydrological models (CLM4.5, H08,\
-          \ JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB), totaling 128\
-          \ exposure grids at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: drought_exposure_rcp26
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Expected rural population exposure to drought for RCP6.0 scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Rural population fixed\
-          \ at 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
-          \ IPSL-CM5A-LR, MIROC5) combined with 8 hydrological models (CLM4.5, H08,\
-          \ JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB), totaling 128\
-          \ exposure grids at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: drought_hazard
-          intensity_measure: SPI:-
-          process: meteorological_drought
-          trigger: null
-          type: drought
-        id: drought_exposure_rcp60
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: drought_occurrence_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Annual probability of drought occurrence for RCP2.6 scenario across\
+        \ 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
+        \ IPSL-CM5A-LR, MIROC5) combined with 8 hydrological models (CLM4.5, H08,\
+        \ JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB), totaling 128 model-scenario\
+        \ combinations at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: drought_hazard
         intensity_measure: SPI:-
         process: meteorological_drought
         trigger: null
         type: drought
-      id: event_set_drought_exposure
-      occurrence_range: null
-      seasonality: null
-    extreme_temperature:
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: "Annual probability of heatwave occurrence for historical scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
-          \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5), totaling 16 model-scenario combinations\
-          \ at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heatwave_hazard
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: heatwave_occurrence_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Annual probability of heatwave occurrence for RCP2.6 scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
-          \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5), totaling 16 model-scenario combinations\
-          \ at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heatwave_hazard
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: heatwave_occurrence_rcp26
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Annual probability of heatwave occurrence for RCP6.0 scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
-          \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5), totaling 16 model-scenario combinations\
-          \ at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heatwave_hazard
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: heatwave_occurrence_rcp60
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: drought_occurrence_rcp26
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Annual probability of drought occurrence for RCP6.0 scenario across\
+        \ 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
+        \ IPSL-CM5A-LR, MIROC5) combined with 8 hydrological models (CLM4.5, H08,\
+        \ JULES-W1, LPJmL, MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB), totaling 128 model-scenario\
+        \ combinations at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: drought_occurrence_rcp60
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: drought_hazard
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_drought_occurrence
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: "Expected rural population exposure to drought for historical scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Rural population fixed at\
+        \ 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR,\
+        \ MIROC5) combined with 9 hydrological models (CLM4.5, H08, JULES-W1, LPJmL,\
+        \ MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB, WaterGAP2), totaling 144 exposure\
+        \ grids at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: drought_exposure_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Expected rural population exposure to drought for RCP2.6 scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Rural population fixed at\
+        \ 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR,\
+        \ MIROC5) combined with 8 hydrological models (CLM4.5, H08, JULES-W1, LPJmL,\
+        \ MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB), totaling 128 exposure grids at 0.5\xB0\
+        \ resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: drought_exposure_rcp26
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Expected rural population exposure to drought for RCP6.0 scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Rural population fixed at\
+        \ 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR,\
+        \ MIROC5) combined with 8 hydrological models (CLM4.5, H08, JULES-W1, LPJmL,\
+        \ MATSIRO, MPI-HM, ORCHIDEE, PCR-GLOBWB), totaling 128 exposure grids at 0.5\xB0\
+        \ resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: drought_hazard
+        intensity_measure: SPI:-
+        process: meteorological_drought
+        trigger: null
+        type: drought
+      id: drought_exposure_rcp60
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: drought_hazard
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_drought_exposure
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: "Annual probability of heatwave occurrence for historical scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
+        \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5), totaling 16 model-scenario combinations\
+        \ at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: heatwave_hazard
         intensity_measure: AirTemp:C
         process: extreme_heat
         trigger: null
         type: extreme_temperature
-      id: event_set_heatwave_occurrence
-      occurrence_range: null
-      seasonality: null
-    - analysis_type: empirical
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: "Expected total population exposure to heatwave for historical\
-          \ scenario across 4 time periods (2020, 2030, 2050, 2080). Total population\
-          \ fixed at 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
-          \ IPSL-CM5A-LR, MIROC5), totaling 16 exposure grids at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heatwave_hazard
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: heatwave_exposure_historical
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Expected total population exposure to heatwave for RCP2.6 scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Total population fixed\
-          \ at 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
-          \ IPSL-CM5A-LR, MIROC5), totaling 16 exposure grids at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heatwave_hazard
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: heatwave_exposure_rcp26
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      - calculation_method: simulated
-        description: "Expected total population exposure to heatwave for RCP6.0 scenario\
-          \ across 4 time periods (2020, 2030, 2050, 2080). Total population fixed\
-          \ at 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
-          \ IPSL-CM5A-LR, MIROC5), totaling 16 exposure grids at 0.5\xB0 resolution."
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: heatwave_hazard
-          intensity_measure: AirTemp:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: heatwave_exposure_rcp60
-        occurrence:
-          deterministic: null
-          empirical:
-            return_period: null
-            temporal:
-              central_year: null
-              duration: P60Y
-              end: '2080'
-              start: '2020'
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: heatwave_occurrence_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Annual probability of heatwave occurrence for RCP2.6 scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
+        \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5), totaling 16 model-scenario combinations\
+        \ at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: heatwave_hazard
         intensity_measure: AirTemp:C
         process: extreme_heat
         trigger: null
         type: extreme_temperature
-      id: event_set_heatwave_exposure
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 4
+      id: heatwave_occurrence_rcp26
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Annual probability of heatwave occurrence for RCP6.0 scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Includes 4 GCMs (GFDL-ESM2M,\
+        \ HadGEM2-ES, IPSL-CM5A-LR, MIROC5), totaling 16 model-scenario combinations\
+        \ at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heatwave_hazard
+        intensity_measure: AirTemp:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: heatwave_occurrence_rcp60
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: heatwave_hazard
+      intensity_measure: AirTemp:C
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: event_set_heatwave_occurrence
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: "Expected total population exposure to heatwave for historical\
+        \ scenario across 4 time periods (2020, 2030, 2050, 2080). Total population\
+        \ fixed at 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES,\
+        \ IPSL-CM5A-LR, MIROC5), totaling 16 exposure grids at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heatwave_hazard
+        intensity_measure: AirTemp:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: heatwave_exposure_historical
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Expected total population exposure to heatwave for RCP2.6 scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Total population fixed at\
+        \ 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR,\
+        \ MIROC5), totaling 16 exposure grids at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heatwave_hazard
+        intensity_measure: AirTemp:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: heatwave_exposure_rcp26
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    - calculation_method: simulated
+      description: "Expected total population exposure to heatwave for RCP6.0 scenario\
+        \ across 4 time periods (2020, 2030, 2050, 2080). Total population fixed at\
+        \ 2020 levels (GHS-POP R2023A). Includes 4 GCMs (GFDL-ESM2M, HadGEM2-ES, IPSL-CM5A-LR,\
+        \ MIROC5), totaling 16 exposure grids at 0.5\xB0 resolution."
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: heatwave_hazard
+        intensity_measure: AirTemp:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: heatwave_exposure_rcp60
+      occurrence:
+        deterministic: null
+        empirical:
+          return_period: null
+          temporal:
+            central_year: null
+            duration: P60Y
+            end: '2080'
+            start: '2020'
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: heatwave_hazard
+      intensity_measure: AirTemp:C
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: event_set_heatwave_exposure
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Annual probability grids for extreme heat and drought events derived
@@ -460,8 +457,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Climate Compatible Growth (CCG)
   url: https://climatecompatiblegrowth.com/
