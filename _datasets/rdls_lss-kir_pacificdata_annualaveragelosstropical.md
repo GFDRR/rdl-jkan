@@ -48,7 +48,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: null
       trigger: null
@@ -76,7 +76,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: null
       trigger: null
@@ -103,7 +103,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_flood
       intensity_measure: wd:m
       process: null
       trigger: null
@@ -130,7 +130,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: PGWS:m/s
       process: tropical_cyclone
       trigger: null
@@ -158,7 +158,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: PGWS:m/s
       process: tropical_cyclone
       trigger: null
@@ -185,7 +185,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_strong_wind
       intensity_measure: PGWS:m/s
       process: tropical_cyclone
       trigger: null
@@ -212,7 +212,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: PGA:g
       process: ground_motion
       trigger: null
@@ -240,7 +240,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: PGA:g
       process: ground_motion
       trigger: null
@@ -267,7 +267,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_earthquake
       intensity_measure: PGA:g
       process: ground_motion
       trigger: null
@@ -294,7 +294,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_tsunami
       intensity_measure: h_tsi:m
       process: tsunami
       trigger: null
@@ -321,7 +321,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_tsunami
       intensity_measure: h_tsi:m
       process: tsunami
       trigger: null
@@ -348,7 +348,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_tsunami
       intensity_measure: h_tsi:m
       process: tsunami
       trigger: null

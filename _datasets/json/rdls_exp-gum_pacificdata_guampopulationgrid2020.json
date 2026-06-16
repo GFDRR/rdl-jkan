@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-gum_pacificdata_guampopulationgrid2020",
+      "title": "Guam Population Grid 2020",
+      "description": "Data Input: Settlement footprint from Facebook's High-Resolution Population Density Maps. Population allocated proportionally using 2011 census population counts at district level. Year Population Growth Rate of 1.64% has been applied to update population up to 2020 The human settlement footprint with census population allocated has been converted into a 100 m resolution raster. [Source: This metadata record was automatically extracted from the GeoNode portal pacificdata]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org"
+      },
+      "contact_point": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/1029"
+      },
+      "creator": {
+        "name": "Earth and Oceans Observations Team Pacific Community",
+        "url": "https://geonode.pacificdata.org/catalogue/#/dataset/1029"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GUM"
+        ],
+        "bbox": [
+          144.55441247379449,
+          13.173245807127929,
+          145.0564124737945,
+          13.715245807127928
+        ]
+      },
+      "temporal": {
+        "central_year": 2024
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Earth and Oceans Observations Team Pacific Community",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WCS: geonode Service",
+          "description": "Guam Population Grid 2020 (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:gum_pop_grid_2020",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__gum_pop_grid_2020",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "id": "resource_1",
+          "title": "GeoTIFF",
+          "description": "Guam Population Grid 2020",
+          "media_type": "image/tiff;application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__gum_pop_grid_2020&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512"
+        },
+        {
+          "id": "resource_2",
+          "title": "OGC WMS: geonode Service",
+          "description": "Guam Population Grid 2020 (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geonode.pacificdata.org/datasets/geonode:gum_pop_grid_2020",
+          "download_url": "https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:gum_pop_grid_2020&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geonode.pacificdata.org/catalogue/#/dataset/1029",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

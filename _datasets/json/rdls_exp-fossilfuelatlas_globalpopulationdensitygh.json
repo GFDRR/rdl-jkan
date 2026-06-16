@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-fossilfuelatlas_globalpopulationdensitygh",
+      "title": "Global Population Density (GHG)",
+      "description": "Global Population Density via the US Greenhouse Gas Center backed by NASA. This tiff displays population density in 2020 as estimated by the GGC. https://earth.gov/ghgcenter https://data.ghg.center/browseui/index.html#sedac-popdensity-yeargrid5yr-v4.11/ [Source: This metadata record was automatically extracted from the GeoNode portal fossilfuelatlas]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "noahrarick",
+        "url": "https://www.fossilfuelatlasportal.org"
+      },
+      "contact_point": {
+        "name": "noahrarick",
+        "email": "noah.rarick@gmail.com",
+        "url": "https://www.fossilfuelatlasportal.org/api/v2/users/1028"
+      },
+      "creator": {
+        "name": "noahrarick",
+        "email": "noah.rarick@gmail.com",
+        "url": "https://www.fossilfuelatlasportal.org/api/v2/users/1028"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          179.99999999999983,
+          90.0
+        ]
+      },
+      "temporal": {
+        "central_year": 2025
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "noahrarick",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Global Population Density (GHG) (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://www.fossilfuelatlasportal.org/datasets/geonode:geonode:gpw_v4_population_density_2020_cog",
+          "download_url": "https://www.fossilfuelatlasportal.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:gpw_v4_population_density_2020_cog&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "Global Population Density (GHG) (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://www.fossilfuelatlasportal.org/datasets/geonode:geonode:gpw_v4_population_density_2020_cog",
+          "download_url": "https://www.fossilfuelatlasportal.org/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:gpw_v4_population_density_2020_cog",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "id": "resource_2",
+          "title": "GeoTIFF",
+          "description": "Global Population Density (GHG)",
+          "media_type": "image/tiff;application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://www.fossilfuelatlasportal.org/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__gpw_v4_population_density_2020_cog&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512"
+        },
+        {
+          "id": "resource_3",
+          "title": "gpw_v4_population_density_2020_cog",
+          "description": "Global Population Density (GHG)",
+          "media_type": "image/tiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://www.fossilfuelatlasportal.org/api/v2/assets/480/link"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://www.fossilfuelatlasportal.org/catalogue/#/dataset/744",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

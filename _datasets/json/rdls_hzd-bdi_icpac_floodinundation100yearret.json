@@ -1,0 +1,121 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-bdi_icpac_floodinundation100yearret",
+      "title": "Burundi Flood Inundation (100 year return period)",
+      "description": "This dataset is the output from the Global Flood Model intercomparison project undertaken on behalf of the Global Flood Partnership. The methodology is described in Trigg et al., 2016, 'The credibility challenge for global fluvial flood risk analysis,' published in the Environmental Research Letters Journal Each file is a geospatial, WGS84, 1/1200 decimal degrees resolution (~90m) GeoTIFF raster with a classified integer value representing how many out of the 6 models agree that a cell is wet (note 0 - dry/no data) [Source: This metadata record was automatically extracted from the GeoNode portal icpac]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net"
+      },
+      "purpose": "component- Exposure Source : University Of Leeds Format : TIFF purpose- The flood inundation shows water that is excess to a river channel capacity inundates the sorrounding floodplain topography",
+      "contact_point": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net/api/v2/users/1001"
+      },
+      "creator": {
+        "name": "IGAD DRM Team",
+        "url": "https://geoportal.icpac.net/api/v2/users/1001"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BDI"
+        ],
+        "bbox": [
+          28.99332863281343,
+          -4.465831391071725,
+          30.847494945183556,
+          -2.309998469677787
+        ]
+      },
+      "temporal": {
+        "start": "2025"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IGAD DRM Team",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Burundi Flood Inundation (100 year return period) (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:Burundi_flood_inundation",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:Burundi_flood_inundation&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "Burundi Flood Inundation (100 year return period) (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:Burundi_flood_inundation",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:Burundi_flood_inundation",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
+          "media_type": "image/tiff;application=geotiff"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_100yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "event_rate": 0.01
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://geoportal.icpac.net/layers/Burundi_flood_inundation:geonode:Burundi_flood_inundation",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

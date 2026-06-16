@@ -1,0 +1,210 @@
+---
+attributions: []
+catalog: null
+contact_point:
+  affiliation: null
+  email: null
+  name: Earth and Oceans Observations Team Pacific Community
+  url: https://geonode.pacificdata.org/catalogue/#/dataset/48
+creator:
+  affiliation: null
+  email: null
+  name: Earth and Oceans Observations Team Pacific Community
+  url: https://geonode.pacificdata.org/catalogue/#/dataset/48
+dataset_id: rdls_hzd-pacificdata_fjtchazardmapwind100mrpea
+description: 'A tropical cyclone wind hazard map provides, at any location, the value
+  of a wind intensity measure (for example, maximum 1 minute sustained wind speed
+  for tropical cyclones) that is expected to be exceeded at least once in 100 year
+  time period. The hazard maps are developed by determining the simulated intensities
+  at every gridded location for 10,000 realizations of next-year activity of tropical
+  cyclone events. At each grid location, the intensities are ranked and the wind intensity
+  of the mean return period of interest is recorded. The size of the grid is 90 arc
+  seconds. Compiled by AIR Worldwide. [Source: This metadata record was automatically
+  extracted from the GeoNode portal pacificdata]'
+details: Hazard Cyclone Probabilistic
+exposure: []
+hazard:
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_strong_wind
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: event_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: null
+  sources:
+  - id: source_1
+    license: null
+    name: Earth and Oceans Observations Team Pacific Community
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://geonode.pacificdata.org/catalogue/#/dataset/48
+  rel: source
+loss: null
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Earth and Oceans Observations Team Pacific Community
+  url: https://geonode.pacificdata.org
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: EPSG:4326
+  description: Fiji Tropical Cyclone Wind Hazard Map, 100-year Return Period East
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__fij_w100_tr_east&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512
+  format: null
+  id: resource_0
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: GeoTIFF
+- access_url: https://geonode.pacificdata.org/datasets/geonode:fij_w100_tr_east
+  baseline_period: null
+  climate: null
+  conforms_to: http://www.opengis.net/def/serviceType/ogc/wcs
+  coordinate_system: EPSG:4326
+  description: 'Fiji Tropical Cyclone Wind Hazard Map, 100-year Return Period East
+    (OGC WCS: geonode Service)'
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__fij_w100_tr_east
+  format: null
+  id: resource_1
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: 'OGC WCS: geonode Service'
+- access_url: https://geonode.pacificdata.org/datasets/geonode:fij_w100_tr_east
+  baseline_period: null
+  climate: null
+  conforms_to: http://www.opengis.net/def/serviceType/ogc/wms
+  coordinate_system: EPSG:4326
+  description: 'Fiji Tropical Cyclone Wind Hazard Map, 100-year Return Period East
+    (OGC WMS: geonode Service)'
+  download_url: https://geonode.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:fij_w100_tr_east&format=image%2Fpng
+  format: null
+  id: resource_2
+  media_type: image/png
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: 'OGC WMS: geonode Service'
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-pacificdata_fjtchazardmapwind100mrpea
+spatial:
+  bbox:
+  - 176.735003
+  - -20.672411904698002
+  - 180.000003
+  - -12.537411904698002
+  centroid: null
+  countries:
+  - AFG
+  - ARE
+  - ARM
+  - AZE
+  - BGD
+  - BHR
+  - BRN
+  - BTN
+  - CHN
+  - CYP
+  - GEO
+  - IDN
+  - IND
+  - IRN
+  - IRQ
+  - ISR
+  - JOR
+  - JPN
+  - KAZ
+  - KGZ
+  - KHM
+  - KOR
+  - KWT
+  - LAO
+  - LBN
+  - LKA
+  - MDV
+  - MMR
+  - MNG
+  - MYS
+  - NPL
+  - OMN
+  - PAK
+  - PHL
+  - PRK
+  - PSE
+  - QAT
+  - SAU
+  - SGP
+  - SYR
+  - THA
+  - TJK
+  - TKM
+  - TLS
+  - TUR
+  - UZB
+  - VNM
+  - YEM
+  gazetteer_entries: []
+  scale: regional
+spatial_resolution: null
+temporal:
+  central_year: 2020
+  duration: null
+  end: null
+  start: null
+temporal_resolution: null
+title: Fiji Tropical Cyclone Wind Hazard Map, 100-year Return Period East
+version: null
+vulnerability: null
+---
