@@ -1,0 +1,226 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-nismod_powerplantdb",
+      "title": "Global Power Plant Database",
+      "description": "A comprehensive, open source database of power plants around the world. It centralizes power plant data to make it easier to navigate, compare and draw insights. The database covers approximately 30,000 power plants from 164 countries and includes thermal plants (coal, gas, oil, nuclear, biomass, waste, geothermal) and renewables (hydro, wind, solar). Each power plant is geolocated and entries contain information on plant capacity, generation, ownership, and fuel type.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "World Resources Institute",
+        "email": "logan.byers@wri.org",
+        "url": "https://www.wri.org/research/global-database-power-plants"
+      },
+      "version": "1.3.0",
+      "purpose": "To create a comprehensive, open-access power sector database that centralizes power plant data globally, making it easier to navigate, compare, and draw insights for analysis. The database facilitates collaborative analysis of the power sector and supports research on climate change, water stress, and air quality impacts.",
+      "project": {
+        "name": "Power Explorer",
+        "url": "https://www.wri.org/initiatives/power-explorer"
+      },
+      "details": "The Global Power Plant Database leverages existing data sources and methodologies to build a comprehensive database covering all types of fuel, technical characteristics (fuel, technology, ownership), operational characteristics (generation), plant geolocation, and plants over 1 megawatt (MW). The database is built preferentially on data reported from trusted sources and uses more than 600 sources. The methodology involves matching plants across databases, automated and manual data collection, and geolocation verification through satellite imagery. The database is continuously updated as data becomes available.",
+      "contact_point": {
+        "name": "World Resources Institute",
+        "email": "logan.byers@wri.org",
+        "url": "https://www.wri.org/research/global-database-power-plants"
+      },
+      "creator": {
+        "name": "World Resources Institute",
+        "email": "logan.byers@wri.org",
+        "url": "https://www.wri.org/research/global-database-power-plants"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_collaborator1",
+          "role": "collaborator",
+          "entity": {
+            "name": "Global Energy Observatory",
+            "email": "rajan@lanl.gov",
+            "url": "https://globalenergyobservatory.org"
+          }
+        },
+        {
+          "id": "attribution_collaborator2",
+          "role": "collaborator",
+          "entity": {
+            "name": "KTH Royal Institute of Technology",
+            "email": "info@kth.se",
+            "url": "https://www.kth.se"
+          }
+        },
+        {
+          "id": "attribution_collaborator3",
+          "role": "collaborator",
+          "entity": {
+            "name": "University of Groningen",
+            "email": "communicatie@rug.nl",
+            "url": "https://www.rug.nl"
+          }
+        },
+        {
+          "id": "attribution_funder",
+          "role": "funder",
+          "entity": {
+            "name": "Google Earth Outreach",
+            "email": "geoforgood-info@google.com",
+            "url": "https://earth.google.com/outreach"
+          }
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Global Energy Observatory (GEO)",
+            "url": "http://globalenergyobservatory.org",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/3.0/",
+            "used_in": "exposure",
+            "description": "Database containing approximately 10,000 power plants representing 58% of global capacity, providing geolocation and plant characteristics data Lineage: Used as a secondary source for geolocation information. Plants in the database are matched against GEO using Enipedia elastic search API with parameters: name (weighted 2x), country (weighted 1x), and fuel type (weighted 1x). GEO geolocation accuracy is high - 92% of tested plants were within 300 meters of actual location. Approximately 1,797 plants representing 20.5% of database capacity were matched with GEO. All high-confidence matches were added; medium-confidence matches were manually verified."
+          },
+          {
+            "id": "source_2",
+            "name": "Carbon Monitoring for Action (CARMA)",
+            "url": "http://carma.org",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Database of carbon dioxide emissions from power plants worldwide, includes geolocation data Lineage: Used as a secondary source for geolocation information when GEO matching was unsuccessful. Plants are matched using Enipedia API with parameters: name (weighted 2x) and country (weighted 1x). CARMA geolocation is less accurate than GEO - only 10% of tested plants were within 300 meters of actual location. Exactly 1,295 plants representing 1.3% of database capacity were matched and manually verified from CARMA."
+          },
+          {
+            "id": "source_3",
+            "name": "Platts World Electric Power Plants Database (WEPP)",
+            "url": "https://www.platts.com/products/world-electric-power-plants-database",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Comprehensive database of global power plant characteristics and capacity information for 2017 Lineage: Used to obtain total capacity of power generating stations in GW at the resolution of {country, fuel} for the year 2017. Only operational units (not under construction or retired) are considered. Used to calculate country-fuel capacity factors by dividing total generation by total capacity. These capacity factors are then applied to individual plants to estimate annual generation. Platts data provides unofficial estimates but are preferred over IEA official statistics which have a two- or three-year lag."
+          },
+          {
+            "id": "source_4",
+            "name": "International Energy Agency (IEA) Statistics",
+            "url": "https://www.iea.org/statistics/",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Total annual electricity generation data disaggregated by country and fuel type Lineage: Provides total generation for electricity production in GWh at the resolution of {year, country, fuel}. This data is divided by total capacity from Platts to calculate country-fuel capacity factors. These capacity factors are then multiplied by individual plant capacity to estimate annual generation for plants without reported generation data. IEA data ensures that individual plant-level generation estimates add up to correct national totals."
+          },
+          {
+            "id": "source_5",
+            "name": "National Government Data Sources (600+ sources)",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Official government data from 164 countries reporting power plant characteristics, including ministries of energy, utilities, transmission operators, and system operators Lineage: Primary sources with legal authority to collect statistics directly from plant-operating entities. Collected on country-by-country basis, with each country requiring different data collection strategies. Data includes plant-level information on capacity, fuel type, technology, ownership, generation, and other characteristics. Represents the most authoritative and preferred source of information. Approximately 29.7% of capacity in database is geolocated using national data. More than 95% of installed capacity information is from 2015 or later."
+          },
+          {
+            "id": "source_6",
+            "name": "Global Coal Plant Tracker",
+            "url": "globalenergymonitor.org/projects/global-coal-plant-tracker/",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Database tracking coal-fired power plants worldwide Lineage: Used as a source for coal plant identification and characteristics. Approximately 16.6% of geolocated capacity in the database comes from this source. Provides information on coal plant capacity, status, and location."
+          },
+          {
+            "id": "source_7",
+            "name": "Enipedia",
+            "url": "http://enipedia.tudelft.nl/wiki/Enipedia",
+            "type": "dataset",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "used_in": "exposure",
+            "description": "Linked data platform for energy and industry data, provides elastic search API for matching plants across databases Lineage: Provides data service based on Elasticsearch for matching plants between this database and GEO/CARMA databases. The Enipedia API returns best matches with associated match quality scores using weighted parameters specific to each database. This matching process creates an ID concordance table linking plant IDs across different databases, enabling integration of geolocation information."
+          },
+          {
+            "id": "source_8",
+            "name": "KTH Royal Institute of Technology Crowdsourcing",
+            "url": "https://www.kth.se",
+            "type": "dataset",
+            "used_in": "exposure",
+            "description": "Manual verification and crowdsourced data collection for power plants in Latin America and Africa Lineage: Partnership with KTH provides manual verification of plant characteristics through satellite imagery and desk research. Targets power plants in Latin America and Africa for geolocation accuracy improvement. Verifies plant traits including location, cooling technology for thermal plants, and ownership information. Approximately 2,870 power plants representing 17.5% of total database were manually located via satellite imagery. Students in course MJ2413 contributed to verification efforts."
+          }
+        ],
+        "description": "Global Power Plant Database compiled by the World Resources Institute (WRI) by aggregating plant-level data from the Global Energy Observatory (GEO), Carbon Monitoring for Action (CARMA), Platts World Electric Power Plants Database (WEPP), IEA Statistics, over 600 national government sources, the Global Coal Plant Tracker, Enipedia, and a KTH Royal Institute of Technology crowdsourcing initiative. Records were harmonised to a common schema, duplicate facilities merged, and locations verified against satellite imagery where possible."
+      },
+      "referenced_by": [
+        {
+          "author_names": [
+            "Logan Byers",
+            "Johannes Friedrich",
+            "Roman Hennig",
+            "Aaron Kressig",
+            "Xinyue Li",
+            "Colin McCormick",
+            "Laura Malaguzzi Valeri"
+          ],
+          "name": "A Global Database of Power Plants - Technical Note",
+          "date_published": "2021-03-01",
+          "url": "https://www.wri.org/publication/global-database-power-plants",
+          "id": "reference_1"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Global Power Plant Database",
+          "description": "Comprehensive database file containing approximately 30,000 geolocated power plants from 164 countries. Includes thermal plants (coal, gas, oil, nuclear, biomass, waste, geothermal) and renewables (hydro, wind, solar). Each entry contains plant name, fuel type, capacity (MW), location (latitude/longitude), year of capacity, year of generation, data source, URL, annual generation (GWh), operational status, generator technology, owner, and commissioning year. Coverage represents 80.2% of global installed capacity.",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datasets.wri.org/dataset/globalpowerplantdatabase",
+          "download_url": "https://github.com/wri/global-power-plant-database",
+          "temporal": {
+            "start": "1892",
+            "end": "2019"
+          },
+          "id": "resource_1",
+          "media_type": "text/csv",
+          "temporal_resolution": "P3M",
+          "spatial_aggregation": "Individual power plant facility level"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_power_plants",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "metric_plant_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            },
+            {
+              "id": "metric_installed_capacity_mw",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "power",
+                "unit": "megawatt"
+              }
+            },
+            {
+              "id": "metric_annual_generation_gwh",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "energy",
+                "unit": "gigawatt_hour"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "pwr-plt",
+            "title": "Infrastructure taxonomy",
+            "description": "Global power generation facilities classified using the GEM GED4ALL schema, sourced from the Global Power Plant Database (WRI, 2021), covering approximately 30,000 geolocated plants from 164 countries.",
+            "uri": "https://wiki.openstreetmap.org/wiki/GED4ALL",
+            "scheme": "GED4ALL"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
