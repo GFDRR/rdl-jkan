@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ncl_spc_newcaledoniapopulationgri_20210618",
+      "title": "New Caledonia - New_Caledonia_Population_Grid_2020",
+      "description": "Population Raster New Caledonia 2020 Data Input: Settlement footprint from Facebook's High-Resolution Population Density Maps https://data.humdata.org/dataset/new-caledonia-high-resolution-population-density-maps-demographic-estimates Population allocated proportionally using 2011 census population counts at enumeration area (districts de recensement) level. Year Population Growth Rate of 0.2% (0.001957) has been applied to update population up to 2020 The human settlement footprint with census population allocated has been converted into a 100 m resolution raster. Access this dataset from the Pacific Data Hub. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/pdh-new_caledonia_population_grid_2020]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-new_caledonia_population_grid_2020"
+      },
+      "creator": {
+        "name": "Pacific Community",
+        "url": "https://data.humdata.org/dataset/pdh-new_caledonia_population_grid_2020"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "NCL"
+        ]
+      },
+      "temporal": {
+        "start": "2021-06-18"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Facebook High-Resolution Population Density Maps",
+            "url": "https://data.humdata.org/dataset/pdh-new_caledonia_population_grid_2020"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "New Caledonia 2011 Census",
+            "url": "https://data.humdata.org/dataset/pdh-new_caledonia_population_grid_2020"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Settlement footprints from Facebook's High-Resolution Population Density Maps were intersected with 2011 census population counts at enumeration area level. Population was proportionally allocated to settlement areas and updated to 2020 using a 0.2% annual growth rate. The resulting population distribution was converted to a 100m resolution raster grid.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Facebook High-Resolution Population Density Maps",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Settlement footprint data providing spatial distribution of human settlements used as the basis for population allocation"
+          },
+          {
+            "id": "source_2",
+            "name": "New Caledonia 2011 Census",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Population counts at enumeration area level used to proportionally allocate population to settlement footprints"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7bfbf06b",
+          "title": "NCL_Pop_Grid_2020.tif",
+          "description": "Population Raster New Caledonia 2020 Data Input: Settlement footprint from Facebook's High-Resolution Population Density Maps https://data.humdata.org/dataset/new-caledonia-high-resolution-population-density-maps-demographic-estimates Population allocated proportionally using 2011 census population counts at enumeration area (districts de recensement) level. Year Population Growth Rate of 0.2% (0.001957) has been applied to update population up to 2020 The human settlement footprint with census population allocated has been converted into a 100 m resolution raster. This is a demo version, SDD is still evaluating the methodology but given the COVID outbreak the dataset has been early released.",
+          "media_type": "image/tiff;application=geotiff",
+          "download_url": "https://pacificdata.org/data/dataset/f3abaff7-0d7d-48f2-bd3b-265d1b1e5732/resource/65791c86-0bc3-4de3-8cdf-6cd3518ca733/download/ncl_pop_grid_2020.tif"
+        },
+        {
+          "id": "resource_04da6384",
+          "title": "NCL_Pop_Grid_2020_README.txt",
+          "description": "New Caledonia - New_Caledonia_Population_Grid_2020",
+          "media_type": "text/plain",
+          "download_url": "https://pacificdata.org/data/dataset/f3abaff7-0d7d-48f2-bd3b-265d1b1e5732/resource/133abe4f-5fd9-4eaa-952f-8e0993a855f5/download/ncl_pop_grid_2020_readme.txt"
+        },
+        {
+          "id": "resource_f42a15b3",
+          "title": "NCL_Pop_Grid_ATLAS",
+          "description": "New Caledonia - New_Caledonia_Population_Grid_2020 (Static maps of the New Caledonia Population Grid 2020)",
+          "format": "zipped jpeg",
+          "download_url": "https://pacificdata.org/data/dataset/f3abaff7-0d7d-48f2-bd3b-265d1b1e5732/resource/5f5986f0-ac2e-42d5-ba0b-32d5fbf2b115/download/ncl_pop_grid_atlas.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "asset_type": {
+            "id": "population",
+            "description": "Gridded population distribution at 100m resolution derived from settlement footprints and census data"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/pdh-new_caledonia_population_grid_2020",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

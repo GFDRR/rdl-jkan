@@ -1,0 +1,98 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-phl_ochaphl_schoolsmappingopenstreetm_20211023",
+      "title": "The Philippines schools mapping by OpenStreetMap",
+      "description": "This project is a portmanteau of OSM + Map + Paaralan - to collaboratively map public schools (paaralan) in the Philippines, on OpenStreetMap. Documentation available at https://wiki.openstreetmap.org/wiki/Philippines/OSMaPaaralan. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/schools-mapping-in-the-philippines-by-openstreetmap]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Philippines",
+        "url": "https://data.humdata.org/dataset/schools-mapping-in-the-philippines-by-openstreetmap"
+      },
+      "creator": {
+        "name": "OCHA Philippines",
+        "url": "https://data.humdata.org/dataset/schools-mapping-in-the-philippines-by-openstreetmap"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2021-10-23"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Department of Education, CY 2012 Public Schools Masterlist",
+            "url": "https://data.humdata.org/dataset/schools-mapping-in-the-philippines-by-openstreetmap"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Public school location data from the Philippine Department of Education (2012) was extracted and validated through visual inspection against available satellite imagery by OpenStreetMap contributors, then compiled into a cleaned geographic dataset of school facilities across the Philippines.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Department of Education, CY 2012 Public Schools Masterlist",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Administrative registry of public schools in the Philippines with location data, validated and georeferenced through OpenStreetMap collaborative mapping"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d2f43455",
+          "title": "Schools dataset cleaned and reviewed",
+          "description": "These data files is the cleaned version of the original data set received from DepEd, back in 2013. You can find the JSON version at https://github.com/OSMPH/deped_schools_db/tree/master/data/2019",
+          "format": "TSV",
+          "download_url": "https://raw.githubusercontent.com/OSMPH/deped_schools_db/master/data/2019/OSMaPaaralan_v2019-282-full.tsv"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Public school facilities mapped with geographic coordinates and validated through imagery"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/schools-mapping-in-the-philippines-by-openstreetmap",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
