@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-achgis4tech_sahelagroclimaticsthreats_2020",
+      "title": "Sahel Agroclimatics Threats Data",
+      "description": "A summary table is established at the municipal level with the list of agroclimatic hazards calculated from the agroclimatic indicators shown in the Vulnerability panel. For each column, the threat category in which the municipality would be found is defined (No risk, Mild threat, Moderate threat, Severe threat), and the final column represents the general summary of global threats, obtained using the 20% rule. The calculation made within each category is established through a matrix of crossed conditions. This information belongs to the Food and Nutrition Security Monitoring and Prediction System in the Sahel (PREDISAN) Project, funded by the Agencia Andaluza de Cooperación Internacional para el Desarrollo (AACID) and the University of Granada (UGR). The PREDISAN AI-SAHEL Project focuses on the Monitoring and Prediction System for Humanitarian Vulnerability of Pastoral and Agro-pastoral Populations in the Western Sahel, based on GIS Analysis and Artificial Intelligence. For more information, contact GIS4Tech at info@gis4tech.com or visit the PREDISAN platform at https://predisan.gis4tech.com/sahel.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/sahel-agroclimatics-threats-data]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/sahel-agroclimatics-threats-data"
+      },
+      "creator": {
+        "name": "Acción contra el hambre - GIS4tech",
+        "url": "https://data.humdata.org/dataset/sahel-agroclimatics-threats-data"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "MLI",
+          "BFA",
+          "NER",
+          "TCD",
+          "SEN",
+          "MRT"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-01",
+        "end": "2026-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "MODIS",
+            "url": "https://data.humdata.org/dataset/sahel-agroclimatics-threats-data"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "CHIRPS",
+            "url": "https://data.humdata.org/dataset/sahel-agroclimatics-threats-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Agroclimatic threat data derived from MODIS vegetation indices and CHIRPS precipitation data collected at pixel level and aggregated to municipal medians. Satellite-derived indicators (NDVI, EVI, ARVI, SIPI, SPI at multiple timescales) are processed through a crossed-condition matrix to classify municipalities into threat categories (No risk, Mild, Moderate, Severe), with a final global threat summary computed using the 20% rule.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "MODIS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite remote sensing data providing vegetation indices (NDVI, SIPI, ARVI, EVI) used to derive agricultural drought indicators at municipal scale"
+          },
+          {
+            "id": "source_2",
+            "name": "CHIRPS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Climate Hazards Group InfraRed Precipitation with Station data providing precipitation measurements used to calculate standardized precipitation indices (SPI) at 1, 3, 6, 9, and 12-month timescales"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_362f0dbc",
+          "title": "Sahel-agroclimatics-threats-by-ACH-GIS4Tech.csv",
+          "description": "Sahel Agroclimatics Threats Data (Agroclimatic threats data for Senegal and Mauritania.)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/9fe80552-9d7f-4d40-baa2-6b269ed95a24/resource/362f0dbc-5933-4e4c-95db-c382e159b2fd/download/sahel-agroclimatics-threats-by-ach-gis4tech.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "agricultural_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "inferred"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/sahel-agroclimatics-threats-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

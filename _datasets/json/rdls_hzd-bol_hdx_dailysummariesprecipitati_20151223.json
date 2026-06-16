@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-bol_hdx_dailysummariesprecipitati_20151223",
+      "title": "Daily Summaries of Precipitation Indicators for Bolivia, Plurinational State of",
+      "description": "This dataset contains the daily summaries on base stations across Bolivia, Plurinational State of . The four indicators included are: * TPCP : Total precipitation * MXSD : Maximum snow depth * TSNW : Total snow fall * EMXP : Extreme maximum daily precipitation Indicators are compiled by the National Centers for Environmental Information (NCEI), which is administrated by National Oceanic and Atmospheric Administration (NOAA) an organization part of the United States government. NOAA has access to data collected from thousands of base stations around the world, which collect data periodically on weather and climate conditions. This dataset contains the latest 5 years of available data .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-bolivia--plurinational-state-of]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Due to late-arriving data, the number of recent records is likely underrepresented in all categories, but the ratio of records (warm to cold, for example) should be a fairly strong estimate of a final outcome.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-bolivia--plurinational-state-of"
+      },
+      "creator": {
+        "name": "National Centers for Environmental Information (NCEI / NOAA)",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-bolivia--plurinational-state-of"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BOL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-12-23"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-bolivia--plurinational-state-of"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Daily precipitation indicators were collected from base stations across Bolivia by NOAA's National Centers for Environmental Information. Stations were selected based on a 30-year minimum record requirement with >182 days of annual data completeness. Four indicators (total precipitation, maximum snow depth, total snowfall, extreme maximum daily precipitation) were compiled into daily summaries to support meteorological drought monitoring and climate analysis.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Long-term precipitation and snow observations from weather stations across Bolivia, compiled and quality-controlled by NOAA with minimum 30-year records and >182 days annual completeness"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncdc.noaa.gov/cdo-web/datatools/records"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_d3051c63",
+          "title": "precipitation_bol.csv",
+          "description": "Daily Summaries of Precipitation Indicators for Bolivia, Plurinational State of (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/aff3f5c8-cafb-429a-9233-588339e428d7/resource/d3051c63-c9eb-441e-a6a5-b8d54228f831/download/precipitation_bol.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-bolivia--plurinational-state-of",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

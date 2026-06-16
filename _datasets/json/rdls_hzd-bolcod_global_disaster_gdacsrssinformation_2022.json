@@ -1,0 +1,144 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-bolcod_global_disaster_gdacsrssinformation_2022",
+      "title": "GDACS RSS Information",
+      "description": "GDACS alerts are issued for earthquakes and possible subsequent tsunamis, tropical cyclones, floods and volcanoes. Earthquake, tsunami and tropical cyclones calculations and assessments are done automatically, without human intervention. Floods and volcanic eruptions are currently manually introduced. Research and development is continuous to improve the global monitoring.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/gdacs-rss-information]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "While we try everything to ensure accuracy, this information is purely indicative and should not be used for any decision making without alternate sources of information. The JRC is not responsible for any damage or loss resulting from use of the information presented on this website.",
+      "contact_point": {
+        "name": "Global Disaster Alert and Coordination System",
+        "url": "https://data.humdata.org/dataset/gdacs-rss-information"
+      },
+      "creator": {
+        "name": "Global Disaster Alert and Coordination System",
+        "url": "https://data.humdata.org/dataset/gdacs-rss-information"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "BOL",
+          "COD"
+        ]
+      },
+      "temporal": {
+        "start": "2022-09-21",
+        "end": "2026-02-03"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Global Disaster Alert and Coordination System (GDACS)",
+            "url": "https://data.humdata.org/dataset/gdacs-rss-information"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "GDACS integrates multiple hazard detection systems (automatic for seismic and cyclone events, manual for floods and volcanoes) to generate real-time alert information. The RSS feed aggregates severity assessments and event metadata across multiple hazard types for global disaster monitoring and coordination.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Global Disaster Alert and Coordination System (GDACS)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Real-time global monitoring system that automatically detects and assesses earthquakes, tsunamis, and tropical cyclones, with manual input for floods and volcanic eruptions. Provides severity classifications and alert dissemination via RSS feeds."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://gdacs.org/Knowledge/overview.aspx"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_4ef001d1",
+          "title": "gdacs_rss_information.csv",
+          "description": "GDACS RSS Information (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/a87f96f8-16e6-4d51-872c-cfa54a8251ec/resource/4ef001d1-7888-4f5d-98ce-0ca8006787f7/download/gdacs_rss_information.csv"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/gdacs-rss-information",
+          "rel": "source"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "es_earthquake",
+            "hazards": [
+              {
+                "id": "hzd_earthquake",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_flood",
+            "hazards": [
+              {
+                "id": "hzd_flood",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_wind",
+            "hazards": [
+              {
+                "id": "hzd_wind",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "ws:m/s"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_volcanic",
+            "hazards": [
+              {
+                "id": "hzd_volcanic",
+                "type": "volcanic",
+                "process": "ashfall",
+                "intensity_measure": "T:cm"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-tha_unosat_preliminaryderivedfloodas_20211112",
+      "title": "Preliminary satellite-derived flood assessment in Lower Northeastern Part of Thailand as of 11 November 2021",
+      "description": "UNOSAT code: FL20210928THA Summary of finding - Floodwaters observed in 13 provinces as of 11 November 2021; - Receding floodwaters observed in Lower Northeastern Region as of 11 November 2021; - Receding floodwaters observed in Amnat Chareon, Buri Ram, Chaiyaphum, Khon Kaen, and Nakhon Ratchasima provinces as of 11 November 2021; - Floodwaters increase observed in Kalasin, Maha Sarakham, Nong Bua Lam Phu, Roi Et, Si Sa Ket, Surin, Ubon Ratchathani, and Yasothon provinces as of 11 November 2021.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/preliminary-satellite-derived-flood-assessment-in-lower-northeastern-part-of-thailand-as-o]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-assessment-in-lower-northeastern-part-of-thailand-as-o"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-assessment-in-lower-northeastern-part-of-thailand-as-o"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "THA"
+        ]
+      },
+      "temporal": {
+        "start": "2021-11-12"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-assessment-in-lower-northeastern-part-of-thailand-as-o"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared multi-temporal satellite imagery to identify and map floodwater extent across Lower Northeastern Thailand as of 11 November 2021. Observed changes between satellite scenes were used to delineate inundated areas and classify provinces by flood status (receding vs. increasing). Results are provided as vector geometries with area measurements in hectares and square meters.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing pre- and post-event scenes to delineate floodwater extent and track temporal dynamics of inundation across provinces"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_564dac45",
+          "title": "FL20210928THA_gdb.zip",
+          "description": "Preliminary satellite-derived flood assessment in Lower Northeastern Part of Thailand as of 11 November 2021 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/TH/FL20210928THA/FL20210928THA_gdb.zip"
+        },
+        {
+          "id": "resource_6f66129d",
+          "title": "FL20210928THA_SHP.zip",
+          "description": "Preliminary satellite-derived flood assessment in Lower Northeastern Part of Thailand as of 11 November 2021 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/TH/FL20210928THA/FL20210928THA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Floodwater extent observed across 13 provinces with spatial delineation of inundated areas"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/preliminary-satellite-derived-flood-assessment-in-lower-northeastern-part-of-thailand-as-o",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

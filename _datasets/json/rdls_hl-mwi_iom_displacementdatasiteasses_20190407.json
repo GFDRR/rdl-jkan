@@ -1,0 +1,140 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-mwi_iom_displacementdatasiteasses_20190407",
+      "title": "Malawi Displacement Data - Site Assessment - Idai - [IOM DTM]",
+      "description": "Malawi has experienced floods and sustained heavy rains caused by the tropical cyclone Idai weather system. IOM, in close coordination with the Government of Malawi through the Department of Disaster Management Affairs (DoDMA), conducted multi-sectoral location assessments in Chikwawa, Nsanje, Phalombe, Zomba districts. The dataset contains number of IDPs, households and their needs at sub-national level.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-idai-iom-dtm]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "details": "Copyright © International Organization for Migration 2018 IOM reserves the right to assert ownership of the Materials collected on the https://data.humdata.org/ website. The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom. At all times the User shall credit the DTM as the source, unless otherwise stated. The user must include the URL of the Materials from the HDX Website, as well as the following credit line: Source: 'International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)'.",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-idai-iom-dtm"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-idai-iom-dtm"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MWI"
+        ]
+      },
+      "temporal": {
+        "start": "2019-04-07"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "url": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-idai-iom-dtm"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IOM DTM conducted multi-round site assessments (3 rounds) in four Malawi districts (Chikwawa, Nsanje, Phalombe, Zomba) following tropical cyclone Idai, documenting displacement populations and household-level needs through sample survey methodology at sub-national assessment sites.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM) Displacement Tracking Matrix (DTM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-sectoral site assessments conducted in coordination with Malawi's Department of Disaster Management Affairs documenting internally displaced persons, households, and humanitarian needs across affected districts."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d21f0711",
+          "title": "DTM Malawi Site Assessment Round 3",
+          "description": "Malawi Displacement Data - Site Assessment - Idai - [IOM DTM] (53,237 individuals and 12,470 families recorded.)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8dfed11c-838f-41d3-8162-3e0cc2f5311b/resource/d21f0711-2722-42ee-aa1c-6dda74287ff4/download/dtm-malawi-site-assessment-round-3.xlsx"
+        },
+        {
+          "id": "resource_8b8d307d",
+          "title": "DTM Malawi Site Assessment Round 2",
+          "description": "110,110 individuals (24,887 households) were recorded across 103 displacement sites. An additional 40 sites in the 4 districts were assessed and verified in this data collection round.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8dfed11c-838f-41d3-8162-3e0cc2f5311b/resource/8b8d307d-b65d-4c6b-b9bf-56374d05ade1/download/dtm-malawi-site-assessment-round-2.xlsx"
+        },
+        {
+          "id": "resource_c7daff9a",
+          "title": "DTM Malawi Site Assessment Round 1",
+          "description": "76,471 individuals (17,254 households) were reported across the 63 assessed displacement sites. The IDPs population is composed of 58% of females and 42% of males. In terms of nationality, 330 Mozambicans were identified in two sites in Nsanje district.",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/8dfed11c-838f-41d3-8162-3e0cc2f5311b/resource/c7daff9a-8bbe-4e65-ac80-9aeda985ce5d/download/dtm-malawi-site-assessment-round-1.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Internally displaced persons from tropical cyclone Idai in Malawi districts"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/malawi-displacement-data-site-assessment-idai-iom-dtm",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

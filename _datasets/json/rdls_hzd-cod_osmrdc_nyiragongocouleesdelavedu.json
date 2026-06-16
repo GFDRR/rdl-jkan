@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-cod_osmrdc_nyiragongocouleesdelavedu",
+      "title": "DR Congo - Nyiragongo Coulées de lave du 22 mai 2021",
+      "description": "Cette première version des coulées de lave résultant de l'éruption du volcan Nyiragongo du 22 mai 2021 sont des données approximatives. Elles ont été numérisées sur base des données Sentinel-1 du 25 mai 2021. [UPDATE 27/05/2021] Une version légèrement adaptée au niveau de l'extrémité Sud de la coulée ayant atteint Buhene est désormais disponible. La mise à jour à été effectuée sur base d'une image Maxar haute-résolution du 25 mai 2021.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/nyiragongo-coulees-de-lave-du-22-mai-2021]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Ces données sont approximatives, la précision devrait s'améliorer au fur et à mesure des mises à jour.",
+      "contact_point": {
+        "name": "OpenStreetMap RDC",
+        "url": "https://data.humdata.org/dataset/nyiragongo-coulees-de-lave-du-22-mai-2021"
+      },
+      "creator": {
+        "name": "OpenStreetMap RDC",
+        "url": "https://data.humdata.org/dataset/nyiragongo-coulees-de-lave-du-22-mai-2021"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "COD"
+        ]
+      },
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Sentinel-1 (ESA Copernicus)",
+            "url": "https://data.humdata.org/dataset/nyiragongo-coulees-de-lave-du-22-mai-2021"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Maxar high-resolution imagery",
+            "url": "https://data.humdata.org/dataset/nyiragongo-coulees-de-lave-du-22-mai-2021"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Lava flow polygons were manually digitized by OpenStreetMap RDC from Sentinel-1 SAR data acquired on 25 May 2021, three days after the Nyiragongo eruption of 22 May 2021. A subsequent update refined the southern boundary of the flow near Buhene using a Maxar high-resolution optical image from the same date. The resulting vector dataset represents the approximate spatial extent of lava flows for emergency mapping and disaster response purposes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Sentinel-1 (ESA Copernicus)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Synthetic aperture radar (SAR) imagery acquired on 25 May 2021 used as the primary source for digitizing the lava flow extent following the Nyiragongo eruption."
+          },
+          {
+            "id": "source_2",
+            "name": "Maxar high-resolution imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "High-resolution optical satellite imagery from Maxar acquired on 25 May 2021, used to refine the southern extent of the lava flow reaching Buhene in the updated version."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_4c725307",
+          "title": "Nyiragongo_Lave_Sentinel-Maxar_210525.zip",
+          "description": "DR Congo - Nyiragongo Coulées de lave du 22 mai 2021 (Shapefile zippé, mise à jour du 27 mai)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/035b0a01-3295-4223-a67e-f6b35751defa/resource/4c725307-f3e0-4d32-a19e-4555d7ad2dd5/download/nyiragongo_lave_sentinel-maxar_210525.zip"
+        },
+        {
+          "id": "resource_447405bd",
+          "title": "Lave_Sentinel-Maxar_210525.osm",
+          "description": "DR Congo - Nyiragongo Coulées de lave du 22 mai 2021 (Données au format .osm)",
+          "format": "OSMand OBF",
+          "download_url": "https://data.humdata.org/dataset/035b0a01-3295-4223-a67e-f6b35751defa/resource/447405bd-ac74-4e5a-98f8-4fa64b763b4e/download/lave_sentinel-maxar_210525.osm"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "volcanic",
+                "process": "lava",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/nyiragongo-coulees-de-lave-du-22-mai-2021",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

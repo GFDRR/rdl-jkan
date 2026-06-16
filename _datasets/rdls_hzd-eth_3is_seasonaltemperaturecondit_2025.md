@@ -1,0 +1,205 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: MODIS (Moderate Resolution Imaging Spectroradiometer)
+    url: https://data.humdata.org/dataset/ethiopia-seasonal-temperature-condition-index-june-july-august-september
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: 3iS
+  url: https://data.humdata.org/dataset/ethiopia-seasonal-temperature-condition-index-june-july-august-september
+creator:
+  affiliation: null
+  email: null
+  name: 3iS
+  url: https://data.humdata.org/dataset/ethiopia-seasonal-temperature-condition-index-june-july-august-september
+dataset_id: rdls_hzd-eth_3is_seasonaltemperaturecondit_2025
+description: 'These datasets provide Ethiopia''s Temperature Condition Index (TCI)
+  values for the past five years, focusing specifically on the growing season (June-September).
+  The Temperature Condition Index is a remote sensing-based indicator used to evaluate
+  vegetation stress resulting from temperature extremes, primarily heat stress. TCI
+  is calculated using Land Surface Temperature (LST) data sourced from the MODIS platform.
+  Higher TCI values reflect cooler and more favorable conditions for plant growth,
+  while lower values are associated with increased heat stress and potential vegetation
+  damage. For long-term seasonal analysis, MODIS LST data from 2000 to the present
+  were utilized, with an emphasis on the June-September period. These time series
+  datasets highlight TCI values from the recent five growing seasons, enabling direct
+  comparison with current year conditions.. [Source: This metadata record was automatically
+  extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ethiopia-seasonal-temperature-condition-index-june-july-august-september]'
+details: null
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    extreme_temperature:
+    - analysis_type: empirical
+      calculation_method: inferred
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: TCI:-
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: Land Surface Temperature data from MODIS satellite platform were processed
+    using remote sensing techniques to derive the Temperature Condition Index (TCI),
+    a vegetation stress indicator calculated for Ethiopia's growing season (June-September)
+    across five years (2021-2025). TCI values reflect relative temperature favorability
+    for plant growth, with lower values indicating heat stress conditions.
+  sources:
+  - id: source_1
+    license: null
+    name: MODIS (Moderate Resolution Imaging Spectroradiometer)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/ethiopia-seasonal-temperature-condition-index-june-july-august-september
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by: []
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: Ethiopia Seasonal Temperature Condition Index (June, July, August,
+    & September).pdf
+  download_url: https://data.humdata.org/dataset/c12d9844-02ce-412c-9302-6cf0ad7db098/resource/b8d7af8d-4869-4a40-90db-ecdbe0532f1b/download/ethiopia-seasonal-temperature-condition-index-june-july-august-september.pdf
+  format: null
+  id: resource_b8d7af8d
+  media_type: application/pdf
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: Ethiopia Seasonal Temperature Condition Index (June, July, August, & September).pdf
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Ethiopia: Seasonal Temperature Condition Index'
+  download_url: https://data.humdata.org/dataset/c12d9844-02ce-412c-9302-6cf0ad7db098/resource/221f07b6-75aa-4520-8782-e075d74a1b28/download/tci_seasonal_whole_ethiopia_2025.tif
+  format: null
+  id: resource_221f07b6
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: TCI_Seasonal_Whole_Ethiopia_2025.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Ethiopia: Seasonal Temperature Condition Index'
+  download_url: https://data.humdata.org/dataset/c12d9844-02ce-412c-9302-6cf0ad7db098/resource/8b49eb2a-6e03-435a-8973-961d87a40ebb/download/tci_seasonal_whole_ethiopia_2024.tif
+  format: null
+  id: resource_8b49eb2a
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: TCI_Seasonal_Whole_Ethiopia_2024.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Ethiopia: Seasonal Temperature Condition Index'
+  download_url: https://data.humdata.org/dataset/c12d9844-02ce-412c-9302-6cf0ad7db098/resource/1c892a5f-9485-4df9-bab9-eccb2ccda214/download/tci_seasonal_whole_ethiopia_2023.tif
+  format: null
+  id: resource_1c892a5f
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: TCI_Seasonal_Whole_Ethiopia_2023.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Ethiopia: Seasonal Temperature Condition Index'
+  download_url: https://data.humdata.org/dataset/c12d9844-02ce-412c-9302-6cf0ad7db098/resource/a2467b53-c302-459e-bd67-d01832836790/download/tci_seasonal_whole_ethiopia_2022.tif
+  format: null
+  id: resource_a2467b53
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: TCI_Seasonal_Whole_Ethiopia_2022.tif
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Ethiopia: Seasonal Temperature Condition Index'
+  download_url: https://data.humdata.org/dataset/c12d9844-02ce-412c-9302-6cf0ad7db098/resource/2f200734-fd8f-4664-a199-f8dfdb0b05a9/download/tci_seasonal_whole_ethiopia_2021.tif
+  format: null
+  id: resource_2f200734
+  media_type: image/tiff;application=geotiff
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: TCI_Seasonal_Whole_Ethiopia_2021.tif
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-eth_3is_seasonaltemperaturecondit_2025
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - ETH
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2025-09-30'
+  start: '2025-06-01'
+temporal_resolution: null
+title: 'Ethiopia: Seasonal Temperature Condition Index'
+version: null
+vulnerability: null
+---

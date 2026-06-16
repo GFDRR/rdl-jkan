@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-bwa_unosat_accumulateddetectedwatere_20250307",
+      "title": "Accumulated satellite-detected water extents in Gaborone, South East and Kgatleng Districts, Botswana as of 4 March 2025",
+      "description": "UNOSAT code: FL20250220BWA, GDACS ID: 1103128 Satellite detected water extents in Gaborone, South East and Kgatleng Districts, Botswana as of 4 March 2025 This map illustrates the satellite-detected accumulated flood extent in Gaborone, South East District, Botswana, as observed from multisatellite imagery, including Sentinel-2, PlanetScope, and Kanopus-V, acquired on 4 March 2025. Within the analyzed area of approximately 700 km², an estimated 7 km² remains affected by floodwaters. Floodwaters have receded by about 23 km² since 23 and 25 February 2025. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-4-m]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-4-m"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-4-m"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BWA"
+        ]
+      },
+      "temporal": {
+        "start": "2025-03-07"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-4-m"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts processed multisatellite imagery (Sentinel-2, PlanetScope, Kanopus-V) acquired on 4 March 2025, comparing images from 23-25 February 2025 to detect and map accumulated flood water extents across approximately 700 km² in Gaborone, South East, and Kgatleng Districts. Water classification and area calculations (in m² and hectares) were performed on the detected features to quantify flood coverage and recession.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis from Sentinel-2, PlanetScope, and Kanopus-V to detect and map accumulated water extents and temporal changes in flood coverage"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_3e854869",
+          "title": "FL20250220BWA_gdb.zip",
+          "description": "Accumulated satellite-detected water extents in Gaborone, South East and Kgatleng Districts, Botswana as of 4 March 2025 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4083/FL20250220BWA_gdb.zip"
+        },
+        {
+          "id": "resource_663ef9db",
+          "title": "FL20250220BWA_SHP.zip",
+          "description": "Accumulated satellite-detected water extents in Gaborone, South East and Kgatleng Districts, Botswana as of 4 March 2025 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/4083/FL20250220BWA_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/accumulated-water-extents-in-gaborone-south-east-and-kgatleng-districts-botswana-as-of-4-m",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

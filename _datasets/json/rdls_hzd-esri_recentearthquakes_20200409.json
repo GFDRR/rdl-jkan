@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-esri_recentearthquakes_20200409",
+      "title": "Recent Earthquakes",
+      "description": "This map displays continuously updated data from the USGS Earthquakes and Shakemaps. This map is provided by the Esri Disaster Response Program.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/earthquakes]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Esri",
+        "url": "https://data.humdata.org/dataset/earthquakes"
+      },
+      "creator": {
+        "name": "Esri",
+        "url": "https://data.humdata.org/dataset/earthquakes"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2020-04-09"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "USGS Earthquakes and Shakemaps",
+            "url": "https://data.humdata.org/dataset/earthquakes"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "USGS PAGER (Prompt Assessment of Global Earthquakes for Response)",
+            "url": "https://data.humdata.org/dataset/earthquakes"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Earthquake locations and magnitudes are continuously collected by the USGS seismic monitoring network. Ground motion shakemaps are generated using the PAGER program methodology, which models seismic wave propagation and converts instrumental data into intensity measures for rapid hazard assessment and emergency response.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "USGS Earthquakes and Shakemaps",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Real-time earthquake epicenter locations, magnitudes, and ground motion shakemaps from the United States Geological Survey"
+          },
+          {
+            "id": "source_2",
+            "name": "USGS PAGER (Prompt Assessment of Global Earthquakes for Response)",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Rapid earthquake impact assessment methodology providing shakemaps and loss estimates for emergency response"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d15bd1fa",
+          "title": "Earthquake App",
+          "description": "This web applications displays continuously updated data from the USGS Earthquakes and Shakemaps. This map is provided by the Esri Disaster Response Program.",
+          "access_url": "https://disasterresponse.maps.arcgis.com/apps/webappviewer/index.html?id=e588a7f3ba0d41388b5052b6444457a8",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_538415b5",
+          "title": "Earthquake Data",
+          "description": "This service presents recent earthquake information from the USGS Prompt Assessment of Global Earthquakes for Response (PAGER) program.",
+          "access_url": "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USGS_Seismic_Data_v1/FeatureServer",
+          "media_type": "text/html"
+        },
+        {
+          "id": "resource_0f32d1a4",
+          "title": "Living Atlas Earthquakes Service",
+          "description": "This service presents recent earthquake information from the USGS Prompt Assessment of Global Earthquakes for Response (PAGER) program.",
+          "access_url": "https://www.arcgis.com/home/item.html?id=9e2f2b544c954fda9cd13b7f3e6eebce",
+          "media_type": "text/html"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/earthquakes",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

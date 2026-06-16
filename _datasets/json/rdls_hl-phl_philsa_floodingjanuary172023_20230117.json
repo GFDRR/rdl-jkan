@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_philsa_floodingjanuary172023_20230117",
+      "title": "Flooding in the Philippines on January 17, 2023",
+      "description": "This dataset shows the actual extent of flooding in the Philippines caused by typhoons or tropical cyclones as of January 17, 2023, as observed through available satellite imagery. The dataset can be used to track the progression of floods over time, identify areas at risk, and assess the impact of these natural disasters on infrastructure, agriculture, and local populations.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-20230117]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset has not been validated using ground-truth data.",
+      "contact_point": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20230117"
+      },
+      "creator": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20230117"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-01-17"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine Space Agency",
+            "url": "https://data.humdata.org/dataset/philippines-flood-20230117"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery acquired on January 17, 2023 was processed by the Philippine Space Agency to delineate flood extent polygons and calculate inundated areas. The resulting vector and raster products represent observed post-event flood hazard footprints used for impact assessment and disaster tracking.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine Space Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery processing to delineate actual flood extent and inundated areas across the Philippines during the January 17, 2023 typhoon event"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_fa108e3b",
+          "title": "20230117_1000_fld_nv1_maps.zip",
+          "description": "Flooding in the Philippines on January 17, 2023 (Flooding extents on January 17, 2023 at 10:00 AM using NovaSAR-1 satellite image)",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/b5731707-c879-4db6-85f7-452ebc9a1f1e/resource/fa108e3b-9520-46fc-9a93-f852f254a13b/download/20230117_1000_fld_nv1_maps.zip"
+        },
+        {
+          "id": "resource_97e75a6c",
+          "title": "20230117_1000_fld_nv1_shp.zip",
+          "description": "Flooding in the Philippines on January 17, 2023 (Flooding extents on January 17, 2023 at 10:00 AM using NovaSAR-1 satellite image)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/b5731707-c879-4db6-85f7-452ebc9a1f1e/resource/97e75a6c-f030-4f01-bc7f-aff23ad2c2c0/download/20230117_1000_fld_nv1_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on infrastructure and agriculture from observed flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-20230117",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

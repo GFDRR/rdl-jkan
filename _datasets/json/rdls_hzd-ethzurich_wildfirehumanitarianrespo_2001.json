@@ -1,0 +1,313 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-ethzurich_wildfirehumanitarianrespo_2001",
+      "title": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment",
+      "description": "Global wildfire dataset at 4km resolution, based on MODIS satellite data 2000-2021 (cf https://firms.modaps.eosdis.nasa.gov).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/climada-wildfire-dataset]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "In this API we provide datasets in a form that can readily be used in CLIMADA analyses. Users should determine whether these datasets are suitable for a particular purpose or application, considering factors such as resolution (for example, a 4km grid is not suitable for modelling risk at the neighborhood level), the way that hazards are represented in the dataset (for example, specific events, event thresholds, probabilistic event sets, etc.), the way that exposure is represented, and other aspects. Data provided with no warranty of any kind under CC BY 4.0. See respective API metadata and referenced publications for details and limitations.",
+      "contact_point": {
+        "name": "ETH Zürich - Weather and Climate Risks",
+        "url": "https://data.humdata.org/dataset/climada-wildfire-dataset"
+      },
+      "creator": {
+        "name": "ETH Zürich - Weather and Climate Risks",
+        "url": "https://data.humdata.org/dataset/climada-wildfire-dataset"
+      },
+      "spatial": {
+        "scale": "regional",
+        "countries": [
+          "COD",
+          "PSE",
+          "SYR",
+          "VEN",
+          "YEM",
+          "AFG",
+          "BFA",
+          "BDI",
+          "CMR",
+          "CAF",
+          "TCD",
+          "COL",
+          "ETH",
+          "HTI",
+          "MLI",
+          "MOZ",
+          "MMR",
+          "NER",
+          "NGA",
+          "SOM",
+          "SSD",
+          "UGA",
+          "ZWE",
+          "ZMB"
+        ]
+      },
+      "temporal": {
+        "start": "2001-01-01",
+        "end": "2020-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "MODIS (Moderate Resolution Imaging Spectroradiometer)",
+            "url": "https://data.humdata.org/dataset/climada-wildfire-dataset"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "ETH Zurich Climada",
+            "url": "https://data.humdata.org/dataset/climada-wildfire-dataset"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "MODIS satellite fire detection data from NASA FIRMS (2000-2021) was processed through the Climada v2.2 API to generate globally consistent wildfire hazard metrics aggregated at 4km resolution and summarized by administrative boundaries for HRP countries, following the methodology described in Lüthi et al. (2021).",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "MODIS (Moderate Resolution Imaging Spectroradiometer)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-based fire detection data from NASA's FIRMS system providing global wildfire observations from 2000-2021"
+          },
+          {
+            "id": "source_2",
+            "name": "ETH Zurich Climada",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Climada v2.2 platform used to process and aggregate MODIS fire observations into consistent global wildfire hazard assessment at 4km resolution"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://gmd.copernicus.org/articles/14/7175/2021/"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_3bedc412",
+          "title": "admin1-summaries-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Wildfire extent over the period 2001-2021 at admin1 level for the HRP countries)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/3bedc412-c936-4b2f-9b1b-a53700c2e211/download/admin1-summaries-wildfire.csv"
+        },
+        {
+          "id": "resource_37df8513",
+          "title": "admin1-timeseries-summaries-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Wildfire extent by admin1 or admin2 for each fire for HRP countries)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/37df8513-6859-464e-a1cc-e83bf2e2fb36/download/admin1-timeseries-summaries-wildfire.csv"
+        },
+        {
+          "id": "resource_96599799",
+          "title": "afghanistan-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Afghanistan at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/96599799-f37b-4ab2-bc1b-643de3e60fc1/download/afghanistan-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_7c05f270",
+          "title": "burkina-faso-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Burkina Faso at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/7c05f270-c131-48a2-9aaf-7867c933cae3/download/burkina-faso-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_a2b5171a",
+          "title": "burundi-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Burundi at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/a2b5171a-69a1-49a4-aafc-290c34cb99c9/download/burundi-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_6ff41dda",
+          "title": "cameroon-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Cameroon at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/6ff41dda-de39-4382-9670-3501ecd159fa/download/cameroon-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_77bcdd6c",
+          "title": "central-african-republic-admin1-wildfire.csv",
+          "description": "Gridded (4kmx4km) wildfire extent for Central African Republic at with admin1 name column",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/77bcdd6c-2667-4894-82cd-628ee9782e36/download/central-african-republic-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_0a30b364",
+          "title": "chad-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Chad at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/0a30b364-a9fb-4a4b-b21d-c161254b4344/download/chad-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_79785092",
+          "title": "colombia-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Colombia at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/79785092-85b0-44b6-a3bd-2ce31173d23e/download/colombia-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_690ce34b",
+          "title": "dr-congo-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for DR Congo at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/690ce34b-08f9-4fa4-8166-4e650ea3b4a1/download/dr-congo-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_d105e72a",
+          "title": "ethiopia-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Ethiopia at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/d105e72a-af1a-4052-85bc-d6ec39cabd5d/download/ethiopia-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_05be32bf",
+          "title": "haiti-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Haiti at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/05be32bf-15ee-4322-a022-8bdfb135091e/download/haiti-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_35a4603a",
+          "title": "mali-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Mali at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/35a4603a-0a34-4816-bede-7d4c4f923f13/download/mali-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_bd453a85",
+          "title": "mozambique-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Mozambique at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/bd453a85-671d-4dce-ad32-3cfed48798dc/download/mozambique-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_36996ce4",
+          "title": "myanmar-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Myanmar at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/36996ce4-66ae-43a2-81e1-97e10dd7d388/download/myanmar-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_8b69053d",
+          "title": "niger-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Niger at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/8b69053d-64f3-4bb4-b5f6-b4579d9f3d01/download/niger-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_8b4bf058",
+          "title": "nigeria-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Nigeria at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/8b4bf058-60c8-48ff-92e6-3340766923d9/download/nigeria-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_1a4b7e00",
+          "title": "somalia-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Somalia at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/1a4b7e00-c4b2-4c14-bc65-86d7af85149f/download/somalia-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_4b315308",
+          "title": "south-sudan-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for South Sudan at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/4b315308-8016-47c8-9e96-a4da95dbc7a3/download/south-sudan-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_ac8cfbbe",
+          "title": "state-of-palestine-admin1-wildfire.csv",
+          "description": "Gridded (4kmx4km) wildfire extent for State of Palestine at with admin1 name column",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/ac8cfbbe-e272-4465-9da6-a73000b36388/download/state-of-palestine-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_a5e6996f",
+          "title": "sudan-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Sudan at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/a5e6996f-4c64-4fc8-9dcd-2dde61c1acbe/download/sudan-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_c4f8b993",
+          "title": "syrian-arab-republic-admin1-wildfire.csv",
+          "description": "Gridded (4kmx4km) wildfire extent for Syrian Arab Republic at with admin1 name column",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/c4f8b993-7688-4bea-bcd0-8df618dadbc9/download/syrian-arab-republic-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_c4fde7a3",
+          "title": "ukraine-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Ukraine at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/c4fde7a3-c79d-41bd-93e0-b9a137d8a6d5/download/ukraine-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_a9d7c18d",
+          "title": "venezuela-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Venezuela at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/a9d7c18d-85d6-404f-9a8f-925d3ebaafdd/download/venezuela-admin1-wildfire.csv"
+        },
+        {
+          "id": "resource_1e709d31",
+          "title": "yemen-admin1-wildfire.csv",
+          "description": "Wildfire: Humanitarian Response Plan (HRP) Countries Hazard Data for Disaster Risk Assessment (Gridded (4kmx4km) wildfire extent for Yemen at with admin1 name column)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/ca740910-069b-4a78-92a8-595bd5b2c930/resource/1e709d31-6394-40f2-808a-cdc317235bee/download/yemen-admin1-wildfire.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "wildfire",
+                "process": "wildfire",
+                "intensity_measure": "FWI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/climada-wildfire-dataset",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

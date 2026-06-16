@@ -1,0 +1,166 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-undrr_globalmodelstormsurgehaza_20150101",
+      "title": "Global model of storm surge hazard 10 years return period",
+      "description": "The tropical cyclonic strong wind and storm surge model use information from 2594 historical tropical cyclones, topography, terrain roughness, and bathymetry. The risk assessment was also conducted by CIMNE and Ingeniar to produced AAL and PML values for cyclone risk.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/storm-surge-hazard-10-years]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/storm-surge-hazard-10-years"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/storm-surge-hazard-10-years"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2015-01-01"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "CIMNE",
+            "url": "https://data.humdata.org/dataset/storm-surge-hazard-10-years"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Ingeniar",
+            "url": "https://data.humdata.org/dataset/storm-surge-hazard-10-years"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Historical tropical cyclone data from five oceanic basins (2594 events) were integrated with topographic, bathymetric, and terrain roughness datasets to simulate probabilistic storm surge inundation using CIMNE's cyclone hazard model. Risk metrics (AAL and PML) were subsequently calculated by Ingeniar using the modeled hazard outputs to quantify expected losses from coastal flooding.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "CIMNE",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Tropical cyclonic storm surge hazard model incorporating historical cyclone data, topography, terrain roughness, and bathymetry to generate probabilistic inundation depths"
+          },
+          {
+            "id": "source_2",
+            "name": "Ingeniar",
+            "type": "model",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Risk assessment methodology applied to generate Annual Average Loss (AAL) and Probable Maximum Loss (PML) values for cyclone-driven coastal flood risk"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9d30760e",
+          "title": "SS-world.zip",
+          "description": "Global model of storm surge hazard 10 years return period (Zipped shapefiles of storm surge hazard (7,230 kb))",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/87ce9e07-4914-49e6-81cc-3e4913d1ea02/resource/9d30760e-292f-4e81-9f5f-8a526977aa68/download/ss-world.zip"
+        },
+        {
+          "id": "resource_db1e1d99",
+          "title": "SS-World.json",
+          "description": "Global model of storm surge hazard 10 years return period (Geojson of storm surge hazard (37,509 kb))",
+          "media_type": "application/json",
+          "download_url": "https://data.humdata.org/dataset/87ce9e07-4914-49e6-81cc-3e4913d1ea02/resource/db1e1d99-6724-450c-8c2a-271524588f0e/download/ss-world.json"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "events": [
+              {
+                "id": "event_10yr",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_flood",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10,
+                    "event_rate": 0.1
+                  }
+                },
+                "description": "Probabilistic storm surge hazard model derived from 2594 historical tropical cyclones with inundation depths at 10-year return period"
+              }
+            ]
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m",
+              "process": "coastal_flood"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual Average Loss (AAL) and Probable Maximum Loss (PML) from cyclone-driven storm surge"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/storm-surge-hazard-10-years",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-vut_unosat_damageassessmentmaewoisla_20200428",
+      "title": "Damage Assessment in Maewo Island, Penama Province, Vanuatu",
+      "description": "UNOSAT code: TC20200403VUT This map illustrates potentially damaged structures and buildings in Meawo Island, Penama Province, Vanuatu as detected by satellite image acquired after landfall of the Tropical Cyclone Harold-20 on 6 April 2020. UNITAR-UNOSAT analysis used a Pleiades image acquired on 21 and 27 April 2020 as post event images, Within the island boundary, UNITAR-UNOSAT identified in the cloud free zones about 20 potentially damaged structures. Taking into account the pre-building footprints provided by Humanitarian OpenStreetMap, this represents about 2% of the total number of structures within the analyzed cloud free areas. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-maewo-island-penama-province-vanuatu]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-maewo-island-penama-province-vanuatu"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-maewo-island-penama-province-vanuatu"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "VUT"
+        ]
+      },
+      "temporal": {
+        "start": "2020-04-28"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian OpenStreetMap",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-maewo-island-penama-province-vanuatu"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Pleiades satellite imagery",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-maewo-island-penama-province-vanuatu"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre-event building footprints from Humanitarian OpenStreetMap with post-event Pleiades satellite imagery (21 and 27 April 2020) to identify structural damage in cloud-free zones of Maewo Island following Tropical Cyclone Harold landfall on 6 April 2020. Visual change detection identified approximately 20 potentially damaged structures, representing 2% of the total building stock.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian OpenStreetMap",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Pre-event building footprints used as reference baseline to calculate damage ratio (20 damaged structures out of ~1000 buildings = 2%)"
+          },
+          {
+            "id": "source_2",
+            "name": "Pleiades satellite imagery",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event satellite images acquired 21 and 27 April 2020 used to detect structural damage through visual change analysis"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_779543fb",
+          "title": "TC20200403VUT_gdb.zip",
+          "description": "Damage Assessment in Maewo Island, Penama Province, Vanuatu (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/VU/TC20200403VUT/TC20200403VUT_gdb.zip"
+        },
+        {
+          "id": "resource_b74d75c5",
+          "title": "TC20200403VUT_SHP.zip",
+          "description": "Damage Assessment in Maewo Island, Penama Province, Vanuatu (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/VU/TC20200403VUT/TC20200403VUT_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from Tropical Cyclone Harold detected via satellite imagery comparison"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-maewo-island-penama-province-vanuatu",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

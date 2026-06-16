@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-bgd_unosat_detectedwaterextentevolut_20160727",
+      "title": "Satellite Detected Water Extent and Evolution Over Central Bangladesh",
+      "description": "This map illustrates satellite-detected water extent and evolution in Dhaka and Rajshahi divisions of the Central Bangladesh as imaged by the SENTINEL-1 satellite on 30 June 2016 and 24 July 2016. The analysis shows an expansion of waters of ~75% between the two dates. Heavy rains at the onset of the Monsoon season have caused flooding. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extent-and-evolution-over-central-bangladesh]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-and-evolution-over-central-bangladesh"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/satellite-detected-water-extent-and-evolution-over-central-bangladesh"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "BGD"
+        ]
+      },
+      "temporal": {
+        "start": "2016-07-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "SENTINEL-1 satellite imagery acquired on 30 June 2016 and 24 July 2016 was analyzed by UNOSAT to detect changes in water extent across Dhaka and Rajshahi divisions. Analysts compared multi-temporal radar imagery to identify and delineate inundated areas, calculating the spatial extent and temporal evolution of flooding during the monsoon season onset.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery analysis using SENTINEL-1 radar data to detect and map water extent changes during monsoon flooding events in Bangladesh"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c4db36a1",
+          "title": "FL20160725BGD.gdb.zip",
+          "description": "Satellite Detected Water Extent and Evolution Over Central Bangladesh (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/BD/FL20160725BGD/FL20160725BGD.gdb.zip"
+        },
+        {
+          "id": "resource_e2572710",
+          "title": "FL20160725BGD_shp.zip",
+          "description": "Satellite Detected Water Extent and Evolution Over Central Bangladesh (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/BD/FL20160725BGD/FL20160725BGD_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/satellite-detected-water-extent-and-evolution-over-central-bangladesh",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

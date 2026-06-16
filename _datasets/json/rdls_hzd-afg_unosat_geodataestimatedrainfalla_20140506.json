@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-afg_unosat_geodataestimatedrainfalla_20140506",
+      "title": "Geodata of Estimated Rainfall Accumulation from 30 April to 06 May 2014, Afghanistan",
+      "description": "This map presents the estimated total rainfall accumulation for Afghanistan covering the period from 30 April to 06 May 2014. This total estimate was derived from the Tropical Rainfall Monitoring Mission (TRMM) precipitation dataset at a spatial resolution of approximately 0.25 degrees for this region. It is possible that precipitation levels may have been underestimated for local areas, and is not a substitute for ground station measurements.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-estimated-rainfall-accumulation-from-30-april-to-06-may-2014-afgha-may-06-2014]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-estimated-rainfall-accumulation-from-30-april-to-06-may-2014-afgha-may-06-2014"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/geodata-of-estimated-rainfall-accumulation-from-30-april-to-06-may-2014-afgha-may-06-2014"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "AFG"
+        ]
+      },
+      "temporal": {
+        "start": "2014-05-06"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Tropical Rainfall Monitoring Mission (TRMM)",
+            "url": "https://data.humdata.org/dataset/geodata-of-estimated-rainfall-accumulation-from-30-april-to-06-may-2014-afgha-may-06-2014"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Rainfall accumulation was estimated from TRMM satellite precipitation data at 0.25-degree resolution for the period 30 April to 6 May 2014 across Afghanistan. UNOSAT analysts processed the satellite-derived precipitation estimates to generate spatial maps of total rainfall accumulation. The dataset represents observed precipitation patterns derived from satellite remote sensing rather than ground-based measurements.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Tropical Rainfall Monitoring Mission (TRMM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-based precipitation dataset providing gridded rainfall estimates at 0.25-degree spatial resolution used to derive rainfall accumulation totals"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8223897d",
+          "title": "FL20140430AFG_shp.zip",
+          "description": "Geodata of Estimated Rainfall Accumulation from 30 April to 06 May 2014, Afghanistan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/AF/FL20140430AFG/FL20140430AFG_shp.zip"
+        },
+        {
+          "id": "resource_b28d2d56",
+          "title": "FL20140430AFG.gdb.zip",
+          "description": "Geodata of Estimated Rainfall Accumulation from 30 April to 06 May 2014, Afghanistan (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/AF/FL20140430AFG/FL20140430AFG.gdb.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/geodata-of-estimated-rainfall-accumulation-from-30-april-to-06-may-2014-afgha-may-06-2014",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

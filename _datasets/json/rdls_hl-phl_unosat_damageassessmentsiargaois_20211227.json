@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_unosat_damageassessmentsiargaois_20211227",
+      "title": "Damage assessment in Siargao Island, General Luna, Surigao del Norte of Philippines as of 26 December 2021",
+      "description": "UNOSAT code: TC20211216PHL This map illustrates potentially damaged structures/buildings in Siargao Island, General Luna, Surigao del Norte of Philippines as detected by Pleiades image acquired on 26 December 2021 and WorldView-3 acquired on 23 December 2021. Within the analyzed area, UNOSAT has identified 1,769 damaged structures, 380 potentially damaged structures. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-siargao-island-general-luna-surigao-del-norte-of-philippines-as-of-26]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-siargao-island-general-luna-surigao-del-norte-of-philippines-as-of-26"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-siargao-island-general-luna-surigao-del-norte-of-philippines-as-of-26"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2021-12-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/damage-assessment-in-siargao-island-general-luna-surigao-del-norte-of-philippines-as-of-26"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts compared pre- and post-event satellite imagery (WorldView-3 from 23 December 2021 and Pleiades from 26 December 2021) of Siargao Island to detect notable changes in building structures. Visual interpretation identified 1,769 damaged and 380 potentially damaged structures in General Luna, Surigao del Norte following Typhoon Odette's passage on 16 December 2021. Results are preliminary and unvalidated.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using Pleiades (26 December 2021) and WorldView-3 (23 December 2021) imagery to detect structural damage through multi-temporal image comparison"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_194bd9a5",
+          "title": "TC20211216PHL_gdb.zip",
+          "description": "Damage assessment in Siargao Island, General Luna, Surigao del Norte of Philippines as of 26 December 2021 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/PH/TC20211216PHL/TC20211216PHL_gdb.zip"
+        },
+        {
+          "id": "resource_82d57818",
+          "title": "TC20211216PHL_SHP.zip",
+          "description": "Damage assessment in Siargao Island, General Luna, Surigao del Norte of Philippines as of 26 December 2021 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/PH/TC20211216PHL/TC20211216PHL_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Direct building damage from tropical cyclone detected via satellite imagery comparison"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-siargao-island-general-luna-surigao-del-norte-of-philippines-as-of-26",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

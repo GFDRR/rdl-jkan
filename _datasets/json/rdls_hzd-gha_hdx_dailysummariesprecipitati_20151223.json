@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-gha_hdx_dailysummariesprecipitati_20151223",
+      "title": "Daily Summaries of Precipitation Indicators for Ghana",
+      "description": "This dataset contains the daily summaries on base stations across Ghana . The four indicators included are: * TPCP : Total precipitation * MXSD : Maximum snow depth * TSNW : Total snow fall * EMXP : Extreme maximum daily precipitation Indicators are compiled by the National Centers for Environmental Information (NCEI), which is administrated by National Oceanic and Atmospheric Administration (NOAA) an organization part of the United States government. NOAA has access to data collected from thousands of base stations around the world, which collect data periodically on weather and climate conditions. This dataset contains the latest 5 years of available data .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-ghana]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Due to late-arriving data, the number of recent records is likely underrepresented in all categories, but the ratio of records (warm to cold, for example) should be a fairly strong estimate of a final outcome.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-ghana"
+      },
+      "creator": {
+        "name": "National Centers for Environmental Information (NCEI / NOAA)",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-ghana"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GHA"
+        ]
+      },
+      "temporal": {
+        "start": "2015-12-23"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-ghana"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Daily precipitation data were collected from meteorological base stations across Ghana by NOAA/NCEI. Stations were selected based on a 30-year minimum record requirement with at least 182 complete days per year. Four precipitation indicators (total precipitation, maximum snow depth, total snowfall, extreme maximum daily precipitation) were extracted and compiled into daily summaries for drought hazard characterization.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Long-term daily precipitation and snow observations from meteorological base stations across Ghana, compiled from thousands of stations with minimum 30-year records meeting quality standards"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncdc.noaa.gov/cdo-web/datatools/records"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_e7f1e3b4",
+          "title": "precipitation_gha.csv",
+          "description": "Daily Summaries of Precipitation Indicators for Ghana (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/865c5c75-fda7-4b5e-a4e3-d564e541cbe3/resource/e7f1e3b4-2bac-4437-a170-6aa92289e247/download/precipitation_gha.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-ghana",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
