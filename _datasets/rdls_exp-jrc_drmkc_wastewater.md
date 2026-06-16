@@ -56,8 +56,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Urban Waste Water Treatment Directive (UWWTD) - EEA Reporting
   url: https://dd.eionet.europa.eu/datasets/latest/UWWTDArt15

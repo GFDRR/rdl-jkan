@@ -66,8 +66,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Natura 2000 Network (European Environment Agency)
   url: https://www.eea.europa.eu/en/analysis/indicators/natura-2000-sites-designated-under

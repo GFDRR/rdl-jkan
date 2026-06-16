@@ -35,186 +35,184 @@ details: 'River flood hazard maps for Europe and the Mediterranean Basin region 
   refer to related publications).'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 9
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '10'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '30'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 30
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '40'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 40
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '50'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '75'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 75
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '200'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 200
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: JRC_River_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: '500'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 500
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 9
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: JRC_River_Flood_Hazard
         intensity_measure: fl_wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: River_Flood_Hazard
-      occurrence_range: 1/10 to 1/500 years
-      seasonality: null
-  event_sets_count: 1
+      id: '10'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: JRC_River_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: JRC_River_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '30'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 30
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: JRC_River_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '40'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 40
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: JRC_River_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '50'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: JRC_River_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '75'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 75
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: JRC_River_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: JRC_River_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '200'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 200
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: JRC_River_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: '500'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 500
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: JRC_River_Flood_Hazard
+      intensity_measure: fl_wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: River_Flood_Hazard
+    occurrence_range: 1/10 to 1/500 years
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: null
@@ -229,8 +227,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Copernicus Emergency Management Service
   url: https://emergency.copernicus.eu/

@@ -42,116 +42,114 @@ details: "Flood maps showing the maximum flood extent and depth for different ex
   \ and the combination of each extreme scenario with every sea level rise scenario."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 4
-      events:
-      - calculation_method: simulated
-        description: 'Static water level: maximum flood extent and depth at a given
-          sea level (no return period applied). Available across all defense levels,
-          climate scenarios (SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons
-          (2010, 2030, 2050, 2100, 2150 for High-End) via the STAC collection.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CoCliCo_Coastal_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: cfhp_static
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 1
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: '1-year return period (63% probability of exceedance in 1 year):
-          maximum flood extent and depth. Available across all defense levels, climate
-          scenarios (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons
-          (2010, 2030, 2050, 2100) via the STAC collection.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CoCliCo_Coastal_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: cfhp_1yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0
-            probability:
-              span: 1
-              value: 0.63212
-            return_period: 1
-      - calculation_method: simulated
-        description: '100-year return period (1% annual exceedance probability): maximum
-          flood extent and depth. Available across all defense levels, climate scenarios
-          (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons (2010,
-          2030, 2050, 2100) via the STAC collection.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CoCliCo_Coastal_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: cfhp_100yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability:
-              span: 100
-              value: 0.63212
-            return_period: 100
-      - calculation_method: simulated
-        description: '1000-year return period (0.1% annual exceedance probability):
-          maximum flood extent and depth. Available across all defense levels, climate
-          scenarios (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons
-          (2010, 2030, 2050, 2100) via the STAC collection.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: CoCliCo_Coastal_Flood_Hazard
-          intensity_measure: fl_wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: cfhp_1000yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001
-            probability:
-              span: 1000
-              value: 0.63212
-            return_period: 1000
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 4
+    events:
+    - calculation_method: simulated
+      description: 'Static water level: maximum flood extent and depth at a given
+        sea level (no return period applied). Available across all defense levels,
+        climate scenarios (SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons
+        (2010, 2030, 2050, 2100, 2150 for High-End) via the STAC collection.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: CoCliCo_Coastal_Flood_Hazard
         intensity_measure: fl_wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: Coastal_Flood_Hazard
-      occurrence_range: 1/1 to 1/1000 years
-      seasonality: null
-  event_sets_count: 1
+      id: cfhp_static
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 1
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: '1-year return period (63% probability of exceedance in 1 year):
+        maximum flood extent and depth. Available across all defense levels, climate
+        scenarios (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons
+        (2010, 2030, 2050, 2100) via the STAC collection.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CoCliCo_Coastal_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: cfhp_1yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0
+          probability:
+            span: 1
+            value: 0.63212
+          return_period: 1
+    - calculation_method: simulated
+      description: '100-year return period (1% annual exceedance probability): maximum
+        flood extent and depth. Available across all defense levels, climate scenarios
+        (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons (2010,
+        2030, 2050, 2100) via the STAC collection.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CoCliCo_Coastal_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: cfhp_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability:
+            span: 100
+            value: 0.63212
+          return_period: 100
+    - calculation_method: simulated
+      description: '1000-year return period (0.1% annual exceedance probability):
+        maximum flood extent and depth. Available across all defense levels, climate
+        scenarios (baseline, SSP1-2.6, SSP2-4.5, SSP5-8.5, High-End), and time horizons
+        (2010, 2030, 2050, 2100) via the STAC collection.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: CoCliCo_Coastal_Flood_Hazard
+        intensity_measure: fl_wd:m
+        process: coastal_flood
+        trigger: null
+        type: flood
+      id: cfhp_1000yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001
+          probability:
+            span: 1000
+            value: 0.63212
+          return_period: 1000
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: CoCliCo_Coastal_Flood_Hazard
+      intensity_measure: fl_wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: Coastal_Flood_Hazard
+    occurrence_range: 1/1 to 1/1000 years
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: null
@@ -166,8 +164,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Coastal Climate Core Services (CoCliCo)
   url: https://coclicoservices.eu/

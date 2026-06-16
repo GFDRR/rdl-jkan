@@ -28,114 +28,112 @@ details: Harmonized wildfire risk assessment for the pan-European region through
   wildfire risk evaluation across Member States and the broader European region.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    wildfire:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 5
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFFIS_Wildfires_Hazard
-          intensity_measure: FWI:-
-          process: wildfire
-          trigger: null
-          type: wildfire
-        id: low_risk
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Low risk (EFFIS wildfire danger class)
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFFIS_Wildfires_Hazard
-          intensity_measure: FWI:-
-          process: wildfire
-          trigger: null
-          type: wildfire
-        id: intermediate_risk
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Intermediate risk (EFFIS wildfire danger class)
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFFIS_Wildfires_Hazard
-          intensity_measure: FWI:-
-          process: wildfire
-          trigger: null
-          type: wildfire
-        id: high_risk
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: High risk (EFFIS wildfire danger class)
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFFIS_Wildfires_Hazard
-          intensity_measure: FWI:-
-          process: wildfire
-          trigger: null
-          type: wildfire
-        id: danger_by_weather
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Danger by weather (EFFIS wildfire danger class)
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFFIS_Wildfires_Hazard
-          intensity_measure: FWI:-
-          process: wildfire
-          trigger: null
-          type: wildfire
-        id: danger_by_thermalanomalies
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Danger by thermalanomalies (EFFIS wildfire danger class)
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 5
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: EFFIS_Wildfires_Hazard
         intensity_measure: FWI:-
         process: wildfire
         trigger: null
         type: wildfire
-      id: Wildfires_Hazard
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: low_risk
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Low risk (EFFIS wildfire danger class)
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFFIS_Wildfires_Hazard
+        intensity_measure: FWI:-
+        process: wildfire
+        trigger: null
+        type: wildfire
+      id: intermediate_risk
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Intermediate risk (EFFIS wildfire danger class)
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFFIS_Wildfires_Hazard
+        intensity_measure: FWI:-
+        process: wildfire
+        trigger: null
+        type: wildfire
+      id: high_risk
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: High risk (EFFIS wildfire danger class)
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFFIS_Wildfires_Hazard
+        intensity_measure: FWI:-
+        process: wildfire
+        trigger: null
+        type: wildfire
+      id: danger_by_weather
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Danger by weather (EFFIS wildfire danger class)
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFFIS_Wildfires_Hazard
+        intensity_measure: FWI:-
+        process: wildfire
+        trigger: null
+        type: wildfire
+      id: danger_by_thermalanomalies
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Danger by thermalanomalies (EFFIS wildfire danger class)
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: EFFIS_Wildfires_Hazard
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: Wildfires_Hazard
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: null
@@ -150,8 +148,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: European Forest Fire Information System (EFFIS)
   url: https://forest-fire.emergency.copernicus.eu/about-effis/

@@ -57,8 +57,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: 'LUISA : Land-Use based Integrated Sustainability Assessment modelling platform'
   url: https://data.jrc.ec.europa.eu/dataset/51858b51-8f27-4006-bf82-53eba35a142c

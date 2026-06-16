@@ -37,424 +37,422 @@ details: "Probabilistic seismic hazard maps for Europe provide gridded datasets 
   \ become available."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 20
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: EMS:-
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: effects_intensity
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_sa
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_pga
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hmap
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: magnitude_radius_probability
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_sa_landing
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_sa_wms
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_sa_ascii
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_sa_discovery
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_pga_landing
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_pga_wms
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_pga_ascii
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hazard_pga_discovery
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hmap_landing
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hmap_wms
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: hmap_shp
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: EMS:-
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: effects_intensity_landing
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: EMS:-
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: effects_intensity_wms
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: magnitude_radius_probability_landing
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: EFEHR_Earthquake_Hazard
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: magnitude_radius_probability_wms
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 20
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: EMS:-
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: effects_intensity
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: EFEHR_Earthquake_Hazard
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: Earthquake_Hazard
-      occurrence_range: 1/10 to 1/10000 years
-      seasonality: null
-  event_sets_count: 1
+      id: hazard_sa
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_pga
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hmap
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: magnitude_radius_probability
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_sa_landing
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_sa_wms
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_sa_ascii
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_sa_discovery
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_pga_landing
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_pga_wms
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_pga_ascii
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hazard_pga_discovery
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hmap_landing
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hmap_wms
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: hmap_shp
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: EMS:-
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: effects_intensity_landing
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: EMS:-
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: effects_intensity_wms
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: magnitude_radius_probability_landing
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: EFEHR_Earthquake_Hazard
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: magnitude_radius_probability_wms
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: EFEHR_Earthquake_Hazard
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: Earthquake_Hazard
+    occurrence_range: 1/10 to 1/10000 years
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: null
@@ -469,8 +467,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: European Seismic Hazard Model 2020 (ESHM20)
   url: https://hazard.efehr.org/en/web-services/hazard-map-data/

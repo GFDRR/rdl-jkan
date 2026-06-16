@@ -38,78 +38,76 @@ details: "Extreme Heat hazard is classified based on an existing and widely acce
   \ applied following this definition of slight/low (32\xB0C) heat stress."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    extreme_temperature:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: GFDRR_Extreme_Heat_Hazard
-          intensity_measure: WBGT:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: '5'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: GFDRR_Extreme_Heat_Hazard
-          intensity_measure: WBGT:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: '20'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: GFDRR_Extreme_Heat_Hazard
-          intensity_measure: WBGT:C
-          process: extreme_heat
-          trigger: null
-          type: extreme_temperature
-        id: '100'
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: GFDRR_Extreme_Heat_Hazard
         intensity_measure: WBGT:C
         process: extreme_heat
         trigger: null
         type: extreme_temperature
-      id: Extreme_Heat_Hazard
-      occurrence_range: 1/5 to 1/100 years
-      seasonality: null
-  event_sets_count: 1
+      id: '5'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: GFDRR_Extreme_Heat_Hazard
+        intensity_measure: WBGT:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: '20'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: GFDRR_Extreme_Heat_Hazard
+        intensity_measure: WBGT:C
+        process: extreme_heat
+        trigger: null
+        type: extreme_temperature
+      id: '100'
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: GFDRR_Extreme_Heat_Hazard
+      intensity_measure: WBGT:C
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: Extreme_Heat_Hazard
+    occurrence_range: 1/5 to 1/100 years
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: null
@@ -124,8 +122,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Development of a hazard screening protocol for Extreme Heat
   url: https://datacatalogfiles.worldbank.org/ddh-published/0040194/DR0087127/VITO%20-%20Extreme%20heat%20Final_report_v2.pdf

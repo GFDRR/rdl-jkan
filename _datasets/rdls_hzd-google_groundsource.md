@@ -56,33 +56,31 @@ details: 'Methodology: news articles where flooding is the primary subject are p
   Also available as Google Earth Engine FeatureCollection at projects/sat-io/open-datasets/groundsource_2026.'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 2600000
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification:
-          description: Flood events observed from global news media. Coverage spans
-            multiple sub-types (fluvial, pluvial, coastal); process is set to fluvial_flood
-            as the dominant type in globally reported major flood events. Dataset
-            does not record physical intensity values; wd:m is the conventional flood
-            intensity measure placeholder required by schema.
-          id: cls_flood_undrr
-          scheme: UNDRR-ISC
-          title: Flood
-          uri: https://www.undrr.org/understanding-disaster-risk/terminology/hips/fl0050
-        id: hzd_flood
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: es_flood_empirical
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 2600000
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification:
+        description: Flood events observed from global news media. Coverage spans
+          multiple sub-types (fluvial, pluvial, coastal); process is set to fluvial_flood
+          as the dominant type in globally reported major flood events. Dataset does
+          not record physical intensity values; wd:m is the conventional flood intensity
+          measure placeholder required by schema.
+        id: cls_flood_undrr
+        scheme: UNDRR-ISC
+        title: Flood
+        uri: https://www.undrr.org/understanding-disaster-risk/terminology/hips/fl0050
+      id: hzd_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: es_flood_empirical
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Flood event records extracted from global news media (2000-2026) using
@@ -131,8 +129,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Groundsource
   url: https://research.google/blog/introducing-groundsource-turning-news-reports-into-data-with-gemini/

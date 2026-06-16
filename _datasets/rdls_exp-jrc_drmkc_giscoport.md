@@ -56,8 +56,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Eurostat/GISCO
   url: https://ec.europa.eu/eurostat/web/gisco
