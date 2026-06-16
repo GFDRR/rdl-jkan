@@ -74,303 +74,301 @@ exposure:
       quantity_kind: currency
       unit: USD
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: River (fluvial) flood hazard map showing flood depth for a 1-in-20
-          year return period event in Freetown, Sierra Leone. Undefended scenario
-          without flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: river_flood_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLRF_RP20
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability:
-              span: 50
-              value: 0.923
-            return_period: 20
-      - calculation_method: simulated
-        description: River (fluvial) flood hazard map showing flood depth for a 1-in-50
-          year return period event in Freetown, Sierra Leone. Undefended scenario
-          without flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: river_flood_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLRF_RP50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability:
-              span: 50
-              value: 0.636
-            return_period: 50
-      - calculation_method: simulated
-        description: River (fluvial) flood hazard map showing flood depth for a 1-in-100
-          year return period event in Freetown, Sierra Leone. Undefended scenario
-          without flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: river_flood_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLRF_RP100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability:
-              span: 50
-              value: 0.395
-            return_period: 100
-      - calculation_method: simulated
-        description: River (fluvial) flood hazard map showing flood depth for a 1-in-200
-          year return period event in Freetown, Sierra Leone. Undefended scenario
-          without flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: river_flood_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLRF_RP200
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.005
-            probability:
-              span: 50
-              value: 0.222
-            return_period: 200
-      - calculation_method: simulated
-        description: River (fluvial) flood hazard map showing flood depth for a 1-in-500
-          year return period event in Freetown, Sierra Leone. Undefended scenario
-          without flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: river_flood_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLRF_RP500
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002
-            probability:
-              span: 50
-              value: 0.095
-            return_period: 500
-      - calculation_method: simulated
-        description: River (fluvial) flood hazard map showing flood depth for a 1-in-1500
-          year return period event in Freetown, Sierra Leone. Undefended scenario
-          without flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: river_flood_hazard_ref
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLRF_RP1500
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000667
-            probability:
-              span: 50
-              value: 0.033
-            return_period: 1500
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: River (fluvial) flood hazard map showing flood depth for a 1-in-20
+        year return period event in Freetown, Sierra Leone. Undefended scenario without
+        flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: river_flood_hazard_ref
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_river_flood
-      occurrence_range: Return periods from 20, 50, 100, 200, 500, and 1,500 years
-      seasonality: null
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 6
-      events:
-      - calculation_method: simulated
-        description: Surface water (pluvial) flood hazard map showing flood depth
-          for a 1-in-20 year return period event in Freetown, Sierra Leone. Undefended
-          scenario without drainage systems or flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: surface_water_flood_hazard_ref
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLSW_RP20
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability:
-              span: 50
-              value: 0.923
-            return_period: 20
-      - calculation_method: simulated
-        description: Surface water (pluvial) flood hazard map showing flood depth
-          for a 1-in-50 year return period event in Freetown, Sierra Leone. Undefended
-          scenario without drainage systems or flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: surface_water_flood_hazard_ref
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLSW_RP50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability:
-              span: 50
-              value: 0.636
-            return_period: 50
-      - calculation_method: simulated
-        description: Surface water (pluvial) flood hazard map showing flood depth
-          for a 1-in-100 year return period event in Freetown, Sierra Leone. Undefended
-          scenario without drainage systems or flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: surface_water_flood_hazard_ref
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLSW_RP100
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability:
-              span: 50
-              value: 0.395
-            return_period: 100
-      - calculation_method: simulated
-        description: Surface water (pluvial) flood hazard map showing flood depth
-          for a 1-in-200 year return period event in Freetown, Sierra Leone. Undefended
-          scenario without drainage systems or flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: surface_water_flood_hazard_ref
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLSW_RP200
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.005
-            probability:
-              span: 50
-              value: 0.222
-            return_period: 200
-      - calculation_method: simulated
-        description: Surface water (pluvial) flood hazard map showing flood depth
-          for a 1-in-500 year return period event in Freetown, Sierra Leone. Undefended
-          scenario without drainage systems or flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: surface_water_flood_hazard_ref
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLSW_RP500
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002
-            probability:
-              span: 50
-              value: 0.095
-            return_period: 500
-      - calculation_method: simulated
-        description: Surface water (pluvial) flood hazard map showing flood depth
-          for a 1-in-1500 year return period event in Freetown, Sierra Leone. Undefended
-          scenario without drainage systems or flood defenses.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: surface_water_flood_hazard_ref
-          intensity_measure: wd:m
-          process: pluvial_flood
-          trigger: null
-          type: flood
-        id: event_FLSW_RP1500
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000667
-            probability:
-              span: 50
-              value: 0.033
-            return_period: 1500
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_FLRF_RP20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability:
+            span: 50
+            value: 0.923
+          return_period: 20
+    - calculation_method: simulated
+      description: River (fluvial) flood hazard map showing flood depth for a 1-in-50
+        year return period event in Freetown, Sierra Leone. Undefended scenario without
+        flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: river_flood_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLRF_RP50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability:
+            span: 50
+            value: 0.636
+          return_period: 50
+    - calculation_method: simulated
+      description: River (fluvial) flood hazard map showing flood depth for a 1-in-100
+        year return period event in Freetown, Sierra Leone. Undefended scenario without
+        flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: river_flood_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLRF_RP100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability:
+            span: 50
+            value: 0.395
+          return_period: 100
+    - calculation_method: simulated
+      description: River (fluvial) flood hazard map showing flood depth for a 1-in-200
+        year return period event in Freetown, Sierra Leone. Undefended scenario without
+        flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: river_flood_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLRF_RP200
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.005
+          probability:
+            span: 50
+            value: 0.222
+          return_period: 200
+    - calculation_method: simulated
+      description: River (fluvial) flood hazard map showing flood depth for a 1-in-500
+        year return period event in Freetown, Sierra Leone. Undefended scenario without
+        flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: river_flood_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLRF_RP500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002
+          probability:
+            span: 50
+            value: 0.095
+          return_period: 500
+    - calculation_method: simulated
+      description: River (fluvial) flood hazard map showing flood depth for a 1-in-1500
+        year return period event in Freetown, Sierra Leone. Undefended scenario without
+        flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: river_flood_hazard_ref
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLRF_RP1500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000667
+          probability:
+            span: 50
+            value: 0.033
+          return_period: 1500
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: river_flood_hazard_ref
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_river_flood
+    occurrence_range: Return periods from 20, 50, 100, 200, 500, and 1,500 years
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 6
+    events:
+    - calculation_method: simulated
+      description: Surface water (pluvial) flood hazard map showing flood depth for
+        a 1-in-20 year return period event in Freetown, Sierra Leone. Undefended scenario
+        without drainage systems or flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: surface_water_flood_hazard_ref
         intensity_measure: wd:m
         process: pluvial_flood
         trigger: null
         type: flood
-      id: event_set_surface_water_flood
-      occurrence_range: Return periods from 20, 50, 100, 200, 500, and 1,500 years
-      seasonality: null
-  event_sets_count: 2
+      id: event_FLSW_RP20
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability:
+            span: 50
+            value: 0.923
+          return_period: 20
+    - calculation_method: simulated
+      description: Surface water (pluvial) flood hazard map showing flood depth for
+        a 1-in-50 year return period event in Freetown, Sierra Leone. Undefended scenario
+        without drainage systems or flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: surface_water_flood_hazard_ref
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLSW_RP50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability:
+            span: 50
+            value: 0.636
+          return_period: 50
+    - calculation_method: simulated
+      description: Surface water (pluvial) flood hazard map showing flood depth for
+        a 1-in-100 year return period event in Freetown, Sierra Leone. Undefended
+        scenario without drainage systems or flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: surface_water_flood_hazard_ref
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLSW_RP100
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability:
+            span: 50
+            value: 0.395
+          return_period: 100
+    - calculation_method: simulated
+      description: Surface water (pluvial) flood hazard map showing flood depth for
+        a 1-in-200 year return period event in Freetown, Sierra Leone. Undefended
+        scenario without drainage systems or flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: surface_water_flood_hazard_ref
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLSW_RP200
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.005
+          probability:
+            span: 50
+            value: 0.222
+          return_period: 200
+    - calculation_method: simulated
+      description: Surface water (pluvial) flood hazard map showing flood depth for
+        a 1-in-500 year return period event in Freetown, Sierra Leone. Undefended
+        scenario without drainage systems or flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: surface_water_flood_hazard_ref
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLSW_RP500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002
+          probability:
+            span: 50
+            value: 0.095
+          return_period: 500
+    - calculation_method: simulated
+      description: Surface water (pluvial) flood hazard map showing flood depth for
+        a 1-in-1500 year return period event in Freetown, Sierra Leone. Undefended
+        scenario without drainage systems or flood defenses.
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: surface_water_flood_hazard_ref
+        intensity_measure: wd:m
+        process: pluvial_flood
+        trigger: null
+        type: flood
+      id: event_FLSW_RP1500
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000667
+          probability:
+            span: 50
+            value: 0.033
+          return_period: 1500
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: surface_water_flood_hazard_ref
+      intensity_measure: wd:m
+      process: pluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_surface_water_flood
+    occurrence_range: Return periods from 20, 50, 100, 200, 500, and 1,500 years
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Flood impact assessment for Freetown, Sierra Leone, produced by JBA

@@ -114,157 +114,153 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: 'OpenQuake scenario simulation of the 2015 Mw 7.8 Gorkha earthquake
-          using USGS finite fault model (us20002926). Complex fault geometry with
-          top edge at 13km and bottom edge at 20km depth. Hypocentre: 28.2305N, 84.7314E,
-          depth 8.2km. GMPEs: AtkinsonBoore2003SInterNSHMP2008 (50%) and BooreEtAl2014
-          (50%). JB2009 spatial correlation, truncation level 2 sigma, 500 ground
-          motion field realisations. 14 intensity measures: PGA, SA(0.1s-1.3s). Scenario
-          33 ground motion field selected for analysis.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_khokana_gorkha
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis using 2015 Mw 7.8
-              Gorkha earthquake rupture model
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: 'OpenQuake scenario simulation of the 2015 Mw 7.8 Gorkha earthquake
+        using USGS finite fault model (us20002926). Complex fault geometry with top
+        edge at 13km and bottom edge at 20km depth. Hypocentre: 28.2305N, 84.7314E,
+        depth 8.2km. GMPEs: AtkinsonBoore2003SInterNSHMP2008 (50%) and BooreEtAl2014
+        (50%). JB2009 spatial correlation, truncation level 2 sigma, 500 ground motion
+        field realisations. 14 intensity measures: PGA, SA(0.1s-1.3s). Scenario 33
+        ground motion field selected for analysis.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_set_earthquake_khokana
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: 'Historical 100-year return period flood extent and depth for
-          Khokana. File: 100yr_flood_historic_Khok.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_khokana_historic
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: 'Maximum flood extent from multi-model ensemble for 100-year
-          return period. Represents worst-case among ensemble members. File: 100yr_flood_MF_max_Khok.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_khokana_mf_max
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: 'Median flood extent from multi-model ensemble for 100-year return
-          period. Represents central estimate among ensemble members. File: 100yr_flood_MF_med_Khok.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_khokana_mf_med
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_earthquake_khokana_gorkha
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis using 2015 Mw 7.8
+            Gorkha earthquake rupture model
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_earthquake_khokana
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: 'Historical 100-year return period flood extent and depth for Khokana.
+        File: 100yr_flood_historic_Khok.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_khokana
-      occurrence_range: null
-      seasonality: null
-    landslide:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 1
-      events:
-      - calculation_method: inferred
-        description: Binary landslide susceptibility map indicating landslide-prone
-          areas in Khokana. Shapefile with polygon boundaries of susceptible zones.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_landslide
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: event_landslide_khokana
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Binary susceptibility classification
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_flood_khokana_historic
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: 'Maximum flood extent from multi-model ensemble for 100-year return
+        period. Represents worst-case among ensemble members. File: 100yr_flood_MF_max_Khok.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_khokana_mf_max
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: 'Median flood extent from multi-model ensemble for 100-year return
+        period. Represents central estimate among ensemble members. File: 100yr_flood_MF_med_Khok.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_khokana_mf_med
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_khokana
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 1
+    events:
+    - calculation_method: inferred
+      description: Binary landslide susceptibility map indicating landslide-prone
+        areas in Khokana. Shapefile with polygon boundaries of susceptible zones.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_landslide
         intensity_measure: LSI:-
         process: landslide_general
         trigger: null
         type: landslide
-      id: event_set_landslide_khokana
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 3
+      id: event_landslide_khokana
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Binary susceptibility classification
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: event_set_landslide_khokana
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

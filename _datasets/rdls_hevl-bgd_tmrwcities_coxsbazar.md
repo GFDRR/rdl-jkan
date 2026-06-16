@@ -159,160 +159,157 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 2
-      events:
-      - calculation_method: simulated
-        description: 'Deterministic earthquake Scenario 1 (Sc1) for Jaliya Palong
-          area using NGA-West2 GMPEs for active shallow crustal sources: Abrahamson
-          et al 2014 (ASK14), Boore et al 2014 (BSSA14), Campbell and Bozorgnia 2014
-          (CB14), Chiou and Youngs 2014 (CY14). Provides PGA and Spectral Acceleration
-          at 0.3s, 0.7s, and 1.0s periods. Available in 32-bit and 64-bit precision.
-          File prefix: Jl_Mah_'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_jaliyapalong_sc1
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'Deterministic earthquake Scenario 2 (Sc2) for Jaliya Palong
-          area using subduction zone GMPEs: Atkinson and Boore, Zhao et al. Provides
-          PGA and Spectral Acceleration at 0.3s, 0.7s, and 1.0s periods. Available
-          in 32-bit and 64-bit precision. File prefix: JL_Ram_'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_jaliyapalong_sc2
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 2
+    events:
+    - calculation_method: simulated
+      description: 'Deterministic earthquake Scenario 1 (Sc1) for Jaliya Palong area
+        using NGA-West2 GMPEs for active shallow crustal sources: Abrahamson et al
+        2014 (ASK14), Boore et al 2014 (BSSA14), Campbell and Bozorgnia 2014 (CB14),
+        Chiou and Youngs 2014 (CY14). Provides PGA and Spectral Acceleration at 0.3s,
+        0.7s, and 1.0s periods. Available in 32-bit and 64-bit precision. File prefix:
+        Jl_Mah_'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_set_earthquake_jaliyapalong
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 4
-      events:
-      - calculation_method: simulated
-        description: '5-year return period flood scenario for Jaliya Palong area providing
-          maximum water depth (m). File: 5RP.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_jaliyapalong_5yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: '10-year return period flood scenario for Jaliya Palong area
-          providing maximum water depth (m). File: 10RP.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_jaliyapalong_10yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      - calculation_method: simulated
-        description: '20-year return period flood scenario for Jaliya Palong area
-          providing maximum water depth (m). File: 20RP.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_jaliyapalong_20yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: '50-year return period flood scenario for Jaliya Palong area
-          providing maximum water depth (m). File: 50RP.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_jaliyapalong_50yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_earthquake_jaliyapalong_sc1
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'Deterministic earthquake Scenario 2 (Sc2) for Jaliya Palong area
+        using subduction zone GMPEs: Atkinson and Boore, Zhao et al. Provides PGA
+        and Spectral Acceleration at 0.3s, 0.7s, and 1.0s periods. Available in 32-bit
+        and 64-bit precision. File prefix: JL_Ram_'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_earthquake
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: event_earthquake_jaliyapalong_sc2
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_earthquake_jaliyapalong
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 4
+    events:
+    - calculation_method: simulated
+      description: '5-year return period flood scenario for Jaliya Palong area providing
+        maximum water depth (m). File: 5RP.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_jaliyapalong
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 2
+      id: event_flood_jaliyapalong_5yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: '10-year return period flood scenario for Jaliya Palong area providing
+        maximum water depth (m). File: 10RP.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_jaliyapalong_10yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    - calculation_method: simulated
+      description: '20-year return period flood scenario for Jaliya Palong area providing
+        maximum water depth (m). File: 20RP.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_jaliyapalong_20yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: '50-year return period flood scenario for Jaliya Palong area providing
+        maximum water depth (m). File: 50RP.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_jaliyapalong_50yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_jaliyapalong
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

@@ -111,44 +111,42 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: '100-year return period flood depth for Nairobi provided as vector
-          point grid GeoJSON (127,422 point features). Each point contains IM (intensity
-          measure / water depth in metres) and projected x/y coordinates. File: _nairobi_flood_depth_100yr.geojson'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_nairobi_100yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: '100-year return period flood depth for Nairobi provided as vector
+        point grid GeoJSON (127,422 point features). Each point contains IM (intensity
+        measure / water depth in metres) and projected x/y coordinates. File: _nairobi_flood_depth_100yr.geojson'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_nairobi
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_flood_nairobi_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_nairobi
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

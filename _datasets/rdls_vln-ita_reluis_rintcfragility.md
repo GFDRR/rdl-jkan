@@ -55,8 +55,7 @@ links:
   rel: describedby
 - href: https://www.reluis.it/en/rintc-dff/
   rel: source
-loss:
-  losses: []
+loss: null
 project:
   name: RINTC - Implicit Seismic Risk of Code-Conforming Structures (ReLUIS-DPC 2014-2022)
   url: https://www.reluis.it/en/rintc-dff/

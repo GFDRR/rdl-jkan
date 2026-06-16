@@ -116,117 +116,113 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: Earthquake ground motion for rupture scenario 4 (rup4) provided
-          as multiband GeoTIFF raster with multiple intensity measures. Structural
-          fragility defined in OpenQuake NRML 0.5 discrete format with PGA range 0.05-2.0g
-          at 30 discrete levels.
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_nablus_rup4
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Scenario-based deterministic analysis for rupture scenario
-              4
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: Earthquake ground motion for rupture scenario 4 (rup4) provided
+        as multiband GeoTIFF raster with multiple intensity measures. Structural fragility
+        defined in OpenQuake NRML 0.5 discrete format with PGA range 0.05-2.0g at
+        30 discrete levels.
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_set_earthquake_nablus
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: 'Future high-emission climate flood depth scenario (YVS) for
-          Nablus providing flood water depth as GeoTIFF raster. File: Nablus_flood_depth_future_high_YVS.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_nablus_future_high
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Future high-emission climate scenario
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_earthquake_nablus_rup4
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Scenario-based deterministic analysis for rupture scenario
+            4
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_earthquake_nablus
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: 'Future high-emission climate flood depth scenario (YVS) for Nablus
+        providing flood water depth as GeoTIFF raster. File: Nablus_flood_depth_future_high_YVS.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_nablus
-      occurrence_range: null
-      seasonality: null
-    landslide:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: 'Earthquake-triggered landslide susceptibility raster derived
-          from coupling rup4 ground motion with slope stability analysis. File: eq-landslide-rup4.tif.
-          Note: All 3,631 buildings show DS=0 (no landslide damage) in impact results.'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_landslide
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: event_landslide_nablus_eq_triggered
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Earthquake-triggered landslide scenario
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_flood_nablus_future_high
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Future high-emission climate scenario
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_nablus
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: 'Earthquake-triggered landslide susceptibility raster derived from
+        coupling rup4 ground motion with slope stability analysis. File: eq-landslide-rup4.tif.
+        Note: All 3,631 buildings show DS=0 (no landslide damage) in impact results.'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_landslide
         intensity_measure: LSI:-
         process: landslide_general
         trigger: null
         type: landslide
-      id: event_set_landslide_nablus
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 3
+      id: event_landslide_nablus_eq_triggered
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Earthquake-triggered landslide scenario
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: event_set_landslide_nablus
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

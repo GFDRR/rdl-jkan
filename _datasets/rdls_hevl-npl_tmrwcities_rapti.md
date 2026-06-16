@@ -160,191 +160,186 @@ exposure:
       quantity_kind: area
       unit: hectare
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: 'Nepal-Bihar earthquake scenario for Rapti Municipality. GeoTIFF
-          raster: earthquake_scenario1_nepalbihar.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_rapti_nepalbihar
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Historical/scenario-based Nepal-Bihar earthquake
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: '2015 Gorkha earthquake (Mw 7.8) replay scenario for Rapti Municipality.
-          GeoTIFF raster: earthquake_scenario2_gorkha.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_rapti_gorkha
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Historical replay of 2015 Mw 7.8 Gorkha earthquake
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: simulated
-        description: 'Historical 1505 AD earthquake scenario for Rapti Municipality.
-          GeoTIFF raster: earthquake_scenario3_the1501.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_earthquake
-          intensity_measure: PGA:g
-          process: ground_motion
-          trigger: null
-          type: earthquake
-        id: event_earthquake_rapti_1505
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Palaeo-seismic reconstruction of 1505 AD earthquake
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: 'Nepal-Bihar earthquake scenario for Rapti Municipality. GeoTIFF
+        raster: earthquake_scenario1_nepalbihar.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_earthquake
         intensity_measure: PGA:g
         process: ground_motion
         trigger: null
         type: earthquake
-      id: event_set_earthquake_rapti
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 2
-      events:
-      - calculation_method: simulated
-        description: '20-year return period flood under future climate conditions
-          with +173mm precipitation increase. GeoTIFF: Rapti_max_depth_20yr_future_173mm_05.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_rapti_20yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.05
-            probability: null
-            return_period: 20
-      - calculation_method: simulated
-        description: '70-year return period flood under future climate conditions
-          with +212mm precipitation increase. GeoTIFF: Rapti_max_depth_70yr_future_212mm_05.tif'
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_flood_rapti_70yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0143
-            probability: null
-            return_period: 70
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_earthquake_rapti_nepalbihar
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Historical/scenario-based Nepal-Bihar earthquake
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: '2015 Gorkha earthquake (Mw 7.8) replay scenario for Rapti Municipality.
+        GeoTIFF raster: earthquake_scenario2_gorkha.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_earthquake
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: event_earthquake_rapti_gorkha
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Historical replay of 2015 Mw 7.8 Gorkha earthquake
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: simulated
+      description: 'Historical 1505 AD earthquake scenario for Rapti Municipality.
+        GeoTIFF raster: earthquake_scenario3_the1501.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_earthquake
+        intensity_measure: PGA:g
+        process: ground_motion
+        trigger: null
+        type: earthquake
+      id: event_earthquake_rapti_1505
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Palaeo-seismic reconstruction of 1505 AD earthquake
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_earthquake_rapti
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 2
+    events:
+    - calculation_method: simulated
+      description: '20-year return period flood under future climate conditions with
+        +173mm precipitation increase. GeoTIFF: Rapti_max_depth_20yr_future_173mm_05.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_flood_rapti
-      occurrence_range: null
-      seasonality: null
-    landslide:
-    - analysis_type: deterministic
-      calculation_method: inferred
-      event_count: 2
-      events:
-      - calculation_method: inferred
-        description: Current landslide susceptibility for Rapti Municipality. Base
-          extent (landslide_current.tif) plus extended version covering 3 power nodes
-          (landslide_current_extended.tif).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_landslide
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: event_landslide_rapti_current
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Current baseline susceptibility
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      - calculation_method: inferred
-        description: Future landslide susceptibility for Rapti Municipality under
-          climate change conditions. Base extent (landslide_future.tif) plus extended
-          version covering 3 power nodes (landslide_future_extended.tif).
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_landslide
-          intensity_measure: LSI:-
-          process: landslide_general
-          trigger: null
-          type: landslide
-        id: event_landslide_rapti_future
-        occurrence:
-          deterministic:
-            description: null
-            index_criteria: Future climate-informed susceptibility
-            thresholds: null
-          empirical: null
-          probabilistic: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+      id: event_flood_rapti_20yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.05
+          probability: null
+          return_period: 20
+    - calculation_method: simulated
+      description: '70-year return period flood under future climate conditions with
+        +212mm precipitation increase. GeoTIFF: Rapti_max_depth_70yr_future_212mm_05.tif'
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_flood_rapti_70yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0143
+          probability: null
+          return_period: 70
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_flood_rapti
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: deterministic
+    calculation_method: inferred
+    event_count: 2
+    events:
+    - calculation_method: inferred
+      description: Current landslide susceptibility for Rapti Municipality. Base extent
+        (landslide_current.tif) plus extended version covering 3 power nodes (landslide_current_extended.tif).
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: hazard_landslide
         intensity_measure: LSI:-
         process: landslide_general
         trigger: null
         type: landslide
-      id: event_set_landslide_rapti
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 3
+      id: event_landslide_rapti_current
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Current baseline susceptibility
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    - calculation_method: inferred
+      description: Future landslide susceptibility for Rapti Municipality under climate
+        change conditions. Base extent (landslide_future.tif) plus extended version
+        covering 3 power nodes (landslide_future_extended.tif).
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_landslide
+        intensity_measure: LSI:-
+        process: landslide_general
+        trigger: null
+        type: landslide
+      id: event_landslide_rapti_future
+      occurrence:
+        deterministic:
+          description: null
+          index_criteria: Future climate-informed susceptibility
+          thresholds: null
+        empirical: null
+        probabilistic: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_landslide
+      intensity_measure: LSI:-
+      process: landslide_general
+      trigger: null
+      type: landslide
+    id: event_set_landslide_rapti
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities
