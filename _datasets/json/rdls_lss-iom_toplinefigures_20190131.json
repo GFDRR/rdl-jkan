@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-iom_toplinefigures_20190131",
+      "title": "IOM Topline Figures",
+      "description": "Topline figures dataset for IOM organisation page. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/iom-topline-figures]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/iom-topline-figures"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/iom-topline-figures"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2019-01-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IOM compiles topline displacement figures from its global field presence and partner networks, aggregating internally displaced persons counts and related indicators to provide organization-wide summary statistics for monitoring and reporting purposes.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IOM collects and aggregates displacement and internally displaced persons statistics from field operations and partner organizations globally."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_855e9fe2",
+          "title": "IOM Topline Figures",
+          "description": "IOM Topline Figures",
+          "media_type": "text/csv",
+          "download_url": "https://docs.google.com/spreadsheets/d/1kPO1CmPvc42j9TouovP5tyiSdegRk1wISLpxMWDlfaQ/edit?usp=drive_web"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons figures aggregated by IOM"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/iom-topline-figures",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

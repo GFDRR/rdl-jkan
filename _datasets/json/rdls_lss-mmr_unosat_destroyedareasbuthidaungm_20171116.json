@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mmr_unosat_destroyedareasbuthidaungm_20171116",
+      "title": "Destroyed areas in Buthidaung, Maungdaw, and Rathedaung Townships of Rakhine State in Myanmar",
+      "description": "This map illustrates areas of satellite-detected destroyed or otherwise damaged settlements in Buthidaung, Maungdaw, and Rathedaung Townships in the Maungdaw and Sittwe Districts of Rakhine State in Myanmar. Analysis used satellite imagery collected on multiple dates between 31 August and 11 October 2017 and encompassed an area of about 4,800 square kilometers. Satellite analysis combined with information on settlement locations in Myanmar indicate that approximately 275 towns and villages were affected. This includes 34 in Buthidaung, 225 in Maungdaw, and 16 in Rathedaung. Note that these locations are indicated on the map though only a sampling are labeled due to the limitations of the map size and scale. Inset graphics show what is likely the village of Hpaw Ti Kaung, destroyed sometime between 16 September and 1 October 2017, with only a few structures and trees undamaged. Continued cloud cover and haze during the period in question means that destruction is likely underestimated in this analysis. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/destroyed-areas-in-buthidaung-maungdaw-and-rathedaung-townships-of-rakhine-state-in-myanmar-2727]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/destroyed-areas-in-buthidaung-maungdaw-and-rathedaung-townships-of-rakhine-state-in-myanmar-2727"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/destroyed-areas-in-buthidaung-maungdaw-and-rathedaung-townships-of-rakhine-state-in-myanmar-2727"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MMR"
+        ]
+      },
+      "temporal": {
+        "start": "2017-11-16"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery collected between 31 August and 11 October 2017 across approximately 4,800 square kilometers in Rakhine State to identify notable changes in settlement structures. Damage assessments were conducted by visual interpretation of satellite imagery, identifying destroyed or damaged settlements and cross-referencing with settlement location databases to determine affected towns and villages.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis comparing multi-temporal images to detect settlement damage and destruction in conflict-affected areas of Myanmar"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6e1e454c",
+          "title": "Damage_Analysis_Rakhine_20171011.gdb.zip",
+          "description": "Destroyed areas in Buthidaung, Maungdaw, and Rathedaung Townships of Rakhine State in Myanmar (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MM/CE20130326MMR/Damage_Analysis_Rakhine_20171011.gdb.zip"
+        },
+        {
+          "id": "resource_25a5cf2b",
+          "title": "Damage_Analysis_Rakhine_20171011_shp.zip",
+          "description": "Destroyed areas in Buthidaung, Maungdaw, and Rathedaung Townships of Rakhine State in Myanmar (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MM/CE20130326MMR/Damage_Analysis_Rakhine_20171011_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Satellite-detected destroyed or damaged settlements in Rakhine State"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/destroyed-areas-in-buthidaung-maungdaw-and-rathedaung-townships-of-rakhine-state-in-myanmar-2727",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

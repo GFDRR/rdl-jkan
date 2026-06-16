@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-idn_unfpaidn_westsulawesieqbuildingdam_20210121",
+      "title": "Indonesia - West Sulawesi EQ - Building Damage",
+      "description": "This data contain of scatter location of building damage that extracted from geotag photos. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/building-damage]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "UNFPA Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/building-damage"
+      },
+      "creator": {
+        "name": "UNFPA Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/building-damage"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2021-01-21"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "BNPB",
+            "url": "https://data.humdata.org/dataset/building-damage"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building damage locations were extracted from geotagged photographs collected in the field following the West Sulawesi earthquake. Point geometries with spatial coordinates (x, y, z) and temporal metadata (datetime, direction) were compiled into a shapefile representing direct observational damage records.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "BNPB",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Indonesian National Disaster Management Authority (Badan Nasional Penanggulangan Bencana) provided direct observational damage assessment data from geotagged field photographs"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c6b8f52c",
+          "title": "bangunan_rusak.zip",
+          "description": "Indonesia - West Sulawesi EQ - Building Damage (extracted from geotag photos of building damage in West Sulawesi)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/aac8c274-da9f-4444-9fb0-40a6f4f4f7a8/resource/c6b8f52c-684a-43f5-9cd1-2fc495bba006/download/bangunan_rusak.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from earthquake assessed through geotagged photo observations"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/building-damage",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
