@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-googleres_openbuildings25dtemporal_2016",
+      "title": "Google Open Buildings 2.5D Temporal",
+      "description": "Source: https://sites.research.google/gr/open-buildings/temporal/ The Open Buildings 2.5D Temporal Dataset contains annual data spanning eight years (2016-2023) with building presence, fractional building counts, and building heights covering approximately 58 million square kilometers. This dataset requires some knowledge with using scripts. The ZIP contains .txt files for over 130 countries and territories. The primary purpose of the data is to support comparison of building footprints across multiple years.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/google-open-buildings-temporal]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "Google Research",
+        "url": "https://data.humdata.org/dataset/google-open-buildings-temporal"
+      },
+      "creator": {
+        "name": "Google Research",
+        "url": "https://data.humdata.org/dataset/google-open-buildings-temporal"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2016-01-01",
+        "end": "2023-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Copernicus Sentinel-2",
+            "url": "https://data.humdata.org/dataset/google-open-buildings-temporal"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "A deep learning model was trained on Sentinel-2 multispectral imagery to detect building presence, fractional counts, and heights. The model was applied to annual stacks of 32 Sentinel-2 images centered on June 30th for each year from 2016-2023 across the Global South, producing annual building exposure data for 130+ countries and territories.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Copernicus Sentinel-2",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Multispectral satellite imagery used as input for deep learning model to detect building presence, fractional counts, and heights"
+          },
+          {
+            "id": "source_2",
+            "name": "Google Research",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Deep learning model trained to detect per-pixel building presence, fractional building counts, and building heights from Sentinel-2 imagery"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://sentiwiki.copernicus.eu/web/s2-processing"
+        },
+        {
+          "id": "reference_2",
+          "name": "Methodology documentation",
+          "url": "https://arxiv.org/abs/2310.11622"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_1a7e9ba0",
+          "title": "google-open-buildings-temporal.zip",
+          "description": "Contains Python script to download GeoTIFFs by country from Google Cloud Storage.",
+          "media_type": "application/zip",
+          "download_url": "https://data.humdata.org/dataset/acab847f-5c1a-462e-9c0e-ddd508525dcb/resource/1a7e9ba0-3fca-4c95-9f5a-a0a1f3bd393d/download/google-open-buildings-temporal.zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "Building footprints with fractional counts and heights derived from Sentinel-2 imagery across 130+ countries, 2016-2023"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/google-open-buildings-temporal",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

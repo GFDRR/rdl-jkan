@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-gtm_nlrc510_aibuildingfootprintizabal_20201127",
+      "title": "AI building footprint in Izabal, Guatemala",
+      "description": "Izabal department (GT-IZ), Guatemala: AI predictions of building footprint on Bing Maps images (approximately 2016-2019), see https://github.com/rodekruis/automated-building-detection. Produced in support to DRRT Guatemala for hurricane Eta and Iota. Coordinate reference system: WGS 84 / EPSG:4326. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ai-building-footprint-in-izabal-guatemala]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Buildings might be missing, complement if possible.",
+      "contact_point": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/ai-building-footprint-in-izabal-guatemala"
+      },
+      "creator": {
+        "name": "Netherlands Red Cross - 510",
+        "url": "https://data.humdata.org/dataset/ai-building-footprint-in-izabal-guatemala"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GTM"
+        ]
+      },
+      "temporal": {
+        "start": "2020-11-27"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Bing Maps imagery (approx. 2016-2019)",
+            "url": "https://data.humdata.org/dataset/ai-building-footprint-in-izabal-guatemala"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "automated-building-detection (rodekruis/510)",
+            "url": "https://data.humdata.org/dataset/ai-building-footprint-in-izabal-guatemala"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Building footprints were generated using an AI/deep learning model (automated-building-detection) applied to Bing Maps imagery from approximately 2016-2019 over Izabal department, Guatemala. The model produces vector polygon predictions of individual building footprints, exported as GeoJSON in WGS84. The dataset was produced in support of DRRT Guatemala disaster response operations following hurricanes Eta and Iota.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Bing Maps imagery (approx. 2016-2019)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Satellite/aerial imagery used as input for AI-based building footprint detection in Izabal, Guatemala."
+          },
+          {
+            "id": "source_2",
+            "name": "automated-building-detection (rodekruis/510)",
+            "type": "model",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Deep learning model developed by Netherlands Red Cross 510 for automated detection and delineation of building footprints from remote sensing imagery."
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://github.com/rodekruis/automated-building-detection"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_4e4b3d3f",
+          "title": "buildings-izabal.geojson",
+          "description": "Izabal department (GT-IZ), Guatemala: AI predictions of building footprint on Bing Maps images (approximately 2016-2019), see https://github.com/rodekruis/automated-building-detection. Produced in support to DRRT Guatemala for hurricane Eta and Iota. Coordinate reference system: WGS 84 / EPSG:4326",
+          "media_type": "application/geo+json",
+          "download_url": "https://data.humdata.org/dataset/00a27905-efd2-4ce5-b5d2-6c862ad7d852/resource/4e4b3d3f-6a31-4623-902a-76eea7fc928f/download/buildings-izabal.geojson"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "asset_type": {
+            "id": "buildings",
+            "description": "AI-predicted building footprints for Izabal department, Guatemala, derived from Bing Maps imagery (approx. 2016-2019) using automated deep learning detection"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "area"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ai-building-footprint-in-izabal-guatemala",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
