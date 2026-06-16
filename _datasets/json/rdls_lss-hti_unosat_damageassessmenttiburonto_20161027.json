@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-hti_unosat_damageassessmenttiburonto_20161027",
+      "title": "Haiti - Damage Assessment of Tiburon town and surroundings",
+      "description": "This map illustrates satellite-detected potentially damaged buildings in Tiburon town, Sud department, Haiti. The UNITAR-UNOSAT analysis used a WorldView-2 satellite image acquired on the 17 July 2016 as a pre-image and a Worldview- 2 satellite image acquired on the 17 October 2016 as a post-image. The UNITAR-UNOSAT analysis identified 648 potentially damaged structures within the map extent of which 611 were identified inside the town of Tiburon. The depiction and use of town boundaries acquired from Wikimapia, are not warranted to be error- free nor do they imply official endorsement or acceptance by the United Nations. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-of-tiburon-town-and-surroundings]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-tiburon-town-and-surroundings"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-of-tiburon-town-and-surroundings"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "HTI"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-27"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared pre-event (17 July 2016) and post-event (17 October 2016) WorldView-2 satellite imagery of Tiburon town to detect structural damage through visual change detection. The analysis identified 648 potentially damaged structures within the mapped area, of which 611 were located within Tiburon town boundaries, producing a post-disaster damage assessment dataset.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite-based damage assessment using WorldView-2 pre- and post-event imagery acquired in July and October 2016 to identify potentially damaged structures in Tiburon, Haiti following a cyclone event."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_dbf1f088",
+          "title": "TC20161003THI_combined_gdb.zip",
+          "description": "Haiti - Damage Assessment of Tiburon town and surroundings (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/TC20161003THI_combined_gdb.zip"
+        },
+        {
+          "id": "resource_9cb02996",
+          "title": "TC20161003THI_combined_shp.zip",
+          "description": "Haiti - Damage Assessment of Tiburon town and surroundings (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/HT/TC20161003HTI/TC20161003THI_combined_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from tropical cyclone assessed via satellite imagery change detection"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-of-tiburon-town-and-surroundings",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

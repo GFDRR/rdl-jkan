@@ -1,0 +1,97 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-irq_iom_dtmmosulcrisisbaselinedat_20161024",
+      "title": "Iraq - IOM DTM - Mosul crisis Baseline data",
+      "description": "The Emergency Tracking (ET) system aims at tracking sudden displacement or return movements triggered by emerging crises. The ET is a crisis-based tool. It does not depend on the location of displacement or return, only on the cause of that movement. The ET figures are not cumulative of the all persons affected by the Mosul crisis thus far, rather the ET update provides only a snapshot of the current displacement situation for the indicated date. The data and information reported on this page are related solely to the displacement caused by the Mosul operations which started on 17 October 2016. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/iom-dtm-mosul-crisis-baseline-data]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Census",
+      "contact_point": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/iom-dtm-mosul-crisis-baseline-data"
+      },
+      "creator": {
+        "name": "International Organization for Migration (IOM)",
+        "url": "https://data.humdata.org/dataset/iom-dtm-mosul-crisis-baseline-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IRQ"
+        ]
+      },
+      "temporal": {
+        "start": "2016-10-24"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "lineage": {
+        "description": "IOM Emergency Tracking system collected displacement and return movement data via census methodology during the Mosul crisis starting October 17, 2016. The dataset provides point-in-time snapshots of displacement situations rather than cumulative figures, tracking population movements caused by military operations.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "International Organization for Migration (IOM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Emergency Tracking system providing displacement counts and return movements triggered by the Mosul crisis, collected via census methodology"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e8781248",
+          "title": "EmergencyTracking_DTM_IOM_IDPs_Dataset.xls",
+          "description": "Iraq - IOM DTM - Mosul crisis Baseline data (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/956be982-5d90-4bb6-bde0-5eba2ec59ce9/resource/e8781248-0a94-4e15-bfd1-c76597a89ee1/download/emergencytracking_dtm_iom_idps_dataset.xls"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displacement caused by Mosul military operations (October 2016 onwards)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/iom-dtm-mosul-crisis-baseline-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

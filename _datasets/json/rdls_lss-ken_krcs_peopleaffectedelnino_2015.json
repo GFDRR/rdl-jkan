@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ken_krcs_peopleaffectedelnino_2015",
+      "title": "Kenya - People affected by Elnino",
+      "description": "This dataset shows the number of people affected by elnino rains per county. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/kenya-people-affected-by-elnino]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "Kenya Red Cross Society",
+        "url": "https://data.humdata.org/dataset/kenya-people-affected-by-elnino"
+      },
+      "creator": {
+        "name": "Kenya Red Cross Society",
+        "url": "https://data.humdata.org/dataset/kenya-people-affected-by-elnino"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2015-10-01",
+        "end": "2016-01-19"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "lineage": {
+        "description": "Kenya Red Cross Society compiled direct observational and anecdotal data on populations affected by El Niño-induced flooding across Kenyan counties during the 2015-2016 period. Data was aggregated by county administrative boundaries and documented in spreadsheet and shapefile formats to provide spatial impact records.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Kenya Red Cross Society",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational and anecdotal data on people affected by El Niño rains collected by Kenya Red Cross Society at county level during 2015-2016 period."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_041ea6f7",
+          "title": "el_nino_effect.xlsx",
+          "description": "Kenya - People affected by Elnino (Excel)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f4178cb5-3586-49f8-8bd7-4848235c5b97/resource/041ea6f7-573b-440f-ad2d-0615de108357/download/el_nino_effect.xlsx"
+        },
+        {
+          "id": "resource_2e1d5002",
+          "title": "red_cross_shapefile.zip",
+          "description": "Kenya - People affected by Elnino (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "http://red_cross_shapefile.zip"
+        },
+        {
+          "id": "resource_1357d235",
+          "title": "FLOODS 2015 -19th jan 2016.xlsx",
+          "description": "Kenya - People affected by Elnino (Data as of 19th January 2015)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/f4178cb5-3586-49f8-8bd7-4848235c5b97/resource/1357d235-4b53-420d-882a-a241758c8371/download/floods-2015-19th-jan-2016.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "total",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by El Niño-induced flooding per county"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/kenya-people-affected-by-elnino",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

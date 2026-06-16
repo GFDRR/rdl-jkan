@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mli_ochamli_idpsdataregion_20211110",
+      "title": "Mali - IDPs Data by region",
+      "description": "The dataset highlights the number of IDPs in Mali by region from Sep '12 - juillet 21.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/idps-data-by-region-in-mali]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "OCHA Mali",
+        "url": "https://data.humdata.org/dataset/idps-data-by-region-in-mali"
+      },
+      "creator": {
+        "name": "OCHA Mali",
+        "url": "https://data.humdata.org/dataset/idps-data-by-region-in-mali"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MLI"
+        ]
+      },
+      "temporal": {
+        "start": "2021-11-10"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "IOM Displacement Tracking Matrix (DTM)",
+            "url": "https://data.humdata.org/dataset/idps-data-by-region-in-mali"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Commission on Population Movements",
+            "url": "https://data.humdata.org/dataset/idps-data-by-region-in-mali"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "IDP displacement data compiled by IOM through their Displacement Tracking Matrix (DTM) exercise combined with field evaluations from the Commission on Population Movements partners. Data aggregated by administrative region covering the period September 2012 to July 2021, tracking conflict-induced internal displacement in Mali.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "IOM Displacement Tracking Matrix (DTM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "IOM's systematic tracking exercise monitoring displacement flows and IDP populations through field assessments and partner reports."
+          },
+          {
+            "id": "source_2",
+            "name": "Commission on Population Movements",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Field evaluations and population movement data compiled through partner networks monitoring displacement in Mali."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_9affe23f",
+          "title": "PDI_Mali_2012_2021.xlsx",
+          "description": "Mali - IDPs Data by region (IDP figures from 2012 to 2021 by region)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/1d309b64-970f-4f28-818e-33869d13b04e/resource/9affe23f-3ce2-40d1-ae6a-1d7060b548a5/download/pdi_mali_2012_2021.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons from conflict and violence in Mali by region"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/idps-data-by-region-in-mali",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

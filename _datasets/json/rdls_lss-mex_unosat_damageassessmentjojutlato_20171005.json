@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mex_unosat_damageassessmentjojutlato_20171005",
+      "title": "Damage Assessment in Jojutla town, Jojutla Municipality, State of Morelos, Mexico",
+      "description": "This map illustrates satellite-detected, potentially damaged structures in the town of Jojutla, Jojutla Municipality, Morelos State, Mexico. The analyzed area is located approximately 82 km west of the main shock epicenter of the 19 September 2017 M7.1 earthquake. UNITAR-UNOSAT identified 1,102 potentially damaged structures. The analysis was performed using a post-event Pleiades satellite image acquired on 03 October 2017 and Bing as pre-event image. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/damage-assessment-in-jojutla-town-jojutla-municipality-state-of-morelos-mexico-2698]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-jojutla-town-jojutla-municipality-state-of-morelos-mexico-2698"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/damage-assessment-in-jojutla-town-jojutla-municipality-state-of-morelos-mexico-2698"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MEX"
+        ]
+      },
+      "temporal": {
+        "start": "2017-10-05"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lineage": {
+        "description": "UNOSAT analysts compared post-event Pleiades satellite imagery (03 October 2017) with pre-event Bing imagery to detect structural changes and identify potentially damaged buildings in Jojutla town following the 19 September 2017 M7.1 earthquake. The analysis identified 1,102 potentially damaged structures through visual interpretation of satellite imagery, representing a preliminary assessment not yet validated in the field.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations Satellite Centre (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event satellite damage assessment using Pleiades imagery acquired 03 October 2017 compared against pre-event Bing imagery to identify potentially damaged structures in Jojutla town."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_74e2f32c",
+          "title": "EQ20170919MEX_gdb.zip",
+          "description": "Damage Assessment in Jojutla town, Jojutla Municipality, State of Morelos, Mexico (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170919MEX/EQ20170919MEX_gdb.zip"
+        },
+        {
+          "id": "resource_e37d5b47",
+          "title": "EQ20170919MEX_shp.zip",
+          "description": "Damage Assessment in Jojutla town, Jojutla Municipality, State of Morelos, Mexico (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat-maps.web.cern.ch/unosat-maps/MX/EQ20170919MEX/EQ20170919MEX_shp.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from the 19 September 2017 M7.1 earthquake detected via satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/damage-assessment-in-jojutla-town-jojutla-municipality-state-of-morelos-mexico-2698",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

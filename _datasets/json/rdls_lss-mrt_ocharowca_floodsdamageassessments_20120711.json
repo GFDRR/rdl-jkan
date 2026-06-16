@@ -1,0 +1,131 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mrt_ocharowca_floodsdamageassessments_20120711",
+      "title": "Mauritania - Floods Damage Assessments",
+      "description": "Floods damages assessment in Mauritania This table displays floods impacts in Mauritania in 2010.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/mauritania-damage-assessments]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Sample Survey",
+      "contact_point": {
+        "name": "OCHA West and Central Africa (ROWCA)",
+        "url": "https://data.humdata.org/dataset/mauritania-damage-assessments"
+      },
+      "creator": {
+        "name": "OCHA West and Central Africa (ROWCA)",
+        "url": "https://data.humdata.org/dataset/mauritania-damage-assessments"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "MRT"
+        ]
+      },
+      "temporal": {
+        "start": "2012-07-11"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "United Nations for Development Programme (UNDP)",
+            "url": "https://data.humdata.org/dataset/mauritania-damage-assessments"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event damage assessment data collected by UNDP through sample survey methodology in Mauritania following the 2010 floods. The dataset documents direct impacts on buildings and population from the flood event, compiled into a structured tracking tool for damage monitoring and humanitarian response planning.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "United Nations for Development Programme (UNDP)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event flood damage assessment data collected through sample survey methodology in Mauritania during the 2010 flood event."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_02e092de",
+          "title": "outil_de_suivi_degats_inondations_15.08.2010.xls",
+          "description": "The dataset represents a tool for flood impacts monitoring. Source: UNDP",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/cce71e24-303c-4183-b399-1e9ff95631d6/resource/02e092de-3e74-4484-856b-50a9370c4507/download/outil_de_suivi_degats_inondations_15.08.2010.xls"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flooding in Mauritania"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flooding in Mauritania"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/mauritania-damage-assessments",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

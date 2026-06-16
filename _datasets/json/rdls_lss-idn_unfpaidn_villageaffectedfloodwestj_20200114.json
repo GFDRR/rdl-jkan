@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-idn_unfpaidn_villageaffectedfloodwestj_20200114",
+      "title": "Indonesia - Village affected by Flood, in West Java Province",
+      "description": "Village affected by flood in Bogor and Lebak District - West Java Province on January 2020, the data source from BNPB, admin boundaries from BPS-Statistics Indonesia, 2016. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/village-affected-by-flood-in-west-java-province]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "UNFPA Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/village-affected-by-flood-in-west-java-province"
+      },
+      "creator": {
+        "name": "UNFPA Indonesia (inactive)",
+        "url": "https://data.humdata.org/dataset/village-affected-by-flood-in-west-java-province"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2020-01-14"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "BNPB",
+            "url": "https://data.humdata.org/dataset/village-affected-by-flood-in-west-java-province"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "BPS-Statistics Indonesia",
+            "url": "https://data.humdata.org/dataset/village-affected-by-flood-in-west-java-province"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Village-level flood impact data collected through direct observation by BNPB during the January 2020 flood event in Bogor and Lebak districts, West Java. Administrative boundaries from BPS-Statistics Indonesia (2016) were used to spatially delineate affected villages. The dataset represents post-event impact records at the village administrative unit level.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "BNPB",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Indonesian National Disaster Management Authority (Badan Nasional Penanggulangan Bencana) provided direct observational data on villages affected by the January 2020 flood event in West Java"
+          },
+          {
+            "id": "source_2",
+            "name": "BPS-Statistics Indonesia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Indonesian Central Statistics Agency (Badan Pusat Statistik) provided administrative boundary data from 2016 used to delineate affected villages"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ea3a049d",
+          "title": "Desa_terdampak_Bogor.zip",
+          "description": "Village affected by flood in Bogor District - West Java Province on January 2020, the data source from BNPB, admin boundaries from BPS-Statistics Indonesia, 2016",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/39ff9d88-db28-4737-bef9-05a4b1c89e02/resource/ea3a049d-2612-4c11-834d-79fdf6b50afb/download/desa_terdampak_bogor.zip"
+        },
+        {
+          "id": "resource_7e31b42b",
+          "title": "Desa_Terdampak_Lebak.zip",
+          "description": "Village affected by flood in Lebak District - West Java Province on January 2020, West Java Province, data source from BNPB, admin boundaries from BPS-Statistics Indonesia, 2016",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/39ff9d88-db28-4737-bef9-05a4b1c89e02/resource/7e31b42b-f15a-4e0e-ae8a-e432142a4604/download/desa_terdampak_lebak.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Villages affected by flooding in Bogor and Lebak districts during January 2020 flood event"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/village-affected-by-flood-in-west-java-province",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

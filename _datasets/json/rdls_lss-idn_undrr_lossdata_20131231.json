@@ -1,0 +1,252 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-idn_undrr_lossdata_20131231",
+      "title": "Disaster Loss Data for Indonesia",
+      "description": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/climate-change-impact-in-indonesia]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "contact_point": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/climate-change-impact-in-indonesia"
+      },
+      "creator": {
+        "name": "United Nations Office for Disaster Risk Reduction (UNDRR)",
+        "url": "https://data.humdata.org/dataset/climate-change-impact-in-indonesia"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "IDN"
+        ]
+      },
+      "temporal": {
+        "start": "2013-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UNISDR",
+            "url": "https://data.humdata.org/dataset/climate-change-impact-in-indonesia"
+          },
+          "role": "collaborator"
+        },
+        {
+          "id": "attribution_2",
+          "entity": {
+            "name": "Indonesia Government Agencies",
+            "url": "https://data.humdata.org/dataset/climate-change-impact-in-indonesia"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event disaster loss data compiled from direct observational records and anecdotal reports collected by UNISDR and Indonesia Government Agencies. Data includes recorded impacts from climate-related hazards (primarily flood and drought events) across Indonesia, with metrics covering human casualties, displacement, housing damage, and agricultural losses. The dataset integrates multiple government agency reports into a unified loss inventory for disaster risk assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UNISDR",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Post-event disaster loss data compiled from observational records and government agency reports on deaths, injuries, displacement, and economic damages from climate-related hazards in Indonesia."
+          },
+          {
+            "id": "source_2",
+            "name": "Indonesia Government Agencies",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Direct observational and anecdotal data on disaster impacts including casualties, affected populations, destroyed/damaged housing, and crop losses from climate change events."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_71c78d9f",
+          "title": "IDN.zip",
+          "description": "Disaster Loss Data for Indonesia (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366/resource/71c78d9f-b219-4881-8c1d-f79654b8c32b/download/idn.zip"
+        },
+        {
+          "id": "resource_bc3bc1c5",
+          "title": "Indonesia.xls",
+          "description": "Number of Deaths, Injured, Missing, Houses Destroyed, Houses Damaged, Victims Affected, Relocated, Evacuated, Losses and Damages in crops by climate change event",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6abc5323-7218-4592-9ab3-70c7e659f366/resource/bc3bc1c5-89ff-4777-9299-dbd2d09e2033/download/indonesia.xls"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct building damage from flood events in Indonesia"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from flood events in Indonesia"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "ppl_injured",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Injuries from flood events in Indonesia"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population affected by flood events in Indonesia"
+          },
+          {
+            "id": "loss_5",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced and evacuated from flood events in Indonesia"
+          },
+          {
+            "id": "loss_6",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Crop losses and damages from drought and climate change events in Indonesia"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/climate-change-impact-in-indonesia",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

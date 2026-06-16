@@ -1,0 +1,188 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ken_kodi_tallyinternalydisplacedpe_2003",
+      "title": "Kenya - Tally of Internaly displaced persons resulting from natural disasters",
+      "description": "This data-set shows the Number of people affected by Disasters in Kenya. It is based on the National Disaster inventory which is a record of Natural Disasters including floods, thunderstorms, forest fires, mudslides and disease outbreaks.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/1999-2013-tally-of-internaly-displaced-persons-resulting-from-natural-disasters]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "details": "This dataset has been sourced from Kenya open data portal",
+      "contact_point": {
+        "name": "Kenya Open Data Initiative (inactive)",
+        "url": "https://data.humdata.org/dataset/1999-2013-tally-of-internaly-displaced-persons-resulting-from-natural-disasters"
+      },
+      "creator": {
+        "name": "Kenya Open Data Initiative (inactive)",
+        "url": "https://data.humdata.org/dataset/1999-2013-tally-of-internaly-displaced-persons-resulting-from-natural-disasters"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "KEN"
+        ]
+      },
+      "temporal": {
+        "start": "2003-01-01",
+        "end": "2013-12-31"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Disaster preparedness centre",
+            "url": "https://data.humdata.org/dataset/1999-2013-tally-of-internaly-displaced-persons-resulting-from-natural-disasters"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Post-event impact data compiled from the National Disaster inventory maintained by Kenya's National Disaster preparedness centre, recording internally displaced persons counts resulting from multiple natural disaster types (floods, thunderstorms, forest fires, mudslides, and disease outbreaks) across Kenya.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Disaster preparedness centre",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "National Disaster inventory registry documenting natural disasters and resulting internally displaced persons across Kenya, including floods, thunderstorms, forest fires, and mudslides."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_e6b336ba",
+          "title": "National_Natural_Disaster_Inventory.csv",
+          "description": "This dataset shows the total recorded number of people affected by disasters in Kenya. It is based on the National Disaster inventory, which is a record of Natural Disasters including floods, thunderstorms, forest fires, mudslides and disease outbreaks.",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/1d7193a5-52ed-4e89-9d14-fb62f2ca8e9c/resource/e6b336ba-7e8d-4a05-9162-89071272e103/download/national_natural_disaster_inventory.csv"
+        },
+        {
+          "id": "resource_5894a78f",
+          "title": "National_Natural_Disaster_Inventory.zip",
+          "description": "Kenya - Tally of Internaly displaced persons resulting from natural disasters (Shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/1d7193a5-52ed-4e89-9d14-fb62f2ca8e9c/resource/5894a78f-2fcb-4977-8ab5-3614909cc572/download/national_natural_disaster_inventory.zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons resulting from flood disasters"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_convective_storm",
+              "type": "convective_storm",
+              "intensity_measure": "sws_10m:m/s"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons resulting from thunderstorm disasters"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_wildfire",
+              "type": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons resulting from forest fire disasters"
+          },
+          {
+            "id": "loss_4",
+            "hazard": {
+              "id": "hazard_landslide",
+              "type": "landslide",
+              "intensity_measure": "LSI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internally displaced persons resulting from mudslide disasters"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/1999-2013-tally-of-internaly-displaced-persons-resulting-from-natural-disasters",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
