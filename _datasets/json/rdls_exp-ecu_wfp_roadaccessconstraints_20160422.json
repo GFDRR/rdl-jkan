@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ecu_wfp_roadaccessconstraints_20160422",
+      "title": "Ecuador, Road Access Constraints",
+      "description": "This dataset shows road access constraints in Ecuador after the earthquake that occurred on 17 April 2016. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ecuador-road-access-constraints]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/ecuador-road-access-constraints"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/ecuador-road-access-constraints"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ECU"
+        ]
+      },
+      "temporal": {
+        "start": "2016-04-22"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Government of Ecuador",
+            "url": "https://data.humdata.org/dataset/ecuador-road-access-constraints"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Road network data was compiled by WFP Logistics Cluster partners and Government of Ecuador following the 17 April 2016 earthquake in Ecuador. The dataset documents spatial constraints on road accessibility for humanitarian logistics operations, derived from post-event field assessments and partner reports.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP - World Food Programme",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Logistics Cluster partner data on road access constraints and infrastructure disruptions in Ecuador following the April 2016 earthquake"
+          },
+          {
+            "id": "source_2",
+            "name": "Government of Ecuador",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure",
+            "description": "Official government assessment of road access constraints and infrastructure status post-earthquake"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_ccdb83b3",
+          "title": "zipped shapefile",
+          "description": "Ecuador, Road Access Constraints (zipped shapefile)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "http://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Aecu_trs_roadaccess_wfp_1&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/vnd.shp"
+        },
+        {
+          "id": "resource_4f0baf56",
+          "title": "geojson",
+          "description": "Ecuador, Road Access Constraints (GeoJSON)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "http://geonode.wfp.org/geoserver/wfs?srsName=EPSG%3A4326&typename=geonode%3Aecu_trs_roadaccess_wfp_1&outputFormat=json&version=1.0.0&service=WFS&request=GetFeature",
+          "media_type": "application/geo+json"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "infrastructure",
+          "asset_type": {
+            "id": "infrastructure",
+            "description": "Road network with access constraints and disruptions following the 2016 earthquake"
+          },
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ecuador-road-access-constraints",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
