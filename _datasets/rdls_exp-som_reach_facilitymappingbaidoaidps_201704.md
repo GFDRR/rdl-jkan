@@ -67,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/reach-som-baidoa-idp-settlement-assessment-facility-mapping-cleandata-april2017
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -25,24 +25,22 @@ description: 'ADAM ID: FL-20230301-MWI-02 Flood covering 111044.0 sq m on Mar 01
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: AA:km2
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: AA:km2
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: "WFP ADAM system collected and mapped observed flood extent (0.111\

@@ -66,8 +66,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm-antigua-and-barbuda-schools-openstreetmap-export
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

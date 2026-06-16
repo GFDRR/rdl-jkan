@@ -37,24 +37,22 @@ description: 'These datasets provide Ethiopia''s Vegetation Condition Index (VCI
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: VCI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: VCI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: MODIS satellite imagery was processed using remote sensing techniques
@@ -77,8 +75,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/ethiopia-seasonal-vegetation-condition-index-june-july-august-september
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

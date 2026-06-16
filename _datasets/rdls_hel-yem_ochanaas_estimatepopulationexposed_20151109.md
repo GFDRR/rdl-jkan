@@ -69,24 +69,22 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: tropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://opendatacommons.org/licenses/odbl/1-0/
 lineage:
   description: "Population exposure estimates were calculated by overlaying tropical\

@@ -67,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/icpac-geonode-somalia-livestock-density
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

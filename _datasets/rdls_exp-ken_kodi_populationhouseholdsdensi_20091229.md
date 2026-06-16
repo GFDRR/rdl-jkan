@@ -60,8 +60,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kenya-population-households-and-density-by-sublocations-2009
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

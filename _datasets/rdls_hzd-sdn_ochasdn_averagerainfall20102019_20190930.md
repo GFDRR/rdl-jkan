@@ -26,24 +26,22 @@ description: 'Rainfall distribution in Sudan for a 2010-2019. The data-set was c
 details: http://www.ersad.gov.sd/index.php
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: RF:mm
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: RF:mm
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Observed rainfall data from Sudan Meteorological Authority station
@@ -64,8 +62,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/sudan-average-rainfall-2010-to-2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -82,8 +82,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/pdh-population-living-in-low-elevation-coastal-zones-0-10m-and-0-20m-above-sea-level
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

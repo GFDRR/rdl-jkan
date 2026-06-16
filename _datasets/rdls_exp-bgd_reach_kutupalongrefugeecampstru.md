@@ -83,8 +83,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kutupalong-refugee-camp-struture-footprint-march-2020-fire-affected-camps
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -36,24 +36,22 @@ description: "On 6 February 2023 at 4:17h, local time in T\xFCrkiye (01:17 GMT),
 details: 'Glide: EQ-2023-000015-TUR'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: deterministic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: PGA:g
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: deterministic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: "USGS ShakeMap methodology automatically processed instrumental seismic\
@@ -76,8 +74,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/earthquake-in-southeastern-turkiye-and-northwestern-syria
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

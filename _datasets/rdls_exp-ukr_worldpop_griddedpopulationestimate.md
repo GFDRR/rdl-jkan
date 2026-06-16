@@ -105,8 +105,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gridded-population-estimates-for-ukraine-using-un-cod-ps-estimates-2020-version-2-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

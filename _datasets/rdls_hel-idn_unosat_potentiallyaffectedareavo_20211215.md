@@ -83,24 +83,22 @@ exposure:
       quantity_kind: area
       unit: null
 hazard:
-  event_sets_by_hazard_type:
-    volcanic:
-    - analysis_type: probabilistic
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: h_vaf:mm
-        process: lahar
-        trigger: null
-        type: volcanic
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: h_vaf:mm
+      process: lahar
+      trigger: null
+      type: volcanic
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: UNOSAT analysts compared pre- and post-eruption Pleiades satellite

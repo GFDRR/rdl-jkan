@@ -65,8 +65,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/pdh-nauru_population_grid_2020
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

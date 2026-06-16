@@ -95,8 +95,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gridded-population-estimates-for-mozambique-2017-census-v1-1
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

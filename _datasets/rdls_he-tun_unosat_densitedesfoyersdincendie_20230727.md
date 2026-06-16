@@ -62,24 +62,22 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    wildfire:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: AA:km2
-        process: wildfire
-        trigger: null
-        type: wildfire
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: AA:km2
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: VIIRS satellite imagery acquired on 25 July 2023 was processed by UNOSAT
@@ -111,8 +109,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/densite-des-foyers-d-incendie-dans-les-delegations-de-nefza-ain-draham-et-tabarka-gouverno
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

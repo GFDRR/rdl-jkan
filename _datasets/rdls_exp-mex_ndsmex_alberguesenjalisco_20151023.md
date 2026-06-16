@@ -60,8 +60,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/mexico-albergues-en-jalisco
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

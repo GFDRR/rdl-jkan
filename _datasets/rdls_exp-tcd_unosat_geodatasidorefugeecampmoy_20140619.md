@@ -85,8 +85,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-sido-refugee-camp-moyen-chari-region-republic-of-chad-june-19-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -30,24 +30,22 @@ details: The limitations and choice for data sources is described in detail [her
   was used to produce this dataset can be found [here](https://github.com/OCHA-DAP/pa-anticipatory-action/blob/1c396ee5367c81ab8ed115bec6ece4ac45b3bd76/analyses/mwi/dryspells_trigger/01_chirps_dry_spell_detection.R)
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: SPI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: "Observational rainfall data from Climate Hazards Center was analyzed\
@@ -69,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/historical-dry-spells-in-malawi
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -73,8 +73,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-landcover-classification-kalobeyei-turkana-county-kenya-july-01-2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

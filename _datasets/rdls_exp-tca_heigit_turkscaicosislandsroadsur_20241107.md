@@ -119,8 +119,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/turks-and-caicos-islands-road-surface-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

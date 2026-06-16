@@ -127,8 +127,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kontur-boundaries-state-of-palestine
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

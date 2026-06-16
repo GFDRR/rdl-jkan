@@ -34,24 +34,22 @@ details: Variations in the vegetation health and/or cover could be related to st
   Indicator).
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: FAPAR:-
-        process: agricultural_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: FAPAR:-
+      process: agricultural_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: FAPAR values from VIIRS 10-day composites are compared against a long-term
@@ -72,8 +70,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/mlt-anomalies-fapar-viirs
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -96,8 +96,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/pdh-percentage-of-population-within-1-5-10km-coastal-buffers
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

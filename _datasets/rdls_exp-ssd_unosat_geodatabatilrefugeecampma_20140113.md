@@ -70,8 +70,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-batil-refugee-camp-maban-county-upper-nile-state-south-sudan-january-13-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -74,8 +74,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-minkaman-idp-site-awerial-county-lakes-state-south-sudan-december-02-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

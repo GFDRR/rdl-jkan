@@ -158,8 +158,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kontur-population-trinidad-and-tobago
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

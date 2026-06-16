@@ -30,24 +30,22 @@ details: The RBR analysis does not distinguish whether burned land was before or
   the harvest of the specific cropland.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    wildfire:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: FWI:-
-        process: wildfire
-        trigger: null
-        type: wildfire
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Sentinel-2A multispectral imagery from before (6 April - 3 May 2019)
@@ -69,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/northern-syria-burned-land-analysis-dataset-may-june-2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -65,8 +65,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/open_buildings_v3_west_japan_earthquake_epicenter
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -87,8 +87,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/bangladesh-npm-drone-imagery-and-gis-package-by-camp-nov-2018
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

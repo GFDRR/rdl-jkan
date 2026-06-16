@@ -54,24 +54,22 @@ description: "European winter storm [gust in meters per second] footprints for U
 details: '2024-01-15: Only Ukraine data since other HRP countries are not in the source'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: extratropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: extratropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Historical winter storm footprints from the Copernicus WISC project
@@ -119,8 +117,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/climada-storm-europe-dataset
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

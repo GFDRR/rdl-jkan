@@ -42,24 +42,22 @@ details: "This product has been prepared for operational purposes only, to suppo
   \ see http://themimu.info/mimu-terms-conditions."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    erosion:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: Er:T/ha
-        process: soil_erosion
-        trigger: null
-        type: erosion
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: Er:T/ha
+      process: soil_erosion
+      trigger: null
+      type: erosion
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Landsat 5-7 satellite imagery spanning 1988-2019 was processed through
@@ -90,8 +88,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/mimu-geonode-ayeyarwady-river-bank-erosion
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

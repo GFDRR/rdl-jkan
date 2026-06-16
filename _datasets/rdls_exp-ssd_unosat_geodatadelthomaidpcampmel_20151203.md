@@ -68,8 +68,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-delthoma-idp-camp-melut-district-upper-nile-state-south-sudan-december-03-2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

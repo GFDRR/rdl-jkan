@@ -26,24 +26,22 @@ description: "Registro de incendios forestal y no forestal de Guatemala, desde l
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    wildfire:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: FWI:-
-        process: wildfire
-        trigger: null
-        type: wildfire
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: FWI:-
+      process: wildfire
+      trigger: null
+      type: wildfire
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Post-event wildfire registry compiled by CONRED Guatemala from 2017-2022,

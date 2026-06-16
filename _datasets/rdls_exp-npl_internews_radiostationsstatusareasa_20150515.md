@@ -140,8 +140,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/radio-stations-in-earthquake-affected-areas
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

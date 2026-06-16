@@ -46,24 +46,22 @@ details: This dataset is refreshed every week, but the source datasets may have 
   to verify their specific update frequency.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: rainfall:mm
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: rainfall:mm
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Rainfall observations from Climate Hazards Center UC Santa Barbara
@@ -93,8 +91,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hdx-hapi-rainfall
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

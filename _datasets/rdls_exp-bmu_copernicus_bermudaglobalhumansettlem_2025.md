@@ -93,8 +93,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/bmu-ghsl
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -70,24 +70,22 @@ exposure:
       quantity_kind: area
       unit: null
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: AA:km2
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: AA:km2
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Radarsat-2 satellite imagery from 12 February 2018 was analyzed by
@@ -109,8 +107,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/satellite-detected-waters-over-el-beni-department-bolivia
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -88,8 +88,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/population-yemen-2019-2023-using-codps-v1
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

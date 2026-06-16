@@ -26,24 +26,22 @@ description: 'Sentinel 1 interferogram of Haiti Magnitude 5.9 earthquake on Oct 
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: probabilistic
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: PGA:g
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Sentinel-1 SAR images acquired on 26 September and 8 October 2018 were
@@ -64,8 +62,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/haiti-magnitude-5-0-earthquake-interferogram
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

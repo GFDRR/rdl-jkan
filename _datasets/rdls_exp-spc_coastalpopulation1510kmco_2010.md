@@ -79,8 +79,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/pdh-coastal-population-1-5-and-10km-from-coast
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

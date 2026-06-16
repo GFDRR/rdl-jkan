@@ -155,8 +155,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/sierra-leone-settlement-catchment-areas
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

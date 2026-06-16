@@ -152,8 +152,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gar15-global-exposure-dataset-for-equatorial-guinea
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

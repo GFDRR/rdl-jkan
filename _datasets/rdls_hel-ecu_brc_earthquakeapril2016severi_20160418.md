@@ -62,24 +62,22 @@ exposure:
       quantity_kind: index
       unit: null
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: MMI:-
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: A predictive severity index was calculated by multiplying gridded population

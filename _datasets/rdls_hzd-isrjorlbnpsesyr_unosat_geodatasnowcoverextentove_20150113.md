@@ -41,24 +41,22 @@ details: This is a preliminary assessment and has not yet been validated in the 
   to seek clarification.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: extratropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: extratropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: UNOSAT analysts interpreted MODIS satellite imagery collected on 13
@@ -81,8 +79,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-snow-cover-extent-over-west-bank-israel-jordan-lebanon-and-syria-january-13-2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -30,81 +30,79 @@ details: "This data was created by the World Bank and should be credited as foll
   \ Inondation de R\xE9currence (5 ans / 25 ans / 100 ans)"
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 3
-      events:
-      - calculation_method: simulated
-        description: Probabilistic fluvial flood hazard model depicting inundation
-          extents at 5-, 25-, and 100-year return periods for Cap Haitien
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_5yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.2
-            probability: null
-            return_period: 5
-      - calculation_method: simulated
-        description: Probabilistic fluvial flood hazard model depicting inundation
-          extents at 5-, 25-, and 100-year return periods for Cap Haitien
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_25yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.04
-            probability: null
-            return_period: 25
-      - calculation_method: simulated
-        description: Probabilistic fluvial flood hazard model depicting inundation
-          extents at 5-, 25-, and 100-year return periods for Cap Haitien
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: fluvial_flood
-          trigger: null
-          type: flood
-        id: event_100yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 3
+    events:
+    - calculation_method: simulated
+      description: Probabilistic fluvial flood hazard model depicting inundation extents
+        at 5-, 25-, and 100-year return periods for Cap Haitien
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: fluvial_flood
         trigger: null
         type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_5yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.2
+          probability: null
+          return_period: 5
+    - calculation_method: simulated
+      description: Probabilistic fluvial flood hazard model depicting inundation extents
+        at 5-, 25-, and 100-year return periods for Cap Haitien
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_25yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.04
+          probability: null
+          return_period: 25
+    - calculation_method: simulated
+      description: Probabilistic fluvial flood hazard model depicting inundation extents
+        at 5-, 25-, and 100-year return periods for Cap Haitien
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
+        intensity_measure: wd:m
+        process: fluvial_flood
+        trigger: null
+        type: flood
+      id: event_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: The World Bank developed probabilistic flood hazard models for Cap
@@ -126,8 +124,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/cap-haitien-haiti-flood-event-extents
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

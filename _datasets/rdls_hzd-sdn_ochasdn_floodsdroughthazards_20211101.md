@@ -26,40 +26,37 @@ description: 'This file contains the the Sudan admin2 level localities with data
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: es_drought_hzd
-        intensity_measure: SPI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: es_drought
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: es_flood_hzd
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: es_flood
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 2
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: es_flood_hzd
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: es_flood
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: es_drought_hzd
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: es_drought
+    occurrence_range: null
+    seasonality: null
 license: https://opendatacommons.org/licenses/odbl/1-0/
 lineage:
   description: Hazard data compiled from direct observational records and anecdotal
@@ -80,8 +77,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/2021-floods-and-drought-hazards
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -59,8 +59,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/wastewater-treatment-plants-east-libya
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

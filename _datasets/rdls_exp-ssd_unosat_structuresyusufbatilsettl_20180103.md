@@ -86,8 +86,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/structures-at-the-yusuf-batil-settlement-in-south-sudan-2751
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

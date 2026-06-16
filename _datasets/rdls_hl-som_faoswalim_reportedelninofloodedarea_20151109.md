@@ -25,24 +25,22 @@ description: 'This dataset shows the reported flooded areas in somalia. [Source:
 details: This dataset has been linked to HDX from the FAO SWALIM Online portal
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: "Direct observational and anecdotal field data collected by FAO SWALIM\

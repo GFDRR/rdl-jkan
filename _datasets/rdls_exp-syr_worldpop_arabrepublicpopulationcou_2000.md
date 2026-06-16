@@ -106,8 +106,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/worldpop-population-counts-for-syrian-arab-republic
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

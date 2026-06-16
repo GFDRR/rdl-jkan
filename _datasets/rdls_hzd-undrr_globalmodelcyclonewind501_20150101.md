@@ -37,124 +37,117 @@ details: This dataset was generated using other global datasets; it should not b
   or concerning the delimitation of its frontiers or boundaries.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 5
-      events:
-      - calculation_method: simulated
-        description: Probabilistic tropical cyclone wind hazard model with maximum
-          sustained wind speeds at 5 return periods derived from 2594 historical cyclone
-          tracks
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_strong_wind
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: event_50yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.02
-            probability: null
-            return_period: 50
-      - calculation_method: simulated
-        description: Probabilistic tropical cyclone wind hazard model with maximum
-          sustained wind speeds at 5 return periods derived from 2594 historical cyclone
-          tracks
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_strong_wind
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: event_100yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.01
-            probability: null
-            return_period: 100
-      - calculation_method: simulated
-        description: Probabilistic tropical cyclone wind hazard model with maximum
-          sustained wind speeds at 5 return periods derived from 2594 historical cyclone
-          tracks
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_strong_wind
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: event_250yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.004
-            probability: null
-            return_period: 250
-      - calculation_method: simulated
-        description: Probabilistic tropical cyclone wind hazard model with maximum
-          sustained wind speeds at 5 return periods derived from 2594 historical cyclone
-          tracks
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_strong_wind
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: event_500yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002
-            probability: null
-            return_period: 500
-      - calculation_method: simulated
-        description: Probabilistic tropical cyclone wind hazard model with maximum
-          sustained wind speeds at 5 return periods derived from 2594 historical cyclone
-          tracks
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_strong_wind
-          intensity_measure: sws_10m:m/s
-          process: tropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: event_1000yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001
-            probability: null
-            return_period: 1000
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 5
+    events:
+    - calculation_method: simulated
+      description: Probabilistic tropical cyclone wind hazard model with maximum sustained
+        wind speeds at 5 return periods derived from 2594 historical cyclone tracks
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_strong_wind
         intensity_measure: sws_10m:m/s
         process: tropical_cyclone
         trigger: null
         type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_50yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.02
+          probability: null
+          return_period: 50
+    - calculation_method: simulated
+      description: Probabilistic tropical cyclone wind hazard model with maximum sustained
+        wind speeds at 5 return periods derived from 2594 historical cyclone tracks
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_strong_wind
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: event_100yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.01
+          probability: null
+          return_period: 100
+    - calculation_method: simulated
+      description: Probabilistic tropical cyclone wind hazard model with maximum sustained
+        wind speeds at 5 return periods derived from 2594 historical cyclone tracks
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_strong_wind
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: event_250yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.004
+          probability: null
+          return_period: 250
+    - calculation_method: simulated
+      description: Probabilistic tropical cyclone wind hazard model with maximum sustained
+        wind speeds at 5 return periods derived from 2594 historical cyclone tracks
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_strong_wind
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: event_500yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002
+          probability: null
+          return_period: 500
+    - calculation_method: simulated
+      description: Probabilistic tropical cyclone wind hazard model with maximum sustained
+        wind speeds at 5 return periods derived from 2594 historical cyclone tracks
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_strong_wind
+        intensity_measure: sws_10m:m/s
+        process: tropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: event_1000yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001
+          probability: null
+          return_period: 1000
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Historical tropical cyclone tracks from IBTrACS were processed with
@@ -176,8 +169,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/cyclone-wind-100-years-return-period
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

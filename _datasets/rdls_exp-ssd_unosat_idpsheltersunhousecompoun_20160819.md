@@ -70,8 +70,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/idp-shelters-in-un-house-compound-juba-central-equatoria-south-sudan
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

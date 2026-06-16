@@ -54,8 +54,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/saint-vincent-and-the-grenadines-gridded-population-dataset
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

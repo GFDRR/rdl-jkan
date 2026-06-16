@@ -49,24 +49,22 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: tropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: UNOSAT analysts integrated observed cyclone track and sustained wind
@@ -88,8 +86,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-population-exposure-analysis-tropical-cyclone-winston-22-february-march-09-2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

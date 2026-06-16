@@ -29,24 +29,22 @@ description: 'This dataset shows the actual extent of flooding in the Philippine
 details: This dataset has not been validated using ground-truth data.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: AA:km2
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: AA:km2
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Satellite imagery was processed by the Philippine Space Agency to delineate
@@ -68,8 +66,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/philippines-flood-20241108
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

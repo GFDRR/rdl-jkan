@@ -73,8 +73,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/qah-idp-settlement-shelter-density-in-dana-subdistrict-harem-district-idlib-governorate-syria-2743
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

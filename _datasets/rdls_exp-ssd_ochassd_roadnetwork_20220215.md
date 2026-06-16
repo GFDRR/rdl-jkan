@@ -78,8 +78,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/south-sudan-road-network_hdx
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

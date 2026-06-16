@@ -92,8 +92,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/census-cartography-based-gridded-population-estimates-for-mali-2020-version-1-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

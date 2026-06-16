@@ -85,8 +85,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/highresolutionpopulationdensitymaps-mli
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

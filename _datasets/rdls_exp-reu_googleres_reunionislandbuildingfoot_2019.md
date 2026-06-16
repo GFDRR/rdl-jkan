@@ -66,8 +66,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/reunion-island-buildings-footprint-belal-cyclone
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -87,8 +87,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-idp-camp-in-unmiss-malakal-base-malakal-south-sudan-october-22-2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

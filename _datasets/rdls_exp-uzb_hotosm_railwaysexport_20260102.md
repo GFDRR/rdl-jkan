@@ -64,8 +64,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_uzb_railways
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

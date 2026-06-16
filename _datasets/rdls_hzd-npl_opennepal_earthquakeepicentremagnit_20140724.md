@@ -27,24 +27,22 @@ description: 'The dataset consitsts of date wise earthquake by epicenter, magnit
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: magnitude:-
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: magnitude:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://opendatacommons.org/licenses/odbl/1-0/
 lineage:
   description: Earthquake event data extracted from Nepal's official Environment Statistics
@@ -64,8 +62,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/earthquake-by-epicentre-and-magnitude-2008-2012
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

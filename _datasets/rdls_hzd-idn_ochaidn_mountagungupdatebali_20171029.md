@@ -40,24 +40,22 @@ description: 'On 22 September 2017 at 20.30 hrs. Indonesia''s Centre of Volcanol
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    volcanic:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: h_vaf:mm
-        process: ashfall
-        trigger: null
-        type: volcanic
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: h_vaf:mm
+      process: ashfall
+      trigger: null
+      type: volcanic
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/publicdomain/zero/1.0/
 lineage:
   description: Volcanic hazard data derived from real-time observational monitoring
@@ -87,8 +85,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/mount-agung-update-bali-indonesia
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

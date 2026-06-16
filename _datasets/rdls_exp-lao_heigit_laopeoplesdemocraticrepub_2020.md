@@ -125,8 +125,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/lao-peoples-democratic-republic-planet-road-surface-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

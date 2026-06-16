@@ -80,8 +80,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/somalia-road-network-and-access-constraints
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

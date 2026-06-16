@@ -109,8 +109,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/cox-s-bazar-existing-and-planned-access-road-network-of-all-rohingya-refugee-camps
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -158,8 +158,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/kosovo-population-density-for-400m-h3-hexagons
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -43,24 +43,22 @@ details: In this API we provide datasets in a form that can readily be used in C
   API metadata and referenced publications for details and limitations.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: MMI:-
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: MMI:-
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Historic earthquake epicentres from the USGS database (1904-2017) were
@@ -90,8 +88,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/climada-earthquake-dataset
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

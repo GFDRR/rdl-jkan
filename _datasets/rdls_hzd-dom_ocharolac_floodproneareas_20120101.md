@@ -24,24 +24,22 @@ description: 'Vulnerable places (For floods). [Source: This metadata record was 
 details: '**Languages:** ES'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: inferred
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: inferred
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Flood-prone areas were identified and mapped by the Instituto Geologico
@@ -62,8 +60,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/dominican-republic-other
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

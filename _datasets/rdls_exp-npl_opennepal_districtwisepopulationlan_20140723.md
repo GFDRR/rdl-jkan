@@ -77,8 +77,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/district-wise-population-land-ratio-and-population-density-2011
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

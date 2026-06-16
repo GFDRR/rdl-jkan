@@ -83,8 +83,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/grid3-cod-gridded-population-estimates-v4-4
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

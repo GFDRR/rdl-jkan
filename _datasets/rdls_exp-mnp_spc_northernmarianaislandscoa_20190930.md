@@ -67,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/pdh-coastal-proximity-of-populations-in-22-pacific-island-countries-and-territories-dataset-northern
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

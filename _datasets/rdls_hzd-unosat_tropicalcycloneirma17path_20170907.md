@@ -29,24 +29,22 @@ description: 'This dataset illustrates the tropical cyclone IRMA-17 path with lo
 details: This is a preliminary analysis and has not yet been validated in the field.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: tropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Tropical cyclone IRMA-17 track and wind speed zones were derived from
@@ -68,8 +66,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/tropical-cyclone-irma-17-path-and-wind-speed-zones-as-of-7-september-2017
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

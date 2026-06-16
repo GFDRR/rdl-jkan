@@ -72,8 +72,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/hotosm_ner_ruwa_water
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

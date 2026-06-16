@@ -70,8 +70,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/structures-at-the-doro-settlement-in-south-sudan-2752
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

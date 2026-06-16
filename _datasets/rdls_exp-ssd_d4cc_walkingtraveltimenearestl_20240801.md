@@ -76,8 +76,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/south-sudan-walking-travel-time-to-nearest-level-iv-health-centre
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

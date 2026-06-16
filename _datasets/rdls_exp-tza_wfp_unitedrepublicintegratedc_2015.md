@@ -86,8 +86,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/wfp_ica_tza_2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

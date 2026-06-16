@@ -26,24 +26,22 @@ description: 'This data is created using GPM data. It contains the accumulated p
 details: This data has been sourced from GPM (https://pmm.nasa.gov/data-access/downloads/gpm)
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    convective_storm:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: RF:mm
-        process: thunderstorm
-        trigger: null
-        type: convective_storm
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: RF:mm
+      process: thunderstorm
+      trigger: null
+      type: convective_storm
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: "Accumulated precipitation data was derived from NASA's Global Precipitation\
@@ -66,8 +64,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/philippines-accumulated-precipitation-typhoon-haima-11-20th-october-2016-zip
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

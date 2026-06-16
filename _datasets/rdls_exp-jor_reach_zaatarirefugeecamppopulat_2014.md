@@ -85,8 +85,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/za-atari-refugee-camp-population-count
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -104,8 +104,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/moz-floods-january-2026-openstreetmap-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

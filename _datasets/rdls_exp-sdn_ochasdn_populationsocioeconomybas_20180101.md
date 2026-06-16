@@ -60,8 +60,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/population-socio-economy-baseline-population-by-age-and-sex
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

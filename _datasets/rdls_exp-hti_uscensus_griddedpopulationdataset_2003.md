@@ -83,8 +83,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/haiti-gridded-population-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

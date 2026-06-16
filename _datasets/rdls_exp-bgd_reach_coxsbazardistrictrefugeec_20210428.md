@@ -103,8 +103,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/bangladesh-refugee-camp-structure-footprint-march-2020
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

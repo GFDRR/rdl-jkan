@@ -85,8 +85,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/trinidad-and-tobago-high-resolution-population-density-maps-demographic-estimates
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

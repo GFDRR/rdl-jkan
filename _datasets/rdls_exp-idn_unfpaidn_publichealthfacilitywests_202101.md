@@ -60,8 +60,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/public-health-facility-in-west-sulawesi-affected-area
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

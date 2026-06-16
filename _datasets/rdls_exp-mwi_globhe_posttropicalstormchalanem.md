@@ -78,8 +78,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/post-tropical-storm-chalane-mapping-ngabu-malawi
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

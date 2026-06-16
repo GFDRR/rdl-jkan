@@ -77,8 +77,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/tm-open-buildings-philippines
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

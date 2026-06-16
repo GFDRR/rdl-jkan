@@ -76,8 +76,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/total-strategic-road-network-srn-length-influenced-population-of-district-in-nepal-2011
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -51,24 +51,22 @@ details: "The data was extracted from list of affected countries from the 2015-2
   \ on 21 April 2016 which can be downloaded from the GFSC website here: http://www.foodsecuritycluster.net/document/2015-2016-el-nino-wfp-and-fao-overview"
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    drought:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: SPI:-
-        process: meteorological_drought
-        trigger: null
-        type: drought
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: SPI:-
+      process: meteorological_drought
+      trigger: null
+      type: drought
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: "Joint assessment by FAO, WFP, and Global Food Security Cluster of\

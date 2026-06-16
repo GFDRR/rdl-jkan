@@ -26,24 +26,22 @@ description: 'A collection of the strongest typhoon (tracks and windspeed) data 
 details: Please refer to http://weather.unisys.com/ for a detailed tracking information.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: tropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Typhoon track and wind speed data were extracted from Unisys Weather
@@ -65,8 +63,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/philippine-typhoon-tracks-category-4-and-5-from-2012-2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

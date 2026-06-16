@@ -62,8 +62,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/nigeria-roads-data-from-osm
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

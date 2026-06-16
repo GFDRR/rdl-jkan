@@ -80,8 +80,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/grid3-myt-settlement-extents-v3-0
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -69,8 +69,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/openbuildings_morocco_earthquake_footprint
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

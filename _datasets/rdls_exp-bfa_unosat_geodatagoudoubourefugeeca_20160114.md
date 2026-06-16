@@ -69,8 +69,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-goudoubou-refugee-camp-seno-province-burkina-faso-january-14-2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -80,8 +80,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-bab-al-salame-idp-camp-azaz-district-aleppo-governorate-syria-june-12-2015
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

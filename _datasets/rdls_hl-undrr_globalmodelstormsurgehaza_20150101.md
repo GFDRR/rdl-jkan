@@ -34,43 +34,41 @@ description: 'The tropical cyclonic strong wind and storm surge model use inform
 details: null
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    flood:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 1
-      events:
-      - calculation_method: simulated
-        description: Probabilistic storm surge hazard model derived from 2594 historical
-          tropical cyclones with inundation depths at 10-year return period
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: hazard_flood
-          intensity_measure: wd:m
-          process: coastal_flood
-          trigger: null
-          type: flood
-        id: event_10yr
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.1
-            probability: null
-            return_period: 10
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 1
+    events:
+    - calculation_method: simulated
+      description: Probabilistic storm surge hazard model derived from 2594 historical
+        tropical cyclones with inundation depths at 10-year return period
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: hazard_flood
         intensity_measure: wd:m
         process: coastal_flood
         trigger: null
         type: flood
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_10yr
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.1
+          probability: null
+          return_period: 10
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: wd:m
+      process: coastal_flood
+      trigger: null
+      type: flood
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Historical tropical cyclone data from five oceanic basins (2594 events)

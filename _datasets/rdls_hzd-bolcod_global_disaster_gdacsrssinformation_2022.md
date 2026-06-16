@@ -32,72 +32,67 @@ details: While we try everything to ensure accuracy, this information is purely 
   presented on this website.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    earthquake:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hzd_earthquake
-        intensity_measure: PGA:g
-        process: ground_motion
-        trigger: null
-        type: earthquake
-      id: es_earthquake
-      occurrence_range: null
-      seasonality: null
-    flood:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hzd_flood
-        intensity_measure: wd:m
-        process: fluvial_flood
-        trigger: null
-        type: flood
-      id: es_flood
-      occurrence_range: null
-      seasonality: null
-    strong_wind:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hzd_wind
-        intensity_measure: ws:m/s
-        process: tropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: es_wind
-      occurrence_range: null
-      seasonality: null
-    volcanic:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hzd_volcanic
-        intensity_measure: T:cm
-        process: ashfall
-        trigger: null
-        type: volcanic
-      id: es_volcanic
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 4
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hzd_earthquake
+      intensity_measure: PGA:g
+      process: ground_motion
+      trigger: null
+      type: earthquake
+    id: es_earthquake
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hzd_flood
+      intensity_measure: wd:m
+      process: fluvial_flood
+      trigger: null
+      type: flood
+    id: es_flood
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hzd_wind
+      intensity_measure: ws:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: es_wind
+    occurrence_range: null
+    seasonality: null
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hzd_volcanic
+      intensity_measure: T:cm
+      process: ashfall
+      trigger: null
+      type: volcanic
+    id: es_volcanic
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: GDACS integrates multiple hazard detection systems (automatic for seismic
@@ -118,8 +113,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gdacs-rss-information
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

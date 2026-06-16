@@ -153,8 +153,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gar15-global-exposure-dataset-for-saint-vincent-and-the-grenadines
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

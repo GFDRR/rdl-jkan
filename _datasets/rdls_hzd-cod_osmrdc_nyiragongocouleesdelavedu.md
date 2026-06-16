@@ -38,24 +38,22 @@ details: "Ces donn\xE9es sont approximatives, la pr\xE9cision devrait s'am\xE9li
   \ au fur et \xE0 mesure des mises \xE0 jour."
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    volcanic:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: AA:km2
-        process: lava
-        trigger: null
-        type: volcanic
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: AA:km2
+      process: lava
+      trigger: null
+      type: volcanic
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://opendatacommons.org/licenses/odbl/1-0/
 lineage:
   description: Lava flow polygons were manually digitized by OpenStreetMap RDC from
@@ -86,8 +84,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/nyiragongo-coulees-de-lave-du-22-mai-2021
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -123,8 +123,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/modelled_population_estimates-png_v1
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

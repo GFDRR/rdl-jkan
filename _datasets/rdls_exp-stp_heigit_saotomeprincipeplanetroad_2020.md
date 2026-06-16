@@ -124,8 +124,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/sao-tome-and-principe-planet-road-surface-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

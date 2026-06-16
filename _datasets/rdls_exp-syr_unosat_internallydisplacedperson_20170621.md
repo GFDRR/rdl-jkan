@@ -67,8 +67,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/internally-displaced-persons-shelters-in-idlib-lattakia-and-aleppo-governorate
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

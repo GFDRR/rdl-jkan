@@ -73,8 +73,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/shelters-at-hadalat-border-crossing-jordan-syria-border
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

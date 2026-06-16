@@ -168,8 +168,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/democratic-republic-of-the-congo-settlement-catchment-areas
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

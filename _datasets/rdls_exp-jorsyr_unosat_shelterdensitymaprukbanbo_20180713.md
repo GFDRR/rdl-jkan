@@ -73,8 +73,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/shelter-density-map-at-rukban-border-crossing-2824
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

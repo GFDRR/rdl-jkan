@@ -96,8 +96,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/census-based-gridded-population-estimates-for-burkina-faso-2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

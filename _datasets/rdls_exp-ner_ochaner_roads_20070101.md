@@ -58,8 +58,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/niger-roads
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

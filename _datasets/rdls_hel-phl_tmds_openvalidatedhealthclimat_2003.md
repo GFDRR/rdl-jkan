@@ -139,24 +139,22 @@ exposure:
       quantity_kind: count
       unit: count
 hazard:
-  event_sets_by_hazard_type:
-    extreme_temperature:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: AirTemp:C
-        process: extreme_heat
-        trigger: null
-        type: extreme_temperature
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: AirTemp:C
+      process: extreme_heat
+      trigger: null
+      type: extreme_temperature
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: The dataset integrates 20 years (2003-2022) of climate, environmental,

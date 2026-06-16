@@ -79,8 +79,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/southern-teknaf-camps-foodpaths-and-roads
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

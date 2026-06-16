@@ -84,8 +84,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/timor-leste-level-1-exposure-data
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

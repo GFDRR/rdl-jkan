@@ -150,8 +150,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/gar15-global-exposure-dataset-for-iran-islamic-republic-of
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

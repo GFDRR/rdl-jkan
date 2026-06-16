@@ -28,24 +28,22 @@ description: 'Archive of Global Tropical Cyclone Tracks Tracks from 1980 to May 
 details: 'Please visit this site for terms of use: https://www.ncdc.noaa.gov/ibtracs/index.php?name=terms'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: empirical
-      calculation_method: observed
-      event_count: 0
-      events: []
-      frequency_distribution: null
-      hazards:
-      - classification: null
-        id: hazard_1
-        intensity_measure: sws_10m:m/s
-        process: tropical_cyclone
-        trigger: null
-        type: strong_wind
-      id: event_set_1
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+  event_sets:
+  - analysis_type: empirical
+    calculation_method: observed
+    event_count: 0
+    events: []
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: hazard_1
+      intensity_measure: sws_10m:m/s
+      process: tropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: event_set_1
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: Tropical cyclone track data compiled by NOAA IBTrACS from direct observational
@@ -67,8 +65,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/archive-of-global-tropical-cyclone-tracks-1980-may-2019
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

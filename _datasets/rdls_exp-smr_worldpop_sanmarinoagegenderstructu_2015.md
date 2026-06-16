@@ -84,8 +84,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/worldpop-age-and-gender-structures-2015-2030-smr
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

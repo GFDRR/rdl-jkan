@@ -71,8 +71,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/displaced-persons-shelters-in-dikwa-nigeria
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

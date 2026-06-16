@@ -68,8 +68,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-doro-refugee-camp-maban-county-upper-nile-state-south-sudan-january-15-2014
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

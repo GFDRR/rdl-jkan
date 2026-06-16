@@ -79,8 +79,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/ai-osm-buildings-in-camarines-sur-1-nov-2020
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

@@ -66,8 +66,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/guatemala-poblacion-indigena-2012
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

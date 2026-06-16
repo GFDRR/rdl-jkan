@@ -66,8 +66,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/geodata-of-pre-cyclone-potential-coconut-plantations-zones-in-farquhar-atoll-may-13-2016
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null

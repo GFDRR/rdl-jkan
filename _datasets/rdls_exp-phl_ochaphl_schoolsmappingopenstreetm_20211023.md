@@ -62,8 +62,7 @@ links:
   rel: describedby
 - href: https://data.humdata.org/dataset/schools-mapping-in-the-philippines-by-openstreetmap
   rel: source
-loss:
-  losses: []
+loss: null
 project: null
 publisher:
   affiliation: null
