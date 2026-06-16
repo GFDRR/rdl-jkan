@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-per_wfpadam_earthquake62mdec2023_20231220",
+      "title": "Peru: Earthquake - 6.2M - Dec 2023",
+      "description": "ADAM ID: eq_us7000lkb1 Magnitude 6.2 earthquake at 93.43 depth occurred on Dec 20 2023 in 12km S of Iray. It impacted 32748 people. The epicentre was at latitude -15.9595 longitude -72.6028.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/peru-earthquake-eq-us7000lkb1]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "contact_point": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/peru-earthquake-eq-us7000lkb1"
+      },
+      "creator": {
+        "name": "WFP Advanced Disaster Analysis & Mapping",
+        "url": "https://data.humdata.org/dataset/peru-earthquake-eq-us7000lkb1"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PER"
+        ]
+      },
+      "temporal": {
+        "start": "2023-12-20"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "url": "https://data.humdata.org/dataset/peru-earthquake-eq-us7000lkb1"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "ADAM system collected earthquake parameters (magnitude 6.2, epicenter coordinates, depth) from seismic networks and overlaid observed ground motion intensity (MMI) with gridded population data to estimate affected population counts by administrative division.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "WFP Advanced Disaster Analysis & Mapping (ADAM)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Operational system for collecting, analyzing and mapping geospatial and socio-economic information following sudden-onset humanitarian emergencies, providing earthquake impact assessments and population exposure estimates."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_8ecd4b8d",
+          "title": "sm-us7000lkb1-sm-us7000lkb1-pop-estimation.csv",
+          "description": "Peru: Earthquake - 6.2M - Dec 2023 (Population Estimation)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/35fe5d11-6a05-4ea8-8fa7-ff63cdc6fe07/resource/8ecd4b8d-6701-4fae-bb37-63803ee940df/download/sm-us7000lkb1-sm-us7000lkb1-pop-estimation.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MMI:-"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_earthquake",
+              "type": "earthquake",
+              "intensity_measure": "MMI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population affected by ground shaking from the 6.2 magnitude earthquake"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/peru-earthquake-eq-us7000lkb1",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

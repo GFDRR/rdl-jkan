@@ -1,0 +1,149 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_philsa_floodingseptember302022_20220930",
+      "title": "Flooding in the Philippines on September 30, 2022",
+      "description": "This dataset shows the actual extent of flooding in the Philippines caused by typhoons or tropical cyclones as of September 30, 2022, as observed through available satellite imagery. The dataset can be used to track the progression of floods over time, identify areas at risk, and assess the impact of these natural disasters on infrastructure, agriculture, and local populations.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-20220930]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset has not been validated using ground-truth data.",
+      "contact_point": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20220930"
+      },
+      "creator": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20220930"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2022-09-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine Space Agency",
+            "url": "https://data.humdata.org/dataset/philippines-flood-20220930"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery was processed by the Philippine Space Agency to delineate actual flood extent during typhoon-induced flooding on September 30, 2022. The resulting flood maps show inundated areas across the Philippines and can be used to assess impacts on infrastructure and agriculture.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine Space Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite image processing to derive observed flood extent mapping from optical/radar imagery during the September 30, 2022 typhoon event."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_c9f01daf",
+          "title": "20220930_1815_fld_tdx_maps.zip",
+          "description": "Flooding extents on September 30, 2022 at 06:15 PM using TanDEM-X satellite image",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/fd2ae5af-d8a9-4ba1-9e31-40d9b0ebd691/resource/c9f01daf-7294-47bb-bc6c-236dd210141e/download/20220930_1815_fld_tdx_maps.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on infrastructure from observed flood extent"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on agricultural areas from observed flood extent"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-20220930",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

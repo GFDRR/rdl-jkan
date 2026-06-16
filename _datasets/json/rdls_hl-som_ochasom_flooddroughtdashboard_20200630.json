@@ -1,0 +1,169 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-som_ochasom_flooddroughtdashboard_20200630",
+      "title": "Somalia Flood and Drought Dashboard",
+      "description": "This dataset contains the data used by the Humanitarian Country Team in Somalia to monitor the evolution of the drought and flood situation in Somalia. The data covers the following topics: Internal displacement by cause (drought related, conflict/insecurity, other cause) River levels in the Shabelle and Juba rivers Water prices by Region Cumulative annual rainfall Disease burden (acute watery diarrhea (AWD)/cholera, bloody diarrhea and measles) Monthly response monitoring by region for the following indicators: CCCM: Number of people benefiting from site improvement projects EDUCATION: Number of children with access to safe drinking water FOOD SECURITY: Number of people reached through activities geared towards improving access to food and safety nets HEALTH: Number of medical consultations NUTRITION: Number of acute malnutrition admissions PROTECTION: Number of girls and boys, women and men participating in community-based psycho-social activities SHELTER: Number of people in need of emergency assistance receiving appropriate NFIs through in-kind distribution, vouchers or cash WASH: Number of people reached with access to sustainable safe water services The sources for the data are as follows: IDP data (PRMN/UNHCR); Rainfall and Rivers (SWALIM); Diseases (Health Cluster/WHO); Monthly Response (Humanitarian Clusters), Water Prices (FAO). [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/somalia-drought-dashboard]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Registry",
+      "contact_point": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/somalia-drought-dashboard"
+      },
+      "creator": {
+        "name": "OCHA Somalia",
+        "url": "https://data.humdata.org/dataset/somalia-drought-dashboard"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2020-06-30"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Humanitarian Country Team Somalia",
+            "url": "https://data.humdata.org/dataset/somalia-drought-dashboard"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The dataset aggregates observed hazard data (river levels, rainfall) and post-event impact records (displacement by cause, disease burden, water prices) collected by the Humanitarian Country Team in Somalia to monitor drought and flood evolution. Data is compiled from multiple sources through a registry methodology for humanitarian monitoring and response coordination.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Humanitarian Country Team Somalia",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Multi-agency compilation of displacement, health, and response monitoring data for drought and flood situations in Somalia"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f11c52d0",
+          "title": "20200503_People affected-displaced matrix",
+          "description": "Somalia Flood and Drought Dashboard (People affected or displaced due to flood)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b701b0bd-16b7-4d17-8723-77ac80abd4a4/resource/f11c52d0-901c-453f-8a4c-11f7071a33ee/download/20200503_people-affected-displaced-matrix.xlsx"
+        },
+        {
+          "id": "resource_130faaf5",
+          "title": "People affected-displaced matrix _Hagaa",
+          "description": "Somalia Flood and Drought Dashboard (Hagaa Season Floods - April to June)",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/b701b0bd-16b7-4d17-8723-77ac80abd4a4/resource/130faaf5-64f7-44d3-9f2a-ccb383068bed/download/people-affected-displaced-matrix-_hagaa.xlsx"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_drought",
+              "type": "drought",
+              "intensity_measure": "SPI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement caused by drought in Somalia"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Internal displacement caused by flooding in Somalia"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/somalia-drought-dashboard",
+          "rel": "source"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "es_flood",
+            "hazards": [
+              {
+                "id": "es_flood_hzd",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          },
+          {
+            "id": "es_drought",
+            "hazards": [
+              {
+                "id": "es_drought_hzd",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      }
+    }
+  ]
+}

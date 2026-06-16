@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_philsa_floodingfebruary132025_20250213",
+      "title": "Flooding in the Philippines on February 13, 2025",
+      "description": "This dataset shows the actual extent of flooding in the Philippines caused by typhoons or tropical cyclones as of February 13, 2025, as observed through available satellite imagery. The dataset can be used to track the progression of floods over time, identify areas at risk, and assess the impact of these natural disasters on infrastructure, agriculture, and local populations.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-20250213]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset has not been validated using ground-truth data.",
+      "contact_point": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20250213"
+      },
+      "creator": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20250213"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2025-02-13"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine Space Agency",
+            "url": "https://data.humdata.org/dataset/philippines-flood-20250213"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery from ALOS-2 was processed by the Philippine Space Agency to detect and map the actual extent of flooding across the Philippines on February 13, 2025. The processing involved image classification to identify inundated areas, with results delivered as both raster (PNG) and vector (shapefile) formats to enable temporal tracking and impact assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine Space Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery (ALOS-2) processed to delineate actual flood extent and inundated areas across the Philippines following tropical cyclone events"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_6dc1cc6f",
+          "title": "20250213_0021_fld_alos2_maps.zip",
+          "description": "Flooding in the Philippines on February 13, 2025 (Flooding extents on February 13, 2025 at 12:21 AM using ALOS-2 satellite image)",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/0f9a925a-d25d-44f3-ab6a-2e5543fa70c0/resource/6dc1cc6f-0dbf-42f8-b33b-5098dfb32a82/download/20250213_0021_fld_alos2_maps.zip"
+        },
+        {
+          "id": "resource_68975cd9",
+          "title": "20250213_0021_fld_alos2_shp.zip",
+          "description": "Flooding in the Philippines on February 13, 2025 (Flooding extents on February 13, 2025 at 12:21 AM using ALOS-2 satellite image)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/0f9a925a-d25d-44f3-ab6a-2e5543fa70c0/resource/68975cd9-daad-4012-91e1-f8d93a5311a2/download/20250213_0021_fld_alos2_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_strong_wind",
+              "type": "strong_wind",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on infrastructure from typhoon-induced flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-20250213",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

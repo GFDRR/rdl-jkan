@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_philsa_floodingjuly252024_20240725",
+      "title": "Flooding in the Philippines on July 25, 2024",
+      "description": "This dataset shows the actual extent of flooding in the Philippines caused by typhoons or tropical cyclones as of July 25, 2024, as observed through available satellite imagery. The dataset can be used to track the progression of floods over time, identify areas at risk, and assess the impact of these natural disasters on infrastructure, agriculture, and local populations.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-20240725]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset has not been validated using ground-truth data.",
+      "contact_point": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20240725"
+      },
+      "creator": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20240725"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2024-07-25"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine Space Agency",
+            "url": "https://data.humdata.org/dataset/philippines-flood-20240725"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery was processed by the Philippine Space Agency to delineate the actual extent of flooding across the Philippines resulting from typhoon-induced rainfall and storm surge on July 25, 2024. The resulting flood extent maps serve as post-event observed hazard data for tracking flood progression and assessing impacts on infrastructure and agriculture.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine Space Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery processing to map actual flood extent caused by tropical cyclones in the Philippines as of July 25, 2024"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_f3db6caa",
+          "title": "20240725_0600_fld_s1_maps.zip",
+          "description": "Flooding in the Philippines on July 25, 2024 (Flooding extents on July 25, 2024 at 06:00 AM using Sentinel-1 satellite image)",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/8bc8e91b-6684-4c18-8f31-55c549873130/resource/f3db6caa-23e7-4ed5-b168-02d9d00c7ff9/download/20240725_0600_fld_s1_maps.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "AA:km2"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on infrastructure and agriculture from observed flood extent"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-20240725",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

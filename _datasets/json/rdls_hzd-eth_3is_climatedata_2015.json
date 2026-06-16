@@ -1,0 +1,98 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-eth_3is_climatedata_2015",
+      "title": "Ethiopia - Climate data",
+      "description": "Climate data estimated using satellite images using Google Earth Engine (GEE) and Amazon Sagemaker with Geospatial Capabilities.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/ethiopia-climate-data]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "Remote Sensing",
+      "contact_point": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/ethiopia-climate-data"
+      },
+      "creator": {
+        "name": "3iS",
+        "url": "https://data.humdata.org/dataset/ethiopia-climate-data"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "ETH"
+        ]
+      },
+      "temporal": {
+        "start": "2015-01-01",
+        "end": "2025-01-07"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "CHIRPS (Climate Hazards Group InfraRed Precipitation with Station data)",
+            "url": "https://data.humdata.org/dataset/ethiopia-climate-data"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Precipitation data was estimated from satellite imagery using Google Earth Engine and Amazon SageMaker geospatial capabilities, leveraging the CHIRPS dataset to derive median pentad precipitation values at 4.8km resolution for the Shabelle region from 1981 to 2024. This observational precipitation record serves as a meteorological drought indicator for climate and agricultural monitoring.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "CHIRPS (Climate Hazards Group InfraRed Precipitation with Station data)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite-based precipitation observations derived from infrared imagery and station data, processed via Google Earth Engine at 4.8km pentad resolution to provide long-term rainfall monitoring for drought assessment."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_dcb08179",
+          "title": "Shabelle - CHIRPS 4.8km Pentad - Median Precipitation in mm.xlsx",
+          "description": "Estimation of precipitations in mm every 5 days from 1981 to 2024. CHIRPS Satellite. Spatial Resolution: 4.8km Temporal resolution: 5 days",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "download_url": "https://data.humdata.org/dataset/6efd3ed9-7918-4c47-80de-07a9702a3bb1/resource/dcb08179-9a08-4a46-9fb2-ad6114af8ca6/download/shabelle-chirps-4.8km-pentad-median-precipitation-in-mm.xlsx"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "PP:mm"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/ethiopia-climate-data",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

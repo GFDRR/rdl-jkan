@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-som_unosat_floodsnovember2023_20231107",
+      "title": "Floods in Somalia, November 2023",
+      "description": "UNOSAT code FL20231105SOM This application provides geospatial information on ongoing satellite based-assessment related to the ongoing floods in Somalia that started in November 2023. Important note: The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations. The United Nations Satellite Centre -UNOSAT is not responsible for the misuse or misrepresentation of the map.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/floods-in-somalia-november-2023]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This is a preliminary assessment and has not yet been validated in the field. It is important to consider the characteristics of the source imagery used in the analyses when interpreting results. For damage assessments it should be noted that only significant damage to the structural integrity of the buildings analyzed can be seen in imagery, while minor damage such as cracks or holes may not be visible at all. For flood extractions using radar data it is important to note that urban areas and highly vegetated areas may mask the flood signature and result in underestimation of flood waters. Users with specific questions or concerns should contact unosat@unitar.org to seek clarification.",
+      "contact_point": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/floods-in-somalia-november-2023"
+      },
+      "creator": {
+        "name": "United Nations Satellite Centre (UNOSAT)",
+        "url": "https://data.humdata.org/dataset/floods-in-somalia-november-2023"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "SOM"
+        ]
+      },
+      "temporal": {
+        "start": "2023-11-07"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "url": "https://data.humdata.org/dataset/floods-in-somalia-november-2023"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "UNOSAT analysts reviewed and compared satellite imagery from the November 2023 Somalia flood event to identify and delineate flood extent. Affected areas were digitized and stored in geodatabase and shapefile formats with metadata including sensor date, sensor ID, and area measurements in square meters and hectares.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "UN Operational Satellite Applications Programme (UNOSAT)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Satellite imagery analysis and interpretation of flood extent and affected areas in Somalia during November 2023 floods"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_7efde38a",
+          "title": "FL20231105SOM_gdb.zip",
+          "description": "Floods in Somalia, November 2023 (Zipped geodatabase)",
+          "format": "Geodatabase",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3726/FL20231105SOM_gdb.zip"
+        },
+        {
+          "id": "resource_a5b36745",
+          "title": "FL20231105SOM_SHP.zip",
+          "description": "Floods in Somalia, November 2023 (Zipped shapefile)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://unosat.org/static/unosat_filesystem/3726/FL20231105SOM_SHP.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "AA:km2"
+            },
+            "asset_category": "natural_environment",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Observed flood extent area in square meters/hectares from satellite imagery"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/floods-in-somalia-november-2023",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

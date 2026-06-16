@@ -1,0 +1,369 @@
+---
+attributions:
+- entity:
+    affiliation: null
+    email: null
+    name: European Commission, Joint Research Centre (JRC)
+    url: https://data.humdata.org/dataset/bih-anomalies-fapar-viirs
+  id: attribution_1
+  role: collaborator
+catalog: Humanitarian Data Exchange
+contact_point:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/bih-anomalies-fapar-viirs
+creator:
+  affiliation: null
+  email: null
+  name: Copernicus
+  url: https://data.humdata.org/dataset/bih-anomalies-fapar-viirs
+dataset_id: rdls_hzd-bih_copernicus_vegetationindexanomalyfap_2012
+description: 'Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) is
+  a biophysical dimensionless quantity (its values range from 0/no absorption to 1/total
+  absorption) used to assess the greenness and health of vegetation. FAPAR anomalies
+  can be used as an indicator to detect and monitor the impacts of agricultural drought
+  on the growth and productivity of vegetation. The data is presented in 10-day time
+  composite of the Visible Infrared Imaging Radiometer Suite (VIIRS).. [Source: This
+  metadata record was automatically extracted from the Humanitarian Data Exchange
+  (HDX); Original dataset: https://data.humdata.org/dataset/bih-anomalies-fapar-viirs]'
+details: Variations in the vegetation health and/or cover could be related to stress
+  factors not related to droughts (e.g., plant diseases, pests, hail, flooding). To
+  determine if changes in FAPAR are linked with a drought event or not, FAPAR data
+  should be interpreted jointly with other indicators (as in the EDO Combined Drought
+  Indicator).
+exposure: []
+hazard:
+  event_sets_by_hazard_type:
+    drought:
+    - analysis_type: empirical
+      calculation_method: observed
+      event_count: 0
+      events: []
+      frequency_distribution: null
+      hazards:
+      - classification: null
+        id: hazard_1
+        intensity_measure: FAPAR:-
+        process: agricultural_drought
+        trigger: null
+        type: drought
+      id: event_set_1
+      occurrence_range: null
+      seasonality: null
+  event_sets_count: 1
+license: https://creativecommons.org/licenses/by/4.0/
+lineage:
+  description: FAPAR values from VIIRS satellite observations are composited at 10-day
+    intervals. Anomalies are calculated at each grid cell as the deviation from a
+    long-term mean baseline (2012 to the last available full year), enabling detection
+    and monitoring of agricultural drought impacts on vegetation growth and productivity
+    across Bosnia and Herzegovina.
+  sources:
+  - id: source_1
+    license: null
+    name: European Commission, Joint Research Centre (JRC)
+    risk_data_type:
+    - hazard
+    type: dataset
+    url: null
+    used_in: hazard
+links:
+- href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
+  rel: describedby
+- href: https://data.humdata.org/dataset/bih-anomalies-fapar-viirs
+  rel: source
+loss:
+  losses: []
+project: null
+publisher:
+  affiliation: null
+  email: null
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+purpose: null
+referenced_by:
+- author_names: null
+  date_published: null
+  doi: null
+  id: reference_1
+  name: Methodology documentation
+  url: https://drought.emergency.copernicus.eu/data/factsheets/factsheet_fapar_viirs.pdf
+resources:
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2026-01-01 to 2026-01-10)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/752c7b91-ed23-49b6-97b4-6e877f73d7d5/download/bih_fpanv_m_gdo_20260101_20260101_t.zip
+  format: null
+  id: resource_752c7b91
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20260101_20260101_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2025-01-01 to 2025-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/9ed3cbd7-4f2e-40e1-9f55-28a6aec125f0/download/bih_fpanv_m_gdo_20250101_20251221_t.zip
+  format: null
+  id: resource_9ed3cbd7
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20250101_20251221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2024-01-01 to 2024-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/dfc20d03-acd7-4e57-9964-74daf67cbfe5/download/bih_fpanv_m_gdo_20240101_20241221_t.zip
+  format: null
+  id: resource_dfc20d03
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20240101_20241221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2023-01-01 to 2023-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/f51d64ba-f1a9-4515-ae3c-c10d87485134/download/bih_fpanv_m_gdo_20230101_20231221_t.zip
+  format: null
+  id: resource_f51d64ba
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20230101_20231221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2022-01-01 to 2022-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/5ff207f5-cd78-4f74-83a4-5520086554c0/download/bih_fpanv_m_gdo_20220101_20221221_t.zip
+  format: null
+  id: resource_5ff207f5
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20220101_20221221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2021-01-01 to 2021-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/dcdfd3e1-964c-4f86-b958-8520295698c5/download/bih_fpanv_m_gdo_20210101_20211221_t.zip
+  format: null
+  id: resource_dcdfd3e1
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20210101_20211221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2020-01-01 to 2020-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/5fb594e6-93ea-46db-a4d5-e13f19f67219/download/bih_fpanv_m_gdo_20200101_20201221_t.zip
+  format: null
+  id: resource_5fb594e6
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20200101_20201221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2019-01-01 to 2019-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/6ceecff6-0a5d-40ab-8864-58175f147346/download/bih_fpanv_m_gdo_20190101_20191221_t.zip
+  format: null
+  id: resource_6ceecff6
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20190101_20191221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2018-01-01 to 2018-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/7e599905-baca-457d-a578-d34905bd573b/download/bih_fpanv_m_gdo_20180101_20181221_t.zip
+  format: null
+  id: resource_7e599905
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20180101_20181221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2017-01-01 to 2017-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/4ba1913d-a3ef-4c76-801b-2a4e3cd903ac/download/bih_fpanv_m_gdo_20170101_20171221_t.zip
+  format: null
+  id: resource_4ba1913d
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20170101_20171221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2016-01-01 to 2016-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/a5169b1d-51a6-4763-8be0-281be4f27648/download/bih_fpanv_m_gdo_20160101_20161221_t.zip
+  format: null
+  id: resource_a5169b1d
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20160101_20161221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2015-01-01 to 2015-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/bb58edf5-61e7-4de3-a272-4edf6dd9e950/download/bih_fpanv_m_gdo_20150101_20151221_t.zip
+  format: null
+  id: resource_bb58edf5
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20150101_20151221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2014-01-01 to 2014-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/359989c8-1eb6-4439-b0ed-f524d2e2b565/download/bih_fpanv_m_gdo_20140101_20141221_t.zip
+  format: null
+  id: resource_359989c8
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20140101_20141221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2013-01-01 to 2013-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/b061c6fe-bef7-4367-8c5c-8e4df4d3d2b0/download/bih_fpanv_m_gdo_20130101_20131221_t.zip
+  format: null
+  id: resource_b061c6fe
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20130101_20131221_t.zip
+- access_url: null
+  baseline_period: null
+  climate: null
+  conforms_to: null
+  coordinate_system: null
+  description: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR
+    Anomaly) (Data from 2012-01-21 to 2012-12-31)'
+  download_url: https://data.humdata.org/dataset/57054afc-a6bb-4197-a986-4fb30c809f19/resource/a94ed94c-c97a-443e-82f9-6f3755b037b9/download/bih_fpanv_m_gdo_20120121_20121221_t.zip
+  format: null
+  id: resource_a94ed94c
+  media_type: application/zip
+  spatial: null
+  spatial_aggregation: null
+  spatial_resolution: null
+  temporal: null
+  temporal_resolution: null
+  title: bih_fpanv_m_gdo_20120121_20121221_t.zip
+risk_data_type:
+- hazard
+schema: rdls-10
+slug: rdls_hzd-bih_copernicus_vegetationindexanomalyfap_2012
+spatial:
+  bbox: null
+  centroid: null
+  countries:
+  - BIH
+  gazetteer_entries: []
+  scale: national
+spatial_resolution: null
+temporal:
+  central_year: null
+  duration: null
+  end: '2026-01-10'
+  start: '2012-01-21'
+temporal_resolution: null
+title: 'Bosnia and Herzegovina: Copernicus Vegetation Index Anomaly (FAPAR Anomaly)'
+version: null
+vulnerability: null
+---

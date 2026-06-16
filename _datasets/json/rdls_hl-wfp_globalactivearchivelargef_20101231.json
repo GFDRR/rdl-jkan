@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-wfp_globalactivearchivelargef_20101231",
+      "title": "Global Active Archive of Large Flood Events (DFO)",
+      "description": "This data is from Darthmouth Flood Observatory (DFO) Global Active Archive of Large Flood Events. It contains more than 4000 records of flooding events globally from 1985 - 2010.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/global-active-archive-of-large-flood-events-dfo]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "purpose": "Direct Observational Data/Anecdotal Data",
+      "details": "Please see this website for more information: http://floodobservatory.colorado.edu/Archives/index.html",
+      "contact_point": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/global-active-archive-of-large-flood-events-dfo"
+      },
+      "creator": {
+        "name": "WFP - World Food Programme",
+        "url": "https://data.humdata.org/dataset/global-active-archive-of-large-flood-events-dfo"
+      },
+      "spatial": {
+        "scale": "global"
+      },
+      "temporal": {
+        "start": "2010-12-31"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Dartmouth Flood Observatory (DFO)",
+            "url": "https://data.humdata.org/dataset/global-active-archive-of-large-flood-events-dfo"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "The Dartmouth Flood Observatory compiled a global archive of large flood events from 1985-2010 using direct observational data and anecdotal reports. Event records include spatial coordinates (centroid), temporal information (began/ended dates), and impact metrics (fatalities, displacement, economic damage). This dataset serves as an empirical inventory of observed flood impacts for global disaster risk assessment.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Dartmouth Flood Observatory (DFO)",
+            "type": "dataset",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss",
+            "description": "Global archive of large flood events compiled from direct observational and anecdotal data, providing spatial locations, temporal records, and impact metrics for over 4000 flooding events worldwide."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_984cc240",
+          "title": "wlf_nhr_fl_dfomasterlist_20190418.zip",
+          "description": "This data is from Darthmouth Flood Observatory (DFO) Global Active Archive of Large Flood Events. It contains more than 4000 records of flooding events globally from 1985 - 2010.",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/1fd855de-57c6-42b3-83e1-9cf989b0f70d/resource/984cc240-b2b7-4266-9f61-5715a9e10ff5/download/wlf_nhr_fl_dfomasterlist_20190418.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "casualty_count",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Fatalities from observed flood events"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "displaced",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Population displaced by observed flood events"
+          },
+          {
+            "id": "loss_3",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "economic_indicator",
+            "asset_dimension": "index",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Economic damage in USD from observed flood events"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/global-active-archive-of-large-flood-events-dfo",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_philsa_floodingaugust292023_20230829",
+      "title": "Flooding in the Philippines on August 29, 2023",
+      "description": "This dataset shows the actual extent of flooding in the Philippines caused by typhoons or tropical cyclones as of August 29, 2023, as observed through available satellite imagery. The dataset can be used to track the progression of floods over time, identify areas at risk, and assess the impact of these natural disasters on infrastructure, agriculture, and local populations.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-20230829]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset has not been validated using ground-truth data.",
+      "contact_point": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20230829"
+      },
+      "creator": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20230829"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2023-08-29"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine Space Agency",
+            "url": "https://data.humdata.org/dataset/philippines-flood-20230829"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery (optical and SAR) acquired on August 29, 2023 was processed by the Philippine Space Agency to delineate observed flood extent polygons. The resulting flood maps were generated through image classification and vectorization to identify inundated areas affected by typhoon-induced flooding, enabling rapid damage assessment and impact tracking.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine Space Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite image processing to delineate actual flood extent from optical and SAR imagery during the August 29, 2023 typhoon event in the Philippines."
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_d5f6b973",
+          "title": "20230829_0600_fld_s1_maps-agri.zip",
+          "description": "Flooding in the Philippines on August 29, 2023 (Flooding extents on August 29, 2023 at 06:00 AM using Sentinel-1 satellite image)",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/7f0898e9-605c-49fc-8db2-e7c865fdc65f/resource/d5f6b973-30ad-4f1c-8c25-f6c836c2980e/download/20230829_0600_fld_s1_maps-agri.zip"
+        },
+        {
+          "id": "resource_fc211ed5",
+          "title": "20230829_0600_fld_s1_maps.zip",
+          "description": "Flooding in the Philippines on August 29, 2023 (Flooding extents on August 29, 2023 at 06:00 AM using Sentinel-1 satellite image)",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/7f0898e9-605c-49fc-8db2-e7c865fdc65f/resource/fc211ed5-a7c4-43fd-8eb4-1b90733f8377/download/20230829_0600_fld_s1_maps.zip"
+        },
+        {
+          "id": "resource_3209d57f",
+          "title": "20230829_0600_fld_s1_shp.zip",
+          "description": "Flooding in the Philippines on August 29, 2023 (Flooding extents on August 29, 2023 at 06:00 AM using Sentinel-1 satellite image)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/7f0898e9-605c-49fc-8db2-e7c865fdc65f/resource/3209d57f-0bb3-4dab-9974-0a6008aa4282/download/20230829_0600_fld_s1_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "area"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Agricultural areas affected by typhoon-induced flooding"
+          },
+          {
+            "id": "loss_2",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Infrastructure areas affected by typhoon-induced flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-20230829",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

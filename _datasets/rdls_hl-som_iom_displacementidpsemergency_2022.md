@@ -82,7 +82,7 @@ loss:
     disaster_identifiers: []
     hazard:
       classification: null
-      id: null
+      id: hazard_drought
       intensity_measure: SPI:-
       process: null
       trigger: null

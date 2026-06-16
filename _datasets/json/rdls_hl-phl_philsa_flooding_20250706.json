@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hl-phl_philsa_flooding_20250706",
+      "title": "Philippines: Flooding",
+      "description": "This dataset shows the actual extent of flooding in the Philippines caused by typhoons or tropical cyclones as of July 06, 2025, as observed through available satellite imagery. The dataset can be used to track the progression of floods over time, identify areas at risk, and assess the impact of these natural disasters on infrastructure, agriculture, and local populations.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/philippines-flood-20250706]",
+      "risk_data_type": [
+        "hazard",
+        "loss"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "This dataset has not been validated using ground-truth data.",
+      "contact_point": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20250706"
+      },
+      "creator": {
+        "name": "The Philippine Space Agency",
+        "url": "https://data.humdata.org/dataset/philippines-flood-20250706"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "PHL"
+        ]
+      },
+      "temporal": {
+        "start": "2025-07-06"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "Philippine Space Agency",
+            "url": "https://data.humdata.org/dataset/philippines-flood-20250706"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Satellite imagery was processed by the Philippine Space Agency to detect and map actual flood extent caused by typhoons. The resulting spatial datasets (raster and vector formats) represent observed inundation boundaries at a specific date, enabling temporal tracking of flood progression and impact assessment on infrastructure and agriculture.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Philippine Space Agency",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Satellite imagery-based flood extent mapping for typhoon-induced flooding in the Philippines, processed to delineate inundated areas as of July 6, 2025"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_62995df8",
+          "title": "20250706_0546_fld_s1_maps.zip",
+          "description": "Philippines: Flooding (Flooding extents on July 06, 2025 at 05:46 AM using Sentinel-1 satellite image)",
+          "format": "PNG",
+          "download_url": "https://data.humdata.org/dataset/e3cbe3fc-82b5-46df-8b04-0f90333975cc/resource/62995df8-888f-4f62-b9f4-f36d120626bf/download/20250706_0546_fld_s1_maps.zip"
+        },
+        {
+          "id": "resource_09a2f682",
+          "title": "20250706_0546_fld_s1_shp.zip",
+          "description": "Philippines: Flooding (Flooding extents on July 06, 2025 at 05:46 AM using Sentinel-1 satellite image)",
+          "media_type": "application/vnd.shp",
+          "download_url": "https://data.humdata.org/dataset/e3cbe3fc-82b5-46df-8b04-0f90333975cc/resource/09a2f682-7304-49b2-90a4-e4e86a7e1fec/download/20250706_0546_fld_s1_shp.zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_flood",
+              "type": "flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "observed",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "empirical",
+              "loss_frequency_type": "empirical"
+            },
+            "description": "Direct impact on infrastructure and agriculture from observed typhoon-induced flooding"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/philippines-flood-20250706",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}

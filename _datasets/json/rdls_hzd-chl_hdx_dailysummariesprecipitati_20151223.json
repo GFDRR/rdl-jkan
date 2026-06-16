@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-chl_hdx_dailysummariesprecipitati_20151223",
+      "title": "Daily Summaries of Precipitation Indicators for Chile",
+      "description": "This dataset contains the daily summaries on base stations across Chile . The four indicators included are: * TPCP : Total precipitation * MXSD : Maximum snow depth * TSNW : Total snow fall * EMXP : Extreme maximum daily precipitation Indicators are compiled by the National Centers for Environmental Information (NCEI), which is administrated by National Oceanic and Atmospheric Administration (NOAA) an organization part of the United States government. NOAA has access to data collected from thousands of base stations around the world, which collect data periodically on weather and climate conditions. This dataset contains the latest 5 years of available data .. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-chile]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Humanitarian Data Exchange (HDX)",
+        "url": "https://data.humdata.org/"
+      },
+      "details": "Due to late-arriving data, the number of recent records is likely underrepresented in all categories, but the ratio of records (warm to cold, for example) should be a fairly strong estimate of a final outcome.",
+      "contact_point": {
+        "name": "HDX",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-chile"
+      },
+      "creator": {
+        "name": "National Centers for Environmental Information (NCEI / NOAA)",
+        "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-chile"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "CHL"
+        ]
+      },
+      "temporal": {
+        "start": "2015-12-23"
+      },
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributions": [
+        {
+          "id": "attribution_1",
+          "entity": {
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "url": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-chile"
+          },
+          "role": "collaborator"
+        }
+      ],
+      "lineage": {
+        "description": "Daily precipitation data were collected from thousands of base stations across Chile by NOAA's National Centers for Environmental Information. Stations were filtered to include only those with minimum 30 years of service and >182 complete days per year. Four indicators (total precipitation, maximum snow depth, total snowfall, extreme maximum daily precipitation) were extracted and compiled into daily summaries for drought and precipitation hazard characterization.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "National Centers for Environmental Information (NCEI / NOAA)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard",
+            "description": "Long-term precipitation and snow observations from thousands of base stations across Chile, compiled and quality-controlled by NOAA with minimum 30-year records"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "reference_1",
+          "name": "Methodology documentation",
+          "url": "https://www.ncdc.noaa.gov/cdo-web/datatools/records"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_8d4d782a",
+          "title": "precipitation_chl.csv",
+          "description": "Daily Summaries of Precipitation Indicators for Chile (CSV)",
+          "media_type": "text/csv",
+          "download_url": "https://data.humdata.org/dataset/d3911f40-5414-4b5d-b0d4-d6e95d57331d/resource/8d4d782a-24a7-4237-a914-16ebbe69a946/download/precipitation_chl.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "drought",
+                "process": "meteorological_drought",
+                "intensity_measure": "SPI:-"
+              }
+            ],
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        },
+        {
+          "href": "https://data.humdata.org/dataset/daily-summaries-of-precipitation-indicators-for-chile",
+          "rel": "source"
+        }
+      ]
+    }
+  ]
+}
