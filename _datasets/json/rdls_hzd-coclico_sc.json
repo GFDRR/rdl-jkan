@@ -1,0 +1,96 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-coclico_sc",
+      "title": "CoCliCo - Shoreline change",
+      "description": "Projections of global shoreline change in view of climate change. This assessment considers the combined effects of ambient change (historical trends), sea level rise (RCP4.5 and RCP8.5) and storm driven (instantaneous) erosion. Data is computed for seven ensembles (1, 5, 17, 50, 83, 95 and 99th percentile) and two timesteps (2050 and 2100). This dataset is part of the LISCOAST (https://data.jrc.ec.europa.eu/collection/LISCOAST) project. See this article (https://doi.org/10.1038/s41558-020-0697-0) for more dataset-specific information. Variants in the source dataset - ensemble: 1, 5, 17, 50, 83, 95, 99; scenarios: RCP45, RCP85; time: 2050-01-01T00:00:00Z, 2100-01-01T00:00:00Z - time; lon: -179.3, 179.43 - longitude; lat: -55.973, 66.414 - latitude. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "contact_point": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "creator": {
+        "name": "Deltares",
+        "url": "https://www.deltares.nl"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "Projections of global shoreline change in view of climate change. This assessment considers the combined effects of ambient change (historical trends), sea level rise (RCP4.5 and RCP8.5) and storm driven (instantaneous) erosion. Data is computed for seven ensembles (1, 5, 17, 50, 83, 95 and 99th percentile) and two timesteps (2050 and 2100). This dataset is part of the LISCOAST (https://data.jrc.ec.europa.eu/collection/LISCOAST) project. See this article (https://doi.org/10.1038/s41558-020-0697-0) for more dataset-specific information.",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://www.deltares.nl",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Shoreline change [sc]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/sc/collection.json"
+        },
+        {
+          "id": "resource_data",
+          "title": "Global shoreline change projections for the year 2050 under RCP4.5 zarr root",
+          "description": "The root of the Global shoreline change projections for the year 2050 under RCP4.5 zarr dataset on public Google Cloud Storage.",
+          "download_url": "https://storage.googleapis.com/coclico-data-public/coclico/shoreline_change_projections.zarr",
+          "media_type": "application/vnd.zarr"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Shoreline change",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/assets/thumbnails/sc.png"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "erosion",
+                "process": "coastal_erosion",
+                "intensity_measure": "Er:m/yr"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

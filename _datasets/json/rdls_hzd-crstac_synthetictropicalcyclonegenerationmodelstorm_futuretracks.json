@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_synthetictropicalcyclonegenerationmodelstorm_futuretracks",
+      "title": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks",
+      "description": "Datasets consisting of 10,000 years of synthetic tropical cyclone tracks, generated using the Synthetic Tropical cyclOne geneRation Model (STORM) algorithm under future climate change. Climate scenarios (as published): \"SSP-RCP combinations\" [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "TU Delft",
+        "url": "https://data.4tu.nl/search"
+      },
+      "contact_point": {
+        "name": "TU Delft",
+        "url": "https://data.4tu.nl/search"
+      },
+      "creator": {
+        "name": "TU Delft",
+        "url": "https://data.4tu.nl/search"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          60.0
+        ]
+      },
+      "spatial_resolution": 11100,
+      "temporal": {
+        "start": "2015",
+        "end": "2050"
+      },
+      "temporal_resolution": "PT3H",
+      "license": "https://spdx.org/licenses/CC0-1.0.html",
+      "lineage": {
+        "description": "Datasets generated with the synthetic resampling algorithm STORM",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "IBTrACS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/NBloemendaal/STORM",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/s41597-020-0381-2",
+          "url": "https://doi.org/10.1038/s41597-020-0381-2"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/wind-related/synthetic-tropical-cyclone-generation-model-storm/future-tracks/future-tracks.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks - data file",
+          "description": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks - data file",
+          "media_type": "text/plain",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://data.4tu.nl/file/98900e17-8e01-4d70-b3b6-ca1a1da2f194/bdc3820c-7b7e-41de-8def-792f50b06c49"
+        },
+        {
+          "id": "resource_data-file_2",
+          "title": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks - data file",
+          "description": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks - data file",
+          "media_type": "text/plain",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://data.4tu.nl/file/98900e17-8e01-4d70-b3b6-ca1a1da2f194/3b08e6a8-2824-435f-a141-9509a9922cfe"
+        },
+        {
+          "id": "resource_data-file_3",
+          "title": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks - data file",
+          "description": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks - data file",
+          "media_type": "text/plain",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://data.4tu.nl/file/98900e17-8e01-4d70-b3b6-ca1a1da2f194/2eaeb5f6-40f3-4f94-9f9c-ca7aad3237fc"
+        },
+        {
+          "id": "resource_data-file_4",
+          "title": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks - data file",
+          "description": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks - data file",
+          "media_type": "text/plain",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://data.4tu.nl/file/98900e17-8e01-4d70-b3b6-ca1a1da2f194/f35142d6-d858-4874-9a51-2dc08462d45f"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/s41597-020-0381-2"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Synthetic Tropical cyclOne geneRation Model (STORM) - Future tracks (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/NBloemendaal/STORM"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "sws_10m:m/s"
+              }
+            ],
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

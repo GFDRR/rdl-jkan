@@ -1,0 +1,108 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_aglobalhighresolutiondatasetofearthsfloodplainsgfp_gfplain250mgeotiff",
+      "title": "A Global High-resolution Dataset of Earth's Floodplains (GFPLAIN250m) - GFPLAIN250m geotiff",
+      "description": "The datasets include the floodplain and floodprone locations at the global level in geotiff format [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "University for Foreigners of Perugia",
+        "url": "https://figshare.com/articles/dataset/GFPLAIN250m/6665165/1"
+      },
+      "contact_point": {
+        "name": "University for Foreigners of Perugia",
+        "url": "https://figshare.com/articles/dataset/GFPLAIN250m/6665165/1"
+      },
+      "creator": {
+        "name": "University for Foreigners of Perugia",
+        "url": "https://figshare.com/articles/dataset/GFPLAIN250m/6665165/1"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -60.0,
+          180.0,
+          60.0
+        ]
+      },
+      "spatial_resolution": 250,
+      "temporal": {
+        "start": "2000",
+        "end": "2000"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "The datasets aims at providing the floodplain delineation at the global level",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "Processed from the NASA SRTM Digital Elevation model",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/sdata.2018.309",
+          "url": "https://doi.org/10.1038/sdata.2018.309"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: A Global High-resolution Dataset of Earth's Floodplains (GFPLAIN250m) - GFPLAIN250m geotiff",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/flood/a-global-high-resolution-dataset-of-earths-floodplains-gfplain250m/gfplain250m-geotiff/gfplain250m-geotiff.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "A Global High-resolution Dataset of Earth's Floodplains (GFPLAIN250m) - GFPLAIN250m geotiff - data file",
+          "description": "A Global High-resolution Dataset of Earth's Floodplains (GFPLAIN250m) - GFPLAIN250m geotiff - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://figshare.com/ndownloader/files/12186356"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "A Global High-resolution Dataset of Earth's Floodplains (GFPLAIN250m) - GFPLAIN250m geotiff (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/sdata.2018.309"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

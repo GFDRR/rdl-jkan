@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_microsoftbuildingfootprints_buildings",
+      "title": "Microsoft Building Footprints - Buildings",
+      "description": "Building footprint polygon geometries located around the world [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Microsoft",
+        "url": "https://planetarycomputer.microsoft.com/dataset/ms-buildings"
+      },
+      "purpose": "data access via API; example: https://planetarycomputer.microsoft.com/dataset/ms-buildings#Example-Notebook",
+      "contact_point": {
+        "name": "Microsoft",
+        "url": "https://planetarycomputer.microsoft.com/dataset/ms-buildings"
+      },
+      "creator": {
+        "name": "Microsoft",
+        "url": "https://planetarycomputer.microsoft.com/dataset/ms-buildings"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "temporal": {
+        "start": "2023",
+        "end": "2023"
+      },
+      "license": "https://spdx.org/licenses/ODbL-1.0.html",
+      "lineage": {
+        "description": "Building footprint polygon geometries located around the world",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "Satellite (Maxar and Airbus imagery)",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/microsoft/GlobalMLBuildingFootprints",
+            "type": "model"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Microsoft Building Footprints - Buildings",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/buildings/microsoft-building-footprints/buildings/buildings.json",
+          "spatial_aggregation": "feature level"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Microsoft Building Footprints - Buildings - data file",
+          "description": "Microsoft Building Footprints - Buildings - data file",
+          "media_type": "application/x-parquet",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://planetarycomputer.microsoft.com/dataset/ms-buildings",
+          "spatial_aggregation": "feature level"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Microsoft Building Footprints - Buildings (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/microsoft/GlobalMLBuildingFootprints",
+          "spatial_aggregation": "feature level"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "building footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

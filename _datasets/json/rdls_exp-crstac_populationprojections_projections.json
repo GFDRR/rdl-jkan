@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-crstac_populationprojections_projections",
+      "title": "Projections",
+      "description": "Population projections under the Shared Socioeconomic Pathways (SSPs) until 2100 based on random forest modeling. Climate scenarios (as published): \"SSPs\" [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "Figshare",
+        "url": "https://figshare.com/articles/dataset/Projecting_1_km-grid_population_distributions_from_2020_to_2100_globally_under_shared_socioeconomic_pathways/19608594/3"
+      },
+      "contact_point": {
+        "name": "Figshare",
+        "url": "https://figshare.com/articles/dataset/Projecting_1_km-grid_population_distributions_from_2020_to_2100_globally_under_shared_socioeconomic_pathways/19608594/3"
+      },
+      "creator": {
+        "name": "Figshare",
+        "url": "https://figshare.com/articles/dataset/Projecting_1_km-grid_population_distributions_from_2020_to_2100_globally_under_shared_socioeconomic_pathways/19608594/3"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 926,
+      "temporal": {
+        "start": "2020",
+        "end": "2100"
+      },
+      "temporal_resolution": "P5Y",
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Population projections under the Shared Socioeconomic Pathways (SSPs) until 2100 based on random forest modeling",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "WorldPop population data and other ancillary datasets",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://doi.org/10.6084/m9.figshare.19609356.v3",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/s41597-022-01675-x",
+          "url": "https://doi.org/10.1038/s41597-022-01675-x"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Projections",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/exposure-vulnerability/population/population-projections/projections/projections.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Projections - data file",
+          "description": "Projections - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://figshare.com/ndownloader/articles/19608594/versions/3"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Projections (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/s41597-022-01675-x"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Projections (Code link)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.6084/m9.figshare.19609356.v3"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "population",
+            "description": "population number"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

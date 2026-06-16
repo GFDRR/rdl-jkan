@@ -1,0 +1,168 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_globalsurfacewatergsw_gsw19842021",
+      "title": "Global Surface Water (GSW) - GSW 1984-2021",
+      "description": "The dataset includes the occurrence, seasonality, recurrence, transitions, and maximum water extent for different temporal moment at global scale [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "EC JRC, Google",
+        "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/"
+      },
+      "purpose": "several aggregation levels and download options available",
+      "contact_point": {
+        "name": "EC JRC, Google",
+        "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/"
+      },
+      "creator": {
+        "name": "EC JRC, Google",
+        "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -56.0,
+          180.0,
+          78.0
+        ]
+      },
+      "spatial_resolution": 31,
+      "temporal": {
+        "start": "1984",
+        "end": "2021"
+      },
+      "temporal_resolution": "P1M",
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "The dataset includes the occurrence, seasonality, recurrence, transitions, and maximum water extent for different temporal moment at global scale",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "precessed from Landsat",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_2",
+            "name": "SRTM DEM",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_3",
+            "name": "GTOPO30 DEM",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_4",
+            "name": "GMTED2010",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_5",
+            "name": "GHSL",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_underlying_6",
+            "name": "GADM",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/mentaljam/download_water_data",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.1038/nature20584",
+          "url": "https://doi.org/10.1038/nature20584"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: Global Surface Water (GSW) - GSW 1984-2021",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/flood/global-surface-water-gsw/gsw-1984-2021/gsw-1984-2021.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "Global Surface Water (GSW) - GSW 1984-2021 - data file",
+          "description": "Global Surface Water (GSW) - GSW 1984-2021 - data file",
+          "media_type": "image/tiff; application=geotiff",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/"
+        },
+        {
+          "id": "resource_link_reference",
+          "title": "Reference",
+          "description": "Global Surface Water (GSW) - GSW 1984-2021 (Web reference)",
+          "format": "Web reference",
+          "access_url": "https://doi.org/10.1038/nature20584"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "Global Surface Water (GSW) - GSW 1984-2021 (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/mentaljam/download_water_data"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

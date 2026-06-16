@@ -1,0 +1,120 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-coclico_bestats",
+      "title": "CoCliCo - Building Exposure - statistics",
+      "description": "Projections of the number of buildings exposed to coastal flooding, integrating future flood risk models and current building. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "contact_point": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "creator": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -81.12146941539005,
+          -29.12357316038395,
+          93.1752791130622,
+          37.855412297701754
+        ]
+      },
+      "temporal": {
+        "start": "2010",
+        "end": "2010"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Projections of the number of buildings exposed to coastal flooding, integrating future flood risk models and current building",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "BRGM",
+            "type": "dataset",
+            "url": "www.brgm.fr",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "source_2",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_citation",
+          "name": "In preparation",
+          "url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/be_stats/collection.json"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Building Exposure - statistics [be_stats]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/be_stats/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Building Exposure - statistics",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/download/storage/v1/b/coclico-data-public/o/coclico%2Fassets%2Fthumbnails%2Fbe_stats.png?alt=media"
+        },
+        {
+          "id": "resource_geoparquetstacitems",
+          "title": "GeoParquet STAC items",
+          "description": "CoCliCo - Building Exposure - statistics (Snapshot of the collection's STAC items exported to GeoParquet format.)",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "https://storage.googleapis.com/coclico-data-public/coclico/be_stats/be_stats.parquet"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "exposure_1",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "metric_1",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count",
+                "unit": "count"
+              }
+            }
+          ],
+          "asset_type": {
+            "id": "buildings",
+            "description": "building footprints"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

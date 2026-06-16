@@ -1,0 +1,116 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-crstac_cmip6heatstressindicatorshis_indoorclimateindexhistorical",
+      "title": "CMIP6 heat stress indicators (HIS) - Indoor climate index historical",
+      "description": "The indoor universal thermal climate index is defined as the air temperature of a reference outdoor environment that would elicit in the human body the same physiological model's response (sweat production, shivering, skin wettedness, skin blood flow and rectal, mean skin and face temperatures) as the actual environment. Here, a polynomial approximation based on near-surface air temperature, solar radiation, vapor pressure, and wind speed is used for calculating the universal thermal climate index. In the present dataset, the influence of solar radiation and wind speed is not considered, and the universal thermal climate index is calculated from near-surface air temperature and vapor pressure solely, thus representing indoor conditions [Source: This metadata record was automatically extracted from the STAC catalog climate-risk-stac (https://climate-risk-data.github.io/climate-risk-stac/)]",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "Copernicus Climate Data Store",
+        "url": "https://doi.org/10.24381/cds.776e08bd"
+      },
+      "purpose": "data download via interface or API (user account needed)",
+      "contact_point": {
+        "name": "Copernicus Climate Data Store",
+        "url": "https://doi.org/10.24381/cds.776e08bd"
+      },
+      "creator": {
+        "name": "Copernicus Climate Data Store",
+        "url": "https://doi.org/10.24381/cds.776e08bd"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -180.0,
+          -60.0,
+          180.0,
+          90.0
+        ]
+      },
+      "spatial_resolution": 55500,
+      "temporal": {
+        "start": "1951",
+        "end": "2014"
+      },
+      "temporal_resolution": "P1D",
+      "license": "https://example.org/license/unknown",
+      "lineage": {
+        "description": "The indices are provided for historical and future climate projections (SSP1-2.6, SSP2-4.5, SSP3-7.0, SSP5-8.5) included in the Coupled Model Intercomparison Project Phase 6 (CMIP6) and used in the 6th Assessment Report of the Intergovernmental Panel on Climate Change (IPCC).",
+        "sources": [
+          {
+            "id": "source_underlying_1",
+            "name": "CMIP6",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          },
+          {
+            "id": "source_code_codelink",
+            "name": "Code link",
+            "url": "https://github.com/IPCC-WG1/Atlas/tree/main",
+            "type": "model"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_doi",
+          "doi": "10.24381/cds.776e08bd",
+          "url": "https://doi.org/10.24381/cds.776e08bd"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_item",
+          "title": "STAC Item: CMIP6 heat stress indicators (HIS) - Indoor climate index historical",
+          "description": "Source STAC Item metadata record for this dataset, hosted as part of the climate-risk-stac catalogue. Conforms to STAC v1.0.0.",
+          "media_type": "application/geo+json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://climate-risk-data.github.io/climate-risk-stac/stac/hazard/temperature-related/cmip6-heat-stress-indicators-his/indoor-climate-index-historical/indoor-climate-index-historical.json"
+        },
+        {
+          "id": "resource_data-file_1",
+          "title": "CMIP6 heat stress indicators (HIS) - Indoor climate index historical - data file",
+          "description": "CMIP6 heat stress indicators (HIS) - Indoor climate index historical - data file",
+          "media_type": "application/x-netcdf",
+          "coordinate_system": "EPSG:4326",
+          "download_url": "https://doi.org/10.24381/cds.776e08bd"
+        },
+        {
+          "id": "resource_link_codelink",
+          "title": "Code link",
+          "description": "CMIP6 heat stress indicators (HIS) - Indoor climate index historical (Code link)",
+          "format": "Web reference",
+          "access_url": "https://github.com/IPCC-WG1/Atlas/tree/main"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_1",
+            "hazards": [
+              {
+                "id": "hazard_1",
+                "type": "extreme_temperature",
+                "process": "extreme_heat",
+                "intensity_measure": "AirTemp:C"
+              }
+            ],
+            "analysis_type": "deterministic",
+            "calculation_method": "simulated"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

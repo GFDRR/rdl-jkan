@@ -1,0 +1,129 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-coclico_bcmaps",
+      "title": "CoCliCo - Damage Costs",
+      "description": "Damage Costs of Exposed Buildings evaluates the potential damage costs to coastal buildings from flooding under different climate change and sea level rise scenarios, helping guide adaptation measures and decision-making. Spatial coverage: European coastal areas. Sources: Sea-level projections, flood hazard maps, and infrastructure data from CoCliCo and IH-Cantabria. Common usage: Assesses flood-related infrastructure damage costs and informs local and regional adaptation planning. More Info about the dataset: User Handbook. Variants in the source dataset - defense level: HIGH_DEFENDED_MAPS (High Defended), LOW_DEFENDED_MAPS (Low Defended), UNDEFENDED_MAPS (No Defense) - Policy-based coastal protection standards at the province level (NUTS2). High (low) defended: maximum (minimum) level of policy-based protection, if information is available. No defense: without protection (beyond what may be included in the DEM); return period: static (No Return Period), 1 (1 year), 100 (100 years), 1000 (1000 years) - Frequency at which an extreme event of total water level (related to storms) is expected to occur on average; scenarios: None (No Scenario), SSP126 (SSP1-2.6), SSP245 (SSP2-4.5), SSP585 (SSP5-8.5) - Climate scenarios based on IPCC's Shared Socioeconomic Pathways (SSPs). High-end (if applicable) refers to P83 of SSP5-8.5, taking into account low-confidence processes. Other scenarios use the P50; time: 2010, 2030, 2050, 2100 - Time slice applied to the data. Either present-day (2010) or future state representing medium (2030 till 2050) and long term (2050 till 2100) outlook. [Source: This metadata record was automatically extracted from the STAC catalog coclico (https://www.openearth.nl/coclico-workbench/data_catalog/)]",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "contact_point": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "creator": {
+        "name": "BRGM",
+        "url": "www.brgm.fr"
+      },
+      "spatial": {
+        "scale": "global",
+        "bbox": [
+          -81.12146941539005,
+          -29.12357316038395,
+          93.1752791130622,
+          37.855412297701754
+        ]
+      },
+      "temporal": {
+        "start": "2010",
+        "end": "2010"
+      },
+      "license": "https://spdx.org/licenses/CC-BY-4.0.html",
+      "lineage": {
+        "description": "Damage Costs of Exposed Buildings evaluates the potential damage costs to coastal buildings from flooding under different climate change and sea level rise scenarios, helping guide adaptation measures and decision-making. Spatial coverage: European coastal areas. Sources: Sea-level projections, flood hazard maps, and infrastructure data from CoCliCo and IH-Cantabria. Common usage: Assesses flood-related infrastructure damage costs and informs local and regional adaptation planning. More Info about the dataset: User Handbook",
+        "sources": [
+          {
+            "id": "source_1",
+            "name": "BRGM",
+            "type": "dataset",
+            "url": "www.brgm.fr",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss"
+          },
+          {
+            "id": "source_2",
+            "name": "Deltares",
+            "type": "dataset",
+            "url": "https://deltares.nl",
+            "risk_data_type": [
+              "loss"
+            ],
+            "used_in": "loss"
+          }
+        ]
+      },
+      "referenced_by": [
+        {
+          "id": "ref_citation",
+          "name": "In preparation",
+          "url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/bc_maps/collection.json"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource_stac_collection",
+          "title": "STAC Collection: CoCliCo - Damage Costs [bc_maps]",
+          "description": "Source STAC Collection metadata for this dataset, hosted as part of the CoCliCo catalog. Conforms to STAC v1.0.0.",
+          "media_type": "application/json",
+          "conforms_to": "https://api.stacspec.org/v1.0.0/",
+          "access_url": "https://storage.googleapis.com/coclico-data-public/coclico/coclico-stac/bc_maps/collection.json"
+        },
+        {
+          "id": "resource_thumbnail",
+          "title": "Thumbnail",
+          "description": "CoCliCo - Damage Costs",
+          "media_type": "image/png",
+          "access_url": "https://storage.googleapis.com/download/storage/v1/b/coclico-data-public/o/coclico%2Fassets%2Fthumbnails%2Fbc_maps.png?alt=media"
+        },
+        {
+          "id": "resource_geoparquetstacitems",
+          "title": "GeoParquet STAC items",
+          "description": "CoCliCo - Damage Costs (Snapshot of the collection's STAC items exported to GeoParquet format.)",
+          "media_type": "application/vnd.apache.parquet",
+          "download_url": "https://storage.googleapis.com/coclico-data-public/coclico/bc_stats/bc_stats.parquet"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "loss_1",
+            "hazard": {
+              "id": "hazard_sea_level_rise",
+              "type": "sea_level_rise",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "EUR"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "analysis_details": "hazard.type=sea_level_rise (cue: 'sea level rise' in title/description) | asset_category=buildings (cue: 'building') | measurement.unit=EUR (source: deltares:units=euros) | loss_type=ground_up (default — pre-insurance gross figure) | loss_approach=analytical (default for model-derived projections) | Source variants: defense level: HIGH_DEFENDED_MAPS (High Defended), LOW_DEFENDED_MAPS (Low Defended), UNDEFENDED_MAPS (No Defense) - Policy-based coastal protection standards at the province level (NUTS2). High (low) defended: maximum (minimum) level of policy-based protection, if information is available. No defense: without protection (beyond what may be included in the DEM); return period: static (No Return Period), 1 (1 year), 100 (100 years), 1000 (1000 years) - Frequency at which an extreme event of total water level (related to storms) is expected to occur on average; scenarios: None (No Scenario), SSP126 (SSP1-2.6), SSP245 (SSP2-4.5), SSP585 (SSP5-8.5) - Climate scenarios based on IPCC's Shared Socioeconomic Pathways (SSPs). High-end (if applicable) refers to P83 of SSP5-8.5, taking into account low-confidence processes. Other scenarios use the P50; time: 2010, 2030, 2050, 2100 - Time slice applied to the data. Either present-day (2010) or future state representing medium (2030 till 2050) and long term (2050 till 2100) outlook"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
