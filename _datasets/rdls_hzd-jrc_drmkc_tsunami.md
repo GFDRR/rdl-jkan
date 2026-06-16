@@ -96,1824 +96,1822 @@ details: The NEAM Tsunami Hazard Model 2018 (NEAMTHM18) is a probabilistic hazar
   are provided for the mean, the 16th percentile, and the 84th percentile.
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    tsunami:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 90
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp0_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: 1
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp0_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: 1
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp0_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: 1
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp0_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: 1
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp0_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: 1
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp0_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: 1
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp72_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.013889
-            probability:
-              span: 50
-              value: 0.5
-            return_period: 72
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp72_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.013889
-            probability:
-              span: 50
-              value: 0.5
-            return_period: 72
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp72_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.013889
-            probability:
-              span: 50
-              value: 0.5
-            return_period: 72
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp72_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.013889
-            probability:
-              span: 50
-              value: 0.5
-            return_period: 72
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp72_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.013889
-            probability:
-              span: 50
-              value: 0.5
-            return_period: 72
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp72_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.013889
-            probability:
-              span: 50
-              value: 0.5
-            return_period: 72
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp224_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.004464
-            probability:
-              span: 50
-              value: 0.2
-            return_period: 224
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp224_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.004464
-            probability:
-              span: 50
-              value: 0.2
-            return_period: 224
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp224_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.004464
-            probability:
-              span: 50
-              value: 0.2
-            return_period: 224
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp224_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.004464
-            probability:
-              span: 50
-              value: 0.2
-            return_period: 224
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp224_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.004464
-            probability:
-              span: 50
-              value: 0.2
-            return_period: 224
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp224_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.004464
-            probability:
-              span: 50
-              value: 0.2
-            return_period: 224
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp475_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002105
-            probability:
-              span: 50
-              value: 0.1
-            return_period: 475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp475_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002105
-            probability:
-              span: 50
-              value: 0.1
-            return_period: 475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp475_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002105
-            probability:
-              span: 50
-              value: 0.1
-            return_period: 475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp475_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002105
-            probability:
-              span: 50
-              value: 0.1
-            return_period: 475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp475_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002105
-            probability:
-              span: 50
-              value: 0.1
-            return_period: 475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp475_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.002105
-            probability:
-              span: 50
-              value: 0.1
-            return_period: 475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001026
-            probability:
-              span: 50
-              value: 0.05
-            return_period: 975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001026
-            probability:
-              span: 50
-              value: 0.05
-            return_period: 975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001026
-            probability:
-              span: 50
-              value: 0.05
-            return_period: 975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001026
-            probability:
-              span: 50
-              value: 0.05
-            return_period: 975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001026
-            probability:
-              span: 50
-              value: 0.05
-            return_period: 975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.001026
-            probability:
-              span: 50
-              value: 0.05
-            return_period: 975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2475_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000404
-            probability:
-              span: 50
-              value: 0.02
-            return_period: 2475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2475_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000404
-            probability:
-              span: 50
-              value: 0.02
-            return_period: 2475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2475_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000404
-            probability:
-              span: 50
-              value: 0.02
-            return_period: 2475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2475_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000404
-            probability:
-              span: 50
-              value: 0.02
-            return_period: 2475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2475_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000404
-            probability:
-              span: 50
-              value: 0.02
-            return_period: 2475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2475_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000404
-            probability:
-              span: 50
-              value: 0.02
-            return_period: 2475
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp4975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000201
-            probability:
-              span: 50
-              value: 0.01
-            return_period: 4975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp4975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000201
-            probability:
-              span: 50
-              value: 0.01
-            return_period: 4975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp4975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000201
-            probability:
-              span: 50
-              value: 0.01
-            return_period: 4975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp4975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000201
-            probability:
-              span: 50
-              value: 0.01
-            return_period: 4975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp4975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000201
-            probability:
-              span: 50
-              value: 0.01
-            return_period: 4975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp4975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.000201
-            probability:
-              span: 50
-              value: 0.01
-            return_period: 4975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp9975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0001
-            probability:
-              span: 50
-              value: 0.005
-            return_period: 9975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp9975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0001
-            probability:
-              span: 50
-              value: 0.005
-            return_period: 9975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp9975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0001
-            probability:
-              span: 50
-              value: 0.005
-            return_period: 9975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp9975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0001
-            probability:
-              span: 50
-              value: 0.005
-            return_period: 9975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp9975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0001
-            probability:
-              span: 50
-              value: 0.005
-            return_period: 9975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp9975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0.0001
-            probability:
-              span: 50
-              value: 0.005
-            return_period: 9975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp24975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-05
-            probability:
-              span: 50
-              value: 0.002
-            return_period: 24975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp24975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-05
-            probability:
-              span: 50
-              value: 0.002
-            return_period: 24975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp24975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-05
-            probability:
-              span: 50
-              value: 0.002
-            return_period: 24975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp24975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-05
-            probability:
-              span: 50
-              value: 0.002
-            return_period: 24975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp24975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-05
-            probability:
-              span: 50
-              value: 0.002
-            return_period: 24975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp24975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-05
-            probability:
-              span: 50
-              value: 0.002
-            return_period: 24975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp49975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-05
-            probability:
-              span: 50
-              value: 0.001
-            return_period: 49975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp49975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-05
-            probability:
-              span: 50
-              value: 0.001
-            return_period: 49975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp49975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-05
-            probability:
-              span: 50
-              value: 0.001
-            return_period: 49975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp49975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-05
-            probability:
-              span: 50
-              value: 0.001
-            return_period: 49975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp49975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-05
-            probability:
-              span: 50
-              value: 0.001
-            return_period: 49975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp49975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-05
-            probability:
-              span: 50
-              value: 0.001
-            return_period: 49975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp99975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-05
-            probability:
-              span: 50
-              value: 0.0005
-            return_period: 99975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp99975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-05
-            probability:
-              span: 50
-              value: 0.0005
-            return_period: 99975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp99975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-05
-            probability:
-              span: 50
-              value: 0.0005
-            return_period: 99975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp99975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-05
-            probability:
-              span: 50
-              value: 0.0005
-            return_period: 99975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp99975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-05
-            probability:
-              span: 50
-              value: 0.0005
-            return_period: 99975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp99975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-05
-            probability:
-              span: 50
-              value: 0.0005
-            return_period: 99975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp249975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-06
-            probability:
-              span: 50
-              value: 0.0002
-            return_period: 249975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp249975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-06
-            probability:
-              span: 50
-              value: 0.0002
-            return_period: 249975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp249975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-06
-            probability:
-              span: 50
-              value: 0.0002
-            return_period: 249975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp249975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-06
-            probability:
-              span: 50
-              value: 0.0002
-            return_period: 249975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp249975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-06
-            probability:
-              span: 50
-              value: 0.0002
-            return_period: 249975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp249975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 4.0e-06
-            probability:
-              span: 50
-              value: 0.0002
-            return_period: 249975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp499975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-06
-            probability:
-              span: 50
-              value: 0.0001
-            return_period: 499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp499975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-06
-            probability:
-              span: 50
-              value: 0.0001
-            return_period: 499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp499975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-06
-            probability:
-              span: 50
-              value: 0.0001
-            return_period: 499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp499975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-06
-            probability:
-              span: 50
-              value: 0.0001
-            return_period: 499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp499975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-06
-            probability:
-              span: 50
-              value: 0.0001
-            return_period: 499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp499975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 2.0e-06
-            probability:
-              span: 50
-              value: 0.0001
-            return_period: 499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp999975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-06
-            probability:
-              span: 50
-              value: 5.0e-05
-            return_period: 999975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp999975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-06
-            probability:
-              span: 50
-              value: 5.0e-05
-            return_period: 999975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp999975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-06
-            probability:
-              span: 50
-              value: 5.0e-05
-            return_period: 999975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp999975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-06
-            probability:
-              span: 50
-              value: 5.0e-05
-            return_period: 999975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp999975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-06
-            probability:
-              span: 50
-              value: 5.0e-05
-            return_period: 999975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp999975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 1.0e-06
-            probability:
-              span: 50
-              value: 5.0e-05
-            return_period: 999975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2499975_avg
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0
-            probability:
-              span: 50
-              value: 2.0e-05
-            return_period: 2499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2499975_p02
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0
-            probability:
-              span: 50
-              value: 2.0e-05
-            return_period: 2499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2499975_p16
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0
-            probability:
-              span: 50
-              value: 2.0e-05
-            return_period: 2499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2499975_p50
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0
-            probability:
-              span: 50
-              value: 2.0e-05
-            return_period: 2499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2499975_p84
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0
-            probability:
-              span: 50
-              value: 2.0e-05
-            return_period: 2499975
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: NEAM_Tsunami_Hazard
-          intensity_measure: Rh_tsi:m
-          process: tsunami
-          trigger: null
-          type: tsunami
-        id: arp2499975_p98
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: 0
-            probability:
-              span: 50
-              value: 2.0e-05
-            return_period: 2499975
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 90
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: NEAM_Tsunami_Hazard
         intensity_measure: Rh_tsi:m
         process: tsunami
         trigger: null
         type: tsunami
-      id: Tsunami Hazard
-      occurrence_range: 1/475 to 1/9975 years
-      seasonality: null
-  event_sets_count: 1
+      id: arp0_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: 1
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp0_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: 1
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp0_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: 1
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp0_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: 1
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp0_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: 1
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp0_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: 1
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp72_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.013889
+          probability:
+            span: 50
+            value: 0.5
+          return_period: 72
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp72_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.013889
+          probability:
+            span: 50
+            value: 0.5
+          return_period: 72
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp72_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.013889
+          probability:
+            span: 50
+            value: 0.5
+          return_period: 72
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp72_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.013889
+          probability:
+            span: 50
+            value: 0.5
+          return_period: 72
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp72_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.013889
+          probability:
+            span: 50
+            value: 0.5
+          return_period: 72
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp72_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.013889
+          probability:
+            span: 50
+            value: 0.5
+          return_period: 72
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp224_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.004464
+          probability:
+            span: 50
+            value: 0.2
+          return_period: 224
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp224_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.004464
+          probability:
+            span: 50
+            value: 0.2
+          return_period: 224
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp224_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.004464
+          probability:
+            span: 50
+            value: 0.2
+          return_period: 224
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp224_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.004464
+          probability:
+            span: 50
+            value: 0.2
+          return_period: 224
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp224_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.004464
+          probability:
+            span: 50
+            value: 0.2
+          return_period: 224
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp224_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.004464
+          probability:
+            span: 50
+            value: 0.2
+          return_period: 224
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp475_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002105
+          probability:
+            span: 50
+            value: 0.1
+          return_period: 475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp475_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002105
+          probability:
+            span: 50
+            value: 0.1
+          return_period: 475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp475_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002105
+          probability:
+            span: 50
+            value: 0.1
+          return_period: 475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp475_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002105
+          probability:
+            span: 50
+            value: 0.1
+          return_period: 475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp475_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002105
+          probability:
+            span: 50
+            value: 0.1
+          return_period: 475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp475_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.002105
+          probability:
+            span: 50
+            value: 0.1
+          return_period: 475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001026
+          probability:
+            span: 50
+            value: 0.05
+          return_period: 975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001026
+          probability:
+            span: 50
+            value: 0.05
+          return_period: 975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001026
+          probability:
+            span: 50
+            value: 0.05
+          return_period: 975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001026
+          probability:
+            span: 50
+            value: 0.05
+          return_period: 975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001026
+          probability:
+            span: 50
+            value: 0.05
+          return_period: 975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.001026
+          probability:
+            span: 50
+            value: 0.05
+          return_period: 975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2475_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000404
+          probability:
+            span: 50
+            value: 0.02
+          return_period: 2475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2475_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000404
+          probability:
+            span: 50
+            value: 0.02
+          return_period: 2475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2475_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000404
+          probability:
+            span: 50
+            value: 0.02
+          return_period: 2475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2475_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000404
+          probability:
+            span: 50
+            value: 0.02
+          return_period: 2475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2475_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000404
+          probability:
+            span: 50
+            value: 0.02
+          return_period: 2475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2475_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000404
+          probability:
+            span: 50
+            value: 0.02
+          return_period: 2475
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp4975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000201
+          probability:
+            span: 50
+            value: 0.01
+          return_period: 4975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp4975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000201
+          probability:
+            span: 50
+            value: 0.01
+          return_period: 4975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp4975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000201
+          probability:
+            span: 50
+            value: 0.01
+          return_period: 4975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp4975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000201
+          probability:
+            span: 50
+            value: 0.01
+          return_period: 4975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp4975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000201
+          probability:
+            span: 50
+            value: 0.01
+          return_period: 4975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp4975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.000201
+          probability:
+            span: 50
+            value: 0.01
+          return_period: 4975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp9975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0001
+          probability:
+            span: 50
+            value: 0.005
+          return_period: 9975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp9975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0001
+          probability:
+            span: 50
+            value: 0.005
+          return_period: 9975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp9975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0001
+          probability:
+            span: 50
+            value: 0.005
+          return_period: 9975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp9975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0001
+          probability:
+            span: 50
+            value: 0.005
+          return_period: 9975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp9975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0001
+          probability:
+            span: 50
+            value: 0.005
+          return_period: 9975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp9975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0.0001
+          probability:
+            span: 50
+            value: 0.005
+          return_period: 9975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp24975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-05
+          probability:
+            span: 50
+            value: 0.002
+          return_period: 24975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp24975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-05
+          probability:
+            span: 50
+            value: 0.002
+          return_period: 24975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp24975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-05
+          probability:
+            span: 50
+            value: 0.002
+          return_period: 24975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp24975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-05
+          probability:
+            span: 50
+            value: 0.002
+          return_period: 24975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp24975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-05
+          probability:
+            span: 50
+            value: 0.002
+          return_period: 24975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp24975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-05
+          probability:
+            span: 50
+            value: 0.002
+          return_period: 24975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp49975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-05
+          probability:
+            span: 50
+            value: 0.001
+          return_period: 49975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp49975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-05
+          probability:
+            span: 50
+            value: 0.001
+          return_period: 49975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp49975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-05
+          probability:
+            span: 50
+            value: 0.001
+          return_period: 49975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp49975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-05
+          probability:
+            span: 50
+            value: 0.001
+          return_period: 49975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp49975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-05
+          probability:
+            span: 50
+            value: 0.001
+          return_period: 49975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp49975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-05
+          probability:
+            span: 50
+            value: 0.001
+          return_period: 49975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp99975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-05
+          probability:
+            span: 50
+            value: 0.0005
+          return_period: 99975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp99975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-05
+          probability:
+            span: 50
+            value: 0.0005
+          return_period: 99975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp99975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-05
+          probability:
+            span: 50
+            value: 0.0005
+          return_period: 99975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp99975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-05
+          probability:
+            span: 50
+            value: 0.0005
+          return_period: 99975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp99975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-05
+          probability:
+            span: 50
+            value: 0.0005
+          return_period: 99975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp99975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-05
+          probability:
+            span: 50
+            value: 0.0005
+          return_period: 99975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp249975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-06
+          probability:
+            span: 50
+            value: 0.0002
+          return_period: 249975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp249975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-06
+          probability:
+            span: 50
+            value: 0.0002
+          return_period: 249975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp249975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-06
+          probability:
+            span: 50
+            value: 0.0002
+          return_period: 249975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp249975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-06
+          probability:
+            span: 50
+            value: 0.0002
+          return_period: 249975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp249975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-06
+          probability:
+            span: 50
+            value: 0.0002
+          return_period: 249975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp249975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 4.0e-06
+          probability:
+            span: 50
+            value: 0.0002
+          return_period: 249975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp499975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-06
+          probability:
+            span: 50
+            value: 0.0001
+          return_period: 499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp499975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-06
+          probability:
+            span: 50
+            value: 0.0001
+          return_period: 499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp499975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-06
+          probability:
+            span: 50
+            value: 0.0001
+          return_period: 499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp499975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-06
+          probability:
+            span: 50
+            value: 0.0001
+          return_period: 499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp499975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-06
+          probability:
+            span: 50
+            value: 0.0001
+          return_period: 499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp499975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 2.0e-06
+          probability:
+            span: 50
+            value: 0.0001
+          return_period: 499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp999975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-06
+          probability:
+            span: 50
+            value: 5.0e-05
+          return_period: 999975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp999975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-06
+          probability:
+            span: 50
+            value: 5.0e-05
+          return_period: 999975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp999975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-06
+          probability:
+            span: 50
+            value: 5.0e-05
+          return_period: 999975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp999975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-06
+          probability:
+            span: 50
+            value: 5.0e-05
+          return_period: 999975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp999975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-06
+          probability:
+            span: 50
+            value: 5.0e-05
+          return_period: 999975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp999975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 1.0e-06
+          probability:
+            span: 50
+            value: 5.0e-05
+          return_period: 999975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2499975_avg
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0
+          probability:
+            span: 50
+            value: 2.0e-05
+          return_period: 2499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2499975_p02
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0
+          probability:
+            span: 50
+            value: 2.0e-05
+          return_period: 2499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2499975_p16
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0
+          probability:
+            span: 50
+            value: 2.0e-05
+          return_period: 2499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2499975_p50
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0
+          probability:
+            span: 50
+            value: 2.0e-05
+          return_period: 2499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2499975_p84
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0
+          probability:
+            span: 50
+            value: 2.0e-05
+          return_period: 2499975
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: NEAM_Tsunami_Hazard
+        intensity_measure: Rh_tsi:m
+        process: tsunami
+        trigger: null
+        type: tsunami
+      id: arp2499975_p98
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: 0
+          probability:
+            span: 50
+            value: 2.0e-05
+          return_period: 2499975
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: NEAM_Tsunami_Hazard
+      intensity_measure: Rh_tsi:m
+      process: tsunami
+      trigger: null
+      type: tsunami
+    id: Tsunami Hazard
+    occurrence_range: 1/475 to 1/9975 years
+    seasonality: null
 license: https://creativecommons.org/licenses/by-sa/4.0/
 lineage:
   description: null
@@ -1928,8 +1926,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Tsunami Hazard Maps for the NEAM Region (TSUMAPS NEAM)
   url: https://tsumaps-neam.eu/

@@ -65,8 +65,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: 'EUCROPMAP : European Union Crop type Map'
   url: https://data.jrc.ec.europa.eu/dataset/555e5d1d-1aae-4320-a716-2e6d18aa1e7c

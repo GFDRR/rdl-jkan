@@ -49,8 +49,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Global Energy Monitor
   url: https://globalenergymonitor.org/

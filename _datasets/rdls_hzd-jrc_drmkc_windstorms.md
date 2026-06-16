@@ -34,104 +34,102 @@ details: 'This data archive is publishing a probabilistic extension of the histo
   speed in Meters per Second [m/s] per event and grid coordinate.'
 exposure: []
 hazard:
-  event_sets_by_hazard_type:
-    strong_wind:
-    - analysis_type: probabilistic
-      calculation_method: simulated
-      event_count: 4
-      events:
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: ETH_Windstorm_Hazard
-          intensity_measure: PGWS_tcy:km/h
-          process: extratropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: event_id
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: ETH_Windstorm_Hazard
-          intensity_measure: PGWS_tcy:km/h
-          process: extratropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: frequency
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: ETH_Windstorm_Hazard
-          intensity_measure: PGWS_tcy:km/h
-          process: extratropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: orig
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      - calculation_method: simulated
-        description: null
-        disaster_identifiers: []
-        hazard:
-          classification: null
-          id: ETH_Windstorm_Hazard
-          intensity_measure: PGWS_tcy:km/h
-          process: extratropical_cyclone
-          trigger: null
-          type: strong_wind
-        id: intensity
-        occurrence:
-          deterministic: null
-          empirical: null
-          probabilistic:
-            event_rate: null
-            probability:
-              span: 50
-              value: null
-            return_period: null
-      frequency_distribution: null
-      hazards:
-      - classification: null
+  event_sets:
+  - analysis_type: probabilistic
+    calculation_method: simulated
+    event_count: 4
+    events:
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
         id: ETH_Windstorm_Hazard
         intensity_measure: PGWS_tcy:km/h
         process: extratropical_cyclone
         trigger: null
         type: strong_wind
-      id: Windstorm_Hazard
-      occurrence_range: null
-      seasonality: null
-  event_sets_count: 1
+      id: event_id
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: ETH_Windstorm_Hazard
+        intensity_measure: PGWS_tcy:km/h
+        process: extratropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: frequency
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: ETH_Windstorm_Hazard
+        intensity_measure: PGWS_tcy:km/h
+        process: extratropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: orig
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    - calculation_method: simulated
+      description: null
+      disaster_identifiers: []
+      hazard:
+        classification: null
+        id: ETH_Windstorm_Hazard
+        intensity_measure: PGWS_tcy:km/h
+        process: extratropical_cyclone
+        trigger: null
+        type: strong_wind
+      id: intensity
+      occurrence:
+        deterministic: null
+        empirical: null
+        probabilistic:
+          event_rate: null
+          probability:
+            span: 50
+            value: null
+          return_period: null
+    frequency_distribution: null
+    hazards:
+    - classification: null
+      id: ETH_Windstorm_Hazard
+      intensity_measure: PGWS_tcy:km/h
+      process: extratropical_cyclone
+      trigger: null
+      type: strong_wind
+    id: Windstorm_Hazard
+    occurrence_range: null
+    seasonality: null
 license: https://creativecommons.org/licenses/by/4.0/
 lineage:
   description: null
@@ -146,8 +144,7 @@ lineage:
 links:
 - href: https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json
   rel: describedby
-loss:
-  losses: []
+loss: null
 project:
   name: Risk Data Hub
   url: https://drmkc.jrc.ec.europa.eu/risk-data-hub#/
