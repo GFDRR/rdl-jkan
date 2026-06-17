@@ -686,8 +686,11 @@ layout: default
       <h3 x-show="results.length > 0" style="margin-top: 0; margin-bottom: 24px;"
         x-text="`Showing ${paginationStart}-${paginationEnd} of ${results.length} dataset${results.length === 1 ? '' : 's'}`"
       ></h3>
-      <h3 x-show="results.length === 0" style="margin-top: 0;">
+      <h3 x-show="results.length === 0 && !$store.datasets.isLoading" style="margin-top: 0;">
         No datasets found with these filters and/or query
+      </h3>
+      <h3 x-show="$store.datasets.isLoading" style="margin-top: 0;">
+        Loading...
       </h3>
 
       <div>
