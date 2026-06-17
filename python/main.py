@@ -191,9 +191,14 @@ def embed_datasets_metadata(datasets_metadata, model):
         tensor = model.encode(
             dataset_metadata, convert_to_tensor=True, normalize_embeddings=True
         )
+        dataset_metadata_dict = json.loads(dataset_metadata)
         vector_embedding = {
             "vector": tensor.cpu().detach().numpy().tolist(),
-            "metadata": json.loads(dataset_metadata),
+            "metadata": {
+                "title": dataset_metadata_dict["title"],
+                "description": dataset_metadata_dict["description"],
+                "purpose": dataset_metadata_dict["purpose"],
+            },
         }
         results.append(vector_embedding)
 

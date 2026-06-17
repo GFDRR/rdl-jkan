@@ -253,8 +253,10 @@ layout: default
         async loadEmbeddedMetadata() {
           this.isEmbeddedMetadataLoading = true;
           try {
-            const response = await fetch(`${$store.datasets.BASE_URL ?? ''}/python/vectors.json`);
-            const vectorsArray = await response.json();
+            const response = await fetch(`${$store.datasets.BASE_URL ?? ''}/python/vectors.min.json`)
+            const arrayBuffer = await response.arrayBuffer()
+            const decompressed = pako.inflate(arrayBuffer, { to: 'string' });
+            const vectorsArray = JSON.parse(decompressed);
             this.vectors = vectorsArray.reduce((acc, item) => {
               if (item.metadata?.dataset_id) acc[item.metadata.dataset_id] = item.vector;
               return acc;
