@@ -81,6 +81,7 @@ hazard:
     id: event_set_xjZnwJUB
     occurrence_range: RP 250, 475, 975, 1500, 2475 years
     seasonality: null
+  type: earthquake
 license: CC-BY-4.0
 lineage: null
 links:

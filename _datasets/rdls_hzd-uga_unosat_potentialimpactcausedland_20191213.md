@@ -53,6 +53,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: landslide
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed Pleiades-1 satellite imagery (50 cm resolution)

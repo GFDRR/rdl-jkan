@@ -14618,6 +14618,7 @@ hazard:
     occurrence_range: Return periods from 2, 5, 10, 25, 50, 100, 250, 500, and 1000
       years
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Global river flood hazard inundation layers produced by the Aqueduct

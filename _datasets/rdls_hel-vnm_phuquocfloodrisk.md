@@ -493,6 +493,7 @@ hazard:
     id: event_set_combined
     occurrence_range: Return periods of 5, 10, 20, 50, and 100 years
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Flood risk assessment for Phu Quoc Island, Kien Giang Province, Viet

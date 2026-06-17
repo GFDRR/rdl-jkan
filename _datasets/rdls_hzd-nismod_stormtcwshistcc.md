@@ -2111,6 +2111,7 @@ hazard:
     id: event_set_storm_cc_tropical_cyclone
     occurrence_range: 1/10 to 1/10000 years
     seasonality: null
+  type: strong_wind
 license: CC0-1.0
 lineage:
   description: Tropical cyclone wind speed return period grids produced using the

@@ -53,6 +53,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Sentinel-1A GRD SAR data acquired on 20 July 2018 was processed in

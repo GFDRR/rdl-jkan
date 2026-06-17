@@ -1497,6 +1497,7 @@ hazard:
     id: event_set_volcanic
     occurrence_range: null
     seasonality: null
+  type: drought, earthquake, flood, extreme_temperature, landslide, volcanic
 license: CC-BY-4.0
 lineage:
   description: Multi-hazard exposure and risk indicator dataset compiled from global

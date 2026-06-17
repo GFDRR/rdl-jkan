@@ -119,6 +119,7 @@ hazard:
     id: GEM
     occurrence_range: 100, 475, 975, 2475 years
     seasonality: null
+  type: earthquake
 license: CC-BY-4.0
 lineage: null
 links:

@@ -81,6 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR imagery acquired 30 July 2021 was analyzed by UNOSAT

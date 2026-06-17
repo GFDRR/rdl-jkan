@@ -34,6 +34,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: extreme_temperature
 license: https://example.org/license/unknown
 lineage:
   description: These data provide modelled hourly data for a set of indices representing

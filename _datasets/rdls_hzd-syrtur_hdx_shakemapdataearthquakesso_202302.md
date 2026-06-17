@@ -52,6 +52,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: earthquake
 license: CC-BY-4.0
 lineage:
   description: "USGS ShakeMap methodology automatically processed instrumental seismic\

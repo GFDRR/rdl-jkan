@@ -48,6 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Satellite imagery from TerraSAR-X (11 August 2016) and SPOT-7 (15 August

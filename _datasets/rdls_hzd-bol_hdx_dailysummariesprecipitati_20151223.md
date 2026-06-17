@@ -50,6 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: drought
 license: CC0-1.0
 lineage:
   description: Daily precipitation indicators were collected from base stations across

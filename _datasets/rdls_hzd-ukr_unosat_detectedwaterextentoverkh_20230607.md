@@ -54,6 +54,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Sentinel-3 imagery acquired on 6 June 2023

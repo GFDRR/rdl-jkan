@@ -45,6 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: drought
 license: CC-BY-4.0
 lineage:
   description: 'WFP VAM processed CHIRPS rainfall estimates (1982-2017) to calculate

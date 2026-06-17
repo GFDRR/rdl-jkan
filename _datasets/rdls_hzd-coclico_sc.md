@@ -41,6 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: erosion
 license: https://example.org/license/unknown
 lineage:
   description: Projections of global shoreline change in view of climate change. This

@@ -77,6 +77,7 @@ hazard:
     id: '0'
     occurrence_range: 100 years
     seasonality: null
+  type: landslide
 license: CC-BY-4.0
 lineage: null
 links:

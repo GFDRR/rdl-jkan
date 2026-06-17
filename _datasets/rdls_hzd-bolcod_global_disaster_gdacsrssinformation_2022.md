@@ -93,6 +93,7 @@ hazard:
     id: es_volcanic
     occurrence_range: null
     seasonality: null
+  type: earthquake, flood, strong_wind, volcanic
 license: CC-BY-4.0
 lineage:
   description: GDACS integrates multiple hazard detection systems (automatic for seismic

@@ -41,6 +41,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC0-1.0
 lineage:
   description: "Direct observational and anecdotal field data collected by FAO SWALIM\

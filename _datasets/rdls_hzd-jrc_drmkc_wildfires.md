@@ -134,6 +134,7 @@ hazard:
     id: Wildfires_Hazard
     occurrence_range: null
     seasonality: null
+  type: wildfire
 license: CC-BY-4.0
 lineage:
   description: null

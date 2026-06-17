@@ -47,6 +47,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: sea_level_rise
 license: CC-BY-4.0
 lineage:
   description: 'Sea level rise projections provide regional insights into future sea

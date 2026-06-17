@@ -212,19 +212,18 @@ def make_hazard_top_level(hazard):
     if hazard is None:
         return None
     event_sets = [make_event_set(event_set) for event_set in hazard["event_sets"]]
-    event_sets_by_hazard_type = {}
+    hazard_types = []
     
     for event_set in event_sets:
         if event_set.get('hazards'):
             hazard_type = event_set['hazards'][0].get('type')
             
-            if hazard_type not in event_sets_by_hazard_type:
-                event_sets_by_hazard_type[hazard_type] = []
-            
-            event_sets_by_hazard_type[hazard_type].append(event_set)
-    
+            if hazard_type not in hazard_types:
+                hazard_types.append(hazard_type)
+                
     return {
         "event_sets": event_sets,
+        "type": ", ".join(hazard_types)
     }
 
 

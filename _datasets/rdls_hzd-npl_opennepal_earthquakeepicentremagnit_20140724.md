@@ -43,6 +43,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: earthquake
 license: ODbL-1.0/
 lineage:
   description: Earthquake event data extracted from Nepal's official Environment Statistics

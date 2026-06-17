@@ -81,6 +81,7 @@ hazard:
     id: es_flood_empirical
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Flood event records extracted from global news media (2000-2026) using

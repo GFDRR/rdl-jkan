@@ -51,6 +51,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR satellite images acquired on 07 November 2016 and 01

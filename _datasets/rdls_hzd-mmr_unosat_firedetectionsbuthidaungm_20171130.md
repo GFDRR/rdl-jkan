@@ -70,6 +70,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: wildfire
 license: CC-BY-SA-4.0
 lineage:
   description: Fire detections were identified from MODIS and VIIRS satellite thermal

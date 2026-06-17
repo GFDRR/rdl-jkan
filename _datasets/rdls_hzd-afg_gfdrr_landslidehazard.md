@@ -201,6 +201,7 @@ hazard:
     id: '1'
     occurrence_range: null
     seasonality: null
+  type: landslide
 license: CC-BY-4.0
 lineage: null
 links:

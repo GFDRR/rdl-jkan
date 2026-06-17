@@ -453,6 +453,7 @@ hazard:
     id: Earthquake_Hazard
     occurrence_range: 1/10 to 1/10000 years
     seasonality: null
+  type: earthquake
 license: CC-BY-SA-4.0
 lineage:
   description: null

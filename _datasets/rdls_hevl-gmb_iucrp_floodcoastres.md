@@ -255,6 +255,7 @@ hazard:
       horizons (2040, 2070), including permanent (structural/SLR-related) and combined
       permanent+temporary storm erosion representations.
     seasonality: null
+  type: flood, erosion
 license: CC-BY-4.0
 lineage:
   description: Flood and coastal risk assessment for the Greater Banjul Area (GBA),

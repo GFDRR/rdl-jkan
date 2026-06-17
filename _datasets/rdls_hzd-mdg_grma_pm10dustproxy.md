@@ -36,6 +36,7 @@ hazard:
     id: event_set_dust_001
     occurrence_range: null
     seasonality: null
+  type: strong_wind
 license: CC-BY-4.0
 lineage: null
 links:

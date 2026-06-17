@@ -81,6 +81,7 @@ hazard:
     id: '2'
     occurrence_range: null
     seasonality: user_defined
+  type: extreme_temperature
 license: CC-BY-4.0
 lineage: null
 links:

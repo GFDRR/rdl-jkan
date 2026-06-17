@@ -40,6 +40,7 @@ hazard:
     id: event_set_aridity_001
     occurrence_range: null
     seasonality: null
+  type: drought
 license: CC-BY-4.0
 lineage: null
 links:

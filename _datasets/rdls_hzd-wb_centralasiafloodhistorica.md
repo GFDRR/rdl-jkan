@@ -108,6 +108,7 @@ hazard:
     id: CA_SFRARR_FL_100y
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage: null
 links:

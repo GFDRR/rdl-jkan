@@ -91,6 +91,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Multiple data sources on the August 2017 Bangladesh floods were integrated,

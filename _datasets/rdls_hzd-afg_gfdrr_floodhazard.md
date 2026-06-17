@@ -531,6 +531,7 @@ hazard:
     id: Historical events
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage: null
 links:

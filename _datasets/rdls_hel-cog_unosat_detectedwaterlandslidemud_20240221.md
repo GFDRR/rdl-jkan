@@ -96,6 +96,7 @@ hazard:
     id: es_landslide
     occurrence_range: null
     seasonality: null
+  type: flood, landslide
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts interpreted WorldView-2 satellite imagery acquired

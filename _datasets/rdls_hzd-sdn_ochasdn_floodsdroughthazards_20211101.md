@@ -57,6 +57,7 @@ hazard:
     id: es_drought
     occurrence_range: null
     seasonality: null
+  type: flood, drought
 license: ODbL-1.0/
 lineage:
   description: Hazard data compiled from direct observational records and anecdotal

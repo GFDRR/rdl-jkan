@@ -85,6 +85,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: "A Pl\xE9iades satellite image acquired on 5 May 2024 at 07:36 UTC\

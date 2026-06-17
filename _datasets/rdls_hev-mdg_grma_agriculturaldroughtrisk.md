@@ -52,6 +52,7 @@ hazard:
     id: event_set_drought_001
     occurrence_range: null
     seasonality: user_defined
+  type: drought
 license: CC-BY-4.0
 lineage: null
 links:

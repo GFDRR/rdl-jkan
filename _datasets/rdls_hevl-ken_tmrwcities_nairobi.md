@@ -147,6 +147,7 @@ hazard:
     id: event_set_flood_nairobi
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC0-1.0
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

@@ -39,6 +39,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: erosion
 license: CC-BY-4.0
 lineage:
   description: 'Coastal Change Segments uses the historical shoreline change regime

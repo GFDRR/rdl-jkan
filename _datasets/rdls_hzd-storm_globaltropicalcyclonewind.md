@@ -592,6 +592,7 @@ hazard:
     id: HST
     occurrence_range: 1/10 to 1/10000 years
     seasonality: uniform
+  type: strong_wind
 license: CC0-1.0
 lineage: null
 links:

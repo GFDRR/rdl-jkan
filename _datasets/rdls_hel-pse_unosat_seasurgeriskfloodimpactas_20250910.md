@@ -73,6 +73,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-2 (28 July 2025) and Pleiades (29 August 2025) satellite imagery

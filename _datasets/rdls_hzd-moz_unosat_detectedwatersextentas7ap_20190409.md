@@ -55,6 +55,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR imagery from 7 April 2019 and 20 March 2019 were compared

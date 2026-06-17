@@ -43,6 +43,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: https://example.org/license/unknown
 lineage:
   description: Dataset presenting the results of a European coastal flood risk assessment

@@ -1076,6 +1076,7 @@ hazard:
     occurrence_range: 50-year return period compound flood (coastal + pluvial + fluvial
       combined) under Historical, RCP4.5, and RCP8.5 scenarios
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Flood impact assessment for Greater Monrovia, Liberia, produced by

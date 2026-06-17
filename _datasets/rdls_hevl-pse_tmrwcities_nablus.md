@@ -223,6 +223,7 @@ hazard:
     id: event_set_landslide_nablus
     occurrence_range: null
     seasonality: null
+  type: earthquake, flood, landslide
 license: CC0-1.0
 lineage:
   description: Integrated multi-hazard risk dataset produced by the Tomorrow's Cities

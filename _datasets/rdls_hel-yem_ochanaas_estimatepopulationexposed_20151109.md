@@ -85,6 +85,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: strong_wind
 license: ODbL-1.0/
 lineage:
   description: "Population exposure estimates were calculated by overlaying tropical\

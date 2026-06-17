@@ -65,6 +65,7 @@ hazard:
     id: '0'
     occurrence_range: null
     seasonality: null
+  type: drought
 license: CC-BY-4.0
 lineage: null
 links:

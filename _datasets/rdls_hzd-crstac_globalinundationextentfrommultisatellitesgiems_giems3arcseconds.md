@@ -33,6 +33,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-NC-SA-4.0
 lineage:
   description: Provides maps of inundation percentage

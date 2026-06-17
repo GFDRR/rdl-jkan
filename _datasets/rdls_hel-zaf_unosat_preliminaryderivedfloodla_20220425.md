@@ -84,6 +84,7 @@ hazard:
     id: es_landslide
     occurrence_range: null
     seasonality: null
+  type: flood, landslide
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts conducted comparative satellite imagery analysis of

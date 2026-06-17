@@ -57,6 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: earthquake
 license: CC-BY-SA-4.0
 lineage:
   description: WFP ADAM processed the magnitude 6.7 earthquake event (USGS ID us7000l9ku)

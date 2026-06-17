@@ -50,6 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: "TerraSAR-X satellite imagery acquired on 11 August 2016 was analyzed\

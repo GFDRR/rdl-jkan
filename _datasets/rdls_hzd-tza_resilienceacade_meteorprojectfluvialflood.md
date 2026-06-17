@@ -81,6 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: ODbL-1.0/
 lineage:
   description: 'The data has been produced using the Fathom global flood hazard modelling

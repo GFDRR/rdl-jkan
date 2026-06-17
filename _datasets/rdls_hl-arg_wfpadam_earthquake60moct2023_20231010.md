@@ -43,6 +43,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: earthquake
 license: CC-BY-SA-4.0
 lineage:
   description: 'ADAM system processed the October 10, 2023 magnitude 6.0 earthquake

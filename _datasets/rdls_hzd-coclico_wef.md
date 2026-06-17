@@ -185,6 +185,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: https://example.org/license/unknown
 lineage:
   description: Dataset with extreme Wave Energy Flux (WEF) at the Global scale. WEF

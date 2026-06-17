@@ -48,6 +48,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: drought
 license: CC-BY-4.0
 lineage:
   description: MODIS MOD13Q1 V6.1 NDVI data from July across three years (2023-2025)
