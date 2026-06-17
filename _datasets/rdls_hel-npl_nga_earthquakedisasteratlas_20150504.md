@@ -90,6 +90,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: earthquake
 license: CC0-1.0
 lineage:
   description: Post-event disaster atlas compiled from NGA geospatial intelligence

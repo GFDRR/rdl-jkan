@@ -76,6 +76,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: strong_wind
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed satellite imagery and cyclone track data from

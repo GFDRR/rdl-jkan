@@ -36,6 +36,7 @@ hazard:
     id: event_set_YhkW50SM
     occurrence_range: null
     seasonality: null
+  type: landslide
 license: CC-BY-4.0
 lineage: null
 links:

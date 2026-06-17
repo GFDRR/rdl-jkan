@@ -40,6 +40,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: erosion
 license: https://example.org/license/unknown
 lineage:
   description: Global long-term (1984-2015) shoreline evolution based on satellite

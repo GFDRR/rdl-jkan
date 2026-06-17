@@ -45,6 +45,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Satellite imagery from ALOS-2 was processed to delineate actual flood

@@ -68,6 +68,7 @@ hazard:
     id: event_set_fl_001
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: null

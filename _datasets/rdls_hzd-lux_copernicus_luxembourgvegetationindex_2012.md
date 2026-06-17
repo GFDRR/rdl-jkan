@@ -50,6 +50,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: drought
 license: CC-BY-4.0
 lineage:
   description: VIIRS satellite observations are processed into 10-day composite FAPAR

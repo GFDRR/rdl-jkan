@@ -44,6 +44,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: landslide
 license: CC-BY-4.0
 lineage:
   description: The dataset represents a national-scale landslide susceptibility assessment

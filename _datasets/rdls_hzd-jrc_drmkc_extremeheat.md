@@ -108,6 +108,7 @@ hazard:
     id: Extreme_Heat_Hazard
     occurrence_range: 1/5 to 1/100 years
     seasonality: null
+  type: extreme_temperature
 license: CC0-1.0
 lineage:
   description: null

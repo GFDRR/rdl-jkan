@@ -35,6 +35,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: https://spdx.org/licenses/CDLA-Permissive-1.0.html
 lineage:
   description: Global flood maps are simulated based on coastal extreme water levels

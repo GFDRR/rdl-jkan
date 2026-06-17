@@ -423,6 +423,7 @@ hazard:
     id: event_set_heatwave_exposure
     occurrence_range: null
     seasonality: null
+  type: drought, extreme_temperature
 license: CC0-1.0
 lineage:
   description: Annual probability grids for extreme heat and drought events derived

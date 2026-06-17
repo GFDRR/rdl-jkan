@@ -82,6 +82,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Secondary data from national and global datasets (2011-2024) were collected

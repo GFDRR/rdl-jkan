@@ -185,6 +185,7 @@ hazard:
     id: '0'
     occurrence_range: 10, 50, 100, 250, 500, 1000, 2.500 years
     seasonality: null
+  type: earthquake
 license: CC-BY-4.0
 lineage: null
 links:

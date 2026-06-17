@@ -136,6 +136,7 @@ hazard:
     id: TC
     occurrence_range: Return period 50 to 1,000 years
     seasonality: null
+  type: strong_wind
 license: CC-BY-4.0
 lineage: null
 links:

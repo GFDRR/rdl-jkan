@@ -34,6 +34,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: sea_level_rise
 license: https://example.org/license/unknown
 lineage:
   description: Median projections of regional sea level rise from 2020 to 2150, relative

@@ -57,6 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: drought
 license: CC-BY-4.0
 lineage:
   description: 'Raw MODIS AQUA and TERRA 16-day composite products (MYD13C1 and MOD13C1)

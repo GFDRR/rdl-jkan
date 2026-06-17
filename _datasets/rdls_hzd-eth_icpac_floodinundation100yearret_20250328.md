@@ -66,6 +66,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Six global flood models were run for the Global Flood Partnership intercomparison

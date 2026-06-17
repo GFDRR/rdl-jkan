@@ -43,6 +43,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: strong_wind
 license: CC0-1.0
 lineage:
   description: Hourly METAR station data from NOAA are ingested and processed by Esri

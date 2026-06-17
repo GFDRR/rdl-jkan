@@ -80,6 +80,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: "Satellite imagery from RCM-1 acquired on 15 March 2022 was analyzed\

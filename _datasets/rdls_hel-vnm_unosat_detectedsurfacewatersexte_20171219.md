@@ -93,6 +93,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Radarsat-2 SAR imagery from 18 December 2017

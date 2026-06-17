@@ -81,6 +81,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: drought
 license: ODbL-1.0/
 lineage:
   description: The ICA integrates multi-year food security trend data (EFSA 2012-2018)

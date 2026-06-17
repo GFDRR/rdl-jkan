@@ -61,6 +61,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: volcanic
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts reviewed and compared very high-resolution satellite

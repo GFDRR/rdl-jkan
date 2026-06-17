@@ -78,6 +78,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: earthquake
 license: CC-BY-4.0
 lineage:
   description: A predictive severity index was calculated by multiplying gridded population

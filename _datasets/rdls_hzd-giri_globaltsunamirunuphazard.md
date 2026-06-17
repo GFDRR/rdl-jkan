@@ -81,6 +81,7 @@ hazard:
     id: RP475
     occurrence_range: Return period 475 years
     seasonality: null
+  type: tsunami
 license: CC-BY-4.0
 lineage: null
 links:

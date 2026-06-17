@@ -155,6 +155,7 @@ hazard:
     id: EQ
     occurrence_range: Return period 100 to 2,475 years
     seasonality: null
+  type: earthquake
 license: CC-BY-4.0
 lineage: null
 links:

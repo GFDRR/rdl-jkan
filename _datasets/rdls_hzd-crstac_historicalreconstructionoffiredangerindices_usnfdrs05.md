@@ -35,6 +35,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: wildfire
 license: https://example.org/license/unknown
 lineage:
   description: The data set provides complete historical reconstruction of meteorological

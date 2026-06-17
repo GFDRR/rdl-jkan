@@ -130,6 +130,7 @@ hazard:
     id: Windstorm_Hazard
     occurrence_range: null
     seasonality: null
+  type: strong_wind
 license: CC-BY-4.0
 lineage:
   description: null

@@ -71,6 +71,7 @@ hazard:
     id: es_drought
     occurrence_range: null
     seasonality: null
+  type: flood, drought
 license: CC-BY-4.0
 lineage:
   description: The dataset aggregates observed hazard data (river levels, rainfall)

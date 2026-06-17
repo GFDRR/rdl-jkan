@@ -74,6 +74,7 @@ hazard:
     id: es_drought
     occurrence_range: null
     seasonality: null
+  type: flood, earthquake, drought
 license: CC-BY-4.0
 lineage:
   description: Spatial hazard datasets were compiled by Bangladesh Agricultural Research

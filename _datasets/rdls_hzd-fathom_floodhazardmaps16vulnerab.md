@@ -861,6 +861,7 @@ hazard:
     id: PFL_U
     occurrence_range: 1/10 to 1/1000 years
     seasonality: uniform
+  type: flood
 license: CC-BY-4.0
 lineage: null
 links:

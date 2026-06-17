@@ -57,6 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: drought
 license: CC-BY-4.0
 lineage:
   description: PDSI values were computed from remote sensing data accessed via Google

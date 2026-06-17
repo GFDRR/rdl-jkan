@@ -42,6 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: convective_storm
 license: CC-BY-4.0
 lineage:
   description: "Accumulated precipitation data was derived from NASA's Global Precipitation\

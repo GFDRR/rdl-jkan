@@ -70,6 +70,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: earthquake
 license: CC-BY-4.0
 lineage:
   description: USGS-Pager earthquake ground motion data (PGA severity classes) was

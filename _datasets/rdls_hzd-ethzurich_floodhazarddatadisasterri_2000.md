@@ -57,6 +57,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Historical flood events from 2000-2018 were extracted from the Cloud

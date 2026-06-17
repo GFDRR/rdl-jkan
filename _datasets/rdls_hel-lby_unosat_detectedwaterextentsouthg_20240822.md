@@ -69,6 +69,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: "WorldView-3 satellite imagery acquired on 18 August 2024 was analyzed\

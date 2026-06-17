@@ -35,6 +35,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: erosion
 license: CC-BY-4.0
 lineage:
   description: Shoreline change projections under different climate scenarios (SSPs).

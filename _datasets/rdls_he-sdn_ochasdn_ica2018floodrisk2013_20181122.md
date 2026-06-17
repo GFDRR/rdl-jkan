@@ -79,6 +79,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: The Integrated Context Analysis (ICA) Sudan 2018 integrated flood risk

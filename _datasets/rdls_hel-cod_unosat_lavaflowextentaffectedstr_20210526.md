@@ -84,6 +84,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: volcanic
 license: CC-BY-SA-4.0
 lineage:
   description: Sentinel-1 SAR satellite imagery acquired on 25 May 2021 was analyzed

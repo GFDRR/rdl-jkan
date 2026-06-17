@@ -1912,6 +1912,7 @@ hazard:
     id: Tsunami Hazard
     occurrence_range: 1/475 to 1/9975 years
     seasonality: null
+  type: tsunami
 license: CC-BY-SA-4.0
 lineage:
   description: null

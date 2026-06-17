@@ -35,6 +35,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: sea_level_rise
 license: https://example.org/license/unknown
 lineage:
   description: Regional sea level data from IPCC AR5 distributed in netCDF format

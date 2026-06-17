@@ -78,6 +78,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts processed Suomi-NPP and NOAA-20 VIIRS satellite imagery

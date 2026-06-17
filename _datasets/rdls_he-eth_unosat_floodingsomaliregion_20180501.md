@@ -74,6 +74,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: UNOSAT analyzed a Sentinel-1 SAR image acquired on 1 May 2018 to detect

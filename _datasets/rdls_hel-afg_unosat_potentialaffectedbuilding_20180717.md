@@ -99,6 +99,7 @@ hazard:
     id: es_flood
     occurrence_range: null
     seasonality: null
+  type: landslide, flood
 license: CC-BY-SA-4.0
 lineage:
   description: UNOSAT analysts compared Sentinel-2 satellite imagery from 13 July

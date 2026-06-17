@@ -101,6 +101,7 @@ hazard:
     id: es_flood
     occurrence_range: null
     seasonality: null
+  type: landslide, flood
 license: CC-BY-4.0
 lineage:
   description: "Post-event landslide and flood inventories were created by visual\

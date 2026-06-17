@@ -131,6 +131,7 @@ hazard:
     id: LS_RF
     occurrence_range: null
     seasonality: uniform
+  type: landslide
 license: CC-BY-4.0
 lineage: null
 links:

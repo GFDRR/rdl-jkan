@@ -58,6 +58,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: earthquake
 license: CC-BY-SA-4.0
 lineage:
   description: USGS shakemap data for the M6.1 earthquake (event ID us7000kx7j) was

@@ -42,6 +42,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: extreme_temperature
 license: https://example.org/license/unknown
 lineage:
   description: The indices are provided for historical and future climate projections

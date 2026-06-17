@@ -213,6 +213,7 @@ hazard:
     id: River_Flood_Hazard
     occurrence_range: 1/10 to 1/500 years
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: null

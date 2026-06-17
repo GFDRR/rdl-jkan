@@ -72,6 +72,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: extreme_temperature
 license: CC-BY-4.0
 lineage:
   description: "Daily maximum temperature grids from the Climate Hazards InfraRed\

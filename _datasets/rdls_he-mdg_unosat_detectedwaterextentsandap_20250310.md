@@ -72,6 +72,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-SA-4.0
 lineage:
   description: "RCM-2 satellite radar images acquired on 9 March 2025 were analyzed\

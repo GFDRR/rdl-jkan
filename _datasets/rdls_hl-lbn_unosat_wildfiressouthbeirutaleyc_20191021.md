@@ -62,6 +62,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: wildfire
 license: CC-BY-SA-4.0
 lineage:
   description: Satellite imagery from SPOT-6 acquired on 19 October 2019 was analyzed

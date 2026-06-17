@@ -369,6 +369,7 @@ hazard:
     id: event_set_surface_water_flood
     occurrence_range: Return periods from 20, 50, 100, 200, 500, and 1,500 years
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Flood impact assessment for Freetown, Sierra Leone, produced by JBA

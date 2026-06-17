@@ -67,6 +67,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: https://example.org/license/unknown
 lineage:
   description: Dataset indicating flood extents as a result of climate change projections

@@ -86,6 +86,7 @@ hazard:
     id: event_set_GO2O8zSU
     occurrence_range: null
     seasonality: null
+  type: wildfire
 license: CC-BY-4.0
 lineage: null
 links:

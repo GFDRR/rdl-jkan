@@ -61,6 +61,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: Flood hazard data from the European Commission's Joint Research Centre

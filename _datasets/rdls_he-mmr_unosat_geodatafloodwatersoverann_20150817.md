@@ -65,6 +65,7 @@ hazard:
     id: event_set_1
     occurrence_range: null
     seasonality: null
+  type: flood
 license: CC-BY-4.0
 lineage:
   description: UNOSAT analysts compared pre-flood and post-flood ALOS-2/PALSAR-2 satellite
