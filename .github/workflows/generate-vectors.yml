@@ -53,13 +53,14 @@ jobs:
         run: |
           source .venv/bin/activate
           python3 main.py --vectors
+          jq -c '.' vectors.json > vectors.min.json
       
       - name: Commit vector embeddings
         if: steps.check_changes.outputs.datasets_changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ./vectors.json
+          git add ./vectors.min.json
           if git diff-index --quiet HEAD; then
             echo "No vector changes to commit"
           else

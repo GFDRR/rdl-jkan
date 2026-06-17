@@ -39,6 +39,7 @@
     defer
     src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.15.8/dist/cdn.min.js"
   ></script>
+  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
   <!-- jQuery (required for Bootstrap) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <!-- Bootstrap JS -->
@@ -122,11 +123,13 @@
           async fetchUnfiltered() {
             this.isLoading = true;
             try {
-              const response = await fetch(`${BASE_URL ?? ''}/rdl-datasets.json`);
+              const response = await fetch(`${BASE_URL ?? ''}/rdl-datasets.json.gz`);
               if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
               }
-              const initialDatasets = await response.json();
+              const arrayBuffer = await response.arrayBuffer()
+              const decompressed = pako.inflate(arrayBuffer, { to: 'string' });
+              const initialDatasets = JSON.parse(decompressed);
               this.unfiltered = initialDatasets.sort((a, b) => {
                 const titleA = a.title ? a.title.toLowerCase() : '';
                 const titleB = b.title ? b.title.toLowerCase() : '';

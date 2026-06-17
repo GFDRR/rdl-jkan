@@ -1,21 +1,20 @@
-FROM ruby:2.7.8-bullseye
+FROM ruby:3.3
+
+RUN gem update --system
+RUN gem install bundler:4.0.3
 
 RUN apt-get update \
  && apt-get install -y --quiet --no-install-recommends \
- nodejs npm
-
-ENV GEM_HOME=/usr/gem
-ENV PATH="$GEM_HOME/bin/:$PATH" 
-
-RUN gem install bundler -v '2.2.11'
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+ nodejs npm build-essential ruby-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /srv/jekyll
+
 COPY Gemfile Gemfile.lock ./
+
+RUN bundle config set --local frozen true
 RUN bundle install
 
-# Add so gh-pages can detect git remotes
 RUN git config --global --add safe.directory /srv/jekyll
 
 CMD ["/bin/bash"]
