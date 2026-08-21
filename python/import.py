@@ -1,0 +1,170 @@
+import json
+import sqlite3
+import os
+from pathlib import Path
+
+from mappers import make_dataset_frontmatter
+
+DATA_PATH = Path("/Users/lydiascarf/Desktop/web/rdl-jkan/_site/data.json")
+DB_PATH = Path("/Users/lydiascarf/Desktop/web/rdl-jkan/sqlite.db")
+
+
+def _serialize(value):
+    """Convert values that SQLite cannot store directly (e.g., lists) to JSON strings."""
+    if isinstance(value, (list, dict)):
+        return json.dumps(value, ensure_ascii=False)
+    return value
+
+
+def create_tables(conn: sqlite3.Connection):
+    cur = conn.cursor()
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS datasets (
+            id TEXT PRIMARY KEY,
+            title TEXT,
+            description TEXT,
+            license TEXT,
+            catalog TEXT,
+            risk_data_type TEXT,
+            slug TEXT,
+            spatial TEXT,
+            temporal TEXT,
+            frontmatter TEXT
+        )
+        """)
+    cur.execute("""
+        CREATE VIRTUAL TABLE IF NOT EXISTS datasets_fts 
+        USING fts5(
+            id, title, description, license, catalog, risk_data_type, slug,
+            tokenize='trigram'
+        )
+        """)
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS resources (
+            id TEXT PRIMARY KEY,
+            dataset_id TEXT NOT NULL,
+            title TEXT,
+            description TEXT,
+            access_url TEXT,
+            download_url TEXT,
+            media_type TEXT,
+            format TEXT,
+            conforms_to TEXT,
+            spatial TEXT,
+            temporal TEXT,
+            FOREIGN KEY(dataset_id) REFERENCES datasets(id) ON DELETE CASCADE
+        )
+        """)
+    conn.commit()
+
+
+def insert_dataset(conn: sqlite3.Connection, fm: dict):
+    cur = conn.cursor()
+    dataset_id = _serialize(fm.get("dataset_id"))
+    title = _serialize(fm.get("title"))
+    description = _serialize(fm.get("description"))
+    license = _serialize(fm.get("license"))
+    catalog = _serialize(fm.get("catalog"))
+    risk_data_type = _serialize(fm.get("risk_data_type"))
+    slug = _serialize(fm.get("slug"))
+    spatial = _serialize(fm.get("spatial"))
+    temporal = _serialize(fm.get("temporal"))
+
+    cur.execute(
+        """
+        INSERT OR REPLACE INTO datasets (
+            id, title, description, license, catalog, risk_data_type, slug,
+            spatial, temporal, frontmatter
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            dataset_id,
+            title,
+            description,
+            license,
+            catalog,
+            risk_data_type,
+            slug,
+            spatial,
+            temporal,
+            json.dumps(fm),
+        ),
+    )
+
+    cur.execute(
+        """
+        INSERT OR REPLACE INTO datasets_fts (
+            id, title, description, license, catalog, risk_data_type, slug
+        ) VALUES (?, ?, ?, ?, ?, ?, ?)
+        """,
+        (dataset_id, title, description, license, catalog, risk_data_type, slug),
+    )
+
+    # Insert resources linked to this dataset
+    for res in fm.get("resources", []):
+        cur.execute(
+            """
+            INSERT OR REPLACE INTO resources (
+                id, dataset_id, title, description, access_url, download_url,
+                media_type, format, conforms_to, spatial, temporal
+            ) VALUES (
+                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+            )
+            """,
+            (
+                _serialize(res.get("id")),
+                dataset_id,
+                _serialize(res.get("title")),
+                _serialize(res.get("description")),
+                _serialize(res.get("access_url")),
+                _serialize(res.get("download_url")),
+                _serialize(res.get("media_type")),
+                _serialize(res.get("format")),
+                _serialize(res.get("conforms_to")),
+                _serialize(res.get("spatial")),
+                _serialize(res.get("temporal")),
+            ),
+        )
+
+    conn.commit()
+
+
+def main():
+    # Verify data file exists
+    if not DATA_PATH.is_file():
+        print(f"Data file not found: {DATA_PATH}")
+        return 1
+
+    # Load raw JSON
+    try:
+        with open(DATA_PATH, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+    except Exception as exc:
+        print(f"Failed to read JSON: {exc}")
+        return 1
+
+    datasets = raw.get("datasets", [])
+    if not datasets:
+        print("No datasets present in the JSON file.")
+        return 0
+
+    # Connect to (or create) the SQLite DB
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        create_tables(conn)
+        processed = 0
+        for ds in datasets:
+            try:
+                fm = make_dataset_frontmatter(ds)
+                insert_dataset(conn, fm)
+                processed += 1
+            except Exception as e:
+                print(f"Error processing dataset {ds.get('id', 'UNKNOWN')}: {e}")
+        print(f"Imported {processed} datasets into {DB_PATH}")
+    finally:
+        conn.close()
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
