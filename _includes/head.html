@@ -1,36 +1,20 @@
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link
     rel="icon"
     type="image/x-icon"
     href="{{ site.baseurl }}/favicon.ico"
   />
-
-  <title>
-    {% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
-  </title>
-  <meta
-    name="description"
-    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
-  />
-
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-    crossorigin="anonymous"
-  />
-
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   {% assign theme_name = site.jkan_theme | default: 'Default' %} {% assign theme
   = site.data.themes | where:'name', theme_name | first %} {% if theme and
   theme.src and theme.src != empty %}
   <link rel="stylesheet" href="{{ theme.src }}" />
   {% endif %}
-
-  <!-- Leaflet CSS for spatial extent maps -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin="anonymous" />
@@ -42,30 +26,20 @@
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
   <!-- jQuery (required for Bootstrap) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <!-- Bootstrap JS -->
   <script
     src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
     integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
     crossorigin="anonymous"
   ></script>
-  <!-- Leaflet JS for spatial extent maps -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin="anonymous"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.js" integrity="sha512-Yra4xuTWinXfBpG2ftgDX8MVmMiOev1FtqiYs51+kEna/5peD0kZqAL1syYCH61f9gxmAFidIJz42IKcRhWMkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script
     defer
     src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.8/dist/cdn.min.js"
   ></script>
-  <script type="module">
-    try {
-      const { pipeline } =
-        await import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0-next.5");
-      window.pipeline = pipeline;
-    } catch (error) {
-      console.warn("Failed to load transformers pipeline:", error);
-    }
-  </script>
+
   <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
@@ -78,114 +52,43 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css"
   />
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/modern-theme.css" />
-  <link
-    rel="canonical"
-    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
-  />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   {% if site.digital_analytics_program.enabled == true %}
-  <!-- US Digital Analytics Program - see https://analytics.usa.gov for data-->
-  <script
-    id="_fed_an_ua_tag"
-    src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency={{ site.digital_analytics_program.agency }}&subagency={{ site.digital_analytics_program.subagency }}"
-  ></script>
-  {% endif %} {% if site.google_analytics.enabled == true %}
-  <!-- Google Analytics -->
-  {% include addons/google-analytics.html %} {% endif %} {% if
-  site.hypothesis.enabled == true %}
-  <!-- Hypothesis.io -->
-  <script async defer src="//hypothes.is/embed.js"></script>
-  {% endif %} {% if site.opengraph.enabled == true %}
-  <!-- Open Graph -->
-  {% include addons/opengraph.html %} {% endif %} {% if site.twittercard.enabled
-  == true %}
-  <!-- Twittercard -->
-  {% include addons/twittercard.html %} {% endif %}
+    <!-- US Digital Analytics Program - see https://analytics.usa.gov for data-->
+    <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency={{ site.digital_analytics_program.agency }}&subagency={{ site.digital_analytics_program.subagency }}"></script>
+  {% endif %}
+
+  {% if site.google_analytics.enabled == true %}
+    <!-- Google Analytics -->
+    {% include addons/google-analytics.html %}
+  {% endif %}
+
+  {% if site.hypothesis.enabled == true %}
+    <!-- Hypothesis.io -->
+    <script async defer src="//hypothes.is/embed.js"></script>
+  {% endif %}
+
+  {% if site.opengraph.enabled == true %}
+    <!-- Open Graph -->
+    {% include addons/opengraph.html %}
+  {% endif %}
+
+  {% if site.twittercard.enabled == true %}
+    <!-- Twittercard -->
+    {% include addons/twittercard.html %}
+  {% endif %}
 
   <script>
-      const BASE_URL = {{ site.baseurl | jsonify }};
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
 
-      // Slugify function (matches Jekyll's slugify)
-      function slugify(text) {
-        return text.toString().toLowerCase().trim()
-          .replace(/[^a-zA-Z0-9]/g, '-')
-          .replace(/\-\-+/g, '-')
-          .replace(/^\-|\-$/i, '');
-      }
-      window.slugify = slugify;
-      document.addEventListener('alpine:init', async () => {
-        Alpine.store('datasets', {
-          BASE_URL,
-          unfiltered: [],
-          isLoading: true,
-
-          async fetchUnfiltered() {
-            this.isLoading = true;
-            try {
-              const response = await fetch(`${BASE_URL ?? ''}/rdl-datasets.json.gz`);
-              if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-              }
-              const arrayBuffer = await response.arrayBuffer()
-              const decompressed = pako.inflate(arrayBuffer, { to: 'string' });
-              const initialDatasets = JSON.parse(decompressed);
-              this.unfiltered = initialDatasets.sort((a, b) => {
-                const titleA = a.title ? a.title.toLowerCase() : '';
-                const titleB = b.title ? b.title.toLowerCase() : '';
-                if (titleA < titleB) return -1;
-                if (titleA > titleB) return 1;
-                return 0;
-              });
-            } catch (error) {
-              console.error('Failed to fetch data:', error);
-            } finally {
-              this.isLoading = false;
-            }
-          },
-
-          // Load filters and search from URL params
-          loadFromUrlParams() {
-            const urlParams = new URLSearchParams(window.location.search);
-
-            // Load search query
-            const searchQuery = urlParams.get('q') || '';
-
-            // Load filter values for each filter type
-            const filters = {};
-            const filterTypes = ['catalog', 'category', 'geo_coverage', 'geo_scale', 'hazard_type', 'license_code', 'project'];
-            filterTypes.forEach(filterType => {
-              const values = urlParams.getAll(filterType + '[]');
-              if (values.length > 0) {
-                filters[filterType] = values;
-              }
-            });
-
-            return { searchQuery, filters };
-          },
-
-          // Update URL params based on current filters and search
-          updateUrlParams(query = '', filters = {}) {
-            const urlParams = new URLSearchParams();
-
-            // Add search query if present
-            if (query && query.trim()) {
-              urlParams.set('q', query.trim());
-            }
-
-            // Add filter values
-            Object.entries(filters).forEach(([filterType, values]) => {
-              values.forEach(value => {
-                urlParams.append(filterType + '[]', value);
-              });
-            });
-
-            // Update URL without reloading page
-            const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
-            window.history.replaceState({}, '', newUrl);
-          },
-        })
-        await Alpine.store('datasets').fetchUnfiltered()
-      })
+  var settings = {
+    BASE_URL: {{ site.baseurl | jsonify }} || "",
+    PAGE_URL: {{ page.url | jsonify }},
+    REPO_BRANCH: {% if site.github.is_user_page %}"main"{% else %}"main"{% endif %},
+    REPO_OWNER: {{ site.github.owner_name | jsonify }},
+    REPO_NAME: {{ site.github.project_title | jsonify }}
+  }
   </script>
 </head>

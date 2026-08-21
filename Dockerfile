@@ -1,7 +1,7 @@
-FROM ruby:3.3
+FROM ruby:4.0.4
 
 RUN gem update --system
-RUN gem install bundler:4.0.3
+RUN gem install bundler:4.0.10
 
 RUN apt-get update \
  && apt-get install -y --quiet --no-install-recommends \

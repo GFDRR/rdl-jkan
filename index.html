@@ -11,10 +11,7 @@ layout: default
         // Constants
         KEYWORD_SCORE_MIN: 0.75,
         KEYWORD_SCORE_MAX: 1.0,
-        SCORED_FIELDS: ['catalog', 'category', 'creator.name', 'dataset_id', 'description', 'details', 'geo_coverage', 'license', 'notes', 'project', 'resources', 'title'],
-        SEMANTIC_MAX_RESULTS: 50,
-        SEMANTIC_MIN_SCORE: 0.25,
-
+        SCORED_FIELDS: ['catalog', 'risk_data_type', 'creator.name', 'id', 'description', 'details', 'geo_coverage', 'license', 'notes', 'project', 'resources', 'title'],
         getCountryEmoji(code) {
           return window.emojiMap[code];
         },
@@ -81,7 +78,7 @@ layout: default
         showScales: 5,
         filters: {
           catalog: [],
-          category: [],
+          risk_data_type: [],
           geo_coverage: [],
           geo_scale: [],
           hazard_type: [],
@@ -93,19 +90,19 @@ layout: default
           switch (filterType) {
             case 'catalog':
               return (dataset.catalog || 'Other').toString().split(',').map(c => c.trim()).filter(c => c);
-            case 'category':
-              return Array.isArray(dataset.category) ? dataset.category : [dataset.category];
+            case 'risk_data_type':
+              return Array.isArray(dataset.risk_data_type) ? dataset.risk_data_type : [dataset.risk_data_type];
             case 'geo_coverage':
-              return Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage : [dataset.geo_coverage];
+              return dataset.spatial?.countries || [];
             case 'geo_scale':
-              return dataset.geo_scale ? dataset.geo_scale.split(',') : [];
+              return dataset.spatial?.scale ? dataset.spatial?.scale.split(',') : [];
             case 'hazard_type':
-              if (dataset.category === 'exposure' || dataset.category?.includes('exposure')) return [];
-              return Array.isArray(dataset.hazard_type) ? dataset.hazard_type : [dataset.hazard_type];
+              if (!dataset.hazard) return [];
+              return String(dataset.hazard.type || '').split(',').map(h => h.trim()).filter(h => h);
             case 'license_code':
-              return dataset.license_code ? dataset.license_code.split(',') : [];
+              return dataset.license ? dataset.license.split(',') : [];
             case 'project':
-              return dataset.project ? [dataset.project] : [];
+              return dataset.project ? [dataset.project.name] : [];
           }
           return [];
         },
@@ -138,7 +135,7 @@ layout: default
 
         getDatasetsForFilterOptions(excludeFilterType) {
           const baseDatasets = this.query.trim() 
-            ? this.filteredKeywordResults.map(r => r.metadata)
+            ? this.filteredKeywordResults
             : $store.datasets.unfiltered;
           return this.applyFiltersExcluding(excludeFilterType, baseDatasets);
         },
@@ -149,7 +146,7 @@ layout: default
 
         applyFiltersExcluding(excludeFilterType = null, datasets = null) {
           const toFilter = datasets || $store.datasets.unfiltered;
-          const filterTypes = ['catalog', 'category', 'geo_coverage', 'geo_scale', 'hazard_type', 'license_code', 'project'];
+          const filterTypes = ['catalog', 'risk_data_type', 'geo_coverage', 'geo_scale', 'hazard_type', 'license_code', 'project'];
           return toFilter.filter(dataset => 
             filterTypes.every(type => 
               type === excludeFilterType || this.datasetMatchesFilter(dataset, type)
@@ -197,138 +194,27 @@ layout: default
 
         // Search
         query: '',
-        model: null,
-        vectors: {},
         filteredKeywordResults: [],
         filteredNonKeywordResults: [],
-        filteredSemanticResults: [],
-        isTransformerModelLoading: false,
-        isEmbeddedMetadataLoading: false,
 
         keywordSearch() {
-          const lowerCaseQuery = this.query.toLowerCase();
-          const keywordMatches = [];
-          const nonMatches = [];
-          
-          for (const dataset of $store.datasets.unfiltered) {
-            let matchCount = 0;
-            for (const key of this.SCORED_FIELDS) {
-              if (dataset[key] && JSON.stringify(dataset[key]).toLowerCase().includes(lowerCaseQuery)) {
-                matchCount++;
-              }
-            }
-            
-            if (matchCount > 0) {
-              keywordMatches.push({
-                metadata: dataset,
-                score: this.KEYWORD_SCORE_MIN + (this.KEYWORD_SCORE_MAX - this.KEYWORD_SCORE_MIN) * (matchCount / this.SCORED_FIELDS.length),
-                isKeywordMatch: true,
-                isSemanticMatch: false
-              });
-            } else {
-              nonMatches.push(dataset);
-            }
-          }
-          this.filteredKeywordResults = keywordMatches;
-          this.filteredNonKeywordResults = nonMatches;
-        },
-
-        async loadTransformerModel() {
-          this.isTransformerModelLoading = true;
-          try {
-            let retries = 0;
-            while (typeof window.pipeline === 'undefined' && retries < 50) {
-              await new Promise(resolve => setTimeout(resolve, 100));
-              retries++;
-            }
-            if (typeof window.pipeline === 'undefined') throw new Error('Pipeline not available');
-            this.model = await window.pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', { dtype: 'q8' });
-          } catch (error) {
-            console.warn('Semantic search unavailable:', error.message);
-          } finally {
-            this.isTransformerModelLoading = false;
-          }
-        },
-        
-        async loadEmbeddedMetadata() {
-          this.isEmbeddedMetadataLoading = true;
-          try {
-            const response = await fetch(`${$store.datasets.BASE_URL ?? ''}/python/vectors.min.json`)
-            const arrayBuffer = await response.arrayBuffer()
-            const decompressed = pako.inflate(arrayBuffer, { to: 'string' });
-            const vectorsArray = JSON.parse(decompressed);
-            this.vectors = vectorsArray.reduce((acc, item) => {
-              if (item.metadata?.dataset_id) acc[item.metadata.dataset_id] = item.vector;
-              return acc;
-            }, {});
-          } catch (error) {
-            console.error('Failed to load vectors:', error);
-          } finally {
-            this.isEmbeddedMetadataLoading = false;
-          }
-        },
-        
-        async embedQueryAsVector(query) {
-          if (!this.model) return null;
-          const result = await this.model([query.trim()], { pooling: 'mean', normalize: true });
-          return Array.from(result.data);
-        },
-        
-        calculateCosineSimilarity(vecA, vecB) {
-          const dotProduct = vecA.reduce((sum, val, i) => sum + val * vecB[i], 0);
-          const magnitudeA = Math.sqrt(vecA.reduce((sum, val) => sum + val * val, 0));
-          const magnitudeB = Math.sqrt(vecB.reduce((sum, val) => sum + val * val, 0));
-          return dotProduct / (magnitudeA * magnitudeB);
-        },
-
-        async semanticSearch(query) {
-          if (!query.trim() || !this.model || !Object.keys(this.vectors).length) {
-            this.filteredSemanticResults = [];
-            return;
-          }
-          
-          const embeddedQuery = await this.embedQueryAsVector(query);
-          if (!embeddedQuery) {
-            this.filteredSemanticResults = [];
-            return;
-          }
-          
-          this.filteredSemanticResults = this.filteredNonKeywordResults
-            .map(result => {
-              const datasetVector = this.vectors[result.dataset_id];
-              if (!datasetVector) return null;
-              const similarity = this.calculateCosineSimilarity(embeddedQuery, datasetVector);
-              return similarity >= this.SEMANTIC_MIN_SCORE ? {
-                metadata: result,
-                score: similarity,
-                isKeywordMatch: false,
-                isSemanticMatch: true
-              } : null;
-            })
-            .filter(Boolean)
-            .sort((a, b) => b.score - a.score)
-            .slice(0, this.SEMANTIC_MAX_RESULTS);
+          // Delegate search to store's optimized SQL search via sql.js
+          $store.datasets.keywordSearch();
+          // Update local cache for filter options (we could also get from store)
+          this.filteredKeywordResults = $store.datasets.filteredKeywordResults;
+          this.filteredNonKeywordResults = $store.datasets.filteredNonKeywordResults;
         },
         
         get results() {
           if (!this.query.trim()) {
-            return this.applyFilters().map(dataset => ({
-              metadata: dataset,
-              score: 0.5,
-              isKeywordMatch: false,
-              isSemanticMatch: false
-            }));
+            return this.applyFilters();
           }
           const filteredIds = new Set(this.applyFilters().map(d => d.dataset_id));
-          return [...this.filteredKeywordResults, ...this.filteredSemanticResults]
-            .filter(r => filteredIds.has(r.metadata.dataset_id))
-            .sort((a, b) => b.score - a.score);
+          return this.filteredKeywordResults
+            .filter(r => filteredIds.has(r.dataset_id))
         },
 
         init() {
-          this.loadTransformerModel();
-          this.loadEmbeddedMetadata();
-          
           this.$watch('$store.datasets.isLoading', (value) => {
             if (!value && $store.datasets.unfiltered.length > 0) {
               const { searchQuery, filters } = $store.datasets.loadFromUrlParams();
@@ -342,25 +228,13 @@ layout: default
             $store.datasets.updateUrlParams(value, this.filters);
             if ($store.datasets.unfiltered.length === 0) return;
             this.keywordSearch();
-            if (value.trim() && this.model && Object.keys(this.vectors).length > 0) {
-              this.semanticSearch(value);
-            }
+           
           });
           this.$watch('query', () => this.currentPage = 1);
           this.$watch('filters', () => {
             $store.datasets.updateUrlParams(this.query, this.filters);
             this.currentPage = 1;
           }, { deep: true });
-          this.$watch('isTransformerModelLoading', (value) => {
-            if (!value && !this.isEmbeddedMetadataLoading && this.query.trim() && this.model && Object.keys(this.vectors).length > 0) {
-              this.semanticSearch(this.query);
-            }
-          });
-          this.$watch('isEmbeddedMetadataLoading', (value) => {
-            if (!value && !this.isTransformerModelLoading && this.query.trim() && this.model && Object.keys(this.vectors).length > 0) {
-              this.semanticSearch(this.query);
-            }
-          });
         },
     }"
   >
@@ -405,14 +279,14 @@ layout: default
         <h4>Risk Component</h4>
         <div class="list-group">
           <template
-            x-for="item in getFilterOptions('category', getDatasetsForFilterOptions('category')).slice(0, showCategories)"
+            x-for="item in getFilterOptions('risk_data_type', getDatasetsForFilterOptions('risk_data_type')).slice(0, showCategories)"
             :key="item.slug"
           >
             <a
               href="#"
               class="list-group-item"
               :class="{ 'active': item.selected }"
-              @click.prevent="toggleFilter('category', item.slug)"
+              @click.prevent="toggleFilter('risk_data_type', item.slug)"
             >
               <span class="filter-icon" :class="item.slug"></span>
               <span
@@ -433,7 +307,7 @@ layout: default
           <a
             href="#"
             class="list-group-item"
-            x-show="getFilterOptions('category', getDatasetsForFilterOptions('category')).filter(i => i.count > 0).length > showCategories"
+            x-show="getFilterOptions('risk_data_type', getDatasetsForFilterOptions('risk_data_type')).filter(i => i.count > 0).length > showCategories"
             @click.prevent="showCategories = showCategories + 10"
             style="text-align: center"
             >Show more...</a
@@ -698,14 +572,14 @@ layout: default
       <div>
         <template
           x-for="dataset in paginatedDatasets"
-          :key="dataset.metadata.dataset_id"
+          :key="dataset.dataset_id"
         >
           <article class="dataset-card">
             <!-- Category Badges - show all categories -->
-            <div x-show="dataset.metadata.category" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
-              <template x-if="Array.isArray(dataset.metadata.category)">
+            <div x-show="dataset.risk_data_type" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <template x-if="Array.isArray(dataset.risk_data_type)">
                 <div style="display: contents;">
-                  <template x-for="cat in dataset.metadata.category" :key="cat">
+                  <template x-for="cat in dataset.risk_data_type" :key="cat">
                     <div class="category-badge" :class="cat.toLowerCase()">
                       <span class="badge-icon"></span>
                       <span x-text="cat"></span>
@@ -713,27 +587,17 @@ layout: default
                   </template>
                 </div>
               </template>
-              <template x-if="!Array.isArray(dataset.metadata.category)">
-                <div class="category-badge" :class="dataset.metadata.category.toLowerCase()">
+              <template x-if="!Array.isArray(dataset.risk_data_type)">
+                <div class="category-badge" :class="dataset.risk_data_type.toLowerCase()">
                   <span class="badge-icon"></span>
-                  <span x-text="dataset.metadata.category"></span>
+                  <span x-text="dataset.risk_data_type"></span>
                 </div>
               </template>
             </div>
 
             <h3>
-              <a x-bind:href="dataset.metadata.url" x-text="dataset.metadata.title"></a>
-                            <span
-                x-show="dataset.isSemanticMatch"
-                x-init="$nextTick(() => { if (typeof $ !== 'undefined' && $.fn.tooltip) { $($el).tooltip(); } })"
-                class="label label-info"
-                style="margin-left: 8px; cursor: help"
-                data-toggle="tooltip"
-                data-placement="right"
-                :title="`Semantic match (similarity: ${dataset.score?.toFixed(3) || 'N/A'})`"
-              >
-                <i class="fa fa-magic" aria-hidden="true"></i> Semantic
-              </span>
+              <a x-bind:href="dataset.url" x-text="dataset.title"></a>
+                 
             </h3>
             <div
               x-data="{ open: false }"
@@ -741,31 +605,31 @@ layout: default
             >
               <p class="card-description desc-text"
                  x-ref="description"
-                 x-text="dataset.metadata.description || ''"></p>
+                 x-text="dataset.description || ''"></p>
               <button x-show="$refs.description.scrollHeight > $refs.description.clientHeight" class="desc-toggle" @click="open = ! open" x-text="open ? 'Show less' : 'Show more'"></button>
             </div>
 
             <div class="card-footer">
-              <div class="meta-item" x-show="dataset.metadata.creator && dataset.metadata.creator.name">
+              <div class="meta-item" x-show="dataset.creator && dataset.creator.name">
                 <i class="fa fa-user"></i>
-                <strong x-text="dataset.metadata.creator?.name || 'Unknown'"></strong>
+                <strong x-text="dataset.creator?.name || 'Unknown'"></strong>
               </div>
-              <div class="meta-item" x-show="dataset.metadata.version">
+              <div class="meta-item" x-show="dataset.version">
                 <i class="fa fa-code-fork"></i>
-                <span x-text="`Version ${dataset.metadata.version}`"></span>
+                <span x-text="`Version ${dataset.version}`"></span>
               </div>
-              <div class="meta-item" x-show="dataset.metadata.geo_coverage">
+              <div class="meta-item" x-show="dataset.geo_coverage">
                 <i class="fa fa-map-marker"></i>
-                <span x-text="Array.isArray(dataset.metadata.geo_coverage) ? dataset.metadata.geo_coverage.join(', ') : dataset.metadata.geo_coverage"></span>
+                <span x-text="Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage.join(', ') : dataset.geo_coverage"></span>
               </div>
-              <div class="meta-item" x-show="dataset.metadata.license_code">
+              <div class="meta-item" x-show="dataset.license_code">
                 <i class="fa fa-legal"></i>
-                <a x-show="dataset.metadata.license_url" x-bind:href="dataset.metadata.license_url" x-text="dataset.metadata.license_code"></a>
-                <span x-show="!dataset.metadata.license_url" x-text="dataset.metadata.license_code"></span>
+                <a x-show="dataset.license_url" x-bind:href="dataset.license_url" x-text="dataset.license_code"></a>
+                <span x-show="!dataset.license_url" x-text="dataset.license_code"></span>
               </div>
-              <div class="meta-item" x-show="dataset.metadata.modified">
+              <div class="meta-item" x-show="dataset.modified">
                 <i class="fa fa-calendar"></i>
-                <span x-text="'Updated ' + dataset.metadata.modified"></span>
+                <span x-text="'Updated ' + dataset.modified"></span>
               </div>
             </div>
           </article>
