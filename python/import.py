@@ -88,7 +88,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
 
     cur.execute(
         """
-        INSERT OR REPLACE INTO catalogs (title, url, slug)
+        INSERT OR IGNORE INTO catalogs (title, url, slug)
         VALUES (?, ?, ?)
         """,
         (
@@ -98,7 +98,6 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
         ),
     )
     catalog_slug = catalog.get("slug", None)
-    print(f"Dataset: {title}, Catalog slug: {catalog_slug}, Full catalog: {catalog}")
     cur.execute(
         """
         INSERT OR REPLACE INTO datasets (
