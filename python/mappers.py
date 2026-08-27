@@ -4,6 +4,7 @@ Differences between RDLS and output frontmatter:
 """
 
 import config
+from utils import slugify
 
 
 def make_dataset_frontmatter(dataset):
@@ -37,10 +38,8 @@ def make_dataset_frontmatter(dataset):
         ],
         "hazard": make_hazard_top_level(dataset.get("hazard")),
         "lineage": make_lineage(dataset["lineage"]) if "lineage" in dataset else None,
-        "loss": {
-            "losses": loss
-        } if loss else None,
-        "project": make_project(dataset["project"]) if "project" in dataset else None,
+        "loss": {"losses": loss} if loss else None,
+        "project": make_project(dataset.get("project", None)),
         "purpose": dataset.get("purpose"),
         "referenced_by": [
             make_related_resource(related_resource)
@@ -97,10 +96,18 @@ def make_catalog(dataset):
     ]
 
     for url in link_hrefs + access_urls:
-        for prefix, label in config.dataset_catalogs.items():
+        for prefix, title in config.dataset_catalogs.items():
             if url is not None and prefix in url:
-                return label
-    return None
+                return {
+                    "title": title,
+                    "url": prefix,
+                    "slug": slugify(title),
+                }
+    return {
+        "title": "Unknown",
+        "url": None,
+        "slug": "unknown",
+    }
 
 
 def make_classification(classification):
@@ -213,18 +220,15 @@ def make_hazard_top_level(hazard):
         return None
     event_sets = [make_event_set(event_set) for event_set in hazard["event_sets"]]
     hazard_types = []
-    
+
     for event_set in event_sets:
-        if event_set.get('hazards'):
-            hazard_type = event_set['hazards'][0].get('type')
-            
+        if event_set.get("hazards"):
+            hazard_type = event_set["hazards"][0].get("type")
+
             if hazard_type not in hazard_types:
                 hazard_types.append(hazard_type)
-                
-    return {
-        "event_sets": event_sets,
-        "type": ", ".join(hazard_types)
-    }
+
+    return {"event_sets": event_sets, "type": ", ".join(hazard_types)}
 
 
 def make_hazard(hazard):
@@ -365,8 +369,11 @@ def make_occurrence_probablilistic_probability(probability):
 
 
 def make_project(project):
+    if project is None:
+        return {"title": "Unknown", "url": None, "slug": "unknown"}
     return {
-        "name": project["name"],
+        "title": project["name"],
+        "slug": slugify(project["name"]),
         "url": project.get("url"),
     }
 

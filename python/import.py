@@ -5,7 +5,7 @@ from pathlib import Path
 
 from mappers import make_dataset_frontmatter
 
-DATA_PATH = Path("/Users/lydiascarf/Desktop/web/rdl-jkan/_site/data.json")
+DATA_PATH = Path("/Users/lydiascarf/Desktop/web/rdl-jkan/_site/datasets.json")
 DB_PATH = Path("/Users/lydiascarf/Desktop/web/rdl-jkan/sqlite.db")
 
 
@@ -18,29 +18,43 @@ def _serialize(value):
 
 def create_tables(conn: sqlite3.Connection):
     cur = conn.cursor()
+    cur.execute("PRAGMA foreign_keys = ON;")
+    cur.execute("DROP TABLE IF EXISTS datasets")
+    cur.execute("DROP TABLE IF EXISTS datasets_fts")
+    cur.execute("DROP TABLE IF EXISTS catalogs")
+    cur.execute("DROP TABLE IF EXISTS resources")
     cur.execute("""
-        CREATE TABLE IF NOT EXISTS datasets (
+        CREATE TABLE datasets (
             id TEXT PRIMARY KEY,
             title TEXT,
             description TEXT,
             license TEXT,
-            catalog TEXT,
+            project TEXT,
+            catalog_slug TEXT,
             risk_data_type TEXT,
             slug TEXT,
             spatial TEXT,
             temporal TEXT,
-            frontmatter TEXT
-        )
+            frontmatter TEXT,
+            FOREIGN KEY(catalog_slug) REFERENCES catalogs(slug) ON DELETE SET NULL
+        );
         """)
     cur.execute("""
-        CREATE VIRTUAL TABLE IF NOT EXISTS datasets_fts 
+        CREATE TABLE catalogs (
+            slug TEXT PRIMARY KEY,
+            title TEXT,
+            url TEXT
+        );
+        """)
+    cur.execute("""
+        CREATE VIRTUAL TABLE datasets_fts 
         USING fts5(
-            id, title, description, license, catalog, risk_data_type, slug,
+            id, title, description,
             tokenize='trigram'
         )
         """)
     cur.execute("""
-        CREATE TABLE IF NOT EXISTS resources (
+        CREATE TABLE resources (
             id TEXT PRIMARY KEY,
             dataset_id TEXT NOT NULL,
             title TEXT,
@@ -64,25 +78,41 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     title = _serialize(fm.get("title"))
     description = _serialize(fm.get("description"))
     license = _serialize(fm.get("license"))
-    catalog = _serialize(fm.get("catalog"))
+    catalog = fm.get("catalog")
+    project = _serialize(fm.get("project"))
     risk_data_type = _serialize(fm.get("risk_data_type"))
     slug = _serialize(fm.get("slug"))
     spatial = _serialize(fm.get("spatial"))
     temporal = _serialize(fm.get("temporal"))
 
+
+    cur.execute(
+        """
+        INSERT OR REPLACE INTO catalogs (title, url, slug)
+        VALUES (?, ?, ?)
+        """,
+        (
+            catalog.get("title"),
+            catalog.get("url"),
+            catalog.get("slug"),
+        ),
+    )
+    catalog_slug = catalog.get("slug", None)
+    print(f"Dataset: {title}, Catalog slug: {catalog_slug}, Full catalog: {catalog}")
     cur.execute(
         """
         INSERT OR REPLACE INTO datasets (
-            id, title, description, license, catalog, risk_data_type, slug,
+            id, title, description, license, project, catalog_slug, risk_data_type, slug,
             spatial, temporal, frontmatter
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             dataset_id,
             title,
             description,
             license,
-            catalog,
+            project,
+            catalog_slug,
             risk_data_type,
             slug,
             spatial,
@@ -94,10 +124,10 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     cur.execute(
         """
         INSERT OR REPLACE INTO datasets_fts (
-            id, title, description, license, catalog, risk_data_type, slug
-        ) VALUES (?, ?, ?, ?, ?, ?, ?)
+            id, title, description
+        ) VALUES (?, ?, ?)
         """,
-        (dataset_id, title, description, license, catalog, risk_data_type, slug),
+        (dataset_id, title, description),
     )
 
     # Insert resources linked to this dataset
