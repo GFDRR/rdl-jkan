@@ -1,50 +1,46 @@
-/* global settings */
-import 'core-js/actual'
-import $ from 'jquery'
-import 'bootstrap/js/dist/collapse'
-import Alpine from 'alpinejs'
-  import persist from '@alpinejs/persist'
+import "core-js/actual";
+import $ from "jquery";
+import "bootstrap/js/dist/collapse";
+import Alpine from "alpinejs";
+import persist from "@alpinejs/persist";
 
-import DatasetsList from './components/datasets-list'
-import CategoriesFilter from './components/categories-filter'
-import OrganizationsFilter from './components/organizations-filter'
-import DatasetDisplay from './components/dataset-display'
-import {queryByComponent} from './util'
+import database from "./state/db";
+import filtering from "./state/filtering";
+import pagination from "./state/pagination";
+import search from "./state/search";
+import ui from "./state/ui";
+import { queryByComponent } from "./util";
 
-const urlSearchParams = new URLSearchParams(window.location.search)
-const params = {}
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = {};
 urlSearchParams.forEach((value, key) => {
-  params[key] = value
-})
+  params[key] = value;
+});
 
-// Helper function to ensure datasets.json is only fetched once per page
-let datasetsCache
-function getDatasets () {
-  datasetsCache = datasetsCache || $.getJSON(`${settings.BASE_URL}/datasets.json`)
-  return datasetsCache
-}
+window.Alpine = Alpine;
+Alpine.plugin(persist);
 
-// Check for these components on the page and initialize them
-const components = [
-  {tag: 'dataset-display', class: DatasetDisplay},
-  {tag: 'datasets-list', class: DatasetsList, usesDatasets: true},
-  {tag: 'categories-filter', class: CategoriesFilter, usesDatasets: true},
-  {tag: 'organizations-filter', class: OrganizationsFilter, usesDatasets: true}
-]
-for (let component of components) {
-  const els = queryByComponent(component.tag)
-  if (els.length) {
-    // If the component depends on datasets.json, fetch it first (once per page) and pass it
-    if (component.usesDatasets) {
-      getDatasets().then((datasets) => {
-        els.each((index, el) => new component.class({el: $(el), params, datasets})) // eslint-disable-line
-      })
-    // Otherwise simply initialize the component
-    } else {
-      els.each((index, el) => new component.class({el: $(el), params})) // eslint-disable-line
-    }
-  }
-}
+const indexStore = {
+  all: [],
+  display: [],
+};
 
-Alpine.plugin(persist)
-Alpine.start()
+// defineProperties to preserve getters, keeping `this` bound to the store
+Object.defineProperties(
+  indexStore,
+  Object.getOwnPropertyDescriptors(database),
+);
+Object.defineProperties(
+  indexStore,
+  Object.getOwnPropertyDescriptors(pagination),
+);
+Object.defineProperties(
+  indexStore,
+  Object.getOwnPropertyDescriptors(filtering),
+);
+Object.defineProperties(indexStore, Object.getOwnPropertyDescriptors(search));
+Object.defineProperties(indexStore, Object.getOwnPropertyDescriptors(ui));
+
+Alpine.store("index", indexStore);
+
+Alpine.start();
