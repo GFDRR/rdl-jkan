@@ -123,60 +123,8 @@ export default {
     return datasetValues.some((v) => v && values.includes(slugify(v)));
   },
 
-  async queryDatasetColumnOptions(queryOptions, retries = 5, delay = 1000) {
-    const {
-      column,
-      filterType,
-      joinedTable,
-      primaryKeyColumn,
-      foreignKeyColumn,
-    } = queryOptions;
-    if (this.db) {
-      const requiresJoin = !!joinedTable;
-      const result = requiresJoin
-        ? this.queryDB(`
-            SELECT ${joinedTable}.${column}, COUNT(*) as count
-            FROM datasets
-            LEFT JOIN ${joinedTable} ON datasets.${foreignKeyColumn} = ${joinedTable}.${primaryKeyColumn}
-            GROUP BY ${joinedTable}.${column}
-            ORDER BY ${joinedTable}.${column} ASC;
-          `)
-        : this.queryDB(
-            `
-          SELECT ${column}, COUNT(*) as count
-          FROM datasets
-          GROUP BY ${column}
-          ORDER BY ${column} ASC;
-        `,
-          );
-      console.log(result);
-      const values = result[0].values.map(([value, count]) => {
-        const { title, slug } = JSON.parse(value);
-
-        return {
-          title,
-          slug,
-          count,
-          // selected: this.isFilterActive(filterType, slug),
-        };
-      });
-      console.log(column, values);
-      return values;
-    } else {
-      if (retries > 0) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.queryDatasetColumnOptions(
-          queryOptions,
-          retries - 1,
-          delay * 2,
-        );
-      } else {
-        throw new Error("All retries failed");
-      }
-    }
-  },
-  getFilterOptions(filterType) {
-    return []
+  getFilterOptions(filterType, retries = 5, delay = 1000) {
+    return [];
   },
 
   async getFilterOptionsCatalog(retries = 5, delay = 1000) {
@@ -189,25 +137,87 @@ export default {
         ORDER BY catalogs.title ASC;
       `);
 
-      console.log(result);
       const values = result[0].values.map(([title, slug, count]) => {
+        return {
+          title,
+          slug,
+          count,
+          selected: this.isFilterActive("catalog", slug),
+        };
+      });
+      return values;
+    } else {
+      if (retries > 0) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        return this.getFilterOptionsCatalog(retries - 1, delay * 2);
+      } else {
+        throw new Error("All retries failed");
+      }
+    }
+  },
+  async getFilterOptionsProject(retries = 5, delay = 1000) {
+    if (this.db) {
+      const result = this.queryDB(
+        `
+          SELECT project, COUNT(*) as count
+          FROM datasets
+          GROUP BY project
+          ORDER BY project ASC;
+        `,
+      );
+      const values = result[0].values.map(([value, count]) => {
+        const { title, slug } = JSON.parse(value);
 
         return {
           title,
           slug,
           count,
-          selected: this.isFilterActive('catalog', slug),
+          selected: this.isFilterActive("project", slug),
         };
       });
-      console.log(values);
       return values;
     } else {
       if (retries > 0) {
         await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.getFilterOptionsCatalog(
-          retries - 1,
-          delay * 2,
-        );
+        return this.getFilterOptionsProject(retries - 1, delay * 2);
+      } else {
+        throw new Error("All retries failed");
+      }
+    }
+  },
+  async getFilterOptionsRiskDataType(retries = 5, delay = 1000) {
+    // so this will be interesting because it's an array
+    if (this.db) {
+      const result = this.queryDB(
+        `
+          SELECT risk_data_type, COUNT(*) as count
+          FROM datasets
+          GROUP BY risk_data_type
+          ORDER BY risk_data_type ASC;
+        `,
+      );
+      const values = Object.values(result[0].values.reduce(
+        (acc, [rdt_json, count]) => {
+          const rdt_array = JSON.parse(rdt_json);
+          rdt_array.forEach((slug) => {
+            if (acc[slug]) acc[slug]['count'] += count;
+            else acc[slug] = {
+              title:String(slug).charAt(0).toUpperCase() + String(slug).slice(1),
+              slug,
+              selected: this.isFilterActive("risk_data_type", slug),
+              count,
+            };
+          });
+
+          return acc;
+        },
+        {}
+      ));
+      return values;
+    } else {
+      if (retries > 0) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        return this.getFilterOptionsRiskDataType(retries - 1, delay * 2);
       } else {
         throw new Error("All retries failed");
       }
