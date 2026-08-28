@@ -14,7 +14,7 @@ export default {
     geo_coverage: [],
     geo_scale: [],
     hazard_type: [],
-    license_code: [],
+    license: [],
     project: [],
   },
 
@@ -40,7 +40,7 @@ export default {
           .split(",")
           .map((h) => h.trim())
           .filter((h) => h);
-      case "license_code":
+      case "license":
         return dataset.license ? dataset.license.split(",") : [];
       case "project":
         return dataset.project ? [dataset.project.name] : [];
@@ -96,7 +96,7 @@ export default {
       "geo_coverage",
       "geo_scale",
       "hazard_type",
-      "license_code",
+      "license",
       "project",
     ];
     return toFilter.filter((dataset) =>
@@ -113,7 +113,7 @@ export default {
     if (!values.length) return true;
     const datasetValues = this.getDatasetValues(dataset, filterType);
     if (
-      ["geo_coverage", "geo_scale", "license_code", "project"].includes(
+      ["geo_coverage", "geo_scale", "license", "project"].includes(
         filterType,
       )
     ) {
@@ -150,6 +150,33 @@ export default {
       if (retries > 0) {
         await new Promise((resolve) => setTimeout(resolve, delay));
         return this.getFilterOptionsCatalog(retries - 1, delay * 2);
+      } else {
+        throw new Error("All retries failed");
+      }
+    }
+  },
+  async getFilterOptionsLicense(retries = 5, delay = 1000) {
+    if (this.db) {
+      const result = this.queryDB(`
+        SELECT licenses.title, licenses.slug, COUNT(*) as count
+        FROM datasets
+        LEFT JOIN licenses ON datasets.license_slug = licenses.slug
+        GROUP BY licenses.slug
+        ORDER BY licenses.title ASC;
+      `);
+      const values = result[0].values.map(([title, slug, count]) => {
+        return {
+          title,
+          slug,
+          count,
+          selected: this.isFilterActive("license", slug),
+        };
+      });
+      return values;
+    } else {
+      if (retries > 0) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        return this.getFilterOptionsLicense(retries - 1, delay * 2);
       } else {
         throw new Error("All retries failed");
       }

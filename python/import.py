@@ -22,25 +22,34 @@ def create_tables(conn: sqlite3.Connection):
     cur.execute("DROP TABLE IF EXISTS datasets")
     cur.execute("DROP TABLE IF EXISTS datasets_fts")
     cur.execute("DROP TABLE IF EXISTS catalogs")
+    cur.execute("DROP TABLE IF EXISTS licenses")
     cur.execute("DROP TABLE IF EXISTS resources")
     cur.execute("""
         CREATE TABLE datasets (
             id TEXT PRIMARY KEY,
-            title TEXT,
-            description TEXT,
-            license TEXT,
-            project TEXT,
             catalog_slug TEXT,
+            description TEXT,
+            frontmatter TEXT,
+            license_slug TEXT,
+            project TEXT,
             risk_data_type TEXT,
             slug TEXT,
             spatial TEXT,
             temporal TEXT,
-            frontmatter TEXT,
-            FOREIGN KEY(catalog_slug) REFERENCES catalogs(slug) ON DELETE SET NULL
+            title TEXT,
+            FOREIGN KEY(catalog_slug) REFERENCES catalogs(slug) ON DELETE SET NULL,
+            FOREIGN KEY(license_slug) REFERENCES licenses(slug) ON DELETE SET NULL
         );
         """)
     cur.execute("""
         CREATE TABLE catalogs (
+            slug TEXT PRIMARY KEY,
+            title TEXT,
+            url TEXT
+        );
+        """)
+    cur.execute("""
+        CREATE TABLE licenses (
             slug TEXT PRIMARY KEY,
             title TEXT,
             url TEXT
@@ -77,7 +86,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     dataset_id = _serialize(fm.get("dataset_id"))
     title = _serialize(fm.get("title"))
     description = _serialize(fm.get("description"))
-    license = _serialize(fm.get("license"))
+    license = fm.get("license")
     catalog = fm.get("catalog")
     project = _serialize(fm.get("project"))
     risk_data_type = _serialize(fm.get("risk_data_type"))
@@ -85,7 +94,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     spatial = _serialize(fm.get("spatial"))
     temporal = _serialize(fm.get("temporal"))
 
-
+    catalog_slug = catalog.get("slug")
     cur.execute(
         """
         INSERT OR IGNORE INTO catalogs (title, url, slug)
@@ -94,14 +103,25 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
         (
             catalog.get("title"),
             catalog.get("url"),
-            catalog.get("slug"),
+            catalog_slug,
         ),
     )
-    catalog_slug = catalog.get("slug", None)
+    license_slug = license.get("slug")
+    cur.execute(
+        """
+        INSERT OR IGNORE INTO licenses (title, url, slug)
+        VALUES (?, ?, ?)
+        """,
+        (
+            license.get("title"),
+            license.get("url"),
+            license_slug,
+        ),
+    )
     cur.execute(
         """
         INSERT OR REPLACE INTO datasets (
-            id, title, description, license, project, catalog_slug, risk_data_type, slug,
+            id, title, description, license_slug, project, catalog_slug, risk_data_type, slug,
             spatial, temporal, frontmatter
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
@@ -109,7 +129,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
             dataset_id,
             title,
             description,
-            license,
+            license_slug,
             project,
             catalog_slug,
             risk_data_type,
