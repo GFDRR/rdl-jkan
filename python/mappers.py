@@ -19,7 +19,7 @@ def make_dataset_frontmatter(dataset):
         "creator": make_entity(dataset["creator"]),
         "dataset_id": dataset["id"],
         "description": dataset["description"],
-        "license": dataset["license"],
+        "license": make_license(dataset["license"]),
         "links": dataset["links"],
         "publisher": make_entity(dataset["publisher"]),
         "resources": [make_resource(resource) for resource in dataset["resources"]],
@@ -264,6 +264,20 @@ def make_impact_and_losses(impact_and_losses):
         "loss_frequency_type": impact_and_losses["loss_frequency_type"],
         # optional
         "impact": make_impact(impact_and_losses.get("impact")),
+    }
+
+def make_license(license_code):
+    for key, license in config.dataset_licenses.items():
+        if license_code is not None and license_code == key:
+            return {
+                "title": license_code,
+                "url": license["url"],
+                "slug": slugify(license_code),
+            }
+    return {
+        "title": "Unknown",
+        "url": None,
+        "slug": "unknown",
     }
 
 

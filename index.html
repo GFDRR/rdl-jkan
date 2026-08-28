@@ -315,14 +315,14 @@ layout: default
             <h4>Licenses</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptions('license_code', $store.index.getDatasetsForFilterOptions('license_code')).slice(0, $store.index.showLicenses)"
+                x-for="item in $store.index.getFilterOptionsLicense()"
                 :key="item.slug"
               >
                 <a
                   href="#"
                   class="list-group-item"
                   :class="{ 'active': item.selected }"
-                  @click.prevent="$store.index.toggleFilter('license_code', item.slug)"
+                  @click.prevent="$store.index.toggleFilter('license', item.slug)"
                 >
                   <span
                     class="list-group-item-truncate"

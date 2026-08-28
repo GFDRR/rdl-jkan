@@ -12,7 +12,20 @@ remote_target_branch = "rdl-1.0"
 # Search configuration constants (matching front-end hybrid search logic)
 KEYWORD_SCORE_MIN = 0.75
 KEYWORD_SCORE_MAX = 1.0
-SCORED_FIELDS = ['catalog', 'category', 'creator.name', 'dataset_id', 'description', 'details', 'geo_coverage', 'license', 'notes', 'project', 'resources', 'title']
+SCORED_FIELDS = [
+    "catalog",
+    "category",
+    "creator.name",
+    "dataset_id",
+    "description",
+    "details",
+    "geo_coverage",
+    "license",
+    "notes",
+    "project",
+    "resources",
+    "title",
+]
 SEMANTIC_MAX_RESULTS = 50
 SEMANTIC_MIN_SCORE = 0.25
 
@@ -41,4 +54,48 @@ dataset_catalogs = {
     "figshare.com": "figshare",
     "datadryad.org": "Dryad",
     "data.europa.eu": "European Data Portal",
+}
+
+dataset_licenses = {
+    "CC0-1.0": {
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "title": "Creative Commons CCZero",
+    },
+    "CC-BY-4.0": {
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "title": "Creative Commons Attribution 4.0",
+    },
+    "CC-BY-SA-4.0": {
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "title": "Creative Commons Attribution Share-Alike 4.0",
+    },
+    "CC-BY-NC-SA-4.0": {
+        "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "title": "Creative Commons Attribution-NonCommercial-Share-Alike 4.0",
+    },
+    "CC-BY-ND 4.0": {
+        "url": "https://creativecommons.org/licenses/by-nd/4.0/",
+        "title": "Creative Commons Attribution-NoDerivatives 4.0 International",
+    },
+    "CC-BY-NC-ND 4.0": {
+        "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "title": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+    },
+    "CC-BY-IGO-3.0": {
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+        "title": "Creative Commons Attribution for Intergovernmental Organisations",
+    },
+    "GPL": {
+        "url": "https://www.gnu.org/licenses/gpl-3.0-standalone.html",
+        "title": "GNU General Public License",
+    },
+    "MIT": {"url": "https://opensource.org/license/MIT", "title": "The MIT License"},
+    "PDDL-1.0": {
+        "url": "http://opendatacommons.org/licenses/pddl/1.0/",
+        "title": "Open Data Commons Public Domain Dedication and License",
+    },
+    "ODbL-1.0": {
+        "url": "https://opendatacommons.org/licenses/odbl/1-0",
+        "title": "Open Data Commons Open Database License",
+    },
 }
