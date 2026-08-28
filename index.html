@@ -67,7 +67,7 @@ layout: default
             <h4>Risk Component</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptions('risk_data_type', $store.index.getDatasetsForFilterOptions('risk_data_type'))"
+                x-for="item in $store.index.getFilterOptionsRiskDataType()"
                 :key="item.slug"
               >
                 <a
@@ -235,7 +235,7 @@ layout: default
             <h4>Projects</h4>
             <div class="list-group">
                 <template
-                  x-for="item in $store.index.queryDatasetColumnOptions({column: 'project'})"
+                  x-for="item in $store.index.getFilterOptionsProject()"
                   :key="item.slug"
                 >
                   <a
