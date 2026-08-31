@@ -57,7 +57,7 @@ layout: default
             <span
               x-text="$store.index.activeFilterCount + ' filter(s) active'"
             ></span>
-            <button @click="clearFilters()" class="btn btn-xs btn-default">
+            <button @click="$store.index.clearFilters()" class="btn btn-xs btn-default">
               Clear all
             </button>
           </div>
@@ -190,19 +190,19 @@ layout: default
             <h4>Countries</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptions('geo_coverage', $store.index.getDatasetsForFilterOptions('geo_coverage')).slice(0, $store.index.showCountries)"
+                x-for="item in $store.index.getFilterOptionsCountries()"
                 :key="item.slug"
               >
                 <a
                   href="#"
                   class="list-group-item"
                   :class="{ 'active': item.selected }"
-                  @click.prevent="$store.index.toggleFilter('geo_coverage', item.slug)"
+                  @click.prevent="$store.index.toggleFilter('countries', item.slug)"
                 >
                   <span
-                    x-show="window.emojiMap[item]"
+                    x-show="item.emoji"
                     class="country-flag"
-                    x-text="window.emojiMap[item]"
+                    x-text="item.emoji"
                   ></span>
                   <span
                     class="list-group-item-truncate"
@@ -222,7 +222,7 @@ layout: default
               <a
                 href="#"
                 class="list-group-item"
-                x-show="$store.index.getFilterOptions('geo_coverage', $store.index.getDatasetsForFilterOptions('geo_coverage')).filter(i => i.count > 0).length > $store.index.showCountries"
+                x-show="$store.index.getFilterOptions('countries', $store.index.getDatasetsForFilterOptions('countries')).filter(i => i.count > 0).length > $store.index.showCountries"
                 @click.prevent="$store.index.showCountries = $store.index.showCountries + 10"
                 style="text-align: center"
                 >Show more...</a
@@ -439,10 +439,10 @@ layout: default
                     <i class="fa fa-code-fork"></i>
                     <span x-text="`Version ${dataset.version}`"></span>
                   </div>
-                  <div class="meta-item" x-show="dataset.geo_coverage">
+                  <div class="meta-item" x-show="dataset.countries">
                     <i class="fa fa-map-marker"></i>
                     <span
-                      x-text="Array.isArray(dataset.geo_coverage) ? dataset.geo_coverage.join(', ') : dataset.geo_coverage"
+                      x-text="Array.isArray(dataset.countries) ? dataset.countries.join(', ') : dataset.countries"
                     ></span>
                   </div>
                   <div class="meta-item" x-show="dataset.license_code">
