@@ -51,14 +51,14 @@ layout: default
                 <div class="info-value">{{ page.version }}</div>
               </div>
               {% endif %}
-              {% if page.geo_coverage %}
+              {% if page.countries %}
               <div class="info-card">
                 <div class="info-label">Coverage</div>
                 <div class="info-value">
-                  {% if page.geo_coverage.size > 1 %}
-                    {{ page.geo_coverage | join: ", " }}
+                  {% if page.countries.size > 1 %}
+                    {{ page.countries | join: ", " }}
                   {% else %}
-                    {{ page.geo_coverage | first }}
+                    {{ page.countries | first }}
                   {% endif %}
                 </div>
               </div>

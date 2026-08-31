@@ -10,8 +10,8 @@ export default {
   showScales: 5,
   filters: {
     catalog: [],
+    countries: [],
     risk_data_type: [],
-    geo_coverage: [],
     geo_scale: [],
     hazard_type: [],
     license: [],
@@ -30,7 +30,7 @@ export default {
         return Array.isArray(dataset.risk_data_type)
           ? dataset.risk_data_type
           : [dataset.risk_data_type];
-      case "geo_coverage":
+      case "country":
         return dataset.spatial?.countries || [];
       case "geo_scale":
         return dataset.spatial?.scale ? dataset.spatial?.scale.split(",") : [];
@@ -61,7 +61,7 @@ export default {
 
   clearFilters() {
     Object.keys(this.filters).forEach((k) => (this.filters[k] = []));
-    this.updateUrlParams();
+    // this.updateUrlParams();
   },
 
   get activeFilterCount() {
@@ -93,7 +93,7 @@ export default {
     const filterTypes = [
       "catalog",
       "risk_data_type",
-      "geo_coverage",
+      "country",
       "geo_scale",
       "hazard_type",
       "license",
@@ -113,7 +113,7 @@ export default {
     if (!values.length) return true;
     const datasetValues = this.getDatasetValues(dataset, filterType);
     if (
-      ["geo_coverage", "geo_scale", "license", "project"].includes(
+      ["country", "geo_scale", "license", "project"].includes(
         filterType,
       )
     ) {
@@ -150,6 +150,44 @@ export default {
       if (retries > 0) {
         await new Promise((resolve) => setTimeout(resolve, delay));
         return this.getFilterOptionsCatalog(retries - 1, delay * 2);
+      } else {
+        throw new Error("All retries failed");
+      }
+    }
+  },
+  async getFilterOptionsCountries(retries = 5, delay = 1000) {
+    if (this.db) {
+      const result = this.queryDB(
+        `
+          SELECT spatial, COUNT(*) as count
+          FROM datasets
+          GROUP BY spatial
+          ORDER BY spatial ASC;
+        `,
+      );
+      const values = Object.values(result[0].values.reduce(
+        (acc, [spatial_json, count]) => {
+          const c_array = JSON.parse(spatial_json).countries;
+          c_array.forEach(({ title, emoji, slug}) => {
+            if (acc[slug]) acc[slug]['count'] += count;
+            else acc[slug] = {
+              emoji,
+              title,
+              slug,
+              selected: this.isFilterActive("countries", slug),
+              count,
+            };
+          });
+
+          return acc;
+        },
+        {}
+      ));
+      return values;
+    } else {
+      if (retries > 0) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        return this.getFilterOptionsCountries(retries - 1, delay * 2);
       } else {
         throw new Error("All retries failed");
       }
@@ -213,7 +251,6 @@ export default {
     }
   },
   async getFilterOptionsRiskDataType(retries = 5, delay = 1000) {
-    // so this will be interesting because it's an array
     if (this.db) {
       const result = this.queryDB(
         `

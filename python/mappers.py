@@ -450,17 +450,19 @@ def make_source(source):
 
 
 def make_spatial(spatial):
-    # TODO: spatial is required but has no required properties??
-    # unless there must be one gazetteer entry?
+    country_codes = spatial.get("countries", [])
+    countries = [{**config.datasets_countries.get(country_code), "slug": slugify(country_code)} for country_code in country_codes]
+
     if spatial.get("scale") == "global":
-        if "countries" in spatial and type(spatial["countries"]) == list:
-            spatial["countries"].append("GLO")
+        global_country = config.datasets_countries.get('GLO')
+        if "countries" in spatial and type(countries) == list:
+            countries.append(global_country)
         else:
-            spatial["countries"] = ["GLO"]
+            countries = [global_country]
     return {
         "bbox": spatial.get("bbox"),
         "centroid": spatial.get("centroid"),
-        "countries": spatial.get("countries"),
+        "countries": countries,
         "gazetteer_entries": [
             make_gazetteer_entry(g) for g in spatial.get("gazetteer_entries", [])
         ],
