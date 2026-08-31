@@ -228,7 +228,7 @@ def make_hazard_top_level(hazard):
             if hazard_type not in hazard_types:
                 hazard_types.append(hazard_type)
 
-    return {"event_sets": event_sets, "type": ", ".join(hazard_types)}
+    return {"event_sets": event_sets, "type": hazard_types}
 
 
 def make_hazard(hazard):

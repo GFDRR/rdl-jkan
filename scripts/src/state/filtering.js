@@ -1,13 +1,6 @@
 import { slugify } from "../util";
 
 export default {
-  showCatalogs: 5,
-  showCategories: 5,
-  showCountries: 5,
-  showHazards: 5,
-  showLicenses: 5,
-  showProjects: 5,
-  showScales: 5,
   filters: {
     catalog: [],
     countries: [],
@@ -93,7 +86,7 @@ export default {
     const filterTypes = [
       "catalog",
       "risk_data_type",
-      "country",
+      "countries",
       "geo_scale",
       "hazard_type",
       "license",
@@ -188,6 +181,81 @@ export default {
       if (retries > 0) {
         await new Promise((resolve) => setTimeout(resolve, delay));
         return this.getFilterOptionsCountries(retries - 1, delay * 2);
+      } else {
+        throw new Error("All retries failed");
+      }
+    }
+  },
+    async getFilterOptionsGeoScale(retries = 5, delay = 1000) {
+    if (this.db) {
+      const result = this.queryDB(
+        `
+          SELECT spatial, COUNT(*) as count
+          FROM datasets
+          GROUP BY spatial
+          ORDER BY spatial ASC;
+        `,
+      );
+      const values = Object.values(result[0].values.reduce(
+        (acc, [spatial_json, count]) => {
+          const slug = JSON.parse(spatial_json).scale;
+          
+          if (acc[slug]) acc[slug]['count'] += count;
+          else acc[slug] = {
+            title:String(slug).charAt(0).toUpperCase() + String(slug).slice(1),
+            slug,
+            selected: this.isFilterActive("geo_scale", slug),
+            count,
+          };
+
+          return acc;
+        },
+        {}
+      ));
+      return values;
+    } else {
+      if (retries > 0) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        return this.getFilterOptionsGeoScale(retries - 1, delay * 2);
+      } else {
+        throw new Error("All retries failed");
+      }
+    }
+  },
+  async getFilterOptionsHazardType(retries = 5, delay = 1000) {
+    if (this.db) {
+      const result = this.queryDB(
+        `
+          SELECT hazard, COUNT(*) as count
+          FROM datasets
+          WHERE hazard IS NOT NULL
+          GROUP BY hazard
+          ORDER BY hazard ASC;
+          ;
+        `,
+      );
+      const values = Object.values(result[0].values.reduce(
+        (acc, [hazard_json, count]) => {
+          const ht_array = hazard_json ? JSON.parse(hazard_json).type : [];
+          ht_array.forEach((slug) => {
+            if (acc[slug]) acc[slug]['count'] += count;
+            else acc[slug] = {
+              title:String(slug).charAt(0).toUpperCase() + String(slug).slice(1).replace('_', ' '),
+              slug,
+              selected: this.isFilterActive("hazard_type", slug),
+              count,
+            };
+          });
+
+          return acc;
+        },
+        {}
+      ));
+      return values;
+    } else {
+      if (retries > 0) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        return this.getFilterOptionsHazardType(retries - 1, delay * 2);
       } else {
         throw new Error("All retries failed");
       }

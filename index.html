@@ -120,7 +120,7 @@ layout: default
             </h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptions('hazard_type', $store.index.getDatasetsForFilterOptions('hazard_type'))"
+                x-for="item in $store.index.getFilterOptionsHazardType()"
                 :key="item.slug"
               >
                 <a
@@ -159,7 +159,7 @@ layout: default
             <h4>Geographical Scale</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptions('geo_scale', $store.index.getDatasetsForFilterOptions('geo_scale')).slice(0, $store.index.showScales)"
+                x-for="item in $store.index.getFilterOptionsGeoScale()"
                 :key="item.slug"
               >
                 <a
