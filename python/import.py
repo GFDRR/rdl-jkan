@@ -30,6 +30,7 @@ def create_tables(conn: sqlite3.Connection):
             catalog_slug TEXT,
             description TEXT,
             frontmatter TEXT,
+            hazard TEXT,
             license_slug TEXT,
             project TEXT,
             risk_data_type TEXT,
@@ -91,6 +92,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     project = _serialize(fm.get("project"))
     risk_data_type = _serialize(fm.get("risk_data_type"))
     slug = _serialize(fm.get("slug"))
+    hazard = _serialize(fm.get("hazard"))
     spatial = _serialize(fm.get("spatial"))
     temporal = _serialize(fm.get("temporal"))
 
@@ -121,14 +123,15 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     cur.execute(
         """
         INSERT OR REPLACE INTO datasets (
-            id, title, description, license_slug, project, catalog_slug, risk_data_type, slug,
+            id, title, description, hazard, license_slug, project, catalog_slug, risk_data_type, slug,
             spatial, temporal, frontmatter
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             dataset_id,
             title,
             description,
+            hazard,
             license_slug,
             project,
             catalog_slug,
