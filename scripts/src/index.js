@@ -1,5 +1,4 @@
 import "core-js/actual";
-import $ from "jquery";
 import "bootstrap/js/dist/collapse";
 import Alpine from "alpinejs";
 import persist from "@alpinejs/persist";
@@ -9,7 +8,6 @@ import filtering from "./state/filtering";
 import pagination from "./state/pagination";
 import search from "./state/search";
 import ui from "./state/ui";
-import { queryByComponent } from "./util";
 
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = {};
