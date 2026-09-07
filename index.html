@@ -7,24 +7,6 @@ layout: default
   const emojiMap = {{ site.data["country-emoji"] | jsonify }};
   window.emojiMap = emojiMap;
 </script>
-<script async src="https://sql.js.org/dist/sql-wasm.js"></script>
-<script>
-  document.addEventListener("alpine:initialized", () => {
-    initSqlJs({
-      locateFile: (file) => `https://sql.js.org/dist/${file}`,
-    })
-      .then(function (SQL) {
-        fetch("/sqlite.db")
-          .then((res) => res.arrayBuffer())
-          .then((filebuffer) => {
-            const db = new SQL.Database(new Uint8Array(filebuffer));
-            Alpine.store("index").loadDB(db);
-          })
-          .catch((err) => console.error("Error loading database file:", err));
-      })
-      .catch((err) => console.error("Error loading sql.js:", err));
-  });
-</script>
 <div x-data>
   <div class="modern-hero">
     <div class="hero-background-image"></div>
@@ -405,7 +387,7 @@ layout: default
                 </div>
 
                 <h3>
-                  <a x-bind:href="dataset.url" x-text="dataset.title"></a>
+                  <a x-bind:href="'/datasets/' + dataset.slug" x-text="dataset.title"></a>
                 </h3>
                 <div
                   x-data="{ open: false }"

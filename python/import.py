@@ -38,6 +38,7 @@ def create_tables(conn: sqlite3.Connection):
             spatial TEXT,
             temporal TEXT,
             title TEXT,
+            version TEXT,
             FOREIGN KEY(catalog_slug) REFERENCES catalogs(slug) ON DELETE SET NULL,
             FOREIGN KEY(license_slug) REFERENCES licenses(slug) ON DELETE SET NULL
         );
@@ -95,6 +96,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     hazard = _serialize(fm.get("hazard"))
     spatial = _serialize(fm.get("spatial"))
     temporal = _serialize(fm.get("temporal"))
+    version = _serialize(fm.get("version"))
 
     catalog_slug = catalog.get("slug")
     cur.execute(
@@ -124,8 +126,8 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
         """
         INSERT OR REPLACE INTO datasets (
             id, title, description, hazard, license_slug, project, catalog_slug, risk_data_type, slug,
-            spatial, temporal, frontmatter
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            spatial, temporal,version, frontmatter
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?)
         """,
         (
             dataset_id,
@@ -139,6 +141,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
             slug,
             spatial,
             temporal,
+            version,
             json.dumps(fm),
         ),
     )

@@ -1,30 +1,24 @@
 ---
 layout: default
 ---
-{% assign schema = page.schema | default: site.schema %}
-{% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
-{% assign dataset_system_fields = "id|title|category|description|license|filename|risk_data_type|slug|schema" | split:
-"|" %}
-{% assign resource_fields = site.data.schemas[schema].resource_fields %}
-{% assign resource_system_fields = "id|title|download_url|format|description" | split: "|" %}
 
-<!-- Content Wrapper -->
-<div class="content-wrapper">
+<div class="content-wrapper" x-data>
   <div class="modern-content">
     <div data-component="view-switcher">
-      <div class="dataset-detail-layout" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset"
-        resource="{{ page.url }}">
-        <!-- Main Content -->
+      <div
+        class="dataset-detail-layout"
+        data-component="dataset-display"
+        data-hook="view"
+        data-view="display"
+        typeof="dcat:Dataset"
+        :resource="$store.index.getDatasetById('{{page.slug}}').url"
+      >
         <main class="main-content">
-          <!-- Dataset Header -->
           <div class="dataset-header">
-            {% if page.category %}
-              {% assign category_slug = page.category | first | downcase %}
-              <div class="category-badge {{ category_slug }}">
-                <span class="badge-icon"></span>
-                {{ page.category | first | capitalize }}
-              </div>
-            {% endif %}
+            <div :class="'category-badge' + $store.index.getDatasetById('{{page.slug}}').risk_data_type[0].slug">
+              <span class="badge-icon"></span>
+              <p x-text="$store.index.getDatasetById('{{page.slug}}').risk_data_type[0]"></p>
+            </div>
             <h1 class="dataset-title">
               <span property="dct:title">{{ page.title }}</span>
             </h1>
@@ -33,90 +27,87 @@ layout: default
               x-bind:class="'dataset-description desc-truncate' + (open ? ' expanded' : '')"
               property="dct:description"
             >
-              <p x-ref="description" class="desc-text">{{ page.description }}</p>
-              <button x-show="$refs.description.scrollHeight > $refs.description.clientHeight" class="desc-toggle" @click="open = ! open" x-text="open ? 'Show less' : 'Show more'"></button>
+              <p x-ref="description" class="desc-text">
+                {{ page.description }}
+              </p>
+              <button
+                x-show="$refs.description.scrollHeight > $refs.description.clientHeight"
+                class="desc-toggle"
+                @click="open = ! open"
+                x-text="open ? 'Show less' : 'Show more'"
+              ></button>
             </div>
 
-            <!-- Quick Info Cards -->
             <div class="quick-info">
-              {% if page.creator.name %}
               <div class="info-card">
                 <div class="info-label">Organization</div>
-                <div class="info-value">{{ page.creator.name }}</div>
+                <div class="info-value" x-text="$store.index.getDatasetById('{{page.slug}}').creator"></div>
               </div>
-              {% endif %}
-              {% if page.version %}
               <div class="info-card">
                 <div class="info-label">Version</div>
-                <div class="info-value">{{ page.version }}</div>
+                <div class="info-value" x-text="$store.index.getDatasetById('{{page.slug}}').version"></div>
               </div>
-              {% endif %}
-              {% if page.countries %}
-              <div class="info-card">
-                <div class="info-label">Coverage</div>
-                <div class="info-value">
-                  {% if page.countries.size > 1 %}
-                    {{ page.countries | join: ", " }}
-                  {% else %}
-                    {{ page.countries | first }}
-                  {% endif %}
-                </div>
-              </div>
-              {% endif %}
-              {% if page.license_display %}
               <div class="info-card">
                 <div class="info-label">License</div>
-                <div class="info-value">
-                  {% if site.data.rdl-license-url[page.license] %}
-                    <a href="{{ site.data.rdl-license-url[page.license] }}">{{ page.license_display }}</a>
-                  {% else %}
-                    {{ page.license_display }}
-                  {% endif %}
+                <div class="info-value" x-text="$store.index.getDatasetById('{{page.slug}}').license_slug">
                 </div>
               </div>
-              {% endif %}
             </div>
           </div>
 
-          <!-- Resources Section -->
           <div class="content-section">
             <h2 class="section-title">Resources</h2>
             <ul class="resources-list">
               {% for resource in page.resources %}
-              <li class="resource-item" data-hook="resource-item" property='dcat:distribution' typeof='dcat:Distribution'>
+              <li
+                class="resource-item"
+                data-hook="resource-item"
+                property="dcat:distribution"
+                typeof="dcat:Distribution"
+              >
                 <div class="resource-header">
                   <h3 class="resource-title">
-                    <a href="{{ resource.download_url }}" property='dcat:accessURL'>
+                    <a
+                      href="{{ resource.download_url }}"
+                      property="dcat:accessURL"
+                    >
                       <i class="fa fa-download"></i>
                       <span property="dct:title">{{ resource.title }}</span>
                     </a>
                   </h3>
                   {% if resource.format %}
-                  <span class="format-badge" property='dcat:mediaType'>{{ resource.format }}</span>
+                  <span class="format-badge" property="dcat:mediaType"
+                    >{{ resource.format }}</span
+                  >
                   {% elsif resource.media_type %}
-                  <span class="format-badge" property='dcat:mediaType'>{{ resource.media_type }}</span>
+                  <span class="format-badge" property="dcat:mediaType"
+                    >{{ resource.media_type }}</span
+                  >
                   {% endif %}
                 </div>
                 {% if resource.description %}
                 <p class="resource-description">{{ resource.description }}</p>
                 {% endif %}
-                <a href="#" class="resource-details-toggle show-resource-details" data-hook="show-resource-details">Show details →</a>
-                <table class="data-table resource-details" data-hook="resource-details">
-                  {% for field in resource_fields %}
-                  {% unless resource_system_fields contains field.field_name %}
-                  {% assign value = resource[field[field_name]] %}
-                  {% if value %}
-                  {% if field.display_template %}
-                  {% include {{ field.display_template }} field=field value=value %}
-                  {% else %}
+                <a
+                  href="#"
+                  class="resource-details-toggle show-resource-details"
+                  data-hook="show-resource-details"
+                  >Show details →</a
+                >
+                <table
+                  class="data-table resource-details"
+                  data-hook="resource-details"
+                >
+                  {% for field in resource_fields %} {% unless
+                  resource_system_fields contains field.field_name %} {% assign
+                  value = resource[field[field_name]] %} {% if value %} {% if
+                  field.display_template %} {% include {{ field.display_template
+                  }} field=field value=value %} {% else %}
                   <tr>
                     <th>{{ field.label }}</th>
                     <td>{{ value }}</td>
                   </tr>
-                  {% endif %}
-                  {% endif %}
-                  {% endunless %}
-                  {% endfor %}
+                  {% endif %} {% endif %} {% endunless %} {% endfor %}
                 </table>
               </li>
               {% endfor %}
@@ -125,78 +116,56 @@ layout: default
           <div class="content-section">
             <h2 class="section-title">Dataset Info</h2>
             <table class="data-table">
-              {% for field in dataset_fields %}
-              {% unless dataset_system_fields contains field.field_name %}
-              {% assign value = page[field[field_name]] %}
-              {% if value %}
-              {% if field.display_template %}
-              {% include {{ field.display_template }} field=field value=value %}
-              {% else %}
               <tr>
-                <th>{{ field.label }}</th>
-                <td>{{ value }}</td>
+                <th>ID of dataset</th>
+                <td x-text="$store.index.getDatasetById('{{page.slug}}').id"></td>
               </tr>
-              {% endif %}
-              {% endif %}
-              {% endunless %}
-              {% endfor %}
-
-              {% if page.license and page.license != empty %}
-              {% if site.data.rdl-license-url[page.license] and site.data.rdl-license-url[page.license] != empty %}
               <tr>
-                <th>License</th>
-                <td>
-                  <a property="dct:license" resource="{{ page.license }}"
-                    href="{{ site.data.rdl-license-url[page.license] }}">
-                    {{ page.license }}
-                  </a>
-                </td>
+                <th>Catalog</th>
+                <td x-text="$store.index.getDatasetById('{{page.slug}}').catalog_slug"></td>
               </tr>
-              {% else %}
+              <tr>
+                <th>Publisher of dataset</th>
+                <td x-text="$store.index.getDatasetById('{{page.slug}}').publisher"></td>
+              </tr>
+              <tr>
+                <th>Additional details</th>
+                <td x-text="$store.index.getDatasetById('{{page.slug}}').details"></td>
+              </tr>
+              <tr>
+                <th>Creator</th>
+                <td x-text="$store.index.getDatasetById('{{page.slug}}').creator"></td>
+              </tr>
+              <tr>
+                <th>Contact Point</th>
+                <td x-text="$store.index.getDatasetById('{{page.slug}}').contact"></td>
+              </tr>
               <tr>
                 <th>License</th>
-                <td>
-                  {{ page.license }}
-                </td>
+                <td x-text="$store.index.getDatasetById('{{page.slug}}').license_slug"></td>
               </tr>
-              {% endif %}
-              {% endif %}
             </table>
           </div>
-          {% if page.risk_data_type contains "hazard" %}
-          {% include display/hazard.html %}
-          {% endif %}
-          {% if page.risk_data_type contains "exposure" %}
-          {% include display/exposure.html %}
-          {% endif %}
-          {% if page.risk_data_type contains "loss" %}
-          {% include display/loss.html %}
-          {% endif %}
-          {% if page.risk_data_type contains "vulnerability" %}
-          {% include display/vulnerability.html %}
-          {% endif %}
         </main>
 
-        <!-- Sidebar -->
         <aside class="sidebar">
-          <!-- Metadata Download -->
           <div class="sidebar-card">
             <h4>Metadata</h4>
-            <div style="display: flex; gap: 8px; margin-top: 12px;">
-              <a href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/_datasets/json/{{ page.dataset_id }}.json"
-                 class="format-badge" style="text-decoration: none;" property="dcat:accessURL" download>
+            <div style="display: flex; gap: 8px; margin-top: 12px">
+              <a
+                href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/_datasets/json/{{ page.id }}.json"
+                class="format-badge"
+                style="text-decoration: none"
+                property="dcat:accessURL"
+                download
+              >
                 json
-              </a>
-              <a href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/{{ page.path }}"
-                 class="format-badge" style="text-decoration: none;" property="dcat:accessURL" download>
-                md
               </a>
             </div>
           </div>
 
           {% include display/spatial_extent_map.html %}
 
-          <!-- Dataset Info Summary -->
           <div class="sidebar-card">
             <h4>Dataset Info</h4>
             {% if page.modified %}
@@ -209,8 +178,7 @@ layout: default
                 <div class="sidebar-value">{{ page.modified }}</div>
               </div>
             </div>
-            {% endif %}
-            {% if page.issued %}
+            {% endif %} {% if page.issued %}
             <div class="sidebar-item">
               <div class="sidebar-icon">
                 <i class="fa fa-clock-o"></i>
@@ -220,8 +188,7 @@ layout: default
                 <div class="sidebar-value">{{ page.issued }}</div>
               </div>
             </div>
-            {% endif %}
-            {% if page.resources %}
+            {% endif %} {% if page.resources %}
             <div class="sidebar-item">
               <div class="sidebar-icon">
                 <i class="fa fa-file-o"></i>
@@ -238,4 +205,3 @@ layout: default
     </div>
   </div>
 </div>
-

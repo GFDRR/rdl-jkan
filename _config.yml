@@ -84,7 +84,6 @@ exclude:
   - webpack.config.js
   - README.md
   - LICENSE
-  - _datasets/json/
   - sqlite.db-journal
 
 plugins:
@@ -96,6 +95,6 @@ gzip:
     - '.json'
 
 sqlite:
-  - data: datasets_sqlite
+  - collection: datasets
     file: sqlite.db
-    query: SELECT * from Datasets
+    query: SELECT *, '/datasets/' || slug AS permalink FROM Datasets
