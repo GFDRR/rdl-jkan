@@ -78,7 +78,8 @@ export default {
   },
 
   applyFilters(datasets = null) {
-    return this.applyFiltersExcluding(null, datasets);
+    this.display = this.applyFiltersExcluding(null, datasets);
+    return this.display;
   },
 
   applyFiltersExcluding(excludeFilterType = null, datasets = null) {
