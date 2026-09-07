@@ -46,6 +46,25 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css"
   />
+  <script async src="https://sql.js.org/dist/sql-wasm.js"></script>
+<script>
+  document.addEventListener("alpine:initialized", () => {
+    initSqlJs({
+      locateFile: (file) => `https://sql.js.org/dist/${file}`,
+    })
+      .then(function (SQL) {
+        fetch("/sqlite.db")
+          .then((res) => res.arrayBuffer())
+          .then((filebuffer) => {
+            const db = new SQL.Database(new Uint8Array(filebuffer));
+            Alpine.store("index").loadDB(db);
+          })
+          .catch((err) => console.error("Error loading database file:", err));
+      })
+      .catch((err) => console.error("Error loading sql.js:", err));
+  });
+</script>
+
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 

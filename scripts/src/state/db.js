@@ -17,9 +17,18 @@ export default {
       spatial: JSON.parse(row[9]),
       temporal: JSON.parse(row[10]),
       title: row[11],
+      version: row[12],
     }))
     this.all = datasets;
     this.display = datasets;
+  },
+
+  getDatasetById(id) {
+    if (this.dataset && this.dataset.id === id) {
+      return this.dataset;
+    }
+    this.dataset = this.all.find((dataset) => dataset.id === id);
+    return this.dataset;
   },
 
   queryDB(sqlString) {
