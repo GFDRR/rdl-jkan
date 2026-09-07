@@ -39,7 +39,7 @@ export default {
 
   get paginatedDatasets() {
     const start = (this.currentPage - 1) * this.itemsPerPage;
-    return this.display.slice(start, start + this.itemsPerPage);
+    return this.datasetsByFilterAndSearch.slice(start, start + this.itemsPerPage);
   },
 
   get paginationStart() {

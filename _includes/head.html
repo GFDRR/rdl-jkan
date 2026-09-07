@@ -57,7 +57,7 @@
           .then((res) => res.arrayBuffer())
           .then((filebuffer) => {
             const db = new SQL.Database(new Uint8Array(filebuffer));
-            Alpine.store("index").loadDB(db);
+            Alpine.store("index").loadDatasets(db);
           })
           .catch((err) => console.error("Error loading database file:", err));
       })
