@@ -55,10 +55,6 @@ dataset {
   color: red;
 }
 
-[data-component~=view-switcher] [data-hook~=view] {
-  display: none;
-}
-
 .homepage-categories,
 .theme-gallery {
   text-align: justify;
@@ -188,16 +184,6 @@ body {
   font-family: var(--font-body);
   color: var(--color-text-primary);
   line-height: 1.6;
-}
-
-/* Override view-switcher hiding - we want to show dataset content */
-[data-component~=view-switcher] [data-hook~=view]:not(.dataset-detail-layout) {
-  display: block !important;
-}
-
-/* Ensure dataset detail grid layout always applies */
-[data-component~=view-switcher] .dataset-detail-layout[data-hook~=view] {
-  display: grid !important;
 }
 
 /* Override Bootstrap container padding for tighter layout */
