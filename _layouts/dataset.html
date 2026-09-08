@@ -36,8 +36,7 @@ layout: default
                 x-bind:class="'dataset-description desc-truncate' + (open ? ' expanded' : '')"
                 property="dct:description"
               >
-                <p x-ref="description" class="desc-text">
-                  {{ page.description }}
+                <p x-ref="description" class="desc-text" x-text="$store.dataset.dataset.description">
                 </p>
                 <button
                   x-show="$refs.description.scrollHeight > $refs.description.clientHeight"
@@ -95,7 +94,10 @@ layout: default
                           property="dcat:accessURL"
                         >
                           <i class="fa fa-download"></i>
-                          <span property="dct:title" x-text="resource.title"></span>
+                          <span
+                            property="dct:title"
+                            x-text="resource.title"
+                          ></span>
                         </a>
                       </h3>
                       <span
@@ -206,7 +208,68 @@ layout: default
                 </a>
               </div>
             </div>
-            {% include display/spatial_extent_map.html %}
+            <div
+              x-show="JSON.parse($store.dataset.dataset.spatial).countries"
+              class="sidebar-card"
+            >
+              <h4>Spatial Extent</h4>
+              <div
+                id="spatial-extent-map"
+                style="
+                  height: 160px;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  border: 1px solid #e5e7eb;
+                  background: #e5e7eb;
+                "
+              ></div>
+            </div>
+            <script>
+              const map = L.map('spatial-extent-map', {
+                zoomControl: false,
+                dragging: false,
+                scrollWheelZoom: false,
+                doubleClickZoom: false,
+                boxZoom: false,
+                keyboard: false,
+                tap: false,
+                touchZoom: false,
+                attributionControl: true
+              });
+              L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> and <a href="https://www.geoboundaries.org/">GeoBoundaries</a>'
+              }).addTo(map);
+              const spatial = JSON.parse(Alpine.store('dataset').dataset.spatial) ?? {};
+              const countryCodes = spatial.countries.map(c =>c.slug) || [];
+              const bbox = spatial.bbox || null;
+              const isGlobal = (spatial.scale || "").toLowerCase() === "global";
+              if (isGlobal) {
+                map.setView([20, 0], 1);
+              } else {
+                const featureGroup = L.featureGroup().addTo(map);
+                if (bbox) {
+                  const [ minLon, minLat, maxLon, maxLat] = bbox;
+                  const bounds = L.latLngBounds([[minLat, minLon], [maxLat, maxLon]]);
+                  featureGroup.addLayer(L.rectangle(bounds));
+                  map.fitBounds(featureGroup.getBounds());
+                }
+                else if (countryCodes.length > 0) {
+                  Promise.all(countryCodes.map(countryCode =>
+                    fetch(`/country_geojson/${countryCode}.geojson`)
+                      .then(response => response.json())
+                      .then(data => {
+                        L.geoJSON(data).addTo(featureGroup);
+                      })
+                      .catch(error => console.error('Error loading GeoJSON:', error))
+                  )).then(() => {
+                    if (featureGroup.getLayers().length > 0) {
+                      map.fitBounds(featureGroup.getBounds());
+                    }
+                  });
+                }
+              }
+            </script>
           </aside>
         </div>
       </div>
