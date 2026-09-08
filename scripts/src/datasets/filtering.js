@@ -1,3 +1,5 @@
+import { queryDB } from "../shared/utils.js";
+
 export default {
   filters: {
     catalog: [],
@@ -38,13 +40,29 @@ export default {
   getWhereSqlForFilters(excludeFilterType = null) {
     // Count only non-excluded filters that have values
     const filtersSetCount =
-      (this.filters.catalog.length > 0 && excludeFilterType !== "catalog" ? 1 : 0) +
-      (this.filters.countries.length > 0 && excludeFilterType !== "countries" ? 1 : 0) +
-      (this.filters.geo_scale.length > 0 && excludeFilterType !== "geo_scale" ? 1 : 0) +
-      (this.filters.project.length > 0 && excludeFilterType !== "project" ? 1 : 0) +
-      (this.filters.risk_data_type.length > 0 && excludeFilterType !== "risk_data_type" ? 1 : 0) +
-      (this.filters.hazard_type.length > 0 && excludeFilterType !== "hazard_type" ? 1 : 0) +
-      (this.filters.license.length > 0 && excludeFilterType !== "license" ? 1 : 0);
+      (this.filters.catalog.length > 0 && excludeFilterType !== "catalog"
+        ? 1
+        : 0) +
+      (this.filters.countries.length > 0 && excludeFilterType !== "countries"
+        ? 1
+        : 0) +
+      (this.filters.geo_scale.length > 0 && excludeFilterType !== "geo_scale"
+        ? 1
+        : 0) +
+      (this.filters.project.length > 0 && excludeFilterType !== "project"
+        ? 1
+        : 0) +
+      (this.filters.risk_data_type.length > 0 &&
+      excludeFilterType !== "risk_data_type"
+        ? 1
+        : 0) +
+      (this.filters.hazard_type.length > 0 &&
+      excludeFilterType !== "hazard_type"
+        ? 1
+        : 0) +
+      (this.filters.license.length > 0 && excludeFilterType !== "license"
+        ? 1
+        : 0);
 
     let whereSql = filtersSetCount > 0 ? "WHERE " : "";
     let filtersAppliedCount = 0;
@@ -107,7 +125,7 @@ export default {
       this.filters.hazard_type.forEach((ht, index) => {
         whereSql += `json_extract(hazard, '$.type') LIKE '%${ht}%' ${index < this.filters.hazard_type.length - 1 ? "OR" : ""} `;
       });
-      whereSql += 'AND hazard IS NOT NULL)';
+      whereSql += "AND hazard IS NOT NULL)";
       if (this.filters.hazard_type.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
     }
@@ -125,14 +143,17 @@ export default {
 
   async getFilterOptionsCatalog(retries = 5, delay = 1000) {
     if (this.db) {
-      const result = this.queryDB(`
+      const result = queryDB(
+        this.db,
+        `
         SELECT catalogs.title, catalogs.slug, COUNT(*) as count
         FROM datasets
         LEFT JOIN catalogs ON datasets.catalog_slug = catalogs.slug
         ${this.getWhereSqlForFilters("catalog")}
         GROUP BY catalogs.slug
         ORDER BY count DESC;
-      `);
+      `,
+      );
 
       const values = result[0].values.map(([title, slug, count]) => {
         return {
@@ -143,8 +164,8 @@ export default {
         };
       });
 
-      const filtered = values.filter(v => !v.selected);
-      const others = values.filter(v => v.selected && v.title === "Unknown");
+      const filtered = values.filter((v) => !v.selected);
+      const others = values.filter((v) => v.selected && v.title === "Unknown");
       return [...others, ...filtered];
     } else {
       if (retries > 0) {
@@ -157,7 +178,8 @@ export default {
   },
   async getFilterOptionsCountries(retries = 5, delay = 1000) {
     if (this.db) {
-      const result = this.queryDB(
+      const result = queryDB(
+        this.db,
         `
           SELECT spatial, COUNT(*) as count
           FROM datasets
@@ -185,10 +207,12 @@ export default {
         }, {}),
       );
 
-      const selected = values.filter(v => v.selected);
-      const unselected = values.filter(v => !v.selected);
-      return [...selected.sort((a, b) => a.title.localeCompare(b.title)),
-        ...unselected.sort((a, b) => a.title.localeCompare(b.title))];
+      const selected = values.filter((v) => v.selected);
+      const unselected = values.filter((v) => !v.selected);
+      return [
+        ...selected.sort((a, b) => a.title.localeCompare(b.title)),
+        ...unselected.sort((a, b) => a.title.localeCompare(b.title)),
+      ];
     } else {
       if (retries > 0) {
         await new Promise((resolve) => setTimeout(resolve, delay));
@@ -200,7 +224,8 @@ export default {
   },
   async getFilterOptionsGeoScale(retries = 5, delay = 1000) {
     if (this.db) {
-      const result = this.queryDB(
+      const result = queryDB(
+        this.db,
         `
           SELECT spatial, COUNT(*) as count
           FROM datasets
@@ -228,16 +253,17 @@ export default {
       );
 
       const geoOrder = ["global", "regional", "national", "sub-national"];
-      const selected = values.filter(v => v.selected);
-      const unselected = values.filter(v => !v.selected);
-      const sortByGeo = (arr) => arr.sort((a, b) => {
-        const aIdx = geoOrder.indexOf(a.title.toLowerCase());
-        const bIdx = geoOrder.indexOf(b.title.toLowerCase());
-        if (aIdx === -1 && bIdx === -1) return a.title.localeCompare(b.title);
-        if (aIdx === -1) return 1;
-        if (bIdx === -1) return -1;
-        return aIdx - bIdx;
-      });
+      const selected = values.filter((v) => v.selected);
+      const unselected = values.filter((v) => !v.selected);
+      const sortByGeo = (arr) =>
+        arr.sort((a, b) => {
+          const aIdx = geoOrder.indexOf(a.title.toLowerCase());
+          const bIdx = geoOrder.indexOf(b.title.toLowerCase());
+          if (aIdx === -1 && bIdx === -1) return a.title.localeCompare(b.title);
+          if (aIdx === -1) return 1;
+          if (bIdx === -1) return -1;
+          return aIdx - bIdx;
+        });
       return [...sortByGeo(selected), ...sortByGeo(unselected)];
     } else {
       if (retries > 0) {
@@ -251,14 +277,15 @@ export default {
   async getFilterOptionsHazardType(retries = 5, delay = 1000) {
     if (this.db) {
       const whereSql = this.getWhereSqlForFilters("hazard_type");
-      const result = this.queryDB(
+      const result = queryDB(
+        this.db,
         `
           SELECT hazard, COUNT(*) as count
           FROM datasets
           ${whereSql.length > 6 ? whereSql : " "}
           GROUP BY hazard
           ORDER BY count DESC;
-        `
+        `,
       );
       const values = Object.values(
         result[0].values.reduce((acc, [hazard_json, count]) => {
@@ -280,10 +307,12 @@ export default {
         }, {}),
       );
 
-      const selected = values.filter(v => v.selected);
-      const unselected = values.filter(v => !v.selected);
-      return [...selected.sort((a, b) => a.title.localeCompare(b.title)),
-        ...unselected.sort((a, b) => a.title.localeCompare(b.title))];
+      const selected = values.filter((v) => v.selected);
+      const unselected = values.filter((v) => !v.selected);
+      return [
+        ...selected.sort((a, b) => a.title.localeCompare(b.title)),
+        ...unselected.sort((a, b) => a.title.localeCompare(b.title)),
+      ];
     } else {
       if (retries > 0) {
         await new Promise((resolve) => setTimeout(resolve, delay));
@@ -295,14 +324,17 @@ export default {
   },
   async getFilterOptionsLicense(retries = 5, delay = 1000) {
     if (this.db) {
-      const result = this.queryDB(`
+      const result = queryDB(
+        this.db,
+        `
         SELECT licenses.title, licenses.slug, COUNT(*) as count
         FROM datasets
         LEFT JOIN licenses ON datasets.license_slug = licenses.slug
         ${this.getWhereSqlForFilters("license")}
         GROUP BY licenses.slug
         ORDER BY count DESC;
-      `);
+      `,
+      );
       const values = result[0].values.map(([title, slug, count]) => {
         return {
           title,
@@ -312,10 +344,12 @@ export default {
         };
       });
 
-      const selected = values.filter(v => v.selected);
-      const unselected = values.filter(v => !v.selected);
-      return [...selected.sort((a, b) => a.title.localeCompare(b.title)),
-        ...unselected.sort((a, b) => a.title.localeCompare(b.title))];
+      const selected = values.filter((v) => v.selected);
+      const unselected = values.filter((v) => !v.selected);
+      return [
+        ...selected.sort((a, b) => a.title.localeCompare(b.title)),
+        ...unselected.sort((a, b) => a.title.localeCompare(b.title)),
+      ];
     } else {
       if (retries > 0) {
         await new Promise((resolve) => setTimeout(resolve, delay));
@@ -327,7 +361,8 @@ export default {
   },
   async getFilterOptionsProject(retries = 5, delay = 1000) {
     if (this.db) {
-      const result = this.queryDB(
+      const result = queryDB(
+        this.db,
         `
           SELECT project, COUNT(*) as count
           FROM datasets
@@ -347,10 +382,12 @@ export default {
         };
       });
 
-      const selected = values.filter(v => v.selected);
-      const unselected = values.filter(v => !v.selected);
-      return [...selected.sort((a, b) => a.title.localeCompare(b.title)),
-        ...unselected.sort((a, b) => a.title.localeCompare(b.title))];
+      const selected = values.filter((v) => v.selected);
+      const unselected = values.filter((v) => !v.selected);
+      return [
+        ...selected.sort((a, b) => a.title.localeCompare(b.title)),
+        ...unselected.sort((a, b) => a.title.localeCompare(b.title)),
+      ];
     } else {
       if (retries > 0) {
         await new Promise((resolve) => setTimeout(resolve, delay));
@@ -363,7 +400,8 @@ export default {
   async getFilterOptionsRiskDataType(retries = 5, delay = 1000) {
     if (this.db) {
       const whereSql = this.getWhereSqlForFilters("risk_data_type");
-      const result = this.queryDB(
+      const result = queryDB(
+        this.db,
         `
           SELECT risk_data_type, COUNT(*) as count
           FROM datasets

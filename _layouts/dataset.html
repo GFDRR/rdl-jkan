@@ -2,206 +2,221 @@
 layout: default
 ---
 
-<div class="content-wrapper" x-data>
+<div class="content-wrapper" x-data x-init="window.__sqlReady.then(db => $store.dataset.loadDataset(db, '{{ page.slug }}')).catch(err => console.error('Error loading database:', err))">
   <div class="modern-content">
-    <div data-component="view-switcher">
-      <div
-        class="dataset-detail-layout"
-        data-component="dataset-display"
-        data-hook="view"
-        data-view="display"
-        typeof="dcat:Dataset"
-        :resource="$store.index.getDatasetById('{{page.slug}}').url"
-      >
-        <main class="main-content">
-          <div class="dataset-header">
-            <div :class="'category-badge' + $store.index.getDatasetById('{{page.slug}}').risk_data_type[0].slug">
-              <span class="badge-icon"></span>
-              <p x-text="$store.index.getDatasetById('{{page.slug}}').risk_data_type[0]"></p>
-            </div>
-            <h1 class="dataset-title">
-              <span property="dct:title">{{ page.title }}</span>
-            </h1>
-            <div
-              x-data="{ open: false }"
-              x-bind:class="'dataset-description desc-truncate' + (open ? ' expanded' : '')"
-              property="dct:description"
-            >
-              <p x-ref="description" class="desc-text">
-                {{ page.description }}
-              </p>
-              <button
-                x-show="$refs.description.scrollHeight > $refs.description.clientHeight"
-                class="desc-toggle"
-                @click="open = ! open"
-                x-text="open ? 'Show less' : 'Show more'"
-              ></button>
-            </div>
+    <template x-if="$store.dataset.dataset">
+      <div data-component="view-switcher">
+        <div
+          class="dataset-detail-layout"
+          data-component="dataset-display"
+          data-hook="view"
+          data-view="display"
+          typeof="dcat:Dataset"
+          :resource="$store.dataset.dataset.url"
+        >
+          <main class="main-content">
+            <div class="dataset-header">
+              <div
+                :class="'category-badge' + $store.dataset.dataset.risk_data_type[0].slug"
+              >
+                <span class="badge-icon"></span>
+                <p x-text="$store.dataset.dataset.risk_data_type[0]"></p>
+              </div>
+              <h1 class="dataset-title">
+                <span property="dct:title">{{ page.title }}</span>
+              </h1>
+              <div
+                x-data="{ open: false }"
+                x-bind:class="'dataset-description desc-truncate' + (open ? ' expanded' : '')"
+                property="dct:description"
+              >
+                <p x-ref="description" class="desc-text">
+                  {{ page.description }}
+                </p>
+                <button
+                  x-show="$refs.description.scrollHeight > $refs.description.clientHeight"
+                  class="desc-toggle"
+                  @click="open = ! open"
+                  x-text="open ? 'Show less' : 'Show more'"
+                ></button>
+              </div>
 
-            <div class="quick-info">
-              <div class="info-card">
-                <div class="info-label">Organization</div>
-                <div class="info-value" x-text="$store.index.getDatasetById('{{page.slug}}').creator"></div>
-              </div>
-              <div class="info-card">
-                <div class="info-label">Version</div>
-                <div class="info-value" x-text="$store.index.getDatasetById('{{page.slug}}').version"></div>
-              </div>
-              <div class="info-card">
-                <div class="info-label">License</div>
-                <div class="info-value" x-text="$store.index.getDatasetById('{{page.slug}}').license_slug">
+              <div class="quick-info">
+                <div class="info-card">
+                  <div class="info-label">Organization</div>
+                  <div
+                    class="info-value"
+                    x-text="$store.dataset.dataset.creator"
+                  ></div>
+                </div>
+                <div class="info-card">
+                  <div class="info-label">Version</div>
+                  <div
+                    class="info-value"
+                    x-text="$store.dataset.dataset.version"
+                  ></div>
+                </div>
+                <div class="info-card">
+                  <div class="info-label">License</div>
+                  <div
+                    class="info-value"
+                    x-text="$store.dataset.dataset.license_slug"
+                  ></div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="content-section">
-            <h2 class="section-title">Resources</h2>
-            <ul class="resources-list">
-              {% for resource in page.resources %}
-              <li
-                class="resource-item"
-                data-hook="resource-item"
-                property="dcat:distribution"
-                typeof="dcat:Distribution"
-              >
-                <div class="resource-header">
-                  <h3 class="resource-title">
-                    <a
-                      href="{{ resource.download_url }}"
-                      property="dcat:accessURL"
+            <div class="content-section">
+              <h2 class="section-title">Resources</h2>
+              <ul class="resources-list">
+                {% for resource in page.resources %}
+                <li
+                  class="resource-item"
+                  data-hook="resource-item"
+                  property="dcat:distribution"
+                  typeof="dcat:Distribution"
+                >
+                  <div class="resource-header">
+                    <h3 class="resource-title">
+                      <a
+                        href="{{ resource.download_url }}"
+                        property="dcat:accessURL"
+                      >
+                        <i class="fa fa-download"></i>
+                        <span property="dct:title">{{ resource.title }}</span>
+                      </a>
+                    </h3>
+                    {% if resource.format %}
+                    <span class="format-badge" property="dcat:mediaType"
+                      >{{ resource.format }}</span
                     >
-                      <i class="fa fa-download"></i>
-                      <span property="dct:title">{{ resource.title }}</span>
-                    </a>
-                  </h3>
-                  {% if resource.format %}
-                  <span class="format-badge" property="dcat:mediaType"
-                    >{{ resource.format }}</span
-                  >
-                  {% elsif resource.media_type %}
-                  <span class="format-badge" property="dcat:mediaType"
-                    >{{ resource.media_type }}</span
-                  >
+                    {% elsif resource.media_type %}
+                    <span class="format-badge" property="dcat:mediaType"
+                      >{{ resource.media_type }}</span
+                    >
+                    {% endif %}
+                  </div>
+                  {% if resource.description %}
+                  <p class="resource-description">{{ resource.description }}</p>
                   {% endif %}
-                </div>
-                {% if resource.description %}
-                <p class="resource-description">{{ resource.description }}</p>
-                {% endif %}
+                  <a
+                    href="#"
+                    class="resource-details-toggle show-resource-details"
+                    data-hook="show-resource-details"
+                    >Show details →</a
+                  >
+                  <table
+                    class="data-table resource-details"
+                    data-hook="resource-details"
+                  >
+                    {% for field in resource_fields %} {% unless
+                    resource_system_fields contains field.field_name %} {%
+                    assign value = resource[field[field_name]] %} {% if value %}
+                    {% if field.display_template %} {% include {{
+                    field.display_template }} field=field value=value %} {% else
+                    %}
+                    <tr>
+                      <th>{{ field.label }}</th>
+                      <td>{{ value }}</td>
+                    </tr>
+                    {% endif %} {% endif %} {% endunless %} {% endfor %}
+                  </table>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="content-section">
+              <h2 class="section-title">Dataset Info</h2>
+              <table class="data-table">
+                <tr>
+                  <th>ID of dataset</th>
+                  <td x-text="$store.dataset.dataset.id"></td>
+                </tr>
+                <tr>
+                  <th>Catalog</th>
+                  <td x-text="$store.dataset.dataset.catalog_title"></td>
+                </tr>
+                <tr>
+                  <th>Publisher of dataset</th>
+                  <td x-text="$store.dataset.dataset.publisher"></td>
+                </tr>
+                <tr>
+                  <th>Additional details</th>
+                  <td x-text="$store.dataset.dataset.details"></td>
+                </tr>
+                <tr>
+                  <th>Creator</th>
+                  <td x-text="$store.dataset.dataset.creator"></td>
+                </tr>
+                <tr>
+                  <th>Contact Point</th>
+                  <td x-text="$store.dataset.dataset.contact"></td>
+                </tr>
+                <tr>
+                  <th>License</th>
+                  <td x-text="$store.dataset.dataset.license_slug"></td>
+                </tr>
+              </table>
+            </div>
+          </main>
+
+          <aside class="sidebar">
+            <div class="sidebar-card">
+              <h4>Metadata</h4>
+              <div style="display: flex; gap: 8px; margin-top: 12px">
                 <a
-                  href="#"
-                  class="resource-details-toggle show-resource-details"
-                  data-hook="show-resource-details"
-                  >Show details →</a
+                  href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/_datasets/json/{{ page.id }}.json"
+                  class="format-badge"
+                  style="text-decoration: none"
+                  property="dcat:accessURL"
+                  download
                 >
-                <table
-                  class="data-table resource-details"
-                  data-hook="resource-details"
-                >
-                  {% for field in resource_fields %} {% unless
-                  resource_system_fields contains field.field_name %} {% assign
-                  value = resource[field[field_name]] %} {% if value %} {% if
-                  field.display_template %} {% include {{ field.display_template
-                  }} field=field value=value %} {% else %}
-                  <tr>
-                    <th>{{ field.label }}</th>
-                    <td>{{ value }}</td>
-                  </tr>
-                  {% endif %} {% endif %} {% endunless %} {% endfor %}
-                </table>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="content-section">
-            <h2 class="section-title">Dataset Info</h2>
-            <table class="data-table">
-              <tr>
-                <th>ID of dataset</th>
-                <td x-text="$store.index.getDatasetById('{{page.slug}}').id"></td>
-              </tr>
-              <tr>
-                <th>Catalog</th>
-                <td x-text="$store.index.getDatasetById('{{page.slug}}').catalog_slug"></td>
-              </tr>
-              <tr>
-                <th>Publisher of dataset</th>
-                <td x-text="$store.index.getDatasetById('{{page.slug}}').publisher"></td>
-              </tr>
-              <tr>
-                <th>Additional details</th>
-                <td x-text="$store.index.getDatasetById('{{page.slug}}').details"></td>
-              </tr>
-              <tr>
-                <th>Creator</th>
-                <td x-text="$store.index.getDatasetById('{{page.slug}}').creator"></td>
-              </tr>
-              <tr>
-                <th>Contact Point</th>
-                <td x-text="$store.index.getDatasetById('{{page.slug}}').contact"></td>
-              </tr>
-              <tr>
-                <th>License</th>
-                <td x-text="$store.index.getDatasetById('{{page.slug}}').license_slug"></td>
-              </tr>
-            </table>
-          </div>
-        </main>
+                  json
+                </a>
+              </div>
+            </div>
 
-        <aside class="sidebar">
-          <div class="sidebar-card">
-            <h4>Metadata</h4>
-            <div style="display: flex; gap: 8px; margin-top: 12px">
-              <a
-                href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/_datasets/json/{{ page.id }}.json"
-                class="format-badge"
-                style="text-decoration: none"
-                property="dcat:accessURL"
-                download
-              >
-                json
-              </a>
-            </div>
-          </div>
+            {% include display/spatial_extent_map.html %}
 
-          {% include display/spatial_extent_map.html %}
-
-          <div class="sidebar-card">
-            <h4>Dataset Info</h4>
-            {% if page.modified %}
-            <div class="sidebar-item">
-              <div class="sidebar-icon">
-                <i class="fa fa-calendar"></i>
+            <div class="sidebar-card">
+              <h4>Dataset Info</h4>
+              {% if page.modified %}
+              <div class="sidebar-item">
+                <div class="sidebar-icon">
+                  <i class="fa fa-calendar"></i>
+                </div>
+                <div class="sidebar-content">
+                  <div class="sidebar-label">Last Updated</div>
+                  <div class="sidebar-value">{{ page.modified }}</div>
+                </div>
               </div>
-              <div class="sidebar-content">
-                <div class="sidebar-label">Last Updated</div>
-                <div class="sidebar-value">{{ page.modified }}</div>
+              {% endif %} {% if page.issued %}
+              <div class="sidebar-item">
+                <div class="sidebar-icon">
+                  <i class="fa fa-clock-o"></i>
+                </div>
+                <div class="sidebar-content">
+                  <div class="sidebar-label">Published</div>
+                  <div class="sidebar-value">{{ page.issued }}</div>
+                </div>
               </div>
+              {% endif %} {% if page.resources %}
+              <div class="sidebar-item">
+                <div class="sidebar-icon">
+                  <i class="fa fa-file-o"></i>
+                </div>
+                <div class="sidebar-content">
+                  <div class="sidebar-label">Resources</div>
+                  <div class="sidebar-value">
+                    {{ page.resources.size }} files
+                  </div>
+                </div>
+              </div>
+              {% endif %}
             </div>
-            {% endif %} {% if page.issued %}
-            <div class="sidebar-item">
-              <div class="sidebar-icon">
-                <i class="fa fa-clock-o"></i>
-              </div>
-              <div class="sidebar-content">
-                <div class="sidebar-label">Published</div>
-                <div class="sidebar-value">{{ page.issued }}</div>
-              </div>
-            </div>
-            {% endif %} {% if page.resources %}
-            <div class="sidebar-item">
-              <div class="sidebar-icon">
-                <i class="fa fa-file-o"></i>
-              </div>
-              <div class="sidebar-content">
-                <div class="sidebar-label">Resources</div>
-                <div class="sidebar-value">{{ page.resources.size }} files</div>
-              </div>
-            </div>
-            {% endif %}
-          </div>
-        </aside>
+          </aside>
+        </div>
       </div>
-    </div>
+    </template>
   </div>
 </div>
