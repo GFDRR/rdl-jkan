@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<div class="content-wrapper" x-data x-init="window.__sqlReady.then(db => $store.dataset.loadDataset(db, '{{ page.slug }}')).catch(err => console.error('Error loading database:', err))">
+<div
+  class="content-wrapper"
+  x-data
+  x-init="window.__sqlReady.then(db => $store.dataset.loadDataset(db, '{{ page.slug }}')).catch(err => console.error('Error loading database:', err))"
+>
   <div class="modern-content">
     <template x-if="$store.dataset.dataset">
       <div data-component="view-switcher">
@@ -20,7 +24,9 @@ layout: default
                 :class="'category-badge ' + JSON.parse($store.dataset.dataset.risk_data_type)[0]"
               >
                 <span class="badge-icon"></span>
-                <p x-text="JSON.parse($store.dataset.dataset.risk_data_type)[0]"></p>
+                <p
+                  x-text="JSON.parse($store.dataset.dataset.risk_data_type)[0]"
+                ></p>
               </div>
               <h1 class="dataset-title">
                 <span property="dct:title">{{ page.title }}</span>
@@ -42,7 +48,10 @@ layout: default
               </div>
 
               <div class="quick-info">
-                <div class="info-card" x-show="JSON.parse($store.dataset.dataset.creator).name">
+                <div
+                  class="info-card"
+                  x-show="JSON.parse($store.dataset.dataset.creator).name"
+                >
                   <div class="info-label">Organization</div>
                   <div
                     class="info-value"
@@ -69,60 +78,46 @@ layout: default
             <div class="content-section">
               <h2 class="section-title">Resources</h2>
               <ul class="resources-list">
-                {% for resource in page.resources %}
-                <li
-                  class="resource-item"
-                  data-hook="resource-item"
-                  property="dcat:distribution"
-                  typeof="dcat:Distribution"
+                <template
+                  x-for="resource in JSON.parse($store.dataset.dataset.resources)"
+                  :key="resource.id"
                 >
-                  <div class="resource-header">
-                    <h3 class="resource-title">
-                      <a
-                        href="{{ resource.download_url }}"
-                        property="dcat:accessURL"
-                      >
-                        <i class="fa fa-download"></i>
-                        <span property="dct:title">{{ resource.title }}</span>
-                      </a>
-                    </h3>
-                    {% if resource.format %}
-                    <span class="format-badge" property="dcat:mediaType"
-                      >{{ resource.format }}</span
-                    >
-                    {% elsif resource.media_type %}
-                    <span class="format-badge" property="dcat:mediaType"
-                      >{{ resource.media_type }}</span
-                    >
-                    {% endif %}
-                  </div>
-                  {% if resource.description %}
-                  <p class="resource-description">{{ resource.description }}</p>
-                  {% endif %}
-                  <a
-                    href="#"
-                    class="resource-details-toggle show-resource-details"
-                    data-hook="show-resource-details"
-                    >Show details →</a
+                  <li
+                    class="resource-item"
+                    data-hook="resource-item"
+                    property="dcat:distribution"
+                    typeof="dcat:Distribution"
                   >
-                  <table
-                    class="data-table resource-details"
-                    data-hook="resource-details"
-                  >
-                    {% for field in resource_fields %} {% unless
-                    resource_system_fields contains field.field_name %} {%
-                    assign value = resource[field[field_name]] %} {% if value %}
-                    {% if field.display_template %} {% include {{
-                    field.display_template }} field=field value=value %} {% else
-                    %}
-                    <tr>
-                      <th>{{ field.label }}</th>
-                      <td>{{ value }}</td>
-                    </tr>
-                    {% endif %} {% endif %} {% endunless %} {% endfor %}
-                  </table>
-                </li>
-                {% endfor %}
+                    <div class="resource-header">
+                      <h3 class="resource-title">
+                        <a
+                          href="resource.download_url"
+                          property="dcat:accessURL"
+                        >
+                          <i class="fa fa-download"></i>
+                          <span property="dct:title" x-text="resource.title"></span>
+                        </a>
+                      </h3>
+                      <span
+                        x-show="resource.format"
+                        class="format-badge"
+                        property="dcat:mediaType"
+                        x-text="resource.format"
+                      ></span>
+                      <span
+                        x-show="!resource.format && resource.media_type"
+                        class="format-badge"
+                        property="dcat:mediaType"
+                        x-text="resource.media_type"
+                      ></span>
+                    </div>
+                    <p
+                      x-show="resource.description"
+                      class="resource-description"
+                      x-text="resource.description"
+                    ></p>
+                  </li>
+                </template>
               </ul>
             </div>
             <div class="content-section">
@@ -138,8 +133,16 @@ layout: default
                 </tr>
                 <tr x-show="JSON.parse($store.dataset.dataset.publisher).name">
                   <th>Publisher of dataset</th>
-                  <td x-show="JSON.parse($store.dataset.dataset.publisher).url"><a :href="JSON.parse($store.dataset.dataset.publisher).url" x-text="JSON.parse($store.dataset.dataset.publisher).name"></a></td>
-                  <td x-show="!JSON.parse($store.dataset.dataset.publisher).url" x-text="JSON.parse($store.dataset.dataset.publisher).name"></td>
+                  <td x-show="JSON.parse($store.dataset.dataset.publisher).url">
+                    <a
+                      :href="JSON.parse($store.dataset.dataset.publisher).url"
+                      x-text="JSON.parse($store.dataset.dataset.publisher).name"
+                    ></a>
+                  </td>
+                  <td
+                    x-show="!JSON.parse($store.dataset.dataset.publisher).url"
+                    x-text="JSON.parse($store.dataset.dataset.publisher).name"
+                  ></td>
                 </tr>
                 <tr x-show="$store.dataset.dataset.details">
                   <th>Additional details</th>
@@ -147,17 +150,42 @@ layout: default
                 </tr>
                 <tr x-show="JSON.parse($store.dataset.dataset.creator).name">
                   <th>Creator</th>
-                  <td x-show="JSON.parse($store.dataset.dataset.creator).url"><a :href="JSON.parse($store.dataset.dataset.creator).url" x-text="JSON.parse($store.dataset.dataset.creator).name"></a></td>
-                  <td x-show="!JSON.parse($store.dataset.dataset.creator).url" x-text="JSON.parse($store.dataset.dataset.creator).name"></td>
+                  <td x-show="JSON.parse($store.dataset.dataset.creator).url">
+                    <a
+                      :href="JSON.parse($store.dataset.dataset.creator).url"
+                      x-text="JSON.parse($store.dataset.dataset.creator).name"
+                    ></a>
+                  </td>
+                  <td
+                    x-show="!JSON.parse($store.dataset.dataset.creator).url"
+                    x-text="JSON.parse($store.dataset.dataset.creator).name"
+                  ></td>
                 </tr>
-                <tr x-show="JSON.parse($store.dataset.dataset.contact_point).name">
+                <tr
+                  x-show="JSON.parse($store.dataset.dataset.contact_point).name"
+                >
                   <th>Contact Point</th>
-                  <td x-show="JSON.parse($store.dataset.dataset.contact_point).url"><a :href="JSON.parse($store.dataset.dataset.contact_point).url" x-text="JSON.parse($store.dataset.dataset.publisher).name"></a></td>
-                  <td x-show="!JSON.parse($store.dataset.dataset.contact_point).url" x-text="JSON.parse($store.dataset.dataset.contact_point).name"></td>
+                  <td
+                    x-show="JSON.parse($store.dataset.dataset.contact_point).url"
+                  >
+                    <a
+                      :href="JSON.parse($store.dataset.dataset.contact_point).url"
+                      x-text="JSON.parse($store.dataset.dataset.publisher).name"
+                    ></a>
+                  </td>
+                  <td
+                    x-show="!JSON.parse($store.dataset.dataset.contact_point).url"
+                    x-text="JSON.parse($store.dataset.dataset.contact_point).name"
+                  ></td>
                 </tr>
                 <tr>
                   <th>License</th>
-                  <td><a :href="$store.dataset.dataset.license_url" x-text="$store.dataset.dataset.license_title"></a></td>
+                  <td>
+                    <a
+                      :href="$store.dataset.dataset.license_url"
+                      x-text="$store.dataset.dataset.license_title"
+                    ></a>
+                  </td>
                 </tr>
               </table>
             </div>
