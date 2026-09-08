@@ -2,8 +2,7 @@
 title: Datasets
 layout: default
 ---
-
-<div x-data>
+<div x-data x-init="window.__sqlReady.then(db => $store.datasets.loadDatasets(db)).catch(err => console.error('Error loading database:', err))">
   <div class="modern-hero">
     <div class="hero-background-image"></div>
     <div class="hero-content">
@@ -14,7 +13,7 @@ layout: default
       </p>
       <div class="modern-search">
         <input
-          x-model="$store.index.query"
+          x-model="$store.datasets.query"
           type="text"
           placeholder="Search datasets by keyword, location, or hazard type..."
           class="form-control"
@@ -29,13 +28,13 @@ layout: default
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
           <!-- Active Filters Summary -->
           <div
-            x-show="$store.index.hasActiveFilters"
+            x-show="$store.datasets.hasActiveFilters"
             class="active-filters-summary"
           >
             <span
-              x-text="$store.index.activeFilterCount + ' filter(s) active'"
+              x-text="$store.datasets.activeFilterCount + ' filter(s) active'"
             ></span>
-            <button @click="$store.index.clearFilters()" class="btn btn-xs btn-default">
+            <button @click="$store.datasets.clearFilters()" class="btn btn-xs btn-default">
               Clear all
             </button>
           </div>
@@ -45,14 +44,14 @@ layout: default
             <h4>Risk Component</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptionsRiskDataType()"
+                x-for="item in $store.datasets.getFilterOptionsRiskDataType()"
                 :key="item.slug"
               >
                 <a
                   href="#"
                   class="list-group-item"
                   :class="{ 'active': item.selected }"
-                  @click.prevent="$store.index.toggleFilter('risk_data_type', item.slug)"
+                  @click.prevent="$store.datasets.toggleFilter('risk_data_type', item.slug)"
                 >
                   <span class="filter-icon" :class="item.slug"></span>
                   <span
@@ -90,14 +89,14 @@ layout: default
             </h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptionsHazardType()"
+                x-for="item in $store.datasets.getFilterOptionsHazardType()"
                 :key="item.slug"
               >
                 <a
                   href="#"
                   class="list-group-item"
                   :class="{ 'active': item.selected }"
-                  @click.prevent="$store.index.toggleFilter('hazard_type', item.slug)"
+                  @click.prevent="$store.datasets.toggleFilter('hazard_type', item.slug)"
                 >
                   <span
                     class="list-group-item-truncate"
@@ -121,14 +120,14 @@ layout: default
             <h4>Geographical Scale</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptionsGeoScale()"
+                x-for="item in $store.datasets.getFilterOptionsGeoScale()"
                 :key="item.slug"
               >
                 <a
                   href="#"
                   class="list-group-item"
                   :class="{ 'active': item.selected }"
-                  @click.prevent="$store.index.toggleFilter('geo_scale', item.slug)"
+                  @click.prevent="$store.datasets.toggleFilter('geo_scale', item.slug)"
                 >
                   <span
                     class="list-group-item-truncate"
@@ -152,14 +151,14 @@ layout: default
             <h4>Countries</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptionsCountries()"
+                x-for="item in $store.datasets.getFilterOptionsCountries()"
                 :key="item.slug"
               >
                 <a
                   href="#"
                   class="list-group-item"
                   :class="{ 'active': item.selected }"
-                  @click.prevent="$store.index.toggleFilter('countries', item.slug)"
+                  @click.prevent="$store.datasets.toggleFilter('countries', item.slug)"
                 >
                   <span
                     x-show="item.emoji"
@@ -189,14 +188,14 @@ layout: default
             <h4>Projects</h4>
             <div class="list-group">
                 <template
-                  x-for="item in $store.index.getFilterOptionsProject()"
+                  x-for="item in $store.datasets.getFilterOptionsProject()"
                   :key="item.slug"
                 >
                   <a
                     href="#"
                     class="list-group-item"
                     :class="{ 'active': item.selected }"
-                    @click.prevent="$store.index.toggleFilter('project', item.slug)"
+                    @click.prevent="$store.datasets.toggleFilter('project', item.slug)"
                   >
                     <span
                       class="list-group-item-truncate"
@@ -220,14 +219,14 @@ layout: default
             <h4>Catalog</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptionsCatalog()"
+                x-for="item in $store.datasets.getFilterOptionsCatalog()"
                 :key="item.slug"
               >
                 <a
                   href="#"
                   class="list-group-item"
                   :class="{ 'active': item.selected }"
-                  @click.prevent="$store.index.toggleFilter('catalog', item.slug)"
+                  @click.prevent="$store.datasets.toggleFilter('catalog', item.slug)"
                 >
                   <span
                     class="list-group-item-truncate"
@@ -252,14 +251,14 @@ layout: default
             <h4>Licenses</h4>
             <div class="list-group">
               <template
-                x-for="item in $store.index.getFilterOptionsLicense()"
+                x-for="item in $store.datasets.getFilterOptionsLicense()"
                 :key="item.slug"
               >
                 <a
                   href="#"
                   class="list-group-item"
                   :class="{ 'active': item.selected }"
-                  @click.prevent="$store.index.toggleFilter('license', item.slug)"
+                  @click.prevent="$store.datasets.toggleFilter('license', item.slug)"
                 >
                   <span
                     class="list-group-item-truncate"
@@ -283,20 +282,20 @@ layout: default
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
           <!-- Results Section -->
           <h3
-            x-show="$store.index.display.length > 0"
+            x-show="$store.datasets.display.length > 0"
             style="margin-top: 0; margin-bottom: 24px"
-            x-text="`Showing ${$store.index.paginationStart}-${$store.index.paginationEnd} of ${$store.index.display.length} dataset${$store.index.display.length === 1 ? '' : 's'}`"
+            x-text="`Showing ${$store.datasets.paginationStart}-${$store.datasets.paginationEnd} of ${$store.datasets.display.length} dataset${$store.datasets.display.length === 1 ? '' : 's'}`"
           ></h3>
-          <h3 x-show="$store.index.isLoaded" style="margin-top: 0">
+          <h3 x-show="$store.datasets.isLoaded" style="margin-top: 0">
             No datasets found with these filters and/or query
           </h3>
-          <h3 x-show="$store.index.isLoading" style="margin-top: 0">
+          <h3 x-show="$store.datasets.isLoading" style="margin-top: 0">
             Loading...
           </h3>
 
           <div>
             <template
-              x-for="dataset in $store.index.paginatedDatasets"
+              x-for="dataset in $store.datasets.paginatedDatasets"
               :key="dataset.id"
             >
               <article class="dataset-card">
@@ -396,17 +395,17 @@ layout: default
           </div>
 
           <!-- Pagination Controls -->
-          <div x-show="$store.index.totalPages > 1" class="pagination-wrapper">
+          <div x-show="$store.datasets.totalPages > 1" class="pagination-wrapper">
             <button
-              @click="$store.index.currentPage = Math.max(1, $store.index.currentPage - 1); window.scrollTo(0, 0)"
-              :disabled="$store.index.currentPage === 1"
+              @click="$store.datasets.currentPage = Math.max(1, $store.datasets.currentPage - 1); window.scrollTo(0, 0)"
+              :disabled="$store.datasets.currentPage === 1"
               class="btn btn-default"
-              :class="{ 'disabled': $store.index.currentPage === 1 }"
+              :class="{ 'disabled': $store.datasets.currentPage === 1 }"
             >
               <i class="fa fa-chevron-left"></i> Previous
             </button>
             <template
-              x-for="(page, index) in $store.index.paginationNumbers"
+              x-for="(page, index) in $store.datasets.paginationNumbers"
               :key="index"
             >
               <div style="display: contents">
@@ -417,18 +416,18 @@ layout: default
                 ></span>
                 <button
                   x-show="page !== '...'"
-                  @click="$store.index.currentPage = page; window.scrollTo(0, 0)"
+                  @click="$store.datasets.currentPage = page; window.scrollTo(0, 0)"
                   class="btn"
-                  :class="page === $store.index.currentPage ? 'btn-primary' : 'btn-default'"
+                  :class="page === $store.datasets.currentPage ? 'btn-primary' : 'btn-default'"
                   x-text="page"
                 ></button>
               </div>
             </template>
             <button
-              @click="$store.index.currentPage = Math.min($store.index.totalPages, $store.index.currentPage + 1); window.scrollTo(0, 0)"
-              :disabled="$store.index.currentPage === $store.index.totalPages"
+              @click="$store.datasets.currentPage = Math.min($store.datasets.totalPages, $store.datasets.currentPage + 1); window.scrollTo(0, 0)"
+              :disabled="$store.datasets.currentPage === $store.datasets.totalPages"
               class="btn btn-default"
-              :class="{ 'disabled': $store.index.currentPage === $store.index.totalPages }"
+              :class="{ 'disabled': $store.datasets.currentPage === $store.datasets.totalPages }"
             >
               Next <i class="fa fa-chevron-right"></i>
             </button>

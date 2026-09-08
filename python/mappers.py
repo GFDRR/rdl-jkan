@@ -1,8 +1,3 @@
-"""
-Differences between RDLS and output frontmatter:
-    - catalog added; derived from links and resources
-"""
-
 import config
 from utils import slugify
 
