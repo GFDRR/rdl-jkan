@@ -125,8 +125,12 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     cur.execute(
         """
         INSERT OR REPLACE INTO datasets (
-            id, title, description, hazard, license_slug, project, catalog_slug, risk_data_type, slug,
-            spatial, temporal,version, frontmatter
+            id, title, description,
+            hazard, license_slug,
+            project, catalog_slug,
+            risk_data_type, slug,
+            spatial, temporal, version,
+            frontmatter
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?)
         """,
         (

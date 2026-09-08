@@ -17,10 +17,10 @@ layout: default
           <main class="main-content">
             <div class="dataset-header">
               <div
-                :class="'category-badge' + $store.dataset.dataset.risk_data_type[0].slug"
+                :class="'category-badge ' + JSON.parse($store.dataset.dataset.risk_data_type)[0]"
               >
                 <span class="badge-icon"></span>
-                <p x-text="$store.dataset.dataset.risk_data_type[0]"></p>
+                <p x-text="JSON.parse($store.dataset.dataset.risk_data_type)[0]"></p>
               </div>
               <h1 class="dataset-title">
                 <span property="dct:title">{{ page.title }}</span>
@@ -42,14 +42,14 @@ layout: default
               </div>
 
               <div class="quick-info">
-                <div class="info-card">
+                <div class="info-card" x-show="JSON.parse($store.dataset.dataset.creator).name">
                   <div class="info-label">Organization</div>
                   <div
                     class="info-value"
-                    x-text="$store.dataset.dataset.creator"
+                    x-text="JSON.parse($store.dataset.dataset.creator).name"
                   ></div>
                 </div>
-                <div class="info-card">
+                <div class="info-card" x-show="$store.dataset.dataset.version">
                   <div class="info-label">Version</div>
                   <div
                     class="info-value"
@@ -60,7 +60,7 @@ layout: default
                   <div class="info-label">License</div>
                   <div
                     class="info-value"
-                    x-text="$store.dataset.dataset.license_slug"
+                    x-text="$store.dataset.dataset.license_title"
                   ></div>
                 </div>
               </div>
@@ -136,25 +136,28 @@ layout: default
                   <th>Catalog</th>
                   <td x-text="$store.dataset.dataset.catalog_title"></td>
                 </tr>
-                <tr>
+                <tr x-show="JSON.parse($store.dataset.dataset.publisher).name">
                   <th>Publisher of dataset</th>
-                  <td x-text="$store.dataset.dataset.publisher"></td>
+                  <td x-show="JSON.parse($store.dataset.dataset.publisher).url"><a :href="JSON.parse($store.dataset.dataset.publisher).url" x-text="JSON.parse($store.dataset.dataset.publisher).name"></a></td>
+                  <td x-show="!JSON.parse($store.dataset.dataset.publisher).url" x-text="JSON.parse($store.dataset.dataset.publisher).name"></td>
                 </tr>
-                <tr>
+                <tr x-show="$store.dataset.dataset.details">
                   <th>Additional details</th>
                   <td x-text="$store.dataset.dataset.details"></td>
                 </tr>
-                <tr>
+                <tr x-show="JSON.parse($store.dataset.dataset.creator).name">
                   <th>Creator</th>
-                  <td x-text="$store.dataset.dataset.creator"></td>
+                  <td x-show="JSON.parse($store.dataset.dataset.creator).url"><a :href="JSON.parse($store.dataset.dataset.creator).url" x-text="JSON.parse($store.dataset.dataset.creator).name"></a></td>
+                  <td x-show="!JSON.parse($store.dataset.dataset.creator).url" x-text="JSON.parse($store.dataset.dataset.creator).name"></td>
                 </tr>
-                <tr>
+                <tr x-show="JSON.parse($store.dataset.dataset.contact_point).name">
                   <th>Contact Point</th>
-                  <td x-text="$store.dataset.dataset.contact"></td>
+                  <td x-show="JSON.parse($store.dataset.dataset.contact_point).url"><a :href="JSON.parse($store.dataset.dataset.contact_point).url" x-text="JSON.parse($store.dataset.dataset.publisher).name"></a></td>
+                  <td x-show="!JSON.parse($store.dataset.dataset.contact_point).url" x-text="JSON.parse($store.dataset.dataset.contact_point).name"></td>
                 </tr>
                 <tr>
                   <th>License</th>
-                  <td x-text="$store.dataset.dataset.license_slug"></td>
+                  <td><a :href="$store.dataset.dataset.license_url" x-text="$store.dataset.dataset.license_title"></a></td>
                 </tr>
               </table>
             </div>
@@ -175,45 +178,7 @@ layout: default
                 </a>
               </div>
             </div>
-
             {% include display/spatial_extent_map.html %}
-
-            <div class="sidebar-card">
-              <h4>Dataset Info</h4>
-              {% if page.modified %}
-              <div class="sidebar-item">
-                <div class="sidebar-icon">
-                  <i class="fa fa-calendar"></i>
-                </div>
-                <div class="sidebar-content">
-                  <div class="sidebar-label">Last Updated</div>
-                  <div class="sidebar-value">{{ page.modified }}</div>
-                </div>
-              </div>
-              {% endif %} {% if page.issued %}
-              <div class="sidebar-item">
-                <div class="sidebar-icon">
-                  <i class="fa fa-clock-o"></i>
-                </div>
-                <div class="sidebar-content">
-                  <div class="sidebar-label">Published</div>
-                  <div class="sidebar-value">{{ page.issued }}</div>
-                </div>
-              </div>
-              {% endif %} {% if page.resources %}
-              <div class="sidebar-item">
-                <div class="sidebar-icon">
-                  <i class="fa fa-file-o"></i>
-                </div>
-                <div class="sidebar-content">
-                  <div class="sidebar-label">Resources</div>
-                  <div class="sidebar-value">
-                    {{ page.resources.size }} files
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-            </div>
           </aside>
         </div>
       </div>
