@@ -190,7 +190,143 @@ layout: default
                 </tr>
               </table>
             </div>
-            <template x-if="JSON.parse($store.dataset.dataset.risk_data_type)">
+            <template x-for="rdt in $store.dataset.dataset.risk_data_type" :key="rdt">
+              <div>
+                <template x-if="rdt === 'exposure'">
+                  <div class="content-section risk-component-section exposure">
+                    <h2 class="section-title">
+                      <span class="component-icon exposure"></span>
+                      Exposure Component
+                    </h2>
+                    <table class="data-table rdl-table" >
+                      <template x-for="exposure in $store.dataset.dataset.exposure" :key="exposure.id">
+                        <tbody>
+                          <tr>
+                            <th>Exposure</th>
+                            <th>Category</th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                          <tr>
+                            <td x-text="exposure.id"></td>
+                            <td x-text="exposure.category"></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th></th>
+                            <th>Metric</th>
+                            <th>Dimension</th>
+                            <th>Unit</th>
+                          </tr>
+                          <template x-for="metric in exposure.metrics" :key="metric.id">
+                            <tr>
+                              <td></td>
+                              <td x-text="metric.id"></td>
+                              <td x-text="metric.dimension"></td>
+                              <td x-text="metric.measurement.unit"></td>
+                            </tr>
+                          </template>
+                        </tbody>
+                      </template>
+                    </table>
+                  </div>
+                </template>
+                <template x-if="rdt === 'hazard'">
+                  <div class="content-section risk-component-section hazard">
+                    <h2 class="section-title">
+                      <span class="component-icon hazard"></span>
+                      Hazard Component
+                    </h2>
+                    <table class="data-table rdl-table" >
+                      <template x-for="event_set in $store.dataset.dataset.hazard.event_sets" :key="event_set.id">
+                        <tbody>
+                          <tr>
+                            <th>Event Set</th>
+                            <th>Analysis Type</th>
+                            <th>Calculation Method</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                          <tr>
+                            <td x-text="event_set.id"></td>
+                            <td x-text="event_set.analysis_type"></td>
+                            <td x-text="event_set.calculation_method"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th></th>
+                            <th>Event</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Hazard Type</th>
+                            <th>Hazard Process</th>
+                          </tr>
+                          <template x-for="event in event_set.events" :key="event.id">
+                              <tr>
+                                <td></td>
+                                <td x-text="event.id"></td>
+                                <td x-text="event.occurrence[event_set.analysis_type].temporal.start"></td>
+                                <td x-text="event.occurrence[event_set.analysis_type].temporal.end"></td>
+                                <td x-text="event.hazard.type"></td>
+                                <td x-text="event.hazard.process"></td>
+                              </tr>
+                            </template>
+                        </tbody>
+                      </template>
+                    </table>
+                  </div>
+                </template>
+                <template x-if="rdt === 'loss'">
+                  <div class="content-section risk-component-section loss">
+                    <h2 class="section-title">
+                      <span class="component-icon loss"></span>
+                      Loss Component
+                    </h2>
+                    <table class="data-table rdl-table" >
+                      <tr>
+                        <th>Loss</th>
+                        <th>Loss Type</th>
+                        <th>Impact Unit</th>
+                      </tr>
+                      <template x-for="loss in $store.dataset.dataset.loss.losses" :key="loss.id">
+                        <tr>
+                          <td x-text="loss.id"></td>
+                          <td x-text="loss.impact_and_losses.loss_type"></td>
+                          <td x-text="loss.impact_and_losses.impact.measurement.unit"></td>
+                        </tr>
+                      </template>
+                    </table>
+                  </div>
+                </template>
+                <template x-if="rdt === 'vulnerability'">
+                  <div class="content-section risk-component-section vulnerability">
+                    <h2 class="section-title">
+                      <span class="component-icon vulnerability"></span>
+                      Vulnerability Component
+                    </h2>
+                    <table class="data-table rdl-table" >
+                      <tr>
+                        <th>Vulnerability Function</th>
+                        <th>Category</th>
+                        <th>Analysis Type</th>
+                        <th>Approach</th>
+                      </tr>
+                      <template x-for="vuln_function in $store.dataset.dataset.vulnerability.functions.vulnerability" :key="vuln_function.id">
+                        <tr>
+                          <td x-text="vuln_function.id"></td>
+                          <td x-text="vuln_function.category"></td>
+                          <td x-text="vuln_function.hazard_analysis_type"></td>
+                          <td x-text="vuln_function.approach"></td>
+                        </tr>
+                      </template>
+                    </table>
+                  </div>
+                </template>
+              </div>
             </template>
           </main>
 
@@ -241,7 +377,7 @@ layout: default
                 maxZoom: 19,
                 attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> and <a href="https://www.geoboundaries.org/">GeoBoundaries</a>'
               }).addTo(map);
-              const spatial = Alpine.store('dataset').dataset.spatial ?? {};
+              const spatial = window.Alpine.store('dataset').dataset.spatial ?? {};
               const countryCodes = spatial.countries.map(c =>c.slug) || [];
               const bbox = spatial.bbox || null;
               const isGlobal = (spatial.scale || "").toLowerCase() === "global";
