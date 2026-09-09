@@ -123,9 +123,9 @@ export default {
       if (this.filters.hazard_type.length > 1) whereSql += "(";
       filtersAppliedCount++;
       this.filters.hazard_type.forEach((ht, index) => {
-        whereSql += `json_extract(hazard, '$.type') LIKE '%${ht}%' ${index < this.filters.hazard_type.length - 1 ? "OR" : ""} `;
+        whereSql += `hazard_type LIKE '%${ht}%' ${index < this.filters.hazard_type.length - 1 ? "OR" : ""} `;
       });
-      whereSql += "AND hazard IS NOT NULL)";
+      whereSql += "AND hazard_type IS NOT NULL)";
       if (this.filters.hazard_type.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
     }
@@ -280,16 +280,16 @@ export default {
       const result = queryDB(
         this.db,
         `
-          SELECT hazard, COUNT(*) as count
+          SELECT hazard_type, COUNT(*) as count
           FROM datasets
           ${whereSql.length > 6 ? whereSql : " "}
-          GROUP BY hazard
+          GROUP BY hazard_type
           ORDER BY count DESC;
         `,
       );
       const values = Object.values(
-        result[0].values.reduce((acc, [hazard_json, count]) => {
-          const ht_array = hazard_json ? JSON.parse(hazard_json).type : [];
+        result[0].values.reduce((acc, [hazard_type, count]) => {
+          const ht_array = hazard_type ? JSON.parse(hazard_type) : [];
           ht_array.forEach((slug) => {
             if (acc[slug]) acc[slug]["count"] += count;
             else
