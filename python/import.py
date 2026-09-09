@@ -23,14 +23,13 @@ def create_tables(conn: sqlite3.Connection):
     cur.execute("DROP TABLE IF EXISTS datasets_fts")
     cur.execute("DROP TABLE IF EXISTS catalogs")
     cur.execute("DROP TABLE IF EXISTS licenses")
-    cur.execute("DROP TABLE IF EXISTS resources")
     cur.execute("""
         CREATE TABLE datasets (
             id TEXT PRIMARY KEY,
             catalog_slug TEXT,
             description TEXT,
             frontmatter TEXT,
-            hazard TEXT,
+            hazard_type TEXT,
             license_slug TEXT,
             project TEXT,
             risk_data_type TEXT,
@@ -64,22 +63,6 @@ def create_tables(conn: sqlite3.Connection):
             tokenize='trigram'
         )
         """)
-    cur.execute("""
-        CREATE TABLE resources (
-            id TEXT PRIMARY KEY,
-            dataset_id TEXT NOT NULL,
-            title TEXT,
-            description TEXT,
-            access_url TEXT,
-            download_url TEXT,
-            media_type TEXT,
-            format TEXT,
-            conforms_to TEXT,
-            spatial TEXT,
-            temporal TEXT,
-            FOREIGN KEY(dataset_id) REFERENCES datasets(id) ON DELETE CASCADE
-        )
-        """)
     conn.commit()
 
 
@@ -93,7 +76,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     project = _serialize(fm.get("project"))
     risk_data_type = _serialize(fm.get("risk_data_type"))
     slug = _serialize(fm.get("slug"))
-    hazard = _serialize(fm.get("hazard"))
+    hazard_type = _serialize((fm.get("hazard") or {}).get('type'))
     spatial = _serialize(fm.get("spatial"))
     temporal = _serialize(fm.get("temporal"))
     version = _serialize(fm.get("version"))
@@ -126,7 +109,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
         """
         INSERT OR REPLACE INTO datasets (
             id, title, description,
-            hazard, license_slug,
+            hazard_type, license_slug,
             project, catalog_slug,
             risk_data_type, slug,
             spatial, temporal, version,
@@ -137,7 +120,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
             dataset_id,
             title,
             description,
-            hazard,
+            hazard_type,
             license_slug,
             project,
             catalog_slug,
@@ -158,32 +141,6 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
         """,
         (dataset_id, title, description),
     )
-
-    # Insert resources linked to this dataset
-    for res in fm.get("resources", []):
-        cur.execute(
-            """
-            INSERT OR REPLACE INTO resources (
-                id, dataset_id, title, description, access_url, download_url,
-                media_type, format, conforms_to, spatial, temporal
-            ) VALUES (
-                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
-            )
-            """,
-            (
-                _serialize(res.get("id")),
-                dataset_id,
-                _serialize(res.get("title")),
-                _serialize(res.get("description")),
-                _serialize(res.get("access_url")),
-                _serialize(res.get("download_url")),
-                _serialize(res.get("media_type")),
-                _serialize(res.get("format")),
-                _serialize(res.get("conforms_to")),
-                _serialize(res.get("spatial")),
-                _serialize(res.get("temporal")),
-            ),
-        )
 
     conn.commit()
 
