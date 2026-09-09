@@ -49,8 +49,11 @@ Object.defineProperties(
           json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
           json_extract(datasets.frontmatter, '$.creator') as creator,
           json_extract(datasets.frontmatter, '$.details') as details,
+          json_extract(datasets.frontmatter, '$.exposure') as exposure,
+          json_extract(datasets.frontmatter, '$.loss') as loss,
           json_extract(datasets.frontmatter, '$.publisher') as publisher,
           json_extract(datasets.frontmatter, '$.resources') as resources,
+          json_extract(datasets.frontmatter, '$.vulnerability') as vulnerability,
           datasets.*
           FROM datasets
           LEFT JOIN catalogs c ON datasets.catalog_slug = c.slug
@@ -60,6 +63,7 @@ Object.defineProperties(
       );
       
       this.dataset = transformShape(results)?.[0] ?? null
+      console.log(this.dataset)
     },
   }),
 );
