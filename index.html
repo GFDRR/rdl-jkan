@@ -370,24 +370,20 @@ layout: default
                   <div class="meta-item" x-show="dataset.countries">
                     <i class="fa fa-map-marker"></i>
                     <span
-                      x-text="Array.isArray(dataset.countries) ? dataset.countries.join(', ') : dataset.countries"
+                      x-text="Array.isArray(dataset.countries) ? dataset.countries.map(c => c.title).join(', ') : dataset.countries[0].title"
                     ></span>
                   </div>
-                  <div class="meta-item" x-show="dataset.license_code">
+                  <div class="meta-item" x-show="dataset.license_title">
                     <i class="fa fa-legal"></i>
                     <a
                       x-show="dataset.license_url"
                       x-bind:href="dataset.license_url"
-                      x-text="dataset.license_code"
+                      x-text="dataset.license_title"
                     ></a>
                     <span
                       x-show="!dataset.license_url"
-                      x-text="dataset.license_code"
+                      x-text="dataset.license_title"
                     ></span>
-                  </div>
-                  <div class="meta-item" x-show="dataset.modified">
-                    <i class="fa fa-calendar"></i>
-                    <span x-text="'Updated ' + dataset.modified"></span>
                   </div>
                 </div>
               </article>

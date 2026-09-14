@@ -15,15 +15,31 @@ export function queryDB(db, sqlString) {
   // "SELECT label FROM risk_data_types;
 }
 
-export function transformDatasetRow(row) {
-  return {
-    id: row[0],
-    description: row[2],
-    frontmatter: row[3],
-    license_slug: row[5],
-    risk_data_type: JSON.parse(row[7]),
-    slug: row[8],
-    spatial: JSON.parse(row[9]),
-    title: row[11],
-  };
+export function transformShape(data) {
+  if (!data || !Array.isArray(data)) {
+    return [];
+  }
+  
+  return data.flatMap(({ columns, values }) => {
+    if (!columns || !values || !Array.isArray(values)) {
+      return [];
+    }
+    
+    return values.map(row => {
+      const obj = {};
+      columns.forEach((column, index) => {
+        let value = row[index];
+        if (typeof value === 'string') {
+          try {
+            const parsed = JSON.parse(value);
+            value = parsed;
+          } catch (e) {
+            // Not valid JSON, keep original string value
+          }
+        }
+        obj[column] = value;
+      });
+      return obj;
+    });
+  });
 }

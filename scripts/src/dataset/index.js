@@ -1,38 +1,9 @@
-import { queryDB } from "../shared/utils";
+import { queryDB, transformShape } from "../shared/utils";
 
 const datasetStore = {
   dataset: null,
   db: null,
 };
-
-function transformShape(data) {
-  if (!data || !Array.isArray(data)) {
-    return [];
-  }
-  
-  return data.flatMap(({ columns, values }) => {
-    if (!columns || !values || !Array.isArray(values)) {
-      return [];
-    }
-    
-    return values.map(row => {
-      const obj = {};
-      columns.forEach((column, index) => {
-        let value = row[index];
-        if (typeof value === 'string') {
-          try {
-            const parsed = JSON.parse(value);
-            value = parsed;
-          } catch (e) {
-            // Not valid JSON, keep original string value
-          }
-        }
-        obj[column] = value;
-      });
-      return obj;
-    });
-  });
-}
 
 // defineProperties to preserve getters, keeping `this` bound to the store
 Object.defineProperties(
@@ -63,7 +34,6 @@ Object.defineProperties(
       );
       
       this.dataset = transformShape(results)?.[0] ?? null
-      console.log(this.dataset)
     },
   }),
 );

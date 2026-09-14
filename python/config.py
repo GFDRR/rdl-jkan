@@ -201,7 +201,7 @@ datasets_countries = {
 "MDV": {"title":"Maldives","emoji": "🇲🇻"},
 "MEX": {"title":"Mexico","emoji": "🇲🇽"},
 "MHL": {"title":"Marshall Islands","emoji": "🇲🇭"},
-"MKD": {"title":"Macedonia, the former Yugoslav Republic of","emoji": "🇲🇰"},
+"MKD": {"title":"Macedonia","emoji": "🇲🇰"},
 "MLI": {"title":"Mali","emoji": "🇲🇱"},
 "MLT": {"title":"Malta","emoji": "🇲🇹"},
 "MMR": {"title":"Myanmar","emoji": "🇲🇲"},
