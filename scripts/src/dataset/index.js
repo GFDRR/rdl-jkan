@@ -23,6 +23,7 @@ Object.defineProperties(
           json_extract(datasets.frontmatter, '$.exposure') as exposure,
           json_extract(datasets.frontmatter, '$.loss') as loss,
           json_extract(datasets.frontmatter, '$.publisher') as publisher,
+          json_extract(datasets.frontmatter, '$.purpose') as purpose,
           json_extract(datasets.frontmatter, '$.resources') as resources,
           json_extract(datasets.frontmatter, '$.vulnerability') as vulnerability,
           datasets.*

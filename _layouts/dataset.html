@@ -145,6 +145,10 @@ layout: default
                     x-text="$store.dataset.dataset.publisher.name"
                   ></td>
                 </tr>
+                <tr x-show="$store.dataset.dataset.purpose">
+                  <th>Purpose</th>
+                  <td x-text="$store.dataset.dataset.purpose"></td>
+                </tr>
                 <tr x-show="$store.dataset.dataset.details">
                   <th>Additional details</th>
                   <td x-text="$store.dataset.dataset.details"></td>
