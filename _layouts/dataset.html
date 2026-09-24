@@ -5,9 +5,23 @@ layout: default
 <div
   class="content-wrapper"
   x-data
-  x-init="window.__sqlReady.then(db => $store.dataset.loadDataset(db, '{{ page.slug }}')).catch(err => console.error('Error loading database:', err))"
+  x-init="window.__sqlReady.then(db => $store.dataset.loadDataset(db, '{{ page.slug }}')).catch(err => $store.dataset.handleLoadError(err))"
 >
   <div class="modern-content">
+    <div x-show="$store.dataset.isLoading" class="datasets-loading">
+      <div
+        class="loading-spinner"
+        role="status"
+        aria-label="Loading dataset…"
+      ></div>
+      <p>Loading dataset…</p>
+    </div>
+    <div x-show="$store.dataset.loadError" class="datasets-error">
+      <p>Couldn't load this dataset. Please try again.</p>
+      <button @click="window.location.reload()" class="btn btn-default">
+        Try again
+      </button>
+    </div>
     <template x-if="$store.dataset.dataset">
       <div >
         <div
