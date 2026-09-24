@@ -2,7 +2,7 @@
 title: Datasets
 layout: default
 ---
-<div x-data x-init="window.__sqlReady.then(db => $store.datasets.loadDatasets(db)).catch(err => $store.datasets.handleLoadError(err))">
+<div x-data x-init="$store.datasets.loadDatasets()">
   <div class="modern-hero">
     <div class="hero-background-image"></div>
     <div class="hero-content">
@@ -284,13 +284,13 @@ layout: default
           <!-- Results Section -->
           <h3
             x-cloak
-            x-show="$store.datasets.display.length > 0"
+            x-show="$store.datasets.totalCount > 0"
             style="margin-top: 0; margin-bottom: 24px"
-            x-text="`Showing ${$store.datasets.paginationStart}-${$store.datasets.paginationEnd} of ${$store.datasets.display.length} dataset${$store.datasets.display.length === 1 ? '' : 's'}`"
+            x-text="`Showing ${$store.datasets.paginationStart}-${$store.datasets.paginationEnd} of ${$store.datasets.totalCount} dataset${$store.datasets.totalCount === 1 ? '' : 's'}`"
           ></h3>
           <h3
             x-cloak
-            x-show="$store.datasets.isLoaded && !$store.datasets.isSearching && $store.datasets.display.length === 0"
+            x-show="$store.datasets.isLoaded && !$store.datasets.isSearching && $store.datasets.totalCount === 0"
             style="margin-top: 0"
           >
             No datasets found with these filters and/or query
@@ -422,7 +422,7 @@ layout: default
             class="pagination-wrapper"
           >
             <button
-              @click="$store.datasets.currentPage = Math.max(1, $store.datasets.currentPage - 1); window.scrollTo(0, 0)"
+              @click="$store.datasets.goToPage($store.datasets.currentPage - 1); window.scrollTo(0, 0)"
               :disabled="$store.datasets.currentPage === 1"
               class="btn btn-default"
               :class="{ 'disabled': $store.datasets.currentPage === 1 }"
@@ -441,7 +441,7 @@ layout: default
                 ></span>
                 <button
                   x-show="page !== '...'"
-                  @click="$store.datasets.currentPage = page; window.scrollTo(0, 0)"
+                  @click="$store.datasets.goToPage(page); window.scrollTo(0, 0)"
                   class="btn"
                   :class="page === $store.datasets.currentPage ? 'btn-primary' : 'btn-default'"
                   x-text="page"
@@ -449,7 +449,7 @@ layout: default
               </div>
             </template>
             <button
-              @click="$store.datasets.currentPage = Math.min($store.datasets.totalPages, $store.datasets.currentPage + 1); window.scrollTo(0, 0)"
+              @click="$store.datasets.goToPage($store.datasets.currentPage + 1); window.scrollTo(0, 0)"
               :disabled="$store.datasets.currentPage === $store.datasets.totalPages"
               class="btn btn-default"
               :class="{ 'disabled': $store.datasets.currentPage === $store.datasets.totalPages }"

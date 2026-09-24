@@ -5,7 +5,7 @@ layout: default
 <div
   class="content-wrapper"
   x-data
-  x-init="window.__sqlReady.then(db => $store.dataset.loadDataset(db, '{{ page.slug }}')).catch(err => $store.dataset.handleLoadError(err))"
+  x-init="$store.dataset.loadDataset('{{ page.slug }}')"
 >
   <div class="modern-content">
     <div x-show="$store.dataset.isLoading" class="datasets-loading">

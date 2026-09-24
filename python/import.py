@@ -5,8 +5,12 @@ from pathlib import Path
 
 from mappers import make_dataset_frontmatter
 
-DATA_PATH = Path("/Users/lydiascarf/Desktop/web/rdl-jkan/_site/datasets.json")
-DB_PATH = Path("/Users/lydiascarf/Desktop/web/rdl-jkan/sqlite.db")
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = SCRIPT_DIR.parent
+# Dataset JSON files, merged in the same order as the site's load_data_json
+# filter (_plugins/load_data_json.rb) and the root datasets.json page.
+DATASETS_JSON_DIR = ROOT_DIR / "_datasets" / "json"
+DB_PATH = ROOT_DIR / "sqlite.db"
 
 
 def _serialize(value):
@@ -265,22 +269,23 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
 
 
 def main():
-    # Verify data file exists
-    if not DATA_PATH.is_file():
-        print(f"Data file not found: {DATA_PATH}")
+    # Verify data directory exists
+    if not DATASETS_JSON_DIR.is_dir():
+        print(f"Datasets directory not found: {DATASETS_JSON_DIR}")
         return 1
 
-    # Load raw JSON
+    # Load and merge the raw dataset JSON files
+    datasets = []
     try:
-        with open(DATA_PATH, "r", encoding="utf-8") as f:
-            raw = json.load(f)
+        for json_path in sorted(DATASETS_JSON_DIR.glob("*.json")):
+            with json_path.open("r", encoding="utf-8") as f:
+                datasets.extend(json.load(f).get("datasets", []))
     except Exception as exc:
-        print(f"Failed to read JSON: {exc}")
+        print(f"Failed to read dataset JSON: {exc}")
         return 1
 
-    datasets = raw.get("datasets", [])
     if not datasets:
-        print("No datasets present in the JSON file.")
+        print("No datasets present in the JSON files.")
         return 0
 
     # Connect to (or create) the SQLite DB

@@ -4,6 +4,12 @@ description: A simple catalog to find datasets compliant with the Risk Data Libr
 baseurl: 
 logo: https://www.gfdrr.org/themes/custom/gfdrr/images/GFDRR_Primary%20Logo_BW-Shade.svg
 
+# Base URL of the Netlify site serving the dataset query function
+# (netlify/functions/query). Leave empty when the site itself is hosted on
+# Netlify; set it to e.g. "https://rdl-data.netlify.app" when the site is
+# hosted elsewhere (e.g. GitHub Pages) and must call the API cross-origin.
+netlify_api_base: ""
+
 # Site theme
 # jkan_theme: Default
 jkan_theme: RDL-flatly
@@ -80,10 +86,15 @@ exclude:
   - .travis.yml
   - node_modules
   - scripts/src
+  - scripts/dev
+  - netlify
+  - netlify.toml
+  - python
   - package.json
   - webpack.config.js
   - README.md
   - LICENSE
+  - sqlite.db
   - sqlite.db-journal
 
 plugins:
