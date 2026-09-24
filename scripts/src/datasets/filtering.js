@@ -16,6 +16,7 @@ export default {
     idx === -1
       ? this.filters[filterType].push(value)
       : this.filters[filterType].splice(idx, 1);
+    this.refreshDisplay();
   },
 
   isFilterActive(filterType, value) {
@@ -24,6 +25,7 @@ export default {
 
   clearFilters() {
     Object.keys(this.filters).forEach((k) => (this.filters[k] = []));
+    this.refreshDisplay();
   },
 
   get activeFilterCount() {

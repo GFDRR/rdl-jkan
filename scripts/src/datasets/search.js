@@ -9,7 +9,8 @@ export const SEMANTIC_MIN_SCORE = 0.25;
 const VECTORS_URL = "/python/vectors.json";
 // Must match the model used to generate vectors.json (see python/generate_vectors.py).
 const EMBEDDING_MODEL = "Xenova/all-MiniLM-L6-v2";
-const EMBEDDING_DEBOUNCE_MS = 150;
+const SEARCH_DEBOUNCE_MS = 200;
+const EMBEDDING_DEBOUNCE_MS = 350;
 
 env.allowLocalModels = false;
 
@@ -39,8 +40,12 @@ export default {
   },
   set query(value) {
     this._query = value ?? "";
+    this.isSearching = Boolean(this._query.trim());
     this.queryVector = null;
-    this.refreshSearchResults();
+    this.filteredKeywordResults = [];
+    this.filteredNonKeywordResults = [];
+    this.refreshDisplay();
+    this.scheduleSearch();
     this.scheduleQueryVector();
   },
   filteredKeywordResults: [],
@@ -49,6 +54,8 @@ export default {
   vectorsLoaded: false,
   queryVector: null,
   embedderPromise: null,
+  _searchTimer: null,
+  _searchToken: 0,
   _embedTimer: null,
   _embedToken: 0,
 
@@ -94,6 +101,18 @@ export default {
     return Array.from(output.data);
   },
 
+  scheduleSearch() {
+    clearTimeout(this._searchTimer);
+    const trimmed = this.query.trim();
+    const token = ++this._searchToken;
+    if (!trimmed) return;
+
+    this._searchTimer = setTimeout(() => {
+      if (token !== this._searchToken) return;
+      this.refreshSearchResults();
+    }, SEARCH_DEBOUNCE_MS);
+  },
+
   scheduleQueryVector() {
     clearTimeout(this._embedTimer);
     const trimmed = this.query.trim();
@@ -105,9 +124,13 @@ export default {
           if (token !== this._embedToken) return;
           this.queryVector = vector;
           this.runSemanticSearch();
+          this.refreshDisplay();
+          this.isSearching = false;
         })
         .catch((error) => {
+          if (token !== this._embedToken) return;
           console.error("Failed to embed search query:", error);
+          this.isSearching = false;
         });
     }, EMBEDDING_DEBOUNCE_MS);
   },
@@ -152,11 +175,13 @@ export default {
     const keywordIds = new Set(
       this.filteredKeywordResults.map((r) => r.dataset_id),
     );
-    this.filteredNonKeywordResults = this.vectors
+    const vectors = window.Alpine.raw(this.vectors);
+    const queryVector = window.Alpine.raw(this.queryVector);
+    this.filteredNonKeywordResults = vectors
       .filter((item) => !keywordIds.has(item.dataset_id))
       .map((item) => ({
         dataset_id: item.dataset_id,
-        score: cosineSimilarity(this.queryVector, item.vector),
+        score: cosineSimilarity(queryVector, item.vector),
         match_type: "semantic",
       }))
       .filter((r) => r.score >= SEMANTIC_MIN_SCORE)
@@ -168,6 +193,7 @@ export default {
   refreshSearchResults() {
     this.runKeywordSearch();
     this.runSemanticSearch();
+    this.refreshDisplay();
   },
 
   get searchResultIds() {

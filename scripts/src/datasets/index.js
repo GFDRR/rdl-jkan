@@ -7,7 +7,10 @@ const datasetsStore = {
   db: null,
   all: [],
   display: [],
+  filteredDatasets: [],
+  filterCacheKey: null,
   isLoading: true,
+  isSearching: false,
   isLoaded: false,
   loadError: false,
 };
@@ -28,45 +31,49 @@ Object.defineProperties(
 Object.defineProperties(
   datasetsStore,
   Object.getOwnPropertyDescriptors({
-    get datasetsByFilterAndSearch() {
+    getFilteredDatasets() {
       if (!this.db) return [];
 
-      const sql = `
-        SELECT
-          c.title as catalog_title, c.slug,
-          l.title as license_title, l.slug as license_slug, l.url as license_url,
-          json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
-          json_extract(datasets.frontmatter, '$.creator') as creator,
-          json_extract(datasets.frontmatter, '$.details') as details,
-          json_extract(datasets.frontmatter, '$.publisher') as publisher,
-          json_extract(datasets.frontmatter, '$.resources') as resources,
-          json_extract(datasets.spatial, '$.countries') as countries,
-          datasets.*
-        FROM datasets
-          LEFT JOIN catalogs c ON datasets.catalog_slug = c.slug
-          LEFT JOIN licenses l ON datasets.license_slug = l.slug
-          ${this.getWhereSqlForFilters()};
-      `;
-      const filtered = transformShape(queryDB(this.db, sql)) ?? [];
+      const filterKey = JSON.stringify(this.filters);
+      if (filterKey !== this.filterCacheKey) {
+        const sql = `
+          SELECT
+            c.title as catalog_title, c.slug,
+            l.title as license_title, l.slug as license_slug, l.url as license_url,
+            json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
+            json_extract(datasets.frontmatter, '$.creator') as creator,
+            json_extract(datasets.frontmatter, '$.details') as details,
+            json_extract(datasets.frontmatter, '$.publisher') as publisher,
+            json_extract(datasets.frontmatter, '$.resources') as resources,
+            json_extract(datasets.spatial, '$.countries') as countries,
+            datasets.*
+          FROM datasets
+            LEFT JOIN catalogs c ON datasets.catalog_slug = c.slug
+            LEFT JOIN licenses l ON datasets.license_slug = l.slug
+            ${this.getWhereSqlForFilters()};
+        `;
+        this.filteredDatasets = transformShape(queryDB(this.db, sql)) ?? [];
+        this.filterCacheKey = filterKey;
+      }
+      return this.filteredDatasets;
+    },
+    refreshDisplay() {
+      if (!this.db) return;
 
+      const filtered = this.getFilteredDatasets();
       if (!this.query.trim()) {
         this.display = filtered;
-        return filtered;
+        return;
       }
 
       const byId = new Map(filtered.map((d) => [d.id, d]));
-      const datasets = this.searchResultIds
+      this.display = this.searchResultIds
         .map((id) => byId.get(id))
         .filter(Boolean);
-      this.display = datasets;
-      return datasets;
     },
     get paginatedDatasets() {
       const start = (this.currentPage - 1) * this.itemsPerPage;
-      return this.datasetsByFilterAndSearch.slice(
-        start,
-        start + this.itemsPerPage,
-      );
+      return this.display.slice(start, start + this.itemsPerPage);
     },
     loadDatasets(db) {
       this.db = db;
@@ -88,9 +95,15 @@ Object.defineProperties(
       `);
       const datasets = transformShape(results) ?? [];
       this.all = datasets;
+      this.filteredDatasets = datasets;
+      this.filterCacheKey = JSON.stringify(this.filters);
       this.display = datasets;
       this.isLoading = false;
       this.isLoaded = true;
+      if (this.query.trim()) {
+        this.scheduleSearch();
+        this.scheduleQueryVector();
+      }
     },
     handleLoadError(err) {
       console.error("Error loading database:", err);
