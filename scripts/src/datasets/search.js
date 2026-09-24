@@ -1,3 +1,4 @@
+import { env, pipeline } from "@huggingface/transformers";
 import { queryDB } from "../shared/utils.js";
 
 export const KEYWORD_SCORE_MIN = 0.75;
@@ -6,9 +7,15 @@ export const SEMANTIC_MAX_RESULTS = 50;
 export const SEMANTIC_MIN_SCORE = 0.25;
 
 const VECTORS_URL = "/python/vectors.json";
+// Must match the model used to generate vectors.json (see python/generate_vectors.py).
+const EMBEDDING_MODEL = "Xenova/all-MiniLM-L6-v2";
+const EMBEDDING_DEBOUNCE_MS = 150;
+
+env.allowLocalModels = false;
 
 function escapeQuery(query) {
-  return `"${query.replace(/"/g, '""')}"`;
+  const phrase = `"${query.replace(/"/g, '""')}"`;
+  return `'${phrase.replace(/'/g, "''")}'`;
 }
 
 function cosineSimilarity(a, b) {
@@ -32,12 +39,18 @@ export default {
   },
   set query(value) {
     this._query = value ?? "";
+    this.queryVector = null;
     this.refreshSearchResults();
+    this.scheduleQueryVector();
   },
   filteredKeywordResults: [],
   filteredNonKeywordResults: [],
   vectors: [],
   vectorsLoaded: false,
+  queryVector: null,
+  embedderPromise: null,
+  _embedTimer: null,
+  _embedToken: 0,
 
   loadVectors() {
     if (this.vectorsPromise) return this.vectorsPromise;
@@ -62,6 +75,43 @@ export default {
     return this.vectorsPromise;
   },
 
+  loadEmbedder() {
+    if (this.embedderPromise) return this.embedderPromise;
+    this.embedderPromise = pipeline("feature-extraction", EMBEDDING_MODEL).catch(
+      (error) => {
+        console.error("Failed to load semantic search model:", error);
+        this.embedderPromise = null;
+        return null;
+      },
+    );
+    return this.embedderPromise;
+  },
+
+  async embedQuery(text) {
+    const embedder = await this.loadEmbedder();
+    if (!embedder) return null;
+    const output = await embedder(text, { pooling: "mean", normalize: true });
+    return Array.from(output.data);
+  },
+
+  scheduleQueryVector() {
+    clearTimeout(this._embedTimer);
+    const trimmed = this.query.trim();
+    const token = ++this._embedToken;
+    if (!trimmed) return;
+    this._embedTimer = setTimeout(() => {
+      this.embedQuery(trimmed)
+        .then((vector) => {
+          if (token !== this._embedToken) return;
+          this.queryVector = vector;
+          this.runSemanticSearch();
+        })
+        .catch((error) => {
+          console.error("Failed to embed search query:", error);
+        });
+    }, EMBEDDING_DEBOUNCE_MS);
+  },
+
   runKeywordSearch() {
     const trimmed = this.query.trim();
     if (!this.db || !trimmed) {
@@ -75,7 +125,7 @@ export default {
         SELECT datasets.id AS dataset_id
         FROM datasets_fts
           JOIN datasets ON datasets.rowid = datasets_fts.rowid
-        WHERE datasets_fts MATCH '${escapeQuery(trimmed)}'
+        WHERE datasets_fts MATCH ${escapeQuery(trimmed)}
         ORDER BY bm25(datasets_fts)
       `,
     );
