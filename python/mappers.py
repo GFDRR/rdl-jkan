@@ -457,7 +457,11 @@ def make_source(source):
 
 def make_spatial(spatial):
     country_codes = spatial.get("countries", [])
-    countries = [{**config.datasets_countries.get(country_code), "slug": slugify(country_code)} for country_code in country_codes]
+    countries = []
+    for country_code in country_codes:
+        country = config.datasets_countries.get(country_code)
+        if country is not None:
+            countries.append({**country, "slug": slugify(country_code)})
 
     if spatial.get("scale") == "global":
         global_country = config.datasets_countries.get('GLO')
