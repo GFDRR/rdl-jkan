@@ -227,7 +227,7 @@ layout: default
                           </tr>
                           <tr>
                             <td x-text="exposure.id"></td>
-                            <td x-text="exposure.category"></td>
+                            <td x-text="String(exposure.category ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
                             <td></td>
                             <td></td>
                           </tr>
@@ -241,8 +241,8 @@ layout: default
                             <tr>
                               <td></td>
                               <td x-text="metric.id"></td>
-                              <td x-text="metric.dimension"></td>
-                              <td x-text="metric.measurement.unit"></td>
+                              <td x-text="String(metric.dimension ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                              <td x-text="String(metric.measurement.unit ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
                             </tr>
                           </template>
                         </tbody>
@@ -269,8 +269,8 @@ layout: default
                           </tr>
                           <tr>
                             <td x-text="event_set.id"></td>
-                            <td x-text="event_set.analysis_type"></td>
-                            <td x-text="event_set.calculation_method"></td>
+                            <td x-text="String(event_set.analysis_type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                            <td x-text="String(event_set.calculation_method ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -287,10 +287,10 @@ layout: default
                               <tr>
                                 <td></td>
                                 <td x-text="event.id"></td>
-                                <td x-text="event.occurrence[event_set.analysis_type].temporal.start"></td>
-                                <td x-text="event.occurrence[event_set.analysis_type].temporal.end"></td>
-                                <td x-text="event.hazard.type"></td>
-                                <td x-text="event.hazard.process"></td>
+                                <td x-text="String(event.occurrence[event_set.analysis_type].temporal.start ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                                <td x-text="String(event.occurrence[event_set.analysis_type].temporal.end ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                                <td x-text="String(event.hazard.type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                                <td x-text="String(event.hazard.process ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
                               </tr>
                             </template>
                         </tbody>
@@ -313,8 +313,8 @@ layout: default
                       <template x-for="loss in $store.dataset.dataset.loss.losses" :key="loss.id">
                         <tr>
                           <td x-text="loss.id"></td>
-                          <td x-text="loss.impact_and_losses.loss_type"></td>
-                          <td x-text="loss.impact_and_losses.impact.measurement.unit"></td>
+                          <td x-text="String(loss.impact_and_losses.loss_type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                          <td x-text="String(loss.impact_and_losses.impact.measurement.unit ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
                         </tr>
                       </template>
                     </table>
@@ -336,9 +336,9 @@ layout: default
                       <template x-for="vuln_function in $store.dataset.dataset.vulnerability.functions.vulnerability" :key="vuln_function.id">
                         <tr>
                           <td x-text="vuln_function.id"></td>
-                          <td x-text="vuln_function.category"></td>
-                          <td x-text="vuln_function.hazard_analysis_type"></td>
-                          <td x-text="vuln_function.approach"></td>
+                          <td x-text="String(vuln_function.category ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                          <td x-text="String(vuln_function.hazard_analysis_type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                          <td x-text="String(vuln_function.approach ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
                         </tr>
                       </template>
                     </table>
