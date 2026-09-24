@@ -3,6 +3,9 @@ import { queryDB, transformShape } from "../shared/utils";
 const datasetStore = {
   dataset: null,
   db: null,
+  isLoading: true,
+  isLoaded: false,
+  loadError: false,
 };
 
 // defineProperties to preserve getters, keeping `this` bound to the store
@@ -35,6 +38,13 @@ Object.defineProperties(
       );
       
       this.dataset = transformShape(results)?.[0] ?? null
+      this.isLoading = false;
+      this.isLoaded = true;
+    },
+    handleLoadError(err) {
+      console.error("Error loading database:", err);
+      this.isLoading = false;
+      this.loadError = true;
     },
   }),
 );

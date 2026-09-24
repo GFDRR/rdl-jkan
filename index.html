@@ -2,7 +2,7 @@
 title: Datasets
 layout: default
 ---
-<div x-data x-init="window.__sqlReady.then(db => $store.datasets.loadDatasets(db)).catch(err => console.error('Error loading database:', err))">
+<div x-data x-init="window.__sqlReady.then(db => $store.datasets.loadDatasets(db)).catch(err => $store.datasets.handleLoadError(err))">
   <div class="modern-hero">
     <div class="hero-background-image"></div>
     <div class="hero-content">
@@ -286,12 +286,26 @@ layout: default
             style="margin-top: 0; margin-bottom: 24px"
             x-text="`Showing ${$store.datasets.paginationStart}-${$store.datasets.paginationEnd} of ${$store.datasets.display.length} dataset${$store.datasets.display.length === 1 ? '' : 's'}`"
           ></h3>
-          <h3 x-show="$store.datasets.isLoaded" style="margin-top: 0">
+          <h3
+            x-show="$store.datasets.isLoaded && $store.datasets.display.length === 0"
+            style="margin-top: 0"
+          >
             No datasets found with these filters and/or query
           </h3>
-          <h3 x-show="$store.datasets.isLoading" style="margin-top: 0">
-            Loading...
-          </h3>
+          <div x-show="$store.datasets.isLoading" class="datasets-loading">
+            <div
+              class="loading-spinner"
+              role="status"
+              aria-label="Loading datasets…"
+            ></div>
+            <p>Loading datasets…</p>
+          </div>
+          <div x-show="$store.datasets.loadError" class="datasets-error">
+            <p>Couldn't load the datasets. Please try again.</p>
+            <button @click="window.location.reload()" class="btn btn-default">
+              Try again
+            </button>
+          </div>
 
           <div>
             <template

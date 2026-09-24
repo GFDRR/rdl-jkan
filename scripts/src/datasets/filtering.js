@@ -168,12 +168,11 @@ export default {
       const others = values.filter((v) => v.selected && v.title === "Unknown");
       return [...others, ...filtered];
     } else {
-      if (retries > 0) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.getFilterOptionsCatalog(retries - 1, delay * 2);
-      } else {
-        throw new Error("All retries failed");
-      }
+      // sqlite.db downloads asynchronously after first paint; wait for it
+      // rather than giving up after a fixed number of retries.
+      await window.__sqlReady;
+      if (!this.db) throw new Error("Database failed to load");
+      return this.getFilterOptionsCatalog();
     }
   },
   async getFilterOptionsCountries(retries = 5, delay = 1000) {
@@ -214,12 +213,11 @@ export default {
         ...unselected.sort((a, b) => a.title.localeCompare(b.title)),
       ];
     } else {
-      if (retries > 0) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.getFilterOptionsCountries(retries - 1, delay * 2);
-      } else {
-        throw new Error("All retries failed");
-      }
+      // sqlite.db downloads asynchronously after first paint; wait for it
+      // rather than giving up after a fixed number of retries.
+      await window.__sqlReady;
+      if (!this.db) throw new Error("Database failed to load");
+      return this.getFilterOptionsCountries();
     }
   },
   async getFilterOptionsGeoScale(retries = 5, delay = 1000) {
@@ -266,12 +264,11 @@ export default {
         });
       return [...sortByGeo(selected), ...sortByGeo(unselected)];
     } else {
-      if (retries > 0) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.getFilterOptionsGeoScale(retries - 1, delay * 2);
-      } else {
-        throw new Error("All retries failed");
-      }
+      // sqlite.db downloads asynchronously after first paint; wait for it
+      // rather than giving up after a fixed number of retries.
+      await window.__sqlReady;
+      if (!this.db) throw new Error("Database failed to load");
+      return this.getFilterOptionsGeoScale();
     }
   },
   async getFilterOptionsHazardType(retries = 5, delay = 1000) {
@@ -314,12 +311,11 @@ export default {
         ...unselected.sort((a, b) => a.title.localeCompare(b.title)),
       ];
     } else {
-      if (retries > 0) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.getFilterOptionsHazardType(retries - 1, delay * 2);
-      } else {
-        throw new Error("All retries failed");
-      }
+      // sqlite.db downloads asynchronously after first paint; wait for it
+      // rather than giving up after a fixed number of retries.
+      await window.__sqlReady;
+      if (!this.db) throw new Error("Database failed to load");
+      return this.getFilterOptionsHazardType();
     }
   },
   async getFilterOptionsLicense(retries = 5, delay = 1000) {
@@ -351,12 +347,11 @@ export default {
         ...unselected.sort((a, b) => a.title.localeCompare(b.title)),
       ];
     } else {
-      if (retries > 0) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.getFilterOptionsLicense(retries - 1, delay * 2);
-      } else {
-        throw new Error("All retries failed");
-      }
+      // sqlite.db downloads asynchronously after first paint; wait for it
+      // rather than giving up after a fixed number of retries.
+      await window.__sqlReady;
+      if (!this.db) throw new Error("Database failed to load");
+      return this.getFilterOptionsLicense();
     }
   },
   async getFilterOptionsProject(retries = 5, delay = 1000) {
@@ -389,12 +384,11 @@ export default {
         ...unselected.sort((a, b) => a.title.localeCompare(b.title)),
       ];
     } else {
-      if (retries > 0) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.getFilterOptionsProject(retries - 1, delay * 2);
-      } else {
-        throw new Error("All retries failed");
-      }
+      // sqlite.db downloads asynchronously after first paint; wait for it
+      // rather than giving up after a fixed number of retries.
+      await window.__sqlReady;
+      if (!this.db) throw new Error("Database failed to load");
+      return this.getFilterOptionsProject();
     }
   },
   async getFilterOptionsRiskDataType(retries = 5, delay = 1000) {
@@ -430,12 +424,11 @@ export default {
       );
       return values;
     } else {
-      if (retries > 0) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        return this.getFilterOptionsRiskDataType(retries - 1, delay * 2);
-      } else {
-        throw new Error("All retries failed");
-      }
+      // sqlite.db downloads asynchronously after first paint; wait for it
+      // rather than giving up after a fixed number of retries.
+      await window.__sqlReady;
+      if (!this.db) throw new Error("Database failed to load");
+      return this.getFilterOptionsRiskDataType();
     }
   },
   // getFilterOptions(filterType, datasets) {

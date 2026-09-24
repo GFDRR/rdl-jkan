@@ -7,6 +7,9 @@ const datasetsStore = {
   db: null,
   all: [],
   display: [],
+  isLoading: true,
+  isLoaded: false,
+  loadError: false,
 };
 
 // defineProperties to preserve getters, keeping `this` bound to the store
@@ -86,6 +89,13 @@ Object.defineProperties(
       const datasets = transformShape(results) ?? [];
       this.all = datasets;
       this.display = datasets;
+      this.isLoading = false;
+      this.isLoaded = true;
+    },
+    handleLoadError(err) {
+      console.error("Error loading database:", err);
+      this.isLoading = false;
+      this.loadError = true;
     },
   }),
 );
