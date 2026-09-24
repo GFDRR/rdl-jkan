@@ -1384,6 +1384,12 @@ body {
   text-decoration: underline;
 }
 
+/* Hide state-dependent blocks until Alpine has initialized, so they don't
+   flash in the raw HTML before x-show/x-if take over. */
+[x-cloak] {
+  display: none !important;
+}
+
 .datasets-loading,
 .datasets-error {
   display: flex;
