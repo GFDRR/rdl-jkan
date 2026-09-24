@@ -290,7 +290,7 @@ layout: default
           ></h3>
           <h3
             x-cloak
-            x-show="$store.datasets.isLoaded && $store.datasets.display.length === 0"
+            x-show="$store.datasets.isLoaded && !$store.datasets.isSearching && $store.datasets.display.length === 0"
             style="margin-top: 0"
           >
             No datasets found with these filters and/or query
@@ -302,6 +302,14 @@ layout: default
               aria-label="Loading datasets…"
             ></div>
             <p>Loading datasets…</p>
+          </div>
+          <div x-cloak x-show="$store.datasets.isSearching" class="datasets-loading">
+            <div
+              class="loading-spinner"
+              role="status"
+              aria-label="Searching datasets…"
+            ></div>
+            <p>Searching datasets…</p></p>
           </div>
           <div x-cloak x-show="$store.datasets.loadError" class="datasets-error">
             <p>Couldn't load the datasets. Please try again.</p>
