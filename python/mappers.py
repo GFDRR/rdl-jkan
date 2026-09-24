@@ -1,6 +1,17 @@
 import config
 from utils import slugify
 
+def make_index_page_dataset(dataset):
+    return {
+    "countries":make_spatial(dataset["spatial"])["countries"],
+    "creator_name": dataset["creator"]["name"],
+    "description": dataset["description"],
+    "id": dataset["id"],
+    "license": make_license(dataset["license"]),
+    "risk_data_type": dataset["risk_data_type"],
+    "title": dataset["title"],
+    "version": dataset.get("version"),
+    }
 
 def make_dataset_frontmatter(dataset):
     """Formats RDL v1.0 metadata into JKAN frontmatter for a dataset"""

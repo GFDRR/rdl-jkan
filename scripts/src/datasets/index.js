@@ -27,10 +27,9 @@ Object.defineProperties(
   Object.getOwnPropertyDescriptors({
     get datasetsByFilterAndSearch() {
       if (!this.db) return [];
-      // search: `SELECT * FROM datasets_fts(${this.query});`
 
       const sql = `
-        SELECT 
+        SELECT
           c.title as catalog_title, c.slug,
           l.title as license_title, l.slug as license_slug, l.url as license_url,
           json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
@@ -45,8 +44,17 @@ Object.defineProperties(
           LEFT JOIN licenses l ON datasets.license_slug = l.slug
           ${this.getWhereSqlForFilters()};
       `;
-      const results = queryDB(this.db, sql);
-      const datasets = transformShape(results) ?? [];
+      const filtered = transformShape(queryDB(this.db, sql)) ?? [];
+
+      if (!this.query.trim()) {
+        this.display = filtered;
+        return filtered;
+      }
+
+      const byId = new Map(filtered.map((d) => [d.id, d]));
+      const datasets = this.searchResultIds
+        .map((id) => byId.get(id))
+        .filter(Boolean);
       this.display = datasets;
       return datasets;
     },
@@ -59,8 +67,9 @@ Object.defineProperties(
     },
     loadDatasets(db) {
       this.db = db;
+      this.loadVectors();
       const results = queryDB(db, `
-        SELECT 
+        SELECT
           c.title as catalog_title, c.slug,
           l.title as license_title, l.slug as license_slug, l.url as license_url,
           json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
