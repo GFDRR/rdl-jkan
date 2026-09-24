@@ -1,18 +1,17 @@
-import { queryDB, transformShape } from "../shared/utils";
+import { queryApi } from "../shared/api";
 import filtering from "./filtering";
 import pagination from "./pagination";
 import search from "./search";
 
 const datasetsStore = {
-  db: null,
-  all: [],
   display: [],
-  filteredDatasets: [],
-  filterCacheKey: null,
+  totalCount: 0,
   isLoading: true,
   isSearching: false,
   isLoaded: false,
   loadError: false,
+  _fetchToken: 0,
+  _optionsTimer: null,
 };
 
 // defineProperties to preserve getters, keeping `this` bound to the store
@@ -31,83 +30,84 @@ Object.defineProperties(
 Object.defineProperties(
   datasetsStore,
   Object.getOwnPropertyDescriptors({
-    getFilteredDatasets() {
-      if (!this.db) return [];
-
-      const filterKey = JSON.stringify(this.filters);
-      if (filterKey !== this.filterCacheKey) {
-        const sql = `
-          SELECT
-            c.title as catalog_title, c.slug,
-            l.title as license_title, l.slug as license_slug, l.url as license_url,
-            json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
-            json_extract(datasets.frontmatter, '$.creator') as creator,
-            json_extract(datasets.frontmatter, '$.details') as details,
-            json_extract(datasets.frontmatter, '$.publisher') as publisher,
-            json_extract(datasets.frontmatter, '$.resources') as resources,
-            json_extract(datasets.spatial, '$.countries') as countries,
-            datasets.*
-          FROM datasets
-            LEFT JOIN catalogs c ON datasets.catalog_slug = c.slug
-            LEFT JOIN licenses l ON datasets.license_slug = l.slug
-            ${this.getWhereSqlForFilters()};
-        `;
-        this.filteredDatasets = transformShape(queryDB(this.db, sql)) ?? [];
-        this.filterCacheKey = filterKey;
-      }
-      return this.filteredDatasets;
-    },
-    refreshDisplay() {
-      if (!this.db) return;
-
-      const filtered = this.getFilteredDatasets();
-      if (!this.query.trim()) {
-        this.display = filtered;
-        return;
-      }
-
-      const byId = new Map(filtered.map((d) => [d.id, d]));
-      this.display = this.searchResultIds
-        .map((id) => byId.get(id))
-        .filter(Boolean);
-    },
+    // The server returns one page of rows at a time; `display` is that page.
     get paginatedDatasets() {
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      return this.display.slice(start, start + this.itemsPerPage);
+      return this.display;
     },
-    loadDatasets(db) {
-      this.db = db;
-      this.loadVectors();
-      const results = queryDB(db, `
-        SELECT
-          c.title as catalog_title, c.slug,
-          l.title as license_title, l.slug as license_slug, l.url as license_url,
-          json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
-          json_extract(datasets.frontmatter, '$.creator') as creator,
-          json_extract(datasets.frontmatter, '$.details') as details,
-          json_extract(datasets.frontmatter, '$.publisher') as publisher,
-          json_extract(datasets.frontmatter, '$.resources') as resources,
-          json_extract(datasets.spatial, '$.countries') as countries,
-          datasets.*
-        FROM datasets
-          LEFT JOIN catalogs c ON datasets.catalog_slug = c.slug
-          LEFT JOIN licenses l ON datasets.license_slug = l.slug
-      `);
-      const datasets = transformShape(results) ?? [];
-      this.all = datasets;
-      this.filteredDatasets = datasets;
-      this.filterCacheKey = JSON.stringify(this.filters);
-      this.display = datasets;
-      this.isLoading = false;
-      this.isLoaded = true;
-      if (this.query.trim()) {
-        this.scheduleSearch();
-        this.scheduleQueryVector();
+
+    loadDatasets() {
+      this.fetchPage();
+      this.scheduleOptionsRefresh();
+    },
+
+    goToPage(page) {
+      this.currentPage = Math.min(
+        Math.max(1, page),
+        Math.max(1, this.totalPages),
+      );
+      this.refreshDisplay();
+    },
+
+    refreshDisplay() {
+      return this.fetchPage();
+    },
+
+    async fetchPage() {
+      const token = ++this._fetchToken;
+      const q = this.query.trim();
+      const payload = q
+        ? {
+            action: "search",
+            q,
+            vector: this.queryVector,
+            filters: this.filters,
+            page: this.currentPage,
+            pageSize: this.itemsPerPage,
+          }
+        : {
+            action: "datasets",
+            filters: this.filters,
+            page: this.currentPage,
+            pageSize: this.itemsPerPage,
+          };
+      this.isSearching = Boolean(q);
+
+      try {
+        const data = await queryApi(payload);
+        if (token !== this._fetchToken) return;
+        this.display = data.rows ?? [];
+        this.totalCount = data.total ?? 0;
+        if (Number.isInteger(data.page) && data.page !== this.currentPage) {
+          this.currentPage = data.page;
+        }
+        this.isLoading = false;
+        this.isLoaded = true;
+        this.loadError = false;
+        // Keep the spinner up while the query embedding is still pending.
+        if (!q || this.queryVector) this.isSearching = false;
+      } catch (error) {
+        if (token !== this._fetchToken) return;
+        this.handleLoadError(error);
       }
     },
-    handleLoadError(err) {
-      console.error("Error loading database:", err);
+
+    scheduleOptionsRefresh() {
+      clearTimeout(this._optionsTimer);
+      this._optionsTimer = setTimeout(() => {
+        queryApi({ action: "options", filters: this.filters })
+          .then((data) => {
+            if (data?.options) this.filterOptions = data.options;
+          })
+          .catch((error) =>
+            console.error("Failed to load filter options:", error),
+          );
+      }, 150);
+    },
+
+    handleLoadError(error) {
+      console.error("Error loading datasets:", error);
       this.isLoading = false;
+      this.isSearching = false;
       this.loadError = true;
     },
   }),

@@ -32,56 +32,11 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin="anonymous"></script>
   <script>
-    // sqlite.db is ~300MB, so it is not fetched during page parse. The
-    // download starts on first use of __sqlReady, once the DOM is ready and
-    // the loading state is on screen. Pages that never touch __sqlReady
-    // (legal, 404, ...) never download the database.
-    (() => {
-      let sqlReadyPromise = null;
-
-      const loadDatabase = (resolve, reject) => {
-        requestAnimationFrame(() => {
-          (async () => {
-            try {
-              await new Promise((loaded, failed) => {
-                const script = document.createElement("script");
-                script.src = "{{ site.baseurl }}/sql-wasm.js";
-                script.onload = loaded;
-                script.onerror = failed;
-                document.head.appendChild(script);
-              });
-              const SQL = await initSqlJs({
-                locateFile: (file) => `{{ site.baseurl }}/${file}`,
-              });
-              const response = await fetch("{{ site.baseurl }}/sqlite.db");
-              const filebuffer = await response.arrayBuffer();
-              resolve(new SQL.Database(new Uint8Array(filebuffer)));
-            } catch (err) {
-              reject(err);
-            }
-          })();
-        });
-      };
-
-      Object.defineProperty(window, "__sqlReady", {
-        configurable: true,
-        get() {
-          if (!sqlReadyPromise) {
-            sqlReadyPromise = new Promise((resolve, reject) => {
-              const start = () => loadDatabase(resolve, reject);
-              if (document.readyState === "loading") {
-                document.addEventListener("DOMContentLoaded", start, {
-                  once: true,
-                });
-              } else {
-                start();
-              }
-            });
-          }
-          return sqlReadyPromise;
-        },
-      });
-    })();
+    // Dataset queries run server-side in a Netlify Function (see
+    // netlify/functions/query). RDL_API_BASE is empty when the site itself is
+    // hosted on Netlify; set site.netlify_api_base in _config.yml when the
+    // site is hosted elsewhere (e.g. GitHub Pages).
+    window.RDL_API_BASE = "{{ site.netlify_api_base | default: '' }}".replace(/\/+$/, "");
   </script>
 
   <link

@@ -1,70 +1,65 @@
 ---
-name: Generate vector embeddings on push
+name: Build and upload search data
 
 on:
+  workflow_dispatch:
+
   push:
     branches:
-      - rdl-0.**
+      - rdl-1.0
+      - "rdl-0.**"
+    paths:
+      - "_datasets/**"
+      - "python/**"
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: build-and-upload-search-data
+  cancel-in-progress: false
 
 jobs:
-  generate-vectors:
+  build-and-upload:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./python
     steps:
       - uses: actions/checkout@v5
-        with:
-          fetch-depth: 2  # Need history to check for changes
-      
-      - name: Check if datasets changed
-        id: check_changes
-        run: |
-          # Check if any files in _datasets/ changed in the last commit
-          if git diff --name-only HEAD~1 HEAD | grep -q "^_datasets/"; then
-            echo "datasets_changed=true" >> $GITHUB_OUTPUT
-            echo "Dataset changes detected - will regenerate vectors"
-          else
-            echo "datasets_changed=false" >> $GITHUB_OUTPUT
-            echo "No dataset changes - skipping vector generation"
-          fi
-      
+
       - name: Set up Python
-        if: steps.check_changes.outputs.datasets_changed == 'true'
         uses: actions/setup-python@v6
         with:
           python-version: '3.13'
           cache: 'pip'
-      
+
       - name: Install dependencies
-        if: steps.check_changes.outputs.datasets_changed == 'true'
+        working-directory: ./python
         run: |
-          python3 -m venv .venv
-          source .venv/bin/activate
           echo 'Cython < 3.0' > /tmp/constraint.txt && PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==6.0.0'
           python3 -m pip install -r requirements.txt
-      
-      - name: Generate vector embeddings
-        if: steps.check_changes.outputs.datasets_changed == 'true'
-        
-        run: |
-          source .venv/bin/activate
-          python3 generate_vectors.py
-      
-      - name: Commit vector embeddings
-        if: steps.check_changes.outputs.datasets_changed == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ./vectors.json
-          if git diff-index --quiet HEAD; then
-            echo "No vector changes to commit"
-          else
-            git commit -m "Generate vector embeddings"
-            git push
-          fi
-          echo "Complete"
 
+      - name: Generate vector embeddings
+        working-directory: ./python
+        run: python3 generate_vectors.py
+
+      - name: Pack vectors for the query function
+        working-directory: ./python
+        run: python3 pack_vectors.py
+
+      - name: Build sqlite.db
+        working-directory: ./python
+        run: python3 import.py
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Upload search data to Netlify Blobs
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+        run: node scripts/netlify-data.mjs upload
