@@ -28,6 +28,7 @@ layout: default
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
           <!-- Active Filters Summary -->
           <div
+            x-cloak
             x-show="$store.datasets.hasActiveFilters"
             class="active-filters-summary"
           >
@@ -282,11 +283,13 @@ layout: default
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
           <!-- Results Section -->
           <h3
+            x-cloak
             x-show="$store.datasets.display.length > 0"
             style="margin-top: 0; margin-bottom: 24px"
             x-text="`Showing ${$store.datasets.paginationStart}-${$store.datasets.paginationEnd} of ${$store.datasets.display.length} dataset${$store.datasets.display.length === 1 ? '' : 's'}`"
           ></h3>
           <h3
+            x-cloak
             x-show="$store.datasets.isLoaded && $store.datasets.display.length === 0"
             style="margin-top: 0"
           >
@@ -300,7 +303,7 @@ layout: default
             ></div>
             <p>Loading datasets…</p>
           </div>
-          <div x-show="$store.datasets.loadError" class="datasets-error">
+          <div x-cloak x-show="$store.datasets.loadError" class="datasets-error">
             <p>Couldn't load the datasets. Please try again.</p>
             <button @click="window.location.reload()" class="btn btn-default">
               Try again
@@ -405,7 +408,11 @@ layout: default
           </div>
 
           <!-- Pagination Controls -->
-          <div x-show="$store.datasets.totalPages > 1" class="pagination-wrapper">
+          <div
+            x-cloak
+            x-show="$store.datasets.totalPages > 1"
+            class="pagination-wrapper"
+          >
             <button
               @click="$store.datasets.currentPage = Math.max(1, $store.datasets.currentPage - 1); window.scrollTo(0, 0)"
               :disabled="$store.datasets.currentPage === 1"

@@ -16,7 +16,7 @@ layout: default
       ></div>
       <p>Loading dataset…</p>
     </div>
-    <div x-show="$store.dataset.loadError" class="datasets-error">
+    <div x-cloak x-show="$store.dataset.loadError" class="datasets-error">
       <p>Couldn't load this dataset. Please try again.</p>
       <button @click="window.location.reload()" class="btn btn-default">
         Try again
