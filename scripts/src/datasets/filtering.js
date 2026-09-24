@@ -71,7 +71,7 @@ export default {
       if (this.filters.catalog.length > 1) whereSql += "(";
       filtersAppliedCount++;
       this.filters.catalog.forEach((c, index) => {
-        whereSql += `catalog_slug = '${c}' ${index < this.filters.catalog.length - 1 ? "OR" : ""} `;
+        whereSql += `datasets.catalog_slug = '${c}' ${index < this.filters.catalog.length - 1 ? "OR" : ""} `;
       });
       if (this.filters.catalog.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
@@ -80,7 +80,7 @@ export default {
       if (this.filters.countries.length > 1) whereSql += "(";
       filtersAppliedCount++;
       this.filters.countries.forEach((c, index) => {
-        whereSql += `json_extract(spatial, '$.countries') LIKE '%${c}%' ${index < this.filters.countries.length - 1 ? "OR" : ""} `;
+        whereSql += `json_extract(datasets.spatial, '$.countries') LIKE '%${c}%' ${index < this.filters.countries.length - 1 ? "OR" : ""} `;
       });
       if (this.filters.countries.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
@@ -89,7 +89,7 @@ export default {
       if (this.filters.geo_scale.length > 1) whereSql += "(";
       filtersAppliedCount++;
       this.filters.geo_scale.forEach((s, index) => {
-        whereSql += `json_extract(spatial, '$.scale') LIKE '%${s}%' ${index < this.filters.geo_scale.length - 1 ? "OR" : ""} `;
+        whereSql += `json_extract(datasets.spatial, '$.scale') LIKE '%${s}%' ${index < this.filters.geo_scale.length - 1 ? "OR" : ""} `;
       });
       if (this.filters.geo_scale.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
@@ -98,7 +98,7 @@ export default {
       if (this.filters.project.length > 1) whereSql += "(";
       filtersAppliedCount++;
       this.filters.project.forEach((p, index) => {
-        whereSql += `json_extract(project, '$') LIKE '%${p}%' ${index < this.filters.project.length - 1 ? "OR" : ""} `;
+        whereSql += `json_extract(datasets.project, '$') LIKE '%${p}%' ${index < this.filters.project.length - 1 ? "OR" : ""} `;
       });
       if (this.filters.project.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
@@ -110,7 +110,7 @@ export default {
       if (this.filters.risk_data_type.length > 1) whereSql += "(";
       filtersAppliedCount++;
       this.filters.risk_data_type.forEach((rdt, index) => {
-        whereSql += `json_extract(risk_data_type, '$') LIKE '%${rdt}%' ${index < this.filters.risk_data_type.length - 1 ? "OR" : ""} `;
+        whereSql += `json_extract(datasets.risk_data_type, '$') LIKE '%${rdt}%' ${index < this.filters.risk_data_type.length - 1 ? "OR" : ""} `;
       });
       if (this.filters.risk_data_type.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
@@ -123,9 +123,9 @@ export default {
       if (this.filters.hazard_type.length > 1) whereSql += "(";
       filtersAppliedCount++;
       this.filters.hazard_type.forEach((ht, index) => {
-        whereSql += `hazard_type LIKE '%${ht}%' ${index < this.filters.hazard_type.length - 1 ? "OR" : ""} `;
+        whereSql += `datasets.hazard_type LIKE '%${ht}%' ${index < this.filters.hazard_type.length - 1 ? "OR" : ""} `;
       });
-      whereSql += "AND hazard_type IS NOT NULL)";
+      whereSql += "AND datasets.hazard_type IS NOT NULL)";
       if (this.filters.hazard_type.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
     }
@@ -133,7 +133,7 @@ export default {
       if (this.filters.license.length > 1) whereSql += "(";
       filtersAppliedCount++;
       this.filters.license.forEach((l, index) => {
-        whereSql += `license_slug = '${l}' ${index < this.filters.license.length - 1 ? "OR" : ""} `;
+        whereSql += `datasets.license_slug = '${l}' ${index < this.filters.license.length - 1 ? "OR" : ""} `;
       });
       if (this.filters.license.length > 1) whereSql += ")";
       if (filtersAppliedCount < filtersSetCount) whereSql += " AND ";
@@ -155,7 +155,7 @@ export default {
       `,
       );
 
-      const values = result[0].values.map(([title, slug, count]) => {
+      const values = (result[0]?.values ?? []).map(([title, slug, count]) => {
         return {
           title,
           slug,
@@ -189,7 +189,7 @@ export default {
         `,
       );
       const values = Object.values(
-        result[0].values.reduce((acc, [spatial_json, count]) => {
+        (result[0]?.values ?? []).reduce((acc, [spatial_json, count]) => {
           const c_array = JSON.parse(spatial_json).countries;
           c_array.forEach(({ title, emoji, slug }) => {
             if (acc[slug]) acc[slug]["count"] += count;
@@ -235,7 +235,7 @@ export default {
         `,
       );
       const values = Object.values(
-        result[0].values.reduce((acc, [spatial_json, count]) => {
+        (result[0]?.values ?? []).reduce((acc, [spatial_json, count]) => {
           const slug = JSON.parse(spatial_json).scale;
 
           if (acc[slug]) acc[slug]["count"] += count;
@@ -288,7 +288,7 @@ export default {
         `,
       );
       const values = Object.values(
-        result[0].values.reduce((acc, [hazard_type, count]) => {
+        (result[0]?.values ?? []).reduce((acc, [hazard_type, count]) => {
           const ht_array = hazard_type ? JSON.parse(hazard_type) : [];
           ht_array.forEach((slug) => {
             if (acc[slug]) acc[slug]["count"] += count;
@@ -335,7 +335,7 @@ export default {
         ORDER BY count DESC;
       `,
       );
-      const values = result[0].values.map(([title, slug, count]) => {
+      const values = (result[0]?.values ?? []).map(([title, slug, count]) => {
         return {
           title,
           slug,
@@ -371,7 +371,7 @@ export default {
           ORDER BY count DESC;
         `,
       );
-      const values = result[0].values.map(([value, count]) => {
+      const values = (result[0]?.values ?? []).map(([value, count]) => {
         const { title, slug } = JSON.parse(value);
 
         return {
@@ -411,7 +411,7 @@ export default {
         `,
       );
       const values = Object.values(
-        result[0].values.reduce((acc, [rdt_json, count]) => {
+        (result[0]?.values ?? []).reduce((acc, [rdt_json, count]) => {
           const rdt_array = JSON.parse(rdt_json);
           rdt_array.forEach((slug) => {
             if (acc[slug]) acc[slug]["count"] += count;

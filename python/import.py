@@ -25,7 +25,8 @@ def create_tables(conn: sqlite3.Connection):
     cur.execute("DROP TABLE IF EXISTS licenses")
     cur.execute("""
         CREATE TABLE datasets (
-            id TEXT PRIMARY KEY,
+            rowid INTEGER PRIMARY KEY AUTOINCREMENT,
+            id TEXT UNIQUE,
             catalog_slug TEXT,
             description TEXT,
             frontmatter TEXT,
@@ -57,13 +58,98 @@ def create_tables(conn: sqlite3.Connection):
         );
         """)
     cur.execute("""
-        CREATE VIRTUAL TABLE datasets_fts 
-        USING fts5(
-            id, title, description,
-            tokenize='trigram'
-        )
-        """)
+        CREATE VIRTUAL TABLE datasets_fts USING fts5(
+            id,
+            title,
+            description,
+            catalog,
+            creator,
+            countries,
+            license,
+            project,
+            risk_data_type,
+            hazard_type,
+            resources,
+            details,
+            purpose,
+            publisher,
+            contact_point,
+            lineage,
+            exposure,
+            loss,
+            hazard,
+            spatial,
+            temporal,
+            version,
+            content='',
+            tokenize=trigram
+        );
+    """)
     conn.commit()
+
+
+def _fts_keyword_text(fm: dict) -> dict:
+    def _flatten(value):
+        if value is None:
+            return ""
+        if isinstance(value, dict):
+            return " ".join(_flatten(v) for v in value.values())
+        if isinstance(value, list):
+            return " ".join(_flatten(v) for v in value)
+        return str(value)
+
+    def _text(*paths):
+        parts = []
+        for path in paths:
+            value = fm
+            for key in path.split("."):
+                if isinstance(value, dict):
+                    value = value.get(key)
+                else:
+                    value = None
+                    break
+            parts.append(_flatten(value))
+        return " ".join(parts).strip()
+
+    countries = _text("spatial.countries")
+    catalog = _text("catalog.title", "catalog.slug")
+    creator = _text("creator.name", "creator.affiliation.name")
+    publisher = _text("publisher.name", "publisher.affiliation.name")
+    contact_point = _text("contact_point.name", "contact_point.affiliation.name")
+    license = _text("license.title")
+    project = _text("project.title")
+    resources = _text("resources")
+    lineage = _text("lineage.description", "lineage.sources")
+    exposure = _text("exposure")
+    loss = _text("loss")
+    hazard = _text("hazard")
+    spatial = _text("spatial.scale", "spatial.gazetteer_entries")
+    temporal = _text("temporal")
+
+    return {
+        "id": _text("dataset_id"),
+        "title": _text("title"),
+        "description": _text("description"),
+        "catalog": catalog,
+        "creator": creator,
+        "countries": countries,
+        "license": license,
+        "project": project,
+        "risk_data_type": _text("risk_data_type"),
+        "hazard_type": _text("hazard.type"),
+        "resources": resources,
+        "details": _text("details"),
+        "purpose": _text("purpose"),
+        "publisher": publisher,
+        "contact_point": contact_point,
+        "lineage": lineage,
+        "exposure": exposure,
+        "loss": loss,
+        "hazard": hazard,
+        "spatial": spatial,
+        "temporal": temporal,
+        "version": _text("version"),
+    }
 
 
 def insert_dataset(conn: sqlite3.Connection, fm: dict):
@@ -76,7 +162,7 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
     project = _serialize(fm.get("project"))
     risk_data_type = _serialize(fm.get("risk_data_type"))
     slug = _serialize(fm.get("slug"))
-    hazard_type = _serialize((fm.get("hazard") or {}).get('type'))
+    hazard_type = _serialize((fm.get("hazard") or {}).get("type"))
     spatial = _serialize(fm.get("spatial"))
     temporal = _serialize(fm.get("temporal"))
     version = _serialize(fm.get("version"))
@@ -133,13 +219,46 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
         ),
     )
 
+    # Rebuild the FTS row for this dataset (handles both insert and update).
+    # The FTS table is contentless (content=''), which does not support
+    # INSERT OR REPLACE, so delete then insert.
+    fts = _fts_keyword_text(fm)
+    rowid = cur.lastrowid
+    cur.execute("DELETE FROM datasets_fts WHERE rowid = ?", (rowid,))
     cur.execute(
         """
-        INSERT OR REPLACE INTO datasets_fts (
-            id, title, description
-        ) VALUES (?, ?, ?)
+        INSERT INTO datasets_fts(
+            rowid, id, title, description, catalog, creator, countries,
+            license, project, risk_data_type, hazard_type, resources,
+            details, purpose, publisher, contact_point, lineage, exposure,
+            loss, hazard, spatial, temporal, version
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
-        (dataset_id, title, description),
+        (
+            rowid,
+            fts["id"],
+            fts["title"],
+            fts["description"],
+            fts["catalog"],
+            fts["creator"],
+            fts["countries"],
+            fts["license"],
+            fts["project"],
+            fts["risk_data_type"],
+            fts["hazard_type"],
+            fts["resources"],
+            fts["details"],
+            fts["purpose"],
+            fts["publisher"],
+            fts["contact_point"],
+            fts["lineage"],
+            fts["exposure"],
+            fts["loss"],
+            fts["hazard"],
+            fts["spatial"],
+            fts["temporal"],
+            fts["version"],
+        ),
     )
 
     conn.commit()

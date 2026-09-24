@@ -31,13 +31,13 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.js" integrity="sha512-Yra4xuTWinXfBpG2ftgDX8MVmMiOev1FtqiYs51+kEna/5peD0kZqAL1syYCH61f9gxmAFidIJz42IKcRhWMkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="{{ site.baseurl }}/sql-wasm.js"></script>
   <script>
     window.__sqlReady = (async () => {
       const SQL = await initSqlJs({
-        locateFile: (file) => `https://sql.js.org/dist/${file}`,
+        locateFile: (file) => `{{ site.baseurl }}/${file}`,
       });
-      const res = await fetch("/sqlite.db");
+      const res = await fetch("{{ site.baseurl }}/sqlite.db");
       const filebuffer = await res.arrayBuffer();
       return new SQL.Database(new Uint8Array(filebuffer));
     })();
