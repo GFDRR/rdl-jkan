@@ -1,43 +1,71 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+---
+name: Build and deploy
 
 on:
-  # Runs on pushes targeting this branch
-  workflow_run:
-    branches: [rdl-1.0]
-    types: [completed]
-    workflows: ["Build and upload search data"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+  push:
+    branches:
+      - rdl-1.0
+    paths:
+      - "_datasets/**"
+      - "python/**"
+
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: build-and-deploy
+  cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-22.04
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        working-directory: ./python
+        run: |
+          echo 'Cython < 3.0' > /tmp/constraint.txt
+          PIP_CONSTRAINT=/tmp/constraint.txt python3 -m pip install Cython
+          PIP_CONSTRAINT=/tmp/constraint.txt python3 -m pip install -r requirements.txt
+
+      - name: Generate vector embeddings
+        working-directory: ./python
+        run: python3 generate_vectors.py
+
+      - name: Pack vectors for the query function
+        working-directory: ./python
+        run: python3 pack_vectors.py
+
+      - name: Build sqlite.db
+        working-directory: ./python
+        run: python3 import.py
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Upload search data to Netlify Blobs
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+        run: node scripts/netlify-data.mjs upload
+
       - name: Download sqlite.db from Netlify Blobs
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -45,22 +73,25 @@ jobs:
         run: |
           npm install --no-save @netlify/blobs
           node scripts/netlify-data.mjs download sqlite.db
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@d03597fde829e5c04aeebf68e15407f31c00ff02 # v1.160.0
         with:
           ruby-version: '3.2'
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          bundler-cache: true
+          cache-version: 0
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+
       - name: Write metadata to a file Jekyll can use
         env:
           BRANCH: ${{ github.ref_name }}
         run: |
           echo "branch: $BRANCH" > _config.ci.yml
+
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --config _config.ci.yml,_config.yml
         env:
           JEKYLL_ENV: production
@@ -68,17 +99,8 @@ jobs:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-22.04
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
