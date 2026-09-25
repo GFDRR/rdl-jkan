@@ -20,7 +20,6 @@ const FILE_PATHS = {
   "sqlite.db": "sqlite.db",
   "vectors.bin": "python/vectors.bin",
   "vectors.ids.json": "python/vectors.ids.json",
-  "sql-wasm.wasm": "sql-wasm.wasm",
 };
 
 const [command, ...requested] = process.argv.slice(2);

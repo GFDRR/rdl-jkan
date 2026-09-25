@@ -411,7 +411,7 @@ layout: default
                 }
                 else if (countryCodes.length > 0) {
                   Promise.all(countryCodes.map(countryCode =>
-                    fetch(`/country_geojson/${countryCode}.geojson`)
+                    fetch(`/country_geojson/${countryCode?.toUpperCase()}.geojson`)
                       .then(response => response.json())
                       .then(data => {
                         L.geoJSON(data).addTo(featureGroup);
