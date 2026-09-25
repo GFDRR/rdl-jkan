@@ -21,13 +21,6 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-If PyYAML gives you trouble, try running this ([source](https://github.com/yaml/pyyaml/issues/736#issuecomment-1653209769)):
-```
-echo 'Cython < 3.0' > /tmp/constraint.txt
-PIP_CONSTRAINT=/tmp/constraint.txt pip install 'PyYAML==5.4.1'
-
-pip install -r requirements.txt
-```
 
 ### Generate markdown and/or vectors from new JSON metadata
 
