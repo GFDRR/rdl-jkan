@@ -1,17 +1,21 @@
 // Query proxy for the site's search data.
 //
-// sqlite.db, vectors.bin, vectors.ids.json and sql-wasm.wasm live in the
-// site's "rdl-data" Netlify Blobs store (uploaded by CI — see
-// .github/workflows/generate-vectors.yml). This function loads them into
-// memory (cached across warm invocations), runs the site's SQL/semantic
-// search server-side, and returns small JSON pages. The database itself is
-// never sent to the client.
+// sqlite.db, vectors.bin and vectors.ids.json live in the site's "rdl-data"
+// Netlify Blobs store (uploaded by CI — see .github/workflows/deploy.yml).
+// This function streams sqlite.db to a temp file and opens it read-only with
+// the built-in node:sqlite driver (cached across warm invocations), runs the
+// site's SQL/semantic search server-side, and returns small JSON pages. The
+// database itself is never sent to the client.
 //
 // Set RDL_DATA_DIR to read the data files from disk instead of Blobs
 // (local development and tests).
 
-import initSqlJs from "./sql-wasm.js";
-import { readFileSync } from "node:fs";
+import { DatabaseSync } from "node:sqlite";
+import { createWriteStream } from "node:fs";
+import { mkdir, rename, rm } from "node:fs/promises";
+import { Readable } from "node:stream";
+import { pipeline } from "node:stream/promises";
+import { tmpdir } from "node:os";
 import { join } from "node:path";
 
 const BLOB_STORE = "rdl-data";
@@ -65,7 +69,6 @@ const DEFAULT_PAGE_SIZE = 10;
 const MAX_FILTER_VALUES = 100;
 const ID_CHUNK_SIZE = 500;
 
-let sqlPromise = null;
 let dbPromise = null;
 let vectorsPromise = null;
 
@@ -77,7 +80,8 @@ function toArrayBuffer(bytes) {
 async function loadData(name) {
   const dir = process.env.RDL_DATA_DIR;
   if (dir) {
-    return readFileSync(join(dir, name));
+    const { readFile } = await import("node:fs/promises");
+    return readFile(join(dir, name));
   }
   // Imported lazily so local runs (RDL_DATA_DIR set) never need the module.
   const { getStore } = await import("@netlify/blobs");
@@ -90,17 +94,41 @@ async function loadData(name) {
   return bytes;
 }
 
-function getSQL() {
-  sqlPromise ??= (async () =>
-    initSqlJs({ wasmBinary: toArrayBuffer(await loadData("sql-wasm.wasm")) }))();
-  return sqlPromise;
+async function getDbPath() {
+  const dir = process.env.RDL_DATA_DIR;
+  if (dir) return join(dir, "sqlite.db");
+
+  const dataDir = join(tmpdir(), "rdl-data");
+  const dbPath = join(dataDir, "sqlite.db");
+  const partialPath = `${dbPath}.${process.pid}.part`;
+  const { getStore } = await import("@netlify/blobs");
+  const stream = await getStore({ name: BLOB_STORE }).get("sqlite.db", {
+    type: "stream",
+  });
+  if (!stream) {
+    throw new Error(`"sqlite.db" not found in Netlify Blobs store "${BLOB_STORE}"`);
+  }
+
+  await mkdir(dataDir, { recursive: true });
+  try {
+    await pipeline(Readable.fromWeb(stream), createWriteStream(partialPath));
+    await rename(partialPath, dbPath);
+  } catch (error) {
+    await rm(partialPath, { force: true });
+    throw error;
+  }
+  return dbPath;
 }
 
 function getDb() {
   dbPromise ??= (async () => {
-    const [SQL, bytes] = await Promise.all([getSQL(), loadData("sqlite.db")]);
-    return new SQL.Database(new Uint8Array(toArrayBuffer(bytes)));
-  })();
+    const dbPath = await getDbPath();
+    return new DatabaseSync(dbPath, { readOnly: true });
+  })().catch((error) => {
+    // Don't cache a failed load — let a later invocation retry.
+    dbPromise = null;
+    throw error;
+  });
   return dbPromise;
 }
 
@@ -122,7 +150,13 @@ function getVectors() {
 }
 
 function exec(db, sql, params = []) {
-  return db.exec(sql, params);
+  const rows = db.prepare(sql).all(...params);
+  // node:sqlite returns rows as objects; derive the column list from the first
+  // row. Duplicate column names collapse to the last value, which matches how
+  // rowsToObjects() built objects from the old sql.js {columns, values} shape.
+  const columns = rows.length ? Object.keys(rows[0]) : [];
+  const values = rows.map((row) => columns.map((name) => row[name]));
+  return [{ columns, values }];
 }
 
 // Mirrors transformShape in the old client code: JSON-parse any string value
