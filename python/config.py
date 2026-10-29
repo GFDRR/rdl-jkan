@@ -328,17 +328,30 @@ dataset_licenses = {
         "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
         "title": "Creative Commons Attribution-NonCommercial-Share-Alike 4.0",
     },
-    "CC-BY-ND 4.0": {
+    "CC-BY-NC-4.0": {
+        "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "title": "Creative Commons Attribution-NonCommercial 4.0",
+    },
+    "CC-BY-ND-4.0": {
         "url": "https://creativecommons.org/licenses/by-nd/4.0/",
         "title": "Creative Commons Attribution-NoDerivatives 4.0 International",
     },
-    "CC-BY-NC-ND 4.0": {
+    "CC-BY-NC-ND-4.0": {
         "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
         "title": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
     },
-    "CC-BY-IGO-3.0": {
-        "url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+    "CC-BY-3.0-IGO": {
+        "url": "https://creativecommons.org/licenses/by/3.0/igo/",
         "title": "Creative Commons Attribution for Intergovernmental Organisations",
+        "aliases": ["CC-BY-IGO-3.0"],
+    },
+    "CC-BY-SA-3.0-IGO": {
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+        "title": "Creative Commons Attribution Share-Alike for Intergovernmental Organisations",
+    },
+    "CDLA-Permissive-1.0": {
+        "url": "https://cdla.dev/permissive-1-0/",
+        "title": "Community Data License Agreement Permissive 1.0",
     },
     "GPL": {
         "url": "https://www.gnu.org/licenses/gpl-3.0-standalone.html",
