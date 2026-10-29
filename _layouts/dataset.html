@@ -103,7 +103,7 @@ layout: default
                     <div class="resource-header">
                       <h3 class="resource-title">
                         <a
-                          href="resource.download_url"
+                          :href="resource.download_url || resource.access_url"
                           property="dcat:accessURL"
                         >
                           <i class="fa fa-download"></i>
@@ -114,16 +114,10 @@ layout: default
                         </a>
                       </h3>
                       <span
-                        x-show="resource.format"
+                        x-show="resource.format_label"
                         class="format-badge"
                         property="dcat:mediaType"
-                        x-text="resource.format"
-                      ></span>
-                      <span
-                        x-show="!resource.format && resource.media_type"
-                        class="format-badge"
-                        property="dcat:mediaType"
-                        x-text="resource.media_type"
+                        x-text="resource.format_label"
                       ></span>
                     </div>
                     <p

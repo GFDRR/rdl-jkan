@@ -1,17 +1,19 @@
 import config
 from utils import slugify
 
+
 def make_index_page_dataset(dataset):
     return {
-    "countries":make_spatial(dataset["spatial"])["countries"],
-    "creator_name": dataset["creator"]["name"],
-    "description": dataset["description"],
-    "id": dataset["id"],
-    "license": make_license(dataset["license"]),
-    "risk_data_type": dataset["risk_data_type"],
-    "title": dataset["title"],
-    "version": dataset.get("version"),
+        "countries": make_spatial(dataset["spatial"])["countries"],
+        "creator_name": dataset["creator"]["name"],
+        "description": dataset["description"],
+        "id": dataset["id"],
+        "license": make_license(dataset["license"]),
+        "risk_data_type": dataset["risk_data_type"],
+        "title": dataset["title"],
+        "version": dataset.get("version"),
     }
+
 
 def make_dataset_frontmatter(dataset):
     """Formats RDL v1.0 metadata into JKAN frontmatter for a dataset"""
@@ -209,6 +211,136 @@ def make_exposure(exposure):
     }
 
 
+FORMAT_LABELS_BY_MEDIA_TYPE = {
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "XLSX",
+    "application/vnd.ms-excel": "XLS",
+    "application/vnd.oasis.opendocument.spreadsheet": "ODS",
+    "text/csv": "CSV",
+    "text/tab-separated-values": "TSV",
+    "application/json": "JSON",
+    "application/geo+json": "GeoJSON",
+    "application/vnd.geo+json": "GeoJSON",
+    "application/vnd.shp": "SHP",
+    "application/x-shapefile": "SHP",
+    "application/geopackage+sqlite3": "GPKG",
+    "application/vnd.google-earth.kml+xml": "KML",
+    "application/vnd.google-earth.kmz": "KMZ",
+    "application/pdf": "PDF",
+    "text/html": "HTML",
+    "text/plain": "TXT",
+    "application/zip": "ZIP",
+    "application/x-zip-compressed": "ZIP",
+    "image/png": "PNG",
+    "image/jpeg": "JPG",
+    "image/tiff": "TIFF",
+    "image/svg+xml": "SVG",
+}
+FORMAT_LABELS_BY_NAME = {
+    "cpg": "CPG",
+    "csv": "CSV",
+    "dbf": "DBF",
+    "doc": "DOC",
+    "docx": "DOCX",
+    "excel": "XLSX",
+    "gdb": "GDB",
+    "geodatabase": "GDB",
+    "geojson": "GeoJSON",
+    "geopackage": "GPKG",
+    "geotiff": "GEOTIFF",
+    "gif": "GIF",
+    "gml": "GML",
+    "gpkg": "GPKG",
+    "grib": "GRIB",
+    "grib2": "GRIB2",
+    "gz": "GZIP",
+    "hdf5": "HDF5",
+    "html": "HTML",
+    "jpeg": "JPG",
+    "jpg": "JPG",
+    "json": "JSON",
+    "kml": "KML",
+    "kmz": "KMZ",
+    "nc": "NETCDF",
+    "netcdf": "NETCDF",
+    "obf": "OBF",
+    "ods": "ODS",
+    "parquet": "PARQUET",
+    "pdf": "PDF",
+    "png": "PNG",
+    "prj": "PRJ",
+    "py": "PYTHON",
+    "rar": "RAR",
+    "shapefile": "SHP",
+    "shp": "SHP",
+    "shx": "SHX",
+    "spreadsheet": "XLSX",
+    "sql": "SQL",
+    "svg": "SVG",
+    "tif": "TIFF",
+    "tiff": "TIFF",
+    "tsv": "TSV",
+    "txt": "TXT",
+    "vrt": "VRT",
+    "xls": "XLS",
+    "xlsx": "XLSX",
+    "xml": "XML",
+    "zarr": "ZARR",
+    "zip": "ZIP",
+}
+FORMAT_LABELS_IGNORED_SUBTYPES = {"octet-stream", "binary"}
+FORMAT_LABELS_BY_SUBSTRING = (
+    ("geodatabase", "GDB"),
+    ("geotiff", "GEOTIFF"),
+    ("shapefile", "SHP"),
+)
+
+
+def _normalize_format(value):
+    """Lowercase a format/media type and drop MIME parameters."""
+    return str(value or "").split(";")[0].strip().lower()
+
+
+def make_resource_format_label(resource):
+    """Short display label (e.g. "XLSX") for a resource's format.
+
+    `format` is free text and `media_type` is a MIME type, so both are checked
+    before falling back to the download URL's extension. Returns None when no
+    reliable label can be derived, so the template can skip the tooltip.
+    """
+    name = _normalize_format(resource.get("format"))
+    media_type = _normalize_format(resource.get("media_type"))
+
+    if name in FORMAT_LABELS_BY_NAME:
+        return FORMAT_LABELS_BY_NAME[name]
+    for needle, label in FORMAT_LABELS_BY_SUBSTRING:
+        if needle in name:
+            return label
+    if media_type in FORMAT_LABELS_BY_MEDIA_TYPE:
+        return FORMAT_LABELS_BY_MEDIA_TYPE[media_type]
+
+    # The MIME subtype beats the URL extension: downloads are often .zip.
+    if "/" in media_type:
+        subtype = media_type.rsplit("/", 1)[-1]
+        subtype = subtype.removeprefix("vnd.").removeprefix("x-")
+        subtype = subtype.split("+")[0].rsplit(".", 1)[-1]
+        if subtype and subtype not in FORMAT_LABELS_IGNORED_SUBTYPES:
+            return subtype[:10].upper()
+
+    url = resource.get("download_url") or resource.get("access_url") or ""
+    extension = url.split("?")[0].split("#")[0].rsplit(".", 1)
+    if len(extension) == 2:
+        label = FORMAT_LABELS_BY_NAME.get(extension[1].lower())
+        if label:
+            return label
+
+    # A short, single-word `format` is a usable label as-is ("GRIB", "ZARR").
+    token = name.removeprefix("x-")
+    if token and " " not in token and len(token) <= 12:
+        return token.upper()
+
+    return None
+
+
 def make_gazetteer_entry(gazetteer_entry):
     return {
         # required; throw if missing
@@ -271,6 +403,7 @@ def make_impact_and_losses(impact_and_losses):
         # optional
         "impact": make_impact(impact_and_losses.get("impact")),
     }
+
 
 def make_license(license_code):
     for key, license in config.dataset_licenses.items():
@@ -423,6 +556,7 @@ def make_resource(resource):
         "download_url": resource.get("download_url"),
         "media_type": resource.get("media_type"),
         "format": resource.get("format"),
+        "format_label": make_resource_format_label(resource),
         "conforms_to": resource.get("conforms_to"),
         "spatial": make_spatial(resource["spatial"]) if "spatial" in resource else None,
         "spatial_aggregation": resource.get("spatial_aggregation"),
@@ -464,7 +598,7 @@ def make_spatial(spatial):
             countries.append({**country, "slug": slugify(country_code)})
 
     if spatial.get("scale") == "global":
-        global_country = config.datasets_countries.get('GLO')
+        global_country = config.datasets_countries.get("GLO")
         if "countries" in spatial and type(countries) == list:
             countries.append(global_country)
         else:
