@@ -116,9 +116,15 @@ layout: default
                       <span
                         x-show="resource.format_label"
                         class="format-badge"
-                        property="dcat:mediaType"
                         x-text="resource.format_label"
                       ></span>
+                      <template x-if="resource.format || resource.media_type">
+                        <span
+                          class="sr-only"
+                          property="dcat:mediaType"
+                          x-text="resource.format || resource.media_type || ''"
+                        ></span>
+                      </template>
                     </div>
                     <p
                       x-show="resource.description"
