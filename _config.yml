@@ -4,6 +4,8 @@ description: A simple catalog to find datasets compliant with the Risk Data Libr
 baseurl: 
 logo: https://www.gfdrr.org/themes/custom/gfdrr/images/GFDRR_Primary%20Logo_BW-Shade.svg
 
+netlify_api_base: "https://rdl-jkan.netlify.app"
+
 # Site theme
 # jkan_theme: Default
 jkan_theme: RDL-flatly
@@ -80,15 +82,26 @@ exclude:
   - .travis.yml
   - node_modules
   - scripts/src
+  - scripts/dev
+  - netlify
+  - netlify.toml
+  - python
   - package.json
   - webpack.config.js
   - README.md
   - LICENSE
-  - _datasets/json/
+  - sqlite.db
+  - sqlite.db-journal
 
 plugins:
   - jekyll-gzip
+  - jekyll_sqlite
 
 gzip:
   extensions:
     - '.json'
+
+sqlite:
+  - collection: datasets
+    file: sqlite.db
+    query: SELECT *, '/datasets/' || slug AS permalink FROM Datasets

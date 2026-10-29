@@ -1,9 +1,18 @@
-"""
-Differences between RDLS and output frontmatter:
-    - catalog added; derived from links and resources
-"""
-
 import config
+from utils import slugify
+
+
+def make_index_page_dataset(dataset):
+    return {
+        "countries": make_spatial(dataset["spatial"])["countries"],
+        "creator_name": dataset["creator"]["name"],
+        "description": dataset["description"],
+        "id": dataset["id"],
+        "license": make_license(dataset["license"]),
+        "risk_data_type": dataset["risk_data_type"],
+        "title": dataset["title"],
+        "version": dataset.get("version"),
+    }
 
 
 def make_dataset_frontmatter(dataset):
@@ -18,7 +27,7 @@ def make_dataset_frontmatter(dataset):
         "creator": make_entity(dataset["creator"]),
         "dataset_id": dataset["id"],
         "description": dataset["description"],
-        "license": dataset["license"],
+        "license": make_license(dataset["license"]),
         "links": dataset["links"],
         "publisher": make_entity(dataset["publisher"]),
         "resources": [make_resource(resource) for resource in dataset["resources"]],
@@ -37,10 +46,8 @@ def make_dataset_frontmatter(dataset):
         ],
         "hazard": make_hazard_top_level(dataset.get("hazard")),
         "lineage": make_lineage(dataset["lineage"]) if "lineage" in dataset else None,
-        "loss": {
-            "losses": loss
-        } if loss else None,
-        "project": make_project(dataset["project"]) if "project" in dataset else None,
+        "loss": {"losses": loss} if loss else None,
+        "project": make_project(dataset.get("project", None)),
         "purpose": dataset.get("purpose"),
         "referenced_by": [
             make_related_resource(related_resource)
@@ -97,10 +104,18 @@ def make_catalog(dataset):
     ]
 
     for url in link_hrefs + access_urls:
-        for prefix, label in config.dataset_catalogs.items():
+        for prefix, title in config.dataset_catalogs.items():
             if url is not None and prefix in url:
-                return label
-    return None
+                return {
+                    "title": title,
+                    "url": prefix,
+                    "slug": slugify(title),
+                }
+    return {
+        "title": "Unknown",
+        "url": None,
+        "slug": "unknown",
+    }
 
 
 def make_classification(classification):
@@ -196,6 +211,136 @@ def make_exposure(exposure):
     }
 
 
+FORMAT_LABELS_BY_MEDIA_TYPE = {
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "XLSX",
+    "application/vnd.ms-excel": "XLS",
+    "application/vnd.oasis.opendocument.spreadsheet": "ODS",
+    "text/csv": "CSV",
+    "text/tab-separated-values": "TSV",
+    "application/json": "JSON",
+    "application/geo+json": "GeoJSON",
+    "application/vnd.geo+json": "GeoJSON",
+    "application/vnd.shp": "SHP",
+    "application/x-shapefile": "SHP",
+    "application/geopackage+sqlite3": "GPKG",
+    "application/vnd.google-earth.kml+xml": "KML",
+    "application/vnd.google-earth.kmz": "KMZ",
+    "application/pdf": "PDF",
+    "text/html": "HTML",
+    "text/plain": "TXT",
+    "application/zip": "ZIP",
+    "application/x-zip-compressed": "ZIP",
+    "image/png": "PNG",
+    "image/jpeg": "JPG",
+    "image/tiff": "TIFF",
+    "image/svg+xml": "SVG",
+}
+FORMAT_LABELS_BY_NAME = {
+    "cpg": "CPG",
+    "csv": "CSV",
+    "dbf": "DBF",
+    "doc": "DOC",
+    "docx": "DOCX",
+    "excel": "XLSX",
+    "gdb": "GDB",
+    "geodatabase": "GDB",
+    "geojson": "GeoJSON",
+    "geopackage": "GPKG",
+    "geotiff": "GEOTIFF",
+    "gif": "GIF",
+    "gml": "GML",
+    "gpkg": "GPKG",
+    "grib": "GRIB",
+    "grib2": "GRIB2",
+    "gz": "GZIP",
+    "hdf5": "HDF5",
+    "html": "HTML",
+    "jpeg": "JPG",
+    "jpg": "JPG",
+    "json": "JSON",
+    "kml": "KML",
+    "kmz": "KMZ",
+    "nc": "NETCDF",
+    "netcdf": "NETCDF",
+    "obf": "OBF",
+    "ods": "ODS",
+    "parquet": "PARQUET",
+    "pdf": "PDF",
+    "png": "PNG",
+    "prj": "PRJ",
+    "py": "PYTHON",
+    "rar": "RAR",
+    "shapefile": "SHP",
+    "shp": "SHP",
+    "shx": "SHX",
+    "spreadsheet": "XLSX",
+    "sql": "SQL",
+    "svg": "SVG",
+    "tif": "TIFF",
+    "tiff": "TIFF",
+    "tsv": "TSV",
+    "txt": "TXT",
+    "vrt": "VRT",
+    "xls": "XLS",
+    "xlsx": "XLSX",
+    "xml": "XML",
+    "zarr": "ZARR",
+    "zip": "ZIP",
+}
+FORMAT_LABELS_IGNORED_SUBTYPES = {"octet-stream", "binary"}
+FORMAT_LABELS_BY_SUBSTRING = (
+    ("geodatabase", "GDB"),
+    ("geotiff", "GEOTIFF"),
+    ("shapefile", "SHP"),
+)
+
+
+def _normalize_format(value):
+    """Lowercase a format/media type and drop MIME parameters."""
+    return str(value or "").split(";")[0].strip().lower()
+
+
+def make_resource_format_label(resource):
+    """Short display label (e.g. "XLSX") for a resource's format.
+
+    `format` is free text and `media_type` is a MIME type, so both are checked
+    before falling back to the download URL's extension. Returns None when no
+    reliable label can be derived, so the template can skip the tooltip.
+    """
+    name = _normalize_format(resource.get("format"))
+    media_type = _normalize_format(resource.get("media_type"))
+
+    if name in FORMAT_LABELS_BY_NAME:
+        return FORMAT_LABELS_BY_NAME[name]
+    for needle, label in FORMAT_LABELS_BY_SUBSTRING:
+        if needle in name:
+            return label
+    if media_type in FORMAT_LABELS_BY_MEDIA_TYPE:
+        return FORMAT_LABELS_BY_MEDIA_TYPE[media_type]
+
+    # The MIME subtype beats the URL extension: downloads are often .zip.
+    if "/" in media_type:
+        subtype = media_type.rsplit("/", 1)[-1]
+        subtype = subtype.removeprefix("vnd.").removeprefix("x-")
+        subtype = subtype.split("+")[0].rsplit(".", 1)[-1]
+        if subtype and subtype not in FORMAT_LABELS_IGNORED_SUBTYPES:
+            return subtype[:10].upper()
+
+    url = resource.get("download_url") or resource.get("access_url") or ""
+    extension = url.split("?")[0].split("#")[0].rsplit(".", 1)
+    if len(extension) == 2:
+        label = FORMAT_LABELS_BY_NAME.get(extension[1].lower())
+        if label:
+            return label
+
+    # A short, single-word `format` is a usable label as-is ("GRIB", "ZARR").
+    token = name.removeprefix("x-")
+    if token and " " not in token and len(token) <= 12:
+        return token.upper()
+
+    return None
+
+
 def make_gazetteer_entry(gazetteer_entry):
     return {
         # required; throw if missing
@@ -213,18 +358,15 @@ def make_hazard_top_level(hazard):
         return None
     event_sets = [make_event_set(event_set) for event_set in hazard["event_sets"]]
     hazard_types = []
-    
+
     for event_set in event_sets:
-        if event_set.get('hazards'):
-            hazard_type = event_set['hazards'][0].get('type')
-            
+        if event_set.get("hazards"):
+            hazard_type = event_set["hazards"][0].get("type")
+
             if hazard_type not in hazard_types:
                 hazard_types.append(hazard_type)
-                
-    return {
-        "event_sets": event_sets,
-        "type": ", ".join(hazard_types)
-    }
+
+    return {"event_sets": event_sets, "type": hazard_types}
 
 
 def make_hazard(hazard):
@@ -260,6 +402,21 @@ def make_impact_and_losses(impact_and_losses):
         "loss_frequency_type": impact_and_losses["loss_frequency_type"],
         # optional
         "impact": make_impact(impact_and_losses.get("impact")),
+    }
+
+
+def make_license(license_code):
+    for key, license in config.dataset_licenses.items():
+        if license_code is not None and license_code == key:
+            return {
+                "title": license_code,
+                "url": license["url"],
+                "slug": slugify(license_code),
+            }
+    return {
+        "title": "Unknown",
+        "url": None,
+        "slug": "unknown",
     }
 
 
@@ -365,8 +522,11 @@ def make_occurrence_probablilistic_probability(probability):
 
 
 def make_project(project):
+    if project is None:
+        return {"title": "Unknown", "url": None, "slug": "unknown"}
     return {
-        "name": project["name"],
+        "title": project["name"],
+        "slug": slugify(project["name"]),
         "url": project.get("url"),
     }
 
@@ -396,6 +556,7 @@ def make_resource(resource):
         "download_url": resource.get("download_url"),
         "media_type": resource.get("media_type"),
         "format": resource.get("format"),
+        "format_label": make_resource_format_label(resource),
         "conforms_to": resource.get("conforms_to"),
         "spatial": make_spatial(resource["spatial"]) if "spatial" in resource else None,
         "spatial_aggregation": resource.get("spatial_aggregation"),
@@ -429,17 +590,23 @@ def make_source(source):
 
 
 def make_spatial(spatial):
-    # TODO: spatial is required but has no required properties??
-    # unless there must be one gazetteer entry?
+    country_codes = spatial.get("countries", [])
+    countries = []
+    for country_code in country_codes:
+        country = config.datasets_countries.get(country_code)
+        if country is not None:
+            countries.append({**country, "slug": slugify(country_code)})
+
     if spatial.get("scale") == "global":
-        if "countries" in spatial and type(spatial["countries"]) == list:
-            spatial["countries"].append("GLO")
+        global_country = config.datasets_countries.get("GLO")
+        if "countries" in spatial and type(countries) == list:
+            countries.append(global_country)
         else:
-            spatial["countries"] = ["GLO"]
+            countries = [global_country]
     return {
         "bbox": spatial.get("bbox"),
         "centroid": spatial.get("centroid"),
-        "countries": spatial.get("countries"),
+        "countries": countries,
         "gazetteer_entries": [
             make_gazetteer_entry(g) for g in spatial.get("gazetteer_entries", [])
         ],

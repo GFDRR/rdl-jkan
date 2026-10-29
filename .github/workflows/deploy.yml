@@ -1,0 +1,118 @@
+---
+name: Build and deploy
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - rdl-1.0
+    paths:
+      - "_datasets/**"
+      - "python/**"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: build-and-deploy
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+          cache-dependency-path: python/requirements.txt
+
+      - name: Install Python dependencies
+        working-directory: ./python
+        run: |
+          echo 'Cython < 3.0' > /tmp/constraint.txt
+          PIP_CONSTRAINT=/tmp/constraint.txt python3 -m pip install Cython
+          PIP_CONSTRAINT=/tmp/constraint.txt python3 -m pip install -r requirements.txt
+
+      - name: Restore generated vectors
+        id: vector-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            python/vectors.bin
+            python/vectors.ids.json
+          key: vectors-ubuntu-py3.13-${{ hashFiles('_datasets/json/**/*.json', 'python/generate_vectors.py', 'python/pack_vectors.py', 'python/mappers.py', 'python/config.py', 'python/utils.py', 'python/requirements.txt') }}
+
+      - name: Generate vector embeddings
+        if: steps.vector-cache.outputs.cache-hit != 'true'
+        working-directory: ./python
+        run: python3 generate_vectors.py
+
+      - name: Pack vectors for the query function
+        if: steps.vector-cache.outputs.cache-hit != 'true'
+        working-directory: ./python
+        run: python3 pack_vectors.py
+
+      - name: Build sqlite.db
+        working-directory: ./python
+        run: python3 import.py
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Upload search data to Netlify Blobs
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+        run: node scripts/netlify-data.mjs upload
+
+      - name: Download sqlite.db from Netlify Blobs
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+        run: |
+          npm install --no-save @netlify/blobs
+          node scripts/netlify-data.mjs download sqlite.db
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1.327.0
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+          cache-version: 0
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Write metadata to a file Jekyll can use
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          echo "branch: $BRANCH" > _config.ci.yml
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --config _config.ci.yml,_config.yml
+        env:
+          JEKYLL_ENV: production
+          PAGES_REPO_NWO: ${{ github.repository }}
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

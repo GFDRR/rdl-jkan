@@ -1,0 +1,12 @@
+[build]
+  command = "echo 'No build needed'"
+  publish = "public"
+
+[build.environment]
+  # The query function uses the built-in node:sqlite driver, which is available
+  # without a flag from Node 22.13. Pin Node 22 so the build and the function
+  # runtime agree.
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
