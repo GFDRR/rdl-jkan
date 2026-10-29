@@ -30,11 +30,6 @@ Object.defineProperties(
 Object.defineProperties(
   datasetsStore,
   Object.getOwnPropertyDescriptors({
-    // The server returns one page of rows at a time; `display` is that page.
-    get paginatedDatasets() {
-      return this.display;
-    },
-
     loadDatasets() {
       this.fetchPage();
       this.scheduleOptionsRefresh();
