@@ -47,6 +47,7 @@ const DETAIL_COLUMNS = `
   json_extract(datasets.frontmatter, '$.creator') as creator,
   json_extract(datasets.frontmatter, '$.details') as details,
   json_extract(datasets.frontmatter, '$.exposure') as exposure,
+  json_extract(datasets.frontmatter, '$.hazard') as hazard,
   json_extract(datasets.frontmatter, '$.loss') as loss,
   json_extract(datasets.frontmatter, '$.publisher') as publisher,
   json_extract(datasets.frontmatter, '$.purpose') as purpose,
