@@ -205,29 +205,34 @@ function buildFilterClauses(filters, excludeType = null) {
     clauses.push(`(${list.map(() => `${column} = ?`).join(" OR ")})`);
     params.push(...list);
   };
-  const addLike = (type, expression) => {
+  // Exact match against any element of a JSON array (or one field of each
+  // element), so e.g. "national" does not also match "sub-national".
+  const addAnyInArray = (type, column, path = "$", field = null) => {
     const list = values(type);
     if (!list.length) return;
-    clauses.push(`(${list.map(() => `${expression} LIKE '%' || ? || '%'`).join(" OR ")})`);
+    const element = field ? `json_extract(value, '$.${field}')` : "value";
+    clauses.push(
+      `EXISTS (SELECT 1 FROM json_each(${column}, '${path}') WHERE ${element} IN (${list.map(() => "?").join(", ")}))`,
+    );
     params.push(...list);
   };
 
   if (excludeType !== "catalog") addEquals("catalog", "datasets.catalog_slug");
   if (excludeType !== "countries") {
-    addLike("countries", "json_extract(datasets.spatial, '$.countries')");
+    addAnyInArray("countries", "datasets.spatial", "$.countries", "slug");
   }
   if (excludeType !== "geo_scale") {
-    addLike("geo_scale", "json_extract(datasets.spatial, '$.scale')");
+    addEquals("geo_scale", "json_extract(datasets.spatial, '$.scale')");
   }
   if (excludeType !== "project") {
-    addLike("project", "json_extract(datasets.project, '$')");
+    addEquals("project", "json_extract(datasets.project, '$.slug')");
   }
   if (excludeType !== "risk_data_type") {
-    addLike("risk_data_type", "json_extract(datasets.risk_data_type, '$')");
+    addAnyInArray("risk_data_type", "datasets.risk_data_type");
   }
-  // No "IS NOT NULL" guard needed: NULL LIKE anything is NULL, so NULL rows
-  // never match anyway.
-  if (excludeType !== "hazard_type") addLike("hazard_type", "datasets.hazard_type");
+  // json_each over a NULL column yields no rows, so datasets without a
+  // hazard never match.
+  if (excludeType !== "hazard_type") addAnyInArray("hazard_type", "datasets.hazard_type");
   if (excludeType !== "license") addEquals("license", "datasets.license_slug");
 
   return { clauses, params };
