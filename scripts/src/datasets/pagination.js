@@ -3,7 +3,7 @@ export default {
   itemsPerPage: 10,
 
   get totalPages() {
-    return Math.ceil(this.display.length / this.itemsPerPage);
+    return Math.ceil(this.totalCount / this.itemsPerPage);
   },
 
   get paginationNumbers() {
@@ -38,6 +38,6 @@ export default {
   },
 
   get paginationEnd() {
-    return Math.min(this.currentPage * this.itemsPerPage, this.display.length);
+    return Math.min(this.currentPage * this.itemsPerPage, this.totalCount);
   },
 };
