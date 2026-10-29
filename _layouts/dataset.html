@@ -277,6 +277,24 @@ layout: default
                           </tr>
                           <tr>
                             <th></th>
+                            <th>Hazard</th>
+                            <th>Hazard Type</th>
+                            <th>Hazard Process</th>
+                            <th>Intensity Measure</th>
+                            <th></th>
+                          </tr>
+                          <template x-for="hazard in event_set.hazards" :key="hazard.id">
+                            <tr>
+                              <td></td>
+                              <td x-text="hazard.id"></td>
+                              <td x-text="String(hazard.type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                              <td x-text="String(hazard.process ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                              <td x-text="hazard.intensity_measure ?? ''"></td>
+                              <td></td>
+                            </tr>
+                          </template>
+                          <tr x-show="event_set.events?.length">
+                            <th></th>
                             <th>Event</th>
                             <th>Start</th>
                             <th>End</th>
