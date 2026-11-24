@@ -1,0 +1,70 @@
+---
+name: Check
+
+on:
+  pull_request:
+    branches:
+      - rdl-1.0
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  datasets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # The checks compare the branch with the one it will be merged into.
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Install Python dependencies
+        # Everything but sentence-transformers, which is large and not needed.
+        run: grep -v sentence-transformers python/requirements.txt | python3 -m pip install -r /dev/stdin
+
+      - name: Check datasets
+        working-directory: ./python
+        env:
+          BASE_REF: ${{ github.base_ref || 'rdl-1.0' }}
+        run: python3 check_datasets.py --base "origin/$BASE_REF"
+
+      - name: Run Python tests
+        working-directory: ./python
+        run: python3 -m unittest discover -s tests
+
+      - name: Build sqlite.db
+        working-directory: ./python
+        run: python3 import.py
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Run query function tests
+        run: node --test "netlify/tests/*.test.mjs"
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1.327.0
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+          cache-version: 0
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Check the built site
+        run: python3 python/check_site.py _site

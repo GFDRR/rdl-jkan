@@ -101,16 +101,21 @@ def make_attribution(attribution):
 
 def make_catalog(dataset):
     link_hrefs = [link.get("href") for link in dataset.get("links", [])]
-    access_urls = [
-        resource.get("access_url") for resource in dataset.get("resources", [])
+    resource_urls = [
+        resource.get(key)
+        for key in ("access_url", "download_url")
+        for resource in dataset.get("resources", [])
     ]
 
-    for url in link_hrefs + access_urls:
+    for url in link_hrefs + resource_urls:
         for prefix, title in config.dataset_catalogs.items():
             if url is not None and prefix in url:
                 return {
                     "title": title,
-                    "url": prefix,
+                    # The first prefix listed for a catalog is its home page.
+                    "url": next(
+                        p for p, t in config.dataset_catalogs.items() if t == title
+                    ),
                     "slug": slugify(title),
                 }
     return {
@@ -634,6 +639,22 @@ def make_source(source):
     }
 
 
+def is_geographic_bbox(bbox):
+    """Whether a bbox is [min_lon, min_lat, max_lon, max_lat] in degrees.
+
+    Some sources give it in the metres of a projected coordinate system.
+    Longitudes up to 360 are used for areas across the antimeridian.
+    """
+    if not isinstance(bbox, list) or len(bbox) != 4:
+        return False
+    if not all(isinstance(n, (int, float)) for n in bbox):
+        return False
+    min_lon, min_lat, max_lon, max_lat = bbox
+    return all(abs(n) <= 360 for n in (min_lon, max_lon)) and all(
+        abs(n) <= 90.01 for n in (min_lat, max_lat)
+    )
+
+
 def make_spatial(spatial):
     country_codes = spatial.get("countries", [])
     countries = []
@@ -648,8 +669,10 @@ def make_spatial(spatial):
             countries.append(global_country)
         else:
             countries = [global_country]
+    bbox = spatial.get("bbox")
     return {
-        "bbox": spatial.get("bbox"),
+        # Without a usable bbox, the map shows the countries instead.
+        "bbox": bbox if is_geographic_bbox(bbox) else None,
         "centroid": spatial.get("centroid"),
         "countries": countries,
         "gazetteer_entries": [
@@ -679,32 +702,35 @@ def make_trigger(trigger):
 
 def make_vulnerability(vulnerability):
     """Convert RDL vulnerability metadata into JKAN frontmatter"""
-    if vulnerability is None or vulnerability.get("functions") is None:
+    if vulnerability is None:
         return None
+    # RDLS v1.0 keeps socio-economic indices next to "functions", so a dataset
+    # may describe indices only.
+    functions = vulnerability.get("functions") or {}
+    socio_economic = vulnerability.get("socio_economic") or []
     return {
         # optional
         "functions": {
             "damage_to_loss": [
                 make_vulnerability_function_damage_to_loss(vf)
-                for vf in vulnerability["functions"].get("damage_to_loss", [])
+                for vf in functions.get("damage_to_loss", [])
             ],
             "engineering_demand": [
                 make_vulnerability_function_engineering_demand(vf)
-                for vf in vulnerability["functions"].get("engineering_demand", [])
+                for vf in functions.get("engineering_demand", [])
             ],
             "fragility": [
                 make_vulnerability_function_fragility(vf)
-                for vf in vulnerability["functions"].get("fragility", [])
-            ],
-            "socio_economic": [
-                make_vulnerability_function_socio_economic(vf)
-                for vf in vulnerability["functions"].get("socio_economic", [])
+                for vf in functions.get("fragility", [])
             ],
             "vulnerability": [
                 make_vulnerability_function_vulnerability(vf)
-                for vf in vulnerability["functions"].get("vulnerability", [])
+                for vf in functions.get("vulnerability", [])
             ],
-        }
+        },
+        "socio_economic": [
+            make_vulnerability_socio_economic(se) for se in socio_economic
+        ],
     }
 
 
@@ -799,17 +825,17 @@ def make_vulnerability_function_engineering_demand(vf):
     }
 
 
-def make_vulnerability_function_socio_economic(vf):
+def make_vulnerability_socio_economic(se):
     return {
         # required; throw if missing
-        "id": vf["id"],
-        "indicator_name": vf["indicator_name"],
-        "indicator_code": vf["indicator_code"],
-        "description": vf["description"],
-        "reference_year": vf["reference_year"],
+        "id": se["id"],
+        "indicator_name": se["indicator_name"],
+        "indicator_code": se["indicator_code"],
+        "description": se["description"],
+        "reference_year": se["reference_year"],
         # optional
-        "scheme": vf.get("scheme"),
-        "threshold": vf.get("threshold"),
-        "uri": vf.get("uri"),
-        "analysis_details": vf.get("analysis_details"),
+        "scheme": se.get("scheme"),
+        "threshold": se.get("threshold"),
+        "uri": se.get("uri"),
+        "analysis_details": se.get("analysis_details"),
     }

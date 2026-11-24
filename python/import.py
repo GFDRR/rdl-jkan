@@ -4,6 +4,8 @@ import os
 from pathlib import Path
 
 from mappers import make_dataset_frontmatter
+from relations import make_relations
+from structured_data import make_dcat_catalog, make_schema_org
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT_DIR = SCRIPT_DIR.parent
@@ -11,6 +13,10 @@ ROOT_DIR = SCRIPT_DIR.parent
 # filter (_plugins/load_data_json.rb) and the root datasets.json page.
 DATASETS_JSON_DIR = ROOT_DIR / "_datasets" / "json"
 DB_PATH = ROOT_DIR / "sqlite.db"
+# Published as they are by Jekyll. The first is the endpoint for harvesters; the
+# second lets editors check whether a dataset id is already in use.
+DCAT_PATH = ROOT_DIR / "catalog.jsonld"
+DATASET_IDS_PATH = ROOT_DIR / "dataset-ids.json"
 
 
 def _serialize(value):
@@ -23,6 +29,8 @@ def _serialize(value):
 def create_tables(conn: sqlite3.Connection):
     cur = conn.cursor()
     cur.execute("PRAGMA foreign_keys = ON;")
+    cur.execute("DROP TABLE IF EXISTS dataset_jsonld")
+    cur.execute("DROP TABLE IF EXISTS dataset_relations")
     cur.execute("DROP TABLE IF EXISTS datasets")
     cur.execute("DROP TABLE IF EXISTS datasets_fts")
     cur.execute("DROP TABLE IF EXISTS catalogs")
@@ -62,6 +70,23 @@ def create_tables(conn: sqlite3.Connection):
         );
         """)
     cur.execute("""
+        CREATE TABLE dataset_jsonld (
+            dataset_id TEXT PRIMARY KEY,
+            schema_org TEXT
+        );
+        """)
+    cur.execute("""
+        CREATE TABLE dataset_relations (
+            dataset_id TEXT,
+            related_id TEXT,
+            relation TEXT,
+            position INTEGER,
+            PRIMARY KEY (dataset_id, relation, position)
+        );
+        """)
+    # bm25() in netlify/functions/query weighs these columns by position: keep
+    # FTS_COLUMN_WEIGHTS there in the same order.
+    cur.execute("""
         CREATE VIRTUAL TABLE datasets_fts USING fts5(
             id,
             title,
@@ -85,6 +110,9 @@ def create_tables(conn: sqlite3.Connection):
             spatial,
             temporal,
             version,
+            attributions,
+            vulnerability,
+            referenced_by,
             content='',
             tokenize=trigram
         );
@@ -129,6 +157,14 @@ def _fts_keyword_text(fm: dict) -> dict:
     hazard = _text("hazard")
     spatial = _text("spatial.scale", "spatial.gazetteer_entries")
     temporal = _text("temporal")
+    attributions = " ".join(
+        _flatten([entity.get("name"), (entity.get("affiliation") or {}).get("name")])
+        for entity in (a["entity"] for a in fm.get("attributions") or [])
+    )
+    referenced_by = " ".join(
+        _flatten([r.get("name"), r.get("author_names"), r.get("doi")])
+        for r in fm.get("referenced_by") or []
+    )
 
     return {
         "id": _text("dataset_id"),
@@ -153,6 +189,9 @@ def _fts_keyword_text(fm: dict) -> dict:
         "spatial": spatial,
         "temporal": temporal,
         "version": _text("version"),
+        "attributions": attributions,
+        "vulnerability": _text("vulnerability"),
+        "referenced_by": referenced_by,
     }
 
 
@@ -235,8 +274,12 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
             rowid, id, title, description, catalog, creator, countries,
             license, project, risk_data_type, hazard_type, resources,
             details, purpose, publisher, contact_point, lineage, exposure,
-            loss, hazard, spatial, temporal, version
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            loss, hazard, spatial, temporal, version, attributions,
+            vulnerability, referenced_by
+        ) VALUES (
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+            ?, ?
+        )
         """,
         (
             rowid,
@@ -262,10 +305,38 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
             fts["spatial"],
             fts["temporal"],
             fts["version"],
+            fts["attributions"],
+            fts["vulnerability"],
+            fts["referenced_by"],
         ),
     )
 
-    conn.commit()
+
+def insert_jsonld(conn: sqlite3.Connection, fm: dict):
+    # Escaped so that no metadata text can close the <script> element the page
+    # puts it in.
+    schema_org = json.dumps(make_schema_org(fm), ensure_ascii=False)
+    conn.execute(
+        "INSERT INTO dataset_jsonld (dataset_id, schema_org) VALUES (?, ?)",
+        (fm["dataset_id"], schema_org.replace("<", "\\u003c")),
+    )
+
+
+def insert_relations(conn: sqlite3.Connection, frontmatters: list[dict]):
+    conn.executemany(
+        """
+        INSERT INTO dataset_relations (dataset_id, related_id, relation, position)
+        VALUES (?, ?, ?, ?)
+        """,
+        make_relations(frontmatters),
+    )
+
+
+def write_json(path: Path, value):
+    path.write_text(
+        json.dumps(value, ensure_ascii=False, separators=(",", ":")) + "\n",
+        encoding="utf-8",
+    )
 
 
 def main():
@@ -292,17 +363,31 @@ def main():
     conn = sqlite3.connect(DB_PATH)
     try:
         create_tables(conn)
-        processed = 0
+        frontmatters = []
+        failed = 0
         for ds in datasets:
             try:
                 fm = make_dataset_frontmatter(ds)
                 insert_dataset(conn, fm)
-                processed += 1
+                insert_jsonld(conn, fm)
+                frontmatters.append(fm)
             except Exception as e:
-                print(f"Error processing dataset {ds.get('id', 'UNKNOWN')}: {e}")
-        print(f"Imported {processed} datasets into {DB_PATH}")
+                failed += 1
+                print(f"Error processing dataset {ds.get('id', 'UNKNOWN')}: {e!r}")
+        insert_relations(conn, frontmatters)
+        conn.commit()
+        print(f"Imported {len(frontmatters)} datasets into {DB_PATH}")
     finally:
         conn.close()
+
+    write_json(DCAT_PATH, make_dcat_catalog(frontmatters))
+    write_json(DATASET_IDS_PATH, sorted(fm["dataset_id"] for fm in frontmatters))
+    print(f"Wrote {DCAT_PATH} and {DATASET_IDS_PATH}")
+
+    if failed:
+        # Fail the build rather than deploy a catalogue with datasets missing.
+        print(f"{failed} dataset(s) could not be imported")
+        return 1
     return 0
 
 

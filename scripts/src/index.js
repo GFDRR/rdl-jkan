@@ -6,12 +6,6 @@ import persist from "@alpinejs/persist";
 import datasetStore from "./dataset";
 import datasetsStore from "./datasets";
 
-const urlSearchParams = new URLSearchParams(window.location.search);
-const params = {};
-urlSearchParams.forEach((value, key) => {
-  params[key] = value;
-});
-
 window.Alpine = Alpine;
 Alpine.plugin(persist);
 

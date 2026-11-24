@@ -1,0 +1,10 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ site.url }}{{ site.baseurl }}/</loc></url>
+{%- for dataset in site.datasets %}
+  <url><loc>{{ site.url }}{{ site.baseurl }}{{ dataset.url | xml_escape }}</loc></url>
+{%- endfor %}
+</urlset>

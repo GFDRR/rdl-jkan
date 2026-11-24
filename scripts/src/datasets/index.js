@@ -2,6 +2,7 @@ import { queryApi } from "../shared/api";
 import filtering from "./filtering";
 import pagination from "./pagination";
 import search from "./search";
+import urlState from "./url-state";
 
 const datasetsStore = {
   display: [],
@@ -31,6 +32,8 @@ Object.defineProperties(
   datasetsStore,
   Object.getOwnPropertyDescriptors({
     loadDatasets() {
+      urlState.read(this);
+      if (this.query) this.scheduleQueryVector();
       this.fetchPage();
       this.scheduleOptionsRefresh();
     },
@@ -49,6 +52,7 @@ Object.defineProperties(
 
     async fetchPage() {
       const token = ++this._fetchToken;
+      urlState.write(this);
       const q = this.query.trim();
       const payload = q
         ? {

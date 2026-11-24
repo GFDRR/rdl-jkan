@@ -61,6 +61,8 @@ function presentOptions(type, store) {
   }
 }
 
+export { FILTER_TYPES };
+
 export default {
   filters: Object.fromEntries(FILTER_TYPES.map((type) => [type, []])),
   filterOptions: Object.fromEntries(FILTER_TYPES.map((type) => [type, []])),
@@ -70,6 +72,7 @@ export default {
     idx === -1
       ? this.filters[filterType].push(value)
       : this.filters[filterType].splice(idx, 1);
+    this.currentPage = 1;
     this.refreshDisplay();
     this.scheduleOptionsRefresh();
   },
@@ -80,6 +83,7 @@ export default {
 
   clearFilters() {
     Object.keys(this.filters).forEach((k) => (this.filters[k] = []));
+    this.currentPage = 1;
     this.refreshDisplay();
     this.scheduleOptionsRefresh();
   },
