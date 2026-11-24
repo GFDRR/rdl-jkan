@@ -64,7 +64,7 @@
     <script type="application/ld+json">{{ page.schema_org }}</script>
   {% endif %}
 
-  {% if site.google_analytics.measurement_id and site.google_analytics.measurement_id != "" %}
+  {% if jekyll.environment == "production" and site.google_analytics.tag_id and site.google_analytics.tag_id != "" %}
     <!-- Google Analytics -->
     {% include addons/google-analytics.html %}
   {% endif %}
