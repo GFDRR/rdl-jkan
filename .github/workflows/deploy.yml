@@ -15,10 +15,13 @@ on:
       - "_plugins/**"
       - "css/**"
       - "img/**"
+      - "netlify/**"
       - "python/**"
       - "scripts/**"
       - "_config.yml"
       - "*.html"
+      - "netlify.toml"
+      - "package-lock.json"
       - "robots.txt"
       - "sitemap.xml"
 
@@ -92,6 +95,20 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
         run: node scripts/netlify-data.mjs upload
+
+      # The Netlify site is not linked to this repository, so it does not deploy
+      # the function by itself.
+      - name: Deploy the query function to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+        run: >-
+          npx --yes netlify-cli@27.20.1 deploy --prod --no-build
+          --dir public --functions netlify/functions
+          --message "GitHub ${{ github.sha }}"
+
+      - name: Check the query function
+        run: node scripts/check-query-function.mjs
 
       - name: Download sqlite.db from Netlify Blobs
         env:
