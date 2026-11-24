@@ -1,0 +1,84 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_vln-GHA_grma_ghana_prog",
+      "title": "Flood depth-damage functions for Crops in Ghana ",
+      "description": "This dataset is a library of flood vulnerability functions for four crops in northern Ghana: soybean (V-1), sorghum (V-2), rice (V-3) and maize (V-4). It was developed by JBA for the Ministry of Finance, Republic of Ghana, as part of the GRMA Ghana flood model. It contains 3,450 functions, one for each combination of crop, region, calendar month and flood duration from 1 to 30 days. The regions covered are Savannah, Northern, Upper East, Upper West, North East and Oti.\nEach function relates flood water depth in metres to a damage ratio, which represents yield loss. A damage ratio of 1 means 0% yield. The functions are step functions: each step is defined by a minimum depth, a maximum depth and an associated damage ratio.\nThe maize, sorghum and soybean functions were derived from the Texas A&M AgriLife Agricultural Flood Loss (AGFL) Tool. It links flood depth, flood duration and crop growth stage to yield loss. The rice functions were derived from the depth-duration-damage relationships in Shrestha et al. (2018), which cover the vegetative, reproductive, maturity and ripening stages. Both sources were matched to Ghanaian regional cropping calendars, so each month's function reflects the likely growth stage of the crop at that time. No calendar was available for Oti, so the Northern region calendar is used there.\nLimitations: No Ghana-specific crop flood-loss functions or validation data were available. The source relationships were developed in the USA, the Philippines and Pakistan. Sorghum has the weakest supporting evidence. The functions have not yet been validated. Validation is planned within the GRMA Ghana model, and the functions may be revised before final delivery.\n",
+      "risk_data_type": [
+        "vulnerability"
+      ],
+      "publisher": {
+        "name": "Global Risk Modelling Alliance",
+        "url": "https://grma.global/"
+      },
+      "version": "V1.0",
+      "purpose": "This dataset is the agricultural vulnerability part of the GRMA Ghana flood model. It turns modelled flood depth and duration into estimates of crop yield loss at each modelled location for each simulated flood event.\nEach crop has functions that vary by region and calendar month, so the model reflects the growth stage a crop is likely to be in when a flood happens. The same flood can therefore cause different losses depending on location, timing and crop type. This matters most during sensitive stages such as flowering and grain filling, which often coincide with peak rainfall in northern Ghana.\nGhana had no quantitative crop flood-loss relationships of its own before this work, so the dataset also fills a gap in national vulnerability information. It gives stakeholders a transparent, documented basis for assessing flood risk to agriculture. The functions can be refined through model validation and as local crop-loss data becomes available.\n",
+      "project": {
+        "name": "GRMA Ghana Programme"
+      },
+      "contact_point": {
+        "name": "Alejandro Diaz Moreno",
+        "email": "analytics@jbarisk.com"
+      },
+      "creator": {
+        "name": "JBA Global Resilience",
+        "email": "analytics@jbarisk.com",
+        "url": "https://jbagr.com/"
+      },
+      "spatial": {
+        "scale": "national",
+        "countries": [
+          "GHA"
+        ]
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resources": [
+        {
+          "spatial.countries": [
+            "GHA"
+          ],
+          "title": "Flood depth-damage functions for crops in Ghana ",
+          "description": "This dataset is a library of flood vulnerability functions for four crops in northern Ghana: soybean (V-1), sorghum (V-2), rice (V-3) and maize (V-4). It was developed by JBA for the Ministry of Finance, Republic of Ghana, as part of the GRMA Ghana flood model. It contains 3,450 functions, one for each combination of crop, region, calendar month and flood duration from 1 to 30 days. The regions covered are Savannah, Northern, Upper East, Upper West, North East and Oti.\nEach function relates flood water depth in metres to a damage ratio, which represents yield loss. A damage ratio of 1 means 0% yield. The functions are step functions: each step is defined by a minimum depth, a maximum depth and an associated damage ratio.\nThe maize, sorghum and soybean functions were derived from the Texas A&M AgriLife Agricultural Flood Loss (AGFL) Tool. It links flood depth, flood duration and crop growth stage to yield loss. The rice functions were derived from the depth-duration-damage relationships in Shrestha et al. (2018), which cover the vegetative, reproductive, maturity and ripening stages. Both sources were matched to Ghanaian regional cropping calendars, so each month's function reflects the likely growth stage of the crop at that time. No calendar was available for Oti, so the Northern region calendar is used there.\nLimitations: No Ghana-specific crop flood-loss functions or validation data were available. The source relationships were developed in the USA, the Philippines and Pakistan. Sorghum has the weakest supporting evidence. The functions have not yet been validated. Validation is planned within the GRMA Ghana model, and the functions may be revised before final delivery.\n",
+          "access_url": "https://jbagr.com/",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "format": "csv",
+          "spatial": {
+            "scale": "sub-national"
+          },
+          "id": "resource_Jjb1JF3i"
+        }
+      ],
+      "vulnerability": {
+        "functions": {
+          "vulnerability": [
+            {
+              "approach": "hybrid",
+              "hazard_primary": {
+                "type": "flood",
+                "intensity_measure": "flow_depth_ground:m"
+              },
+              "category": "agriculture",
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "Yield",
+                "measurement": {
+                  "quantity_kind": "dimensionless_ratio",
+                  "unit": "percent"
+                }
+              },
+              "taxonomy": "OED",
+              "id": "item_jULVv2xg"
+            }
+          ]
+        }
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
