@@ -148,11 +148,61 @@ layout: default
             </div>
           </div>
           <!-- Countries Filter -->
-          <div class="filter-card">
+          <div
+            class="filter-card"
+            x-data="{
+              countryQuery: '',
+              normalize(text) {
+                return text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+              },
+              // Every typed word must appear in the name (ignoring accents and
+              // word order), or the whole input must be the ISO code.
+              get countryOptions() {
+                const options = this.$store.datasets.getFilterOptionsCountries();
+                const query = this.normalize(this.countryQuery).trim();
+                if (!query) return options;
+                const words = query.match(/[a-z0-9]+/g) ?? [];
+                return options.filter((item) => {
+                  const title = this.normalize(item.title);
+                  return (
+                    (words.length > 0 && words.every((word) => title.includes(word))) ||
+                    item.slug.toLowerCase() === query
+                  );
+                });
+              },
+              // Enter picks the country once the search is down to one match.
+              pickSingleMatch() {
+                const options = this.countryOptions;
+                if (!this.countryQuery.trim() || options.length !== 1) return;
+                if (!options[0].selected) {
+                  this.$store.datasets.toggleFilter('countries', options[0].slug);
+                }
+                this.countryQuery = '';
+              },
+            }"
+          >
             <h4>Countries</h4>
-            <div class="list-group">
+            <input
+              x-model="countryQuery"
+              @keydown.enter.prevent="pickSingleMatch()"
+              @keydown.escape.prevent="countryQuery = ''"
+              type="search"
+              class="form-control filter-search"
+              placeholder="Find a country..."
+              aria-label="Find a country"
+              autocomplete="off"
+            />
+            <p
+              x-cloak
+              x-show="countryQuery.trim() && countryOptions.length === 0"
+              class="filter-search-empty"
+              role="status"
+            >
+              No matching countries
+            </p>
+            <div class="list-group" x-show="countryOptions.length > 0 || !countryQuery.trim()">
               <template
-                x-for="item in $store.datasets.getFilterOptionsCountries()"
+                x-for="item in countryOptions"
                 :key="item.slug"
               >
                 <a
