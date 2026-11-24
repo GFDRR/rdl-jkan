@@ -7,6 +7,8 @@
   # without a flag from Node 22.13. Pin Node 22 so the build and the function
   # runtime agree.
   NODE_VERSION = "22"
+  # The GPU binaries are not needed, and their download can fail (404).
+  ONNXRUNTIME_NODE_INSTALL_CUDA = "skip"
 
 [functions]
   node_bundler = "esbuild"
