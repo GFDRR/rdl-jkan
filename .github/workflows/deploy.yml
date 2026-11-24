@@ -16,6 +16,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  # The GPU binaries are not needed, and their download can fail (404).
+  ONNXRUNTIME_NODE_INSTALL_CUDA: skip
+
 concurrency:
   group: build-and-deploy
   cancel-in-progress: false
