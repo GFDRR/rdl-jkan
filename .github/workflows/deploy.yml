@@ -96,8 +96,8 @@ jobs:
           NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
         run: node scripts/netlify-data.mjs upload
 
-      # The Netlify site is not linked to this repository, so it does not deploy
-      # the function by itself.
+      # Pushes do not deploy the function by themselves, and the site needs the
+      # version that matches its pages and data.
       - name: Deploy the query function to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
