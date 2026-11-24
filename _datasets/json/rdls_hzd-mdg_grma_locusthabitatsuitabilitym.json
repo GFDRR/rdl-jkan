@@ -133,7 +133,41 @@
           "component": "hazard",
           "license": "CC-BY-4.0"
         }
-      ]
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "event_set_locust_001",
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred",
+            "hazards": [
+              {
+                "id": "hazard_locust_001",
+                "type": "pest_infestation",
+                "process": "pest",
+                "intensity_measure": "Habitat suitability:-"
+              }
+            ],
+            "events": [
+              {
+                "id": "event_locust_001",
+                "calculation_method": "inferred",
+                "hazard": {
+                  "id": "hazard_locust_001",
+                  "type": "pest_infestation",
+                  "process": "pest",
+                  "intensity_measure": "Habitat suitability:-"
+                },
+                "occurrence": {
+                  "deterministic": {
+                    "index_criteria": "Locust habitat suitability from a random forest model using bioclimatic variables, sand concentration in soil, elevation and landcover features, trained on locust larvae observations from the Locust Hub. Maps for the baseline (1995-2014) and for 2050 and 2085 under SSP2-4.5 and SSP5-8.5."
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
