@@ -1,3 +1,5 @@
+import re
+
 import config
 from utils import slugify
 
@@ -405,18 +407,61 @@ def make_impact_and_losses(impact_and_losses):
     }
 
 
-def make_license(license_code):
+UNKNOWN_LICENSE = {"title": "Unknown", "url": None, "slug": "unknown"}
+# Values used in the source metadata to mean "no license given".
+PLACEHOLDER_LICENSES = {"example.org/license/unknown"}
+
+
+def _normalize_license_url(value):
+    """Lowercase a URL and drop scheme, "www.", query, fragment and trailing slash."""
+    url = value.strip().lower().split("#")[0].split("?")[0]
+    url = re.sub(r"^https?://(www\.)?", "", url)
+    return url.rstrip("/")
+
+
+def _match_license_key(value):
+    """Key in config.dataset_licenses for an RDLS license code or URL, or None.
+
+    The RDLS license codelist is open: values may be SPDX-style codes or URLs
+    to the license text, so both are matched, tolerating case, a space instead
+    of a hyphen and a trailing slash.
+    """
+    code = value.strip().rstrip("/").replace(" ", "-").upper()
+    url = _normalize_license_url(value)
+    spdx = re.fullmatch(r"spdx\.org/licenses/(.+?)(\.html)?", url)
+    if spdx:
+        code = spdx.group(1).upper()
+
     for key, license in config.dataset_licenses.items():
-        if license_code is not None and license_code == key:
-            return {
-                "title": license_code,
-                "url": license["url"],
-                "slug": slugify(license_code),
-            }
+        codes = [key, *license.get("aliases", [])]
+        if code in (c.upper() for c in codes):
+            return key
+        if url == _normalize_license_url(license["url"]):
+            return key
+    return None
+
+
+def make_license(license_value):
+    if not isinstance(license_value, str) or not license_value.strip():
+        return UNKNOWN_LICENSE
+    if _normalize_license_url(license_value) in PLACEHOLDER_LICENSES:
+        return UNKNOWN_LICENSE
+
+    key = _match_license_key(license_value)
+    if key is not None:
+        return {
+            "title": key,
+            "url": config.dataset_licenses[key]["url"],
+            "slug": slugify(key),
+        }
+
+    # Free-text licenses ("Commercial", "Custom") or unlisted license URLs:
+    # show the value as given rather than hiding it behind "Unknown".
+    value = license_value.strip()
     return {
-        "title": "Unknown",
-        "url": None,
-        "slug": "unknown",
+        "title": value,
+        "url": value if re.match(r"https?://", value) else None,
+        "slug": slugify(value),
     }
 
 
