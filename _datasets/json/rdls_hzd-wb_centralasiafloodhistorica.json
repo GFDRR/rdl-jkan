@@ -90,7 +90,7 @@
         "event_sets": [
           {
             "id": "CA_SFRARR_FL_hist",
-            "analysis_type": "deterministic",
+            "analysis_type": "empirical",
             "calculation_method": "inferred",
             "event_count": 1,
             "spatial": {
@@ -128,7 +128,11 @@
                   "process": "fluvial_flood"
                 },
                 "occurrence": {
-                  "probabilistic": {
+                  "empirical": {
+                    "temporal": {
+                      "start": "2005-06",
+                      "end": "2005-07"
+                    },
                     "return_period": 3
                   }
                 },
@@ -143,7 +147,7 @@
           },
           {
             "id": "CA_SFRARR_FL_100y",
-            "analysis_type": "deterministic",
+            "analysis_type": "probabilistic",
             "calculation_method": "simulated",
             "event_count": 3,
             "spatial": {
@@ -154,8 +158,8 @@
               ],
               "bbox": [
                 46,
-                88,
                 34,
+                88,
                 57
               ],
               "scale": "sub-national"
