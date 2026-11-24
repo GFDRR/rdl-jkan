@@ -20,6 +20,7 @@ export default {
     this._query = value ?? "";
     this.isSearching = Boolean(this._query.trim());
     this.queryVector = null;
+    this.currentPage = 1;
     this.scheduleSearch();
     this.scheduleQueryVector();
   },

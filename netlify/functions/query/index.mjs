@@ -17,6 +17,7 @@ import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { findCountry, matchExpression, parseQuery } from "./query-text.mjs";
 
 const BLOB_STORE = "rdl-data";
 
@@ -69,9 +70,44 @@ const MAX_PAGE_SIZE = 50;
 const DEFAULT_PAGE_SIZE = 10;
 const MAX_FILTER_VALUES = 100;
 const ID_CHUNK_SIZE = 500;
+const RELATED_LIMIT = 6;
+// Above the search threshold: "similar" is shown unprompted, so it must be.
+const RELATED_MIN_SCORE = 0.5;
+
+// Weights of the datasets_fts columns in bm25(), in the order python/import.py
+// creates them. What a dataset is about counts more than a passing mention.
+const FTS_COLUMN_WEIGHTS = {
+  id: 1,
+  title: 10,
+  description: 3,
+  catalog: 2,
+  creator: 4,
+  countries: 8,
+  license: 0.5,
+  project: 4,
+  risk_data_type: 4,
+  hazard_type: 8,
+  resources: 0.5,
+  details: 1,
+  purpose: 1,
+  publisher: 3,
+  contact_point: 1,
+  lineage: 0.5,
+  exposure: 2,
+  loss: 2,
+  hazard: 2,
+  spatial: 2,
+  temporal: 0.5,
+  version: 0.5,
+  attributions: 3,
+  vulnerability: 2,
+  referenced_by: 1,
+};
+const BM25 = `bm25(datasets_fts, ${Object.values(FTS_COLUMN_WEIGHTS).join(", ")})`;
 
 let dbPromise = null;
 let vectorsPromise = null;
+let countriesPromise = null;
 
 function toArrayBuffer(bytes) {
   if (bytes instanceof ArrayBuffer) return bytes;
@@ -145,8 +181,13 @@ function getVectors() {
     const idList = JSON.parse(new TextDecoder().decode(ids));
     const floats = new Float32Array(toArrayBuffer(bin));
     const dims = idList.length ? Math.floor(floats.length / idList.length) : 0;
-    return { ids: idList, floats, dims };
-  })();
+    const rowById = new Map(idList.map((id, row) => [id, row]));
+    return { ids: idList, floats, dims, rowById };
+  })().catch((error) => {
+    // Don't cache a failed load — let a later invocation retry.
+    vectorsPromise = null;
+    throw error;
+  });
   return vectorsPromise;
 }
 
@@ -312,6 +353,32 @@ function selectIds(db, ids, clauses, params) {
   return found;
 }
 
+// Countries the catalogue covers, and the ids of the datasets about each one,
+// with how many countries the dataset lists.
+function getCountries(db) {
+  countriesPromise ??= (async () => {
+    const rows = exec(
+      db,
+      `SELECT datasets.id, json_extract(value, '$.slug') AS slug,
+         json_extract(value, '$.title') AS title,
+         json_array_length(datasets.spatial, '$.countries') AS size
+       FROM datasets, json_each(datasets.spatial, '$.countries')`,
+    )[0].values;
+    const bySlug = new Map();
+    for (const [id, slug, title, size] of rows) {
+      // "Global" is listed as a country but has no slug.
+      if (!slug || !title) continue;
+      if (!bySlug.has(slug)) bySlug.set(slug, { slug, title, datasets: new Map() });
+      bySlug.get(slug).datasets.set(id, size);
+    }
+    return [...bySlug.values()];
+  })().catch((error) => {
+    countriesPromise = null;
+    throw error;
+  });
+  return countriesPromise;
+}
+
 function semanticSearch(vectors, queryVector, { exclude, limit, minScore }) {
   if (!vectors?.dims || queryVector.length !== vectors.dims) return [];
   const { ids, floats, dims } = vectors;
@@ -328,6 +395,139 @@ function semanticSearch(vectors, queryVector, { exclude, limit, minScore }) {
   return scores.slice(0, limit).map(([id]) => id);
 }
 
+function matchIds(db, terms) {
+  const expression = matchExpression(terms);
+  if (!expression) return [];
+  try {
+    return exec(
+      db,
+      `SELECT datasets.id AS dataset_id
+       FROM datasets_fts
+         JOIN datasets ON datasets.rowid = datasets_fts.rowid
+       WHERE datasets_fts MATCH ?
+       ORDER BY ${BM25}`,
+      [expression],
+    )[0].values.map(([id]) => id);
+  } catch (error) {
+    // Degrade to semantic-only results instead of failing the request.
+    console.error("FTS query failed:", error);
+    return [];
+  }
+}
+
+// Ids that contain every term of the query, in any order, best first. When the
+// query names a country, datasets about that country come before the ones that
+// only mention it, and the ones about few countries before regional lists.
+async function keywordSearch(db, q) {
+  const terms = parseQuery(q);
+  const country = findCountry(q, await getCountries(db));
+  if (!country) {
+    return { keywordIds: matchIds(db, terms), countryIds: new Set() };
+  }
+
+  const { datasets } = country;
+  const inCountry = country.rest.length
+    ? matchIds(db, country.rest).filter((id) => datasets.has(id))
+    : [...datasets.keys()];
+  const scope = (id) => {
+    const size = datasets.get(id);
+    return size === 1 ? 0 : size <= 5 ? 1 : 2;
+  };
+  // Array.prototype.sort is stable, so relevance is kept within each scope.
+  inCountry.sort((a, b) => scope(a) - scope(b));
+  return {
+    keywordIds: [...new Set([...inCountry, ...matchIds(db, terms)])],
+    countryIds: new Set(datasets.keys()),
+  };
+}
+
+// Datasets to suggest on a dataset's page: those linked by lineage, then those
+// of the same project. Similar ones only when there is neither.
+async function handleRelated(body) {
+  const id = typeof body?.id === "string" ? body.id : "";
+  if (!id) return { related: [] };
+  const db = await getDb();
+
+  const related = exec(
+    db,
+    `SELECT related_id, relation FROM dataset_relations
+     WHERE dataset_id = ?
+     ORDER BY relation = 'derived', position`,
+    [id],
+  )[0].values.map(([relatedId, relation]) => ({ id: relatedId, relation }));
+
+  const projectIds = exec(
+    db,
+    `SELECT other.id FROM datasets
+       JOIN datasets other
+         ON json_extract(other.project, '$.slug') = json_extract(datasets.project, '$.slug')
+     WHERE datasets.id = ? AND other.id <> datasets.id
+       AND json_extract(datasets.project, '$.slug') <> 'unknown'
+     ORDER BY other.rowid`,
+    [id],
+  )[0].values.map(([otherId]) => otherId);
+
+  let similarity = new Map();
+  try {
+    similarity = await similarityTo(id);
+  } catch (error) {
+    console.error("Similarity ranking failed:", error);
+  }
+  const bySimilarity = (a, b) => (similarity.get(b) ?? 0) - (similarity.get(a) ?? 0);
+
+  // A project can hold hundreds of datasets: prefer the most similar ones.
+  for (const otherId of projectIds.sort(bySimilarity)) {
+    related.push({ id: otherId, relation: "project" });
+  }
+  if (!related.length) {
+    for (const [otherId] of [...similarity]
+      .filter(([, score]) => score >= RELATED_MIN_SCORE)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, RELATED_LIMIT)) {
+      related.push({ id: otherId, relation: "similar" });
+    }
+  }
+
+  const relationById = new Map();
+  for (const item of related) {
+    if (!relationById.has(item.id)) relationById.set(item.id, item.relation);
+  }
+  const top = [...relationById].slice(0, RELATED_LIMIT);
+  if (!top.length) return { related: [] };
+
+  const rows = rowsToObjects(
+    exec(
+      db,
+      `SELECT id, slug, title FROM datasets
+       WHERE id IN (${top.map(() => "?").join(", ")})`,
+      top.map(([otherId]) => otherId),
+    ),
+  );
+  const rowById = new Map(rows.map((row) => [row.id, row]));
+  return {
+    related: top
+      .filter(([otherId]) => rowById.has(otherId))
+      .map(([otherId, relation]) => ({ ...rowById.get(otherId), relation })),
+  };
+}
+
+// Cosine similarity of every other dataset to this one.
+async function similarityTo(id) {
+  const { ids, floats, dims, rowById } = await getVectors();
+  const scores = new Map();
+  const target = rowById.get(id);
+  if (target === undefined || !dims) return scores;
+  for (let row = 0; row < ids.length; row++) {
+    if (row === target) continue;
+    let dot = 0;
+    for (let i = 0; i < dims; i++) {
+      dot += floats[target * dims + i] * floats[row * dims + i];
+    }
+    scores.set(ids[row], dot);
+  }
+  return scores;
+}
+
 async function handleSearch(body) {
   const q = typeof body?.q === "string" ? body.q.trim() : "";
   if (!q) return handleDatasets(body);
@@ -336,28 +536,10 @@ async function handleSearch(body) {
   const { clauses, params } = buildFilterClauses(body.filters);
   const { page, pageSize } = pageParams(body);
 
-  // Keyword (FTS) results, best first — same query the client used to run.
-  let keywordIds = [];
-  try {
-    const phrase = `"${q.replace(/"/g, '""')}"`;
-    const result = exec(
-      db,
-      `SELECT datasets.id AS dataset_id
-       FROM datasets_fts
-         JOIN datasets ON datasets.rowid = datasets_fts.rowid
-       WHERE datasets_fts MATCH ?
-       ORDER BY bm25(datasets_fts)`,
-      [phrase],
-    );
-    keywordIds = (result[0]?.values ?? []).map(([id]) => id);
-  } catch (error) {
-    // Malformed match expression (e.g. stray FTS operators) — degrade to
-    // semantic-only results instead of failing the request.
-    console.error("FTS query failed:", error);
-  }
+  const { keywordIds, countryIds } = await keywordSearch(db, q);
 
-  // Semantic results appended after keyword results, mirroring the old
-  // client-side merge order.
+  // Semantic results come after keyword results. When the query names a
+  // country, the ones about that country come first.
   let semanticIds = [];
   const vector = Array.isArray(body?.vector)
     ? body.vector.filter(
@@ -367,11 +549,15 @@ async function handleSearch(body) {
   if (vector.length) {
     try {
       const vectors = await getVectors();
-      semanticIds = semanticSearch(vectors, vector, {
+      const ranked = semanticSearch(vectors, vector, {
         exclude: new Set(keywordIds),
-        limit: SEMANTIC_MAX_RESULTS,
+        limit: Infinity,
         minScore: SEMANTIC_MIN_SCORE,
       });
+      semanticIds = [
+        ...ranked.filter((id) => countryIds.has(id)),
+        ...ranked.filter((id) => !countryIds.has(id)),
+      ].slice(0, SEMANTIC_MAX_RESULTS);
     } catch (error) {
       console.error("Semantic search failed:", error);
     }
@@ -644,6 +830,8 @@ export default async (req) => {
         return jsonResponse(await handleDatasets(body));
       case "dataset":
         return jsonResponse(await handleDataset(body));
+      case "related":
+        return jsonResponse(await handleRelated(body));
       case "options":
         return jsonResponse(await handleOptions(body));
       case "search":

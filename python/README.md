@@ -22,15 +22,37 @@ python -m pip install -r requirements.txt
 ```
 
 
-### Generate markdown and/or vectors from new JSON metadata
+### Check the dataset files
 
-- You can configure input and output directories in `/python/config.py`
-- Open a shell here, at `/python`
-- Generate datasets with `python3 main.py --markdown`
-  - To run on only files modified since the most recent commit on the target branch, run `python3 main.py --ci --markdown`
-  - To also generate vector embeddings for semantic search, add the `--vectors` flag, e.g. `python3 main.py --ci --markdown --vectors`
-- To test semantic search performance as well, add the following argument: `--test search`
-  - To configure these tests, edit `/python/tests.yml`
+Pull requests run these checks (`.github/workflows/check.yml`). To run them locally:
+
+```
+python check_datasets.py --base origin/rdl-1.0   # the files changed on this branch
+python check_datasets.py --all                   # every file, takes minutes
+python -m unittest discover -s tests
+```
+
+Each file must be valid JSON in UTF-8, hold one dataset, and be named after the dataset's id, which no other dataset may use. Changed files must also follow the RDLS schema. An edit must keep the dataset's id, since the id is its URL.
+
+### Build the site's data
+
+```
+python import.py
+```
+
+This writes, from the files in `_datasets/json`:
+
+- `sqlite.db`: what the site and its search are built from
+- `catalog.jsonld`: the catalogue in DCAT (JSON-LD), for harvesting by other catalogues
+- `dataset-ids.json`: the ids in use, for editors to check that a new id is free
+
+`generate_vectors.py` and `pack_vectors.py` build the vectors for semantic search. The deploy workflow runs all of them.
+
+The query function has its own tests, which need `sqlite.db`. From the repository root:
+
+```
+node --test "netlify/tests/*.test.mjs"
+```
 
 ### Handling multi-dataset JSON files
 

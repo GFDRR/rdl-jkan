@@ -33,13 +33,16 @@ layout: default
         >
           <main class="main-content">
             <div class="dataset-header">
-              <div
-                :class="'category-badge ' + $store.dataset.dataset.risk_data_type[0]"
-              >
-                <span class="badge-icon"></span>
-                <p
-                  x-text="$store.dataset.dataset.risk_data_type[0]"
-                ></p>
+              <div class="category-badges">
+                <template
+                  x-for="rdt in $store.dataset.dataset.risk_data_type"
+                  :key="rdt"
+                >
+                  <div class="category-badge" :class="rdt">
+                    <span class="badge-icon"></span>
+                    <p x-text="rdt"></p>
+                  </div>
+                </template>
               </div>
               <h1 class="dataset-title">
                 <span property="dct:title">{{ page.title }}</span>
@@ -183,7 +186,7 @@ layout: default
                   >
                     <a
                       :href="$store.dataset.dataset.contact_point.url"
-                      x-text="$store.dataset.dataset.publisher.name"
+                      x-text="$store.dataset.dataset.contact_point.name"
                     ></a>
                   </td>
                   <td
@@ -211,7 +214,7 @@ layout: default
                       Exposure Component
                     </h2>
                     <table class="data-table rdl-table" >
-                      <template x-for="exposure in $store.dataset.dataset.exposure" :key="exposure.id">
+                      <template x-for="exposure in $store.dataset.dataset.exposure ?? []" :key="exposure.id">
                         <tbody>
                           <tr>
                             <th>Exposure</th>
@@ -242,6 +245,7 @@ layout: default
                         </tbody>
                       </template>
                     </table>
+                    <p class="component-empty" x-show="!$store.dataset.dataset.exposure?.length">The metadata gives no details for this component.</p>
                   </div>
                 </template>
                 <template x-if="rdt === 'hazard'">
@@ -251,7 +255,7 @@ layout: default
                       Hazard Component
                     </h2>
                     <table class="data-table rdl-table" >
-                      <template x-for="event_set in $store.dataset.dataset.hazard.event_sets" :key="event_set.id">
+                      <template x-for="event_set in $store.dataset.dataset.hazard?.event_sets ?? []" :key="event_set.id">
                         <tbody>
                           <tr>
                             <th>Event Set</th>
@@ -292,22 +296,23 @@ layout: default
                             <th>Event</th>
                             <th>Start</th>
                             <th>End</th>
-                            <th>Hazard Type</th>
-                            <th>Hazard Process</th>
+                            <th>Frequency</th>
+                            <th>Hazard</th>
                           </tr>
                           <template x-for="event in event_set.events" :key="event.id">
                               <tr>
                                 <td></td>
                                 <td x-text="event.id"></td>
-                                <td x-text="String(event.occurrence[event_set.analysis_type].temporal.start ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                                <td x-text="String(event.occurrence[event_set.analysis_type].temporal.end ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                                <td x-text="String(event.hazard.type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                                <td x-text="String(event.hazard.process ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                                <td x-text="event.occurrence?.empirical?.temporal?.start ?? ''"></td>
+                                <td x-text="event.occurrence?.empirical?.temporal?.end ?? ''"></td>
+                                <td x-text="$store.dataset.eventFrequency(event)"></td>
+                                <td x-text="$store.dataset.label(event.hazard?.process ?? event.hazard?.type)"></td>
                               </tr>
                             </template>
                         </tbody>
                       </template>
                     </table>
+                    <p class="component-empty" x-show="!$store.dataset.dataset.hazard?.event_sets?.length">The metadata gives no details for this component.</p>
                   </div>
                 </template>
                 <template x-if="rdt === 'loss'">
@@ -316,20 +321,49 @@ layout: default
                       <span class="component-icon loss"></span>
                       Loss Component
                     </h2>
-                    <table class="data-table rdl-table" >
-                      <tr>
-                        <th>Loss</th>
-                        <th>Loss Type</th>
-                        <th>Impact Unit</th>
-                      </tr>
-                      <template x-for="loss in $store.dataset.dataset.loss.losses" :key="loss.id">
-                        <tr>
-                          <td x-text="loss.id"></td>
-                          <td x-text="String(loss.impact_and_losses.loss_type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                          <td x-text="String(loss.impact_and_losses.impact.measurement.unit ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                        </tr>
-                      </template>
-                    </table>
+                    <p
+                      x-show="$store.dataset.lossGroups.length > 1"
+                      x-text="$store.dataset.lossCount + ' loss records across ' + $store.dataset.lossGroups.length + ' hazard types'"
+                    ></p>
+                    <!-- One collapsible group per hazard type: some datasets
+                         describe more than a hundred losses. -->
+                    <template x-for="group in $store.dataset.lossGroups" :key="group.hazard_type">
+                      <details
+                        class="component-group"
+                        :open="$store.dataset.lossCount <= 5 || $store.dataset.lossGroups.length === 1"
+                      >
+                        <summary>
+                          <span x-text="$store.dataset.label(group.hazard_type)"></span>
+                          <span class="badge" x-text="group.losses.length"></span>
+                        </summary>
+                        <table class="data-table rdl-table">
+                          <thead>
+                            <tr>
+                              <th>Loss</th>
+                              <th>Asset</th>
+                              <th>Impact Metric</th>
+                              <th>Loss Type</th>
+                              <th>Impact Unit</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <template x-for="(loss, index) in group.losses" :key="index">
+                              <tr>
+                                <td x-text="loss.description || loss.id"></td>
+                                <td x-text="$store.dataset.label(loss.asset_category)"></td>
+                                <td x-text="$store.dataset.label(loss.impact_and_losses?.impact?.metric)"></td>
+                                <td x-text="$store.dataset.label(loss.impact_and_losses?.loss_type)"></td>
+                                <td x-text="$store.dataset.measurementLabel(loss.impact_and_losses?.impact?.measurement)"></td>
+                              </tr>
+                            </template>
+                          </tbody>
+                        </table>
+                      </details>
+                    </template>
+                    <p
+                      class="component-empty"
+                      x-show="!$store.dataset.lossCount"
+                    >The metadata gives no details for this component.</p>
                   </div>
                 </template>
                 <template x-if="rdt === 'vulnerability'">
@@ -338,24 +372,80 @@ layout: default
                       <span class="component-icon vulnerability"></span>
                       Vulnerability Component
                     </h2>
-                    <table class="data-table rdl-table" >
-                      <tr>
-                        <th>Vulnerability Function</th>
-                        <th>Category</th>
-                        <th>Analysis Type</th>
-                        <th>Approach</th>
-                      </tr>
-                      <template x-for="vuln_function in $store.dataset.dataset.vulnerability.functions.vulnerability" :key="vuln_function.id">
+                    <template x-for="group in $store.dataset.vulnerabilityGroups" :key="group.type">
+                      <table class="data-table rdl-table">
+                        <thead>
+                          <tr>
+                            <th x-text="group.title"></th>
+                            <th>Category</th>
+                            <th>Hazard</th>
+                            <th>Analysis Type</th>
+                            <th>Approach</th>
+                            <th>Relationship</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <template x-for="(fn, index) in group.functions" :key="index">
+                            <tr>
+                              <td x-text="fn.id"></td>
+                              <td x-text="$store.dataset.label(fn.category)"></td>
+                              <td x-text="$store.dataset.label(fn.hazard_primary?.type)"></td>
+                              <td x-text="$store.dataset.label(fn.hazard_analysis_type)"></td>
+                              <td x-text="$store.dataset.label(fn.approach)"></td>
+                              <td x-text="$store.dataset.label(fn.relationship)"></td>
+                            </tr>
+                          </template>
+                        </tbody>
+                      </table>
+                    </template>
+                    <table
+                      class="data-table rdl-table"
+                      x-show="$store.dataset.socioEconomicIndices.length"
+                    >
+                      <thead>
                         <tr>
-                          <td x-text="vuln_function.id"></td>
-                          <td x-text="String(vuln_function.category ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                          <td x-text="String(vuln_function.hazard_analysis_type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                          <td x-text="String(vuln_function.approach ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
+                          <th>Socio-economic Index</th>
+                          <th>Description</th>
+                          <th>Scheme</th>
+                          <th>Reference Year</th>
                         </tr>
-                      </template>
+                      </thead>
+                      <tbody>
+                        <template x-for="(index, i) in $store.dataset.socioEconomicIndices" :key="i">
+                          <tr>
+                            <td x-text="index.indicator_name"></td>
+                            <td x-text="index.description"></td>
+                            <td x-text="index.scheme ?? ''"></td>
+                            <td x-text="index.reference_year ?? ''"></td>
+                          </tr>
+                        </template>
+                      </tbody>
                     </table>
+                    <p
+                      class="component-empty"
+                      x-show="!$store.dataset.vulnerabilityGroups.length && !$store.dataset.socioEconomicIndices.length"
+                    >The metadata gives no details for this component.</p>
                   </div>
                 </template>
+              </div>
+            </template>
+            <template x-if="$store.dataset.related.length">
+              <div class="content-section">
+                <h2 class="section-title">Related Datasets</h2>
+                <ul class="related-list">
+                  <template x-for="item in $store.dataset.related" :key="item.id">
+                    <li class="related-item">
+                      <a
+                        :href="'{{ site.baseurl }}/datasets/' + item.slug + '/'"
+                        x-text="item.title"
+                      ></a>
+                      <span
+                        class="related-reason"
+                        x-text="$store.dataset.relationLabel(item.relation)"
+                      ></span>
+                    </li>
+                  </template>
+                </ul>
               </div>
             </template>
           </main>
@@ -365,15 +455,34 @@ layout: default
               <h4>Metadata</h4>
               <div style="display: flex; gap: 8px; margin-top: 12px">
                 <a
-                  href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/_datasets/json/{{ page.id }}.json"
+                  href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/_datasets/json/{{ page.slug }}.json"
                   class="format-badge"
                   style="text-decoration: none"
-                  property="dcat:accessURL"
                   download
                 >
                   json
                 </a>
               </div>
+              <ul class="sidebar-links">
+                {% if site.metadata_editor.edit_param and site.metadata_editor.edit_param != "" %}
+                <li>
+                  <a
+                    href="{{ site.metadata_editor.url }}?{{ site.metadata_editor.edit_param }}={{ page.slug | url_encode }}"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa fa-pencil"></i> Edit in the Metadata Editor</a
+                  >
+                </li>
+                {% endif %}
+                <li>
+                  <a
+                    href="https://github.com/GFDRR/rdl-jkan/edit/rdl-1.0/_datasets/json/{{ page.slug }}.json"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa fa-github"></i> Suggest an edit on GitHub</a
+                  >
+                </li>
+              </ul>
             </div>
             <div
               x-show="$store.dataset.dataset.spatial.countries"

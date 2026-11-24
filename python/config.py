@@ -29,6 +29,14 @@ SCORED_FIELDS = [
 SEMANTIC_MAX_RESULTS = 50
 SEMANTIC_MIN_SCORE = 0.25
 
+# Public site, used to build absolute URLs. Must match url in _config.yml.
+site_url = "https://catalog.riskdatalibrary.org"
+site_title = "Risk Data Library catalog"
+site_description = (
+    "Standardized disaster risk data: hazard, exposure, vulnerability and loss "
+    "datasets described with the Risk Data Library Standard"
+)
+
 schema_url = "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json"
 
 dataset_catalogs = {
@@ -42,6 +50,7 @@ dataset_catalogs = {
     "cds.climate.copernicus.eu": "Copernicus Climate Data Store",
     "earthdata.nasa.gov": "NASA Earth Data",
     "datacatalog.worldbank.org": "World Bank Data Catalog",
+    "datacatalogfiles.worldbank.org": "World Bank Data Catalog",
     "geohub.data.undp.org": "UNDP GeoHub",
     "unosat.org": "UNOSAT",
     "fao.org": "FAO Data",

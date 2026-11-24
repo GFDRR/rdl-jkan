@@ -1,6 +1,8 @@
 title: Risk Data Library catalog (beta)
 greeting: Risk Data Library catalog
 description: A simple catalog to find datasets compliant with the Risk Data Library
+# Must match site_url in python/config.py
+url: https://catalog.riskdatalibrary.org
 baseurl: 
 logo: https://www.gfdrr.org/themes/custom/gfdrr/images/GFDRR_Primary%20Logo_BW-Shade.svg
 
@@ -16,6 +18,13 @@ gatekeeper_host: https://rdl-jkan.herokuapp.com
 
 # Dataset schema
 schema: rdls-10
+
+# RDLS Metadata Editor. When the editor can open a catalogue dataset by URL, set
+# edit_param to the name of the query parameter to show an "Edit in the Metadata
+# Editor" link on dataset pages (issue #101).
+metadata_editor:
+  url: https://docs.riskdatalibrary.org/en/latest/_static/RDL_MDE.html
+  edit_param: ""
 
 # Nav bar
 navigation:
@@ -50,10 +59,9 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-# Google Analytics
+# Google Analytics 4. Off until measurement_id is set, e.g. "G-XXXXXXXXXX".
 google_analytics:
-  enabled: false
-  code: "UA-XXXXXX-1"
+  measurement_id: ""
 
 # US Digital Analytics Program - https://analytics.usa.gov
 digital_analytics_program:
@@ -75,7 +83,10 @@ opengraph:
   enabled: true
 
 # Exclude these files from the build
+# The dataset JSON is read by datasets.json and python/import.py. Left in, Jekyll
+# would write every file over /datasets.json, the collection's shared permalink.
 exclude:
+  - _datasets/json
   - Gemfile
   - Gemfile.lock
   - vendor
@@ -100,8 +111,13 @@ plugins:
 gzip:
   extensions:
     - '.json'
+    - '.jsonld'
 
 sqlite:
   - collection: datasets
     file: sqlite.db
-    query: SELECT *, '/datasets/' || slug || '/' AS permalink FROM Datasets
+    query: >-
+      SELECT datasets.*, dataset_jsonld.schema_org,
+        '/datasets/' || datasets.slug || '/' AS permalink
+      FROM datasets
+        LEFT JOIN dataset_jsonld ON dataset_jsonld.dataset_id = datasets.id
