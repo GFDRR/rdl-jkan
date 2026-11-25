@@ -1,11 +1,6 @@
 import { queryApi } from "../shared/api";
-
-const FUNCTION_TYPES = {
-  vulnerability: "Vulnerability Function",
-  fragility: "Fragility Function",
-  damage_to_loss: "Damage-to-loss Function",
-  engineering_demand: "Engineering Demand Function",
-};
+import { drawMap } from "./components.js";
+import { buildPage } from "./sections.js";
 
 const RELATION_LABELS = {
   source: "Source of this dataset",
@@ -14,12 +9,18 @@ const RELATION_LABELS = {
   similar: "Similar dataset",
 };
 
+// The main facts come first: only this many countries are listed at once.
+const COUNTRIES_SHOWN = 6;
+
 const datasetStore = {
   dataset: null,
+  // What the page shows of the dataset, see sections.js.
+  page: null,
   related: [],
   isLoading: true,
   isLoaded: false,
   loadError: false,
+  allCountries: false,
 };
 
 // defineProperties to preserve getters, keeping `this` bound to the store
@@ -30,7 +31,9 @@ Object.defineProperties(
       this.isLoading = true;
       try {
         const data = await queryApi({ action: "dataset", id });
-        this.dataset = data.dataset ?? null;
+        const dataset = data.dataset ?? null;
+        this.page = dataset && buildPage(dataset);
+        this.dataset = dataset;
         this.isLoading = false;
         this.isLoaded = true;
       } catch (error) {
@@ -50,62 +53,41 @@ Object.defineProperties(
       }
     },
 
+    // The sections of the page, with the related datasets once they are loaded.
+    get sections() {
+      const sections = this.page?.sections ?? [];
+      if (!this.related.length) return sections;
+      return [
+        ...sections,
+        {
+          id: "related",
+          title: "Related datasets",
+          kind: "neutral",
+          count: this.related.length,
+          summary: "",
+        },
+      ];
+    },
+
+    get countries() {
+      const countries = this.page?.countries ?? [];
+      const shown = this.allCountries
+        ? countries
+        : countries.slice(0, COUNTRIES_SHOWN);
+      return shown.join(", ");
+    },
+
+    get moreCountries() {
+      if (this.allCountries) return 0;
+      return Math.max(0, (this.page?.countries.length ?? 0) - COUNTRIES_SHOWN);
+    },
+
     relationLabel(relation) {
       return RELATION_LABELS[relation] ?? "";
     },
 
-    // Readable form of a codelist value, e.g. "ground_up" -> "Ground Up".
-    label(value) {
-      return String(value ?? "")
-        .replace(/_/g, " ")
-        .replace(/\b\w/g, (char) => char.toUpperCase());
-    },
-
-    measurementLabel(measurement) {
-      return this.label(measurement?.unit ?? measurement?.quantity_kind);
-    },
-
-    eventFrequency(event) {
-      const { probabilistic, empirical } = event.occurrence ?? {};
-      const returnPeriod =
-        probabilistic?.return_period ?? empirical?.return_period;
-      if (returnPeriod != null) return `1 in ${returnPeriod} years`;
-      if (probabilistic?.event_rate != null) {
-        return `${probabilistic.event_rate} per year`;
-      }
-      const { value, span } = probabilistic?.probability ?? {};
-      return value != null ? `${value} in ${span} years` : "";
-    },
-
-    get lossGroups() {
-      const groups = new Map();
-      for (const loss of this.dataset?.loss?.losses ?? []) {
-        const type = loss.hazard?.type ?? "other";
-        if (!groups.has(type)) groups.set(type, []);
-        groups.get(type).push(loss);
-      }
-      return [...groups]
-        .map(([hazard_type, losses]) => ({ hazard_type, losses }))
-        .sort((a, b) => a.hazard_type.localeCompare(b.hazard_type));
-    },
-
-    get lossCount() {
-      return this.dataset?.loss?.losses?.length ?? 0;
-    },
-
-    get vulnerabilityGroups() {
-      const functions = this.dataset?.vulnerability?.functions ?? {};
-      return Object.entries(FUNCTION_TYPES)
-        .map(([type, title]) => ({
-          type,
-          title,
-          functions: functions[type] ?? [],
-        }))
-        .filter((group) => group.functions.length);
-    },
-
-    get socioEconomicIndices() {
-      return this.dataset?.vulnerability?.socio_economic ?? [];
+    drawMap(element, baseUrl) {
+      drawMap(element, this.dataset.spatial, baseUrl);
     },
 
     handleLoadError(err) {

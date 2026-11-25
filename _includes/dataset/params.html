@@ -1,0 +1,9 @@
+{% comment %} A list of parameters. list: expression of [{ name, value }]. {% endcomment %}
+<ul class="ds-params" x-show="{{ include.list }}.length">
+  <template x-for="param in {{ include.list }}" :key="param.name">
+    <li class="ds-param">
+      <span class="ds-param-name" x-text="param.name"></span>
+      <b x-text="param.value"></b>
+    </li>
+  </template>
+</ul>

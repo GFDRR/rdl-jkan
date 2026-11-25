@@ -52,6 +52,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css"
   />
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+  {% if page.layout == "dataset" %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/dataset.css">
+  {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   {% if site.digital_analytics_program.enabled == true %}

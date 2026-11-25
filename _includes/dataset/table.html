@@ -1,0 +1,124 @@
+{% comment %}
+  A table of scripts/src/dataset/table.js, inside an x-data="datasetTable(...)".
+  distribution: whether the rows are the files of the dataset (for RDFa).
+{% endcomment %}
+<div class="ds-table">
+  <p class="ds-same" x-show="table.same.length">
+    <span x-text="table.total === 2 ? 'Same for both:' : 'Same for all ' + table.total + ':'"></span>
+    <template x-for="item in table.same" :key="item.label">
+      <span class="ds-param">
+        <span class="ds-param-name" x-text="item.label"></span>
+        <b x-text="item.value"></b>
+      </span>
+    </template>
+  </p>
+
+  <template x-if="table.filterable">
+    <div>
+      <div class="ds-tools">
+        <input
+          type="search"
+          class="ds-input"
+          x-model.debounce.150ms="query"
+          :placeholder="'Search ' + table.total.toLocaleString('en') + ' ' + table.noun[1]"
+          :aria-label="'Search ' + table.noun[1]"
+        >
+        <template x-for="facet in table.facets.filter((facet) => !facet.chips)" :key="facet.id">
+          <select
+            class="ds-input"
+            :class="{ active: filters[facet.id] }"
+            :aria-label="facet.label"
+            @change="filters[facet.id] = $event.target.value"
+          >
+            <option value="" :selected="!filters[facet.id]" x-text="facet.label + ': all'"></option>
+            <template x-for="option in facet.options" :key="option.value">
+              <option
+                :value="option.value"
+                :selected="filters[facet.id] === option.value"
+                x-text="option.value + ' (' + option.count + ')'"
+              ></option>
+            </template>
+          </select>
+        </template>
+      </div>
+      <template x-for="facet in table.facets.filter((facet) => facet.chips)" :key="facet.id">
+        <div class="ds-chips" role="group" :aria-label="facet.label">
+          <span class="ds-muted" x-text="facet.label"></span>
+          <template x-for="option in facet.options" :key="option.value">
+            <button
+              type="button"
+              class="ds-chip"
+              :aria-pressed="isOn({ [facet.id]: option.value })"
+              @click="toggle({ [facet.id]: option.value })"
+            >
+              <span x-text="option.value"></span>
+              <small x-text="option.count"></small>
+            </button>
+          </template>
+        </div>
+      </template>
+    </div>
+  </template>
+
+  <div class="ds-scroll ds-stack" x-show="visible.length">
+    <table>
+      <thead>
+        <tr>
+          <template x-for="column in table.columns" :key="column.id">
+            <th scope="col" :aria-sort="ariaSort(column.id)">
+              <button
+                type="button"
+                :disabled="!table.sortable"
+                @click="sortBy(column.id)"
+                x-text="column.label + (sort === column.id ? (descending ? ' ↓' : ' ↑') : '')"
+              ></button>
+            </th>
+          </template>
+        </tr>
+      </thead>
+      <tbody>
+        <template x-for="entry in visible" :key="entry.key">
+          <tr{% if include.distribution %} data-hook="resource-item" property="dcat:distribution" typeof="dcat:Distribution"{% endif %}>
+            <template x-for="column in table.columns" :key="column.id">
+              <td
+                x-data="{ get cell() { return entry.cells[column.id] } }"
+                :class="{ main: column.main, num: column.num, empty: !cell.text }"
+                :data-label="column.label"
+              >
+                <template x-if="cell.href">
+                  <a
+                    :href="cell.href"
+                    x-text="cell.text"
+                    {% if include.distribution %}property="dcat:accessURL"{% else %}target="_blank" rel="noopener"{% endif %}
+                  ></a>
+                </template>
+                <template x-if="!cell.href && cell.text">
+                  <span :class="{ 'ds-tag': column.tag }" x-text="cell.text"></span>
+                </template>
+                <template x-if="cell.detail">
+                  <div class="ds-detail" x-text="cell.detail"></div>
+                </template>
+                <template x-if="cell.note">
+                  <span class="ds-note" x-text="cell.note"></span>
+                </template>
+              </td>
+            </template>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </div>
+  <p class="ds-empty" x-show="!visible.length" x-text="'No ' + table.noun[1] + ' match these filters.'"></p>
+
+  <div class="ds-foot" x-show="table.total > pageSize || filtered">
+    <span role="status" x-text="status"></span>
+    <button
+      type="button"
+      class="ds-btn"
+      x-show="found.length > pageSize"
+      @click="all = !all"
+      x-text="all ? 'Show only ' + pageSize : 'Show all ' + found.length.toLocaleString('en')"
+    ></button>
+    <button type="button" class="ds-btn" x-show="filtered" @click="clear()">Clear filters</button>
+  </div>
+</div>

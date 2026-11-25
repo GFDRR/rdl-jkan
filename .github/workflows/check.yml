@@ -54,6 +54,9 @@ jobs:
       - name: Run query function tests
         run: node --test "netlify/tests/*.test.mjs"
 
+      - name: Run dataset page tests
+        run: node --test "scripts/tests/*.test.mjs"
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1.327.0
         with:
