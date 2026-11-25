@@ -1,0 +1,278 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_centralasiapluvialidfcurves",
+      "title": "Central Asia pluvial intensity-duration-frequency curves (SFRARR)",
+      "description": "Precipitation Intensity-Duration-Frequency (IDF) curves for 2, 5, 10, 20, 50, 100, 200, 500 and 1,000 years return period and durations of 3, 6 and 9 hours.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "version": "2022",
+      "purpose": "Regional risk modelling. These data have been derived on a regional scale for the purpose of consistent regional multi-country hazard and risk assessment. Application of this information on smaller scales should be done with care. Importantly on a local scale, it is often the case that more detailed history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia",
+        "url": "https://www.gfdrr.org/en/program/SFRARR-Central-Asia"
+      },
+      "details": "Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia). Pluvial flood Intensity-duration-Frequency (IDF) curves calculated for all 5,564 virtual stations (simulation points) for 2,5,10,20,50,100,200,500 and 1,000 years return time and duration 3,6 and 9 hours. In order to derive the IDF curves, the ERA5-Land data were spatially aggregated to tiles of 0.4x0.4 resolution, and for each tile the annual maximum values of precipitation corresponding to the above-mentioned durations were computed and fitted with a Gumbel distribution.",
+      "contact_point": {
+        "name": "Paola Ceresa",
+        "email": "paola.ceresa@redrisk.com"
+      },
+      "creator": {
+        "name": "Gabriele Coccia",
+        "url": "https://www.redrisk.com"
+      },
+      "spatial": {
+        "countries": [
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ],
+        "bbox": [
+          46.0,
+          34.0,
+          88.0,
+          57.0
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "CA_SFRARR_RED",
+          "entity": {
+            "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+            "url": "https://www.redrisk.com"
+          },
+          "role": "principal_investigator"
+        },
+        {
+          "id": "CA_SFRARR_WB",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "CA_SFRARR_DR0090774",
+          "name": "Central Asia flood hazard technical report - English version",
+          "date_published": "2022-09-02",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064084/2/DR0090774/Task3_FloodHazard_Report_r5_EN.pdf"
+        },
+        {
+          "id": "CA_SFRARR_DR0090783",
+          "name": "Central Asia flood hazard technical report - Russian version",
+          "date_published": "2022-09-02",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064084/2/DR0090783/Task3_FloodHazard_Report_r5_RU.pdf"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "ERA5Land",
+            "name": "ERA5-Land precipitation data",
+            "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land",
+            "type": "dataset",
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "CA_SFRARR_FL_IDF",
+          "title": "Pluvial Intensity-Duration-Frequency (IDF) curves",
+          "description": "IDF curves for all 5,564 virtual stations (simulation points).",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064154",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064154/2/DR0091668/SFRARR_IDF_curves.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CA_SFRARR_IDF",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 20, 50, 100, 200, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "PPT",
+                "type": "flood",
+                "process": "pluvial_flood",
+                "intensity_measure": "pptn_tot:mm"
+              }
+            ],
+            "events": [
+              {
+                "id": "CA_SFRARR_IDF_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_IDF_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_IDF_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_IDF_20",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_IDF_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_IDF_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_IDF_200",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 200
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_IDF_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_IDF_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PPT",
+                  "type": "flood",
+                  "process": "pluvial_flood",
+                  "intensity_measure": "pptn_tot:mm"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

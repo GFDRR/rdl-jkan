@@ -1,0 +1,176 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-afg_gfdrr_droughtrisk",
+      "title": "Afghanistan Drought risk",
+      "description": "Annual average losses in agricultural production (USD) and affected population, both for the baseline reference and future projections (2050)",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "version": "2018",
+      "purpose": "These maps have been derived on a nation-wide scale for the purpose of identifying high-risk areas on the district and provincial scale, from which decisions can be made on allocating efforts for more detailed site specific hazard and risk analysis. Use of this information on smaller scales should be applied with care. Importantly for on a local scale, it is often the case that more detailed case history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "Afghanistan Multi-hazard risk assessment"
+      },
+      "details": "To better understand natural hazard and disaster risk, the World Bank and Global Facility for Disaster Reduction and Recovery (GFDRR) supported the development of new fluvial flood, flash flood, drought, landslide, avalanche and seismic risk information in Afghanistan, as well as a first-order analysis of the costs and benefits of resilient reconstruction and risk reduction strategies. This publication describes the applied methods and main results of the project.",
+      "contact_point": {
+        "name": "Pierre Chrzanowski",
+        "email": "pchrzanowski@worldbank.org"
+      },
+      "creator": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "spatial": {
+        "countries": [
+          "AFG"
+        ],
+        "scale": "national"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "Federica Ranghieri",
+            "email": "franghieri@worldbank.org"
+          },
+          "role": "world_bank_team_lead"
+        },
+        {
+          "id": "1",
+          "entity": {
+            "name": "Ditte Fallesen",
+            "email": "dfallesen@worldbank.org"
+          },
+          "role": "world_bank_team_lead"
+        },
+        {
+          "id": "2",
+          "entity": {
+            "name": "Brandan Jongman",
+            "email": "bjongman@worldbank.org"
+          },
+          "role": "world_bank_team_lead"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "0",
+          "name": "Afghanistan - Multi-hazard risk assessment",
+          "author_names": [
+            "Federica Ranghieri",
+            "Ditte Fallesen",
+            "Brenden Jongman",
+            "Guillermo Siercke",
+            "Abdul Azim Doosti",
+            "Julian Palma",
+            "Simone Balog",
+            "Sayed Sharifullah Mashahid",
+            "Erika Vargas"
+          ],
+          "date_published": "2018-12-18",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0050637/1/DR0065488/afghanistan_mhra.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "0",
+          "title": "Water per capita (ADM1)",
+          "description": "Water availability as m3 per capita at administrative level 1 (ADM1).",
+          "format": "gpkg",
+          "coordinate_system": "EPSG:32642",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0050636",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0050636/2/DR0065483/lss-afg-dr-dts.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "1",
+          "title": "Agricultural losses (ADM1)",
+          "description": "Agricultural losses (USD) aggregated for administrative boundaries (ADM1).",
+          "format": "gpkg",
+          "coordinate_system": "EPSG:32642",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0050636",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0050636/2/DR0065482/lss-afg-dr-dta.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "2",
+          "title": "Water per capita (tables)",
+          "description": "Water availability per capita as tables, and reference threshold values.",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0050636",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0050636/2/DR0065484/lss-afg-dr-dts-tab.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "population",
+            "hazard": {
+              "id": "DRS",
+              "type": "drought",
+              "process": "socioeconomic_drought",
+              "intensity_measure": "DI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "inferred",
+                "metric": "ppl_affected",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "gross",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "People affected by low water availability per capita (m3 per person), by administrative unit (ADM1)."
+          },
+          {
+            "id": "agriculture",
+            "hazard": {
+              "id": "DRA",
+              "type": "drought",
+              "process": "agricultural_drought",
+              "intensity_measure": "DI:-"
+            },
+            "asset_category": "agriculture",
+            "asset_dimension": "product",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "inferred",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
+              "loss_type": "gross",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Annual average losses in agricultural production, aggregated for administrative boundaries (ADM1)."
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

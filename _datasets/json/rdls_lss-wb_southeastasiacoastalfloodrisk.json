@@ -1,0 +1,100 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-wb_southeastasiacoastalfloodrisk",
+      "title": "South-East Asia coastal flood risk",
+      "description": "Coastal flood hazard scenarios representing maximum water depths (9 return periods) combined with the exposure of the rail network, using vulnerability functions, to calculate probabilistic losses (Expected Annual Losses). One historical baseline and five future climate models considering the RCP4.5 and RCP8.5 emission scenarios in 2030, 2050 and 2080.",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "version": "2021",
+      "contact_point": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "creator": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "spatial": {
+        "countries": [
+          "KHM",
+          "IDN",
+          "LAO",
+          "MMR",
+          "PHL",
+          "THA",
+          "VNM"
+        ],
+        "bbox": [
+          91.4297,
+          -5.4352,
+          141.1758,
+          28.7728
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "resources": [
+        {
+          "id": "rail",
+          "title": "South-East Asia coastal flood risk over rail network",
+          "description": "Coastal flood hazard scenarios representing maximum water depths (9 Return Periods) are combined with the exposure datasets representing the rail network. 1 historical baseline and 5 future climate models considering RCP 4.5 and 8.5 emission scenarios for baseline and future periods (2030, 2050, 2080). See full metadata notes for attributes specifications.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0050607",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0050607/1/DR0065440/lss-sea-fcf-rail.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "eal_rail",
+            "hazard": {
+              "id": "FL",
+              "type": "flood",
+              "process": "coastal_flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Expected Annual Losses over the rail network."
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

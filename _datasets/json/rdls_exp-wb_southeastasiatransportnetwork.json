@@ -1,0 +1,218 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-wb_southeastasiatransportnetwork",
+      "title": "South-East Asia transport network",
+      "description": "Rail and road network of seven South-East Asian countries derived from OpenStreetMap, with the GDP per macro-sector associated with each link.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "version": "2021",
+      "details": "The study associates GDP per macro-sectors for each link in the road network. To estimate the GDP, we first estimated how much traffic (passenger and freight) could be allocated to a road link. The Emissions Database for Global Atmospheric Research was used to infer the number of road journeys made per year. This dataset provided a global map of 0.1-degree by 0.1-degree grid of Nitrogen Oxide (NOx) emissions attributable to road transport. The total number of vehicles using the road in any grid-cell have been estimated by scaling the fleet-emissions associated with the full complement of road segments in each grid-cell to match the total NOx output in the gridded EDGAR dataset. The total number of freight-km and passenger-km associated with both road and rail were identified for each country: these totals were used to estimate the proportion of GDP flowing through the road network, and the proportion flowing through the railway network. The number of commercial vehicle-km that, together with the passenger vehicle km, reproduced the predicted EDGAR NOx emissions in each grid-cell were calculated and summed across the entire network. The total contribution to GDP of each commercial vehicle-km and passenger vehicle-km in the network was calculated and assigned to each road-segment in the road network, in each country, to account for 100% of the GDP transported by road within country. The total contribution to GDP associated with each road-link was stored as the final output.",
+      "contact_point": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "creator": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "spatial": {
+        "countries": [
+          "KHM",
+          "IDN",
+          "LAO",
+          "MMR",
+          "PHL",
+          "THA",
+          "VNM"
+        ],
+        "bbox": [
+          91.4297,
+          -5.4352,
+          141.1758,
+          28.7728
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "0",
+            "name": "OpenStreetMap",
+            "url": "https://www.openstreetmap.org",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          },
+          {
+            "id": "1",
+            "name": "Emissions Database for Global Atmospheric Research (EDGAR)",
+            "url": "https://data.jrc.ec.europa.eu/collection/edgar",
+            "type": "dataset",
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "road_IDN",
+          "title": "Indonesia road network",
+          "description": "Road network of Indonesia derived from OpenStreetMap, with the GDP per macro-sector associated with each link of the network.",
+          "spatial": {
+            "countries": [
+              "IDN"
+            ],
+            "scale": "national"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042426",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042426/1/DR0053227/exp-idn-road-osm.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "road_KHM",
+          "title": "Cambodia road network",
+          "description": "Road network of Cambodia derived from OpenStreetMap, with the GDP per macro-sector associated with each link of the network.",
+          "spatial": {
+            "countries": [
+              "KHM"
+            ],
+            "scale": "national"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042426",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042426/1/DR0053228/exp-khm-road-osm.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "road_LAO",
+          "title": "Laos road network",
+          "description": "Road network of Laos derived from OpenStreetMap, with the GDP per macro-sector associated with each link of the network.",
+          "spatial": {
+            "countries": [
+              "LAO"
+            ],
+            "scale": "national"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042426",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042426/1/DR0053229/exp-lao-road-osm.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "road_MMR",
+          "title": "Myanmar road network",
+          "description": "Road network of Myanmar derived from OpenStreetMap, with the GDP per macro-sector associated with each link of the network.",
+          "spatial": {
+            "countries": [
+              "MMR"
+            ],
+            "scale": "national"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042426",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042426/1/DR0053230/exp-mmr-road-osm.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "road_PHL",
+          "title": "Philippines road network",
+          "description": "Road network of Philippines derived from OpenStreetMap, with the GDP per macro-sector associated with each link of the network.",
+          "spatial": {
+            "countries": [
+              "PHL"
+            ],
+            "scale": "national"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042426",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042426/1/DR0053231/exp-phl-road-osm.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "road_THA",
+          "title": "Thailand road network",
+          "description": "Road network of Thailand derived from OpenStreetMap, with the GDP per macro-sector associated with each link of the network.",
+          "spatial": {
+            "countries": [
+              "THA"
+            ],
+            "scale": "national"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042426",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042426/1/DR0053232/exp-tha-road-osm.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "road_VNM",
+          "title": "Vietnam road network",
+          "description": "Road network of Vietnam derived from OpenStreetMap, with the GDP per macro-sector associated with each link of the network.",
+          "spatial": {
+            "countries": [
+              "VNM"
+            ],
+            "scale": "national"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042426",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042426/1/DR0053233/exp-vnm-road-osm.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "rail",
+          "title": "South-East Asia rail network",
+          "description": "Derived from OSM, includes spatialisation of GDP per macrosectors. The OpenStreetMap rail network was manually cleaned to ensure that only currently functioning railway lines remain. The fraction of GDP associated with the rail network (as calculated for the road-transport assignment of GDP, above) was attributed to the cleaned linear assets within the network. It was assumed that per kilometre length of railway main-line would make an equal contribution to GDP, and that sidings, yards and spurs made a contribution that was 10% that of an equivalent length of main-line. The total number of passenger-km and freight-km were calculated by summing up the total weighted-length of all rail assets in each country, and the relative contributions of each asset in the network was calculated in proportion to its length and stored on each asset as total contribution to GDP based on the railway network.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042426",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042426/1/DR0053226/exp-sea-rail-osm.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "network",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "network_length",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        },
+        {
+          "id": "gdp",
+          "category": "economic_indicator",
+          "metrics": [
+            {
+              "id": "gdp_value",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "currency"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

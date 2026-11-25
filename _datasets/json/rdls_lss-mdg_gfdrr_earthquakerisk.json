@@ -1,0 +1,165 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-mdg_gfdrr_earthquakerisk",
+      "title": "Madagascar earthquake risk",
+      "description": "Direct loss triggered by earthquake hazard (ground shaking) simulated on exposed building asset measured as Average Annual Losses (AAL) and six Return Period scenarios.",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "version": "2017",
+      "purpose": "Quantification of site specific risk of flood, earthquakes, tropical cyclones, storm surge and tsunamis, to support improvement in the resiliency and capacity of South West Indian Ocean island states through the creation of disaster risk financing strategies.",
+      "project": {
+        "name": "SWIO-RAFI"
+      },
+      "details": "This data set was produced with financial support from the European Union in the framework of the ACP-EU Natural Disaster Risk Reduction Program, managed by the Global Facility for Disaster Reduction and Recovery (GFDRR).",
+      "contact_point": {
+        "name": "Pierre Chrzanowski",
+        "email": "pchrzanowski@worldbank.org"
+      },
+      "creator": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "spatial": {
+        "countries": [
+          "MDG"
+        ],
+        "bbox": [
+          37.3764,
+          -25.8818,
+          56.3222,
+          -11.6724
+        ],
+        "scale": "national"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "GFDRR",
+            "url": "https://www.gfdrr.org"
+          },
+          "role": "owner"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "0",
+          "name": "South West Indian Ocean risk assessment and financing initiative (SWIO-RAFI): summary report",
+          "author_names": [
+            "Doekle Wielinga",
+            "Alanna Simpson",
+            "Julie Dana",
+            "Emily White",
+            "Emma Philips",
+            "Liana Razafindrazay",
+            "Luis Corrales",
+            "Richard Murnane",
+            "Richard Poulter",
+            "Samantha Cook",
+            "Simone Balog",
+            "Stuart Fraser",
+            "Vivien Deparday"
+          ],
+          "date_published": "2017-01-01",
+          "url": "http://documents1.worldbank.org/curated/en/951701497623912193/pdf/116342-WP-PUBLIC-52p-SWIO-RAFI-Summary-Report-2017-Publish-Version.pdf"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "0",
+            "name": "AIR-Worldwide",
+            "url": "https://www.air-worldwide.com/",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ]
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "0",
+          "title": "Madagascar earthquake risk",
+          "description": "Direct loss triggered by earthquake hazard (ground shaking) simulated on exposed building asset measured as Average Annual Losses (AAL) and six Return Period scenarios.",
+          "format": "gpkg",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0043553",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0043553/2/DR0054413/lss-mdg-eq.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "earthquake_aal",
+            "hazard": {
+              "id": "earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "annual_average",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Average Annual Losses (AAL) over exposed buildings, earthquake."
+          },
+          {
+            "id": "earthquake_rp",
+            "hazard": {
+              "id": "earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "loss",
+                "loss_statistic": "probable_maximum",
+                "measurement": {
+                  "quantity_kind": "currency",
+                  "unit": "USD"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Losses over exposed buildings for return periods of 25, 50, 100, 250, 500 and 1,000 years, earthquake."
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

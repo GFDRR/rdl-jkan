@@ -1,0 +1,540 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_centralasiadischarge",
+      "title": "Central Asia flood hazard discharge data (SFRARR)",
+      "description": "River discharge data for Central Asia: gauge records (daily and annual maxima) and discharge hazard curves for 78,000 virtual stations, in the current climate and in a 2080 climate scenario.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "version": "2022",
+      "purpose": "Regional risk modelling. These data have been derived on a regional scale for the purpose of consistent regional multi-country hazard and risk assessment. Application of this information on smaller scales should be done with care. Importantly on a local scale, it is often the case that more detailed history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia",
+        "url": "https://www.gfdrr.org/en/program/SFRARR-Central-Asia"
+      },
+      "details": "Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia). The hazard curves come from an extreme value analysis which fits observed and simulated annual maximum discharge to a generalized extreme value (GEV) distribution.",
+      "contact_point": {
+        "name": "Paola Ceresa",
+        "email": "paola.ceresa@redrisk.com"
+      },
+      "creator": {
+        "name": "Gabriele Coccia",
+        "url": "https://www.redrisk.com"
+      },
+      "spatial": {
+        "countries": [
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ],
+        "bbox": [
+          46.0,
+          34.0,
+          88.0,
+          57.0
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "CA_SFRARR_RED",
+          "entity": {
+            "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+            "url": "https://www.redrisk.com"
+          },
+          "role": "principal_investigator"
+        },
+        {
+          "id": "CA_SFRARR_WB",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "CA_SFRARR_DR0090774",
+          "name": "Central Asia flood hazard technical report - English version",
+          "date_published": "2022-09-02",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064084/2/DR0090774/Task3_FloodHazard_Report_r5_EN.pdf"
+        },
+        {
+          "id": "CA_SFRARR_DR0090783",
+          "name": "Central Asia flood hazard technical report - Russian version",
+          "date_published": "2022-09-02",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064084/2/DR0090783/Task3_FloodHazard_Report_r5_RU.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "CA_SFRARR_FL_curves",
+          "title": "Discharge hazard curves",
+          "description": "Discharge hazard curves calculated for all 78,000 virtual stations (simulation points) for 2,5,10,20,50,100,200,500 and 1,000 years return time via extreme value analysis which included generalized extreme value (GEV) distribution fitting, temporal and spatial shifts detection, extreme values adjustment and extrapolation. Both observed and simulated annual maximum discharge values were used to fit the GEV via the non-linear least squares method. ID stands for the virtual station ID. noData: “-9999”. Units: m3/s",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064229",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064229/2/DR0090969/discharge_hazard_curves.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_FL_curves_2080",
+          "title": "Discharge hazard curves - climate change (2080 scenario)",
+          "description": "Discharge hazard curves for the 2080 scenario (climate change) calculated for all 78,000 virtual stations (simulation points) for 2,5,10,20,50,100,200,500 and 1,000 years return time. The climate change scenario simulation was carried out by adopting change factors to the ERA5-Land precipitation and temperature based on the pdf comparison of the current climate and 1971-2100 projection (we used MPI-ESM-MR GCM). We used a pdf matching technique to change the distributions of the current ERA5-Land variables. Eventually, the entire modeling chain composed of hydrological modeling (TOPKAPI), extreme values analysis was performed to produce the fluvial flood hazard curves under 2080 conditions. ID stands for the virtual station ID. noData: “-9999”. Units: m3/s",
+          "format": "csv",
+          "climate": {
+            "model": "MPI-ESM-MR"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064229",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064229/2/DR0090966/discharge_hazard_curves_cc.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_FL_curves_low",
+          "title": "Discharge hazard curves - uncertainty lower bounds",
+          "description": "Discharge hazard curves uncertainty lower bounds calculated for all 78,000 virtual stations (simulation points) for 2,5,10,20,50,100,200,500 and 1,000 years return time. The uncertainty analysis was carried out by comparing the modelled discharge extreme values distributions after bias correction with the observed ones (both obtained through a GEV fitting). Absolute values of percent errors were computed on pairs of observed vs. simulated flows at fixed return periods (5, 10, 20, 50, 100, 200, 500, 1000 years) for every river section where observed data were available. Then, for every return period, the empirical 90% percentile of all percent errors in all gauged stations was computed. The corresponding values of percent errors were used to obtain lower and upper bounds of discharge extreme values distributions at gauged sections. For ungauged sections, a similar procedure was put in place, but rather than comparing extreme values distributions from simulations and observations (obviously not available at ungauged sections), the comparison was done on distributions before and after the bias correction. The final result was, again, lower and upper bounds of discharge extreme values distributions. ID stands for the virtual station ID. noData: “-9999”. Units: m3/s",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064229",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064229/2/DR0090968/discharge_hazard_curves_uncertainty_low.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_FL_curves_upp",
+          "title": "Discharge hazard curves - uncertainty upper bounds",
+          "description": "Discharge hazard curves uncertainty upper bounds calculated for all 78,000 virtual stations (simulation points) for 2,5,10,20,50,100,200,500 and 1,000 years return time. The uncertainty analysis was carried out by comparing the modelled discharge extreme values distributions after bias correction with the observed ones (both obtained through a GEV fitting). Absolute values of percent errors were computed on pairs of observed vs. simulated flows at fixed return periods (5, 10, 20, 50, 100, 200, 500, 1000 years) for every river section where observed data were available. Then, for every return period, the empirical 90% percentile of all percent errors in all gauged stations was computed. The corresponding values of percent errors were used to obtain lower and upper bounds of discharge extreme values distributions at gauged sections. For ungauged sections, a similar procedure was put in place, but rather than comparing extreme values distributions from simulations and observations (obviously not available at ungauged sections), the comparison was done on distributions before and after the bias correction. The final result was, again, lower and upper bounds of discharge extreme values distributions. ID stands for the virtual station ID. noData: “-9999”. Units: m3/s",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064229",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064229/2/DR0090967/discharge_hazard_curves_uncertainty_upp.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_FL_annual_maxima",
+          "title": "Annual maxima discharge data",
+          "description": "Dataset of annual maxima discharge (m3/s) from different gauges in Central Asia between 1909 and 2020.",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064229",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064229/2/DR0090964/data_annual_maxima.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_FL_daily",
+          "title": "Daily discharge data",
+          "description": "Dataset of daily discharge (m3/s) from different gauges in Central Asia between 1936 and 2020.",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064229",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064229/2/DR0090965/data_daily_discharge.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_FL_stations_maxima",
+          "title": "Stations of the annual maxima discharge data",
+          "description": "Data on annual maxima discharge stations (Lon, Lat, x, y, Name)",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064229",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064229/2/DR0090970/stations_annual_maxima.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_FL_stations_daily",
+          "title": "Stations of the daily discharge data",
+          "description": "Data on daily discharge stations (Lon, Lat, x, y, Name)",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064229",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064229/2/DR0090971/stations_daily_discharge.csv",
+          "media_type": "text/csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CA_SFRARR_Q",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 20, 50, 100, 200, 500, 1000 years",
+            "frequency_distribution": "generalized_extreme_value",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "Q",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "discharge:m3/s"
+              }
+            ],
+            "events": [
+              {
+                "id": "CA_SFRARR_Q_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_20",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_200",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 200
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CA_SFRARR_Q_2080",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 20, 50, 100, 200, 500, 1000 years",
+            "frequency_distribution": "generalized_extreme_value",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "2080",
+              "end": "2080"
+            },
+            "hazards": [
+              {
+                "id": "Q",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "discharge:m3/s"
+              }
+            ],
+            "events": [
+              {
+                "id": "CA_SFRARR_Q_2080_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_2080_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_2080_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_2080_20",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 20
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_2080_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_2080_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_2080_200",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 200
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_2080_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_Q_2080_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "Q",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "discharge:m3/s"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CA_SFRARR_Q_gauges",
+            "analysis_type": "empirical",
+            "calculation_method": "observed",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "1909",
+              "end": "2020"
+            },
+            "hazards": [
+              {
+                "id": "Q_obs",
+                "type": "flood",
+                "process": "fluvial_flood",
+                "intensity_measure": "discharge:m3/s"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

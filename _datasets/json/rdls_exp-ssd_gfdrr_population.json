@@ -1,0 +1,124 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-ssd_gfdrr_population",
+      "title": "South Sudan population",
+      "description": "Total population of South Sudan as 1km grid for year 2018 from LandScan and demographic statistics at the county level from the Inter Cluster Information Management Working Group (ICIWG) and NBS for year 2019.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "version": "2019",
+      "purpose": "The results of the analysis contribute to the production of knowledge for disaster risk management (DRM) to support the World Bank's operational teams in their in-country engagements. Specifically, the key findings of this study allow to rank South Sudan states in terms of natural disasters risk, and to identify the most critical components for each area. The output of this assessment includes a geodatabase which contains both the key primary data and all the resulting maps produced by the analysis, allowing risk analysts and managers to explore them in detail using GIS software.",
+      "project": {
+        "name": "South Sudan Multi-hazard risk assessment"
+      },
+      "contact_point": {
+        "name": "Lukas Loeschner",
+        "email": "lloeschner@worldbank.org"
+      },
+      "creator": {
+        "name": "Mattia Amadio",
+        "email": "mamadio@worldbank.org"
+      },
+      "spatial": {
+        "countries": [
+          "SSD"
+        ],
+        "scale": "national"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "Lukas Loeschner",
+            "email": "lloeschner@worldbank.org"
+          },
+          "role": "world_bank_team_lead"
+        },
+        {
+          "id": "1",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          },
+          "role": "author"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "0",
+          "name": "Disasters, Conflict, and Displacement : Intersectional Risks in South Sudan (Vol. 2)",
+          "author_names": [
+            "Rina Meutia",
+            "Lukas Loeschner",
+            "Makiko Watanabe",
+            "Meskerem Brhane",
+            "Mattia Amadio"
+          ],
+          "date_published": "2020-09-24",
+          "url": "http://documents1.worldbank.org/curated/en/570701601009027965/pdf/Summary.pdf"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "0",
+            "name": "LandScan 2018",
+            "url": "https://landscan.ornl.gov",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "0",
+          "title": "South Sudan population map",
+          "description": "Total population of South Sudan as 1 km grid from LandScan 2018.",
+          "format": "geotiff",
+          "spatial_resolution": 1000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042414"
+        },
+        {
+          "id": "1",
+          "title": "National population statistics",
+          "description": "Demographic statistics for South Sudan from a variety of sources: National Bureau of Statistics (NBS), ICIWG and IPC.",
+          "format": "xlsx",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042414",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042414/2/DR0053209/exp-ssd-pop_stats.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "population",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "population_count",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
