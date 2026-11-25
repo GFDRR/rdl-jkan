@@ -42,7 +42,7 @@ jobs:
         working-directory: ./python
         run: python3 -m unittest discover -s tests
 
-      - name: Build sqlite.db
+      - name: Build sqlite.db and search.db
         working-directory: ./python
         run: python3 import.py
 
@@ -54,8 +54,11 @@ jobs:
       - name: Run query function tests
         run: node --test "netlify/tests/*.test.mjs"
 
-      - name: Run dataset page tests
+      - name: Run site script tests
         run: node --test "scripts/tests/*.test.mjs"
+
+      - name: Write the first datasets of the home page
+        run: node scripts/initial-data.mjs
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1.327.0

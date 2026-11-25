@@ -17,7 +17,7 @@ const STORE_NAME = "rdl-data";
 
 // Blob key -> path in the repository.
 const FILE_PATHS = {
-  "sqlite.db": "sqlite.db",
+  "search.db": "search.db",
   "vectors.bin": "python/vectors.bin",
   "vectors.ids.json": "python/vectors.ids.json",
 };

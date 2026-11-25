@@ -2,6 +2,10 @@
 title: Datasets
 layout: default
 ---
+{% if site.data.initial %}
+<!-- Written by scripts/initial-data.mjs -->
+<script type="application/json" id="initial-data">{{ site.data.initial | jsonify | replace: "</", "<\/" }}</script>
+{% endif %}
 <div x-data x-init="$store.datasets.loadDatasets()">
   <div class="modern-hero">
     <div class="hero-background-image"></div>
@@ -338,14 +342,16 @@ layout: default
             style="margin-top: 0; margin-bottom: 24px"
             x-text="`Showing ${$store.datasets.paginationStart}-${$store.datasets.paginationEnd} of ${$store.datasets.totalCount} dataset${$store.datasets.totalCount === 1 ? '' : 's'}`"
           ></h3>
+          <!-- Not x-show, which shows an element later than it hides it: with answers
+            from the cache, a spinner would be left on the page. -->
           <h3
             x-cloak
-            x-show="$store.datasets.isLoaded && !$store.datasets.isSearching && $store.datasets.totalCount === 0"
+            :class="{ hidden: !$store.datasets.isLoaded || $store.datasets.isSearching || $store.datasets.isLookingForRelated || $store.datasets.totalCount > 0 }"
             style="margin-top: 0"
           >
             No datasets found with these filters and/or query
           </h3>
-          <div x-show="$store.datasets.isLoading" class="datasets-loading">
+          <div :class="{ hidden: !$store.datasets.isLoading }" class="datasets-loading">
             <div
               class="loading-spinner"
               role="status"
@@ -353,7 +359,7 @@ layout: default
             ></div>
             <p>Loading datasets…</p>
           </div>
-          <div x-cloak x-show="$store.datasets.isSearching" class="datasets-loading">
+          <div x-cloak :class="{ hidden: !$store.datasets.isSearching }" class="datasets-loading">
             <div
               class="loading-spinner"
               role="status"
@@ -463,6 +469,15 @@ layout: default
                 </div>
               </article>
             </template>
+          </div>
+
+          <div x-cloak :class="{ hidden: !$store.datasets.isLookingForRelated }" class="datasets-loading">
+            <div
+              class="loading-spinner"
+              role="status"
+              aria-label="Looking for related datasets…"
+            ></div>
+            <p>Looking for related datasets…</p>
           </div>
 
           <!-- Pagination Controls -->

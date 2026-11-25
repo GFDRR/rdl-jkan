@@ -1,12 +1,7 @@
-import { env, pipeline } from "@huggingface/transformers";
-
-// Must match the model used to generate the embeddings
-// (see python/generate_vectors.py).
-const EMBEDDING_MODEL = "Xenova/all-MiniLM-L6-v2";
 const SEARCH_DEBOUNCE_MS = 200;
-const EMBEDDING_DEBOUNCE_MS = 350;
-
-env.allowLocalModels = false;
+// Semantic search adds related datasets to the ones that contain the words of
+// the query. Its model is a large download, so it is for searches that find few.
+const FEW_RESULTS = 20;
 
 // Keyword search (FTS) and semantic search both run server-side in the query
 // function; this module only embeds the query text in the browser and keeps
@@ -19,72 +14,56 @@ export default {
   set query(value) {
     this._query = value ?? "";
     this.isSearching = Boolean(this._query.trim());
+    this.isLookingForRelated = false;
     this.queryVector = null;
     this.currentPage = 1;
     this.scheduleSearch();
-    this.scheduleQueryVector();
   },
   queryVector: null,
-  embedderPromise: null,
+  // The results are on the page and semantic search may still add some.
+  isLookingForRelated: false,
   _searchTimer: null,
-  _searchToken: 0,
-  _embedTimer: null,
-  _embedToken: 0,
+  // The query that was last embedded, or is being embedded.
+  _embeddedQuery: null,
 
   scheduleSearch() {
     clearTimeout(this._searchTimer);
-    const trimmed = this.query.trim();
-    const token = ++this._searchToken;
-    if (!trimmed) {
-      // Query cleared — refetch the unfiltered page right away.
+    this._embeddedQuery = null;
+    // The answer to the previous query must not be shown any more.
+    this._fetchToken++;
+    if (!this.query.trim()) {
+      // Query cleared — show the unfiltered page right away.
       this.refreshDisplay();
       return;
     }
-
-    this._searchTimer = setTimeout(() => {
-      if (token !== this._searchToken) return;
-      this.refreshDisplay();
-    }, SEARCH_DEBOUNCE_MS);
-  },
-
-  scheduleQueryVector() {
-    clearTimeout(this._embedTimer);
-    const trimmed = this.query.trim();
-    const token = ++this._embedToken;
-    if (!trimmed) return;
-
-    this._embedTimer = setTimeout(() => {
-      this.embedQuery(trimmed)
-        .then((vector) => {
-          if (token !== this._embedToken) return;
-          this.queryVector = vector;
-          this.refreshDisplay();
-          this.isSearching = false;
-        })
-        .catch((error) => {
-          if (token !== this._embedToken) return;
-          console.error("Failed to embed search query:", error);
-          this.isSearching = false;
-        });
-    }, EMBEDDING_DEBOUNCE_MS);
-  },
-
-  loadEmbedder() {
-    if (this.embedderPromise) return this.embedderPromise;
-    this.embedderPromise = pipeline("feature-extraction", EMBEDDING_MODEL).catch(
-      (error) => {
-        console.error("Failed to load semantic search model:", error);
-        this.embedderPromise = null;
-        return null;
-      },
+    this._searchTimer = setTimeout(
+      () => this.refreshDisplay(),
+      SEARCH_DEBOUNCE_MS,
     );
-    return this.embedderPromise;
   },
 
-  async embedQuery(text) {
-    const embedder = await this.loadEmbedder();
-    if (!embedder) return null;
-    const output = await embedder(text, { pooling: "mean", normalize: true });
-    return Array.from(output.data);
+  // Called with the number of datasets found by keyword.
+  async findRelated(total) {
+    const q = this.query.trim();
+    if (total >= FEW_RESULTS || this._embeddedQuery === q) return;
+    this._embeddedQuery = q;
+    this.isLookingForRelated = true;
+
+    let vector = null;
+    try {
+      const { embed } = await import(new URL("./embedder.js", import.meta.url));
+      if (this._embeddedQuery !== q) return;
+      vector = await embed(q);
+    } catch (error) {
+      console.error("Semantic search is not available:", error);
+    }
+    if (this._embeddedQuery !== q) return;
+
+    if (vector) {
+      this.queryVector = vector;
+      await this.refreshDisplay();
+      if (this._embeddedQuery !== q) return;
+    }
+    this.isLookingForRelated = false;
   },
 };

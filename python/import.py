@@ -1,6 +1,7 @@
 import json
 import sqlite3
 import os
+import zlib
 from pathlib import Path
 
 from mappers import make_dataset_frontmatter
@@ -12,7 +13,11 @@ ROOT_DIR = SCRIPT_DIR.parent
 # Dataset JSON files, merged in the same order as the site's load_data_json
 # filter (_plugins/load_data_json.rb) and the root datasets.json page.
 DATASETS_JSON_DIR = ROOT_DIR / "_datasets" / "json"
+# Read by Jekyll (_config.yml) to write the dataset pages.
 DB_PATH = ROOT_DIR / "sqlite.db"
+# Read by the query function, which downloads the whole file when it starts:
+# everything in it has to earn its place.
+SEARCH_DB_PATH = ROOT_DIR / "search.db"
 # Published as they are by Jekyll. The first is the endpoint for harvesters; the
 # second lets editors check whether a dataset id is already in use.
 DCAT_PATH = ROOT_DIR / "catalog.jsonld"
@@ -32,7 +37,6 @@ def create_tables(conn: sqlite3.Connection):
     cur.execute("DROP TABLE IF EXISTS dataset_jsonld")
     cur.execute("DROP TABLE IF EXISTS dataset_relations")
     cur.execute("DROP TABLE IF EXISTS datasets")
-    cur.execute("DROP TABLE IF EXISTS datasets_fts")
     cur.execute("DROP TABLE IF EXISTS catalogs")
     cur.execute("DROP TABLE IF EXISTS licenses")
     cur.execute("""
@@ -73,6 +77,48 @@ def create_tables(conn: sqlite3.Connection):
         CREATE TABLE dataset_jsonld (
             dataset_id TEXT PRIMARY KEY,
             schema_org TEXT
+        );
+        """)
+    conn.commit()
+
+
+def create_search_tables(conn: sqlite3.Connection):
+    cur = conn.cursor()
+    # What the filters use, and little else: their counts read the whole table.
+    # The rest of the metadata is in dataset_details.
+    cur.execute("""
+        CREATE TABLE datasets (
+            rowid INTEGER PRIMARY KEY,
+            id TEXT UNIQUE,
+            catalog_slug TEXT,
+            license_slug TEXT,
+            project TEXT,
+            risk_data_type TEXT,
+            hazard_type TEXT,
+            spatial TEXT,
+            slug TEXT,
+            title TEXT
+        );
+        """)
+    cur.execute("""
+        CREATE TABLE dataset_details (
+            rowid INTEGER PRIMARY KEY,
+            -- JSON, compressed with zlib
+            frontmatter BLOB
+        );
+        """)
+    cur.execute("""
+        CREATE TABLE catalogs (
+            slug TEXT PRIMARY KEY,
+            title TEXT,
+            url TEXT
+        );
+        """)
+    cur.execute("""
+        CREATE TABLE licenses (
+            slug TEXT PRIMARY KEY,
+            title TEXT,
+            url TEXT
         );
         """)
     cur.execute("""
@@ -120,6 +166,11 @@ def create_tables(conn: sqlite3.Connection):
     conn.commit()
 
 
+# Not searched for, and most of the text of the resources: their names and
+# formats are in other fields.
+UNSEARCHED_RESOURCE_FIELDS = {"id", "download_url", "access_url", "conforms_to"}
+
+
 def _fts_keyword_text(fm: dict) -> dict:
     def _flatten(value):
         if value is None:
@@ -150,7 +201,16 @@ def _fts_keyword_text(fm: dict) -> dict:
     contact_point = _text("contact_point.name", "contact_point.affiliation.name")
     license = _text("license.title")
     project = _text("project.title")
-    resources = _text("resources")
+    # Many resources share their values, which need to be found only once.
+    resources = " ".join(
+        dict.fromkeys(
+            text
+            for resource in fm.get("resources") or []
+            for key, value in resource.items()
+            if key not in UNSEARCHED_RESOURCE_FIELDS
+            and (text := _flatten(value).strip())
+        )
+    )
     # The descriptions of the sources are about other datasets: only shown.
     lineage = _flatten(
         [
@@ -271,12 +331,35 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
         ),
     )
 
-    # Rebuild the FTS row for this dataset (handles both insert and update).
-    # The FTS table is contentless (content=''), which does not support
-    # INSERT OR REPLACE, so delete then insert.
-    fts = _fts_keyword_text(fm)
+
+def insert_search_dataset(conn: sqlite3.Connection, fm: dict):
+    cur = conn.cursor()
+    cur.execute(
+        """
+        INSERT INTO datasets (
+            id, catalog_slug, license_slug, project, risk_data_type,
+            hazard_type, spatial, slug, title
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            fm["dataset_id"],
+            fm["catalog"].get("slug"),
+            fm["license"].get("slug"),
+            _serialize(fm.get("project")),
+            _serialize(fm.get("risk_data_type")),
+            _serialize((fm.get("hazard") or {}).get("type")),
+            _serialize(fm.get("spatial")),
+            fm.get("slug"),
+            fm.get("title"),
+        ),
+    )
     rowid = cur.lastrowid
-    cur.execute("DELETE FROM datasets_fts WHERE rowid = ?", (rowid,))
+    frontmatter = json.dumps(fm, ensure_ascii=False, separators=(",", ":"))
+    cur.execute(
+        "INSERT INTO dataset_details (rowid, frontmatter) VALUES (?, ?)",
+        (rowid, zlib.compress(frontmatter.encode("utf-8"), 9)),
+    )
+    fts = _fts_keyword_text(fm)
     cur.execute(
         """
         INSERT INTO datasets_fts(
@@ -319,6 +402,13 @@ def insert_dataset(conn: sqlite3.Connection, fm: dict):
             fts["referenced_by"],
         ),
     )
+
+
+def finish_search_db(conn: sqlite3.Connection):
+    """Make the file as small as it gets."""
+    conn.execute("INSERT INTO datasets_fts(datasets_fts) VALUES ('optimize')")
+    conn.commit()
+    conn.execute("VACUUM")
 
 
 def insert_jsonld(conn: sqlite3.Connection, fm: dict):
@@ -370,8 +460,11 @@ def main():
 
     # Connect to (or create) the SQLite DB
     conn = sqlite3.connect(DB_PATH)
+    SEARCH_DB_PATH.unlink(missing_ok=True)
+    search_conn = sqlite3.connect(SEARCH_DB_PATH)
     try:
         create_tables(conn)
+        create_search_tables(search_conn)
         frontmatters = []
         failed = 0
         for ds in datasets:
@@ -379,15 +472,26 @@ def main():
                 fm = make_dataset_frontmatter(ds)
                 insert_dataset(conn, fm)
                 insert_jsonld(conn, fm)
+                insert_search_dataset(search_conn, fm)
                 frontmatters.append(fm)
             except Exception as e:
                 failed += 1
                 print(f"Error processing dataset {ds.get('id', 'UNKNOWN')}: {e!r}")
-        insert_relations(conn, frontmatters)
         conn.commit()
-        print(f"Imported {len(frontmatters)} datasets into {DB_PATH}")
+        for table in ("catalogs", "licenses"):
+            search_conn.executemany(
+                f"INSERT INTO {table} (slug, title, url) VALUES (?, ?, ?)",
+                conn.execute(f"SELECT slug, title, url FROM {table}"),
+            )
+        insert_relations(search_conn, frontmatters)
+        finish_search_db(search_conn)
+        print(
+            f"Imported {len(frontmatters)} datasets into {DB_PATH}"
+            f" and {SEARCH_DB_PATH}"
+        )
     finally:
         conn.close()
+        search_conn.close()
 
     write_json(DCAT_PATH, make_dcat_catalog(frontmatters))
     write_json(DATASET_IDS_PATH, sorted(fm["dataset_id"] for fm in frontmatters))

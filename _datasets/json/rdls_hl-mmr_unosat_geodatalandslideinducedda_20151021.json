@@ -5,8 +5,7 @@
       "title": "Geodata of Landslide induced dam over Tonzang Township, Chin Division, Myanmar",
       "description": "This map illustrates satellite-detected waters over Tonzang township, Chin Division, Myanmar. UNITAR-UNOSAT analyzed imagery collected by the WorldView-2 satellite on 17 October 2015 to assess the status of a landslide induced dam in Tonzang township. Imagery shows that there has been an increase in the satellite detected waters in the area and a total of 54 hectares are covered by water as of 17 October 2015. This means an increase of 59% since last UNOSAT analysis with imagery from 16 September 2015 when 34 hectares of land were covered by water. The increase on the satellite detected waters might have been slightly overestimated as extensive cloud cover in the area as of 16 September prevented UNOSAT from analyzing certain areas of the landslide. This is a preliminary analysis & has not yet been validated in the field. Please send ground feedback to UNITAR / UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/geodata-of-landslide-induced-dam-over-tonzang-township-chin-division-myanmar-october-21-2015]",
       "risk_data_type": [
-        "hazard",
-        "loss"
+        "hazard"
       ],
       "publisher": {
         "name": "Humanitarian Data Exchange (HDX)",
@@ -39,9 +38,9 @@
             "name": "United Nations Satellite Centre (UNOSAT)",
             "type": "dataset",
             "risk_data_type": [
-              "loss"
+              "hazard"
             ],
-            "used_in": "loss",
+            "used_in": "hazard",
             "description": "Satellite imagery analysis from WorldView-2 sensor comparing multi-temporal observations to detect and quantify water extent changes from landslide-induced damming"
           }
         ]
@@ -76,34 +75,6 @@
             ],
             "analysis_type": "empirical",
             "calculation_method": "observed"
-          }
-        ]
-      },
-      "loss": {
-        "losses": [
-          {
-            "id": "loss_1",
-            "hazard": {
-              "id": "hazard_landslide",
-              "type": "landslide",
-              "intensity_measure": "AA:km2"
-            },
-            "asset_category": "natural_environment",
-            "asset_dimension": "product",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "area"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Water impoundment area created by landslide-induced dam, measured at 54 hectares as of 17 October 2015"
           }
         ]
       },

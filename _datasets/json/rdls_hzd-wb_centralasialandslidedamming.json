@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_centralasialandslidedamming",
+      "title": "Central Asia landslide damming susceptibility (SFRARR)",
+      "description": "The landslide damming susceptibility presents a qualitative representation of the damming potential of each landslide, simplified to five categories ranging from Very Low to Very High based on morphometrical parameters of the river valley and the landslide.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "version": "2022",
+      "purpose": "Regional risk modelling. These data have been derived on a regional scale for the purpose of consistent regional multi-country hazard and risk assessment. Application of this information on smaller scales should be done with care. Importantly on a local scale, it is often the case that more detailed history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia",
+        "url": "https://www.gfdrr.org/en/program/SFRARR-Central-Asia"
+      },
+      "details": "Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia). An empirical relationship was developed between two important parameters the valley width from the river and the volume of the landslides. This bivariate index assesses the probability of formation of landslide dams within three evolutionary domains: formed; not formed and of uncertain evolution. The latter is the overlapping of the first two domains and is marked by two lines the “Non-formation line” which express the minimum volume able to block a valley with a width value and the “Formation line” which express the smallest volume potentially able to block a valley and below this value there is no damming. Using the relationship the river network damming susceptibility was estimated.",
+      "contact_point": {
+        "name": "Paola Ceresa",
+        "email": "paola.ceresa@redrisk.com"
+      },
+      "creator": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "spatial": {
+        "countries": [
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ],
+        "bbox": [
+          46.0,
+          34.0,
+          88.0,
+          57.0
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "CA_SFRARR_RED",
+          "entity": {
+            "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+            "url": "https://www.redrisk.com"
+          },
+          "role": "principal_investigator"
+        },
+        {
+          "id": "CA_SFRARR_WB",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "CA_SFRARR_DR0090815",
+          "name": "Central Asia landslide hazard technical report - English version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090815/Task7_LnHaz_Report_r5_EN.pdf"
+        },
+        {
+          "id": "CA_SFRARR_DR0090816",
+          "name": "Central Asia landslide hazard technical report - Russian version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090816/Task7_LnHaz_Report_r5_RU.pdf"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "damming",
+            "name": "Geomorphological assessment of landslide damming",
+            "url": "https://doi.org/10.1016/j.enggeo.2016.04.024",
+            "type": "model",
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "CA_SFRARR_LS_0064176",
+          "title": "Central Asia landslide damming susceptibility",
+          "description": "The landslide damming susceptibility presents a qualitative representation of the damming potential of each landslide, simplified to five categories ranging from Very Low to Very High based on morphometrical parameters of the river valley and the landslide.",
+          "format": "shp",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064176",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064176/3/DR0090899/Landslides_Damming_Susceptibility_CA.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CA_SFRARR_LS",
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "LS",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

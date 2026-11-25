@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 process.env.RDL_DATA_DIR ??= root;
-const skip = !existsSync(join(process.env.RDL_DATA_DIR, "sqlite.db"));
+const skip = !existsSync(join(process.env.RDL_DATA_DIR, "search.db"));
 
 async function query(body) {
   const { default: handler } = await import("../functions/query/index.mjs");
@@ -21,6 +21,37 @@ async function query(body) {
   assert.equal(response.status, 200);
   return response.json();
 }
+
+async function get(body, method = "GET") {
+  const { default: handler } = await import("../functions/query/index.mjs");
+  const payload = encodeURIComponent(JSON.stringify(body));
+  return handler(new Request(`http://localhost/?payload=${payload}`, { method }));
+}
+
+test("GET answers like POST, and only good answers are cached", { skip }, async () => {
+  const body = { action: "datasets", filters: { hazard_type: ["flood"] }, page: 2 };
+  const response = await get(body);
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("cache-control"), /public/);
+  assert.deepEqual(await response.json(), await query(body));
+
+  const unknown = await get({ action: "nope" });
+  assert.equal(unknown.status, 400);
+  assert.equal(unknown.headers.get("cache-control"), "no-store");
+  assert.equal(unknown.headers.get("netlify-cdn-cache-control"), null);
+
+  const { default: handler } = await import("../functions/query/index.mjs");
+  assert.equal((await handler(new Request("http://localhost/"))).status, 400);
+});
+
+test("the list only has what the cards show", { skip }, async () => {
+  const { rows } = await query({ action: "datasets", filters: {} });
+  for (const row of rows) {
+    assert.ok(row.title && row.slug && row.risk_data_type.length, row.id);
+    assert.equal(row.frontmatter, undefined);
+    assert.equal(row.resources, undefined);
+  }
+});
 
 const ids = async (q) =>
   (await query({ action: "search", q, pageSize: 50 })).rows.map((row) => row.id);

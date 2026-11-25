@@ -80,7 +80,25 @@
               }
             ],
             "analysis_type": "probabilistic",
-            "calculation_method": "simulated"
+            "calculation_method": "simulated",
+            "occurrence_range": "1000 years",
+            "events": [
+              {
+                "id": "event_set_1_rp1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_1",
+                  "type": "flood",
+                  "process": "fluvial_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
           }
         ]
       },

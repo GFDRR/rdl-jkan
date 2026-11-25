@@ -9,28 +9,39 @@
   />
   <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 | escape }}">
+  {% if site.google_site_verification and site.google_site_verification != "" %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+  {% endif %}
   {% assign theme_name = site.jkan_theme | default: 'Default' %} {% assign theme
   = site.data.themes | where:'name', theme_name | first %} {% if theme and
   theme.src and theme.src != empty %}
   <link rel="stylesheet" href="{{ theme.src }}" />
   {% endif %}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {% if site.netlify_api_base and site.netlify_api_base != "" %}
+  <link rel="preconnect" href="{{ site.netlify_api_base }}" crossorigin>
+  {% endif %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic&display=swap">
+  {% if page.layout == "dataset" %}
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin="anonymous" />
+  {% endif %}
 
- 
-  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+  <!-- The scripts are deferred: use them after DOMContentLoaded. -->
   <!-- jQuery (required for Bootstrap) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script
+    defer
     src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
     integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
     crossorigin="anonymous"
   ></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  {% if page.layout == "dataset" %}
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin="anonymous"></script>
+  {% endif %}
   <script>
     // Dataset queries run server-side in a Netlify Function (see
     // netlify/functions/query). RDL_API_BASE is empty when the site itself is
@@ -42,14 +53,6 @@
   <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css"
   />
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
   {% if page.layout == "dataset" %}

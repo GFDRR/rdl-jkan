@@ -1,4 +1,4 @@
-import { queryApi } from "../shared/api";
+import { queryApi } from "../shared/api.js";
 import { drawMap } from "./components.js";
 import { buildPage } from "./sections.js";
 

@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_exp-wb_southeastasiaelectricgrid",
+      "title": "South-East Asia electric grid",
+      "description": "Electricity lines of seven South-East Asian countries, adapted from the Gridfinder and power plants databases, with the GDP associated with each target area.",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "version": "2021",
+      "contact_point": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "creator": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "spatial": {
+        "countries": [
+          "KHM",
+          "IDN",
+          "LAO",
+          "MMR",
+          "PHL",
+          "THA",
+          "VNM"
+        ],
+        "bbox": [
+          91.4297,
+          -5.4352,
+          141.1758,
+          28.7728
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "0",
+            "name": "Gridfinder",
+            "url": "https://gridfinder.org",
+            "type": "dataset",
+            "risk_data_type": [
+              "exposure"
+            ],
+            "used_in": "exposure"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "0",
+          "title": "Electric grid",
+          "description": "Electric gridlines for 7 SEA countries. Adapted from GridFinder and PowerPlants databases. The Gridfinder data provides information on “target” areas, which show the gridded locations predicted to be connected to the electricity grid. Target areas are intersect with the population layers and the GDP per capita layers to assign the GDP associated with each target area. Gridfinder data is combined with the power plants database connecting each power plant to its nearest transmission line, and create a network graph of nodes and edges, where the nodes are classified into: (1) sources – power plants; (2) intermediates – ends points of each transmission line segment; and (3) sinks – target area.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042425",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042425/1/DR0053225/exp-sea-electric_grid.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "exposure": [
+        {
+          "id": "grid",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "grid_length",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        },
+        {
+          "id": "gdp",
+          "category": "economic_indicator",
+          "metrics": [
+            {
+              "id": "gdp_value",
+              "dimension": "product",
+              "measurement": {
+                "quantity_kind": "currency"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

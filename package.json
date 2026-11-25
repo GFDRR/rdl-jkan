@@ -2,7 +2,7 @@
   "name": "jkan",
   "description": "A lightweight, backend-free open data portal, powered by Jekyll",
   "scripts": {
-    "build": "./node_modules/.bin/esbuild scripts/src/index.js --bundle --minify --sourcemap --outfile=scripts/dist/index.js"
+    "build": "esbuild scripts/src/index.js scripts/src/embedder.js --bundle --minify --sourcemap --format=esm --target=es2022 --outdir=scripts/dist"
   },
   "targets": {
     "modern": {
@@ -26,8 +26,6 @@
     "@alpinejs/persist": "^3.15.12",
     "@huggingface/transformers": "^3.7.0",
     "alpinejs": "^3.15.12",
-    "bootstrap": "^5.3.8",
-    "core-js": "^3.50.0",
     "jquery": "^3.7.1",
     "lodash": "^4.17.21"
   }

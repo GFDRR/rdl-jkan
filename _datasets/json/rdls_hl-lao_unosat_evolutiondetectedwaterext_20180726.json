@@ -5,8 +5,7 @@
       "title": "Evolution satellite detected water extent over Sanamxay District, Attapeu Province, Lao People Democratic Republic",
       "description": "This map illustrates the evolution of satellite-detected surface waters in Sanamxay district, Attapeu province, as observed from the Radarsat-2 radar image acquired on 24 July 2018 and compared with a Radsarsat-2 image acquired on 10 July 2018. As of 10 July 2018, flooded areas and saturated soils were already visible, due to the heavy rains that happened previously to the collapse of the dam. As well, the reservoir controlled by the dam was full of water. As of 24 July 2018, an additional surface of 5,826 ha of inundated areas were detected, representing an increase of the surface waters of 66%, due to the collapse of the dam. At this date, the reservoir that was controlled by the dam has decreased in its size. Several villages and surrounding agricultural fields seems to be inundated. The villages of Ban Hinlat, Ban Thaseangchan, Ban Mai and Ban Samong-tai seems to be the most affected ones. It is likely that flood waters have been systematically underestimated along highly vegetated areas, along the main riverbanks and within built-up urban areas because of the special characteristics of the used satellite data. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR - UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/evolution-satellite-detected-water-extent-over-sanamxay-district-attapeu-province-lao-people-]",
       "risk_data_type": [
-        "hazard",
-        "loss"
+        "hazard"
       ],
       "publisher": {
         "name": "Humanitarian Data Exchange (HDX)",
@@ -39,9 +38,9 @@
             "name": "United Nations Satellite Centre (UNOSAT)",
             "type": "dataset",
             "risk_data_type": [
-              "loss"
+              "hazard"
             ],
-            "used_in": "loss",
+            "used_in": "hazard",
             "description": "Satellite radar imagery analysis (Radarsat-2) comparing water extent before and after the dam collapse event, detecting changes in inundated surface area through multi-temporal image comparison"
           }
         ]
@@ -69,34 +68,6 @@
             ],
             "analysis_type": "empirical",
             "calculation_method": "observed"
-          }
-        ]
-      },
-      "loss": {
-        "losses": [
-          {
-            "id": "loss_1",
-            "hazard": {
-              "id": "hazard_flood",
-              "type": "flood",
-              "intensity_measure": "AA:km2"
-            },
-            "asset_category": "natural_environment",
-            "asset_dimension": "product",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "area"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Direct inundation of 5,826 hectares of land surface detected by satellite radar imagery"
           }
         ]
       },

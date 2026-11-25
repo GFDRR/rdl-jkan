@@ -1,0 +1,466 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_lss-ssd_gfdrr_multihazardindex",
+      "title": "South Sudan multi-hazard index",
+      "description": "Simple risk index obtained by combining hazard exposure ranking for floods, droughts, earthquake, extreme heat and wildfires in South Sudan considering population, settlements and health facilities. The Multi-Hazard Index is calculated at ADM1 level. Flood exposure is calculated for all return periods and exposure categories at ADM2 level.",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "version": "2020",
+      "purpose": "The results of the analysis contribute to the production of knowledge for disaster risk management (DRM) to support the World Bank's operational teams in their in-country engagements. Specifically, the key findings of this study allow to rank South Sudan states in terms of natural disasters risk, and to identify the most critical components for each area. The output of this assessment includes a geodatabase which contains both the key primary data and all the resulting maps produced by the analysis, allowing risk analysts and managers to explore them in detail using GIS software.",
+      "project": {
+        "name": "South Sudan Multi-hazard risk assessment"
+      },
+      "contact_point": {
+        "name": "Lukas Loeschner",
+        "email": "lloeschner@worldbank.org"
+      },
+      "creator": {
+        "name": "Mattia Amadio",
+        "email": "mamadio@worldbank.org"
+      },
+      "spatial": {
+        "countries": [
+          "SSD"
+        ],
+        "scale": "national"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "Lukas Loeschner",
+            "email": "lloeschner@worldbank.org"
+          },
+          "role": "world_bank_team_lead"
+        },
+        {
+          "id": "1",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          },
+          "role": "author"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "0",
+          "name": "Disasters, Conflict, and Displacement : Intersectional Risks in South Sudan (Vol. 2)",
+          "author_names": [
+            "Rina Meutia",
+            "Lukas Loeschner",
+            "Makiko Watanabe",
+            "Meskerem Brhane",
+            "Mattia Amadio"
+          ],
+          "date_published": "2020-09-24",
+          "url": "http://documents1.worldbank.org/curated/en/570701601009027965/pdf/Summary.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "0",
+          "title": "Multi-Hazard Index",
+          "description": "Simple risk index obtained by combining hazard exposure ranking for floods, droughts, earthquake, extreme heat and wildfires in South Sudan considering population, settlements and health facilities. The Multi-Hazard Index is calculated at ADM1 level. Flood exposure is calculated for all return periods and exposure categories at ADM2 level.",
+          "format": "gpkg",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042415",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042415/1/DR0053211/hzd-ssd-mh.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "loss": {
+        "losses": [
+          {
+            "id": "flood_population",
+            "hazard": {
+              "id": "flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population exposed to floods, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "flood_buildings",
+            "hazard": {
+              "id": "flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Settlements exposed to floods, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "flood_infrastructure",
+            "hazard": {
+              "id": "flood",
+              "type": "flood",
+              "process": "fluvial_flood",
+              "intensity_measure": "wd:m"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Health facilities exposed to floods, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "drought_population",
+            "hazard": {
+              "id": "drought",
+              "type": "drought",
+              "process": "agricultural_drought",
+              "intensity_measure": "ASI:%"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population exposed to droughts, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "drought_buildings",
+            "hazard": {
+              "id": "drought",
+              "type": "drought",
+              "process": "agricultural_drought",
+              "intensity_measure": "ASI:%"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Settlements exposed to droughts, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "drought_infrastructure",
+            "hazard": {
+              "id": "drought",
+              "type": "drought",
+              "process": "agricultural_drought",
+              "intensity_measure": "ASI:%"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Health facilities exposed to droughts, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "earthquake_population",
+            "hazard": {
+              "id": "earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population exposed to earthquakes, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "earthquake_buildings",
+            "hazard": {
+              "id": "earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Settlements exposed to earthquakes, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "earthquake_infrastructure",
+            "hazard": {
+              "id": "earthquake",
+              "type": "earthquake",
+              "process": "ground_motion",
+              "intensity_measure": "PGA:g"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Health facilities exposed to earthquakes, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "extreme_heat_population",
+            "hazard": {
+              "id": "extreme_heat",
+              "type": "extreme_temperature",
+              "process": "extreme_heat",
+              "intensity_measure": "WBGT:C"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population exposed to extreme heat, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "extreme_heat_buildings",
+            "hazard": {
+              "id": "extreme_heat",
+              "type": "extreme_temperature",
+              "process": "extreme_heat",
+              "intensity_measure": "WBGT:C"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Settlements exposed to extreme heat, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "extreme_heat_infrastructure",
+            "hazard": {
+              "id": "extreme_heat",
+              "type": "extreme_temperature",
+              "process": "extreme_heat",
+              "intensity_measure": "WBGT:C"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Health facilities exposed to extreme heat, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "wildfire_population",
+            "hazard": {
+              "id": "wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "population",
+            "asset_dimension": "population",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Population exposed to wildfires, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "wildfire_buildings",
+            "hazard": {
+              "id": "wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "buildings",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Settlements exposed to wildfires, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          },
+          {
+            "id": "wildfire_infrastructure",
+            "hazard": {
+              "id": "wildfire",
+              "type": "wildfire",
+              "process": "wildfire",
+              "intensity_measure": "FWI:-"
+            },
+            "asset_category": "infrastructure",
+            "asset_dimension": "structure",
+            "impact_and_losses": {
+              "impact": {
+                "type": "direct",
+                "modelling": "simulated",
+                "metric": "exposure",
+                "measurement": {
+                  "quantity_kind": "count"
+                }
+              },
+              "loss_type": "ground_up",
+              "loss_approach": "analytical",
+              "loss_frequency_type": "probabilistic"
+            },
+            "description": "Health facilities exposed to wildfires, used for the hazard exposure ranking that the multi-hazard index combines at ADM1 level."
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
