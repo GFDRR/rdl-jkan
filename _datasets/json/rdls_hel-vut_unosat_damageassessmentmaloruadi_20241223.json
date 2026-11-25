@@ -83,6 +83,12 @@
                 "type": "earthquake",
                 "process": "ground_motion",
                 "intensity_measure": "PGA:g"
+              },
+              {
+                "id": "hazard_2",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
               }
             ],
             "analysis_type": "empirical",
@@ -152,30 +158,6 @@
               "loss_frequency_type": "empirical"
             },
             "description": "Direct building damage from earthquake ground motion detected via satellite analysis"
-          },
-          {
-            "id": "loss_2",
-            "hazard": {
-              "id": "hazard_landslide",
-              "type": "landslide",
-              "intensity_measure": "LSI:-"
-            },
-            "asset_category": "natural_environment",
-            "asset_dimension": "product",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "area"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Land area affected by earthquake-triggered landslides"
           }
         ]
       },

@@ -5,8 +5,7 @@
       "title": "Satellite Detected Water Extent in the Phonhong & Viengkham Districts, Vientiane Province, Lao PDR",
       "description": "This map illustrates the satellite-detected water extent in the Phonhong & Viengkham Districts, Vientiane Province, in the northwestern part of Lao People's Democratic Republic after the tropical storm SONCA-17. The UNITAR-UNOSAT analysis used a Sentinel-1 satellite image acquired on the 1 August 2017 and detected several areas with potentially standing waters. In the district of Phonhong 2,045 ha are likely flooded and in the district of Viengkham 1,077 ha. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extent-in-the-phonhong-viengkham-districts-vientiane-province-lao-pdr]",
       "risk_data_type": [
-        "hazard",
-        "loss"
+        "hazard"
       ],
       "publisher": {
         "name": "Humanitarian Data Exchange (HDX)",
@@ -39,9 +38,9 @@
             "name": "United Nations Satellite Centre (UNOSAT)",
             "type": "dataset",
             "risk_data_type": [
-              "loss"
+              "hazard"
             ],
-            "used_in": "loss",
+            "used_in": "hazard",
             "description": "Sentinel-1 satellite imagery analysis detecting water extent changes post-event through multi-temporal image comparison methodology"
           }
         ]
@@ -76,34 +75,6 @@
             ],
             "analysis_type": "empirical",
             "calculation_method": "observed"
-          }
-        ]
-      },
-      "loss": {
-        "losses": [
-          {
-            "id": "loss_1",
-            "hazard": {
-              "id": "hazard_flood",
-              "type": "flood",
-              "intensity_measure": "AA:km2"
-            },
-            "asset_category": "natural_environment",
-            "asset_dimension": "product",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "area"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Direct flood extent impact measured as inundated area (2,045 ha in Phonhong, 1,077 ha in Viengkham)"
           }
         ]
       },

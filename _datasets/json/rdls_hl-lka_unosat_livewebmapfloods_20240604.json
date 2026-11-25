@@ -5,8 +5,7 @@
       "title": "UNOSAT Live Web map - Floods in Sri Lanka",
       "description": "UNOSAT code: FL20240603LKA, GDACS ID: 1102660 This application provides geospatial information regarding the floods in Sri Lanka in June 2024. Important note: The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations. The United Nations Satellite Centre. UNOSAT is not responsible for the misuse or misrepresentation of the map.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-live-web-map-floods-in-sri-lanka]",
       "risk_data_type": [
-        "hazard",
-        "loss"
+        "hazard"
       ],
       "publisher": {
         "name": "Humanitarian Data Exchange (HDX)",
@@ -49,9 +48,9 @@
             "name": "UN Operational Satellite Applications Programme (UNOSAT)",
             "type": "dataset",
             "risk_data_type": [
-              "loss"
+              "hazard"
             ],
-            "used_in": "loss",
+            "used_in": "hazard",
             "description": "Satellite imagery analysis and change detection methodology to map observed flood extent and inundated areas during the June 2024 flooding event in Sri Lanka"
           }
         ]
@@ -86,34 +85,6 @@
             ],
             "analysis_type": "empirical",
             "calculation_method": "observed"
-          }
-        ]
-      },
-      "loss": {
-        "losses": [
-          {
-            "id": "loss_1",
-            "hazard": {
-              "id": "hazard_flood",
-              "type": "flood",
-              "intensity_measure": "wd:m"
-            },
-            "asset_category": "natural_environment",
-            "asset_dimension": "product",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "area"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Direct flood extent and inundated area from satellite-detected changes in Sri Lanka"
           }
         ]
       },
