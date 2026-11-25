@@ -1,16 +1,21 @@
 // Query proxy for the site's search data.
 //
-// sqlite.db, vectors.bin and vectors.ids.json live in the site's "rdl-data"
+// search.db, vectors.bin and vectors.ids.json live in the site's "rdl-data"
 // Netlify Blobs store (uploaded by CI — see .github/workflows/deploy.yml).
-// This function streams sqlite.db to a temp file and opens it read-only with
+// This function streams search.db to a temp file and opens it read-only with
 // the built-in node:sqlite driver (cached across warm invocations), runs the
 // site's SQL/semantic search server-side, and returns small JSON pages. The
 // database itself is never sent to the client.
+//
+// Requests are GET with the JSON payload in ?payload=, so that Netlify's CDN and
+// the browser can cache them, or POST with the payload as the body for those too
+// long for a URL (a search with the vector of the query).
 //
 // Set RDL_DATA_DIR to read the data files from disk instead of Blobs
 // (local development and tests).
 
 import { DatabaseSync } from "node:sqlite";
+import { inflateSync } from "node:zlib";
 import { createWriteStream } from "node:fs";
 import { mkdir, rename, rm } from "node:fs/promises";
 import { Readable } from "node:stream";
@@ -23,39 +28,18 @@ const BLOB_STORE = "rdl-data";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Max-Age": "86400",
 };
 
-// Column lists mirror the queries the client used to run against sql.js in
-// the browser (scripts/src/datasets/index.js and scripts/src/dataset/index.js).
-const PAGE_COLUMNS = `
-  c.title as catalog_title, c.slug,
-  l.title as license_title, l.slug as license_slug, l.url as license_url,
-  json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
-  json_extract(datasets.frontmatter, '$.creator') as creator,
-  json_extract(datasets.frontmatter, '$.details') as details,
-  json_extract(datasets.frontmatter, '$.publisher') as publisher,
-  json_extract(datasets.frontmatter, '$.resources') as resources,
-  json_extract(datasets.spatial, '$.countries') as countries,
-  datasets.*
-`;
-
-const DETAIL_COLUMNS = `
-  c.title as catalog_title, c.slug,
-  l.title as license_title, l.slug as license_slug, l.url as license_url,
-  json_extract(datasets.frontmatter, '$.contact_point') as contact_point,
-  json_extract(datasets.frontmatter, '$.creator') as creator,
-  json_extract(datasets.frontmatter, '$.details') as details,
-  json_extract(datasets.frontmatter, '$.exposure') as exposure,
-  json_extract(datasets.frontmatter, '$.hazard') as hazard,
-  json_extract(datasets.frontmatter, '$.loss') as loss,
-  json_extract(datasets.frontmatter, '$.publisher') as publisher,
-  json_extract(datasets.frontmatter, '$.purpose') as purpose,
-  json_extract(datasets.frontmatter, '$.resources') as resources,
-  json_extract(datasets.frontmatter, '$.vulnerability') as vulnerability,
-  datasets.*
-`;
+// Answers only change when the data does, and each deploy of the function, which
+// follows every upload of the data, empties the CDN's cache.
+const CACHE_HEADERS = {
+  "Cache-Control": "public, max-age=300",
+  "Netlify-CDN-Cache-Control": "public, durable, s-maxage=86400",
+  "Netlify-Vary": "query=payload",
+};
 
 // Licenses which are not in config.dataset_licenses and only given as a URL have
 // the URL as title (make_license in python/mappers.py). The filter groups them
@@ -64,8 +48,12 @@ const CUSTOM_LICENSE = { title: "Custom", slug: "custom" };
 const IS_CUSTOM_LICENSE =
   "(licenses.slug = 'custom' OR licenses.title LIKE 'http://%' OR licenses.title LIKE 'https://%')";
 
-const DATASET_FROM = `
+const DATASET_SELECT = `
+  SELECT datasets.id, datasets.slug, dataset_details.frontmatter,
+    c.title AS catalog_title,
+    l.title AS license_title, l.slug AS license_slug, l.url AS license_url
   FROM datasets
+    JOIN dataset_details ON dataset_details.rowid = datasets.rowid
     LEFT JOIN catalogs c ON datasets.catalog_slug = c.slug
     LEFT JOIN licenses l ON datasets.license_slug = l.slug
 `;
@@ -140,17 +128,17 @@ async function loadData(name) {
 
 async function getDbPath() {
   const dir = process.env.RDL_DATA_DIR;
-  if (dir) return join(dir, "sqlite.db");
+  if (dir) return join(dir, "search.db");
 
   const dataDir = join(tmpdir(), "rdl-data");
-  const dbPath = join(dataDir, "sqlite.db");
+  const dbPath = join(dataDir, "search.db");
   const partialPath = `${dbPath}.${process.pid}.part`;
   const { getStore } = await import("@netlify/blobs");
-  const stream = await getStore({ name: BLOB_STORE }).get("sqlite.db", {
+  const stream = await getStore({ name: BLOB_STORE }).get("search.db", {
     type: "stream",
   });
   if (!stream) {
-    throw new Error(`"sqlite.db" not found in Netlify Blobs store "${BLOB_STORE}"`);
+    throw new Error(`"search.db" not found in Netlify Blobs store "${BLOB_STORE}"`);
   }
 
   await mkdir(dataDir, { recursive: true });
@@ -312,14 +300,58 @@ function pageParams(body) {
   return { page, pageSize };
 }
 
+// The metadata of a row of DATASET_SELECT, stored as compressed JSON.
+function readFrontmatter(row) {
+  return JSON.parse(inflateSync(row.frontmatter).toString("utf8"));
+}
+
+// What a dataset's card in the list shows.
+function cardRow({ frontmatter: _, ...row }, frontmatter) {
+  return {
+    ...row,
+    title: frontmatter.title,
+    description: frontmatter.description,
+    risk_data_type: frontmatter.risk_data_type,
+    creator: frontmatter.creator,
+    version: frontmatter.version,
+    countries: frontmatter.spatial?.countries,
+  };
+}
+
+// What a dataset's page shows, and the rest of what describes the dataset.
+function detailRow(row, frontmatter) {
+  const { lineage, referenced_by, attributions, catalog, version } = frontmatter;
+  return {
+    ...cardRow(row, frontmatter),
+    contact_point: frontmatter.contact_point,
+    details: frontmatter.details,
+    exposure: frontmatter.exposure,
+    hazard: frontmatter.hazard,
+    loss: frontmatter.loss,
+    project: frontmatter.project,
+    publisher: frontmatter.publisher,
+    purpose: frontmatter.purpose,
+    resources: frontmatter.resources,
+    spatial: frontmatter.spatial,
+    temporal: frontmatter.temporal,
+    vulnerability: frontmatter.vulnerability,
+    frontmatter: { lineage, referenced_by, attributions, catalog, version },
+  };
+}
+
+function fetchCards(db, sql, params) {
+  return db
+    .prepare(`${DATASET_SELECT} ${sql}`)
+    .all(...params)
+    .map((row) => cardRow(row, readFrontmatter(row)));
+}
+
 function fetchPageRows(db, clauses, params, page, pageSize) {
-  const result = exec(
+  return fetchCards(
     db,
-    `SELECT ${PAGE_COLUMNS} ${DATASET_FROM} ${whereSql(clauses)}
-     ORDER BY datasets.rowid LIMIT ? OFFSET ?`,
+    `${whereSql(clauses)} ORDER BY datasets.rowid LIMIT ? OFFSET ?`,
     [...params, pageSize, (page - 1) * pageSize],
   );
-  return rowsToObjects(result);
 }
 
 async function handleDatasets(body) {
@@ -343,12 +375,8 @@ async function handleDataset(body) {
   const db = await getDb();
   const id = typeof body?.id === "string" ? body.id : "";
   if (!id) return { dataset: null };
-  const result = exec(
-    db,
-    `SELECT ${DETAIL_COLUMNS} ${DATASET_FROM} WHERE datasets.id = ?`,
-    [id],
-  );
-  return { dataset: rowsToObjects(result)[0] ?? null };
+  const row = db.prepare(`${DATASET_SELECT} WHERE datasets.id = ?`).get(id);
+  return { dataset: row ? detailRow(row, readFrontmatter(row)) : null };
 }
 
 // Ids from a candidate list that also pass the active filters. Chunked to
@@ -459,7 +487,7 @@ async function keywordSearch(db, q) {
 
 // Datasets to suggest on a dataset's page: those linked by lineage, then those
 // of the same project. Similar ones only when there is neither.
-async function handleRelated(body) {
+async function handleRelated(body, context) {
   const id = typeof body?.id === "string" ? body.id : "";
   if (!id) return { related: [] };
   const db = await getDb();
@@ -488,6 +516,7 @@ async function handleRelated(body) {
     similarity = await similarityTo(id);
   } catch (error) {
     console.error("Similarity ranking failed:", error);
+    context.degraded = true;
   }
   const bySimilarity = (a, b) => (similarity.get(b) ?? 0) - (similarity.get(a) ?? 0);
 
@@ -594,13 +623,8 @@ async function handleSearch(body) {
   let rows = [];
   if (pageIds.length) {
     const placeholders = pageIds.map(() => "?").join(", ");
-    const result = exec(
-      db,
-      `SELECT ${PAGE_COLUMNS} ${DATASET_FROM}
-       WHERE datasets.id IN (${placeholders})`,
-      pageIds,
-    );
-    const byId = new Map(rowsToObjects(result).map((row) => [row.id, row]));
+    const cards = fetchCards(db, `WHERE datasets.id IN (${placeholders})`, pageIds);
+    const byId = new Map(cards.map((row) => [row.id, row]));
     rows = pageIds.map((id) => byId.get(id)).filter(Boolean);
   }
 
@@ -825,43 +849,56 @@ async function handleOptions(body) {
   };
 }
 
-function jsonResponse(payload, status = 200) {
+function jsonResponse(payload, status = 200, headers = {}) {
   return new Response(JSON.stringify(payload), {
     status,
-    headers: { "Content-Type": "application/json", ...CORS_HEADERS },
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-store",
+      ...CORS_HEADERS,
+      ...headers,
+    },
   });
 }
+
+async function readPayload(req) {
+  if (req.method === "POST") return req.json();
+  return JSON.parse(new URL(req.url).searchParams.get("payload"));
+}
+
+const ACTIONS = new Map([
+  ["datasets", handleDatasets],
+  ["dataset", handleDataset],
+  ["related", handleRelated],
+  ["options", handleOptions],
+  ["search", handleSearch],
+]);
 
 export default async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: CORS_HEADERS });
   }
-  if (req.method !== "POST") {
+  if (req.method !== "GET" && req.method !== "POST") {
     return jsonResponse({ error: "Method not allowed" }, 405);
   }
 
   let body;
   try {
-    body = await req.json();
+    body = await readPayload(req);
   } catch {
-    return jsonResponse({ error: "Invalid JSON body" }, 400);
+    return jsonResponse({ error: "Invalid JSON payload" }, 400);
+  }
+
+  const answer = ACTIONS.get(body?.action);
+  if (!answer) {
+    return jsonResponse({ error: `Unknown action "${body?.action}"` }, 400);
   }
 
   try {
-    switch (body?.action) {
-      case "datasets":
-        return jsonResponse(await handleDatasets(body));
-      case "dataset":
-        return jsonResponse(await handleDataset(body));
-      case "related":
-        return jsonResponse(await handleRelated(body));
-      case "options":
-        return jsonResponse(await handleOptions(body));
-      case "search":
-        return jsonResponse(await handleSearch(body));
-      default:
-        return jsonResponse({ error: `Unknown action "${body?.action}"` }, 400);
-    }
+    const context = { degraded: false };
+    const payload = await answer(body, context);
+    const cacheable = req.method === "GET" && !context.degraded;
+    return jsonResponse(payload, 200, cacheable ? CACHE_HEADERS : {});
   } catch (error) {
     console.error("Query function failed:", error);
     return jsonResponse(

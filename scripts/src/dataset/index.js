@@ -1,4 +1,4 @@
-import { queryApi } from "../shared/api";
+import { queryApi } from "../shared/api.js";
 
 const FUNCTION_TYPES = {
   vulnerability: "Vulnerability Function",

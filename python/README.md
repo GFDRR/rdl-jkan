@@ -42,13 +42,14 @@ python import.py
 
 This writes, from the files in `_datasets/json`:
 
-- `sqlite.db`: what the site and its search are built from
+- `sqlite.db`: what the dataset pages are built from
+- `search.db`: what the query function searches
 - `catalog.jsonld`: the catalogue in DCAT (JSON-LD), for harvesting by other catalogues
 - `dataset-ids.json`: the ids in use, for editors to check that a new id is free
 
 `generate_vectors.py` and `pack_vectors.py` build the vectors for semantic search. The deploy workflow runs all of them.
 
-The query function has its own tests, which need `sqlite.db`. From the repository root:
+The query function has its own tests, which need `search.db`. From the repository root:
 
 ```
 node --test "netlify/tests/*.test.mjs"
