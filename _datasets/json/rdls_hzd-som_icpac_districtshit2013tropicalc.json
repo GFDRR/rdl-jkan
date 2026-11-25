@@ -38,6 +38,7 @@
       },
       "license": "CC-BY-4.0",
       "lineage": {
+        "description": "Post-event observational data from ICPAC documenting the 2013 Tropical Cyclone 3A track, wind speeds (74 kph maximum), and rainfall (100-200 mm) across Somalia districts. Administrative boundaries of affected districts were delineated and compiled into vector geospatial formats to represent the spatial extent of cyclone impact.",
         "sources": [
           {
             "id": "source_1",
@@ -70,6 +71,30 @@
           "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geonode:geonode:a__2013_TC3A&outputFormat=application%2Fjson",
           "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
           "media_type": "application/geo+json"
+        },
+        {
+          "id": "resource_04a99762",
+          "title": "Somalia Districts hit by 2013 Tropical Cyclone 3A Zipped Shapefile",
+          "description": "Somalia Districts hit by 2013 Tropical Cyclone 3A (Zipped Shapefile)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aa__2013_TC3A&outputFormat=SHAPE-ZIP&srs=EPSG%3A4326&format_options=charset%3AUTF-8",
+          "media_type": "application/vnd.shp"
+        },
+        {
+          "id": "resource_d5f4b509",
+          "title": "Somalia Districts hit by 2013 Tropical Cyclone 3A CSV",
+          "description": "Somalia Districts hit by 2013 Tropical Cyclone 3A (CSV)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aa__2013_TC3A&outputFormat=csv&srs=EPSG%3A4326",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "resource_01f748c6",
+          "title": "Somalia Districts hit by 2013 Tropical Cyclone 3A Excel",
+          "description": "Somalia Districts hit by 2013 Tropical Cyclone 3A (Excel)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typename=geonode%3Aa__2013_TC3A&outputFormat=excel&srs=EPSG%3A4326",
+          "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         }
       ],
       "hazard": {
@@ -84,8 +109,8 @@
                 "intensity_measure": "sws_10m:m/s"
               }
             ],
-            "analysis_type": "probabilistic",
-            "calculation_method": "inferred"
+            "analysis_type": "empirical",
+            "calculation_method": "observed"
           }
         ]
       },
