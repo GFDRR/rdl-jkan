@@ -31,6 +31,7 @@ layout: default
           typeof="dcat:Dataset"
           :resource="$store.dataset.dataset.url"
         >
+          <div class="main-column">
           <main class="main-content">
             <div class="dataset-header">
               <div class="category-badges">
@@ -429,26 +430,27 @@ layout: default
                 </template>
               </div>
             </template>
-            <template x-if="$store.dataset.related.length">
-              <div class="content-section">
-                <h2 class="section-title">Related Datasets</h2>
-                <ul class="related-list">
-                  <template x-for="item in $store.dataset.related" :key="item.id">
-                    <li class="related-item">
-                      <a
-                        :href="'{{ site.baseurl }}/datasets/' + item.slug + '/'"
-                        x-text="item.title"
-                      ></a>
-                      <span
-                        class="related-reason"
-                        x-text="$store.dataset.relationLabel(item.relation)"
-                      ></span>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-            </template>
           </main>
+          <template x-if="$store.dataset.related.length">
+            <section class="main-content related-datasets">
+              <h2 class="section-title">Related Datasets</h2>
+              <ul class="related-list">
+                <template x-for="item in $store.dataset.related" :key="item.id">
+                  <li class="related-item">
+                    <a
+                      :href="'{{ site.baseurl }}/datasets/' + item.slug + '/'"
+                      x-text="item.title"
+                    ></a>
+                    <span
+                      class="related-reason"
+                      x-text="$store.dataset.relationLabel(item.relation)"
+                    ></span>
+                  </li>
+                </template>
+              </ul>
+            </section>
+          </template>
+          </div>
 
           <aside class="sidebar">
             <div class="sidebar-card">
@@ -463,8 +465,8 @@ layout: default
                   json
                 </a>
               </div>
+              {% if site.metadata_editor.edit_param and site.metadata_editor.edit_param != "" %}
               <ul class="sidebar-links">
-                {% if site.metadata_editor.edit_param and site.metadata_editor.edit_param != "" %}
                 <li>
                   <a
                     href="{{ site.metadata_editor.url }}?{{ site.metadata_editor.edit_param }}={{ page.slug | url_encode }}"
@@ -473,16 +475,8 @@ layout: default
                     ><i class="fa fa-pencil"></i> Open in Editor</a
                   >
                 </li>
-                {% endif %}
-                <li>
-                  <a
-                    href="https://github.com/GFDRR/rdl-jkan/edit/rdl-1.0/_datasets/json/{{ page.slug }}.json"
-                    target="_blank"
-                    rel="noopener"
-                    ><i class="fa fa-github"></i> Suggest an edit on GitHub</a
-                  >
-                </li>
               </ul>
+              {% endif %}
             </div>
             <div
               x-show="$store.dataset.dataset.spatial.countries"
