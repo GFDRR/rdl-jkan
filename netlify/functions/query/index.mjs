@@ -57,6 +57,13 @@ const DETAIL_COLUMNS = `
   datasets.*
 `;
 
+// Licenses which are not in config.dataset_licenses and only given as a URL have
+// the URL as title (make_license in python/mappers.py). The filter groups them
+// under "Custom", while the datasets still show and link the license itself.
+const CUSTOM_LICENSE = { title: "Custom", slug: "custom" };
+const IS_CUSTOM_LICENSE =
+  "(licenses.slug = 'custom' OR licenses.title LIKE 'http://%' OR licenses.title LIKE 'https://%')";
+
 const DATASET_FROM = `
   FROM datasets
     LEFT JOIN catalogs c ON datasets.catalog_slug = c.slug
@@ -274,7 +281,16 @@ function buildFilterClauses(filters, excludeType = null) {
   // json_each over a NULL column yields no rows, so datasets without a
   // hazard never match.
   if (excludeType !== "hazard_type") addAnyInArray("hazard_type", "datasets.hazard_type");
-  if (excludeType !== "license") addEquals("license", "datasets.license_slug");
+  if (excludeType !== "license") {
+    const list = values("license");
+    const conditions = list.map((value) =>
+      value === CUSTOM_LICENSE.slug
+        ? `datasets.license_slug IN (SELECT slug FROM licenses WHERE ${IS_CUSTOM_LICENSE})`
+        : "datasets.license_slug = ?",
+    );
+    if (conditions.length) clauses.push(`(${conditions.join(" OR ")})`);
+    params.push(...list.filter((value) => value !== CUSTOM_LICENSE.slug));
+  }
 
   return { clauses, params };
 }
@@ -734,14 +750,21 @@ async function handleOptions(body) {
         const { clauses, params } = where("license");
         return optionRows(
           db,
-          `SELECT licenses.title, licenses.slug, COUNT(*) as count
+          `SELECT
+             CASE WHEN ${IS_CUSTOM_LICENSE} THEN NULL ELSE licenses.title END as title,
+             CASE WHEN ${IS_CUSTOM_LICENSE} THEN '${CUSTOM_LICENSE.slug}' ELSE licenses.slug END as slug,
+             COUNT(*) as count
            FROM datasets
            LEFT JOIN licenses ON datasets.license_slug = licenses.slug
            ${whereSql(clauses)}
-           GROUP BY licenses.slug
+           GROUP BY 2
            ORDER BY count DESC`,
           params,
-          ([title, slug, count]) => ({ title, slug, count }),
+          ([title, slug, count]) => ({
+            title: slug === CUSTOM_LICENSE.slug ? CUSTOM_LICENSE.title : title,
+            slug,
+            count,
+          }),
         );
       }),
       project: option("project", () => {

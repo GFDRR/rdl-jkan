@@ -63,3 +63,31 @@ test("related datasets: lineage comes first", { skip }, async () => {
 test("related datasets: an unknown id has none", { skip }, async () => {
   assert.deepEqual(await query({ action: "related", id: "nope" }), { related: [] });
 });
+
+test("licenses only given as a URL are grouped under Custom", { skip }, async () => {
+  const { options } = await query({ action: "options", filters: {} });
+  const titles = options.license.map((item) => item.title);
+  assert.deepEqual(titles.filter((title) => /^https?:/.test(title)), []);
+  assert.equal(titles.filter((title) => title === "Custom").length, 1);
+
+  const custom = options.license.find((item) => item.slug === "custom");
+  const { rows, total } = await query({
+    action: "datasets",
+    filters: { license: ["custom"] },
+    pageSize: 50,
+  });
+  assert.equal(total, custom.count);
+  for (const row of rows) {
+    assert.match(row.license_title, /^(Custom$|https?:)/, row.id);
+  }
+
+  const counts = options.license.filter((item) =>
+    ["custom", "cc0-10"].includes(item.slug),
+  );
+  assert.equal(counts.length, 2);
+  const both = await query({
+    action: "datasets",
+    filters: { license: counts.map((item) => item.slug) },
+  });
+  assert.equal(both.total, counts.reduce((sum, item) => sum + item.count, 0));
+});
