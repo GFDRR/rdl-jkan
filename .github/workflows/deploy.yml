@@ -8,6 +8,7 @@ on:
     branches:
       - rdl-1.0
     paths:
+      - ".github/workflows/deploy.yml"
       - "_data/**"
       - "_datasets/**"
       - "_includes/**"
@@ -39,8 +40,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    outputs:
+      # Every attempt has its own name: deploying fails if a run has two
+      # artifacts with the same name, as after running it again.
+      artifact-name: github-pages-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v5
 
@@ -144,7 +149,40 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages-${{ github.run_attempt }}
+
+  # A job of its own, so that running only the failed jobs again does not build
+  # the site again.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      pages: write
+      id-token: write
+    steps:
+      # The artifact may not be listed right after its upload, and deploying
+      # does not wait for it.
+      - name: Wait for the artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_NAME: ${{ needs.build.outputs.artifact-name }}
+        run: |
+          url="repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=$ARTIFACT_NAME"
+          for attempt in $(seq 30); do
+            count=$(gh api "$url" --jq .total_count || echo 0)
+            if [ "$count" = 1 ]; then
+              exit 0
+            fi
+            echo "Attempt $attempt: $count artifacts"
+            sleep 5
+          done
+          echo "::error::The artifact $ARTIFACT_NAME is not listed."
+          exit 1
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ needs.build.outputs.artifact-name }}
