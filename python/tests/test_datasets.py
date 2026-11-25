@@ -154,6 +154,13 @@ class CheckTest(unittest.TestCase):
         for text in ("a b", "a​b", "�", "SÃ£o"):
             self.assertEqual(len(self.errors(check, "a", {"t": text})), 1, text)
 
+    def test_spaces(self):
+        check = check_datasets.check_spaces
+        good = {"a": "x y", "b": ["p\n\nq"], "c": 1, "d": None, "e": ""}
+        self.assertEqual(self.errors(check, "a", good), [])
+        for value in ({"a": " x"}, {"a": [{"b": "x\n"}]}, {"a": {"b": " "}}):
+            self.assertEqual(len(self.errors(check, "a", value)), 1, value)
+
     def test_id(self):
         check = check_datasets.check_id
         self.assertEqual(self.errors(check, "a-b.json", {"id": "a-b"}, {}), [])

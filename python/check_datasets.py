@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Check the dataset JSON files before they are merged.
 
-Every file is checked for encoding, JSON syntax and id/filename collisions. The
-files changed since --base (or all of them, with --all) are also validated
-against the RDLS schema and passed through the mappers that build the site.
+Every file is checked for encoding, JSON syntax, stray spaces and id/filename
+collisions. The files changed since --base (or all of them, with --all) are also
+validated against the RDLS schema and passed through the mappers that build the
+site.
 
 Exits with 1 when there are errors. Warnings do not fail the check.
 """
@@ -98,6 +99,17 @@ def check_text(name, dataset, report):
     if match:
         context = text[max(0, match.start() - 20) : match.end() + 20]
         report.error(name, f"text with the wrong encoding: …{context}…")
+
+
+def check_spaces(name, value, report, path=""):
+    if isinstance(value, dict):
+        for key, item in value.items():
+            check_spaces(name, item, report, f"{path}.{key}" if path else key)
+    elif isinstance(value, list):
+        for index, item in enumerate(value):
+            check_spaces(name, item, report, f"{path}[{index}]")
+    elif isinstance(value, str) and value != value.strip():
+        report.error(name, f"{path} starts or ends with a space or line break")
 
 
 def check_id(name, dataset, names_by_id, report):
@@ -270,6 +282,7 @@ def main():
             continue
         datasets[name] = dataset
         check_text(name, dataset, report)
+        check_spaces(name, dataset, report)
         check_id(name, dataset, names_by_id, report)
 
     if args.all:

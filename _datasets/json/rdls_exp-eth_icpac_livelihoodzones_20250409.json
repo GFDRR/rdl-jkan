@@ -3,7 +3,7 @@
     {
       "id": "rdls_exp-eth_icpac_livelihoodzones_20250409",
       "title": "Ethiopia Livelihood zones",
-      "description": "Livelihood zone maps define geographic areas of a country where people generally share similar options for obtaining food and income and similar access to markets. An understanding of geographic livelihood systems is a key component in Vulnerability Assesment for both Drought and Floods - The livelihood zones of resolution approximately 5000 metres ( 0.05&times;0.05) Referenced September 2019. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-ethiopia-livelihood-zones]",
+      "description": "Livelihood zone maps define geographic areas of a country where people generally share similar options for obtaining food and income and similar access to markets. An understanding of geographic livelihood systems is a key component in Vulnerability Assesment for both Drought and Floods - The livelihood zones of resolution approximately 5000 metres ( 0.05×0.05) Referenced September 2019. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/icpac-geonode-ethiopia-livelihood-zones]",
       "risk_data_type": [
         "exposure"
       ],
@@ -24,6 +24,12 @@
         "scale": "national",
         "countries": [
           "ETH"
+        ],
+        "bbox": [
+          33.083,
+          3.433,
+          47.933,
+          14.833
         ]
       },
       "temporal": {
@@ -49,9 +55,29 @@
         {
           "id": "resource_a430f923",
           "title": "Ethiopia Livelihood zones GeoTIFF",
-          "description": "GeoTIFF file. Livelihood zone maps define geographic areas of a country where people generally share similar options for obtaining food and income and similar access to markets. An understanding of geographic livelihood systems is a key component in Vulnerability Assesment for both Drought and Floods - The livelihood zones of resolution approximately 5000 metres ( 0.05&times;0.05) Referenced September 2019",
-          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wfs",
+          "description": "Ethiopia Livelihood zones (GeoTIFF)",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
           "access_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&request=GetCoverage&coverageid=geonode__Normalized_Biomes&format=image%2Ftiff&version=2.0.1&compression=DEFLATE&tileWidth=512&tileHeight=512",
+          "media_type": "image/tiff;application=geotiff"
+        },
+        {
+          "id": "resource_0",
+          "title": "OGC WMS: geonode Service",
+          "description": "Ethiopia Livelihood zones (OGC WMS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:Normalized_Biomes",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WMS&version=1.1.1&request=GetMap&layers=geonode:geonode:Normalized_Biomes&format=image%2Fpng",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wms",
+          "media_type": "image/png"
+        },
+        {
+          "id": "resource_1",
+          "title": "OGC WCS: geonode Service",
+          "description": "Ethiopia Livelihood zones (OGC WCS: geonode Service)",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://geoportal.icpac.net/datasets/geonode:geonode:Normalized_Biomes",
+          "download_url": "https://geoportal.icpac.net/geoserver/ows?service=WCS&version=2.0.1&request=DescribeCoverage&CoverageId=geonode__geonode:Normalized_Biomes",
+          "conforms_to": "http://www.opengis.net/def/serviceType/ogc/wcs",
           "media_type": "image/tiff;application=geotiff"
         }
       ],
