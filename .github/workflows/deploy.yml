@@ -82,7 +82,7 @@ jobs:
         working-directory: ./python
         run: python3 pack_vectors.py
 
-      - name: Build sqlite.db
+      - name: Build sqlite.db and search.db
         working-directory: ./python
         run: python3 import.py
 
@@ -94,6 +94,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Write the first datasets of the home page
+        run: node scripts/initial-data.mjs
 
       - name: Upload search data to Netlify Blobs
         env:
@@ -114,14 +117,6 @@ jobs:
 
       - name: Check the query function
         run: node scripts/check-query-function.mjs
-
-      - name: Download sqlite.db from Netlify Blobs
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
-        run: |
-          npm install --no-save @netlify/blobs
-          node scripts/netlify-data.mjs download sqlite.db
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1.327.0

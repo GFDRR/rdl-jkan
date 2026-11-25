@@ -1,5 +1,3 @@
-import { queryApi } from "../shared/api";
-
 const FILTER_TYPES = [
   "catalog",
   "countries",

@@ -1,8 +1,14 @@
-import { queryApi } from "../shared/api";
-import filtering from "./filtering";
-import pagination from "./pagination";
-import search from "./search";
-import urlState from "./url-state";
+import {
+  datasetsPayload,
+  isAnswered,
+  optionsPayload,
+  queryApi,
+  searchPayload,
+} from "../shared/api.js";
+import filtering from "./filtering.js";
+import pagination from "./pagination.js";
+import search from "./search.js";
+import urlState from "./url-state.js";
 
 const datasetsStore = {
   display: [],
@@ -13,6 +19,7 @@ const datasetsStore = {
   loadError: false,
   _fetchToken: 0,
   _optionsTimer: null,
+  _optionsToken: 0,
 };
 
 // defineProperties to preserve getters, keeping `this` bound to the store
@@ -33,7 +40,6 @@ Object.defineProperties(
   Object.getOwnPropertyDescriptors({
     loadDatasets() {
       urlState.read(this);
-      if (this.query) this.scheduleQueryVector();
       this.fetchPage();
       this.scheduleOptionsRefresh();
     },
@@ -55,21 +61,20 @@ Object.defineProperties(
       urlState.write(this);
       const q = this.query.trim();
       const payload = q
-        ? {
-            action: "search",
+        ? searchPayload(
             q,
-            vector: this.queryVector,
-            filters: this.filters,
-            page: this.currentPage,
-            pageSize: this.itemsPerPage,
-          }
-        : {
-            action: "datasets",
-            filters: this.filters,
-            page: this.currentPage,
-            pageSize: this.itemsPerPage,
-          };
-      this.isSearching = Boolean(q);
+            this.queryVector,
+            this.filters,
+            this.currentPage,
+            this.itemsPerPage,
+          )
+        : datasetsPayload(this.filters, this.currentPage, this.itemsPerPage);
+      // The page has other spinners for its first datasets and the related ones.
+      this.isSearching =
+        Boolean(q) &&
+        this.isLoaded &&
+        !this.isLookingForRelated &&
+        !isAnswered(payload);
 
       try {
         const data = await queryApi(payload);
@@ -82,8 +87,8 @@ Object.defineProperties(
         this.isLoading = false;
         this.isLoaded = true;
         this.loadError = false;
-        // Keep the spinner up while the query embedding is still pending.
-        if (!q || this.queryVector) this.isSearching = false;
+        this.isSearching = false;
+        if (q && !this.queryVector) this.findRelated(this.totalCount);
       } catch (error) {
         if (token !== this._fetchToken) return;
         this.handleLoadError(error);
@@ -92,21 +97,26 @@ Object.defineProperties(
 
     scheduleOptionsRefresh() {
       clearTimeout(this._optionsTimer);
-      this._optionsTimer = setTimeout(() => {
-        queryApi({ action: "options", filters: this.filters })
+      const token = ++this._optionsToken;
+      const payload = optionsPayload(this.filters);
+      const refresh = () =>
+        queryApi(payload)
           .then((data) => {
+            if (token !== this._optionsToken) return;
             if (data?.options) this.filterOptions = data.options;
           })
           .catch((error) =>
             console.error("Failed to load filter options:", error),
           );
-      }, 150);
+      if (isAnswered(payload)) refresh();
+      else this._optionsTimer = setTimeout(refresh, 150);
     },
 
     handleLoadError(error) {
       console.error("Error loading datasets:", error);
       this.isLoading = false;
       this.isSearching = false;
+      this.isLookingForRelated = false;
       this.loadError = true;
     },
   }),

@@ -1,4 +1,4 @@
-import { FILTER_TYPES } from "./filtering";
+import { FILTER_TYPES } from "./filtering.js";
 
 // Keeps the search, filters and page in the address bar, so that a result list
 // can be linked to: /?q=flood+kenya&catalog[]=zenodo&page=2

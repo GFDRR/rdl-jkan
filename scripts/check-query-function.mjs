@@ -10,10 +10,8 @@ const ATTEMPTS = 5;
 const DELAY_MS = 10_000;
 
 async function query(payload) {
-  const response = await fetch(`${base}/.netlify/functions/query`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
+  const params = encodeURIComponent(JSON.stringify(payload));
+  const response = await fetch(`${base}/.netlify/functions/query?payload=${params}`, {
     signal: AbortSignal.timeout(60_000),
   });
   const text = await response.text();
