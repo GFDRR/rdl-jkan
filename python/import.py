@@ -151,7 +151,16 @@ def _fts_keyword_text(fm: dict) -> dict:
     license = _text("license.title")
     project = _text("project.title")
     resources = _text("resources")
-    lineage = _text("lineage.description", "lineage.sources")
+    # The descriptions of the sources are about other datasets: only shown.
+    lineage = _flatten(
+        [
+            (fm.get("lineage") or {}).get("description"),
+            [
+                {key: value for key, value in source.items() if key != "description"}
+                for source in (fm.get("lineage") or {}).get("sources") or []
+            ],
+        ]
+    ).strip()
     exposure = _text("exposure")
     loss = _text("loss")
     hazard = _text("hazard")

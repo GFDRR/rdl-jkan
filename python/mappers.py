@@ -630,6 +630,7 @@ def make_source(source):
         # required; throw if missing
         "id": source["id"],
         # optional
+        "description": source.get("description"),
         "license": source.get("license"),
         "name": source.get("name"),
         "risk_data_type": source.get("risk_data_type"),
