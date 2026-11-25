@@ -3,546 +3,385 @@ layout: default
 ---
 
 <div
-  class="content-wrapper"
+  class="content-wrapper ds-page"
   x-data
   x-init="$store.dataset.loadDataset('{{ page.slug }}')"
 >
-  <div class="modern-content">
-    <div x-show="$store.dataset.isLoading" class="datasets-loading">
-      <div
-        class="loading-spinner"
-        role="status"
-        aria-label="Loading dataset…"
-      ></div>
-      <p>Loading dataset…</p>
-    </div>
-    <div x-cloak x-show="$store.dataset.loadError" class="datasets-error">
-      <p>Couldn't load this dataset. Please try again.</p>
-      <button @click="window.location.reload()" class="btn btn-default">
-        Try again
-      </button>
-    </div>
-    <template x-if="$store.dataset.dataset">
-      <div >
-        <div
-          class="dataset-detail-layout"
-          data-hook="view"
-          data-view="display"
-          typeof="dcat:Dataset"
-          :resource="$store.dataset.dataset.url"
-        >
-          <div class="main-column">
-          <main class="main-content">
-            <div class="dataset-header">
-              <div class="category-badges">
-                <template
-                  x-for="rdt in $store.dataset.dataset.risk_data_type"
-                  :key="rdt"
-                >
-                  <div class="category-badge" :class="rdt">
-                    <span class="badge-icon"></span>
-                    <p x-text="rdt"></p>
-                  </div>
-                </template>
+  <div x-show="$store.dataset.isLoading" class="datasets-loading">
+    <div
+      class="loading-spinner"
+      role="status"
+      aria-label="Loading dataset…"
+    ></div>
+    <p>Loading dataset…</p>
+  </div>
+  <div x-cloak x-show="$store.dataset.loadError" class="datasets-error">
+    <p>Couldn't load this dataset. Please try again.</p>
+    <button @click="window.location.reload()" class="btn btn-default">
+      Try again
+    </button>
+  </div>
+  <template x-if="$store.dataset.dataset">
+    <div
+      data-hook="view"
+      data-view="display"
+      typeof="dcat:Dataset"
+      :resource="$store.dataset.dataset.url"
+    >
+      <header class="ds-overview">
+        <div>
+          <div class="category-badges">
+            <template
+              x-for="rdt in $store.dataset.dataset.risk_data_type"
+              :key="rdt"
+            >
+              <div class="category-badge" :class="rdt">
+                <span class="badge-icon"></span>
+                <p x-text="rdt"></p>
               </div>
-              <h1 class="dataset-title">
-                <span property="dct:title">{{ page.title }}</span>
-              </h1>
-              <div
-                x-data="{ open: false }"
-                x-bind:class="'dataset-description desc-truncate' + (open ? ' expanded' : '')"
-                property="dct:description"
-              >
-                <p x-ref="description" class="desc-text" x-text="$store.dataset.dataset.description">
-                </p>
-                <button
-                  x-show="$refs.description.scrollHeight > $refs.description.clientHeight"
-                  class="desc-toggle"
-                  @click="open = ! open"
-                  x-text="open ? 'Show less' : 'Show more'"
-                ></button>
-              </div>
-
-              <div class="quick-info">
-                <div
-                  class="info-card"
-                  x-show="$store.dataset.dataset.creator.name"
-                >
-                  <div class="info-label">Organization</div>
-                  <div
-                    class="info-value"
-                    x-text="$store.dataset.dataset.creator.name"
-                  ></div>
-                </div>
-                <div class="info-card" x-show="$store.dataset.dataset.version">
-                  <div class="info-label">Version</div>
-                  <div
-                    class="info-value"
-                    x-text="$store.dataset.dataset.version"
-                  ></div>
-                </div>
-                <div class="info-card">
-                  <div class="info-label">License</div>
-                  <div
-                    class="info-value"
-                    x-text="$store.dataset.dataset.license_title"
-                  ></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="content-section">
-              <h2 class="section-title">Resources</h2>
-              <ul class="resources-list">
-                <template
-                  x-for="resource in $store.dataset.dataset.resources"
-                  :key="resource.id"
-                >
-                  <li
-                    class="resource-item"
-                    data-hook="resource-item"
-                    property="dcat:distribution"
-                    typeof="dcat:Distribution"
-                  >
-                    <div class="resource-header">
-                      <h3 class="resource-title">
-                        <a
-                          :href="resource.download_url || resource.access_url"
-                          property="dcat:accessURL"
-                        >
-                          <i class="fa fa-download"></i>
-                          <span
-                            property="dct:title"
-                            x-text="resource.title"
-                          ></span>
-                        </a>
-                      </h3>
-                      <span
-                        x-show="resource.format_label"
-                        class="format-badge"
-                        property="dcat:mediaType"
-                        x-text="resource.format_label"
-                      ></span>
-                    </div>
-                    <p
-                      x-show="resource.description"
-                      class="resource-description"
-                      x-text="resource.description"
-                    ></p>
-                  </li>
-                </template>
-              </ul>
-            </div>
-            <div class="content-section">
-              <h2 class="section-title">Dataset Info</h2>
-              <table class="data-table">
-                <tr>
-                  <th>ID of dataset</th>
-                  <td x-text="$store.dataset.dataset.id"></td>
-                </tr>
-                <tr>
-                  <th>Catalog</th>
-                  <td x-text="$store.dataset.dataset.catalog_title"></td>
-                </tr>
-                <tr x-show="$store.dataset.dataset.publisher.name">
-                  <th>Publisher of dataset</th>
-                  <td x-show="$store.dataset.dataset.publisher.url">
-                    <a
-                      :href="$store.dataset.dataset.publisher.url"
-                      x-text="$store.dataset.dataset.publisher.name"
-                    ></a>
-                  </td>
-                  <td
-                    x-show="!$store.dataset.dataset.publisher.url"
-                    x-text="$store.dataset.dataset.publisher.name"
-                  ></td>
-                </tr>
-                <tr x-show="$store.dataset.dataset.purpose">
-                  <th>Purpose</th>
-                  <td x-text="$store.dataset.dataset.purpose"></td>
-                </tr>
-                <tr x-show="$store.dataset.dataset.details">
-                  <th>Additional details</th>
-                  <td x-text="$store.dataset.dataset.details"></td>
-                </tr>
-                <tr x-show="$store.dataset.dataset.creator.name">
-                  <th>Creator</th>
-                  <td x-show="$store.dataset.dataset.creator.url">
-                    <a
-                      :href="$store.dataset.dataset.creator.url"
-                      x-text="$store.dataset.dataset.creator.name"
-                    ></a>
-                  </td>
-                  <td
-                    x-show="!$store.dataset.dataset.creator.url"
-                    x-text="$store.dataset.dataset.creator.name"
-                  ></td>
-                </tr>
-                <tr
-                  x-show="$store.dataset.dataset.contact_point.name"
-                >
-                  <th>Contact Point</th>
-                  <td
-                    x-show="$store.dataset.dataset.contact_point.url"
-                  >
-                    <a
-                      :href="$store.dataset.dataset.contact_point.url"
-                      x-text="$store.dataset.dataset.contact_point.name"
-                    ></a>
-                  </td>
-                  <td
-                    x-show="!$store.dataset.dataset.contact_point.url"
-                    x-text="$store.dataset.dataset.contact_point.name"
-                  ></td>
-                </tr>
-                <tr>
-                  <th>License</th>
-                  <td>
-                    <a
-                      :href="$store.dataset.dataset.license_url"
-                      x-text="$store.dataset.dataset.license_title"
-                    ></a>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <template x-for="rdt in $store.dataset.dataset.risk_data_type" :key="rdt">
+            </template>
+          </div>
+          <h1 class="ds-title">
+            <span property="dct:title">{{ page.title }}</span>
+          </h1>
+          <div
+            x-data="{ open: false }"
+            class="ds-description desc-truncate"
+            :class="{ expanded: open }"
+            property="dct:description"
+          >
+            <p x-ref="description" class="desc-text" x-text="$store.dataset.dataset.description"></p>
+            <button
+              type="button"
+              x-show="$refs.description.scrollHeight > $refs.description.clientHeight"
+              class="desc-toggle"
+              @click="open = ! open"
+              x-text="open ? 'Show less' : 'Show more'"
+            ></button>
+          </div>
+          <dl class="ds-facts">
+            <template x-for="fact in $store.dataset.page.facts" :key="fact.name">
               <div>
-                <template x-if="rdt === 'exposure'">
-                  <div class="content-section risk-component-section exposure">
-                    <h2 class="section-title">
-                      <span class="component-icon exposure"></span>
-                      Exposure Component
-                    </h2>
-                    <table class="data-table rdl-table" >
-                      <template x-for="exposure in $store.dataset.dataset.exposure ?? []" :key="exposure.id">
-                        <tbody>
-                          <tr>
-                            <th>Exposure</th>
-                            <th>Category</th>
-                            <th></th>
-                            <th></th>
-                          </tr>
-                          <tr>
-                            <td x-text="exposure.id"></td>
-                            <td x-text="String(exposure.category ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <th></th>
-                            <th>Metric</th>
-                            <th>Dimension</th>
-                            <th>Unit</th>
-                          </tr>
-                          <template x-for="metric in exposure.metrics" :key="metric.id">
-                            <tr>
-                              <td></td>
-                              <td x-text="metric.id"></td>
-                              <td x-text="String(metric.dimension ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                              <td x-text="String(metric.measurement.unit ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                            </tr>
-                          </template>
-                        </tbody>
-                      </template>
-                    </table>
-                    <p class="component-empty" x-show="!$store.dataset.dataset.exposure?.length">The metadata gives no details for this component.</p>
-                  </div>
-                </template>
-                <template x-if="rdt === 'hazard'">
-                  <div class="content-section risk-component-section hazard">
-                    <h2 class="section-title">
-                      <span class="component-icon hazard"></span>
-                      Hazard Component
-                    </h2>
-                    <table class="data-table rdl-table" >
-                      <template x-for="event_set in $store.dataset.dataset.hazard?.event_sets ?? []" :key="event_set.id">
-                        <tbody>
-                          <tr>
-                            <th>Event Set</th>
-                            <th>Analysis Type</th>
-                            <th>Calculation Method</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                          </tr>
-                          <tr>
-                            <td x-text="event_set.id"></td>
-                            <td x-text="String(event_set.analysis_type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                            <td x-text="String(event_set.calculation_method ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <th></th>
-                            <th>Hazard</th>
-                            <th>Hazard Type</th>
-                            <th>Hazard Process</th>
-                            <th>Intensity Measure</th>
-                            <th></th>
-                          </tr>
-                          <template x-for="hazard in event_set.hazards" :key="hazard.id">
-                            <tr>
-                              <td></td>
-                              <td x-text="hazard.id"></td>
-                              <td x-text="String(hazard.type ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                              <td x-text="String(hazard.process ?? '').replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase())"></td>
-                              <td x-text="hazard.intensity_measure ?? ''"></td>
-                              <td></td>
-                            </tr>
-                          </template>
-                          <tr x-show="event_set.events?.length">
-                            <th></th>
-                            <th>Event</th>
-                            <th>Start</th>
-                            <th>End</th>
-                            <th>Frequency</th>
-                            <th>Hazard</th>
-                          </tr>
-                          <template x-for="event in event_set.events" :key="event.id">
-                              <tr>
-                                <td></td>
-                                <td x-text="event.id"></td>
-                                <td x-text="event.occurrence?.empirical?.temporal?.start ?? ''"></td>
-                                <td x-text="event.occurrence?.empirical?.temporal?.end ?? ''"></td>
-                                <td x-text="$store.dataset.eventFrequency(event)"></td>
-                                <td x-text="$store.dataset.label(event.hazard?.process ?? event.hazard?.type)"></td>
-                              </tr>
-                            </template>
-                        </tbody>
-                      </template>
-                    </table>
-                    <p class="component-empty" x-show="!$store.dataset.dataset.hazard?.event_sets?.length">The metadata gives no details for this component.</p>
-                  </div>
-                </template>
-                <template x-if="rdt === 'loss'">
-                  <div class="content-section risk-component-section loss">
-                    <h2 class="section-title">
-                      <span class="component-icon loss"></span>
-                      Loss Component
-                    </h2>
-                    <p
-                      x-show="$store.dataset.lossGroups.length > 1"
-                      x-text="$store.dataset.lossCount + ' loss records across ' + $store.dataset.lossGroups.length + ' hazard types'"
-                    ></p>
-                    <!-- One collapsible group per hazard type: some datasets
-                         describe more than a hundred losses. -->
-                    <template x-for="group in $store.dataset.lossGroups" :key="group.hazard_type">
-                      <details
-                        class="component-group"
-                        :open="$store.dataset.lossCount <= 5 || $store.dataset.lossGroups.length === 1"
-                      >
-                        <summary>
-                          <span x-text="$store.dataset.label(group.hazard_type)"></span>
-                          <span class="badge" x-text="group.losses.length"></span>
-                        </summary>
-                        <table class="data-table rdl-table">
-                          <thead>
-                            <tr>
-                              <th>Loss</th>
-                              <th>Asset</th>
-                              <th>Impact Metric</th>
-                              <th>Loss Type</th>
-                              <th>Impact Unit</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <template x-for="(loss, index) in group.losses" :key="index">
-                              <tr>
-                                <td x-text="loss.description || loss.id"></td>
-                                <td x-text="$store.dataset.label(loss.asset_category)"></td>
-                                <td x-text="$store.dataset.label(loss.impact_and_losses?.impact?.metric)"></td>
-                                <td x-text="$store.dataset.label(loss.impact_and_losses?.loss_type)"></td>
-                                <td x-text="$store.dataset.measurementLabel(loss.impact_and_losses?.impact?.measurement)"></td>
-                              </tr>
-                            </template>
-                          </tbody>
-                        </table>
-                      </details>
-                    </template>
-                    <p
-                      class="component-empty"
-                      x-show="!$store.dataset.lossCount"
-                    >The metadata gives no details for this component.</p>
-                  </div>
-                </template>
-                <template x-if="rdt === 'vulnerability'">
-                  <div class="content-section risk-component-section vulnerability">
-                    <h2 class="section-title">
-                      <span class="component-icon vulnerability"></span>
-                      Vulnerability Component
-                    </h2>
-                    <template x-for="group in $store.dataset.vulnerabilityGroups" :key="group.type">
-                      <table class="data-table rdl-table">
-                        <thead>
-                          <tr>
-                            <th x-text="group.title"></th>
-                            <th>Category</th>
-                            <th>Hazard</th>
-                            <th>Analysis Type</th>
-                            <th>Approach</th>
-                            <th>Relationship</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <template x-for="(fn, index) in group.functions" :key="index">
-                            <tr>
-                              <td x-text="fn.id"></td>
-                              <td x-text="$store.dataset.label(fn.category)"></td>
-                              <td x-text="$store.dataset.label(fn.hazard_primary?.type)"></td>
-                              <td x-text="$store.dataset.label(fn.hazard_analysis_type)"></td>
-                              <td x-text="$store.dataset.label(fn.approach)"></td>
-                              <td x-text="$store.dataset.label(fn.relationship)"></td>
-                            </tr>
-                          </template>
-                        </tbody>
-                      </table>
-                    </template>
-                    <table
-                      class="data-table rdl-table"
-                      x-show="$store.dataset.socioEconomicIndices.length"
+                <dt x-text="fact.name"></dt>
+                <dd x-text="fact.value"></dd>
+              </div>
+            </template>
+          </dl>
+        </div>
+
+        <aside class="ds-aside">
+          <div
+            id="spatial-extent-map"
+            class="ds-map"
+            role="img"
+            aria-label="Spatial extent"
+            x-init="$nextTick(() => $store.dataset.drawMap($el, '{{ site.baseurl }}'))"
+          ></div>
+          <p class="ds-places" x-show="$store.dataset.page.countries.length > 1">
+            <span x-text="$store.dataset.countries"></span>
+            <button
+              type="button"
+              class="desc-toggle"
+              x-show="$store.dataset.moreCountries"
+              @click="$store.dataset.allCountries = true"
+              x-text="'and ' + $store.dataset.moreCountries + ' more'"
+            ></button>
+          </p>
+          <div class="ds-actions">
+            <a class="ds-btn primary" href="#files">
+              Get the data
+              <span
+                x-text="'(' + $store.dataset.page.files.total + ($store.dataset.page.files.total === 1 ? ' file)' : ' files)')"
+              ></span>
+            </a>
+            <div class="ds-pair">
+              {% if site.metadata_editor.edit_param and site.metadata_editor.edit_param != "" %}
+              <a
+                class="ds-btn"
+                href="{{ site.metadata_editor.url }}?{{ site.metadata_editor.edit_param }}={{ page.slug | url_encode }}"
+                target="_blank"
+                rel="noopener"
+                >Open in Editor</a
+              >
+              {% endif %}
+              <a
+                class="ds-btn"
+                href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/_datasets/json/{{ page.slug }}.json"
+                download
+                >MetaData (JSON)</a
+              >
+            </div>
+          </div>
+        </aside>
+      </header>
+
+      <nav
+        class="ds-index"
+        aria-label="Sections of the dataset"
+        x-data="sectionIndex"
+        @scroll.window.throttle.50ms="mark()"
+      >
+        <div class="ds-index-links">
+          <template x-for="section in $store.dataset.sections" :key="section.id">
+            <a
+              :href="'#' + section.id"
+              :class="section.kind"
+              :aria-current="current === section.id ? 'true' : 'false'"
+            >
+              <span x-text="section.title"></span>
+              <span class="ds-count" x-show="section.count" x-text="section.count.toLocaleString('en')"></span>
+            </a>
+          </template>
+        </div>
+      </nav>
+
+      <main class="ds-sections">
+        <template x-for="section in $store.dataset.sections" :key="section.id">
+          <section class="ds-section" :class="section.kind" :id="section.id">
+            <div class="ds-section-head">
+              <h2 x-text="section.title"></h2>
+              <p x-text="section.summary"></p>
+            </div>
+
+            <p
+              class="ds-empty"
+              x-show="section.kind !== 'neutral' && !section.count"
+            >The metadata gives no details for this component.</p>
+
+            <template x-if="section.id === 'hazard' && section.count">
+              <div x-data="{ sets: $store.dataset.page.hazard, open: 0 }">
+                <div class="ds-tabs" role="group" aria-label="Event sets" x-show="sets.length > 1">
+                  <template x-for="set in sets" :key="set.key">
+                    <button
+                      type="button"
+                      class="ds-tab"
+                      :aria-pressed="open === set.key"
+                      @click="open = set.key"
                     >
-                      <thead>
-                        <tr>
-                          <th>Socio-economic Index</th>
-                          <th>Description</th>
-                          <th>Scheme</th>
-                          <th>Reference Year</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <template x-for="(index, i) in $store.dataset.socioEconomicIndices" :key="i">
-                          <tr>
-                            <td x-text="index.indicator_name"></td>
-                            <td x-text="index.description"></td>
-                            <td x-text="index.scheme ?? ''"></td>
-                            <td x-text="index.reference_year ?? ''"></td>
-                          </tr>
-                        </template>
-                      </tbody>
-                    </table>
-                    <p
-                      class="component-empty"
-                      x-show="!$store.dataset.vulnerabilityGroups.length && !$store.dataset.socioEconomicIndices.length"
-                    >The metadata gives no details for this component.</p>
+                      <span x-text="set.title"></span>
+                      <span class="ds-count" x-show="set.count" x-text="set.count"></span>
+                    </button>
+                  </template>
+                </div>
+                <template x-for="set in sets.filter((set) => set.key === open)" :key="set.key">
+                  <div class="ds-blocks">
+                    {% include dataset/params.html list="set.params" %}
+                    <template x-if="set.hazards">
+                      <div class="ds-block">
+                        <h3>Hazards <span class="ds-count" x-text="set.hazards.total"></span></h3>
+                        <div x-data="datasetTable(set.hazards)">{% include dataset/table.html %}</div>
+                      </div>
+                    </template>
+                    <template x-if="set.events">
+                      <div class="ds-block">
+                        <h3>Events <span class="ds-count" x-text="set.events.total.toLocaleString('en')"></span></h3>
+                        <div x-data="datasetTable(set.events)">{% include dataset/table.html %}</div>
+                      </div>
+                    </template>
                   </div>
                 </template>
               </div>
             </template>
-          </main>
-          <template x-if="$store.dataset.related.length">
-            <section class="main-content related-datasets">
-              <h2 class="section-title">Related Datasets</h2>
-              <ul class="related-list">
+
+            <template x-if="section.id === 'exposure' && section.count">
+              <div class="ds-assets">
+                <template x-for="asset in $store.dataset.page.exposure" :key="asset.key">
+                  <div class="ds-asset" :class="{ wide: asset.grouped }">
+                    <div>
+                      <h3>
+                        <span x-text="asset.title"></span>
+                        <span class="ds-tag" x-show="asset.category" x-text="asset.category"></span>
+                        <span class="ds-count" x-show="asset.grouped" x-text="asset.count + ' metrics'"></span>
+                      </h3>
+                      <p x-show="asset.description" x-text="asset.description"></p>
+                      <p x-show="asset.assetType" x-text="'Asset type ' + asset.assetType"></p>
+                    </div>
+                    <div>
+                      <template x-for="group in asset.groups" :key="group.name">
+                        <div>
+                          <h4 class="ds-dimension" x-show="group.name">
+                            <span x-text="group.name"></span>
+                            <span class="ds-count" x-text="group.metrics.length"></span>
+                          </h4>
+                          <ul class="ds-metrics">
+                            <template x-for="(metric, index) in group.metrics" :key="index">
+                              <li>
+                                <span class="ds-quantity" :class="metric.quantity" x-text="metric.quantityLabel"></span>
+                                <span>
+                                  <span x-text="metric.name"></span>
+                                  <span class="ds-muted" x-text="metric.details"></span>
+                                </span>
+                              </li>
+                            </template>
+                          </ul>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </template>
+
+            <template x-if="section.id === 'vulnerability' && section.count">
+              <div class="ds-blocks" x-data="{ vulnerability: $store.dataset.page.vulnerability }">
+                <div class="ds-block" x-show="vulnerability.functions.length">
+                  <h3>Functions <span class="ds-count" x-text="vulnerability.functions.length"></span></h3>
+                  <template x-for="fn in vulnerability.functions" :key="fn.key">
+                    <details class="ds-function" :open="fn.open">
+                      <summary>
+                        <span>
+                          <b x-text="fn.title"></b>
+                          <span class="ds-muted" x-text="fn.type"></span>
+                        </span>
+                        <span x-text="fn.category"></span>
+                        <span class="ds-muted" x-text="fn.hazard"></span>
+                      </summary>
+                      <div class="ds-function-body">
+                        <p x-show="fn.details" x-text="fn.details"></p>
+                        {% include dataset/params.html list="fn.params" %}
+                        <span class="ds-note" x-text="fn.id"></span>
+                      </div>
+                    </details>
+                  </template>
+                </div>
+                <template x-if="vulnerability.indices">
+                  <div class="ds-block">
+                    <h3>Socio-economic indices <span class="ds-count" x-text="vulnerability.indices.total"></span></h3>
+                    <div x-data="datasetTable(vulnerability.indices)">{% include dataset/table.html %}</div>
+                  </div>
+                </template>
+              </div>
+            </template>
+
+            <template x-if="section.id === 'loss' && section.count">
+              <div
+                x-data="datasetTable($store.dataset.page.loss.table)"
+              >
+                <template x-if="$store.dataset.page.loss.matrix">
+                  <div x-data="{ matrix: $store.dataset.page.loss.matrix }">
+                    <p class="ds-lead">
+                      What the dataset measures for each hazard and asset, with
+                      the unit. These are the kinds of loss described in the
+                      metadata; the loss amounts are in the files. Select one
+                      to see its entries.
+                    </p>
+                    <div class="ds-scroll">
+                      <table class="ds-matrix">
+                        <thead>
+                          <tr>
+                            <th scope="col">Hazard</th>
+                            <template x-for="asset in matrix.assets" :key="asset">
+                              <th scope="col" x-text="asset"></th>
+                            </template>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <template x-for="row in matrix.rows" :key="row.hazard">
+                            <tr>
+                              <th scope="row" x-text="row.hazard"></th>
+                              <template x-for="cell in row.cells" :key="cell.asset">
+                                <td>
+                                  <template x-for="item in cell.measures" :key="item.measure">
+                                    <button
+                                      type="button"
+                                      class="ds-quantity"
+                                      :class="item.quantity"
+                                      :aria-pressed="isOn({ hazard: row.hazard, asset: cell.asset, measure: item.measure })"
+                                      @click="toggle({ hazard: row.hazard, asset: cell.asset, measure: item.measure })"
+                                      x-text="item.measure"
+                                    ></button>
+                                  </template>
+                                  <span class="ds-muted" x-show="!cell.measures.length">Not covered</span>
+                                </td>
+                              </template>
+                            </tr>
+                          </template>
+                        </tbody>
+                      </table>
+                    </div>
+                    <h3 class="ds-table-title">
+                      Loss entries <span class="ds-count" x-text="table.total"></span>
+                    </h3>
+                  </div>
+                </template>
+                {% include dataset/table.html %}
+              </div>
+            </template>
+
+            <template x-if="section.id === 'files' && section.count">
+              <div x-data="datasetTable($store.dataset.page.files)">
+                {% include dataset/table.html distribution=true %}
+              </div>
+            </template>
+
+            <template x-if="section.id === 'sources'">
+              <div class="ds-blocks" x-data="{ sources: $store.dataset.page.sources }">
+                <p class="ds-text" x-show="sources.description" x-text="sources.description"></p>
+                <template x-if="sources.sources">
+                  <div class="ds-block">
+                    <h3>Sources <span class="ds-count" x-text="sources.sources.total"></span></h3>
+                    <div x-data="datasetTable(sources.sources)">{% include dataset/table.html %}</div>
+                  </div>
+                </template>
+                <div class="ds-block" x-show="sources.references.length">
+                  <h3>References <span class="ds-count" x-text="sources.references.length"></span></h3>
+                  <ul class="ds-list">
+                    <template x-for="reference in sources.references" :key="reference.key">
+                      <li>
+                        <span>
+                          <span x-text="reference.lead"></span>
+                          <template x-if="reference.url">
+                            <a :href="reference.url" target="_blank" rel="noopener" x-text="reference.name"></a>
+                          </template>
+                          <span x-show="!reference.url" x-text="reference.name"></span>
+                        </span>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+              </div>
+            </template>
+
+            <template x-if="section.id === 'about'">
+              <dl class="ds-about">
+                <template x-for="row in $store.dataset.page.about" :key="row.label">
+                  <div>
+                    <dt x-text="row.label"></dt>
+                    <dd :class="{ code: row.code }">
+                      <template x-for="(value, index) in row.values" :key="index">
+                        <p>
+                          <template x-if="value.url">
+                            <a :href="value.url" target="_blank" rel="noopener" x-text="value.text"></a>
+                          </template>
+                          <span x-show="!value.url" x-text="value.text"></span>
+                          <span class="ds-muted" x-text="value.note"></span>
+                        </p>
+                      </template>
+                    </dd>
+                  </div>
+                </template>
+              </dl>
+            </template>
+
+            <template x-if="section.id === 'related'">
+              <ul class="ds-list">
                 <template x-for="item in $store.dataset.related" :key="item.id">
-                  <li class="related-item">
+                  <li>
                     <a
                       :href="'{{ site.baseurl }}/datasets/' + item.slug + '/'"
                       x-text="item.title"
                     ></a>
                     <span
-                      class="related-reason"
+                      class="ds-muted"
                       x-text="$store.dataset.relationLabel(item.relation)"
                     ></span>
                   </li>
                 </template>
               </ul>
-            </section>
-          </template>
-          </div>
-
-          <aside class="sidebar">
-            <div class="sidebar-card">
-              <h4>Metadata</h4>
-              <div style="display: flex; gap: 8px; margin-top: 12px">
-                <a
-                  href="https://raw.githubusercontent.com/GFDRR/rdl-jkan/rdl-1.0/_datasets/json/{{ page.slug }}.json"
-                  class="format-badge"
-                  style="text-decoration: none"
-                  download
-                >
-                  json
-                </a>
-              </div>
-              {% if site.metadata_editor.edit_param and site.metadata_editor.edit_param != "" %}
-              <ul class="sidebar-links">
-                <li>
-                  <a
-                    href="{{ site.metadata_editor.url }}?{{ site.metadata_editor.edit_param }}={{ page.slug | url_encode }}"
-                    target="_blank"
-                    rel="noopener"
-                    ><i class="fa fa-pencil"></i> Open in Editor</a
-                  >
-                </li>
-              </ul>
-              {% endif %}
-            </div>
-            <div
-              x-show="$store.dataset.dataset.spatial.countries"
-              class="sidebar-card"
-            >
-              <h4>Spatial Extent</h4>
-              <div
-                id="spatial-extent-map"
-                style="
-                  height: 160px;
-                  border-radius: 8px;
-                  overflow: hidden;
-                  border: 1px solid #e5e7eb;
-                  background: #e5e7eb;
-                "
-              ></div>
-            </div>
-            <script>
-              const map = L.map('spatial-extent-map', {
-                zoomControl: false,
-                dragging: false,
-                scrollWheelZoom: false,
-                doubleClickZoom: false,
-                boxZoom: false,
-                keyboard: false,
-                tap: false,
-                touchZoom: false,
-                attributionControl: true
-              });
-              L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> and <a href="https://www.geoboundaries.org/">GeoBoundaries</a>'
-              }).addTo(map);
-              const spatial = window.Alpine.store('dataset').dataset.spatial ?? {};
-              const countryCodes = spatial.countries.map(c =>c.slug) || [];
-              const bbox = spatial.bbox || null;
-              const isGlobal = (spatial.scale || "").toLowerCase() === "global";
-              if (isGlobal) {
-                map.setView([20, 0], 1);
-              } else {
-                const featureGroup = L.featureGroup().addTo(map);
-                if (bbox) {
-                  const [ minLon, minLat, maxLon, maxLat] = bbox;
-                  const bounds = L.latLngBounds([[minLat, minLon], [maxLat, maxLon]]);
-                  featureGroup.addLayer(L.rectangle(bounds));
-                  map.fitBounds(featureGroup.getBounds());
-                }
-                else if (countryCodes.length > 0) {
-                  Promise.all(countryCodes.map(countryCode =>
-                    fetch(`/country_geojson/${countryCode?.toUpperCase()}.geojson`)
-                      .then(response => response.json())
-                      .then(data => {
-                        L.geoJSON(data).addTo(featureGroup);
-                      })
-                      .catch(error => console.error('Error loading GeoJSON:', error))
-                  )).then(() => {
-                    if (featureGroup.getLayers().length > 0) {
-                      map.fitBounds(featureGroup.getBounds());
-                    }
-                  });
-                }
-              }
-            </script>
-          </aside>
-        </div>
-      </div>
-    </template>
-  </div>
+            </template>
+          </section>
+        </template>
+      </main>
+    </div>
+  </template>
 </div>

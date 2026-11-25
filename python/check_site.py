@@ -33,6 +33,8 @@ def main():
             errors.append(f"{dataset_id}: no page")
             continue
         html = page.read_text(encoding="utf-8")
+        if "/css/dataset.css" not in html:
+            errors.append(f"{dataset_id}: no dataset.css")
         match = re.search(
             r'<script type="application/ld\+json">(.*?)</script>', html, re.S
         )
