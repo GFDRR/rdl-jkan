@@ -43,6 +43,9 @@ def main():
             continue
         if not (metadata.get("name") and metadata.get("description")):
             errors.append(f"{dataset_id}: JSON-LD without a name or description")
+        # The library of the map.
+        if "/leaflet.js" not in html or "/leaflet.css" not in html:
+            errors.append(f"{dataset_id}: no Leaflet")
 
     for error in errors[:50]:
         print(error)
