@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_centralasialandslidesusceptibility",
+      "title": "Central Asia landslide susceptibility map (SFRARR)",
+      "description": "The landslide susceptibility map presents a qualitative representation of those areas where landslides can occur, based on their geological, morphological, and climatic characteristics, of the whole Central Asia area.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "version": "2022",
+      "purpose": "Regional risk modelling. These data have been derived on a regional scale for the purpose of consistent regional multi-country hazard and risk assessment. Application of this information on smaller scales should be done with care. Importantly on a local scale, it is often the case that more detailed history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia",
+        "url": "https://www.gfdrr.org/en/program/SFRARR-Central-Asia"
+      },
+      "details": "Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia). To generate the landslide susceptibility maps, the Random Forest model was used. This map was obtained by training the model for four of the five countries: Kazakhstan Tajikistan Uzbekistan and Kyrgyz Republic. As regard Turkmenistan there was not a landslide inventory available to train the model therefore the corresponding LSM was obtained applying the model trained for the other four countries. The lack of landslide data did not allow any validation of the result or estimation of the quality of the susceptibility map of Turkmenistan. In addition the landslides database provided for the other countries containing punctual geometries so a buffer of 100 m has been created around these punctual landslides to consider their whole body in the calculation. However when the points refer to large landslides a common kind of landslides in the study area it is possible that part of the body of these landslides is still outside the perimeter achieved with the buffer. To avoid classifying these areas as non-landslide points it was decided to create an additional buffer of 1 km around points used as a mask where non-landslide points will not be selected. This process reduced the probability of pixels misclassification (i.e. landslide points considered as non-landslide points) during the training of the model. All the points inside the 1 km buffer were then considered during the model application as well as point from Turkmenistan.",
+      "contact_point": {
+        "name": "Paola Ceresa",
+        "email": "paola.ceresa@redrisk.com"
+      },
+      "creator": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "spatial": {
+        "countries": [
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ],
+        "bbox": [
+          46.0,
+          34.0,
+          88.0,
+          57.0
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "CA_SFRARR_RED",
+          "entity": {
+            "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+            "url": "https://www.redrisk.com"
+          },
+          "role": "principal_investigator"
+        },
+        {
+          "id": "CA_SFRARR_WB",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "CA_SFRARR_DR0090815",
+          "name": "Central Asia landslide hazard technical report - English version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090815/Task7_LnHaz_Report_r5_EN.pdf"
+        },
+        {
+          "id": "CA_SFRARR_DR0090816",
+          "name": "Central Asia landslide hazard technical report - Russian version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090816/Task7_LnHaz_Report_r5_RU.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "CA_SFRARR_LS_0064175",
+          "title": "Central Asia landslide susceptibility map",
+          "description": "The landslide susceptibility map presents a qualitative representation of those areas where landslides can occur, based on their geological, morphological, and climatic characteristics, of the whole Central Asia area.",
+          "format": "geotiff",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064175",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published-v2/0064175/3/DR0090897/Central_Asia_Susceptibility_Map.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_LS_page",
+          "title": "Central Asia landslide susceptibility and scenario analysis",
+          "description": "World Bank Data Catalog page that collects the landslide data and reports of the SFRARR program.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064119",
+          "media_type": "text/html"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CA_SFRARR_LS",
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "LS",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

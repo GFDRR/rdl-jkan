@@ -34,7 +34,7 @@
         "start": "2050",
         "end": "2050"
       },
-      "license": "https://spdx.org/licenses/CDLA-Permissive-1.0.html",
+      "license": "CDLA-Permissive-1.0",
       "lineage": {
         "description": "Global flood maps are simulated based on coastal extreme water levels with given return periods. These coastal water levels are taken from the Deltares dataset of extreme sea levels modelled using GTSMv3.0 with ERA5 reanalysis dataset (1979-2018) used a atmospheric forcing. Global coastal flood maps are simulated based on two DEMs (i.e. MERIT, NASADEM) and are available at high resolution of 3 arc-seconds (90m at the equator). A bathtub inundation model that includes flood attenuation and roughness is used as the flood modeling tool. Spatial fields of sea level rise were imposed on extreme water levels, which were derived for the present-day situation (2018, end of the ERA5 climate reanalysis) and for the future situation (2050, based on the IPCC AR5 assessment for the RCP 8.5 scenario).",
         "sources": [
@@ -134,7 +134,115 @@
               }
             ],
             "analysis_type": "probabilistic",
-            "calculation_method": "simulated"
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 25, 50, 100, 250 years",
+            "events": [
+              {
+                "id": "event_set_1_rp2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_1",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "event_set_1_rp5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_1",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "event_set_1_rp10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_1",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "event_set_1_rp25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_1",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "event_set_1_rp50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_1",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "event_set_1_rp100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_1",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "event_set_1_rp250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "hazard_1",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              }
+            ]
           }
         ]
       },

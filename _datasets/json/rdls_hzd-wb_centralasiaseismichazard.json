@@ -1,0 +1,556 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_centralasiaseismichazard",
+      "title": "Central Asia seismic hazard (SFRARR)",
+      "description": "Historical and probabilistic seismic hazard data for Central Asia: earthquake catalogue, fault database, OpenQuake model, stochastic event set, hazard maps and curves, disaggregation and scenario footprints.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "version": "2022",
+      "purpose": "Regional risk modelling. These data have been derived on a regional scale for the purpose of consistent regional multi-country hazard and risk assessment. Application of this information on smaller scales should be done with care. Importantly on a local scale, it is often the case that more detailed history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia",
+        "url": "https://www.gfdrr.org/en/program/SFRARR-Central-Asia"
+      },
+      "details": "Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia). Data and results of a new probabilistic earthquake hazard model for Central Asia, calibrated on a newly developed regional earthquake catalogue harmonized between countries and homogenized in moment magnitude (Mw) using the most up-to-date information from global and local sources. A new seismogenic source zonation model was developed in cooperation with the scientific representatives of the five countries included. Mapped active faults from regional datasets were used to create finite fault source models and new regionalized selection of ground motion model is proposed in a new logic tree structure. All hazard calculations were carried using the OpenQuake open-source engine.",
+      "contact_point": {
+        "name": "Paola Ceresa",
+        "email": "paola.ceresa@redrisk.com"
+      },
+      "creator": {
+        "name": "Ettore Faga",
+        "url": "https://www.redrisk.com"
+      },
+      "spatial": {
+        "countries": [
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ],
+        "bbox": [
+          46.0,
+          34.0,
+          88.0,
+          57.0
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "CA_SFRARR_RED",
+          "entity": {
+            "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+            "url": "https://www.redrisk.com"
+          },
+          "role": "principal_investigator"
+        },
+        {
+          "id": "CA_SFRARR_WB",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "CA_SFRARR_DR0090813",
+          "name": "Central Asia Seismic hazard technical report - English version",
+          "date_published": "2022-09-02",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064114/2/DR0090813/Task2_EqHaz_Report_r4_EN.pdf"
+        },
+        {
+          "id": "CA_SFRARR_DR0090814",
+          "name": "Central Asia Seismic hazard technical report - Russian version",
+          "date_published": "2022-09-02",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064114/2/DR0090814/Task2_EqHaz_Report_r4_RU.pdf"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "AFEAD",
+            "name": "Active Fault Database of Eurasia (AFEAD)",
+            "citation": "Bachmanov et al., 2017",
+            "type": "dataset",
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "CA_SFRARR_EQ_hazMapsPGA",
+          "title": "Central Asia seismic return period hazard maps - PGA",
+          "description": "Georeferenced TIFF files including earthquake hazard maps in PGA for the different probability of exceedance (86, 63, 39, 18, 10, 9 and 5% in 50 years observation time, corresponding to 25, 50, 100, 250, 475, 500 and 1000 years return period).",
+          "format": "geotiff",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064172",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064172/3/DR0091669/SFRARR_seismicHazardMaps.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_hazMapsIntensity",
+          "title": "Central Asia seismic hazard maps - MKS and MCS intensity",
+          "description": "Hazard maps in Macroseismic intensity of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees.",
+          "format": "geotiff",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064171",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064171/3/DR0090891/hazard_map-mean_%5BSCALE%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_catalogue",
+          "title": "Harmonized Earthquake Catalogue for Central Asia",
+          "description": "The harmonized earthquake catalogue included the earthquake events collected from different sources from historical time to 2020.",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064167",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064167/2/DR0090882/SFRARR_Earthquake_Catalogue.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_catalogue_declustered",
+          "title": "Declustered Harmonized Earthquake Catalogue for Central Asia",
+          "description": "Declustered version of the harmonized earthquake catalogue.",
+          "format": "csv",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064167",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064167/2/DR0090883/SFRARR_Earthquake_Catalogue_Declustered.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_faultDB",
+          "title": "Central Asia seismic fault database",
+          "description": "This dataset contains a selection of the active faults in central Asia from the AFEAD database converted to the geospatial GEM format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064168",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064168/2/DR0090885/AFEAD_CA_OQ_Format_%5BTYPE%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_Oqfiles",
+          "title": "Central Asia PSHA OpenQuake model files",
+          "description": "The archive contains the OpenQuake input files for the calculation of the SFRARR probabilistic earthquake hazard model for central Asia.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064169",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064169/3/DR0090887/PSHA_OQ_Model.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_ScenFootprints",
+          "title": "Central Asia seismic hazard scenario footprints",
+          "description": "Selected earthquake footprint scenarios from the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for six selected target sites.",
+          "format": "geotiff",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064170",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published-v2/0064170/2/DR0090889/eq_scenario_%5BSITE%5D_PGA_%5BGMPE%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_HazCurves_1",
+          "title": "Hazard maps of the SFRARR PSHA model for Central Asia",
+          "description": "Mean hazard maps of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees. Hazard maps computed for the different intensity measure types (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) and probability of exceedance (PoE: 86, 63, 39, 18, 10, 9 and 5% in 50 years observation time, corresponding to 25, 50, 100, 250, 475, 500 and 1000 years return period).",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064237",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064237/2/DR0090990/hazard_map-mean.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_HazCurves_2",
+          "title": "Uniform Hazard Spectra of the SFRARR PSHA model for Central Asia",
+          "description": "Mean uniform hazard spectra of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees. Uniform Hazard Spectra (UHS) computed for the different intensity measure types (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) and probability of exceedance (PoE: 86, 63, 39, 18, 10, 9 and 5% in 50 years observation time, corresponding to 25, 50, 100, 250, 475, 500 and 1000 years return period).",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064237",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064237/2/DR0090991/hazard_uhs-mean.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_HazCurves_3",
+          "title": "Hazard curves of the SFRARR PSHA model for Central Asia",
+          "description": "Mean hazard curves of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees. Each file in the folder includes an hazard curve in probability of exceedance for a different intensity measure type (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064237",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064237/2/DR0090992/hazard_curve-mean-%5BIMT%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_HazCurves_4",
+          "title": "Quantile hazard curves of the SFRARR PSHA model for Central Asia",
+          "description": "Quantile hazard curves of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees. Each file in the folder includes an hazard curve in probability of exceedance for different uncertainty quantiles (QUANTILE: 0.05, 0.5, 0.15., 0.85, 0.95) and different intensity measure type (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064237",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064237/2/DR0090993/quantile_curve-%5BQUANTILE%5D-%5BIM%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_HazCurves_5",
+          "title": "Quantile hazard maps of the SFRARR PSHA model for Central Asia",
+          "description": "Quantile hazard maps of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees. Each file in the folder includes an hazard map in probability of exceedance for different uncertainty quantiles (QUANTILE: 0.05, 0.5, 0.15., 0.85, 0.95) defined for different intensity measure types (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) and probability of exceedance (PoE: 86, 63, 39, 18, 10, 9 and 5% in 50 years observation time, corresponding to 25, 50, 100, 250, 475, 500 and 1000 years return period). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064237",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064237/2/DR0090994/quantile_map-%5BQUANTILE%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_HazCurves_6",
+          "title": "Quantile uniform hazard spectra of the SFRARR PSHA model for Central Asia",
+          "description": "Quantile uniform hazard spectra of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees. Each file in the folder includes Uniform Hazard Spectra (UHS) for different uncertainty quantiles (QUANTILE: 0.05, 0.5, 0.15., 0.85, 0.95), including different intensity measure type (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) and probability of exceedance (PoE: 86, 63, 39, 18, 10, 9 and 5% in 50 years observation time, corresponding to 25, 50, 100, 250, 475, 500 and 1000 years return period). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064237",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064237/2/DR0090995/quantile_uhs-%5BQUANTILE%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_HazDisagg_1",
+          "title": "Disaggregation matrices of the SFRARR PSHA model for Central Asia",
+          "description": "Disaggregation results of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for six selected target sites. Each file in the folder includes a disaggregation matrix (in probability) for different intensity measure types (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) and probability of exceedance (PoE: 86, 63, 39, 18, 10, 9 and 5% in 50 years observation time, corresponding to 25, 50, 100, 250, 475, 500 and 1000 years return period) at each disaggregation site.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064235",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064235/2/DR0090988/%5BIM%5D-sid-%5BSID%5D-poe-%5BPOE%5D_%5BTYPE%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_HazDisagg_2",
+          "title": "Disaggregation summary of the SFRARR PSHA model for Central Asia",
+          "description": "Summary of the disaggregation results of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for six selected target sites. Summary containing the largest probability value of each magnitude-distance disaggregation matrix (in probability) for different intensity measure types (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) and probability of exceedance (PoE: 86, 63, 39, 18, 10, 9 and 5% in 50 years observation time, corresponding to 25, 50, 100, 250, 475, 500 and 1000 years return period) at each disaggregation site.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064235",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064235/2/DR0090986/disaggregation_summary.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_EventSet_1",
+          "title": "Stochastic event set - Stochastic earthquake catalogue",
+          "description": "Stochastic earthquake catalogue for 10.000 years simulation time of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for six selected target sites. Stochastic event set (earthquake catalogue) computed for 10.000 years simulation time. Each event is associated to a rupture (rup_id). Logic tree is randomly sampled according to relative branch weighting. Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064233",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064233/11/DR0090979/events.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_EventSet_2",
+          "title": "Stochastic event set - Stochastic ground motion fields",
+          "description": "Stochastic ground motion fields of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for six selected target sites. Ground motion fields for each rupture of the 10.000 years stochastic earthquake catalogue computed for different intensity measure types (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) at six selected target sites (Almaty, Ashgabat, Bishkek, Dushanbe, Nur-Sultan and Tashkent). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064233",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064233/11/DR0090980/gmf-data.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_EventSet_3",
+          "title": "Stochastic event set - Average ground motion fields",
+          "description": "Average stochastic ground motion fields of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for six selected target sites. Average ground motion fields (mean and standard deviation) from the 10.000 years stochastic earthquake catalogue computed for different intensity measure types (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) at six selected target sites (Almaty, Ashgabat, Bishkek, Dushanbe, Nur-Sultan and Tashkent). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064233",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064233/11/DR0090978/avg_gmf.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_EventSet_4",
+          "title": "Stochastic event set - Stochastic Inter-event uncertainty",
+          "description": "Inter-event uncertainty of the stochastic catalogue of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for six selected target sites. Inter-event variability (sigma and epsilon) of the 10.000 years stochastic earthquake catalogue computed for different intensity measure types (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) at six selected target sites (Almaty, Ashgabat, Bishkek, Dushanbe, Nur-Sultan and Tashkent). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064233",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064233/11/DR0090981/sigma_epsilon.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_EventSet_5",
+          "title": "Stochastic event set - Selected target sites",
+          "description": "Coordinates of the six selected calculation sites of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine. Coordinates of the six selected calculation sites (Almaty, Ashgabat, Bishkek, Dushanbe, Nur-Sultan and Tashkent) for the generation of the 10.000 years stochastic event set.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064233",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064233/11/DR0090982/sitemesh.csv",
+          "media_type": "text/csv"
+        },
+        {
+          "id": "CA_SFRARR_EQ_EventSet_6",
+          "title": "Stochastic event set - Hazard curves",
+          "description": "Mean hazard curves from the 10.000 years stochastic event set of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees. Each file in the folder includes an hazard curve in probability of exceedance for a different intensity measure type (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) computed from the 10.000 years stochastic event set (only used for internal validation). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064233",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064233/11/DR0090983/hazard_curve-mean-%5BIMT%5D.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "CA_SFRARR_EQ_EventSet_7",
+          "title": "Stochastic event set - Quantile hazard curves",
+          "description": "Quantile hazard curves from the 10.000 years stochastic event set of the SFRARR Central Asia Probabilistic Earthquake Hazard Model computed with the OpenQuake calculation engine for a site grid of 0.2 degrees. Each file in the folder includes an hazard curve in probability of exceedance for different uncertainty quantiles (QUANTILE: 0.05, 0.5, 0.15., 0.85, 0.95) and different intensity measure type (IMT: PGA, SA0.1s, SA0.2s, SA0.5s, SA1.0s, SA2.0s, SA3.0s) from the 10.000 years stochastic event set (only used for internal validation). Files are in OpenQuake format.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064233",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064233/11/DR0090984/quantile_curve-%5BQUANTILE%5D-%5BIM%5D.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CA_SFRARR_EQ_RP",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "25, 50, 100, 250, 475, 500, 1000 years",
+            "seasonality": "uniform",
+            "event_count": 7,
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "PGA",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              }
+            ],
+            "events": [
+              {
+                "id": "CA_SFRARR_EQ_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PGA",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25,
+                    "probability": {
+                      "value": 0.86,
+                      "span": 50
+                    }
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_EQ_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PGA",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50,
+                    "probability": {
+                      "value": 0.63,
+                      "span": 50
+                    }
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_EQ_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PGA",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100,
+                    "probability": {
+                      "value": 0.39,
+                      "span": 50
+                    }
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_EQ_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PGA",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250,
+                    "probability": {
+                      "value": 0.18,
+                      "span": 50
+                    }
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_EQ_475",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PGA",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 475,
+                    "probability": {
+                      "value": 0.1,
+                      "span": 50
+                    }
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_EQ_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PGA",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500,
+                    "probability": {
+                      "value": 0.09,
+                      "span": 50
+                    }
+                  }
+                }
+              },
+              {
+                "id": "CA_SFRARR_EQ_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "PGA",
+                  "type": "earthquake",
+                  "process": "ground_motion",
+                  "intensity_measure": "PGA:g"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000,
+                    "probability": {
+                      "value": 0.05,
+                      "span": 50
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CA_SFRARR_EQ_StochEvSet",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "seasonality": "uniform",
+            "occurrence_range": "10,000 years of simulation time",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "PGA",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "PGA:g"
+              },
+              {
+                "id": "SA",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "SA:g"
+              }
+            ]
+          },
+          {
+            "id": "CA_SFRARR_EQ_Intensity",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "seasonality": "uniform",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "MKS",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MKS:-"
+              },
+              {
+                "id": "MCS",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "MCS:-"
+              }
+            ]
+          },
+          {
+            "id": "CA_SFRARR_EQ_Catalogue",
+            "analysis_type": "empirical",
+            "calculation_method": "observed",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "end": "2020"
+            },
+            "hazards": [
+              {
+                "id": "EQ",
+                "type": "earthquake",
+                "process": "ground_motion",
+                "intensity_measure": "Mw:-"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

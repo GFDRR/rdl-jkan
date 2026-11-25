@@ -1,0 +1,140 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_southeastasiastrongwind",
+      "title": "South-East Asia strong wind hazard (tropical cyclone)",
+      "description": "Originated from STORM IBTrACS model, includes 28 different probabilities (from 1/10 to 1/10000) for 3-hour time step wind gust speeds in m/s at 0.1-degree grid squares. Dataset created from historical records over 38 years (1980-2018). No climate scenarios available.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "version": "2021",
+      "contact_point": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "creator": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "spatial": {
+        "countries": [
+          "BRN",
+          "KHM",
+          "IDN",
+          "LAO",
+          "MYS",
+          "PHL",
+          "SGP",
+          "THA",
+          "TLS",
+          "VNM"
+        ],
+        "bbox": [
+          91.4297,
+          -5.4352,
+          141.1758,
+          28.7728
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "0",
+            "name": "STORM IBTrACS",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "0",
+          "title": "Cyclonic strong wind hazard scenarios (historical baseline)",
+          "description": "3-hour time step wind gust speeds in m/s at 0.1-degree grid",
+          "format": "geotiff",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042422",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042422/1/DR0053217/hzd-sea-stc.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "1",
+          "title": "Max wind speed",
+          "description": "10m-altitude max wind-speed, in m/s",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042422",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042422/1/DR0053218/hzd-sea-stc-wind_10m.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "STC",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "event_count": 28,
+            "occurrence_range": "28 return periods, from 10 to 10,000 years",
+            "spatial": {
+              "countries": [
+                "BRN",
+                "KHM",
+                "IDN",
+                "LAO",
+                "MYS",
+                "PHL",
+                "SGP",
+                "THA",
+                "TLS",
+                "VNM"
+              ],
+              "bbox": [
+                91.4297,
+                -5.4352,
+                141.1758,
+                28.7728
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "1980",
+              "end": "2018"
+            },
+            "hazards": [
+              {
+                "id": "STC",
+                "type": "strong_wind",
+                "process": "tropical_cyclone",
+                "intensity_measure": "PGWS:m/s"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

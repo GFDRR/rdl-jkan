@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-ssd_gfdrr_extremeheathazard",
+      "title": "South Sudan Extreme Heat hazard",
+      "description": "Daily maximum Wet Bulb Globe Temperature (WBGT, in °C) for a return period of 100 years, from the VITO global dataset (2017).",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "version": "2017",
+      "purpose": "The results of the analysis contribute to the production of knowledge for disaster risk management (DRM) to support the World Bank's operational teams in their in-country engagements. Specifically, the key findings of this study allow to rank South Sudan states in terms of natural disasters risk, and to identify the most critical components for each area. The output of this assessment includes a geodatabase which contains both the key primary data and all the resulting maps produced by the analysis, allowing risk analysts and managers to explore them in detail using GIS software.",
+      "project": {
+        "name": "South Sudan Multi-hazard risk assessment"
+      },
+      "details": "Heat stress studies in the scientific literature that make use of the WBGT apply thresholds of 28°C and 32°C to categorise heat stress risk. The damaging intensity thresholds are applied following this definition of slight/low (<28°C), moderate/high (28-32°C) and severe/very high (>32°C) heat stress.",
+      "contact_point": {
+        "name": "Lukas Loeschner",
+        "email": "lloeschner@worldbank.org"
+      },
+      "creator": {
+        "name": "Mattia Amadio",
+        "email": "mamadio@worldbank.org"
+      },
+      "spatial": {
+        "countries": [
+          "SSD"
+        ],
+        "scale": "national"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "Lukas Loeschner",
+            "email": "lloeschner@worldbank.org"
+          },
+          "role": "world_bank_team_lead"
+        },
+        {
+          "id": "1",
+          "entity": {
+            "name": "Mattia Amadio",
+            "email": "mamadio@worldbank.org"
+          },
+          "role": "author"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "0",
+          "name": "Disasters, Conflict, and Displacement : Intersectional Risks in South Sudan (Vol. 2)",
+          "author_names": [
+            "Rina Meutia",
+            "Lukas Loeschner",
+            "Makiko Watanabe",
+            "Meskerem Brhane",
+            "Mattia Amadio"
+          ],
+          "date_published": "2020-09-24",
+          "url": "http://documents1.worldbank.org/curated/en/570701601009027965/pdf/Summary.pdf"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "0",
+            "name": "VITO global extreme heat hazard dataset (2017)",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "0",
+          "title": "South Sudan WBGT (max)",
+          "description": "Maximum Wet Bulb Globe Temperature in Celsius degrees for RP100 years.",
+          "format": "geotiff",
+          "spatial_resolution": 1000,
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042410",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042410/1/DR0053199/hzd-ssd-eh-wbgt_max.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "WBGT",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "100 years",
+            "spatial": {
+              "countries": [
+                "SSD"
+              ],
+              "scale": "national"
+            },
+            "hazards": [
+              {
+                "id": "EH",
+                "type": "extreme_temperature",
+                "process": "extreme_heat",
+                "intensity_measure": "WBGT:C"
+              }
+            ],
+            "events": [
+              {
+                "id": "WBGT_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "EH",
+                  "type": "extreme_temperature",
+                  "process": "extreme_heat",
+                  "intensity_measure": "WBGT:C"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

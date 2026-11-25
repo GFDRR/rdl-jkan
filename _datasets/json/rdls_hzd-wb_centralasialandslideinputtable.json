@@ -1,0 +1,127 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_centralasialandslideinputtable",
+      "title": "Central Asia landslide susceptibility input table (SFRARR)",
+      "description": "Table with all the variables used by the Random Forest model of the landslide susceptibility assessment of the Central Asia area.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "version": "2022",
+      "purpose": "Regional risk modelling. These data have been derived on a regional scale for the purpose of consistent regional multi-country hazard and risk assessment. Application of this information on smaller scales should be done with care. Importantly on a local scale, it is often the case that more detailed history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia",
+        "url": "https://www.gfdrr.org/en/program/SFRARR-Central-Asia"
+      },
+      "details": "Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia). As independent variables for the Random Forest model, 26 parameters in all 5 countries have been selected, based on the available data and according to the ones most widely adopted in literature. For each pixel, the parameters sampled are: Digital Elevation Model (Elevation); aspect (Aspect); slope (Slope); total curvature (Curv_Tot); profile curvature (Prof_Curv); planar curvature (Plan_Curv); flow accumulation (Flow_Acc); Topographic Wetness Index (TWI); Stream Power Index (SPI); Topographic Position Index (TPI); lithology (Lithology); land use (Land_Use); distance from faults (Faults_Dist); distance from roads (Roads_Dist); distance from rivers (Rivers_Dist); distance from Hypocentres (Hypo_Dist); Peak Ground Acceleration with a return time of 475 years and related on outcropping soil layers (PGA_soil _475y); Peak Ground Acceleration with a return time of 1000 years and related on outcropping soil layers (PGA_soil _1000y); Peak Ground Acceleration with a return time of 475 years and related on outcropping bedrock (PGA_rock _475y); Peak Ground Acceleration with a return time of 1000 years and related on outcropping bedrock (PGA_rock _1000y); random raster (Random); Mean Annual Precipitation (MAP); cumulative rainfall value at 120 days at 1.5 standard deviations (rain_1.5s_120gg); cumulative rainfall value at 30 days at 1.5 standard deviations (rain_1.5s_30gg); cumulative rainfall value at 1 day at 3 standard deviations (rain_3s_1g); cumulative rainfall value at 7 days at 3 standard deviations (rain_3s_7gg). In the table there are also the coordinates of each pixel in the WGS 84 system (X,Y) and the dependent variable (Landslides).",
+      "contact_point": {
+        "name": "Paola Ceresa",
+        "email": "paola.ceresa@redrisk.com"
+      },
+      "creator": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "spatial": {
+        "countries": [
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ],
+        "bbox": [
+          46.0,
+          34.0,
+          88.0,
+          57.0
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "CA_SFRARR_RED",
+          "entity": {
+            "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+            "url": "https://www.redrisk.com"
+          },
+          "role": "principal_investigator"
+        },
+        {
+          "id": "CA_SFRARR_WB",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "CA_SFRARR_DR0090815",
+          "name": "Central Asia landslide hazard technical report - English version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090815/Task7_LnHaz_Report_r5_EN.pdf"
+        },
+        {
+          "id": "CA_SFRARR_DR0090816",
+          "name": "Central Asia landslide hazard technical report - Russian version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090816/Task7_LnHaz_Report_r5_RU.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "CA_SFRARR_LS_0064181",
+          "title": "Central Asia landslide susceptibility input table",
+          "description": "Table with all the variables used by the Random Forest model of the landslide susceptibility assessment of the Central Asia area.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064181",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064181/3/DR0090908/Susceptibility_Input_table.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CA_SFRARR_LS",
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "LS",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

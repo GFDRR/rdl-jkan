@@ -1,0 +1,1327 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_southeastasiacoastalflood",
+      "title": "South-East Asia coastal flood hazard",
+      "description": "Maximum coastal flood depths (m) on a 30 arc-second grid for nine return periods (2, 5, 10, 25, 50, 100, 250, 500 and 1,000 years), obtained from the World Resources Institute (WRI). One historical baseline and five future climate models considering the RCP4.5 and RCP8.5 emission scenarios in 2030, 2050 and 2080.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "version": "2021",
+      "contact_point": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "creator": {
+        "name": "World Bank",
+        "url": "https://www.worldbank.org"
+      },
+      "spatial": {
+        "countries": [
+          "KHM",
+          "IDN",
+          "LAO",
+          "MMR",
+          "PHL",
+          "THA",
+          "VNM"
+        ],
+        "bbox": [
+          91.4297,
+          -5.4352,
+          141.1758,
+          28.7728
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "0",
+            "name": "World Resources Institute (WRI) flood hazard maps",
+            "url": "https://www.wri.org/aqueduct",
+            "type": "dataset",
+            "risk_data_type": [
+              "hazard"
+            ],
+            "used_in": "hazard"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "baseline",
+          "title": "Coastal flood hazard scenarios (historical baseline)",
+          "description": "Max simulated Flood depths (m) over 30 arcsec grid for 9 Return Periods (RP 2,5,10,25,50,100,250,500,1000). Historical baseline covers 30 years (1980-2010)",
+          "format": "geotiff",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042424",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042424/2/DR0053222/hzd-sea-fcf-baseline.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "rcp45",
+          "title": "Coastal flood hazard scenarios (RCP4.5)",
+          "description": "Max simulated Flood depths (m) over 30 arcsec grid for 9 Return Periods (RP 2,5,10,25,50,100,250,500,1000). 5 future climate models considering RCP 4.5 emission scenario. Future time periods 2030, 2050, 2080.",
+          "format": "geotiff",
+          "coordinate_system": "EPSG:4326",
+          "climate": {
+            "scenario": "RCP4.5"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042424",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042424/2/DR0053223/hzd-sea-fcf-rcp45.zip",
+          "media_type": "application/zip"
+        },
+        {
+          "id": "rcp85",
+          "title": "Coastal flood hazard scenarios (RCP8.5)",
+          "description": "Max simulated Flood depths (m) over 30 arcsec grid for 9 Return Periods (RP 2,5,10,25,50,100,250,500,1000). 5 future climate models considering RCP 8.5 emission scenario. Future time periods 2030, 2050, 2080.",
+          "format": "geotiff",
+          "coordinate_system": "EPSG:4326",
+          "climate": {
+            "scenario": "RCP8.5"
+          },
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0042424",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0042424/2/DR0053224/hzd-sea-fcf-rcp85.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CF_baseline",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 25, 50, 100, 250, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "KHM",
+                "IDN",
+                "LAO",
+                "MMR",
+                "PHL",
+                "THA",
+                "VNM"
+              ],
+              "bbox": [
+                91.4297,
+                -5.4352,
+                141.1758,
+                28.7728
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "1980",
+              "end": "2010"
+            },
+            "hazards": [
+              {
+                "id": "CF",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "CF_baseline_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CF_baseline_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CF_baseline_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CF_baseline_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "CF_baseline_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CF_baseline_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CF_baseline_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "CF_baseline_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CF_baseline_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CF_rcp45_2030",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 25, 50, 100, 250, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "KHM",
+                "IDN",
+                "LAO",
+                "MMR",
+                "PHL",
+                "THA",
+                "VNM"
+              ],
+              "bbox": [
+                91.4297,
+                -5.4352,
+                141.1758,
+                28.7728
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "2030",
+              "end": "2030"
+            },
+            "hazards": [
+              {
+                "id": "CF",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "CF_rcp45_2030_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2030_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2030_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2030_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2030_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2030_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2030_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2030_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2030_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CF_rcp45_2050",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 25, 50, 100, 250, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "KHM",
+                "IDN",
+                "LAO",
+                "MMR",
+                "PHL",
+                "THA",
+                "VNM"
+              ],
+              "bbox": [
+                91.4297,
+                -5.4352,
+                141.1758,
+                28.7728
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "2050",
+              "end": "2050"
+            },
+            "hazards": [
+              {
+                "id": "CF",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "CF_rcp45_2050_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2050_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2050_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2050_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2050_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2050_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2050_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2050_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2050_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CF_rcp45_2080",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 25, 50, 100, 250, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "KHM",
+                "IDN",
+                "LAO",
+                "MMR",
+                "PHL",
+                "THA",
+                "VNM"
+              ],
+              "bbox": [
+                91.4297,
+                -5.4352,
+                141.1758,
+                28.7728
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "2080",
+              "end": "2080"
+            },
+            "hazards": [
+              {
+                "id": "CF",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "CF_rcp45_2080_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2080_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2080_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2080_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2080_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2080_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2080_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2080_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp45_2080_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CF_rcp85_2030",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 25, 50, 100, 250, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "KHM",
+                "IDN",
+                "LAO",
+                "MMR",
+                "PHL",
+                "THA",
+                "VNM"
+              ],
+              "bbox": [
+                91.4297,
+                -5.4352,
+                141.1758,
+                28.7728
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "2030",
+              "end": "2030"
+            },
+            "hazards": [
+              {
+                "id": "CF",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "CF_rcp85_2030_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2030_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2030_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2030_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2030_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2030_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2030_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2030_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2030_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CF_rcp85_2050",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 25, 50, 100, 250, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "KHM",
+                "IDN",
+                "LAO",
+                "MMR",
+                "PHL",
+                "THA",
+                "VNM"
+              ],
+              "bbox": [
+                91.4297,
+                -5.4352,
+                141.1758,
+                28.7728
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "2050",
+              "end": "2050"
+            },
+            "hazards": [
+              {
+                "id": "CF",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "CF_rcp85_2050_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2050_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2050_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2050_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2050_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2050_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2050_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2050_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2050_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "CF_rcp85_2080",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "2, 5, 10, 25, 50, 100, 250, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "KHM",
+                "IDN",
+                "LAO",
+                "MMR",
+                "PHL",
+                "THA",
+                "VNM"
+              ],
+              "bbox": [
+                91.4297,
+                -5.4352,
+                141.1758,
+                28.7728
+              ],
+              "scale": "regional"
+            },
+            "temporal": {
+              "start": "2080",
+              "end": "2080"
+            },
+            "hazards": [
+              {
+                "id": "CF",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m"
+              }
+            ],
+            "events": [
+              {
+                "id": "CF_rcp85_2080_2",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 2
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2080_5",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 5
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2080_10",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 10
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2080_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2080_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2080_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2080_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2080_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CF_rcp85_2080_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

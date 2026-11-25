@@ -1,0 +1,128 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-wb_centralasialandslideinventory",
+      "title": "Central Asia landslide inventory (SFRARR)",
+      "description": "Shapefile with all the landslide polygons available for the Central Asia area.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "version": "2022",
+      "purpose": "Regional risk modelling. These data have been derived on a regional scale for the purpose of consistent regional multi-country hazard and risk assessment. Application of this information on smaller scales should be done with care. Importantly on a local scale, it is often the case that more detailed history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia",
+        "url": "https://www.gfdrr.org/en/program/SFRARR-Central-Asia"
+      },
+      "details": "Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia). The landslides inventory was created by merging the data retrieved from a variety of sources compiled by means of decades of field surveys, remote sensing and geophysical analysis. These cover the study area mainly in the Tien Shan area, Kyrgyz Republic, Tajikistan, and parts of the Pamir Alai system and Altaj mountainous areas in eastern Uzbekistan and southern Kazakhstan. After the data collection, an initial control and homogenization phase was necessary. In this framework the landslide data were checked to verify the presence of overlapping polygons or topological errors. Since some landslides were mapped only as a landslide point, a 100 m buffer was created around them, in order to include them inside the model.",
+      "contact_point": {
+        "name": "Paola Ceresa",
+        "email": "paola.ceresa@redrisk.com"
+      },
+      "creator": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "spatial": {
+        "countries": [
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ],
+        "bbox": [
+          46.0,
+          34.0,
+          88.0,
+          57.0
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "CA_SFRARR_RED",
+          "entity": {
+            "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+            "url": "https://www.redrisk.com"
+          },
+          "role": "principal_investigator"
+        },
+        {
+          "id": "CA_SFRARR_WB",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "CA_SFRARR_DR0090815",
+          "name": "Central Asia landslide hazard technical report - English version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090815/Task7_LnHaz_Report_r5_EN.pdf"
+        },
+        {
+          "id": "CA_SFRARR_DR0090816",
+          "name": "Central Asia landslide hazard technical report - Russian version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090816/Task7_LnHaz_Report_r5_RU.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "CA_SFRARR_LS_0064180",
+          "title": "Central Asia landslide inventory",
+          "description": "Shapefile with all the landslide polygons available for the Central Asia area.",
+          "format": "shp",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064180",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064180/3/DR0090906/Landslides_Inventory.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CA_SFRARR_LS",
+            "analysis_type": "empirical",
+            "calculation_method": "observed",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "LS",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "AA:km2"
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

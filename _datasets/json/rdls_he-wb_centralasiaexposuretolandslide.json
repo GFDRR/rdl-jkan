@@ -1,0 +1,169 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_he-wb_centralasiaexposuretolandslide",
+      "title": "Central Asia exposure to landslide (SFRARR)",
+      "description": "Population and buildings (residential, commercial, industrial, healthcare and education) on a 1 km grid, roads, railways, cultural heritage sites and Silk Road segments of Central Asia, with their landslide susceptibility class.",
+      "risk_data_type": [
+        "hazard",
+        "exposure"
+      ],
+      "publisher": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "version": "2022",
+      "purpose": "Regional risk modelling. These data have been derived on a regional scale for the purpose of consistent regional multi-country hazard and risk assessment. Application of this information on smaller scales should be done with care. Importantly on a local scale, it is often the case that more detailed history and hazard information is required to perform such hazard and risk modelling, particularly where applied to dimension mitigation structures or strategies.",
+      "project": {
+        "name": "SFRARR - Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia",
+        "url": "https://www.gfdrr.org/en/program/SFRARR-Central-Asia"
+      },
+      "details": "Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program (https://www.gfdrr.org/en/program/SFRARR-Central-Asia). The data consist of a 1 km2 grid for which the number of people, number of buildings (residential, commercial, industrial, healthcare, and education) and landslide susceptibility class are defined. For roads and railways, the landslide susceptibility class is reported for each segment (maximum 1km length). For cultural Heritage polygons and Silk Road segments with their corresponding landslide susceptibility class. The classes come from spatial statistics between landslide susceptibility and the elements at risk.",
+      "contact_point": {
+        "name": "Paola Ceresa",
+        "email": "paola.ceresa@redrisk.com"
+      },
+      "creator": {
+        "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+        "url": "https://www.redrisk.com"
+      },
+      "spatial": {
+        "countries": [
+          "KAZ",
+          "KGZ",
+          "TJK",
+          "TKM",
+          "UZB"
+        ],
+        "bbox": [
+          46.0,
+          34.0,
+          88.0,
+          57.0
+        ],
+        "scale": "regional"
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "CA_SFRARR_RED",
+          "entity": {
+            "name": "RED - Risk, Engineering & Development - Pavia (Italy)",
+            "url": "https://www.redrisk.com"
+          },
+          "role": "principal_investigator"
+        },
+        {
+          "id": "CA_SFRARR_WB",
+          "entity": {
+            "name": "World Bank",
+            "url": "https://www.worldbank.org"
+          },
+          "role": "resource_provider"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "CA_SFRARR_DR0090815",
+          "name": "Central Asia landslide hazard technical report - English version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090815/Task7_LnHaz_Report_r5_EN.pdf"
+        },
+        {
+          "id": "CA_SFRARR_DR0090816",
+          "name": "Central Asia landslide hazard technical report - Russian version",
+          "url": "https://datacatalogfiles.worldbank.org/ddh-published/0064119/3/DR0090816/Task7_LnHaz_Report_r5_RU.pdf"
+        }
+      ],
+      "resources": [
+        {
+          "id": "CA_SFRARR_LS_0064178",
+          "title": "Landslide susceptibility and elements at risk",
+          "description": "The data consist of: a 1 km2 grid for which the number of people, number of buildings (residential, commercial, industrial, healthcare, and education) and landslide susceptibility class are defined. For roads and railways, the landslide susceptibility class is reported for each segment (maximum 1km length). For cultural Heritage polygons and Silk Road segments with their corresponding landslide susceptibility class.",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0064178",
+          "download_url": "https://datacatalogfiles.worldbank.org/ddh-published/0064178/3/DR0090902/Susceptibility_Exposed%20Elements.zip",
+          "media_type": "application/zip"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CA_SFRARR_LS",
+            "analysis_type": "deterministic",
+            "calculation_method": "inferred",
+            "spatial": {
+              "countries": [
+                "KAZ",
+                "KGZ",
+                "TJK",
+                "TKM",
+                "UZB"
+              ],
+              "bbox": [
+                46.0,
+                34.0,
+                88.0,
+                57.0
+              ],
+              "scale": "regional"
+            },
+            "hazards": [
+              {
+                "id": "LS",
+                "type": "landslide",
+                "process": "landslide_general",
+                "intensity_measure": "LSI:-"
+              }
+            ]
+          }
+        ]
+      },
+      "exposure": [
+        {
+          "id": "population",
+          "category": "population",
+          "metrics": [
+            {
+              "id": "population_count",
+              "dimension": "population",
+              "measurement": {
+                "quantity_kind": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "buildings",
+          "category": "buildings",
+          "metrics": [
+            {
+              "id": "buildings_count",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "count"
+              }
+            }
+          ]
+        },
+        {
+          "id": "infrastructure",
+          "category": "infrastructure",
+          "metrics": [
+            {
+              "id": "infrastructure_length",
+              "dimension": "structure",
+              "measurement": {
+                "quantity_kind": "length"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

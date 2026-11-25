@@ -1,0 +1,244 @@
+{
+  "datasets": [
+    {
+      "id": "rdls_hzd-tza_gfdrr_coastalfloodhazard",
+      "title": "United Republic of Tanzania coastal flood hazard (Zanzibar)",
+      "description": "Coastal flood hazard for six return periods (25, 50, 100, 250, 500 and 1,000 years). The raster of each return period was interpolated from a 1 km grid of points.",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "version": "2017",
+      "purpose": "The goal of the South West Indian Ocean Risk Assessment and Financing Initiative (SWIO RAFI) is to improve the resiliency and capacity of the island states through the creation of disaster risk financing strategies. A key component of this effort involves the quantification of site specific risk from the perils of flood, earthquakes, and tropical cyclones as well as their secondary hazards of storm surge and tsunamis. Regional hazard intensity calculations were applied to 10,000 years of Stochastic catalogs derived from the historical records to produce hazard intensity profiles at mean return periods of 25, 50, 100, 250, 500 and 1,000 years. All datasets are at their original resolution (0.00083) except for Madagascar (0.0032) which was resampled to reduce file sizes.",
+      "project": {
+        "name": "SWIO-RAFI"
+      },
+      "details": "This data set was produced with financial support from the European Union in the framework of the ACP-EU Natural Disaster Risk Reduction Program, managed by the Global Facility for Disaster Reduction and Recovery (GFDRR).",
+      "contact_point": {
+        "name": "Pierre Chrzanowski",
+        "email": "pchrzanowski@worldbank.org"
+      },
+      "creator": {
+        "name": "GFDRR",
+        "url": "https://www.gfdrr.org"
+      },
+      "spatial": {
+        "countries": [
+          "TZA"
+        ],
+        "bbox": [
+          38.441218,
+          -6.490984,
+          40.615042,
+          -4.860616
+        ],
+        "scale": "sub-national",
+        "gazetteer_entries": [
+          {
+            "id": "TZA_Zanzibar",
+            "description": "Zanzibar archipelago"
+          }
+        ]
+      },
+      "license": "CC-BY-4.0",
+      "attributions": [
+        {
+          "id": "0",
+          "entity": {
+            "name": "GFDRR",
+            "url": "https://www.gfdrr.org"
+          },
+          "role": "owner"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "0",
+          "name": "South West Indian Ocean risk assessment and financing initiative (SWIO-RAFI): summary report",
+          "author_names": [
+            "Doekle Wielinga",
+            "Alanna Simpson",
+            "Julie Dana",
+            "Emily White",
+            "Emma Philips",
+            "Liana Razafindrazay",
+            "Luis Corrales",
+            "Richard Murnane",
+            "Richard Poulter",
+            "Samantha Cook",
+            "Simone Balog",
+            "Stuart Fraser",
+            "Vivien Deparday"
+          ],
+          "date_published": "2017-01-01",
+          "url": "http://documents1.worldbank.org/curated/en/951701497623912193/pdf/116342-WP-PUBLIC-52p-SWIO-RAFI-Summary-Report-2017-Publish-Version.pdf"
+        }
+      ],
+      "lineage": {
+        "sources": [
+          {
+            "id": "0",
+            "name": "AIR-Worldwide",
+            "url": "https://www.air-worldwide.com/",
+            "type": "model",
+            "risk_data_type": [
+              "hazard"
+            ]
+          }
+        ]
+      },
+      "resources": [
+        {
+          "id": "0",
+          "title": "United Republic of Tanzania coastal flood hazard",
+          "description": "World Bank Data Catalog page of the coastal flood hazard rasters, one for each return period (25, 50, 100, 250, 500 and 1,000 years).",
+          "format": "geotiff",
+          "coordinate_system": "EPSG:4326",
+          "access_url": "https://datacatalog.worldbank.org/search/dataset/0038600"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "CF",
+            "analysis_type": "probabilistic",
+            "calculation_method": "simulated",
+            "occurrence_range": "25, 50, 100, 250, 500, 1000 years",
+            "spatial": {
+              "countries": [
+                "TZA"
+              ],
+              "bbox": [
+                38.441218,
+                -6.490984,
+                40.615042,
+                -4.860616
+              ],
+              "scale": "sub-national",
+              "gazetteer_entries": [
+                {
+                  "id": "TZA_Zanzibar",
+                  "description": "Zanzibar archipelago"
+                }
+              ]
+            },
+            "hazards": [
+              {
+                "id": "CF",
+                "type": "flood",
+                "process": "coastal_flood",
+                "intensity_measure": "wd:m",
+                "trigger": {
+                  "id": "trigger_strong_wind",
+                  "type": "strong_wind",
+                  "process": "tropical_cyclone"
+                }
+              }
+            ],
+            "events": [
+              {
+                "id": "CF_25",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 25
+                  }
+                }
+              },
+              {
+                "id": "CF_50",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 50
+                  }
+                }
+              },
+              {
+                "id": "CF_100",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 100
+                  }
+                }
+              },
+              {
+                "id": "CF_250",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 250
+                  }
+                }
+              },
+              {
+                "id": "CF_500",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 500
+                  }
+                }
+              },
+              {
+                "id": "CF_1000",
+                "calculation_method": "simulated",
+                "hazard": {
+                  "id": "CF",
+                  "type": "flood",
+                  "process": "coastal_flood",
+                  "intensity_measure": "wd:m"
+                },
+                "occurrence": {
+                  "probabilistic": {
+                    "return_period": 1000
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}
