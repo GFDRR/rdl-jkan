@@ -1296,14 +1296,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .dataset-detail-layout {
-    grid-template-columns: 1fr !important;
-  }
-
-  .sidebar {
-    position: static;
-  }
-
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1511,6 +1503,34 @@ body {
 
 .related-datasets {
   margin-top: 32px;
+}
+
+/* Below the width of a two-column page, the sidebar goes under the dataset and
+   above its related datasets. */
+@media (max-width: 1199px) {
+  .dataset-detail-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .main-column {
+    display: contents;
+  }
+
+  .dataset-detail-layout .sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: inherit;
+  }
+
+  .dataset-detail-layout .sidebar-card {
+    margin-bottom: 0;
+  }
+
+  .related-datasets {
+    order: 1;
+    margin-top: 0;
+  }
 }
 
 .related-list,
