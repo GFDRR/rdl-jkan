@@ -9,6 +9,9 @@
   />
   <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 | escape }}">
+  {% if site.google_site_verification and site.google_site_verification != "" %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+  {% endif %}
   {% assign theme_name = site.jkan_theme | default: 'Default' %} {% assign theme
   = site.data.themes | where:'name', theme_name | first %} {% if theme and
   theme.src and theme.src != empty %}
