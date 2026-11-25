@@ -5,8 +5,7 @@
       "title": "Satellite detected water extent over Maputo province, Mozambique as of 27 March 2024",
       "description": "UNOSAT code: TC20240313MOZ, GDACS ID: 1001053 This map illustrates satellite detected surface waters in Maputo province, Mozambique, as observed from a Sentinel-1 images acquired on 27 March 2024 at 18:23 local time (16:23 UTC). Within the analyzed areas of about 2,000 km², a total of about 45 km² of lands appear to be flooded. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to the United Nations Satellite Centre (UNOSAT). Important note: Flood analysis from radar images may underestimate the presence of standing waters in built-up areas and densely vegetated areas due to backscattering properties of the radar signal.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-water-extent-over-maputo-province-mozambique-as-of-27-march-2024]",
       "risk_data_type": [
-        "hazard",
-        "loss"
+        "hazard"
       ],
       "publisher": {
         "name": "Humanitarian Data Exchange (HDX)",
@@ -49,9 +48,9 @@
             "name": "UN Operational Satellite Applications Programme (UNOSAT)",
             "type": "dataset",
             "risk_data_type": [
-              "loss"
+              "hazard"
             ],
-            "used_in": "loss",
+            "used_in": "hazard",
             "description": "Sentinel-1 satellite radar imagery analysis detecting surface water extent and flooded areas through multi-temporal image comparison methodology"
           }
         ]
@@ -86,34 +85,6 @@
             ],
             "analysis_type": "empirical",
             "calculation_method": "observed"
-          }
-        ]
-      },
-      "loss": {
-        "losses": [
-          {
-            "id": "loss_1",
-            "hazard": {
-              "id": "hazard_flood",
-              "type": "flood",
-              "intensity_measure": "AA:km2"
-            },
-            "asset_category": "natural_environment",
-            "asset_dimension": "product",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "area"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Satellite-detected flooded land area (45 km²) from coastal flood event in Maputo province"
           }
         ]
       },

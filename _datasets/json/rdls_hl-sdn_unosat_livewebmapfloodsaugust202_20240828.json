@@ -5,8 +5,7 @@
       "title": "UNOSAT Live Webmap, Floods in Sudan - August 2024",
       "description": "UNOSAT code: FL20240826SDN, GDACS ID: 1102854 This application provides geospatial information regarding the analysis related to the floods in Sudan in August 2024. Important note: The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations. The United Nations Satellite Centre. UNOSAT is not responsible for the misuse or misrepresentation of the map.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/unosat-live-webmap-floods-in-sudan-august-2024]",
       "risk_data_type": [
-        "hazard",
-        "loss"
+        "hazard"
       ],
       "publisher": {
         "name": "Humanitarian Data Exchange (HDX)",
@@ -49,9 +48,9 @@
             "name": "UN Operational Satellite Applications Programme (UNOSAT)",
             "type": "dataset",
             "risk_data_type": [
-              "loss"
+              "hazard"
             ],
-            "used_in": "loss",
+            "used_in": "hazard",
             "description": "Satellite imagery analysis and change detection methodology to identify flood extent and affected areas in Sudan during August 2024 event"
           }
         ]
@@ -86,34 +85,6 @@
             ],
             "analysis_type": "empirical",
             "calculation_method": "observed"
-          }
-        ]
-      },
-      "loss": {
-        "losses": [
-          {
-            "id": "loss_1",
-            "hazard": {
-              "id": "hazard_flood",
-              "type": "flood",
-              "intensity_measure": "AA:km2"
-            },
-            "asset_category": "natural_environment",
-            "asset_dimension": "product",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "area"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Flood-affected area extent derived from satellite imagery change detection"
           }
         ]
       },

@@ -6,8 +6,7 @@
       "description": "UNOSAT code EQ20230206SYR, GDACS Id: 1357372 This map illustrates satellite-detected water along the Orontes (Al Assi) River on the Syria-Türkyie boarder close to the Al Tloul and Jakara towns from a Sentinel-2 imagery acquired on 9 February 2023, and from a Worldview-2 imagery aquired on the 13 February 2023. Within the analyzed area of 210 km2 about 18 km2 appears to be flooded. The floods may have been likely triggered by the opening of dams and the damage induced to certain water infrastructures along the river by the tremors. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to United Nations Satellite Centre (UNOSAT).. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/flood-impact-analysis-along-the-orontes-river-al-assi-syrian-turkyie-boarder-as-of-9-febru]",
       "risk_data_type": [
         "hazard",
-        "exposure",
-        "loss"
+        "exposure"
       ],
       "publisher": {
         "name": "Humanitarian Data Exchange (HDX)",
@@ -51,9 +50,9 @@
             "name": "UN Operational Satellite Applications Programme (UNOSAT)",
             "type": "dataset",
             "risk_data_type": [
-              "loss"
+              "hazard"
             ],
-            "used_in": "loss",
+            "used_in": "hazard",
             "description": "Satellite imagery analysis (Sentinel-2 and Worldview-2) for post-event flood extent mapping and damage detection through multi-temporal image comparison"
           }
         ]
@@ -111,34 +110,6 @@
           ]
         }
       ],
-      "loss": {
-        "losses": [
-          {
-            "id": "loss_1",
-            "hazard": {
-              "id": "hazard_flood",
-              "type": "flood",
-              "intensity_measure": "wd:m"
-            },
-            "asset_category": "buildings",
-            "asset_dimension": "structure",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "count"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Direct building damage from fluvial flooding detected via satellite imagery comparison"
-          }
-        ]
-      },
       "links": [
         {
           "href": "https://docs.riskdatalibrary.org/en/1__0__0/rdls_schema.json",

@@ -5,8 +5,7 @@
       "title": "Satellite Detected Surface Waters Extent in Quang Nam Province, Vietnam",
       "description": "This map illustrates the satellite-detected surface waters in Quang Nam Province, Vietnam, as observed from the Radarsat-2 image acquired on 07 November 2017, following the landfall of tropical cyclone DAMREY-17 on 05 November 2017. The districts located in the coastal areas have been affected by the floods; especially the ones located in the northern coastal part of the province and more particularly Dien Ban, Duy Xuyen and Thang Binh districts. Even if the province of Quang Nam was not in the passage of the cyclone, ~ 35,000 ha were identified as flooded within the analyzed area (8,700 km2). It represents an increase of about 230% of the surface waters in the analyzed zone. This is a preliminary analysis and has not yet been validated in the field. Please send ground feedback to UNITAR-UNOSAT.. [Source: This metadata record was automatically extracted from the Humanitarian Data Exchange (HDX); Original dataset: https://data.humdata.org/dataset/satellite-detected-surface-waters-extent-in-quang-nam-province-vietnam-2718]",
       "risk_data_type": [
-        "hazard",
-        "loss"
+        "hazard"
       ],
       "publisher": {
         "name": "Humanitarian Data Exchange (HDX)",
@@ -39,9 +38,9 @@
             "name": "United Nations Satellite Centre (UNOSAT)",
             "type": "dataset",
             "risk_data_type": [
-              "loss"
+              "hazard"
             ],
-            "used_in": "loss",
+            "used_in": "hazard",
             "description": "Satellite imagery analysis using Radarsat-2 to detect surface water extent and map flooded areas post-event through multi-temporal image comparison"
           }
         ]
@@ -76,34 +75,6 @@
             ],
             "analysis_type": "empirical",
             "calculation_method": "observed"
-          }
-        ]
-      },
-      "loss": {
-        "losses": [
-          {
-            "id": "loss_1",
-            "hazard": {
-              "id": "hazard_flood",
-              "type": "flood",
-              "intensity_measure": "AA:km2"
-            },
-            "asset_category": "natural_environment",
-            "asset_dimension": "product",
-            "impact_and_losses": {
-              "impact": {
-                "type": "direct",
-                "modelling": "observed",
-                "metric": "loss",
-                "measurement": {
-                  "quantity_kind": "area"
-                }
-              },
-              "loss_type": "ground_up",
-              "loss_approach": "empirical",
-              "loss_frequency_type": "empirical"
-            },
-            "description": "Direct flood extent and inundated area detected from satellite imagery following tropical cyclone"
           }
         ]
       },
